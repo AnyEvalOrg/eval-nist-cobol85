@@ -1,0 +1,8 @@
+RL108A.CBL: in section 'SECT-RL108A-001':
+RL108A.CBL: in paragraph 'REL-DELETE-002':
+RL108A.CBL:439: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  437 | 044400     PERFORM DE-LETE.                                             R..
+  438 | 044500     PERFORM PRINT-DETAIL.                                        R..
+  439 > 044600     GO TO   CCVS-EXIT.                                           R..
+  440 | 044700 REL-TEST-002-1.                                                  R..
+  441 | 044800     IF      XRECORD-NUMBER (1) NOT EQUAL TO 500                  R..

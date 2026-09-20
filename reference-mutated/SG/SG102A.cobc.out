@@ -1,0 +1,48 @@
+SG102A.CBL: in section 'TEST-6-5':
+SG102A.CBL: in paragraph 'TEST-6E':
+SG102A.CBL:340: warning: GO TO SECTION 'TEST-6-2' [-Wgoto-section]
+  338 | 034000     MOVE 0 TO RANGE-X (RANGE-SUB).                               S..
+  339 | 034100     ADD 2 TO RANGE-SUB.                                          S..
+  340 > 034200     GO TO TEST-6-2.                                              S..
+  341 | 034300 START-TESTING SECTION 11.                                        S..
+  342 | 034400 SEG-TEST-1.                                                      S..
+SG102A.CBL: in section 'TEST-8-BRANCH':
+SG102A.CBL: in paragraph 'PARA-8':
+SG102A.CBL:370: warning: GO TO SECTION 'SEG-TEST8' [-Wgoto-section]
+  368 | 037000 TEST-8-BRANCH SECTION 12.                                        S..
+  369 | 037100 PARA-8.                                                          S..
+  370 > 037200     GO TO SEG-TEST8.                                             S..
+  371 | 037300 TEST-6-6 SECTION 15.                                             S..
+  372 | 037400 TEST-6F.                                                         S..
+SG102A.CBL: in section 'TEST-6-7':
+SG102A.CBL: in paragraph 'TEST-6G':
+SG102A.CBL:379: warning: GO TO SECTION 'TEST-6-2' [-Wgoto-section]
+  377 | 037900 TEST-6G.                                                         S..
+  378 | 038000     ALTER TEST-6B TO PROCEED TO TEST-6-8.                        S..
+  379 > 038100     GO TO TEST-6-2.                                              S..
+  380 | 038200 TEST-6-8 SECTION 20.                                             S..
+  381 | 038300 TEST-6H.                                                         S..
+SG102A.CBL: in section 'SEG-TEST7':
+SG102A.CBL: in paragraph 'TEST-7-WRITE':
+SG102A.CBL:462: warning: GO TO SECTION 'TEST-8-BRANCH' [-Wgoto-section]
+  460 | 046200     PERFORM PRINT-DETAIL.                                        S..
+  461 | 046300     MOVE 0 TO SEG-CALC.                                          S..
+  462 > 046400     GO TO TEST-8-BRANCH.                                         S..
+  463 | 046500 TEST-7-1 SECTION 74.                                             S..
+  464 | 046600 TEST-7A.                                                         S..
+SG102A.CBL: in section 'SEG-TEST8':
+SG102A.CBL: in paragraph 'SEG-TEST-8':
+SG102A.CBL:579: warning: GO TO SECTION 'TEST-8-BRANCH' [-Wgoto-section]
+  577 | 057900         PERFORM FAIL                                             S..
+  578 | 058000         GO TO TEST-8-WRITE.                                      S..
+  579 > 058100     GO TO TEST-8-BRANCH.                                         S..
+  580 | 058200 SEG-TEST-8A SECTION 85.                                          S..
+  581 | 058300 PARA-85.                                                         S..
+SG102A.CBL: in section 'SEG':
+SG102A.CBL: in paragraph 'SEG-99B':
+SG102A.CBL:557: warning: TEST-6A and TEST-6I are not in the same SECTION [-Wsuspicious-perform-thru]
+  555 | 055700     MOVE "-" TO RANGE-X (2) RANGE-X (4) RANGE-X (6).             S..
+  556 | 055800     MOVE 3 TO RANGE-SUB.                                         S..
+  557 > 055900     PERFORM TEST-6A THRU TEST-6I.                                S..
+  558 | 056000     IF SEG-CALC EQUAL TO 8                                       S..
+  559 | 056100         PERFORM PASS                                             S..

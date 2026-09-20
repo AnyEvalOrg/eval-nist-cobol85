@@ -1,6 +1,6 @@
 services:
   default:
-    image: eval-cobol-sandbox:local
+    image: us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-livecodebench-sandbox:1.0.0
     build:
       context: .
       dockerfile: Dockerfile

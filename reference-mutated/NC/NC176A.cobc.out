@@ -1,0 +1,14 @@
+NC176A.CBL:182: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  180 | 018000 77  A18THREES-CS-18V00 PICTURE S9(18) VALUE -333333333333333333  N..
+  181 | 018100             COMPUTATIONAL.                                       N..
+  182 > 018200 77  WRK-CS-03V00 PICTURE S999 COMPUTATIONAL SYNCHRONIZED RIGHT.  N..
+  183 | 018300 01  SUBTRACT-DATA.                                               N..
+  184 | 018400     02  SUBTR-1    PICTURE 9         VALUE 1.                    N..
+NC176A.CBL: in section 'SECT-NC176A-001':
+NC176A.CBL: in paragraph 'ADD-DELETE-F1-58':
+NC176A.CBL:2373: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2371 | 237300     PERFORM DE-LETE.                                             N..
+ 2372 | 237400     PERFORM PRINT-DETAIL.                                        N..
+ 2373 > 237500     GO TO   CCVS-EXIT.                                           N..
+ 2374 | 237600 ADD-TEST-F1-58-1.                                                N..
+ 2375 | 237700     MOVE   "ADD-TEST-F1-58-1" TO PAR-NAME.                       N..

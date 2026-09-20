@@ -1,0 +1,29 @@
+OBSQ3A.CBL: in section 'SECT-OBSQ3A-0001':
+OBSQ3A.CBL: in paragraph 'SEQ-INIT-002':
+OBSQ3A.CBL:427: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
+  425 | 047000     MOVE "RC"     TO CHARS-OR-RECORDS (1).                       O..
+  426 | 047100     MOVE 5        TO XBLOCK-SIZE (1).                            O..
+  427 > 047200     OPEN OUTPUT SQ-FS2 WITH NO REWIND.                           O..
+  428 | 047300 SEQ-TEST-002.                                                    O..
+  429 | 047400     MOVE FILE-RECORD-INFO-P1-120 (1) TO SQ-FS2R1-F-G-120.        O..
+OBSQ3A.CBL: in paragraph 'SEQ-INIT-003':
+OBSQ3A.CBL:451: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
+  449 | 049400     MOVE "CH"     TO CHARS-OR-RECORDS (1).                       O..
+  450 | 049500     MOVE 1200     TO XBLOCK-SIZE (1).                            O..
+  451 > 049600     OPEN OUTPUT SQ-FS3 NO REWIND.                                O..
+  452 | 049700 SEQ-TEST-003.                                                    O..
+  453 | 049800     MOVE FILE-RECORD-INFO-P1-120 (1) TO SQ-FS3R1-F-G-120.        O..
+OBSQ3A.CBL: in paragraph 'SEQ-INIT-004':
+OBSQ3A.CBL:475: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
+  473 | 051800     MOVE "RC"     TO CHARS-OR-RECORDS (1).                       O..
+  474 | 051900     MOVE 10       TO XBLOCK-SIZE (1).                            O..
+  475 > 052000     OPEN OUTPUT SQ-FS4 WITH NO REWIND.                           O..
+  476 | 052100 SEQ-TEST-004.                                                    O..
+  477 | 052200     MOVE FILE-RECORD-INFO-P1-120 (1) TO SQ-FS4R1-F-G-120.        O..
+OBSQ3A.CBL: in paragraph 'TERMINATE-OBSQ3A':
+OBSQ3A.CBL:591: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  589 | 063400     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      O..
+  590 | 063500 TERMINATE-OBSQ3A.                                                O..
+  591 > 063600     GO TO CCVS-EXIT.                                             O..
+  592 | 063700 BUILD-RECORD.                                                    O..
+  593 | 063800     MOVE "R1-F-G" TO XRECORD-NAME (1).                           O..

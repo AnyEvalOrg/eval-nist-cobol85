@@ -1,0 +1,8 @@
+SM208A.CBL: in section 'SECT-SM208A-001':
+SM208A.CBL: in paragraph 'REP-DELETE-9':
+SM208A.CBL:626: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  624 | 062600     PERFORM DE-LETE.                                             S..
+  625 | 062700     PERFORM PRINT-DETAIL.                                        S..
+  626 > 062800     GO TO   CCVS-EXIT.                                           S..
+  627 | 062900 REP-TEST-9-1.                                                    S..
+  628 | 063000     IF      P-OR-F = "PASS"                                      S..

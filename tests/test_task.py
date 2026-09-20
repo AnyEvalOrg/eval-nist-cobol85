@@ -7,14 +7,19 @@ import yaml
 from nist_cobol85 import nist_cobol85_python
 
 
+
 def test_docker_task_and_catalog():
     task=nist_cobol85_python(sandbox_type='docker')
-    assert len(task.dataset)==323 and task.epochs==1
+    from nist_cobol85.dataset import load_records
+    assert len(task.dataset)==len(load_records()) > 0 and task.epochs==1
     assert task.sandbox.type=='docker'
     service=yaml.safe_load(Path(task.sandbox.config).read_text())['services']['default']
     assert service['network_mode']=='none' and service['user']=='0:0'
+    assert service['image'].endswith('eval-livecodebench-sandbox:1.0.0')
     catalog=json.loads(Path('anyeval.json').read_text())
-    assert catalog['tasks']==[{'name':'nist_cobol85_python','samples':323}]
+    mutations=json.loads(Path('nist_cobol85/data/mutations.json').read_text())
+    count=sum(p['eligible'] for p in mutations['programs'].values())
+    assert catalog['tasks']==[{'name':'nist_cobol85_python','samples':count}]
     assert catalog['execution']['cost_class']=='high'
 
 
@@ -22,7 +27,7 @@ def test_default_k8s_contract():
     task=nist_cobol85_python()
     values=yaml.safe_load(task.sandbox.config.values.read_text())
     assert values['services']['default']['runtimeClassName']=='gvisor'
-    assert values['services']['default']['image'].endswith('eval-cobol-sandbox:1.0.0')
+    assert values['services']['default']['image'].endswith('eval-livecodebench-sandbox:1.0.0')
     assert values['automountServiceAccountToken'] is False
     assert Path(task.sandbox.config.chart).joinpath('Chart.yaml').is_file()
 
@@ -60,3 +65,11 @@ def test_values_match_pinned_provider_schema():
 
 def test_invalid_sandbox():
     with pytest.raises(ValueError): nist_cobol85_python(sandbox_type='local')
+
+
+def test_python_only_image_recipe():
+    recipe = Path('nist_cobol85/Dockerfile').read_text()
+    assert 'FROM python:3.12-slim\n' in recipe
+    assert 'procps util-linux hostname' in recipe
+    assert 'gnucobol' not in recipe and 'openjdk' not in recipe
+    assert '--uid 65532 --gid 65532' in recipe

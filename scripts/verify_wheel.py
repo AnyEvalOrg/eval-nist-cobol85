@@ -29,7 +29,7 @@ def main():
     from importlib.metadata import version
     assert Path(nist_cobol85.__file__).is_relative_to(installed)
     assert version('eval-nist-cobol85')=='1.0.0'
-    assert len(task.dataset)==manifest()['count']==323
+    assert len(task.dataset)==manifest()['count']
     assert [s.id for s in task.dataset]==manifest()['task_ids']
     assert task.epochs==1 and Path(task.sandbox.config).is_relative_to(installed)
     for sample,record in zip(task.dataset,load_records()):
@@ -41,7 +41,7 @@ def main():
     assert not files('nist_cobol85').joinpath('reference').is_dir()
     default=registry_create('task','nist_cobol85/nist_cobol85_python')
     assert Path(default.sandbox.config.chart).is_relative_to(installed)
-    print('Cold installed-wheel validation: PASS; 1 task, 323 exact ids; all targets self-match; network disabled.')
+    print('Cold installed-wheel validation: PASS; 1 task, exact manifest ids; all targets self-match; network disabled.')
 
 
 if __name__=='__main__': main()

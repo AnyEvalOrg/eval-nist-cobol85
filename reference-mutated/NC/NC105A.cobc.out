@@ -1,0 +1,20 @@
+NC105A.CBL:69: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   67 | 006700 77  WRK-CS-03V00 PIC S999 COMPUTATIONAL.                         N..
+   68 | 006800 77  MOVE74   PICTURE 9(9)V9 VALUE 234565432.1                    N..
+   69 > 006900              SYNCHRONIZED RIGHT COMPUTATIONAL.                   N..
+   70 | 007000 77  MOVE75   PICTURE 9(10)                                       N..
+   71 | 007100              SYNCHRONIZED RIGHT COMPUTATIONAL.                   N..
+NC105A.CBL:71: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   69 | 006900              SYNCHRONIZED RIGHT COMPUTATIONAL.                   N..
+   70 | 007000 77  MOVE75   PICTURE 9(10)                                       N..
+   71 > 007100              SYNCHRONIZED RIGHT COMPUTATIONAL.                   N..
+   72 | 007200 77  EDIT-PICTURE-01 PICTURE 9B(15)99.                            N..
+   73 | 007300 77  EDIT-PICTURE-02   PICTURE $0(10)999.                         N..
+NC105A.CBL: in section 'SECT-NC105A-001':
+NC105A.CBL: in paragraph 'EDIT-WRITE-F1-129':
+NC105A.CBL:3062: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 3060 | 306200     MOVE "EDIT-TEST-F1-129"  TO PAR-NAME.                        N..
+ 3061 | 306300     PERFORM PRINT-DETAIL.                                        N..
+ 3062 > 306400     GO TO CCVS-EXIT.                                             N..
+ 3063 | 306500 A20.                                                             N..
+ 3064 | 306600     MOVE FIRST-20S TO CORRECT-A.                                 N..

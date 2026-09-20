@@ -1,0 +1,24 @@
+ST108A.CBL: in section 'OUTPROC':
+ST108A.CBL: in paragraph 'OPEN-FILES':
+ST108A.CBL:281: warning: GO TO SECTION 'SPACE-IS-LESS-THAN-B' [-Wgoto-section]
+  279 | 027900     PERFORM  HEAD-ROUTINE THRU COLUMN-NAMES-ROUTINE.             S..
+  280 | 028000     IF       SPAC-E IS LESS THAN "B"                             S..
+  281 > 028100              GO TO SPACE-IS-LESS-THAN-B.                         S..
+  282 | 028200 B-IS-LESS-THAN-SPACE SECTION.                                    S..
+  283 | 028300 SORT-INIT-A.                                                     S..
+ST108A.CBL: in section 'B-IS-LESS-THAN-SPACE':
+ST108A.CBL: in paragraph 'SORT-REMARK-A':
+ST108A.CBL:386: warning: GO TO SECTION 'CONTINUE-TESTING' [-Wgoto-section]
+  384 | 038400     PERFORM  PRINT-DETAIL.                                       S..
+  385 | 038500     MOVE     "SORT - 8 ASC. KEYS" TO FEATURE.                    S..
+  386 > 038600     GO       TO CONTINUE-TESTING.                                S..
+  387 | 038700 SPACE-IS-LESS-THAN-B SECTION.                                    S..
+  388 | 038800 SORT-REMARK-B.                                                   S..
+ST108A.CBL: in section 'CONTINUE-TESTING':
+ST108A.CBL: in paragraph 'SORT-WRITE-17':
+ST108A.CBL:498: warning: GO TO SECTION 'OUTPROC-EXIT' [-Wgoto-section]
+  496 | 049600     MOVE     "SORT-TEST-17" TO PAR-NAME.                         S..
+  497 | 049700     PERFORM  PRINT-DETAIL.                                       S..
+  498 > 049800     GO       TO OUTPROC-EXIT.                                    S..
+  499 | 049900 RETURN-ERROR.                                                    S..
+  500 | 050000     MOVE     "RETURN-ERROR" TO PAR-NAME.                         S..

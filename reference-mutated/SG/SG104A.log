@@ -1,0 +1,51 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG104A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                          THE COLLATING SEQUENCE                                        
+                                                          RENDERS TESTS 1 THRU 8                                        
+                                                          UNNECESSARY.                                                  
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-9                                                                                 
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-10                                                                                
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-11                                                                                
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-12                                                                                
+ SORT - 8 ASC. KEYS   FAIL* SORT-TEST-13                                                                                
+                                                                                                                        
+                                     COMPUTED= Z                                                                        
+                                     CORRECT = Z     F                                                                  
+                                                                                                                        
+ SORT - 8 ASC. KEYS   FAIL* SORT-TEST-14                                                                                
+                                                                                                                        
+                                     COMPUTED= Z                                                                        
+                                     CORRECT = Z                M                                                       
+                                                                                                                        
+ SORT - 8 ASC. KEYS   FAIL* SORT-TEST-15                                                                                
+                                                                                                                        
+                                     COMPUTED=  .600000000000000000                                                     
+                                     CORRECT =  .600006000000000000                                                     
+                                                                                                                        
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-16                                                                                
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-17                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  SG104A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

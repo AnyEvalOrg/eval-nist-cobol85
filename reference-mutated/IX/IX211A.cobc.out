@@ -1,0 +1,8 @@
+IX211A.CBL: in section 'SECT-0001-IX211A':
+IX211A.CBL: in paragraph 'READ-END-004':
+IX211A.CBL:1036: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1034 | 108200     CLOSE   IX-FD1.                                              I..
+ 1035 | 108300                                                                  I..
+ 1036 > 108400     GO TO CCVS-EXIT.                                             I..
+ 1037 | 108500                                                                  I..
+ 1038 | 108600                                                                  I..

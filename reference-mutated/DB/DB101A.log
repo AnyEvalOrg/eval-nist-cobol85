@@ -1,0 +1,83 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB101A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ON PROC-NAME   INSPT START-PROGRAM-TEST            DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                                               <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  START-PROGRAM-TEST            DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  START-PROGRAM-TEST            DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   INSPT FALL-THROUGH-TEST             DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         406                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  FALL-THROUGH-TEST             DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  FALL-THROUGH-TEST             DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   INSPT PROC-SERIES-TEST              DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         445                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  PROC-SERIES-TEST              DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  PROC-SERIES-TEST              DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   INSPT GO-TO-TEST                    DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         486                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  GO-TO-TEST                    DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  GO-TO-TEST                    DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   INSPT ALTER-TEST                    DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         533                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  ALTER-TEST                    DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  ALTER-TEST                    DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   INSPT ALTERED-GO-TO-TEST            DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         574                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  ALTERED-GO-TO-TEST            DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  ALTERED-GO-TO-TEST            DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   PASS  PERF-ITERATION-TEST           PROC EXECUTED FIVE TIMES                                      
+ DEBUG ON PROC-NAME   INSPT PERF-ITERATION-TEST           DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         668                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  PERF-ITERATION-TEST           DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  PERF-ITERATION-TEST           DEBUG-CONTENTS                                                                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ON PROC-NAME   PASS  PERFORM-THRU-TEST             PROC EXECUTED FIVE TIMES                                      
+ DEBUG ON PROC-NAME   INSPT PERFORM-THRU-TEST             DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         668                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  PERFORM-THRU-TEST             DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  PERFORM-THRU-TEST             DEBUG-CONTENTS                                                
+ DEBUG ON PROC-NAME   INSPT SIMPLE-PERFORM-TEST           DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         719                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG ON PROC-NAME   PASS  SIMPLE-PERFORM-TEST           DEBUG-NAME                                                    
+ DEBUG ON PROC-NAME   PASS  SIMPLE-PERFORM-TEST           DEBUG-CONTENTS                                                
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-01            COMPLETE ENTITY                                               
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-02            CONSECUTIVE DEBUG LINES                                       
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-03            BROKEN STATEMENTS                                             
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-04            NESTED COMMENTS                                               
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-05            NESTED INSIDE COMMENTS                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB101A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    025 OF 034  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    009 TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

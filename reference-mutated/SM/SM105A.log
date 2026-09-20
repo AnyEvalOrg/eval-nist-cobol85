@@ -1,0 +1,48 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                         CCVS85  NCC COPY - NOT FOR DISTRIBUTION                                        
+                                                                                                                        
+TEST RESULT OF SM105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ COPY SORT DESCR      PASS  COPY-TEST-1                                                                                 
+ COPY SORT DESCR      PASS  COPY-TEST-2                                                                                 
+ COPY SORT DESCR      FAIL* COPY-TEST-3                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000106001000200002                                                      
+                                     CORRECT =  000106001000230002                                                      
+                                                                                                                        
+ COPY SORT DESCR      PASS  COPY-TEST-4                                                                                 
+ COPY SORT DESCR      FAIL* COPY-TEST-5                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000201001000200002                                                      
+                                     CORRECT =  000201001000290002                                                      
+                                                                                                                        
+ COPY SORT DESCR      PASS  COPY-TEST-6                                                                                 
+ COPY SORT DESCR      PASS  COPY-TEST-7                                                                                 
+ COPY SORT DESCR      FAIL* COPY-TEST-8                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000900009000000000                                                      
+                                     CORRECT =  000900059000000000                                                      
+                                                                                                                        
+ COPY SORT DESCR      PASS  COPY-TEST-9                                                                                 
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  SM105A    NTIS DISTRIBUTION COBOL 85                  
+                                                                                                                        
+                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -1,0 +1,8 @@
+ST114M.SUB: in section 'SECT-ST114-0001':
+ST114M.SUB: in paragraph 'SORT-WRITE-10':
+ST114M.SUB:438: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  436 | 044300     PERFORM  PRINT-DETAIL.                                       S..
+  437 | 044400     CLOSE    SORTIN-1N.                                          S..
+  438 > 044500     GO TO    CCVS-EXIT.                                          S..
+  439 | 044600 BREAKDOWN-PARA.                                                  S..
+  440 | 044700     PERFORM  FAIL.                                               S..

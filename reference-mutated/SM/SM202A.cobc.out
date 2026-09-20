@@ -1,0 +1,15 @@
+SM202A.SUB: in section 'COPY-PARA':
+SM202A.SUB: in paragraph 'COPY-WRITE-17':
+SM202A.SUB:510: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  508 | 051500     PERFORM  PRINT-DETAIL.                                       S..
+  509 | 051600     CLOSE    TEST-FILE.                                          S..
+  510 > 051700     GO TO CCVS-EXIT.                                             S..
+  511 | 051800 READ-TEST-FILE.                                                  S..
+  512 | 051900     READ     TEST-FILE          AT END GO TO BAD-FILE.           S..
+SM202A.SUB: in paragraph 'BAD-FILE':
+SM202A.SUB:519: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  517 | 052400     PERFORM  PRINT-DETAIL.                                       S..
+  518 | 052500     CLOSE    TEST-FILE.                                          S..
+  519 > 052600     GO TO CCVS-EXIT.                                             S..
+  520 | 052700 CCVS-EXIT SECTION.                                               S..
+  521 | 052800 CCVS-999999.                                                     S..

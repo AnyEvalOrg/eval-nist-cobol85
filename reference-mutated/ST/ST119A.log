@@ -1,0 +1,83 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF ST119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ PERFORM EXTNL CODE   PASS  INPT-TEST-1                                                                                 
+ GO TO EXTERNAL CODE  PASS  INPT-TEST-2-1      .01                                                                      
+ GO TO EXTERNAL CODE  PASS  INPT-TEST-2-1      .02                                                                      
+                                                          ST119 GENERATES OUTPUT                                        
+                                                          WHICH AFFECTS PROGRAMS                                        
+                                                          ST120 AND ST121.                                              
+ SORT --- FIVE KEYS   PASS  SORT-TEST-1                                                                                 
+ SORT --- FIVE KEYS   PASS  SORT-TEST-2                                                                                 
+ SORT --- FIVE KEYS   FAIL* SORT-TEST-3                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000106001000200002                                                      
+                                     CORRECT =  000106001000240002   XI-19 4.4.4 GR(7)                                  
+                                                                                                                        
+ SORT --- FIVE KEYS   FAIL* SORT-TEST-4                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000206001000200002                                                      
+                                     CORRECT =  000206001090200002   XI-19 4.4.4 GR(7)                                  
+                                                                                                                        
+ SORT --- FIVE KEYS   PASS  SORT-TEST-5                                                                                 
+ SORT --- FIVE KEYS   PASS  RET-3                                                                                       
+ SORT --- FIVE KEYS   PASS  RET-4                                                                                       
+ SORT --- FIVE KEYS   PASS  RET-5                                                                                       
+ SORT --- FIVE KEYS   PASS  RET-6                                                                                       
+ SORT --- FIVE KEYS   PASS  RET-7                                                                                       
+ SORT --- FIVE KEYS   PASS  RET-8                                                                                       
+ THE FILE BUILT IN ST119A IS SORTED IN ST120A.  ST120A DOES NOT PRODUCE A REPORT - THE RESULTS ARE CHECKED IN ST121A.   
+                      FAIL* SORT-TEST-6                                                                                 
+                                                                                                                                                                                                                                                
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF ST119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                     COMPUTED=  000201002000100001                                                      
+                                     CORRECT =  000201002000100004   XI-14 4.3.4 GR(2) & (4)                            
+                                                                                                                        
+                      PASS  SORT-TEST-7                                                                                 
+                      PASS  SORT-TEST-8                                                                                 
+                      PASS  SORT-TEST-9                                                                                 
+ PERFORM EXTNL CODE   PASS  SORT-TEST-10                                                                                
+ GO TO EXTERNAL CODE  PASS  SORT-TEST-11-1     .01                                                                      
+ GO TO EXTERNAL CODE  PASS  SORT-TEST-11-2     .02                                                                      
+ INTNL CODE PERFORMED PASS  INT-TEST-1         .02                                                                      
+ GO TO INTERNAL CODE  PASS  INT-TEST-2-1       .01                                                                      
+ GO TO INTERNAL CODE  PASS  INT-TEST-2-1       .02                                                                      
+ INTNL CODE PERFORMED PASS  INT-TEST-3         .02                                                                      
+ GO TO INTERNAL CODE  PASS  INT-TEST-4-1       .01                                                                      
+ GO TO INTERNAL CODE  PASS  INT-TEST-4-2       .02                                                                      
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  ST119A                                                
+                                                                                                                        
+                                                    024 OF 027  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

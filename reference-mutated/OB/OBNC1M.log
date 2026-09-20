@@ -1,0 +1,83 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                                    
+                                                                                                                                    
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                                     
+                                                                                                                                    
+TEST RESULT OF OBNC1M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                 
+                                                                                                                                    
+                                                                                                                                    
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985                      
+                                                                                                                                    
+                                                                                                                                    
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                                  
+ TESTED               FAIL                                                                                                          
+                                                                                                                                    
+ ***********************************************************************************************************************            
+ COBOL REMARKS PARA         REMARKS                       PHONY LINES SHOULDNT EXECUT                                               
+ NOTE RESERVED WORDS        NOTE-TEST-6                                                                                             
+ NUMERIC PARA-NAMES                                                                                                                 
+ NUMERIC PARA-NAMES   PASS  NUM-TEST-1                                                                                              
+ ALTER                PASS  ALTER-TEST-1                                                                                            
+ ALTER                PASS  ALTER-TEST-2                                                                                            
+ ALTER                PASS  ALTER-TEST-3                                                                                            
+ ***********************************************************************************************************************            
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+ UNFINISHED GO TO     PASS  GO--TEST-1                                                                                              
+ UNFINISHED GO TO                                         PLEASE VISUALLY VERIFY THE FOLLOWING PARAGRAPHS:                          
+ UNFINISHED GO TO                                           AUTHOR, INSTALLATION, DATE-WRITTEN, SECURITY                            
+ STOP LITERAL         PASS  STOP-TEST-GF-1                                                                                          
+ STOP LITERAL                                             SEE STOP-NOTE PARAGRAPH                                                   
+ STOP LITERAL               STOP-TEST-GF-2                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           VI-88 6.14.3 SR3, 6.14.4 GR2                                
+                                                                                                                                     A                                                                                                                                  
+                            STOP-TEST-GF-3                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           VI-88 6.14.3 SR3, 6.14.4 GR2                                
+                                                                                                                                     *                                                                                                                                  
+                            STOP-TEST-GF-4                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           VI-88 6.14.3 SR3, 6.14.4 GR2                                
+                                                                                                                                     (A SINGLE QUOTE)                                                                                                                   
+                            STOP-TEST-GF-5                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           IV-9 4.3.3.3.1                                                                                                                                                                                  
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                                    
+                                                                                                                                    
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                                     
+                                                                                                                                    
+TEST RESULT OF OBNC1M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                 
+                                                                                                                                    
+                                                                                                                                    
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985                      
+                                                                                                                                    
+                                                                                                                                    
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                                  
+ TESTED               FAIL                                                                                                          
+ ***********************************************************************************************************************            
+                                                                                                                                     *  5 * 10 * 15 * 20 * 25 * 30 * 35 * 40 * 45 * 50 * 55 * 60 * 65 * 70 * 75 * 80 * 85 * 90 * 95 *100 *105 *110 *115 *120 *125 *130 *
+                            STOP-TEST-GF-6                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           VI-129 6.23.4                                               
+                                                                                                                                     7                                                                                                                                  
+                            STOP-TEST-GF-7                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           VI-129 6.23.4                                               
+                                                                                                                                     123456789987654321                                                                                                                 
+                            STOP-TEST-GF-8                                                                                          
+*** INFORMATION ***        SEE OPERATOR MESSAGE     SEE BELOW           VI-129 6.23.4                                               
+                                                                                                                                     0                                                                                                                                  
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+ STOP-TEST-GF-9 PASSES UNLESS A SECOND REPORT FOR  OBNC1 IS GENERATED AFTER THIS ONE.                                               
+ ***********************************************************************************************************************            
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+                                                    END OF TEST-  OBNC1M                                                            
+                                                                                                                                    
+                                                    006 OF 006  TESTS WERE EXECUTED SUCCESSFULLY                                    
+                                                    NO  TEST(S) FAILED                                                              
+                                                    NO  TEST(S) DELETED                                                             
+                                                    NO  TEST(S) REQUIRE INSPECTION                                                  
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985            

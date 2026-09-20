@@ -6,7 +6,7 @@ generates the key locally; no ancestor shell receives it as stdin or an argument
 The root supervisor drops the child to reserved UID/GID 65532 before exec.
 PR_SET_DUMPABLE also protects supervisor memory/fds.
 The child has separate stdio, no inherited supervisor descriptors, no core dumps,
-no privilege gains, and a bounded process limit (compiler subprocesses and JVM threads are required).
+no privilege gains, and bounded process and file limits.
 Only the supervisor can authenticate the wait() status. Provider stdout markers
 can truncate/destroy the receipt, but cannot manufacture a valid passing receipt.
 """
@@ -17,7 +17,7 @@ CANDIDATE_GID = 65532
 CLEANUP_COMMAND = ["timeout", "-s", "KILL", "5s",
                    "/usr/bin/pkill", "-KILL", "-u", str(CANDIDATE_UID)]
 
-# Compilers need forks and JVMs need threads. After the template's independent
+# After the template's independent
 # pkill exec, verify quiescence with repeated UID sweeps (escaped sessions too).
 # Ignore zombies: they cannot execute and belong to the container's reaper.
 UID_QUIESCENCE = r'''
@@ -125,7 +125,7 @@ def kill_group(pgid):
 
 
 def sweep_uid():
-    # NPROC must permit compiler subprocesses/JVM threads. Repeatedly sweep the
+    # Repeatedly sweep the
     # reserved UID and reap adopted descendants, including setsid escapees.
     until = time.monotonic() + 3
     while True:
@@ -146,6 +146,21 @@ def sweep_uid():
         if time.monotonic() >= until:
             raise RuntimeError("UID sweep did not complete")
         time.sleep(0.02)
+
+
+def read_report(candidate_work, name, limit):
+    if not name or name in {".", ".."} or os.path.basename(name) != name:
+        raise ValueError("Invalid output filename")
+    directory = os.open(candidate_work, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory)
+        with os.fdopen(fd, "rb") as f:
+            info = os.fstat(f.fileno())
+            if not stat.S_ISREG(info.st_mode) or info.st_uid != CANDIDATE_UID or info.st_nlink != 1:
+                raise ValueError("Unsafe output file")
+            return f.read(limit + 1)
+    finally:
+        os.close(directory)
 
 
 def run_step(argv, timeout, candidate_work):
@@ -192,24 +207,12 @@ try:
     output = b""
     missing_report = False
     if status["returncode"] == 0 and not status["timeout"] and not status["overflow"]:
-        name = request["output_file"]
-        if not name or name in {".", ".."} or os.path.basename(name) != name:
-            raise ValueError("Invalid output filename")
-        # Candidate is quiescent. Pin the directory itself: a candidate may have
-        # renamed its writable working directory and replaced it with a symlink.
-        directory = os.open(candidate_work, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        # Candidate is quiescent before pinning/reading its REPORT.
         try:
-            fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory)
-            with os.fdopen(fd, "rb") as f:
-                info = os.fstat(f.fileno())
-                if not stat.S_ISREG(info.st_mode) or info.st_uid != CANDIDATE_UID or info.st_nlink != 1:
-                    raise ValueError("Unsafe output file")
-                output = f.read(limit + 1)
-                status["overflow"] = status["overflow"] or len(output) >= limit
+            output = read_report(candidate_work, request["output_file"], limit)
+            status["overflow"] = len(output) >= limit
         except (OSError, ValueError):
             missing_report = True
-        finally:
-            os.close(directory)
     body = json.dumps({**status, "stage": "run", "missing_report": missing_report,
                       "output": base64.b64encode(output).decode("ascii"),
                       "stdout": base64.b64encode(stdout).decode("ascii"), "cwd": work}, separators=(",", ":"))

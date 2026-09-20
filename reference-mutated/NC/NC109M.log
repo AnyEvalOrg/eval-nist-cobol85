@@ -1,0 +1,279 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC109M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ ACCEPT               PASS  ACC-TEST-GF-1                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-2                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-3                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-4                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-5                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-6                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-7                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-8                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-9                                                                               
+ ACCEPT               PASS  ACC-TEST-GF-10                                                                              
+ ACCEPT               PASS  ACC-TEST-GF-11                                                                              
+                                                                                                                        
+ DISPLAY TESTS                                            SEE NOTE IN DISP-INIT-GF-1                                    
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-1                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+ALPHABETIC                                                                                                              
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-1                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-2                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+ALPHABETIC LITERAL                                                                                                      
+                                                                                                                                                                                                                                                
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC109M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-2                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-3                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+0123456789                                                                                                              
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-3                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-4                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+9876543210                                                                                                              
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-4                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-5                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+A1B2C3D4E5                                                                                                              
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-5                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-6                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+12345 ///// ALPHANUMERIC LITERAL                                                                                        
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-6                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                                                                                                                                            
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC109M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-7                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+ALPHABETIC0123456789A1B2C3D4E5 SERIES                                                                                   
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-7                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-8                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+0 "                                                                                                                     
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-8                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-9                                                                              
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+REDEFINE-INFO                                                                                                           
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-9                END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-10                                                                             
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+*001*002*003*004*005*006*007*008*009*010*011*012*013*014*015*016*017*018*019*020*021*022*023*024*025                    
+*026*027*028*029*030*031*032*033*034*035*036*037*038*039*040*041*042*043*044*045*046*047*048*049*050                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-10               END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-11                                                                                                                                                                                                     
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC109M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+UTSRQPONMLKJIHGFEDCBA                                                                                                   
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-11               END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-12                                                                             
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+ABCDEFGHIJKLMNOPQRSTU                                                                                                   
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-12               END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-13                                                                             
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+QUOTE " ASTERISK * NUMERIC LITERALS 21 35 IDENTIFIER DATA A B C D E 0102030405 (TOTAL 21 OPERANDS) END OF DATA          
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-13               END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-14 GR3                                                                         
+*** INFORMATION ***        SEE BELOW                SEE BELOW           V1-78 6.10.4                                    
+                                                                                                                        
+                                                                                                                        
+                                                          CORRECT DATA FOLLOWS                                          
+                                                                                                                        
+ABCD                                                                                                                    
+                                                                                                                        
+                                                                                                                        
+ DISPLAY                    DISP-TEST-GF-14               END CORRECT DATA                                              
+*** INFORMATION ***        SEE ABOVE                SEE ABOVE           V1-78 6.10.4                                    
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                                                                                                                                
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC109M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                    END OF TEST-  NC109M                                                
+                                                                                                                        
+                                                    011 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

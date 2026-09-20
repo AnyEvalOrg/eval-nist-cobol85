@@ -1,0 +1,22 @@
+NC139A.CBL: in section 'SECT-TH110-0002':
+NC139A.CBL: in paragraph 'IND-TEST-005-05':
+NC139A.CBL:561: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  559 | 056100     MOVE ELEM2(+2 2 INDEX3 + 2) TO TEMP.                         N..
+  560 | 056200     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                N..
+  561 > 056300     GO TO CCVS-EXIT.                                             N..
+  562 | 056400 IND-DELETE-005.                                                  N..
+  563 | 056500     PERFORM DE-LETE.                                             N..
+NC139A.CBL: in paragraph 'IND-TEST-006-05':
+NC139A.CBL:595: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  593 | 059500     MOVE ELEM2(WS-PLUS-2  WS-2 INDEX3 + 2) TO TEMP.              N..
+  594 | 059600     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                N..
+  595 > 059700     GO TO CCVS-EXIT.                                             N..
+  596 | 059800 IND-DELETE-006.                                                  N..
+  597 | 059900     PERFORM DE-LETE.                                             N..
+NC139A.CBL: in paragraph 'IND-DELETE-006':
+NC139A.CBL:599: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  597 | 059900     PERFORM DE-LETE.                                             N..
+  598 | 060000     PERFORM SYNTAX-CHECK-WRITE.                                  N..
+  599 > 060100     GO TO CCVS-EXIT.                                             N..
+  600 | 060200 SECT-TH110-0003 SECTION.                                         N..
+  601 | 060300 SYNTAX-CHECK.                                                    N..

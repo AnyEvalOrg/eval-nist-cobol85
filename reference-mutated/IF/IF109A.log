@@ -1,0 +1,60 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DAY-OF-INTEGER       PASS  F-DAYOFINT-01                                                                               
+ DAY-OF-INTEGER       PASS  F-DAYOFINT-02                                                                               
+ DAY-OF-INTEGER       PASS  F-DAYOFINT-03                                                                               
+ DAY-OF-INTEGER       FAIL* F-DAYOFINT-04                                                                               
+                                                                                                                        
+                                     COMPUTED=  001601004.000000000                                                     
+                                     CORRECT =  001601008.000000000  See ref. A-42 2.13                                 
+                                                                                                                        
+ DAY-OF-INTEGER       PASS  F-DAYOFINT-05                                                                               
+ DAY-OF-INTEGER       FAIL* F-DAYOFINT-06                                                                               
+                                                                                                                        
+                                     COMPUTED=  001601011.000000000                                                     
+                                     CORRECT =  001601013.000000000  See ref. A-42 2.13                                 
+                                                                                                                        
+ DAY-OF-INTEGER       FAIL* F-DAYOFINT-07                                                                               
+                                                                                                                        
+                                     COMPUTED=  003202002.000000000                                                     
+                                     CORRECT =  003272002.000000000  See ref. A-42 2.13                                 
+                                                                                                                        
+ DAY-OF-INTEGER       PASS  F-DAYOFINT-08                                                                               
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF109A                                                
+                                                                                                                        
+                                                    005 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

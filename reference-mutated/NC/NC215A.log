@@ -1,0 +1,40 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC215A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ A = LOW-VALUE        PASS  SEQ-TEST-GF-1                                                                               
+ H I J B SEQUENCE     PASS  SEQ-TEST-GF-2                                                                               
+ I J K L M N EQUAL    PASS  SEQ-TEST-GF-3                                                                               
+ O > THAN N           PASS  SEQ-TEST-GF-4                                                                               
+ A < THAN ZERO        PASS  SEQ-TEST-GF-5                                                                               
+ NINE < THAN SPACE    PASS  SEQ-TEST-GF-6                                                                               
+ NINE < THAN QUOTE    PASS  SEQ-TEST-GF-7                                                                               
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ ALPHABET-NAME     *****     CHECK THE ALPHABET-NAME IN THE SPECIAL-NAMES PARAGRAPH                                     
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  NC215A                                                
+                                                                                                                        
+                                                    007 OF 007  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

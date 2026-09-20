@@ -1,0 +1,83 @@
+NC102A.CBL: in section 'SECT-NC102A-001':
+NC102A.CBL: in paragraph 'GO--TEST-F1-2':
+NC102A.CBL:475: warning: GO TO SECTION 'GO--PASS-F1-2' [-Wgoto-section]
+  473 | 047500     MOVE    "V1-88 6.14.4 GR1"  TO ANSI-REFERENCE.               N..
+  474 | 047600 GO--TEST-F1-2.                                                   N..
+  475 > 047700     GO TO    GO--PASS-F1-2.                                      N..
+  476 | 047800*    NOTE THAT GO--PASS-F1-2 IS A SECTION-NAME.                   N..
+  477 | 047900     PERFORM  FAIL.                                               N..
+NC102A.CBL: in section 'GO--PASS-F1-2':
+NC102A.CBL: in paragraph 'GO--TEST-F2-2':
+NC102A.CBL:495: warning: GO TO SECTION 'GO--PASS-F2-2' [-Wgoto-section]
+  493 | 049500     MOVE    1 TO GO-TO-DEEP.                                     N..
+  494 | 049600 GO--TEST-F2-2.                                                   N..
+  495 > 049700     GO TO   GO--PASS-F2-2                                        N..
+  496 | 049800             GO--FAIL-F2-2 DEPENDING ON GO-TO-DEEP.               N..
+  497 | 049900*    NOTE THAT GO--PASS-F2-2 IS A SECTION-NAME.                   N..
+NC102A.CBL: in section 'GO--PASS-F2-2':
+NC102A.CBL: in paragraph 'GO--TEST-F2-6':
+NC102A.CBL:625: warning: GO TO SECTION 'GO--PASS-F2-6' [-Wgoto-section]
+  623 | 062500     MOVE    1 TO GO-TO-DEEP.                                     N..
+  624 | 062600 GO--TEST-F2-6.                                                   N..
+  625 > 062700     GO TO   GO--PASS-F2-6 DEPENDING ON GO-TO-DEEP.               N..
+  626 | 062800*    NOTE THAT GO--PASS-F2-6 IS A SECTION-NAME.                   N..
+  627 | 062900     GO TO   GO--FAIL-F2-6.                                       N..
+NC102A.CBL: in section 'PFM-J-F1-10':
+NC102A.CBL: in paragraph 'PFM-WRITE-F3-4':
+NC102A.CBL:1363: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1361 | 136300     MOVE   "PFM-TEST-F3-4  " TO PAR-NAME.                        N..
+ 1362 | 136400     PERFORM PRINT-DETAIL.                                        N..
+ 1363 > 136500     GO TO   CCVS-EXIT.                                           N..
+ 1364 | 136600 A121.                                                            N..
+ 1365 | 136700     EXIT.                                                        N..
+NC102A.CBL: in section 'CCVS-EXIT':
+NC102A.CBL: in paragraph 'CCVS-999999':
+NC102A.CBL:912: warning: PFM-B-F1-7 and PFM-D-F1-7 are not in the same SECTION [-Wsuspicious-perform-thru]
+  910 | 091200     MOVE     ZERO TO P-COUNT.                                    N..
+  911 | 091300 PFM-TEST-F1-7.                                                   N..
+  912 > 091400     PERFORM  PFM-B-F1-7 THROUGH PFM-D-F1-7.                      N..
+  913 | 091500     ADD      1 TO P-COUNT                                        N..
+  914 | 091600     PERFORM  PFM-A-F1-7 THRU PFM-C-F1-7.                         N..
+NC102A.CBL:916: warning: PFM-A-F1-7 and PFM-D-F1-7 are not in the same SECTION [-Wsuspicious-perform-thru]
+  914 | 091600     PERFORM  PFM-A-F1-7 THRU PFM-C-F1-7.                         N..
+  915 | 091700     ADD      1 TO P-COUNT.                                       N..
+  916 > 091800     PERFORM  PFM-A-F1-7 THRU PFM-D-F1-7.                         N..
+  917 | 091900     ADD      1 TO P-COUNT.                                       N..
+  918 | 092000     PERFORM  PFM-B-F1-7 THRU PFM-C-F1-7.                         N..
+NC102A.CBL:947: warning: PFM-B-F2-4 and PFM-D-F2-4 are not in the same SECTION [-Wsuspicious-perform-thru]
+  945 | 094700     MOVE     ZERO TO P-COUNT.                                    N..
+  946 | 094800 PFM-TEST-F2-4.                                                   N..
+  947 > 094900     PERFORM  PFM-B-F2-4 THROUGH PFM-D-F2-4 2 TIMES.              N..
+  948 | 095000     ADD      1 TO P-COUNT.                                       N..
+  949 | 095100     PERFORM  PFM-A-F2-4 THRU PFM-C-F2-4 2 TIMES.                 N..
+NC102A.CBL:951: warning: PFM-A-F2-4 and PFM-D-F2-4 are not in the same SECTION [-Wsuspicious-perform-thru]
+  949 | 095100     PERFORM  PFM-A-F2-4 THRU PFM-C-F2-4 2 TIMES.                 N..
+  950 | 095200     ADD      1 TO P-COUNT.                                       N..
+  951 > 095300     PERFORM  PFM-A-F2-4 THRU PFM-D-F2-4 2 TIMES.                 N..
+  952 | 095400     ADD      1 TO P-COUNT.                                       N..
+  953 | 095500     PERFORM  PFM-B-F2-4 THRU PFM-D-F2-4 2 TIMES.                 N..
+NC102A.CBL:953: warning: PFM-B-F2-4 and PFM-D-F2-4 are not in the same SECTION [-Wsuspicious-perform-thru]
+  951 | 095300     PERFORM  PFM-A-F2-4 THRU PFM-D-F2-4 2 TIMES.                 N..
+  952 | 095400     ADD      1 TO P-COUNT.                                       N..
+  953 > 095500     PERFORM  PFM-B-F2-4 THRU PFM-D-F2-4 2 TIMES.                 N..
+  954 | 095600     ADD      1 TO P-COUNT.                                       N..
+  955 | 095700 PFM-A-F2-4 SECTION.                                              N..
+NC102A.CBL:1066: warning: PFM-G-F1-10 and PFM-B-F1-10 are not in the same SECTION [-Wsuspicious-perform-thru]
+ 1064 | 106600     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             N..
+ 1065 | 106700 PFM-TEST-F1-10.                                                  N..
+ 1066 > 106800     PERFORM  PFM-G-F1-10 THRU PFM-B-F1-10.                       N..
+ 1067 | 106900*        NOTE PERFORM SECTION-NAME THRU PARAGRAPH-NAME -- SECOND  N..
+ 1068 | 107000*             PROCEDURE-NAME PHYSICALLY PRECEEDS THE FIRST BUT    N..
+NC102A.CBL:1066: warning: PFM-B-F1-10 is defined before PFM-G-F1-10 [-Wsuspicious-perform-thru]
+NC102A.CBL:1088: note: 'PFM-G-F1-10' defined here [-Wsuspicious-perform-thru]
+ 1086 | 108800 PFM-F-F1-10.                                                     N..
+ 1087 | 108900     GO       TO PFM-D-F1-10.                                     N..
+ 1088 > 109000 PFM-G-F1-10 SECTION.                                             N..
+ 1089 | 109100 PFM-H-F1-10.                                                     N..
+ 1090 | 109200     GO       TO PFM-E-F1-10.                                     N..
+NC102A.CBL:1074: note: 'PFM-B-F1-10' defined here [-Wsuspicious-perform-thru]
+ 1072 | 107400     PERFORM  DE-LETE.                                            N..
+ 1073 | 107500     GO       TO PFM-WRITE-F1-10.                                 N..
+ 1074 > 107600 PFM-B-F1-10.                                                     N..
+ 1075 | 107700     PERFORM  PASS.                                               N..
+ 1076 | 107800 PFM-C-F1-10.                                                     N..

@@ -1,0 +1,8 @@
+NC224A.CBL: in section 'SECT-NC224A-001':
+NC224A.CBL: in paragraph 'REF-DELETE-GF-6':
+NC224A.CBL:623: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  621 | 062300     PERFORM DE-LETE.                                             N..
+  622 | 062400     PERFORM PRINT-DETAIL.                                        N..
+  623 > 062500     GO TO   CCVS-EXIT.                                           N..
+  624 | 062600 REF-TEST-GF-6-1.                                                 N..
+  625 | 062700     MOVE   "REF-TEST-GF-6-1" TO PAR-NAME.                        N..

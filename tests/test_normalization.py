@@ -58,3 +58,39 @@ def test_order_and_summary_numbers_are_significant():
     assert not compare_reports(other + '\n' + row, row + '\n' + other)[0]
     assert not compare_reports(row + '\n 1 TEST(S) FAILED', row + '\n NO TEST(S) FAILED')[0]
     assert not compare_reports('', '')[0]
+
+
+@pytest.mark.parametrize('module,program', [('IX','IX210A'), ('NC','NC208A'), ('NC','NC211A'), ('NC','NC232A'), ('SQ','SQ126A')])
+def test_real_blank_paragraph_rows_are_scored(module, program):
+    report = (ROOT/'reference'/module/(program+'.log')).read_text()
+    lines = report.splitlines()
+    dropped = next(i for i, l in enumerate(lines) if l[22:28].strip() == 'PASS' and not l[28:50].strip())
+    norm = normalize_report(report)
+    assert sum(r[0]=='row' and r[2]=='PASS' and r[3]=='' for r in norm) == 1
+    lines[dropped] = lines[dropped][:22] + 'FAIL* ' + lines[dropped][28:]
+    assert not compare_reports('\n'.join(lines), report)[0]
+
+
+def test_wide_blank_paragraph_and_heading():
+    heading = '    FEATURE               PASS  PARAGRAPH-NAME                                                 REMARKS'
+    row = ' ' + 'WIDE FEATURE'.ljust(24) + ' PASS  ' + ' '*17
+    report = heading + '\n    TESTED                FAIL\n' + row
+    assert normalize_report(report) == (('row','WIDE FEATURE','PASS',''),)
+    assert not compare_reports(report.replace('PASS  '+' '*17, 'FAIL* '+' '*17), report)[0]
+
+
+@pytest.mark.parametrize('computed,correct', [(' 000000042.000000000', ' 000000043.000000000'), ('A B C', 'A X C'), ('A'*69+'B', 'A'*69+'C'), ('', 'X')])
+def test_fail_evidence_is_ordered_and_significant(computed, correct):
+    row = ' ' + 'FEATURE'.ljust(20) + ' FAIL* ' + 'TEST-A'
+    # Labels occupy 17 columns (including the initial seven spaces).
+    comp = ' '*30 + '       COMPUTED=' .ljust(17) + computed.ljust(70)
+    corr = ' '*30 + '       CORRECT =' .ljust(17) + correct.ljust(70)
+    report = '\n'.join([row,comp,corr])
+    assert compare_reports(report, report)[0]
+    assert normalize_report(report)[0][4] == (('computed',computed),('correct',correct))
+    assert not compare_reports('\n'.join([row,corr,comp]), report)[0]
+    assert not compare_reports('\n'.join([row,comp]), report)[0]
+    for index in (1,2):
+        changed = [row,comp,corr]
+        changed[index] = changed[index][:47] + 'Z' + changed[index][48:]
+        assert not compare_reports('\n'.join(changed), report)[0]

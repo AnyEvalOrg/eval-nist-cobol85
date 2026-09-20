@@ -1,0 +1,54 @@
+Filename    total pass fail deleted inspect
+--------    ----- ---- ---- ------- -------
+IF101A.CBL     26   26    0       0       0 OK
+IF102A.CBL     13   13    0       0       0 OK
+IF103A.CBL     23   23    0       0       0 OK
+IF104A.CBL     27   27    0       0       0 OK
+IF105A.CBL      8    8    0       0       0 OK
+IF106A.CBL     30   30    0       0       0 OK
+IF107A.CBL      2    2    0       0       0 OK
+IF108A.CBL     10    7    3       0       0 
+IF109A.CBL      8    5    3       0       0 
+IF110A.CBL      9    6    3       0       0 
+IF111A.CBL     23   20    3       0       0 
+IF112A.CBL      8    5    3       0       0 
+IF113A.CBL      8    5    3       0       0 
+IF114A.CBL     23   20    3       0       0 
+IF115A.CBL      8    8    0       0       0 OK
+IF116A.CBL     25   25    0       0       0 OK
+IF117A.CBL     32   32    0       0       0 OK
+IF118A.CBL     13   10    3       0       0 
+IF119A.CBL     23   20    3       0       0 
+IF120A.CBL     17   17    0       0       0 OK
+IF121A.CBL     17   14    3       0       0 
+IF122A.CBL     17   17    0       0       0 OK
+IF123A.CBL     23   20    3       0       0 
+IF124A.CBL     21   18    3       0       0 
+IF125A.CBL     20   17    3       0       0 
+IF126A.CBL     30   27    3       0       0 
+IF127A.CBL      9    6    3       0       0 
+IF128A.CBL     16   13    3       0       0 
+IF129A.CBL     17   14    3       0       0 
+IF130A.CBL     21   21    0       0       0 OK
+IF131A.CBL      8    8    0       0       0 OK
+IF132A.CBL     15   12    3       0       0 
+IF133A.CBL     17   14    3       0       0 
+IF134A.CBL     13   10    3       0       0 
+IF135A.CBL     32   32    0       0       0 OK
+IF136A.CBL     26   26    0       0       0 OK
+IF137A.CBL     17   17    0       0       0 OK
+IF138A.CBL     16   13    3       0       0 
+IF139A.CBL     30   30    0       0       0 OK
+IF140A.CBL     13   10    3       0       0 
+IF141A.CBL     16   16    0       0       0 OK
+IF142A.CBL      2    2    0       0       0 OK
+IF401M.CBL      0    0    0       0       0 OK
+IF402M.CBL      1    1    0       0       0 OK
+IF403M.CBL      0    0    0       0       0 OK
+--------    ----- ---- ---- ------- -------
+Total         733  667   66       0       0
+
+Number of programs:    45
+Successfully executed: 23
+Compile error:          0
+Execute error:          0

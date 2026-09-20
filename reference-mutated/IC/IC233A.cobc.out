@@ -1,0 +1,8 @@
+IC233A.CBL: in section 'SECT-IC233A-1R-001':
+IC233A.CBL: in paragraph 'USE-TEST-0':
+IC233A.CBL:386: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  384 | 038600     CALL   "IC233A-1".                                           I..
+  385 | 038700     IF      DILFRAP = 1                                          I..
+  386 > 038800             GO TO   CCVS-EXIT.                                   I..
+  387 | 038900 USE-FAIL-1.                                                      I..
+  388 | 039000     MOVE   "USE PROCEDURE NOT INVOKED" TO RE-MARK.               I..

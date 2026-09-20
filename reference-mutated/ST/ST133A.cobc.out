@@ -1,0 +1,8 @@
+ST133A.CBL: in section 'MAINLINE':
+ST133A.CBL: in paragraph 'SECOND-SORT-PARA':
+ST133A.CBL:455: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  453 | 046500     MOVE    "SECOND SORT DONE" TO FEATURE.                       S..
+  454 | 046600     PERFORM PRINT-DETAIL.                                        S..
+  455 > 046700     GO TO    CCVS-EXIT.                                          S..
+  456 | 046800 INPROC SECTION.                                                  S..
+  457 | 046900 INPROC-INIT.                                                     S..

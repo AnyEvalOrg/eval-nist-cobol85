@@ -1,0 +1,59 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF OBNC2M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ UNFINISHED GO TO     PASS  GO--TEST-1                                                                                  
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ SERIES ALTER         PASS  ALTER-TEST-1                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-2                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-3                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-4                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-5                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-6                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-7                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-8                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-9                                                                                
+ SERIES ALTER         PASS  ALTER-TEST-10                                                                               
+ SERIES ALTER         PASS  ALTER-TEST-11                                                                               
+ SERIES ALTER         PASS  ALTER-TEST-12                                                                               
+ SERIES ALTER         PASS  ALTER-TEST-13                                                                               
+ DATE-COMPILED              DATE-COMPILED                 COMMENT SHOULD BE DELETED                                     
+*** INFORMATION ***        SEE SOURCE LISTING                                                                           
+                                                                                                                        
+ DATE-COMPILED        PASS  PARA-TEST-5                                                                                 
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  OBNC2M                                                
+                                                                                                                        
+                                                    016 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

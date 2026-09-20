@@ -1,0 +1,104 @@
+Filename    total pass fail deleted inspect
+--------    ----- ---- ---- ------- -------
+NC101A.CBL     93   90    3       0       0 
+NC102A.CBL     42   39    3       0       0 
+NC103A.CBL    102  102    0       0       0 OK
+NC104A.CBL    141  128   13       0       0 
+NC105A.CBL    132  122    7       3       0 
+NC106A.CBL    126  123    3       0       0 
+NC107A.CBL    177  177    0       0       0 OK
+NC108M.CBL     14   11    3       0       0 
+NC109M.CBL     11   11    0       0       0 OK
+NC110M.CBL      1    1    0       0       0 OK
+NC111A.CBL      7    4    3       0       0 
+NC112A.CBL     32   29    3       0       0 
+NC113M.CBL     15   15    0       0       0 OK
+NC114M.CBL      6    2    3       0       1 
+NC115A.CBL     31   28    3       0       0 
+NC116A.CBL     66   63    3       0       0 
+NC117A.CBL     40   37    3       0       0 
+NC118A.CBL     29   26    3       0       0 
+NC119A.CBL     36   33    3       0       0 
+NC120A.CBL     39   36    3       0       0 
+NC121M.CBL     41   39    2       0       0 
+NC122A.CBL     24   21    3       0       0 
+NC123A.CBL     34   31    3       0       0 
+NC124A.CBL    169  166    3       0       0 
+NC125A.CBL    110  110    0       0       0 OK
+NC126A.CBL    145  136    9       0       0 
+NC127A.CBL      2    2    0       0       0 OK
+NC131A.CBL     10   10    0       0       0 OK
+NC132A.CBL     25   22    3       0       0 
+NC133A.CBL     25   22    3       0       0 
+NC134A.CBL     20   17    3       0       0 
+NC135A.CBL      8    8    0       0       0 OK
+NC136A.CBL      8    8    0       0       0 OK
+NC137A.CBL      8    8    0       0       0 OK
+NC138A.CBL     36   36    0       0       0 OK
+NC139A.CBL     41   41    0       0       0 OK
+NC140A.CBL     70   70    0       0       0 OK
+NC141A.CBL      9    9    0       0       0 OK
+NC170A.CBL     96   93    3       0       0 
+NC171A.CBL    108  105    3       0       0 
+NC172A.CBL    101   98    3       0       0 
+NC173A.CBL    102   99    3       0       0 
+NC174A.CBL     77   74    3       0       0 
+NC175A.CBL     97   94    3       0       0 
+NC176A.CBL    124  120    4       0       0 
+NC177A.CBL    108  105    3       0       0 
+NC201A.CBL     59   56    3       0       0 
+NC202A.CBL     77   74    3       0       0 
+NC203A.CBL     58   54    3       1       0 
+NC204M.CBL     15   15    0       0       0 OK
+NC205A.CBL     10    7    3       0       0 
+NC206A.CBL     53   53    0       0       0 OK
+NC207A.CBL     85   79    6       0       0 
+NC208A.CBL     24   21    3       0       0 
+NC209A.CBL     32   32    0       0       0 OK
+NC210A.CBL     85   85    0       0       0 OK
+NC211A.CBL     51   51    0       0       0 OK
+NC214M.CBL      1    1    0       0       0 OK
+NC215A.CBL      7    7    0       0       0 OK
+NC216A.CBL     57   54    3       0       0 
+NC217A.CBL     82   76    6       0       0 
+NC218A.CBL    125  114   11       0       0 
+NC219A.CBL      9    9    0       0       0 OK
+NC220M.CBL     25   23    2       0       0 
+NC221A.CBL     17   14    3       0       0 
+NC222A.CBL      8    5    3       0       0 
+NC223A.CBL     94   87    7       0       0 
+NC224A.CBL     14   11    3       0       0 
+NC225A.CBL     63   60    3       0       0 
+NC231A.CBL     24   24    0       0       0 OK
+NC232A.CBL     17   17    0       0       0 OK
+NC233A.CBL     14   14    0       0       0 OK
+NC234A.CBL     17   17    0       0       0 OK
+NC235A.CBL     13   13    0       0       0 OK
+NC236A.CBL     10   10    0       0       0 OK
+NC237A.CBL     13   10    3       0       0 
+NC238A.CBL     10   10    0       0       0 OK
+NC239A.CBL      8    5    3       0       0 
+NC240A.CBL     11   11    0       0       0 OK
+NC241A.CBL     11   11    0       0       0 OK
+NC242A.CBL     12   12    0       0       0 OK
+NC243A.CBL     16   16    0       0       0 OK
+NC244A.CBL      6    3    3       0       0 
+NC245A.CBL     28   28    0       0       0 OK
+NC246A.CBL     49   49    0       0       0 OK
+NC247A.CBL     21   17    3       1       0 
+NC248A.CBL     11    8    3       0       0 
+NC250A.CBL    115  115    0       0       0 OK
+NC251A.CBL     59   59    0       0       0 OK
+NC252A.CBL     75   72    3       0       0 
+NC253A.CBL     61   58    3       0       0 
+NC254A.CBL      9    9    0       0       0 OK
+NC302M.CBL      0    0    0       0       0 OK
+NC303M.CBL      0    0    0       0       0 OK
+NC401M.CBL      0    0    0       0       0 OK
+--------    ----- ---- ---- ------- -------
+Total        4399 4197  196       5       1
+
+Number of programs:    95
+Successfully executed: 42
+Compile error:          0
+Execute error:          0

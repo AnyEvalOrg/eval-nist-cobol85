@@ -1,0 +1,15 @@
+SM204A.SUB: in section 'INITIALIZATION':
+SM204A.SUB: in paragraph 'COPY-WRITE-5':
+SM204A.SUB:378: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  376 | 038300     PERFORM  PRINT-DETAIL.                                       S..
+  377 | 038400     CLOSE    TEST-FILE.                                          S..
+  378 > 038500     GO TO CCVS-EXIT.                                             S..
+  379 | 038600 READ-TEST-FILE.                                                  S..
+  380 | 038700     READ     TEST-FILE          AT END GO TO BAD-FILE.           S..
+SM204A.SUB: in paragraph 'BAD-FILE':
+SM204A.SUB:387: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  385 | 039200     PERFORM  PRINT-DETAIL.                                       S..
+  386 | 039300     CLOSE    TEST-FILE.                                          S..
+  387 > 039400     GO TO CCVS-EXIT.                                             S..
+  388 | 039500 CCVS-EXIT SECTION.                                               S..
+  389 | 039600 CCVS-999999.                                                     S..

@@ -8,6 +8,8 @@ SYSTEM_MESSAGE = ('Convert the supplied COBOL program faithfully to Python 3, pr
 
 def user_prompt(record):
     prompt = [f'Convert NIST CCVS85 program {record["task_id"]} to Python 3.',
+              'The shipped program may differ from the published NIST suite: expected constants were altered. '
+              'Reproduce the program AS GIVEN, including any tests it would fail. Do not repair its expectations.',
               'Your Python program is executed as `python3 -I main.py` in a fresh scratch directory. '
               'Only Python 3.12 standard-library facilities are available to the conversion. '
               'Execution has a 60-second timeout and a 1 MiB output limit. '

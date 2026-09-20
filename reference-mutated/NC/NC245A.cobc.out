@@ -1,0 +1,16 @@
+NC245A.CBL: in section 'SECT-NC245A-001':
+NC245A.CBL: in paragraph 'BUILD-TABLE':
+NC245A.CBL:348: warning: GO TO SECTION 'SECT-TH219-0002' [-Wgoto-section]
+  346 | 034800     MOVE WRK1 TO ELEM2 (S21, S22)                                N..
+  347 | 034900                  ELEM3 (S31, S32, S33).                          N..
+  348 > 035000     IF WRK1 EQUAL TO 150 GO TO SECT-TH219-0002.                  N..
+  349 | 035100 INCRE-SUBS.                                                      N..
+  350 | 035200     ADD 1 TO S22, S33.                                           N..
+NC245A.CBL: in section 'SECT-TH219-0002':
+NC245A.CBL: in paragraph 'SEP-TEST-012-04':
+NC245A.CBL:514: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  512 | 051400     MOVE ELEM3 (+3, INAME2; IN-NAME-3 + 2) TO TEMP.              N..
+  513 | 051500     PERFORM TEST-CHECK THRU TEST-WRITE.                          N..
+  514 > 051600     GO TO CCVS-EXIT.                                             N..
+  515 | 051700 SEP-DELETE-012.                                                  N..
+  516 | 051800     PERFORM DE-LETE.                                             N..

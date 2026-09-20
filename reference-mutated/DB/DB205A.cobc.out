@@ -1,0 +1,14 @@
+DB205A.CBL:172: warning: COMMUNICATION SECTION is not implemented [-Wpending]
+  170 | 017000 01  CCVS-PGM-ID PIC X(6) VALUE                                   D..
+  171 | 017100     "DB205A".                                                    D..
+  172 > 017200 COMMUNICATION SECTION.                                           D..
+  173 | 017300 CD  CM-INQUE FOR INPUT.                                          D..
+  174 | 017400 01  INQUE-SPECS.                                                 D..
+DB205A.CBL: in section 'BEGIN-DB205A-TESTS':
+DB205A.CBL: in paragraph 'ACCEPT-TEST-1':
+DB205A.CBL:394: warning: ACCEPT MESSAGE COUNT is not implemented [-Wpending]
+  392 | 039400     MOVE "ACCEPT CD-NAME" TO FEATURE.                            D..
+  393 | 039500 ACCEPT-TEST-1.                                                   D..
+  394 > 039600     ACCEPT CM-INQUE MESSAGE COUNT.                               D..
+  395 | 039700     IF KEY-1 IS EQUAL TO 1                                       D..
+  396 | 039800         MOVE "DEBUG PROC WAS EXECUTED" TO RE-MARK                D..

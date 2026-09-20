@@ -1,0 +1,65 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ UPPER-CASE Function  FAIL* F-UPCASE-01                                                                                 
+                                                                                                                        
+                                     COMPUTED= FIGURE                                                                   
+                                     CORRECT = SIGURE                See ref. A-73 2.44                                 
+                                                                                                                        
+ UPPER-CASE Function  PASS  F-UPCASE-02                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-03                                                                                 
+ UPPER-CASE Function  FAIL* F-UPCASE-04                                                                                 
+                                                                                                                        
+                                     COMPUTED= 95                                                                       
+                                     CORRECT = W5                    See ref. A-73 2.44                                 
+                                                                                                                        
+ UPPER-CASE Function  PASS  F-UPCASE-05                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-06                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-07                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-08                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-09                                                                                 
+ UPPER-CASE Function  FAIL* F-UPCASE-10                                                                                 
+                                                                                                                        
+                                     COMPUTED= AND4                                                                     
+                                     CORRECT = ANDH                  See ref. A-73 2.44                                 
+                                                                                                                        
+ UPPER-CASE Function  PASS  F-UPCASE-11                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-12                                                                                 
+ UPPER-CASE Function  PASS  F-UPCASE-13                                                                                 
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                                                                                                                                                
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF140A                                                
+                                                                                                                        
+                                                    010 OF 013  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

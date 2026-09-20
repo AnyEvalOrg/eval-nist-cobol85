@@ -1,0 +1,34 @@
+Filename    total pass fail deleted inspect
+--------    ----- ---- ---- ------- -------
+IC101A.CBL      5    2    3       0       0 
+IC103A.CBL     10    7    3       0       0 
+IC106A.CBL     14   11    3       0       0 
+IC108A.CBL      9    6    3       0       0 
+IC112A.CBL      3    3    0       0       0 OK
+IC114A.CBL      3    3    0       0       0 OK
+IC116M.CBL      1    1    0       0       0 OK
+IC201A.CBL     11   11    0       0       0 OK
+IC203A.CBL     21   18    3       0       0 
+IC207A.CBL     11    8    3       0       0 
+IC209A.CBL      4    1    3       0       0 
+IC213A.CBL      3    0    3       0       0 
+IC216A.CBL      2    2    0       0       0 OK
+IC222A.CBL     16   13    3       0       0 
+IC223A.CBL     11   11    0       0       0 OK
+IC224A.CBL     44   44    0       0       0 OK
+IC225A.CBL     36   36    0       0       0 OK
+IC226A.CBL      4    4    0       0       0 OK
+IC227A.CBL     23   19    0       4       0 OK
+IC228A.CBL      4    4    0       0       0 OK
+IC233A.CBL      1    1    0       0       0 OK
+IC234A.CBL      1    1    0       0       0 OK
+IC235A.CBL     12    9    3       0       0 
+IC237A.CBL      1    1    0       0       0 OK
+IC401M.CBL      0    0    0       0       0 OK
+--------    ----- ---- ---- ------- -------
+Total         250  216   30       4       0
+
+Number of programs:    25
+Successfully executed: 15
+Compile error:          0
+Execute error:          0

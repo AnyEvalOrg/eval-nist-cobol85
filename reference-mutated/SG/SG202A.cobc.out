@@ -1,0 +1,27 @@
+SG202A.CBL: in section 'SEC45':
+SG202A.CBL: in paragraph 'P4502':
+SG202A.CBL:347: warning: P4501 and P0003 are not in the same SECTION [-Wsuspicious-perform-thru]
+  345 | 034700*             REFERENCING A OVERLAYABLE FOLLOWED BY A  PERMANENT  S..
+  346 | 034800*             SEGMENT  OF THE FIXED PORTION WILL BE EXECUTED OK.  S..
+  347 > 034900     PERFORM P4501 THRU P0003.                                    S..
+  348 | 035000     IF PERF-OVER-RES IS EQUAL TO "EB" PERFORM PASS               S..
+  349 | 035100         ELSE MOVE PERF-OVER-RES TO COMPUTED-A                    S..
+SG202A.CBL:347: warning: P0003 is defined before P4501 [-Wsuspicious-perform-thru]
+SG202A.CBL:422: note: 'P4501' defined here [-Wsuspicious-perform-thru]
+  420 | 042200     EXIT.                                                        S..
+  421 | 042300 SEC45 SECTION 45.                                                S..
+  422 > 042400 P4501.                                                           S..
+  423 | 042500     MOVE "A" TO PERF-OVER-RES-A.                                 S..
+  424 | 042600 P4502.                                                           S..
+SG202A.CBL:295: note: 'P0003' defined here [-Wsuspicious-perform-thru]
+  293 | 029500 SECT-SG-02-001 SECTION 00 .                                      S..
+  294 | 029600 SG-02-001.                                                       S..
+  295 > 029700 P0003.                                                           S..
+  296 | 029800     MOVE "B" TO PERF-OVER-RES-B.                                 S..
+  297 | 029900 P0004.                                                           S..
+SG202A.CBL:365: warning: P0004 and P4802 are not in the same SECTION [-Wsuspicious-perform-thru]
+  363 | 036500*             OVERLAYABLE SEGMENT OF THE FIXED PORTION WILL       S..
+  364 | 036600*             BE EXECUTED OK.                                     S..
+  365 > 036700     PERFORM P0004 THRU P4802.                                    S..
+  366 | 036800     IF PERF-RES-OVER EQUAL TO "XY" PERFORM PASS                  S..
+  367 | 036900         ELSE MOVE PERF-RES-OVER TO COMPUTED-A                    S..

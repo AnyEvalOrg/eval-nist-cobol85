@@ -1,0 +1,8 @@
+IC207A.CBL: in section 'SECT-IC207-0001':
+IC207A.CBL: in paragraph 'EXIT-IC207':
+IC207A.CBL:474: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  472 | 047400     PERFORM PRINT-DETAIL.                                        I..
+  473 | 047500 EXIT-IC207.                                                      I..
+  474 > 047600     GO TO CCVS-EXIT.                                             I..
+  475 | 047700 CCVS-EXIT SECTION.                                               I..
+  476 | 047800 CCVS-999999.                                                     I..

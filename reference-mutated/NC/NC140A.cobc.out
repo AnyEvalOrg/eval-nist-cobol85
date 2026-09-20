@@ -1,0 +1,23 @@
+NC140A.CBL: in section 'SECT-NC140A-0001':
+NC140A.CBL: in paragraph 'MOVE-VALUE':
+NC140A.CBL:346: warning: GO TO SECTION 'SECT-TH111-0002' [-Wgoto-section]
+  344 | 034600     MOVE WRK1 TO ELEM1 (S1) ELEM2 (S21 S22).                     N..
+  345 | 034700     IF WRK1 IS EQUAL TO 100                                      N..
+  346 > 034800              GO TO SECT-TH111-0002.                              N..
+  347 | 034900 INCRE-SUBS.                                                      N..
+  348 | 035000     ADD 1 TO S1.                                                 N..
+NC140A.CBL: in section 'SECT-TH111-0002':
+NC140A.CBL: in paragraph 'SET-TEST-004-23':
+NC140A.CBL:722: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  720 | 072200 SET-TEST-004-23.                                                 N..
+  721 | 072300     PERFORM TEST-CHECK2 THRU TEST-WRITE.                         N..
+  722 > 072400     GO TO CCVS-EXIT.                                             N..
+  723 | 072500 SET-DELETE-004.                                                  N..
+  724 | 072600     PERFORM DE-LETE.                                             N..
+NC140A.CBL: in paragraph 'SET-DELETE-004':
+NC140A.CBL:726: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  724 | 072600     PERFORM DE-LETE.                                             N..
+  725 | 072700     PERFORM TEST-WRITE.                                          N..
+  726 > 072800     GO TO CCVS-EXIT.                                             N..
+  727 | 072900 SECT-TH111-0003 SECTION.                                         N..
+  728 | 073000 TEST-CHECK1.                                                     N..

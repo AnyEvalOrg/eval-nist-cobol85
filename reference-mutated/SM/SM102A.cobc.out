@@ -1,0 +1,8 @@
+SM102A.SUB: in section 'FD-TEST':
+SM102A.SUB: in paragraph 'COPY-WRITE-11':
+SM102A.SUB:375: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  373 | 038000     PERFORM  PRINT-DETAIL.                                       S..
+  374 | 038100     CLOSE    TEST-FILE.                                          S..
+  375 > 038200     GO TO CCVS-EXIT.                                             S..
+  376 | 038300 READ-TSTFILE.                                                    S..
+  377 | 038400     READ     TEST-FILE          AT END GO TO BAD-FILE.           S..

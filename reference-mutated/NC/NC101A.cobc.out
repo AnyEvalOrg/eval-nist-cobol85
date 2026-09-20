@@ -1,0 +1,8 @@
+NC101A.CBL: in section 'SECT-NC101A-001':
+NC101A.CBL: in paragraph 'MPY-DELETE-F1-29-1':
+NC101A.CBL:1823: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1821 | 182300     PERFORM DE-LETE.                                             N..
+ 1822 | 182400     PERFORM PRINT-DETAIL.                                        N..
+ 1823 > 182500     GO TO   CCVS-EXIT.                                           N..
+ 1824 | 182600 MPY-TEST-F1-29-1.                                                N..
+ 1825 | 182700     MOVE   "MPY-TEST-F1-29-1" TO PAR-NAME.                       N..

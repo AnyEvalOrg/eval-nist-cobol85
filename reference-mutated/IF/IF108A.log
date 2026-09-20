@@ -1,0 +1,62 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-01                                                                              
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-02                                                                              
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-03                                                                              
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-04                                                                              
+ DATE-OF-INTEGER      FAIL* F-DATEOFINT-05                                                                              
+                                                                                                                        
+                                     COMPUTED=  016021231.000000000                                                     
+                                     CORRECT =  016026231.000000000  See ref. A-41 2.12                                 
+                                                                                                                        
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-06                                                                              
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-07                                                                              
+ DATE-OF-INTEGER      FAIL* F-DATEOFINT-08                                                                              
+                                                                                                                        
+                                     COMPUTED=  016010111.000000000                                                     
+                                     CORRECT =  016010181.000000000  See ref. A-41 2.12                                 
+                                                                                                                        
+ DATE-OF-INTEGER      FAIL* F-DATEOFINT-09                                                                              
+                                                                                                                        
+                                     COMPUTED=  032020202.000000000                                                     
+                                     CORRECT =  032020201.000000000  See ref. A-41 2.12                                 
+                                                                                                                        
+ DATE-OF-INTEGER      PASS  F-DATEOFINT-10                                                                              
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF108A                                                                                                                                                                        
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                    007 OF 010  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

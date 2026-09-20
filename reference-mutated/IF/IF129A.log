@@ -1,0 +1,69 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ ORD-MIN Function     PASS  F-ORD-MIN-01                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-02                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-03                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-04                                                                                
+ ORD-MIN Function     FAIL* F-ORD-MIN-05                                                                                
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000009.000000000  See ref. A-62 2.33                                 
+                                                                                                                        
+ ORD-MIN Function     PASS  F-ORD-MIN-06                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-07                                                                                
+ ORD-MIN Function     FAIL* F-ORD-MIN-08                                                                                
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000007.000000000  See ref. A-62 2.33                                 
+                                                                                                                        
+ ORD-MIN Function     PASS  F-ORD-MIN-09                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-10                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-11                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-12                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-13                                                                                
+ ORD-MIN Function     FAIL* F-ORD-MIN-14                                                                                
+                                                                                                                        
+                                     COMPUTED=  000000002.000000000                                                     
+                                     CORRECT =  000000001.000000000  See ref. A-62 2.33                                 
+                                                                                                                        
+ ORD-MIN Function     PASS  F-ORD-MIN-15                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-16                                                                                                                                                                                                        
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+ ORD-MIN Function     PASS  F-ORD-MIN-17                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF129A                                                
+                                                                                                                        
+                                                    014 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

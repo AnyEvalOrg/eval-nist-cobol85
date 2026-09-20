@@ -1,0 +1,75 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ MIN Function         PASS  F-MIN-01                                                                                    
+ MIN Function         PASS  F-MIN-02                                                                                    
+ MIN Function         PASS  F-MIN-03                                                                                    
+ MIN Function         PASS  F-MIN-04                                                                                    
+ MIN Function         PASS  F-MIN-05                                                                                    
+ MIN Function         PASS  F-MIN-06                                                                                    
+ MIN Function         PASS  F-MIN-07                                                                                    
+ MIN Function         PASS  F-MIN-08                                                                                    
+ MIN Function         FAIL* F-MIN-09                                                                                    
+                                                                                                                        
+                                     COMPUTED= -000000010.000000000                                                     
+                                     CORRECT =  000000000.000000000  See ref. A-56 2.27                                 
+                                                                                                                        
+ MIN Function         PASS  F-MIN-10                                                                                    
+ MIN Function         PASS  F-MIN-11                                                                                    
+ MIN Function         FAIL* F-MIN-12                                                                                    
+                                                                                                                        
+                                     COMPUTED= J                                                                        
+                                     CORRECT = 6                     See ref. A-56 2.27                                 
+                                                                                                                        
+ MIN Function         PASS  F-MIN-13                                                                                    
+ MIN Function         PASS  F-MIN-14                                                                                    
+ MIN Function         FAIL* F-MIN-15                                                                                    
+                                                                                                                        
+                                     COMPUTED=  000000000.000000000                                                     
+                                     CORRECT =  000000008.000000000  See ref. A-56 2.27                                 
+                                                                                                                        
+ MIN Function         PASS  F-MIN-17                                                                                                                                                                                                            
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+ MIN Function         PASS  F-MIN-18                                                                                    
+ MIN Function         PASS  F-MIN-19                                                                                    
+ MIN Function         PASS  F-MIN-20                                                                                    
+ MIN Function         PASS  F-MIN-21                                                                                    
+ MIN Function         PASS  F-MIN-22                                                                                    
+ MIN Function         PASS  F-MIN-23                                                                                    
+ MIN Function         PASS  F-MIN-24                                                                                    
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF123A                                                
+                                                                                                                        
+                                                    020 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    003 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

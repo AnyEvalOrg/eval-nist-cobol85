@@ -1,0 +1,14 @@
+DB304M.CBL:15: warning: COMMUNICATION SECTION is obsolete in COBOL 85 [-Wobsolete]
+   13 | 001300     GNU-Linux.                                                   D..
+   14 | 001400 DATA DIVISION.                                                   D..
+   15 > 001500 COMMUNICATION SECTION.                                           D..
+   16 | 001600                                                                  D..
+   17 | 001700 CD COMMNAME FOR INPUT.                                           D..
+DB304M.CBL:15: warning: COMMUNICATION SECTION is not implemented [-Wpending]
+DB304M.CBL: in section 'BUGGING':
+DB304M.CBL:28: warning: USE FOR DEBUGGING is obsolete in COBOL 85 [-Wobsolete]
+   26 | 002600 BUGGING SECTION.                                                 D..
+   27 | 002700                                                                  D..
+   28 > 002800     USE FOR DEBUGGING ON COMMNAME.                               D..
+   29 | 002900*Message expected for above statement: OBSOLETE                   D..
+   30 | 003000                                                                  D..

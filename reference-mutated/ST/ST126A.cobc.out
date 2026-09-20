@@ -1,0 +1,56 @@
+ST126A.SUB: in section 'CCVS1':
+ST126A.SUB: in paragraph 'ST126A-001-01':
+ST126A.SUB:350: warning: GO TO SECTION 'ZERO-IS-LESS-THAN-SPACE' [-Wgoto-section]
+  348 | 036500     MOVE     "SORT, MIXED CLASSES" TO FEATURE.                   S..
+  349 | 036600     IF       ZER-O IS LESS THAN SPAC-E                           S..
+  350 > 036700              GO TO ZERO-IS-LESS-THAN-SPACE.                      S..
+  351 | 036800 SPACE-IS-LESS-THAN-ZERO SECTION.                                 S..
+  352 | 036900 SORT-INIT-A.                                                     S..
+ST126A.SUB: in section 'SPACE-IS-LESS-THAN-ZERO':
+ST126A.SUB: in paragraph 'DUMMY-3-AND-4':
+ST126A.SUB:407: warning: GO TO SECTION 'CONTINUE-TESTING' [-Wgoto-section]
+  405 | 042200     MOVE     DUM-MY TO RE-MARK.                                  S..
+  406 | 042300     PERFORM  PRINT-DETAIL.                                       S..
+  407 > 042400     GO       TO CONTINUE-TESTING.                                S..
+  408 | 042500 ZERO-IS-LESS-THAN-SPACE SECTION.                                 S..
+  409 | 042600 SORT-INIT-C.                                                     S..
+ST126A.SUB: in section 'CONTINUE-TESTING':
+ST126A.SUB: in paragraph 'ST126A-001-02':
+ST126A.SUB:549: warning: GO TO SECTION 'ZERO-IS-LESS-THAN-SPACE-2' [-Wgoto-section]
+  547 | 056400     MOVE     ZERO TO UTIL-CTR.                                   S..
+  548 | 056500     IF       ZER-O IS LESS THAN SPAC-E                           S..
+  549 > 056600              GO TO ZERO-IS-LESS-THAN-SPACE-2.                    S..
+  550 | 056700 SPACE-IS-LESS-THAN-ZERO-2 SECTION.                               S..
+  551 | 056800 SORT-INIT-A-2.                                                   S..
+ST126A.SUB: in section 'SPACE-IS-LESS-THAN-ZERO-2':
+ST126A.SUB: in paragraph 'DUMMY-3-AND-4-2':
+ST126A.SUB:606: warning: GO TO SECTION 'CONTINUE-TESTING-2' [-Wgoto-section]
+  604 | 062100     MOVE     DUM-MY TO RE-MARK.                                  S..
+  605 | 062200     PERFORM  PRINT-DETAIL.                                       S..
+  606 > 062300     GO       TO CONTINUE-TESTING-2.                              S..
+  607 | 062400 ZERO-IS-LESS-THAN-SPACE-2 SECTION.                               S..
+  608 | 062500 SORT-INIT-C-2.                                                   S..
+ST126A.SUB: in section 'CONTINUE-TESTING-2':
+ST126A.SUB: in paragraph 'ST126A-001-03':
+ST126A.SUB:748: warning: GO TO SECTION 'ZERO-IS-LESS-THAN-SPACE-3' [-Wgoto-section]
+  746 | 076300     MOVE     ZERO TO UTIL-CTR.                                   S..
+  747 | 076400     IF       ZER-O IS LESS THAN SPAC-E                           S..
+  748 > 076500              GO TO ZERO-IS-LESS-THAN-SPACE-3.                    S..
+  749 | 076600 SPACE-IS-LESS-THAN-ZERO-3 SECTION.                               S..
+  750 | 076700 SORT-INIT-A-3.                                                   S..
+ST126A.SUB: in section 'SPACE-IS-LESS-THAN-ZERO-3':
+ST126A.SUB: in paragraph 'DUMMY-3-AND-4-3':
+ST126A.SUB:805: warning: GO TO SECTION 'CONTINUE-TESTING-3' [-Wgoto-section]
+  803 | 082000     MOVE     DUM-MY TO RE-MARK.                                  S..
+  804 | 082100     PERFORM  PRINT-DETAIL.                                       S..
+  805 > 082200     GO       TO CONTINUE-TESTING-3.                              S..
+  806 | 082300 ZERO-IS-LESS-THAN-SPACE-3 SECTION.                               S..
+  807 | 082400 SORT-INIT-C-3.                                                   S..
+ST126A.SUB: in section 'CONTINUE-TESTING-3':
+ST126A.SUB: in paragraph 'SORT-WRITE-8-3':
+ST126A.SUB:932: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  930 | 094700     PERFORM  PRINT-DETAIL.                                       S..
+  931 | 094800     CLOSE    SORTIN-3G.                                          S..
+  932 > 094900     GO TO    CCVS-EXIT.                                          S..
+  933 | 095000 READ-SORTIN-3.                                                   S..
+  934 | 095100     READ     SORTIN-3G AT END GO TO READ-ERROR-3.                S..

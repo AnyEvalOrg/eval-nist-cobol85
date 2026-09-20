@@ -1,0 +1,15 @@
+RL213A.SUB: in section 'SECT-RL213A-001':
+RL213A.SUB: in paragraph 'REL-DELETE-001':
+RL213A.SUB:402: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  400 | 041200     PERFORM DE-LETE.                                             R..
+  401 | 041300     PERFORM PRINT-DETAIL.                                        R..
+  402 > 041400     GO TO   CCVS-EXIT.                                           R..
+  403 | 041500 REL-TEST-001.                                                    R..
+  404 | 041600     MOVE    FILE-RECORD-INFO-P1-120 (1) TO RL-FS1R1-F-G-120.     R..
+RL213A.SUB: in paragraph 'REL-DELETE-002':
+RL213A.SUB:428: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  426 | 043800     PERFORM DE-LETE.                                             R..
+  427 | 043900     PERFORM PRINT-DETAIL.                                        R..
+  428 > 044000     GO TO   CCVS-EXIT.                                           R..
+  429 | 044100 REL-TEST-002.                                                    R..
+  430 | 044200     READ    RL-FS1                                               R..

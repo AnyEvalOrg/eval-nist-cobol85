@@ -1,0 +1,15 @@
+NC246A.CBL: in section 'SECT-NC246A-001':
+NC246A.CBL: in paragraph 'QUAL-DELETE-12':
+NC246A.CBL:1226: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1224 | 122600     PERFORM DE-LETE.                                             N..
+ 1225 | 122700     PERFORM PRINT-DETAIL.                                        N..
+ 1226 > 122800     GO TO   CCVS-EXIT.                                           N..
+ 1227 | 122900 QUAL-TEST-12.                                                    N..
+ 1228 | 123000     IF      ELEM1 OF L8 IN L7 OF L6 OF L5 IN L4 IN L3 OF L2      N..
+NC246A.CBL: in paragraph 'QUAL-TEST-12':
+NC246A.CBL:1301: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1299 | 130100             PERFORM PRINT-DETAIL.                                N..
+ 1300 | 130200*                                                                 N..
+ 1301 > 130300     GO TO CCVS-EXIT.                                             N..
+ 1302 | 130400*                                                                 N..
+ 1303 | 130500 SECT-TH220-0003 SECTION.                                         N..

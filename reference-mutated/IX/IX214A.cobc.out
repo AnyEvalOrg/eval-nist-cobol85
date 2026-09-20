@@ -1,0 +1,8 @@
+IX214A.CBL: in section 'SECT-0001-IX214A':
+IX214A.CBL: in paragraph 'START-WRITE-GF-37':
+IX214A.CBL:2257: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2255 | 230300                                                                  I..
+ 2256 | 230400     CLOSE   IX-FS1.                                              I..
+ 2257 > 230500     GO TO  CCVS-EXIT.                                            I..
+ 2258 | 230600                                                                  I..
+ 2259 | 230700                                                                  I..

@@ -1,0 +1,8 @@
+ST121A.SUB: in section 'SECT-ST119A-0001':
+ST121A.SUB: in paragraph 'SORT-WRITE-9':
+ST121A.SUB:451: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  449 | 045600     PERFORM  PRINT-DETAIL.                                       S..
+  450 | 045700     CLOSE    SORTIN-1C.                                          S..
+  451 > 045800     GO TO    CCVS-EXIT.                                          S..
+  452 | 045900 READ-SORTED-FILE.                                                S..
+  453 | 046000     READ     SORTIN-1C          AT END GO TO BAD-FILE.           S..

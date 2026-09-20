@@ -1,0 +1,21 @@
+IX108A.CBL: in section 'SECT-IX-04-001':
+IX108A.CBL: in paragraph 'WRITE-TEST-GF-01-1':
+IX108A.CBL:529: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  527 | 057800         MOVE "FILE IX-FS2 CANNOT BE CREATED CORRECTLY; IX-41"    I..
+  528 | 057900              TO RE-MARK                                          I..
+  529 > 058000         GO TO CCVS-EXIT.                                         I..
+  530 | 058100 WRITE-TEST-GF-01-2.                                              I..
+  531 | 058200     MOVE ZERO TO SWITCH-NOT-INVALID.                             I..
+IX108A.CBL: in paragraph 'WRITE-TEST-GF-01-2-1':
+IX108A.CBL:549: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  547 | 059800         MOVE "FILE IX-FS1 CANNOT BE CREATED CORRECTLY; IX-41"    I..
+  548 | 059900              TO RE-MARK                                          I..
+  549 > 060000         GO TO CCVS-EXIT.                                         I..
+  550 | 060100     IF SWITCH-END-XXX     = 1                                    I..
+  551 | 060200         MOVE 0 TO SWITCH-END-XXX                                 I..
+IX108A.CBL:557: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  555 | 060600              TO RE-MARK                                          I..
+  556 | 060700         PERFORM FAIL                                             I..
+  557 > 060800         GO TO CCVS-EXIT.                                         I..
+  558 | 060900     IF        IX-FS2-STATUS NOT EQUAL TO "00"                    I..
+  559 | 061000         ADD  1  TO WRK-CS-09V00-016.                             I..

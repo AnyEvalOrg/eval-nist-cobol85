@@ -21,7 +21,7 @@
     "inspect_ai": "0.3.260",
     "eval_version": "1.0.0",
     "dependency": "",
-    "reference": "reference/; GnuCOBOL 3.2.0; expanded sources identify CCVS85 4.2"
+    "reference": "reference-mutated/; validated mutated GnuCOBOL logs"
   },
   "execution": {
     "class": "sandbox-k8s",
@@ -35,14 +35,14 @@
   "tasks": [
     {
       "name": "nist_cobol85_python",
-      "samples": 323
+      "samples": 101
     }
   ],
-  "total_samples": 323,
+  "total_samples": 101,
   "external_assets": [
     {
       "type": "container",
-      "source": "us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-cobol-sandbox:1.0.0"
+      "source": "us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-livecodebench-sandbox:1.0.0"
     },
     {
       "type": "container",
@@ -58,5 +58,6 @@
     "type": "deterministic",
     "metric": "pass@1",
     "judge": null
-  }
+  },
+  "dataset_status": "ready"
 }

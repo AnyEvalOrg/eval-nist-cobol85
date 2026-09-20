@@ -1,0 +1,8 @@
+SG101A.CBL: in section 'RUN-THE-TESTS':
+SG101A.CBL: in paragraph 'SEG-WRITE-100':
+SG101A.CBL:1784: warning: GO TO SECTION 'SECOND-HALF' [-Wgoto-section]
+ 1782 | 178400     MOVE "SEG-TEST-100" TO PAR-NAME.                             S..
+ 1783 | 178500     PERFORM PRINT-DETAIL.                                        S..
+ 1784 > 178600     GO TO SECOND-HALF.                                           S..
+ 1785 | 178700 01  SECTION 01.                                                  S..
+ 1786 | 178800 PARA-01.                                                         S..

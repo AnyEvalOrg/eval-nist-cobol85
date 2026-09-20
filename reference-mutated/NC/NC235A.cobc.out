@@ -1,0 +1,8 @@
+NC235A.CBL: in section 'SECT-NC235A-001':
+NC235A.CBL: in paragraph 'IDX-WRITE-F2-13':
+NC235A.CBL:615: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  613 | 061500 IDX-WRITE-F2-13.                                                 N..
+  614 | 061600     PERFORM PRINT-DETAIL.                                        N..
+  615 > 061700     GO TO CCVS-EXIT.                                             N..
+  616 | 061800*                                                                 N..
+  617 | 061900 PUTOUT-COMPUTED-A.                                               N..

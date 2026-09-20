@@ -1,0 +1,33 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB204A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ MERGE OUTPUT PROC    PASS  MERGE-TEST                    DEBUG PROC WAS EXECUTED                                       
+ MERGE OUTPUT PROC    INSPT MERGE-TEST-A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         437                   <===  DEBUG-LINE                             
+                                                                                                                        
+ MERGE OUTPUT PROC    PASS  MERGE-TEST-B                  DEBUG-NAME                                                    
+ MERGE OUTPUT PROC    PASS  MERGE-TEST-C                  DEBUG-CONTENTS                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB204A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    003 OF 004  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    001 TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

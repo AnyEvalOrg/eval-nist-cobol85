@@ -1,0 +1,50 @@
+NC203A.CBL:99: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   97 | 009700 77  25ANS PICTURE  99 VALUE ZERO.                                N..
+   98 | 009800 77  25REM PICTURE 99 VALUE ZERO.                                 N..
+   99 > 009900 77  DIV-30-Y1 PICTURE 999 USAGE COMP SYNC RIGHT VALUE 31.        N..
+  100 | 010000 77  DIV-30-Y2 PICTURE 999 USAGE COMP VALUE 54.                   N..
+  101 | 010100 77  DIV-30-Y3 PICTURE 999 VALUE 151.                             N..
+NC203A.CBL:102: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  100 | 010000 77  DIV-30-Y2 PICTURE 999 USAGE COMP VALUE 54.                   N..
+  101 | 010100 77  DIV-30-Y3 PICTURE 999 VALUE 151.                             N..
+  102 > 010200 77  DIV-30-Y4         PICTURE 9(4) SYNC RIGHT VALUE 1010.        N..
+  103 | 010300 77  DIV-Z1-30 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  104 | 010400 77  DIV-Z2-30 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+NC203A.CBL:104: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  102 | 010200 77  DIV-30-Y4         PICTURE 9(4) SYNC RIGHT VALUE 1010.        N..
+  103 | 010300 77  DIV-Z1-30 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  104 > 010400 77  DIV-Z2-30 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  105 | 010500 77  DIV-Z3-30 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  106 | 010600 77  DIV-Z4-30 PICTURE 999 VALUE ZERO.                            N..
+NC203A.CBL:105: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  103 | 010300 77  DIV-Z1-30 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  104 | 010400 77  DIV-Z2-30 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  105 > 010500 77  DIV-Z3-30 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  106 | 010600 77  DIV-Z4-30 PICTURE 999 VALUE ZERO.                            N..
+  107 | 010700 77  DIV-30-A1 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+NC203A.CBL:107: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  105 | 010500 77  DIV-Z3-30 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  106 | 010600 77  DIV-Z4-30 PICTURE 999 VALUE ZERO.                            N..
+  107 > 010700 77  DIV-30-A1 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  108 | 010800 77  DIV-30-A2 PICTURE 999 VALUE ZERO.                            N..
+  109 | 010900 77  DIV-30-A3 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+NC203A.CBL:109: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  107 | 010700 77  DIV-30-A1 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  108 | 010800 77  DIV-30-A2 PICTURE 999 VALUE ZERO.                            N..
+  109 > 010900 77  DIV-30-A3 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  110 | 011000 77  DIV-30-A4 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  111 | 011100 01  DIV-ENTRIES.                                                 N..
+NC203A.CBL:137: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  135 | 013500 01  NE-04V01-0006     PIC ****.9.                                N..
+  136 | 013600 01  GRP-0010.                                                    N..
+  137 > 013700     02 WRK-DU-03V00-L-0011       PIC 9(03) SYNC LEFT.            N..
+  138 | 013800     02 WRK-O005F-0012        OCCURS   5  TIMES.                  N..
+  139 | 013900        03 WRK-O003F-0013     OCCURS   3  TIMES.                  N..
+NC203A.CBL: in section 'SECT-NC203A-001':
+NC203A.CBL: in paragraph 'DIV-DELETE-F4-20':
+NC203A.CBL:1647: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1645 | 164700     PERFORM DE-LETE.                                             N..
+ 1646 | 164800     PERFORM PRINT-DETAIL.                                        N..
+ 1647 > 164900     GO TO CCVS-EXIT.                                             N..
+ 1648 | 165000 DIV-FAIL-F4-20.                                                  N..
+ 1649 | 165100     PERFORM FAIL.                                                N..

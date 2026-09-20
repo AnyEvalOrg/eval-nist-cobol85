@@ -1,0 +1,8 @@
+SM104A.SUB: in section 'ENVIRONMENT-TEST':
+SM104A.SUB: in paragraph 'COPY-WRITE-7':
+SM104A.SUB:431: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  429 | 043600     PERFORM  PRINT-DETAIL.                                       S..
+  430 | 043700     CLOSE    TEST-FILE.                                          S..
+  431 > 043800     GO TO CCVS-EXIT.                                             S..
+  432 | 043900 READ-TEST-FILE.                                                  S..
+  433 | 044000     READ     TEST-FILE          AT END GO TO BAD-FILE.           S..

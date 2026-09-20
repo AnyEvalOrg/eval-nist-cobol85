@@ -1,0 +1,8 @@
+SQ201M.CBL: in section 'SECT-SQ201M-0001':
+SQ201M.CBL: in paragraph 'SQ201M-END-ROUTINE':
+SQ201M.CBL:644: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  642 | 069100     MOVE "END OF SQ201M VALIDATION TESTS" TO PRINT-REC.          S..
+  643 | 069200     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      S..
+  644 > 069300     GO TO CCVS-EXIT.                                             S..
+  645 | 069400 EOP-TEST-1.                                                      S..
+  646 | 069500     MOVE LINAGE-COUNTER TO DETAIL-LC.                            S..

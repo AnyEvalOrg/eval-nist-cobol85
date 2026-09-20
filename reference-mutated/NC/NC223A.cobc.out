@@ -1,0 +1,8 @@
+NC223A.CBL: in section 'SECT-NC223A-001':
+NC223A.CBL: in paragraph 'INI-DELETE-GF-9':
+NC223A.CBL:2058: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2056 | 205800     PERFORM DE-LETE.                                             N..
+ 2057 | 205900     PERFORM PRINT-DETAIL.                                        N..
+ 2058 > 206000     GO TO   CCVS-EXIT.                                           N..
+ 2059 | 206100 INI-TEST-GF-9-1.                                                 N..
+ 2060 | 206200     MOVE   "INI-TEST-GF-9-1" TO PAR-NAME.                        N..

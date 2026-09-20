@@ -11,7 +11,7 @@ allowCIDR: []
 services:
   default:
     # Cloud Build tag matches pyproject.toml; AnyEval pins the digest in its catalog.
-    image: us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-cobol-sandbox:1.0.0
+    image: us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-livecodebench-sandbox:1.0.0
     command: ["sleep", "infinity"]
     workingDir: /tmp
     runtimeClassName: gvisor

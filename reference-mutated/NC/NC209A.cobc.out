@@ -1,0 +1,8 @@
+NC209A.CBL: in section 'SECT-NC209A-001':
+NC209A.CBL: in paragraph 'MOV-INIT-F2-3':
+NC209A.CBL:573: warning: no CORRESPONDING items found [-Wcorresponding]
+  571 | 057300     MOVE     "MOV-TEST-F2-3" TO PAR-NAME.                        N..
+  572 | 057400     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              N..
+  573 > 057500     MOVE     CORR B-LEVEL OF A-LEVEL TO B-SET.                   N..
+  574 | 057600     MOVE     1 TO REC-CT.                                        N..
+  575 | 057700*        NOTE CORR IS A LEGAL ABBREVIATION.                       N..

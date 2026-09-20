@@ -1,0 +1,24 @@
+ST107A.SUB: in section 'CCVS1':
+ST107A.SUB: in paragraph 'ST107-0001-01':
+ST107A.SUB:320: warning: GO TO SECTION 'ZERO-IS-LESS-THAN-SPACE' [-Wgoto-section]
+  318 | 032500     MOVE     "SORT, MIXED CLASSES" TO FEATURE.                   S..
+  319 | 032600     IF       ZER-O IS LESS THAN SPAC-E                           S..
+  320 > 032700              GO TO ZERO-IS-LESS-THAN-SPACE.                      S..
+  321 | 032800 SPACE-IS-LESS-THAN-ZERO SECTION.                                 S..
+  322 | 032900 SORT-INIT-A.                                                     S..
+ST107A.SUB: in section 'SPACE-IS-LESS-THAN-ZERO':
+ST107A.SUB: in paragraph 'DUMMY-3-AND-4':
+ST107A.SUB:377: warning: GO TO SECTION 'CONTINUE-TESTING' [-Wgoto-section]
+  375 | 038200     MOVE     DUM-MY TO RE-MARK.                                  S..
+  376 | 038300     PERFORM  PRINT-DETAIL.                                       S..
+  377 > 038400     GO       TO CONTINUE-TESTING.                                S..
+  378 | 038500 ZERO-IS-LESS-THAN-SPACE SECTION.                                 S..
+  379 | 038600 SORT-INIT-C.                                                     S..
+ST107A.SUB: in section 'CONTINUE-TESTING':
+ST107A.SUB: in paragraph 'SORT-WRITE-8':
+ST107A.SUB:504: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  502 | 050900     PERFORM  PRINT-DETAIL.                                       S..
+  503 | 051000     CLOSE    SORTIN-1G.                                          S..
+  504 > 051100     GO TO    CCVS-EXIT.                                          S..
+  505 | 051200 READ-SORTIN.                                                     S..
+  506 | 051300     READ     SORTIN-1G AT END GO TO READ-ERROR.                  S..

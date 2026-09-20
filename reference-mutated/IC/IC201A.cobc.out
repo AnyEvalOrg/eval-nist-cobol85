@@ -1,0 +1,30 @@
+IC201A.CBL: in section 'SECT-IC201-0001':
+IC201A.CBL: in paragraph 'CALL-TEST-02-01':
+IC201A.CBL:385: warning: duplicate USING BY REFERENCE item 'DN1' [-Wothers]
+  383 | 038500     MOVE 1 TO DN1.                                               I..
+  384 | 038600     MOVE 0 TO DN2, DN3, DN4.                                     I..
+  385 > 038700     CALL "IC202A" USING DN1, DN2, DN1, DN4.                      I..
+  386 | 038800     IF DN1 NOT EQUAL TO 2                                        I..
+  387 | 038900         GO TO CALL-FAIL-02-01-1.                                 I..
+IC201A.CBL: in paragraph 'CALL-TEST-02-02':
+IC201A.CBL:427: warning: duplicate USING BY REFERENCE item 'DN2' [-Wothers]
+  425 | 042700     ADD 1 TO REC-CT.                                             I..
+  426 | 042800     MOVE 0 TO DN4, DN3, DN2, DN1.                                I..
+  427 > 042900     CALL ID1 USING DN1 DN2 DN3 DN2.                              I..
+  428 | 043000     IF DN1 NOT EQUAL TO 0                                        I..
+  429 | 043100         GO TO CALL-FAIL-02-02-1.                                 I..
+IC201A.CBL: in paragraph 'CALL-TEST-02-03':
+IC201A.CBL:471: warning: duplicate USING BY REFERENCE item 'DN1' [-Wothers]
+  469 | 047100     MOVE 10 TO DN2.                                              I..
+  470 | 047200     MOVE 25 TO DN1.                                              I..
+  471 > 047300     CALL ID1 USING DN1 DN2 DN1 DN2.                              I..
+  472 | 047400     IF DN1 EQUAL TO 26                                           I..
+  473 | 047500         GO TO CHECK-02-03-2.                                     I..
+IC201A.CBL:471: warning: duplicate USING BY REFERENCE item 'DN2' [-Wothers]
+IC201A.CBL: in paragraph 'EXIT-IC201':
+IC201A.CBL:590: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  588 | 059000     PERFORM PRINT-DETAIL.                                        I..
+  589 | 059100 EXIT-IC201.                                                      I..
+  590 > 059200     GO TO CCVS-EXIT.                                             I..
+  591 | 059300 SECT-IC201-0002 SECTION.                                         I..
+  592 | 059400 CHECK-TEST-01.                                                   I..

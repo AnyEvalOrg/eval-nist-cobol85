@@ -4,3 +4,4 @@ recursive-include tests *.py
 recursive-include scaffolds *.yaml
 recursive-include reference *
 include run.py bundle.template.json
+recursive-include reference-mutated *

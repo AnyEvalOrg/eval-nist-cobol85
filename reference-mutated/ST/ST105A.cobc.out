@@ -1,0 +1,8 @@
+ST105A.SUB: in section 'OUTPROC':
+ST105A.SUB: in paragraph 'SORT-TEST-1':
+ST105A.SUB:362: warning: GO TO SECTION 'OUTPROC-EXIT' [-Wgoto-section]
+  360 | 037200 SORT-TEST-1.                                                     S..
+  361 | 037300     RETURN   SORTFILE-1E INTO SORTOUT-REC                        S..
+  362 > 037400              AT END GO TO OUTPROC-EXIT.                          S..
+  363 | 037500     WRITE    SORTOUT-REC.                                        S..
+  364 | 037600     IF       NON-KEY-ITEM EQUAL TO +987654321078                 S..

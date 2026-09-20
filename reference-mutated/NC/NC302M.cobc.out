@@ -1,0 +1,44 @@
+NC302M.CBL:6: warning: AUTHOR is obsolete in COBOL 85 [-Wobsolete]
+    4 | 000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF OBSOLETE             N..
+    5 | 000500*MINIMUM SUBSET NUCLEUS FEATURES.                                 N..
+    6 > 000600 AUTHOR. DAVID G BAMBER.                                          N..
+    7 | 000700*Message expected for above statement: OBSOLETE                   N..
+    8 | 000800 INSTALLATION. NCC.                                               N..
+NC302M.CBL:8: warning: INSTALLATION is obsolete in COBOL 85 [-Wobsolete]
+    6 | 000600 AUTHOR. DAVID G BAMBER.                                          N..
+    7 | 000700*Message expected for above statement: OBSOLETE                   N..
+    8 > 000800 INSTALLATION. NCC.                                               N..
+    9 | 000900*Message expected for above statement: OBSOLETE                   N..
+   10 | 001000 DATE-WRITTEN. 19TH AUG 1988.                                     N..
+NC302M.CBL:10: warning: DATE-WRITTEN is obsolete in COBOL 85 [-Wobsolete]
+    8 | 000800 INSTALLATION. NCC.                                               N..
+    9 | 000900*Message expected for above statement: OBSOLETE                   N..
+   10 > 001000 DATE-WRITTEN. 19TH AUG 1988.                                     N..
+   11 | 001100*Message expected for above statement: OBSOLETE                   N..
+   12 | 001200 SECURITY. NO SECURITY.                                           N..
+NC302M.CBL:12: warning: SECURITY is obsolete in COBOL 85 [-Wobsolete]
+   10 | 001000 DATE-WRITTEN. 19TH AUG 1988.                                     N..
+   11 | 001100*Message expected for above statement: OBSOLETE                   N..
+   12 > 001200 SECURITY. NO SECURITY.                                           N..
+   13 | 001300*Message expected for above statement: OBSOLETE                   N..
+   14 | 001400 ENVIRONMENT DIVISION.                                            N..
+NC302M.CBL:22: warning: MEMORY SIZE is obsolete in COBOL 85 [-Wobsolete]
+   20 | 002000     MEMORY SIZE                                                  N..
+   21 | 002100     64000                                                        N..
+   22 > 002200     CHARACTERS.                                                  N..
+   23 | 002300*Message expected for above statement: OBSOLETE                   N..
+   24 | 002400                                                                  N..
+NC302M.CBL: in paragraph 'NC302M-ALTER':
+NC302M.CBL:34: warning: ALTER is obsolete in COBOL 85 [-Wobsolete]
+   32 | 003200                                                                  N..
+   33 | 003300 NC302M-ALTER.                                                    N..
+   34 > 003400     ALTER NC302M-PROC1 TO NC302M-PROC2.                          N..
+   35 | 003500*Message expected for above statement: OBSOLETE                   N..
+   36 | 003600                                                                  N..
+NC302M.CBL: in paragraph 'NC302M-STOP':
+NC302M.CBL:47: warning: STOP literal is obsolete in COBOL 85 [-Wobsolete]
+   45 | 004500                                                                  N..
+   46 | 004600 NC302M-STOP.                                                     N..
+   47 > 004700     STOP "FNC302".                                               N..
+   48 | 004800*Message expected for above statement: OBSOLETE                   N..
+   49 | 004900                                                                  N..

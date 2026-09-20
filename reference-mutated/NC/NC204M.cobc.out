@@ -1,0 +1,8 @@
+NC204M.CBL: in section 'AC-CEPT':
+NC204M.CBL: in paragraph 'ACCEPT-EXIT':
+NC204M.CBL:1162: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1160 | 116200             PERFORM PRINT-DETAIL.                                N..
+ 1161 | 116300 ACCEPT-EXIT.                                                     N..
+ 1162 > 116400     GO TO    CCVS-EXIT.                                          N..
+ 1163 | 116500 DISPLAY-SUPPORT-1.                                               N..
+ 1164 | 116600     PERFORM  BLANK-LINE-PRINT.                                   N..

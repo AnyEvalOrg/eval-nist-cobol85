@@ -1,0 +1,30 @@
+IC223A.CBL: in section 'SECT-IC223A-001':
+IC223A.CBL: in paragraph 'CALL-TEST-02-01':
+IC223A.CBL:401: warning: duplicate USING BY REFERENCE item 'DN1' [-Wothers]
+  399 | 040100     MOVE 1 TO DN1.                                               I..
+  400 | 040200     MOVE 0 TO DN2, DN3, DN4.                                     I..
+  401 > 040300     CALL "IC223A-1" USING REFERENCE DN1, DN2, DN1, DN4           I..
+  402 | 040400     END-CALL.                                                    I..
+  403 | 040500     IF DN1 NOT EQUAL TO 2                                        I..
+IC223A.CBL: in paragraph 'CALL-TEST-02-02':
+IC223A.CBL:444: warning: duplicate USING BY REFERENCE item 'DN2' [-Wothers]
+  442 | 044400     ADD 1 TO REC-CT.                                             I..
+  443 | 044500     MOVE 0 TO DN4, DN3, DN2, DN1.                                I..
+  444 > 044600     CALL ID1 USING REFERENCE DN1 DN2 DN3 DN2                     I..
+  445 | 044700     END-CALL.                                                    I..
+  446 | 044800     IF DN1 NOT EQUAL TO 0                                        I..
+IC223A.CBL: in paragraph 'CALL-TEST-02-03':
+IC223A.CBL:489: warning: duplicate USING BY REFERENCE item 'DN1' [-Wothers]
+  487 | 048900     MOVE 10 TO DN2.                                              I..
+  488 | 049000     MOVE 25 TO DN1.                                              I..
+  489 > 049100     CALL ID1 USING REFERENCE DN1 DN2 DN1 DN2                     I..
+  490 | 049200     END-CALL.                                                    I..
+  491 | 049300     IF DN1 EQUAL TO 26                                           I..
+IC223A.CBL:489: warning: duplicate USING BY REFERENCE item 'DN2' [-Wothers]
+IC223A.CBL: in paragraph 'EXIT-IC223A':
+IC223A.CBL:613: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  611 | 061300     PERFORM PRINT-DETAIL.                                        I..
+  612 | 061400 EXIT-IC223A.                                                     I..
+  613 > 061500     GO TO CCVS-EXIT.                                             I..
+  614 | 061600 SECT-IC223A-002 SECTION.                                         I..
+  615 | 061700 CHECK-TEST-01.                                                   I..

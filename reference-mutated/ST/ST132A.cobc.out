@@ -1,0 +1,24 @@
+ST132A.CBL: in section 'SRT-4':
+ST132A.CBL: in paragraph 'FOURTH-SORT':
+ST132A.CBL:425: warning: GO TO SECTION 'SRT-5' [-Wgoto-section]
+  423 | 043000             INPUT PROCEDURE SRT-4-INPUT                          S..
+  424 | 043100             OUTPUT PROCEDURE SRT-4-OUTPUT.                       S..
+  425 > 043200     GO TO SRT-5.                                                 S..
+  426 | 043300 SRT-4-INPUT SECTION.                                             S..
+  427 | 043400 P1-CREATE-S4.                                                    S..
+ST132A.CBL: in section 'SRT-5':
+ST132A.CBL: in paragraph 'FIFTH-SORT':
+ST132A.CBL:581: warning: GO TO SECTION 'SRT-6' [-Wgoto-section]
+  579 | 058700             USING FILE4                                          S..
+  580 | 058800             OUTPUT PROCEDURE SRT-5-OUTPUT.                       S..
+  581 > 058900     GO TO SRT-6.                                                 S..
+  582 | 059000 SRT-5-OUTPUT SECTION.                                            S..
+  583 | 059100 OPEN-SRT5-OUT.                                                   S..
+ST132A.CBL: in section 'SRT-6':
+ST132A.CBL: in paragraph 'STOP-RUN':
+ST132A.CBL:694: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  692 | 070000             OUTPUT PROCEDURE SRT-6-OUTPUT.                       S..
+  693 | 070100 STOP-RUN.                                                        S..
+  694 > 070200     GO TO    CCVS-EXIT.                                          S..
+  695 | 070300 SRT-6-OUTPUT SECTION.                                            S..
+  696 | 070400 SORT-TEST-21.                                                    S..

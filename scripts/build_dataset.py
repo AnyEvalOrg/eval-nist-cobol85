@@ -78,7 +78,7 @@ def dependencies(path, reference):
     return dict(sorted(copies.items())), dict(sorted(libraries.items()))
 
 
-def build(reference: Path, output: Path):
+def _build(reference: Path, output: Path, mutations=None):
     perl = read(reference / 'report.pl')
     sets = {name: set(re.findall(r'\$' + name + r'\{(\w+)\}\s*=\s*1;', perl))
             for name in ('comp_only', 'no_output', 'to_kill')}
@@ -99,7 +99,7 @@ def build(reference: Path, output: Path):
         norm = normalize_report(report)
         rows = [r for r in norm if r[0] == 'row' and r[2] in {'PASS', 'FAIL'}]
         inspection = sum(r[2] for r in norm if r[:2] == ('summary', 'REQUIRE INSPECTION'))
-        reasons = []
+        reasons = list(mutations['programs'][name]['reasons']) if mutations else []
         for key in sets:
             if name in sets[key]: reasons.append(key)
         if module == 'DB': reasons.append('compiler_specific_debugging')
@@ -147,7 +147,7 @@ def build(reference: Path, output: Path):
                               reasons=['continuation_outside_indexed_population'],
                               justification='.SUB runs inherit predecessor files (report.pl only removes XXXXX* for .CBL); no standalone reference inputs supplied.'))
     counts = {m: sum(r['module'] == m for r in records) for m in MODULES}
-    eligibility = dict(population='Standalone .CBL programs in reference/index.json',
+    eligibility = dict(population='Mutated standalone .CBL programs' if mutations else 'Original standalone .CBL programs',
                        indexed_programs=len(index['programs']), eligible=len(records), by_module=counts,
                        programs=sorted(decisions, key=lambda d: (d['module'], d['program'])))
     output.mkdir(parents=True, exist_ok=True)
@@ -155,7 +155,7 @@ def build(reference: Path, output: Path):
     artifact = gzip.compress(raw, mtime=0)
     (output / 'problems.jsonl.gz').write_bytes(artifact)
     (output / 'eligibility.json').write_text(json.dumps(eligibility, indent=2) + '\n')
-    manifest = dict(schema_version=1, protocol_version=1, eval_version='1.0.0',
+    manifest = dict(schema_version=2, protocol_version=2, eval_version='1.0.0',
                     source='https://github.com/Zaneham/nist-cobol85-test-suite', source_file='newcob.val',
                     suite_version='4.2 (expanded program identification columns)',
                     compiler=read(reference / 'cobc-version.txt').strip(), generated='2026-09-20',
@@ -167,11 +167,89 @@ def build(reference: Path, output: Path):
     return records, eligibility, manifest
 
 
+def validate_mutated(reference, mutations):
+    """Classify executed candidates; malformed/stale inputs remain hard errors.
+
+    Newly generated sources may await logs outside the shipped population.
+    Losing a previously validated eligible log is still an infrastructure error.
+    Execution exclusions are re-evaluated on every build, never made permanent.
+    """
+    from scripts.mutation_evidence import mutation_evidence
+    problems = []
+    for name, entry in mutations['programs'].items():
+        path = reference / entry['source_path']
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != entry['mutated_sha256']:
+            problems.append(f'{name}: mutated source checksum mismatch')
+            continue
+        candidate = bool(entry['mutations']) or entry['eligible']
+        if not candidate:
+            continue
+        if len(entry['mutations']) < 3:
+            problems.append(f'{name}: fewer than 3 mutations')
+            continue
+        if not path.with_suffix('.log').is_file():
+            if entry.get('needs_new_logs'):
+                entry.update(eligible=False, reasons=['awaiting mutated logs'])
+            else:
+                problems.append(f'{name}: missing mutated log')
+            continue
+        norm = normalize_report(read(path.with_suffix('.log')))
+        if not any(r[0] == 'success' for r in norm):
+            problems.append(f'{name}: missing success summary')
+            continue
+        evidence = mutation_evidence(read(path), entry['mutations'], norm)
+        reasons = []
+        if not evidence['fail_rows']:
+            reasons.append('mutation did not bite')
+        else:
+            if evidence['unplanted']:
+                reasons.append('FAIL rows outside mutated sites')
+            if evidence['incorrect_evidence']:
+                reasons.append('FAIL rows lack matching mutated COMPUTED/CORRECT evidence')
+            if evidence['missing_sites']:
+                reasons.append('planted sites without matching FAIL rows')
+        entry.update(eligible=not reasons, reasons=reasons, validation=evidence,
+                     mutation_candidate=True, needs_new_logs=False)
+    if problems:
+        raise ValueError('Mutated reference not ready; run reference/run_nist.sh on reference-mutated/ '
+                         'and supply generated logs. ' + str(len(problems)) + ' program(s) invalid: '
+                         + '; '.join(problems[:8]))
+
+
+def build(reference: Path, output: Path, mutation_manifest: Path | None = None):
+    mutation_manifest = mutation_manifest or ROOT / 'nist_cobol85/data/mutations.json'
+    if not mutation_manifest.is_file():
+        raise ValueError('Private mutation manifest missing; run scripts/mutate_suite.py first')
+    mutations = json.loads(mutation_manifest.read_text())
+    index = json.loads((reference / 'index.json').read_text())
+    if set(index['programs']) != set(mutations['programs']):
+        raise ValueError('Mutation inventory does not match reference index')
+    validate_mutated(reference, mutations)
+    serialized = json.dumps(mutations, indent=2, sort_keys=True) + '\n'
+    if mutation_manifest.read_text() != serialized:
+        mutation_manifest.write_text(serialized)
+    records, eligibility, manifest = _build(reference, output, mutations)
+    manifest['pending_programs'] = sorted(n for n, p in mutations['programs'].items() if p.get('needs_new_logs'))
+    manifest['mutation_sha256'] = hashlib.sha256(mutation_manifest.read_bytes()).hexdigest()
+    (output / 'manifest.json').write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n')
+    if output.resolve() == (ROOT / 'nist_cobol85/data').resolve():
+        catalog_path = ROOT / 'anyeval.json'
+        catalog = json.loads(catalog_path.read_text())
+        catalog['tasks'][0]['samples'] = catalog['total_samples'] = len(records)
+        catalog['dataset_status'] = 'ready'
+        catalog['upstream']['reference'] = 'reference-mutated/; validated mutated GnuCOBOL logs'
+        catalog_path.write_text(json.dumps(catalog, indent=2) + '\n')
+    return records, eligibility, manifest
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--reference', type=Path, default=ROOT / 'reference')
+    parser.add_argument('--reference', type=Path, default=ROOT / 'reference-mutated')
     parser.add_argument('--output', type=Path, default=ROOT / 'nist_cobol85/data')
     args = parser.parse_args()
-    records, eligibility, manifest = build(args.reference, args.output)
+    try:
+        records, eligibility, manifest = build(args.reference, args.output)
+    except ValueError as error:
+        parser.exit(1, str(error) + '\n')
     print(f'Eligible programs: {len(records)}')
     print(' '.join(f'{m}={n}' for m, n in manifest['by_module'].items()))

@@ -1,0 +1,22 @@
+SQ211A.CBL: in section 'SECT-SQ211A-0001':
+SQ211A.CBL: in paragraph 'WRITE-OPEN-01':
+SQ211A.CBL:474: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  472 | 047600         MOVE   "VII-3, VII-40, FILE STATUS" TO ANSI-REFERENCE    S..
+  473 | 047700         PERFORM FAIL                                             S..
+  474 > 047800         GO TO   CCVS-EXIT                                        S..
+  475 | 047900     END-IF.                                                      S..
+  476 | 048000*                                                                 S..
+SQ211A.CBL: in paragraph 'WRITE-TEST-01-01':
+SQ211A.CBL:495: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  493 | 049700         MOVE   "VII-3, VII-53, FILE STATUS" TO ANSI-REFERENCE    S..
+  494 | 049800         PERFORM FAIL                                             S..
+  495 > 049900         GO TO   CCVS-EXIT                                        S..
+  496 | 050000     END-IF.                                                      S..
+  497 | 050100*                                                                 S..
+SQ211A.CBL: in paragraph 'CLOSE-TEST-01':
+SQ211A.CBL:516: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  514 | 051800         MOVE   "VII-3, VII-38, FILE STATUS" TO ANSI-REFERENCE    S..
+  515 | 051900         PERFORM FAIL                                             S..
+  516 > 052000         GO TO   CCVS-EXIT                                        S..
+  517 | 052100     END-IF.                                                      S..
+  518 | 052200*                                                                 S..

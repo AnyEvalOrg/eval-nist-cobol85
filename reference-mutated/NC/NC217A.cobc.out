@@ -1,0 +1,8 @@
+NC217A.CBL: in section 'SECT-NC217A-001':
+NC217A.CBL: in paragraph 'STR-DELETE-GF-30':
+NC217A.CBL:2091: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2089 | 209100     PERFORM DE-LETE.                                             N..
+ 2090 | 209200     PERFORM PRINT-DETAIL.                                        N..
+ 2091 > 209300     GO TO   CCVS-EXIT.                                           N..
+ 2092 | 209400*                                                                 N..
+ 2093 | 209500 STR-TEST-GF-30-1.                                                N..

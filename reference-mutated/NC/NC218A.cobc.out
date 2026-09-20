@@ -1,0 +1,8 @@
+NC218A.CBL: in section 'SECT-NC218A-001':
+NC218A.CBL: in paragraph 'UST-DELETE-GF-30':
+NC218A.CBL:3000: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2998 | 300000     PERFORM DE-LETE.                                             N..
+ 2999 | 300100     PERFORM PRINT-DETAIL.                                        N..
+ 3000 > 300200     GO      TO CCVS-EXIT.                                        N..
+ 3001 | 300300*                                                                 N..
+ 3002 | 300400 UST-TEST-GF-30-1.                                                N..
