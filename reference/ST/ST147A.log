@@ -1,0 +1,70 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF ST147A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ CREATE FILE SQ-FS1   PASS  MRG-TEST-001                                                                                
+*** INFORMATION ***        FIRST FILE CREATED        000000000000000052                                                 
+                                                                                                                        
+ CREATE FILE SQ-FS2   PASS  MRG-TEST-002                                                                                
+*** INFORMATION ***        2ND FILE CREATED          000000000000000052                                                 
+                                                                                                                        
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-003                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-004                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-005                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-006                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-007                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-008                                                                                
+ EOF CHECK SQ-FS3     PASS  MRG-TEST-009                                                                                
+ NUMER. SEQ. CHECK    PASS  MRG-TEST-010                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-011                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-012                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-013                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-014                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-015                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-016                                                                                
+ EOF CHECK SQ-FS4     PASS  MRG-TEST-017                                                                                
+ NUMER. SEQ. CHECK    PASS  MRG-TEST-018                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-019                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-020                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-021                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-022                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-023                                                                                
+ NATIVE COLL.SEQUENCE PASS  MRG-TEST-024                                                                                                                                                                                                        
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF ST147A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+ EOF CHECK SQ-FS5     PASS  MRG-TEST-025                                                                                
+ NUMER. SEQ. CHECK    PASS  MRG-TEST-026                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  ST147A                                                
+                                                                                                                        
+                                                    026 OF 026  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

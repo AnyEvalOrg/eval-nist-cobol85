@@ -1,0 +1,8 @@
+SQ208M.CBL: in section 'SECT-SQ208M-0001':
+SQ208M.CBL: in paragraph 'SQ208M-END-ROUTINE':
+SQ208M.CBL:563: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  561 | 060900     MOVE "END OF SQ208M VALIDATION TESTS" TO PRINT-REC.          S..
+  562 | 061000     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      S..
+  563 > 061100     GO TO CCVS-EXIT.                                             S..
+  564 | 061200 INITIALIZE-PAGE.                                                 S..
+  565 | 061300     MOVE 0 TO TOP-CTR, BOTTOM-CTR.                               S..

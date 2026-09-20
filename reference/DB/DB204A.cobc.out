@@ -1,0 +1,30 @@
+DB204A.CBL: in section 'CREATE-INPUT-FILES':
+DB204A.CBL: in paragraph 'WRITE-FILES':
+DB204A.CBL:415: warning: GO TO SECTION 'BEGIN-DB204A-TESTS' [-Wgoto-section]
+  413 | 043000     PERFORM WRITE-FILES-SUBROUTINE 10 TIMES.                     D..
+  414 | 043100     CLOSE SQ-FS1  SQ-FS2.                                        D..
+  415 > 043200      GO TO BEGIN-DB204A-TESTS.                                   D..
+  416 | 043300 WRITE-FILES-SUBROUTINE.                                          D..
+  417 | 043400     MOVE FILE-RECORD-INFO (1) TO REC-1.                          D..
+DB204A.CBL: in section 'BEGIN-DB204A-TESTS':
+DB204A.CBL: in paragraph 'MERGE-TEST':
+DB204A.CBL:450: warning: GO TO SECTION 'END-OF-DB204A' [-Wgoto-section]
+  448 | 046500     IF KEY-1 IS EQUAL TO 0                                       D..
+  449 | 046600         PERFORM DELETE-MERGE-TEST-SUBTESTS                       D..
+  450 > 046700         GO TO END-OF-DB204A                                      D..
+  451 | 046800     ELSE GO TO MERGE-TEST-A.                                     D..
+  452 | 046900 MERGE-TEST-DELETE.                                               D..
+DB204A.CBL: in paragraph 'MERGE-TEST-DELETE':
+DB204A.CBL:456: warning: GO TO SECTION 'END-OF-DB204A' [-Wgoto-section]
+  454 | 047100     PERFORM PRINT-DETAIL.                                        D..
+  455 | 047200     PERFORM DELETE-MERGE-TEST-SUBTESTS.                          D..
+  456 > 047300     GO TO END-OF-DB204A.                                         D..
+  457 | 047400 DELETE-MERGE-TEST-SUBTESTS.                                      D..
+  458 | 047500     MOVE "MERGE-TEST-A" TO PAR-NAME.                             D..
+DB204A.CBL: in paragraph 'MERGE-TEST-C':
+DB204A.CBL:492: warning: GO TO SECTION 'END-OF-DB204A' [-Wgoto-section]
+  490 | 050700     MOVE "DEBUG-CONTENTS" TO RE-MARK.                            D..
+  491 | 050800     PERFORM PRINT-DETAIL.                                        D..
+  492 > 050900     GO TO END-OF-DB204A.                                         D..
+  493 | 051000 MERGE-OUTPUT-PROC SECTION.                                       D..
+  494 | 051100 OPEN-OUTPUT-FILE.                                                D..

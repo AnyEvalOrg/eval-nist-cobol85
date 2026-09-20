@@ -1,0 +1,16 @@
+ST136A.CBL: in section 'SORT-PARA':
+ST136A.CBL: in paragraph 'SORT-PARAGRAPH':
+ST136A.CBL:350: warning: GO TO SECTION 'SORT-TESTS' [-Wgoto-section]
+  348 | 035500              INPUT PROCEDURE INPROC                              S..
+  349 | 035600              GIVING SORTOUT-2F.                                  S..
+  350 > 035700     GO       TO SORT-TESTS.                                      S..
+  351 | 035800 INPROC SECTION.                                                  S..
+  352 | 035900  INPROC-SYSIN.                                                   S..
+ST136A.CBL: in section 'SORT-TESTS':
+ST136A.CBL: in paragraph 'CLOSE-SORT-FILES':
+ST136A.CBL:513: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  511 | 051800 CLOSE-SORT-FILES.                                                S..
+  512 | 051900     CLOSE    SORTOUT-2F.                                         S..
+  513 > 052000     GO TO     CCVS-EXIT.                                         S..
+  514 | 052100 BREAKDOWN-PARA.                                                  S..
+  515 | 052200     MOVE     SORTOUT-KEY TO COMPUTED-N.                          S..

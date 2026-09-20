@@ -1,0 +1,278 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB105A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+        FEATURE         PASS          PROGRAM                   ADJUSTED                  ADJUSTED                      
+        TESTED          FAIL       PROCEDURE NAME            PROCEDURE NAME              DEBUG-NAME                     
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ALL PROCEDURES  PASS   PROC-001-BEGIN-TESTS      PROC-001-BEGIN-TESTS       PROC-001-BEGIN-TESTS                 
+ DEBUG ALL PROCEDURES  PASS   PROC-002-GO--TEST-1       PROC-002-GO--TEST-1        PROC-002-GO--TEST-1                  
+ DEBUG ALL PROCEDURES  PASS   PROC-003-GO--WRITE-1      PROC-003-GO--WRITE-1       PROC-003-GO--WRITE-1                 
+ DEBUG ALL PROCEDURES  PASS   PROC-004-GO--INIT-2       PROC-004-GO--INIT-2        PROC-004-GO--INIT-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--TEST-2       PROC-005-GO--TEST-2        PROC-005-GO--TEST-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--A            PROC-006-GO--A             PROC-006-GO--A                       
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--TEST-2       PROC-007-GO--TEST-2        PROC-007-GO--TEST-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--B            PROC-008-GO--B             PROC-008-GO--B                       
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--TEST-2       PROC-009-GO--TEST-2        PROC-009-GO--TEST-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--C            PROC-010-GO--C             PROC-010-GO--C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--TEST-2       PROC-011-GO--TEST-2        PROC-011-GO--TEST-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--D            PROC-012-GO--D             PROC-012-GO--D                       
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--TEST-2       PROC-013-GO--TEST-2        PROC-013-GO--TEST-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--A            PROC-014-GO--A             PROC-014-GO--A                       
+ DEBUG ALL PROCEDURES  PASS   PROC-005-GO--E            PROC-015-GO--E             PROC-015-GO--E                       
+ DEBUG ALL PROCEDURES  PASS   PROC-016-GO--WRITE-2      PROC-016-GO--WRITE-2       PROC-016-GO--WRITE-2                 
+ DEBUG ALL PROCEDURES  PASS   PROC-017-GO--TEST-3       PROC-017-GO--TEST-3        PROC-017-GO--TEST-3                  
+ DEBUG ALL PROCEDURES  PASS   PROC-018-GO--PASS-3       PROC-018-GO--PASS-3        PROC-018-GO--PASS-3                  
+ DEBUG ALL PROCEDURES  PASS   PROC-019-GO--WRITE-3      PROC-019-GO--WRITE-3       PROC-019-GO--WRITE-3                 
+ DEBUG ALL PROCEDURES  PASS   PROC-020-GO--TEST-4       PROC-020-GO--TEST-4        PROC-020-GO--TEST-4                  
+ DEBUG ALL PROCEDURES  PASS   PROC-021-GO--PASS-4       PROC-021-GO--PASS-4        PROC-021-GO--PASS-4                  
+ DEBUG ALL PROCEDURES  PASS   PROC-022-GO--PAS-4        PROC-022-GO--PAS-4         PROC-022-GO--PAS-4                   
+ DEBUG ALL PROCEDURES  PASS   PROC-023-GO--WRITE-4      PROC-023-GO--WRITE-4       PROC-023-GO--WRITE-4                 
+ DEBUG ALL PROCEDURES  PASS   PROC-024-ALTER-INIT       PROC-024-ALTER-INIT        PROC-024-ALTER-INIT                  
+ DEBUG ALL PROCEDURES  PASS   PROC-025-ALTER-TEST-1     PROC-025-ALTER-TEST-1      PROC-025-ALTER-TEST-1                
+ DEBUG ALL PROCEDURES  PASS   PROC-026-ALTER-A          PROC-026-ALTER-A           PROC-026-ALTER-A                     
+ DEBUG ALL PROCEDURES  PASS   PROC-026-ALTER-A          PROC-027-ALTER-A           PROC-027-ALTER-A                     
+ DEBUG ALL PROCEDURES  PASS   PROC-027-ALTER-C          PROC-028-ALTER-C           PROC-028-ALTER-C                     
+ DEBUG ALL PROCEDURES  PASS   PROC-028-ALTER-WRITE-1    PROC-029-ALTER-WRITE-1     PROC-029-ALTER-WRITE-1               
+ DEBUG ALL PROCEDURES  PASS   PROC-030-ALTER-TEST-3     PROC-030-ALTER-TEST-3      PROC-030-ALTER-TEST-3                
+ DEBUG ALL PROCEDURES  PASS   PROC-031-ALTER-G          PROC-031-ALTER-G           PROC-031-ALTER-G                     
+ DEBUG ALL PROCEDURES  PASS   PROC-031-ALTER-G          PROC-032-ALTER-G           PROC-032-ALTER-G                     
+ DEBUG ALL PROCEDURES  PASS   PROC-032-ALTER-I          PROC-033-ALTER-I           PROC-033-ALTER-I                     
+ DEBUG ALL PROCEDURES  PASS   PROC-031-ALTER-G          PROC-034-ALTER-G           PROC-034-ALTER-G                     
+ DEBUG ALL PROCEDURES  PASS   PROC-031-ALTER-G          PROC-035-ALTER-G           PROC-035-ALTER-G                     
+ DEBUG ALL PROCEDURES  PASS   PROC-032-ALTER-WRITE-3    PROC-036-ALTER-WRITE-3     PROC-036-ALTER-WRITE-3                                                                                                                                       
+        FEATURE         PASS          PROGRAM                   ADJUSTED                  ADJUSTED                      
+        TESTED          FAIL       PROCEDURE NAME            PROCEDURE NAME              DEBUG-NAME                     
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ALL PROCEDURES  PASS   PROC-037-EXIT-TEST-1      PROC-037-EXIT-TEST-1       PROC-037-EXIT-TEST-1                 
+ DEBUG ALL PROCEDURES  PASS   PROC-038-EXIT-CHECK-1     PROC-038-EXIT-CHECK-1      PROC-038-EXIT-CHECK-1                
+ DEBUG ALL PROCEDURES  PASS   PROC-039-EXIT-WRITE-1     PROC-039-EXIT-WRITE-1      PROC-039-EXIT-WRITE-1                
+ DEBUG ALL PROCEDURES  PASS   PROC-040-PFM-TEST-1       PROC-040-PFM-TEST-1        PROC-040-PFM-TEST-1                  
+ DEBUG ALL PROCEDURES  PASS   PROC-041-PFM-A            PROC-041-PFM-A             PROC-041-PFM-A                       
+ DEBUG ALL PROCEDURES  PASS   PROC-042-PFM-WRITE-1      PROC-042-PFM-WRITE-1       PROC-042-PFM-WRITE-1                 
+ DEBUG ALL PROCEDURES  PASS   PROC-043-PFM-TEST-2       PROC-043-PFM-TEST-2        PROC-043-PFM-TEST-2                  
+ DEBUG ALL PROCEDURES  PASS   PROC-041-PFM-A            PROC-044-PFM-A             PROC-044-PFM-A                       
+ DEBUG ALL PROCEDURES  PASS   PROC-045-PFM-B            PROC-045-PFM-B             PROC-045-PFM-B                       
+ DEBUG ALL PROCEDURES  PASS   PROC-046-PFM-WRITE-2      PROC-046-PFM-WRITE-2       PROC-046-PFM-WRITE-2                 
+ DEBUG ALL PROCEDURES  PASS   PROC-047-PFM-TEST-3       PROC-047-PFM-TEST-3        PROC-047-PFM-TEST-3                  
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-C            PROC-048-PFM-C             PROC-048-PFM-C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-C            PROC-049-PFM-C             PROC-049-PFM-C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-C            PROC-050-PFM-C             PROC-050-PFM-C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-C            PROC-051-PFM-C             PROC-051-PFM-C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-C            PROC-052-PFM-C             PROC-052-PFM-C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-C            PROC-053-PFM-C             PROC-053-PFM-C                       
+ DEBUG ALL PROCEDURES  PASS   PROC-048-PFM-WRITE-3      PROC-054-PFM-WRITE-3       PROC-054-PFM-WRITE-3                 
+ DEBUG ALL PROCEDURES  PASS   PROC-055-PFM-TEST-4       PROC-055-PFM-TEST-4        PROC-055-PFM-TEST-4                  
+ DEBUG ALL PROCEDURES  PASS   PROC-056-PFM-E            PROC-056-PFM-E             PROC-056-PFM-E                       
+ DEBUG ALL PROCEDURES  PASS   PROC-057-PFM-F            PROC-057-PFM-F             PROC-057-PFM-F                       
+ DEBUG ALL PROCEDURES  PASS   PROC-058-PFM-G            PROC-058-PFM-G             PROC-058-PFM-G                       
+ DEBUG ALL PROCEDURES  PASS   PROC-059-PFM-H            PROC-059-PFM-H             PROC-059-PFM-H                       
+ DEBUG ALL PROCEDURES  PASS   PROC-060-PFM-WRITE-4      PROC-060-PFM-WRITE-4       PROC-060-PFM-WRITE-4                 
+ DEBUG ALL PROCEDURES  PASS   PROC-061-PFM-TEST-5       PROC-061-PFM-TEST-5        PROC-061-PFM-TEST-5                  
+ DEBUG ALL PROCEDURES  PASS   PROC-062-PFM-J            PROC-062-PFM-J             PROC-062-PFM-J                       
+ DEBUG ALL PROCEDURES  PASS   PROC-063-PFM-L            PROC-063-PFM-L             PROC-063-PFM-L                       
+ DEBUG ALL PROCEDURES  PASS   PROC-064-PFM-WRITE-5      PROC-064-PFM-WRITE-5       PROC-064-PFM-WRITE-5                 
+ DEBUG ALL PROCEDURES  PASS   PROC-065-PFM-TEST-6       PROC-065-PFM-TEST-6        PROC-065-PFM-TEST-6                  
+ DEBUG ALL PROCEDURES  PASS   PROC-066-PFM-N            PROC-066-PFM-N             PROC-066-PFM-N                       
+ DEBUG ALL PROCEDURES  PASS   PROC-067-PFM-O            PROC-067-PFM-O             PROC-067-PFM-O                       
+ DEBUG ALL PROCEDURES  PASS   PROC-068-PFM-P            PROC-068-PFM-P             PROC-068-PFM-P                       
+ DEBUG ALL PROCEDURES  PASS   PROC-069-PFM-WRITE-6      PROC-069-PFM-WRITE-6       PROC-069-PFM-WRITE-6                 
+ DEBUG ALL PROCEDURES  PASS   PROC-070-PFM-TEST-7       PROC-070-PFM-TEST-7        PROC-070-PFM-TEST-7                  
+ DEBUG ALL PROCEDURES  PASS   PROC-071-PFM-V            PROC-071-PFM-V             PROC-071-PFM-V                       
+ DEBUG ALL PROCEDURES  PASS   PROC-072-PFM-W            PROC-072-PFM-W             PROC-072-PFM-W                       
+ DEBUG ALL PROCEDURES  PASS   PROC-073-PFM-X            PROC-073-PFM-X             PROC-073-PFM-X                       
+ DEBUG ALL PROCEDURES  PASS   PROC-074-PFM-Y            PROC-074-PFM-Y             PROC-074-PFM-Y                       
+ DEBUG ALL PROCEDURES  PASS   PROC-075-PFM-Z            PROC-075-PFM-Z             PROC-075-PFM-Z                       
+ DEBUG ALL PROCEDURES  PASS   PROC-071-PFM-V            PROC-076-PFM-V             PROC-076-PFM-V                       
+ DEBUG ALL PROCEDURES  PASS   PROC-072-PFM-W            PROC-077-PFM-W             PROC-077-PFM-W                       
+ DEBUG ALL PROCEDURES  PASS   PROC-073-PFM-X            PROC-078-PFM-X             PROC-078-PFM-X                       
+ DEBUG ALL PROCEDURES  PASS   PROC-074-PFM-Y            PROC-079-PFM-Y             PROC-079-PFM-Y                       
+ DEBUG ALL PROCEDURES  PASS   PROC-075-PFM-Z            PROC-080-PFM-Z             PROC-080-PFM-Z                       
+ DEBUG ALL PROCEDURES  PASS   PROC-071-PFM-V            PROC-081-PFM-V             PROC-081-PFM-V                       
+ DEBUG ALL PROCEDURES  PASS   PROC-072-PFM-W            PROC-082-PFM-W             PROC-082-PFM-W                       
+ DEBUG ALL PROCEDURES  PASS   PROC-073-PFM-X            PROC-083-PFM-X             PROC-083-PFM-X                       
+ DEBUG ALL PROCEDURES  PASS   PROC-074-PFM-Y            PROC-084-PFM-Y             PROC-084-PFM-Y                       
+ DEBUG ALL PROCEDURES  PASS   PROC-075-PFM-Z            PROC-085-PFM-Z             PROC-085-PFM-Z                       
+ DEBUG ALL PROCEDURES  PASS   PROC-071-PFM-V            PROC-086-PFM-V             PROC-086-PFM-V                       
+ DEBUG ALL PROCEDURES  PASS   PROC-072-PFM-W            PROC-087-PFM-W             PROC-087-PFM-W                                                                                                                                               
+        FEATURE         PASS          PROGRAM                   ADJUSTED                  ADJUSTED                      
+        TESTED          FAIL       PROCEDURE NAME            PROCEDURE NAME              DEBUG-NAME                     
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ALL PROCEDURES  PASS   PROC-073-PFM-X            PROC-088-PFM-X             PROC-088-PFM-X                       
+ DEBUG ALL PROCEDURES  PASS   PROC-074-PFM-Y            PROC-089-PFM-Y             PROC-089-PFM-Y                       
+ DEBUG ALL PROCEDURES  PASS   PROC-075-PFM-Z            PROC-090-PFM-Z             PROC-090-PFM-Z                       
+ DEBUG ALL PROCEDURES  PASS   PROC-071-PFM-V            PROC-091-PFM-V             PROC-091-PFM-V                       
+ DEBUG ALL PROCEDURES  PASS   PROC-072-PFM-W            PROC-092-PFM-W             PROC-092-PFM-W                       
+ DEBUG ALL PROCEDURES  PASS   PROC-073-PFM-X            PROC-093-PFM-X             PROC-093-PFM-X                       
+ DEBUG ALL PROCEDURES  PASS   PROC-074-PFM-Y            PROC-094-PFM-Y             PROC-094-PFM-Y                       
+ DEBUG ALL PROCEDURES  PASS   PROC-075-PFM-Z            PROC-095-PFM-Z             PROC-095-PFM-Z                       
+ DEBUG ALL PROCEDURES  PASS   PROC-096-PFM-WRITE-7      PROC-096-PFM-WRITE-7       PROC-096-PFM-WRITE-7                 
+ DEBUG ALL PROCEDURES  PASS   PROC-097-PFM-TEST-08      PROC-097-PFM-TEST-08       PROC-097-PFM-TEST-08                 
+ DEBUG ALL PROCEDURES  PASS   PROC-098-PFM-B-8          PROC-098-PFM-B-8           PROC-098-PFM-B-8                     
+ DEBUG ALL PROCEDURES  PASS   PROC-097-PFM-A-8          PROC-099-PFM-A-8           PROC-099-PFM-A-8                     
+ DEBUG ALL PROCEDURES  PASS   PROC-098-PFM-B-8          PROC-100-PFM-B-8           PROC-100-PFM-B-8                     
+ DEBUG ALL PROCEDURES  PASS   PROC-097-PFM-A-8          PROC-101-PFM-A-8           PROC-101-PFM-A-8                     
+ DEBUG ALL PROCEDURES  PASS   PROC-098-PFM-B-8          PROC-102-PFM-B-8           PROC-102-PFM-B-8                     
+ DEBUG ALL PROCEDURES  PASS   PROC-097-PFM-TESTT-8      PROC-103-PFM-TESTT-8       PROC-103-PFM-TESTT-8                 
+ DEBUG ALL PROCEDURES  PASS   PROC-098-PFM-TESTTT-8     PROC-104-PFM-TESTTT-8      PROC-104-PFM-TESTTT-8                
+ DEBUG ALL PROCEDURES  PASS   PROC-105-PFM-WRITE-08     PROC-105-PFM-WRITE-08      PROC-105-PFM-WRITE-08                
+ DEBUG ALL PROCEDURES  PASS   PROC-106-PFM-TEST-09      PROC-106-PFM-TEST-09       PROC-106-PFM-TEST-09                 
+ DEBUG ALL PROCEDURES  PASS   PROC-107-PFM-B-9          PROC-107-PFM-B-9           PROC-107-PFM-B-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-106-PFM-A-9          PROC-108-PFM-A-9           PROC-108-PFM-A-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-107-PFM-B-9          PROC-109-PFM-B-9           PROC-109-PFM-B-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-106-PFM-A-9          PROC-110-PFM-A-9           PROC-110-PFM-A-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-107-PFM-B-9          PROC-111-PFM-B-9           PROC-111-PFM-B-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-106-PFM-A-9          PROC-112-PFM-A-9           PROC-112-PFM-A-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-107-PFM-B-9          PROC-113-PFM-B-9           PROC-113-PFM-B-9                     
+ DEBUG ALL PROCEDURES  PASS   PROC-106-PFM-TESTT-9      PROC-114-PFM-TESTT-9       PROC-114-PFM-TESTT-9                 
+ DEBUG ALL PROCEDURES  PASS   PROC-107-PFM-TESTTT-9     PROC-115-PFM-TESTTT-9      PROC-115-PFM-TESTTT-9                
+ DEBUG ALL PROCEDURES  PASS   PROC-116-PFM-WRITE-09     PROC-116-PFM-WRITE-09      PROC-116-PFM-WRITE-09                
+ DEBUG ALL PROCEDURES  PASS   PROC-117-PFM-TEST-10      PROC-117-PFM-TEST-10       PROC-117-PFM-TEST-10                 
+ DEBUG ALL PROCEDURES  PASS   PROC-118-PFM-B-10         PROC-118-PFM-B-10          PROC-118-PFM-B-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-119-PFM-C-10         PROC-119-PFM-C-10          PROC-119-PFM-C-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-120-PFM-D-10         PROC-120-PFM-D-10          PROC-120-PFM-D-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-117-PFM-A-10         PROC-121-PFM-A-10          PROC-121-PFM-A-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-118-PFM-B-10         PROC-122-PFM-B-10          PROC-122-PFM-B-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-119-PFM-C-10         PROC-123-PFM-C-10          PROC-123-PFM-C-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-120-PFM-D-10         PROC-124-PFM-D-10          PROC-124-PFM-D-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-117-PFM-A-10         PROC-125-PFM-A-10          PROC-125-PFM-A-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-118-PFM-B-10         PROC-126-PFM-B-10          PROC-126-PFM-B-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-119-PFM-C-10         PROC-127-PFM-C-10          PROC-127-PFM-C-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-120-PFM-D-10         PROC-128-PFM-D-10          PROC-128-PFM-D-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-118-PFM-B-10         PROC-129-PFM-B-10          PROC-129-PFM-B-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-119-PFM-C-10         PROC-130-PFM-C-10          PROC-130-PFM-C-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-120-PFM-D-10         PROC-131-PFM-D-10          PROC-131-PFM-D-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-117-PFM-A-10         PROC-132-PFM-A-10          PROC-132-PFM-A-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-118-PFM-B-10         PROC-133-PFM-B-10          PROC-133-PFM-B-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-119-PFM-C-10         PROC-134-PFM-C-10          PROC-134-PFM-C-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-120-PFM-D-10         PROC-135-PFM-D-10          PROC-135-PFM-D-10                    
+ DEBUG ALL PROCEDURES  PASS   PROC-121-PFM-TESTT-10     PROC-136-PFM-TESTT-10      PROC-136-PFM-TESTT-10                
+ DEBUG ALL PROCEDURES  PASS   PROC-122-PFM-TESTTT-10    PROC-137-PFM-TESTTT-10     PROC-137-PFM-TESTTT-10               
+ DEBUG ALL PROCEDURES  PASS   PROC-138-PFM-WRITE-10     PROC-138-PFM-WRITE-10      PROC-138-PFM-WRITE-10                                                                                                                                        
+        FEATURE         PASS          PROGRAM                   ADJUSTED                  ADJUSTED                      
+        TESTED          FAIL       PROCEDURE NAME            PROCEDURE NAME              DEBUG-NAME                     
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-TEST-11      PROC-139-PFM-TEST-11       PROC-139-PFM-TEST-11                 
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-140-PFM-B-11          PROC-140-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-141-PFM-C-11          PROC-141-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-142-PFM-D-11          PROC-142-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-A-11         PROC-143-PFM-A-11          PROC-143-PFM-A-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-144-PFM-B-11          PROC-144-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-145-PFM-C-11          PROC-145-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-146-PFM-D-11          PROC-146-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-A-11         PROC-147-PFM-A-11          PROC-147-PFM-A-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-148-PFM-B-11          PROC-148-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-149-PFM-C-11          PROC-149-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-150-PFM-D-11          PROC-150-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-A-11         PROC-151-PFM-A-11          PROC-151-PFM-A-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-152-PFM-B-11          PROC-152-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-153-PFM-C-11          PROC-153-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-154-PFM-D-11          PROC-154-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-A-11         PROC-155-PFM-A-11          PROC-155-PFM-A-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-156-PFM-B-11          PROC-156-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-157-PFM-C-11          PROC-157-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-158-PFM-D-11          PROC-158-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-159-PFM-B-11          PROC-159-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-160-PFM-C-11          PROC-160-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-161-PFM-D-11          PROC-161-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-A-11         PROC-162-PFM-A-11          PROC-162-PFM-A-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-B-11         PROC-163-PFM-B-11          PROC-163-PFM-B-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-C-11         PROC-164-PFM-C-11          PROC-164-PFM-C-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-D-11         PROC-165-PFM-D-11          PROC-165-PFM-D-11                    
+ DEBUG ALL PROCEDURES  PASS   PROC-139-PFM-TESTT-11     PROC-166-PFM-TESTT-11      PROC-166-PFM-TESTT-11                
+ DEBUG ALL PROCEDURES  PASS   PROC-140-PFM-TESTTT-11    PROC-167-PFM-TESTTT-11     PROC-167-PFM-TESTTT-11               
+ DEBUG ALL PROCEDURES  PASS   PROC-168-PFM-WRITE-11     PROC-168-PFM-WRITE-11      PROC-168-PFM-WRITE-11                
+ DEBUG ALL PROCEDURES  PASS   PROC-169-PFM-TEST-12      PROC-169-PFM-TEST-12       PROC-169-PFM-TEST-12                 
+ DEBUG ALL PROCEDURES  PASS   PROC-170-PFM-A-12         PROC-170-PFM-A-12          PROC-170-PFM-A-12                    
+ DEBUG ALL PROCEDURES  PASS   PROC-171-PFM-B-12         PROC-171-PFM-B-12          PROC-171-PFM-B-12                    
+ DEBUG ALL PROCEDURES  PASS   PROC-172-PFM-C-12         PROC-172-PFM-C-12          PROC-172-PFM-C-12                    
+ DEBUG ALL PROCEDURES  PASS   PROC-173-PFM-D-12         PROC-173-PFM-D-12          PROC-173-PFM-D-12                    
+ DEBUG ALL PROCEDURES  PASS   PROC-174-PFM-E-12         PROC-174-PFM-E-12          PROC-174-PFM-E-12                    
+ DEBUG ALL PROCEDURES  PASS   PROC-175-PFM-TESTT-12     PROC-175-PFM-TESTT-12      PROC-175-PFM-TESTT-12                
+ DEBUG ALL PROCEDURES  PASS   PROC-176-PFM-WRITE-12     PROC-176-PFM-WRITE-12      PROC-176-PFM-WRITE-12                
+ DEBUG ALL PROCEDURES  PASS   PROC-177-PFM-TEST-13      PROC-177-PFM-TEST-13       PROC-177-PFM-TEST-13                 
+ DEBUG ALL PROCEDURES  PASS   PROC-178-PFM-A-13         PROC-178-PFM-A-13          PROC-178-PFM-A-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-177-PFM-B-13         PROC-179-PFM-B-13          PROC-179-PFM-B-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-178-PFM-A-13         PROC-180-PFM-A-13          PROC-180-PFM-A-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-177-PFM-B-13         PROC-181-PFM-B-13          PROC-181-PFM-B-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-178-PFM-A-13         PROC-182-PFM-A-13          PROC-182-PFM-A-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-177-PFM-B-13         PROC-183-PFM-B-13          PROC-183-PFM-B-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-178-PFM-A-13         PROC-184-PFM-A-13          PROC-184-PFM-A-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-177-PFM-B-13         PROC-185-PFM-B-13          PROC-185-PFM-B-13                    
+ DEBUG ALL PROCEDURES  PASS   PROC-178-PFM-TESTT-13     PROC-186-PFM-TESTT-13      PROC-186-PFM-TESTT-13                
+ DEBUG ALL PROCEDURES  PASS   PROC-187-PFM-WRITE-13     PROC-187-PFM-WRITE-13      PROC-187-PFM-WRITE-13                
+ DEBUG ALL PROCEDURES  PASS   PROC-188-PFM-TEST-14      PROC-188-PFM-TEST-14       PROC-188-PFM-TEST-14                 
+ DEBUG ALL PROCEDURES  PASS   PROC-189-A101             PROC-189-A101              PROC-189-A101                                                                                                                                                
+        FEATURE         PASS          PROGRAM                   ADJUSTED                  ADJUSTED                      
+        TESTED          FAIL       PROCEDURE NAME            PROCEDURE NAME              DEBUG-NAME                     
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ALL PROCEDURES  PASS   PROC-190-A102             PROC-190-A102              PROC-190-A102                        
+ DEBUG ALL PROCEDURES  PASS   PROC-191-A103             PROC-191-A103              PROC-191-A103                        
+ DEBUG ALL PROCEDURES  PASS   PROC-192-A104             PROC-192-A104              PROC-192-A104                        
+ DEBUG ALL PROCEDURES  PASS   PROC-193-A105             PROC-193-A105              PROC-193-A105                        
+ DEBUG ALL PROCEDURES  PASS   PROC-194-A106             PROC-194-A106              PROC-194-A106                        
+ DEBUG ALL PROCEDURES  PASS   PROC-195-A107             PROC-195-A107              PROC-195-A107                        
+ DEBUG ALL PROCEDURES  PASS   PROC-196-A108             PROC-196-A108              PROC-196-A108                        
+ DEBUG ALL PROCEDURES  PASS   PROC-197-A109             PROC-197-A109              PROC-197-A109                        
+ DEBUG ALL PROCEDURES  PASS   PROC-198-A110             PROC-198-A110              PROC-198-A110                        
+ DEBUG ALL PROCEDURES  PASS   PROC-199-A111             PROC-199-A111              PROC-199-A111                        
+ DEBUG ALL PROCEDURES  PASS   PROC-200-A112             PROC-200-A112              PROC-200-A112                        
+ DEBUG ALL PROCEDURES  PASS   PROC-201-A113             PROC-201-A113              PROC-201-A113                        
+ DEBUG ALL PROCEDURES  PASS   PROC-202-A114             PROC-202-A114              PROC-202-A114                        
+ DEBUG ALL PROCEDURES  PASS   PROC-203-A115             PROC-203-A115              PROC-203-A115                        
+ DEBUG ALL PROCEDURES  PASS   PROC-204-A116             PROC-204-A116              PROC-204-A116                        
+ DEBUG ALL PROCEDURES  PASS   PROC-205-A117             PROC-205-A117              PROC-205-A117                        
+ DEBUG ALL PROCEDURES  PASS   PROC-206-A118             PROC-206-A118              PROC-206-A118                        
+ DEBUG ALL PROCEDURES  PASS   PROC-207-A119             PROC-207-A119              PROC-207-A119                        
+ DEBUG ALL PROCEDURES  PASS   PROC-208-A120             PROC-208-A120              PROC-208-A120                        
+ DEBUG ALL PROCEDURES  PASS   PROC-209-A121             PROC-209-A121              PROC-209-A121                        
+ DEBUG ALL PROCEDURES  PASS   PROC-210-PFM-WRITE-14     PROC-210-PFM-WRITE-14      PROC-210-PFM-WRITE-14                
+ DEBUG ALL PROCEDURES  PASS   PROC-211-PFM-A-15         PROC-211-PFM-A-15          PROC-211-PFM-A-15                    
+ DEBUG ALL PROCEDURES  PASS   PROC-212-PFM-TEST-15      PROC-212-PFM-TEST-15       PROC-212-PFM-TEST-15                 
+ DEBUG ALL PROCEDURES  PASS   PROC-213-PFM-G-15         PROC-213-PFM-G-15          PROC-213-PFM-G-15                    
+ DEBUG ALL PROCEDURES  PASS   PROC-214-PFM-H-15         PROC-214-PFM-H-15          PROC-214-PFM-H-15                    
+ DEBUG ALL PROCEDURES  PASS   PROC-215-PFM-E-15         PROC-215-PFM-E-15          PROC-215-PFM-E-15                    
+ DEBUG ALL PROCEDURES  PASS   PROC-216-PFM-L-15         PROC-216-PFM-L-15          PROC-216-PFM-L-15                    
+ DEBUG ALL PROCEDURES  PASS   PROC-217-PFM-B-15         PROC-217-PFM-B-15          PROC-217-PFM-B-15                    
+ DEBUG ALL PROCEDURES  PASS   PROC-218-PFM-WRITE-15     PROC-218-PFM-WRITE-15      PROC-218-PFM-WRITE-15                
+ DEBUG ALL PROCEDURES  PASS   PROC-219-PFM-TEST-LAST    PROC-219-PFM-TEST-LAST     PROC-219-PFM-TEST-LAST               
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-220-PFM-U             PROC-220-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-221-PFM-U             PROC-221-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-222-PFM-U             PROC-222-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-223-PFM-U             PROC-223-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-224-PFM-U             PROC-224-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-225-PFM-U             PROC-225-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-220-PFM-U            PROC-226-PFM-U             PROC-226-PFM-U                       
+ DEBUG ALL PROCEDURES  PASS   PROC-227-PFM-WRITE-LAST   PROC-227-PFM-WRITE-LAST    PROC-227-PFM-WRITE-LAST                                                                                                                                      
+        FEATURE         PASS          PROGRAM                   ADJUSTED                  ADJUSTED                      
+        TESTED          FAIL       PROCEDURE NAME            PROCEDURE NAME              DEBUG-NAME                     
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+ COUNT OF LEVEL 1 NUCLEUS FLOW FAILURES WAS 000.                                                                        
+ A NON-ZERO COUNT WILL CAUSE FAILURES TO APPEAR IN THE ABOVE REPORT.                                                    
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB105A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    227 OF 227  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

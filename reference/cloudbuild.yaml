@@ -1,0 +1,8 @@
+steps:
+  - name: us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-cobol-sandbox:1.0.0
+    entrypoint: bash
+    args: ["run_nist.sh"]
+    timeout: 3600s
+  - name: gcr.io/cloud-builders/gsutil
+    args: ["cp", "nist-reference.tgz", "gs://openevalz-sbx-84737_cloudbuild/nist/nist-reference-$BUILD_ID.tgz"]
+timeout: 4000s

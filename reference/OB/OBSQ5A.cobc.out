@@ -1,0 +1,29 @@
+OBSQ5A.SUB: in section 'SECT-OBSQ5A-0001':
+OBSQ5A.SUB: in paragraph 'SEQ-INIT-003':
+OBSQ5A.SUB:452: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
+  450 | 049500*             THIS TEST READS AND VALIDATES FILE SQ-FS6.          O..
+  451 | 049600     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    O..
+  452 > 049700     OPEN INPUT SQ-FS6 WITH NO REWIND.                            O..
+  453 | 049800 SEQ-TEST-003.                                                    O..
+  454 | 049900     READ SQ-FS6 AT END GO TO SEQ-TEST-003-01.                    O..
+OBSQ5A.SUB: in paragraph 'SEQ-INIT-004':
+OBSQ5A.SUB:494: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
+  492 | 053700*             THIS TEST READS AND VALIDATES FILE SQ-FS7.          O..
+  493 | 053800     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    O..
+  494 > 053900     OPEN INPUT SQ-FS7 WITH NO REWIND.                            O..
+  495 | 054000 SEQ-TEST-004.                                                    O..
+  496 | 054100     READ SQ-FS7 AT END GO TO SEQ-TEST-004-01.                    O..
+OBSQ5A.SUB: in paragraph 'SEQ-INIT-005':
+OBSQ5A.SUB:536: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
+  534 | 057900*             THIS TEST READS AND VALIDATES FILE SQ-FS8.          O..
+  535 | 058000     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    O..
+  536 > 058100     OPEN INPUT SQ-FS8 WITH NO REWIND.                            O..
+  537 | 058200 SEQ-TEST-005.                                                    O..
+  538 | 058300     READ SQ-FS8 AT END GO TO SEQ-TEST-005-01.                    O..
+OBSQ5A.SUB: in paragraph 'OBSQ5A-END-ROUTINE':
+OBSQ5A.SUB:578: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  576 | 062100     MOVE "END OF OBSQ5A VALIDATION TESTS" TO PRINT-REC.          O..
+  577 | 062200     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      O..
+  578 > 062300     GO TO CCVS-EXIT.                                             O..
+  579 | 062400 CCVS-EXIT SECTION.                                               O..
+  580 | 062500 CCVS-999999.                                                     O..

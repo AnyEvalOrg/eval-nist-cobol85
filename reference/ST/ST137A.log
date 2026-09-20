@@ -1,0 +1,37 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF ST137A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ CREATE FILE SQ-FS1   PASS  SRT-TEST-001                                                                                
+*** INFORMATION ***        FIRST FILE CREATED        000000000000000052                                                 
+                                                                                                                        
+ CREATE FILE SQ-FS2   PASS  SRT-TEST-002                                                                                
+*** INFORMATION ***        2ND FILE CREATED          000000000000000052                                                 
+                                                                                                                        
+ NATIVE COLL.SEQUENCE PASS  SRT-TEST-003                                                                                
+ NATIVE COLL.SEQUENCE PASS  SRT-TEST-004                                                                                
+ NATIVE COLL.SEQUENCE PASS  SRT-TEST-005                                                                                
+ EOF CHECK SQ-FS2     PASS  SRT-TEST-006                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  ST137A                                                
+                                                                                                                        
+                                                    006 OF 006  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -1,0 +1,8 @@
+NC216A.CBL: in section 'SECT-NC216A-001':
+NC216A.CBL: in paragraph 'INS-DELETE-F4-42':
+NC216A.CBL:2206: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2204 | 220600     PERFORM DE-LETE.                                             N..
+ 2205 | 220700     PERFORM PRINT-DETAIL.                                        N..
+ 2206 > 220800     GO TO   CCVS-EXIT.                                           N..
+ 2207 | 220900 INS-TEST-F4-42-1.                                                N..
+ 2208 | 221000     IF      TEST-40-DATA = "674Q23ZT2BAGA"                       N..

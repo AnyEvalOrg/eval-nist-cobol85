@@ -1,0 +1,8 @@
+ST135A.CBL: in section 'BUILD-AND-SORT-AND-CHECK':
+ST135A.CBL: in paragraph 'CLOSE-SORT-FILES':
+ST135A.CBL:525: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  523 | 054500     CLOSE    DEADWEIGHT-FILE.                                    S..
+  524 | 054600     CLOSE    SORTOUT-2E.                                         S..
+  525 > 054700     GO TO CCVS-EXIT.                                             S..
+  526 | 054800 BREAKDOWN-PARA.                                                  S..
+  527 | 054900     MOVE     SORTOUT-KEY TO COMPUTED-N.                          S..

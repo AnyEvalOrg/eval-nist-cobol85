@@ -1,0 +1,62 @@
+{
+  "anyeval_version": 1,
+  "eval": {
+    "id": "nist-cobol85",
+    "slug": "nist-cobol85",
+    "title": "NIST COBOL85 \u2192 Python",
+    "group": "Coding",
+    "tags": [
+      "coding",
+      "translation",
+      "cobol",
+      "python",
+      "sandbox",
+      "pass@1"
+    ],
+    "source": "original"
+  },
+  "upstream": {
+    "repo": "https://github.com/Zaneham/nist-cobol85-test-suite",
+    "path": "newcob.val",
+    "inspect_ai": "0.3.260",
+    "eval_version": "1.0.0",
+    "dependency": "",
+    "reference": "reference/; GnuCOBOL 3.2.0; expanded sources identify CCVS85 4.2"
+  },
+  "execution": {
+    "class": "sandbox-k8s",
+    "cost_class": "high",
+    "sandbox": "k8s",
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": true,
+    "environment": "nist_cobol85/values.yaml"
+  },
+  "tasks": [
+    {
+      "name": "nist_cobol85_python",
+      "samples": 323
+    }
+  ],
+  "total_samples": 323,
+  "external_assets": [
+    {
+      "type": "container",
+      "source": "us-central1-docker.pkg.dev/openevalz-sbx-84737/openevalz/eval-cobol-sandbox:1.0.0"
+    },
+    {
+      "type": "container",
+      "source": "coredns/coredns:1.8.3",
+      "condition": "Explicit anyeval_chart=false exception only; absent from default chart"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-09-20",
+  "grading": {
+    "type": "deterministic",
+    "metric": "pass@1",
+    "judge": null
+  }
+}

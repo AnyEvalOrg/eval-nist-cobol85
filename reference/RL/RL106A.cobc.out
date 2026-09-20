@@ -1,0 +1,8 @@
+RL106A.CBL: in section 'SECT-RC106-001':
+RL106A.CBL: in paragraph 'REL-DELETE-15':
+RL106A.CBL:697: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  695 | 071100*          SKIP TO      END-PARAGRAPH.                            R..
+  696 | 071200     PERFORM  PRINT-DETAIL.                                       R..
+  697 > 071300     GO TO    CCVS-EXIT.                                          R..
+  698 | 071400 REL-TEST-12-LONG-REC.                                            R..
+  699 | 071500     MOVE "LONG " TO RECORD-LONG-OR-SHORT.                        R..

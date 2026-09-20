@@ -1,0 +1,43 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ ORD-MAX Function     PASS  F-ORD-MAX-01                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-02                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-03                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-04                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-05                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-06                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-07                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-08                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-09                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-10                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-11                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-12                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-13                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-14                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-15                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-16                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF128A                                                
+                                                                                                                        
+                                                    016 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

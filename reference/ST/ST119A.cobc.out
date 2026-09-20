@@ -1,0 +1,15 @@
+ST119A.CBL: in section 'INTERNAL-INPUT-PROC-CODE':
+ST119A.CBL: in paragraph 'I-2':
+ST119A.CBL:480: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  478 | 048500                                                                  S..
+  479 | 048600 I-2.                                                             S..
+  480 > 048700     GO TO   CCVS-EXIT.                                           S..
+  481 | 048800                                                                  S..
+  482 | 048900 IN-1.                                                            S..
+ST119A.CBL: in paragraph 'BAD-FILE':
+ST119A.CBL:847: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  845 | 085200     PERFORM PRINT-DETAIL.                                        S..
+  846 | 085300     MOVE    SPACE TO FEATURE.                                    S..
+  847 > 085400     GO TO   CCVS-EXIT.                                           S..
+  848 | 085500 RET-1.                                                           S..
+  849 | 085600     RETURN  SORTFILE-1A RECORD AT END GO TO BAD-FILE.            S..

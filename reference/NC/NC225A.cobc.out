@@ -1,0 +1,8 @@
+NC225A.CBL: in section 'SECT-NC225A-001-1':
+NC225A.CBL: in paragraph 'EVA-DELETE-GF-35':
+NC225A.CBL:1894: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1892 | 189400     PERFORM DE-LETE.                                             N..
+ 1893 | 189500     PERFORM PRINT-DETAIL.                                        N..
+ 1894 > 189600     GO TO   CCVS-EXIT.                                           N..
+ 1895 | 189700 EVA-TEST-GF-35-1.                                                N..
+ 1896 | 189800     EVALUATE     TRUE                                            N..

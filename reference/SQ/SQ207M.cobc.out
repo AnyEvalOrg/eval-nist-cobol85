@@ -1,0 +1,8 @@
+SQ207M.CBL: in section 'SECT-SQ207M-0001':
+SQ207M.CBL: in paragraph 'SQ207M-END-ROUTINE':
+SQ207M.CBL:386: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  384 | 043200     MOVE "END OF SQ207M VALIDATION TESTS" TO PRINT-REC.          S..
+  385 | 043300     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      S..
+  386 > 043400     GO TO CCVS-EXIT.                                             S..
+  387 | 043500 WRITE-TEST-LINE.                                                 S..
+  388 | 043600     PERFORM PRINT-DETAIL.                                        S..

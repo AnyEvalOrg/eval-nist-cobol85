@@ -1,0 +1,8 @@
+NC170A.CBL: in section 'SECT-NC170A-001':
+NC170A.CBL: in paragraph 'MPY-DELETE-F2-32-1':
+NC170A.CBL:1972: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1970 | 197200     PERFORM DE-LETE.                                             N..
+ 1971 | 197300     PERFORM PRINT-DETAIL.                                        N..
+ 1972 > 197400     GO TO   CCVS-EXIT.                                           N..
+ 1973 | 197500 MPY-TEST-F2-32-1.                                                N..
+ 1974 | 197600     MOVE   "MPY-TEST-F2-32-1" TO PAR-NAME.                       N..

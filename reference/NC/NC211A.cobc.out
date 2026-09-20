@@ -1,0 +1,6 @@
+NC211A.CBL:192: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  190 | 019000-    "NOPQRSTUVWXYZ1234567890ABCDEFGHIJKL".                       N..
+  191 | 019100 01  IF-D40 PICTURE 9(5) VALUE 12345                              N..
+  192 > 019200              COMPUTATIONAL SYNCHRONIZED RIGHT.                   N..
+  193 | 019300     88 IF-D40A VALUE ZERO THRU 10000.                            N..
+  194 | 019400     88 IF-D40B VALUE 10001 THRU 99999.                           N..

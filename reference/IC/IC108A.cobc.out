@@ -1,0 +1,8 @@
+IC108A.CBL: in section 'SECTION-IC108-0001':
+IC108A.CBL: in paragraph 'LINK-WRITE-07-03':
+IC108A.CBL:439: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  437 | 043900 LINK-WRITE-07-03.                                                I..
+  438 | 044000     PERFORM PRINT-DETAIL.                                        I..
+  439 > 044100     GO TO CCVS-EXIT.                                             I..
+  440 | 044200 CCVS-EXIT SECTION.                                               I..
+  441 | 044300 CCVS-999999.                                                     I..

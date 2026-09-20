@@ -1,0 +1,41 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB102A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG ON PROC-NAME   PASS  START-PROGRAM-TEST                                                                          
+ DEBUG ON PROC-NAME   PASS  FALL-THROUGH-TEST                                                                           
+ DEBUG ON PROC-NAME   PASS  PROC-SERIES-TEST                                                                            
+ DEBUG ON PROC-NAME   PASS  GO-TO-TEST                                                                                  
+ DEBUG ON PROC-NAME   PASS  ALTER-TEST                                                                                  
+ DEBUG ON PROC-NAME   PASS  ALTERED-GO-TO-TEST                                                                          
+ DEBUG ON PROC-NAME   PASS  PERF-ITERATION-TEST                                                                         
+ DEBUG ON PROC-NAME   PASS  PERFORM-THRU-TEST                                                                           
+ DEBUG ON PROC-NAME   PASS  SIMPLE-PERFORM-TEST                                                                         
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-01            COMPLETE ENTITY                                               
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-02            CONSECUTIVE DEBUG LINES                                       
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-03            BROKEN STATEMENTS                                             
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-04            NESTED COMMENTS                                               
+ DEBUG LINE TESTS     PASS  DEBUG-LINE-TEST-05            NESTED INSIDE COMMENTS                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB102A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    014 OF 014  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

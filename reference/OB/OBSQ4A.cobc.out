@@ -1,0 +1,8 @@
+OBSQ4A.SUB: in section 'SECT-OBSQ4A-0001':
+OBSQ4A.SUB: in paragraph 'OBSQ4A-END-ROUTINE':
+OBSQ4A.SUB:526: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  524 | 056900     MOVE "END OF OBSQ4A VALIDATION TESTS" TO PRINT-REC.          O..
+  525 | 057000     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      O..
+  526 > 057100     GO TO CCVS-EXIT.                                             O..
+  527 | 057200 CCVS-EXIT SECTION.                                               O..
+  528 | 057300 CCVS-999999.                                                     O..

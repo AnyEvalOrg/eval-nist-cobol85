@@ -1,0 +1,8 @@
+IC226A.CBL: in section 'SECT-IC226A-001':
+IC226A.CBL: in paragraph 'EXT-DELETE-01-01':
+IC226A.CBL:333: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  331 | 033300     PERFORM DE-LETE.                                             I..
+  332 | 033400     PERFORM PRINT-DETAIL.                                        I..
+  333 > 033500     GO TO   CCVS-EXIT.                                           I..
+  334 | 033600 EXT-TEST-01-01-1.                                                I..
+  335 | 033700     MOVE   "EXT-TEST-01-01-1" TO PAR-NAME.                       I..

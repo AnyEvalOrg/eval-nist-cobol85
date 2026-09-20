@@ -1,0 +1,43 @@
+{
+  "$schema": "https://anyeval.com/schema/bundle/1",
+  "bundle_version": 1,
+  "generated_at": null,
+  "eval": {
+    "id": "nist-cobol85",
+    "task": null,
+    "sample_id": null
+  },
+  "upstream": {
+    "repo": "https://github.com/Zaneham/nist-cobol85-test-suite",
+    "inspect_ai": "0.3.260"
+  },
+  "dataset": {
+    "source": "NIST CCVS85 newcob.val",
+    "revision": "8aa735e1ad3a0aa7ffe59181a51d94cc9c87e13645a9009a202de28a9b1fbbe5"
+  },
+  "model": {
+    "name": null,
+    "provider": null,
+    "served": []
+  },
+  "scaffold": {
+    "id": "baseline",
+    "version": 1,
+    "token_limit": null
+  },
+  "sandbox": {
+    "class": null,
+    "provenance": null
+  },
+  "scorer": {
+    "name": "report_scorer",
+    "metric": "pass@1"
+  },
+  "receipts": [],
+  "routing": [],
+  "outputs": {
+    "status": null,
+    "score": null,
+    "explanation": null
+  }
+}

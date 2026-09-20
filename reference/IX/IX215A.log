@@ -1,0 +1,101 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IX215A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ CREATE-FILE-FD1      PASS  WRITE-TEST-GF-01              FILE IX-FD1 CREATED (200 RECORDS)                             
+ READ FILE IX-FD1     PASS  READ-TEST-F1-01               200 RECORDS VERIFIED                                          
+----------                                                                                                              
+ START REDF REC-KEY   PASS  START-TEST-GF-01              OK.; INVALID KEY ON START OF DELETED RECORD                   
+----------                                                                                                              
+ START REDF REC-KEY   PASS  START-TEST-GF-02              OK.; INVALID KEY ON START OF DELETED RECORD                   
+----------                                                                                                              
+ START REDF REC-KEY   PASS  START-TEST-GF-03              OK.; INVALID KEY ON START OF DELETED RECORD                   
+----------                                                                                                              
+ START REDF ALT-KEY-1 PASS  START-TEST-GF-04                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-1 PASS  START-TEST-GF-05                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-1 PASS  START-TEST-GF-06                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-2 PASS  START-TEST-GF-07                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-2 PASS  START-TEST-GF-08                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-2 PASS  START-TEST-GF-09                                                                            
+ START REDF ALT-KEY-2                                                                                                   
+ CREATE-FILE-FD2      PASS  WRITE-TEST-GF-02              FILE IX-FD2 CREATED (200 RECORDS)                             
+ READ FILE IX-FD2     PASS  READ-TEST-F1-02               200 RECORDS VERIFIED                                          
+----------                                                                                                              
+ START REDF REC-KEY   PASS  START-TEST-GF-10                                                                            
+----------                                                                                                              
+ START REDF REC-KEY   PASS  START-TEST-GF-11              OK.;    INVALID KEY ON START OF DELETED RECORD                
+----------                                                                                                              
+ START REDF REC-KEY   PASS  START-TEST-GF-12              OK.; INVALID KEY ON START OF DELETED RECORD                   
+----------                                                                                                              
+ START REDF ALT-KEY-1 PASS  START-TEST-GF-13                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-1 PASS  START-TEST-GF-14                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-1 PASS  START-TEST-GF-15                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-2 PASS  START-TEST-GF-16                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-2 PASS  START-TEST-GF-17                                                                            
+----------                                                                                                              
+ START REDF ALT-KEY-2 PASS  START-TEST-GF-18                                                                            
+ CREATE-FILE-FD3      PASS  WRITE-TEST-GF-03              FILE IX-FD3 CREATED (200 RECORDS)                             
+ READ FILE IX-FD3     PASS  READ-TEST-F1-O3               200 RECORDS VERIFIED                                          
+----------                                                                                                              
+ START QUAL REC-KEY   PASS  START-TEST-GF-19              OK.;    INVALID KEY ON START OF DELETED RECORD                
+----------                                                                                                              
+ START QUAL REC-KEY   PASS  START-TEST-GF-20              OK.;   INVALID KEY ON START OF DELETED RECORD                 
+----------                                                                                                              
+ START QUAL REC-KEY   PASS  START-TEST-GF-21              OK.;    INVALID KEY ON START OF DELETED RECORD                
+----------                                                                                                                                                                                                                                      
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IX215A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+ START QUAL ALT-KEY-1 PASS  START-TEST-GF-22                                                                            
+----------                                                                                                              
+ START QUAL ALT-KEY-1 PASS  START-TEST-GF-23                                                                            
+----------                                                                                                              
+ START QUAL ALT-KEY-1 PASS  START-TEST-GF-24                                                                            
+----------                                                                                                              
+ START QUAL ALT-KEY-2 PASS  START-TEST-GF-25                                                                            
+----------                                                                                                              
+ START QUAL ALT-KEY-2 PASS  START-TEST-GF-26                                                                            
+----------                                                                                                              
+ START QUAL ALT-KEY-2 PASS  START-TEST-GF-27                                                                            
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IX215A                                                
+                                                                                                                        
+                                                    033 OF 033  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

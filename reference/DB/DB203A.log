@@ -1,0 +1,51 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB203A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG OPEN OUTPUT    PASS  OPEN-TEST-1                   DEBUG PROC WAS EXECUTED                                       
+ DEBUG WRITE RECORD   PASS  WRITE-TEST-1                  DEBUG PROC WAS EXECUTED                                       
+ DEBUG CLOSE FILE     PASS  CLOSE-TEST-1                  DEBUG PROC WAS EXECUTED                                       
+ DEBUG OPEN I-O       PASS  OPEN-TEST-2                   DEBUG PROC WAS EXECUTED                                       
+ DEBUG READ RANDOM    PASS  READ-TEST-1                   DEBUG PROC WAS EXECUTED                                       
+ DEBUG READ RANDOM    INSPT READ-TEST-1A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         493                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG READ RANDOM    PASS  READ-TEST-1B                  DEBUG-NAME                                                    
+ DEBUG READ RANDOM    PASS  READ-TEST-1C                  DEBUG-CONTENTS                                                
+ DEBUG READ INV KEY   PASS  READ-TEST-2                   DEBUG PROC NOT EXECUTED                                       
+ DEBUG REWRITE RECORD PASS  REWRITE-TEST-1                DEBUG PROC WAS EXECUTED                                       
+ DEBUG REWRITE RECORD INSPT REWRITE-TEST-1A               DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         592                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG REWRITE RECORD PASS  REWRITE-TEST-1B               DEBUG-NAME                                                    
+ DEBUG REWRITE RECORD PASS  REWRITE-TEST-1C               DEBUG-CONTENTS                                                
+ DEBUG REWRITE INVLID PASS  REWRITE-TEST-2                DEBUG PROC WAS EXECUTED                                       
+ DEBUG START FILENAME PASS  START-TEST-1                  DEBUG PROC WAS EXECUTED                                       
+ DEBUG START FILENAME PASS  START-TEST-1A                 DEBUG-CONTENTS                                                
+ DEBUG START INV KEY  PASS  START-TEST-2                  DEBUG PROC WAS EXECUTED                                       
+ DEBUG DELETE FILE    PASS  DELETE-TEST-1                 DEBUG PROC WAS EXECUTED                                       
+ DEBUG DELETE FILE    PASS  DELETE-TEST-1A                DEBUG-CONTENTS                                                
+ DEBUG DELETE INV KEY PASS  DELETE-TEST-2                 DEBUG PROC WAS EXECUTED                                       
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB203A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    018 OF 020  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    002 TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

@@ -1,0 +1,8 @@
+IC224A.CBL: in section 'SECT-IC224A-001':
+IC224A.CBL: in paragraph 'EXIT-IC224A':
+IC224A.CBL:523: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  521 | 052300     PERFORM PRINT-DETAIL.                                        I..
+  522 | 052400 EXIT-IC224A.                                                     I..
+  523 > 052500     GO TO   CCVS-EXIT.                                           I..
+  524 | 052600*                                                                 I..
+  525 | 052700 SECT-IC224A-CHECK-01.                                            I..

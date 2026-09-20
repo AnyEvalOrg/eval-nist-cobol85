@@ -1,0 +1,4 @@
+apiVersion: v2
+name: nist-cobol85-sandbox
+version: 1.0.0
+description: AnyEval NIST COBOL85 sandbox with standard NetworkPolicy and no sidecars

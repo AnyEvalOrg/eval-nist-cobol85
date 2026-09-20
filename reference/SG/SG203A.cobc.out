@@ -1,0 +1,56 @@
+SG203A.CBL: in section 'SECT-SG-03-001':
+SG203A.CBL: in paragraph 'INIT-SG203':
+SG203A.CBL:175: warning: GO TO SECTION '50' [-Wgoto-section]
+  173 | 017300 INIT-SG203.                                                      S..
+  174 | 017400     PERFORM  CCVS1.                                              S..
+  175 > 017500     GO TO 50.                                                    S..
+  176 | 017600 CCVS1 SECTION.                                                   S..
+  177 | 017700 OPEN-FILES.                                                      S..
+SG203A.CBL: in section '36':
+SG203A.CBL: in paragraph 'PARA-36A':
+SG203A.CBL:500: warning: GO TO SECTION '85' [-Wgoto-section]
+  498 | 050000     ALTER PARA-36 TO PROCEED TO PARA-36B.                        S..
+  499 | 050100     MOVE SPACE TO TEST-CHECK.                                    S..
+  500 > 050200     GO TO 85.                                                    S..
+  501 | 050300 PARA-36B.                                                        S..
+  502 | 050400     IF TEST-CHECK EQUAL TO "GOOD"                                S..
+SG203A.CBL: in section '85':
+SG203A.CBL: in paragraph 'PARA-85':
+SG203A.CBL:521: warning: GO TO SECTION '36' [-Wgoto-section]
+  519 | 052100 PARA-85.                                                         S..
+  520 | 052200     MOVE "GOOD" TO TEST-CHECK.                                   S..
+  521 > 052300     GO TO 36.                                                    S..
+  522 | 052400 98  SECTION 98.                                                  S..
+  523 | 052500 PARA-98.                                                         S..
+SG203A.CBL: in section '41':
+SG203A.CBL: in paragraph 'WRITE-41':
+SG203A.CBL:707: warning: GO TO SECTION '45' [-Wgoto-section]
+  705 | 070700     MOVE "TEST BEGINS IN PARA-41A" TO RE-MARK.                   S..
+  706 | 070800     PERFORM PRINT-DETAIL.                                        S..
+  707 > 070900     GO TO 45.                                                    S..
+  708 | 071000 TEST-16 SECTION 41.                                              S..
+  709 | 071100 PARA-41B.                                                        S..
+SG203A.CBL: in section '45':
+SG203A.CBL: in paragraph 'PARA-45A':
+SG203A.CBL:735: warning: GO TO SECTION '45A' [-Wgoto-section]
+  733 | 073500     PERFORM 45A THRU 45B.                                        S..
+  734 | 073600*    NOTE THE WRITE PARAGRAPH FOR THIS TEST IS IN SEGMENT 46.     S..
+  735 > 073700     GO TO 45A.                                                   S..
+  736 | 073800 DELETE-45.                                                       S..
+  737 | 073900     PERFORM DE-LETE.                                             S..
+SG203A.CBL: in section 'TEST-18':
+SG203A.CBL: in paragraph 'PARA-47':
+SG203A.CBL:776: warning: GO TO SECTION '05' [-Wgoto-section]
+  774 | 077600*    NOTE ************** TEST 18 BEGINS HERE ***************.     S..
+  775 | 077700     ALTER PARA-05 TO PROCEED TO 69.                              S..
+  776 > 077800     GO TO 05.                                                    S..
+  777 | 077900 05 SECTION 05.                                                   S..
+  778 | 078000 PARA-05.                                                         S..
+SG203A.CBL: in section '69':
+SG203A.CBL: in paragraph 'WRITE-69':
+SG203A.CBL:335: warning: PARA-32 and PARA-33 are not in the same SECTION [-Wsuspicious-perform-thru]
+  333 | 033500 99  SECTION 99.                                                  S..
+  334 | 033600 PARA-99.                                                         S..
+  335 > 033700     PERFORM PARA-32 THROUGH PARA-33 8 TIMES.                     S..
+  336 | 033800     IF TEST-COUNTER EQUAL TO 8                                   S..
+  337 | 033900         PERFORM PASS                                             S..

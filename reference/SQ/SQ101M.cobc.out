@@ -1,0 +1,8 @@
+SQ101M.CBL: in section 'SECT-SQ101-0001':
+SQ101M.CBL: in paragraph 'SQ-END-ROUTINE':
+SQ101M.CBL:1819: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1817 | 186400*                                                                 S..
+ 1818 | 186500 SQ-END-ROUTINE.                                                  S..
+ 1819 > 186600     GO TO CCVS-EXIT.                                             S..
+ 1820 | 186700*                                                                 S..
+ 1821 | 186800 WRITE-TEST-LINE.                                                 S..

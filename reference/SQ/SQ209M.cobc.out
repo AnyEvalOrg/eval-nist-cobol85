@@ -1,0 +1,8 @@
+SQ209M.CBL: in section 'SECT-SQ209M-0001':
+SQ209M.CBL: in paragraph 'SQ209M-END-ROUTINE':
+SQ209M.CBL:392: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  390 | 043800     MOVE "END OF SQ209M VALIDATION TESTS" TO PRINT-REC.          S..
+  391 | 043900     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      S..
+  392 > 044000     GO TO CCVS-EXIT.                                             S..
+  393 | 044100 WRITE-BEFORE.                                                    S..
+  394 | 044200     MOVE LINAGE-COUNTER TO DL3-LC.                               S..

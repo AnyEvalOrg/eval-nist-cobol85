@@ -1,0 +1,8 @@
+IC101A.CBL: in section 'SECT-IC101-0001':
+IC101A.CBL: in paragraph 'CALL-END-ROUTINE':
+IC101A.CBL:377: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  375 | 037700     PERFORM PRINT-DETAIL.                                        I..
+  376 | 037800 CALL-END-ROUTINE.                                                I..
+  377 > 037900     GO TO CCVS-EXIT.                                             I..
+  378 | 038000 CCVS-EXIT SECTION.                                               I..
+  379 | 038100 CCVS-999999.                                                     I..

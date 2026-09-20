@@ -1,0 +1,14 @@
+OBNC2M.CBL:175: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  173 | 017300-    "NOPQRSTUVWXYZ1234567890ABCDEFGHIJKL".                       O..
+  174 | 017400 01  IF-D40 PICTURE 9(5) VALUE 12345                              O..
+  175 > 017500              COMPUTATIONAL SYNCHRONIZED RIGHT.                   O..
+  176 | 017600     88 IF-D40A VALUE ZERO THRU 10000.                            O..
+  177 | 017700     88 IF-D40B VALUE 10001 THRU 99999.                           O..
+OBNC2M.CBL: in section 'QUAL-SECTION-1':
+OBNC2M.CBL: in paragraph 'PARA-6-LAST':
+OBNC2M.CBL:908: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  906 | 090800     EXIT.                                                        O..
+  907 | 090900 PARA-6-LAST.                                                     O..
+  908 > 091000     GO TO   CCVS-EXIT.                                           O..
+  909 | 091100 PARA-TEST-FINISH.                                                O..
+  910 | 091200     MOVE   "PARA-TEST-6" TO PAR-NAME.                            O..

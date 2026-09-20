@@ -1,0 +1,22 @@
+IC225A.CBL: in section 'SECT-IC225A-001':
+IC225A.CBL: in paragraph 'CALL-TEST-02-01-0':
+IC225A.CBL:527: warning: duplicate USING BY REFERENCE item 'DN1' [-Wothers]
+  525 | 052700     CALL   "IC225A-1" USING REFERENCE DN1,                       I..
+  526 | 052800                             CONTENT   DN2,                       I..
+  527 > 052900                             REFERENCE DN1, DN4,                  I..
+  528 | 053000     END-CALL.                                                    I..
+  529 | 053100     GO TO   CALL-TEST-02-01-1.                                   I..
+IC225A.CBL: in paragraph 'CALL-TEST-02-03-0':
+IC225A.CBL:650: warning: duplicate USING BY REFERENCE item 'DN2' [-Wothers]
+  648 | 065000     CALL ID1 USING CONTENT   DN1                                 I..
+  649 | 065100                    REFERENCE DN2 DN1                             I..
+  650 > 065200                    REFERENCE DN2                                 I..
+  651 | 065300     END-CALL.                                                    I..
+  652 | 065400     GO TO   CALL-TEST-02-03-1.                                   I..
+IC225A.CBL: in paragraph 'EXIT-IC225A':
+IC225A.CBL:914: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  912 | 091400     PERFORM PRINT-DETAIL.                                        I..
+  913 | 091500 EXIT-IC225A.                                                     I..
+  914 > 091600     GO TO CCVS-EXIT.                                             I..
+  915 | 091700 SECT-IC225A-002 SECTION.                                         I..
+  916 | 091800 CHECK-TEST-03.                                                   I..

@@ -1,0 +1,18 @@
+Filename    Duration
+--------    --------
+SG101A.CBL    2.0000
+SG102A.CBL    0.0000
+SG103A.CBL    0.0000
+SG104A.CBL    0.0000
+SG105A.CBL    1.0000
+SG106A.CBL    0.0000
+SG201A.CBL    1.0000
+SG202A.CBL    0.0000
+SG203A.CBL    0.0000
+SG204A.CBL    1.0000
+SG302M.CBL    0.0000
+SG303M.CBL    0.0000
+SG401M.CBL    0.0000
+--------    --------
+Total         5.0000
+

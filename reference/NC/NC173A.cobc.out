@@ -1,0 +1,8 @@
+NC173A.CBL: in section 'SECT-NC173A-001':
+NC173A.CBL: in paragraph 'DIV-DELETE-F3-31':
+NC173A.CBL:2174: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2172 | 217400     PERFORM DE-LETE.                                             N..
+ 2173 | 217500     PERFORM PRINT-DETAIL.                                        N..
+ 2174 > 217600     GO TO   CCVS-EXIT.                                           N..
+ 2175 | 217700 DIV-TEST-F3-31-1.                                                N..
+ 2176 | 217800     MOVE   "DIV-TEST-F3-31-1" TO PAR-NAME.                       N..

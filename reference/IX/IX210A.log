@@ -1,0 +1,83 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ CREATE-FILE-FS1      PASS  WRITE-TEST-GF-1               RECORDS IN FILE                                               
+*** INFORMATION ***         000000000000000200       000000000000000200                                                 
+                                                                                                                        
+ READ FILE IX-FS1     PASS                                RECORDS IN FILE                                               
+*** INFORMATION ***         000000000000000200       000000000000000200                                                 
+                                                                                                                        
+ START GT RECKEY      PASS  START-TEST-GF-01                                                                            
+ START GT RECKEY      PASS  START-TEST-GF-02                                                                            
+ START GT RECKEY      PASS  START-TEST-GF-03                                                                            
+ START GT RECKEY      PASS  START-TEST-GF-04              INVALID KEY OK.                                               
+ START GT RECKEY      PASS  START-TEST-GF-05              SUBORDINATE DATA ITEM OF KEY                                  
+ START GT RECKEY      PASS  START-TEST-GF-06              SUBORDINATE DATA ITEM IN KEY                                  
+ START GT RECKEY      PASS  START-TEST-GF-07              INVALID KEY OK.                                               
+ START GT RECKEY      PASS  START-TEST-GF-08              SUBORDINATE DATA ITEM IN KEY                                  
+ START GT RECKEY      PASS  START-TEST-GF-09              INVALID KEY OK.                                               
+ FILE STATUS START:00 PASS  START-TEST-GF-10                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-11                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-12                                                                            
+ FILE STATUS START:23 PASS  START-TEST-GF-13                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-14                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-15                                                                            
+ FILE STATUS START:23 PASS  START-TEST-GF-16                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-17                                                                            
+ FILE STATUS START:23 PASS  START-TEST-GF-18                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-19                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-20                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-21                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-22              INVALID KEY OK.                                                                                                                                                                       
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-23              SUBORDINATE DATA ITEM OF KEY                                  
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-24              SUBORDINATE DATA ITEM IN KEY                                  
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-25              INVALID KEY                                                   
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-26              SUBORDINATE DATA ITEM IN KEY                                  
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-27              INVALID KEY OK.                                               
+ FILE STATUS START:00 PASS  START-TEST-GF-28                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-29                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-30                                                                            
+ FILE STATUS START:23 PASS  START-TEST-GF-31                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-32                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-33                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-34                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-35                                                                            
+ FILE STATUS START:23 PASS  START-TEST-GF-36                                                                            
+ START SERIES         PASS  START-TEST-GF-37              MULTIPLE STARTS BEFORE READ                                   
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IX210A                                                
+                                                                                                                        
+                                                    039 OF 039  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

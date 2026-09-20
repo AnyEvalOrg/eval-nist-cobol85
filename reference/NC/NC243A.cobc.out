@@ -1,0 +1,8 @@
+NC243A.CBL: in section 'SECT-NC243A-001':
+NC243A.CBL: in paragraph 'TH7-DELETE-1':
+NC243A.CBL:604: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  602 | 060400     PERFORM DE-LETE.                                             N..
+  603 | 060500     PERFORM PRINT-DETAIL.                                        N..
+  604 > 060600     GO TO   CCVS-EXIT.                                           N..
+  605 | 060700 TH7-TEST-1-0.                                                    N..
+  606 | 060800     PERFORM TH7-FIND-LEVEL-4-ENTRY                               N..

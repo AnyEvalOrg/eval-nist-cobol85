@@ -1,0 +1,14 @@
+Filename    Duration
+--------    --------
+OBIC2A.CBL    0.0000
+OBIC3A.CBL    0.0000
+OBIC1A.CBL    0.0000
+OBNC1M.CBL    1.0000
+OBNC2M.CBL    0.0000
+OBSQ1A.CBL    0.0000
+OBSQ3A.CBL    0.0000
+OBSQ4A.SUB    1.0000
+OBSQ5A.SUB    0.0000
+--------    --------
+Total         2.0000
+

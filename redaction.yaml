@@ -1,0 +1,6 @@
+version: 1
+redact: [reference_report, report, output, result]
+global: [target, targets, answer, explanation]
+sandbox_exec: [input, stdout, stderr]
+# Runtime private_grading suppresses events and provider logs independently.
+# Source COBOL is intentional public input; reference REPORT is a private target.

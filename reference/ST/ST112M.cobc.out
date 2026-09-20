@@ -1,0 +1,8 @@
+ST112M.CBL: in section 'SECT-ST112M-001':
+ST112M.CBL: in paragraph 'ST112M-002-01':
+ST112M.CBL:374: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  372 | 037900     PERFORM WRITE-LINE.                                          S..
+  373 | 038000     CLOSE   SORTOUT-1L.                                          S..
+  374 > 038100     GO TO   CCVS-EXIT.                                           S..
+  375 | 038200 WRITE-SORT-KEY.                                                  S..
+  376 | 038300     WRITE   SORT-KEY.                                            S..

@@ -1,0 +1,6 @@
+NC177A.CBL:137: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  135 | 013500 77  A18THREES-CS-18V00 PICTURE S9(18) VALUE -333333333333333333  N..
+  136 | 013600             COMPUTATIONAL.                                       N..
+  137 > 013700 77  WRK-CS-03V00 PICTURE S999 COMPUTATIONAL SYNCHRONIZED RIGHT.  N..
+  138 | 013800 01  SUBTRACT-DATA.                                               N..
+  139 | 013900     02  SUBTR-1    PICTURE 9         VALUE 1.                    N..

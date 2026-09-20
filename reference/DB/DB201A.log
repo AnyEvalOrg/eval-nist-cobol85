@@ -1,0 +1,120 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB201A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ GO TO DEP/ALL REF    PASS  G-T-D-2                       DEBUG EXECUTED ON IDENTIFR                                    
+ GO TO DEP/ALL REF    INSPT G-T-D-2A                      DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         410                   <===  DEBUG-LINE                             
+                                                                                                                        
+ GO TO DEP/ALL REF    PASS  G-T-D-2B                      DEBUG-NAME                                                    
+ GO TO DEP/ALL REF    PASS  G-T-D-2C                      DEBUG-CONTENTS                                                
+ GO TO DEP/ALL REF    PASS  G-T-D-3                       DEBUG ON PROC-NAME EXECUTED                                   
+ GO TO DEP/ALL REF    INSPT G-T-D-3A                      DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         410                   <===  DEBUG-LINE                             
+                                                                                                                        
+ GO TO DEP/ALL REF    PASS  G-T-D-3B                      DEBUG-NAME                                                    
+ GO TO DEP/ALL REF    PASS  G-T-D-3C                      DEBUG-CONTENTS                                                
+ GO TO DEP/ALL REF    PASS  G-T-D-4                       PROCS EXECUTED IN RIGHT ORDER                                 
+ GO TO DEP/NOT ALL    PASS  G-T-D-6                       DEBUG PROC NOT EXECUTED                                       
+ PERFORM VARYING      PASS  PERFORM-VARY-1                DEBUG PROC EXECUTED 6 TIMES                                   
+ PERFORM VARYING      INSPT P-V-1A                        DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         593                   <===  DEBUG-LINE                             
+                                                                                                                        
+ PERFORM VARYING      PASS  P-V-1B                        DEBUG-NAME                                                    
+ PERFORM VARYING      PASS  P-V-1C                        DEBUG-CONTENTS                                                
+ PERFORM VARYING      PASS  PERFORM-VARY-2                DEBUG PROC EXECUTED 12 TIMES                                  
+ PERFORM AFTER        PASS  PERFORM-AFTER-1               DEBUG PROC EXECUTED 31 TIMES                                  
+ PERFORM AFTER        PASS  PERFORM-AFT-1A                DEBUG-CONTENTS                                                
+ PERFORM UNTIL        PASS  PERFORM-UNTIL-1               DEBUG PROC EXECUTED 6 TIMES                                   
+ PERFORM UNTIL        PASS  PERFORM-UNT-1A                DEBUG-CONTENTS                                                
+ ALL REF OF IDENT     PASS  BYPASSED-CODE-1                                                                             
+ ALL REF OF IDENT     PASS  REDEFINED-ID-1                                                                              
+ ALL REF OF IDENT     PASS  MOVE-TEST-1                   DEBUG PROC EXECUTED                                           
+ ALL REF OF IDENT     INSPT MOVE-TEST-1A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         773                   <===  DEBUG-LINE                             
+                                                                                                                        
+ ALL REF OF IDENT     PASS  MOVE-TEST-1B                  DEBUG-NAME                                                    
+ ALL REF OF IDENT     PASS  MOVE-TEST-1C                  DEBUG-CONTENTS                                                
+ NOT ALL REF OF IDENT PASS  MOVE-TEST-2                   DEBUG EXECUTED                                                
+ NOT ALL REF OF IDENT PASS  MOVE-TEST-2A                  DEBUG-CONTENTS                                                
+ REPEATED NOT ALL REF INFO  MOVE-TEST-3                   REPEATED MOVE INVOKED PROC                                                                                                                                                            
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ SRC OPR/ALL REF      PASS  MOVE-TEST-4                   DEBUG PROC EXECUTED                                           
+ SRC OPR/ALL REF      INSPT MOVE-TEST-4A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         886                   <===  DEBUG-LINE                             
+                                                                                                                        
+ SRC OPR/ALL REF      PASS  MOVE-TEST-4B                  DEBUG-NAME                                                    
+ SRC OPR/ALL REF      PASS  MOVE-TEST-4C                  DEBUG-CONTENTS                                                
+ SRC OPR/NOT ALL REF  PASS  MOVE-TEST-5                   DEBUG PROC NOT EXECUTED                                       
+ MULT SRC OPR/ALL REF PASS  ADD-TEST-1                    DEBUG PROC EXECUTED                                           
+ MULT SRC OPR/ALL REF INSPT ADD-TEST-1A                   DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         969                   <===  DEBUG-LINE                             
+                                                                                                                        
+ MULT SRC OPR/ALL REF PASS  ADD-TEST-1B                   DEBUG-NAME                                                    
+ MULT SRC OPR/ALL REF PASS  ADD-TEST-1C                   DEBUG-CONTENTS                                                
+ MULT SRC OPR/NOT ALL PASS  ADD-TEST-2                    DEBUG PROC NOT EXECUTED                                       
+ SRC-RCV OPR/ALL REF  PASS  ADD-TEST-3                    DEBUG PROC EXECUTED                                           
+ SRC-RCV OPR/ALL REF  PASS  ADD-TEST-3A                   DEBUG-CONTENTS                                                
+ SRC-RCV OPR/NOT ALL  PASS  ADD-TEST-4                    DEBUG PROC EXECUTED                                           
+ SRC-RCV OPR/NOT ALL  PASS  ADD-TEST-4A                   DEBUG-CONTENTS                                                
+ ONE-DIM SUBSCRIPT    PASS  SUBSC-TEST-1                  DEBUG PROC WAS EXECUTED                                       
+ ONE-DIM SUBSCRIPT    INSPT SUBSC-TEST-1A                 DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                        1136                   <===  DEBUG-LINE                             
+                                                                                                                        
+ ONE-DIM SUBSCRIPT    PASS  SUBSC-TEST-1B                 DEBUG-NAME                                                    
+ ONE-DIM SUBSCRIPT    PASS  SUBSC-TEST-1C                 DEBUG-CONTENTS                                                
+ ONE-DIM SUBSCRIPT    PASS  SUBSC-TEST-1D                 DEBUG-SUB-1                                                   
+ ONE-DIM SUBSCRIPT    ***** SUBSC-TEST-1E                 ****TEST DELETED****                                          
+ ONE-DIM SUBSCRIPT    ***** SUBSC-TEST-1F                 ****TEST DELETED****                                          
+ THR-DIM SUBSCRIPT    PASS  SUBSC-TEST-2                  DEBUG PROC WAS EXECUTED                                       
+ THR-DIM SUBSCRIPT    PASS  SUBSC-TEST-2A                 DEBUG-CONTENTS                                                
+ THR-DIM SUBSCRIPT    PASS  SUBSC-TEST-2B                 DEBUG-SUB-1                                                   
+ THR-DIM SUBSCRIPT    PASS  SUBSC-TEST-2C                 DEBUG-SUB-2                                                   
+ THR-DIM SUBSCRIPT    PASS  SUBSC-TEST-2D                 DEBUG-SUB-3                                                   
+ 1-LEVEL QUALIFICATN  PASS  QUAL-TEST-1                   DEBUG PROC EXECUTED                                           
+ 1-LEVEL QUALIFICATN  INSPT QUAL-TEST-1A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                        1300                   <===  DEBUG-LINE                             
+                                                                                                                        
+ 1-LEVEL QUALIFICATN  PASS  QUAL-TEST-1B                  DEBUG-NAME                                                    
+ 1-LEVEL QUALIFICATN  PASS  QUAL-TEST-1C                  DEBUG-CONTENTS                                                
+ 1-LEVEL QUALIFICATN  PASS  QUAL-TEST-2                   DEBUG PROC NOT EXECUTED                                       
+ 1-LEVEL QUALIFICATN  PASS  QUAL-TEST-3                   DEBUG PROC NOT EXECUTED                                       
+ 2-LEVEL QUALIFICATN  PASS  QUAL-TEST-4                   DEBUG PROC EXECUTED                                           
+ 2-LEVEL QUALIFICATN  PASS  QUAL-TEST-4A                  DEBUG-NAME                                                    
+ 2-LEVEL QUALIFICATN  PASS  QUAL-TEST-4B                  DEBUG-CONTENTS                                                
+ QUALIFIED SUBSC ITEM PASS  QUAL-TEST-5                   DEBUG PROC EXECUTED                                           
+ QUALIFIED SUBSC ITEM PASS  QUAL-TEST-5A                  DEBUG-NAME                                                    
+ QUALIFIED SUBSC ITEM PASS  QUAL-TEST-5B                  DEBUG-CONTENTS                                                
+ QUALIFIED SUBSC ITEM PASS  QUAL-TEST-5C                  DEBUG-SUB-1                                                   
+ QUALIFIED SUBSC ITEM ***** QUAL-TEST-5D                  ****TEST DELETED****                                          
+ QUALIFIED SUBSC ITEM ***** QUAL-TEST-5E                  ****TEST DELETED****                                          
+ ***********************************************************************************************************************
+                                                                                                                                                                                                                                                
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB201A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    056 OF 068  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    004 TEST(S) DELETED                                                 
+                                                    008 TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

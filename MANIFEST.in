@@ -1,0 +1,6 @@
+include LICENSE NOTICE.md anyeval.json redaction.yaml
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include scaffolds *.yaml
+recursive-include reference *
+include run.py bundle.template.json

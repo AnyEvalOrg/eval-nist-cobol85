@@ -1,0 +1,16 @@
+SG204A.CBL: in section 'SRT-2':
+SG204A.CBL: in paragraph 'SECOND-SORT':
+SG204A.CBL:437: warning: GO TO SECTION 'SRT-3' [-Wgoto-section]
+  435 | 043700         GIVING FILE3.                                            S..
+  436 | 043800*      NOTE SORT STATEMENT WITH ALL OPTIONAL WORDS OMITTED.       S..
+  437 > 043900     GO TO SRT-3.                                                 S..
+  438 | 044000 SRT-2-INPUT SECTION 74.                                          S..
+  439 | 044100 OPEN-1.                                                          S..
+SG204A.CBL: in section 'SRT-3':
+SG204A.CBL: in paragraph 'END-FIRST-PROGRAM':
+SG204A.CBL:587: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  585 | 058700*        WITHOUT THE GENERATION OF AN OUTPUT FILE.                S..
+  586 | 058800 END-FIRST-PROGRAM.                                               S..
+  587 > 058900     GO TO CCVS-EXIT.                                             S..
+  588 | 059000 SRT3-INPUT SECTION 49.                                           S..
+  589 | 059100 OPEN-2.                                                          S..

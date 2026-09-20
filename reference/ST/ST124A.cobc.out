@@ -1,0 +1,8 @@
+ST124A.SUB: in section 'SECT-ST111-0001':
+ST124A.SUB: in paragraph 'SORT-WRITE-7':
+ST124A.SUB:465: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  463 | 047000     PERFORM  PRINT-DETAIL.                                       S..
+  464 | 047100     CLOSE    SORTIN-1K.                                          S..
+  465 > 047200     GO TO    CCVS-EXIT.                                          S..
+  466 | 047300 BREAKDOWN-PARA.                                                  S..
+  467 | 047400     PERFORM  FAIL.                                               S..

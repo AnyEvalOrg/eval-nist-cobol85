@@ -1,0 +1,16 @@
+ST134A.CBL: in section 'MAIN-LINE':
+ST134A.CBL: in paragraph 'AFTER-SORT-PARA':
+ST134A.CBL:420: warning: GO TO SECTION 'CLOSE-AND-STOP' [-Wgoto-section]
+  418 | 043000 AFTER-SORT-PARA.                                                 S..
+  419 | 043100     PERFORM  SORT-TESTS.                                         S..
+  420 > 043200     GO       TO CLOSE-AND-STOP.                                  S..
+  421 | 043300 CREATE-INPUT-FILE SECTION.                                       S..
+  422 | 043400 CREATE-INIT.                                                     S..
+ST134A.CBL: in section 'CLOSE-AND-STOP':
+ST134A.CBL: in paragraph 'CLOSE-AND-STOP-PARA':
+ST134A.CBL:518: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  516 | 052800 CLOSE-AND-STOP-PARA.                                             S..
+  517 | 052900     CLOSE    SORTOUT-2D.                                         S..
+  518 > 053000     GO TO CCVS-EXIT.                                             S..
+  519 | 053100 INSPT-1. MOVE "INSPT" TO P-OR-F. ADD 1 TO INSPECT-COUNTER.       S..
+  520 | 053200 PASS-1.  MOVE "PASS " TO P-OR-F.  ADD 1 TO PASS-COUNTER.         S..

@@ -1,0 +1,23 @@
+IC235A.CBL: in section 'SECT-IC235-0001':
+IC235A.CBL: in paragraph 'EXIT-WRITE-004':
+IC235A.CBL:395: warning: GO TO SECTION 'SECT-IC235-0002' [-Wgoto-section]
+  393 | 039500     MOVE "EXIT-TEST-04" TO PAR-NAME.                             I..
+  394 | 039600     PERFORM PRINT-DETAIL.                                        I..
+  395 > 039700     GO TO SECT-IC235-0002.                                       I..
+  396 | 039800 EXIT-DELETES.                                                    I..
+  397 | 039900*        IF THE SUBPROGRAM WITH MULTIPLE EXIT PROGRAM             I..
+IC235A.CBL: in section 'SECT-IC235-0002':
+IC235A.CBL: in paragraph 'CALL-DELETE-06':
+IC235A.CBL:431: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  429 | 043100     PERFORM DE-LETE.                                             I..
+  430 | 043200     PERFORM PRINT-DETAIL.                                        I..
+  431 > 043300     GO TO CCVS-EXIT.                                             I..
+  432 | 043400*       IF IC235A-1 CANNOT BE INCLUDED IN THE RUN UNIT            I..
+  433 | 043500*    DELETE THE PARAGRAPH CALL-TEST-06.                           I..
+IC235A.CBL: in paragraph 'CALL-WRITE-06-08':
+IC235A.CBL:534: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  532 | 053400     PERFORM PRINT-DETAIL.                                        I..
+  533 | 053500*                                                                 I..
+  534 > 053600     GO TO CCVS-EXIT.                                             I..
+  535 | 053700 CCVS-EXIT SECTION.                                               I..
+  536 | 053800 CCVS-999999.                                                     I..

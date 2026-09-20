@@ -1,0 +1,14 @@
+NC107A.CBL:75: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   73 | 007300 77  DATA-F                             PICTURE IS 9(10)          N..
+   74 | 007400     BLANK WHEN ZERO.                                             N..
+   75 > 007500 77  DATA-G  SYNCHRONIZED RIGHT   PICTURE X(5)                    N..
+   76 | 007600     VALUE IS "VWXYZ".                                            N..
+   77 | 007700 77  DATA-H                             PICTURE IS X(5)           N..
+NC107A.CBL: in section 'CCVS-EXIT':
+NC107A.CBL: in paragraph 'CCVS-999999':
+NC107A.CBL:1912: warning: 000000000000000000000000001 and 00000000000000000000000000001 are not in the same SECTION [-Wsuspicious-perform-thru]
+ 1910 | 191200     MOVE     ZERO TO NUM-UTILITY.                                N..
+ 1911 | 191300     PERFORM  000000000000000000000000001 THRU                    N..
+ 1912 > 191400              00000000000000000000000000001 2 TIMES.              N..
+ 1913 | 191500     IF       NUM-UTILITY EQUAL TO 220                            N..
+ 1914 | 191600              PERFORM PASS GO TO NUM-WRITE-3.                     N..

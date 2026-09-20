@@ -1,0 +1,8 @@
+NC109M.CBL: in section 'SECT-NC109M-001':
+NC109M.CBL: in paragraph 'DISP-WRITE-GF-14':
+NC109M.CBL:926: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  924 | 092600     MOVE     "DISP-TEST-GF-14 " TO PAR-NAME.                     N..
+  925 | 092700     PERFORM  PRINT-DETAIL.                                       N..
+  926 > 092800     GO TO   CCVS-EXIT.                                           N..
+  927 | 092900 DISPLAY-SUPPORT-1.                                               N..
+  928 | 093000     PERFORM  BLANK-LINE-PRINT.                                   N..

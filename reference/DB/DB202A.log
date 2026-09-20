@@ -1,0 +1,63 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB202A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG OPEN FILENAME  PASS  OPEN-TEST-1                   DEBUG PROC EXECUTED                                           
+ DEBUG OPEN FILENAME  INSPT OPEN-TEST-1A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         388                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG OPEN FILENAME  PASS  OPEN-TEST-1B                  DEBUG-NAME                                                    
+ DEBUG OPEN FILENAME  PASS  OPEN-TEST-1C                  DEBUG-CONTENTS                                                
+ DEBUG WRITE/ALL REF  PASS  WRITE-TEST-1                  DEBUG PROC EXECUTED 10 TIMES                                  
+ DEBUG WRITE/ALL REF  INSPT WRITE-TEST-1A                 DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         495                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG WRITE/ALL REF  PASS  WRITE-TEST-1B                 DEBUG-NAME                                                    
+ DEBUG WRITE/ALL REF  PASS  WRITE-TEST-1C                 PROC EXECUTED AT PROPER TIME                                  
+ DEBUG WRITE/ALL REF  PASS  WRITE-TEST-1D                 DEBUG-CONTENTS                                                
+ DEBUG WRITE/NOT ALL  PASS  WRITE-TEST-2                  DEBUG PROC EXECUTED 10 TIMES                                  
+ DEBUG WRITE/NOT ALL  PASS  WRITE-TEST-2A                 DEBUG-NAME                                                    
+ DEBUG WRITE/NOT ALL  PASS  WRITE-TEST-2B                 PROC EXECUTED AT PROPER TIME                                  
+ DEBUG WRITE/NOT ALL  PASS  WRITE-TEST-2C                 DEBUG-CONTENTS                                                
+ WRITE/NO DEBUG PROC  PASS  WRITE-TEST-3                  DEBUG PROC NOT EXECUTED                                       
+ DEBUG CLOSE FILENAME PASS  CLOSE-TEST-1                  DEBUG PROC EXECUTED                                           
+ DEBUG CLOSE FILENAME INSPT CLOSE-TEST-1A                 DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         661                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG CLOSE FILENAME PASS  CLOSE-TEST-1B                 DEBUG-NAME                                                    
+ DEBUG CLOSE FILENAME PASS  OPEN-TEST-1C                  DEBUG-CONTENTS                                                
+ DEBUG OPEN FILENAME  PASS  OPEN-TEST-2                   DEBUG PROC EXECUTED                                           
+ DEBUG READ FILENAME  PASS  READ-TEST-1                   DEBUG PROC EXECUTED                                           
+ DEBUG READ FILENAME  INSPT READ-TEST-1A                  DEBUG-LINE; SEE NEXT LINE                                     
+        *** INFORMATION  ***                         742                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG READ FILENAME  PASS  READ-TEST-1B                  DEBUG-NAME                                                    
+ DEBUG READ FILENAME  PASS  READ-TEST-1C                  DEBUG-CONTENTS                                                
+ DEBUG READ AT END    PASS  READ-TEST-2                   DEBUG PROC NOT EXECUTED                                       
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                                                                                                                                
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                    END OF TEST-  DB202A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    020 OF 024  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    004 TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

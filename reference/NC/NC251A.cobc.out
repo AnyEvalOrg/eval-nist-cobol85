@@ -1,0 +1,57 @@
+NC251A.CBL:101: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   99 | 009900 77  25ANS PICTURE  99 VALUE ZERO.                                N..
+  100 | 010000 77  25REM PICTURE 99 VALUE ZERO.                                 N..
+  101 > 010100 77  DIV-30-Y1 PICTURE 999 USAGE COMP SYNC RIGHT VALUE 31.        N..
+  102 | 010200 77  DIV-30-Y2 PICTURE 999 USAGE COMP VALUE 54.                   N..
+  103 | 010300 77  DIV-30-Y3 PICTURE 999 VALUE 151.                             N..
+NC251A.CBL:104: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  102 | 010200 77  DIV-30-Y2 PICTURE 999 USAGE COMP VALUE 54.                   N..
+  103 | 010300 77  DIV-30-Y3 PICTURE 999 VALUE 151.                             N..
+  104 > 010400 77  DIV-30-Y4         PICTURE 9(4) SYNC RIGHT VALUE 1010.        N..
+  105 | 010500 77  DIV-Z1-30 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  106 | 010600 77  DIV-Z2-30 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+NC251A.CBL:106: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  104 | 010400 77  DIV-30-Y4         PICTURE 9(4) SYNC RIGHT VALUE 1010.        N..
+  105 | 010500 77  DIV-Z1-30 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  106 > 010600 77  DIV-Z2-30 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  107 | 010700 77  DIV-Z3-30 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  108 | 010800 77  DIV-Z4-30 PICTURE 999 VALUE ZERO.                            N..
+NC251A.CBL:107: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  105 | 010500 77  DIV-Z1-30 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  106 | 010600 77  DIV-Z2-30 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  107 > 010700 77  DIV-Z3-30 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  108 | 010800 77  DIV-Z4-30 PICTURE 999 VALUE ZERO.                            N..
+  109 | 010900 77  DIV-30-A1 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+NC251A.CBL:109: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  107 | 010700 77  DIV-Z3-30 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  108 | 010800 77  DIV-Z4-30 PICTURE 999 VALUE ZERO.                            N..
+  109 > 010900 77  DIV-30-A1 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  110 | 011000 77  DIV-30-A2 PICTURE 999 VALUE ZERO.                            N..
+  111 | 011100 77  DIV-30-A3 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+NC251A.CBL:111: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  109 | 010900 77  DIV-30-A1 PICTURE 999 SYNC RIGHT VALUE ZERO.                 N..
+  110 | 011000 77  DIV-30-A2 PICTURE 999 VALUE ZERO.                            N..
+  111 > 011100 77  DIV-30-A3 PICTURE 999 USAGE COMP SYNC RIGHT VALUE ZERO.      N..
+  112 | 011200 77  DIV-30-A4 PICTURE 999 USAGE COMP VALUE ZERO.                 N..
+  113 | 011300 01  DIV-ENTRIES.                                                 N..
+NC251A.CBL:135: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  133 | 013300 01  NE-04V01-0006     PIC ****.9.                                N..
+  134 | 013400 01  GRP-0010.                                                    N..
+  135 > 013500     02 WRK-DU-03V00-L-0011       PIC 9(03) SYNC LEFT.            N..
+  136 | 013600     02 WRK-O005F-0012        OCCURS   5  TIMES.                  N..
+  137 | 013700        03 WRK-O003F-0013     OCCURS   3  TIMES.                  N..
+NC251A.CBL: in section 'SECT-NC251A-001':
+NC251A.CBL: in paragraph 'DIV-DELETE-F5-20':
+NC251A.CBL:1350: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1348 | 135000     PERFORM DE-LETE.                                             N..
+ 1349 | 135100     PERFORM PRINT-DETAIL.                                        N..
+ 1350 > 135200     GO TO   CCVS-EXIT.                                           N..
+ 1351 | 135300 DIV-TEST-F5-20-1.                                                N..
+ 1352 | 135400     MOVE   "DIV-TEST-F5-20-1" TO PAR-NAME.                       N..
+NC251A.CBL: in paragraph 'DIV-DELETE-F5-21':
+NC251A.CBL:1393: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1391 | 139300     PERFORM DE-LETE.                                             N..
+ 1392 | 139400     PERFORM PRINT-DETAIL.                                        N..
+ 1393 > 139500     GO TO CCVS-EXIT.                                             N..
+ 1394 | 139600 DIV-FAIL-F5-21.                                                  N..
+ 1395 | 139700     PERFORM FAIL.                                                N..

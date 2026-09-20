@@ -1,0 +1,368 @@
+
+ *SELECT-MODULE SG                                                                                                                  
+ *KILL-DELETIONS                                                                                                                    
+ X-00173 "XXXXX001"                                                                                                                 
+ X-00273 "XXXXX002"                                                                                                                 
+ X-00373 "XXXXX003"                                                                                                                 
+ X-00473 "XXXXX004"                                                                                                                 
+ X-00573 "XXXXX005"                                                                                                                 
+ X-00673 "XXXXX006"                                                                                                                 
+ X-00773 "XXXXX007"                                                                                                                 
+ X-00873 "XXXXX008"                                                                                                                 
+ X-00973 "XXXXX009"                                                                                                                 
+ X-01073 "XXXXX010"                                                                                                                 
+ X-01173 "XXXXX011"                                                                                                                 
+ X-01273 "XXXXX012"                                                                                                                 
+ X-01373 "XXXXX013"                                                                                                                 
+ X-01473 "XXXXX014"                                                                                                                 
+ X-01573 "XXXXX015"                                                                                                                 
+ X-01673 "XXXXX016"                                                                                                                 
+ X-01773 "XXXXX017"                                                                                                                 
+ X-01873 "XXXXX018"                                                                                                                 
+ X-01973 "XXXXX019"                                                                                                                 
+ X-02073 "XXXXX020"                                                                                                                 
+ X-02173 "XXXXX021"                                                                                                                 
+ X-02273 "XXXXX022"                                                                                                                 
+ X-02373 "XXXXX023"                                                                                                                 
+ X-02473 "XXXXX024"                                                                                                                 
+ X-02573 "XXXXX025"                                                                                                                 
+ X-02673 "XXXXX026"                                                                                                                 
+ X-02773 "XXXXX027"                                                                                                                 
+ X-02873 "XXXXX028"                                                                                                                 
+ X-02973 "XXXXX029"                                                                                                                 
+ X-03073 "INPUTQUEUE1"                                                                                                              
+ X-03173 "INPUTKEY1"                                                                                                                
+ X-03273 "OUTPUTQUEUE1"                                                                                                             
+ X-03373 "OUTPUTKEY1"                                                                                                               
+ X-03473 "INPUTQUEUE2"                                                                                                              
+ X-03573 "OUTPUTQUEUE2"                                                                                                             
+ X-03673 "INPUTKEY2"                                                                                                                
+ X-03773 "OUTPUTKEY2"                                                                                                               
+ X-03873 "QUEUE1"                                                                                                                   
+ X-03973 "QUEUE2"                                                                                                                   
+ X-04073 "QUEUE3"                                                                                                                   
+ X-04173 "QUEUE4"                                                                                                                   
+ X-04273 "TERM1"                                                                                                                    
+ X-04373 "TERM2"                                                                                                                    
+ X-04773 "."                                                                                                                        
+ X-04873 "../copyalt"                                                                                                               
+ X-04973 "XXXXX049"                                                                                                                 
+ X-05173 SWITCH-1                                                                                                                   
+ X-05273 SWITCH-2                                                                                                                   
+ X-05373 MULTIPLE FILE TFIL                                                                                                             CCVS85 VERSION NUMBER    , RELEASED ON                                                   26 09 20    PAGE      1                                                                                                                                                    
+ X-05573 "REPORT"                                                                                                                   
+ X-05673 SYSOUT                                                                                                                     
+ X-05773 SYSIN                                                                                                                      
+ X-06073 "XXXXX060"                                                                                                                 
+ X-06173 "XXXXX061"                                                                                                                 
+ X-06273 "XXXXX062"                                                                                                                 
+ X-06373 " $$()*+,-./0123456789;<=>ABCDEFGHIJKLMNOPQRSTUVWXYZ"                                                                      
+ X-06473 "ZYXWVUTSRQPONMLKJIHGFEDCBA>=<;9876543210/.-,+*)($$ "                                                                      
+ X-06573 1000                                                                                                                       
+ X-06773 1000                                                                                                                       
+ X-06873 64000                                                                                                                      
+ X-06973 SYSIN                                                                                                                      
+ X-07073 STANDARD-1                                                                                                                 
+ X-07373 FORMFEED                                                                                                                   
+ X-07473 OCLABELID                                                                                                                  
+ X-07573 "OCDUMMY"                                                                                                                  
+ X-07673 "OCDUMMY"                                                                                                                  
+ X-07773 "OCDUMMY"                                                                                                                  
+ X-08173 "12345678"                                                                                                                 
+ X-08273 GNU-Linux                                                                                                                  
+ X-08373 GNU-Linux                                                                                                                  
+ X-08673 PIC X(8)                                                                                                                   
+ X-09073 "A"                                                                                                                        
+ X-09173 "D"                                                                                                                        
+ X-09273 "XXXXX092"                                                                                                                  OPTION SWITCH SETTINGS -                                                                                                           
+ 0                 1                   2                                                                                            
+ 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6                                                                                
+ A E H L     Y       T                                                                                                              
+
+
+ UPDATES WILL BE REPORTED                                                                                                           
+ X-CARD SUBSTITUTIONS WILL NOT BE SHOWN                                                                                             
+ PROGRAM LISTINGS WILL NOT BE PRINTED                                                                                               
+ REPORT WILL BE EXPANDED                                                                                                            
+ SOURCE FILE WILL BE CREATED                                                                                                        
+ NEW POPULATION FILE WILL BE SUPPRESSED                                                                                             
+ LIBRARY FILES WILL BE SELECTED                                                                                                     
+ DATA BLOCKS WILL BE SENT TO SOURCE FILE                                                                                            
+ SEPARATE MODULES SELECTED                                                                                                          
+ COMMENT LINES WILL BE RETAINED                                                                                                     
+ UNUSED OPTIONAL CODE WILL BE REMOVED                                                                                               
+ CCVS85  VERSION 4.2   01 OCT 1992 0032                                                                                                 CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      2                                                                                                                                                    
+ *HEADER,CLBRY,ALTL1                                                                                                                
+  ** END OF PROGRAM ALTL1  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      3                                                                                                                                                    
+ *HEADER,CLBRY,ALTLB                                                                                                                
+  ** END OF PROGRAM ALTLB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      4                                                                                                                                                    
+ *HEADER,CLBRY,K101A                                                                                                                
+  ** END OF PROGRAM K101A  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      5                                                                                                                                                    
+ *HEADER,CLBRY,K1DAA                                                                                                                
+  ** END OF PROGRAM K1DAA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      6                                                                                                                                                    
+ *HEADER,CLBRY,K1FDA                                                                                                                
+  ** END OF PROGRAM K1FDA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      5 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      7                                                                                                                                                    
+ *HEADER,CLBRY,K1P01                                                                                                                
+  ** END OF PROGRAM K1P01  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      8                                                                                                                                                    
+ *HEADER,CLBRY,K1PRA                                                                                                                
+  ** END OF PROGRAM K1PRA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      9                                                                                                                                                    
+ *HEADER,CLBRY,K1PRB                                                                                                                
+  ** END OF PROGRAM K1PRB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     10                                                                                                                                                    
+ *HEADER,CLBRY,K1PRC                                                                                                                
+  ** END OF PROGRAM K1PRC  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     11                                                                                                                                                    
+ *HEADER,CLBRY,K1SEA                                                                                                                
+  ** END OF PROGRAM K1SEA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     12                                                                                                                                                    
+ *HEADER,CLBRY,K1W01                                                                                                                
+  ** END OF PROGRAM K1W01  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     13                                                                                                                                                    
+ *HEADER,CLBRY,K1W02                                                                                                                
+  ** END OF PROGRAM K1W02  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     14                                                                                                                                                    
+ *HEADER,CLBRY,K1W03                                                                                                                
+  ** END OF PROGRAM K1W03  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     15                                                                                                                                                    
+ *HEADER,CLBRY,K1W04                                                                                                                
+  ** END OF PROGRAM K1W04  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     16                                                                                                                                                    
+ *HEADER,CLBRY,K1WKA                                                                                                                
+  ** END OF PROGRAM K1WKA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     17                                                                                                                                                    
+ *HEADER,CLBRY,K1WKB                                                                                                                
+  ** END OF PROGRAM K1WKB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     18                                                                                                                                                    
+ *HEADER,CLBRY,K1WKC                                                                                                                
+  ** END OF PROGRAM K1WKC  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     19                                                                                                                                                    
+ *HEADER,CLBRY,K1WKY                                                                                                                
+  ** END OF PROGRAM K1WKY  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     20                                                                                                                                                    
+ *HEADER,CLBRY,K1WKZ                                                                                                                
+  ** END OF PROGRAM K1WKZ  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     21                                                                                                                                                    
+ *HEADER,CLBRY,K2PRA                                                                                                                
+  ** END OF PROGRAM K2PRA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     22                                                                                                                                                    
+ *HEADER,CLBRY,K2SEA                                                                                                                
+  ** END OF PROGRAM K2SEA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     23                                                                                                                                                    
+ *HEADER,CLBRY,K3FCA                                                                                                                
+  ** END OF PROGRAM K3FCA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     24                                                                                                                                                    
+ *HEADER,CLBRY,K3FCB                                                                                                                
+  ** END OF PROGRAM K3FCB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     25                                                                                                                                                    
+ *HEADER,CLBRY,K3IOA                                                                                                                
+  ** END OF PROGRAM K3IOA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     26                                                                                                                                                    
+ *HEADER,CLBRY,K3IOB                                                                                                                
+  ** END OF PROGRAM K3IOB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     27                                                                                                                                                    
+ *HEADER,CLBRY,K3LGE                                                                                                                
+  ** END OF PROGRAM K3LGE  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     28                                                                                                                                                    
+ *HEADER,CLBRY,K3OCA                                                                                                                
+  ** END OF PROGRAM K3OCA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     29                                                                                                                                                    
+ *HEADER,CLBRY,K3SCA                                                                                                                
+  ** END OF PROGRAM K3SCA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     30                                                                                                                                                    
+ *HEADER,CLBRY,K3SML                                                                                                                
+  ** END OF PROGRAM K3SML  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     31                                                                                                                                                    
+ *HEADER,CLBRY,K3SNA                                                                                                                
+  ** END OF PROGRAM K3SNA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     32                                                                                                                                                    
+ *HEADER,CLBRY,K3SNB                                                                                                                
+  ** END OF PROGRAM K3SNB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     33                                                                                                                                                    
+ *HEADER,CLBRY,K4NTA                                                                                                                
+  ** END OF PROGRAM K4NTA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     34                                                                                                                                                    
+ *HEADER,CLBRY,K501A                                                                                                                
+  ** END OF PROGRAM K501A  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     35                                                                                                                                                    
+ *HEADER,CLBRY,K501B                                                                                                                
+  ** END OF PROGRAM K501B  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     36                                                                                                                                                    
+ *HEADER,CLBRY,K5SDA                                                                                                                
+  ** END OF PROGRAM K5SDA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     37                                                                                                                                                    
+ *HEADER,CLBRY,K5SDB                                                                                                                
+  ** END OF PROGRAM K5SDB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     38                                                                                                                                                    
+ *HEADER,CLBRY,K6SCA                                                                                                                
+  ** END OF PROGRAM K6SCA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     39                                                                                                                                                    
+ *HEADER,CLBRY,K7SEA                                                                                                                
+  ** END OF PROGRAM K7SEA  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     40                                                                                                                                                    
+ *HEADER,CLBRY,KK208A                                                                                                               
+  ** END OF PROGRAM KK208A FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     41                                                                                                                                                    
+ *HEADER,CLBRY,KP001                                                                                                                
+  ** END OF PROGRAM KP001  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     42                                                                                                                                                    
+ *HEADER,CLBRY,KP002                                                                                                                
+  ** END OF PROGRAM KP002  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     43                                                                                                                                                    
+ *HEADER,CLBRY,KP003                                                                                                                
+  ** END OF PROGRAM KP003  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     44                                                                                                                                                    
+ *HEADER,CLBRY,KP004                                                                                                                
+  ** END OF PROGRAM KP004  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     45                                                                                                                                                    
+ *HEADER,CLBRY,KP005                                                                                                                
+  ** END OF PROGRAM KP005  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     46                                                                                                                                                    
+ *HEADER,CLBRY,KP006                                                                                                                
+  ** END OF PROGRAM KP006  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     47                                                                                                                                                    
+ *HEADER,CLBRY,KP007                                                                                                                
+  ** END OF PROGRAM KP007  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     48                                                                                                                                                    
+ *HEADER,CLBRY,KP008                                                                                                                
+  ** END OF PROGRAM KP008  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     49                                                                                                                                                    
+ *HEADER,CLBRY,KP009                                                                                                                
+  ** END OF PROGRAM KP009  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     50                                                                                                                                                    
+ *HEADER,CLBRY,KP010                                                                                                                
+  ** END OF PROGRAM KP010  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     51                                                                                                                                                    
+ *HEADER,CLBRY,KSM31                                                                                                                
+  ** END OF PROGRAM KSM31  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     52                                                                                                                                                    
+ *HEADER,CLBRY,KSM41                                                                                                                
+  ** END OF PROGRAM KSM41  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                        
+  ** END OF PROGRAM        FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                        
+  ** END OF PROGRAM        FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     53                                                                                                                                                    
+ *HEADER,COBOL,SG101A                                                                                                               
+  ** END OF PROGRAM SG101A FOUND,  COBOL LINES PROCESSED:   2849                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     54                                                                                                                                                    
+ *HEADER,COBOL,SG102A                                                                                                               
+  ** END OF PROGRAM SG102A FOUND,  COBOL LINES PROCESSED:    610                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     55                                                                                                                                                    
+ *HEADER,COBOL,SG103A                                                                                                               
+  ** END OF PROGRAM SG103A FOUND,  COBOL LINES PROCESSED:    485                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     56                                                                                                                                                    
+ *HEADER,COBOL,SG104A                                                                                                               
+  ** END OF PROGRAM SG104A FOUND,  COBOL LINES PROCESSED:    592                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     57                                                                                                                                                    
+ *HEADER,COBOL,SG105A                                                                                                               
+  ** END OF PROGRAM SG105A FOUND,  COBOL LINES PROCESSED:    592                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     58                                                                                                                                                    
+ *HEADER,COBOL,SG106A                                                                                                               
+  ** END OF PROGRAM SG106A FOUND,  COBOL LINES PROCESSED:    592                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     59                                                                                                                                                    
+ *HEADER,COBOL,SG201A                                                                                                               
+  ** END OF PROGRAM SG201A FOUND,  COBOL LINES PROCESSED:   1950                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     60                                                                                                                                                    
+ *HEADER,COBOL,SG202A                                                                                                               
+  ** END OF PROGRAM SG202A FOUND,  COBOL LINES PROCESSED:    432                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     61                                                                                                                                                    
+ *HEADER,COBOL,SG203A                                                                                                               
+  ** END OF PROGRAM SG203A FOUND,  COBOL LINES PROCESSED:    794                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     62                                                                                                                                                    
+ *HEADER,COBOL,SG204A                                                                                                               
+  ** END OF PROGRAM SG204A FOUND,  COBOL LINES PROCESSED:    880                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      2 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     63                                                                                                                                                    
+ *HEADER,COBOL,SG302M                                                                                                               
+  ** END OF PROGRAM SG302M FOUND,  COBOL LINES PROCESSED:     21                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     64                                                                                                                                                    
+ *HEADER,COBOL,SG303M                                                                                                               
+  ** END OF PROGRAM SG303M FOUND,  COBOL LINES PROCESSED:     37                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     65                                                                                                                                                    
+ *HEADER,COBOL,SG401M                                                                                                               
+  ** END OF PROGRAM SG401M FOUND,  COBOL LINES PROCESSED:     39                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                        
+  ** END OF POPULATION FILE REACHED NUMBER OF PROGRAMS FOUND:    319                                                                
+  ** NUMBER OF PROGRAMS WRITTEN TO SOURCE FILE:     64                                                                              
+ 057300     GO TO   REP-TEST-7-1.                                                                                                   
+ *START SQ106A                                                                                                                      
+ 114400     GO TO   SEQ-TEST-RD-15-03.                                                                                              
+ 135600     GO TO   SEQ-TEST-RD-17-03.                                                                                              
+ 148400     GO TO   SEQ-TEST-RD-18-03.                                                                                              
+ 174000     GO TO   SEQ-TEST-RD-20-03.                                                                                              
+ 228400     GO TO   SEQ-TEST-RD-24-03.                                                                                              
+ 243700     GO TO   SEQ-TEST-RD-25-03.                                                                                              
+ *END-UPDATE                                                                                                                        
+ *START                                                                                                                             

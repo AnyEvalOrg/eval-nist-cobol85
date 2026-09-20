@@ -1,0 +1,30 @@
+NC108M.CBL:85: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   83 | 008300         BLANK WHEN ZERO                                          N..
+   84 | 008400         PICTURE IS 9                                             N..
+   85 > 008500         SYNCHRONIZED RIGHT                                       N..
+   86 | 008600         DISPLAY                                                  N..
+   87 | 008700              VALUE IS "5".                                       N..
+NC108M.CBL:117: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  115 | 011500 01  SYNC-RIGHT-GROUP.                                            N..
+  116 | 011600     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  117 > 011700     02 FILLER PICTURE 9(5) VALUE 33333 SYNC RIGHT.               N..
+  118 | 011800     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  119 | 011900 01  SYNCHRONIZED-RIGHT-GROUP.                                    N..
+NC108M.CBL:121: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  119 | 011900 01  SYNCHRONIZED-RIGHT-GROUP.                                    N..
+  120 | 012000     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  121 > 012100     02 FILLER PICTURE 9(5) VALUE 33333 SYNCHRONIZED RIGHT.       N..
+  122 | 012200     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  123 | 012300 01  SYNC-LEFT-GROUP.                                             N..
+NC108M.CBL:125: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  123 | 012300 01  SYNC-LEFT-GROUP.                                             N..
+  124 | 012400     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  125 > 012500     02 FILLER PICTURE 9(5) VALUE 11111 SYNC LEFT.                N..
+  126 | 012600     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  127 | 012700 01  SYNCHRONIZED-LEFT-GROUP.                                     N..
+NC108M.CBL:129: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  127 | 012700 01  SYNCHRONIZED-LEFT-GROUP.                                     N..
+  128 | 012800     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  129 > 012900     02 FILLER PICTURE 9(5) VALUE 11111 SYNCHRONIZED LEFT.        N..
+  130 | 013000     02 FILLER PICTURE X(5) VALUE SPACE.                          N..
+  131 | 013100 01  TEST-FIELD            PIC X(10).                             N..

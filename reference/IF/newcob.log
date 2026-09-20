@@ -1,0 +1,333 @@
+
+ *SELECT-MODULE IF                                                                                                                  
+ *KILL-DELETIONS                                                                                                                    
+ X-00173 "XXXXX001"                                                                                                                 
+ X-00273 "XXXXX002"                                                                                                                 
+ X-00373 "XXXXX003"                                                                                                                 
+ X-00473 "XXXXX004"                                                                                                                 
+ X-00573 "XXXXX005"                                                                                                                 
+ X-00673 "XXXXX006"                                                                                                                 
+ X-00773 "XXXXX007"                                                                                                                 
+ X-00873 "XXXXX008"                                                                                                                 
+ X-00973 "XXXXX009"                                                                                                                 
+ X-01073 "XXXXX010"                                                                                                                 
+ X-01173 "XXXXX011"                                                                                                                 
+ X-01273 "XXXXX012"                                                                                                                 
+ X-01373 "XXXXX013"                                                                                                                 
+ X-01473 "XXXXX014"                                                                                                                 
+ X-01573 "XXXXX015"                                                                                                                 
+ X-01673 "XXXXX016"                                                                                                                 
+ X-01773 "XXXXX017"                                                                                                                 
+ X-01873 "XXXXX018"                                                                                                                 
+ X-01973 "XXXXX019"                                                                                                                 
+ X-02073 "XXXXX020"                                                                                                                 
+ X-02173 "XXXXX021"                                                                                                                 
+ X-02273 "XXXXX022"                                                                                                                 
+ X-02373 "XXXXX023"                                                                                                                 
+ X-02473 "XXXXX024"                                                                                                                 
+ X-02573 "XXXXX025"                                                                                                                 
+ X-02673 "XXXXX026"                                                                                                                 
+ X-02773 "XXXXX027"                                                                                                                 
+ X-02873 "XXXXX028"                                                                                                                 
+ X-02973 "XXXXX029"                                                                                                                 
+ X-03073 "INPUTQUEUE1"                                                                                                              
+ X-03173 "INPUTKEY1"                                                                                                                
+ X-03273 "OUTPUTQUEUE1"                                                                                                             
+ X-03373 "OUTPUTKEY1"                                                                                                               
+ X-03473 "INPUTQUEUE2"                                                                                                              
+ X-03573 "OUTPUTQUEUE2"                                                                                                             
+ X-03673 "INPUTKEY2"                                                                                                                
+ X-03773 "OUTPUTKEY2"                                                                                                               
+ X-03873 "QUEUE1"                                                                                                                   
+ X-03973 "QUEUE2"                                                                                                                   
+ X-04073 "QUEUE3"                                                                                                                   
+ X-04173 "QUEUE4"                                                                                                                   
+ X-04273 "TERM1"                                                                                                                    
+ X-04373 "TERM2"                                                                                                                    
+ X-04773 "."                                                                                                                        
+ X-04873 "../copyalt"                                                                                                               
+ X-04973 "XXXXX049"                                                                                                                 
+ X-05173 SWITCH-1                                                                                                                   
+ X-05273 SWITCH-2                                                                                                                   
+ X-05373 MULTIPLE FILE TFIL                                                                                                             CCVS85 VERSION NUMBER    , RELEASED ON                                                   26 09 20    PAGE      1                                                                                                                                                    
+ X-05573 "REPORT"                                                                                                                   
+ X-05673 SYSOUT                                                                                                                     
+ X-05773 SYSIN                                                                                                                      
+ X-06073 "XXXXX060"                                                                                                                 
+ X-06173 "XXXXX061"                                                                                                                 
+ X-06273 "XXXXX062"                                                                                                                 
+ X-06373 " $$()*+,-./0123456789;<=>ABCDEFGHIJKLMNOPQRSTUVWXYZ"                                                                      
+ X-06473 "ZYXWVUTSRQPONMLKJIHGFEDCBA>=<;9876543210/.-,+*)($$ "                                                                      
+ X-06573 1000                                                                                                                       
+ X-06773 1000                                                                                                                       
+ X-06873 64000                                                                                                                      
+ X-06973 SYSIN                                                                                                                      
+ X-07073 STANDARD-1                                                                                                                 
+ X-07373 FORMFEED                                                                                                                   
+ X-07473 OCLABELID                                                                                                                  
+ X-07573 "OCDUMMY"                                                                                                                  
+ X-07673 "OCDUMMY"                                                                                                                  
+ X-07773 "OCDUMMY"                                                                                                                  
+ X-08173 "12345678"                                                                                                                 
+ X-08273 GNU-Linux                                                                                                                  
+ X-08373 GNU-Linux                                                                                                                  
+ X-08673 PIC X(8)                                                                                                                   
+ X-09073 "A"                                                                                                                        
+ X-09173 "D"                                                                                                                        
+ X-09273 "XXXXX092"                                                                                                                  OPTION SWITCH SETTINGS -                                                                                                           
+ 0                 1                   2                                                                                            
+ 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6                                                                                
+ A E H L     Y       T                                                                                                              
+
+
+ UPDATES WILL BE REPORTED                                                                                                           
+ X-CARD SUBSTITUTIONS WILL NOT BE SHOWN                                                                                             
+ PROGRAM LISTINGS WILL NOT BE PRINTED                                                                                               
+ REPORT WILL BE EXPANDED                                                                                                            
+ SOURCE FILE WILL BE CREATED                                                                                                        
+ NEW POPULATION FILE WILL BE SUPPRESSED                                                                                             
+ LIBRARY FILES WILL BE SELECTED                                                                                                     
+ DATA BLOCKS WILL BE SENT TO SOURCE FILE                                                                                            
+ SEPARATE MODULES SELECTED                                                                                                          
+ COMMENT LINES WILL BE RETAINED                                                                                                     
+ UNUSED OPTIONAL CODE WILL BE REMOVED                                                                                               
+ CCVS85  VERSION 4.2   01 OCT 1992 0032                                                                                                 CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      2                                                                                                                                                    
+ *HEADER,CLBRY,ALTL1                                                                                                                
+  ** END OF PROGRAM ALTL1  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      3                                                                                                                                                    
+ *HEADER,CLBRY,ALTLB                                                                                                                
+  ** END OF PROGRAM ALTLB  FOUND,  COBOL LINES PROCESSED:      0                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      4                                                                                                                                                    
+ *HEADER,COBOL,IF101A                                                                                                               
+  ** END OF PROGRAM IF101A FOUND,  COBOL LINES PROCESSED:    906                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      5                                                                                                                                                    
+ *HEADER,COBOL,IF102A                                                                                                               
+  ** END OF PROGRAM IF102A FOUND,  COBOL LINES PROCESSED:    617                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      6                                                                                                                                                    
+ *HEADER,COBOL,IF103A                                                                                                               
+  ** END OF PROGRAM IF103A FOUND,  COBOL LINES PROCESSED:    840                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      7                                                                                                                                                    
+ *HEADER,COBOL,IF104A                                                                                                               
+  ** END OF PROGRAM IF104A FOUND,  COBOL LINES PROCESSED:    927                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      8                                                                                                                                                    
+ *HEADER,COBOL,IF105A                                                                                                               
+  ** END OF PROGRAM IF105A FOUND,  COBOL LINES PROCESSED:    487                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE      9                                                                                                                                                    
+ *HEADER,COBOL,IF106A                                                                                                               
+  ** END OF PROGRAM IF106A FOUND,  COBOL LINES PROCESSED:   1005                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     10                                                                                                                                                    
+ *HEADER,COBOL,IF107A                                                                                                               
+  ** END OF PROGRAM IF107A FOUND,  COBOL LINES PROCESSED:    379                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     11                                                                                                                                                    
+ *HEADER,COBOL,IF108A                                                                                                               
+  ** END OF PROGRAM IF108A FOUND,  COBOL LINES PROCESSED:    489                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     12                                                                                                                                                    
+ *HEADER,COBOL,IF109A                                                                                                               
+  ** END OF PROGRAM IF109A FOUND,  COBOL LINES PROCESSED:    451                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     13                                                                                                                                                    
+ *HEADER,COBOL,IF110A                                                                                                               
+  ** END OF PROGRAM IF110A FOUND,  COBOL LINES PROCESSED:    500                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     14                                                                                                                                                    
+ *HEADER,COBOL,IF111A                                                                                                               
+  ** END OF PROGRAM IF111A FOUND,  COBOL LINES PROCESSED:    731                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     15                                                                                                                                                    
+ *HEADER,COBOL,IF112A                                                                                                               
+  ** END OF PROGRAM IF112A FOUND,  COBOL LINES PROCESSED:    452                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     16                                                                                                                                                    
+ *HEADER,COBOL,IF113A                                                                                                               
+  ** END OF PROGRAM IF113A FOUND,  COBOL LINES PROCESSED:    451                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     17                                                                                                                                                    
+ *HEADER,COBOL,IF114A                                                                                                               
+  ** END OF PROGRAM IF114A FOUND,  COBOL LINES PROCESSED:    732                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     18                                                                                                                                                    
+ *HEADER,COBOL,IF115A                                                                                                               
+  ** END OF PROGRAM IF115A FOUND,  COBOL LINES PROCESSED:    450                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     19                                                                                                                                                    
+ *HEADER,COBOL,IF116A                                                                                                               
+  ** END OF PROGRAM IF116A FOUND,  COBOL LINES PROCESSED:    889                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     20                                                                                                                                                    
+ *HEADER,COBOL,IF117A                                                                                                               
+  ** END OF PROGRAM IF117A FOUND,  COBOL LINES PROCESSED:   1037                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     21                                                                                                                                                    
+ *HEADER,COBOL,IF118A                                                                                                               
+  ** END OF PROGRAM IF118A FOUND,  COBOL LINES PROCESSED:    544                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     22                                                                                                                                                    
+ *HEADER,COBOL,IF119A                                                                                                               
+ 061200     COMPUTE WS-NUM = FUNCTION MAX(IND(ALL)).                     IF1194.2            ORIGINAL                               
+ 061200     COMPUTE WS-NUM = FUNCTION MAX (4 0 5 3 7).                                       REPLACEMENT                            
+  ** END OF PROGRAM IF119A FOUND,  COBOL LINES PROCESSED:    797                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     23                                                                                                                                                    
+ *HEADER,COBOL,IF120A                                                                                                               
+ 050300     COMPUTE WS-NUM = FUNCTION MEAN(IND(ALL)).                    IF1204.2            ORIGINAL                               
+ 050300     COMPUTE WS-NUM = FUNCTION MEAN (4 0 5 3 7).                                      REPLACEMENT                            
+  ** END OF PROGRAM IF120A FOUND,  COBOL LINES PROCESSED:    684                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     24                                                                                                                                                    
+ *HEADER,COBOL,IF121A                                                                                                               
+ 050000     COMPUTE WS-NUM = FUNCTION MEDIAN(IND(ALL)).                  IF1214.2            ORIGINAL                               
+ 050000     COMPUTE WS-NUM = FUNCTION MEDIAN (4 0 5 3 7).                                    REPLACEMENT                            
+  ** END OF PROGRAM IF121A FOUND,  COBOL LINES PROCESSED:    680                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     25                                                                                                                                                    
+ *HEADER,COBOL,IF122A                                                                                                               
+ 052200     COMPUTE WS-NUM = FUNCTION MIDRANGE(IND(ALL)).                IF1224.2            ORIGINAL                               
+ 052200     COMPUTE WS-NUM = FUNCTION MIDRANGE (4 0 5 3 7).                                  REPLACEMENT                            
+  ** END OF PROGRAM IF122A FOUND,  COBOL LINES PROCESSED:    680                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     26                                                                                                                                                    
+ *HEADER,COBOL,IF123A                                                                                                               
+ 061500     COMPUTE WS-NUM = FUNCTION MIN(IND(ALL)).                     IF1234.2            ORIGINAL                               
+ 061500     COMPUTE WS-NUM = FUNCTION MIN (4 0 5 3 7).                                       REPLACEMENT                            
+  ** END OF PROGRAM IF123A FOUND,  COBOL LINES PROCESSED:    797                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     27                                                                                                                                                    
+ *HEADER,COBOL,IF124A                                                                                                               
+  ** END OF PROGRAM IF124A FOUND,  COBOL LINES PROCESSED:    761                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     28                                                                                                                                                    
+ *HEADER,COBOL,IF125A                                                                                                               
+  ** END OF PROGRAM IF125A FOUND,  COBOL LINES PROCESSED:    686                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     29                                                                                                                                                    
+ *HEADER,COBOL,IF126A                                                                                                               
+  ** END OF PROGRAM IF126A FOUND,  COBOL LINES PROCESSED:    886                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     30                                                                                                                                                    
+ *HEADER,COBOL,IF127A                                                                                                               
+  ** END OF PROGRAM IF127A FOUND,  COBOL LINES PROCESSED:    505                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     31                                                                                                                                                    
+ *HEADER,COBOL,IF128A                                                                                                               
+ 054900     COMPUTE WS-INT = FUNCTION ORD-MAX(IND(ALL)).                 IF1284.2            ORIGINAL                               
+ 054900     COMPUTE WS-INT = FUNCTION ORD-MAX (4 0 5 3 7).                                   REPLACEMENT                            
+  ** END OF PROGRAM IF128A FOUND,  COBOL LINES PROCESSED:    647                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     32                                                                                                                                                    
+ *HEADER,COBOL,IF129A                                                                                                               
+ 055200     COMPUTE WS-INT = FUNCTION ORD-MIN(IND(ALL)).                 IF1294.2            ORIGINAL                               
+ 055200     COMPUTE WS-INT = FUNCTION ORD-MIN (4 0 5 3 7).                                   REPLACEMENT                            
+  ** END OF PROGRAM IF129A FOUND,  COBOL LINES PROCESSED:    632                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     33                                                                                                                                                    
+ *HEADER,COBOL,IF130A                                                                                                               
+  ** END OF PROGRAM IF130A FOUND,  COBOL LINES PROCESSED:    818                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     34                                                                                                                                                    
+ *HEADER,COBOL,IF131A                                                                                                               
+  ** END OF PROGRAM IF131A FOUND,  COBOL LINES PROCESSED:    512                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     35                                                                                                                                                    
+ *HEADER,COBOL,IF132A                                                                                                               
+ 049800     COMPUTE WS-NUM = FUNCTION RANGE(IND(ALL)).                   IF1324.2            ORIGINAL                               
+ 049800     COMPUTE WS-NUM = FUNCTION RANGE (4 0 5 3 7).                                     REPLACEMENT                            
+  ** END OF PROGRAM IF132A FOUND,  COBOL LINES PROCESSED:    633                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     36                                                                                                                                                    
+ *HEADER,COBOL,IF133A                                                                                                               
+  ** END OF PROGRAM IF133A FOUND,  COBOL LINES PROCESSED:    678                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     37                                                                                                                                                    
+ *HEADER,COBOL,IF134A                                                                                                               
+  ** END OF PROGRAM IF134A FOUND,  COBOL LINES PROCESSED:    546                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     38                                                                                                                                                    
+ *HEADER,COBOL,IF135A                                                                                                               
+  ** END OF PROGRAM IF135A FOUND,  COBOL LINES PROCESSED:   1036                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     39                                                                                                                                                    
+ *HEADER,COBOL,IF136A                                                                                                               
+  ** END OF PROGRAM IF136A FOUND,  COBOL LINES PROCESSED:    904                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     40                                                                                                                                                    
+ *HEADER,COBOL,IF137A                                                                                                               
+ 053100     COMPUTE WS-NUM = FUNCTION STANDARD-DEVIATION(IND(ALL)).      IF1374.2            ORIGINAL                               
+ 053100     COMPUTE WS-NUM = FUNCTION STANDARD-DEVIATION (4 0 5 3 7).                        REPLACEMENT                            
+  ** END OF PROGRAM IF137A FOUND,  COBOL LINES PROCESSED:    725                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     41                                                                                                                                                    
+ *HEADER,COBOL,IF138A                                                                                                               
+ 049800     COMPUTE WS-NUM = FUNCTION SUM(IND(ALL)).                     IF1384.2            ORIGINAL                               
+ 049800     COMPUTE WS-NUM = FUNCTION SUM (4 0 5 3 7).                                       REPLACEMENT                            
+  ** END OF PROGRAM IF138A FOUND,  COBOL LINES PROCESSED:    659                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     42                                                                                                                                                    
+ *HEADER,COBOL,IF139A                                                                                                               
+  ** END OF PROGRAM IF139A FOUND,  COBOL LINES PROCESSED:    992                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     43                                                                                                                                                    
+ *HEADER,COBOL,IF140A                                                                                                               
+  ** END OF PROGRAM IF140A FOUND,  COBOL LINES PROCESSED:    543                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     44                                                                                                                                                    
+ *HEADER,COBOL,IF141A                                                                                                               
+ 052500     COMPUTE WS-NUM = FUNCTION VARIANCE(IND(ALL)).                IF1414.2            ORIGINAL                               
+ 052500     COMPUTE WS-NUM = FUNCTION VARIANCE (4 0 5 3 7).                                  REPLACEMENT                            
+  ** END OF PROGRAM IF141A FOUND,  COBOL LINES PROCESSED:    692                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      1 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     45                                                                                                                                                    
+ *HEADER,COBOL,IF142A                                                                                                               
+  ** END OF PROGRAM IF142A FOUND,  COBOL LINES PROCESSED:    367                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     46                                                                                                                                                    
+ *HEADER,COBOL,IF401M                                                                                                               
+  ** END OF PROGRAM IF401M FOUND,  COBOL LINES PROCESSED:    104                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     47                                                                                                                                                    
+ *HEADER,COBOL,IF402M                                                                                                               
+ 005900     MOVE FUNCTION MAX (WS-TABLE (ALL, ALL, ALL)) TO WS-AN-TEMP.  IF4024.2            ORIGINAL                               
+ 005900                                                                                      REPLACEMENT                            
+ 008600     MOVE FUNCTION MIN (WS-TABLE (ALL, ALL, ALL)) TO WS-AN-TEMP.  IF4024.2            ORIGINAL                               
+ 008600                                                                                      REPLACEMENT                            
+  ** END OF PROGRAM IF402M FOUND,  COBOL LINES PROCESSED:    124                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      2 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                            CCVS85 VERSION NUMBER 4.2, RELEASED ON 01 OCT 1992                                       26 09 20    PAGE     48                                                                                                                                                    
+ *HEADER,COBOL,IF403M                                                                                                               
+  ** END OF PROGRAM IF403M FOUND,  COBOL LINES PROCESSED:     97                                                                    
+  ** LINES INSERTED      0 ** LINES REPLACED      0 ** LINES DELETED       0                                                        
+  ** OPTIONAL CODE DELETED      0 ** COMMENTS DELETED      0                                                                        
+  ** END OF POPULATION FILE REACHED NUMBER OF PROGRAMS FOUND:    119                                                                
+  ** NUMBER OF PROGRAMS WRITTEN TO SOURCE FILE:     47                                                                              
+ 012250 01  STATUS-TEST-10          PIC 9 VALUE ZERO.                                                                               
+ *START NC174A                                                                                                                      
+ 065200                                                                                                                             
+ *START NC217A                                                                                                                      
+ 051300     STRING  ID1-1 OF ID1-XN-X-25 (ID8-DU-2V0)                                                                               
+ 051400             ID1-2 OF ID1-XN-X-25 (ID8-DU-2V0)                                                                               
+ 051500             ID1-3 OF ID1-XN-X-25 (ID8-DU-2V0)                                                                               
+ 051600             ID1-4 OF ID1-XN-X-25 (ID8-DU-2V0)                                                                               
+ 051700             ID1-5 OF ID1-XN-X-25 (ID8-DU-2V0)                                                                               
+ 051800             DELIMITED BY SIZE INTO ID7-XN-5                                                                                 
+ 051900             POINTER ID8-DU-2V0.                                                                                             
+ 052000     GO      TO STRING-TEST-4-1.                                                                                             
+ *START SM208A                                                                                                                      
+ 057300     GO TO   REP-TEST-7-1.                                                                                                   
+ *START SQ106A                                                                                                                      
+ 114400     GO TO   SEQ-TEST-RD-15-03.                                                                                              
+ 135600     GO TO   SEQ-TEST-RD-17-03.                                                                                              
+ 148400     GO TO   SEQ-TEST-RD-18-03.                                                                                              
+ 174000     GO TO   SEQ-TEST-RD-20-03.                                                                                              
+ 228400     GO TO   SEQ-TEST-RD-24-03.                                                                                              
+ 243700     GO TO   SEQ-TEST-RD-25-03.                                                                                              
+ *END-UPDATE                                                                                                                        
+ *START                                                                                                                             

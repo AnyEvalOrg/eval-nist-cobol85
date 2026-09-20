@@ -1,0 +1,8 @@
+IC106A.CBL: in section 'SEC-IC106-0001':
+IC106A.CBL: in paragraph 'LINK-END-ROUTINE':
+IC106A.CBL:525: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  523 | 052500     PERFORM PRINT-DETAIL.                                        I..
+  524 | 052600 LINK-END-ROUTINE.                                                I..
+  525 > 052700     GO TO CCVS-EXIT.                                             I..
+  526 | 052800 CCVS-EXIT SECTION.                                               I..
+  527 | 052900 CCVS-999999.                                                     I..

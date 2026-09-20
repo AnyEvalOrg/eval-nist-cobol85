@@ -1,0 +1,8 @@
+NC133A.CBL: in section 'SECT-TH133A-001':
+NC133A.CBL: in paragraph 'IDX-INIT-A':
+NC133A.CBL:337: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  335 | 033700     PERFORM FAIL.                                                N..
+  336 | 033800     PERFORM INIT-WRITE.                                          N..
+  337 > 033900     GO TO   CCVS-EXIT.                                           N..
+  338 | 034000 INIT-WRITE.                                                      N..
+  339 | 034100     MOVE     "TABLE BUILD" TO PAR-NAME.                          N..

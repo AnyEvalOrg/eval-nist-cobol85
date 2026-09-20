@@ -1,0 +1,14 @@
+NC201A.CBL:185: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  183 | 018300-    "NOPQRSTUVWXYZ1234567890ABCDEFGHIJKL".                       N..
+  184 | 018400 01  IF-D40 PICTURE 9(5) VALUE 12345                              N..
+  185 > 018500              COMPUTATIONAL SYNCHRONIZED RIGHT.                   N..
+  186 | 018600     88 IF-D40A VALUE ZERO THRU 10000.                            N..
+  187 | 018700     88 IF-D40B VALUE 10001 THRU 99999.                           N..
+NC201A.CBL: in section 'SECT-NC201A-001':
+NC201A.CBL: in paragraph 'PFM-TEST-F4-8':
+NC201A.CBL:1031: warning: GO TO SECTION 'PFM-PART-A' [-Wgoto-section]
+ 1029 | 103100*                 RESULT.                                         N..
+ 1030 | 103200 PFM-TEST-F4-8.                                                   N..
+ 1031 > 103300     GO TO PFM-PART-A.                                            N..
+ 1032 | 103400 PFM-DELETE-F4-8.                                                 N..
+ 1033 | 103500     PERFORM DE-LETE.                                             N..

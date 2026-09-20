@@ -1,0 +1,8 @@
+NC174A.CBL: in section 'SECT-NC174A-001':
+NC174A.CBL: in paragraph 'CLASS-DELETE-GF-52':
+NC174A.CBL:1905: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1903 | 191900     PERFORM DE-LETE.                                             N..
+ 1904 | 192000     PERFORM PRINT-DETAIL.                                        N..
+ 1905 > 192100     GO TO   CCVS-EXIT.                                           N..
+ 1906 | 192200 CLASS-TEST-GF-52.                                                N..
+ 1907 | 192300     IF      DATA-VWXYZ NOT ACTUAL-ABCD                           N..

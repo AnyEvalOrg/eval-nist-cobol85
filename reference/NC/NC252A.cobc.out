@@ -1,0 +1,6 @@
+NC252A.CBL:229: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+  227 | 022700 01  NE-04V01-0006     PIC ****.9.                                N..
+  228 | 022800 01  GRP-0010.                                                    N..
+  229 > 022900     02 WRK-DU-03V00-L-0011       PIC 9(03) SYNC LEFT.            N..
+  230 | 023000     02 WRK-O005F-0012        OCCURS   5  TIMES.                  N..
+  231 | 023100        03 WRK-O003F-0013     OCCURS   3  TIMES.                  N..

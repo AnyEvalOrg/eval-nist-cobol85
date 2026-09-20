@@ -1,0 +1,45 @@
+
+                            FEDERAL COMPILER TESTING CENTER COBOL COMPILER VALIDATION   SYSTEM                          
+                                                                                                                        
+CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  DB104A                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1974          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ DEBUG SORT INPUT     PASS  SORT-IN-1                     DEBUG PROCEDURE EXECUTED                                      
+ DEBUG SORT INPUT     INSPT SORT-IN-2                     DEBUG-LINE, SEE NEXT LINE                                     
+        *** INFORMATION  ***                         441                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG SORT INPUT     PASS  SORT-IN-3                     DEBUG-NAME                                                    
+ DEBUG SORT INPUT     PASS  SORT-IN-4                     DEBUG-CONTENTS                                                
+ DEBUG USE PROC       PASS  SORT-USE-TEST                 BOTH PROCEDURES EXECUTED                                      
+ DEBUG USE PROC       INSPT SORT-USE-TEST                 DEBUG-LINE, SEE NEXT LINE                                     
+        *** INFORMATION  ***                         502                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG USE PROC       PASS  SORT-USE-TEST                 DEBUG-NAME                                                    
+ DEBUG USE PROC       PASS  SORT-USE-TEST                 DEBUG-CONTENTS                                                
+ DEBUG SORT OUTPUT    PASS  SORT-OUT-1                    DEBUG PROCEDURE EXECUTED                                      
+ DEBUG SORT OUTPUT    INSPT SORT-OUT-2                    DEBUG-LINE, SEE NEXT LINE                                     
+        *** INFORMATION  ***                         618                   <===  DEBUG-LINE                             
+                                                                                                                        
+ DEBUG SORT OUTPUT    PASS  SORT-OUT-3                    DEBUG-NAME                                                    
+ DEBUG SORT OUTPUT    PASS  SORT-OUT-4                    DEBUG-CONTENTS                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  DB104A    NTIS DISTRIBUTION COBOL 74                  
+                                                                                                                        
+                                                    009 OF 012  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    003 TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

@@ -1,0 +1,16 @@
+ST131A.CBL: in section 'SRT-2':
+ST131A.CBL: in paragraph 'SECOND-SORT':
+ST131A.CBL:497: warning: GO TO SECTION 'SRT-3' [-Wgoto-section]
+  495 | 051500         GIVING FILE3.                                            S..
+  496 | 051600*      NOTE SORT STATEMENT WITH ALL OPTIONAL WORDS OMITTED.       S..
+  497 > 051700     GO TO SRT-3.                                                 S..
+  498 | 051800 SRT-2-INPUT SECTION.                                             S..
+  499 | 051900 OPEN-1.                                                          S..
+ST131A.CBL: in section 'SRT-3':
+ST131A.CBL: in paragraph 'END-FIRST-PROGRAM':
+ST131A.CBL:647: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  645 | 066500*        WITHOUT THE GENERATION OF AN OUTPUT FILE.                S..
+  646 | 066600 END-FIRST-PROGRAM.                                               S..
+  647 > 066700     GO TO CCVS-EXIT.                                             S..
+  648 | 066800 SRT3-INPUT SECTION.                                              S..
+  649 | 066900 OPEN-2.                                                          S..

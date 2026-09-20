@@ -1,0 +1,8 @@
+NC126A.CBL: in section 'SECT-NC126A-001':
+NC126A.CBL: in paragraph 'LEV-WRITE-GF-3-50':
+NC126A.CBL:2579: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2577 | 257900     MOVE "LEV-TEST-GF-3-50"  TO PAR-NAME.                        N..
+ 2578 | 258000     PERFORM PRINT-DETAIL.                                        N..
+ 2579 > 258100     GO TO    CCVS-EXIT.                                          N..
+ 2580 | 258200 BREAKDOWN-PARA.                                                  N..
+ 2581 | 258300     PERFORM  FAIL.                                               N..

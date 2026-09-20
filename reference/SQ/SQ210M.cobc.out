@@ -1,0 +1,8 @@
+SQ210M.CBL: in section 'SECT-SQ210M-0001':
+SQ210M.CBL: in paragraph 'SQ210M-END-ROUTINE':
+SQ210M.CBL:318: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  316 | 036400     MOVE "END OF SQ210M VALIDATION TESTS" TO PRINT-REC.          S..
+  317 | 036500     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      S..
+  318 > 036600     GO TO CCVS-EXIT.                                             S..
+  319 | 036700 PRINT-DETAIL-1.                                                  S..
+  320 | 036800     MOVE LINAGE-COUNTER TO DL1-LC.                               S..

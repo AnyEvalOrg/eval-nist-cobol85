@@ -1,0 +1,29 @@
+NC138A.CBL:51: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
+   49 | 004900        VALUE 1.                                                  N..
+   50 | 005000 77  S31    PIC  S999 COMPUTATIONAL  VALUE 1.                     N..
+   51 > 005100 77  S32    PIC  S999 SYNC LEFT VALUE 1.                          N..
+   52 | 005200 77  S33    PIC  S999            VALUE 1.                         N..
+   53 | 005300*    ONE DIMENSIONAL TABLE.                                       N..
+NC138A.CBL: in section 'SECT-NC138A-0001':
+NC138A.CBL: in paragraph 'MOVE-VALUE':
+NC138A.CBL:338: warning: GO TO SECTION 'SECT-TH109-0002' [-Wgoto-section]
+  336 | 033800     MOVE WRK1 TO ELEM1 (S1)  ELEM2 (S21, S22)                    N..
+  337 | 033900                  ELEM3 (S31, S32, S33).                          N..
+  338 > 034000     IF WRK1 EQUAL TO 60   GO TO SECT-TH109-0002.                 N..
+  339 | 034100 INCRE-SUBS.                                                      N..
+  340 | 034200     ADD 1 TO S1.                                                 N..
+NC138A.CBL: in section 'SECT-TH109-0002':
+NC138A.CBL: in paragraph 'SEP-TEST-007-07':
+NC138A.CBL:580: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  578 | 058000     MOVE ELEM3 ( +1,  +3,  +2 ) TO TEMP.                         N..
+  579 | 058100     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                N..
+  580 > 058200     GO TO CCVS-EXIT.                                             N..
+  581 | 058300*         IF THE COMPILER REJECTS ANY OF THE ABOVE TABLE          N..
+  582 | 058400*    REFERENCES, DELETE THAT LINE OF CODE BY PLACING              N..
+NC138A.CBL: in paragraph 'SEP-DELETE-007':
+NC138A.CBL:589: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  587 | 058900     PERFORM DE-LETE.                                             N..
+  588 | 059000     PERFORM SYNTAX-CHECK-WRITE.                                  N..
+  589 > 059100     GO TO CCVS-EXIT.                                             N..
+  590 | 059200 SEP-INIT-008.                                                    N..
+  591 | 059300     MOVE "IV-4 4.2.1(2)" TO ANSI-REFERENCE.                      N..

@@ -1,0 +1,8 @@
+SM206A.CBL: in section 'SECT-SM206-0002':
+SM206A.CBL: in paragraph 'PST-DELETE-11':
+SM206A.CBL:667: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  665 | 066700     PERFORM DE-LETE.                                             S..
+  666 | 066800     PERFORM PRINT-DETAIL.                                        S..
+  667 > 066900     GO TO   CCVS-EXIT.                                           S..
+  668 | 067000 PST-TEST-11-1.                                                   S..
+  669 | 067100     MOVE   "PST-TEST-11-1" TO PAR-NAME.                          S..

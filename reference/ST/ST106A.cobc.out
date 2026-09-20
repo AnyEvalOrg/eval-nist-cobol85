@@ -1,0 +1,8 @@
+ST106A.CBL: in section 'INPROC':
+ST106A.CBL: in paragraph 'BUILD-FILE-WRITE':
+ST106A.CBL:390: warning: GO TO SECTION 'INPROC-EXIT' [-Wgoto-section]
+  388 | 039500     PERFORM  PRINT-DETAIL.                                       S..
+  389 | 039600     CLOSE    SORTOUT-1F.                                         S..
+  390 > 039700     GO       TO INPROC-EXIT.                                     S..
+  391 | 039800 INPROC-EXIT SECTION.                                             S..
+  392 | 039900 EXITPARA.                                                        S..

@@ -1,0 +1,76 @@
+DB105A.CBL: in section 'PROC-001-BEGIN-TESTS':
+DB105A.CBL: in paragraph 'PROC-017-GO--TEST-3':
+DB105A.CBL:699: warning: GO TO SECTION 'PROC-018-GO--PASS-3' [-Wgoto-section]
+  697 | 069700 PROC-017-GO--TEST-3.                                             D..
+  698 | 069800     MOVE 0 TO INCREMENT.                                         D..
+  699 > 069900     GO TO    PROC-018-GO--PASS-3.                                D..
+  700 | 070000 PROC-000-GO--TEST-3A.                                            D..
+  701 | 070100     MOVE 0 TO INCREMENT.                                         D..
+DB105A.CBL: in section 'PROC-018-GO--PASS-3':
+DB105A.CBL: in paragraph 'PROC-020-GO--TEST-4':
+DB105A.CBL:715: warning: GO TO SECTION 'PROC-021-GO--PASS-4' [-Wgoto-section]
+  713 | 071300 PROC-020-GO--TEST-4.                                             D..
+  714 | 071400     MOVE 0 TO INCREMENT.                                         D..
+  715 > 071500     GO TO    PROC-021-GO--PASS-4                                 D..
+  716 | 071600              PROC-000-GO--NUC-FAIL-4 DEPENDING ON GO-TO-DEEP.    D..
+  717 | 071700*    NOTE THAT PROC-021-GO--PASS-4 IS A SECTION-NAME.             D..
+DB105A.CBL: in section 'PROC-000-PFM-J-15':
+DB105A.CBL: in paragraph 'PROC-227-PFM-WRITE-LAST':
+DB105A.CBL:1219: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1217 | 121700         PERFORM WRITE-LINE                                       D..
+ 1218 | 121800         MOVE 227 TO ERROR-COUNTER                                D..
+ 1219 > 121900         GO TO CCVS-EXIT.                                         D..
+ 1220 | 122000     MOVE 0 TO INCREMENT.                                         D..
+ 1221 | 122100     MOVE SPACE TO TEST-RESULTS.                                  D..
+DB105A.CBL: in paragraph 'STACK-EMPTY':
+DB105A.CBL:1242: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 1240 | 124000     PERFORM WRITE-LINE 2 TIMES.                                  D..
+ 1241 | 124100*                                                                 D..
+ 1242 > 124200     GO TO    CCVS-EXIT.                                          D..
+ 1243 | 124300 NAME-LISTER SECTION.                                             D..
+ 1244 | 124400 NAME-LISTER-1.                                                   D..
+DB105A.CBL: in section 'CCVS-EXIT':
+DB105A.CBL: in paragraph 'CCVS-999999':
+DB105A.CBL:975: warning: PROC-118-PFM-B-10 and PROC-120-PFM-D-10 are not in the same SECTION [-Wsuspicious-perform-thru]
+  973 | 097300     MOVE 0 TO INCREMENT.                                         D..
+  974 | 097400     MOVE     ZERO TO P-COUNT.                                    D..
+  975 > 097500     PERFORM  PROC-118-PFM-B-10 THROUGH PROC-120-PFM-D-10.        D..
+  976 | 097600     MOVE 4 TO INCREMENT.                                         D..
+  977 | 097700     ADD      1 TO P-COUNT                                        D..
+DB105A.CBL:981: warning: PROC-117-PFM-A-10 and PROC-120-PFM-D-10 are not in the same SECTION [-Wsuspicious-perform-thru]
+  979 | 097900     MOVE 8 TO INCREMENT.                                         D..
+  980 | 098000     ADD      1 TO P-COUNT.                                       D..
+  981 > 098100     PERFORM  PROC-117-PFM-A-10 THRU PROC-120-PFM-D-10.           D..
+  982 | 098200     MOVE 11 TO INCREMENT.                                        D..
+  983 | 098300     ADD      1 TO P-COUNT.                                       D..
+DB105A.CBL:1015: warning: PROC-140-PFM-B-11 and PROC-140-PFM-D-11 are not in the same SECTION [-Wsuspicious-perform-thru]
+ 1013 | 101300     MOVE 0 TO INCREMENT.                                         D..
+ 1014 | 101400     MOVE     ZERO TO P-COUNT.                                    D..
+ 1015 > 101500     PERFORM PROC-140-PFM-B-11 THROUGH PROC-140-PFM-D-11 1 TIMES. D..
+ 1016 | 101600     MOVE 4 TO INCREMENT.                                         D..
+ 1017 | 101700     ADD      1 TO P-COUNT.                                       D..
+DB105A.CBL:1021: warning: PROC-139-PFM-A-11 and PROC-140-PFM-D-11 are not in the same SECTION [-Wsuspicious-perform-thru]
+ 1019 | 101900     MOVE 12 TO INCREMENT.                                        D..
+ 1020 | 102000     ADD      1 TO P-COUNT.                                       D..
+ 1021 > 102100     PERFORM  PROC-139-PFM-A-11 THRU PROC-140-PFM-D-11 2 TIMES.   D..
+ 1022 | 102200     MOVE 19 TO INCREMENT.                                        D..
+ 1023 | 102300     ADD      1 TO P-COUNT.                                       D..
+DB105A.CBL:1151: warning: PROC-213-PFM-G-15 and PROC-217-PFM-B-15 are not in the same SECTION [-Wsuspicious-perform-thru]
+ 1149 | 114900 PROC-212-PFM-TEST-15.                                            D..
+ 1150 | 115000     MOVE 0 TO INCREMENT.                                         D..
+ 1151 > 115100     PERFORM  PROC-213-PFM-G-15 THRU PROC-217-PFM-B-15.           D..
+ 1152 | 115200     GO       TO PROC-218-PFM-WRITE-15.                           D..
+ 1153 | 115300 PROC-000-PFM-DELETE-15.                                          D..
+DB105A.CBL:1151: warning: PROC-217-PFM-B-15 is defined before PROC-213-PFM-G-15 [-Wsuspicious-perform-thru]
+DB105A.CBL:1176: note: 'PROC-213-PFM-G-15' defined here [-Wsuspicious-perform-thru]
+ 1174 | 117400     MOVE 0 TO INCREMENT.                                         D..
+ 1175 | 117500     GO       TO PROC-000-PFM-D-15.                               D..
+ 1176 > 117600 PROC-213-PFM-G-15 SECTION.                                       D..
+ 1177 | 117700 PROC-214-PFM-H-15.                                               D..
+ 1178 | 117800     MOVE 0 TO INCREMENT.                                         D..
+DB105A.CBL:1157: note: 'PROC-217-PFM-B-15' defined here [-Wsuspicious-perform-thru]
+ 1155 | 115500     PERFORM  PROC-000-NUCLEUS-FAILURE.                           D..
+ 1156 | 115600     GO       TO PROC-218-PFM-WRITE-15.                           D..
+ 1157 > 115700 PROC-217-PFM-B-15.                                               D..
+ 1158 | 115800     MOVE 0 TO INCREMENT.                                         D..
+ 1159 | 115900     ADD 1 TO REC-CT.                                             D..

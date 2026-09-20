@@ -1,0 +1,95 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC246A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ STORE TABLE VALUES         INIT-TABLE         .01        GROUP-1-TABLE = ABCDEFGHIJKLMNO                               
+*** INFORMATION ***        SEE REMARKS              ABCDEFGHIJKLMNO                                                     
+                                                                                                                        
+ STORE TABLE VALUES         INIT-TABLE         .02        GROUP-2-TABLE = LKJIHGFEDCBA                                  
+*** INFORMATION ***        SEE REMARKS              LKJIHGFEDCBA                                                        
+                                                                                                                        
+ STORE TABLE VALUES         INIT-TABLE         .03        GROUP-3-TABLE =ABCDEFGHIJKLMNOP                               
+*** INFORMATION ***        SEE REMARKS              ABCDEFGHIJKLMNOP                                                    
+                                                                                                                        
+ STORE TABLE VALUES         INIT-TABLE         .04        GROUP-4-TABLE =ABCDEFGHIJKLMNO                                
+*** INFORMATION ***        SEE REMARKS              ABCDEFGHIJKLMNO                                                     
+                                                                                                                        
+ STORE TABLE VALUES         INIT-TABLE         .05        GROUP-5-TABLE =PONMLKJIHGFEDCBA                               
+*** INFORMATION ***        SEE REMARKS              PONMLKJIHGFEDCBA                                                    
+                                                                                                                        
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .01        ONE DIMENSIONAL TABLE                                         
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .02                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .03                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .04                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .05                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .06                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-01       .07                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-02       .01                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-02       .02                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-02       .03                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-02       .04                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-02       .05                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-03       .01        THREE DIMENSIONAL TABLE                                       
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-03       .02                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-03       .03                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-03       .04                                                                      
+ QUALIFIED TABLE ITEM PASS  QUAL-TEST-03       .05                                                                      
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-04       .01        ONE DIMENSIONAL TABLE                                         
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-04       .02                                                                      
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-04       .03                                                                      
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-04       .04                                                                                                                                                                                              
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-04       .05                                                                      
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-05       .01        THREE DIMENSIONAL TABLE                                       
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-05       .02                                                                      
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-06       .01        ONE DIMENSIONAL TABLE                                         
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-06       .02                                                                      
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-07       .01        THREE DIMENSIONAL TABLE                                       
+ QUALIFIED SUBSCRIPT  PASS  QUAL-TEST-07       .02                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-08       .01        ONE DIMENSIONAL TABLE                                         
+ QUAL. CONDITION NAME PASS  QUAL-TEST-08       .02                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-08       .03                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-08       .04                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-08       .05                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-09       .01        THREE DIMENSIONAL TABLE                                       
+ QUAL. CONDITION NAME PASS  QUAL-TEST-09       .02                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-09       .03                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-09       .04                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-09       .05                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-10       .01        QUALIFIED SUBSCRIPTS                                          
+ QUAL. CONDITION NAME PASS  QUAL-TEST-10       .02                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-10       .03                                                                      
+ QUAL. CONDITION NAME PASS  QUAL-TEST-10       .04                                                                      
+ QUALIFICATION        PASS  QUAL-TEST-11       .01        INTERMEDIATE LEVELS SKIPPED                                   
+ QUALIFICATION        PASS  QUAL-TEST-11       .02                                                                      
+ QUALIFICATION        PASS  QUAL-TEST-11       .03                                                                      
+ QUALIFICATION        PASS  QUAL-TEST-11       .04                                                                      
+ QUALIFICATION        PASS  QUAL-TEST-11       .05                                                                      
+ QUALIFICATION        PASS  QUAL-TEST-11       .06                                                                      
+ QUALIFICATION        PASS  QUAL-TEST-12       .06        SEVEN DIMENSIONAL TABLE                                       
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  NC246A                                                
+                                                                                                                        
+                                                    049 OF 049  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

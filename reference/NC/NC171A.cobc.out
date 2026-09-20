@@ -1,0 +1,8 @@
+NC171A.CBL: in section 'SECT-NC171A-001':
+NC171A.CBL: in paragraph 'DIV-DELETE-F1-30-1':
+NC171A.CBL:2228: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+ 2226 | 222800     PERFORM DE-LETE.                                             N..
+ 2227 | 222900     PERFORM PRINT-DETAIL.                                        N..
+ 2228 > 223000     GO TO   CCVS-EXIT.                                           N..
+ 2229 | 223100 DIV-TEST-F1-30-1.                                                N..
+ 2230 | 223200     IF      WRK-XN-00001  = "2"                                  N..

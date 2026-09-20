@@ -1,0 +1,8 @@
+IC228A.CBL: in section 'SECT-IC228A-001':
+IC228A.CBL: in paragraph 'GLO-DELETE-01-01':
+IC228A.CBL:335: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
+  333 | 033500     PERFORM DE-LETE.                                             I..
+  334 | 033600     PERFORM PRINT-DETAIL.                                        I..
+  335 > 033700     GO TO   CCVS-EXIT.                                           I..
+  336 | 033800 GLO-TEST-01-01-1.                                                I..
+  337 | 033900     MOVE   "GLO-TEST-01-01-1" TO PAR-NAME.                       I..

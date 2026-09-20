@@ -1,0 +1,117 @@
+
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ LIT DEL BY SIZE      PASS  STR-TEST-GF-1      .01                                                                      
+ LIT DEL BY SIZE      PASS  STR-TEST-GF-1      .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-2      .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-2      .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-2      .03                                                                      
+ ID DEL BY QUAL ID    PASS  STR-TEST-GF-3      .01                                                                      
+ ID DEL BY QUAL ID    PASS  STR-TEST-GF-3      .02                                                                      
+ SUBSCRIPTED IDS      PASS  STR-TEST-GF-4                                                                               
+ SUBSCRIPTED IDS      PASS                     .01                                                                      
+ IMMEDIATE OVERFLOW   PASS  STR-TEST-GF-5      .01                                                                      
+ IMMEDIATE OVERFLOW   PASS  STR-TEST-GF-5      .02                                                                      
+ IMMEDIATE OVERFLOW   PASS  STR-TEST-GF-5      .03                                                                      
+ SPACE LIT OVERFLOWS  PASS  STR-TEST-GF-6      .01                                                                      
+ SPACE LIT OVERFLOWS  PASS  STR-TEST-GF-6      .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-7      .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-7      .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-7      .03                                                                      
+ LOW-VALUE OVERFLOW   PASS  STR-TEST-GF-8      .01                                                                      
+ LOW-VALUE OVERFLOW   PASS  STR-TEST-GF-8      .02                                                                      
+ LOW-VALUE OVERFLOW   PASS  STR-TEST-GF-8      .03                                                                      
+ HIGH-VALUE DEL SIZE  PASS  STR-TEST-GF-9      .01                                                                      
+ HIGH-VALUE DEL SIZE  PASS  STR-TEST-GF-9      .02                                                                      
+ HIGH-VALUE DEL SIZE  PASS  STR-TEST-GF-9      .03                                                                      
+ LIT DEL ZERO         PASS  STR-TEST-GF-10     .01                                                                      
+ LIT DEL ZERO         PASS  STR-TEST-GF-10     .02                                                                      
+ LIT DEL BY QUOTE     PASS  STR-TEST-GF-11     .01                                                                      
+ LIT DEL BY QUOTE     PASS  STR-TEST-GF-11     .02                                                                      
+ ZERO ID DEL SIZE     PASS  STR-TEST-GF-12                                                                              
+ LITERAL SERIES       PASS  STR-TEST-GF-13                                                                              
+ IDENTIFIER SERIES    PASS  STR-TEST-GF-14                                                                              
+ SIGN LEADING         PASS  STR-TEST-GF-15     .01                                                                      
+ SIGN LEADING         PASS  STR-TEST-GF-15     .02                                                                      
+ SIGN LEADING         PASS  STR-TEST-GF-16     .01                                                                      
+ SIGN LEADING         PASS  STR-TEST-GF-16     .02                                                                      
+ SIGN TRAILING        PASS  STR-TEST-GF-17     .01                                                                      
+ SIGN TRAILING        PASS  STR-TEST-GF-17     .02                                                                                                                                                                                              
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+ NEG LEADING SEPARATE PASS  STR-TEST-GF-18     .01                                                                      
+ NEG LEADING SEPARATE PASS  STR-TEST-GF-18     .02                                                                      
+ NEGATIVE SIGN TRAIL  PASS  STR-TEST-GF-19     .01                                                                      
+ NEGATIVE SIGN TRAIL  PASS  STR-TEST-GF-19     .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-20     .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-20     .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-20     .02                                                                      
+ LIT DEL BY SIZE      PASS  STR-TEST-GF-21     .01                                                                      
+ LIT DEL BY SIZE      PASS  STR-TEST-GF-21     .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-22     .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-22     .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-22     .03                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-23     .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-23     .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-23     .03                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-24     .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-24     .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-24     .03                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-25                                                                              
+ LITERAL SERIES       PASS  STR-TEST-GF-25-1   .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-25-1   .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-26     .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-26-2   .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-26-2   .03                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-26-2   .04                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-26-2   .05                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .03                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .04                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .05                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-28     .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-28     .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-28     .03                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-28     .04                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-28     .05                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-29     .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-29     .02                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-29     .03                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-29     .04                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-29     .05                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-30     .01                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-30     .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-30     .03                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-30     .04                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-30     .05                                                                      
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                                                                                                                                
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                    END OF TEST-  NC217A                                                
+                                                                                                                        
+                                                    082 OF 082  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+ FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985
