@@ -34,7 +34,7 @@ TEST RESULT OF IX215A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
 ----------                                                                                                              
  START REDF ALT-KEY-2 PASS  START-TEST-GF-09                                                                            
  START REDF ALT-KEY-2                                                                                                   
- CREATE-FILE-FD2      PASS  WRITE-TEST-GF-02              FILE IX-FD2 CREATED (200 RECORDS)                             
+ CREATE-FILE-FD2      PASS  WRITE-TEST-GF-02              FILE IX-FD2 CREATED (??? RECORDS)                             
  READ FILE IX-FD2     PASS  READ-TEST-F1-02               200 RECORDS VERIFIED                                          
 ----------                                                                                                              
  START REDF REC-KEY   PASS  START-TEST-GF-10                                                                            
@@ -54,7 +54,7 @@ TEST RESULT OF IX215A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  START REDF ALT-KEY-2 PASS  START-TEST-GF-17                                                                            
 ----------                                                                                                              
  START REDF ALT-KEY-2 PASS  START-TEST-GF-18                                                                            
- CREATE-FILE-FD3      PASS  WRITE-TEST-GF-03              FILE IX-FD3 CREATED (200 RECORDS)                             
+ CREATE-FILE-FD3      PASS  WRITE-TEST-GF-03              FILE IX-FD3 CREATED (??? RECORDS)                             
  READ FILE IX-FD3     PASS  READ-TEST-F1-O3               200 RECORDS VERIFIED                                          
 ----------                                                                                                              
  START QUAL REC-KEY   PASS  START-TEST-GF-19              OK.;    INVALID KEY ON START OF DELETED RECORD                

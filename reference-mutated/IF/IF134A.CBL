@@ -506,7 +506,7 @@
 050600 F-REVERSE-12.                                                    IF1344.2
 050700     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 050800 F-REVERSE-TEST-12.                                               IF1344.2
-050900     MOVE FUNCTION REVERSE(FUNCTION REVERSE("giZZard"))           IF1344.2
+050900     MOVE FUNCTION REVERSE(FUNCTION REVERSE("???????"))           IF1344.2
 051000       TO WS-ANUM.                                                IF1344.2
 051100     IF WS-ANUM = "giZCard" THEN                                  IF1344.2
 051200                    PERFORM PASS                                  IF1344.2

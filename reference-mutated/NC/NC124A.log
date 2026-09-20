@@ -226,24 +226,12 @@ TEST RESULT OF NC124A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PICTURE CHARACTER Z  PASS  PCTRE-TST-26       .05                                                                      
  PICTURE CHARACTER Z  PASS  PCTRE-TST-26       .06                                                                      
  PICTURE CHARACTER Z  PASS  PCTRE-TST-26       .07                                                                      
- PICTURE CHARACTER P  FAIL* PICTURE-TEST-27                                                                             
-                                                                                                                        
-                                     COMPUTED= 200                                                                      
-                                     CORRECT = 260                   VI-31                                              
-                                                                                                                        
+ PICTURE CHARACTER P  PASS  PICTURE-TEST-27                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-28                                                                             
- PICTURE CHARACTER P  FAIL* PICTURE-TEST-29                                                                             
-                                                                                                                        
-                                     COMPUTED= 100                                                                      
-                                     CORRECT = 105                   VI-31                                              
-                                                                                                                        
+ PICTURE CHARACTER P  PASS  PICTURE-TEST-29                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-30                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-31                                                                             
- PICTURE CHARACTER P  FAIL* PICTURE-TEST-32                                                                             
-                                                                                                                        
-                                     COMPUTED=  .001000000000000000                                                     
-                                     CORRECT =  .201000000000000000  VI-31                                              
-                                                                                                                        
+ PICTURE CHARACTER P  PASS  PICTURE-TEST-32                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-33                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-34                                                                             
  ***********************************************************************************************************************
@@ -253,8 +241,8 @@ TEST RESULT OF NC124A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC124A                                                
                                                                                                                         
-                                                    166 OF 169  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    169 OF 169  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -21,7 +21,7 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MIN Function         PASS  F-MIN-02                                                                                    
  MIN Function         PASS  F-MIN-03                                                                                    
  MIN Function         PASS  F-MIN-04                                                                                    
- MIN Function         FAIL* F-MIN-05                                                                                    
+ MIN Function         FAIL* F-MIN-0?                                                                                    
                                                                                                                         
                                      COMPUTED=  000000005.000000000                                                     
                                      CORRECT =  000000006.000000000  See ref. A-56 2.27                                 
@@ -35,12 +35,12 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                      CORRECT = -000000011.000000000  See ref. A-56 2.27                                 
                                                                                                                         
  MIN Function         PASS  F-MIN-10                                                                                    
- MIN Function         PASS  F-MIN-11                                                                                    
- MIN Function         PASS  F-MIN-12                                                                                    
- MIN Function         PASS  F-MIN-13                                                                                    
- MIN Function         PASS  F-MIN-14                                                                                    
- MIN Function         PASS  F-MIN-15                                                                                    
- MIN Function         PASS  F-MIN-17                                                                                                                                                                                                            
+ MIN Function         FAIL* F-M?N-11                                                                                    
+                                                                                                                        
+                                     COMPUTED= ?                                                                        
+                                     CORRECT = I                     See ref. A-56 2.27                                 
+                                                                                                                        
+ MIN Function         FAIL* F-MIN-12                                                                                                                                                                                                            
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,6 +54,14 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                                                                                                        
+                                     COMPUTED= ?                                                                        
+                                     CORRECT = J                     See ref. A-56 2.27                                 
+                                                                                                                        
+ MIN Function         PASS  F-MIN-13                                                                                    
+ MIN Function         PASS  F-MIN-1?                                                                                    
+ MIN Function         PASS  F-MIN-15                                                                                    
+ MIN Function         PASS  F-MIN-17                                                                                    
  MIN Function         PASS  F-MIN-18                                                                                    
  MIN Function         PASS  F-MIN-19                                                                                    
  MIN Function         PASS  F-MIN-20                                                                                    
@@ -68,8 +76,8 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF123A                                                
                                                                                                                         
-                                                    020 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    018 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    005 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -460,7 +460,7 @@
 046200     MOVE    -56 TO MULT4.                                        NC1014.2
 046300 MPY-TEST-F1-2.                                                   NC1014.2
 046400     MULTIPLY -1.3 BY MULT4 ROUNDED.                              NC1014.2
-046500     IF       MULT4 EQUAL TO 77                                   NC1014.2
+046500     IF       MULT4 EQUAL TO 72                                   NC1014.2
 046600              PERFORM PASS                                        NC1014.2
 046700     ELSE                                                         NC1014.2
 046800              GO TO MPY-FAIL-F1-2.                                NC1014.2
@@ -471,7 +471,7 @@
 047300 MPY-FAIL-F1-2.                                                   NC1014.2
 047400     PERFORM  FAIL.                                               NC1014.2
 047500     MOVE     MULT4 TO COMPUTED-N.                                NC1014.2
-047600     MOVE     +77   TO CORRECT-N.                                 NC1014.2
+047600     MOVE     +72   TO CORRECT-N.                                 NC1014.2
 047700 MPY-WRITE-F1-2.                                                  NC1014.2
 047800     MOVE "MPY-TEST-F1-2 " TO PAR-NAME.                           NC1014.2
 047900     PERFORM  PRINT-DETAIL.                                       NC1014.2
@@ -543,7 +543,7 @@
 054500     MOVE    "MPY-TEST-F1-4-1" TO PAR-NAME.                       NC1014.2
 054600     PERFORM  PRINT-DETAIL.                                       NC1014.2
 054700 MPY-TEST-F1-4-2.                                                 NC1014.2
-054800     IF       MULT6 EQUAL TO 23                                   NC1014.2
+054800     IF       MULT6 EQUAL TO 25                                   NC1014.2
 054900              PERFORM PASS                                        NC1014.2
 055000     ELSE                                                         NC1014.2
 055100              GO TO MPY-FAIL-F1-4-2.                              NC1014.2
@@ -554,7 +554,7 @@
 055600 MPY-FAIL-F1-4-2.                                                 NC1014.2
 055700     PERFORM  FAIL.                                               NC1014.2
 055800     MOVE     MULT6 TO COMPUTED-N.                                NC1014.2
-055900     MOVE     +23 TO CORRECT-N.                                   NC1014.2
+055900     MOVE     +25 TO CORRECT-N.                                   NC1014.2
 056000     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1014.2
 056100 MPY-WRITE-F1-4-2.                                                NC1014.2
 056200     MOVE    "MPY-TEST-F1-4-2" TO PAR-NAME.                       NC1014.2
@@ -626,18 +626,18 @@
 062800     MOVE "MPY-TEST-F1-7-1         " TO PAR-NAME.                 NC1014.2
 062900     PERFORM PRINT-DETAIL.                                        NC1014.2
 063000 MPY-TEST-F1-7-2.                                                 NC1014.2
-063100     IF WRK-XN-00001 EQUAL TO "7"                                 NC1014.2
+063100     IF WRK-XN-00001 EQUAL TO "3"                                 NC1014.2
 063200         PERFORM PASS                                             NC1014.2
 063300         GO TO MPY-WRITE-F1-7-2.                                  NC1014.2
 063400     MOVE    "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.             NC1014.2
-063500     MOVE "7" TO CORRECT-A.                                       NC1014.2
+063500     MOVE "3" TO CORRECT-A.                                       NC1014.2
 063600     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1014.2
 063700     PERFORM FAIL.                                                NC1014.2
 063800     GO TO MPY-WRITE-F1-7-2.                                      NC1014.2
 063900 MPY-DELETE-F1-7-2.                                               NC1014.2
 064000     PERFORM DE-LETE.                                             NC1014.2
 064100 MPY-WRITE-F1-7-2.                                                NC1014.2
-064200     MOVE "MPY-TEST-F1-7-2         " TO PAR-NAME.                 NC1014.2
+064200     MOVE "MPY-TEST-F?-7-2         " TO PAR-NAME.                 NC1014.2
 064300     PERFORM PRINT-DETAIL.                                        NC1014.2
 064400                                                                  NC1014.2
 064500 MPY-INIT-F1-8.                                                   NC1014.2
@@ -674,7 +674,7 @@
 067600 MPY-DELETE-F1-8-2.                                               NC1014.2
 067700     PERFORM DE-LETE.                                             NC1014.2
 067800 MPY-WRITE-F1-8-2.                                                NC1014.2
-067900     MOVE "MPY-TEST-F1-8-2         " TO PAR-NAME.                 NC1014.2
+067900     MOVE "MPY-TEST-F?-8-2         " TO PAR-NAME.                 NC1014.2
 068000     PERFORM PRINT-DETAIL.                                        NC1014.2
 068100                                                                  NC1014.2
 068200 MPY-INIT-F1-9.                                                   NC1014.2
@@ -712,7 +712,7 @@
 071400 MPY-DELETE-F1-9-2.                                               NC1014.2
 071500     PERFORM DE-LETE.                                             NC1014.2
 071600 MPY-WRITE-F1-9-2.                                                NC1014.2
-071700     MOVE "MPY-TEST-F1-9-2         " TO PAR-NAME.                 NC1014.2
+071700     MOVE "MPY-TEST-F?-9-2         " TO PAR-NAME.                 NC1014.2
 071800     PERFORM PRINT-DETAIL.                                        NC1014.2
 071900                                                                  NC1014.2
 072000 MPY-INIT-F1-10.                                                  NC1014.2
@@ -738,10 +738,10 @@
 074000     MOVE "MPY-TEST-F1-10-1         " TO PAR-NAME.                NC1014.2
 074100     PERFORM PRINT-DETAIL.                                        NC1014.2
 074200 MPY-TEST-F1-10-2.                                                NC1014.2
-074300     IF WRK-XN-00001 EQUAL TO "1"                                 NC1014.2
+074300     IF WRK-XN-00001 EQUAL TO "0"                                 NC1014.2
 074400         PERFORM PASS                                             NC1014.2
 074500         GO TO MPY-WRITE-F1-10-2.                                 NC1014.2
-074600     MOVE "1" TO CORRECT-A.                                       NC1014.2
+074600     MOVE "0" TO CORRECT-A.                                       NC1014.2
 074700     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1014.2
 074800     MOVE    "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.   NC1014.2
 074900     PERFORM FAIL.                                                NC1014.2
@@ -749,7 +749,7 @@
 075100 MPY-DELETE-F1-10-2.                                              NC1014.2
 075200     PERFORM DE-LETE.                                             NC1014.2
 075300 MPY-WRITE-F1-10-2.                                               NC1014.2
-075400     MOVE "MPY-TEST-F1-10-2         " TO PAR-NAME.                NC1014.2
+075400     MOVE "MPY-TEST-F?-?0-2         " TO PAR-NAME.                NC1014.2
 075500     PERFORM PRINT-DETAIL.                                        NC1014.2
 075600                                                                  NC1014.2
 075700 MPY-INIT-F1-11.                                                  NC1014.2

@@ -13,7 +13,7 @@ TEST RESULT OF IF124A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- MOD Function         FAIL* F-MOD-01                                                                                    
+ MOD Function         FAIL* F-MOD-?1                                                                                    
                                                                                                                         
                                      COMPUTED=  000000000.000000000                                                     
                                      CORRECT =  000000001.000000000  See ref. A-58 2.28                                 

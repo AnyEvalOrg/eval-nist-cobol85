@@ -273,12 +273,12 @@
 027300*                                                                         
 027400 SORT-TEST-1.                                                     SG1064.2
 027500     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-027600     IF       SORTKEY-7 EQUAL TO 458                              SG1064.2
+027600     IF       SORTKEY-7 EQUAL TO 518                              SG1064.2
 027700              PERFORM PASS GO TO SORT-WRITE-1.                    SG1064.2
 027800 SORT-FAIL-1.                                                     SG1064.2
 027900     PERFORM  FAIL.                                               SG1064.2
 028000     MOVE     SORTKEY-7 TO COMPUTED-N.                            SG1064.2
-028100     MOVE     458 TO CORRECT-N.                                   SG1064.2
+028100     MOVE     518 TO CORRECT-N.                                   SG1064.2
 028200 SORT-WRITE-1.                                                    SG1064.2
 028300     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         SG1064.2
 028400     PERFORM  PRINT-DETAIL.                                       SG1064.2
@@ -306,12 +306,12 @@
 030600     PERFORM  PRINT-DETAIL.                                       SG1064.2
 030700 SORT-TEST-4.                                                     SG1064.2
 030800     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-030900     IF       SORTKEY-5 EQUAL TO "E                   "           SG1064.2
+030900     IF       SORTKEY-5 EQUAL TO "L                   "           SG1064.2
 031000              PERFORM PASS GO TO SORT-WRITE-4.                    SG1064.2
 031100 SORT-FAIL-4.                                                     SG1064.2
 031200     PERFORM  FAIL.                                               SG1064.2
 031300     MOVE     SORTKEY-5 TO COMPUTED-A.                            SG1064.2
-031400     MOVE     "E                   " TO CORRECT-A.                SG1064.2
+031400     MOVE     "L                   " TO CORRECT-A.                SG1064.2
 031500 SORT-WRITE-4.                                                    SG1064.2
 031600     MOVE     "SORT-TEST-4 " TO PAR-NAME.                         SG1064.2
 031700     PERFORM  PRINT-DETAIL.                                       SG1064.2
@@ -339,12 +339,12 @@
 033900     PERFORM  PRINT-DETAIL.                                       SG1064.2
 034000 SORT-TEST-7.                                                     SG1064.2
 034100     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-034200     IF       SORTKEY-2 EQUAL TO "    X"                          SG1064.2
+034200     IF       SORTKEY-2 EQUAL TO "    O"                          SG1064.2
 034300              PERFORM PASS GO TO SORT-WRITE-7.                    SG1064.2
 034400 SORT-FAIL-7.                                                     SG1064.2
 034500     PERFORM  FAIL.                                               SG1064.2
 034600     MOVE     SORTKEY-2 TO COMPUTED-A.                            SG1064.2
-034700     MOVE     "    X" TO CORRECT-A.                               SG1064.2
+034700     MOVE     "    O" TO CORRECT-A.                               SG1064.2
 034800 SORT-WRITE-7.                                                    SG1064.2
 034900     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         SG1064.2
 035000     PERFORM  PRINT-DETAIL.                                       SG1064.2
@@ -450,12 +450,12 @@
 045000     PERFORM  PRINT-DETAIL.                                       SG1064.2
 045100 SORT-TEST-15.                                                    SG1064.2
 045200     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-045300     IF       SORTKEY-3 EQUAL TO +.6000000008000000               SG1064.2
+045300     IF       SORTKEY-3 EQUAL TO +.6000000000000001               SG1064.2
 045400              PERFORM PASS GO TO SORT-WRITE-15.                   SG1064.2
 045500 SORT-FAIL-15.                                                    SG1064.2
 045600     PERFORM  FAIL.                                               SG1064.2
 045700     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         SG1064.2
-045800     MOVE     +.6000000008000000     TO CORRECT-0V18.             SG1064.2
+045800     MOVE     +.6000000000000001     TO CORRECT-0V18.             SG1064.2
 045900 SORT-WRITE-15.                                                   SG1064.2
 046000     MOVE     "SORT-TEST-15" TO PAR-NAME.                         SG1064.2
 046100     PERFORM  PRINT-DETAIL.                                       SG1064.2

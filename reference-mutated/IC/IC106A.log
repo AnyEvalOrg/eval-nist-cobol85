@@ -26,7 +26,7 @@ TEST RESULT OF IC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INDEX DATA ITEM      PASS  LINK-TEST-04       .01                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .02                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .03                                                                      
- TABLE REFERENCES     FAIL* LINK-TEST-05       .01        TABLES DEFINED IN LINKAGE SEC                                 
+ TABLE REFERENCES     FAIL* LINK-TEST-05       .01        TABLES ?EFINE? IN LINKAGE SEC                                 
                                                                                                                         
                                      COMPUTED= D                                                                        
                                      CORRECT = N                                                                        

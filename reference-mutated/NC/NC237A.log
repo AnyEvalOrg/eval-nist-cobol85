@@ -18,21 +18,9 @@ TEST RESULT OF NC237A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-3                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-4                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-5                                                                               
- SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-6                                                                               
-                                                                                                                        
-                                     COMPUTED= 070307                                                                   
-                                     CORRECT = 071307                VI-121 6.21.2                                      
-                                                                                                                        
- SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-7                                                                               
-                                                                                                                        
-                                     COMPUTED= 040604                                                                   
-                                     CORRECT = 040607                VI-121 6.21.2                                      
-                                                                                                                        
- SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-8                                                                               
-                                                                                                                        
-                                     COMPUTED= 040604                                                                   
-                                     CORRECT = 070604                VI-121 6.21.2                                      
-                                                                                                                        
+ SET AND SEARCH-ALL   PASS  IDX-TEST-GF-6                                                                               
+ SET AND SEARCH-ALL   PASS  IDX-TEST-GF-7                                                                               
+ SET AND SEARCH-ALL   PASS  IDX-TEST-GF-8                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-9                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-10                                                                              
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-11                                                                              
@@ -45,12 +33,8 @@ TEST RESULT OF NC237A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC237A                                                
                                                                                                                         
-                                                    010 OF 013  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    013 OF 013  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                                                                                                                                              
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+                                                    NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

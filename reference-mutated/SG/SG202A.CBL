@@ -308,9 +308,9 @@
 031000     PERFORM SEC39.                                               SG2024.2
 031100     PERFORM P3901 THRU P3904.                                    SG2024.2
 031200     PERFORM SEC39.                                               SG2024.2
-031300     IF LAST-STATE-A EQUAL TO "53" PERFORM PASS                   SG2024.2
+031300     IF LAST-STATE-A EQUAL TO "23" PERFORM PASS                   SG2024.2
 031400         ELSE MOVE LAST-STATE-A TO COMPUTED-A                     SG2024.2
-031500         MOVE "53" TO CORRECT-A                                   SG2024.2
+031500         MOVE "23" TO CORRECT-A                                   SG2024.2
 031600              PERFORM FAIL.                                       SG2024.2
 031700     GO TO TEST-1-WRITE.                                          SG2024.2
 031800 TEST-1-DELETE.                                                   SG2024.2
@@ -328,9 +328,9 @@
 033000*                                                                         
 033100     ALTER P4001 TO PROCEED TO P4003.                             SG2024.2
 033200     PERFORM SEC40.                                               SG2024.2
-033300     IF ALTER-NOT-CALL EQUAL TO "T" PERFORM PASS                  SG2024.2
+033300     IF ALTER-NOT-CALL EQUAL TO "B" PERFORM PASS                  SG2024.2
 033400         ELSE MOVE ALTER-NOT-CALL TO COMPUTED-A                   SG2024.2
-033500         MOVE "T" TO CORRECT-A                                    SG2024.2
+033500         MOVE "B" TO CORRECT-A                                    SG2024.2
 033600              PERFORM FAIL.                                       SG2024.2
 033700     GO TO TEST-2-WRITE.                                          SG2024.2
 033800 TEST-2-DELETE.                                                   SG2024.2
@@ -363,9 +363,9 @@
 036500*                                                                         
 036600*                                                                         
 036700     PERFORM P0004 THRU P4802.                                    SG2024.2
-036800     IF PERF-RES-OVER EQUAL TO "XU" PERFORM PASS                  SG2024.2
+036800     IF PERF-RES-OVER EQUAL TO "XY" PERFORM PASS                  SG2024.2
 036900         ELSE MOVE PERF-RES-OVER TO COMPUTED-A                    SG2024.2
-037000         MOVE "XU" TO CORRECT-A                                   SG2024.2
+037000         MOVE "XY" TO CORRECT-A                                   SG2024.2
 037100              PERFORM FAIL.                                       SG2024.2
 037200     GO TO TEST-4-WRITE.                                          SG2024.2
 037300 TEST-4-DELETE.                                                   SG2024.2

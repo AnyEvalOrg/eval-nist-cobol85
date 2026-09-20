@@ -310,7 +310,7 @@
 031000 F-LOWCASE-01.                                                    IF1184.2
 031100     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 031200 F-LOWCASE-TEST-01.                                               IF1184.2
-031300     MOVE FUNCTION LOWER-CASE("figure") TO WS-ANUM.               IF1184.2
+031300     MOVE FUNCTION LOWER-CASE("??????") TO WS-ANUM.               IF1184.2
 031400     IF WS-ANUM = "finure" THEN                                   IF1184.2
 031500                    PERFORM PASS                                  IF1184.2
 031600     ELSE                                                         IF1184.2
@@ -359,7 +359,7 @@
 035900 F-LOWCASE-04.                                                    IF1184.2
 036000     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 036100 F-LOWCASE-TEST-04.                                               IF1184.2
-036200     MOVE FUNCTION LOWER-CASE("95") TO WS-ANUM.                   IF1184.2
+036200     MOVE FUNCTION LOWER-CASE("??") TO WS-ANUM.                   IF1184.2
 036300     IF WS-ANUM = "95" THEN                                       IF1184.2
 036400                    PERFORM PASS                                  IF1184.2
 036500     ELSE                                                         IF1184.2

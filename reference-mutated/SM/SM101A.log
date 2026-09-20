@@ -18,21 +18,9 @@ TEST RESULT OF SM101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COPY ---                                                                                                               
    WKNG-STORAGE ENTRY PASS  COPY-TEST-1                                                                                 
    PROCEDURE          PASS  COPY-TEST-2                                                                                 
-   SECTION            FAIL* COPY-TEST-3                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000095427.000000000                                                     
-                                     CORRECT =  000085427.000000000                                                     
-                                                                                                                        
-   SECTION            FAIL* COPY-TEST-4                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000023121.000000000                                                     
-                                     CORRECT =  000026121.000000000                                                     
-                                                                                                                        
-   SECTION            FAIL* COPY-TEST-5                                                                                 
-                                                                                                                        
-                                     COMPUTED= LIBCO                                                                    
-                                     CORRECT = LIBCL                                                                    
-                                                                                                                        
+   SECTION            PASS  COPY-TEST-3                                                                                 
+   SECTION            PASS  COPY-TEST-4                                                                                 
+   SECTION            PASS  COPY-TEST-5                                                                                 
    SECTION            PASS  COPY-TEST-6                                                                                 
    FILE DESCRIPTION   PASS  COPY-TEST-7                   OUTPUT CHECKED IN SM102A                                      
    FILE DESCRIPTION   PASS  COPY-TEST-8                                                                                 
@@ -43,8 +31,8 @@ TEST RESULT OF SM101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  SM101A                                                
                                                                                                                         
-                                                    005 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    008 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -21,18 +21,18 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO          PASS  DIV-TEST-F1-4-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-5-1                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-5-2                                                                             
- DIVIDE INTO          PASS  DIV-TEST-F1-6                                                                               
- DIVIDE INTO          FAIL* DIV-TEST-F1-7                                                                               
+ DIVIDE INTO          FAIL* DIV-TEST-F1-6                                                                               
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000009000001   V1-81 6.11.4 GR1                                   
+                                     CORRECT =  000000000008000001   V1-81 6.11.4 GR1                                   
                                                                                                                         
- DIVIDE INTO          PASS  DIV-TEST-F1-8-1                                                                             
- DIVIDE INTO          PASS  DIV-TEST-F1-8-2                                                                             
+ DIVIDE INTO          PASS  DIV-TEST-F1-7                                                                               
+ DIVIDE INTO          PASS  DIV-TEST-F?-8-?                                                                             
+ DIVIDE INTO          PASS  DIV-TEST-F?-8-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-9-1                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-9-2                                                                             
- DIVIDE INTO          PASS  DIV-TEST-F1-10-1                                                                            
- DIVIDE INTO          FAIL* DIV-TEST-F1-10-2              ON SIZE ERROR NOT EXECUTED                                    
+ DIVIDE INTO          PASS  DIV-TEST-F1-1?-1                                                                            
+ DIVIDE INTO          FAIL* DIV-TEST-F?-?0-2              ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
                                      COMPUTED= 1                                                                        
                                      CORRECT = 9                     V1-81 6.11.4 GR1                                   

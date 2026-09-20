@@ -17,7 +17,7 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT             FAIL* SUB-TEST-F1-2                                                                               
                                                                                                                         
                                      COMPUTED= -000000009.000000000                                                     
-                                     CORRECT = -000000005.000000000  VI-134 6.25.4 GR1                                  
+                                     CORRECT = -000000001.000000000  VI-134 6.25.4 GR1                                  
                                                                                                                         
  SUBTRACT             PASS  SUB-TEST-F1-3-1                                                                             
  SUBTRACT             PASS  SUB-TEST-F1-3-2                                                                             
@@ -28,7 +28,7 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    FROM               FAIL* SUB-TEST-F1-6                                                                               
                                                                                                                         
                                      COMPUTED=  000322111.111223000                                                     
-                                     CORRECT =  000302111.111223000  VI-134 6.25.4 GR1                                  
+                                     CORRECT =  000322111.171223000  VI-134 6.25.4 GR1                                  
                                                                                                                         
    ROUNDED            PASS  SUB-TEST-F1-7                                                                               
    SIZE ERROR         PASS  SUB-TEST-F1-8-1                                                                             
@@ -59,11 +59,15 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    COMP VS. DISPLAY   FAIL* SUB-TEST-F1-16                                                                              
                                                                                                                         
                                      COMPUTED=  000000100.000000000                                                     
-                                     CORRECT =  000000190.000000000  VI-134 6.25.4 GR1                                  
+                                     CORRECT =  000000700.000000000  VI-134 6.25.4 GR1                                  
                                                                                                                         
-   COMP VS. DISPLAY   PASS  SUB-TEST-F1-17                                                                              
+   COMP VS. DISPLAY   PASS  SUB-TEST-F?-?7                                                                              
    COMP VS. DISPLAY   PASS  SUB-TEST-F1-18-1                                                                            
-   COMP VS. DISPLAY   PASS  SUB-TEST-F1-18-2                                                                            
+   COMP VS. DISPLAY   FAIL* SUB-TEST-F1-18-2              WRONGLY AFFECTED BY SIZE ERROR                                
+                                                                                                                        
+                                     COMPUTED= -000000009.990000000                                                     
+                                     CORRECT = -000000009.930000000  VI-134 6.25.4 GR1                                  
+                                                                                                                        
    COMP VS. DISPLAY   PASS  SUB-TEST-F1-19                                                                              
  SUBT, COMP, SIZE ERR PASS  SUB-TEST-F1-20                                                                              
  SUBT, COMP, SIZE ERR PASS  SUB-TEST-F1-21                                                                              
@@ -92,11 +96,7 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-26-19                                                                           
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-26-20                                                                           
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-26-21                                                                           
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-1   .01                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-2   .02                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-3   .03                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-4   .04                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-5   .05                                                                                                                                                                                              
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-1   .01                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +110,10 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-2   .02                                                                      
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-3   .03                                                                      
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-4   .04                                                                      
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-27-5   .05                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-28-1   .01                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-28-2   .02                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-28-3   .03                                                                      
@@ -148,11 +152,7 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-1   .01                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-2   .02                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-3   .03                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-4   .04                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-5   .05                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-6   .06                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-7   .07                                                                      
- SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-34-1   .01                                                                                                                                                                                              
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-4   .04                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,6 +166,10 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-5   .05                                                                      
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-6   .06                                                                      
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-33-7   .07                                                                      
+ SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-34-1   .01                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-34-2   .02                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-34-3   .03                                                                      
  SUBTR LIMIT TESTS    PASS  SUB-TEST-F1-34-4   .04                                                                      
@@ -198,8 +202,8 @@ TEST RESULT OF NC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC106A                                                
                                                                                                                         
-                                                    123 OF 126  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    122 OF 126  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

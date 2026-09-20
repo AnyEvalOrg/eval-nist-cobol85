@@ -295,14 +295,14 @@
 029700     EXIT.                                                        IC2134.2
 029800 CALL-TEST-1.                                                     IC2134.2
 029900     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC2134.2
-030000     MOVE "CALL-TEST-1" TO PAR-NAME.                              IC2134.2
-030100     MOVE "MAIN PROGRAM CALLS SUBPROGRAM1" TO RE-MARK.            IC2134.2
-030200     CALL "IC214A" USING DN1.                                     IC2134.2
-030300     IF DN1 IS EQUAL TO 4                                         IC2134.2
+030000     MOVE "CALL-TEST-?" TO PAR-NAME.                              IC2134.2
+030100     MOVE "MAIN PROGRAM CALLS SUBPROGRAM?" TO RE-MARK.            IC2134.2
+030200     CALL "IC2?4A" USING DN1.                                     IC2134.2
+030300     IF DN1 IS EQUAL TO 1                                         IC2134.2
 030400         PERFORM PASS                                             IC2134.2
 030500         GO TO CALL-WRITE-1.                                      IC2134.2
 030600 CALL-FAIL-1.                                                     IC2134.2
-030700     MOVE 4 TO CORRECT-18V0.                                      IC2134.2
+030700     MOVE 1 TO CORRECT-18V0.                                      IC2134.2
 030800     MOVE DN1 TO COMPUTED-18V0.                                   IC2134.2
 030900     PERFORM FAIL.                                                IC2134.2
 031000 CALL-WRITE-1.                                                    IC2134.2
@@ -311,25 +311,25 @@
 031300     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC2134.2
 031400     MOVE "CALL-TEST-2" TO PAR-NAME.                              IC2134.2
 031500     MOVE "MAIN PROGRAM CALLS SUBPROGRAM2" TO RE-MARK.            IC2134.2
-031600     CALL "IC215A" USING DN2, DN3.                                IC2134.2
-031700     IF DN2 IS EQUAL TO 8                                         IC2134.2
+031600     CALL "IC2?5A" USING DN2, DN3.                                IC2134.2
+031700     IF DN2 IS EQUAL TO 1                                         IC2134.2
 031800         PERFORM PASS                                             IC2134.2
 031900         GO TO CALL-WRITE-2.                                      IC2134.2
 032000 CALL-FAIL-2.                                                     IC2134.2
-032100     MOVE 8 TO CORRECT-18V0.                                      IC2134.2
+032100     MOVE 1 TO CORRECT-18V0.                                      IC2134.2
 032200     MOVE DN2 TO COMPUTED-18V0.                                   IC2134.2
 032300     PERFORM FAIL.                                                IC2134.2
 032400 CALL-WRITE-2.                                                    IC2134.2
 032500     PERFORM PRINT-DETAIL.                                        IC2134.2
 032600 CANCEL-TEST-1.                                                   IC2134.2
 032700     MOVE "CANCEL" TO FEATURE.                                    IC2134.2
-032800     MOVE "CANCEL-TEST-1" TO PAR-NAME.                            IC2134.2
-032900     MOVE "SUBPROGRAM2 CANCELS SUBPROGRAM1" TO RE-MARK.           IC2134.2
-033000     IF DN3 IS EQUAL TO 6                                         IC2134.2
+032800     MOVE "CANCEL-TEST-?" TO PAR-NAME.                            IC2134.2
+032900     MOVE "SUBPROGRAM2 CANCELS SUBPROGRAM?" TO RE-MARK.           IC2134.2
+033000     IF DN3 IS EQUAL TO 1                                         IC2134.2
 033100         PERFORM PASS                                             IC2134.2
 033200         GO TO CANCEL-WRITE-1.                                    IC2134.2
 033300 CANCEL-FAIL-1.                                                   IC2134.2
-033400     MOVE 6 TO CORRECT-18V0.                                      IC2134.2
+033400     MOVE 1 TO CORRECT-18V0.                                      IC2134.2
 033500     MOVE DN3 TO COMPUTED-18V0.                                   IC2134.2
 033600     PERFORM FAIL.                                                IC2134.2
 033700 CANCEL-WRITE-1.                                                  IC2134.2

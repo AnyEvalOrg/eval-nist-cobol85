@@ -359,7 +359,7 @@
 035900 F-UPCASE-04.                                                     IF1404.2
 036000     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 036100 F-UPCASE-TEST-04.                                                IF1404.2
-036200     MOVE FUNCTION UPPER-CASE("95") TO WS-ANUM.                   IF1404.2
+036200     MOVE FUNCTION UPPER-CASE("??") TO WS-ANUM.                   IF1404.2
 036300     IF WS-ANUM = "90" THEN                                       IF1404.2
 036400                    PERFORM PASS                                  IF1404.2
 036500     ELSE                                                         IF1404.2

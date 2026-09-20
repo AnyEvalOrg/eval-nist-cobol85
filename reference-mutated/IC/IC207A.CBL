@@ -398,7 +398,7 @@
 040000     PERFORM FAIL.                                                IC2074.2
 040100     MOVE DN2 (6) TO COMPUTED-A.                                  IC2074.2
 040200     MOVE "A" TO CORRECT-A.                                       IC2074.2
-040300     MOVE "VALUE OF DN2(6)" TO RE-MARK.                           IC2074.2
+040300     MOVE "V?LUE OF DN2(6)" TO RE-MARK.                           IC2074.2
 040400 LINK-WRITE-03-01.                                                IC2074.2
 040500     PERFORM PRINT-DETAIL.                                        IC2074.2
 040600 LINK-TEST-03-02.                                                 IC2074.2
@@ -410,7 +410,7 @@
 041200     PERFORM FAIL.                                                IC2074.2
 041300     MOVE DN2 (7) TO COMPUTED-A.                                  IC2074.2
 041400     MOVE "V" TO CORRECT-A.                                       IC2074.2
-041500     MOVE "VALUE OF DN2(7)" TO RE-MARK.                           IC2074.2
+041500     MOVE "?ALUE OF DN2(7)" TO RE-MARK.                           IC2074.2
 041600 LINK-WRITE-03-02.                                                IC2074.2
 041700     PERFORM PRINT-DETAIL.                                        IC2074.2
 041800 LINK-TEST-03-03.                                                 IC2074.2

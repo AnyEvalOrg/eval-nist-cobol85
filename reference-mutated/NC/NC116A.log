@@ -22,9 +22,17 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SIGN TRLNG SEPARATE  PASS  SIG-TEST-GF-2      .03        TRAILING SIGN EQUAL MINUS                                     
  SIGN TRLNG SEPARATE  PASS  SIG-TEST-GF-2      .04                                                                      
  SIGN LEADING         PASS  SIG-TEST-GF-3      .01        POSITIVE NUMERIC ITEM                                         
- SIGN LEADING         PASS  SIG-TEST-GF-3      .02        NEGATIVE NUMERIC ITEM                                         
+ SIGN LEADING         FAIL* SIG-TEST-GF-3      .02        NEGATIVE NUMERIC ITEM                                         
+                                                                                                                        
+                                     COMPUTED= 127                                                                      
+                                     CORRECT = 187                   VI-42 5.12.4                                       
+                                                                                                                        
  SIGN TRAILING        PASS  SIG-TEST-GF-4      .01        POSITIVE NUMERIC ITEM                                         
- SIGN TRAILING        PASS  SIG-TEST-GF-4      .02        NEGATIVE NUMERIC ITEM                                         
+ SIGN TRAILING        FAIL* SIG-TEST-GF-4      .02        NEGATIVE NUMERIC ITEM                                         
+                                                                                                                        
+                                     COMPUTED= 362                                                                      
+                                     CORRECT = 312                   VI-42 5.12.4                                       
+                                                                                                                        
  COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-5      .01        LEADING SIGN                                                  
  COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-5      .02                                                                      
  COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-5      .03                                                                      
@@ -32,15 +40,7 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-6      .01        TRAILING SIGN                                                 
  COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-6      .02                                                                      
  COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-6      .03                                                                      
- COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-6      .04                                                                      
- COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .01        LEADING SIGN SEPARATE CHARACTER                               
- COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .02                                                                      
- COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .03                                                                      
- COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .04                                                                      
- COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .01        TRAILING SIGN SEPARATE CHARACTR                               
- COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .02                                                                      
- COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .03                                                                      
- COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .04                                                                                                                                                                                              
+ COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-6      .04                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,12 +54,16 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .01        LEADING SIGN SEPARATE CHARACTER                               
+ COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .02                                                                      
+ COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .03                                                                      
+ COMPARE SIGNED ITEMS PASS  SIG-TEST-GF-7      .04                                                                      
+ COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .01        TRAILING SIGN SEPARATE CHARACTR                               
+ COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .02                                                                      
+ COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .03                                                                      
+ COMPARE SIGN ITEMS   PASS  SIG-TEST-GF-8      .04                                                                      
  SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .01                                                                      
- SENDING ITEM DS-LS   FAIL* SIG-TEST-GF-9      .02        MOVE DS-LS-5 TO DS-005                                        
-                                                                                                                        
-                                     COMPUTED=  000000000000091275                                                      
-                                     CORRECT =  000000000000091975   VI-42 5.12.4                                       
-                                                                                                                        
+ SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .02                                                                      
  SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .03                                                                      
  SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .04                                                                      
  SENDING ITEM DS-TS-4 PASS  SIG-TEST-GF-10     .01                                                                      
@@ -76,27 +80,23 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SIGN CLAUSE ITEMS    PASS  SIG-TEST-GF-12     .04                                                                      
  SIGN CLAUSE ITEMS    PASS  SIG-TEST-GF-13     .01                                                                      
  SIGN CLAUSE ITEMS    PASS  SIG-TEST-GF-13     .02                                                                      
- SIGN CLAUSE ITEMS    PASS  SIG-TEST-GF-13     .03                                                                      
+ SIGN CLAUSE ITEMS    FAIL* SIG-TEST-GF-13     .03        MOVE DS-L-5 TO WRK-DS-TS-5                                    
+                                                                                                                        
+                                     COMPUTED= 91275+                                                                   
+                                     CORRECT = 91775+                VI-42 5.12.4                                       
+                                                                                                                        
  SIGN CLAUSE ITEMS    PASS  SIG-TEST-GF-13     .04                                                                      
  SIGNED NUM. TO ALPHA PASS  SIG-TEST-GF-14     .01                                                                      
  SIGNED NUM. TO ALPHA PASS  SIG-TEST-GF-14     .02                                                                      
- SIGNED NUM. TO ALPHA PASS  SIG-TEST-GF-14     .03                                                                      
+ SIGNED NUM. TO ALPHA FAIL* SIG-TEST-GF-14     .03        MOVE DS-L-4 TO AN-006                                         
+                                                                                                                        
+                                     COMPUTED= 9127                                                                     
+                                     CORRECT = 9137                  VI-42 5.12.4                                       
+                                                                                                                        
  SIGNED NUM. TO ALPHA PASS  SIG-TEST-GF-14     .04                                                                      
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .01                                                                      
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .02                                                                      
- RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .03                                                                      
- RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .04                                                                      
- RECEIVING ITEM DS-LS FAIL* SIG-TEST-GF-15     .05        MOVE 15759 TO WRK-DS-LS-5                                     
-                                                                                                                        
-                                     COMPUTED= +15759                                                                   
-                                     CORRECT = +12759                VI-42 5.12.4                                       
-                                                                                                                        
- RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .06                                                                      
- RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .01                                                                      
- RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .02                                                                      
- RECEIVING ITEM DS-TS FAIL* SIG-TEST-GF-16     .03        MOVE DS-005 TO WRK-DS-TS-5                                    
-                                                                                                                        
-                                     COMPUTED= 15759-                                                                                                                                                                                           
+ RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .03                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,8 +110,12 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     CORRECT = 15779-                VI-42 5.12.4                                       
-                                                                                                                        
+ RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .04                                                                      
+ RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .05                                                                      
+ RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .06                                                                      
+ RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .01                                                                      
+ RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .02                                                                      
+ RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .03                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .04                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .05                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .06                                                                      
@@ -124,8 +128,8 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC116A                                                
                                                                                                                         
-                                                    063 OF 066  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    062 OF 066  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

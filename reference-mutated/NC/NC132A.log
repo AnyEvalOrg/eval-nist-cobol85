@@ -18,29 +18,29 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* SUB-SCRIPT-3                                                                                
                                                                                                                         
                                      COMPUTED= 111                                                                      
-                                     CORRECT = 115                   IV-21 4.3.8.2                                      
+                                     CORRECT = 611                   IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-4                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-5                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-6                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-8                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-9                                                                                
- SUBSCRIPTING         FAIL* SUB-SCRIPT-10                                                                               
+ SUBSCRIPTING         FAIL* SUB-SCRIPT-?0                                                                               
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = 7                     IV-21 4.3.8.2                                      
+                                     CORRECT = 2                     IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-11                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-12                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-13                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-14                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-15                                                                               
+ SUBSCRIPTING         FAIL* SUB-SCRIPT-15                                                                               
+                                                                                                                        
+                                     COMPUTED= 1111                                                                     
+                                     CORRECT = 1110                  IV-21 4.3.8.2                                      
+                                                                                                                        
  SUBSCRIPTING         PASS  SUB-SCRIPT-16                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-17                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-18                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-19                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-20                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-21                                                                                                                                                                                                       
+ SUBSCRIPTING         PASS  SUB-SCRIPT-17                                                                                                                                                                                                       
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,12 +54,20 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ SUBSCRIPTING         PASS  SUB-SCRIPT-18                                                                               
+ SUBSCRIPTING         PASS  SUB-SCRIPT-19                                                                               
+ SUBSCRIPTING         PASS  SUB-SCRIPT-20                                                                               
+ SUBSCRIPTING         FAIL* SUB-SCRIPT-2?                                                                               
+                                                                                                                        
+                                     COMPUTED= 1                                                                        
+                                     CORRECT = 4                     IV-21 4.3.8.2                                      
+                                                                                                                        
  SUBSCRIPTING         PASS  SUB-SCRIPT-22                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-23                                                                               
  SUBSCRIPTING         FAIL* SUB-SCRIPT-24                                                                               
                                                                                                                         
                                      COMPUTED= 0000                                                                     
-                                     CORRECT = 0004                  IV-21 4.3.8.2                                      
+                                     CORRECT = 0007                  IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-25                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-26                                                                               
@@ -70,8 +78,8 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC132A                                                
                                                                                                                         
-                                                    022 OF 025  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    020 OF 025  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    005 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

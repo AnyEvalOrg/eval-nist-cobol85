@@ -13,22 +13,10 @@ TEST RESULT OF IC209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- CALL...USING DATA-NM FAIL* CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
-                                                                                                                        
-                                     COMPUTED= Y                                                                        
-                                     CORRECT = Q                                                                        
-                                                                                                                        
+ CALL...USING DATA-NM PASS  CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
  CALL...USING DATA-NM PASS  CALL-TEST-2                   SUBPROGRAM1 CALLS SUBPROGRAM2                                 
- CALL...USING DATA-NM FAIL* CALL-TEST-3                   SUBPROGRAM1 CALLS SUBPROGRAM3                                 
-                                                                                                                        
-                                     COMPUTED= Y                                                                        
-                                     CORRECT = W                                                                        
-                                                                                                                        
- CANCEL               FAIL* CANCEL-TEST-1                 SUBPROGRAM1 CANCELS SUBPROGRAM2                               
-                                                                                                                        
-                                     COMPUTED= Y                                                                        
-                                     CORRECT = X                                                                        
-                                                                                                                        
+ CALL...USING DATA-NM PASS  CALL-TEST-3                   SUBPROGRAM1 CALLS SUBPROGRAM3                                 
+ CANCEL               PASS  CANCEL-TEST-1                 SUBPROGRAM1 CANCELS SUBPROGRAM2                               
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -36,8 +24,8 @@ TEST RESULT OF IC209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC209A                                                
                                                                                                                         
-                                                    001 OF 004  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    004 OF 004  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

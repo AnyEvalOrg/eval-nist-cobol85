@@ -613,7 +613,7 @@
 061500              A05ONES-DS-00V05                                    NC1754.2
 061600              A12THREES-DS-06V06                                  NC1754.2
 061700              A06THREES-DS-03V03 FROM ZERO GIVING WRK-DS-06V06.   NC1754.2
-061800     IF       WRK-DS-06V06 EQUAL TO -342777.777443                NC1754.2
+061800     IF       WRK-DS-06V06 EQUAL TO -344737.777443                NC1754.2
 061900              PERFORM PASS GO TO SUB-WRITE-F2-6.                  NC1754.2
 062000     GO       TO SUB-FAIL-F2-6.                                   NC1754.2
 062100 SUB-DELETE-F2-6.                                                 NC1754.2
@@ -621,7 +621,7 @@
 062300     GO       TO SUB-WRITE-F2-6.                                  NC1754.2
 062400 SUB-FAIL-F2-6.                                                   NC1754.2
 062500     MOVE     WRK-DS-06V06 TO COMPUTED-N.                         NC1754.2
-062600     MOVE     -342777.777443 TO CORRECT-N.                        NC1754.2
+062600     MOVE     -344737.777443 TO CORRECT-N.                        NC1754.2
 062700     PERFORM  FAIL.                                               NC1754.2
 062800 SUB-WRITE-F2-6.                                                  NC1754.2
 062900     MOVE     "SUB-TEST-F2-6" TO PAR-NAME.                        NC1754.2
@@ -632,7 +632,7 @@
 063400              -11111                                              NC1754.2
 063500              AZERO-DS-05V05 FROM WRK-DS-06V06                    NC1754.2
 063600              GIVING WRK-DS-06V00 ROUNDED.                        NC1754.2
-063700     IF       WRK-DS-06V00 EQUAL TO -100000                       NC1754.2
+063700     IF       WRK-DS-06V00 EQUAL TO -100030                       NC1754.2
 063800              PERFORM PASS GO TO SUB-WRITE-F2-7.                  NC1754.2
 063900     GO       TO SUB-FAIL-F2-7.                                   NC1754.2
 064000 SUB-DELETE-F2-7.                                                 NC1754.2
@@ -640,7 +640,7 @@
 064200     GO       TO SUB-WRITE-F2-7.                                  NC1754.2
 064300 SUB-FAIL-F2-7.                                                   NC1754.2
 064400     MOVE     WRK-DS-06V00 TO COMPUTED-N.                         NC1754.2
-064500     MOVE    -100000 TO CORRECT-N.                                NC1754.2
+064500     MOVE    -100030 TO CORRECT-N.                                NC1754.2
 064600     PERFORM  FAIL.                                               NC1754.2
 064700 SUB-WRITE-F2-7.                                                  NC1754.2
 064800     MOVE     "SUB-TEST-F2-7" TO PAR-NAME.                        NC1754.2
@@ -897,11 +897,11 @@
 089900         PLUS-NAME4 EVEN-NAME2 .35 FROM EVEN-NAME2                NC1754.2
 090000         GIVING DECMAL-FIELD                                      NC1754.2
 090100         ON SIZE ERROR  MOVE "1" TO SIZE-ERR.                     NC1754.2
-090200     IF DECMAL-FIELD EQUAL TO .5                                  NC1754.2
+090200     IF DECMAL-FIELD EQUAL TO .1                                  NC1754.2
 090300         PERFORM PASS                                             NC1754.2
 090400         GO TO SUB-WRITE-F2-17-1.                                 NC1754.2
 090500     MOVE DECMAL-FIELD TO COMPUTED-0V18.                          NC1754.2
-090600     MOVE .5 TO CORRECT-0V18.                                     NC1754.2
+090600     MOVE .1 TO CORRECT-0V18.                                     NC1754.2
 090700     PERFORM FAIL.                                                NC1754.2
 090800     GO TO SUB-WRITE-F2-17-1.                                     NC1754.2
 090900 SUB-DELETE-F2-17-1.                                              NC1754.2
@@ -943,10 +943,10 @@
 094500     MOVE ZERO TO WRK-DU-18V00.                                   NC1754.2
 094600     SUBTRACT A18SIXES-CS-18V00 FROM A18THREES-CS-18V00           NC1754.2
 094700             GIVING WRK-DU-18V00.                                 NC1754.2
-094800     IF WRK-DU-18V00 EQUAL TO 999999999999999991                  NC1754.2
+094800     IF WRK-DU-18V00 EQUAL TO 999999999999992999                  NC1754.2
 094900         PERFORM PASS                                             NC1754.2
 095000         GO TO SUB-WRITE-F2-19.                                   NC1754.2
-095100     MOVE 999999999999999991 TO CORRECT-18V0.                     NC1754.2
+095100     MOVE 999999999999992999 TO CORRECT-18V0.                     NC1754.2
 095200     MOVE WRK-DU-18V00 TO COMPUTED-18V0.                          NC1754.2
 095300     PERFORM FAIL.                                                NC1754.2
 095400     GO TO SUB-WRITE-F2-19.                                       NC1754.2

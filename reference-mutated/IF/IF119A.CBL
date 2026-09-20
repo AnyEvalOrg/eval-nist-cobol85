@@ -537,7 +537,7 @@
 053700 F-MAX-11.                                                        IF1194.2
 053800     MOVE SPACES TO WS-ANUM.                                      IF1194.2
 053900 F-MAX-TEST-11.                                                   IF1194.2
-054000     MOVE FUNCTION MAX("R", I, "I", "a") TO WS-ANUM.              IF1194.2
+054000     MOVE FUNCTION MAX("R", I, "I", "?") TO WS-ANUM.              IF1194.2
 054100     IF WS-ANUM = "r" THEN                                        IF1194.2
 054200                    PERFORM PASS                                  IF1194.2
 054300     ELSE                                                         IF1194.2

@@ -431,12 +431,12 @@
 043100     PERFORM  PRINT-DETAIL.                                       ST1184.2
 043200 SORT-TEST-11.                                                    ST1184.2
 043300     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-043400     IF       SORTKEY-7 EQUAL TO 418                              ST1184.2
+043400     IF       SORTKEY-7 EQUAL TO 413                              ST1184.2
 043500              PERFORM PASS GO TO SORT-WRITE-11.                   ST1184.2
 043600 SORT-FAIL-11.                                                    ST1184.2
 043700     PERFORM  FAIL.                                               ST1184.2
 043800     MOVE     SORTKEY-7 TO COMPUTED-N                             ST1184.2
-043900     MOVE     418 TO CORRECT-N.                                   ST1184.2
+043900     MOVE     413 TO CORRECT-N.                                   ST1184.2
 044000 SORT-WRITE-11.                                                   ST1184.2
 044100     MOVE     "SORT-TEST-11" TO PAR-NAME.                         ST1184.2
 044200     PERFORM  PRINT-DETAIL.                                       ST1184.2

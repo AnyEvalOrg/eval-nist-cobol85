@@ -41,10 +41,19 @@ def test_packaged_data_checksums():
         assert hashlib.sha256((ROOT/'nist_cobol85/data'/asset).read_bytes()).hexdigest() == info[key]
 
 
+def test_insufficient_site_eligibility_without_logs():
+    from scripts.mutate_suite import find_sites
+    info = json.loads((ROOT/'nist_cobol85/data/eligibility.json').read_text())
+    insufficient = [p for p in info['programs'] if 'fewer than 6 supported sites' in p['reasons']]
+    assert len(insufficient) == info['mutation_summary']['insufficient_sites']
+    assert insufficient
+    for decision in insufficient:
+        assert not decision['eligible'], decision['program']
+        source = (ROOT/'reference'/decision['source_path']).read_bytes().decode('latin1')
+        assert len(find_sites(source)) < 6, decision['program']
+
+
 def test_dependency_closure_and_qualified_copybooks(records):
-    assert {'copy/K1FDA', 'copy/K101A', 'copy/K1W01', 'copy/K1P01'} <= records['SM101A']['copybooks'].keys()
-    assert set(records['IC108A']['subprograms']) == {'IC/lib/IC109A.CBL', 'IC/lib/IC110A.CBL', 'IC/lib/IC111A.CBL'}
-    assert 'IC/lib/IC206A.CBL' in records['IC203A']['subprograms']
     for record in records.values():
         for kind in ('copybooks', 'subprograms'):
             for name, source in record[kind].items():
@@ -84,6 +93,13 @@ def test_all_reference_reports_self_match(records):
 
 
 def test_dependency_resolution_without_logs():
+    reference = ROOT/'reference-mutated'
+    copies, _ = dependencies(reference/'SM/SM101A.CBL', reference)
+    assert {'copy/K1FDA', 'copy/K101A', 'copy/K1W01', 'copy/K1P01'} <= copies.keys()
+    _, subs = dependencies(reference/'IC/IC108A.CBL', reference)
+    assert set(subs) == {'IC/lib/IC109A.CBL', 'IC/lib/IC110A.CBL', 'IC/lib/IC111A.CBL'}
+    _, subs = dependencies(reference/'IC/IC203A.CBL', reference)
+    assert 'IC/lib/IC206A.CBL' in subs
     for name, expected in [('SM206A', {'copy/KP009'}), ('SM207A', {'copy/ALTLB', 'copyalt/ALTLB'})]:
         copies, _ = dependencies(ROOT/'reference-mutated/SM'/f'{name}.CBL', ROOT/'reference-mutated')
         assert expected <= copies.keys()

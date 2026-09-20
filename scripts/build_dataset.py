@@ -188,6 +188,13 @@ def validate_mutated(reference, mutations):
         if len(entry['mutations']) < 3:
             problems.append(f'{name}: fewer than 3 mutations')
             continue
+        sites = entry.get('mutable_sites', 0)
+        if sites < 6:
+            problems.append(f'{name}: fewer than 6 supported sites')
+            continue
+        if len(entry['mutations']) != min(max(3, round(0.25 * sites)), sites//2):
+            problems.append(f'{name}: incorrect mutation count for supported sites')
+            continue
         if not path.with_suffix('.log').is_file():
             if entry.get('needs_new_logs'):
                 entry.update(eligible=False, reasons=['awaiting mutated logs'])

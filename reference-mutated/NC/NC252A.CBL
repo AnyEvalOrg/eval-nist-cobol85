@@ -836,7 +836,7 @@
 083600 RENAM-TEST-8.                                                    NC2524.2
 083700     MOVE     "IOWA" TO TAG-1A.                                   NC2524.2
 083800     MOVE     "OREGON" TO TAG-1B.                                 NC2524.2
-083900     MOVE     "CALIFORNIA" TO RENAME-5 OF T-RENAMES-DATA.         NC2524.2
+083900     MOVE     "??????????" TO RENAME-5 OF T-RENAMES-DATA.         NC2524.2
 084000     IF       TAG-1 EQUAL TO "CALIFORNIA"                         NC2524.2
 084100              PERFORM PASS GO TO RENAM-WRITE-8.                   NC2524.2
 084200     GO       TO RENAM-FAIL-8.                                    NC2524.2
@@ -1010,7 +1010,7 @@
 101000 RENAM-TEST-18.                                                   NC2524.2
 101100     MOVE     SPACE TO U-RENAMES-DATA.                            NC2524.2
 101200     MOVE     "CHICAGO ILLINOIS" TO RENAME-5 OF U-RENAMES-DATA.   NC2524.2
-101300     IF       U-RENAMES-DATA EQUAL TO "CHICAGO ILL     "          NC2524.2
+101300     IF       U-RENAMES-DATA EQUAL TO "CHIMAGO ILL     "          NC2524.2
 101400              PERFORM PASS GO TO RENAM-WRITE-18.                  NC2524.2
 101500     PERFORM  FAIL.                                               NC2524.2
 101600     GO       TO RENAM-FAIL-18.                                   NC2524.2
@@ -1020,7 +1020,7 @@
 102000 RENAM-FAIL-18.                                                   NC2524.2
 102100     PERFORM  FAIL.                                               NC2524.2
 102200     MOVE     U-RENAMES-DATA TO COMPUTED-A.                       NC2524.2
-102300     MOVE     "CHICAGO ILL     " TO CORRECT-A.                    NC2524.2
+102300     MOVE     "CHIMAGO ILL     " TO CORRECT-A.                    NC2524.2
 102400 RENAM-WRITE-18.                                                  NC2524.2
 102500     MOVE     "  THROUGH" TO FEATURE.                             NC2524.2
 102600     MOVE     "RENAM-TEST-18" TO PAR-NAME.                        NC2524.2
@@ -1377,11 +1377,11 @@
 137700     MOVE 10 TO W-2.                                              NC2524.2
 137800     COMPUTE W-2 = 96 + TWENTY ON SIZE ERROR                      NC2524.2
 137900     MOVE 8 TO XRAY.                                              NC2524.2
-138000     IF XRAY IS EQUAL TO "5"                                      NC2524.2
+138000     IF XRAY IS EQUAL TO "3"                                      NC2524.2
 138100              PERFORM PASS                                        NC2524.2
 138200              GO TO COMP-WRITE-23.                                NC2524.2
 138300     PERFORM FAIL.                                                NC2524.2
-138400     MOVE "5" TO CORRECT-A.                                       NC2524.2
+138400     MOVE "3" TO CORRECT-A.                                       NC2524.2
 138500     MOVE XRAY TO COMPUTED-A.                                     NC2524.2
 138600     MOVE "OSE NOT EXECUTED" TO RE-MARK.                          NC2524.2
 138700     GO TO COMP-WRITE-23.                                         NC2524.2
@@ -1503,11 +1503,11 @@
 150300 COMP-TEST-31.                                                    NC2524.2
 150400     MOVE   ZERO TO   TA--X.                                      NC2524.2
 150500     COMPUTE     TA--X  =  3 * A02TWOS-DU-02V00.                  NC2524.2
-150600        IF TA--X = 61                                             NC2524.2
+150600        IF TA--X = 86                                             NC2524.2
 150700              PERFORM PASS                                        NC2524.2
 150800              GO TO COMP-WRITE-31.                                NC2524.2
 150900     MOVE       TA--X TO COMPUTED-N                               NC2524.2
-151000     MOVE     61 TO CORRECT-N.                                    NC2524.2
+151000     MOVE     86 TO CORRECT-N.                                    NC2524.2
 151100     PERFORM  FAIL.                                               NC2524.2
 151200     GO TO COMP-WRITE-31.                                         NC2524.2
 151300 COMP-DELETE-31.                                                  NC2524.2
@@ -1654,10 +1654,10 @@
 165400     COMPUTE  WHOLE-FIELD =                                       NC2524.2
 165500     (ONE + (TWO - (THREE + (FOUR - (FIVE + (SIX - (SEVEN +       NC2524.2
 165600         (EIGHT - (NINE + (TEN - EVEN-NAME1)))))))))).            NC2524.2
-165700        IF WHOLE-FIELD = 80    PERFORM PASS                       NC2524.2
+165700        IF WHOLE-FIELD = 60    PERFORM PASS                       NC2524.2
 165800         GO TO COMP-WRITE-44.                                     NC2524.2
 165900     MOVE WHOLE-FIELD TO COMPUTED-18V0.                           NC2524.2
-166000     MOVE 80 TO CORRECT-18V0.                                     NC2524.2
+166000     MOVE 60 TO CORRECT-18V0.                                     NC2524.2
 166100     PERFORM FAIL.                                                NC2524.2
 166200     GO TO COMP-WRITE-44.                                         NC2524.2
 166300 COMP-DELETE-44.                                                  NC2524.2

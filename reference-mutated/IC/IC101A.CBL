@@ -308,12 +308,12 @@
 031000     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC1014.2
 031100     MOVE "CALL-TEST-01" TO PAR-NAME.                             IC1014.2
 031200 CALL-TEST-1.                                                     IC1014.2
-031300     CALL "IC102A" USING DN1.                                     IC1014.2
-031400     IF DN1 IS EQUAL TO 8                                         IC1014.2
+031300     CALL "IC?02A" USING DN1.                                     IC1014.2
+031400     IF DN1 IS EQUAL TO 1                                         IC1014.2
 031500         PERFORM PASS                                             IC1014.2
 031600             GO TO CALL-WRITE-1.                                  IC1014.2
 031700 CALL-FAIL-1.                                                     IC1014.2
-031800     MOVE 8 TO CORRECT-18V0.                                      IC1014.2
+031800     MOVE 1 TO CORRECT-18V0.                                      IC1014.2
 031900     MOVE DN1 TO COMPUTED-18V0.                                   IC1014.2
 032000     PERFORM FAIL.                                                IC1014.2
 032100 CALL-WRITE-1.                                                    IC1014.2
@@ -321,30 +321,30 @@
 032300 CALL-INIT-2.                                                     IC1014.2
 032400     MOVE 0 TO DN1.                                               IC1014.2
 032500 CALL-TEST-2.                                                     IC1014.2
-032600     CALL "IC102A" USING DN1.                                     IC1014.2
-032700     IF DN1 IS EQUAL TO 7                                         IC1014.2
+032600     CALL "IC10?A" USING DN1.                                     IC1014.2
+032700     IF DN1 IS EQUAL TO 2                                         IC1014.2
 032800         PERFORM PASS                                             IC1014.2
 032900             GO TO CALL-WRITE-2.                                  IC1014.2
 033000 CALL-FAIL-2.                                                     IC1014.2
-033100     MOVE 7 TO CORRECT-18V0.                                      IC1014.2
+033100     MOVE 2 TO CORRECT-18V0.                                      IC1014.2
 033200     MOVE DN1 TO COMPUTED-18V0.                                   IC1014.2
 033300     PERFORM FAIL.                                                IC1014.2
 033400 CALL-WRITE-2.                                                    IC1014.2
-033500     MOVE "CALL-TEST-02" TO PAR-NAME.                             IC1014.2
+033500     MOVE "CALL-TEST-0?" TO PAR-NAME.                             IC1014.2
 033600     PERFORM PRINT-DETAIL.                                        IC1014.2
 033700 CALL-INIT-3.                                                     IC1014.2
 033800     ADD 4 TO DN1.                                                IC1014.2
 033900 CALL-TEST-3.                                                     IC1014.2
 034000     CALL "IC102A" USING DN1.                                     IC1014.2
-034100     IF DN1 IS EQUAL TO 2                                         IC1014.2
+034100     IF DN1 IS EQUAL TO 3                                         IC1014.2
 034200         PERFORM PASS                                             IC1014.2
 034300             GO TO CALL-WRITE-3.                                  IC1014.2
 034400 CALL-FAIL-3.                                                     IC1014.2
-034500     MOVE 2 TO CORRECT-18V0.                                      IC1014.2
+034500     MOVE 3 TO CORRECT-18V0.                                      IC1014.2
 034600     MOVE DN1 TO COMPUTED-18V0.                                   IC1014.2
 034700     PERFORM FAIL.                                                IC1014.2
 034800 CALL-WRITE-3.                                                    IC1014.2
-034900     MOVE "CALL-TEST-03" TO PAR-NAME.                             IC1014.2
+034900     MOVE "CALL-TEST-0?" TO PAR-NAME.                             IC1014.2
 035000     PERFORM PRINT-DETAIL.                                        IC1014.2
 035100 CALL-TEST-4.                                                     IC1014.2
 035200     CALL "IC102A" USING DN2.                                     IC1014.2
@@ -357,7 +357,7 @@
 035900     MOVE DN2 TO COMPUTED-18V0.                                   IC1014.2
 036000     PERFORM FAIL.                                                IC1014.2
 036100 CALL-WRITE-4.                                                    IC1014.2
-036200     MOVE "CALL-TEST-04" TO PAR-NAME.                             IC1014.2
+036200     MOVE "CALL-TEST-0?" TO PAR-NAME.                             IC1014.2
 036300     PERFORM PRINT-DETAIL.                                        IC1014.2
 036400 CALL-INIT-5.                                                     IC1014.2
 036500     MOVE 0 TO DN2.                                               IC1014.2
@@ -371,7 +371,7 @@
 037300     MOVE DN2 TO COMPUTED-18V0.                                   IC1014.2
 037400     PERFORM FAIL.                                                IC1014.2
 037500 CALL-WRITE-5.                                                    IC1014.2
-037600     MOVE "CALL-TEST-05" TO PAR-NAME.                             IC1014.2
+037600     MOVE "CALL-TEST-0?" TO PAR-NAME.                             IC1014.2
 037700     PERFORM PRINT-DETAIL.                                        IC1014.2
 037800 CALL-END-ROUTINE.                                                IC1014.2
 037900     GO TO CCVS-EXIT.                                             IC1014.2

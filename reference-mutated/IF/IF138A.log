@@ -13,47 +13,22 @@ TEST RESULT OF IF138A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- SUM Function         FAIL* F-SUM-01                                                                                    
-                                                                                                                        
-                                     COMPUTED= -000000011.000000000                                                     
-                                     CORRECT = -000000041.000000000  See ref. A-69 2.40                                 
-                                                                                                                        
+ SUM Function         PASS  F-SUM-01                                                                                    
  SUM Function         PASS  F-SUM-02                                                                                    
  SUM Function         PASS  F-SUM-03                                                                                    
  SUM Function         PASS  F-SUM-04                                                                                    
  SUM Function         PASS  F-SUM-05                                                                                    
  SUM Function         PASS  F-SUM-06                                                                                    
  SUM Function         PASS  F-SUM-07                                                                                    
- SUM Function         FAIL* F-SUM-08                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000016.000000000                                                     
-                                     CORRECT =  000000015.000000000  See ref. A-69 2.40                                 
-                                                                                                                        
- SUM Function         FAIL* F-SUM-09                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000019.000000000                                                     
-                                     CORRECT =  000000018.000000000  See ref. A-69 2.40                                 
-                                                                                                                        
+ SUM Function         PASS  F-SUM-08                                                                                    
+ SUM Function         PASS  F-SUM-09                                                                                    
  SUM Function         PASS  F-SUM-11                                                                                    
  SUM Function         PASS  F-SUM-12                                                                                    
  SUM Function         PASS  F-SUM-13                                                                                    
  SUM Function         PASS  F-SUM-14                                                                                    
  SUM Function         PASS  F-SUM-15                                                                                    
  SUM Function         PASS  F-SUM-16                                                                                    
- SUM Function         PASS  F-SUM-17                                                                                                                                                                                                            
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF IF138A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
+ SUM Function         PASS  F-SUM-17                                                                                    
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -61,8 +36,8 @@ TEST RESULT OF IF138A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF138A                                                
                                                                                                                         
-                                                    013 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    016 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

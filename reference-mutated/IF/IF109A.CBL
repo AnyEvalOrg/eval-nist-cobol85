@@ -312,10 +312,10 @@
 031200     MOVE ZERO TO WS-DATE.                                        IF1094.2
 031300 F-DAYOFINT-TEST-01.                                              IF1094.2
 031400     COMPUTE WS-DATE = FUNCTION DAY-OF-INTEGER(1).                IF1094.2
-031500     IF WS-DATE = 1601901 THEN                                    IF1094.2
+031500     IF WS-DATE = 1601001 THEN                                    IF1094.2
 031600                        PERFORM PASS                              IF1094.2
 031700     ELSE                                                         IF1094.2
-031800                        MOVE  1601901  TO CORRECT-N               IF1094.2
+031800                        MOVE  1601001  TO CORRECT-N               IF1094.2
 031900                        MOVE WS-DATE TO COMPUTED-N                IF1094.2
 032000                        PERFORM FAIL.                             IF1094.2
 032100     GO TO F-DAYOFINT-WRITE-01.                                   IF1094.2
@@ -393,10 +393,10 @@
 039300     MOVE ZERO TO WS-DATE.                                        IF1094.2
 039400 F-DAYOFINT-TEST-06.                                              IF1094.2
 039500     COMPUTE WS-DATE = FUNCTION DAY-OF-INTEGER(D) + 10.           IF1094.2
-039600     IF WS-DATE = 5601011 THEN                                    IF1094.2
+039600     IF WS-DATE = 1601011 THEN                                    IF1094.2
 039700                        PERFORM PASS                              IF1094.2
 039800     ELSE                                                         IF1094.2
-039900                        MOVE  5601011  TO CORRECT-N               IF1094.2
+039900                        MOVE  1601011  TO CORRECT-N               IF1094.2
 040000                        MOVE WS-DATE TO COMPUTED-N                IF1094.2
 040100                        PERFORM FAIL.                             IF1094.2
 040200     GO TO F-DAYOFINT-WRITE-06.                                   IF1094.2
@@ -412,10 +412,10 @@
 041200 F-DAYOFINT-TEST-07.                                              IF1094.2
 041300     COMPUTE WS-DATE = FUNCTION DAY-OF-INTEGER(D) +               IF1094.2
 041400                       FUNCTION DAY-OF-INTEGER(D).                IF1094.2
-041500     IF WS-DATE = 3203002 THEN                                    IF1094.2
+041500     IF WS-DATE = 3202002 THEN                                    IF1094.2
 041600                        PERFORM PASS                              IF1094.2
 041700     ELSE                                                         IF1094.2
-041800                        MOVE  3203002  TO CORRECT-N               IF1094.2
+041800                        MOVE  3202002  TO CORRECT-N               IF1094.2
 041900                        MOVE WS-DATE TO COMPUTED-N                IF1094.2
 042000                        PERFORM FAIL.                             IF1094.2
 042100     GO TO F-DAYOFINT-WRITE-07.                                   IF1094.2

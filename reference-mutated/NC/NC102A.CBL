@@ -812,10 +812,10 @@
 081400              MOVE PERFORM1 TO COMPUTED-A                         NC1024.2
 081500              PERFORM FAIL                                        NC1024.2
 081600              GO TO PFM-WRITE-F1-4.                               NC1024.2
-081700     IF       PERFORM2 EQUAL TO 372                               NC1024.2
+081700     IF       PERFORM2 EQUAL TO 317                               NC1024.2
 081800              PERFORM PASS                                        NC1024.2
 081900     ELSE                                                         NC1024.2
-082000              MOVE 372 TO CORRECT-N                               NC1024.2
+082000              MOVE 317 TO CORRECT-N                               NC1024.2
 082100               MOVE PERFORM2 TO COMPUTED-N                        NC1024.2
 082200              PERFORM FAIL.                                       NC1024.2
 082300     GO TO    PFM-WRITE-F1-4.                                     NC1024.2
@@ -1001,7 +1001,7 @@
 100300 PFM-E-F1-8.                                                      NC1024.2
 100400     ADD      100000 TO P-COUNT.                                  NC1024.2
 100500 PFM-TESTT-F1-8.                                                  NC1024.2
-100600     IF       P-COUNT EQUAL TO 133133                             NC1024.2
+100600     IF       P-COUNT EQUAL TO 633333                             NC1024.2
 100700              PERFORM PASS GO TO PFM-WRITE-F1-8.                  NC1024.2
 100800     GO       TO PFM-FAIL-F1-8.                                   NC1024.2
 100900 PFM-DELETE-F1-8.                                                 NC1024.2
@@ -1009,7 +1009,7 @@
 101100     GO       TO PFM-WRITE-F1-8.                                  NC1024.2
 101200 PFM-FAIL-F1-8.                                                   NC1024.2
 101300     MOVE     P-COUNT TO COMPUTED-N.                              NC1024.2
-101400     MOVE     133133 TO CORRECT-N.                                NC1024.2
+101400     MOVE     633333 TO CORRECT-N.                                NC1024.2
 101500     PERFORM  FAIL.                                               NC1024.2
 101600 PFM-WRITE-F1-8.                                                  NC1024.2
 101700     MOVE "NESTED PERFORM      " TO FEATURE.                      NC1024.2
@@ -1227,10 +1227,10 @@
 122900     END-PERFORM                                                  NC1024.2
 123000     MOVE    77 TO WRK-DU-2V0-1.                                  NC1024.2
 123100 PFM-TEST-F2-8-1.                                                 NC1024.2
-123200     IF      P-COUNT = 28                                         NC1024.2
+123200     IF      P-COUNT = 08                                         NC1024.2
 123300             PERFORM PASS                                         NC1024.2
 123400     ELSE                                                         NC1024.2
-123500             MOVE    28      TO CORRECT-N                         NC1024.2
+123500             MOVE    08      TO CORRECT-N                         NC1024.2
 123600             MOVE    P-COUNT TO COMPUTED-N                        NC1024.2
 123700             PERFORM FAIL.                                        NC1024.2
 123800     GO TO   PFM-WRITE-F2-8-1.                                    NC1024.2
@@ -1240,10 +1240,10 @@
 124200     MOVE   "PFM-TEST-F2-8-1" TO PAR-NAME.                        NC1024.2
 124300     PERFORM PRINT-DETAIL.                                        NC1024.2
 124400 PFM-TEST-F2-8-2.                                                 NC1024.2
-124500     IF      WRK-DU-2V0-1 = 77                                    NC1024.2
+124500     IF      WRK-DU-2V0-1 = 79                                    NC1024.2
 124600             PERFORM PASS                                         NC1024.2
 124700     ELSE                                                         NC1024.2
-124800             MOVE    77           TO CORRECT-N                    NC1024.2
+124800             MOVE    79           TO CORRECT-N                    NC1024.2
 124900             MOVE    WRK-DU-2V0-1 TO COMPUTED-N                   NC1024.2
 125000             PERFORM FAIL.                                        NC1024.2
 125100     GO TO   PFM-WRITE-F2-8-2.                                    NC1024.2
@@ -1291,7 +1291,7 @@
 129300*                                                                         
 129400 PFM-TEST-F3-2-0.                                                 NC1024.2
 129500     PERFORM PFM-F3-2-C UNTIL PERFORM2 GREATER THAN 25.           NC1024.2
-129600     IF      PERFORM2 EQUAL TO 20                                 NC1024.2
+129600     IF      PERFORM2 EQUAL TO 40                                 NC1024.2
 129700             PERFORM PASS                                         NC1024.2
 129800             GO TO   PFM-WRITE-F3-2.                              NC1024.2
 129900     GO TO   PFM-FAIL-F3-2.                                       NC1024.2
@@ -1302,7 +1302,7 @@
 130400     ADD     1 TO PERFORM2.                                       NC1024.2
 130500 PFM-FAIL-F3-2.                                                   NC1024.2
 130600     MOVE    PERFORM2 TO COMPUTED-N.                              NC1024.2
-130700     MOVE    20 TO CORRECT-N.                                     NC1024.2
+130700     MOVE    40 TO CORRECT-N.                                     NC1024.2
 130800     PERFORM FAIL.                                                NC1024.2
 130900 PFM-WRITE-F3-2.                                                  NC1024.2
 131000     MOVE   "PFM-TEST-F3-2" TO PAR-NAME.                          NC1024.2

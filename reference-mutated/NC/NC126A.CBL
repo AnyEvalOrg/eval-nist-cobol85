@@ -1260,12 +1260,12 @@
 126200     MOVE  "LEV-TEST-GF-2-1"  TO PAR-NAME.                        NC1264.2
 126300     PERFORM PRINT-DETAIL.                                        NC1264.2
 126400 LEV-TEST-GF-2-2.                                                 NC1264.2
-126500     IF TB-2 EQUAL TO "CL"                                        NC1264.2
+126500     IF TB-2 EQUAL TO "CC"                                        NC1264.2
 126600              PERFORM PASS                                        NC1264.2
 126700              GO  TO   LEV-WRITE-GF-2-2.                          NC1264.2
 126800     PERFORM FAIL.                                                NC1264.2
 126900     MOVE TB-2 TO COMPUTED-A.                                     NC1264.2
-127000     MOVE "CL" TO  CORRECT-A.                                     NC1264.2
+127000     MOVE "CC" TO  CORRECT-A.                                     NC1264.2
 127100     GO   TO    LEV-WRITE-GF-2-2.                                 NC1264.2
 127200 LEV-DELETE-GF-2-2.                                               NC1264.2
 127300     PERFORM DE-LETE.                                             NC1264.2
@@ -1374,15 +1374,15 @@
 137600 LEV-DELETE-GF-2-10.                                              NC1264.2
 137700     PERFORM DE-LETE.                                             NC1264.2
 137800 LEV-WRITE-GF-2-10.                                               NC1264.2
-137900     MOVE  "LEV-TEST-GF-2-10"  TO PAR-NAME.                       NC1264.2
+137900     MOVE  "LEV-TE??-GF-2-10"  TO PAR-NAME.                       NC1264.2
 138000     PERFORM PRINT-DETAIL.                                        NC1264.2
 138100 LEV-TEST-GF-2-11.                                                NC1264.2
-138200     IF TB-11 EQUAL TO "01"                                       NC1264.2
+138200     IF TB-11 EQUAL TO "81"                                       NC1264.2
 138300              PERFORM PASS                                        NC1264.2
 138400              GO  TO   LEV-WRITE-GF-2-11.                         NC1264.2
 138500     PERFORM FAIL.                                                NC1264.2
 138600     MOVE TB-11 TO COMPUTED-A.                                    NC1264.2
-138700     MOVE "01" TO CORRECT-A.                                      NC1264.2
+138700     MOVE "81" TO CORRECT-A.                                      NC1264.2
 138800     GO   TO    LEV-WRITE-GF-2-11.                                NC1264.2
 138900 LEV-DELETE-GF-2-11.                                              NC1264.2
 139000     PERFORM DE-LETE.                                             NC1264.2
@@ -1442,12 +1442,12 @@
 144400     MOVE "LEV-TEST-GF-2-15" TO PAR-NAME.                         NC1264.2
 144500     PERFORM PRINT-DETAIL.                                        NC1264.2
 144600 LEV-TEST-GF-2-16.                                                NC1264.2
-144700     IF TB-16 EQUAL TO "98"                                       NC1264.2
+144700     IF TB-16 EQUAL TO "94"                                       NC1264.2
 144800              PERFORM PASS                                        NC1264.2
 144900              GO  TO   LEV-WRITE-GF-2-16.                         NC1264.2
 145000     PERFORM FAIL.                                                NC1264.2
 145100     MOVE TB-16 TO COMPUTED-A.                                    NC1264.2
-145200     MOVE "98" TO CORRECT-A.                                      NC1264.2
+145200     MOVE "94" TO CORRECT-A.                                      NC1264.2
 145300     GO   TO    LEV-WRITE-GF-2-16.                                NC1264.2
 145400 LEV-DELETE-GF-2-16.                                              NC1264.2
 145500     PERFORM DE-LETE.                                             NC1264.2
@@ -1468,12 +1468,12 @@
 147000     MOVE  "LEV-TEST-GF-2-17"  TO PAR-NAME.                       NC1264.2
 147100     PERFORM PRINT-DETAIL.                                        NC1264.2
 147200 LEV-TEST-GF-2-18.                                                NC1264.2
-147300     IF TB-18 EQUAL TO "54"                                       NC1264.2
+147300     IF TB-18 EQUAL TO "56"                                       NC1264.2
 147400              PERFORM PASS                                        NC1264.2
 147500              GO  TO   LEV-WRITE-GF-2-18.                         NC1264.2
 147600     PERFORM FAIL.                                                NC1264.2
 147700     MOVE TB-18 TO COMPUTED-A.                                    NC1264.2
-147800     MOVE "54" TO CORRECT-A.                                      NC1264.2
+147800     MOVE "56" TO CORRECT-A.                                      NC1264.2
 147900     GO   TO    LEV-WRITE-GF-2-18.                                NC1264.2
 148000 LEV-DELETE-GF-2-18.                                              NC1264.2
 148100     PERFORM DE-LETE.                                             NC1264.2
@@ -1621,7 +1621,7 @@
 162300 LEV-DELETE-GF-2-29.                                              NC1264.2
 162400     PERFORM DE-LETE.                                             NC1264.2
 162500 LEV-WRITE-GF-2-29.                                               NC1264.2
-162600     MOVE  "LEV-TEST-GF-2-29"  TO PAR-NAME.                       NC1264.2
+162600     MOVE  "LEV-TE??-GF-2-29"  TO PAR-NAME.                       NC1264.2
 162700     PERFORM PRINT-DETAIL.                                        NC1264.2
 162800 LEV-TEST-GF-2-30.                                                NC1264.2
 162900     IF TB-30 EQUAL TO "IC"                                       NC1264.2
@@ -1637,12 +1637,12 @@
 163900     MOVE  "LEV-TEST-GF-2-30"  TO PAR-NAME.                       NC1264.2
 164000     PERFORM PRINT-DETAIL.                                        NC1264.2
 164100 LEV-TEST-GF-2-31.                                                NC1264.2
-164200     IF TB-31 EQUAL TO "TL"                                       NC1264.2
+164200     IF TB-31 EQUAL TO "TG"                                       NC1264.2
 164300              PERFORM PASS                                        NC1264.2
 164400              GO  TO   LEV-WRITE-GF-2-31.                         NC1264.2
 164500     PERFORM FAIL.                                                NC1264.2
 164600     MOVE TB-31 TO COMPUTED-A.                                    NC1264.2
-164700     MOVE "TL" TO CORRECT-A.                                      NC1264.2
+164700     MOVE "TG" TO CORRECT-A.                                      NC1264.2
 164800     GO   TO    LEV-WRITE-GF-2-31.                                NC1264.2
 164900 LEV-DELETE-GF-2-31.                                              NC1264.2
 165000     PERFORM DE-LETE.                                             NC1264.2
@@ -1715,12 +1715,12 @@
 171700     MOVE  "LEV-TEST-GF-2-36"  TO PAR-NAME.                       NC1264.2
 171800     PERFORM PRINT-DETAIL.                                        NC1264.2
 171900 LEV-TEST-GF-2-37.                                                NC1264.2
-172000     IF TB-37 EQUAL TO " V"                                       NC1264.2
+172000     IF TB-37 EQUAL TO " N"                                       NC1264.2
 172100              PERFORM PASS                                        NC1264.2
 172200              GO  TO   LEV-WRITE-GF-2-37.                         NC1264.2
 172300     PERFORM FAIL.                                                NC1264.2
 172400     MOVE TB-37 TO COMPUTED-A.                                    NC1264.2
-172500     MOVE " V" TO CORRECT-A.                                      NC1264.2
+172500     MOVE " N" TO CORRECT-A.                                      NC1264.2
 172600     GO   TO    LEV-WRITE-GF-2-37.                                NC1264.2
 172700 LEV-DELETE-GF-2-37.                                              NC1264.2
 172800     PERFORM DE-LETE.                                             NC1264.2
@@ -1767,12 +1767,12 @@
 176900     MOVE  "LEV-TEST-GF-2-40"  TO PAR-NAME.                       NC1264.2
 177000     PERFORM PRINT-DETAIL.                                        NC1264.2
 177100 LEV-TEST-GF-2-41.                                                NC1264.2
-177200     IF TB-41 EQUAL TO "UP"                                       NC1264.2
+177200     IF TB-41 EQUAL TO "UD"                                       NC1264.2
 177300              PERFORM PASS                                        NC1264.2
 177400              GO  TO   LEV-WRITE-GF-2-41.                         NC1264.2
 177500     PERFORM FAIL.                                                NC1264.2
 177600     MOVE TB-41 TO COMPUTED-A.                                    NC1264.2
-177700     MOVE "UP" TO CORRECT-A.                                      NC1264.2
+177700     MOVE "UD" TO CORRECT-A.                                      NC1264.2
 177800     GO   TO    LEV-WRITE-GF-2-41.                                NC1264.2
 177900 LEV-DELETE-GF-2-41.                                              NC1264.2
 178000     PERFORM DE-LETE.                                             NC1264.2
@@ -1793,12 +1793,12 @@
 179500     MOVE  "LEV-TEST-GF-2-42"  TO PAR-NAME.                       NC1264.2
 179600     PERFORM PRINT-DETAIL.                                        NC1264.2
 179700 LEV-TEST-GF-2-43.                                                NC1264.2
-179800     IF TB-43 EQUAL TO "P "                                       NC1264.2
+179800     IF TB-43 EQUAL TO "Y "                                       NC1264.2
 179900              PERFORM PASS                                        NC1264.2
 180000              GO  TO   LEV-WRITE-GF-2-43.                         NC1264.2
 180100     PERFORM FAIL.                                                NC1264.2
 180200     MOVE TB-43 TO COMPUTED-A.                                    NC1264.2
-180300     MOVE "P " TO CORRECT-A.                                      NC1264.2
+180300     MOVE "Y " TO CORRECT-A.                                      NC1264.2
 180400     GO   TO    LEV-WRITE-GF-2-43.                                NC1264.2
 180500 LEV-DELETE-GF-2-43.                                              NC1264.2
 180600     PERFORM DE-LETE.                                             NC1264.2
@@ -1845,12 +1845,12 @@
 184700     MOVE  "LEV-TEST-GF-2-46"  TO PAR-NAME.                       NC1264.2
 184800     PERFORM PRINT-DETAIL.                                        NC1264.2
 184900 LEV-TEST-GF-2-47.                                                NC1264.2
-185000     IF TB-47 EQUAL TO "OF"                                       NC1264.2
+185000     IF TB-47 EQUAL TO "OT"                                       NC1264.2
 185100              PERFORM PASS                                        NC1264.2
 185200              GO TO LEV-WRITE-GF-2-47.                            NC1264.2
 185300     PERFORM FAIL.                                                NC1264.2
 185400     MOVE TB-47  TO COMPUTED-A.                                   NC1264.2
-185500     MOVE "OF" TO CORRECT-A.                                      NC1264.2
+185500     MOVE "OT" TO CORRECT-A.                                      NC1264.2
 185600     GO   TO    LEV-WRITE-GF-2-47.                                NC1264.2
 185700 LEV-DELETE-GF-2-47.                                              NC1264.2
 185800     PERFORM DE-LETE.                                             NC1264.2
@@ -1941,12 +1941,12 @@
 194300     MOVE  "LEV-TEST-GF-3-1"  TO PAR-NAME.                        NC1264.2
 194400     PERFORM PRINT-DETAIL.                                        NC1264.2
 194500 LEV-TEST-GF-3-2.                                                 NC1264.2
-194600     IF GP-2 EQUAL TO "345678902.00"                              NC1264.2
+194600     IF GP-2 EQUAL TO "325678902.00"                              NC1264.2
 194700              PERFORM PASS                                        NC1264.2
 194800              GO  TO   LEV-WRITE-GF-3-2.                          NC1264.2
 194900     PERFORM FAIL.                                                NC1264.2
 195000     MOVE GP-2 TO COMPUTED-A                                      NC1264.2
-195100     MOVE  "345678902.00"         TO CORRECT-A.                   NC1264.2
+195100     MOVE  "325678902.00"         TO CORRECT-A.                   NC1264.2
 195200     GO   TO    LEV-WRITE-GF-3-2.                                 NC1264.2
 195300 LEV-DELETE-GF-3-2.                                               NC1264.2
 195400     PERFORM DE-LETE.                                             NC1264.2
@@ -2174,12 +2174,12 @@
 217600     MOVE  "LEV-TEST-GF-3-19" TO PAR-NAME.                        NC1264.2
 217700     PERFORM PRINT-DETAIL.                                        NC1264.2
 217800 LEV-TEST-GF-3-20.                                                NC1264.2
-217900     IF GP-20 EQUAL TO      "492  "                               NC1264.2
+217900     IF GP-20 EQUAL TO      "402  "                               NC1264.2
 218000              PERFORM PASS                                        NC1264.2
 218100              GO  TO   LEV-WRITE-GF-3-20.                         NC1264.2
 218200     PERFORM FAIL.                                                NC1264.2
 218300     MOVE GP-20 TO COMPUTED-A                                     NC1264.2
-218400     MOVE  "492  "                TO CORRECT-A.                   NC1264.2
+218400     MOVE  "402  "                TO CORRECT-A.                   NC1264.2
 218500     GO   TO    LEV-WRITE-GF-3-20.                                NC1264.2
 218600 LEV-DELETE-GF-3-20.                                              NC1264.2
 218700     PERFORM DE-LETE.                                             NC1264.2
@@ -2265,12 +2265,12 @@
 226700     MOVE  "LEV-TEST-GF-3-26" TO PAR-NAME.                        NC1264.2
 226800     PERFORM PRINT-DETAIL.                                        NC1264.2
 226900 LEV-TEST-GF-3-27.                                                NC1264.2
-227000     IF GP-27 EQUAL TO      "0,001,692"                           NC1264.2
+227000     IF GP-27 EQUAL TO      "2,001,692"                           NC1264.2
 227100              PERFORM PASS                                        NC1264.2
 227200              GO  TO   LEV-WRITE-GF-3-27.                         NC1264.2
 227300     PERFORM FAIL.                                                NC1264.2
 227400     MOVE GP-27 TO COMPUTED-A                                     NC1264.2
-227500     MOVE  "0,001,692"            TO CORRECT-A.                   NC1264.2
+227500     MOVE  "2,001,692"            TO CORRECT-A.                   NC1264.2
 227600     GO   TO    LEV-WRITE-GF-3-27.                                NC1264.2
 227700 LEV-DELETE-GF-3-27.                                              NC1264.2
 227800     PERFORM DE-LETE.                                             NC1264.2
@@ -2278,12 +2278,12 @@
 228000     MOVE  "LEV-TEST-GF-3-27" TO PAR-NAME.                        NC1264.2
 228100     PERFORM PRINT-DETAIL.                                        NC1264.2
 228200 LEV-TEST-GF-3-28.                                                NC1264.2
-228300     IF GP-28 EQUAL TO      "0000004,1"                           NC1264.2
+228300     IF GP-28 EQUAL TO      "3000004,1"                           NC1264.2
 228400              PERFORM PASS                                        NC1264.2
 228500              GO  TO   LEV-WRITE-GF-3-28.                         NC1264.2
 228600     PERFORM FAIL.                                                NC1264.2
 228700     MOVE GP-28 TO COMPUTED-A.                                    NC1264.2
-228800     MOVE  "0000004,1"            TO CORRECT-A.                   NC1264.2
+228800     MOVE  "3000004,1"            TO CORRECT-A.                   NC1264.2
 228900     GO   TO    LEV-WRITE-GF-3-28.                                NC1264.2
 229000 LEV-DELETE-GF-3-28.                                              NC1264.2
 229100     PERFORM DE-LETE.                                             NC1264.2
@@ -2330,12 +2330,12 @@
 233200     MOVE  "LEV-TEST-GF-3-31" TO PAR-NAME.                        NC1264.2
 233300     PERFORM PRINT-DETAIL.                                        NC1264.2
 233400 LEV-TEST-GF-3-32.                                                NC1264.2
-233500     IF GP-32 EQUAL TO      "*40"                                 NC1264.2
+233500     IF GP-32 EQUAL TO      "*60"                                 NC1264.2
 233600              PERFORM PASS                                        NC1264.2
 233700              GO  TO   LEV-WRITE-GF-3-32.                         NC1264.2
 233800     PERFORM FAIL.                                                NC1264.2
 233900     MOVE GP-32 TO COMPUTED-A                                     NC1264.2
-234000     MOVE  "*40"                  TO CORRECT-A.                   NC1264.2
+234000     MOVE  "*60"                  TO CORRECT-A.                   NC1264.2
 234100     GO   TO    LEV-WRITE-GF-3-32.                                NC1264.2
 234200 LEV-DELETE-GF-3-32.                                              NC1264.2
 234300     PERFORM DE-LETE.                                             NC1264.2
@@ -2421,12 +2421,12 @@
 242300     MOVE  "LEV-TEST-GF-3-38" TO PAR-NAME.                        NC1264.2
 242400     PERFORM PRINT-DETAIL.                                        NC1264.2
 242500 LEV-TEST-GF-3-39.                                                NC1264.2
-242600     IF GP-39 EQUAL TO      " 24"                                 NC1264.2
+242600     IF GP-39 EQUAL TO      " 14"                                 NC1264.2
 242700              PERFORM PASS                                        NC1264.2
 242800              GO  TO   LEV-WRITE-GF-3-39.                         NC1264.2
 242900              PERFORM FAIL.                                       NC1264.2
 243000     MOVE GP-39 TO COMPUTED-A                                     NC1264.2
-243100     MOVE  " 24"                  TO CORRECT-A.                   NC1264.2
+243100     MOVE  " 14"                  TO CORRECT-A.                   NC1264.2
 243200     GO   TO    LEV-WRITE-GF-3-39.                                NC1264.2
 243300 LEV-DELETE-GF-3-39.                                              NC1264.2
 243400     PERFORM DE-LETE.                                             NC1264.2
@@ -2447,12 +2447,12 @@
 244900     MOVE  "LEV-TEST-GF-3-40" TO PAR-NAME.                        NC1264.2
 245000     PERFORM PRINT-DETAIL.                                        NC1264.2
 245100 LEV-TEST-GF-3-41.                                                NC1264.2
-245200     IF GP-41 EQUAL TO      "01DB"                                NC1264.2
+245200     IF GP-41 EQUAL TO      "81DB"                                NC1264.2
 245300              PERFORM PASS                                        NC1264.2
 245400              GO  TO   LEV-WRITE-GF-3-41.                         NC1264.2
 245500     PERFORM FAIL.                                                NC1264.2
 245600     MOVE GP-41 TO COMPUTED-A                                     NC1264.2
-245700     MOVE  "01DB"                 TO CORRECT-A.                   NC1264.2
+245700     MOVE  "81DB"                 TO CORRECT-A.                   NC1264.2
 245800     GO   TO    LEV-WRITE-GF-3-41.                                NC1264.2
 245900 LEV-DELETE-GF-3-41.                                              NC1264.2
 246000     PERFORM DE-LETE.                                             NC1264.2
@@ -2473,12 +2473,12 @@
 247500     MOVE  "LEV-TEST-GF-3-42" TO PAR-NAME.                        NC1264.2
 247600     PERFORM PRINT-DETAIL.                                        NC1264.2
 247700 LEV-TEST-GF-3-43.                                                NC1264.2
-247800     IF GP-43 EQUAL TO      "WIR"                                 NC1264.2
+247800     IF GP-43 EQUAL TO      "KIR"                                 NC1264.2
 247900              PERFORM PASS                                        NC1264.2
 248000              GO  TO   LEV-WRITE-GF-3-43.                         NC1264.2
 248100     PERFORM FAIL.                                                NC1264.2
 248200     MOVE GP-43 TO COMPUTED-A                                     NC1264.2
-248300     MOVE  "WIR"                  TO CORRECT-A.                   NC1264.2
+248300     MOVE  "KIR"                  TO CORRECT-A.                   NC1264.2
 248400     GO   TO    LEV-WRITE-GF-3-43.                                NC1264.2
 248500 LEV-DELETE-GF-3-43.                                              NC1264.2
 248600     PERFORM DE-LETE.                                             NC1264.2

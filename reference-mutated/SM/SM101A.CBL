@@ -456,7 +456,7 @@
 045800 COPY-INIT-A.                                                     SM1014.2
 045900     MOVE     "  SECTION" TO FEATURE.                             SM1014.2
 046000 COPY-TEST-3.                                                     SM1014.2
-046100     IF       COPYSECT-1 EQUAL TO 85427                           SM1014.2
+046100     IF       COPYSECT-1 EQUAL TO 95427                           SM1014.2
 046200              PERFORM PASS GO TO COPY-WRITE-3.                    SM1014.2
 046300*                                                                         
 046400*                                                                         
@@ -466,13 +466,13 @@
 046800     GO       TO COPY-WRITE-3.                                    SM1014.2
 046900 COPY-FAIL-3.                                                     SM1014.2
 047000     MOVE     COPYSECT-1 TO COMPUTED-N.                           SM1014.2
-047100     MOVE     85427   TO CORRECT-N.                               SM1014.2
+047100     MOVE     95427   TO CORRECT-N.                               SM1014.2
 047200     PERFORM  FAIL.                                               SM1014.2
 047300 COPY-WRITE-3.                                                    SM1014.2
 047400     MOVE     "COPY-TEST-3 " TO PAR-NAME.                         SM1014.2
 047500     PERFORM  PRINT-DETAIL.                                       SM1014.2
 047600 COPY-TEST-4.                                                     SM1014.2
-047700     IF       COPYSECT-2 EQUAL TO 26121                           SM1014.2
+047700     IF       COPYSECT-2 EQUAL TO 23121                           SM1014.2
 047800              PERFORM PASS GO TO COPY-WRITE-4.                    SM1014.2
 047900     GO       TO COPY-FAIL-4.                                     SM1014.2
 048000 COPY-DELETE-4.                                                   SM1014.2
@@ -480,13 +480,13 @@
 048200     GO       TO COPY-WRITE-4.                                    SM1014.2
 048300 COPY-FAIL-4.                                                     SM1014.2
 048400     MOVE     COPYSECT-2 TO COMPUTED-N.                           SM1014.2
-048500     MOVE     26121   TO CORRECT-N.                               SM1014.2
+048500     MOVE     23121   TO CORRECT-N.                               SM1014.2
 048600     PERFORM  FAIL.                                               SM1014.2
 048700 COPY-WRITE-4.                                                    SM1014.2
 048800     MOVE     "COPY-TEST-4 " TO PAR-NAME.                         SM1014.2
 048900     PERFORM  PRINT-DETAIL.                                       SM1014.2
 049000 COPY-TEST-5.                                                     SM1014.2
-049100     IF       COPYSECT-3 EQUAL TO "LIBCL"                         SM1014.2
+049100     IF       COPYSECT-3 EQUAL TO "LIBCO"                         SM1014.2
 049200              PERFORM PASS GO TO COPY-WRITE-5.                    SM1014.2
 049300     GO       TO COPY-FAIL-5.                                     SM1014.2
 049400 COPY-DELETE-5.                                                   SM1014.2
@@ -494,7 +494,7 @@
 049600     GO       TO COPY-WRITE-5.                                    SM1014.2
 049700 COPY-FAIL-5.                                                     SM1014.2
 049800     MOVE     COPYSECT-3 TO COMPUTED-A.                           SM1014.2
-049900     MOVE     "LIBCL" TO CORRECT-A.                               SM1014.2
+049900     MOVE     "LIBCO" TO CORRECT-A.                               SM1014.2
 050000     PERFORM  FAIL.                                               SM1014.2
 050100 COPY-WRITE-5.                                                    SM1014.2
 050200     MOVE     "COPY-TEST-5 " TO PAR-NAME.                         SM1014.2

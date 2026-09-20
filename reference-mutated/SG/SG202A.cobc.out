@@ -23,5 +23,5 @@ SG202A.CBL:365: warning: P0004 and P4802 are not in the same SECTION [-Wsuspicio
   363 | 036500*..
   364 | 036600*..
   365 > 036700     PERFORM P0004 THRU P4802.                                    S..
-  366 | 036800     IF PERF-RES-OVER EQUAL TO "XU" PERFORM PASS                  S..
+  366 | 036800     IF PERF-RES-OVER EQUAL TO "XY" PERFORM PASS                  S..
   367 | 036900         ELSE MOVE PERF-RES-OVER TO COMPUTED-A                    S..

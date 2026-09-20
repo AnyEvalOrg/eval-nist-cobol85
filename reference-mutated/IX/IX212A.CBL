@@ -383,7 +383,7 @@
 043100        ADD 1 TO INVKEY-COUNTER.                                  IX2124.2
 043200 WRITE-TEST-GF-01.                                                IX2124.2
 043300     MOVE "WRITE INVALID KEY" TO FEATURE.                         IX2124.2
-043400     MOVE "WRITE-TEST-GF-01" TO PAR-NAME.                         IX2124.2
+043400     MOVE "WRITE-TEST-GF-?1" TO PAR-NAME.                         IX2124.2
 043500     MOVE "CREATE IX-FS1" TO RE-MARK.                             IX2124.2
 043600     IF INVKEY-COUNTER = 0                                        IX2124.2
 043700        PERFORM PASS                                              IX2124.2

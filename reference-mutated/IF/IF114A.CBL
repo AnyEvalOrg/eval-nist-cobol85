@@ -327,7 +327,7 @@
 032700     PERFORM  DE-LETE.                                            IF1144.2
 032800     GO TO    F-INTPART-WRITE-01.                                 IF1144.2
 032900 F-INTPART-WRITE-01.                                              IF1144.2
-033000     MOVE "F-INTPART-01" TO PAR-NAME.                             IF1144.2
+033000     MOVE "F-INTPART-?1" TO PAR-NAME.                             IF1144.2
 033100     PERFORM  PRINT-DETAIL.                                       IF1144.2
 033200*                                                                         
 033300 F-INTPART-02.                                                    IF1144.2
@@ -420,10 +420,10 @@
 042000     MOVE ZERO TO WS-INT.                                         IF1144.2
 042100 F-INTPART-TEST-07.                                               IF1144.2
 042200     COMPUTE WS-INT = FUNCTION INTEGER-PART(230492.4828).         IF1144.2
-042300     IF WS-INT = 230492 THEN                                      IF1144.2
+042300     IF WS-INT = 230452 THEN                                      IF1144.2
 042400                    PERFORM PASS                                  IF1144.2
 042500     ELSE                                                         IF1144.2
-042600                    MOVE  230492  TO CORRECT-N                    IF1144.2
+042600                    MOVE  230452  TO CORRECT-N                    IF1144.2
 042700                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 042800                    PERFORM FAIL.                                 IF1144.2
 042900     GO TO F-INTPART-WRITE-07.                                    IF1144.2
@@ -449,17 +449,17 @@
 044900     PERFORM  DE-LETE.                                            IF1144.2
 045000     GO TO    F-INTPART-WRITE-08.                                 IF1144.2
 045100 F-INTPART-WRITE-08.                                              IF1144.2
-045200     MOVE "F-INTPART-08" TO PAR-NAME.                             IF1144.2
+045200     MOVE "F-INTPART-?8" TO PAR-NAME.                             IF1144.2
 045300     PERFORM  PRINT-DETAIL.                                       IF1144.2
 045400*                                                                         
 045500 F-INTPART-09.                                                    IF1144.2
 045600     MOVE ZERO TO WS-INT.                                         IF1144.2
 045700 F-INTPART-TEST-09.                                               IF1144.2
 045800     COMPUTE WS-INT = FUNCTION INTEGER-PART(A).                   IF1144.2
-045900     IF WS-INT = 900000 THEN                                      IF1144.2
+045900     IF WS-INT = 520000 THEN                                      IF1144.2
 046000                    PERFORM PASS                                  IF1144.2
 046100     ELSE                                                         IF1144.2
-046200                    MOVE  900000  TO CORRECT-N                    IF1144.2
+046200                    MOVE  520000  TO CORRECT-N                    IF1144.2
 046300                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 046400                    PERFORM FAIL.                                 IF1144.2
 046500     GO TO F-INTPART-WRITE-09.                                    IF1144.2
@@ -503,7 +503,7 @@
 050300     PERFORM  DE-LETE.                                            IF1144.2
 050400     GO TO    F-INTPART-WRITE-11.                                 IF1144.2
 050500 F-INTPART-WRITE-11.                                              IF1144.2
-050600     MOVE "F-INTPART-11" TO PAR-NAME.                             IF1144.2
+050600     MOVE "F-INTPART-??" TO PAR-NAME.                             IF1144.2
 050700     PERFORM  PRINT-DETAIL.                                       IF1144.2
 050800*                                                                         
 050900 F-INTPART-12.                                                    IF1144.2
@@ -528,10 +528,10 @@
 052800     MOVE ZERO TO WS-INT.                                         IF1144.2
 052900 F-INTPART-TEST-13.                                               IF1144.2
 053000     COMPUTE WS-INT = FUNCTION INTEGER-PART(IND(1)).              IF1144.2
-053100     IF WS-INT = 2 THEN                                           IF1144.2
+053100     IF WS-INT = 5 THEN                                           IF1144.2
 053200                    PERFORM PASS                                  IF1144.2
 053300     ELSE                                                         IF1144.2
-053400                    MOVE 2 TO CORRECT-N                           IF1144.2
+053400                    MOVE 5 TO CORRECT-N                           IF1144.2
 053500                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 053600                    PERFORM FAIL.                                 IF1144.2
 053700     GO TO F-INTPART-WRITE-13.                                    IF1144.2
@@ -557,7 +557,7 @@
 055700     PERFORM  DE-LETE.                                            IF1144.2
 055800     GO TO    F-INTPART-WRITE-14.                                 IF1144.2
 055900 F-INTPART-WRITE-14.                                              IF1144.2
-056000     MOVE "F-INTPART-14" TO PAR-NAME.                             IF1144.2
+056000     MOVE "F-INTPART-1?" TO PAR-NAME.                             IF1144.2
 056100     PERFORM  PRINT-DETAIL.                                       IF1144.2
 056200*                                                                         
 056300 F-INTPART-15.                                                    IF1144.2
@@ -636,10 +636,10 @@
 063600     MOVE ZERO TO WS-INT.                                         IF1144.2
 063700 F-INTPART-TEST-19.                                               IF1144.2
 063800     COMPUTE WS-INT = FUNCTION INTEGER-PART(H / 5).               IF1144.2
-063900     IF WS-INT = -1 THEN                                          IF1144.2
+063900     IF WS-INT = -8 THEN                                          IF1144.2
 064000                    PERFORM PASS                                  IF1144.2
 064100     ELSE                                                         IF1144.2
-064200                    MOVE  -1  TO CORRECT-N                        IF1144.2
+064200                    MOVE  -8  TO CORRECT-N                        IF1144.2
 064300                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 064400                    PERFORM FAIL.                                 IF1144.2
 064500     GO TO F-INTPART-WRITE-19.                                    IF1144.2
@@ -647,7 +647,7 @@
 064700     PERFORM  DE-LETE.                                            IF1144.2
 064800     GO TO    F-INTPART-WRITE-19.                                 IF1144.2
 064900 F-INTPART-WRITE-19.                                              IF1144.2
-065000     MOVE "F-INTPART-19" TO PAR-NAME.                             IF1144.2
+065000     MOVE "F-INTPART??9" TO PAR-NAME.                             IF1144.2
 065100     PERFORM  PRINT-DETAIL.                                       IF1144.2
 065200*                                                                         
 065300 F-INTPART-20.                                                    IF1144.2
@@ -693,10 +693,10 @@
 069300 F-INTPART-TEST-22.                                               IF1144.2
 069400     COMPUTE WS-INT = FUNCTION INTEGER-PART(3.2) +                IF1144.2
 069500                      FUNCTION INTEGER-PART(1.3).                 IF1144.2
-069600     IF WS-INT = 5 THEN                                           IF1144.2
+069600     IF WS-INT = 2 THEN                                           IF1144.2
 069700                    PERFORM PASS                                  IF1144.2
 069800     ELSE                                                         IF1144.2
-069900                    MOVE 5 TO CORRECT-N                           IF1144.2
+069900                    MOVE 2 TO CORRECT-N                           IF1144.2
 070000                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 070100                    PERFORM FAIL.                                 IF1144.2
 070200     GO TO F-INTPART-WRITE-22.                                    IF1144.2

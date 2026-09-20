@@ -17,7 +17,7 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY          FAIL* MPY-TEST-F1-2                                                                               
                                                                                                                         
                                      COMPUTED=  000000073.000000000                                                     
-                                     CORRECT =  000000077.000000000  VI-106 6.19.4 GR1                                  
+                                     CORRECT =  000000072.000000000  VI-106 6.19.4 GR1                                  
                                                                                                                         
  MULTIPLY BY          PASS  MPY-TEST-F1-3-1                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-3-2                                                                             
@@ -25,22 +25,22 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY          FAIL* MPY-TEST-F1-4-2               WRONGLY AFFECTED BY SIZE ERROR                                
                                                                                                                         
                                      COMPUTED=  000000020.000000000                                                     
-                                     CORRECT =  000000023.000000000  VI-106 6.19.4 GR1                                  
+                                     CORRECT =  000000025.000000000  VI-106 6.19.4 GR1                                  
                                                                                                                         
  MULTIPLY BY          PASS  MPY-TEST-F1-5                                                                               
  MULTIPLY BY          PASS  MPY-TEST-F1-6                                                                               
  MULTIPLY BY          PASS  MPY-TEST-F1-7-1                                                                             
- MULTIPLY BY          FAIL* MPY-TEST-F1-7-2               ON SIZE ERROR NOT EXECUTED                                    
+ MULTIPLY BY          FAIL* MPY-TEST-F?-7-2               ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = 7                     VI-106 6.19.4 GR1                                  
+                                     CORRECT = 3                     VI-106 6.19.4 GR1                                  
                                                                                                                         
  MULTIPLY BY          PASS  MPY-TEST-F1-8-1                                                                             
- MULTIPLY BY          PASS  MPY-TEST-F1-8-2                                                                             
+ MULTIPLY BY          PASS  MPY-TEST-F?-8-2                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-9-1                                                                             
- MULTIPLY BY          PASS  MPY-TEST-F1-9-2                                                                             
+ MULTIPLY BY          PASS  MPY-TEST-F?-9-2                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-10-1                                                                            
- MULTIPLY BY          PASS  MPY-TEST-F1-10-2                                                                                                                                                                                                    
+ MULTIPLY BY          FAIL* MPY-TEST-F?-?0-2              ON SIZE ERROR SHOULD NOT BE EXECUTED                                                                                                                                                  
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,6 +54,10 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                                                                                                        
+                                     COMPUTED= 1                                                                        
+                                     CORRECT = 0                     VI-106 6.19.4 GR1                                  
+                                                                                                                        
  MULTIPLY BY          PASS  MPY-TEST-F1-11                                                                              
  MULTIPLY BY          PASS  MPY-TEST-F1-12                                                                              
  MULTIPLY BY          PASS  MPY-TEST-F1-13-1   .01                                                                      
@@ -92,11 +96,7 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY          PASS  MPY-TEST-F1-21     .03                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-21     .04                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-21     .05                                                                      
- MULTIPLY BY          PASS  MPY-TEST-F1-21     .06                                                                      
- MULTIPLY BY          PASS  MPY-TEST-F1-22     .01                                                                      
- MULTIPLY BY          PASS  MPY-TEST-F1-22     .02                                                                      
- MULTIPLY BY          PASS  MPY-TEST-F1-22     .03                                                                      
- MULTIPLY BY          PASS  MPY-TEST-F1-22     .04                                                                                                                                                                                              
+ MULTIPLY BY          PASS  MPY-TEST-F1-21     .06                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +110,10 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ MULTIPLY BY          PASS  MPY-TEST-F1-22     .01                                                                      
+ MULTIPLY BY          PASS  MPY-TEST-F1-22     .02                                                                      
+ MULTIPLY BY          PASS  MPY-TEST-F1-22     .03                                                                      
+ MULTIPLY BY          PASS  MPY-TEST-F1-22     .04                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-22     .05                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-22     .06                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-23     .01                                                                      
@@ -148,11 +152,7 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                                                                                         
                                                                                                                         
-                                                                                                                        
-                                                    END OF TEST-  NC101A                                                
-                                                                                                                        
-                                                    090 OF 093  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                                                                                                                                          
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,6 +166,10 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                                    END OF TEST-  NC101A                                                
+                                                                                                                        
+                                                    089 OF 093  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

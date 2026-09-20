@@ -29,7 +29,7 @@ TEST RESULT OF IF119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MAX Function         PASS  F-MAX-10                                                                                    
  MAX Function         FAIL* F-MAX-11                                                                                    
                                                                                                                         
-                                     COMPUTED= a                                                                        
+                                     COMPUTED= R                                                                        
                                      CORRECT = r                     See ref. A-52 2.23                                 
                                                                                                                         
  MAX Function         PASS  F-MAX-12                                                                                    

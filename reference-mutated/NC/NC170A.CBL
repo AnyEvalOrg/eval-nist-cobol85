@@ -561,7 +561,7 @@
 056300     MOVE     4 TO MULT5.                                         NC1704.2
 056400     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1704.2
 056500 MPY-WRITE-F2-4-2.                                                NC1704.2
-056600     MOVE    "MPY-TEST-F2-4-2 " TO PAR-NAME.                      NC1704.2
+056600     MOVE    "MPY-TEST-F2-?-2 " TO PAR-NAME.                      NC1704.2
 056700     PERFORM  PRINT-DETAIL.                                       NC1704.2
 056800                                                                  NC1704.2
 056900 MPY-INIT-F2-5.                                                   NC1704.2
@@ -593,7 +593,7 @@
 059500     MULTIPLY A06THREES-DS-03V03 BY A06THREES-DS-03V03            NC1704.2
 059600         GIVING WRK-DS-10V00 ROUNDED.                             NC1704.2
 059700 MPY-TEST-F2-6.                                                   NC1704.2
-059800     IF WRK-DS-10V00 EQUAL TO 0000111111                          NC1704.2
+059800     IF WRK-DS-10V00 EQUAL TO 0000111161                          NC1704.2
 059900         PERFORM PASS                                             NC1704.2
 060000         GO TO MPY-WRITE-F2-6.                                    NC1704.2
 060100     GO TO MPY-FAIL-F2-6.                                         NC1704.2
@@ -601,7 +601,7 @@
 060300     PERFORM DE-LETE.                                             NC1704.2
 060400     GO TO MPY-WRITE-F2-6.                                        NC1704.2
 060500 MPY-FAIL-F2-6.                                                   NC1704.2
-060600     MOVE  0000111111         TO CORRECT-18V0.                    NC1704.2
+060600     MOVE  0000111161         TO CORRECT-18V0.                    NC1704.2
 060700     MOVE  WRK-DS-10V00       TO COMPUTED-18V0.                   NC1704.2
 060800     PERFORM FAIL.                                                NC1704.2
 060900 MPY-WRITE-F2-6.                                                  NC1704.2
@@ -634,10 +634,10 @@
 063600     MOVE "MPY-TEST-F2-7-1         " TO PAR-NAME.                 NC1704.2
 063700     PERFORM PRINT-DETAIL.                                        NC1704.2
 063800 MPY-TEST-F2-7-2.                                                 NC1704.2
-063900     IF      WRK-XN-00001 EQUAL TO "8"                            NC1704.2
+063900     IF      WRK-XN-00001 EQUAL TO "1"                            NC1704.2
 064000             PERFORM PASS                                         NC1704.2
 064100             GO TO MPY-WRITE-F2-7-2.                              NC1704.2
-064200     MOVE "8" TO CORRECT-A.                                       NC1704.2
+064200     MOVE "1" TO CORRECT-A.                                       NC1704.2
 064300     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1704.2
 064400     MOVE    "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.             NC1704.2
 064500     PERFORM FAIL.                                                NC1704.2
@@ -672,10 +672,10 @@
 067400     MOVE "MPY-TEST-F2-8-1         " TO PAR-NAME.                 NC1704.2
 067500     PERFORM PRINT-DETAIL.                                        NC1704.2
 067600 MPY-TEST-F2-8-2.                                                 NC1704.2
-067700     IF WRK-XN-00001 EQUAL TO "1"                                 NC1704.2
+067700     IF WRK-XN-00001 EQUAL TO "2"                                 NC1704.2
 067800         PERFORM PASS                                             NC1704.2
 067900         GO TO MPY-WRITE-F2-8-2.                                  NC1704.2
-068000     MOVE    "1"           TO CORRECT-A.                          NC1704.2
+068000     MOVE    "2"           TO CORRECT-A.                          NC1704.2
 068100     MOVE     WRK-XN-00001 TO COMPUTED-A.                         NC1704.2
 068200     MOVE    "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.   NC1704.2
 068300     PERFORM FAIL.                                                NC1704.2
@@ -733,10 +733,10 @@
 073500         GIVING WRK-DS-09V08 ROUNDED ON SIZE ERROR                NC1704.2
 073600         MOVE "0" TO WRK-XN-00001.                                NC1704.2
 073700 MPY-TEST-F2-10-1.                                                NC1704.2
-073800     IF WRK-DS-17V00-S EQUAL TO 11111111111111111                 NC1704.2
+073800     IF WRK-DS-17V00-S EQUAL TO 11111511111111111                 NC1704.2
 073900         PERFORM PASS                                             NC1704.2
 074000         GO TO MPY-WRITE-F2-10-1.                                 NC1704.2
-074100     MOVE  11111111111111111  TO CORRECT-18V0.                    NC1704.2
+074100     MOVE  11111511111111111  TO CORRECT-18V0.                    NC1704.2
 074200     MOVE  WRK-DS-17V00-S     TO COMPUTED-18V0.                   NC1704.2
 074300     PERFORM FAIL.                                                NC1704.2
 074400     GO TO MPY-WRITE-F2-10-1.                                     NC1704.2
@@ -757,7 +757,7 @@
 075900 MPY-DELETE-F2-10-2.                                              NC1704.2
 076000     PERFORM DE-LETE.                                             NC1704.2
 076100 MPY-WRITE-F2-10-2.                                               NC1704.2
-076200     MOVE   "MPY-TEST-F2-10-2       " TO PAR-NAME.                NC1704.2
+076200     MOVE   "MPY-TEST-F2-?0-2       " TO PAR-NAME.                NC1704.2
 076300     PERFORM PRINT-DETAIL.                                        NC1704.2
 076400                                                                  NC1704.2
 076500 MPY-INIT-F2-11.                                                  NC1704.2
@@ -767,10 +767,10 @@
 076900     MULTIPLY A99-CS-02V00 BY A01ONE-CS-00V01 GIVING WRK-CS-02V02.NC1704.2
 077000 MPY-TEST-F2-11-1.                                                NC1704.2
 077100     MOVE    WRK-CS-02V02 TO WRK-DS-06V06.                        NC1704.2
-077200     IF      WRK-DS-12V00-S EQUAL TO 000049900000                 NC1704.2
+077200     IF      WRK-DS-12V00-S EQUAL TO 000009900000                 NC1704.2
 077300             PERFORM PASS                                         NC1704.2
 077400             GO TO   MPY-WRITE-F2-11.                             NC1704.2
-077500     MOVE    000049900000     TO CORRECT-18V0.                    NC1704.2
+077500     MOVE    000009900000     TO CORRECT-18V0.                    NC1704.2
 077600     MOVE    WRK-DS-12V00-S   TO COMPUTED-18V0.                   NC1704.2
 077700     PERFORM FAIL.                                                NC1704.2
 077800     GO TO   MPY-WRITE-F2-11.                                     NC1704.2
@@ -807,10 +807,10 @@
 080900     MULTIPLY A02THREES-CS-18V00 BY A14TWOS-CU-18V00              NC1704.2
 081000             GIVING WRK-DU-18V00.                                 NC1704.2
 081100 MPY-TEST-F2-13.                                                  NC1704.2
-081200     IF WRK-DU-18V00 EQUAL TO 000733333333333326                  NC1704.2
+081200     IF WRK-DU-18V00 EQUAL TO 000933333333333326                  NC1704.2
 081300         PERFORM PASS                                             NC1704.2
 081400         GO TO MPY-WRITE-F2-13.                                   NC1704.2
-081500     MOVE 000733333333333326 TO CORRECT-18V0.                     NC1704.2
+081500     MOVE 000933333333333326 TO CORRECT-18V0.                     NC1704.2
 081600     MOVE WRK-DU-18V00 TO COMPUTED-18V0.                          NC1704.2
 081700     PERFORM FAIL.                                                NC1704.2
 081800     GO TO MPY-WRITE-F2-13.                                       NC1704.2
@@ -847,10 +847,10 @@
 084900     MULTIPLY A01ONES-CS-18V00 BY A18SIXES-CU-18V00               NC1704.2
 085000         GIVING WRK-DU-18V00.                                     NC1704.2
 085100 MPY-TEST-F2-15.                                                  NC1704.2
-085200     IF WRK-DU-18V00 EQUAL TO 666666666666666662                  NC1704.2
+085200     IF WRK-DU-18V00 EQUAL TO 666666666666666666                  NC1704.2
 085300         PERFORM PASS                                             NC1704.2
 085400         GO TO MPY-WRITE-F2-15.                                   NC1704.2
-085500     MOVE 666666666666666662 TO CORRECT-18V0.                     NC1704.2
+085500     MOVE 666666666666666666 TO CORRECT-18V0.                     NC1704.2
 085600     MOVE WRK-DU-18V00 TO COMPUTED-18V0.                          NC1704.2
 085700     PERFORM FAIL.                                                NC1704.2
 085800     GO TO MPY-WRITE-F2-15.                                       NC1704.2

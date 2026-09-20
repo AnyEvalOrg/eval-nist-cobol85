@@ -17,18 +17,22 @@ TEST RESULT OF ST131A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SORT, INPUT PROC     FAIL* SORT-TEST-2                                                                                 
                                                                                                                         
                                      COMPUTED= 567AI                                                                    
-                                     CORRECT = 567AH                                                                    
+                                     CORRECT = 561AI                                                                    
                                                                                                                         
  SORT, INPUT PROC     PASS  SORT-TEST-3                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-4                                                                                 
  SORT, INPUT PROC     FAIL* SORT-TEST-5                                                                                 
                                                                                                                         
                                      COMPUTED= 567AZAZ                                                                  
-                                     CORRECT = 567AZZZ                                                                  
+                                     CORRECT = 567AZAT                                                                  
                                                                                                                         
  SORT, INPUT PROC     PASS  SORT-TEST-6                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-7                                                                                 
- SORT, INPUT PROC     PASS  SORT-TEST-8                                                                                 
+ SORT, INPUT PROC     FAIL* SORT-TEST-8                                                                                 
+                                                                                                                        
+                                     COMPUTED= 567AABA                                                                  
+                                     CORRECT = 567AABM                                                                  
+                                                                                                                        
  SORT, OUTPUT PROC    PASS  SORT-TEST-9                                                                                 
  SORT, OUTPUT PROC    PASS  SORT-TEST-10                                                                                
  SORT, OUTPUT PROC    PASS  SORT-TEST-11                                                                                
@@ -43,8 +47,21 @@ TEST RESULT OF ST131A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  ST131A                                                
                                                                                                                         
-                                                    012 OF 015  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    011 OF 015  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF ST131A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

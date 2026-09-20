@@ -2176,7 +2176,7 @@
 217800 PICTURE-TEST-27-0.                                               NC1244.2
 217900     MOVE WORK-AREA-27 TO WORK-AREA-27A.                          NC1244.2
 218000 PICTURE-TEST-27-1.                                               NC1244.2
-218100     IF WORK-AREA-27A EQUAL TO "260"                              NC1244.2
+218100     IF WORK-AREA-27A EQUAL TO "200"                              NC1244.2
 218200        PERFORM PASS                                              NC1244.2
 218300        ELSE GO TO PICTURE-FAIL-27.                               NC1244.2
 218400     GO TO PICTURE-WRITE-27.                                      NC1244.2
@@ -2186,7 +2186,7 @@
 218800 PICTURE-FAIL-27.                                                 NC1244.2
 218900     PERFORM FAIL.                                                NC1244.2
 219000     MOVE WORK-AREA-27A TO COMPUTED-A.                            NC1244.2
-219100     MOVE "260" TO CORRECT-A.                                     NC1244.2
+219100     MOVE "200" TO CORRECT-A.                                     NC1244.2
 219200 PICTURE-WRITE-27.                                                NC1244.2
 219300     MOVE "PICTURE-TEST-27" TO PAR-NAME.                          NC1244.2
 219400     PERFORM PRINT-DETAIL.                                        NC1244.2
@@ -2221,7 +2221,7 @@
 222300 PICTURE-TEST-29.                                                 NC1244.2
 222400     MOVE WORK-AREA-29 TO WORK-AREA-29A.                          NC1244.2
 222500     MOVE WORK-AREA-29A TO WORK-AREA-29B.                         NC1244.2
-222600     IF WORK-AREA-29B EQUAL TO "105"                              NC1244.2
+222600     IF WORK-AREA-29B EQUAL TO "100"                              NC1244.2
 222700        PERFORM PASS                                              NC1244.2
 222800        ELSE GO TO PICTURE-FAIL-29.                               NC1244.2
 222900     GO TO PICTURE-WRITE-29.                                      NC1244.2
@@ -2231,7 +2231,7 @@
 223300 PICTURE-FAIL-29.                                                 NC1244.2
 223400     PERFORM FAIL.                                                NC1244.2
 223500     MOVE WORK-AREA-29B TO COMPUTED-A.                            NC1244.2
-223600     MOVE "105" TO CORRECT-A.                                     NC1244.2
+223600     MOVE "100" TO CORRECT-A.                                     NC1244.2
 223700 PICTURE-WRITE-29.                                                NC1244.2
 223800     MOVE "PICTURE-TEST-29" TO PAR-NAME.                          NC1244.2
 223900     PERFORM PRINT-DETAIL.                                        NC1244.2
@@ -2288,7 +2288,7 @@
 229000 PICTURE-TEST-32-0.                                               NC1244.2
 229100     MOVE WORK-AREA-32 TO WORK-AREA-32A.                          NC1244.2
 229200 PICTURE-TEST-32-1.                                               NC1244.2
-229300     IF WORK-AREA-32A EQUAL TO .201                               NC1244.2
+229300     IF WORK-AREA-32A EQUAL TO .001                               NC1244.2
 229400        PERFORM PASS                                              NC1244.2
 229500        ELSE GO TO PICTURE-FAIL-32.                               NC1244.2
 229600     GO TO PICTURE-WRITE-32.                                      NC1244.2
@@ -2298,7 +2298,7 @@
 230000 PICTURE-FAIL-32.                                                 NC1244.2
 230100     PERFORM FAIL.                                                NC1244.2
 230200     MOVE WORK-AREA-32A TO COMPUTED-0V18.                         NC1244.2
-230300     MOVE .201 TO CORRECT-0V18.                                   NC1244.2
+230300     MOVE .001 TO CORRECT-0V18.                                   NC1244.2
 230400 PICTURE-WRITE-32.                                                NC1244.2
 230500     MOVE "PICTURE-TEST-32" TO PAR-NAME.                          NC1244.2
 230600     PERFORM PRINT-DETAIL.                                        NC1244.2

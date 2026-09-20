@@ -13,30 +13,3 @@ TEST RESULT OF IC213A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- CALL...USING DATA-NM FAIL* CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000004                                                      
-                                                                                                                        
- CALL...USING DATA-NM FAIL* CALL-TEST-2                   MAIN PROGRAM CALLS SUBPROGRAM2                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000008                                                      
-                                                                                                                        
- CANCEL               FAIL* CANCEL-TEST-1                 SUBPROGRAM2 CANCELS SUBPROGRAM1                               
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000006                                                      
-                                                                                                                        
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                    END OF TEST-  IC213A                                                
-                                                                                                                        
-                                                    000 OF 003  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                      
- FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -9,7 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DATA = {'problems.jsonl.gz', 'manifest.json', 'eligibility.json'}
-PRIVATE_KEYS = {'mutations', 'replacements', 'comment_changes', 'mutable_sites', 'seed', 'salt_sha256'}
+PRIVATE_KEYS = {'mutations', 'replacements', 'comment_changes', 'diagnostic_changes', 'mutable_sites', 'seed', 'salt_sha256'}
 
 
 def check_data(blob, suffix):

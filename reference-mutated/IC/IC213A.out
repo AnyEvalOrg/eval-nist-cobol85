@@ -1,1 +1,7 @@
 Warning: program compiled against libxml 212 using older 209
+libcob: IC213A.CBL:300: error: module 'IC2?4A' not found
+
+ Last statement of "IC213A" was CALL
+	CALL-TEST-1 OF CCVS1 at IC213A.CBL:300
+	ENTRY IC213A at IC213A.CBL:184
+ Started by ./IC213A

@@ -13,25 +13,13 @@ TEST RESULT OF IF133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- REM Function         FAIL* F-REM-01                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000000.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-66 2.37                                 
-                                                                                                                        
+ REM Function         PASS  F-REM-?1                                                                                    
  REM Function         PASS  F-REM-02                                                                                    
  REM Function         PASS  F-REM-03                                                                                    
- REM Function         FAIL* F-REM-04                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000000.000000000  See ref. A-66 2.37                                 
-                                                                                                                        
+ REM Function         PASS  F-REM-04                                                                                    
  REM Function         PASS  F-REM-05                                                                                    
  REM Function         PASS  F-REM-06                                                                                    
- REM Function         FAIL* F-REM-07                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000007.000000000  See ref. A-66 2.37                                 
-                                                                                                                        
+ REM Function         PASS  F-REM-07                                                                                    
  REM Function         PASS  F-REM-08                                                                                    
  REM Function         PASS  F-REM-09                                                                                    
  REM Function         PASS  F-REM-10                                                                                    
@@ -40,7 +28,19 @@ TEST RESULT OF IF133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  REM Function         PASS  F-REM-13                                                                                    
  REM Function         PASS  F-REM-14                                                                                    
  REM Function         PASS  F-REM-15                                                                                    
- REM Function         PASS  F-REM-16                                                                                                                                                                                                            
+ REM Function         PASS  F-REM-16                                                                                    
+ REM Function         PASS  F-REM-17                                                                                    
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF133A                                                
+                                                                                                                        
+                                                    017 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,16 +54,4 @@ TEST RESULT OF IF133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- REM Function         PASS  F-REM-17                                                                                    
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                    END OF TEST-  IF133A                                                
-                                                                                                                        
-                                                    014 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

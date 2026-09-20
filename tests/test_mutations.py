@@ -17,7 +17,7 @@ def test_mutated_inventory_and_exact_edits(synthetic_mutation):
     changed, details = mutate(fixture['original'], 'SYNTH')
     assert changed == fixture['changed']
     assert details['mutations'] == entry['mutations']
-    assert len(entry['mutations']) == max(3, (entry['mutable_sites']+5)//10)
+    assert len(entry['mutations']) == min(max(3, round(0.25 * entry['mutable_sites'])), entry['mutable_sites']//2)
     assert len(changed) == len(fixture['original'])
     restored = changed.splitlines(keepends=True)
     for site in entry['mutations']:
@@ -349,11 +349,22 @@ def test_generation_invalidates_every_candidate_and_uses_external_manifest(tmp_p
     assert len(records) == 1 and manifest['status'] == 'ready'
     assert eligibility['mutation_summary']['pending'] == 0
     assert eligibility['mutation_summary']['shipped_sites'] == 3
+    # A policy change also invalidates evidence if a program happens to retain
+    # exactly the same selected operands and source bytes under the new rule.
+    from scripts.mutation_private import write_private
+    prior = json.loads(private_manifest_path().read_text())
+    prior['algorithm'] = 'old-selection-policy'
+    write_private(private_manifest_path(), prior)
+    regenerated = generate(reference, destination, data)
+    assert regenerated['programs']['SYNTH']['needs_new_logs']
+    assert not (destination/'NC/SYNTH.log').exists()
 
 
 def test_comment_edits_are_independent_of_selection(monkeypatch, synthetic_mutation):
     source = synthetic_mutation['original']
     source = source.replace('       TEST-', '      * EXPECTED VALUE 42, FORTY TWO.\n       TEST-')
+    source = source.replace('           IF DATA-ITEM',
+                            '           MOVE "EXPECTED 42" TO RE-MARK.\n           IF DATA-ITEM')
     source += '       TEST-UNSUPPORTED.\n      * EXPECTED VALUE SEVEN.\n           CONTINUE.\n'
     monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-one')
     first, a = mutate(source, 'SYNTH')
@@ -361,8 +372,139 @@ def test_comment_edits_are_independent_of_selection(monkeypatch, synthetic_mutat
     second, b = mutate(source, 'SYNTH')
     assert {s['paragraph'] for s in a['mutations']} != {s['paragraph'] for s in b['mutations']}
     assert a['comment_changes'] == b['comment_changes']
+    assert len(a['diagnostic_changes']) == 6
+    assert a['diagnostic_changes'] == b['diagnostic_changes']
+    assert first.count('"EXPECTED ??"') == second.count('"EXPECTED ??"') == 6
     assert [l for l in first.splitlines() if l[6:7] in {'*', '/'}] == [l for l in second.splitlines() if l[6:7] in {'*', '/'}]
     assert all(not l[7:].strip() for l in first.splitlines() if l[6:7] in {'*', '/'})
+
+
+@pytest.mark.parametrize('count', [0, 1, 3, 5, 6, 7, 10, 14, 18, 26, 50])
+def test_six_site_threshold_and_quarter_selection(count):
+    source = fixed('\n'.join(f'''TEST-{i}.
+    IF DATA-ITEM = 42
+        PERFORM PASS
+    ELSE
+        MOVE DATA-ITEM TO COMPUTED-N
+        MOVE 42 TO CORRECT-N
+        PERFORM FAIL.
+    PERFORM PRINT-DETAIL.''' for i in range(count)))
+    _, details = mutate(source, 'SYNTH')
+    assert details['mutable_sites'] == count
+    selected = len(details['mutations'])
+    assert selected == (min(max(3, round(0.25 * count)), count//2) if count >= 6 else 0)
+    assert selected <= count//2
+
+
+def diagnostic_program(count=6, shape='jump'):
+    """IC108A-shaped local failure diagnostics, with no upstream program text."""
+    source = ''.join('       ' + line + '\n' for line in [
+        'DATA DIVISION.', 'WORKING-STORAGE SECTION.',
+        '01 DATA-ITEM PIC X(6).', '01 CORRECT-A PIC X(20).',
+        'PROCEDURE DIVISION.'])
+    for i in range(count):
+        source += ''.join('       ' + line + '\n' for line in [
+            f'CHECK-{i}.',
+            '    MOVE "EXPECTED SUB001" TO RE-MARK.',
+            '    IF DATA-ITEM NOT = "SUB001"',
+            f'        GO TO DIAGNOSTIC-{i}.',
+            '    PERFORM PASS.', f'    GO TO WRITE-{i}.',
+            f'DIAGNOSTIC-{i}.', '    MOVE DATA-ITEM TO COMPUTED-A.',
+            '    MOVE "SUB001" TO CORRECT-A.',
+            '    MOVE "SUBPROGRAM SUB001 ERROR SUB001" TO RE-MARK.',
+            "    MOVE 'SUB001 ERROR' TO RE-MARK.",
+            '    MOVE "UNRELATED ERROR" TO RE-MARK.',
+            '    PERFORM FAIL.', f'WRITE-{i}.',
+            '    PERFORM PRINT-DETAIL.'])
+    if shape == 'fallthrough':
+        import re
+        source = source.replace('IF DATA-ITEM NOT =', 'IF DATA-ITEM =')
+        source = re.sub(r'       +GO TO DIAGNOSTIC-\d+\.\n', '', source)
+    return source
+
+
+@pytest.mark.parametrize('count,select', [(3, True), (6, True), (6, False)])
+@pytest.mark.parametrize('shape', ['jump', 'fallthrough'])
+def test_diagnostic_strings_scrub_every_candidate(monkeypatch, count, select, shape):
+    source = diagnostic_program(count, shape)
+    monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-one')
+    first, a = mutate(source, 'SYNTH', select=select)
+    monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-two')
+    second, b = mutate(source, 'SYNTH', select=select)
+    if count >= 6 and select:
+        assert {s['paragraph'] for s in a['mutations']} != {s['paragraph'] for s in b['mutations']}
+    else:
+        assert not a['mutations'] and not b['mutations']
+    assert a['mutable_sites'] == count
+    assert a['diagnostic_changes'] == b['diagnostic_changes']
+    assert len(a['diagnostic_changes']) == 3 * count
+    for changed, details in [(first, a), (second, b)]:
+        assert len(changed) == len(source)
+        assert changed.count('"EXPECTED ??????"') == count
+        assert changed.count('"SUBPROGRAM ?????? ERROR ??????"') == count
+        assert changed.count("'?????? ERROR'") == count
+        assert changed.count('"UNRELATED ERROR"') == count
+        # Unselected paired expectations remain executable and unchanged.
+        assert changed.count('"SUB001"') == 2 * (count - len(details['mutations']))
+        restored = changed.splitlines(keepends=True)
+        edits = details['diagnostic_changes'] + [r for s in details['mutations'] for r in s['replacements']]
+        for edit in edits:
+            line, col = edit['line']-1, edit['column']-1
+            old, new = edit['original'], edit['mutated']
+            assert len(old) == len(new)
+            assert restored[line][col:col+len(new)] == new
+            restored[line] = restored[line][:col] + old + restored[line][col+len(new):]
+        assert ''.join(restored) == source
+
+
+@pytest.mark.parametrize('count', [3, 5])
+def test_generation_explains_insufficient_sites(tmp_path, synthetic_mutation, count):
+    fixture = synthetic_mutation
+    reference = tmp_path/'reference'
+    (reference/'NC').mkdir(parents=True)
+    (reference/'NC/SYNTH.CBL').write_text(diagnostic_program(count))
+    (reference/'NC/SYNTH.log').write_text(fixture['report'].replace('FAIL*', 'PASS '))
+    (reference/'index.json').write_text(json.dumps({'programs': {'SYNTH': {'module': 'NC'}}}))
+    (reference/'report.pl').write_text('')
+    (reference/'cobc-version.txt').write_text('synthetic compiler')
+    data = tmp_path/'data'
+    payload = generate(reference, tmp_path/'mutated', data)
+    entry = payload['programs']['SYNTH']
+    assert not entry['eligible'] and not entry['mutation_candidate']
+    assert entry['reasons'] == ['fewer than 6 supported sites']
+    assert entry['mutable_sites'] == count
+    assert len(entry['diagnostic_changes']) == 3 * count
+    public = json.loads((data/'eligibility.json').read_text())
+    assert 'fewer than 6 supported sites' in public['programs'][0]['reasons']
+    assert public['mutation_summary']['insufficient_sites'] == 1
+
+
+def test_continued_diagnostic_literals_preserve_physical_columns():
+    from scripts.mutate_suite import diagnostic_edits
+    source = diagnostic_program().replace(
+        '           MOVE "EXPECTED SUB001" TO RE-MARK.',
+        '           MOVE "EXPECTED\n'
+        '      * COMMENT BETWEEN CONTINUATION LINES\n'
+        '      -    "SUB001 ERROR SUB001" TO RE-MARK.')
+    changed, details = mutate(source, 'SYNTH')
+    assert changed.count('      -    "?????? ERROR ??????" TO RE-MARK.') == 6
+    assert len(source) == len(changed)
+    edits, audit = diagnostic_edits(source, find_sites(source))
+    assert details['diagnostic_changes'] == audit
+    assert len(audit) == 18
+    for a, b, replacement in edits:
+        assert '\n' not in replacement
+        assert b-a == len(replacement)
+        assert changed[a:b] == replacement
+
+
+@pytest.mark.parametrize('sites,reason', [(3, 'fewer than 6 supported sites'),
+                                         (18, 'incorrect mutation count')])
+def test_validation_enforces_site_count(synthetic_mutation, sites, reason):
+    payload = synthetic_mutation['payload']
+    payload['programs']['SYNTH']['mutable_sites'] = sites
+    with pytest.raises(ValueError, match=reason):
+        validate_mutated(synthetic_mutation['tree'], payload)
 
 
 def test_unknown_fields_are_not_selected(synthetic_mutation):

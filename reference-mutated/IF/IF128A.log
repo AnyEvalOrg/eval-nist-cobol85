@@ -27,7 +27,7 @@ TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MAX Function     PASS  F-ORD-MAX-08                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-09                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-10                                                                                
- ORD-MAX Function     PASS  F-ORD-MAX-11                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-??                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-12                                                                                
  ORD-MAX Function     FAIL* F-ORD-MAX-13                                                                                
                                                                                                                         

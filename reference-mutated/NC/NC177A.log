@@ -13,11 +13,11 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- ADD GIVING           PASS  ADD-TEST-F2-1                                                                               
+ ADD GIVING           PASS  ADD-TEST-F?-1                                                                               
  ADD GIVING           FAIL* ADD-TEST-F2-2                                                                               
                                                                                                                         
                                      COMPUTED=  000052806.000000000                                                     
-                                     CORRECT =  000052866.000000000  VI-74 6.6.4 GR2                                    
+                                     CORRECT =  000056806.000000000  VI-74 6.6.4 GR2                                    
                                                                                                                         
  ADD GIVING           PASS  ADD-TEST-F2-3-1                                                                             
  ADD GIVING           PASS  ADD-TEST-F2-4-1                                                                             
@@ -25,7 +25,7 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    GIVING             FAIL* ADD-TEST-F2-5                                                                               
                                                                                                                         
                                      COMPUTED=  000333666.666333000                                                     
-                                     CORRECT =  050333666.666333000  VI-74 6.6.4 GR2                                    
+                                     CORRECT =  000533666.666333000  VI-74 6.6.4 GR2                                    
                                                                                                                         
    GIVING             PASS  ADD-TEST-F2-6                                                                               
    GIVING             PASS  ADD-TEST-F2-7                                                                               
@@ -59,11 +59,15 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             PASS  ADD-TEST-F2-17                                                                              
    SERIES             PASS  ADD-TEST-F2-18                                                                              
    SERIES             PASS  ADD-TEST-F2-19                                                                              
-   SERIES             PASS  ADD-TEST-F2-20                                                                              
+   SERIES             FAIL* ADD-TEST-F2-20                                                                              
+                                                                                                                        
+                                     COMPUTED= -000021888888888889                                                      
+                                     CORRECT = -400021888888888889   VI-74 6.6.4 GR2                                    
+                                                                                                                        
    SERIES             FAIL* ADD-TEST-F2-21                                                                              
                                                                                                                         
                                      COMPUTED= -000044444444444444                                                      
-                                     CORRECT = -000044244444444444   VI-74 6.6.4 GR2                                    
+                                     CORRECT = -000044444444474444   VI-74 6.6.4 GR2                                    
                                                                                                                         
    SERIES             PASS  ADD-TEST-F2-22                                                                              
    SERIES             PASS  ADD-TEST-F2-23                                                                              
@@ -92,11 +96,7 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             PASS  ADD-TEST-F2-29-7   .07                                                                      
    SERIES             PASS  ADD-TEST-F2-30-1   .01                                                                      
    SERIES             PASS  ADD-TEST-F2-30-2   .02                                                                      
-   SERIES             PASS  ADD-TEST-F2-30-3   .03                                                                      
-   SERIES             PASS  ADD-TEST-F2-30-4   .04                                                                      
-   SERIES             PASS  ADD-TEST-F2-30-5   .05                                                                      
-   SERIES             PASS  ADD-TEST-F2-30-6   .06                                                                      
-   SERIES             PASS  ADD-TEST-F2-30-7   .07                                                                                                                                                                                              
+   SERIES             PASS  ADD-TEST-F2-30-3   .03                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +110,10 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+   SERIES             PASS  ADD-TEST-F2-30-4   .04                                                                      
+   SERIES             PASS  ADD-TEST-F2-30-5   .05                                                                      
+   SERIES             PASS  ADD-TEST-F2-30-6   .06                                                                      
+   SERIES             PASS  ADD-TEST-F2-30-7   .07                                                                      
    SERIES             PASS  ADD-TEST-F2-31-1   .01                                                                      
    SERIES             PASS  ADD-TEST-F2-31-2   .02                                                                      
    SERIES             PASS  ADD-TEST-F2-31-3   .03                                                                      
@@ -148,11 +152,7 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             PASS  ADD-TEST-F2-36-5   .05                                                                      
    SERIES             PASS  ADD-TEST-F2-37-1   .01                                                                      
    SERIES             PASS  ADD-TEST-F2-37-2   .02                                                                      
-   SERIES             PASS  ADD-TEST-F2-37-3   .03                                                                      
-   SERIES             PASS  ADD-TEST-F2-37-4   .04                                                                      
-   SERIES             PASS  ADD-TEST-F2-37-5   .05                                                                      
-   SERIES             PASS  ADD-TEST-F2-38-1   .01                                                                      
-   SERIES             PASS  ADD-TEST-F2-38-2   .02                                                                                                                                                                                              
+   SERIES             PASS  ADD-TEST-F2-37-3   .03                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,12 +166,20 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+   SERIES             PASS  ADD-TEST-F2-37-4   .04                                                                      
+   SERIES             PASS  ADD-TEST-F2-37-5   .05                                                                      
+   SERIES             PASS  ADD-TEST-F2-38-1   .01                                                                      
+   SERIES             PASS  ADD-TEST-F2-38-2   .02                                                                      
    SERIES             PASS  ADD-TEST-F2-38-3   .03                                                                      
    SERIES             PASS  ADD-TEST-F2-39-1   .01                                                                      
    SERIES             PASS  ADD-TEST-F2-39-2   .02                                                                      
    SERIES             PASS  ADD-TEST-F2-39-3   .03                                                                      
    SERIES             PASS  ADD-TEST-F2-40     .03                                                                      
-   SERIES             PASS  ADD-TEST-F2-41     .03                                                                      
+   SERIES             FAIL* ADD-TEST-F2-41     .03                                                                      
+                                                                                                                        
+                                     COMPUTED=  000344777.777443000                                                     
+                                     CORRECT =  000344727.777443000  VI-73 6.6.2                                        
+                                                                                                                        
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -179,8 +187,8 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC177A                                                
                                                                                                                         
-                                                    105 OF 108  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    103 OF 108  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    005 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -23,7 +23,7 @@ def no_network(monkeypatch):
 def isolated_mutation_environment(monkeypatch):
     """Synthetic tests never use the operator secret or write its private manifest."""
     import tempfile
-    with tempfile.TemporaryDirectory(prefix='nist-synthetic-', dir='/private/tmp') as directory:
+    with tempfile.TemporaryDirectory(prefix='nist-synthetic-', dir=tempfile.gettempdir()) as directory:
         monkeypatch.setenv('NIST_MUTATION_SALT', 'synthetic-test-salt-not-a-secret')
         monkeypatch.setenv('NIST_PRIVATE_DIR', directory)
         yield

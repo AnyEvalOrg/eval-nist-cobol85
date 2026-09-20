@@ -477,7 +477,7 @@
 047900     MOVE 4 TO IDENT-1.                                           NC2374.2
 048000     SET IDX-1  IDX-2  IDX-3 UP BY IDENT-1.                       NC2374.2
 048100 IDX-TEST-GF-6.                                                   NC2374.2
-048200     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "071307"           NC2374.2
+048200     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "070307"           NC2374.2
 048300         PERFORM PASS                                             NC2374.2
 048400         GO TO IDX-WRITE-GF-6.                                    NC2374.2
 048500     GO TO IDX-FAIL-GF-6.                                         NC2374.2
@@ -486,7 +486,7 @@
 048800     GO TO IDX-WRITE-GF-6.                                        NC2374.2
 048900 IDX-FAIL-GF-6.                                                   NC2374.2
 049000     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A.            NC2374.2
-049100     MOVE "071307" TO CORRECT-A.                                  NC2374.2
+049100     MOVE "070307" TO CORRECT-A.                                  NC2374.2
 049200     PERFORM FAIL.                                                NC2374.2
 049300 IDX-WRITE-GF-6.                                                  NC2374.2
 049400     PERFORM PRINT-DETAIL.                                        NC2374.2
@@ -501,7 +501,7 @@
 050300     SET IDX-3 TO IDENT-4.                                        NC2374.2
 050400     SET IDX-1  IDX-2  IDX-3 UP BY IDENT-7.                       NC2374.2
 050500 IDX-TEST-GF-7.                                                   NC2374.2
-050600     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "040607"           NC2374.2
+050600     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "040604"           NC2374.2
 050700         PERFORM PASS                                             NC2374.2
 050800         GO TO IDX-WRITE-GF-7.                                    NC2374.2
 050900     GO TO IDX-FAIL-GF-7.                                         NC2374.2
@@ -509,7 +509,7 @@
 051100     PERFORM DE-LETE.                                             NC2374.2
 051200     GO TO IDX-WRITE-GF-7.                                        NC2374.2
 051300 IDX-FAIL-GF-7.                                                   NC2374.2
-051400     MOVE "040607" TO CORRECT-A.                                  NC2374.2
+051400     MOVE "040604" TO CORRECT-A.                                  NC2374.2
 051500     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A.            NC2374.2
 051600     PERFORM FAIL.                                                NC2374.2
 051700 IDX-WRITE-GF-7.                                                  NC2374.2
@@ -523,7 +523,7 @@
 052500     SET IDX-1, IDX-2, IDX-3 TO IDENT-1.                          NC2374.2
 052600     SET IDX-1, IDX-2, IDX-3 DOWN BY 5.                           NC2374.2
 052700 IDX-TEST-GF-8.                                                   NC2374.2
-052800     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "070604"           NC2374.2
+052800     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "040604"           NC2374.2
 052900         PERFORM PASS                                             NC2374.2
 053000         GO TO IDX-WRITE-GF-8.                                    NC2374.2
 053100     GO TO IDX-FAIL-GF-8.                                         NC2374.2
@@ -531,7 +531,7 @@
 053300     PERFORM DE-LETE.                                             NC2374.2
 053400     GO TO IDX-WRITE-GF-8.                                        NC2374.2
 053500 IDX-FAIL-GF-8.                                                   NC2374.2
-053600     MOVE "070604" TO CORRECT-A.                                  NC2374.2
+053600     MOVE "040604" TO CORRECT-A.                                  NC2374.2
 053700     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A.            NC2374.2
 053800     PERFORM FAIL.                                                NC2374.2
 053900 IDX-WRITE-GF-8.                                                  NC2374.2

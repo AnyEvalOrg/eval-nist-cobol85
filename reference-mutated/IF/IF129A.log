@@ -20,7 +20,7 @@ TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MIN Function     FAIL* F-ORD-MIN-05                                                                                
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000007.000000000  See ref. A-62 2.33                                 
+                                     CORRECT =  000000005.000000000  See ref. A-62 2.33                                 
                                                                                                                         
  ORD-MIN Function     PASS  F-ORD-MIN-06                                                                                
  ORD-MIN Function     PASS  F-ORD-MIN-07                                                                                
@@ -28,19 +28,19 @@ TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MIN Function     FAIL* F-ORD-MIN-09                                                                                
                                                                                                                         
                                      COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000005.000000000  See ref. A-62 2.33                                 
+                                     CORRECT =  000000003.000000000  See ref. A-62 2.33                                 
                                                                                                                         
- ORD-MIN Function     PASS  F-ORD-MIN-10                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-?0                                                                                
  ORD-MIN Function     FAIL* F-ORD-MIN-11                                                                                
                                                                                                                         
                                      COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000003.000000000  See ref. A-62 2.33                                 
+                                     CORRECT =  000000001.000000000  See ref. A-62 2.33                                 
                                                                                                                         
- ORD-MIN Function     PASS  F-ORD-MIN-12                                                                                
- ORD-MIN Function     PASS  F-ORD-MIN-13                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-?2                                                                                
+ ORD-MIN Function     PASS  F-ORD-MIN-?3                                                                                
  ORD-MIN Function     PASS  F-ORD-MIN-14                                                                                
  ORD-MIN Function     PASS  F-ORD-MIN-15                                                                                
- ORD-MIN Function     PASS  F-ORD-MIN-16                                                                                                                                                                                                        
+ ORD-MIN Function     FAIL* F-ORD-MIN-16                                                                                                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,6 +54,10 @@ TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                                                                                                        
+                                     COMPUTED=  000000003.000000000                                                     
+                                     CORRECT =  000000002.000000000  See ref. A-62 2.33                                 
+                                                                                                                        
  ORD-MIN Function     PASS  F-ORD-MIN-17                                                                                
  ***********************************************************************************************************************
                                                                                                                         
@@ -62,8 +66,8 @@ TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF129A                                                
                                                                                                                         
-                                                    014 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    013 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -18,11 +18,15 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG204A
  SORT, INPUT PROC     PASS  SORT-TEST-3                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-4                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-5                                                                                 
- SORT, INPUT PROC     PASS  SORT-TEST-6                                                                                 
+ SORT, INPUT PROC     FAIL* SORT-TEST-6                                                                                 
+                                                                                                                        
+                                     COMPUTED= 567ARBR                                                                  
+                                     CORRECT = 567LRBR                                                                  
+                                                                                                                        
  SORT, INPUT PROC     FAIL* SORT-TEST-7                                                                                 
                                                                                                                         
                                      COMPUTED= 567AHBH                                                                  
-                                     CORRECT = 567QHBH                                                                  
+                                     CORRECT = 567XHBH                                                                  
                                                                                                                         
  SORT, INPUT PROC     PASS  SORT-TEST-8                                                                                 
  SORT, OUTPUT PROC    PASS  SORT-TEST-9                                                                                 
@@ -39,8 +43,8 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG204A
                                                                                                                         
                                                     END OF TEST-  SG204A    NTIS DISTRIBUTION COBOL 74                  
                                                                                                                         
-                                                    012 OF 015  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    011 OF 015  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

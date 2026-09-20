@@ -13,21 +13,9 @@ TEST RESULT OF NC244A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- RELATIVE INDEXING    FAIL* IDX-TEST-F1-1                                                                               
-                                                                                                                        
-                                     COMPUTED= JJ                                                                       
-                                     CORRECT = YJ                    VI-126 6.22.2                                      
-                                                                                                                        
- SET DN BY COMP ITEM  FAIL* IDX-TEST-F2-2                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000029.000000000                                                     
-                                     CORRECT =  000000089.000000000  VI-126 6.22.2                                      
-                                                                                                                        
- SET UP BY COMP ITEM  FAIL* IDX-TEST-F2-3                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000012.000000000                                                     
-                                     CORRECT =  000000032.000000000  VI-126 6.22.2                                      
-                                                                                                                        
+ RELATIVE INDEXING    PASS  IDX-TEST-F1-1                                                                               
+ SET DN BY COMP ITEM  PASS  IDX-TEST-F2-2                                                                               
+ SET UP BY COMP ITEM  PASS  IDX-TEST-F2-3                                                                               
  MULT OPERND SET STMT PASS  IDX-TEST-F2-4                                                                               
  PFM VARYNG COMP ITEM PASS  IDX-TEST-F2-5                                                                               
  PFM VARYNG COMP ITEM PASS  IDX-TEST-F2-6                                                                               
@@ -38,8 +26,8 @@ TEST RESULT OF NC244A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC244A                                                
                                                                                                                         
-                                                    003 OF 006  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    006 OF 006  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

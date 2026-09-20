@@ -540,7 +540,7 @@
 054000     PERFORM  DE-LETE.                                            IF1284.2
 054100     GO TO    F-ORD-MAX-WRITE-11.                                 IF1284.2
 054200 F-ORD-MAX-WRITE-11.                                              IF1284.2
-054300     MOVE "F-ORD-MAX-11" TO PAR-NAME.                             IF1284.2
+054300     MOVE "F-ORD-MAX-??" TO PAR-NAME.                             IF1284.2
 054400     PERFORM  PRINT-DETAIL.                                       IF1284.2
 054500*                                                                         
 054600 F-ORD-MAX-12.                                                    IF1284.2

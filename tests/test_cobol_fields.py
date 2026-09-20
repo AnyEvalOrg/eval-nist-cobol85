@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import pytest
 from scripts.cobol_fields import data_fields, picture_field, representable, replacement_options, resolve_field
-from scripts.mutate_suite import find_sites
+from scripts.mutate_suite import find_sites, diagnostic_edits
 
 ROOT = Path(__file__).resolve().parents[1]
 # Capture the location before synthetic fixtures isolate configuration. Never
@@ -99,6 +99,15 @@ def test_every_private_manifest_literal_is_representable():
         assert hashlib.sha256(mutated).hexdigest() == entry['mutated_sha256'], name
         source_lines = source.splitlines(keepends=True)
         changed_lines = mutated.decode('latin1').splitlines()
+        expected_edits, expected_audit = diagnostic_edits(source, list(sites.values()))
+        assert entry['diagnostic_changes'] == expected_audit, name
+        if name == 'IC108A':
+            assert {329, 341, 353} <= {e['line'] for e in expected_audit}, name
+        for a, b, replacement in expected_edits:
+            assert mutated[a:b] == replacement.encode('latin1'), name
+        if entry['mutation_candidate']:
+            assert entry['mutable_sites'] >= 6, name
+            assert len(entry['mutations']) == min(max(3, round(0.25 * len(sites))), len(sites)//2), name
         for mutation in entry['mutations']:
             first = mutation['replacements'][0]
             offset = sum(len(l) for l in source_lines[:first['line']-1]) + first['column']-1

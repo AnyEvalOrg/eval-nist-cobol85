@@ -17,19 +17,23 @@ TEST RESULT OF IC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INITIAL STATE        FAIL* CALL-TEST-04       .02        DN2 INCORRECT                                                 
                                                                                                                         
                                      COMPUTED= YES                                                                      
-                                     CORRECT = YEP                                                                      
+                                     CORRECT = YJS                                                                      
                                                                                                                         
  INITIAL STATE        PASS  CALL-TEST-04       .03                                                                      
  STATE UNCHANGED      FAIL* CALL-TEST-05       .01        DN5 INCORRECT                                                 
                                                                                                                         
                                      COMPUTED=  000000000000000002                                                      
-                                     CORRECT =  000000000000000005                                                      
+                                     CORRECT =  000000000000000000                                                      
                                                                                                                         
  STATE UNCHANGED      PASS  CALL-TEST-05       .02                                                                      
  STATE UNCHANGED      PASS  CALL-TEST-05       .03                                                                      
  SET TO INITIAL STATE PASS  CNCL-TEST-01       .01                                                                      
  SET TO INITIAL STATE PASS  CNCL-TEST-01       .02                                                                      
- SET TO INITIAL STATE PASS  CNCL-TEST-01       .03                                                                      
+ SET TO INITIAL STATE FAIL* CNCL-TEST-01       .03        DN4 INCORRECT                                                 
+                                                                                                                        
+                                     COMPUTED= EQUAL                                                                    
+                                     CORRECT = EQCAL                                                                    
+                                                                                                                        
  SET TO INITIAL STATE PASS  CNCL-TEST-02       .01                                                                      
  SET TO INITIAL STATE PASS  CNCL-TEST-02       .02                                                                      
  SET TO INITIAL STATE PASS  CNCL-TEST-02       .03                                                                      
@@ -37,28 +41,32 @@ TEST RESULT OF IC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PREVIOUSLY CANCELED  PASS  CNCL-TEST-03       .02                                                                      
  PREVIOUSLY CANCELED  PASS  CNCL-TEST-03       .03                                                                      
  CANCEL UNCALLED PROG PASS  CNCL-TEST-04                                                                                
- CANCEL IN SUBPROGRAM PASS  CNCL-TEST-05                                                                                
+ CANCEL IN SUBPROGRAM FAIL* CNCL-TEST-05                  T??LE-2 INCORRECT                                             
+                                                                                                                        
+                                     COMPUTED= AB                                                                       
+                                     CORRECT = WB                                                                       
+                                                                                                                        
  CALL CANCELED PROG   PASS  CNCL-TEST-06       .01                                                                      
  CALL CANCELED PROG   PASS  CNCL-TEST-06       .02                                                                      
- CALL CANCELED PROG   FAIL* CNCL-TEST-06       .03        DN4 INCORRECT                                                 
-                                                                                                                        
-                                     COMPUTED= EQUAL                                                                    
-                                     CORRECT = EQOAL                                                                    
-                                                                                                                        
- CANCEL 3 PROGS       PASS  CNCL-TEST-07                                                                                
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                                                                                                                                                
+ CALL CANCELED PROG   FAIL* CNCL-TEST-06       .03        DN4 INCORRECT                                                                                                                                                                         
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         
+                                     COMPUTED= EQUAL                                                                    
+                                     CORRECT = ENUAL                                                                    
+                                                                                                                        
+ CANCEL 3 PROGS       PASS  CNCL-TEST-07                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
                                                                                                                         
                                                     END OF TEST-  IC203A                                                
                                                                                                                         
-                                                    018 OF 021  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    016 OF 021  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    005 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

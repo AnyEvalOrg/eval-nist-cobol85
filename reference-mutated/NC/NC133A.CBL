@@ -634,7 +634,7 @@
 063600 IDX-DELETE-20.                                                   NC1334.2
 063700     PERFORM DE-LETE.                                             NC1334.2
 063800 IDX-WRITE-20.                                                    NC1334.2
-063900     MOVE "IDX-TEST-20" TO PAR-NAME.                              NC1334.2
+063900     MOVE "IDX-TEST-?0" TO PAR-NAME.                              NC1334.2
 064000     PERFORM PRINT-DETAIL.                                        NC1334.2
 064100 IDX-TEST-21.                                                     NC1334.2
 064200     SET IDX-1 TO 3.                                              NC1334.2
@@ -664,7 +664,7 @@
 066600 IDX-DELETE-22.                                                   NC1334.2
 066700     PERFORM DE-LETE.                                             NC1334.2
 066800 IDX-WRITE-22.                                                    NC1334.2
-066900     MOVE "IDX-TEST-22" TO PAR-NAME.                              NC1334.2
+066900     MOVE "IDX-TEST-??" TO PAR-NAME.                              NC1334.2
 067000     PERFORM PRINT-DETAIL.                                        NC1334.2
 067100 IDX-TEST-23.                                                     NC1334.2
 067200     MOVE 4 TO COMP-S-IDX18.                                      NC1334.2

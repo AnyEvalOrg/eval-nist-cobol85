@@ -23,9 +23,13 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    GIVING             FAIL* SUB-TEST-F2-6                                                                               
                                                                                                                         
                                      COMPUTED= -000344777.777443000                                                     
-                                     CORRECT = -000342777.777443000  VI-134 6.25.4 GR2                                  
+                                     CORRECT = -000344737.777443000  VI-134 6.25.4 GR2                                  
                                                                                                                         
-   GIVING             PASS  SUB-TEST-F2-7                                                                               
+   GIVING             FAIL* SUB-TEST-F2-7                                                                               
+                                                                                                                        
+                                     COMPUTED= -000100000.000000000                                                     
+                                     CORRECT = -000100030.000000000  VI-134 6.25.4 GR2                                  
+                                                                                                                        
    GIVING             PASS  SUB-TEST-F2-8-1                                                                             
    GIVING             PASS  SUB-TEST-F2-8-2                                                                             
    GIVING             PASS  SUB-TEST-F2-9-1                                                                             
@@ -36,11 +40,7 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             PASS  SUB-TEST-F2-12                                                                              
    SERIES             PASS  SUB-TEST-F2-13                                                                              
    SERIES             PASS  SUB-TEST-F2-14                                                                              
-   SERIES             PASS  SUB-TEST-F2-15-1                                                                            
-   SERIES             PASS  SUB-TEST-F2-15-2                                                                            
-   SERIES             PASS  SUB-TEST-F2-16-1                                                                            
-   SERIES             PASS  SUB-TEST-F2-16-2                                                                            
-   SERIES             FAIL* SUB-TEST-F2-17-1                                                                                                                                                                                                    
+   SERIES             PASS  SUB-TEST-F2-15-1                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,16 +54,20 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+   SERIES             PASS  SUB-TEST-F2-15-2                                                                            
+   SERIES             PASS  SUB-TEST-F2-16-1                                                                            
+   SERIES             PASS  SUB-TEST-F2-16-2                                                                            
+   SERIES             FAIL* SUB-TEST-F2-17-1                                                                            
                                                                                                                         
                                      COMPUTED=  .000000000000000000                                                     
-                                     CORRECT =  .500000000000000000  VI-134 6.25.4 GR2                                  
+                                     CORRECT =  .100000000000000000  VI-134 6.25.4 GR2                                  
                                                                                                                         
    SERIES             PASS  SUB-TEST-F2-17-2                                                                            
    SERIES             PASS  SUB-TEST-F2-18                                                                              
    SERIES             FAIL* SUB-TEST-F2-19                                                                              
                                                                                                                         
                                      COMPUTED=  999999999999999999                                                      
-                                     CORRECT =  999999999999999991   VI-134 6.25.4 GR2                                  
+                                     CORRECT =  999999999999992999   VI-134 6.25.4 GR2                                  
                                                                                                                         
    SERIES             PASS  SUB-TEST-F2-20                                                                              
    SERIES             PASS  SUB-TEST-F2-21                                                                              
@@ -92,11 +96,7 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             PASS  SUB-TEST-F2-30-3   .03                                                                      
    SERIES             PASS  SUB-TEST-F2-30-4   .04                                                                      
    SERIES             PASS  SUB-TEST-F2-30-5   .05                                                                      
-   SERIES             PASS  SUB-TEST-F2-30-6   .06                                                                      
-   SERIES             PASS  SUB-TEST-F2-31-1   .01                                                                      
-   SERIES             PASS  SUB-TEST-F2-31-2   .02                                                                      
-   SERIES             PASS  SUB-TEST-F2-31-3   .03                                                                      
-   SERIES             PASS  SUB-TEST-F2-31-4   .04                                                                                                                                                                                              
+   SERIES             PASS  SUB-TEST-F2-30-6   .06                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +110,10 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+   SERIES             PASS  SUB-TEST-F2-31-1   .01                                                                      
+   SERIES             PASS  SUB-TEST-F2-31-2   .02                                                                      
+   SERIES             PASS  SUB-TEST-F2-31-3   .03                                                                      
+   SERIES             PASS  SUB-TEST-F2-31-4   .04                                                                      
    SERIES             PASS  SUB-TEST-F2-31-5   .05                                                                      
    SERIES             PASS  SUB-TEST-F2-32-1   .01                                                                      
    SERIES             PASS  SUB-TEST-F2-32-2   .02                                                                      
@@ -148,11 +152,7 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             PASS  SUB-TEST-F2-39-1   .01                                                                      
    SERIES             PASS  SUB-TEST-F2-39-2   .02                                                                      
    SERIES             PASS  SUB-TEST-F2-39-3   .03                                                                      
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                                                                                                                                                
+ ***********************************************************************************************************************                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,10 +166,14 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
                                                     END OF TEST-  NC175A                                                
                                                                                                                         
-                                                    094 OF 097  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    093 OF 097  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

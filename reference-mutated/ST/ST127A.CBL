@@ -355,12 +355,12 @@
 035500*                                                                         
 035600 SORT-TEST-1.                                                     ST1274.2
 035700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-035800     IF       SORTKEY-7 EQUAL TO 118                              ST1274.2
+035800     IF       SORTKEY-7 EQUAL TO 518                              ST1274.2
 035900              PERFORM PASS GO TO SORT-WRITE-1.                    ST1274.2
 036000 SORT-FAIL-1.                                                     ST1274.2
 036100     PERFORM  FAIL.                                               ST1274.2
 036200     MOVE     SORTKEY-7 TO COMPUTED-N.                            ST1274.2
-036300     MOVE     118 TO CORRECT-N.                                   ST1274.2
+036300     MOVE     518 TO CORRECT-N.                                   ST1274.2
 036400 SORT-WRITE-1.                                                    ST1274.2
 036500     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         ST1274.2
 036600     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -421,12 +421,12 @@
 042100     PERFORM  PRINT-DETAIL.                                       ST1274.2
 042200 SORT-TEST-7.                                                     ST1274.2
 042300     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-042400     IF       SORTKEY-2 EQUAL TO "    E"                          ST1274.2
+042400     IF       SORTKEY-2 EQUAL TO "    Y"                          ST1274.2
 042500              PERFORM PASS GO TO SORT-WRITE-7.                    ST1274.2
 042600 SORT-FAIL-7.                                                     ST1274.2
 042700     PERFORM  FAIL.                                               ST1274.2
 042800     MOVE     SORTKEY-2 TO COMPUTED-A.                            ST1274.2
-042900     MOVE     "    E" TO CORRECT-A.                               ST1274.2
+042900     MOVE     "    Y" TO CORRECT-A.                               ST1274.2
 043000 SORT-WRITE-7.                                                    ST1274.2
 043100     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         ST1274.2
 043200     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -525,12 +525,12 @@
 052500     PERFORM  PRINT-DETAIL.                                       ST1274.2
 052600 SORT-TEST-14.                                                    ST1274.2
 052700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-052800     IF       SORTKEY-5 EQUAL TO "X                   "           ST1274.2
+052800     IF       SORTKEY-5 EQUAL TO "C                   "           ST1274.2
 052900              PERFORM PASS GO TO SORT-WRITE-14.                   ST1274.2
 053000 SORT-FAIL-14.                                                    ST1274.2
 053100     PERFORM  FAIL.                                               ST1274.2
 053200     MOVE     SORTKEY-5 TO COMPUTED-A.                            ST1274.2
-053300     MOVE     "X                   " TO CORRECT-A.                ST1274.2
+053300     MOVE     "C                   " TO CORRECT-A.                ST1274.2
 053400 SORT-WRITE-14.                                                   ST1274.2
 053500     MOVE     "SORT-TEST-14" TO PAR-NAME.                         ST1274.2
 053600     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -547,12 +547,12 @@
 054700     PERFORM  PRINT-DETAIL.                                       ST1274.2
 054800 SORT-TEST-16.                                                    ST1274.2
 054900     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-055000     IF       SORTKEY-1 EQUAL TO +123456                          ST1274.2
+055000     IF       SORTKEY-1 EQUAL TO +723456                          ST1274.2
 055100              PERFORM PASS GO TO SORT-WRITE-16.                   ST1274.2
 055200 SORT-FAIL-16.                                                    ST1274.2
 055300     PERFORM  FAIL.                                               ST1274.2
 055400     MOVE     SORTKEY-1 TO COMPUTED-N.                            ST1274.2
-055500     MOVE     +123456 TO CORRECT-N.                               ST1274.2
+055500     MOVE     +723456 TO CORRECT-N.                               ST1274.2
 055600 SORT-WRITE-16.                                                   ST1274.2
 055700     MOVE     "SORT-TEST-16" TO PAR-NAME.                         ST1274.2
 055800     PERFORM  PRINT-DETAIL.                                       ST1274.2

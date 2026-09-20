@@ -389,7 +389,7 @@
 039100     MOVE     N-45 TO COMPUTED-N.                                 NC1114.2
 039200     MOVE     -2 TO CORRECT-N.                                    NC1114.2
 039300 TRU-WRITE-GF-3.                                                  NC1114.2
-039400     MOVE     "TRU-TEST-GF-3 " TO PAR-NAME.                       NC1114.2
+039400     MOVE     "TRU-TEST-GF?? " TO PAR-NAME.                       NC1114.2
 039500     PERFORM  PRINT-DETAIL.                                       NC1114.2
 039600 TRU-INIT-GF-4.                                                   NC1114.2
 039700     MOVE   "V1-67 6.4.1" TO ANSI-REFERENCE.                      NC1114.2

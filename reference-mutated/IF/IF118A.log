@@ -15,12 +15,16 @@ TEST RESULT OF IF118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
  LOWER-CASE Function  FAIL* F-LOWCASE-01                                                                                
                                                                                                                         
-                                     COMPUTED= figure                                                                   
+                                     COMPUTED= ??????                                                                   
                                      CORRECT = finure                See ref. A-51 2.22                                 
                                                                                                                         
  LOWER-CASE Function  PASS  F-LOWCASE-02                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-03                                                                                
- LOWER-CASE Function  PASS  F-LOWCASE-04                                                                                
+ LOWER-CASE Function  FAIL* F-LOWCASE-04                                                                                
+                                                                                                                        
+                                     COMPUTED= ??                                                                       
+                                     CORRECT = 95                    See ref. A-51 2.22                                 
+                                                                                                                        
  LOWER-CASE Function  PASS  F-LOWCASE-05                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-06                                                                                
  LOWER-CASE Function  FAIL* F-LOWCASE-07                                                                                
@@ -36,11 +40,7 @@ TEST RESULT OF IF118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LOWER-CASE Function  PASS  F-LOWCASE-09                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-10                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-11                                                                                
- LOWER-CASE Function  PASS  F-LOWCASE-12                                                                                
- LOWER-CASE Function  PASS  F-LOWCASE-13                                                                                
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                                                                                                                                                
+ LOWER-CASE Function  PASS  F-LOWCASE-12                                                                                                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,12 +54,16 @@ TEST RESULT OF IF118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ LOWER-CASE Function  PASS  F-LOWCASE-13                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
                                                                                                                         
                                                                                                                         
                                                     END OF TEST-  IF118A                                                
                                                                                                                         
-                                                    010 OF 013  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    009 OF 013  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

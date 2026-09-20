@@ -13,7 +13,7 @@ TEST RESULT OF IX213A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- WRITE INVALID KEY    PASS  WRITE-TEST-GF-01              CREATE IX-FS1                                                 
+ WRITE INVALID KEY    PASS  WRITE-TEST-GF-?1              CREATE IX-FS1                                                 
  READ...RECORD KEY    PASS  READ-TEST-F2-01               RETRIEVED BY ALTERNATE KEY 1                                  
  READ...RECORD KEY    PASS  READ-TEST-F2-02               RETRIEVED BY ALTERNATE KEY 8                                  
  DELETE...RECORD      PASS  DELETE-TEST-GF-01             DELETES RECORD FOUND IN READ-TEST-GF-02                       

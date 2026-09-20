@@ -23,7 +23,7 @@ TEST RESULT OF NC111A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                           TESTS.                                                        
  TRUNCATION           PASS  TRU-TEST-GF-1                                                                               
  TRUNCATION           PASS  TRU-TEST-GF-2                                                                               
- TRUNCATION           FAIL* TRU-TEST-GF-3                                                                               
+ TRUNCATION           FAIL* TRU-TEST-GF??                                                                               
                                                                                                                         
                                      COMPUTED= -000000003.000000000                                                     
                                      CORRECT = -000000002.000000000  V1-67 6.4.1                                        

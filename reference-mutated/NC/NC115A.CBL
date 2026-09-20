@@ -435,7 +435,7 @@
 043700     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
 043800     MOVE 1 TO CORRECT-N.                                         NC1154.2
 043900 INSP-WRITE-F1-4.                                                 NC1154.2
-044000     MOVE "INSP-TEST-F1-4" TO PAR-NAME.                           NC1154.2
+044000     MOVE "INSP-TEST-F?-4" TO PAR-NAME.                           NC1154.2
 044100     MOVE "TALLY LEADING LIT" TO FEATURE.                         NC1154.2
 044200     PERFORM PRINT-DETAIL.                                        NC1154.2
 044300 INSP-INIT-F1-5.                                                  NC1154.2
@@ -501,7 +501,7 @@
 050300     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
 050400     MOVE 1 TO CORRECT-N.                                         NC1154.2
 050500 INSP-WRITE-F1-7.                                                 NC1154.2
-050600     MOVE "INSP-TEST-F1-7" TO PAR-NAME.                           NC1154.2
+050600     MOVE "INSP-TEST-F?-7" TO PAR-NAME.                           NC1154.2
 050700     MOVE "LEAD LIT INITIAL FIG" TO FEATURE.                      NC1154.2
 050800     PERFORM PRINT-DETAIL.                                        NC1154.2
 050900 INSP-INIT-F2-1.                                                  NC1154.2

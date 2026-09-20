@@ -327,7 +327,7 @@
 032700     PERFORM  DE-LETE.                                            IF1114.2
 032800     GO TO    F-INTEGER-WRITE-01.                                 IF1114.2
 032900 F-INTEGER-WRITE-01.                                              IF1114.2
-033000     MOVE "F-INTEGER-01" TO PAR-NAME.                             IF1114.2
+033000     MOVE "F-INTEGER-?1" TO PAR-NAME.                             IF1114.2
 033100     PERFORM  PRINT-DETAIL.                                       IF1114.2
 033200*                                                                         
 033300 F-INTEGER-02.                                                    IF1114.2
@@ -420,10 +420,10 @@
 042000     MOVE ZERO TO WS-INT.                                         IF1114.2
 042100 F-INTEGER-TEST-07.                                               IF1114.2
 042200     COMPUTE WS-INT = FUNCTION INTEGER(230492.4828).              IF1114.2
-042300     IF WS-INT = 232492 THEN                                      IF1114.2
+042300     IF WS-INT = 230422 THEN                                      IF1114.2
 042400                    PERFORM PASS                                  IF1114.2
 042500     ELSE                                                         IF1114.2
-042600                    MOVE  232492  TO CORRECT-N                    IF1114.2
+042600                    MOVE  230422  TO CORRECT-N                    IF1114.2
 042700                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 042800                    PERFORM FAIL.                                 IF1114.2
 042900     GO TO F-INTEGER-WRITE-07.                                    IF1114.2
@@ -449,17 +449,17 @@
 044900     PERFORM  DE-LETE.                                            IF1114.2
 045000     GO TO    F-INTEGER-WRITE-08.                                 IF1114.2
 045100 F-INTEGER-WRITE-08.                                              IF1114.2
-045200     MOVE "F-INTEGER-08" TO PAR-NAME.                             IF1114.2
+045200     MOVE "F-INTEGER-?8" TO PAR-NAME.                             IF1114.2
 045300     PERFORM  PRINT-DETAIL.                                       IF1114.2
 045400*                                                                         
 045500 F-INTEGER-09.                                                    IF1114.2
 045600     MOVE ZERO TO WS-INT.                                         IF1114.2
 045700 F-INTEGER-TEST-09.                                               IF1114.2
 045800     COMPUTE WS-INT = FUNCTION INTEGER(A).                        IF1114.2
-045900     IF WS-INT = 500030 THEN                                      IF1114.2
+045900     IF WS-INT = 502000 THEN                                      IF1114.2
 046000                    PERFORM PASS                                  IF1114.2
 046100     ELSE                                                         IF1114.2
-046200                    MOVE  500030  TO CORRECT-N                    IF1114.2
+046200                    MOVE  502000  TO CORRECT-N                    IF1114.2
 046300                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 046400                    PERFORM FAIL.                                 IF1114.2
 046500     GO TO F-INTEGER-WRITE-09.                                    IF1114.2
@@ -503,17 +503,17 @@
 050300     PERFORM  DE-LETE.                                            IF1114.2
 050400     GO TO    F-INTEGER-WRITE-11.                                 IF1114.2
 050500 F-INTEGER-WRITE-11.                                              IF1114.2
-050600     MOVE "F-INTEGER-11" TO PAR-NAME.                             IF1114.2
+050600     MOVE "F-INTEGER-??" TO PAR-NAME.                             IF1114.2
 050700     PERFORM  PRINT-DETAIL.                                       IF1114.2
 050800*                                                                         
 050900 F-INTEGER-12.                                                    IF1114.2
 051000     MOVE ZERO TO WS-INT.                                         IF1114.2
 051100 F-INTEGER-TEST-12.                                               IF1114.2
 051200     COMPUTE WS-INT = FUNCTION INTEGER(F).                        IF1114.2
-051300     IF WS-INT = 0 THEN                                           IF1114.2
+051300     IF WS-INT = 3 THEN                                           IF1114.2
 051400                    PERFORM PASS                                  IF1114.2
 051500     ELSE                                                         IF1114.2
-051600                    MOVE  0  TO CORRECT-N                         IF1114.2
+051600                    MOVE  3  TO CORRECT-N                         IF1114.2
 051700                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 051800                    PERFORM FAIL.                                 IF1114.2
 051900     GO TO F-INTEGER-WRITE-12.                                    IF1114.2
@@ -557,7 +557,7 @@
 055700     PERFORM  DE-LETE.                                            IF1114.2
 055800     GO TO    F-INTEGER-WRITE-14.                                 IF1114.2
 055900 F-INTEGER-WRITE-14.                                              IF1114.2
-056000     MOVE "F-INTEGER-14" TO PAR-NAME.                             IF1114.2
+056000     MOVE "F-INTEGER-1?" TO PAR-NAME.                             IF1114.2
 056100     PERFORM  PRINT-DETAIL.                                       IF1114.2
 056200*                                                                         
 056300 F-INTEGER-15.                                                    IF1114.2
@@ -582,10 +582,10 @@
 058200     MOVE ZERO TO WS-INT.                                         IF1114.2
 058300 F-INTEGER-TEST-16.                                               IF1114.2
 058400     COMPUTE WS-INT = FUNCTION INTEGER(H + B).                    IF1114.2
-058500     IF WS-INT = -4 THEN                                          IF1114.2
+058500     IF WS-INT = -7 THEN                                          IF1114.2
 058600                    PERFORM PASS                                  IF1114.2
 058700     ELSE                                                         IF1114.2
-058800                    MOVE  -4  TO CORRECT-N                        IF1114.2
+058800                    MOVE  -7  TO CORRECT-N                        IF1114.2
 058900                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 059000                    PERFORM FAIL.                                 IF1114.2
 059100     GO TO F-INTEGER-WRITE-16.                                    IF1114.2
@@ -647,7 +647,7 @@
 064700     PERFORM  DE-LETE.                                            IF1114.2
 064800     GO TO    F-INTEGER-WRITE-19.                                 IF1114.2
 064900 F-INTEGER-WRITE-19.                                              IF1114.2
-065000     MOVE "F-INTEGER-19" TO PAR-NAME.                             IF1114.2
+065000     MOVE "F-INTEGER??9" TO PAR-NAME.                             IF1114.2
 065100     PERFORM  PRINT-DETAIL.                                       IF1114.2
 065200*                                                                         
 065300 F-INTEGER-20.                                                    IF1114.2
@@ -684,7 +684,7 @@
 068400     PERFORM  DE-LETE.                                            IF1114.2
 068500     GO TO    F-INTEGER-WRITE-21.                                 IF1114.2
 068600 F-INTEGER-WRITE-21.                                              IF1114.2
-068700     MOVE "F-INTEGER-21" TO PAR-NAME.                             IF1114.2
+068700     MOVE "F-INTEGER-2?" TO PAR-NAME.                             IF1114.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1114.2
 068900*                                                                         
 069000 F-INTEGER-22.                                                    IF1114.2
@@ -703,7 +703,7 @@
 070300     PERFORM  DE-LETE.                                            IF1114.2
 070400     GO TO    F-INTEGER-WRITE-22.                                 IF1114.2
 070500 F-INTEGER-WRITE-22.                                              IF1114.2
-070600     MOVE "F-INTEGER-22" TO PAR-NAME.                             IF1114.2
+070600     MOVE "F-INTEGER-??" TO PAR-NAME.                             IF1114.2
 070700     PERFORM  PRINT-DETAIL.                                       IF1114.2
 070800*                                                                         
 070900 F-DATEOFINT-23.                                                  IF1114.2

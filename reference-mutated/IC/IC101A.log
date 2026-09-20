@@ -13,32 +13,3 @@ TEST RESULT OF IC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- CALL...USING DATA-NM FAIL* CALL-TEST-01                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000008                                                      
-                                                                                                                        
- CALL...USING DATA-NM FAIL* CALL-TEST-02                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000002                                                      
-                                     CORRECT =  000000000000000007                                                      
-                                                                                                                        
- CALL...USING DATA-NM FAIL* CALL-TEST-03                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000003                                                      
-                                     CORRECT =  000000000000000002                                                      
-                                                                                                                        
- CALL...USING DATA-NM PASS  CALL-TEST-04                                                                                
- CALL...USING DATA-NM PASS  CALL-TEST-05                                                                                
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                    END OF TEST-  IC101A                                                
-                                                                                                                        
-                                                    002 OF 005  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                      
- FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

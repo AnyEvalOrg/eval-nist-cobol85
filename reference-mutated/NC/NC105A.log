@@ -20,11 +20,19 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MISC MOVE            FAIL* MOVE-TEST-F1-5                                                                              
                                                                                                                         
                                      COMPUTED=  000012345.000000000                                                     
-                                     CORRECT =  000012348.000000000  VI-102 6.18.2                                      
+                                     CORRECT =  000012341.000000000  VI-102 6.18.2                                      
                                                                                                                         
  MISC MOVE            PASS  MOVE-TEST-F1-6                                                                              
- MISC MOVE            PASS  MOVE-TEST-F1-7                                                                              
- MISC MOVE            PASS  MOVE-TEST-F1-8                                                                              
+ MISC MOVE            FAIL* MOVE-TEST-F1-7                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000000.000000000                                                     
+                                     CORRECT =  000000007.000000000  VI-102 6.18.2                                      
+                                                                                                                        
+ MISC MOVE            FAIL* MOVE-TEST-F1-8                                                                              
+                                                                                                                        
+                                     COMPUTED=   ABCDE                                                                  
+                                     CORRECT =   ABCDU               VI-102 6.18.2                                      
+                                                                                                                        
  GROUP MOVE           PASS  MOVE-TEST-F1-9                                                                              
  GROUP MOVE           PASS  MOVE-TEST-F1-10                                                                             
  GROUP MOVE           PASS  MOVE-TEST-F1-11                                                                             
@@ -32,15 +40,7 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  GROUP MOVE           PASS  MOVE-TEST-F1-13                                                                             
  GROUP MOVE           PASS  MOVE-TEST-F1-14                                                                             
  GROUP MOVE           PASS  MOVE-TEST-F1-15                                                                             
- GROUP MOVE           PASS  MOVE-TEST-F1-16                                                                             
- GROUP MOVE           PASS  MOVE-TEST-F1-17                                                                             
- GROUP MOVE           PASS  MOVE-TEST-F1-18                                                                             
- GROUP MOVE           PASS  MOVE-TEST-F1-19                                                                             
- GROUP MOVE           PASS  MOVE-TEST-F1-20                                                                             
- GROUP MOVE           PASS  MOVE-TEST-F1-21                                                                             
- EDITED MOVE          PASS  MOVE-TEST-F1-22                                                                             
- EDITED MOVE          FAIL* MOVE-TEST-F1-23                                                                             
-                                                                                                                                                                                                                                                
+ GROUP MOVE           PASS  MOVE-TEST-F1-16                                                                                                                                                                                                     
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,14 +54,22 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ GROUP MOVE           PASS  MOVE-TEST-F1-17                                                                             
+ GROUP MOVE           PASS  MOVE-TEST-F1-18                                                                             
+ GROUP MOVE           PASS  MOVE-TEST-F1-19                                                                             
+ GROUP MOVE           PASS  MOVE-TEST-F1-20                                                                             
+ GROUP MOVE           PASS  MOVE-TEST-F1-21                                                                             
+ EDITED MOVE          PASS  MOVE-TEST-F1-22                                                                             
+ EDITED MOVE          FAIL* MOVE-TEST-F1-23                                                                             
+                                                                                                                        
                                      COMPUTED= 12345                                                                    
-                                     CORRECT = 12245                 VI-102 6.18.2                                      
+                                     CORRECT = 12945                 VI-102 6.18.2                                      
                                                                                                                         
  EDITED MOVE          PASS  MOVE-TEST-F1-24                                                                             
  EDITED MOVE          FAIL* MOVE-TEST-F1-25                                                                             
                                                                                                                         
                                      COMPUTED= 12345                                                                    
-                                     CORRECT = 14345                 VI-102 6.18.2                                      
+                                     CORRECT = 12342                 VI-102 6.18.2                                      
                                                                                                                         
  EDITED MOVE          PASS  MOVE-TEST-F1-26                                                                             
  EDITED MOVE          PASS  MOVE-TEST-F1-27                                                                             
@@ -88,15 +96,7 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE ALPHA-NUM ITEM  PASS  MOVE-TEST-F1-48                                                                             
  MOVE ALPHA-NUM ITEM  PASS  MOVE-TEST-F1-49                                                                             
  MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-50                                                                             
- MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-51                                                                             
- MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-52                                                                             
- MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-53                                                                             
- MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-54                                                                             
- MOVE NUMERIC EDITED  PASS  MOVE-TEST-F1-55                                                                             
- MOVE NUMERIC EDITED  PASS  MOVE-TEST-F1-56                                                                             
- MOVE NUMERIC EDITED  PASS  MOVE-TEST-F1-57                                                                             
- MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-58                                                                             
- MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-59                                                                                                                                                                                                     
+ MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-51                                                                                                                                                                                                     
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +110,14 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-52                                                                             
+ MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-53                                                                             
+ MOVE NUMERIC ITEM    PASS  MOVE-TEST-F1-54                                                                             
+ MOVE NUMERIC EDITED  PASS  MOVE-TEST-F1-55                                                                             
+ MOVE NUMERIC EDITED  PASS  MOVE-TEST-F1-56                                                                             
+ MOVE NUMERIC EDITED  PASS  MOVE-TEST-F1-57                                                                             
+ MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-58                                                                             
+ MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-59                                                                             
  MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-60                                                                             
  MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-61                                                                             
  MOVE ZERO LITERAL    PASS  MOVE-TEST-F1-62                                                                             
@@ -135,24 +143,16 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-82                                                                             
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-82                                                                             
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-84                                                                             
- MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-85                                                                             
+ MOVE NUMERIC LITERAL FAIL* MOVE-TEST-F1-85                                                                             
+                                                                                                                        
+                                     COMPUTED= 9876543210                                                               
+                                     CORRECT = 9876541210            VI-102 6.18.2                                      
+                                                                                                                        
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-86                                                                             
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-87                                                                             
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-88                                                                             
  MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-89                                                                             
- MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-90                                                                             
- MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-91                                                                             
- MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-92                                                                             
- MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-93                                                                             
- JUSTIFIED MOVES      PASS  MOVE-TEST-F1-94                                                                             
- JUSTIFIED MOVES      PASS  MOVE-TEST-F1-95                                                                             
- JUSTIFIED MOVES      PASS  MOVE-TEST-F1-96                                                                             
- JUSTIFIED MOVES      PASS  MOVE-TEST-F1-97                                                                             
- MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-98                                                                             
- MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-99                                                                             
- MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-100                                                                            
- MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-101                                                                            
- MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-102                                                                                                                                                                                                    
+ MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-90                                                                                                                                                                                                     
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,8 +166,28 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-91                                                                             
+ MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-92                                                                             
+ MOVE NUMERIC LITERAL PASS  MOVE-TEST-F1-93                                                                             
+ JUSTIFIED MOVES      PASS  MOVE-TEST-F1-94                                                                             
+ JUSTIFIED MOVES      PASS  MOVE-TEST-F1-95                                                                             
+ JUSTIFIED MOVES      FAIL* MOVE-TEST-F1-96                                                                             
+                                                                                                                        
+                                     COMPUTED= 99                                                                       
+                                     CORRECT = 39                    VI-102 6.18.2                                      
+                                                                                                                        
+ JUSTIFIED MOVES      PASS  MOVE-TEST-F1-97                                                                             
+ MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-98                                                                             
+ MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-99                                                                             
+ MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-100                                                                            
+ MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-101                                                                            
+ MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-102                                                                            
  MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-103                                                                            
- MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-104                                                                            
+ MOVE (COMP/DISPLAY)  FAIL* MOVE-TEST-F1-104                                                                            
+                                                                                                                        
+                                     COMPUTED=  06382.47                                                                
+                                     CORRECT =  06342.47             VI-102 6.18.2                                      
+                                                                                                                        
  MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-105                                                                            
  MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-106                                                                            
  MOVE (COMP/DISPLAY)  PASS  MOVE-TEST-F1-107                                                                            
@@ -178,7 +198,7 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE TO COMP (ABS)   FAIL* MOVE-TEST-F1-112                                                                            
                                                                                                                         
                                      COMPUTED=  000000000000060666                                                      
-                                     CORRECT =  000000000000070666   VI-102 6.18.2                                      
+                                     CORRECT =  000000000000063666   VI-102 6.18.2                                      
                                                                                                                         
  MOVE TO COMP (ABS)   PASS  MOVE-TEST-F1-113                                                                            
  MOVE TO COMP (ABS)   PASS  MOVE-TEST-F1-114                                                                            
@@ -186,7 +206,24 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE TO COMP (ABS)   PASS  MOVE-TEST-F1-116                                                                            
  MOVE TO COMP (ABS)   PASS  MOVE-TEST-F1-117                                                                            
  MOVE TO COMP (ABS)   PASS  MOVE-TEST-F1-118                                                                            
- MOVE TO COMP (ABS)   PASS  MOVE-TEST-F1-119                                                                            
+ MOVE TO COMP (ABS)   FAIL* MOVE-TEST-F1-119                                                                            
+                                                                                                                        
+                                     COMPUTED=  000000000000070718                                                                                                                                                                              
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
+                                     CORRECT =  000000000000070714   VI-102 6.18.2                                      
+                                                                                                                        
  *DELETED BY FCCTS*   ***** MOVE-TEST-176                 ****TEST DELETED****                                          
  *DELETED BY FCCTS*   ***** MOVE-TEST-177                 ****TEST DELETED****                                          
  *DELETED BY FCCTS*   ***** MOVE-TEST-178                 ****TEST DELETED****                                          
@@ -207,21 +244,8 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC105A                                                
                                                                                                                         
-                                                    125 OF 132  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    004 TEST(S) FAILED                                                                                                                                                                          
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
+                                                    119 OF 132  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    010 TEST(S) FAILED                                                  
                                                     003 TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

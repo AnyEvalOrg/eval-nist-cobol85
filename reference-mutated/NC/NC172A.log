@@ -24,23 +24,23 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-7-1               WRONGLY AFFECTED BY SIZE ERROR                                
                                                                                                                         
                                      COMPUTED=  000000000000000000                                                      
-                                     CORRECT =  000000000000100000   V1-81 6.11.4 GR2                                   
+                                     CORRECT =  000008000000000000   V1-81 6.11.4 GR2                                   
                                                                                                                         
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-7-2                                                                             
- DIVIDE INTO GIVING   PASS  DIV-TEST-F2-8-1                                                                             
+ DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-8-1                                                                             
+                                                                                                                        
+                                     COMPUTED=  000000001000000000                                                      
+                                     CORRECT =  000004001000000000   V1-81 6.11.4 GR2                                   
+                                                                                                                        
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-8-2                                                                             
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-9-1                                                                             
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-9-2                                                                             
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-10-1                                                                            
- DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-10-2              ON SIZE ERROR SHOULD NOT BE EXECUTED                          
+ DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-?0-2              ON SIZE ERROR SHOULD NOT BE EXECUTED                          
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = 4                     V1-81 6.11.4 GR2                                   
-                                                                                                                        
- DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-11                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000990.000000000                                                     
-                                     CORRECT =  000004990.000000000  V1-81 6.11.4 GR2                                                                                                                                                           
+                                     CORRECT = 5                     V1-81 6.11.4 GR2                                   
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,6 +54,10 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-11                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000990.000000000                                                     
+                                     CORRECT =  000000290.000000000  V1-81 6.11.4 GR2                                   
                                                                                                                         
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-12                                                                              
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-13                                                                              
@@ -92,11 +96,7 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-21     .05                                                                      
  DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-21     .06                                                                      
  DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-21     .07                                                                      
- DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .01                                                                      
- DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .02                                                                      
- DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .03                                                                      
- DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .04                                                                      
- DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .05                                                                                                                                                                                              
+ DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .01                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +110,10 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .02                                                                      
+ DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .03                                                                      
+ DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .04                                                                      
+ DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .05                                                                      
  DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .06                                                                      
  DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-22     .07                                                                      
  DIVIDE-INTO-GIVING   PASS  DIV-TEST-F2-23     .01                                                                      
@@ -148,11 +152,7 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-28-5   .05                                                                      
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-29-1   .01                                                                      
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-29-2   .02                                                                      
- DIVIDE INTO GIVING   PASS  DIV-TEST-F2-29-3   .03                                                                      
- DIVIDE INTO GIVING   PASS  DIV-TEST-F2-30-1   .03                                                                      
- DIVIDE INTO GIVING   PASS  DIV-TEST-F2-30-2   .04                                                                      
- DIVIDE INTO GIVING   PASS  DIV-TEST-F2-30-3   .05                                                                      
- ***********************************************************************************************************************                                                                                                                        
+ DIVIDE INTO GIVING   PASS  DIV-TEST-F2-29-3   .03                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,14 +166,18 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ DIVIDE INTO GIVING   PASS  DIV-TEST-F2-30-1   .03                                                                      
+ DIVIDE INTO GIVING   PASS  DIV-TEST-F2-30-2   .04                                                                      
+ DIVIDE INTO GIVING   PASS  DIV-TEST-F2-30-3   .05                                                                      
+ ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
                                                                                                                         
                                                                                                                         
                                                     END OF TEST-  NC172A                                                
                                                                                                                         
-                                                    098 OF 101  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    097 OF 101  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

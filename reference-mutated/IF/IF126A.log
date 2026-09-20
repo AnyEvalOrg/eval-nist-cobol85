@@ -13,7 +13,11 @@ TEST RESULT OF IF126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- NUMVAL-C Function    PASS  F-NUMVALC-01                                                                                
+ NUMVAL-C Function    FAIL* F-NUMVALC-01                                                                                
+                                                                                                                        
+                                     COMPUTED=  000000000.000000000                                                     
+                                     CORRECT =  000000009.000000000  See ref. A-59 2.30                                 
+                                                                                                                        
  NUMVAL-C Function    PASS  F-NUMVALC-02                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-03                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-04                                                                                
@@ -30,17 +34,13 @@ TEST RESULT OF IF126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NUMVAL-C Function    PASS  F-NUMVALC-15                                                                                
  NUMVAL-C Function    FAIL* F-NUMVALC-16                                                                                
                                                                                                                         
-                                     COMPUTED=  000000005.000000000                                                     
+                                     COMPUTED=  000000000.000000000                                                     
                                      CORRECT =  000000007.000000000  See ref. A-59 2.30                                 
                                                                                                                         
  NUMVAL-C Function    PASS  F-NUMVALC-17                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-18                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-20                                                                                
- NUMVAL-C Function    PASS  F-NUMVALC-21                                                                                
- NUMVAL-C Function    PASS  F-NUMVALC-22                                                                                
- NUMVAL-C Function    PASS  F-NUMVALC-23                                                                                
- NUMVAL-C Function    PASS  F-NUMVALC-24                                                                                
- NUMVAL-C Function    PASS  F-NUMVALC-25                                                                                                                                                                                                        
+ NUMVAL-C Function    PASS  F-NUMVALC-21                                                                                                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,6 +54,10 @@ TEST RESULT OF IF126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ NUMVAL-C Function    PASS  F-NUMVALC-22                                                                                
+ NUMVAL-C Function    PASS  F-NUMVALC-23                                                                                
+ NUMVAL-C Function    PASS  F-NUMVALC-24                                                                                
+ NUMVAL-C Function    PASS  F-NUMVALC-25                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-26                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-27                                                                                
  NUMVAL-C Function    PASS  F-NUMVALC-28                                                                                
@@ -75,8 +79,8 @@ TEST RESULT OF IF126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF126A                                                
                                                                                                                         
-                                                    027 OF 030  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    026 OF 030  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    004 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

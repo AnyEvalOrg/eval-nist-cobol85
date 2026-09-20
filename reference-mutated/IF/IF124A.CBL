@@ -357,7 +357,7 @@
 035700     PERFORM  DE-LETE.                                            IF1244.2
 035800     GO TO    F-MOD-WRITE-01.                                     IF1244.2
 035900 F-MOD-WRITE-01.                                                  IF1244.2
-036000     MOVE "F-MOD-01" TO PAR-NAME.                                 IF1244.2
+036000     MOVE "F-MOD-?1" TO PAR-NAME.                                 IF1244.2
 036100     PERFORM  PRINT-DETAIL.                                       IF1244.2
 036200*                                                                         
 036300 F-MOD-02.                                                        IF1244.2

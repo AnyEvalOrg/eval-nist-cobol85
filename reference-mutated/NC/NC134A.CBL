@@ -487,13 +487,13 @@
 048900     MOVE "TABTEST-5" TO PAR-NAME.                                NC1344.2
 049000     PERFORM PRINT-DETAIL.                                        NC1344.2
 049100 TABTEST-6.                                                       NC1344.2
-049200      IF YEAR-1 (1  1) EQUAL TO "001002503" PERFORM PASS ELSE GO  NC1344.2
+049200      IF YEAR-1 (1  1) EQUAL TO "001002003" PERFORM PASS ELSE GO  NC1344.2
 049300     TO TTST-61.                                                  NC1344.2
 049400     GO TO TTST-62.                                               NC1344.2
 049500 TTST-61.                                                         NC1344.2
 049600     PERFORM FAIL.                                                NC1344.2
 049700     MOVE YEAR-1 (1  1) TO COMPUTED-A.                            NC1344.2
-049800     MOVE "001002503" TO CORRECT-A.                               NC1344.2
+049800     MOVE "001002003" TO CORRECT-A.                               NC1344.2
 049900 TTST-62.                                                         NC1344.2
 050000     MOVE "TABTEST-6" TO PAR-NAME.                                NC1344.2
 050100     PERFORM PRINT-DETAIL.                                        NC1344.2
@@ -547,11 +547,11 @@
 054900     MOVE "TABTEST-10" TO PAR-NAME.                               NC1344.2
 055000     PERFORM PRINT-DETAIL.                                        NC1344.2
 055100 TABTEST-11.                                                      NC1344.2
-055200     IF YEAR-1 (+10  +10) EQUAL TO "298299301"                    NC1344.2
+055200     IF YEAR-1 (+10  +10) EQUAL TO "298299300"                    NC1344.2
 055300             PERFORM PASS                                         NC1344.2
 055400             GO TO TABTEST-11B.                                   NC1344.2
 055500     MOVE YEAR-1 (+10  +10) TO COMPUTED-A.                        NC1344.2
-055600     MOVE "298299301" TO CORRECT-A.                               NC1344.2
+055600     MOVE "298299300" TO CORRECT-A.                               NC1344.2
 055700     PERFORM FAIL.                                                NC1344.2
 055800     GO TO TABTEST-11B.                                           NC1344.2
 055900 TABTEST-11A.                                                     NC1344.2
@@ -562,11 +562,11 @@
 056400     PERFORM PRINT-DETAIL.                                        NC1344.2
 056500 TABTEST-12.                                                      NC1344.2
 056600     MOVE 1 TO W-1.                                               NC1344.2
-056700     IF YEAR-1 (W-1  +1) EQUAL TO "001006003"                     NC1344.2
+056700     IF YEAR-1 (W-1  +1) EQUAL TO "001002003"                     NC1344.2
 056800             PERFORM PASS                                         NC1344.2
 056900             GO TO TABTEST-12B.                                   NC1344.2
 057000     MOVE YEAR-1 (W-1  +1) TO COMPUTED-A.                         NC1344.2
-057100     MOVE "001006003" TO CORRECT-A.                               NC1344.2
+057100     MOVE "001002003" TO CORRECT-A.                               NC1344.2
 057200     PERFORM FAIL.                                                NC1344.2
 057300     GO TO TABTEST-12B.                                           NC1344.2
 057400 TABTEST-12A.                                                     NC1344.2

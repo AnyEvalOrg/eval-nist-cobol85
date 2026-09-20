@@ -907,7 +907,7 @@
 095500                     MOVE  "AT END ON READ" TO COMPUTED-A         IX2094.2
 095600                     GO TO START-FAIL-GF-01.                      IX2094.2
 095700     MOVE    IX-FS1R1-F-G-240  TO  FILE-RECORD-INFO (1).          IX2094.2
-095800     IF      XRECORD-NUMBER (1) EQUAL TO 11                       IX2094.2
+095800     IF      XRECORD-NUMBER (1) EQUAL TO 16                       IX2094.2
 095900             PERFORM PASS                                         IX2094.2
 096000             MOVE SPACE TO RE-MARK                                IX2094.2
 096100             GO TO START-WRITE-GF-01.                             IX2094.2
@@ -916,7 +916,7 @@
 096400     MOVE     XRECORD-NUMBER (1)  TO COMPUTED-18V0.               IX2094.2
 096500 START-FAIL-GF-01.                                                IX2094.2
 096600     PERFORM FAIL.                                                IX2094.2
-096700     MOVE    11   TO CORRECT-18V0.                                IX2094.2
+096700     MOVE    16   TO CORRECT-18V0.                                IX2094.2
 096800     MOVE "IX-36; 4.7.2 ETC." TO RE-MARK.                         IX2094.2
 096900     GO TO   START-WRITE-GF-01.                                   IX2094.2
 097000 START-DELETE-GF-01.                                              IX2094.2
@@ -1140,7 +1140,7 @@
 118800                     MOVE "AT END ON READ" TO COMPUTED-A          IX2094.2
 118900                     GO TO START-FAIL-GF-06.                      IX2094.2
 119000     MOVE    IX-FS1R1-F-G-240 TO FILE-RECORD-INFO (1).            IX2094.2
-119100     IF      XRECORD-NUMBER (1) EQUAL TO 190                      IX2094.2
+119100     IF      XRECORD-NUMBER (1) EQUAL TO 090                      IX2094.2
 119200             PERFORM  PASS                                        IX2094.2
 119300             GO TO START-WRITE-GF-06.                             IX2094.2
 119400     MOVE    65  TO RECNO.                                        IX2094.2
@@ -1149,7 +1149,7 @@
 119700 START-FAIL-GF-06.                                                IX2094.2
 119800     MOVE "IX-36; 4.7.2 ETC.; SUBORDINATE D-I OF KEY" TO RE-MARK. IX2094.2
 119900     PERFORM  FAIL.                                               IX2094.2
-120000     MOVE    190   TO CORRECT-18V0.                               IX2094.2
+120000     MOVE    090   TO CORRECT-18V0.                               IX2094.2
 120100     GO TO   START-WRITE-GF-06.                                   IX2094.2
 120200 START-DELETE-GF-06.                                              IX2094.2
 120300     PERFORM DE-LETE.                                             IX2094.2
@@ -1325,7 +1325,7 @@
 137300 START-WRITE-GF-10.                                               IX2094.2
 137400     PERFORM  PRINT-DETAIL.                                       IX2094.2
 137500 START-TEST-GF-11.                                                IX2094.2
-137600     MOVE "FILE STATUS START:23"   TO FEATURE.                    IX2094.2
+137600     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 137700     MOVE "START-TEST-GF-11" TO PAR-NAME.                         IX2094.2
 137800     IF      FILESTATUS (2)  EQUAL TO "**"                        IX2094.2
 137900             PERFORM DE-LETE                                      IX2094.2
@@ -1344,7 +1344,7 @@
 139200 START-WRITE-GF-11.                                               IX2094.2
 139300     PERFORM  PRINT-DETAIL.                                       IX2094.2
 139400 START-TEST-GF-12.                                                IX2094.2
-139500     MOVE "FILE STATUS START:23"   TO FEATURE.                    IX2094.2
+139500     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 139600     MOVE "START-TEST-GF-12" TO PAR-NAME.                         IX2094.2
 139700     IF      FILESTATUS (3)  EQUAL TO "**"                        IX2094.2
 139800             PERFORM DE-LETE                                      IX2094.2
@@ -1354,17 +1354,17 @@
 140200*                                                                         
 140300*                                                                         
 140400*                                                                         
-140500     IF      FILESTATUS (3)  EQUAL TO "33"                        IX2094.2
+140500     IF      FILESTATUS (3)  EQUAL TO "73"                        IX2094.2
 140600             PERFORM  PASS                                        IX2094.2
 140700             ELSE  PERFORM  FAIL                                  IX2094.2
 140800     MOVE "IX-3; 1.3.4 (1) A; FROM START-TEST-GF-03  " TO RE-MARK IX2094.2
-140900             MOVE    "33"  TO CORRECT-A                           IX2094.2
+140900             MOVE    "73"  TO CORRECT-A                           IX2094.2
 141000             MOVE   FILESTATUS (3)  TO COMPUTED-A.                IX2094.2
 141100 START-WRITE-GF-12.                                               IX2094.2
 141200     PERFORM  PRINT-DETAIL.                                       IX2094.2
 141300 START-TEST-GF-13.                                                IX2094.2
 141400     MOVE "START-TEST-GF-13" TO PAR-NAME.                         IX2094.2
-141500     MOVE "FILE STATUS START:23"   TO FEATURE.                    IX2094.2
+141500     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 141600     IF      FILESTATUS (4)  EQUAL TO "**"                        IX2094.2
 141700             PERFORM DE-LETE                                      IX2094.2
 141800             GO TO  START-WRITE-GF-13.                            IX2094.2
@@ -1383,7 +1383,7 @@
 143100     PERFORM  PRINT-DETAIL.                                       IX2094.2
 143200 START-TEST-GF-14.                                                IX2094.2
 143300     MOVE "START-TEST-GF-14" TO PAR-NAME.                         IX2094.2
-143400     MOVE "FILE STATUS START:00"   TO FEATURE.                    IX2094.2
+143400     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 143500     IF      FILESTATUS (5)  EQUAL TO "**"                        IX2094.2
 143600             PERFORM DE-LETE                                      IX2094.2
 143700             GO TO  START-WRITE-GF-14.                            IX2094.2
@@ -1402,7 +1402,7 @@
 145000     PERFORM  PRINT-DETAIL.                                       IX2094.2
 145100 START-TEST-GF-15.                                                IX2094.2
 145200     MOVE "START-TEST-GF-15" TO PAR-NAME.                         IX2094.2
-145300     MOVE "FILE STATUS START:00"   TO FEATURE.                    IX2094.2
+145300     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 145400     IF      FILESTATUS (6)  EQUAL TO "**"                        IX2094.2
 145500             PERFORM DE-LETE                                      IX2094.2
 145600             GO TO  START-WRITE-GF-15.                            IX2094.2
@@ -1421,7 +1421,7 @@
 146900     PERFORM  PRINT-DETAIL.                                       IX2094.2
 147000 START-TEST-GGF-16.                                               IX2094.2
 147100     MOVE "START-TEST-GF-16" TO PAR-NAME.                         IX2094.2
-147200     MOVE "FILE STATUS START:23"   TO FEATURE.                    IX2094.2
+147200     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 147300     IF      FILESTATUS (7)  EQUAL TO "**"                        IX2094.2
 147400             PERFORM DE-LETE                                      IX2094.2
 147500             GO TO  START-WRITE-GF-16.                            IX2094.2
@@ -1440,7 +1440,7 @@
 148800     PERFORM  PRINT-DETAIL.                                       IX2094.2
 148900 START-TEST-GF-17.                                                IX2094.2
 149000     MOVE "START-TEST-GF-17" TO PAR-NAME.                         IX2094.2
-149100     MOVE "FILE STATUS START:23"   TO FEATURE.                    IX2094.2
+149100     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 149200     IF      FILESTATUS (8)  EQUAL TO "**"                        IX2094.2
 149300             PERFORM DE-LETE                                      IX2094.2
 149400             GO TO  START-WRITE-GF-17.                            IX2094.2
@@ -1459,7 +1459,7 @@
 150700     PERFORM  PRINT-DETAIL.                                       IX2094.2
 150800 START-TEST-GF-18.                                                IX2094.2
 150900     MOVE "START-TEST-GF-18" TO PAR-NAME.                         IX2094.2
-151000     MOVE "FILE STATUS START:23"   TO FEATURE.                    IX2094.2
+151000     MOVE "FILE STATUS START:??"   TO FEATURE.                    IX2094.2
 151100     IF      FILESTATUS (9)  EQUAL TO "**"                        IX2094.2
 151200             PERFORM DE-LETE                                      IX2094.2
 151300             GO TO  START-WRITE-GF-18.                            IX2094.2
@@ -1967,7 +1967,7 @@
 201500 START-WRITE-GF-28.                                               IX2094.2
 201600     PERFORM  PRINT-DETAIL.                                       IX2094.2
 201700 START-TEST-GF-29.                                                IX2094.2
-201800     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+201800     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 201900     MOVE "START-TEST-GF-29" TO PAR-NAME.                         IX2094.2
 202000     IF      FILESTATUS (2)  EQUAL TO "**"                        IX2094.2
 202100             PERFORM DE-LETE                                      IX2094.2
@@ -1986,7 +1986,7 @@
 203400 START-WRITE-GF-29.                                               IX2094.2
 203500     PERFORM  PRINT-DETAIL.                                       IX2094.2
 203600 START-TEST-GF-30.                                                IX2094.2
-203700     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+203700     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 203800     MOVE "START-TEST-GF-30" TO PAR-NAME.                         IX2094.2
 203900     IF      FILESTATUS (3)  EQUAL TO "**"                        IX2094.2
 204000             PERFORM DE-LETE                                      IX2094.2
@@ -2005,7 +2005,7 @@
 205300 START-WRITE-GF-30.                                               IX2094.2
 205400     PERFORM  PRINT-DETAIL.                                       IX2094.2
 205500 START-TEST-GF-31.                                                IX2094.2
-205600     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+205600     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 205700     MOVE "START-TEST-GF-31" TO PAR-NAME.                         IX2094.2
 205800     IF      FILESTATUS (4)  EQUAL TO "**"                        IX2094.2
 205900             PERFORM DE-LETE                                      IX2094.2
@@ -2015,16 +2015,16 @@
 206300*                                                                         
 206400*                                                                         
 206500*                                                                         
-206600     IF      FILESTATUS (4)  EQUAL TO "23"                        IX2094.2
+206600     IF      FILESTATUS (4)  EQUAL TO "21"                        IX2094.2
 206700             PERFORM  PASS                                        IX2094.2
 206800             ELSE  PERFORM  FAIL                                  IX2094.2
 206900     MOVE "IX-4; 1.3.4 (3) C; SEE START-TEST-GF-22    " TO RE-MARKIX2094.2
-207000             MOVE    "23"  TO CORRECT-A                           IX2094.2
+207000             MOVE    "21"  TO CORRECT-A                           IX2094.2
 207100             MOVE   FILESTATUS (4)  TO COMPUTED-A.                IX2094.2
 207200 START-WRITE-GF-31.                                               IX2094.2
 207300     PERFORM  PRINT-DETAIL.                                       IX2094.2
 207400 START-TEST-GF-32.                                                IX2094.2
-207500     MOVE             "FILE STATUS START:00"   TO FEATURE.        IX2094.2
+207500     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 207600     MOVE "START-TEST-GF-32" TO PAR-NAME.                         IX2094.2
 207700     IF      FILESTATUS (5)  EQUAL TO "**"                        IX2094.2
 207800             PERFORM DE-LETE                                      IX2094.2
@@ -2034,16 +2034,16 @@
 208200*                                                                         
 208300*                                                                         
 208400*                                                                         
-208500     IF      FILESTATUS (5)  EQUAL TO "00"                        IX2094.2
+208500     IF      FILESTATUS (5)  EQUAL TO "06"                        IX2094.2
 208600             PERFORM  PASS                                        IX2094.2
 208700             ELSE  PERFORM  FAIL                                  IX2094.2
 208800     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-23    " TO RE-MARKIX2094.2
-208900             MOVE    "00"  TO CORRECT-A                           IX2094.2
+208900             MOVE    "06"  TO CORRECT-A                           IX2094.2
 209000             MOVE   FILESTATUS (5)  TO COMPUTED-A.                IX2094.2
 209100 START-WRITE-GF-32.                                               IX2094.2
 209200     PERFORM  PRINT-DETAIL.                                       IX2094.2
 209300 START-TEST-GF-33.                                                IX2094.2
-209400     MOVE             "FILE STATUS START:00"   TO FEATURE.        IX2094.2
+209400     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 209500     MOVE "START-TEST-GF-33" TO PAR-NAME.                         IX2094.2
 209600     IF      FILESTATUS (6)  EQUAL TO "**"                        IX2094.2
 209700             PERFORM DE-LETE                                      IX2094.2
@@ -2053,16 +2053,16 @@
 210100*                                                                         
 210200*                                                                         
 210300*                                                                         
-210400     IF      FILESTATUS (6)  EQUAL TO "10"                        IX2094.2
+210400     IF      FILESTATUS (6)  EQUAL TO "60"                        IX2094.2
 210500             PERFORM  PASS                                        IX2094.2
 210600             ELSE  PERFORM  FAIL                                  IX2094.2
 210700     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-24    " TO RE-MARKIX2094.2
-210800             MOVE   "10"  TO CORRECT-A                            IX2094.2
+210800             MOVE   "60"  TO CORRECT-A                            IX2094.2
 210900             MOVE   FILESTATUS (6)  TO COMPUTED-A.                IX2094.2
 211000 START-WRITE-GF-33.                                               IX2094.2
 211100     PERFORM  PRINT-DETAIL.                                       IX2094.2
 211200 START-TEST-GF-34.                                                IX2094.2
-211300     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+211300     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 211400     MOVE "START-TEST-GF-34" TO PAR-NAME.                         IX2094.2
 211500     IF      FILESTATUS (7)  EQUAL TO "**"                        IX2094.2
 211600             PERFORM DE-LETE                                      IX2094.2
@@ -2081,7 +2081,7 @@
 212900 START-WRITE-GF-34.                                               IX2094.2
 213000     PERFORM  PRINT-DETAIL.                                       IX2094.2
 213100 START-TEST-GF-35.                                                IX2094.2
-213200     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+213200     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 213300     MOVE "START-TEST-GF-35" TO PAR-NAME.                         IX2094.2
 213400     IF      FILESTATUS (8)  EQUAL TO "**"                        IX2094.2
 213500             PERFORM DE-LETE                                      IX2094.2
@@ -2100,7 +2100,7 @@
 214800 START-WRITE-GF-35.                                               IX2094.2
 214900     PERFORM  PRINT-DETAIL.                                       IX2094.2
 215000 START-TEST-GF-36.                                                IX2094.2
-215100     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+215100     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 215200     MOVE "START-TEST-GF-36" TO PAR-NAME.                         IX2094.2
 215300     IF      FILESTATUS (9)  EQUAL TO "**"                        IX2094.2
 215400             PERFORM DE-LETE                                      IX2094.2
@@ -2614,7 +2614,7 @@
 266200 START-WRITE-GF-46.                                               IX2094.2
 266300     PERFORM  PRINT-DETAIL.                                       IX2094.2
 266400 START-TEST-GF-47.                                                IX2094.2
-266500     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+266500     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 266600     MOVE "START-TEST-GF-47" TO PAR-NAME.                         IX2094.2
 266700     IF      FILESTATUS (2)  EQUAL TO "**"                        IX2094.2
 266800             PERFORM DE-LETE                                      IX2094.2
@@ -2633,7 +2633,7 @@
 268100 START-WRITE-GF-47.                                               IX2094.2
 268200     PERFORM  PRINT-DETAIL.                                       IX2094.2
 268300 START-TEST-GF-48.                                                IX2094.2
-268400     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+268400     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 268500     MOVE "START-TEST-GF-48" TO PAR-NAME.                         IX2094.2
 268600     IF      FILESTATUS (3)  EQUAL TO "**"                        IX2094.2
 268700             PERFORM DE-LETE                                      IX2094.2
@@ -2643,16 +2643,16 @@
 269100*                                                                         
 269200*                                                                         
 269300*                                                                         
-269400     IF      FILESTATUS (3)  EQUAL TO "26"                        IX2094.2
+269400     IF      FILESTATUS (3)  EQUAL TO "24"                        IX2094.2
 269500             PERFORM  PASS                                        IX2094.2
 269600     ELSE PERFORM FAIL                                            IX2094.2
 269700     MOVE "IX-4; 1.3.4 (3) C; SEE START-TEST-GF-39    " TO RE-MARKIX2094.2
-269800             MOVE    "26"  TO CORRECT-A                           IX2094.2
+269800             MOVE    "24"  TO CORRECT-A                           IX2094.2
 269900             MOVE  FILESTATUS (3) TO COMPUTED-A.                  IX2094.2
 270000 START-WRITE-GF-48.                                               IX2094.2
 270100     PERFORM  PRINT-DETAIL.                                       IX2094.2
 270200 START-TEST-GF-49.                                                IX2094.2
-270300     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+270300     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 270400     MOVE "START-TEST-GF-49" TO PAR-NAME.                         IX2094.2
 270500     IF      FILESTATUS (4)  EQUAL TO "**"                        IX2094.2
 270600             PERFORM DE-LETE                                      IX2094.2
@@ -2671,7 +2671,7 @@
 271900 START-WRITE-GF-49.                                               IX2094.2
 272000     PERFORM  PRINT-DETAIL.                                       IX2094.2
 272100 START-TEST-GF-50.                                                IX2094.2
-272200     MOVE             "FILE STATUS START:00"   TO FEATURE.        IX2094.2
+272200     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 272300     MOVE "START-TEST-GF-50" TO PAR-NAME.                         IX2094.2
 272400     IF      FILESTATUS (5)  EQUAL TO "**"                        IX2094.2
 272500             PERFORM DE-LETE                                      IX2094.2
@@ -2681,17 +2681,17 @@
 272900*                                                                         
 273000*                                                                         
 273100*                                                                         
-273200     IF      FILESTATUS (5)  EQUAL TO "10"                        IX2094.2
+273200     IF      FILESTATUS (5)  EQUAL TO "50"                        IX2094.2
 273300             PERFORM  PASS                                        IX2094.2
 273400     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-41    " TO RE-MARKIX2094.2
 273500             ELSE  PERFORM  FAIL                                  IX2094.2
-273600             MOVE    "10"  TO CORRECT-A                           IX2094.2
+273600             MOVE    "50"  TO CORRECT-A                           IX2094.2
 273700             MOVE   FILESTATUS (5)  TO COMPUTED-A.                IX2094.2
 273800 START-WRITE-GF-50.                                               IX2094.2
-273900     MOVE    "FROM START-TEST-007.05" TO RE-MARK.                 IX2094.2
+273900     MOVE    "FROM START-TEST-??7.05" TO RE-MARK.                 IX2094.2
 274000     PERFORM  PRINT-DETAIL.                                       IX2094.2
 274100 START-TEST-GF-51.                                                IX2094.2
-274200     MOVE             "FILE STATUS START:00"   TO FEATURE.        IX2094.2
+274200     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 274300     MOVE "START-TEST-GF-51" TO PAR-NAME.                         IX2094.2
 274400     IF      FILESTATUS (6)  EQUAL TO "**"                        IX2094.2
 274500             PERFORM DE-LETE                                      IX2094.2
@@ -2710,7 +2710,7 @@
 275800 START-WRITE-GF-51.                                               IX2094.2
 275900     PERFORM  PRINT-DETAIL.                                       IX2094.2
 276000 START-TEST-GF-52.                                                IX2094.2
-276100     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+276100     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 276200     MOVE "START-TEST-GF-52" TO PAR-NAME.                         IX2094.2
 276300     IF      FILESTATUS (7)  EQUAL TO "**"                        IX2094.2
 276400             PERFORM DE-LETE                                      IX2094.2
@@ -2720,16 +2720,16 @@
 276800*                                                                         
 276900*                                                                         
 277000*                                                                         
-277100     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2094.2
+277100     IF      FILESTATUS (7)  EQUAL TO "13"                        IX2094.2
 277200             PERFORM  PASS                                        IX2094.2
 277300             ELSE  PERFORM  FAIL                                  IX2094.2
 277400     MOVE "IX-4; 1.3.4 (3) C; SEE START-TEST-GF-43    " TO RE-MARKIX2094.2
-277500             MOVE    "23"  TO CORRECT-A                           IX2094.2
+277500             MOVE    "13"  TO CORRECT-A                           IX2094.2
 277600             MOVE   FILESTATUS (7)  TO COMPUTED-A.                IX2094.2
 277700 START-WRITE-GF-52.                                               IX2094.2
 277800     PERFORM  PRINT-DETAIL.                                       IX2094.2
 277900 START-TEST-GF-53.                                                IX2094.2
-278000     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+278000     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 278100     MOVE "START-TEST-GF-53" TO PAR-NAME.                         IX2094.2
 278200     IF      FILESTATUS (8)  EQUAL TO "**"                        IX2094.2
 278300             PERFORM DE-LETE                                      IX2094.2
@@ -2748,7 +2748,7 @@
 279600 START-WRITE-GF-53.                                               IX2094.2
 279700     PERFORM  PRINT-DETAIL.                                       IX2094.2
 279800 START-TEST-GF-54.                                                IX2094.2
-279900     MOVE             "FILE STATUS START:23"   TO FEATURE.        IX2094.2
+279900     MOVE             "FILE STATUS START:??"   TO FEATURE.        IX2094.2
 280000     MOVE "START-TEST-GF-54" TO PAR-NAME.                         IX2094.2
 280100     IF      FILESTATUS (9)  EQUAL TO "**"                        IX2094.2
 280200             PERFORM DE-LETE                                      IX2094.2

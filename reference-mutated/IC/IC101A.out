@@ -1,1 +1,7 @@
 Warning: program compiled against libxml 212 using older 209
+libcob: IC101A.CBL:311: error: module 'IC?02A' not found
+
+ Last statement of "IC101A" was CALL
+	CALL-TEST-1 OF SECT-IC101-0001 at IC101A.CBL:311
+	ENTRY IC101A at IC101A.CBL:194
+ Started by ./IC101A

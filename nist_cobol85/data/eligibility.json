@@ -1,18 +1,18 @@
 {
   "population": "Mutated standalone .CBL programs",
   "indexed_programs": 381,
-  "eligible": 78,
+  "eligible": 58,
   "by_module": {
-    "NC": 37,
-    "SM": 1,
-    "IC": 9,
+    "NC": 33,
+    "SM": 0,
+    "IC": 6,
     "SQ": 0,
     "RL": 0,
     "IX": 3,
-    "ST": 3,
-    "SG": 3,
+    "ST": 2,
+    "SG": 1,
     "OB": 0,
-    "IF": 22,
+    "IF": 13,
     "RW": 0,
     "DB": 0
   },
@@ -262,11 +262,13 @@
       "program": "IC101A",
       "module": "IC",
       "source_path": "IC/IC101A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites",
+        "no_pass_fail_rows",
+        "missing_success_summary"
       ],
-      "result_rows": 5,
+      "result_rows": 0,
       "inspection_count": 0,
       "inspection_justification": null
     },
@@ -312,7 +314,7 @@
       "source_path": "IC/IC112A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -324,7 +326,7 @@
       "source_path": "IC/IC114A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -336,7 +338,7 @@
       "source_path": "IC/IC116M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -348,7 +350,7 @@
       "source_path": "IC/IC201A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -382,9 +384,9 @@
       "program": "IC209A",
       "module": "IC",
       "source_path": "IC/IC209A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -394,11 +396,13 @@
       "program": "IC213A",
       "module": "IC",
       "source_path": "IC/IC213A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites",
+        "no_pass_fail_rows",
+        "missing_success_summary"
       ],
-      "result_rows": 3,
+      "result_rows": 0,
       "inspection_count": 0,
       "inspection_justification": null
     },
@@ -408,7 +412,7 @@
       "source_path": "IC/IC216A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -433,7 +437,7 @@
       "source_path": "IC/IC223A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -445,7 +449,7 @@
       "source_path": "IC/IC224A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 44,
       "inspection_count": 0,
@@ -457,7 +461,7 @@
       "source_path": "IC/IC225A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 36,
       "inspection_count": 0,
@@ -469,7 +473,7 @@
       "source_path": "IC/IC226A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -481,7 +485,7 @@
       "source_path": "IC/IC227A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 19,
       "inspection_count": 0,
@@ -493,7 +497,7 @@
       "source_path": "IC/IC228A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -505,7 +509,7 @@
       "source_path": "IC/IC233A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -517,7 +521,7 @@
       "source_path": "IC/IC234A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -541,7 +545,7 @@
       "source_path": "IC/IC237A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -572,7 +576,7 @@
       "source_path": "IF/IF101A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 26,
       "inspection_count": 0,
@@ -584,7 +588,7 @@
       "source_path": "IF/IF102A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -596,7 +600,7 @@
       "source_path": "IF/IF103A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 23,
       "inspection_count": 0,
@@ -608,7 +612,7 @@
       "source_path": "IF/IF104A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 27,
       "inspection_count": 0,
@@ -620,7 +624,7 @@
       "source_path": "IF/IF105A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -632,7 +636,7 @@
       "source_path": "IF/IF106A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 30,
       "inspection_count": 0,
@@ -644,7 +648,7 @@
       "source_path": "IF/IF107A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -666,9 +670,9 @@
       "program": "IF109A",
       "module": "IF",
       "source_path": "IF/IF109A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -702,9 +706,9 @@
       "program": "IF112A",
       "module": "IF",
       "source_path": "IF/IF112A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -714,9 +718,9 @@
       "program": "IF113A",
       "module": "IF",
       "source_path": "IF/IF113A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -740,7 +744,7 @@
       "source_path": "IF/IF115A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -752,7 +756,7 @@
       "source_path": "IF/IF116A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 25,
       "inspection_count": 0,
@@ -764,7 +768,7 @@
       "source_path": "IF/IF117A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 32,
       "inspection_count": 0,
@@ -774,9 +778,9 @@
       "program": "IF118A",
       "module": "IF",
       "source_path": "IF/IF118A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "FAIL rows outside mutated sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -800,7 +804,7 @@
       "source_path": "IF/IF120A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -824,7 +828,7 @@
       "source_path": "IF/IF122A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -834,9 +838,9 @@
       "program": "IF123A",
       "module": "IF",
       "source_path": "IF/IF123A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "FAIL rows outside mutated sites"
       ],
       "result_rows": 23,
       "inspection_count": 0,
@@ -858,9 +862,9 @@
       "program": "IF125A",
       "module": "IF",
       "source_path": "IF/IF125A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 20,
       "inspection_count": 0,
@@ -870,9 +874,9 @@
       "program": "IF126A",
       "module": "IF",
       "source_path": "IF/IF126A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "FAIL rows outside mutated sites"
       ],
       "result_rows": 30,
       "inspection_count": 0,
@@ -920,7 +924,7 @@
       "source_path": "IF/IF130A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 21,
       "inspection_count": 0,
@@ -932,7 +936,7 @@
       "source_path": "IF/IF131A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -954,9 +958,9 @@
       "program": "IF133A",
       "module": "IF",
       "source_path": "IF/IF133A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -980,7 +984,7 @@
       "source_path": "IF/IF135A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 32,
       "inspection_count": 0,
@@ -992,7 +996,7 @@
       "source_path": "IF/IF136A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 26,
       "inspection_count": 0,
@@ -1004,7 +1008,7 @@
       "source_path": "IF/IF137A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -1014,9 +1018,9 @@
       "program": "IF138A",
       "module": "IF",
       "source_path": "IF/IF138A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 16,
       "inspection_count": 0,
@@ -1028,7 +1032,7 @@
       "source_path": "IF/IF139A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 30,
       "inspection_count": 0,
@@ -1052,7 +1056,7 @@
       "source_path": "IF/IF141A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 16,
       "inspection_count": 0,
@@ -1064,7 +1068,7 @@
       "source_path": "IF/IF142A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -1129,7 +1133,7 @@
       "source_path": "IX/IX101A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -1161,7 +1165,7 @@
       "source_path": "IX/IX104A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -1173,7 +1177,7 @@
       "source_path": "IX/IX105A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -1185,7 +1189,7 @@
       "source_path": "IX/IX106A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -1197,7 +1201,7 @@
       "source_path": "IX/IX107A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -1209,7 +1213,7 @@
       "source_path": "IX/IX108A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 32,
       "inspection_count": 0,
@@ -1221,7 +1225,7 @@
       "source_path": "IX/IX109A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -1253,7 +1257,7 @@
       "source_path": "IX/IX112A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -1265,7 +1269,7 @@
       "source_path": "IX/IX113A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -1347,7 +1351,7 @@
       "source_path": "IX/IX121A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -1359,7 +1363,7 @@
       "source_path": "IX/IX201A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -1391,7 +1395,7 @@
       "source_path": "IX/IX204A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -1403,7 +1407,7 @@
       "source_path": "IX/IX205A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 12,
       "inspection_count": 0,
@@ -1415,7 +1419,7 @@
       "source_path": "IX/IX206A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -1427,7 +1431,7 @@
       "source_path": "IX/IX207A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -1439,7 +1443,7 @@
       "source_path": "IX/IX208A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 29,
       "inspection_count": 0,
@@ -1475,7 +1479,7 @@
       "source_path": "IX/IX211A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -1487,7 +1491,7 @@
       "source_path": "IX/IX212A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 24,
       "inspection_count": 0,
@@ -1499,7 +1503,7 @@
       "source_path": "IX/IX213A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 21,
       "inspection_count": 0,
@@ -1523,7 +1527,7 @@
       "source_path": "IX/IX215A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 33,
       "inspection_count": 0,
@@ -1535,7 +1539,7 @@
       "source_path": "IX/IX216A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -1547,7 +1551,7 @@
       "source_path": "IX/IX217A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -1559,7 +1563,7 @@
       "source_path": "IX/IX218A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -1650,7 +1654,7 @@
       "source_path": "NC/NC103A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 102,
       "inspection_count": 0,
@@ -1709,9 +1713,9 @@
       "program": "NC108M",
       "module": "NC",
       "source_path": "NC/NC108M.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -1723,7 +1727,7 @@
       "source_path": "NC/NC109M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -1793,7 +1797,7 @@
       "source_path": "NC/NC114M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 5,
       "inspection_count": 1,
@@ -1912,9 +1916,9 @@
       "program": "NC124A",
       "module": "NC",
       "source_path": "NC/NC124A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 169,
       "inspection_count": 0,
@@ -1926,7 +1930,7 @@
       "source_path": "NC/NC125A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 110,
       "inspection_count": 0,
@@ -1950,7 +1954,7 @@
       "source_path": "NC/NC127A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -1962,7 +1966,7 @@
       "source_path": "NC/NC131A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -1996,9 +2000,9 @@
       "program": "NC134A",
       "module": "NC",
       "source_path": "NC/NC134A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 20,
       "inspection_count": 0,
@@ -2023,7 +2027,7 @@
       "source_path": "NC/NC136A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -2035,7 +2039,7 @@
       "source_path": "NC/NC137A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -2047,7 +2051,7 @@
       "source_path": "NC/NC138A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 36,
       "inspection_count": 0,
@@ -2059,7 +2063,7 @@
       "source_path": "NC/NC139A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 41,
       "inspection_count": 0,
@@ -2071,7 +2075,7 @@
       "source_path": "NC/NC140A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 70,
       "inspection_count": 0,
@@ -2083,7 +2087,7 @@
       "source_path": "NC/NC141A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -2143,7 +2147,7 @@
       "source_path": "NC/NC174A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 77,
       "inspection_count": 0,
@@ -2203,7 +2207,7 @@
       "source_path": "NC/NC202A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 77,
       "inspection_count": 0,
@@ -2213,11 +2217,11 @@
       "program": "NC203A",
       "module": "NC",
       "source_path": "NC/NC203A.CBL",
-      "eligible": false,
+      "eligible": true,
       "reasons": [
-        "planted sites without matching FAIL rows"
+        "self_checking_report"
       ],
-      "result_rows": 56,
+      "result_rows": 57,
       "inspection_count": 0,
       "inspection_justification": null
     },
@@ -2227,7 +2231,7 @@
       "source_path": "NC/NC204M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 15,
       "inspection_count": 0,
@@ -2239,7 +2243,7 @@
       "source_path": "NC/NC205A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -2251,7 +2255,7 @@
       "source_path": "NC/NC206A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 53,
       "inspection_count": 0,
@@ -2275,7 +2279,7 @@
       "source_path": "NC/NC208A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 24,
       "inspection_count": 0,
@@ -2287,7 +2291,7 @@
       "source_path": "NC/NC209A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 32,
       "inspection_count": 0,
@@ -2299,7 +2303,7 @@
       "source_path": "NC/NC210A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 85,
       "inspection_count": 0,
@@ -2311,7 +2315,7 @@
       "source_path": "NC/NC211A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 51,
       "inspection_count": 0,
@@ -2338,7 +2342,7 @@
       "source_path": "NC/NC215A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -2386,7 +2390,7 @@
       "source_path": "NC/NC219A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -2423,7 +2427,7 @@
       "source_path": "NC/NC222A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -2435,7 +2439,7 @@
       "source_path": "NC/NC223A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 94,
       "inspection_count": 0,
@@ -2447,7 +2451,7 @@
       "source_path": "NC/NC224A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -2459,7 +2463,7 @@
       "source_path": "NC/NC225A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 63,
       "inspection_count": 0,
@@ -2471,7 +2475,7 @@
       "source_path": "NC/NC231A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 24,
       "inspection_count": 0,
@@ -2483,7 +2487,7 @@
       "source_path": "NC/NC232A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -2495,7 +2499,7 @@
       "source_path": "NC/NC233A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -2507,7 +2511,7 @@
       "source_path": "NC/NC234A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 17,
       "inspection_count": 0,
@@ -2519,7 +2523,7 @@
       "source_path": "NC/NC235A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -2531,7 +2535,7 @@
       "source_path": "NC/NC236A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -2541,9 +2545,9 @@
       "program": "NC237A",
       "module": "NC",
       "source_path": "NC/NC237A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -2555,7 +2559,7 @@
       "source_path": "NC/NC238A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -2579,7 +2583,7 @@
       "source_path": "NC/NC240A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -2591,7 +2595,7 @@
       "source_path": "NC/NC241A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -2603,7 +2607,7 @@
       "source_path": "NC/NC242A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 12,
       "inspection_count": 0,
@@ -2615,7 +2619,7 @@
       "source_path": "NC/NC243A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 16,
       "inspection_count": 0,
@@ -2625,9 +2629,9 @@
       "program": "NC244A",
       "module": "NC",
       "source_path": "NC/NC244A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -2639,7 +2643,7 @@
       "source_path": "NC/NC245A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 28,
       "inspection_count": 0,
@@ -2651,7 +2655,7 @@
       "source_path": "NC/NC246A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 49,
       "inspection_count": 0,
@@ -2663,7 +2667,7 @@
       "source_path": "NC/NC247A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 20,
       "inspection_count": 0,
@@ -2675,7 +2679,7 @@
       "source_path": "NC/NC248A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -2687,7 +2691,7 @@
       "source_path": "NC/NC250A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 115,
       "inspection_count": 0,
@@ -2699,7 +2703,7 @@
       "source_path": "NC/NC251A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 59,
       "inspection_count": 0,
@@ -2724,7 +2728,7 @@
       "source_path": "NC/NC253A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 61,
       "inspection_count": 0,
@@ -2736,7 +2740,7 @@
       "source_path": "NC/NC254A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -2801,7 +2805,7 @@
       "source_path": "OB/OBIC1A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -2826,7 +2830,7 @@
       "source_path": "OB/OBNC2M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 15,
       "inspection_count": 0,
@@ -2838,7 +2842,7 @@
       "source_path": "OB/OBSQ1A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -2885,7 +2889,7 @@
       "source_path": "RL/RL101A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -2917,7 +2921,7 @@
       "source_path": "RL/RL104A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 12,
       "inspection_count": 0,
@@ -2929,7 +2933,7 @@
       "source_path": "RL/RL105A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -2941,7 +2945,7 @@
       "source_path": "RL/RL106A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -2953,7 +2957,7 @@
       "source_path": "RL/RL107A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 19,
       "inspection_count": 0,
@@ -2965,7 +2969,7 @@
       "source_path": "RL/RL108A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -2997,7 +3001,7 @@
       "source_path": "RL/RL111A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 24,
       "inspection_count": 0,
@@ -3009,7 +3013,7 @@
       "source_path": "RL/RL112A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 12,
       "inspection_count": 0,
@@ -3021,7 +3025,7 @@
       "source_path": "RL/RL113A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -3033,7 +3037,7 @@
       "source_path": "RL/RL114A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -3045,7 +3049,7 @@
       "source_path": "RL/RL115A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 13,
       "inspection_count": 0,
@@ -3057,7 +3061,7 @@
       "source_path": "RL/RL116A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -3069,7 +3073,7 @@
       "source_path": "RL/RL117A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -3081,7 +3085,7 @@
       "source_path": "RL/RL118A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -3093,7 +3097,7 @@
       "source_path": "RL/RL119A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3105,7 +3109,7 @@
       "source_path": "RL/RL201A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3137,7 +3141,7 @@
       "source_path": "RL/RL204A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 12,
       "inspection_count": 0,
@@ -3149,7 +3153,7 @@
       "source_path": "RL/RL205A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 66,
       "inspection_count": 0,
@@ -3161,7 +3165,7 @@
       "source_path": "RL/RL206A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3193,7 +3197,7 @@
       "source_path": "RL/RL209A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3205,7 +3209,7 @@
       "source_path": "RL/RL210A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3217,7 +3221,7 @@
       "source_path": "RL/RL211A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3229,7 +3233,7 @@
       "source_path": "RL/RL212A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3306,7 +3310,7 @@
       "source_path": "RW/RW101A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -3318,7 +3322,7 @@
       "source_path": "RW/RW102A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -3330,7 +3334,7 @@
       "source_path": "RW/RW103A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -3342,7 +3346,7 @@
       "source_path": "RW/RW104A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -3392,7 +3396,7 @@
       "source_path": "SG/SG101A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 151,
       "inspection_count": 0,
@@ -3404,7 +3408,7 @@
       "source_path": "SG/SG102A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -3416,7 +3420,7 @@
       "source_path": "SG/SG103A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -3438,9 +3442,9 @@
       "program": "SG105A",
       "module": "SG",
       "source_path": "SG/SG105A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3474,9 +3478,9 @@
       "program": "SG202A",
       "module": "SG",
       "source_path": "SG/SG202A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 5,
       "inspection_count": 0,
@@ -3488,7 +3492,7 @@
       "source_path": "SG/SG203A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 18,
       "inspection_count": 0,
@@ -3562,9 +3566,9 @@
       "program": "SM101A",
       "module": "SM",
       "source_path": "SM/SM101A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -3586,7 +3590,7 @@
       "source_path": "SM/SM103A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -3608,7 +3612,7 @@
       "source_path": "SM/SM105A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3633,7 +3637,7 @@
       "source_path": "SM/SM107A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 200,
       "inspection_count": 0,
@@ -3645,7 +3649,7 @@
       "source_path": "SM/SM201A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -3667,7 +3671,7 @@
       "source_path": "SM/SM203A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3689,7 +3693,7 @@
       "source_path": "SM/SM205A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3701,7 +3705,7 @@
       "source_path": "SM/SM206A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -3713,7 +3717,7 @@
       "source_path": "SM/SM207A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -3725,7 +3729,7 @@
       "source_path": "SM/SM208A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3784,7 +3788,7 @@
       "source_path": "SQ/SQ102A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -3796,7 +3800,7 @@
       "source_path": "SQ/SQ103A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 30,
       "inspection_count": 0,
@@ -3808,7 +3812,7 @@
       "source_path": "SQ/SQ104A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -3820,7 +3824,7 @@
       "source_path": "SQ/SQ105A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 22,
       "inspection_count": 0,
@@ -3832,7 +3836,7 @@
       "source_path": "SQ/SQ106A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 75,
       "inspection_count": 0,
@@ -3844,7 +3848,7 @@
       "source_path": "SQ/SQ107A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -3856,7 +3860,7 @@
       "source_path": "SQ/SQ108A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -3868,7 +3872,7 @@
       "source_path": "SQ/SQ109M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -3880,7 +3884,7 @@
       "source_path": "SQ/SQ110M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -3892,7 +3896,7 @@
       "source_path": "SQ/SQ111A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -3904,7 +3908,7 @@
       "source_path": "SQ/SQ112A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -3916,7 +3920,7 @@
       "source_path": "SQ/SQ113A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 22,
       "inspection_count": 0,
@@ -3928,7 +3932,7 @@
       "source_path": "SQ/SQ114A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 15,
       "inspection_count": 0,
@@ -3940,7 +3944,7 @@
       "source_path": "SQ/SQ115A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -3952,7 +3956,7 @@
       "source_path": "SQ/SQ116A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -3964,7 +3968,7 @@
       "source_path": "SQ/SQ117A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -3976,7 +3980,7 @@
       "source_path": "SQ/SQ121A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -3988,7 +3992,7 @@
       "source_path": "SQ/SQ122A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -4000,7 +4004,7 @@
       "source_path": "SQ/SQ123A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -4012,7 +4016,7 @@
       "source_path": "SQ/SQ124A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 19,
       "inspection_count": 0,
@@ -4024,7 +4028,7 @@
       "source_path": "SQ/SQ125A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -4036,7 +4040,7 @@
       "source_path": "SQ/SQ126A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -4048,7 +4052,7 @@
       "source_path": "SQ/SQ127A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4060,7 +4064,7 @@
       "source_path": "SQ/SQ128A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -4072,7 +4076,7 @@
       "source_path": "SQ/SQ129A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4084,7 +4088,7 @@
       "source_path": "SQ/SQ130A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4096,7 +4100,7 @@
       "source_path": "SQ/SQ131A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -4108,7 +4112,7 @@
       "source_path": "SQ/SQ132A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4120,7 +4124,7 @@
       "source_path": "SQ/SQ133A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 15,
       "inspection_count": 0,
@@ -4132,7 +4136,7 @@
       "source_path": "SQ/SQ134A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 15,
       "inspection_count": 0,
@@ -4144,7 +4148,7 @@
       "source_path": "SQ/SQ135A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4156,7 +4160,7 @@
       "source_path": "SQ/SQ136A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4168,7 +4172,7 @@
       "source_path": "SQ/SQ137A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4180,7 +4184,7 @@
       "source_path": "SQ/SQ138A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4192,7 +4196,7 @@
       "source_path": "SQ/SQ139A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4204,7 +4208,7 @@
       "source_path": "SQ/SQ140A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4216,7 +4220,7 @@
       "source_path": "SQ/SQ141A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4228,7 +4232,7 @@
       "source_path": "SQ/SQ142A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4240,7 +4244,7 @@
       "source_path": "SQ/SQ143A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4252,7 +4256,7 @@
       "source_path": "SQ/SQ144A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4264,7 +4268,7 @@
       "source_path": "SQ/SQ146A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4276,7 +4280,7 @@
       "source_path": "SQ/SQ147A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4288,7 +4292,7 @@
       "source_path": "SQ/SQ148A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -4300,7 +4304,7 @@
       "source_path": "SQ/SQ149A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4312,7 +4316,7 @@
       "source_path": "SQ/SQ150A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4324,7 +4328,7 @@
       "source_path": "SQ/SQ151A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4336,7 +4340,7 @@
       "source_path": "SQ/SQ152A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4348,7 +4352,7 @@
       "source_path": "SQ/SQ153A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4360,7 +4364,7 @@
       "source_path": "SQ/SQ154A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4372,7 +4376,7 @@
       "source_path": "SQ/SQ155A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4384,7 +4388,7 @@
       "source_path": "SQ/SQ156A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4396,7 +4400,7 @@
       "source_path": "SQ/SQ201M.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 12,
       "inspection_count": 11,
@@ -4408,7 +4412,7 @@
       "source_path": "SQ/SQ202A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4430,7 +4434,7 @@
       "source_path": "SQ/SQ204A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -4442,7 +4446,7 @@
       "source_path": "SQ/SQ205A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 2,
       "inspection_count": 0,
@@ -4454,7 +4458,7 @@
       "source_path": "SQ/SQ206A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -4518,7 +4522,7 @@
       "source_path": "SQ/SQ211A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -4530,7 +4534,7 @@
       "source_path": "SQ/SQ212A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4542,7 +4546,7 @@
       "source_path": "SQ/SQ213A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -4554,7 +4558,7 @@
       "source_path": "SQ/SQ214A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 5,
       "inspection_count": 0,
@@ -4566,7 +4570,7 @@
       "source_path": "SQ/SQ215A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -4578,7 +4582,7 @@
       "source_path": "SQ/SQ216A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -4590,7 +4594,7 @@
       "source_path": "SQ/SQ217A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 7,
       "inspection_count": 0,
@@ -4602,7 +4606,7 @@
       "source_path": "SQ/SQ218A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4614,7 +4618,7 @@
       "source_path": "SQ/SQ219A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4626,7 +4630,7 @@
       "source_path": "SQ/SQ220A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4638,7 +4642,7 @@
       "source_path": "SQ/SQ221A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4650,7 +4654,7 @@
       "source_path": "SQ/SQ222A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4662,7 +4666,7 @@
       "source_path": "SQ/SQ223A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -4674,7 +4678,7 @@
       "source_path": "SQ/SQ224A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -4686,7 +4690,7 @@
       "source_path": "SQ/SQ225A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 3,
       "inspection_count": 0,
@@ -4698,7 +4702,7 @@
       "source_path": "SQ/SQ226A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 37,
       "inspection_count": 0,
@@ -4710,7 +4714,7 @@
       "source_path": "SQ/SQ227A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 16,
       "inspection_count": 0,
@@ -4722,7 +4726,7 @@
       "source_path": "SQ/SQ228A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4734,7 +4738,7 @@
       "source_path": "SQ/SQ229A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4746,7 +4750,7 @@
       "source_path": "SQ/SQ230A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4845,7 +4849,7 @@
       "source_path": "ST/ST104A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -4867,7 +4871,7 @@
       "source_path": "ST/ST106A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -5085,7 +5089,7 @@
       "source_path": "ST/ST125A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 1,
       "inspection_count": 0,
@@ -5130,9 +5134,9 @@
       "program": "ST132A",
       "module": "ST",
       "source_path": "ST/ST132A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -5144,7 +5148,7 @@
       "source_path": "ST/ST133A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 18,
       "inspection_count": 0,
@@ -5156,7 +5160,7 @@
       "source_path": "ST/ST134A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -5168,7 +5172,7 @@
       "source_path": "ST/ST135A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -5180,7 +5184,7 @@
       "source_path": "ST/ST136A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 5,
       "inspection_count": 0,
@@ -5192,7 +5196,7 @@
       "source_path": "ST/ST137A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 6,
       "inspection_count": 0,
@@ -5204,7 +5208,7 @@
       "source_path": "ST/ST139A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -5216,7 +5220,7 @@
       "source_path": "ST/ST140A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -5228,7 +5232,7 @@
       "source_path": "ST/ST144A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -5240,7 +5244,7 @@
       "source_path": "ST/ST146A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 4,
       "inspection_count": 0,
@@ -5252,7 +5256,7 @@
       "source_path": "ST/ST147A.CBL",
       "eligible": false,
       "reasons": [
-        "fewer_than_3_mutable_sites"
+        "fewer than 6 supported sites"
       ],
       "result_rows": 26,
       "inspection_count": 0,
@@ -5279,12 +5283,12 @@
     }
   ],
   "mutation_summary": {
-    "candidates": 88,
-    "planted_sites": 293,
-    "shipped_sites": 263,
+    "candidates": 71,
+    "planted_sites": 381,
+    "shipped_sites": 333,
     "original_exclusions": 58,
-    "insufficient_sites": 235,
-    "execution_exclusions": 10,
+    "insufficient_sites": 252,
+    "execution_exclusions": 13,
     "pending": 0
   }
 }

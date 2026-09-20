@@ -362,7 +362,7 @@
 036400     PERFORM FAIL.                                                IC1064.2
 036500     MOVE DN2 (7) TO COMPUTED-A.                                  IC1064.2
 036600     MOVE "G" TO CORRECT-A.                                       IC1064.2
-036700     MOVE "INDEX DATA ITEM IN LINKAGE SEC" TO RE-MARK.            IC1064.2
+036700     MOVE "INDEX DATA ITEM IN LINKA?E SEC" TO RE-MARK.            IC1064.2
 036800 LINK-WRITE-02-01.                                                IC1064.2
 036900     PERFORM PRINT-DETAIL.                                        IC1064.2
 037000 LINK-TEST-02-02.                                                 IC1064.2
@@ -392,7 +392,7 @@
 039400     PERFORM FAIL.                                                IC1064.2
 039500     MOVE DN2 (1) TO COMPUTED-A.                                  IC1064.2
 039600     MOVE "A" TO CORRECT-A.                                       IC1064.2
-039700     MOVE "INDEX IN LINKAGE SECTION" TO RE-MARK.                  IC1064.2
+039700     MOVE "INDEX IN LINK?GE SECTION" TO RE-MARK.                  IC1064.2
 039800 LINK-WRITE-03-01.                                                IC1064.2
 039900     PERFORM PRINT-DETAIL.                                        IC1064.2
 040000 LINK-TEST-03-02.                                                 IC1064.2
@@ -465,7 +465,7 @@
 046700     PERFORM FAIL.                                                IC1064.2
 046800     MOVE DN2 (4) TO COMPUTED-A.                                  IC1064.2
 046900     MOVE "N" TO CORRECT-A.                                       IC1064.2
-047000     MOVE "TABLES DEFINED IN LINKAGE SEC" TO RE-MARK.             IC1064.2
+047000     MOVE "TABLES ?EFINE? IN LINKAGE SEC" TO RE-MARK.             IC1064.2
 047100 LINK-WRITE-05-01.                                                IC1064.2
 047200     PERFORM PRINT-DETAIL.                                        IC1064.2
 047300 LINK-TEST-05-02.                                                 IC1064.2
@@ -477,7 +477,7 @@
 047900     PERFORM FAIL.                                                IC1064.2
 048000     MOVE DN2 (5) TO COMPUTED-A.                                  IC1064.2
 048100     MOVE "E" TO CORRECT-A.                                       IC1064.2
-048200     MOVE "TABLES DEFINED IN LINKAGE SEC" TO RE-MARK.             IC1064.2
+048200     MOVE "TABL?S D?FIN?D IN LINKAG? S?C" TO RE-MARK.             IC1064.2
 048300 LINK-WRITE-05-02.                                                IC1064.2
 048400     PERFORM PRINT-DETAIL.                                        IC1064.2
 048500 LINK-TEST-06.                                                    IC1064.2

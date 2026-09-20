@@ -63,7 +63,7 @@ TEST RESULT OF NC121M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE BY GIVING     PASS  IND-TEST-GF-31                                                                              
  DIVIDE BY GIVING     PASS  IND-TEST-GF-32                                                                              
  DIVIDE BY GIVING     PASS  IND-TEST-GF-33                                                                              
- PERFORM              PASS  IND-TEST-GF-34                                                                              
+ PERFORM              PASS  IND-TEST-GF-?4                                                                              
  PERFORM THRU         PASS  IND-TEST-GF-35                                                                              
  DISPLAY              INSPT IND-TEST-GF-36                RESULTS MUST BE                                               
 *** INFORMATION ***                                 LITERAL-01          IV-21 4.3.8.2.3/4                               

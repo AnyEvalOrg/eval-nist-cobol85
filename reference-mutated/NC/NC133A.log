@@ -54,9 +54,9 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- SET STATEMENT        PASS  IDX-TEST-20                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-?0                                                                                 
  SET STATEMENT        PASS  IDX-TEST-21                                                                                 
- SET STATEMENT        FAIL* IDX-TEST-22                                                                                 
+ SET STATEMENT        FAIL* IDX-TEST-??                                                                                 
                                                                                                                         
                                      COMPUTED=  000000002.000000000                                                     
                                      CORRECT =  000000005.000000000                                                     

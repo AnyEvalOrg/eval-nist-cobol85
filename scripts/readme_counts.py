@@ -10,7 +10,7 @@ EXECUTION_REASONS = {'mutation did not bite', 'FAIL rows outside mutated sites',
 
 def population_text(info):
     indexed = [p for p in info['programs'] if p['source_path'].endswith('.CBL')]
-    insufficient = sum('fewer_than_3_mutable_sites' in p['reasons'] for p in indexed)
+    insufficient = sum('fewer than 6 supported sites' in p['reasons'] for p in indexed)
     pending = sum('awaiting mutated logs' in p['reasons'] for p in indexed)
     execution = sum(bool(EXECUTION_REASONS.intersection(p['reasons'])) for p in indexed)
     original = info['indexed_programs'] - info['eligible'] - insufficient - pending - execution

@@ -327,7 +327,7 @@
 032700 F-NUMVALC-01.                                                    IF1264.2
 032800     MOVE ZERO TO TEMP.                                           IF1264.2
 032900 F-NUMVALC-TEST-01.                                               IF1264.2
-033000     COMPUTE TEMP = FUNCTION NUMVAL-C ("9").                      IF1264.2
+033000     COMPUTE TEMP = FUNCTION NUMVAL-C ("?").                      IF1264.2
 033100     IF TEMP = 9 THEN                                             IF1264.2
 033200                        PERFORM PASS                              IF1264.2
 033300     ELSE                                                         IF1264.2
@@ -604,7 +604,7 @@
 060400 F-NUMVALC-16.                                                    IF1264.2
 060500     MOVE ZERO TO TEMP.                                           IF1264.2
 060600 F-NUMVALC-TEST-16.                                               IF1264.2
-060700     COMPUTE TEMP = FUNCTION NUMVAL-C ("$5", "$").                IF1264.2
+060700     COMPUTE TEMP = FUNCTION NUMVAL-C ("$?", "$").                IF1264.2
 060800     IF TEMP = 7 THEN                                             IF1264.2
 060900                        PERFORM PASS                              IF1264.2
 061000     ELSE                                                         IF1264.2

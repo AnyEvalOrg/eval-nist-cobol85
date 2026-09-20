@@ -6,8 +6,8 @@ FAIL after a conditional PASS/GO TO WRITE. Match through PRINT-DETAIL, never
 through another IF. Reject compound predicates, continued literals, ambiguous
 CORRECT moves, and missing computed-data evidence. Equality/inequality and
 symbolic ordering predicates are recognized; execution validates every site.
-For programs below the legacy three-site threshold, also support direct NOT
-equality jumps to a local FAIL block with only evidence and diagnostic MOVEs.
+Also support direct NOT equality jumps to a local FAIL block with only evidence
+and diagnostic MOVEs. Selection requires at least six supported sites.
 """
 from __future__ import annotations
 import argparse
@@ -32,24 +32,57 @@ ITEM = r'[A-Z][A-Z0-9-]*(?:\s*\([^\n()]+\))?'
 CONDITION = re.compile(r'\bIF\s+(?P<item>' + ITEM + r')\s+(?:IS\s+)?(?P<op>NOT\s+EQUAL(?:\s+TO)?|EQUAL(?:\s+TO)?|=|<|>)\s*(?P<literal>' + LITERAL + r')(?=\s|\.(?:\s|$))', re.I)
 EXTENDED_CONDITION = re.compile(CONDITION.pattern.replace('NOT\\s+EQUAL', 'NOT\\s*=|NOT\\s+EQUAL'), re.I)
 CORRECT = re.compile(r'\bMOVE\s+(?P<literal>' + LITERAL + r')\s+TO\s+CORRECT-(?P<kind>N|A|X|18V0|0V18|4V14|14V4)\b', re.I)
+ALGORITHM = 'hmac-sha256-program-v4-six-sites-quarter-uniform-diagnostics'
 
 
 def value(literal):
     return literal[1:-1] if literal.startswith(('"', "'")) else Decimal(literal)
 
 
-def find_sites(source, extended=True):
+def source_code(source, *, continuations=False):
     lines = source.splitlines(keepends=True)
     code, offsets = [], []
     offset = 0
+    quote = None
     for line in lines:
-        # Continuations are deliberately unsupported, not silently joined.
-        text = line[7:72] if len(line) > 6 and line[6] == ' ' else ''
+        # Site matching excludes continuations; diagnostic scrubbing joins
+        # continued strings with a map back to every physical source byte.
+        active = len(line) > 6 and line[6] in (' -' if continuations else ' ')
+        if continuations and not active:
+            offset += len(line)
+            continue
+        text = line[7:72].rstrip('\r\n') if active else ''
+        column = 7
+        if continuations and line[6] == '-' and quote:
+            column += len(text) - len(text.lstrip())
+            text = text.lstrip()
+            if text.startswith(quote):
+                text = text[1:]
+                column += 1
+            # Keep literal padding but omit the physical line break and the
+            # repeated opening delimiter required by fixed-format COBOL.
+            code[-1] = code[-1][:-1]
+            offsets.pop()
         code.append(text.rstrip('\r\n') + '\n')
-        offsets.extend(range(offset + 7, offset + 7 + len(code[-1])-1))
+        offsets.extend(range(offset + column, offset + column + len(code[-1])-1))
         offsets.append(-1)
+        if continuations:
+            i = 0
+            while i < len(text):
+                if quote and text[i] == quote:
+                    if i+1 < len(text) and text[i+1] == quote:
+                        i += 2
+                        continue
+                    quote = None
+                elif not quote and text[i] in ('"', "'"):
+                    quote = text[i]
+                i += 1
         offset += len(line)
-    code = ''.join(code)
+    return ''.join(code), offsets
+
+
+def find_sites(source, extended=True):
+    code, offsets = source_code(source)
     sites = []
     fields = data_fields(source)
     for m in (EXTENDED_CONDITION if extended else CONDITION).finditer(code):
@@ -138,13 +171,75 @@ def scrub_comments(source):
     return source
 
 
-def mutate(source, name):
+def diagnostic_edits(source, sites):
+    """Scrub expectation echoes around every supported site, before sampling.
+
+    Preserve the actual IF/CORRECT operands, including unselected sites. All
+    other string literals in the site's paragraph and its diagnostic paragraphs
+    (direct branch targets or fall-through CORRECT blocks) are scrubbed uniformly.
+    Collect matches against the original
+    text so shared paragraphs and overlapping substrings are order independent.
+    """
+    code, offsets = source_code(source, continuations=True)
+    strings = list(re.finditer(r'''"(?:[^"\n]|"")*"|'(?:[^'\n]|'')*' ''', code, re.X))
+    masked = list(code)
+    for literal in strings:
+        masked[literal.start():literal.end()] = ' ' * len(literal[0])
+    masked = ''.join(masked)
+    headers = list(re.finditer(r'(?m)^([A-Z0-9][A-Z0-9-]*)\.', masked))
+    paragraphs = {m[1]: (m.start(), headers[i+1].start() if i+1 < len(headers) else len(code))
+                  for i, m in enumerate(headers)}
+    protected = {tuple(span) for site in sites for span in site['spans']}
+    replacements = {}
+    for site in sites:
+        a, b = paragraphs[site['paragraph']]
+        targets = re.findall(r'\bGO\s+TO\s+([A-Z0-9-]+)\b', masked[a:b], re.I)
+        # Equality/PASS forms fall through to their FAIL paragraph instead of
+        # naming it in GO TO. Its paired CORRECT operand identifies it exactly.
+        targets += [name for name, (start, end) in paragraphs.items()
+                    if offsets[start] <= site['spans'][1][0]
+                    < (offsets[end] if end < len(code) else len(source))]
+        ranges = [paragraphs[name] for name in {site['paragraph'], *targets} if name in paragraphs]
+        original = site['literals'][0]
+        needle = original[1:-1] if original.startswith(('"', "'")) else original
+        if not needle:
+            continue
+        for literal in strings:
+            if not any(start <= literal.start() < end for start, end in ranges):
+                continue
+            span = (offsets[literal.start()], offsets[literal.end()-1]+1)
+            if span in protected:
+                continue
+            body = literal[0][1:-1]
+            start = 0
+            while (start := body.find(needle, start)) != -1:
+                changed = replacements.setdefault(literal.span(), list(literal[0]))
+                changed[start+1:start+1+len(needle)] = '?' * len(needle)
+                start += 1
+    edits, audit = [], []
+    for (start, end), characters in sorted(replacements.items()):
+        # A continued literal has noncontiguous source coordinates. Audit each
+        # physical fragment separately, preserving indicators and delimiters.
+        boundaries = [start] + [i for i in range(start+1, end) if offsets[i] != offsets[i-1]+1] + [end]
+        for left, right in zip(boundaries, boundaries[1:]):
+            a, b = offsets[left], offsets[right-1]+1
+            changed = ''.join(characters[left-start:right-start])
+            if changed == source[a:b]:
+                continue
+            edits.append((a, b, changed))
+            audit.append(dict(line=source.count('\n', 0, a)+1,
+                              column=a-source.rfind('\n', 0, a),
+                              original=source[a:b], mutated=changed))
+    return edits, audit
+
+
+def mutate(source, name, *, select=True):
     salt = mutation_salt()
-    legacy_sites = find_sites(source, extended=False)
-    sites = legacy_sites if len(legacy_sites) >= 3 else find_sites(source)
+    sites = find_sites(source)
     seed = hmac.new(salt, name.encode('utf-8'), hashlib.sha256).digest()
     rng = random.Random(int.from_bytes(seed, 'big'))
-    selected = rng.sample(sites, max(3, (len(sites) + 5)//10)) if len(sites) >= 3 else []
+    count = min(max(3, round(0.25 * len(sites))), len(sites)//2)
+    selected = rng.sample(sites, count) if select and len(sites) >= 6 else []
     edits, manifest = [], []
     for site in sorted(selected, key=lambda s: s['spans'][0]):
         original = site['literals'][0]
@@ -159,9 +254,12 @@ def mutate(source, name):
         manifest.append(dict(item=site['item'], field=site['field'], correct_field=site['correct_field'], paragraph=site['paragraph'], operator=site['operator'], kind=site['kind'], replacements=replacements))
     comments, audit = comment_edits(source)
     edits.extend(comments)
+    diagnostics, diagnostic_audit = diagnostic_edits(source, sites)
+    edits.extend(diagnostics)
     for a, b, replacement in sorted(edits, reverse=True):
         source = source[:a] + replacement + source[b:]
-    return source, dict(mutable_sites=len(sites), mutations=manifest, comment_changes=audit)
+    return source, dict(mutable_sites=len(sites), mutations=manifest, comment_changes=audit,
+                        diagnostic_changes=diagnostic_audit)
 
 
 def generate(reference, destination, data):
@@ -180,16 +278,17 @@ def generate(reference, destination, data):
     for name, entry in sorted(json.loads((reference/'index.json').read_text())['programs'].items()):
         rel = f'{entry["module"]}/{name}.CBL'
         source = read(reference/rel)
-        changed, details = mutate(source, name) if decisions[name]['eligible'] else (scrub_comments(source), dict(mutable_sites=0, mutations=[], comment_changes=comment_edits(source)[1]))
+        changed, details = mutate(source, name, select=decisions[name]['eligible'])
         candidate = decisions[name]['eligible'] and len(details['mutations']) >= 3
         eligible = candidate
-        reasons = [] if candidate else (['fewer_than_3_mutable_sites'] if decisions[name]['eligible'] else decisions[name]['reasons'])
+        reasons = [] if candidate else (['fewer than 6 supported sites'] if decisions[name]['eligible'] else decisions[name]['reasons'])
         programs[name] = dict(**details, eligible=eligible, reasons=reasons, source_path=rel,
                               original_sha256=hashlib.sha256(source.encode('latin1')).hexdigest(),
                               mutated_sha256=hashlib.sha256(changed.encode('latin1')).hexdigest(),
                               baseline=decisions[name])
         previous = prior.get(name, {})
-        same = previous.get('mutated_sha256') == programs[name]['mutated_sha256']
+        same = (previous.get('mutated_sha256') == programs[name]['mutated_sha256']
+                and prior_payload.get('algorithm') == ALGORITHM) if prior_payload else False
         programs[name]['mutation_candidate'] = candidate
         programs[name]['needs_new_logs'] = candidate and (not same or previous.get('needs_new_logs', False))
         if same and candidate:
@@ -219,7 +318,7 @@ def generate(reference, destination, data):
             if not dest.exists() or dest.read_bytes() != content:
                 dest.write_bytes(content)
     data.mkdir(parents=True, exist_ok=True)
-    payload = dict(schema_version=2, algorithm='hmac-sha256-program-v3-pic-uniform-comments', salt_sha256=fingerprint, programs=programs)
+    payload = dict(schema_version=2, algorithm=ALGORITHM, salt_sha256=fingerprint, programs=programs)
     write_private(prior_path, payload)
     # Pending new candidates are excluded explicitly; keep shipping the already
     # validated population. The builder promotes them after fresh logs arrive.

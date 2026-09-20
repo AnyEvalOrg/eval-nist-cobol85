@@ -1220,7 +1220,7 @@
 122200     MOVE NUM-9V9 TO COMPUTED-18V0.                               NC1214.2
 122300     MOVE 3 TO CORRECT-18V0.                                      NC1214.2
 122400 IND-WRITE-GF-34.                                                 NC1214.2
-122500     MOVE "IND-TEST-GF-34" TO PAR-NAME.                           NC1214.2
+122500     MOVE "IND-TEST-GF-?4" TO PAR-NAME.                           NC1214.2
 122600     PERFORM PRINT-DETAIL.                                        NC1214.2
 122700 IND-INIT-GF-35.                                                  NC1214.2
 122800     MOVE  "IV-21 4.3.8.2.3/4" TO ANSI-REFERENCE.                 NC1214.2

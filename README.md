@@ -10,28 +10,28 @@ binary metric is pass@1 (one generation, one epoch, no model judge).
 
 <!-- population:begin -->
 The indexed population contains 381 standalone `.CBL` programs.
-The shipped dataset contains **78** programs validated against GnuCOBOL logs.
-Exclusions are **58 original + 235 insufficient-site + 10 execution-evidence**;
+The shipped dataset contains **58** programs validated against GnuCOBOL logs.
+Exclusions are **58 original + 252 insufficient-site + 13 execution-evidence**;
 **0** candidates await fresh operator logs.
 
 | Module | Shipped eligible programs |
 |---|---:|
-| NC | 37 |
-| SM | 1 |
-| IC | 9 |
+| NC | 33 |
+| SM | 0 |
+| IC | 6 |
 | SQ | 0 |
 | RL | 0 |
 | IX | 3 |
-| ST | 3 |
-| SG | 3 |
+| ST | 2 |
+| SG | 1 |
 | OB | 0 |
-| IF | 22 |
+| IF | 13 |
 | RW | 0 |
 | DB | 0 |
-| **Total** | **78** |
+| **Total** | **58** |
 
-There are 88 mutation candidates with 293 planted sites;
-263 sites belong to the shipped population.
+There are 71 mutation candidates with 381 planted sites;
+333 sites belong to the shipped population.
 
 <!-- population:end -->
 
@@ -42,7 +42,10 @@ counts require the existing source audits (NC114M and SQ201M), followed by fresh
 
 Each candidate source in `reference-mutated/<MODULE>/<PROG>.CBL` uses
 HMAC-SHA256(NIST_MUTATION_SALT, program name) as its random seed. The script
-changes K = max(3, nearest integer to 10% of supported sites). It changes a numeric
+requires at least 6 supported sites and selects K = max(3, round(0.25 * sites)),
+capped at half the sites (rounded down). `round` uses Python’s nearest-integer,
+ties-to-even rule. Programs below the threshold are excluded with reason
+`fewer than 6 supported sites`. It changes a numeric
 digit or an alphanumeric character in both the IF expectation and its matching
 MOVE to CORRECT. Replacements preserve byte width, character class and fixed-format
 columns. Both the compared item and CORRECT field must have a resolved PICTURE
@@ -59,8 +62,8 @@ form accepts IF NOT = / NOT EQUAL TO followed by GO TO a local FAIL block,
 then unconditional PASS/GO TO WRITE. The FAIL block permits only paired evidence
 MOVEs, diagnostic MOVEs, and PERFORM FAIL. It cannot alter the tested data or
 perform user code. These sites must also pass the field-format checks.
-Programs with at least three legacy sites use that matcher; the extension applies
-below that threshold. All selections use the operator secret. Matching requires
+All supported forms contribute to the candidate pool. All selections use the
+operator secret. Matching requires
 a test/check paragraph (or the strictly checked new jump form), an unambiguous
 matching literal, a MOVE of the tested data
 item to COMPUTED, both PASS and FAIL, and PRINT-DETAIL. N/A/X and the extended
@@ -79,7 +82,7 @@ repository. The operator holds `NIST_MUTATION_SALT` in Secret Manager
 comes **only** from that environment variable; mutation and dataset builds refuse
 a missing or empty value. Neither the salt nor derived seeds are written anywhere.
 The private manifest records site locations and original/mutated literals, comment
-edits, source checksums and validation decisions, plus SHA-256 of the salt so rebuilds
+and diagnostic-string edits, source checksums and validation decisions, plus SHA-256 of the salt so rebuilds
 reject a different secret. `NIST_PRIVATE_DIR` is required and must resolve outside
 the repository. The manifest is excluded from wheels, source distributions, package
 data, prompts and candidate sandboxes; ignore rules also guard accidental copies.
@@ -97,6 +100,23 @@ The tree includes **44 `.SUB` continuation drivers**, absent from index.json.
 They inherit predecessor files: report.pl removes `XXXXX*` only before `.CBL`
 execution. They remain outside the standalone sample population; an inventory test
 asserts the count. Library subprograms are dependencies, not samples.
+
+For every supported site in every program, selected or not, string literals in
+the same paragraph and its diagnostic paragraphs (direct branch targets or
+fall-through failure blocks) have occurrences
+of the original expected literal replaced with same-width neutral placeholders.
+The IF and paired CORRECT operands are preserved except for selected mutations.
+These diagnostic edits are independent of the secret key and selection and are
+recorded only in the private manifest, like the uniform comment edits.
+
+## Known limitations
+
+The original NIST suite is public. Anyone who can diff the shipped sources
+against `newcob.val` can recover every altered site. The alteration defends
+against source-only fabrication by a model that has only the shipped program;
+it does not defend against a model that has memorized the original suite.
+Scoring therefore also relies on the sandbox having no access to the original
+suite or a COBOL compiler.
 
 ## Prompt and execution protocol
 

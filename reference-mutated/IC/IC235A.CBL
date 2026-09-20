@@ -481,13 +481,13 @@
 048300     ADD 1 TO REC-CT.                                             IC2354.2
 048400     PERFORM PRINT-DETAIL.                                        IC2354.2
 048500 CALL-TEST-06-05.                                                 IC2354.2
-048600     IF NUM-ITEM EQUAL TO 85                                      IC2354.2
+048600     IF NUM-ITEM EQUAL TO 25                                      IC2354.2
 048700         PERFORM PASS                                             IC2354.2
 048800         GO TO CALL-WRITE-06-05.                                  IC2354.2
 048900 CALL-FAIL-06-05.                                                 IC2354.2
 049000     PERFORM FAIL.                                                IC2354.2
 049100     MOVE NUM-ITEM TO COMPUTED-18V0.                              IC2354.2
-049200     MOVE 85 TO CORRECT-18V0.                                     IC2354.2
+049200     MOVE 25 TO CORRECT-18V0.                                     IC2354.2
 049300     MOVE "SIGNED NUMERIC PARAMETER" TO RE-MARK.                  IC2354.2
 049400 CALL-WRITE-06-05.                                                IC2354.2
 049500     ADD 1 TO REC-CT.                                             IC2354.2
@@ -518,13 +518,13 @@
 052000     ADD 1 TO REC-CT.                                             IC2354.2
 052100     PERFORM PRINT-DETAIL.                                        IC2354.2
 052200 CALL-TEST-06-08.                                                 IC2354.2
-052300     IF      SUBSCRIPTED-DATA (4) = "1A"                          IC2354.2
+052300     IF      SUBSCRIPTED-DATA (4) = "1H"                          IC2354.2
 052400             PERFORM PASS                                         IC2354.2
 052500             GO TO CALL-WRITE-06-08.                              IC2354.2
 052600 CALL-FAIL-06-08.                                                 IC2354.2
 052700     PERFORM FAIL.                                                IC2354.2
 052800     MOVE    SUBSCRIPTED-DATA (4) TO COMPUTED-A.                  IC2354.2
-052900     MOVE   "1A"        TO CORRECT-A.                             IC2354.2
+052900     MOVE   "1H"        TO CORRECT-A.                             IC2354.2
 053000     MOVE   "SUBSCRIPTED LINKAGE DATA ITEM" TO RE-MARK.           IC2354.2
 053100 CALL-WRITE-06-08.                                                IC2354.2
 053200     MOVE   "XVII-46 (59)" TO ANSI-REFERENCE.                     IC2354.2

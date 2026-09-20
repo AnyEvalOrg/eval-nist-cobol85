@@ -358,7 +358,7 @@
 035800     PERFORM  DE-LETE.                                            IF1104.2
 035900     GO TO    F-FACTORIAL-WRITE-01.                               IF1104.2
 036000 F-FACTORIAL-WRITE-01.                                            IF1104.2
-036100     MOVE "F-FACTORIAL-01" TO PAR-NAME.                           IF1104.2
+036100     MOVE "F-FACTORIAL-0?" TO PAR-NAME.                           IF1104.2
 036200     PERFORM  PRINT-DETAIL.                                       IF1104.2
 036300*                                                                         
 036400 F-FACTORIAL-02.                                                  IF1104.2

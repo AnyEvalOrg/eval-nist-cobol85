@@ -301,11 +301,11 @@
 030300     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC2094.2
 030400     MOVE "CALL-TEST-1" TO PAR-NAME.                              IC2094.2
 030500     MOVE "MAIN PROGRAM CALLS SUBPROGRAM1" TO RE-MARK.            IC2094.2
-030600     IF TEST1 = "Q" PERFORM PASS                                  IC2094.2
+030600     IF TEST1 = "Y" PERFORM PASS                                  IC2094.2
 030700        GO TO CALL-WRITE-1.                                       IC2094.2
 030800 CALL-FAIL-1.                                                     IC2094.2
 030900     MOVE TEST1 TO COMPUTED-A.                                    IC2094.2
-031000     MOVE "Q" TO CORRECT-A.                                       IC2094.2
+031000     MOVE "Y" TO CORRECT-A.                                       IC2094.2
 031100     PERFORM FAIL.                                                IC2094.2
 031200 CALL-WRITE-1.                                                    IC2094.2
 031300     PERFORM PRINT-DETAIL.                                        IC2094.2
@@ -325,11 +325,11 @@
 032700     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC2094.2
 032800     MOVE "CALL-TEST-3" TO PAR-NAME.                              IC2094.2
 032900     MOVE "SUBPROGRAM1 CALLS SUBPROGRAM3" TO RE-MARK.             IC2094.2
-033000     IF TEST3 = "W" PERFORM PASS                                  IC2094.2
+033000     IF TEST3 = "Y" PERFORM PASS                                  IC2094.2
 033100        GO TO CALL-WRITE-3.                                       IC2094.2
 033200 CALL-FAIL-3.                                                     IC2094.2
 033300     MOVE TEST3 TO COMPUTED-A.                                    IC2094.2
-033400     MOVE "W" TO CORRECT-A.                                       IC2094.2
+033400     MOVE "Y" TO CORRECT-A.                                       IC2094.2
 033500     PERFORM FAIL.                                                IC2094.2
 033600 CALL-WRITE-3.                                                    IC2094.2
 033700     PERFORM PRINT-DETAIL.                                        IC2094.2
@@ -337,11 +337,11 @@
 033900     MOVE "CANCEL" TO FEATURE.                                    IC2094.2
 034000     MOVE "CANCEL-TEST-1" TO PAR-NAME.                            IC2094.2
 034100     MOVE "SUBPROGRAM1 CANCELS SUBPROGRAM2" TO RE-MARK.           IC2094.2
-034200     IF TEST4 = "X" PERFORM PASS                                  IC2094.2
+034200     IF TEST4 = "Y" PERFORM PASS                                  IC2094.2
 034300        GO TO CANCEL-WRITE-1.                                     IC2094.2
 034400 CANCEL-FAIL-1.                                                   IC2094.2
 034500     MOVE TEST4 TO COMPUTED-A.                                    IC2094.2
-034600     MOVE "X" TO CORRECT-A.                                       IC2094.2
+034600     MOVE "Y" TO CORRECT-A.                                       IC2094.2
 034700     PERFORM FAIL.                                                IC2094.2
 034800 CANCEL-WRITE-1.                                                  IC2094.2
 034900     PERFORM PRINT-DETAIL.                                        IC2094.2

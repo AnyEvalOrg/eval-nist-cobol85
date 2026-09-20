@@ -441,7 +441,7 @@
 044100     PERFORM  DE-LETE.                                            IF1234.2
 044200     GO TO    F-MIN-WRITE-05.                                     IF1234.2
 044300 F-MIN-WRITE-05.                                                  IF1234.2
-044400     MOVE "F-MIN-05" TO PAR-NAME.                                 IF1234.2
+044400     MOVE "F-MIN-0?" TO PAR-NAME.                                 IF1234.2
 044500     PERFORM  PRINT-DETAIL.                                       IF1234.2
 044600*                                                                         
 044700 F-MIN-06.                                                        IF1234.2
@@ -540,7 +540,7 @@
 054000 F-MIN-11.                                                        IF1234.2
 054100     MOVE SPACES TO WS-ANUM.                                      IF1234.2
 054200 F-MIN-TEST-11.                                                   IF1234.2
-054300     MOVE FUNCTION MIN("R", I, "I", "a") TO WS-ANUM.              IF1234.2
+054300     MOVE FUNCTION MIN("R", I, "?", "a") TO WS-ANUM.              IF1234.2
 054400     IF WS-ANUM = "I" THEN                                        IF1234.2
 054500                    PERFORM PASS                                  IF1234.2
 054600     ELSE                                                         IF1234.2
@@ -552,13 +552,13 @@
 055200     PERFORM  DE-LETE.                                            IF1234.2
 055300     GO TO    F-MIN-WRITE-11.                                     IF1234.2
 055400 F-MIN-WRITE-11.                                                  IF1234.2
-055500     MOVE "F-MIN-11" TO PAR-NAME.                                 IF1234.2
+055500     MOVE "F-M?N-11" TO PAR-NAME.                                 IF1234.2
 055600     PERFORM  PRINT-DETAIL.                                       IF1234.2
 055700*                                                                         
 055800 F-MIN-12.                                                        IF1234.2
 055900     MOVE ZERO TO WS-NUM.                                         IF1234.2
 056000 F-MIN-TEST-12.                                                   IF1234.2
-056100     MOVE FUNCTION MIN("a", J, "J") TO WS-ANUM.                   IF1234.2
+056100     MOVE FUNCTION MIN("a", J, "?") TO WS-ANUM.                   IF1234.2
 056200     IF WS-ANUM = "J" THEN                                        IF1234.2
 056300                    PERFORM PASS                                  IF1234.2
 056400     ELSE                                                         IF1234.2
@@ -606,7 +606,7 @@
 060600     PERFORM  DE-LETE.                                            IF1234.2
 060700     GO TO    F-MIN-WRITE-14.                                     IF1234.2
 060800 F-MIN-WRITE-14.                                                  IF1234.2
-060900     MOVE "F-MIN-14" TO PAR-NAME.                                 IF1234.2
+060900     MOVE "F-MIN-1?" TO PAR-NAME.                                 IF1234.2
 061000     PERFORM  PRINT-DETAIL.                                       IF1234.2
 061100*                                                                         
 061200 F-MIN-15.                                                        IF1234.2

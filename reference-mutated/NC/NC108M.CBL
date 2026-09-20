@@ -524,12 +524,12 @@
 052600 FMT-INIT-GF-2.                                                   NC1084.2
 052700     MOVE   "V1-20 5.3" TO ANSI-REFERENCE.                        NC1084.2
 052800 FMT-TEST-GF-2.                                                   NC1084.2
-052900     IF       MORE-COMPLETE-FORMAT NOT EQUAL TO "7"               NC1084.2
+052900     IF       MORE-COMPLETE-FORMAT NOT EQUAL TO "5"               NC1084.2
 053000              PERFORM FAIL                                        NC1084.2
 053100         ELSE PERFORM PASS                                        NC1084.2
 053200              GO TO FMT-WRITE-GF-2.                               NC1084.2
 053300     MOVE     MORE-COMPLETE-FORMAT TO COMPUTED-A.                 NC1084.2
-053400     MOVE     "7" TO CORRECT-A.                                   NC1084.2
+053400     MOVE     "5" TO CORRECT-A.                                   NC1084.2
 053500     GO       TO FMT-WRITE-GF-2.                                  NC1084.2
 053600 FMT-DELETE-GF-2.                                                 NC1084.2
 053700     PERFORM  DE-LETE.                                            NC1084.2
@@ -573,7 +573,7 @@
 057500     MOVE   "VI-20 5.3" TO ANSI-REFERENCE.                        NC1084.2
 057600     MOVE     SEND-JUST TO RECEIVE-JUSTRIGHT.                     NC1084.2
 057700 ABR-TEST-GF-2.                                                   NC1084.2
-057800     IF       RECEIVE-JUSTRIGHT EQUAL TO "     SIGHT"             NC1084.2
+057800     IF       RECEIVE-JUSTRIGHT EQUAL TO "     RIGHT"             NC1084.2
 057900              PERFORM PASS GO TO ABR-WRITE-GF-2.                  NC1084.2
 058000     GO       TO ABR-FAIL-GF-2.                                   NC1084.2
 058100 ABR-DELETE-GF-2.                                                 NC1084.2
@@ -582,7 +582,7 @@
 058400 ABR-FAIL-GF-2.                                                   NC1084.2
 058500     PERFORM  FAIL.                                               NC1084.2
 058600     MOVE     RECEIVE-JUSTRIGHT TO COMPUTED-A.                    NC1084.2
-058700     MOVE     "     SIGHT" TO CORRECT-A.                          NC1084.2
+058700     MOVE     "     RIGHT" TO CORRECT-A.                          NC1084.2
 058800 ABR-WRITE-GF-2.                                                  NC1084.2
 058900     MOVE     "  JUST" TO FEATURE                                 NC1084.2
 059000     MOVE     "ABR-TEST-GF-2 " TO PAR-NAME.                       NC1084.2
@@ -591,7 +591,7 @@
 059300     MOVE   "VI-20 5.3" TO ANSI-REFERENCE.                        NC1084.2
 059400     MOVE     SEND-JUST TO RECEIVE-JUST.                          NC1084.2
 059500 ABR-TEST-GF-3.                                                   NC1084.2
-059600     IF       RECEIVE-JUST EQUAL TO "     DIGHT"                  NC1084.2
+059600     IF       RECEIVE-JUST EQUAL TO "     RIGHT"                  NC1084.2
 059700              PERFORM PASS GO TO ABR-WRITE-GF-3.                  NC1084.2
 059800     GO       TO ABR-FAIL-GF-3.                                   NC1084.2
 059900 ABR-DELETE-GF-3.                                                 NC1084.2
@@ -600,7 +600,7 @@
 060200 ABR-FAIL-GF-3.                                                   NC1084.2
 060300     PERFORM  FAIL.                                               NC1084.2
 060400     MOVE     RECEIVE-JUST TO COMPUTED-A.                         NC1084.2
-060500     MOVE     "     DIGHT" TO CORRECT-A.                          NC1084.2
+060500     MOVE     "     RIGHT" TO CORRECT-A.                          NC1084.2
 060600 ABR-WRITE-GF-3.                                                  NC1084.2
 060700     MOVE     "ABR-TEST-GF-3 " TO PAR-NAME.                       NC1084.2
 060800     PERFORM  PRINT-DETAIL.                                       NC1084.2

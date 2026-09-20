@@ -603,7 +603,7 @@
 060500 DIV-TEST-F1-6-0.                                                 NC1714.2
 060600     DIVIDE  A99-DS-02V00 INTO WRK-DS-18V00.                      NC1714.2
 060700 DIV-TEST-F1-6-1.                                                 NC1714.2
-060800     IF      WRK-DS-18V00 EQUAL TO 000000000000000001             NC1714.2
+060800     IF      WRK-DS-18V00 EQUAL TO 000000000008000001             NC1714.2
 060900             PERFORM PASS                                         NC1714.2
 061000             GO TO   DIV-WRITE-F1-6.                              NC1714.2
 061100     GO TO   DIV-FAIL-F1-6.                                       NC1714.2
@@ -611,7 +611,7 @@
 061300     PERFORM DE-LETE.                                             NC1714.2
 061400     GO TO   DIV-WRITE-F1-6.                                      NC1714.2
 061500 DIV-FAIL-F1-6.                                                   NC1714.2
-061600     MOVE  000000000000000001 TO CORRECT-18V0.                    NC1714.2
+061600     MOVE  000000000008000001 TO CORRECT-18V0.                    NC1714.2
 061700     MOVE  WRK-DS-18V00       TO COMPUTED-18V0.                   NC1714.2
 061800     PERFORM FAIL.                                                NC1714.2
 061900 DIV-WRITE-F1-6.                                                  NC1714.2
@@ -623,7 +623,7 @@
 062500 DIV-TEST-F1-7-0.                                                 NC1714.2
 062600     DIVIDE 4 INTO WRK-DS-12V00 ROUNDED.                          NC1714.2
 062700 DIV-TEST-F1-7-1.                                                 NC1714.2
-062800     IF WRK-DS-12V00 EQUAL TO 000009000001                        NC1714.2
+062800     IF WRK-DS-12V00 EQUAL TO 000000000001                        NC1714.2
 062900         PERFORM PASS                                             NC1714.2
 063000         GO TO DIV-WRITE-F1-7.                                    NC1714.2
 063100     GO TO DIV-FAIL-F1-7.                                         NC1714.2
@@ -632,7 +632,7 @@
 063400     GO TO DIV-WRITE-F1-7.                                        NC1714.2
 063500 DIV-FAIL-F1-7.                                                   NC1714.2
 063600     MOVE  WRK-DS-12V00       TO COMPUTED-18V0.                   NC1714.2
-063700     MOVE  000009000001       TO CORRECT-18V0.                    NC1714.2
+063700     MOVE  000000000001       TO CORRECT-18V0.                    NC1714.2
 063800     PERFORM FAIL.                                                NC1714.2
 063900 DIV-WRITE-F1-7.                                                  NC1714.2
 064000     MOVE "DIV-TEST-F1-7         " TO PAR-NAME.                   NC1714.2
@@ -658,7 +658,7 @@
 066000     MOVE   "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.          NC1714.2
 066100     PERFORM FAIL.                                                NC1714.2
 066200 DIV-WRITE-F1-8-1.                                                NC1714.2
-066300     MOVE "DIV-TEST-F1-8-1         " TO PAR-NAME.                 NC1714.2
+066300     MOVE "DIV-TEST-F?-8-?         " TO PAR-NAME.                 NC1714.2
 066400     PERFORM PRINT-DETAIL.                                        NC1714.2
 066500 DIV-TEST-F1-8-2.                                                 NC1714.2
 066600     IF WRK-XN-00001 EQUAL TO "1"                                 NC1714.2
@@ -672,7 +672,7 @@
 067400 DIV-DELETE-F1-8-2.                                               NC1714.2
 067500     PERFORM DE-LETE.                                             NC1714.2
 067600 DIV-WRITE-F1-8-2.                                                NC1714.2
-067700     MOVE "DIV-TEST-F1-8-2         " TO PAR-NAME.                 NC1714.2
+067700     MOVE "DIV-TEST-F?-8-2         " TO PAR-NAME.                 NC1714.2
 067800     PERFORM PRINT-DETAIL.                                        NC1714.2
 067900 DIV-INIT-F1-9.                                                   NC1714.2
 068000     MOVE   "V1-81 6.11.4 GR1"  TO ANSI-REFERENCE.                NC1714.2
@@ -731,7 +731,7 @@
 073300     MOVE   "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.          NC1714.2
 073400     PERFORM FAIL.                                                NC1714.2
 073500 DIV-WRITE-F1-10-1.                                               NC1714.2
-073600     MOVE "DIV-TEST-F1-10-1         " TO PAR-NAME.                NC1714.2
+073600     MOVE "DIV-TEST-F1-1?-1         " TO PAR-NAME.                NC1714.2
 073700     PERFORM PRINT-DETAIL.                                        NC1714.2
 073800 DIV-TEST-F1-10-2.                                                NC1714.2
 073900     IF WRK-XN-00001 EQUAL TO "9"                                 NC1714.2
@@ -746,7 +746,7 @@
 074800 DIV-DELETE-F1-10-2.                                              NC1714.2
 074900     PERFORM DE-LETE.                                             NC1714.2
 075000 DIV-WRITE-F1-10-2.                                               NC1714.2
-075100     MOVE "DIV-TEST-F1-10-2         " TO PAR-NAME.                NC1714.2
+075100     MOVE "DIV-TEST-F?-?0-2         " TO PAR-NAME.                NC1714.2
 075200     PERFORM PRINT-DETAIL.                                        NC1714.2
 075300 DIV-INIT-F1-11.                                                  NC1714.2
 075400     MOVE   "V1-81 6.11.4 GR1"  TO ANSI-REFERENCE.                NC1714.2
