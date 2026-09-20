@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1304.2
 000300     IF130A.                                                      IF1304.2
 000400                                                                  IF1304.2
-000500***********************************************************       IF1304.2
-000600*                                                         *       IF1304.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1304.2
-000800* It contains tests for the Intrinsic Function            *       IF1304.2
-000900* PRESENT-VALUE.                                          *       IF1304.2
-001000*                                                         *       IF1304.2
-001100***********************************************************       IF1304.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1304.2
 001300 CONFIGURATION SECTION.                                           IF1304.2
 001400 SOURCE-COMPUTER.                                                 IF1304.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1304.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1304.2
 002700 WORKING-STORAGE SECTION.                                         IF1304.2
-002800***********************************************************       IF1304.2
-002900* Variables specific to the Intrinsic Function Test IF130A*       IF1304.2
-003000***********************************************************       IF1304.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 5.             IF1304.2
 003200 01  B                   PIC S9(10)          VALUE 7.             IF1304.2
 003300 01  C                   PIC S9(10)          VALUE -4.            IF1304.2
@@ -50,9 +50,9 @@
 005000 01  WS-NUM              PIC S9(5)V9(6).                          IF1304.2
 005100 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1304.2
 005200 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1304.2
-005300*                                                                 IF1304.2
-005400**********************************************************        IF1304.2
-005500*                                                                 IF1304.2
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
 005600 01  TEST-RESULTS.                                                IF1304.2
 005700     02 FILLER                   PIC X      VALUE SPACE.          IF1304.2
 005800     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1304.2
@@ -346,16 +346,16 @@
 034600 BAIL-OUT-EX. EXIT.                                               IF1304.2
 034700 CCVS1-EXIT.                                                      IF1304.2
 034800     EXIT.                                                        IF1304.2
-034900********************************************************          IF1304.2
-035000*                                                      *          IF1304.2
-035100*    Intrinsic Function Tests   IF130A - PRESENT-VALUE *          IF1304.2
-035200*                                                      *          IF1304.2
-035300********************************************************          IF1304.2
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
+035200*                                                                         
+035300*                                                                         
 035400 SECT-IF130A SECTION.                                             IF1304.2
 035500 F-PRES-VAL-INFO.                                                 IF1304.2
 035600     MOVE     "See ref. A-63 2.34" TO ANSI-REFERENCE.             IF1304.2
 035700     MOVE     "PRESENT-VALUE Function" TO FEATURE.                IF1304.2
-035800*****************TEST (a) - SIMPLE TEST*****************          IF1304.2
+035800*                                                                         
 035900 F-PRES-VAL-01.                                                   IF1304.2
 036000     MOVE ZERO TO WS-NUM.                                         IF1304.2
 036100     MOVE 43.9991 TO MIN-RANGE.                                   IF1304.2
@@ -377,7 +377,7 @@
 037700 F-PRES-VAL-WRITE-01.                                             IF1304.2
 037800     MOVE "F-PRES-VAL-01" TO PAR-NAME.                            IF1304.2
 037900     PERFORM  PRINT-DETAIL.                                       IF1304.2
-038000*****************TEST (b) - SIMPLE TEST*****************          IF1304.2
+038000*                                                                         
 038100 F-PRES-VAL-02.                                                   IF1304.2
 038200     EVALUATE FUNCTION PRESENT-VALUE(1, 10, 20, 10, 5)            IF1304.2
 038300     WHEN  11.5623 THRU  11.5627                                  IF1304.2
@@ -391,7 +391,7 @@
 039100 F-PRES-VAL-WRITE-02.                                             IF1304.2
 039200     MOVE "F-PRES-VAL-02" TO PAR-NAME.                            IF1304.2
 039300     PERFORM  PRINT-DETAIL.                                       IF1304.2
-039400*****************TEST (c) - SIMPLE TEST*****************          IF1304.2
+039400*                                                                         
 039500 F-PRES-VAL-03.                                                   IF1304.2
 039600     MOVE  9.53314 TO MIN-RANGE.                                  IF1304.2
 039700     MOVE  9.53352 TO MAX-RANGE.                                  IF1304.2
@@ -410,7 +410,7 @@
 041000 F-PRES-VAL-WRITE-03.                                             IF1304.2
 041100     MOVE "F-PRES-VAL-03" TO PAR-NAME.                            IF1304.2
 041200     PERFORM  PRINT-DETAIL.                                       IF1304.2
-041300*****************TEST (d) - SIMPLE TEST*****************          IF1304.2
+041300*                                                                         
 041400 F-PRES-VAL-04.                                                   IF1304.2
 041500     MOVE ZERO TO WS-NUM.                                         IF1304.2
 041600     MOVE  22.6274 TO MIN-RANGE.                                  IF1304.2
@@ -433,7 +433,7 @@
 043300 F-PRES-VAL-WRITE-04.                                             IF1304.2
 043400     MOVE "F-PRES-VAL-04" TO PAR-NAME.                            IF1304.2
 043500     PERFORM  PRINT-DETAIL.                                       IF1304.2
-043600*****************TEST (e) - SIMPLE TEST*****************          IF1304.2
+043600*                                                                         
 043700 F-PRES-VAL-05.                                                   IF1304.2
 043800     MOVE ZERO TO WS-NUM.                                         IF1304.2
 043900     MOVE  20.1691 TO MIN-RANGE.                                  IF1304.2
@@ -455,7 +455,7 @@
 045500 F-PRES-VAL-WRITE-05.                                             IF1304.2
 045600     MOVE "F-PRES-VAL-05" TO PAR-NAME.                            IF1304.2
 045700     PERFORM  PRINT-DETAIL.                                       IF1304.2
-045800*****************TEST (f) - SIMPLE TEST*****************          IF1304.2
+045800*                                                                         
 045900 F-PRES-VAL-06.                                                   IF1304.2
 046000     MOVE ZERO TO WS-NUM.                                         IF1304.2
 046100     MOVE  33.3113 TO MIN-RANGE.                                  IF1304.2
@@ -478,7 +478,7 @@
 047800 F-PRES-VAL-WRITE-06.                                             IF1304.2
 047900     MOVE "F-PRES-VAL-06" TO PAR-NAME.                            IF1304.2
 048000     PERFORM  PRINT-DETAIL.                                       IF1304.2
-048100*****************TEST (g) - SIMPLE TEST*****************          IF1304.2
+048100*                                                                         
 048200 F-PRES-VAL-07.                                                   IF1304.2
 048300     MOVE ZERO TO WS-NUM.                                         IF1304.2
 048400     MOVE  5.76505 TO MIN-RANGE.                                  IF1304.2
@@ -501,7 +501,7 @@
 050100 F-PRES-VAL-WRITE-07.                                             IF1304.2
 050200     MOVE "F-PRES-VAL-07" TO PAR-NAME.                            IF1304.2
 050300     PERFORM  PRINT-DETAIL.                                       IF1304.2
-050400*****************TEST (h) - SIMPLE TEST*****************          IF1304.2
+050400*                                                                         
 050500 F-PRES-VAL-08.                                                   IF1304.2
 050600     MOVE ZERO TO WS-NUM.                                         IF1304.2
 050700     MOVE  0.361674 TO MIN-RANGE.                                 IF1304.2
@@ -523,7 +523,7 @@
 052300 F-PRES-VAL-WRITE-08.                                             IF1304.2
 052400     MOVE "F-PRES-VAL-08" TO PAR-NAME.                            IF1304.2
 052500     PERFORM  PRINT-DETAIL.                                       IF1304.2
-052600*****************TEST (i) - SIMPLE TEST*****************          IF1304.2
+052600*                                                                         
 052700 F-PRES-VAL-09.                                                   IF1304.2
 052800     MOVE ZERO TO WS-NUM.                                         IF1304.2
 052900     MOVE -0.001500 TO MIN-RANGE.                                 IF1304.2
@@ -546,7 +546,7 @@
 054600 F-PRES-VAL-WRITE-09.                                             IF1304.2
 054700     MOVE "F-PRES-VAL-09" TO PAR-NAME.                            IF1304.2
 054800     PERFORM  PRINT-DETAIL.                                       IF1304.2
-054900*****************TEST (k) - SIMPLE TEST*****************          IF1304.2
+054900*                                                                         
 055000 F-PRES-VAL-11.                                                   IF1304.2
 055100     MOVE ZERO TO WS-NUM.                                         IF1304.2
 055200     MOVE  57454.07 TO MIN-RANGE.                                 IF1304.2
@@ -569,7 +569,7 @@
 056900 F-PRES-VAL-WRITE-11.                                             IF1304.2
 057000     MOVE "F-PRES-VAL-11" TO PAR-NAME.                            IF1304.2
 057100     PERFORM  PRINT-DETAIL.                                       IF1304.2
-057200*****************TEST (l) - SIMPLE TEST*****************          IF1304.2
+057200*                                                                         
 057300 F-PRES-VAL-12.                                                   IF1304.2
 057400     MOVE ZERO TO WS-NUM.                                         IF1304.2
 057500     MOVE -1406.26 TO MIN-RANGE.                                  IF1304.2
@@ -591,7 +591,7 @@
 059100 F-PRES-VAL-WRITE-12.                                             IF1304.2
 059200     MOVE "F-PRES-VAL-12" TO PAR-NAME.                            IF1304.2
 059300     PERFORM  PRINT-DETAIL.                                       IF1304.2
-059400*****************TEST (m) - SIMPLE TEST*****************          IF1304.2
+059400*                                                                         
 059500 F-PRES-VAL-13.                                                   IF1304.2
 059600     MOVE ZERO TO WS-NUM.                                         IF1304.2
 059700     MOVE  6.76570 TO MIN-RANGE.                                  IF1304.2
@@ -615,7 +615,7 @@
 061500 F-PRES-VAL-WRITE-13.                                             IF1304.2
 061600     MOVE "F-PRES-VAL-13" TO PAR-NAME.                            IF1304.2
 061700     PERFORM  PRINT-DETAIL.                                       IF1304.2
-061800*****************TEST (n) - SIMPLE TEST*****************          IF1304.2
+061800*                                                                         
 061900 F-PRES-VAL-14.                                                   IF1304.2
 062000     MOVE ZERO TO WS-NUM.                                         IF1304.2
 062100     MOVE  12.3066 TO MIN-RANGE.                                  IF1304.2
@@ -638,7 +638,7 @@
 063800 F-PRES-VAL-WRITE-14.                                             IF1304.2
 063900     MOVE "F-PRES-VAL-14" TO PAR-NAME.                            IF1304.2
 064000     PERFORM  PRINT-DETAIL.                                       IF1304.2
-064100*****************TEST (o) - SIMPLE TEST*****************          IF1304.2
+064100*                                                                         
 064200 F-PRES-VAL-15.                                                   IF1304.2
 064300     MOVE ZERO TO WS-NUM.                                         IF1304.2
 064400     MOVE  37.9070 TO MIN-RANGE.                                  IF1304.2
@@ -661,7 +661,7 @@
 066100 F-PRES-VAL-WRITE-15.                                             IF1304.2
 066200     MOVE "F-PRES-VAL-15" TO PAR-NAME.                            IF1304.2
 066300     PERFORM  PRINT-DETAIL.                                       IF1304.2
-066400*****************TEST (a) - COMPLEX TEST****************          IF1304.2
+066400*                                                                         
 066500 F-PRES-VAL-16.                                                   IF1304.2
 066600     MOVE ZERO TO WS-NUM.                                         IF1304.2
 066700     MOVE  65.9974 TO MIN-RANGE.                                  IF1304.2
@@ -684,7 +684,7 @@
 068400 F-PRES-VAL-WRITE-16.                                             IF1304.2
 068500     MOVE "F-PRES-VAL-16" TO PAR-NAME.                            IF1304.2
 068600     PERFORM  PRINT-DETAIL.                                       IF1304.2
-068700*****************TEST (b) - COMPLEX TEST****************          IF1304.2
+068700*                                                                         
 068800 F-PRES-VAL-17.                                                   IF1304.2
 068900     MOVE ZERO TO WS-NUM.                                         IF1304.2
 069000     MOVE  44.4513 TO MIN-RANGE.                                  IF1304.2
@@ -707,7 +707,7 @@
 070700 F-PRES-VAL-WRITE-17.                                             IF1304.2
 070800     MOVE "F-PRES-VAL-17" TO PAR-NAME.                            IF1304.2
 070900     PERFORM  PRINT-DETAIL.                                       IF1304.2
-071000*****************TEST (c) - COMPLEX TEST****************          IF1304.2
+071000*                                                                         
 071100 F-PRES-VAL-18.                                                   IF1304.2
 071200     MOVE ZERO TO WS-NUM.                                         IF1304.2
 071300     MOVE  7.91943 TO MIN-RANGE.                                  IF1304.2
@@ -730,7 +730,7 @@
 073000 F-PRES-VAL-WRITE-18.                                             IF1304.2
 073100     MOVE "F-PRES-VAL-18" TO PAR-NAME.                            IF1304.2
 073200     PERFORM  PRINT-DETAIL.                                       IF1304.2
-073300*****************TEST (d) - COMPLEX TEST****************          IF1304.2
+073300*                                                                         
 073400 F-PRES-VAL-19.                                                   IF1304.2
 073500     MOVE ZERO TO WS-NUM.                                         IF1304.2
 073600     MOVE  22.4229 TO MIN-RANGE.                                  IF1304.2
@@ -752,7 +752,7 @@
 075200 F-PRES-VAL-WRITE-19.                                             IF1304.2
 075300     MOVE "F-PRES-VAL-19" TO PAR-NAME.                            IF1304.2
 075400     PERFORM  PRINT-DETAIL.                                       IF1304.2
-075500*****************TEST (e) - COMPLEX TEST****************          IF1304.2
+075500*                                                                         
 075600 F-PRES-VAL-20.                                                   IF1304.2
 075700     MOVE ZERO TO WS-NUM.                                         IF1304.2
 075800     MOVE -2.09570 TO MIN-RANGE.                                  IF1304.2
@@ -775,7 +775,7 @@
 077500 F-PRES-VAL-WRITE-20.                                             IF1304.2
 077600     MOVE "F-PRES-VAL-20" TO PAR-NAME.                            IF1304.2
 077700     PERFORM  PRINT-DETAIL.                                       IF1304.2
-077800*****************TEST (f) - COMPLEX TEST****************          IF1304.2
+077800*                                                                         
 077900 F-PRES-VAL-21.                                                   IF1304.2
 078000     MOVE ZERO TO WS-NUM.                                         IF1304.2
 078100     MOVE  1.49994 TO MIN-RANGE.                                  IF1304.2
@@ -798,7 +798,7 @@
 079800 F-PRES-VAL-WRITE-21.                                             IF1304.2
 079900     MOVE "F-PRES-VAL-21" TO PAR-NAME.                            IF1304.2
 080000     PERFORM  PRINT-DETAIL.                                       IF1304.2
-080100*****************SPECIAL PERFORM TEST**********************       IF1304.2
+080100*                                                                         
 080200 F-PRES-VAL-22.                                                   IF1304.2
 080300     PERFORM F-PRES-VAL-TEST-22                                   IF1304.2
 080400       UNTIL FUNCTION PRESENT-VALUE(ARG1, 2) < 0.5.               IF1304.2
@@ -812,7 +812,7 @@
 081200 F-PRES-VAL-WRITE-22.                                             IF1304.2
 081300     MOVE "F-PRES-VAL-22" TO PAR-NAME.                            IF1304.2
 081400     PERFORM  PRINT-DETAIL.                                       IF1304.2
-081500********************END OF TESTS***************                   IF1304.2
+081500*                                                                         
 081600 CCVS-EXIT SECTION.                                               IF1304.2
 081700 CCVS-999999.                                                     IF1304.2
 081800     GO TO CLOSE-FILES.                                           IF1304.2

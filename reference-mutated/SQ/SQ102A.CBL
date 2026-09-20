@@ -1,94 +1,94 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1024.2
 000200 PROGRAM-ID.                                                      SQ1024.2
 000300     SQ102A.                                                      SQ1024.2
-000400****************************************************************  SQ1024.2
-000500*                                                              *  SQ1024.2
-000600*    VALIDATION FOR:-                                          *  SQ1024.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1024.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ1024.2
-000900*                             REVISED 1986, AUGUST             *  SQ1024.2
-001000*                                                              *  SQ1024.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ1024.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1024.2
-001300*                                                              *  SQ1024.2
-001400****************************************************************  SQ1024.2
-001500*                                                              *  SQ1024.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1024.2
-001700*                                                              *  SQ1024.2
-001800*            X-01   SEQUENTIAL MAGNETIC TAPE                   *  SQ1024.2
-001900*            X-55   SYSTEM PRINTER                             *  SQ1024.2
-002000*            X-82   SOURCE-COMPUTER                            *  SQ1024.2
-002100*            X-83   OBJECT-COMPUTER.                           *  SQ1024.2
-002200*                                                              *  SQ1024.2
-002300****************************************************************  SQ1024.2
-002400*                                                              *  SQ1024.2
-002500*    SQ102A CREATES A MAGNETIC TAPE FILE CONTAINING 750 FIXED  *  SQ1024.2
-002600*    LENGTH RECORDS, EACH 120 CHARACTERS LONG.  THE FILE IS    *  SQ1024.2
-002700*    READ TWICE.  THE FIRST PASS CHECKS THAT ALL THE EXPECTED  *  SQ1024.2
-002800*    RECORDS ARE PRESENT.  THE SECOND PASS PERFORMS SIMILAR    *  SQ1024.2
-002900*    CHECKS, BUT USES ALL FOUR VARIANTS OF THE READ STATEMENT  *  SQ1024.2
-003000*    WITH THE END PHRASE THAT CAN BE PRODUCED BY INCLUDING OR  *  SQ1024.2
-003100*    OMITTING THE OPTIONAL WORDS "RECORD" AND "AT".            *  SQ1024.2
-003200*                                                              *  SQ1024.2
-003300*    THE PROGRAM OMITS THE OPTIONAL WORDS "ORGANIZATION IS"    *  SQ1024.2
-003400*    FROM THE "ORGANIZATION IS SEQUENTIAL" CLAUSE OF THE       *  SQ1024.2
-003500*    FILE-CONTROL ENTRY, AND PLACES THE ASSIGN CLAUSE IN A     *  SQ1024.2
-003600*    POSITION OTHER THAN FIRST IN THE SAME ENTRY.              *  SQ1024.2
-003700*                                                              *  SQ1024.2
-003800****************************************************************  SQ1024.2
-003900*                                                                 SQ1024.2
-004000*                                                                 SQ1024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 ENVIRONMENT DIVISION.                                            SQ1024.2
 004200 CONFIGURATION SECTION.                                           SQ1024.2
 004300 SOURCE-COMPUTER.                                                 SQ1024.2
 004400     GNU-Linux.                                                   SQ1024.2
 004500 OBJECT-COMPUTER.                                                 SQ1024.2
 004600     GNU-Linux.                                                   SQ1024.2
-004700*                                                                 SQ1024.2
+004700*                                                                         
 004800 INPUT-OUTPUT SECTION.                                            SQ1024.2
 004900 FILE-CONTROL.                                                    SQ1024.2
 005000     SELECT PRINT-FILE ASSIGN TO                                  SQ1024.2
 005100     "REPORT".                                                    SQ1024.2
-005200*                                                                 SQ1024.2
+005200*                                                                         
 005900     SELECT SQ-FS1                                                SQ1024.2
 006000            ACCESS MODE IS SEQUENTIAL                             SQ1024.2
 006100            SEQUENTIAL                                            SQ1024.2
 006200            ASSIGN TO                                             SQ1024.2
 006300     "XXXXX001"                                                   SQ1024.2
 006400            .                                                     SQ1024.2
-006500*                                                                 SQ1024.2
-006600*                                                                 SQ1024.2
+006500*                                                                         
+006600*                                                                         
 006700 DATA DIVISION.                                                   SQ1024.2
 006800 FILE SECTION.                                                    SQ1024.2
 006900 FD  PRINT-FILE                                                   SQ1024.2
 007300               .                                                  SQ1024.2
 007400 01  PRINT-REC    PICTURE X(120).                                 SQ1024.2
 007500 01  DUMMY-RECORD PICTURE X(120).                                 SQ1024.2
-009100*                                                                 SQ1024.2
+009100*                                                                         
 009200 FD  SQ-FS1                                                       SQ1024.2
 009400                .                                                 SQ1024.2
 009500 01  SQ-FS1R1-F-G-120 PIC X(120).                                 SQ1024.2
-009600*                                                                 SQ1024.2
+009600*                                                                         
 009700 WORKING-STORAGE SECTION.                                         SQ1024.2
-009800*                                                                 SQ1024.2
-009900***************************************************************   SQ1024.2
-010000*                                                             *   SQ1024.2
-010100*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1024.2
-010200*                                                             *   SQ1024.2
-010300***************************************************************   SQ1024.2
-010400*                                                                 SQ1024.2
+009800*                                                                         
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
 010500 01  RECORDS-IN-ERROR PIC S9(5) USAGE COMP VALUE ZERO.            SQ1024.2
 010600 01  ERROR-FLAG PIC 9 VALUE ZERO.                                 SQ1024.2
 010700 01  EOF-FLAG   PICTURE 9 VALUE ZERO.                             SQ1024.2
-010800*                                                                 SQ1024.2
-010900***************************************************************   SQ1024.2
-011000*                                                             *   SQ1024.2
-011100*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1024.2
-011200*                                                             *   SQ1024.2
-011300***************************************************************   SQ1024.2
-011400*                                                                 SQ1024.2
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
+011100*                                                                         
+011200*                                                                         
+011300*                                                                         
+011400*                                                                         
 011500 01  REC-SKEL-SUB   PIC 99.                                       SQ1024.2
-011600*                                                                 SQ1024.2
+011600*                                                                         
 011700 01  FILE-RECORD-INFORMATION-REC.                                 SQ1024.2
 011800     03 FILE-RECORD-INFO-SKELETON.                                SQ1024.2
 011900        05 FILLER                 PICTURE X(48)       VALUE       SQ1024.2
@@ -140,7 +140,7 @@
 016500           07 FILLER              PIC X(9).                       SQ1024.2
 016600           07 ALTERNATE-KEY2      PIC X(29).                      SQ1024.2
 016700           07 FILLER              PIC X(7).                       SQ1024.2
-016800*                                                                 SQ1024.2
+016800*                                                                         
 016900 01  TEST-RESULTS.                                                SQ1024.2
 017000     02 FILLER              PIC X      VALUE SPACE.               SQ1024.2
 017100     02  PAR-NAME.                                                SQ1024.2
@@ -219,7 +219,7 @@
 024400   02  FILLER            PIC X(28)  VALUE                         SQ1024.2
 024500            " COPY - NOT FOR DISTRIBUTION".                       SQ1024.2
 024600   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1024.2
-024700*                                                                 SQ1024.2
+024700*                                                                         
 024800 01  CCVS-H-2B.                                                   SQ1024.2
 024900   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1024.2
 025000   02  TEST-ID           PIC X(9).                                SQ1024.2
@@ -281,10 +281,10 @@
 030600-    "******************************".                            SQ1024.2
 030700 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1024.2
 030800     "SQ102A".                                                    SQ1024.2
-030900*                                                                 SQ1024.2
-031000*                                                                 SQ1024.2
+030900*                                                                         
+031000*                                                                         
 031100 PROCEDURE DIVISION.                                              SQ1024.2
-031200*                                                                 SQ1024.2
+031200*                                                                         
 031300 CCVS1 SECTION.                                                   SQ1024.2
 031400 OPEN-FILES.                                                      SQ1024.2
 032500     OPEN    OUTPUT PRINT-FILE.                                   SQ1024.2
@@ -295,39 +295,39 @@
 033000     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1024.2
 033100     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1024.2
 033200     GO TO CCVS1-EXIT.                                            SQ1024.2
-033300*                                                                 SQ1024.2
+033300*                                                                         
 033400 CCVS-INIT-FILE.                                                  SQ1024.2
 033500     ADD     1 TO REC-SKL-SUB.                                    SQ1024.2
 033600     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1024.2
 033700                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1024.2
-033800*                                                                 SQ1024.2
+033800*                                                                         
 033900 CLOSE-FILES.                                                     SQ1024.2
 034000     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1024.2
 034100     CLOSE   PRINT-FILE.                                          SQ1024.2
 035400 TERMINATE-CCVS.                                                  SQ1024.2
 035600     STOP    RUN.                                                 SQ1024.2
-035700*                                                                 SQ1024.2
+035700*                                                                         
 035800 INSPT.                                                           SQ1024.2
 035900     MOVE   "INSPT" TO P-OR-F.                                    SQ1024.2
 036000     ADD     1 TO INSPECT-COUNTER.                                SQ1024.2
 036100     PERFORM PRINT-DETAIL.                                        SQ1024.2
-036200*                                                                 SQ1024.2
+036200*                                                                         
 036300 PASS.                                                            SQ1024.2
 036400     MOVE   "PASS " TO P-OR-F.                                    SQ1024.2
 036500     ADD     1 TO PASS-COUNTER.                                   SQ1024.2
 036600     PERFORM PRINT-DETAIL.                                        SQ1024.2
-036700*                                                                 SQ1024.2
+036700*                                                                         
 036800 FAIL.                                                            SQ1024.2
 036900     MOVE   "FAIL*" TO P-OR-F.                                    SQ1024.2
 037000     ADD     1 TO ERROR-COUNTER.                                  SQ1024.2
 037100     PERFORM PRINT-DETAIL.                                        SQ1024.2
-037200*                                                                 SQ1024.2
+037200*                                                                         
 037300 DE-LETE.                                                         SQ1024.2
 037400     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1024.2
 037500     MOVE   "*****" TO P-OR-F.                                    SQ1024.2
 037600     ADD     1 TO DELETE-COUNTER.                                 SQ1024.2
 037700     PERFORM PRINT-DETAIL.                                        SQ1024.2
-037800*                                                                 SQ1024.2
+037800*                                                                         
 037900 PRINT-DETAIL.                                                    SQ1024.2
 038000     IF REC-CT NOT EQUAL TO ZERO                                  SQ1024.2
 038100         MOVE   "." TO PARDOT-X                                   SQ1024.2
@@ -344,7 +344,7 @@
 039200     MOVE    SPACE TO CORRECT-X.                                  SQ1024.2
 039300     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1024.2
 039400     MOVE    SPACE TO RE-MARK.                                    SQ1024.2
-039500*                                                                 SQ1024.2
+039500*                                                                         
 039600 HEAD-ROUTINE.                                                    SQ1024.2
 039700     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1024.2
 039800     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1024.2
@@ -360,7 +360,7 @@
 040800 END-RTN-EXIT.                                                    SQ1024.2
 040900     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1024.2
 041000     PERFORM WRITE-LINE 2 TIMES.                                  SQ1024.2
-041100*                                                                 SQ1024.2
+041100*                                                                         
 041200 END-ROUTINE-1.                                                   SQ1024.2
 041300     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1024.2
 041400     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1024.2
@@ -393,7 +393,7 @@
 044100     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1024.2
 044200     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1024.2
 044300     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1024.2
-044400*                                                                 SQ1024.2
+044400*                                                                         
 044500 WRITE-LINE.                                                      SQ1024.2
 044600     ADD     1 TO RECORD-COUNT.                                   SQ1024.2
 044700     IF RECORD-COUNT GREATER 50                                   SQ1024.2
@@ -406,7 +406,7 @@
 045400         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1024.2
 045500         MOVE  ZERO TO RECORD-COUNT.                              SQ1024.2
 045600     PERFORM WRT-LN.                                              SQ1024.2
-045700*                                                                 SQ1024.2
+045700*                                                                         
 045800 WRT-LN.                                                          SQ1024.2
 045900     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1024.2
 046000     MOVE    SPACE TO DUMMY-RECORD.                               SQ1024.2
@@ -444,14 +444,14 @@
 049200     EXIT.                                                        SQ1024.2
 049300 CCVS1-EXIT.                                                      SQ1024.2
 049400     EXIT.                                                        SQ1024.2
-049500*                                                                 SQ1024.2
-049600****************************************************************  SQ1024.2
-049700*                                                              *  SQ1024.2
-049800*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1024.2
-049900*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1024.2
-050000*                                                              *  SQ1024.2
-050100****************************************************************  SQ1024.2
-050200*                                                                 SQ1024.2
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
+050200*                                                                         
 050300 SECT-SQ102-0001 SECTION.                                         SQ1024.2
 050400 SEQ-INIT-WR-01.                                                  SQ1024.2
 050500     MOVE    "SQ-FS1" TO XFILE-NAME (1).                          SQ1024.2
@@ -466,23 +466,23 @@
 051400     MOVE     ZERO   TO XRECORD-NUMBER (1).                       SQ1024.2
 051500     MOVE    "CREATE 750 RECORD FILE" TO FEATURE.                 SQ1024.2
 051600     MOVE    "SEQ-TEST-WR-01" TO PAR-NAME.                        SQ1024.2
-051700*                                                                 SQ1024.2
+051700*                                                                         
 051800 SEQ-TEST-WR-01.                                                  SQ1024.2
 051900     OPEN OUTPUT SQ-FS1.                                          SQ1024.2
-052000*                                                                 SQ1024.2
+052000*                                                                         
 052100 SEQ-TEST-WR-01-LOOP.                                             SQ1024.2
 052200     ADD     1 TO XRECORD-NUMBER (1).                             SQ1024.2
 052300     MOVE    FILE-RECORD-INFO-P1-120 (1)  TO SQ-FS1R1-F-G-120.    SQ1024.2
 052400     WRITE   SQ-FS1R1-F-G-120.                                    SQ1024.2
 052500     IF XRECORD-NUMBER (1) LESS THAN 750                          SQ1024.2
 052600         GO TO   SEQ-TEST-WR-01-LOOP.                             SQ1024.2
-052700*                                                                 SQ1024.2
+052700*                                                                         
 052800     CLOSE   SQ-FS1.                                              SQ1024.2
-052900*                                                                 SQ1024.2
-053000*    A SEQUENTIAL TAPE FILE HAS BEEN CREATED.  IT CONTAINS 750    SQ1024.2
-053100*    RECORDS, EACH 120 CHARACTERS LONG.  THE FILE WILL NOW BE     SQ1024.2
-053200*    READ AND THE RECORDS VERIFIED.                               SQ1024.2
-053300*                                                                 SQ1024.2
+052900*                                                                         
+053000*                                                                         
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
 053400 SEQ-INIT-GF-02.                                                  SQ1024.2
 053500     MOVE   "SEQ-TEST-GF-02" TO PAR-NAME.                         SQ1024.2
 053600     MOVE   "VERIFY NEW FILE" TO FEATURE.                         SQ1024.2
@@ -492,7 +492,7 @@
 054000     GO TO   SEQ-DELETE-02-02.                                    SQ1024.2
 054100 SEQ-TEST-GF-02-01.                                               SQ1024.2
 054200     OPEN INPUT SQ-FS1.                                           SQ1024.2
-054300*                                                                 SQ1024.2
+054300*                                                                         
 054400 SEQ-INIT-GF-02-02.                                               SQ1024.2
 054500     MOVE    FILE-RECORD-INFO-P1-120 (1)                          SQ1024.2
 054600                TO FILE-RECORD-INFO-P1-120 (2).                   SQ1024.2
@@ -515,7 +515,7 @@
 056300                NOT EQUAL TO FILE-RECORD-INFO-P1-120 (2)          SQ1024.2
 056400         ADD     1 TO RECORDS-IN-ERROR.                           SQ1024.2
 056500     GO TO   SEQ-TEST-GF-02-02-LOOP.                              SQ1024.2
-056600*                                                                 SQ1024.2
+056600*                                                                         
 056700 SEQ-TEST-GF-02-02-1.                                             SQ1024.2
 056800     IF XRECORD-NUMBER (2) = 750                                  SQ1024.2
 056900         PERFORM PASS                                             SQ1024.2
@@ -525,7 +525,7 @@
 057300         MOVE    750 TO CORRECT-18V0                              SQ1024.2
 057400         MOVE   "VII-44" TO ANSI-REFERENCE                        SQ1024.2
 057500         PERFORM FAIL.                                            SQ1024.2
-057600*                                                                 SQ1024.2
+057600*                                                                         
 057700     ADD     1 TO REC-CT.                                         SQ1024.2
 057800     IF RECORDS-IN-ERROR EQUAL TO ZERO                            SQ1024.2
 057900         PERFORM PASS                                             SQ1024.2
@@ -535,7 +535,7 @@
 058300         MOVE    RECORDS-IN-ERROR TO COMPUTED-18V0                SQ1024.2
 058400         MOVE   "VII-44; 4.4.2" TO ANSI-REFERENCE                 SQ1024.2
 058500         PERFORM FAIL.                                            SQ1024.2
-058600*                                                                 SQ1024.2
+058600*                                                                         
 058700 SEQ-INIT-GF-02-05.                                               SQ1024.2
 058800     GO TO   SEQ-TEST-GF-02-05.                                   SQ1024.2
 058900 SEQ-DELETE-GF-02-05.                                             SQ1024.2
@@ -543,8 +543,8 @@
 059100 SEQ-TEST-GF-02-05.                                               SQ1024.2
 059200     CLOSE   SQ-FS1.                                              SQ1024.2
 059300 SEQ-TEST-GF-02-END.                                              SQ1024.2
-059400*                                                                 SQ1024.2
-059500*                                                                 SQ1024.2
+059400*                                                                         
+059500*                                                                         
 059600 SEQ-INIT-GF-03.                                                  SQ1024.2
 059700     GO TO  SEQ-TEST-GF-03.                                       SQ1024.2
 059800 SEQ-DELETE-03.                                                   SQ1024.2
@@ -552,11 +552,11 @@
 060000 SEQ-TEST-GF-03.                                                  SQ1024.2
 060100     OPEN    INPUT SQ-FS1.                                        SQ1024.2
 060200 SEQ-TEST-03-END.                                                 SQ1024.2
-060300*                                                                 SQ1024.2
-060400*                                                                 SQ1024.2
-060500*    THIS SERIES OF TESTS CHECKS FOUR LEVEL 1 VARIANTS OF         SQ1024.2
-060600*    THE READ STATEMENT                                           SQ1024.2
-060700*                                                                 SQ1024.2
+060300*                                                                         
+060400*                                                                         
+060500*                                                                         
+060600*                                                                         
+060700*                                                                         
 060800 SEQ-INIT-GF-04.                                                  SQ1024.2
 060900     MOVE    ZERO TO XRECORD-NUMBER (2).                          SQ1024.2
 061000     MOVE    ZERO TO RECORDS-IN-ERROR.                            SQ1024.2
@@ -581,7 +581,7 @@
 062900         MOVE    1 TO ERROR-FLAG.                                 SQ1024.2
 063000     IF XRECORD-NUMBER (2) LESS THAN 200                          SQ1024.2
 063100         GO TO   SEQ-TEST-GF-04.                                  SQ1024.2
-063200*                                                                 SQ1024.2
+063200*                                                                         
 063300 SEQ-TEST-GF-04-01.                                               SQ1024.2
 063400     IF EOF-FLAG NOT EQUAL TO ZERO                                SQ1024.2
 063500         MOVE   "PREMATURE END OF FILE" TO RE-MARK                SQ1024.2
@@ -591,7 +591,7 @@
 063900         PERFORM FAIL                                             SQ1024.2
 064000     ELSE                                                         SQ1024.2
 064100         PERFORM PASS.                                            SQ1024.2
-064200*                                                                 SQ1024.2
+064200*                                                                         
 064300 SEQ-TEST-GF-04-02.                                               SQ1024.2
 064400     ADD     1 TO REC-CT.                                         SQ1024.2
 064500     IF ERROR-FLAG EQUAL TO ZERO                                  SQ1024.2
@@ -603,8 +603,8 @@
 065100         MOVE   "VII-44" TO ANSI-REFERENCE                        SQ1024.2
 065200         PERFORM FAIL.                                            SQ1024.2
 065300 SEQ-TEST-04-END.                                                 SQ1024.2
-065400*                                                                 SQ1024.2
-065500*                                                                 SQ1024.2
+065400*                                                                         
+065500*                                                                         
 065600 SEQ-INIT-GF-O5.                                                  SQ1024.2
 065700     MOVE    1 TO REC-CT.                                         SQ1024.2
 065800     IF EOF-FLAG EQUAL TO 1                                       SQ1024.2
@@ -630,7 +630,7 @@
 067800         MOVE    1 TO ERROR-FLAG.                                 SQ1024.2
 067900     IF XRECORD-NUMBER (2) LESS THAN 400                          SQ1024.2
 068000         GO TO   SEQ-TEST-GF-05.                                  SQ1024.2
-068100*                                                                 SQ1024.2
+068100*                                                                         
 068200 SEQ-TEST-GF-05-01.                                               SQ1024.2
 068300     IF EOF-FLAG NOT EQUAL TO ZERO                                SQ1024.2
 068400         MOVE   "PREMATURE END OF FILE" TO RE-MARK                SQ1024.2
@@ -640,7 +640,7 @@
 068800         PERFORM FAIL                                             SQ1024.2
 068900     ELSE                                                         SQ1024.2
 069000         PERFORM PASS.                                            SQ1024.2
-069100*                                                                 SQ1024.2
+069100*                                                                         
 069200 SEQ-TEST-GF-05-02.                                               SQ1024.2
 069300     ADD     1 TO REC-CT.                                         SQ1024.2
 069400     IF ERROR-FLAG EQUAL TO ZERO                                  SQ1024.2
@@ -652,8 +652,8 @@
 070000         MOVE   "VII-44" TO ANSI-REFERENCE                        SQ1024.2
 070100         PERFORM FAIL.                                            SQ1024.2
 070200 SEQ-TEST-05-END.                                                 SQ1024.2
-070300*                                                                 SQ1024.2
-070400*                                                                 SQ1024.2
+070300*                                                                         
+070400*                                                                         
 070500 SEQ-INIT-GF-O6.                                                  SQ1024.2
 070600     MOVE    1 TO REC-CT.                                         SQ1024.2
 070700     IF EOF-FLAG EQUAL TO 1                                       SQ1024.2
@@ -679,7 +679,7 @@
 072700         MOVE    1 TO ERROR-FLAG.                                 SQ1024.2
 072800     IF XRECORD-NUMBER (2) LESS THAN 600                          SQ1024.2
 072900         GO TO   SEQ-TEST-GF-06.                                  SQ1024.2
-073000*                                                                 SQ1024.2
+073000*                                                                         
 073100 SEQ-TEST-GF-06-01.                                               SQ1024.2
 073200     IF EOF-FLAG NOT EQUAL TO ZERO                                SQ1024.2
 073300         MOVE   "PREMATURE END OF FILE" TO RE-MARK                SQ1024.2
@@ -689,7 +689,7 @@
 073700         PERFORM FAIL                                             SQ1024.2
 073800     ELSE                                                         SQ1024.2
 073900         PERFORM PASS.                                            SQ1024.2
-074000*                                                                 SQ1024.2
+074000*                                                                         
 074100 SEQ-TEST-GF-06-02.                                               SQ1024.2
 074200     ADD     1 TO REC-CT.                                         SQ1024.2
 074300     IF ERROR-FLAG EQUAL TO ZERO                                  SQ1024.2
@@ -701,8 +701,8 @@
 074900         MOVE   "VII-44" TO ANSI-REFERENCE                        SQ1024.2
 075000         PERFORM FAIL.                                            SQ1024.2
 075100 SEQ-TEST-06-END.                                                 SQ1024.2
-075200*                                                                 SQ1024.2
-075300*                                                                 SQ1024.2
+075200*                                                                         
+075300*                                                                         
 075400 SEQ-INIT-GF-O7.                                                  SQ1024.2
 075500     MOVE    1 TO REC-CT.                                         SQ1024.2
 075600     IF EOF-FLAG EQUAL TO 1                                       SQ1024.2
@@ -728,7 +728,7 @@
 077600         MOVE    1 TO ERROR-FLAG.                                 SQ1024.2
 077700     IF XRECORD-NUMBER (2) LESS THAN 750                          SQ1024.2
 077800         GO TO   SEQ-TEST-GF-07.                                  SQ1024.2
-077900*                                                                 SQ1024.2
+077900*                                                                         
 078000 SEQ-TEST-GF-07-01.                                               SQ1024.2
 078100     IF EOF-FLAG NOT EQUAL TO ZERO                                SQ1024.2
 078200         MOVE   "PREMATURE END OF FILE" TO RE-MARK                SQ1024.2
@@ -738,7 +738,7 @@
 078600         PERFORM FAIL                                             SQ1024.2
 078700     ELSE                                                         SQ1024.2
 078800         PERFORM PASS.                                            SQ1024.2
-078900*                                                                 SQ1024.2
+078900*                                                                         
 079000 SEQ-TEST-GF-07-02.                                               SQ1024.2
 079100     ADD     1 TO REC-CT.                                         SQ1024.2
 079200     IF ERROR-FLAG EQUAL TO ZERO                                  SQ1024.2
@@ -750,8 +750,8 @@
 079800         MOVE   "VII-44" TO ANSI-REFERENCE                        SQ1024.2
 079900         PERFORM FAIL.                                            SQ1024.2
 080000 SEQ-TEST-07-END.                                                 SQ1024.2
-080100*                                                                 SQ1024.2
-080200*                                                                 SQ1024.2
+080100*                                                                         
+080200*                                                                         
 080300 SEQ-INIT-GF-O8.                                                  SQ1024.2
 080400     MOVE    1 TO REC-CT.                                         SQ1024.2
 080500     IF EOF-FLAG EQUAL TO 1                                       SQ1024.2
@@ -765,7 +765,7 @@
 081300 SEQ-TEST-GF-08.                                                  SQ1024.2
 081400     READ SQ-FS1 END                                              SQ1024.2
 081500         MOVE    1 TO EOF-FLAG.                                   SQ1024.2
-081600*                                                                 SQ1024.2
+081600*                                                                         
 081700 SEQ-TEST-GF-08-01.                                               SQ1024.2
 081800     IF EOF-FLAG NOT EQUAL TO 1                                   SQ1024.2
 081900         MOVE    EOF-FLAG TO COMPUTED-18V0                        SQ1024.2
@@ -775,8 +775,8 @@
 082300     ELSE                                                         SQ1024.2
 082400         PERFORM PASS.                                            SQ1024.2
 082500 SEQ-TEST-08-END.                                                 SQ1024.2
-082600*                                                                 SQ1024.2
-082700*                                                                 SQ1024.2
+082600*                                                                         
+082700*                                                                         
 082800 SEQ-INIT-GF-O9.                                                  SQ1024.2
 082900     GO TO  SEQ-TEST-GF-09.                                       SQ1024.2
 083000 SEQ-DELETE-09.                                                   SQ1024.2
@@ -784,8 +784,8 @@
 083200 SEQ-TEST-GF-09.                                                  SQ1024.2
 083300     CLOSE SQ-FS1.                                                SQ1024.2
 083400 SEQ-TEST-09-END.                                                 SQ1024.2
-083500*                                                                 SQ1024.2
-083600*                                                                 SQ1024.2
+083500*                                                                         
+083600*                                                                         
 083700 TERMINATE-ROUTINE.                                               SQ1024.2
 083800     EXIT.                                                        SQ1024.2
 083900 CCVS-EXIT SECTION.                                               SQ1024.2

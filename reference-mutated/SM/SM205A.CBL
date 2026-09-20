@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         SM2054.2
 000200 PROGRAM-ID.                                                      SM2054.2
 000300     SM205A.                                                      SM2054.2
-000400****************************************************************  SM2054.2
-000500*                                                              *  SM2054.2
-000600*    VALIDATION FOR:-                                          *  SM2054.2
-000700*                                                              *  SM2054.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2054.2
-000900*                                                              *  SM2054.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2054.2
-001100*                                                              *  SM2054.2
-001200****************************************************************  SM2054.2
-001300*                                                              *  SM2054.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2054.2
-001500*                                                              *  SM2054.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2054.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2054.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2054.2
-001900*                                                              *  SM2054.2
-002000****************************************************************  SM2054.2
-002100*                                                              *  SM2054.2
-002200*    PROGRAM SM205A TESTS THE USE OF THE "COPY" STATEMENT WITH *  SM2054.2
-002300*    ITS "REPLACING" PHRASE FOR A SORT DESCRIPTION AND RELATED *  SM2054.2
-002400*    ENTRIES.  (THIS PROGRAM ASSUMES THAT PROGRAM ST101        *  SM2054.2
-002500*    PERFORMS CORRECTLY).                                      *  SM2054.2
-002600*                                                              *  SM2054.2
-002700****************************************************************  SM2054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            SM2054.2
 002900 CONFIGURATION SECTION.                                           SM2054.2
 003000 SOURCE-COMPUTER.                                                 SM2054.2
@@ -49,33 +49,33 @@
 004900                                                                  SM2054.2
 005000                                                                  SM2054.2
 005100                                                                  SM2054.2
-005200*                                                                 SM2054.2
-005300*********************** COPY STATEMENT USED **********************SM2054.2
-005400*                                                                 SM2054.2
-005500*SD  SORTFILE-2E                                       COPY K5SDB SM2054.2
-005600*                   REPLACING J-RECORD BY S-RECORD.               SM2054.2
-005700*                                                                 SM2054.2
-005800******************** COPIED TEXT BEGINS BELOW ********************SM2054.2
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
 005900 SD  SORTFILE-2E                                       COPY K5SDB SM2054.2
 006000              REPLACING J-RECORD BY S-RECORD.                     SM2054.2
-006100*********************** END OF COPIED TEXT ***********************SM2054.2
+006100*                                                                         
 006200                                                                  SM2054.2
 006300                                                                  SM2054.2
 006400                                                                  SM2054.2
 006500                                                                  SM2054.2
 006600                                                                  SM2054.2
-006700*                                                                 SM2054.2
-006800*********************** COPY STATEMENT USED **********************SM2054.2
-006900*                                                                 SM2054.2
-007000*01  S-RECORD.                                         COPY K501B SM2054.2
-007100*             REPLACING KEY-A BY KEY-1                            SM2054.2
-007200*                       XYZ-KEYS BY RDF-KEYS.                     SM2054.2
-007300*                                                                 SM2054.2
-007400******************** COPIED TEXT BEGINS BELOW ********************SM2054.2
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
 007500 01  S-RECORD.                                         COPY K501B SM2054.2
 007600              REPLACING KEY-A BY KEY-1                            SM2054.2
 007700                        XYZ-KEYS BY RDF-KEYS.                     SM2054.2
-007800*********************** END OF COPIED TEXT ***********************SM2054.2
+007800*                                                                         
 007900 FD  SORTOUT-2E                                                   SM2054.2
 008000     BLOCK CONTAINS 10 RECORDS                                    SM2054.2
 008100     LABEL RECORDS ARE STANDARD                                   SM2054.2
@@ -281,7 +281,7 @@
 028800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2054.2
 028900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2054.2
 029000      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2054.2
-029100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2054.2
+029100*                                                                         
 029200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2054.2
 029300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2054.2
 029400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2054.2
@@ -361,8 +361,8 @@
 036800     GO TO    CLOSE-FILES.                                        SM2054.2
 036900 INSORT SECTION.                                                  SM2054.2
 037000 IN-1.                                                            SM2054.2
-037100*        NOTE TESTS ORDINARY COPYING OF ENTRIES WHICH ARE ALSO    SM2054.2
-037200*             COPIED WITH REPLACEMENT.                            SM2054.2
+037100*                                                                         
+037200*                                                                         
 037300 IN-2.                                                            SM2054.2
 037400     MOVE 900009000000000 TO RDF-KEYS.                            SM2054.2
 037500     RELEASE S-RECORD.                                            SM2054.2
@@ -372,7 +372,7 @@
 037900     RELEASE S-RECORD.                                            SM2054.2
 038000     MOVE 009000000900008 TO RDF-KEYS.                            SM2054.2
 038100     RELEASE S-RECORD.                                            SM2054.2
-038200*    NOTE HI-LOW CONTROL RECORDS DONE.                            SM2054.2
+038200*                                                                         
 038300     MOVE 300003000000000 TO WKEYS-RDF.                           SM2054.2
 038400 IN-3.                                                            SM2054.2
 038500     PERFORM IN-4 2 TIMES.                                        SM2054.2
@@ -425,7 +425,7 @@
 043200     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 043300 COPY-TEST-2.                                                     SM2054.2
 043400     PERFORM  RET-1.                                              SM2054.2
-043500     IF       RDF-KEYS EQUAL TO 009000600900008                   SM2054.2
+043500     IF       RDF-KEYS EQUAL TO 009000000900008                   SM2054.2
 043600              PERFORM PASS-1 GO TO COPY-WRITE-2.                  SM2054.2
 043700     GO       TO COPY-FAIL-1-2.                                   SM2054.2
 043800 COPY-DELETE-2.                                                   SM2054.2
@@ -433,7 +433,7 @@
 044000     GO       TO COPY-WRITE-2.                                    SM2054.2
 044100 COPY-FAIL-1-2.                                                   SM2054.2
 044200     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-044300     MOVE     009000600900008 TO CORRECT-18V0.                    SM2054.2
+044300     MOVE     009000000900008 TO CORRECT-18V0.                    SM2054.2
 044400     PERFORM  FAIL-1.                                             SM2054.2
 044500 COPY-WRITE-2.                                                    SM2054.2
 044600     MOVE     "COPY-TEST-2 " TO PAR-NAME.                         SM2054.2
@@ -466,12 +466,12 @@
 047300     MOVE     206001000200002 TO CORRECT-18V0.                    SM2054.2
 047400     PERFORM  FAIL-1.                                             SM2054.2
 047500 COPY-WRITE-4.                                                    SM2054.2
-047600*        NOTE COPYING OF A PROCEDURE WHICH REFERENCES COPIED DATA.SM2054.2
+047600*                                                                         
 047700     MOVE "COPY-TEST-4 " TO PAR-NAME.                             SM2054.2
 047800     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 047900 COPY-TEST-5.                                                     SM2054.2
 048000     PERFORM  RET-2 40 TIMES.                                     SM2054.2
-048100     IF       RDF-KEYS EQUAL TO 201001000400002                   SM2054.2
+048100     IF       RDF-KEYS EQUAL TO 201001000200002                   SM2054.2
 048200              PERFORM PASS-1 GO TO COPY-WRITE-5.                  SM2054.2
 048300     GO       TO COPY-FAIL-1-5.                                   SM2054.2
 048400 COPY-DELETE-5.                                                   SM2054.2
@@ -479,14 +479,14 @@
 048600     GO       TO COPY-WRITE-5.                                    SM2054.2
 048700 COPY-FAIL-1-5.                                                   SM2054.2
 048800     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-048900     MOVE     201001000400002 TO CORRECT-18V0.                    SM2054.2
+048900     MOVE     201001000200002 TO CORRECT-18V0.                    SM2054.2
 049000     PERFORM  FAIL-1.                                             SM2054.2
 049100 COPY-WRITE-5.                                                    SM2054.2
 049200     MOVE     "COPY-TEST-5 " TO PAR-NAME.                         SM2054.2
 049300     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 049400 COPY-TEST-6.                                                     SM2054.2
 049500     PERFORM  RET-2  7 TIMES.                                     SM2054.2
-049600     IF       RDF-KEYS EQUAL TO 211002000100001                   SM2054.2
+049600     IF       RDF-KEYS EQUAL TO 201002000100001                   SM2054.2
 049700              PERFORM PASS-1 GO TO COPY-WRITE-6.                  SM2054.2
 049800     GO       TO COPY-FAIL-1-6.                                   SM2054.2
 049900 COPY-DELETE-6.                                                   SM2054.2
@@ -494,7 +494,7 @@
 050100     GO       TO COPY-WRITE-6.                                    SM2054.2
 050200 COPY-FAIL-1-6.                                                   SM2054.2
 050300     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-050400     MOVE     211002000100001 TO CORRECT-18V0.                    SM2054.2
+050400     MOVE     201002000100001 TO CORRECT-18V0.                    SM2054.2
 050500     PERFORM  FAIL-1.                                             SM2054.2
 050600 COPY-WRITE-6.                                                    SM2054.2
 050700     MOVE     "COPY-TEST-6 " TO PAR-NAME.                         SM2054.2
@@ -533,7 +533,7 @@
 054000 COPY-TEST-9.                                                     SM2054.2
 054100     RETURN   SORTFILE-2E END                                     SM2054.2
 054200              PERFORM PASS-1 GO TO COPY-WRITE-9.                  SM2054.2
-054300*    NOTE     THE FOLLOWING STATEMENTS SHOULD NOT BE EXECUTED.    SM2054.2
+054300*                                                                         
 054400     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
 054500     MOVE     "END OF FILE NOT FOUND" TO RE-MARK.                 SM2054.2
 054600 COPY-DELETE-9.                                                   SM2054.2

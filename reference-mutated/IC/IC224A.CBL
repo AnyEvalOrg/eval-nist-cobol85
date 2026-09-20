@@ -1,42 +1,42 @@
 000100 IDENTIFICATION DIVISION.                                         IC2244.2
 000200 PROGRAM-ID.                                                      IC2244.2
 000300     IC224A.                                                      IC2244.2
-000400****************************************************************  IC2244.2
-000500*                                                              *  IC2244.2
-000600*    VALIDATION FOR:-                                          *  IC2244.2
-000700*                                                              *  IC2244.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2244.2
-000900*                                                              *  IC2244.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2244.2
-001100*                                                              *  IC2244.2
-001200****************************************************************  IC2244.2
-001300*                                                              *  IC2244.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2244.2
-001500*                                                              *  IC2244.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2244.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2244.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2244.2
-001900*                                                              *  IC2244.2
-002000****************************************************************  IC2244.2
-002100*                                                              *  IC2244.2
-002200*    PROGRAM IC224A AND IC224A-1 WILL TEST THE NEW LANGUAGE    *  IC2244.2
-002300*    ELEMENTS FOR THE LEVEL 2 INTER-PROGRAM COMMUNICATION      *  IC2244.2
-002400*    MODULE.                                                   *  IC2244.2
-002500*    THE NEW LANGUAGE ELEMENTS TO BE TESTED WILL BE:           *  IC2244.2
-002600*          "BY CONTENT"       PHRASE                           *  IC2244.2
-002700*    THE TWO PROGRAMS WILL BE COMPILED IN THE SAME FLOW        *  IC2244.2
-002800*    (TO TEST THE "END PROGRAM" STATEMENT) AS SHOWN BELOW:     *  IC2244.2
-002900*    IDENTIFICATION DIVISION.                                  *  IC2244.2
-003000*    PROGRAM-ID. IC224A.                                       *  IC2244.2
-003100*              .                                               *  IC2244.2
-003200*              .                                               *  IC2244.2
-003300*              .                                               *  IC2244.2
-003400*    END PROGRAM IC224A.                                       *  IC2244.2
-003500*    PROGRAM-ID. IC224A-1.                                     *  IC2244.2
-003600*              .                                               *  IC2244.2
-003700*              .                                               *  IC2244.2
-003800*              .                                               *  IC2244.2
-003900****************************************************************  IC2244.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
 004000 ENVIRONMENT DIVISION.                                            IC2244.2
 004100 CONFIGURATION SECTION.                                           IC2244.2
 004200 SOURCE-COMPUTER.                                                 IC2244.2
@@ -256,7 +256,7 @@
 025800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2244.2
 025900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2244.2
 026000      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2244.2
-026100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2244.2
+026100*                                                                         
 026200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2244.2
 026300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2244.2
 026400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2244.2
@@ -328,11 +328,11 @@
 033000     MOVE "CALL-TEST-01" TO PAR-NAME.                             IC2244.2
 033100     MOVE     "LEV 2 CALL STATEMENT" TO FEATURE.                  IC2244.2
 033200     MOVE 0 TO CALL-COUNT.                                        IC2244.2
-033300*        THIS TEST HAS CALL STATEMENTS WITH AN IDENTIFIER         IC2244.2
-033400*    CONTAINING THE NAME OF THE SUBPROGRAM TO BE CALLED.          IC2244.2
-033500*        CALL-TEST-01 CONTAINS THE BASIC LEVEL 2 CALL STATEMENT.  IC2244.2
-033600*    IF IT CANNOT BE COMPILED AND EXECUTED CORRECTLY, THERE IS    IC2244.2
-033700*    NO USE IN RUNNING THE LEVEL 2 IPC ROUTINES.                  IC2244.2
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
 033800 CALL-TEST-01-01.                                                 IC2244.2
 033900     MOVE ZERO TO DN3, DN4.                                       IC2244.2
 034000     MOVE  "CALL-TEST-01-01" TO PAR-NAME.                         IC2244.2
@@ -379,8 +379,8 @@
 038100 CALL-TEST-02.                                                    IC2244.2
 038200     MOVE "CALL-TEST-02" TO PAR-NAME.                             IC2244.2
 038300     MOVE "DATA-NAME USED TWICE" TO FEATURE.                      IC2244.2
-038400*        THIS TEST USES A DATA-NAME MORE THAN ONCE IN             IC2244.2
-038500*    A USING PHRASE OF A CALL STATEMENT.                          IC2244.2
+038400*                                                                         
+038500*                                                                         
 038600 CALL-INIT-02-01.                                                 IC2244.2
 038700     MOVE    1 TO DN1.                                            IC2244.2
 038800     MOVE    0 TO DN2, DN3, DN4.                                  IC2244.2
@@ -433,9 +433,9 @@
 043500     END-CALL.                                                    IC2244.2
 043600     PERFORM CHECK-TEST-01.                                       IC2244.2
 043700 CALL-TEST-03.                                                    IC2244.2
-043800*        THIS TEST USES THE ON OVERFLOW PHRASE IN THE CALL        IC2244.2
-043900*    STATEMENT.  THIS IS A SYNTACTICAL CHECK ONLY, THE ON         IC2244.2
-044000*    OVERFLOW CONDITION SHOULD NEVER OCCUR.                       IC2244.2
+043800*                                                                         
+043900*                                                                         
+044000*                                                                         
 044100     MOVE "ON OVERFLOW PHRASE" TO FEATURE.                        IC2244.2
 044200 CALL-INIT-03-01.                                                 IC2244.2
 044300     MOVE    20 TO DN1.                                           IC2244.2
@@ -514,16 +514,16 @@
 051600     PERFORM CHECK-TEST-01.                                       IC2244.2
 051700     GO TO   EXIT-IC224A.                                         IC2244.2
 051800 CALL-DELETE-03.                                                  IC2244.2
-051900*        IF THE ON OVERFLOW PHRASE IS NOT RECOGNIZED, DELETE ALL  IC2244.2
-052000*    OF THE ABOVE CALL-TEST-03 PARAGRAPHS, STARTING WITH          IC2244.2
-052100*    CALL-TEST-03-01.                                             IC2244.2
+051900*                                                                         
+052000*                                                                         
+052100*                                                                         
 052200     PERFORM DE-LETE.                                             IC2244.2
 052300     PERFORM PRINT-DETAIL.                                        IC2244.2
 052400 EXIT-IC224A.                                                     IC2244.2
 052500     GO TO   CCVS-EXIT.                                           IC2244.2
-052600*                                                                 IC2244.2
+052600*                                                                         
 052700 SECT-IC224A-CHECK-01.                                            IC2244.2
-052800*=====================                                            IC2244.2
+052800*                                                                         
 052900 CHECK-TEST-01.                                                   IC2244.2
 053000     MOVE    1 TO REC-CT.                                         IC2244.2
 053100     IF      DN1 = SAVE-DN1                                       IC2244.2
@@ -565,8 +565,8 @@
 056700             MOVE   "VALUE OF DN4 HAS CHANGED" TO RE-MARK         IC2244.2
 056800             PERFORM FAIL                                         IC2244.2
 056900             PERFORM PRINT-DETAIL.                                IC2244.2
-057000*                                                                 IC2244.2
-057100*                                                                 IC2244.2
+057000*                                                                         
+057100*                                                                         
 057200 CCVS-EXIT SECTION.                                               IC2244.2
 057300 CCVS-999999.                                                     IC2244.2
 057400     GO TO CLOSE-FILES.                                           IC2244.2
@@ -574,97 +574,97 @@
 057600 IDENTIFICATION DIVISION.                                         IC2244.2
 057700 PROGRAM-ID.                                                      IC2244.2
 057800     IC224A-1.                                                    IC2244.2
-057900****************************************************************  IC2244.2
-058000*                                                              *  IC2244.2
-058100*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2244.2
-058200*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2244.2
-058300*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2244.2
-058400*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2244.2
-058500*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2244.2
-058600*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2244.2
-058700*                                                              *  IC2244.2
-058800*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2244.2
-058900*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2244.2
-059000*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2244.2
-059100*                                                              *  IC2244.2
-059200*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2244.2
-059300*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2244.2
-059400*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2244.2
-059500*                                                              *  IC2244.2
-059600*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2244.2
-059700*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2244.2
-059800*                & INFORMATION TECHNOLOGY                      *  IC2244.2
-059900*          TWO SKYLINE PLACE                                   *  IC2244.2
-060000*          SUITE 1100                                          *  IC2244.2
-060100*          5203 LEESBURG PIKE                                  *  IC2244.2
-060200*          FALLS CHURCH                                        *  IC2244.2
-060300*          VA 22041                                            *  IC2244.2
-060400*          U.S.A.                                              *  IC2244.2
-060500*                                                              *  IC2244.2
-060600*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2244.2
-060700*                                                              *  IC2244.2
-060800*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2244.2
-060900*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2244.2
-061000*          21 RUE BARA                                         *  IC2244.2
-061100*          F-92132 ISSY                                        *  IC2244.2
-061200*          FRANCE                                              *  IC2244.2
-061300*                                                              *  IC2244.2
-061400*                                                              *  IC2244.2
-061500*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2244.2
-061600*               UND DATENVERARBEITUNG MBH)                     *  IC2244.2
-061700*          SCHLOSS BIRLINGHOVEN                                *  IC2244.2
-061800*          POSTFACH 12 40                                      *  IC2244.2
-061900*          D-5205 ST. AUGUSTIN 1                               *  IC2244.2
-062000*          GERMANY FR                                          *  IC2244.2
-062100*                                                              *  IC2244.2
-062200*                                                              *  IC2244.2
-062300*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2244.2
-062400*          OXFORD ROAD                                         *  IC2244.2
-062500*          MANCHESTER                                          *  IC2244.2
-062600*          M1 7ED                                              *  IC2244.2
-062700*          UNITED KINGDOM                                      *  IC2244.2
-062800*                                                              *  IC2244.2
-062900*                                                              *  IC2244.2
-063000*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2244.2
-063100*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2244.2
-063200*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2244.2
-063300*                                                              *  IC2244.2
-063400****************************************************************  IC2244.2
-063500*                                                              *  IC2244.2
-063600*    VALIDATION FOR:-                                          *  IC2244.2
-063700*                                                              *  IC2244.2
-063800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2244.2
-063900*                                                              *  IC2244.2
-064000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2244.2
-064100*                                                              *  IC2244.2
-064200****************************************************************  IC2244.2
-064300*                                                              *  IC2244.2
-064400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2244.2
-064500*                                                              *  IC2244.2
-064600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2244.2
-064700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2244.2
-064800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2244.2
-064900*                                                              *  IC2244.2
-065000****************************************************************  IC2244.2
-065100*                                                              *  IC2244.2
-065200*    PROGRAM IC224A AND IC224A-1 WILL TEST THE NEW LANGUAGE    *  IC2244.2
-065300*    ELEMENTS FOR THE LEVEL 2 INTER-PROGRAM COMMUNICATION      *  IC2244.2
-065400*    MODULE.                                                   *  IC2244.2
-065500*    THE NEW LANGUAGE ELEMENTS TO BE TESTED WILL BE:           *  IC2244.2
-065600*          "BY CONTENT"       PHRASE                           *  IC2244.2
-065700*    THE TWO PROGRAMS WILL BE COMPILED IN THE SAME FLOW        *  IC2244.2
-065800*    (TO TEST THE "END PROGRAM" STATEMENT) AS SHOWN BELOW:     *  IC2244.2
-065900*    IDENTIFICATION DIVISION.                                  *  IC2244.2
-066000*    PROGRAM-ID. IC224A.                                       *  IC2244.2
-066100*              .                                               *  IC2244.2
-066200*              .                                               *  IC2244.2
-066300*              .                                               *  IC2244.2
-066400*    END PROGRAM IC224A.                                       *  IC2244.2
-066500*    PROGRAM-ID. IC224A-1.                                     *  IC2244.2
-066600*              .                                               *  IC2244.2
-066700*              .                                               *  IC2244.2
-066800*              .                                               *  IC2244.2
-066900****************************************************************  IC2244.2
+057900*                                                                         
+058000*                                                                         
+058100*                                                                         
+058200*                                                                         
+058300*                                                                         
+058400*                                                                         
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
+059000*                                                                         
+059100*                                                                         
+059200*                                                                         
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
+060000*                                                                         
+060100*                                                                         
+060200*                                                                         
+060300*                                                                         
+060400*                                                                         
+060500*                                                                         
+060600*                                                                         
+060700*                                                                         
+060800*                                                                         
+060900*                                                                         
+061000*                                                                         
+061100*                                                                         
+061200*                                                                         
+061300*                                                                         
+061400*                                                                         
+061500*                                                                         
+061600*                                                                         
+061700*                                                                         
+061800*                                                                         
+061900*                                                                         
+062000*                                                                         
+062100*                                                                         
+062200*                                                                         
+062300*                                                                         
+062400*                                                                         
+062500*                                                                         
+062600*                                                                         
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
+064100*                                                                         
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
+064700*                                                                         
+064800*                                                                         
+064900*                                                                         
+065000*                                                                         
+065100*                                                                         
+065200*                                                                         
+065300*                                                                         
+065400*                                                                         
+065500*                                                                         
+065600*                                                                         
+065700*                                                                         
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
+066200*                                                                         
+066300*                                                                         
+066400*                                                                         
+066500*                                                                         
+066600*                                                                         
+066700*                                                                         
+066800*                                                                         
+066900*                                                                         
 067000 ENVIRONMENT DIVISION.                                            IC2244.2
 067100 CONFIGURATION SECTION.                                           IC2244.2
 067200 SOURCE-COMPUTER.                                                 IC2244.2

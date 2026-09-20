@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         RL2074.2
 000200 PROGRAM-ID.                                                      RL2074.2
 000300     RL207A.                                                      RL2074.2
-000400****************************************************************  RL2074.2
-000500*                                                              *  RL2074.2
-000600*    VALIDATION FOR:-                                          *  RL2074.2
-000700*                                                              *  RL2074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2074.2
-000900*                                                              *  RL2074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2074.2
-001100*                                                              *  RL2074.2
-001200****************************************************************  RL2074.2
-001300*GENERAL:    THE FUNCTION OF THIS PROGRAM IS TO PROCESS A RELATIVERL2074.2
-001400*            I-O FILE RANDOMLY (ACCESS MODE IS DYNAMIC). THE FILE RL2074.2
-001500*            USED AS INPUT IS THAT FILE CREATED BY RL206A.        RL2074.2
-001600*                                                                 RL2074.2
-001700*            FIRST THE FILE IS VERIFED AS TO THE EXISTANCE AND    RL2074.2
-001800*            ACCURACY OF THE 500  RECORDS CREATED IN THE FIRST    RL2074.2
-001900*            PROGRAM.  SECONDLY, RECORDS OF THE FILE ARE SEL-     RL2074.2
-002000*            ECTIVELY UPDATED; AND THIRDLY, THE ACCURACY OF EACH  RL2074.2
-002100*            RECORD IN THE FILE IS AGAIN VERIFIED.                RL2074.2
-002200*                                                                 RL2074.2
-002300*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL2074.2
-002400*            PROGRAM ARE:                                         RL2074.2
-002500*                                                                 RL2074.2
-002600*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL2074.2
-002700*                         RELATIVE  I-O DATA FILE                 RL2074.2
-002800*                 X-55   SYSTEM PRINTER                           RL2074.2
-002900*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL2074.2
-003000*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL2074.2
-003100*                 X-75   OBJECT OF VALUE OF CLAUSE                RL2074.2
-003200*                 X-82   SOURCE-COMPUTER                          RL2074.2
-003300*                 X-83   OBJECT-COMPUTER.                         RL2074.2
-003400*                                                                 RL2074.2
-003500****************************************************************  RL2074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            RL2074.2
 003700 CONFIGURATION SECTION.                                           RL2074.2
 003800 SOURCE-COMPUTER.                                                 RL2074.2
@@ -342,7 +342,7 @@
 034900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2074.2
 035000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2074.2
 035100      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2074.2
-035200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2074.2
+035200*                                                                         
 035300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2074.2
 035400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2074.2
 035500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2074.2
@@ -418,7 +418,7 @@
 042500     MOVE    ZERO TO   RL-FD1-KEY.                                RL2074.2
 042600     MOVE    ZERO TO   WRK-CS-09V00-002.                          RL2074.2
 042700     MOVE    ZERO  TO  WRK-CS-09V00-003.                          RL2074.2
-042800*                                                                 RL2074.2
+042800*                                                                         
 042900     MOVE    01 TO REC-CT.                                        RL2074.2
 043000     MOVE   "READ RANDOM"  TO FEATURE.                            RL2074.2
 043100 REL-TEST-003-R.                                                  RL2074.2
@@ -447,9 +447,9 @@
 045400              ELSE                                                RL2074.2
 045500              PERFORM PASS.                                       RL2074.2
 045600     PERFORM PRINT-DETAIL.                                        RL2074.2
-045700*                                                                 RL2074.2
-045800*01                                                               RL2074.2
-045900*                                                                 RL2074.2
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
 046000     ADD      1 TO REC-CT.                                        RL2074.2
 046100     IF       XRECORD-NUMBER (1) NOT EQUAL TO 500                 RL2074.2
 046200              MOVE "WRONG RECORD/NOT 500" TO CORRECT-A            RL2074.2
@@ -458,9 +458,9 @@
 046500              ELSE                                                RL2074.2
 046600              PERFORM PASS.                                       RL2074.2
 046700     PERFORM PRINT-DETAIL.                                        RL2074.2
-046800*                                                                 RL2074.2
-046900*02                                                               RL2074.2
-047000*                                                                 RL2074.2
+046800*                                                                         
+046900*                                                                         
+047000*                                                                         
 047100     ADD      1 TO REC-CT.                                        RL2074.2
 047200     IF      WRK-CS-09V00-003 NOT EQUAL TO 501                    RL2074.2
 047300              MOVE "INCORRECT RECORD COUNT" TO RE-MARK            RL2074.2
@@ -470,9 +470,9 @@
 047700              ELSE                                                RL2074.2
 047800              PERFORM PASS.                                       RL2074.2
 047900     PERFORM PRINT-DETAIL.                                        RL2074.2
-048000*                                                                 RL2074.2
-048100*03                                                               RL2074.2
-048200*                                                                 RL2074.2
+048000*                                                                         
+048100*                                                                         
+048200*                                                                         
 048300     ADD      1 TO REC-CT.                                        RL2074.2
 048400     IF       I-O-ERROR-RL-FD1 EQUAL TO "YES"                     RL2074.2
 048500              MOVE WRK-CS-09V00-002 TO COMPUTED-18V0              RL2074.2
@@ -481,9 +481,9 @@
 048800              ELSE                                                RL2074.2
 048900              PERFORM PASS.                                       RL2074.2
 049000     PERFORM PRINT-DETAIL.                                        RL2074.2
-049100*                                                                 RL2074.2
-049200*04                                                               RL2074.2
-049300*                                                                 RL2074.2
+049100*                                                                         
+049200*                                                                         
+049300*                                                                         
 049400     ADD      1 TO REC-CT.                                        RL2074.2
 049500     CLOSE    RL-FD1.                                             RL2074.2
 049600 REL-INIT-004-R .                                                 RL2074.2
@@ -494,7 +494,7 @@
 050100     MOVE     ZERO TO WRK-CS-09V00-003.                           RL2074.2
 050200      MOVE    ZERO TO WRK-CS-09V00-004.                           RL2074.2
 050300      MOVE    ZERO TO WRK-CS-09V00-005.                           RL2074.2
-050400*                                                                 RL2074.2
+050400*                                                                         
 050500     MOVE     01 TO REC-CT.                                       RL2074.2
 050600     MOVE     SPACE TO  FILE-RECORD-INFO-P1-120 (1).              RL2074.2
 050700     MOVE    "REWRITE"  TO FEATURE.                               RL2074.2
@@ -523,9 +523,9 @@
 053000              GO TO REL-TEST-004-R.                               RL2074.2
 053100     PERFORM   PASS.                                              RL2074.2
 053200     PERFORM   PRINT-DETAIL.                                      RL2074.2
-053300*                                                                 RL2074.2
-053400*01                                                               RL2074.2
-053500*                                                                 RL2074.2
+053300*                                                                         
+053400*                                                                         
+053500*                                                                         
 053600     ADD     1  TO REC-CT.                                        RL2074.2
 053700     GO TO    REL-TEST-004-3.                                     RL2074.2
 053800 REL-TEST-004-2.                                                  RL2074.2
@@ -540,9 +540,9 @@
 054700              ELSE                                                RL2074.2
 054800              PERFORM PASS.                                       RL2074.2
 054900     PERFORM PRINT-DETAIL.                                        RL2074.2
-055000*                                                                 RL2074.2
-055100*02                                                               RL2074.2
-055200*                                                                 RL2074.2
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
 055300     ADD      1 TO REC-CT.                                        RL2074.2
 055400     IF      WRK-CS-09V00-005 NOT EQUAL TO ZERO                   RL2074.2
 055500             MOVE "INVALID KEY ON REWRITE" TO COMPUTED-A          RL2074.2
@@ -551,9 +551,9 @@
 055800     ELSE                                                         RL2074.2
 055900             PERFORM PASS.                                        RL2074.2
 056000     PERFORM PRINT-DETAIL.                                        RL2074.2
-056100*                                                                 RL2074.2
-056200*03                                                               RL2074.2
-056300*                                                                 RL2074.2
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
 056400     ADD     1 TO REC-CT.                                         RL2074.2
 056500     CLOSE   RL-FD1.                                              RL2074.2
 056600 REL-INIT-005.                                                    RL2074.2
@@ -565,7 +565,7 @@
 057200     MOVE    ZERO TO WRK-CS-09V00-002.                            RL2074.2
 057300     MOVE     SPACE TO  FILE-RECORD-INFO-P1-120 (1).              RL2074.2
 057400     MOVE     01 TO REC-CT.                                       RL2074.2
-057500*                                                                 RL2074.2
+057500*                                                                         
 057600     MOVE    "READ RANDOM"  TO FEATURE.                           RL2074.2
 057700 REL-TEST-005-R.                                                  RL2074.2
 057800     SUBTRACT 1 FROM    WRK-CS-09V00-003.                         RL2074.2
@@ -593,7 +593,7 @@
 060000     PERFORM   PASS.                                              RL2074.2
 060100     PERFORM   PRINT-DETAIL.                                      RL2074.2
 060200     ADD      1  TO REC-CT.                                       RL2074.2
-060300*01                                                               RL2074.2
+060300*                                                                         
 060400     GO TO    REL-TEST-005-3.                                     RL2074.2
 060500 REL-TEST-005-3.                                                  RL2074.2
 060600     IF       WRK-CS-09V00-004 NOT EQUAL TO 400                   RL2074.2
@@ -604,10 +604,10 @@
 061100     ELSE                                                         RL2074.2
 061200             PERFORM PASS.                                        RL2074.2
 061300     PERFORM PRINT-DETAIL.                                        RL2074.2
-061400*                                                                 RL2074.2
-061500*                                                                 RL2074.2
-061600*02                                                               RL2074.2
-061700*                                                                 RL2074.2
+061400*                                                                         
+061500*                                                                         
+061600*                                                                         
+061700*                                                                         
 061800     ADD     1 TO REC-CT.                                         RL2074.2
 061900     IF      WRK-CS-09V00-005 NOT EQUAL TO 100                    RL2074.2
 062000             MOVE "UPDATED RECORDS" TO COMPUTED-A                 RL2074.2
@@ -617,9 +617,9 @@
 062400     ELSE                                                         RL2074.2
 062500             PERFORM PASS.                                        RL2074.2
 062600     PERFORM PRINT-DETAIL.                                        RL2074.2
-062700*                                                                 RL2074.2
-062800*03                                                               RL2074.2
-062900*                                                                 RL2074.2
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
 063000     ADD     1 TO REC-CT.                                         RL2074.2
 063100     IF      WRK-CS-09V00-002 GREATER 1                           RL2074.2
 063200             MOVE WRK-CS-09V00-002 TO COMPUTED-N                  RL2074.2
@@ -628,9 +628,9 @@
 063500     ELSE                                                         RL2074.2
 063600             PERFORM PASS.                                        RL2074.2
 063700     PERFORM PRINT-DETAIL.                                        RL2074.2
-063800*                                                                 RL2074.2
-063900*04                                                               RL2074.2
-064000*                                                                 RL2074.2
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
 064100     ADD     1 TO REC-CT.                                         RL2074.2
 064200     CLOSE   RL-FD1.                                              RL2074.2
 064300 REL-INIT-006.                                                    RL2074.2
@@ -678,7 +678,7 @@
 068500             MOVE    98 TO CORRECT-N                              RL2074.2
 068600             PERFORM FAIL                                         RL2074.2
 068700             PERFORM PRINT-DETAIL.                                RL2074.2
-068800*                                                                 RL2074.2
+068800*                                                                         
 068900 REL-INIT-007.                                                    RL2074.2
 069000     MOVE   "REL-TEST-007" TO PAR-NAME.                           RL2074.2
 069100     MOVE    11   TO WRK-CS-09V00-003.                            RL2074.2
@@ -724,7 +724,7 @@
 073100             MOVE    98 TO CORRECT-N                              RL2074.2
 073200             PERFORM FAIL                                         RL2074.2
 073300             PERFORM PRINT-DETAIL.                                RL2074.2
-073400*                                                                 RL2074.2
+073400*                                                                         
 073500 REL-INIT-008.                                                    RL2074.2
 073600     MOVE   "REL-TEST-008" TO PAR-NAME.                           RL2074.2
 073700     MOVE    21   TO WRK-CS-09V00-003.                            RL2074.2
@@ -770,7 +770,7 @@
 077700             MOVE    98 TO CORRECT-N                              RL2074.2
 077800             PERFORM FAIL                                         RL2074.2
 077900             PERFORM PRINT-DETAIL.                                RL2074.2
-078000*                                                                 RL2074.2
+078000*                                                                         
 078100 REL-INIT-009.                                                    RL2074.2
 078200     MOVE   "REL-TEST-009" TO PAR-NAME.                           RL2074.2
 078300     MOVE    31   TO WRK-CS-09V00-003.                            RL2074.2
@@ -833,7 +833,7 @@
 084000             MOVE    EXTRA-8-CHARS TO COMPUTED-X                  RL2074.2
 084100             PERFORM FAIL                                         RL2074.2
 084200             PERFORM PRINT-DETAIL.                                RL2074.2
-084300*                                                                 RL2074.2
+084300*                                                                         
 084400 REL-INIT-010.                                                    RL2074.2
 084500     MOVE   "REL-TEST-010" TO PAR-NAME.                           RL2074.2
 084600     MOVE    32   TO WRK-CS-09V00-003.                            RL2074.2
@@ -896,7 +896,7 @@
 090300             MOVE    EXTRA-12-CHARS TO COMPUTED-X                 RL2074.2
 090400             PERFORM FAIL                                         RL2074.2
 090500             PERFORM PRINT-DETAIL.                                RL2074.2
-090600*                                                                 RL2074.2
+090600*                                                                         
 090700 REL-INIT-011.                                                    RL2074.2
 090800     MOVE   "REL-TEST-011" TO PAR-NAME.                           RL2074.2
 090900     MOVE    33   TO WRK-CS-09V00-003.                            RL2074.2
@@ -916,26 +916,26 @@
 092300     MOVE    145 TO WRK-SIZE.                                     RL2074.2
 092400 REL-TEST-011-1.                                                  RL2074.2
 092500     MOVE   "REL-TEST-011-1" TO PAR-NAME.                         RL2074.2
-092600*    REWRITE RL-FD1R1-F-G-140 FROM NEW-145-CHAR-AREA              RL2074.2
-092700*            INVALID GO TO REL-TEST-011-1-A.                      RL2074.2
-092800*REL-TEST-011-1-A.                                                RL2074.2
-092900*    IF      WS-STATUS = "44"                                     RL2074.2
-093000*            PERFORM PASS                                         RL2074.2
-093100*            PERFORM PRINT-DETAIL                                 RL2074.2
-093200*    ELSE                                                         RL2074.2
-093300*            MOVE  "INCORRECT FILE STATUS HAS OCCURED"            RL2074.2
-093400*                TO RE-MARK                                       RL2074.2
-093500*            MOVE   "44"       TO CORRECT-X                       RL2074.2
-093600*            MOVE    WS-STATUS TO COMPUTED-X                      RL2074.2
-093700*            PERFORM FAIL                                         RL2074.2
-093800*            PERFORM PRINT-DETAIL.                                RL2074.2
-093900*    MOVE    SPACES   TO RL-FD1R1-F-G-140.                        RL2074.2
-094000*    READ    RL-FD1  INTO NEW-140-CHAR-AREA                       RL2074.2
-094100*            INVALID KEY                                          RL2074.2
-094200*                         MOVE "INVALID KEY ON 33RD RECORD READ"  RL2074.2
-094300*                            TO RE-MARK                           RL2074.2
-094400*                         PERFORM FAIL                            RL2074.2
-094500*                         PERFORM PRINT-DETAIL                    RL2074.2
+092600*                                                                         
+092700*                                                                         
+092800*                                                                         
+092900*                                                                         
+093000*                                                                         
+093100*                                                                         
+093200*                                                                         
+093300*                                                                         
+093400*                                                                         
+093500*                                                                         
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
 094600                          GO TO   CCVS-EXIT.                      RL2074.2
 094700 REL-TEST-011-2.                                                  RL2074.2
 094800     MOVE   "REL-TEST-011-2" TO PAR-NAME.                         RL2074.2
@@ -974,7 +974,7 @@
 098100             MOVE    WRK-SIZE TO COMPUTED-18V0                    RL2074.2
 098200             PERFORM FAIL                                         RL2074.2
 098300             PERFORM PRINT-DETAIL.                                RL2074.2
-098400*                                                                 RL2074.2
+098400*                                                                         
 098500 REL-INIT-012.                                                    RL2074.2
 098600     MOVE   "REL-TEST-012" TO PAR-NAME.                           RL2074.2
 098700     MOVE    34   TO WRK-CS-09V00-003.                            RL2074.2
@@ -995,25 +995,25 @@
 100200                                                                  RL2074.2
 100300     REWRITE RL-FD1R1-F-G-140 FROM NEW-115-CHAR-AREA              RL2074.2
 100400             INVALID GO TO REL-TEST-012-2.                        RL2074.2
-100500*REL-TEST-012-1-A.                                                RL2074.2
-100600*    IF      WS-STATUS = "44"                                     RL2074.2
-100700*            PERFORM PASS                                         RL2074.2
-100800*            PERFORM PRINT-DETAIL                                 RL2074.2
-100900*    ELSE                                                         RL2074.2
-101000*            MOVE  "INCORRECT FILE STATUS HAS OCCURED"            RL2074.2
-101100*                TO RE-MARK                                       RL2074.2
-101200*            MOVE   "44"       TO CORRECT-X                       RL2074.2
-101300*            MOVE    WS-STATUS TO COMPUTED-X                      RL2074.2
-101400*            PERFORM FAIL                                         RL2074.2
-101500*            PERFORM PRINT-DETAIL.                                RL2074.2
-101600*    MOVE    SPACES   TO RL-FD1R1-F-G-140.                        RL2074.2
-101700*    READ    RL-FD1  INTO NEW-140-CHAR-AREA                       RL2074.2
-101800*            INVALID KEY  MOVE "REL-INIT-012 READ2" TO PAR-NAME   RL2074.2
-101900*                         MOVE "INVALID KEY ON 34TH RECORD READ"  RL2074.2
-102000*                            TO RE-MARK                           RL2074.2
-102100*                         PERFORM FAIL                            RL2074.2
-102200*                         PERFORM PRINT-DETAIL                    RL2074.2
-102300*                         GO TO   REL-INIT-012.                   RL2074.2
+100500*                                                                         
+100600*                                                                         
+100700*                                                                         
+100800*                                                                         
+100900*                                                                         
+101000*                                                                         
+101100*                                                                         
+101200*                                                                         
+101300*                                                                         
+101400*                                                                         
+101500*                                                                         
+101600*                                                                         
+101700*                                                                         
+101800*                                                                         
+101900*                                                                         
+102000*                                                                         
+102100*                                                                         
+102200*                                                                         
+102300*                                                                         
 102400 REL-TEST-012-2.                                                  RL2074.2
 102500     MOVE   "REL-TEST-012-2" TO PAR-NAME.                         RL2074.2
 102600     MOVE    NEW-140-120      TO FILE-RECORD-INFO-P1-120 (1).     RL2074.2
@@ -1051,7 +1051,7 @@
 105800             MOVE    WRK-SIZE TO COMPUTED-18V0                    RL2074.2
 105900             PERFORM FAIL                                         RL2074.2
 106000             PERFORM PRINT-DETAIL.                                RL2074.2
-106100*                                                                 RL2074.2
+106100*                                                                         
 106200 CCVS-EXIT SECTION.                                               RL2074.2
 106300 CCVS-999999.                                                     RL2074.2
 106400     GO TO CLOSE-FILES.                                           RL2074.2

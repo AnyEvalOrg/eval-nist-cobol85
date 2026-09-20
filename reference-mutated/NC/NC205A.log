@@ -15,27 +15,15 @@ TEST RESULT OF NC205A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
  CONTINUATION ---                                                                                                       
    NUMERIC INTEGER    PASS  CON-TEST-GF-1                                                                               
-   NUM NON-INTEGER    FAIL* CON-TEST-GF-2                                                                               
-                                                                                                                        
-                                     COMPUTED= -000000999.777000000                                                     
-                                     CORRECT = -000000992.777000000  IV-44 7.2.2                                        
-                                                                                                                        
+   NUM NON-INTEGER    PASS  CON-TEST-GF-2                                                                               
    COMP CONDITIONAL   PASS  CON-TEST-GF-3                                                                               
    RESERVED WORDS     PASS  CON-TEST-GF-4                                                                               
-   DATA-NAMES         FAIL* CON-TEST-GF-5                                                                               
-                                                                                                                        
-                                     COMPUTED= 00011000                                                                 
-                                     CORRECT = 10000                 IV-44 7.2.2                                        
-                                                                                                                        
+   DATA-NAMES         PASS  CON-TEST-GF-5                                                                               
    PARAGRAPH-NAMES    PASS  CON-TEST-GF-6                                                                               
    RECORD, ITEM DESCR PASS  CON-TEST-GF-7                                                                               
  SPACES BETWEEN WORDS PASS  CON-TEST-GF-10                                                                              
  SPACES BETWEEN WORDS PASS  CON-WRITE-GF-9                                                                              
- PICTURE STRING CONTI FAIL* CON-TEST-GF-10                                                                              
-                                                                                                                        
-                                     COMPUTED=  000654321.987654000                                                     
-                                     CORRECT =  000644321.987654000  IV-44 7.2.2                                        
-                                                                                                                        
+ PICTURE STRING CONTI PASS  CON-TEST-GF-10                                                                              
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -43,8 +31,8 @@ TEST RESULT OF NC205A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC205A                                                
                                                                                                                         
-                                                    007 OF 010  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    010 OF 010  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

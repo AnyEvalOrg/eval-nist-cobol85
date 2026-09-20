@@ -326,7 +326,7 @@
 032800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG2044.2
 032900      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG2044.2
 033000      ADD PASS-COUNTER TO ERROR-HOLD.                             SG2044.2
-033100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG2044.2
+033100*                                                                         
 033200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG2044.2
 033300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG2044.2
 033400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG2044.2
@@ -408,14 +408,14 @@
 041000     MOVE W-S3-KEYS TO R1.                                        SG2044.2
 041100     WRITE R1.                                                    SG2044.2
 041200 F1-NOTE.                                                         SG2044.2
-041300*    NOTE.                                                        SG2044.2
-041400*      KEY-1 WILL BE 567 IN ALL RECORDS.                          SG2044.2
-041500*      KEY-2 WILL BE >A> IN FIRST LETTER WITH 4 OCCURRENCES OF THESG2044.2
-041600*        ALPHABET IN THE SECOND LETTER.                           SG2044.2
-041700*      KEY-3 WILL BE >A> OR >B> IN FIRST LETTER WITH 2 OCCURRENCESSG2044.2
-041800*        OF THE ALPHABET FOR EACH IN THE SECOND LETTER.           SG2044.2
-041900*      KEY-4 WILL VARY FROM 7050 THRU 6951.                       SG2044.2
-042000*      THE LETTER "O" HAS BEEN OMITTED.                           SG2044.2
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
 042100 SRT-1 SECTION 69.                                                SG2044.2
 042200 FIRST-SORT.                                                      SG2044.2
 042300     SORT SORT1                                                   SG2044.2
@@ -423,8 +423,8 @@
 042500         ON ASCENDING KEY S1-2                                    SG2044.2
 042600         USING FILE1                                              SG2044.2
 042700         GIVING FILE2.                                            SG2044.2
-042800*    NOTE SORT STATEMENT WITH ALL OPTIONAL WORDS.                 SG2044.2
-042900*    NOTE OUTPUT WILL BE TESTED IN THE FOLLOWING INPUT PROCEDURE. SG2044.2
+042800*                                                                         
+042900*                                                                         
 043000 SRT-2 SECTION 48.                                                SG2044.2
 043100 SECOND-SORT.                                                     SG2044.2
 043200     SORT SORT2                                                   SG2044.2
@@ -433,7 +433,7 @@
 043500         ASCENDING S2-3                                           SG2044.2
 043600         INPUT PROCEDURE SRT-2-INPUT                              SG2044.2
 043700         GIVING FILE3.                                            SG2044.2
-043800*      NOTE SORT STATEMENT WITH ALL OPTIONAL WORDS OMITTED.       SG2044.2
+043800*                                                                         
 043900     GO TO SRT-3.                                                 SG2044.2
 044000 SRT-2-INPUT SECTION 74.                                          SG2044.2
 044100 OPEN-1.                                                          SG2044.2
@@ -578,11 +578,11 @@
 058000       INPUT PROCEDURE IS SRT3-INPUT                              SG2044.2
 058100       OUTPUT PROCEDURE SRT3-OUTPUT-1 THRU SRT3-OUTPUT-2.         SG2044.2
 058200 NOTE-SORT-3.                                                     SG2044.2
-058300*    NOTE SORT STATEMENT WITH INCLUSION-OMISSION OF OPTIONAL      SG2044.2
-058400*        WORDS AND THRU OPTION. THE OUTPUT OF SRT-2 IS TESTED     SG2044.2
-058500*        IN THE INPUT PROCEDURE OF THIS (THIRD) SORT.  THE OUTPUT SG2044.2
-058600*        OF THE THIRD SORT IS TESTED IN THE OUTPUT PROCEDURE      SG2044.2
-058700*        WITHOUT THE GENERATION OF AN OUTPUT FILE.                SG2044.2
+058300*                                                                         
+058400*                                                                         
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
 058800 END-FIRST-PROGRAM.                                               SG2044.2
 058900     GO TO CCVS-EXIT.                                             SG2044.2
 059000 SRT3-INPUT SECTION 49.                                           SG2044.2
@@ -624,7 +624,7 @@
 062600 SORT-TEST-7.                                                     SG2044.2
 062700     PERFORM  READ-RELEASE-FILE3 35 TIMES.                        SG2044.2
 062800     MOVE     R3-KEYS TO W-S3-KEYS.                               SG2044.2
-062900     IF       W-S2-KEYS EQUAL TO "56SAHBH"                        SG2044.2
+062900     IF       W-S2-KEYS EQUAL TO "567QHBH"                        SG2044.2
 063000              PERFORM PASS-2 GO TO SORT-WRITE-7.                  SG2044.2
 063100     GO       TO SORT-FAIL-7.                                     SG2044.2
 063200 SORT-DELETE-7.                                                   SG2044.2
@@ -632,7 +632,7 @@
 063400     GO       TO SORT-WRITE-7.                                    SG2044.2
 063500 SORT-FAIL-7.                                                     SG2044.2
 063600     MOVE     W-S2-KEYS TO COMPUTED-A.                            SG2044.2
-063700     MOVE     "56SAHBH" TO CORRECT-A.                             SG2044.2
+063700     MOVE     "567QHBH" TO CORRECT-A.                             SG2044.2
 063800     PERFORM  FAIL-2.                                             SG2044.2
 063900 SORT-WRITE-7.                                                    SG2044.2
 064000     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         SG2044.2
@@ -659,8 +659,8 @@
 066100 READ-RELEASE-FILE3.                                              SG2044.2
 066200     READ     FILE3 AT END GO TO TERMINAL-2.                      SG2044.2
 066300     RELEASE  S3.                                                 SG2044.2
-066400*    NOTE     THE FROM OPTION AND MOVE ARE REDUNDANT WITH SAME    SG2044.2
-066500*             RECORD AREA CLAUSE IN I-O CONTROL PARAGRAPH.        SG2044.2
+066400*                                                                         
+066500*                                                                         
 066600 TERMINAL-2.                                                      SG2044.2
 066700     PERFORM  FAIL-2.                                             SG2044.2
 066800     MOVE     "TERMINAL-2" TO PAR-NAME.                           SG2044.2
@@ -745,7 +745,7 @@
 074700     PERFORM  PRINT-DETAIL-3.                                     SG2044.2
 074800 SORT-TEST-10.                                                    SG2044.2
 074900     PERFORM  RETURN-SORT3.                                       SG2044.2
-075000     IF       S3-KEYS EQUAL TO "567AZBN7026"                      SG2044.2
+075000     IF       S3-KEYS EQUAL TO "567AXBZ7026"                      SG2044.2
 075100              PERFORM PASS-3 GO TO SORT-WRITE-10.                 SG2044.2
 075200     GO       TO SORT-FAIL-10.                                    SG2044.2
 075300 SORT-DELETE-10.                                                  SG2044.2
@@ -753,14 +753,14 @@
 075500     GO       TO SORT-WRITE-10.                                   SG2044.2
 075600 SORT-FAIL-10.                                                    SG2044.2
 075700     MOVE     S3-KEYS TO COMPUTED-A.                              SG2044.2
-075800     MOVE     "567AZBN7026" TO CORRECT-A.                         SG2044.2
+075800     MOVE     "567AXBZ7026" TO CORRECT-A.                         SG2044.2
 075900     PERFORM  FAIL-3.                                             SG2044.2
 076000 SORT-WRITE-10.                                                   SG2044.2
 076100     MOVE     "SORT-TEST-10" TO PAR-NAME.                         SG2044.2
 076200     PERFORM  PRINT-DETAIL-3.                                     SG2044.2
 076300 SORT-TEST-11.                                                    SG2044.2
 076400     PERFORM  RETURN-SORT3 35 TIMES.                              SG2044.2
-076500     IF       S3-KEYS EQUAL TO "5678QBQ7010"                      SG2044.2
+076500     IF       S3-KEYS EQUAL TO "567AQWQ7010"                      SG2044.2
 076600              PERFORM PASS-3 GO TO SORT-WRITE-11.                 SG2044.2
 076700     GO       TO SORT-FAIL-11.                                    SG2044.2
 076800 SORT-DELETE-11.                                                  SG2044.2
@@ -768,7 +768,7 @@
 077000     GO       TO SORT-WRITE-11.                                   SG2044.2
 077100 SORT-FAIL-11.                                                    SG2044.2
 077200     MOVE     S3-KEYS TO COMPUTED-A.                              SG2044.2
-077300     MOVE     "5678QBQ7010" TO CORRECT-A.                         SG2044.2
+077300     MOVE     "567AQWQ7010" TO CORRECT-A.                         SG2044.2
 077400     PERFORM  FAIL-3.                                             SG2044.2
 077500 SORT-WRITE-11.                                                   SG2044.2
 077600     MOVE     "SORT-TEST-11" TO PAR-NAME.                         SG2044.2
@@ -821,7 +821,7 @@
 082300 SORT-TEST-15.                                                    SG2044.2
 082400     RETURN   SORT3 RECORD AT END                                 SG2044.2
 082500              PERFORM PASS-3 GO TO SORT-WRITE-15.                 SG2044.2
-082600*    NOTE     THE FOLLOWING SENTENCES SHOULD NOT BE EXECUTED.     SG2044.2
+082600*                                                                         
 082700     PERFORM FAIL-3.                                              SG2044.2
 082800     MOVE     "END OF FILE NOT FOUND" TO RE-MARK.                 SG2044.2
 082900     GO       TO SORT-WRITE-15.                                   SG2044.2
@@ -835,7 +835,7 @@
 083700 SRT3-OUTPUT-2 SECTION 25.                                        SG2044.2
 083800 RETURN-SORT3.                                                    SG2044.2
 083900     RETURN   SORT3 RECORD AT END GO TO TERMINAL-3.               SG2044.2
-084000*    NOTE     RETURN VERB WITH ALL OPTIONS EXCEPT INTO.           SG2044.2
+084000*                                                                         
 084100 TERMINAL-3.                                                      SG2044.2
 084200     PERFORM  FAIL-3.                                             SG2044.2
 084300     MOVE     "TERMINAL-3" TO PAR-NAME.                           SG2044.2

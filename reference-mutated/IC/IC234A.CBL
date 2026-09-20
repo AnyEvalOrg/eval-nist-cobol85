@@ -1,55 +1,55 @@
 000100 IDENTIFICATION DIVISION.                                         IC2344.2
 000200 PROGRAM-ID.                                                      IC2344.2
 000300     IC234A.                                                      IC2344.2
-000400****************************************************************  IC2344.2
-000500*                                                              *  IC2344.2
-000600*    VALIDATION FOR:-                                          *  IC2344.2
-000700*                                                              *  IC2344.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2344.2
-000900*                                                              *  IC2344.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2344.2
-001100*                                                              *  IC2344.2
-001200****************************************************************  IC2344.2
-001300*                                                              *  IC2344.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2344.2
-001500*                                                              *  IC2344.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2344.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2344.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2344.2
-001900*        X-14  - TEST-FILE.                                    *  IC2344.2
-002000*                                                              *  IC2344.2
-002100****************************************************************  IC2344.2
-002200*                                                              *  IC2344.2
-002300*    PROGRAMS IC234A, IC234A-1, IC234A-2 AND IC234A-3 TEST     *  IC2344.2
-002400*    TEST THAT A "USE" PROCEDURE IN A CALLING PROGRAM IS       *  IC2344.2
-002500*    INVOKED BY A QUALIFYING CONDITION OCURRING IN A CONTAINED *  IC2344.2
-002600*    PROGRAM NESTED TO FOUR LEVELS.                            *  IC2344.2
-002700*                                                              *  IC2344.2
-002800*    ALL PROGRAMS WILL BE COMPILED IN ONE INVOCATION OF THE    *  IC2344.2
-002900*    COMPILER AS SHOWN BELOW:                                  *  IC2344.2
-003000*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-003100*    PROGRAM-ID. IC234A.                                       *  IC2344.2
-003200*              .                                               *  IC2344.2
-003300*              .                                               *  IC2344.2
-003400*              .                                               *  IC2344.2
-003500*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-003600*    PROGRAM-ID. IC234A-1.                                     *  IC2344.2
-003700*              .                                               *  IC2344.2
-003800*              .                                               *  IC2344.2
-003900*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-004000*    PROGRAM-ID. IC234A-2.                                     *  IC2344.2
-004100*              .                                               *  IC2344.2
-004200*              .                                               *  IC2344.2
-004300*              .                                               *  IC2344.2
-004400*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-004500*    PROGRAM-ID. IC234A-3.                                     *  IC2344.2
-004600*              .                                               *  IC2344.2
-004700*              .                                               *  IC2344.2
-004800*    END PROGRAM IC234A-3.                                     *  IC2344.2
-004900*    END PROGRAM IC234A-2.                                     *  IC2344.2
-005000*    END PROGRAM IC234A-1.                                     *  IC2344.2
-005100*    END PROGRAM IC234A.                                       *  IC2344.2
-005200****************************************************************  IC2344.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
 005300 ENVIRONMENT DIVISION.                                            IC2344.2
 005400 CONFIGURATION SECTION.                                           IC2344.2
 005500 SOURCE-COMPUTER.                                                 IC2344.2
@@ -264,7 +264,7 @@
 026600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2344.2
 026700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2344.2
 026800      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2344.2
-026900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2344.2
+026900*                                                                         
 027000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2344.2
 027100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2344.2
 027200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2344.2
@@ -357,120 +357,120 @@
 035900     PERFORM DE-LETE.                                             IC2344.2
 036000 USE-WRITE-1.                                                     IC2344.2
 036100     PERFORM PRINT-DETAIL.                                        IC2344.2
-036200*                                                                 IC2344.2
+036200*                                                                         
 036300 CCVS-EXIT SECTION.                                               IC2344.2
 036400 CCVS-999999.                                                     IC2344.2
 036500     GO TO CLOSE-FILES.                                           IC2344.2
-036600*                                                                 IC2344.2
+036600*                                                                         
 036700 IDENTIFICATION DIVISION.                                         IC2344.2
 036800 PROGRAM-ID.                                                      IC2344.2
 036900     IC234A-1.                                                    IC2344.2
-037000****************************************************************  IC2344.2
-037100*                                                              *  IC2344.2
-037200*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2344.2
-037300*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2344.2
-037400*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2344.2
-037500*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2344.2
-037600*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2344.2
-037700*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2344.2
-037800*                                                              *  IC2344.2
-037900*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2344.2
-038000*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2344.2
-038100*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2344.2
-038200*                                                              *  IC2344.2
-038300*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2344.2
-038400*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2344.2
-038500*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2344.2
-038600*                                                              *  IC2344.2
-038700*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2344.2
-038800*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2344.2
-038900*                & INFORMATION TECHNOLOGY                      *  IC2344.2
-039000*          TWO SKYLINE PLACE                                   *  IC2344.2
-039100*          SUITE 1100                                          *  IC2344.2
-039200*          5203 LEESBURG PIKE                                  *  IC2344.2
-039300*          FALLS CHURCH                                        *  IC2344.2
-039400*          VA 22041                                            *  IC2344.2
-039500*          U.S.A.                                              *  IC2344.2
-039600*                                                              *  IC2344.2
-039700*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2344.2
-039800*                                                              *  IC2344.2
-039900*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2344.2
-040000*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2344.2
-040100*          21 RUE BARA                                         *  IC2344.2
-040200*          F-92132 ISSY                                        *  IC2344.2
-040300*          FRANCE                                              *  IC2344.2
-040400*                                                              *  IC2344.2
-040500*                                                              *  IC2344.2
-040600*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2344.2
-040700*               UND DATENVERARBEITUNG MBH)                     *  IC2344.2
-040800*          SCHLOSS BIRLINGHOVEN                                *  IC2344.2
-040900*          POSTFACH 12 40                                      *  IC2344.2
-041000*          D-5205 ST. AUGUSTIN 1                               *  IC2344.2
-041100*          GERMANY FR                                          *  IC2344.2
-041200*                                                              *  IC2344.2
-041300*                                                              *  IC2344.2
-041400*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2344.2
-041500*          OXFORD ROAD                                         *  IC2344.2
-041600*          MANCHESTER                                          *  IC2344.2
-041700*          M1 7ED                                              *  IC2344.2
-041800*          UNITED KINGDOM                                      *  IC2344.2
-041900*                                                              *  IC2344.2
-042000*                                                              *  IC2344.2
-042100*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2344.2
-042200*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2344.2
-042300*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2344.2
-042400*                                                              *  IC2344.2
-042500****************************************************************  IC2344.2
-042600*                                                              *  IC2344.2
-042700*    VALIDATION FOR:-                                          *  IC2344.2
-042800*                                                              *  IC2344.2
-042900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2344.2
-043000*                                                              *  IC2344.2
-043100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2344.2
-043200*                                                              *  IC2344.2
-043300****************************************************************  IC2344.2
-043400*                                                              *  IC2344.2
-043500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2344.2
-043600*                                                              *  IC2344.2
-043700*        X-55  - SYSTEM PRINTER NAME.                          *  IC2344.2
-043800*        X-82  - SOURCE COMPUTER NAME.                         *  IC2344.2
-043900*        X-83  - OBJECT COMPUTER NAME.                         *  IC2344.2
-044000*                                                              *  IC2344.2
-044100****************************************************************  IC2344.2
-044200*                                                              *  IC2344.2
-044300*    PROGRAMS IC234A, IC234A-1, IC234A-2 AND IC234A-3 TEST     *  IC2344.2
-044400*    TEST THAT A "USE" PROCEDURE IN A CALLING PROGRAM IS       *  IC2344.2
-044500*    INVOKED BY A QUALIFYING CONDITION OCURRING IN A CONTAINED *  IC2344.2
-044600*    PROGRAM NESTED TO FOUR LEVELS.                            *  IC2344.2
-044700*                                                              *  IC2344.2
-044800*    ALL PROGRAMS WILL BE COMPILED IN ONE INVOCATION OF THE    *  IC2344.2
-044900*    COMPILER AS SHOWN BELOW:                                  *  IC2344.2
-045000*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-045100*    PROGRAM-ID. IC234A.                                       *  IC2344.2
-045200*              .                                               *  IC2344.2
-045300*              .                                               *  IC2344.2
-045400*              .                                               *  IC2344.2
-045500*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-045600*    PROGRAM-ID. IC234A-1.                                     *  IC2344.2
-045700*              .                                               *  IC2344.2
-045800*              .                                               *  IC2344.2
-045900*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-046000*    PROGRAM-ID. IC234A-2.                                     *  IC2344.2
-046100*              .                                               *  IC2344.2
-046200*              .                                               *  IC2344.2
-046300*              .                                               *  IC2344.2
-046400*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-046500*    PROGRAM-ID. IC234A-3.                                     *  IC2344.2
-046600*              .                                               *  IC2344.2
-046700*              .                                               *  IC2344.2
-046800*    END PROGRAM IC234A-3.                                     *  IC2344.2
-046900*    END PROGRAM IC234A-2.                                     *  IC2344.2
-047000*    END PROGRAM IC234A-1.                                     *  IC2344.2
-047100*    END PROGRAM IC234A.                                       *  IC2344.2
-047200****************************************************************  IC2344.2
-047300*ENVIRONMENT DIVISION.                                            IC2344.2
-047400*INPUT-OUTPUT SECTION.                                            IC2344.2
-047500*FILE-CONTROL.                                                    IC2344.2
+037000*                                                                         
+037100*                                                                         
+037200*                                                                         
+037300*                                                                         
+037400*                                                                         
+037500*                                                                         
+037600*                                                                         
+037700*                                                                         
+037800*                                                                         
+037900*                                                                         
+038000*                                                                         
+038100*                                                                         
+038200*                                                                         
+038300*                                                                         
+038400*                                                                         
+038500*                                                                         
+038600*                                                                         
+038700*                                                                         
+038800*                                                                         
+038900*                                                                         
+039000*                                                                         
+039100*                                                                         
+039200*                                                                         
+039300*                                                                         
+039400*                                                                         
+039500*                                                                         
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
+039900*                                                                         
+040000*                                                                         
+040100*                                                                         
+040200*                                                                         
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
+041000*                                                                         
+041100*                                                                         
+041200*                                                                         
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
+042600*                                                                         
+042700*                                                                         
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
+043900*                                                                         
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
+044600*                                                                         
+044700*                                                                         
+044800*                                                                         
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
+046600*                                                                         
+046700*                                                                         
+046800*                                                                         
+046900*                                                                         
+047000*                                                                         
+047100*                                                                         
+047200*                                                                         
+047300*                                                                         
+047400*                                                                         
+047500*                                                                         
 047600 DATA DIVISION.                                                   IC2344.2
 047700 FILE SECTION.                                                    IC2344.2
 047800 WORKING-STORAGE SECTION.                                         IC2344.2
@@ -485,116 +485,116 @@
 048700 USE-INIT-1.                                                      IC2344.2
 048800     CALL   "IC234A-2".                                           IC2344.2
 048900     EXIT PROGRAM.                                                IC2344.2
-049000*                                                                 IC2344.2
+049000*                                                                         
 049100 IDENTIFICATION DIVISION.                                         IC2344.2
 049200 PROGRAM-ID.                                                      IC2344.2
 049300     IC234A-2.                                                    IC2344.2
-049400****************************************************************  IC2344.2
-049500*                                                              *  IC2344.2
-049600*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2344.2
-049700*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2344.2
-049800*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2344.2
-049900*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2344.2
-050000*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2344.2
-050100*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2344.2
-050200*                                                              *  IC2344.2
-050300*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2344.2
-050400*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2344.2
-050500*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2344.2
-050600*                                                              *  IC2344.2
-050700*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2344.2
-050800*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2344.2
-050900*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2344.2
-051000*                                                              *  IC2344.2
-051100*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2344.2
-051200*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2344.2
-051300*                & INFORMATION TECHNOLOGY                      *  IC2344.2
-051400*          TWO SKYLINE PLACE                                   *  IC2344.2
-051500*          SUITE 1100                                          *  IC2344.2
-051600*          5203 LEESBURG PIKE                                  *  IC2344.2
-051700*          FALLS CHURCH                                        *  IC2344.2
-051800*          VA 22041                                            *  IC2344.2
-051900*          U.S.A.                                              *  IC2344.2
-052000*                                                              *  IC2344.2
-052100*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2344.2
-052200*                                                              *  IC2344.2
-052300*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2344.2
-052400*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2344.2
-052500*          21 RUE BARA                                         *  IC2344.2
-052600*          F-92132 ISSY                                        *  IC2344.2
-052700*          FRANCE                                              *  IC2344.2
-052800*                                                              *  IC2344.2
-052900*                                                              *  IC2344.2
-053000*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2344.2
-053100*               UND DATENVERARBEITUNG MBH)                     *  IC2344.2
-053200*          SCHLOSS BIRLINGHOVEN                                *  IC2344.2
-053300*          POSTFACH 12 40                                      *  IC2344.2
-053400*          D-5205 ST. AUGUSTIN 1                               *  IC2344.2
-053500*          GERMANY FR                                          *  IC2344.2
-053600*                                                              *  IC2344.2
-053700*                                                              *  IC2344.2
-053800*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2344.2
-053900*          OXFORD ROAD                                         *  IC2344.2
-054000*          MANCHESTER                                          *  IC2344.2
-054100*          M1 7ED                                              *  IC2344.2
-054200*          UNITED KINGDOM                                      *  IC2344.2
-054300*                                                              *  IC2344.2
-054400*                                                              *  IC2344.2
-054500*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2344.2
-054600*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2344.2
-054700*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2344.2
-054800*                                                              *  IC2344.2
-054900****************************************************************  IC2344.2
-055000*                                                              *  IC2344.2
-055100*    VALIDATION FOR:-                                          *  IC2344.2
-055200*                                                              *  IC2344.2
-055300*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2344.2
-055400*                                                              *  IC2344.2
-055500*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2344.2
-055600*                                                              *  IC2344.2
-055700****************************************************************  IC2344.2
-055800*                                                              *  IC2344.2
-055900*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2344.2
-056000*                                                              *  IC2344.2
-056100*        X-55  - SYSTEM PRINTER NAME.                          *  IC2344.2
-056200*        X-82  - SOURCE COMPUTER NAME.                         *  IC2344.2
-056300*        X-83  - OBJECT COMPUTER NAME.                         *  IC2344.2
-056400*                                                              *  IC2344.2
-056500****************************************************************  IC2344.2
-056600*                                                              *  IC2344.2
-056700*    PROGRAMS IC234A, IC234A-1, IC234A-2 AND IC234A-3 TEST     *  IC2344.2
-056800*    TEST THAT A "USE" PROCEDURE IN A CALLING PROGRAM IS       *  IC2344.2
-056900*    INVOKED BY A QUALIFYING CONDITION OCURRING IN A CONTAINED *  IC2344.2
-057000*    PROGRAM NESTED TO FOUR LEVELS.                            *  IC2344.2
-057100*                                                              *  IC2344.2
-057200*    ALL PROGRAMS WILL BE COMPILED IN ONE INVOCATION OF THE    *  IC2344.2
-057300*    COMPILER AS SHOWN BELOW:                                  *  IC2344.2
-057400*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-057500*    PROGRAM-ID. IC234A.                                       *  IC2344.2
-057600*              .                                               *  IC2344.2
-057700*              .                                               *  IC2344.2
-057800*              .                                               *  IC2344.2
-057900*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-058000*    PROGRAM-ID. IC234A-1.                                     *  IC2344.2
-058100*              .                                               *  IC2344.2
-058200*              .                                               *  IC2344.2
-058300*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-058400*    PROGRAM-ID. IC234A-2.                                     *  IC2344.2
-058500*              .                                               *  IC2344.2
-058600*              .                                               *  IC2344.2
-058700*              .                                               *  IC2344.2
-058800*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-058900*    PROGRAM-ID. IC234A-3.                                     *  IC2344.2
-059000*              .                                               *  IC2344.2
-059100*              .                                               *  IC2344.2
-059200*    END PROGRAM IC234A-3.                                     *  IC2344.2
-059300*    END PROGRAM IC234A-2.                                     *  IC2344.2
-059400*    END PROGRAM IC234A-1.                                     *  IC2344.2
-059500*    END PROGRAM IC234A.                                       *  IC2344.2
-059600****************************************************************  IC2344.2
-059700*ENVIRONMENT DIVISION.                                            IC2344.2
-059800*INPUT-OUTPUT SECTION.                                            IC2344.2
-059900*FILE-CONTROL.                                                    IC2344.2
+049400*                                                                         
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
+050200*                                                                         
+050300*                                                                         
+050400*                                                                         
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
+050800*                                                                         
+050900*                                                                         
+051000*                                                                         
+051100*                                                                         
+051200*                                                                         
+051300*                                                                         
+051400*                                                                         
+051500*                                                                         
+051600*                                                                         
+051700*                                                                         
+051800*                                                                         
+051900*                                                                         
+052000*                                                                         
+052100*                                                                         
+052200*                                                                         
+052300*                                                                         
+052400*                                                                         
+052500*                                                                         
+052600*                                                                         
+052700*                                                                         
+052800*                                                                         
+052900*                                                                         
+053000*                                                                         
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
+053400*                                                                         
+053500*                                                                         
+053600*                                                                         
+053700*                                                                         
+053800*                                                                         
+053900*                                                                         
+054000*                                                                         
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
+054800*                                                                         
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
+057200*                                                                         
+057300*                                                                         
+057400*                                                                         
+057500*                                                                         
+057600*                                                                         
+057700*                                                                         
+057800*                                                                         
+057900*                                                                         
+058000*                                                                         
+058100*                                                                         
+058200*                                                                         
+058300*                                                                         
+058400*                                                                         
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
+059000*                                                                         
+059100*                                                                         
+059200*                                                                         
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
 060000 DATA DIVISION.                                                   IC2344.2
 060100 FILE SECTION.                                                    IC2344.2
 060200 WORKING-STORAGE SECTION.                                         IC2344.2
@@ -609,116 +609,116 @@
 061100 USE-INIT-1.                                                      IC2344.2
 061200     CALL   "IC234A-3".                                           IC2344.2
 061300     EXIT PROGRAM.                                                IC2344.2
-061400*                                                                 IC2344.2
+061400*                                                                         
 061500 IDENTIFICATION DIVISION.                                         IC2344.2
 061600 PROGRAM-ID.                                                      IC2344.2
 061700     IC234A-3.                                                    IC2344.2
-061800****************************************************************  IC2344.2
-061900*                                                              *  IC2344.2
-062000*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2344.2
-062100*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2344.2
-062200*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2344.2
-062300*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2344.2
-062400*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2344.2
-062500*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2344.2
-062600*                                                              *  IC2344.2
-062700*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2344.2
-062800*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2344.2
-062900*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2344.2
-063000*                                                              *  IC2344.2
-063100*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2344.2
-063200*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2344.2
-063300*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2344.2
-063400*                                                              *  IC2344.2
-063500*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2344.2
-063600*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2344.2
-063700*                & INFORMATION TECHNOLOGY                      *  IC2344.2
-063800*          TWO SKYLINE PLACE                                   *  IC2344.2
-063900*          SUITE 1100                                          *  IC2344.2
-064000*          5203 LEESBURG PIKE                                  *  IC2344.2
-064100*          FALLS CHURCH                                        *  IC2344.2
-064200*          VA 22041                                            *  IC2344.2
-064300*          U.S.A.                                              *  IC2344.2
-064400*                                                              *  IC2344.2
-064500*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2344.2
-064600*                                                              *  IC2344.2
-064700*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2344.2
-064800*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2344.2
-064900*          21 RUE BARA                                         *  IC2344.2
-065000*          F-92132 ISSY                                        *  IC2344.2
-065100*          FRANCE                                              *  IC2344.2
-065200*                                                              *  IC2344.2
-065300*                                                              *  IC2344.2
-065400*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2344.2
-065500*               UND DATENVERARBEITUNG MBH)                     *  IC2344.2
-065600*          SCHLOSS BIRLINGHOVEN                                *  IC2344.2
-065700*          POSTFACH 12 40                                      *  IC2344.2
-065800*          D-5205 ST. AUGUSTIN 1                               *  IC2344.2
-065900*          GERMANY FR                                          *  IC2344.2
-066000*                                                              *  IC2344.2
-066100*                                                              *  IC2344.2
-066200*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2344.2
-066300*          OXFORD ROAD                                         *  IC2344.2
-066400*          MANCHESTER                                          *  IC2344.2
-066500*          M1 7ED                                              *  IC2344.2
-066600*          UNITED KINGDOM                                      *  IC2344.2
-066700*                                                              *  IC2344.2
-066800*                                                              *  IC2344.2
-066900*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2344.2
-067000*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2344.2
-067100*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2344.2
-067200*                                                              *  IC2344.2
-067300****************************************************************  IC2344.2
-067400*                                                              *  IC2344.2
-067500*    VALIDATION FOR:-                                          *  IC2344.2
-067600*                                                              *  IC2344.2
-067700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2344.2
-067800*                                                              *  IC2344.2
-067900*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2344.2
-068000*                                                              *  IC2344.2
-068100****************************************************************  IC2344.2
-068200*                                                              *  IC2344.2
-068300*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2344.2
-068400*                                                              *  IC2344.2
-068500*        X-55  - SYSTEM PRINTER NAME.                          *  IC2344.2
-068600*        X-82  - SOURCE COMPUTER NAME.                         *  IC2344.2
-068700*        X-83  - OBJECT COMPUTER NAME.                         *  IC2344.2
-068800*                                                              *  IC2344.2
-068900****************************************************************  IC2344.2
-069000*                                                              *  IC2344.2
-069100*    PROGRAMS IC234A, IC234A-1, IC234A-2 AND IC234A-3 TEST     *  IC2344.2
-069200*    TEST THAT A "USE" PROCEDURE IN A CALLING PROGRAM IS       *  IC2344.2
-069300*    INVOKED BY A QUALIFYING CONDITION OCURRING IN A CONTAINED *  IC2344.2
-069400*    PROGRAM NESTED TO FOUR LEVELS.                            *  IC2344.2
-069500*                                                              *  IC2344.2
-069600*    ALL PROGRAMS WILL BE COMPILED IN ONE INVOCATION OF THE    *  IC2344.2
-069700*    COMPILER AS SHOWN BELOW:                                  *  IC2344.2
-069800*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-069900*    PROGRAM-ID. IC234A.                                       *  IC2344.2
-070000*              .                                               *  IC2344.2
-070100*              .                                               *  IC2344.2
-070200*              .                                               *  IC2344.2
-070300*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-070400*    PROGRAM-ID. IC234A-1.                                     *  IC2344.2
-070500*              .                                               *  IC2344.2
-070600*              .                                               *  IC2344.2
-070700*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-070800*    PROGRAM-ID. IC234A-2.                                     *  IC2344.2
-070900*              .                                               *  IC2344.2
-071000*              .                                               *  IC2344.2
-071100*              .                                               *  IC2344.2
-071200*    IDENTIFICATION DIVISION.                                  *  IC2344.2
-071300*    PROGRAM-ID. IC234A-3.                                     *  IC2344.2
-071400*              .                                               *  IC2344.2
-071500*              .                                               *  IC2344.2
-071600*    END PROGRAM IC234A-3.                                     *  IC2344.2
-071700*    END PROGRAM IC234A-2.                                     *  IC2344.2
-071800*    END PROGRAM IC234A-1.                                     *  IC2344.2
-071900*    END PROGRAM IC234A.                                       *  IC2344.2
-072000****************************************************************  IC2344.2
-072100*ENVIRONMENT DIVISION.                                            IC2344.2
-072200*INPUT-OUTPUT SECTION.                                            IC2344.2
-072300*FILE-CONTROL.                                                    IC2344.2
+061800*                                                                         
+061900*                                                                         
+062000*                                                                         
+062100*                                                                         
+062200*                                                                         
+062300*                                                                         
+062400*                                                                         
+062500*                                                                         
+062600*                                                                         
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
+064100*                                                                         
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
+064700*                                                                         
+064800*                                                                         
+064900*                                                                         
+065000*                                                                         
+065100*                                                                         
+065200*                                                                         
+065300*                                                                         
+065400*                                                                         
+065500*                                                                         
+065600*                                                                         
+065700*                                                                         
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
+066200*                                                                         
+066300*                                                                         
+066400*                                                                         
+066500*                                                                         
+066600*                                                                         
+066700*                                                                         
+066800*                                                                         
+066900*                                                                         
+067000*                                                                         
+067100*                                                                         
+067200*                                                                         
+067300*                                                                         
+067400*                                                                         
+067500*                                                                         
+067600*                                                                         
+067700*                                                                         
+067800*                                                                         
+067900*                                                                         
+068000*                                                                         
+068100*                                                                         
+068200*                                                                         
+068300*                                                                         
+068400*                                                                         
+068500*                                                                         
+068600*                                                                         
+068700*                                                                         
+068800*                                                                         
+068900*                                                                         
+069000*                                                                         
+069100*                                                                         
+069200*                                                                         
+069300*                                                                         
+069400*                                                                         
+069500*                                                                         
+069600*                                                                         
+069700*                                                                         
+069800*                                                                         
+069900*                                                                         
+070000*                                                                         
+070100*                                                                         
+070200*                                                                         
+070300*                                                                         
+070400*                                                                         
+070500*                                                                         
+070600*                                                                         
+070700*                                                                         
+070800*                                                                         
+070900*                                                                         
+071000*                                                                         
+071100*                                                                         
+071200*                                                                         
+071300*                                                                         
+071400*                                                                         
+071500*                                                                         
+071600*                                                                         
+071700*                                                                         
+071800*                                                                         
+071900*                                                                         
+072000*                                                                         
+072100*                                                                         
+072200*                                                                         
+072300*                                                                         
 072400 DATA DIVISION.                                                   IC2344.2
 072500 FILE SECTION.                                                    IC2344.2
 072600 WORKING-STORAGE SECTION.                                         IC2344.2
@@ -728,7 +728,7 @@
 073000     OPEN    INPUT TEST-FILE.                                     IC2344.2
 073100     READ    TEST-FILE.                                           IC2344.2
 073200     EXIT PROGRAM.                                                IC2344.2
-073300*                                                                 IC2344.2
+073300*                                                                         
 073400 END PROGRAM IC234A-3.                                            IC2344.2
 073500 END PROGRAM IC234A-2.                                            IC2344.2
 073600 END PROGRAM IC234A-1.                                            IC2344.2

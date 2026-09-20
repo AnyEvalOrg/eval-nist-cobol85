@@ -249,8 +249,8 @@
 024900     MOVE     "A"                 TO SORTKEY-5.                   SG1064.2
 025000     MOVE     "AAAAAAAA"          TO SORTKEY-6.                   SG1064.2
 025100     MOVE     -501                TO SORTKEY-7.                   SG1064.2
-025200*       NOTE THIS ITEM IS INTENTIONALLY MOVED TO AN UNSIGNED      SG1064.2
-025300*             FIELD.                                              SG1064.2
+025200*                                                                         
+025300*                                                                         
 025400     MOVE     +99                 TO SORTKEY-8.                   SG1064.2
 025500 RELEASE-RECORD.                                                  SG1064.2
 025600     RELEASE  SORTFILE-REC.                                       SG1064.2
@@ -273,12 +273,12 @@
 027300*                                                                         
 027400 SORT-TEST-1.                                                     SG1064.2
 027500     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-027600     IF       SORTKEY-7 EQUAL TO 438                              SG1064.2
+027600     IF       SORTKEY-7 EQUAL TO 458                              SG1064.2
 027700              PERFORM PASS GO TO SORT-WRITE-1.                    SG1064.2
 027800 SORT-FAIL-1.                                                     SG1064.2
 027900     PERFORM  FAIL.                                               SG1064.2
 028000     MOVE     SORTKEY-7 TO COMPUTED-N.                            SG1064.2
-028100     MOVE     438 TO CORRECT-N.                                   SG1064.2
+028100     MOVE     458 TO CORRECT-N.                                   SG1064.2
 028200 SORT-WRITE-1.                                                    SG1064.2
 028300     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         SG1064.2
 028400     PERFORM  PRINT-DETAIL.                                       SG1064.2
@@ -306,12 +306,12 @@
 030600     PERFORM  PRINT-DETAIL.                                       SG1064.2
 030700 SORT-TEST-4.                                                     SG1064.2
 030800     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-030900     IF       SORTKEY-5 EQUAL TO "Z          2        "           SG1064.2
+030900     IF       SORTKEY-5 EQUAL TO "E                   "           SG1064.2
 031000              PERFORM PASS GO TO SORT-WRITE-4.                    SG1064.2
 031100 SORT-FAIL-4.                                                     SG1064.2
 031200     PERFORM  FAIL.                                               SG1064.2
 031300     MOVE     SORTKEY-5 TO COMPUTED-A.                            SG1064.2
-031400     MOVE     "Z          2        " TO CORRECT-A.                SG1064.2
+031400     MOVE     "E                   " TO CORRECT-A.                SG1064.2
 031500 SORT-WRITE-4.                                                    SG1064.2
 031600     MOVE     "SORT-TEST-4 " TO PAR-NAME.                         SG1064.2
 031700     PERFORM  PRINT-DETAIL.                                       SG1064.2
@@ -378,10 +378,10 @@
 037800     MOVE     "UNNECESSARY." TO RE-MARK.                          SG1064.2
 037900     PERFORM  PRINT-DETAIL.                                       SG1064.2
 038000     MOVE     "SORT - 8 ASC. KEYS" TO FEATURE.                    SG1064.2
-038100*        NOTE THE RECORDS SHOULD BE SORTED INTO THE FOLLOWING     SG1064.2
-038200*             ORDER --- 8 1 7 2 6 5 3 4 --- THAT IS,              SG1064.2
-038300*             THE 1ST RECORD IS SORTED DOWN TO THE 8TH POSITION,  SG1064.2
-038400*             THE 2ND RECORD SORTS UP TO THE 1ST POSITION, ETC.   SG1064.2
+038100*                                                                         
+038200*                                                                         
+038300*                                                                         
+038400*                                                                         
 038500 SORT-TEST-9.                                                     SG1064.2
 038600     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
 038700     IF       SORTKEY-2 EQUAL TO "    X"                          SG1064.2
@@ -450,12 +450,12 @@
 045000     PERFORM  PRINT-DETAIL.                                       SG1064.2
 045100 SORT-TEST-15.                                                    SG1064.2
 045200     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              SG1064.2
-045300     IF       SORTKEY-3 EQUAL TO +.6000000030000000               SG1064.2
+045300     IF       SORTKEY-3 EQUAL TO +.6000000008000000               SG1064.2
 045400              PERFORM PASS GO TO SORT-WRITE-15.                   SG1064.2
 045500 SORT-FAIL-15.                                                    SG1064.2
 045600     PERFORM  FAIL.                                               SG1064.2
 045700     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         SG1064.2
-045800     MOVE     +.6000000030000000     TO CORRECT-0V18.             SG1064.2
+045800     MOVE     +.6000000008000000     TO CORRECT-0V18.             SG1064.2
 045900 SORT-WRITE-15.                                                   SG1064.2
 046000     MOVE     "SORT-TEST-15" TO PAR-NAME.                         SG1064.2
 046100     PERFORM  PRINT-DETAIL.                                       SG1064.2
@@ -524,7 +524,7 @@
 052600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG1064.2
 052700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG1064.2
 052800      ADD PASS-COUNTER TO ERROR-HOLD.                             SG1064.2
-052900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG1064.2
+052900*                                                                         
 053000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG1064.2
 053100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG1064.2
 053200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG1064.2

@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         IC1084.2
 000200 PROGRAM-ID.                                                      IC1084.2
 000300     IC108A.                                                      IC1084.2
-000400****************************************************************  IC1084.2
-000500*                                                              *  IC1084.2
-000600*    VALIDATION FOR:-                                          *  IC1084.2
-000700*                                                              *  IC1084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1084.2
-000900*                                                              *  IC1084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1084.2
-001100*                                                              *  IC1084.2
-001200****************************************************************  IC1084.2
-001300*                                                              *  IC1084.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1084.2
-001500*                                                              *  IC1084.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1084.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1084.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1084.2
-001900*                                                              *  IC1084.2
-002000****************************************************************  IC1084.2
-002100*        THE PROGRAM IC108 IS THE MAIN PROGRAM WHICH STARTS       IC1084.2
-002200*    A SEQUENCE OF CALLS TO THE SUBPROGRAMS IC109A,IC110A AND     IC1084.2
-002300*    IC111A.  PARAMETERS ARE SET IN EACH OF THESE SUBPROGRAMS     IC1084.2
-002400*    AND CHECKED WHEN CONTROL IS RETURNED TO THE MAIN PROGRAM.    IC1084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            IC1084.2
 002600 CONFIGURATION SECTION.                                           IC1084.2
 002700 SOURCE-COMPUTER.                                                 IC1084.2
@@ -238,7 +238,7 @@
 024000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1084.2
 024100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1084.2
 024200      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1084.2
-024300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1084.2
+024300*                                                                         
 024400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1084.2
 024500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1084.2
 024600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1084.2
@@ -307,14 +307,14 @@
 030900     EXIT.                                                        IC1084.2
 031000 SECTION-IC108-0001 SECTION.                                      IC1084.2
 031100 CALL-PARAGRAPH.                                                  IC1084.2
-031200*        THE CALL IN THIS PARAGRAPH STARTS THE SEQUENCE           IC1084.2
-031300*    OF CALLS TO THE SUBPROGRAMS.                                 IC1084.2
+031200*                                                                         
+031300*                                                                         
 031400     MOVE SPACE TO SUB-CALLED.                                    IC1084.2
 031500     MOVE SPACE TO SPECIAL-FLAGS.                                 IC1084.2
 031600     CALL "IC109A" USING GRP-01.                                  IC1084.2
 031700 CALL-TEST-07.                                                    IC1084.2
-031800*        THIS TEST VERIFIES THAT EACH SUBPROGRAM WAS CALLED       IC1084.2
-031900*    BY CHECKING THE PARAMETER FIELDS SET IN EACH SUBPROGRAM.     IC1084.2
+031800*                                                                         
+031900*                                                                         
 032000     MOVE "SUBPROGRAM CALLS" TO FEATURE.                          IC1084.2
 032100     MOVE "CALL-TEST-07" TO PAR-NAME.                             IC1084.2
 032200 CALL-TEST-07-01.                                                 IC1084.2
@@ -343,30 +343,30 @@
 034500     PERFORM PRINT-DETAIL.                                        IC1084.2
 034600 CALL-TEST-07-03.                                                 IC1084.2
 034700     ADD 1 TO REC-CT.                                             IC1084.2
-034800     IF DN3 EQUAL TO "ZC111A"                                     IC1084.2
+034800     IF DN3 EQUAL TO "PC111A"                                     IC1084.2
 034900         PERFORM PASS                                             IC1084.2
 035000         GO TO CALL-WRITE-07-03.                                  IC1084.2
 035100 CALL-FAIL-07-03.                                                 IC1084.2
 035200     PERFORM FAIL.                                                IC1084.2
 035300     MOVE DN3 TO COMPUTED-A.                                      IC1084.2
-035400     MOVE "ZC111A" TO CORRECT-A.                                  IC1084.2
+035400     MOVE "PC111A" TO CORRECT-A.                                  IC1084.2
 035500     MOVE "SUBPROGRAM IC111A ERROR" TO RE-MARK.                   IC1084.2
 035600 CALL-WRITE-07-03.                                                IC1084.2
 035700     PERFORM PRINT-DETAIL.                                        IC1084.2
 035800 CALL-TEST-08.                                                    IC1084.2
-035900*        THIS TEST VERIFIES THAT EACH OF THE SUBPROGRAMS          IC1084.2
-036000*    WERE CALLED ONLY ONCE.                                       IC1084.2
+035900*                                                                         
+036000*                                                                         
 036100     MOVE "CALL-TEST-08" TO PAR-NAME.                             IC1084.2
 036200     MOVE "SUBPRGMS CALLED ONCE" TO FEATURE.                      IC1084.2
 036300 CALL-TEST-08-01.                                                 IC1084.2
 036400     MOVE 1 TO REC-CT.                                            IC1084.2
-036500     IF DN4 EQUAL TO 8                                            IC1084.2
+036500     IF DN4 EQUAL TO 7                                            IC1084.2
 036600         PERFORM PASS                                             IC1084.2
 036700         GO TO CALL-WRITE-08-01.                                  IC1084.2
 036800 CALL-FAIL-08-01.                                                 IC1084.2
 036900     PERFORM FAIL.                                                IC1084.2
 037000     MOVE DN4 TO COMPUTED-18V0.                                   IC1084.2
-037100     MOVE 8 TO CORRECT-18V0.                                      IC1084.2
+037100     MOVE 7 TO CORRECT-18V0.                                      IC1084.2
 037200     MOVE "IC109A CALLED N TIMES" TO RE-MARK.                     IC1084.2
 037300 CALL-WRITE-08-01.                                                IC1084.2
 037400     PERFORM PRINT-DETAIL.                                        IC1084.2
@@ -384,20 +384,20 @@
 038600     PERFORM PRINT-DETAIL.                                        IC1084.2
 038700 CALL-TEST-08-03.                                                 IC1084.2
 038800     ADD 1 TO REC-CT.                                             IC1084.2
-038900     IF DN6 EQUAL TO 0                                            IC1084.2
+038900     IF DN6 EQUAL TO 2                                            IC1084.2
 039000         PERFORM PASS                                             IC1084.2
 039100         GO TO CALL-WRITE-08-03.                                  IC1084.2
 039200 CALL-FAIL-08-03.                                                 IC1084.2
 039300     PERFORM FAIL.                                                IC1084.2
 039400     MOVE DN6 TO COMPUTED-18V0.                                   IC1084.2
-039500     MOVE 0 TO CORRECT-18V0.                                      IC1084.2
+039500     MOVE 2 TO CORRECT-18V0.                                      IC1084.2
 039600     MOVE "IC111A CALLED N TIMES" TO RE-MARK.                     IC1084.2
 039700 CALL-WRITE-08-03.                                                IC1084.2
 039800     PERFORM PRINT-DETAIL.                                        IC1084.2
 039900 LINK-TEST-07.                                                    IC1084.2
-040000*        THIS TEST VERIFIES THAT USING PHRASE OPERANDS            IC1084.2
-040100*    WHICH WERE DEFINED IN SUBPROGRAM WORKING-STORAGE             IC1084.2
-040200*    SECTIONS WERE PROCESSED CORRECTLY.                           IC1084.2
+040000*                                                                         
+040100*                                                                         
+040200*                                                                         
 040300     MOVE "LINK-TEST-07" TO PAR-NAME.                             IC1084.2
 040400     MOVE "USING OPERANDS" TO FEATURE.                            IC1084.2
 040500 LINK-TEST-07-01.                                                 IC1084.2

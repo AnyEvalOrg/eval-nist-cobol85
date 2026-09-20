@@ -21,7 +21,7 @@ def no_network(monkeypatch):
 
 @pytest.fixture(autouse=True)
 def isolated_mutation_environment(monkeypatch):
-    """Tests must never read the operator secret or private manifest."""
+    """Synthetic tests never use the operator secret or write its private manifest."""
     import tempfile
     with tempfile.TemporaryDirectory(prefix='nist-synthetic-', dir='/private/tmp') as directory:
         monkeypatch.setenv('NIST_MUTATION_SALT', 'synthetic-test-salt-not-a-secret')
@@ -34,7 +34,10 @@ def synthetic_mutation(tmp_path):
     import hashlib
     from scripts.mutate_suite import mutate
     from scripts.mutation_private import salt_sha256
-    source = '       PROGRAM-ID. SYNTH.\n       PAR-NAME.\n           03 FILLER PIC X(22).\n'
+    source = ''.join('       ' + line + '\n' for line in [
+        'PROGRAM-ID. SYNTH.', 'DATA DIVISION.', 'WORKING-STORAGE SECTION.',
+        '01 DATA-ITEM PIC 99.', '01 CORRECT-N PIC -9(9).9(9).',
+        '01 PAR-NAME.', '   03 FILLER PIC X(22).', 'PROCEDURE DIVISION.'])
     for number in range(6):
         name = f'TEST-{number}'
         source += ''.join('       ' + line + '\n' for line in [

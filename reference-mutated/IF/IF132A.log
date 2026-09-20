@@ -16,7 +16,7 @@ TEST RESULT OF IF132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  RANGE Function       FAIL* F-RANGE-01                                                                                  
                                                                                                                         
                                      COMPUTED=  000000019.000000000                                                     
-                                     CORRECT =  000000011.000000000  See ref. A-65 2.65                                 
+                                     CORRECT =  000000016.000000000  See ref. A-65 2.65                                 
                                                                                                                         
  RANGE Function       PASS  F-RANGE-02                                                                                  
  RANGE Function       PASS  F-RANGE-03                                                                                  
@@ -26,14 +26,14 @@ TEST RESULT OF IF132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  RANGE Function       FAIL* F-RANGE-07                                                                                  
                                                                                                                         
                                      COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000000.000000000  See ref. A-65 2.65                                 
+                                     CORRECT =  000000001.000000000  See ref. A-65 2.65                                 
                                                                                                                         
  RANGE Function       PASS  F-RANGE-08                                                                                  
  RANGE Function       PASS  F-RANGE-09                                                                                  
  RANGE Function       FAIL* F-RANGE-11                                                                                  
                                                                                                                         
                                      COMPUTED=  001080000.000000000                                                     
-                                     CORRECT =  001000000.000000000  See ref. A-65 2.65                                 
+                                     CORRECT =  001080030.000000000  See ref. A-65 2.65                                 
                                                                                                                         
  RANGE Function       PASS  F-RANGE-12                                                                                  
  RANGE Function       PASS  F-RANGE-13                                                                                  

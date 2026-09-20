@@ -22,7 +22,7 @@ TEST RESULT OF NC119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT             FAIL* SUB-TEST-GF-2                                                                               
                                                                                                                         
                                      COMPUTED=  111111111111111111                                                      
-                                     CORRECT =  111111111111511111   VI-42 5.12.4                                       
+                                     CORRECT =  111111111113111111   VI-42 5.12.4                                       
                                                                                                                         
  SUBTRACT             PASS  SUB-TEST-GF-3                                                                               
    GIVING             PASS  SUB-TEST-GF-13                                                                              
@@ -55,21 +55,21 @@ TEST RESULT OF NC119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
    SERIES             PASS  SUB-TEST-GF-20                                                                              
-   SERIES             FAIL* SUB-TEST-GF-21                                                                              
+   SERIES             PASS  SUB-TEST-GF-21                                                                              
+   SERIES             FAIL* SUB-TEST-GF-22                                                                              
                                                                                                                         
                                      COMPUTED= -0242.43322201100000                                                     
-                                     CORRECT = -0242.43322201400000  VI-42 5.12.4                                       
+                                     CORRECT = -0242.44322201100000  VI-42 5.12.4                                       
                                                                                                                         
-   SERIES             PASS  SUB-TEST-GF-22                                                                              
    COMP VS. DISPLAY   PASS  SUB-TEST-GF-7                                                                               
    COMP VS. DISPLAY   PASS  SUB-TEST-GF-8                                                                               
    COMP VS. DISPLAY   PASS  SUB-TEST-GF-9                                                                               
-   COMP VS. DISPLAY   FAIL* SUB-TEST-GF-10                                                                              
+   COMP VS. DISPLAY   PASS  SUB-TEST-GF-10                                                                              
+   COMP VS. DISPLAY   FAIL* SUB-TEST-GF-23                                                                              
                                                                                                                         
-                                     COMPUTED=  000000100.000000000                                                     
-                                     CORRECT =  000000170.000000000  VI-42 5.12.4                                       
+                                     COMPUTED= -000000001.500000000                                                     
+                                     CORRECT = -000000007.500000000  VI-42 5.12.4                                       
                                                                                                                         
-   COMP VS. DISPLAY   PASS  SUB-TEST-GF-23                                                                              
    COMP VS. DISPLAY   PASS  SUB-TEST-GF-11                                                                              
    COMP VS. DISPLAY   PASS  SUB-TEST-GF-12-1                                                                            
    COMP VS. DISPLAY   PASS  SUB-TEST-GF-12-2                                                                            

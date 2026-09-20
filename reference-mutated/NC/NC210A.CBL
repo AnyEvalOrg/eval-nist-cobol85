@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC2104.2
 000200 PROGRAM-ID.                                                      NC2104.2
 000300     NC210A.                                                      NC2104.2
-000400****************************************************************  NC2104.2
-000500*                                                              *  NC2104.2
-000600*    VALIDATION FOR:-                                          *  NC2104.2
-000700*                                                              *  NC2104.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2104.2
-000900*                                                              *  NC2104.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2104.2
-001100*                                                              *  NC2104.2
-001200****************************************************************  NC2104.2
-001300*                                                              *  NC2104.2
-001400*    PROGRAM NC210A TESTS NESTED "IF" STATEMENTS, USING 63     *  NC2104.2
-001500*    STATEMENTS AND 6 LEVELS OF NESTING IN ONE SENTENCE AND    *  NC2104.2
-001600*    22 LEVELS OF NESTING IN A SECOND TEST.                    *  NC2104.2
-001700*                                                              *  NC2104.2
-001800*     X-CARDS USED ARE :-                                      *  NC2104.2
-001900*                                                              *  NC2104.2
-002000*      X-55  - SYSTEM PRINTER NAME.                            *  NC2104.2
-002100*      X-82  - SOURCE COMPUTER NAME.                           *  NC2104.2
-002200*      X-83  - OBJECT COMPUTER NAME.                           *  NC2104.2
-002300*                                                              *  NC2104.2
-002400****************************************************************  NC2104.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC2104.2
 002600 CONFIGURATION SECTION.                                           NC2104.2
 002700 SOURCE-COMPUTER.                                                 NC2104.2
@@ -323,7 +323,7 @@
 032300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2104.2
 032400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2104.2
 032500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2104.2
-032600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2104.2
+032600*                                                                         
 032700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2104.2
 032800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2104.2
 032900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2104.2
@@ -673,7 +673,7 @@
 067300     IF ONE-C EQUAL TO 2 ADD 8000 TO ONE-X.                       NC2104.2
 067400     IF ONE-B EQUAL TO 2 ADD 80000 TO ONE-X.                      NC2104.2
 067500     GO TO IF-INIT-GF-X.                                          NC2104.2
-067600*                                                                 NC2104.2
+067600*                                                                         
 067700 IF-INIT-GF-Y.                                                    NC2104.2
 067800     MOVE   "VI-89 6.15.4 GR1(C)" TO ANSI-REFERENCE.              NC2104.2
 067900     ADD 1 TO PAR-NUMBER.                                         NC2104.2

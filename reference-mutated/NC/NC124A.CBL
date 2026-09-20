@@ -2,27 +2,27 @@
 000200 PROGRAM-ID.                                                      NC1244.2
 000300                                                                  NC1244.2
 000400     NC124A.                                                      NC1244.2
-000500****************************************************************  NC1244.2
-000600*                                                              *  NC1244.2
-000700*    VALIDATION FOR:-                                          *  NC1244.2
-000800*                                                              *  NC1244.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1244.2
-001000*                                                              *  NC1244.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1244.2
-001200*                                                              *  NC1244.2
-001300****************************************************************  NC1244.2
-001400*                                                              *  NC1244.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1244.2
-001600*                                                              *  NC1244.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC1244.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC1244.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC1244.2
-002000*                                                              *  NC1244.2
-002100****************************************************************  NC1244.2
-002200*                                                                 NC1244.2
-002300*               PROGRAM NC124A TESTS THE USE OF                   NC1244.2
-002400*            PICTURE CHARACTERS P, S, +, -, Z AND *.              NC1244.2
-002500*                                                                 NC1244.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1244.2
 002700 CONFIGURATION SECTION.                                           NC1244.2
 002800 SOURCE-COMPUTER.                                                 NC1244.2
@@ -295,7 +295,7 @@
 029700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1244.2
 029800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1244.2
 029900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1244.2
-030000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1244.2
+030000*                                                                         
 030100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1244.2
 030200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1244.2
 030300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1244.2
@@ -2176,7 +2176,7 @@
 217800 PICTURE-TEST-27-0.                                               NC1244.2
 217900     MOVE WORK-AREA-27 TO WORK-AREA-27A.                          NC1244.2
 218000 PICTURE-TEST-27-1.                                               NC1244.2
-218100     IF WORK-AREA-27A EQUAL TO "300"                              NC1244.2
+218100     IF WORK-AREA-27A EQUAL TO "260"                              NC1244.2
 218200        PERFORM PASS                                              NC1244.2
 218300        ELSE GO TO PICTURE-FAIL-27.                               NC1244.2
 218400     GO TO PICTURE-WRITE-27.                                      NC1244.2
@@ -2186,7 +2186,7 @@
 218800 PICTURE-FAIL-27.                                                 NC1244.2
 218900     PERFORM FAIL.                                                NC1244.2
 219000     MOVE WORK-AREA-27A TO COMPUTED-A.                            NC1244.2
-219100     MOVE "300" TO CORRECT-A.                                     NC1244.2
+219100     MOVE "260" TO CORRECT-A.                                     NC1244.2
 219200 PICTURE-WRITE-27.                                                NC1244.2
 219300     MOVE "PICTURE-TEST-27" TO PAR-NAME.                          NC1244.2
 219400     PERFORM PRINT-DETAIL.                                        NC1244.2
@@ -2221,7 +2221,7 @@
 222300 PICTURE-TEST-29.                                                 NC1244.2
 222400     MOVE WORK-AREA-29 TO WORK-AREA-29A.                          NC1244.2
 222500     MOVE WORK-AREA-29A TO WORK-AREA-29B.                         NC1244.2
-222600     IF WORK-AREA-29B EQUAL TO "10D"                              NC1244.2
+222600     IF WORK-AREA-29B EQUAL TO "105"                              NC1244.2
 222700        PERFORM PASS                                              NC1244.2
 222800        ELSE GO TO PICTURE-FAIL-29.                               NC1244.2
 222900     GO TO PICTURE-WRITE-29.                                      NC1244.2
@@ -2231,7 +2231,7 @@
 223300 PICTURE-FAIL-29.                                                 NC1244.2
 223400     PERFORM FAIL.                                                NC1244.2
 223500     MOVE WORK-AREA-29B TO COMPUTED-A.                            NC1244.2
-223600     MOVE "10D" TO CORRECT-A.                                     NC1244.2
+223600     MOVE "105" TO CORRECT-A.                                     NC1244.2
 223700 PICTURE-WRITE-29.                                                NC1244.2
 223800     MOVE "PICTURE-TEST-29" TO PAR-NAME.                          NC1244.2
 223900     PERFORM PRINT-DETAIL.                                        NC1244.2
@@ -2288,7 +2288,7 @@
 229000 PICTURE-TEST-32-0.                                               NC1244.2
 229100     MOVE WORK-AREA-32 TO WORK-AREA-32A.                          NC1244.2
 229200 PICTURE-TEST-32-1.                                               NC1244.2
-229300     IF WORK-AREA-32A EQUAL TO .091                               NC1244.2
+229300     IF WORK-AREA-32A EQUAL TO .201                               NC1244.2
 229400        PERFORM PASS                                              NC1244.2
 229500        ELSE GO TO PICTURE-FAIL-32.                               NC1244.2
 229600     GO TO PICTURE-WRITE-32.                                      NC1244.2
@@ -2298,7 +2298,7 @@
 230000 PICTURE-FAIL-32.                                                 NC1244.2
 230100     PERFORM FAIL.                                                NC1244.2
 230200     MOVE WORK-AREA-32A TO COMPUTED-0V18.                         NC1244.2
-230300     MOVE .091 TO CORRECT-0V18.                                   NC1244.2
+230300     MOVE .201 TO CORRECT-0V18.                                   NC1244.2
 230400 PICTURE-WRITE-32.                                                NC1244.2
 230500     MOVE "PICTURE-TEST-32" TO PAR-NAME.                          NC1244.2
 230600     PERFORM PRINT-DETAIL.                                        NC1244.2

@@ -1,61 +1,61 @@
 000100 IDENTIFICATION DIVISION.                                         IX1044.2
 000200 PROGRAM-ID.                                                      IX1044.2
 000300     IX104A.                                                      IX1044.2
-000400****************************************************************  IX1044.2
-000500*                                                              *  IX1044.2
-000600*    VALIDATION FOR:-                                          *  IX1044.2
-000700*                                                              *  IX1044.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1044.2
-000900*                                                              *  IX1044.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1044.2
-001100*                                                              *  IX1044.2
-001200****************************************************************  IX1044.2
-001300*    THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND SEMANTIC   IX1044.2
-001400*    ACTIONS ASSOCIATED WITH THE FOLLOWING ELEMENTS:              IX1044.2
-001500*                                                                 IX1044.2
-001600*    (1) FILE STATUS                                              IX1044.2
-001700*    (2) USE AFTER EXCEPTION USING FILE-NAME                      IX1044.2
-001800*    (3) READ                                                     IX1044.2
-001900*    (4) WRITE                                                    IX1044.2
-002000*    (5) REWRITE                                                  IX1044.2
-002100*    (6) RECORD KEY                                               IX1044.2
-002200*    (7) ACCESS                                                   IX1044.2
-002300*                                                                 IX1044.2
-002400*    THIS PROGRAM CREATES AN INDEXED FILE SEQUENTIALLY (ACCESS    IX1044.2
-002500*    MODE SEQUENTIAL) AND THEN UPDATES SELECTIVE RECORDS OF THE   IX1044.2
-002600*    FILE.  THE FILE STATUS CONTENTS ARE CAPTURED AND TESTED FOR  IX1044.2
-002700*    ACCURACY FOR EACH OPEN, CLOSE, READ AND REWRITE STATEMENT    IX1044.2
-002800*    USED.  THE READ, WRITE AND REWRITE STATEMENTS ARE USED       IX1044.2
-002900*    WITHOUT THE APPROPRIATE AT END OR INVALID KEY PHRASES. THE   IX1044.2
-003000*    OMISSION OF THESE PHRASES ARE PERMITTED IF AN APPLICABLE USE IX1044.2
-003100*    PROCEDURE HAS BEEN SPECIFIED.                                IX1044.2
-003200*                                                                 IX1044.2
-003300*                                                                 IX1044.2
-003400*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX1044.2
-003500*                                                                 IX1044.2
-003600*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1044.2
-003700*                    CLAUSE FOR DATA FILE IX-FD2                  IX1044.2
-003800*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1044.2
-003900*                    CLAUSE FOR INDEX FILE IX-FD2                 IX1044.2
-004000*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX1044.2
-004100*             X-62   FOR RAW-DATA                                 IX1044.2
-004200*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX1044.2
-004300*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX1044.2
-004400*                                                                 IX1044.2
-004500*         NOTE:  X-CARDS 45 AND 62       ARE OPTIONAL             IX1044.2
-004600*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX1044.2
-004700*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX1044.2
-004800*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX1044.2
-004900*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX1044.2
-005000*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX1044.2
-005100*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX1044.2
-005200*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX1044.2
-005300*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX1044.2
-005400*               THEY ARE AS FOLLOWS                               IX1044.2
-005500*                                                                 IX1044.2
-005600*                  J  SELECTS X-CARD 45                           IX1044.2
-005700*                                                                 IX1044.2
-005800******************************************************            IX1044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
 005900 ENVIRONMENT DIVISION.                                            IX1044.2
 006000 CONFIGURATION SECTION.                                           IX1044.2
 006100 SOURCE-COMPUTER.                                                 IX1044.2
@@ -317,8 +317,8 @@
 034100              DEPENDING ON  WRK-CS-09V00-012.                     IX1044.2
 034200     GO TO    IX-FS2-01-EXIT.                                     IX1044.2
 034300 IX-FS2-01-03.                                                    IX1044.2
-034400*ENTRY FROM SEGMENT INX-TEST-001.                                 IX1044.2
-034500*    SHOULD NOT ENTER HERE UNLESS SPACE ALLOCATION TOO SMALL.     IX1044.2
+034400*                                                                         
+034500*                                                                         
 034600     ADD     1 TO  WRK-CS-09V00-014.                              IX1044.2
 034700 IX-FS2-01-05.                                                    IX1044.2
 034800     ADD      1 TO WRK-CS-09V00-017.                              IX1044.2
@@ -380,7 +380,7 @@
 042800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1044.2
 042900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1044.2
 043000      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1044.2
-043100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1044.2
+043100*                                                                         
 043200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1044.2
 043300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1044.2
 043400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1044.2
@@ -466,7 +466,7 @@
 051400     MOVE    "WRITE-TEST-GF-01" TO PAR-NAME.                      IX1044.2
 051500     MOVE     "S"             TO  XLABEL-TYPE        (2).         IX1044.2
 051600     MOVE     000001          TO  XRECORD-NUMBER     (2).         IX1044.2
-051700*INITIALIZE  RECORD WORK AREA NUMBER 2.                           IX1044.2
+051700*                                                                         
 051800     MOVE     1         TO  WRK-CS-09V00-012.                     IX1044.2
 051900     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     IX1044.2
 052000                            WRK-CS-09V00-015 WRK-CS-09V00-016     IX1044.2
@@ -476,7 +476,7 @@
 052400     OPEN     OUTPUT    IX-FS2.                                   IX1044.2
 052500     MOVE GRP-0101 TO IX-FS2-KEY.                                 IX1044.2
 052600     MOVE     IX-FS2-STATUS TO WRK-XN-0002-001.                   IX1044.2
-052700*CAPTURE STATUS KEY AFTER  OPEN STATEMENT IS EXECUTED.            IX1044.2
+052700*                                                                         
 052800 WRITE-TEST-GF-01.                                                IX1044.2
 052900     MOVE    "99"  TO IX-FS2-STATUS.                              IX1044.2
 053000     MOVE     XRECORD-NUMBER (2) TO WRK-DU-09V00-001.             IX1044.2
@@ -572,7 +572,7 @@
 062000     MOVE     SPACE     TO  WRK-XN-0002-004                       IX1044.2
 062100     MOVE      IX-FS2-STATUS TO WRK-XN-0002-001                   IX1044.2
 062200     MOVE     SPACE TO IX-FS2-STATUS.                             IX1044.2
-062300*CAPTURE THE CONTENTS OF STATUS KEY AFTER OPEN IS EXECUTED.       IX1044.2
+062300*                                                                         
 062400 READ-TEST-F1-01.                                                 IX1044.2
 062500     ADD      1 TO WRK-CS-09V00-014.                              IX1044.2
 062600     ADD      1 TO WRK-CS-09V00-015.                              IX1044.2

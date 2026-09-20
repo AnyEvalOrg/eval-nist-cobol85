@@ -17,7 +17,7 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD GIVING           FAIL* ADD-TEST-F2-2                                                                               
                                                                                                                         
                                      COMPUTED=  000052806.000000000                                                     
-                                     CORRECT =  000052800.000000000  VI-74 6.6.4 GR2                                    
+                                     CORRECT =  000052866.000000000  VI-74 6.6.4 GR2                                    
                                                                                                                         
  ADD GIVING           PASS  ADD-TEST-F2-3-1                                                                             
  ADD GIVING           PASS  ADD-TEST-F2-4-1                                                                             
@@ -25,7 +25,7 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    GIVING             FAIL* ADD-TEST-F2-5                                                                               
                                                                                                                         
                                      COMPUTED=  000333666.666333000                                                     
-                                     CORRECT =  000333616.666333000  VI-74 6.6.4 GR2                                    
+                                     CORRECT =  050333666.666333000  VI-74 6.6.4 GR2                                    
                                                                                                                         
    GIVING             PASS  ADD-TEST-F2-6                                                                               
    GIVING             PASS  ADD-TEST-F2-7                                                                               
@@ -63,7 +63,7 @@ TEST RESULT OF NC177A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             FAIL* ADD-TEST-F2-21                                                                              
                                                                                                                         
                                      COMPUTED= -000044444444444444                                                      
-                                     CORRECT = -800044444444444444   VI-74 6.6.4 GR2                                    
+                                     CORRECT = -000044244444444444   VI-74 6.6.4 GR2                                    
                                                                                                                         
    SERIES             PASS  ADD-TEST-F2-22                                                                              
    SERIES             PASS  ADD-TEST-F2-23                                                                              

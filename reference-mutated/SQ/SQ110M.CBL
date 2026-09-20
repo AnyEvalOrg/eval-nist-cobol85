@@ -1,36 +1,36 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1104.2
 000200 PROGRAM-ID.                                                      SQ1104.2
 000300     SQ110M.                                                      SQ1104.2
-000400****************************************************************  SQ1104.2
-000500*                                                              *  SQ1104.2
-000600*    VALIDATION FOR:-                                          *  SQ1104.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1104.2
-000800*                                                              *  SQ1104.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1104.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1104.2
-001100*                                                              *  SQ1104.2
-001200****************************************************************  SQ1104.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1104.2
-001400*         THIS ROUTINE CREATES A 2 UNIT MASS-STORAGE              SQ1104.2
-001500*    FILE WHICH HAS FIXED LENGTH RECORDS.  THE FILE IS THEN       SQ1104.2
-001600*    CLOSED AND OPENED AS AN INPUT FILE.  THE FILE IS READ AND    SQ1104.2
-001700*    FIELDS IN THE INPUT RECORDS ARE COMPARED TO THE VALUES       SQ1104.2
-001800*    WRITTEN TO ENSURE THAT THE RECORDS WERE PROCESSED CORRECTLY. SQ1104.2
-001900*                                                                 SQ1104.2
-002000*    THE FILE IS CLOSED AND OPENED AGAIN AS AN INPUT FILE.  FOUR  SQ1104.2
-002100*    READ FORMAT OPTIONS ARE USED TO READ THE FILE AND FIELDS IN  SQ1104.2
-002200*    THE RECORDS ARE VERIFIED.  THE OPEN, CLOSE, READ, AND WRITE  SQ1104.2
-002300*    STATEMENTS ARE TESTED FOR LEVEL ONE FEATURES.                SQ1104.2
-002400*                                                                 SQ1104.2
-002500*    USED X-CARDS:                                                SQ1104.2
-002600*         XXXXX019                                                SQ1104.2
-002700*         XXXXX055                                                SQ1104.2
-002800*     P   XXXXX062                                                SQ1104.2
-002900*         XXXXX082                                                SQ1104.2
-003000*         XXXXX083                                                SQ1104.2
-003100*     C   XXXXX084                                                SQ1104.2
-003200*                                                                 SQ1104.2
-003300*                                                                 SQ1104.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 ENVIRONMENT DIVISION.                                            SQ1104.2
 003500 CONFIGURATION SECTION.                                           SQ1104.2
 003600 SOURCE-COMPUTER.                                                 SQ1104.2
@@ -286,7 +286,7 @@
 033600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1104.2
 033700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1104.2
 033800      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1104.2
-033900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1104.2
+033900*                                                                         
 034000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1104.2
 034100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1104.2
 034200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1104.2
@@ -377,12 +377,12 @@
 042800     MOVE XRECORD-NUMBER (1) TO CORRECT-18V0.                     SQ1104.2
 042900     PERFORM PRINT-DETAIL.                                        SQ1104.2
 043000     CLOSE SQ-FS3.                                                SQ1104.2
-043100*        A MASS STORAGE SEQUENTIAL FILE WITH 120 CHARACTER        SQ1104.2
-043200*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 649 RECORDS.    SQ1104.2
+043100*                                                                         
+043200*                                                                         
 043300 SEQ-INIT-008.                                                    SQ1104.2
 043400     MOVE ZERO TO WRK-CS-09V00.                                   SQ1104.2
-043500*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ1104.2
-043600*    SEQ-TEST-007.                                                SQ1104.2
+043500*                                                                         
+043600*                                                                         
 043700     OPEN INPUT SQ-FS3.                                           SQ1104.2
 043800 SEQ-TEST-008.                                                    SQ1104.2
 043900     READ SQ-FS3 RECORD                                           SQ1104.2
@@ -423,8 +423,8 @@
 047400     MOVE ZERO TO WRK-CS-09V00.                                   SQ1104.2
 047500     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1104.2
 047600     OPEN INPUT SQ-FS3.                                           SQ1104.2
-047700*        FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED          SQ1104.2
-047800*    IN THIS SERIES OF TESTS.                                     SQ1104.2
+047700*                                                                         
+047800*                                                                         
 047900     MOVE "READ...RECORD AT END ..." TO FEATURE.                  SQ1104.2
 048000     MOVE "READ-TEST-GF-01" TO PAR-NAME.                          SQ1104.2
 048100     MOVE ZERO TO ERROR-FLAG.                                     SQ1104.2

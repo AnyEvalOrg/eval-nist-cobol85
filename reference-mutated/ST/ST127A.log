@@ -55,7 +55,7 @@ TEST RESULT OF ST127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
                                      COMPUTED= Z                                                                        
-                                     CORRECT = Z            R        XI-18 4.4.4 GR(3)b                                 
+                                     CORRECT = X                     XI-18 4.4.4 GR(3)b                                 
                                                                                                                         
  DUPLICATE KEYS       PASS  SORT-TEST-15                                                                                
  DUPLICATE KEYS       PASS  SORT-TEST-16                                                                                

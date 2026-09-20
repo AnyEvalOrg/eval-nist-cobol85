@@ -1,10 +1,10 @@
 000100 IDENTIFICATION DIVISION.                                         RL3024.2
 000200 PROGRAM-ID.                                                      RL3024.2
 000300     RL302M.                                                      RL3024.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF                      RL3024.2
-000500*OBSOLETE FEATURES THAT ARE USED IN INTERMEDIATE SUBSET           RL3024.2
-000600*RELATIVE INPUT-OUTPUT.                                           RL3024.2
-000700*INPUT-OUTPUT.                                                    RL3024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
 000800 ENVIRONMENT DIVISION.                                            RL3024.2
 000900 CONFIGURATION SECTION.                                           RL3024.2
 001000 SOURCE-COMPUTER.                                                 RL3024.2
@@ -28,20 +28,20 @@
 002800         ORGANIZATION IS RELATIVE.                                RL3024.2
 002900 I-O-CONTROL.                                                     RL3024.2
 003000     MULTIPLE FILE TFIL.                                          RL3024.2
-003100*Message expected for above statement: OBSOLETE                   RL3024.2
+003100*                                                                         
 003200                                                                  RL3024.2
 003300 DATA DIVISION.                                                   RL3024.2
 003400 FILE SECTION.                                                    RL3024.2
 003500 FD TFIL                                                          RL3024.2
 003600     LABEL RECORDS STANDARD                                       RL3024.2
-003700*Message expected for above statement: OBSOLETE                   RL3024.2
+003700*                                                                         
 003800     VALUE OF                                                     RL3024.2
 003900     OCLABELID                                                    RL3024.2
 004000     IS                                                           RL3024.2
 004100     "OCDUMMY"                                                    RL3024.2
-004200*Message expected for above statement: OBSOLETE                   RL3024.2
+004200*                                                                         
 004300     DATA RECORDS ARE FREC.                                       RL3024.2
-004400*Message expected for above statement: OBSOLETE                   RL3024.2
+004400*                                                                         
 004500                                                                  RL3024.2
 004600 01 FREC.                                                         RL3024.2
 004700     03 GUBBINS PIC 9(8).                                         RL3024.2
@@ -67,4 +67,4 @@
 006700     DISPLAY "THIS IS A DUMMY PARAGRAPH".                         RL3024.2
 006800     STOP RUN.                                                    RL3024.2
 006900                                                                  RL3024.2
-007000*TOTAL NUMBER OF FLAGS EXPECTED = 4.                              RL3024.2
+007000*                                                                         

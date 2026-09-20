@@ -35,10 +35,10 @@
   "tasks": [
     {
       "name": "nist_cobol85_python",
-      "samples": 97
+      "samples": 78
     }
   ],
-  "total_samples": 97,
+  "total_samples": 78,
   "external_assets": [
     {
       "type": "container",

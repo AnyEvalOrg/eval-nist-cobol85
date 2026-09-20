@@ -212,7 +212,7 @@
 021400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG1014.2
 021500      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG1014.2
 021600      ADD PASS-COUNTER TO ERROR-HOLD.                             SG1014.2
-021700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG1014.2
+021700*                                                                         
 021800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG1014.2
 021900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG1014.2
 022000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG1014.2

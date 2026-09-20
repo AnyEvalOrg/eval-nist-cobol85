@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1744.2
 000200 PROGRAM-ID.                                                      NC1744.2
 000300     NC174A.                                                      NC1744.2
-000400****************************************************************  NC1744.2
-000500*                                                              *  NC1744.2
-000600*    VALIDATION FOR:-                                          *  NC1744.2
-000700*                                                              *  NC1744.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1744.2
-000900*                                                              *  NC1744.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1744.2
-001100*                                                              *  NC1744.2
-001200****************************************************************  NC1744.2
-001300*                                                              *  NC1744.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1744.2
-001500*                                                              *  NC1744.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1744.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1744.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1744.2
-001900*                                                              *  NC1744.2
-002000****************************************************************  NC1744.2
-002100*                                                                 NC1744.2
-002200*    PROGRAM NC174A TESTS THE FOLLOWING GENERAL FEATURES:         NC1744.2
-002300*              RELATIONAL OPERATORS                               NC1744.2
-002400*              CLASS CONDITIONS                                   NC1744.2
-002500*              SWITCH SETTINGS                                    NC1744.2
-002600*                                                                 NC1744.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1744.2
 002800 CONFIGURATION SECTION.                                           NC1744.2
 002900 SOURCE-COMPUTER.                                                 NC1744.2
@@ -448,7 +448,7 @@
 045000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1744.2
 045100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1744.2
 045200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1744.2
-045300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1744.2
+045300*                                                                         
 045400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1744.2
 045500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1744.2
 045600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1744.2
@@ -521,10 +521,10 @@
 052300 CCVS1-EXIT.                                                      NC1744.2
 052400     EXIT.                                                        NC1744.2
 052500 SECT-NC174A-001 SECTION.                                         NC1744.2
-052600*                                                                 NC1744.2
-052700*                                                                 NC1744.2
+052600*                                                                         
+052700*                                                                         
 052800 NEXT-INIT-GF-1.                                                  NC1744.2
-052900*    ==-->     NEXT SENTENCE           <--==                      NC1744.2
+052900*                                                                         
 053000     MOVE   "V1-89 6.15.4 GR2 " TO ANSI-REFERENCE.                NC1744.2
 053100     MOVE    "A" TO A-2.                                          NC1744.2
 053200 NEXT-TEST-GF-1.                                                  NC1744.2
@@ -539,8 +539,8 @@
 054100 NEXT-WRITE-GF-1.                                                 NC1744.2
 054200     MOVE "NEXT-TEST-1" TO PAR-NAME.                              NC1744.2
 054300     PERFORM  PRINT-DETAIL.                                       NC1744.2
-054400*                                                                 NC1744.2
-054500*                                                                 NC1744.2
+054400*                                                                         
+054500*                                                                         
 054600 ANOTHER-REMARK.                                                  NC1744.2
 054700     MOVE     SPACE TO TEST-RESULTS.                              NC1744.2
 054800     MOVE "THE FOLLOWING TESTS        " TO RE-MARK.               NC1744.2
@@ -605,7 +605,7 @@
 061100     MOVE "SWH-TEST-GF-4" TO PAR-NAME.                            NC1744.2
 061200     PERFORM  PRINT-DETAIL.                                       NC1744.2
 061300 SWH-TEST-5.                                                      NC1744.2
-061400* DELETE THE NEXT LINE TO DELETE THIS TEST                        NC1744.2
+061400*                                                                         
 061500     GO TO SWH-TEST-5-B.                                          NC1744.2
 061600 SWH-TEST-5-A.                                                    NC1744.2
 061700     GO TO SWH-DELETE-5.                                          NC1744.2
@@ -623,7 +623,7 @@
 063000     MOVE "SWH-TEST-5" TO PAR-NAME.                               NC1744.2
 063100     PERFORM PRINT-DETAIL.                                        NC1744.2
 063200 SWH-TEST-6.                                                      NC1744.2
-063300* DELETE THE NEXT LINE TO DELETE THIS TEST                        NC1744.2
+063300*                                                                         
 063400     GO TO SWH-TEST-6-B.                                          NC1744.2
 063500 SWH-TEST-6-A.                                                    NC1744.2
 063600     GO TO SWH-DELETE-6.                                          NC1744.2
@@ -655,7 +655,7 @@
 066400     MOVE "SWH-TEST-7" TO PAR-NAME.                               NC1744.2
 066500     PERFORM PRINT-DETAIL.                                        NC1744.2
 066600 SWH-TEST-8.                                                      NC1744.2
-066700* DELETE THE NEXT LINE TO DELETE THIS TEST                        NC1744.2
+066700*                                                                         
 066800     GO TO SWH-TEST-8-B.                                          NC1744.2
 066900 SWH-TEST-8-A.                                                    NC1744.2
 067000     GO TO SWH-DELETE-8.                                          NC1744.2
@@ -672,8 +672,8 @@
 068200 SWH-WRITE-8.                                                     NC1744.2
 068300     MOVE  "SWH-TEST-8" TO PAR-NAME.                              NC1744.2
 068400     PERFORM PRINT-DETAIL.                                        NC1744.2
-068500*                                                                 NC1744.2
-068600*                                                                 NC1744.2
+068500*                                                                         
+068600*                                                                         
 068700 SWH-INIT-GF-9.                                                   NC1744.2
 068800     MOVE   "SET SWITCH ON/OFF" TO FEATURE.                       NC1744.2
 068900     MOVE   "V1-126 6.22.1(2)"  TO ANSI-REFERENCE.                NC1744.2
@@ -689,8 +689,8 @@
 070000 SWH-WRITE-GF-9.                                                  NC1744.2
 070100     MOVE   "SWH-TEST-GF-9" TO PAR-NAME.                          NC1744.2
 070200     PERFORM PRINT-DETAIL.                                        NC1744.2
-070300*                                                                 NC1744.2
-070400*                                                                 NC1744.2
+070300*                                                                         
+070400*                                                                         
 070500 SWH-INIT-GF-10.                                                  NC1744.2
 070600     MOVE   "SET SWITCH ON/OFF" TO FEATURE.                       NC1744.2
 070700     MOVE   "V1-126 6.22.1(2)"  TO ANSI-REFERENCE.                NC1744.2
@@ -717,8 +717,8 @@
 073000 SWH-WRITE-GF-10-2.                                               NC1744.2
 073100     MOVE   "SWH-TEST-GF-10-2" TO PAR-NAME.                       NC1744.2
 073200     PERFORM PRINT-DETAIL.                                        NC1744.2
-073300*                                                                 NC1744.2
-073400*                                                                 NC1744.2
+073300*                                                                         
+073400*                                                                         
 073500 SWH-INIT-GF-11.                                                  NC1744.2
 073600     MOVE   "SET SWITCH ON/OFF" TO FEATURE.                       NC1744.2
 073700     MOVE   "V1-126 6.22.1(2)"  TO ANSI-REFERENCE.                NC1744.2
@@ -746,8 +746,8 @@
 076100 SWH-WRITE-GF-11-2.                                               NC1744.2
 076200     MOVE   "SWH-TEST-GF-11-2" TO PAR-NAME.                       NC1744.2
 076300     PERFORM PRINT-DETAIL.                                        NC1744.2
-076400*                                                                 NC1744.2
-076500*                                                                 NC1744.2
+076400*                                                                         
+076500*                                                                         
 076600 SWH-INIT-GF-12.                                                  NC1744.2
 076700     MOVE   "SET SWITCH ON/OFF" TO FEATURE.                       NC1744.2
 076800     MOVE   "V1-126 6.22.1(2)"  TO ANSI-REFERENCE.                NC1744.2
@@ -763,8 +763,8 @@
 077900 SWH-WRITE-GF-12.                                                 NC1744.2
 078000     MOVE   "SWH-TEST-GF-12" TO PAR-NAME.                         NC1744.2
 078100     PERFORM PRINT-DETAIL.                                        NC1744.2
-078200*                                                                 NC1744.2
-078300*                                                                 NC1744.2
+078200*                                                                         
+078300*                                                                         
 078400 RELAT-INIT-GF-1.                                                 NC1744.2
 078500     MOVE   "RELATION"          TO FEATURE.                       NC1744.2
 078600     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
@@ -782,11 +782,11 @@
 079800     PERFORM  DE-LETE.                                            NC1744.2
 079900     GO TO    RELAT-WRITE-GF-1.                                   NC1744.2
 080000 RELAT-CHECK-GF-1.                                                NC1744.2
-080100     IF       VAL EQUAL TO 2                                      NC1744.2
+080100     IF       VAL EQUAL TO 3                                      NC1744.2
 080200             PERFORM PASS                                         NC1744.2
 080300             GO TO RELAT-WRITE-GF-1.                              NC1744.2
 080400     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-080500     MOVE 2 TO CORRECT-A.                                         NC1744.2
+080500     MOVE 3 TO CORRECT-A.                                         NC1744.2
 080600     PERFORM FAIL.                                                NC1744.2
 080700 RELAT-WRITE-GF-1.                                                NC1744.2
 080800     MOVE "RELAT-TEST-GF-1" TO PAR-NAME.                          NC1744.2
@@ -806,11 +806,11 @@
 082200     PERFORM DE-LETE.                                             NC1744.2
 082300     GO TO   RELAT-WRITE-GF-2.                                    NC1744.2
 082400 RELAT-CHECK-GF-2.                                                NC1744.2
-082500     IF       VAL EQUAL TO 8                                      NC1744.2
+082500     IF       VAL EQUAL TO 3                                      NC1744.2
 082600              PERFORM PASS                                        NC1744.2
 082700              GO TO RELAT-WRITE-GF-2.                             NC1744.2
 082800     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-082900     MOVE 8 TO CORRECT-A.                                         NC1744.2
+082900     MOVE 3 TO CORRECT-A.                                         NC1744.2
 083000     PERFORM  FAIL.                                               NC1744.2
 083100 RELAT-WRITE-GF-2.                                                NC1744.2
 083200     MOVE "RELAT-TEST-GF-2" TO PAR-NAME.                          NC1744.2
@@ -831,11 +831,11 @@
 084700     PERFORM  DE-LETE.                                            NC1744.2
 084800     GO TO    RELAT-WRITE-GF-3.                                   NC1744.2
 084900 RELAT-CHECK-GF-3.                                                NC1744.2
-085000     IF       VAL EQUAL TO 5                                      NC1744.2
+085000     IF       VAL EQUAL TO 3                                      NC1744.2
 085100              PERFORM PASS                                        NC1744.2
 085200              GO TO RELAT-WRITE-GF-3.                             NC1744.2
 085300     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-085400     MOVE 5 TO CORRECT-A.                                         NC1744.2
+085400     MOVE 3 TO CORRECT-A.                                         NC1744.2
 085500     PERFORM  FAIL.                                               NC1744.2
 085600 RELAT-WRITE-GF-3.                                                NC1744.2
 085700     MOVE "RELAT-TEST-GF-3" TO PAR-NAME.                          NC1744.2
@@ -946,8 +946,8 @@
 096200 RELAT-WRITE-GF-8.                                                NC1744.2
 096300     MOVE "RELAT-TEST-GF-8" TO PAR-NAME.                          NC1744.2
 096400     PERFORM  PRINT-DETAIL.                                       NC1744.2
-096500*                                                                 NC1744.2
-096600*                                                                 NC1744.2
+096500*                                                                         
+096600*                                                                         
 096700 RELAT-INIT-GF-9.                                                 NC1744.2
 096800     MOVE    "V1-54 6.3.1.1"     TO ANSI-REFERENCE.               NC1744.2
 096900     MOVE     29   TO N-33.                                       NC1744.2
@@ -962,8 +962,8 @@
 097800 RELAT-WRITE-GF-9.                                                NC1744.2
 097900     MOVE  "RELAT-TEST-GF-9" TO PAR-NAME.                         NC1744.2
 098000     PERFORM PRINT-DETAIL.                                        NC1744.2
-098100*                                                                 NC1744.2
-098200*                                                                 NC1744.2
+098100*                                                                         
+098200*                                                                         
 098300 RELAT-INIT-GF-10.                                                NC1744.2
 098400     MOVE    "V1-54 6.3.1.1"     TO ANSI-REFERENCE.               NC1744.2
 098500 RELAT-TEST-GF-10.                                                NC1744.2
@@ -977,8 +977,8 @@
 099300 RELAT-WRITE-GF-10.                                               NC1744.2
 099400     MOVE   "RELAT-TEST-GF-10" TO PAR-NAME.                       NC1744.2
 099500     PERFORM PRINT-DETAIL.                                        NC1744.2
-099600*                                                                 NC1744.2
-099700*                                                                 NC1744.2
+099600*                                                                         
+099700*                                                                         
 099800 RELAT-INIT-GF-11.                                                NC1744.2
 099900     MOVE    "V1-54 6.3.1.1"     TO ANSI-REFERENCE.               NC1744.2
 100000     MOVE    "X"    TO A-37.                                      NC1744.2
@@ -993,8 +993,8 @@
 100900 RELAT-WRITE-GF-11.                                               NC1744.2
 101000     MOVE   "RELAT-TEST-GF-11" TO PAR-NAME.                       NC1744.2
 101100     PERFORM PRINT-DETAIL.                                        NC1744.2
-101200*                                                                 NC1744.2
-101300*                                                                 NC1744.2
+101200*                                                                         
+101300*                                                                         
 101400 RELAT-INIT-GF-12.                                                NC1744.2
 101500     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 101600     MOVE    29    TO N-33.                                       NC1744.2
@@ -1009,8 +1009,8 @@
 102500 RELAT-WRITE-GF-12.                                               NC1744.2
 102600     MOVE  "RELAT-TEST-GF-12" TO PAR-NAME.                        NC1744.2
 102700     PERFORM PRINT-DETAIL.                                        NC1744.2
-102800*                                                                 NC1744.2
-102900*                                                                 NC1744.2
+102800*                                                                         
+102900*                                                                         
 103000 RELAT-INIT-GF-13.                                                NC1744.2
 103100     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 103200 RELAT-TEST-GF-13.                                                NC1744.2
@@ -1024,8 +1024,8 @@
 104000 RELAT-WRITE-GF-13.                                               NC1744.2
 104100     MOVE   "RELAT-TEST-GF-13" TO PAR-NAME.                       NC1744.2
 104200     PERFORM PRINT-DETAIL.                                        NC1744.2
-104300*                                                                 NC1744.2
-104400*                                                                 NC1744.2
+104300*                                                                         
+104400*                                                                         
 104500 RELAT-INIT-GF-14.                                                NC1744.2
 104600     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 104700     MOVE   "X"  TO A-37.                                         NC1744.2
@@ -1040,8 +1040,8 @@
 105600 RELAT-WRITE-GF-14.                                               NC1744.2
 105700     MOVE   "RELAT-TEST-GF-14" TO PAR-NAME.                       NC1744.2
 105800     PERFORM PRINT-DETAIL.                                        NC1744.2
-105900*                                                                 NC1744.2
-106000*                                                                 NC1744.2
+105900*                                                                         
+106000*                                                                         
 106100 RELAT-INIT-GF-15.                                                NC1744.2
 106200     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 106300     MOVE   "A"  TO A-2.                                          NC1744.2
@@ -1057,8 +1057,8 @@
 107300 RELAT-WRITE-GF-15.                                               NC1744.2
 107400     MOVE   "RELAT-TEST-GF-15" TO PAR-NAME.                       NC1744.2
 107500     PERFORM PRINT-DETAIL.                                        NC1744.2
-107600*                                                                 NC1744.2
-107700*                                                                 NC1744.2
+107600*                                                                         
+107700*                                                                         
 107800 RELAT-INIT-GF-16.                                                NC1744.2
 107900     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 108000 RELAT-TEST-GF-16.                                                NC1744.2
@@ -1072,8 +1072,8 @@
 108800 RELAT-WRITE-GF-16.                                               NC1744.2
 108900     MOVE  "RELAT-TEST-GF-16" TO PAR-NAME.                        NC1744.2
 109000     PERFORM PRINT-DETAIL.                                        NC1744.2
-109100*                                                                 NC1744.2
-109200*                                                                 NC1744.2
+109100*                                                                         
+109200*                                                                         
 109300 RELAT-INIT-GF-17.                                                NC1744.2
 109400     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 109500     MOVE    29 TO N-33.                                          NC1744.2
@@ -1088,8 +1088,8 @@
 110400 RELAT-WRITE-GF-17.                                               NC1744.2
 110500     MOVE  "RELAT-TEST-GF-17" TO PAR-NAME.                        NC1744.2
 110600     PERFORM PRINT-DETAIL.                                        NC1744.2
-110700*                                                                 NC1744.2
-110800*                                                                 NC1744.2
+110700*                                                                         
+110800*                                                                         
 110900 RELAT-INIT-GF-18.                                                NC1744.2
 111000     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 111100 RELAT-TEST-GF-18.                                                NC1744.2
@@ -1103,8 +1103,8 @@
 111900 RELAT-WRITE-GF-18.                                               NC1744.2
 112000     MOVE   "RELAT-TEST-GF-18" TO PAR-NAME.                       NC1744.2
 112100     PERFORM PRINT-DETAIL.                                        NC1744.2
-112200*                                                                 NC1744.2
-112300*                                                                 NC1744.2
+112200*                                                                         
+112300*                                                                         
 112400 RELAT-INIT-GF-19.                                                NC1744.2
 112500     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 112600     MOVE   "X" TO A-37.                                          NC1744.2
@@ -1119,8 +1119,8 @@
 113500 RELAT-WRITE-GF-19.                                               NC1744.2
 113600     MOVE   "RELAT-TEST-GF-19" TO PAR-NAME.                       NC1744.2
 113700     PERFORM PRINT-DETAIL.                                        NC1744.2
-113800*                                                                 NC1744.2
-113900*                                                                 NC1744.2
+113800*                                                                         
+113900*                                                                         
 114000 RELAT-INIT-GF-20.                                                NC1744.2
 114100     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 114200     MOVE    29 TO N-33.                                          NC1744.2
@@ -1135,8 +1135,8 @@
 115100 RELAT-WRITE-GF-20.                                               NC1744.2
 115200     MOVE  "RELAT-TEST-GF-20" TO PAR-NAME.                        NC1744.2
 115300     PERFORM PRINT-DETAIL.                                        NC1744.2
-115400*                                                                 NC1744.2
-115500*                                                                 NC1744.2
+115400*                                                                         
+115500*                                                                         
 115600 RELAT-INIT-GF-21.                                                NC1744.2
 115700     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 115800 RELAT-TEST-GF-21.                                                NC1744.2
@@ -1150,8 +1150,8 @@
 116600 RELAT-WRITE-GF-21.                                               NC1744.2
 116700     MOVE   "RELAT-TEST-GF-21" TO PAR-NAME.                       NC1744.2
 116800     PERFORM PRINT-DETAIL.                                        NC1744.2
-116900*                                                                 NC1744.2
-117000*                                                                 NC1744.2
+116900*                                                                         
+117000*                                                                         
 117100 RELAT-INIT-GF-22.                                                NC1744.2
 117200     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 117300     MOVE   "X" TO A-37.                                          NC1744.2
@@ -1166,8 +1166,8 @@
 118200 RELAT-WRITE-GF-22.                                               NC1744.2
 118300     MOVE   "RELAT-TEST-GF-22" TO PAR-NAME.                       NC1744.2
 118400     PERFORM PRINT-DETAIL.                                        NC1744.2
-118500*                                                                 NC1744.2
-118600*                                                                 NC1744.2
+118500*                                                                         
+118600*                                                                         
 118700 RELAT-INIT-GF-23.                                                NC1744.2
 118800     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 118900     MOVE   "A" TO A-2.                                           NC1744.2
@@ -1183,8 +1183,8 @@
 119900 RELAT-WRITE-GF-23.                                               NC1744.2
 120000     MOVE   "RELAT-TEST-GF-23" TO PAR-NAME.                       NC1744.2
 120100     PERFORM PRINT-DETAIL.                                        NC1744.2
-120200*                                                                 NC1744.2
-120300*                                                                 NC1744.2
+120200*                                                                         
+120300*                                                                         
 120400 RELAT-INIT-GF-24.                                                NC1744.2
 120500     MOVE   "V1-54 6.3.1.1"     TO ANSI-REFERENCE.                NC1744.2
 120600 RELAT-TEST-GF-24.                                                NC1744.2
@@ -1198,8 +1198,8 @@
 121400 RELAT-WRITE-GF-24.                                               NC1744.2
 121500     MOVE   "RELAT-TEST-GF-24" TO PAR-NAME.                       NC1744.2
 121600     PERFORM PRINT-DETAIL.                                        NC1744.2
-121700*                                                                 NC1744.2
-121800*                                                                 NC1744.2
+121700*                                                                         
+121800*                                                                         
 121900 CLASS-INIT-GF-1.                                                 NC1744.2
 122000     PERFORM END-ROUTINE.                                         NC1744.2
 122100     MOVE   "CLASS ---" TO FEATURE.                               NC1744.2
@@ -1460,9 +1460,9 @@
 147600 CLASS-WRITE-GF-16.                                               NC1744.2
 147700     MOVE "CLASS-TEST-GF-16" TO PAR-NAME.                         NC1744.2
 147800     PERFORM PRINT-DETAIL.                                        NC1744.2
-147900*CLASS-TEST-17.                                                   NC1744.2
-148000*    THIS TEST WAS DELETED BY THE FCCTS SINCE IT DID NOT          NC1744.2
-148100*    APPLY TO THE REVISED FEDERAL STANDARD - FIPS PUB 21-1.       NC1744.2
+147900*                                                                         
+148000*                                                                         
+148100*                                                                         
 148200 CLASS-INIT-GF-17.                                                NC1744.2
 148300     MOVE   "V1-56 6.3.1.2"      TO ANSI-REFERENCE.               NC1744.2
 148400     MOVE    0 TO NUMERIC-1.                                      NC1744.2
@@ -1533,11 +1533,11 @@
 154900 CLASS-WRITE-GF-20.                                               NC1744.2
 155000     MOVE "CLASS-TEST-GF-20" TO PAR-NAME.                         NC1744.2
 155100     PERFORM PRINT-DETAIL.                                        NC1744.2
-155200*CLASS-TEST-22.                                                   NC1744.2
-155300*    THIS TEST WAS DELETED BY THE FCCTS SINCE IT DID NOT          NC1744.2
-155400*    APPLY TO THE REVISED FEDERAL STANDARD - FIPS PUB 21-1.       NC1744.2
-155500*                                                                 NC1744.2
-155600*                                                                 NC1744.2
+155200*                                                                         
+155300*                                                                         
+155400*                                                                         
+155500*                                                                         
+155600*                                                                         
 155700 CLASS-INIT-35.                                                   NC1744.2
 155800     MOVE   "V1-56 6.3.1.2(3,4)" TO ANSI-REFERENCE.               NC1744.2
 155900     MOVE "  ALPHABETIC-UPPER  " TO FEATURE.                      NC1744.2
@@ -1557,10 +1557,10 @@
 157300 CLASS-WRITE-GF-35.                                               NC1744.2
 157400     MOVE   "CLASS-TEST-GF-35" TO PAR-NAME.                       NC1744.2
 157500     PERFORM PRINT-DETAIL.                                        NC1744.2
-157600*                                                                 NC1744.2
-157700*                                                                 NC1744.2
-157800*                                                                 NC1744.2
-157900*                                                                 NC1744.2
+157600*                                                                         
+157700*                                                                         
+157800*                                                                         
+157900*                                                                         
 158000 CLASS-INIT-36.                                                   NC1744.2
 158100     MOVE "  ALPHABETIC-LOWER  " TO FEATURE.                      NC1744.2
 158200     MOVE " lowercase chars"     TO ALPHA-LOWER.                  NC1744.2
@@ -1580,8 +1580,8 @@
 159600 CLASS-WRITE-GF-36.                                               NC1744.2
 159700     MOVE   "CLASS-TEST-GF-36" TO PAR-NAME.                       NC1744.2
 159800     PERFORM PRINT-DETAIL.                                        NC1744.2
-159900*                                                                 NC1744.2
-160000*                                                                 NC1744.2
+159900*                                                                         
+160000*                                                                         
 160100 CLASS-INIT-37.                                                   NC1744.2
 160200     MOVE   "V1-56 6.3.1.2(2)"     TO ANSI-REFERENCE.             NC1744.2
 160300     MOVE   "UPPER & LOWER CASE  " TO FEATURE.                    NC1744.2
@@ -1601,8 +1601,8 @@
 161700 CLASS-WRITE-GF-37.                                               NC1744.2
 161800     MOVE   "CLASS-TEST-GF-37" TO PAR-NAME.                       NC1744.2
 161900     PERFORM PRINT-DETAIL.                                        NC1744.2
-162000*                                                                 NC1744.2
-162100*                                                                 NC1744.2
+162000*                                                                         
+162100*                                                                         
 162200 CLASS-INIT-38.                                                   NC1744.2
 162300     MOVE   "V1-56 6.3.1.2(2)"     TO ANSI-REFERENCE.             NC1744.2
 162400     move   "AbCdEfGhIj"           TO YADATA-XN-00010-U-AND-L.    NC1744.2
@@ -1621,8 +1621,8 @@
 163700 CLASS-WRITE-GF-38.                                               NC1744.2
 163800     MOVE   "CLASS-TEST-GF-38" TO PAR-NAME.                       NC1744.2
 163900     PERFORM PRINT-DETAIL.                                        NC1744.2
-164000*                                                                 NC1744.2
-164100*                                                                 NC1744.2
+164000*                                                                         
+164100*                                                                         
 164200 CLASS-INIT-39.                                                   NC1744.2
 164300     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 164400          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1643,8 +1643,8 @@
 165900                  TO RE-MARK                                      NC1744.2
 166000             PERFORM FAIL                                         NC1744.2
 166100             PERFORM PRINT-DETAIL.                                NC1744.2
-166200*                                                                 NC1744.2
-166300*                                                                 NC1744.2
+166200*                                                                         
+166300*                                                                         
 166400 CLASS-INIT-40.                                                   NC1744.2
 166500     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 166600          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1664,8 +1664,8 @@
 168000                  TO RE-MARK                                      NC1744.2
 168100             PERFORM FAIL                                         NC1744.2
 168200             PERFORM PRINT-DETAIL.                                NC1744.2
-168300*                                                                 NC1744.2
-168400*                                                                 NC1744.2
+168300*                                                                         
+168400*                                                                         
 168500 CLASS-INIT-41.                                                   NC1744.2
 168600     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 168700          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1685,8 +1685,8 @@
 170100                  TO RE-MARK                                      NC1744.2
 170200             PERFORM FAIL                                         NC1744.2
 170300             PERFORM PRINT-DETAIL.                                NC1744.2
-170400*                                                                 NC1744.2
-170500*                                                                 NC1744.2
+170400*                                                                         
+170500*                                                                         
 170600 CLASS-INIT-42.                                                   NC1744.2
 170700     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 170800          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1706,8 +1706,8 @@
 172200                  TO RE-MARK                                      NC1744.2
 172300             PERFORM FAIL                                         NC1744.2
 172400             PERFORM PRINT-DETAIL.                                NC1744.2
-172500*                                                                 NC1744.2
-172600*                                                                 NC1744.2
+172500*                                                                         
+172600*                                                                         
 172700 CLASS-INIT-43.                                                   NC1744.2
 172800     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 172900          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1727,8 +1727,8 @@
 174300                  TO RE-MARK                                      NC1744.2
 174400             PERFORM FAIL                                         NC1744.2
 174500             PERFORM PRINT-DETAIL.                                NC1744.2
-174600*                                                                 NC1744.2
-174700*                                                                 NC1744.2
+174600*                                                                         
+174700*                                                                         
 174800 CLASS-INIT-44.                                                   NC1744.2
 174900     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 175000          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1748,8 +1748,8 @@
 176400                  TO RE-MARK                                      NC1744.2
 176500             PERFORM FAIL                                         NC1744.2
 176600             PERFORM PRINT-DETAIL.                                NC1744.2
-176700*                                                                 NC1744.2
-176800*                                                                 NC1744.2
+176700*                                                                         
+176800*                                                                         
 176900 CLASS-INIT-45.                                                   NC1744.2
 177000     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 177100          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1769,8 +1769,8 @@
 178500                  TO RE-MARK                                      NC1744.2
 178600             PERFORM FAIL                                         NC1744.2
 178700             PERFORM PRINT-DETAIL.                                NC1744.2
-178800*                                                                 NC1744.2
-178900*                                                                 NC1744.2
+178800*                                                                         
+178900*                                                                         
 179000 CLASS-INIT-46.                                                   NC1744.2
 179100     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 179200          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1789,8 +1789,8 @@
 180500                  TO RE-MARK                                      NC1744.2
 180600             PERFORM FAIL                                         NC1744.2
 180700             PERFORM PRINT-DETAIL.                                NC1744.2
-180800*                                                                 NC1744.2
-180900*                                                                 NC1744.2
+180800*                                                                         
+180900*                                                                         
 181000 CLASS-INIT-47.                                                   NC1744.2
 181100     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 181200          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1810,8 +1810,8 @@
 182600                  TO RE-MARK                                      NC1744.2
 182700             PERFORM FAIL                                         NC1744.2
 182800             PERFORM PRINT-DETAIL.                                NC1744.2
-182900*                                                                 NC1744.2
-183000*                                                                 NC1744.2
+182900*                                                                         
+183000*                                                                         
 183100 CLASS-INIT-48.                                                   NC1744.2
 183200     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 183300          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1830,8 +1830,8 @@
 184600                  TO RE-MARK                                      NC1744.2
 184700             PERFORM FAIL                                         NC1744.2
 184800             PERFORM PRINT-DETAIL.                                NC1744.2
-184900*                                                                 NC1744.2
-185000*                                                                 NC1744.2
+184900*                                                                         
+185000*                                                                         
 185100 CLASS-INIT-49.                                                   NC1744.2
 185200     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 185300          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1850,8 +1850,8 @@
 186600                  TO RE-MARK                                      NC1744.2
 186700             PERFORM FAIL                                         NC1744.2
 186800             PERFORM PRINT-DETAIL.                                NC1744.2
-186900*                                                                 NC1744.2
-187000*                                                                 NC1744.2
+186900*                                                                         
+187000*                                                                         
 187100 CLASS-INIT-50.                                                   NC1744.2
 187200     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 187300          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1871,8 +1871,8 @@
 188700                  TO RE-MARK                                      NC1744.2
 188800             PERFORM FAIL                                         NC1744.2
 188900             PERFORM PRINT-DETAIL.                                NC1744.2
-189000*                                                                 NC1744.2
-189100*                                                                 NC1744.2
+189000*                                                                         
+189100*                                                                         
 189200 CLASS-INIT-51.                                                   NC1744.2
 189300     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 189400          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1892,8 +1892,8 @@
 190800                  TO RE-MARK                                      NC1744.2
 190900             PERFORM FAIL                                         NC1744.2
 191000             PERFORM PRINT-DETAIL.                                NC1744.2
-191100*                                                                 NC1744.2
-191200*                                                                 NC1744.2
+191100*                                                                         
+191200*                                                                         
 191300 CLASS-INIT-52.                                                   NC1744.2
 191400     MOVE   "V1-17 4.5.4 (GR10) & VI-57 6.3.1.2"                  NC1744.2
 191500          TO ANSI-REFERENCE.                                      NC1744.2
@@ -1912,8 +1912,8 @@
 192800                  TO RE-MARK                                      NC1744.2
 192900             PERFORM FAIL                                         NC1744.2
 193000             PERFORM PRINT-DETAIL.                                NC1744.2
-193100*                                                                 NC1744.2
-193200*                                                                 NC1744.2
+193100*                                                                         
+193200*                                                                         
 193300 CCVS-EXIT SECTION.                                               NC1744.2
 193400 CCVS-999999.                                                     NC1744.2
 193500     GO TO CLOSE-FILES.                                           NC1744.2

@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC2394.2
 000200 PROGRAM-ID.                                                      NC2394.2
 000300     NC239A.                                                      NC2394.2
-000400****************************************************************  NC2394.2
-000500*                                                              *  NC2394.2
-000600*    VALIDATION FOR:-                                          *  NC2394.2
-000700*                                                              *  NC2394.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2394.2
-000900*                                                              *  NC2394.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2394.2
-001100*                                                              *  NC2394.2
-001200****************************************************************  NC2394.2
-001300*                                                              *  NC2394.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2394.2
-001500*                                                              *  NC2394.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2394.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2394.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2394.2
-001900*                                                              *  NC2394.2
-002000****************************************************************  NC2394.2
-002100*                                                              *  NC2394.2
-002200*    PROGRAM NC239A TESTS THE CONSTRUCTION AND ACCESS OF A     *  NC2394.2
-002300*    THREE-DIMENSIONAL TABLE USING INDICES.                    *  NC2394.2
-002400*    VALUES ARE VERIFIED USING THE "IF" STATEMENT.             *  NC2394.2
-002500*                                                ~             *  NC2394.2
-002600****************************************************************  NC2394.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC2394.2
 002800 CONFIGURATION SECTION.                                           NC2394.2
 002900 SOURCE-COMPUTER.                                                 NC2394.2
@@ -262,7 +262,7 @@
 026400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2394.2
 026500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2394.2
 026600      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2394.2
-026700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2394.2
+026700*                                                                         
 026800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2394.2
 026900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2394.2
 027000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2394.2
@@ -437,7 +437,7 @@
 043900     SET IDX-1 TO 3.                                              NC2394.2
 044000     SET IDX-2 TO 7.                                              NC2394.2
 044100 TH2-TEST-GF-3.                                                   NC2394.2
-044200     IF ENTRY-2 (IDX-1, IDX-2) IS NOT EQUAL TO "SEN (03,07)"      NC2394.2
+044200     IF ENTRY-2 (IDX-1, IDX-2) IS NOT EQUAL TO "UEC (03,07)"      NC2394.2
 044300         GO TO TH2-FAIL-GF-3.                                     NC2394.2
 044400     PERFORM PASS.                                                NC2394.2
 044500     GO TO TH2-WRITE-GF-3.                                        NC2394.2
@@ -445,7 +445,7 @@
 044700     PERFORM DE-LETE.                                             NC2394.2
 044800     GO TO TH2-WRITE-GF-3.                                        NC2394.2
 044900 TH2-FAIL-GF-3.                                                   NC2394.2
-045000     MOVE "SEN (03,07)" TO CORRECT-A                              NC2394.2
+045000     MOVE "UEC (03,07)" TO CORRECT-A                              NC2394.2
 045100     MOVE ENTRY-2 (IDX-1, IDX-2) TO COMPUTED-A                    NC2394.2
 045200     MOVE "INTERNAL INDEXING LEVEL 2  " TO RE-MARK                NC2394.2
 045300     PERFORM FAIL.                                                NC2394.2
@@ -461,7 +461,7 @@
 046300     SET IDX-3 TO 10.                                             NC2394.2
 046400 TH3-TEST-GF-1.                                                   NC2394.2
 046500     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) IS NOT EQUAL TO             NC2394.2
-046600              "ELEM (02L06,10)"                                   NC2394.2
+046600              "EYEM (02,06,10)"                                   NC2394.2
 046700         GO TO TH3-FAIL-GF-1.                                     NC2394.2
 046800     PERFORM PASS.                                                NC2394.2
 046900     GO TO TH3-WRITE-GF-1.                                        NC2394.2
@@ -469,7 +469,7 @@
 047100     PERFORM DE-LETE.                                             NC2394.2
 047200     GO TO TH3-WRITE-GF-1.                                        NC2394.2
 047300 TH3-FAIL-GF-1.                                                   NC2394.2
-047400     MOVE "ELEM (02L06,10)" TO CORRECT-A                          NC2394.2
+047400     MOVE "EYEM (02,06,10)" TO CORRECT-A                          NC2394.2
 047500     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A             NC2394.2
 047600     MOVE "INTERNAL INDEXING LEVEL 3  " TO RE-MARK                NC2394.2
 047700     PERFORM FAIL.                                                NC2394.2
@@ -507,7 +507,7 @@
 050900     SET IDX-3 TO 7.                                              NC2394.2
 051000 TH3-TEST-GF-3.                                                   NC2394.2
 051100     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) IS NOT EQUAL TO             NC2394.2
-051200         "ELEM (09,08107)"                                        NC2394.2
+051200         "ELEM (09,06,07)"                                        NC2394.2
 051300         GO TO TH3-FAIL-GF-3.                                     NC2394.2
 051400     PERFORM PASS.                                                NC2394.2
 051500     GO TO TH3-WRITE-GF-3.                                        NC2394.2
@@ -515,7 +515,7 @@
 051700     PERFORM DE-LETE.                                             NC2394.2
 051800     GO TO TH3-WRITE-GF-3.                                        NC2394.2
 051900 TH3-FAIL-GF-3.                                                   NC2394.2
-052000     MOVE "ELEM (09,08107)" TO CORRECT-A                          NC2394.2
+052000     MOVE "ELEM (09,06,07)" TO CORRECT-A                          NC2394.2
 052100     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A             NC2394.2
 052200     MOVE "INTERNAL INDEXING LEVEL 3  " TO RE-MARK                NC2394.2
 052300     PERFORM FAIL.                                                NC2394.2

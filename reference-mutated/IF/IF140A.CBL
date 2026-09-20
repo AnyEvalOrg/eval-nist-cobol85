@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1404.2
 000300     IF140A.                                                      IF1404.2
 000400                                                                  IF1404.2
-000500***********************************************************       IF1404.2
-000600*                                                         *       IF1404.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1404.2
-000800* It contains tests for the Intrinsic Function            *       IF1404.2
-000900* UPPER-CASE.                                             *       IF1404.2
-001000*                                                         *       IF1404.2
-001100***********************************************************       IF1404.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1404.2
 001300 CONFIGURATION SECTION.                                           IF1404.2
 001400 SOURCE-COMPUTER.                                                 IF1404.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1404.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1404.2
 002700 WORKING-STORAGE SECTION.                                         IF1404.2
-002800***********************************************************       IF1404.2
-002900* Variables specific to the Intrinsic Function Test IF140A*       IF1404.2
-003000***********************************************************       IF1404.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC A(10)           VALUE "tumble".      IF1404.2
 003200 01  B                   PIC A(10)           VALUE "WEED".        IF1404.2
 003300 01  C                   PIC X(10)           VALUE "Was".         IF1404.2
@@ -35,9 +35,9 @@
 003500 01  E                   PIC X(10)           VALUE "And4".        IF1404.2
 003600 01  TEMP                PIC S9(10).                              IF1404.2
 003700 01  WS-ANUM          PIC X(10).                                  IF1404.2
-003800*                                                                 IF1404.2
-003900**********************************************************        IF1404.2
-004000*                                                                 IF1404.2
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 01  TEST-RESULTS.                                                IF1404.2
 004200     02 FILLER                   PIC X      VALUE SPACE.          IF1404.2
 004300     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1404.2
@@ -297,16 +297,16 @@
 029700 BAIL-OUT-EX. EXIT.                                               IF1404.2
 029800 CCVS1-EXIT.                                                      IF1404.2
 029900     EXIT.                                                        IF1404.2
-030000********************************************************          IF1404.2
-030100*                                                      *          IF1404.2
-030200*    Intrinsic Function Tests         IF140A - UPCASE *           IF1404.2
-030300*                                                      *          IF1404.2
-030400********************************************************          IF1404.2
+030000*                                                                         
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
 030500 SECT-IF140A SECTION.                                             IF1404.2
 030600 F-UPCASE-INFO.                                                   IF1404.2
 030700     MOVE     "See ref. A-73 2.44" TO ANSI-REFERENCE.             IF1404.2
 030800     MOVE     "UPPER-CASE Function"     TO FEATURE.               IF1404.2
-030900*****************TEST (a) ******************************          IF1404.2
+030900*                                                                         
 031000 F-UPCASE-01.                                                     IF1404.2
 031100     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 031200 F-UPCASE-TEST-01.                                                IF1404.2
@@ -324,7 +324,7 @@
 032400 F-UPCASE-WRITE-01.                                               IF1404.2
 032500     MOVE "F-UPCASE-01" TO PAR-NAME.                              IF1404.2
 032600     PERFORM  PRINT-DETAIL.                                       IF1404.2
-032700*****************TEST (b) ******************************          IF1404.2
+032700*                                                                         
 032800 F-UPCASE-TEST-02.                                                IF1404.2
 032900     IF FUNCTION UPPER-CASE("CAPS") = "CAPS" THEN                 IF1404.2
 033000                    PERFORM PASS                                  IF1404.2
@@ -337,7 +337,7 @@
 033700 F-UPCASE-WRITE-02.                                               IF1404.2
 033800     MOVE "F-UPCASE-02" TO PAR-NAME.                              IF1404.2
 033900     PERFORM  PRINT-DETAIL.                                       IF1404.2
-034000*****************TEST (c) ******************************          IF1404.2
+034000*                                                                         
 034100 F-UPCASE-03.                                                     IF1404.2
 034200     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 034300 F-UPCASE-TEST-03.                                                IF1404.2
@@ -355,15 +355,15 @@
 035500 F-UPCASE-WRITE-03.                                               IF1404.2
 035600     MOVE "F-UPCASE-03" TO PAR-NAME.                              IF1404.2
 035700     PERFORM  PRINT-DETAIL.                                       IF1404.2
-035800*****************TEST (d) ******************************          IF1404.2
+035800*                                                                         
 035900 F-UPCASE-04.                                                     IF1404.2
 036000     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 036100 F-UPCASE-TEST-04.                                                IF1404.2
 036200     MOVE FUNCTION UPPER-CASE("95") TO WS-ANUM.                   IF1404.2
-036300     IF WS-ANUM = "9F" THEN                                       IF1404.2
+036300     IF WS-ANUM = "90" THEN                                       IF1404.2
 036400                    PERFORM PASS                                  IF1404.2
 036500     ELSE                                                         IF1404.2
-036600                    MOVE "9F"  TO CORRECT-A                       IF1404.2
+036600                    MOVE "90"  TO CORRECT-A                       IF1404.2
 036700                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 036800                    PERFORM FAIL.                                 IF1404.2
 036900     GO TO F-UPCASE-WRITE-04.                                     IF1404.2
@@ -373,7 +373,7 @@
 037300 F-UPCASE-WRITE-04.                                               IF1404.2
 037400     MOVE "F-UPCASE-04" TO PAR-NAME.                              IF1404.2
 037500     PERFORM  PRINT-DETAIL.                                       IF1404.2
-037600*****************TEST (e) ******************************          IF1404.2
+037600*                                                                         
 037700 F-UPCASE-05.                                                     IF1404.2
 037800     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 037900 F-UPCASE-TEST-05.                                                IF1404.2
@@ -391,7 +391,7 @@
 039100 F-UPCASE-WRITE-05.                                               IF1404.2
 039200     MOVE "F-UPCASE-05" TO PAR-NAME.                              IF1404.2
 039300     PERFORM  PRINT-DETAIL.                                       IF1404.2
-039400*****************TEST (f) ******************************          IF1404.2
+039400*                                                                         
 039500 F-UPCASE-06.                                                     IF1404.2
 039600     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 039700 F-UPCASE-TEST-06.                                                IF1404.2
@@ -409,7 +409,7 @@
 040900 F-UPCASE-WRITE-06.                                               IF1404.2
 041000     MOVE "F-UPCASE-06" TO PAR-NAME.                              IF1404.2
 041100     PERFORM  PRINT-DETAIL.                                       IF1404.2
-041200*****************TEST (g) ******************************          IF1404.2
+041200*                                                                         
 041300 F-UPCASE-07.                                                     IF1404.2
 041400     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 041500 F-UPCASE-TEST-07.                                                IF1404.2
@@ -427,15 +427,15 @@
 042700 F-UPCASE-WRITE-07.                                               IF1404.2
 042800     MOVE "F-UPCASE-07" TO PAR-NAME.                              IF1404.2
 042900     PERFORM  PRINT-DETAIL.                                       IF1404.2
-043000*****************TEST (h) ******************************          IF1404.2
+043000*                                                                         
 043100 F-UPCASE-08.                                                     IF1404.2
 043200     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 043300 F-UPCASE-TEST-08.                                                IF1404.2
 043400     MOVE FUNCTION UPPER-CASE(C) TO WS-ANUM.                      IF1404.2
-043500     IF WS-ANUM = "YAS" THEN                                      IF1404.2
+043500     IF WS-ANUM = "KAS" THEN                                      IF1404.2
 043600                    PERFORM PASS                                  IF1404.2
 043700     ELSE                                                         IF1404.2
-043800                    MOVE "YAS"  TO CORRECT-A                      IF1404.2
+043800                    MOVE "KAS"  TO CORRECT-A                      IF1404.2
 043900                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 044000                    PERFORM FAIL.                                 IF1404.2
 044100     GO TO F-UPCASE-WRITE-08.                                     IF1404.2
@@ -445,7 +445,7 @@
 044500 F-UPCASE-WRITE-08.                                               IF1404.2
 044600     MOVE "F-UPCASE-08" TO PAR-NAME.                              IF1404.2
 044700     PERFORM  PRINT-DETAIL.                                       IF1404.2
-044800*****************TEST (i) ******************************          IF1404.2
+044800*                                                                         
 044900 F-UPCASE-09.                                                     IF1404.2
 045000     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 045100 F-UPCASE-TEST-09.                                                IF1404.2
@@ -463,7 +463,7 @@
 046300 F-UPCASE-WRITE-09.                                               IF1404.2
 046400     MOVE "F-UPCASE-09" TO PAR-NAME.                              IF1404.2
 046500     PERFORM  PRINT-DETAIL.                                       IF1404.2
-046600*****************TEST (j) ******************************          IF1404.2
+046600*                                                                         
 046700 F-UPCASE-10.                                                     IF1404.2
 046800     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 046900 F-UPCASE-TEST-10.                                                IF1404.2
@@ -481,7 +481,7 @@
 048100 F-UPCASE-WRITE-10.                                               IF1404.2
 048200     MOVE "F-UPCASE-10" TO PAR-NAME.                              IF1404.2
 048300     PERFORM  PRINT-DETAIL.                                       IF1404.2
-048400*****************TEST (k) ******************************          IF1404.2
+048400*                                                                         
 048500 F-UPCASE-11.                                                     IF1404.2
 048600     MOVE ZERO TO TEMP.                                           IF1404.2
 048700 F-UPCASE-TEST-11.                                                IF1404.2
@@ -499,16 +499,16 @@
 049900 F-UPCASE-WRITE-11.                                               IF1404.2
 050000     MOVE "F-UPCASE-11" TO PAR-NAME.                              IF1404.2
 050100     PERFORM  PRINT-DETAIL.                                       IF1404.2
-050200*****************TEST (l) ******************************          IF1404.2
+050200*                                                                         
 050300 F-UPCASE-12.                                                     IF1404.2
 050400     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 050500 F-UPCASE-TEST-12.                                                IF1404.2
 050600     MOVE FUNCTION UPPER-CASE(FUNCTION UPPER-CASE("giZZard"))     IF1404.2
 050700       TO WS-ANUM.                                                IF1404.2
-050800     IF WS-ANUM = "GIZTARD" THEN                                  IF1404.2
+050800     IF WS-ANUM = "GTZZARD" THEN                                  IF1404.2
 050900                    PERFORM PASS                                  IF1404.2
 051000     ELSE                                                         IF1404.2
-051100                    MOVE "GIZTARD"  TO CORRECT-A                  IF1404.2
+051100                    MOVE "GTZZARD"  TO CORRECT-A                  IF1404.2
 051200                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 051300                    PERFORM FAIL.                                 IF1404.2
 051400     GO TO F-UPCASE-WRITE-12.                                     IF1404.2
@@ -518,7 +518,7 @@
 051800 F-UPCASE-WRITE-12.                                               IF1404.2
 051900     MOVE "F-UPCASE-12" TO PAR-NAME.                              IF1404.2
 052000     PERFORM  PRINT-DETAIL.                                       IF1404.2
-052100*****************TEST (m) ******************************          IF1404.2
+052100*                                                                         
 052200 F-UPCASE-13.                                                     IF1404.2
 052300     MOVE ZERO TO TEMP.                                           IF1404.2
 052400 F-UPCASE-TEST-13.                                                IF1404.2
@@ -537,7 +537,7 @@
 053700 F-UPCASE-WRITE-13.                                               IF1404.2
 053800     MOVE "F-UPCASE-13" TO PAR-NAME.                              IF1404.2
 053900     PERFORM  PRINT-DETAIL.                                       IF1404.2
-054000*******************END OF TESTS**************************         IF1404.2
+054000*                                                                         
 054100 CCVS-EXIT SECTION.                                               IF1404.2
 054200 CCVS-999999.                                                     IF1404.2
 054300     GO TO CLOSE-FILES.                                           IF1404.2

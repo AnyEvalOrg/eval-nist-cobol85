@@ -29,7 +29,7 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED ADDITION   FAIL* ADD-TEST-F2-14                                                                              
                                                                                                                         
                                      COMPUTED=  000000028.000000000                                                     
-                                     CORRECT =  000000068.000000000  IV-18 4.3.8.1                                      
+                                     CORRECT =  000000078.000000000  IV-18 4.3.8.1                                      
                                                                                                                         
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-15                                                                              
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-16                                                                              
@@ -64,7 +64,7 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED SUBTRACT   FAIL* SUB-TEST-F2-11                                                                              
                                                                                                                         
                                      COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000000.000000000  IV-18 4.3.8.1                                      
+                                     CORRECT =  000000006.000000000  IV-18 4.3.8.1                                      
                                                                                                                         
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-12                                                                              
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-13                                                                              
@@ -92,7 +92,7 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED MULTIPLY   FAIL* MPY-TEST-F2-5                                                                               
                                                                                                                         
                                      COMPUTED=  000000025.000000000                                                     
-                                     CORRECT =  000000075.000000000  IV-18 4.3.8.1                                      
+                                     CORRECT =  000000028.000000000  IV-18 4.3.8.1                                      
                                                                                                                         
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-6                                                                               
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-7                                                                               
@@ -110,7 +110,7 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
                                                                                                                         
                                      COMPUTED=  000000225.000000000                                                     
-                                     CORRECT =  000000229.000000000  IV-18 4.3.8.1                                      
+                                     CORRECT =  000000425.000000000  IV-18 4.3.8.1                                      
                                                                                                                         
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-16                                                                              
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-17                                                                              
@@ -138,7 +138,7 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED DIVIDE     FAIL* DIV-TEST-F3-13                                                                              
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000003.000000000  IV-18 4.3.8.1                                      
+                                     CORRECT =  000000009.000000000  IV-18 4.3.8.1                                      
                                                                                                                         
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-14                                                                              
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-15                                                                              

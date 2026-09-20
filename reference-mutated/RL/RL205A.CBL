@@ -1,102 +1,102 @@
 000100 IDENTIFICATION DIVISION.                                         RL2054.2
 000200 PROGRAM-ID.                                                      RL2054.2
 000300     RL205A.                                                      RL2054.2
-000400****************************************************************  RL2054.2
-000500*                                                              *  RL2054.2
-000600*    VALIDATION FOR:-                                          *  RL2054.2
-000700*                                                              *  RL2054.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2054.2
-000900*                                                              *  RL2054.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2054.2
-001100*                                                              *  RL2054.2
-001200****************************************************************  RL2054.2
-001300*    THE FUNCTION OF THIS PROGRAM IS TO TEST THE PERMISSIBLE SYN- RL2054.2
-001400*    TACTICAL CONSTRUCTS OF COBOL ELEMENTS ASSOCIATED WITH LEVEL 2RL2054.2
-001500*    OF THE RELATIVE I-O MODULE.  THE ELEMENTS TESTED IN THIS     RL2054.2
-001600*    ROUTINE ARE:                                                 RL2054.2
-001700*                                                                 RL2054.2
-001800*            USE AFTER ERROR PROCEDURE FILE-NAME-1 FILE-NAME-2    RL2054.2
-001900*            READ .....  NEXT                                     RL2054.2
-002000*            READ .....  NEXT RECORD INTO ....                    RL2054.2
-002100*            READ .....  NEXT INTO .....                          RL2054.2
-002200*            READ .....  NEXT INTO ..... AT END ....              RL2054.2
-002300*            READ .....                                           RL2054.2
-002400*            READ .....  INTO .....                               RL2054.2
-002500*            READ .....  RECORD                                   RL2054.2
-002600*            READ .....  RECORD  INVALID .....                    RL2054.2
-002700*            READ .....  RECORD  INVALID KEY ....                 RL2054.2
-002800*            START FILE-NAME-2                                    RL2054.2
-002900*            START FILE-NAME-2 KEY EQUAL TO ....                  RL2054.2
-003000*            START FILE-NAME-2 KEY IS EQUAL TO  ....              RL2054.2
-003100*            START FILE-NAME-2 KEY IS EQUAL .....                 RL2054.2
-003200*            START FILE-NAME-2 KEY IS =  ......                   RL2054.2
-003300*            START FILE-NAME-2 KEY IS GREATER  .....              RL2054.2
-003400*            START FILE-NAME-2 KEY  GREATER THAN ....             RL2054.2
-003500*            START FILE-NAME-2 KEY IS GREATER  .....              RL2054.2
-003600*            START FILE-NAME-2 KEY IS  >   ....                   RL2054.2
-003700*            START FILE-NAME-2 KEY     >   ....                   RL2054.2
-003800*            START FILE-NAME-2 KEY IS NOT LESS THAN ....          RL2054.2
-003900*            START FILE-NAME-2 KEY IS NOT LESS  ....              RL2054.2
-004000*            START FILE-NAME-2 KEY    NOT LESS  ....              RL2054.2
-004100*            START FILE-NAME-2 KEY IS NOT  <  .....               RL2054.2
-004200*            START FILE-NAME-1 KEY IS EQUAL TO INVALID KEY .....  RL2054.2
-004300*            START FILE-NAME-1 KEY IS EQUAL TO INVALID ....       RL2054.2
-004400*            START FILE-NAME-1 INVALID KEY ....                   RL2054.2
-004500*            START FILE-NAME-1 ; INVALID KEY ....                 RL2054.2
-004600*            START FILE-NAME-1 KEY EQUAL TO  .....                RL2054.2
-004700*            FILE POSITION INDICATOR                              RL2054.2
-004800*                                                                 RL2054.2
-004900*    EACH ELEMENT TESTED WILL BE EXERCISED SEMANTICALLY BY THIS   RL2054.2
-005000*    ROUTINE.                                                     RL2054.2
-005100*    FOR A RELATIVE OR INDEXED FILE IN THE DYNAMIC ACCESS MODE,   RL2054.2
-005200*    EXECUTION OF AN "OPEN I-O" STATEMENT FOLLOWED BYONE OR       RL2054.2
-005300*    MORE "WRITE" STATEMENTS AND THEN A "READ NEXT" STATEMENT     RL2054.2
-005400*    WILL CAUSE THE "READ" STATEMENT TO ACCESS THE FIRST RECORD   RL2054.2
-005500*    IN THE FILE AT THE TIME OF EXECUTION OF THE "READ"           RL2054.2
-005600*    STATEMENT.  SYNTAX TESTS FOR THE "START" STATEMENT ARE       RL2054.2
-005700*    ALSO INCLUDED.                                               RL2054.2
-005800*                                                                 RL2054.2
-005900*                                                                 RL2054.2
-006000*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      RL2054.2
-006100*                                                                 RL2054.2
-006200*             X-21   RELATIVE FILE IMPLEMENTOR-NAME IN ASSGN TO   RL2054.2
-006300*                    CLAUSE FOR DATA FILE RL-FS1                  RL2054.2
-006400*             X-22   RELATIVE FILE IMPLEMENTOR-NAME IN ASSIGN TO  RL2054.2
-006500*                    CLAUSE FOR DATA FILE RL-FD2                  RL2054.2
-006600*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          RL2054.2
-006700*             X-69   ADDITIONAL VALUE OF PHRASES                  RL2054.2
-006800*             X-74   VALUE OF IMPLEMENTOR-NAME                    RL2054.2
-006900*             X-75   OBJECT OF VALUE OF CLAUSE FOR FILE RL-FS1    RL2054.2
-007000*             X-76   OBJECT OF VALUE OF CLAUSE FOR FILE RL-FD2    RL2054.2
-007100*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         RL2054.2
-007200*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         RL2054.2
-007300*                                                                 RL2054.2
-007400*        NOTE:  X-CARDS 69,74,75 AND 76 ARE OPTIONAL              RL2054.2
-007500*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   RL2054.2
-007600*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  RL2054.2
-007700*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   RL2054.2
-007800*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   RL2054.2
-007900*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    RL2054.2
-008000*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       RL2054.2
-008100*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        RL2054.2
-008200*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    RL2054.2
-008300*               THEY ARE AS FOLLOWS                               RL2054.2
-008400*                                                                 RL2054.2
-008500*                  C  SELECTS X-CARDS 74,75 AND 76                RL2054.2
-008600*                  G  SELECTS X-CARDS 69                          RL2054.2
-008700*                                                                 RL2054.2
-008800*        NOTE:  THERE IS OPTIONAL SOURCE CODE IN THIS PROGRAM     RL2054.2
-008900*               FOR THE CONVENIENCE OF THE USER.  THIS OPTIONAL   RL2054.2
-009000*               CODE IS IDENTIFIED BY THE LETTER  X IN            RL2054.2
-009100*               POSITION 7  OF THE SOURCE LINE.  USE OF           RL2054.2
-009200*               SOURCE CODE WITH LETTER X WILL PRINT THE CONTENTS RL2054.2
-009300*               OF THE FILES AFTER THE TEST REPORT.               RL2054.2
-009400*               IF THE VP-ROUTINE IS USED THE APPROPRIATE         RL2054.2
-009500*               SOURCE CODE MAY BE SELECTED BY SPECIFYING THE     RL2054.2
-009600*               RESPECTIVE LETTER IN THE "*OPT" VP-ROUTINE CONTROLRL2054.2
-009700*               CARD.                                             RL2054.2
-009800*                                                                 RL2054.2
-009900******************************************************            RL2054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
+008900*                                                                         
+009000*                                                                         
+009100*                                                                         
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
 010000 ENVIRONMENT DIVISION.                                            RL2054.2
 010100 CONFIGURATION SECTION.                                           RL2054.2
 010200 SOURCE-COMPUTER.                                                 RL2054.2
@@ -431,7 +431,7 @@
 044300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2054.2
 044400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2054.2
 044500      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2054.2
-044600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2054.2
+044600*                                                                         
 044700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2054.2
 044800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2054.2
 044900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2054.2
@@ -565,9 +565,9 @@
 057700              MOVE      "INVALID KEY ON WRITE" TO RE-MARK         RL2054.2
 057800              PERFORM   PRINT-DETAIL                              RL2054.2
 057900              GO TO     REL-INIT-001-R2.                          RL2054.2
-058000*                                                                 RL2054.2
-058100*    01                                                           RL2054.2
-058200*                                                                 RL2054.2
+058000*                                                                         
+058100*                                                                         
+058200*                                                                         
 058300     PERFORM  PASS.                                               RL2054.2
 058400     PERFORM  REL-WRITE-001.                                      RL2054.2
 058500 REL-INIT-001-R2.                                                 RL2054.2
@@ -597,9 +597,9 @@
 060900              MOVE      "INCORRECT NUMBER OF WRITES" TO RE-MARK   RL2054.2
 061000              PERFORM   PRINT-DETAIL                              RL2054.2
 061100              GO  TO    REL-EXIT-001.                             RL2054.2
-061200*                                                                 RL2054.2
-061300*    02                                                           RL2054.2
-061400*                                                                 RL2054.2
+061200*                                                                         
+061300*                                                                         
+061400*                                                                         
 061500     IF       INV-KEY-COUNTER  NOT EQUAL TO ZERO                  RL2054.2
 061600              PERFORM   FAIL                                      RL2054.2
 061700              MOVE      INV-KEY-COUNTER  TO COMPUTED-N            RL2054.2
@@ -640,9 +640,9 @@
 065200     MOVE     01  TO REC-CT.                                      RL2054.2
 065300     PERFORM  REL-TEST-002.                                       RL2054.2
 065400     GO TO    REL-EXIT-002-01.                                    RL2054.2
-065500*                                                                 RL2054.2
-065600*    01                                                           RL2054.2
-065700*                                                                 RL2054.2
+065500*                                                                         
+065600*                                                                         
+065700*                                                                         
 065800 REL-DELETE-002-01.                                               RL2054.2
 065900     MOVE     01  TO REC-CT.                                      RL2054.2
 066000     PERFORM  DE-LETE.                                            RL2054.2
@@ -667,9 +667,9 @@
 067900 REL-TEST-002-02.                                                 RL2054.2
 068000     MOVE     02 TO REC-CT.                                       RL2054.2
 068100     PERFORM  REL-TEST-002.                                       RL2054.2
-068200*                                                                 RL2054.2
-068300*    02                                                           RL2054.2
-068400*                                                                 RL2054.2
+068200*                                                                         
+068300*                                                                         
+068400*                                                                         
 068500     GO TO    REL-EXIT-002-02.                                    RL2054.2
 068600 REL-DELETE-002-02.                                               RL2054.2
 068700     MOVE     02  TO REC-CT.                                      RL2054.2
@@ -695,9 +695,9 @@
 070700 REL-TEST-002-03.                                                 RL2054.2
 070800     MOVE     03 TO REC-CT.                                       RL2054.2
 070900     PERFORM  REL-TEST-002.                                       RL2054.2
-071000*                                                                 RL2054.2
-071100*    03                                                           RL2054.2
-071200*                                                                 RL2054.2
+071000*                                                                         
+071100*                                                                         
+071200*                                                                         
 071300     GO  TO   REL-EXIT-002-03.                                    RL2054.2
 071400 REL-DELETE-002-03.                                               RL2054.2
 071500     MOVE     03  TO REC-CT.                                      RL2054.2
@@ -724,19 +724,19 @@
 073600              NEXT SENTENCE                                       RL2054.2
 073700              ELSE                                                RL2054.2
 073800              GO TO    REL-TEST-002-R4.                           RL2054.2
-073900*                                                                 RL2054.2
-074000*    TEST REL-002-04 TESTS THE COBOL CONSTRUCT  "READ FILE-       RL2054.2
-074100*    NAME NEXT INTO IDENTIFIER AT END".  THE TEST READS THE FILE  RL2054.2
-074200*    SEQUENTIALY VIA THE RELATIVE KEY  (RECORD KEY IS THE KEY OF  RL2054.2
-074300*    REFERENCE) UNTIL AN END-OF-FILE CONDITION OCCURS.  A CHECK   RL2054.2
-074400*    IS MADE TO VERIFY THAT THE PROPER RECORDS WERE RETRIVED AND  RL2054.2
-074500*    THE AT END PATH WAS TAKEN ON THE 301 ST READ.                RL2054.2
-074600*                                                                 RL2054.2
+073900*                                                                         
+074000*                                                                         
+074100*                                                                         
+074200*                                                                         
+074300*                                                                         
+074400*                                                                         
+074500*                                                                         
+074600*                                                                         
 074700 REL-TEST-002-04.                                                 RL2054.2
 074800     CLOSE   RL-FD1.                                              RL2054.2
 074900     MOVE     04   TO REC-CT.                                     RL2054.2
 075000     PERFORM  REL-TEST-002.                                       RL2054.2
-075100*   .04                                                           RL2054.2
+075100*                                                                         
 075200     GO TO    REL-EXIT-002-04.                                    RL2054.2
 075300 REL-DELETE-002-04.                                               RL2054.2
 075400     MOVE     04  TO REC-CT.                                      RL2054.2
@@ -763,7 +763,7 @@
 077500 REL-TEST-002-05.                                                 RL2054.2
 077600     MOVE     05   TO REC-CT.                                     RL2054.2
 077700     PERFORM  REL-TEST-002.                                       RL2054.2
-077800*   .05                                                           RL2054.2
+077800*                                                                         
 077900     GO TO    REL-EXIT-002-05.                                    RL2054.2
 078000 REL-DELETE-002-05.                                               RL2054.2
 078100     MOVE     05  TO REC-CT.                                      RL2054.2
@@ -792,7 +792,7 @@
 080400 REL-TEST-002-06.                                                 RL2054.2
 080500     MOVE     06   TO REC-CT.                                     RL2054.2
 080600     PERFORM  REL-TEST-002.                                       RL2054.2
-080700*   .06                                                           RL2054.2
+080700*                                                                         
 080800     GO TO    REL-EXIT-002-06.                                    RL2054.2
 080900 REL-DELETE-002-06.                                               RL2054.2
 081000     MOVE     06  TO REC-CT.                                      RL2054.2
@@ -819,7 +819,7 @@
 083100 REL-TEST-002-07.                                                 RL2054.2
 083200     MOVE     07   TO REC-CT.                                     RL2054.2
 083300     PERFORM  REL-TEST-002.                                       RL2054.2
-083400*   .07                                                           RL2054.2
+083400*                                                                         
 083500     GO TO    REL-EXIT-002-07.                                    RL2054.2
 083600 REL-DELETE-002-07.                                               RL2054.2
 083700     MOVE     07  TO REC-CT.                                      RL2054.2
@@ -844,7 +844,7 @@
 085600 REL-TEST-002-08.                                                 RL2054.2
 085700     MOVE     08   TO REC-CT.                                     RL2054.2
 085800     PERFORM  REL-TEST-002.                                       RL2054.2
-085900*   .08                                                           RL2054.2
+085900*                                                                         
 086000     GO TO    REL-EXIT-002-08.                                    RL2054.2
 086100 REL-DELETE-002-08.                                               RL2054.2
 086200     MOVE     08  TO REC-CT.                                      RL2054.2
@@ -870,7 +870,7 @@
 088200 REL-TEST-002-09.                                                 RL2054.2
 088300     MOVE     09   TO REC-CT.                                     RL2054.2
 088400     PERFORM  REL-TEST-002.                                       RL2054.2
-088500*   .09                                                           RL2054.2
+088500*                                                                         
 088600     GO TO    REL-EXIT-002-09.                                    RL2054.2
 088700 REL-DELETE-002-09.                                               RL2054.2
 088800     MOVE     09  TO REC-CT.                                      RL2054.2
@@ -897,47 +897,47 @@
 090900              MOVE      ERROR-COUNTER-06V00 TO COMPUTED-N         RL2054.2
 091000              MOVE      "SEE PARA. - REL-TEST-002" TO RE-MARK.    RL2054.2
 091100     PERFORM  REL-WRITE-002.                                      RL2054.2
-091200*                                                                 RL2054.2
-091300*       EACH TEST IS EXECUTED 10 TIMES EXCEPT FOR  REL-TEST-002-04RL2054.2
-091400*    WHICH IS EXECUTED 300 TIMES.  FOLLOWING THE LAST             RL2054.2
-091500*    EXECUTION A TEST IS MADE ON ERROR-COUNTER-06V00 WHICH IS     RL2054.2
-091600*    EXPECTED TO BE ZERO.  IF ERROR-COUNTER-06V00 IS NOT ZERO     RL2054.2
-091700*    THE VALUE IN THE COUNTER INDICATES HOW THE EXECUTION FAILED  RL2054.2
-091800*    AND THE NUMBER OF TIMES THE UNEXPECTED ACTION OCCURRED       RL2054.2
-091900*    DURING THE TEST.  BEFORE THE TEST BEGINS ERROR-COUNTER-06V00 RL2054.2
-092000*    IS INITIALIZED WITH A VALUE.  EACH TIME THE CORRECT RECORD   RL2054.2
-092100*    WAS MADE AVAILABLE FOLLOWING THE READ, OR AN INVALID KEY     RL2054.2
-092200*    CONDITION OCCURRED THAT WAS EXPECTED FOLLOWING A READ OR     RL2054.2
-092300*    START, ERROR-COUNTER-06V00 IS DECREMENTED BY 1.              RL2054.2
-092400*    FOR EACH EXECUTION THAT DID NOT PRODUCE THE EXPECTED         RL2054.2
-092500*    RESULTS  THE ERROR-COUNTER-06V00 IS INCREMENTED BY THE VALUE RL2054.2
-092600*    FOR THE ACTION LISTED BELOW, E.G., VALUE 20003 WOULD INDICATERL2054.2
-092700*    THAT OF THE 10 EXECUTIONS DURING THE TEST (READING LEFT TO   RL2054.2
-092800*    RIGHT)  2 INVALID KEY CONDITIONS AND 3 RECORDS RETRIEVED     RL2054.2
-092900*    AS A RESULT OF THE READ OR START WAS NOT-AS EXPECTED.        RL2054.2
-093000*                                                                 RL2054.2
-093100*                                                                 RL2054.2
-093200*                                                                 RL2054.2
-093300*    COMPUTED RESULT                 INDICATED                    RL2054.2
-093400*       INCREMENTS                     ACTION                     RL2054.2
-093500*                                                                 RL2054.2
-093600*       000100          THE  RECORD  FOUND IN THE IDENTIFIER      RL2054.2
-093700*                       SPECIFIED IN THE INTO PHRASE OF THE       RL2054.2
-093800*                       READ STATEMENT WAS NOT THE RECORD         RL2054.2
-093900*                       EXPECTED FOLLOWING EXECUTION OF THE       RL2054.2
-094000*                       READ.                                     RL2054.2
-094100*                                                                 RL2054.2
-094200*       000001          THE RECORD RETREIVED FROM THE FILE        RL2054.2
-094300*                       FOLLOWING THE READ WAS NOT THE ONE        RL2054.2
-094400*                       EXPECTED.                                 RL2054.2
-094500*                                                                 RL2054.2
-094600*       010000          AN UNEXPECTED INVALID KEY OR AT END       RL2054.2
-094700*                       CONDITION OCCURRED.  NOTE - ASSUMPTION    RL2054.2
-094800*                       IS THAT THE "USE" STATEMENT IS ONLY       RL2054.2
-094900*                       EXECUTED WHEN AN INVALID KEY OR AT END    RL2054.2
-095000*                       CONDITION OCCURS AND THE INVALID KEY OR   RL2054.2
-095100*                       AT END PHRASE HAS NOT BEEN SPECIFIED.     RL2054.2
-095200*                                                                 RL2054.2
+091200*                                                                         
+091300*                                                                         
+091400*                                                                         
+091500*                                                                         
+091600*                                                                         
+091700*                                                                         
+091800*                                                                         
+091900*                                                                         
+092000*                                                                         
+092100*                                                                         
+092200*                                                                         
+092300*                                                                         
+092400*                                                                         
+092500*                                                                         
+092600*                                                                         
+092700*                                                                         
+092800*                                                                         
+092900*                                                                         
+093000*                                                                         
+093100*                                                                         
+093200*                                                                         
+093300*                                                                         
+093400*                                                                         
+093500*                                                                         
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
+094600*                                                                         
+094700*                                                                         
+094800*                                                                         
+094900*                                                                         
+095000*                                                                         
+095100*                                                                         
+095200*                                                                         
 095300 REL-WRITE-002.                                                   RL2054.2
 095400     PERFORM  PRINT-DETAIL.                                       RL2054.2
 095500 REL-EXIT-002.                                                    RL2054.2
@@ -968,7 +968,7 @@
 098000 REL-TEST-003-01.                                                 RL2054.2
 098100     MOVE     01   TO REC-CT.                                     RL2054.2
 098200     PERFORM  REL-TEST-003.                                       RL2054.2
-098300*   .01                                                           RL2054.2
+098300*                                                                         
 098400     GO TO    REL-EXIT-003-01.                                    RL2054.2
 098500 REL-DELETE-003-01.                                               RL2054.2
 098600     PERFORM  DE-LETE.                                            RL2054.2
@@ -991,7 +991,7 @@
 100300 REL-TEST-003-02.                                                 RL2054.2
 100400     MOVE     02   TO REC-CT.                                     RL2054.2
 100500     PERFORM  REL-TEST-003.                                       RL2054.2
-100600*   .02                                                           RL2054.2
+100600*                                                                         
 100700     GO TO    REL-EXIT-003-02.                                    RL2054.2
 100800 REL-DELETE-003-02.                                               RL2054.2
 100900     MOVE     02  TO REC-CT.                                      RL2054.2
@@ -1015,7 +1015,7 @@
 102700 REL-TEST-003-03.                                                 RL2054.2
 102800     MOVE     03   TO REC-CT.                                     RL2054.2
 102900     PERFORM  REL-TEST-003.                                       RL2054.2
-103000*   .03                                                           RL2054.2
+103000*                                                                         
 103100     GO TO    REL-EXIT-003-03.                                    RL2054.2
 103200 REL-DELETE-003-03.                                               RL2054.2
 103300     MOVE     03  TO REC-CT.                                      RL2054.2
@@ -1039,7 +1039,7 @@
 105100 REL-TEST-003-04.                                                 RL2054.2
 105200     MOVE     04   TO REC-CT.                                     RL2054.2
 105300     PERFORM  REL-TEST-003.                                       RL2054.2
-105400*   .04                                                           RL2054.2
+105400*                                                                         
 105500     GO TO    REL-EXIT-003-04.                                    RL2054.2
 105600 REL-DELETE-003-04.                                               RL2054.2
 105700     MOVE     04  TO REC-CT.                                      RL2054.2
@@ -1063,7 +1063,7 @@
 107500 REL-TEST-003-05.                                                 RL2054.2
 107600     MOVE     05   TO REC-CT.                                     RL2054.2
 107700     PERFORM  REL-TEST-003.                                       RL2054.2
-107800*   .05                                                           RL2054.2
+107800*                                                                         
 107900     GO TO    REL-EXIT-003-05.                                    RL2054.2
 108000 REL-DELETE-003-05.                                               RL2054.2
 108100     MOVE     05  TO REC-CT.                                      RL2054.2
@@ -1089,7 +1089,7 @@
 110100 REL-TEST-003-06.                                                 RL2054.2
 110200     MOVE     06   TO REC-CT.                                     RL2054.2
 110300     PERFORM  REL-TEST-003.                                       RL2054.2
-110400*   .06                                                           RL2054.2
+110400*                                                                         
 110500     GO TO    REL-EXIT-003-06.                                    RL2054.2
 110600 REL-DELETE-003-06.                                               RL2054.2
 110700     MOVE     06  TO REC-CT.                                      RL2054.2
@@ -1114,7 +1114,7 @@
 112600 REL-TEST-003-07.                                                 RL2054.2
 112700     MOVE     07   TO REC-CT.                                     RL2054.2
 112800     PERFORM  REL-TEST-003.                                       RL2054.2
-112900*   .07                                                           RL2054.2
+112900*                                                                         
 113000     GO TO    REL-EXIT-003-07.                                    RL2054.2
 113100 REL-DELETE-003-07.                                               RL2054.2
 113200     MOVE     07  TO REC-CT.                                      RL2054.2
@@ -1139,7 +1139,7 @@
 115100 REL-TEST-003-08.                                                 RL2054.2
 115200     MOVE     08   TO REC-CT.                                     RL2054.2
 115300     PERFORM  REL-TEST-003.                                       RL2054.2
-115400*   .08                                                           RL2054.2
+115400*                                                                         
 115500     GO TO    REL-EXIT-003-08.                                    RL2054.2
 115600 REL-DELETE-003-08.                                               RL2054.2
 115700     MOVE     08  TO REC-CT.                                      RL2054.2
@@ -1164,7 +1164,7 @@
 117600 REL-TEST-003-09.                                                 RL2054.2
 117700     MOVE     09   TO REC-CT.                                     RL2054.2
 117800     PERFORM  REL-TEST-003.                                       RL2054.2
-117900*   .09                                                           RL2054.2
+117900*                                                                         
 118000     GO TO    REL-EXIT-003-09.                                    RL2054.2
 118100 REL-DELETE-003-09.                                               RL2054.2
 118200     MOVE     09  TO REC-CT.                                      RL2054.2
@@ -1189,7 +1189,7 @@
 120100 REL-TEST-003-10.                                                 RL2054.2
 120200     MOVE     10   TO REC-CT.                                     RL2054.2
 120300     PERFORM  REL-TEST-003.                                       RL2054.2
-120400*   .10                                                           RL2054.2
+120400*                                                                         
 120500     GO TO    REL-EXIT-003-10.                                    RL2054.2
 120600 REL-DELETE-003-10.                                               RL2054.2
 120700     MOVE     10  TO REC-CT.                                      RL2054.2
@@ -1214,7 +1214,7 @@
 122600 REL-TEST-003-11.                                                 RL2054.2
 122700     MOVE     11   TO REC-CT.                                     RL2054.2
 122800     PERFORM  REL-TEST-003.                                       RL2054.2
-122900*   .11                                                           RL2054.2
+122900*                                                                         
 123000     GO TO    REL-EXIT-003-11.                                    RL2054.2
 123100 REL-DELETE-003-11.                                               RL2054.2
 123200     MOVE     11  TO REC-CT.                                      RL2054.2
@@ -1238,7 +1238,7 @@
 125000 REL-TEST-003-12.                                                 RL2054.2
 125100     MOVE     12   TO REC-CT.                                     RL2054.2
 125200     PERFORM  REL-TEST-003.                                       RL2054.2
-125300*   .12                                                           RL2054.2
+125300*                                                                         
 125400     GO TO    REL-EXIT-003-12.                                    RL2054.2
 125500 REL-DELETE-003-12.                                               RL2054.2
 125600     MOVE     12  TO REC-CT.                                      RL2054.2
@@ -1262,7 +1262,7 @@
 127400 REL-TEST-003-13.                                                 RL2054.2
 127500     MOVE     13   TO REC-CT.                                     RL2054.2
 127600     PERFORM  REL-TEST-003.                                       RL2054.2
-127700*   .13                                                           RL2054.2
+127700*                                                                         
 127800     GO TO    REL-EXIT-003-13.                                    RL2054.2
 127900 REL-DELETE-003-13.                                               RL2054.2
 128000     MOVE     13  TO REC-CT.                                      RL2054.2
@@ -1286,7 +1286,7 @@
 129800 REL-TEST-003-14.                                                 RL2054.2
 129900     MOVE     14   TO REC-CT.                                     RL2054.2
 130000     PERFORM  REL-TEST-003.                                       RL2054.2
-130100*   .14                                                           RL2054.2
+130100*                                                                         
 130200     GO TO    REL-EXIT-003-14.                                    RL2054.2
 130300 REL-DELETE-003-14.                                               RL2054.2
 130400     MOVE     14  TO REC-CT.                                      RL2054.2
@@ -1317,7 +1317,7 @@
 132900 REL-TEST-003-15.                                                 RL2054.2
 133000     MOVE     15   TO REC-CT.                                     RL2054.2
 133100     PERFORM  REL-TEST-003.                                       RL2054.2
-133200*   .15                                                           RL2054.2
+133200*                                                                         
 133300     GO TO    REL-EXIT-003-15.                                    RL2054.2
 133400 REL-DELETE-003-15.                                               RL2054.2
 133500     MOVE     15  TO REC-CT.                                      RL2054.2
@@ -1341,7 +1341,7 @@
 135300 REL-TEST-003-16.                                                 RL2054.2
 135400     MOVE     16   TO REC-CT.                                     RL2054.2
 135500     PERFORM  REL-TEST-003.                                       RL2054.2
-135600*   .16                                                           RL2054.2
+135600*                                                                         
 135700     GO TO    REL-EXIT-003-16.                                    RL2054.2
 135800 REL-DELETE-003-16.                                               RL2054.2
 135900     MOVE     16  TO REC-CT.                                      RL2054.2
@@ -1364,7 +1364,7 @@
 137600 REL-TEST-003-17.                                                 RL2054.2
 137700     MOVE     17   TO REC-CT.                                     RL2054.2
 137800     PERFORM  REL-TEST-003.                                       RL2054.2
-137900*   .17                                                           RL2054.2
+137900*                                                                         
 138000     GO TO    REL-EXIT-003-17.                                    RL2054.2
 138100 REL-DELETE-003-17.                                               RL2054.2
 138200     MOVE     17  TO REC-CT.                                      RL2054.2
@@ -1387,7 +1387,7 @@
 139900 REL-TEST-003-18.                                                 RL2054.2
 140000     MOVE     18   TO REC-CT.                                     RL2054.2
 140100     PERFORM  REL-TEST-003.                                       RL2054.2
-140200*   .18                                                           RL2054.2
+140200*                                                                         
 140300     GO TO    REL-EXIT-003-18.                                    RL2054.2
 140400 REL-DELETE-003-18.                                               RL2054.2
 140500     MOVE     18  TO REC-CT.                                      RL2054.2
@@ -1410,7 +1410,7 @@
 142200 REL-TEST-003-19.                                                 RL2054.2
 142300     MOVE     19   TO REC-CT.                                     RL2054.2
 142400     PERFORM  REL-TEST-003.                                       RL2054.2
-142500*   .19                                                           RL2054.2
+142500*                                                                         
 142600     GO TO    REL-END-003.                                        RL2054.2
 142700 REL-DELETE-003-19.                                               RL2054.2
 142800     MOVE     19  TO REC-CT.                                      RL2054.2
@@ -1454,41 +1454,41 @@
 146600              MOVE     ERROR-COUNTER-06V00  TO COMPUTED-N         RL2054.2
 146700              MOVE    "SEE PARA. - REL-TEST-003"  TO RE-MARK.     RL2054.2
 146800     PERFORM   REL-WRITE-003.                                     RL2054.2
-146900*                                                                 RL2054.2
-147000*       EACH TEST IS EXECUTED 10 TIMES.  FOLLOWING THE 10TH       RL2054.2
-147100*    EXECUTION A TEST IS MADE ON ERROR-COUNTER-06V00 WHICH IS     RL2054.2
-147200*    EXPECTED TO BE ZERO.  IF ERROR-COUNTER-06V00 IS NOT ZERO     RL2054.2
-147300*    THE VALUE IN THE COUNTER INDICATES HOW THE EXECUTION FAILED  RL2054.2
-147400*    AND THE NUMBER OF TIMES THE UNEXPECTED ACTION OCCURRED       RL2054.2
-147500*    DURING THE TEST.  BEFORE THE TEST BEGINS ERROR-COUNTER-06V00 RL2054.2
-147600*    IS LOADED WITH THE VALUE 10.  EACH TIME THE CORRECT RECORD   RL2054.2
-147700*    WAS MADE AVAILABLE FOLLOWING THE READ, OR AN INVALID KEY     RL2054.2
-147800*    CONDITION OCCURRED THAT WAS EXPECTED FOLLOWING A READ OR     RL2054.2
-147900*    START, ERROR-COUNTER-06V00 IS DECREMENTED BY 1.              RL2054.2
-148000*    FOR EACH ACTION THAT DID NOT OCCUR AS                        RL2054.2
-148100*    EXPECTED THE ERROR-COUNTER-06V00 IS INCREMENTED BY THE VALUE RL2054.2
-148200*    FOR THE ACTION LISTED BELOW, E.G., VALUE 20003 WOULD INDICATERL2054.2
-148300*    THAT OF THE 10 EXECUTIONS DURING THE TEST (READING LEFT TO   RL2054.2
-148400*    RIGHT)  2 INVALID KEY CONDITIONS AND 3 RECORDS RETRIEVED     RL2054.2
-148500*    AS A RESULT OF THE READ OR START WAS NOT AS EXPECTED.        RL2054.2
-148600*                                                                 RL2054.2
-148700*    COMPUTED RESULT                 INDICATED                    RL2054.2
-148800*       INCREMENTS                     ACTION                     RL2054.2
-148900*                                                                 RL2054.2
-149000*       000001          THE RECORD RETREIVED FROM THE FILE        RL2054.2
-149100*                       FOLLOWING THE READ WAS NOT THE ONE        RL2054.2
-149200*                       EXPECTED.                                 RL2054.2
-149300*                                                                 RL2054.2
-149400*       000100          INDICATES,BY 10"S THE NUMBER OF TIMES THE RL2054.2
-149500*                       TEST WAS EXECUTED.                        RL2054.2
-149600*                                                                 RL2054.2
-149700*       010000          AN UNEXPECTED INVALID KEY OR AT END       RL2054.2
-149800*                       CONDITION OCCURRED.  NOTE - ASSUMPTION    RL2054.2
-149900*                       IS THAT THE "USE" STATEMENT IS ONLY       RL2054.2
-150000*                       EXECUTED WHEN AN INVALID KEY OR AT END    RL2054.2
-150100*                       CONDITION OCCURS AND THE INVALID KEY OR   RL2054.2
-150200*                       AT END PHRASE HAS NOT BEEN SPECIFIED.     RL2054.2
-150300*                                                                 RL2054.2
+146900*                                                                         
+147000*                                                                         
+147100*                                                                         
+147200*                                                                         
+147300*                                                                         
+147400*                                                                         
+147500*                                                                         
+147600*                                                                         
+147700*                                                                         
+147800*                                                                         
+147900*                                                                         
+148000*                                                                         
+148100*                                                                         
+148200*                                                                         
+148300*                                                                         
+148400*                                                                         
+148500*                                                                         
+148600*                                                                         
+148700*                                                                         
+148800*                                                                         
+148900*                                                                         
+149000*                                                                         
+149100*                                                                         
+149200*                                                                         
+149300*                                                                         
+149400*                                                                         
+149500*                                                                         
+149600*                                                                         
+149700*                                                                         
+149800*                                                                         
+149900*                                                                         
+150000*                                                                         
+150100*                                                                         
+150200*                                                                         
+150300*                                                                         
 150400 REL-WRITE-003.                                                   RL2054.2
 150500     PERFORM  PRINT-DETAIL.                                       RL2054.2
 150600 REL-END-003.                                                     RL2054.2
@@ -1496,17 +1496,17 @@
 150800     CLOSE   RL-FS2.                                              RL2054.2
 150900 REL-EXIT-003.                                                    RL2054.2
 151000     EXIT.                                                        RL2054.2
-151100*                                                                 RL2054.2
-151200*    THE FOLLOWING SECTION CONTAINS ALL THE NEW TESTS FOR 8X:     RL2054.2
-151300*                                                                 RL2054.2
+151100*                                                                         
+151200*                                                                         
+151300*                                                                         
 151400 NEW-COBOL-8X-TESTS SECTION.                                      RL2054.2
-151500*==========================                                       RL2054.2
+151500*                                                                         
 151600 REL-8X-INIT-1.                                                   RL2054.2
 151700     MOVE   "XVII-70 2.2.37" TO ANSI-REFERENCE.                   RL2054.2
 151800     MOVE   "REL-8X-TEST-1"  TO PAR-NAME.                         RL2054.2
 151900     OPEN    I-O RL-FD1.                                          RL2054.2
-152000* DELETE THE NEXT LINE TO DELETE THE TEST                         RL2054.2
-152100*    GO TO REL-8X-INIT-1-BETA.                                    RL2054.2
+152000*                                                                         
+152100*                                                                         
 152200 REL-8X-INIT-1-ALPHA.                                             RL2054.2
 152300     GO TO REL-8X-DELETE-1.                                       RL2054.2
 152400 REL-8X-INIT-1-BETA.                                              RL2054.2
@@ -1547,7 +1547,7 @@
 155900     PERFORM FAIL.                                                RL2054.2
 156000 REL-8X-WRITE-1.                                                  RL2054.2
 156100     PERFORM PRINT-DETAIL.                                        RL2054.2
-156200*                                                                 RL2054.2
+156200*                                                                         
 156300 REL-8X-INIT-2.                                                   RL2054.2
 156400     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 156500     MOVE   "REL-8X-TEST-2"  TO PAR-NAME.                         RL2054.2
@@ -1579,7 +1579,7 @@
 159100     ELSE                                                         RL2054.2
 159200             PERFORM PASS                                         RL2054.2
 159300             PERFORM PRINT-DETAIL.                                RL2054.2
-159400*                                                                 RL2054.2
+159400*                                                                         
 159500 REL-8X-INIT-3.                                                   RL2054.2
 159600     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 159700     MOVE   "REL-8X-TEST-3"  TO PAR-NAME.                         RL2054.2
@@ -1610,7 +1610,7 @@
 162200     ELSE                                                         RL2054.2
 162300             PERFORM PASS                                         RL2054.2
 162400             PERFORM PRINT-DETAIL.                                RL2054.2
-162500*                                                                 RL2054.2
+162500*                                                                         
 162600 REL-8X-INIT-4.                                                   RL2054.2
 162700     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 162800     MOVE   "REL-8X-TEST-4"  TO PAR-NAME.                         RL2054.2
@@ -1641,7 +1641,7 @@
 165300     ELSE                                                         RL2054.2
 165400             PERFORM PASS                                         RL2054.2
 165500             PERFORM PRINT-DETAIL.                                RL2054.2
-165600*                                                                 RL2054.2
+165600*                                                                         
 165700 REL-8X-INIT-5.                                                   RL2054.2
 165800     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 165900     MOVE   "REL-8X-TEST-5"  TO PAR-NAME.                         RL2054.2
@@ -1672,7 +1672,7 @@
 168400     ELSE                                                         RL2054.2
 168500             PERFORM PASS                                         RL2054.2
 168600             PERFORM PRINT-DETAIL.                                RL2054.2
-168700*                                                                 RL2054.2
+168700*                                                                         
 168800 REL-8X-INIT-6.                                                   RL2054.2
 168900     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 169000     MOVE   "REL-8X-TEST-6"  TO PAR-NAME.                         RL2054.2
@@ -1714,7 +1714,7 @@
 172600     ELSE                                                         RL2054.2
 172700             PERFORM PASS                                         RL2054.2
 172800             PERFORM PRINT-DETAIL.                                RL2054.2
-172900*                                                                 RL2054.2
+172900*                                                                         
 173000 REL-8X-INIT-7.                                                   RL2054.2
 173100     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 173200     MOVE   "REL-8X-TEST-7"  TO PAR-NAME.                         RL2054.2
@@ -1758,7 +1758,7 @@
 177000     ELSE                                                         RL2054.2
 177100             PERFORM PASS                                         RL2054.2
 177200             PERFORM PRINT-DETAIL.                                RL2054.2
-177300*                                                                 RL2054.2
+177300*                                                                         
 177400 REL-8X-INIT-8.                                                   RL2054.2
 177500     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 177600     MOVE   "REL-8X-TEST-8"  TO PAR-NAME.                         RL2054.2
@@ -1802,7 +1802,7 @@
 181400     ELSE                                                         RL2054.2
 181500             PERFORM PASS                                         RL2054.2
 181600             PERFORM PRINT-DETAIL.                                RL2054.2
-181700*                                                                 RL2054.2
+181700*                                                                         
 181800 REL-8X-INIT-9.                                                   RL2054.2
 181900     MOVE   "VIII-33 4.7.2"  TO ANSI-REFERENCE.                   RL2054.2
 182000     MOVE   "REL-8X-TEST-9"  TO PAR-NAME.                         RL2054.2
@@ -1846,7 +1846,7 @@
 185800     ELSE                                                         RL2054.2
 185900             PERFORM PASS                                         RL2054.2
 186000             PERFORM PRINT-DETAIL.                                RL2054.2
-186100*                                                                 RL2054.2
+186100*                                                                         
 186200 REL-8X-INIT-10.                                                  RL2054.2
 186300     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 186400     MOVE   "REL-8X-TEST-10"  TO PAR-NAME.                        RL2054.2
@@ -1890,7 +1890,7 @@
 190200     ELSE                                                         RL2054.2
 190300             PERFORM PASS                                         RL2054.2
 190400             PERFORM PRINT-DETAIL.                                RL2054.2
-190500*                                                                 RL2054.2
+190500*                                                                         
 190600 REL-8X-INIT-11.                                                  RL2054.2
 190700     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 190800     MOVE   "REL-8X-TEST-11"  TO PAR-NAME.                        RL2054.2
@@ -1920,7 +1920,7 @@
 193200     ELSE                                                         RL2054.2
 193300             PERFORM PASS                                         RL2054.2
 193400             PERFORM PRINT-DETAIL.                                RL2054.2
-193500*                                                                 RL2054.2
+193500*                                                                         
 193600 REL-8X-INIT-12.                                                  RL2054.2
 193700     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 193800     MOVE   "REL-8X-TEST-12"  TO PAR-NAME.                        RL2054.2
@@ -1964,7 +1964,7 @@
 197600     ELSE                                                         RL2054.2
 197700             PERFORM PASS                                         RL2054.2
 197800             PERFORM PRINT-DETAIL.                                RL2054.2
-197900*                                                                 RL2054.2
+197900*                                                                         
 198000 REL-8X-INIT-13.                                                  RL2054.2
 198100     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 198200     MOVE   "REL-8X-TEST-13"  TO PAR-NAME.                        RL2054.2
@@ -1994,7 +1994,7 @@
 200600     ELSE                                                         RL2054.2
 200700             PERFORM PASS                                         RL2054.2
 200800             PERFORM PRINT-DETAIL.                                RL2054.2
-200900*                                                                 RL2054.2
+200900*                                                                         
 201000 REL-8X-INIT-14.                                                  RL2054.2
 201100     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 201200     MOVE   "REL-8X-TEST-14"  TO PAR-NAME.                        RL2054.2
@@ -2040,7 +2040,7 @@
 205200     ELSE                                                         RL2054.2
 205300             PERFORM PASS                                         RL2054.2
 205400             PERFORM PRINT-DETAIL.                                RL2054.2
-205500*                                                                 RL2054.2
+205500*                                                                         
 205600 REL-8X-INIT-15.                                                  RL2054.2
 205700     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 205800     MOVE   "REL-8X-TEST-15"  TO PAR-NAME.                        RL2054.2
@@ -2072,7 +2072,7 @@
 208400     ELSE                                                         RL2054.2
 208500             PERFORM PASS                                         RL2054.2
 208600             PERFORM PRINT-DETAIL.                                RL2054.2
-208700*                                                                 RL2054.2
+208700*                                                                         
 208800 REL-8X-INIT-16.                                                  RL2054.2
 208900     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 209000     MOVE   "REL-8X-TEST-16"  TO PAR-NAME.                        RL2054.2
@@ -2131,7 +2131,7 @@
 214300     ELSE                                                         RL2054.2
 214400             PERFORM PASS                                         RL2054.2
 214500             PERFORM PRINT-DETAIL.                                RL2054.2
-214600*                                                                 RL2054.2
+214600*                                                                         
 214700 REL-8X-INIT-17.                                                  RL2054.2
 214800     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 214900     MOVE   "REL-8X-TEST-17"  TO PAR-NAME.                        RL2054.2
@@ -2176,7 +2176,7 @@
 218800     ELSE                                                         RL2054.2
 218900             PERFORM PASS                                         RL2054.2
 219000             PERFORM PRINT-DETAIL.                                RL2054.2
-219100*                                                                 RL2054.2
+219100*                                                                         
 219200 REL-8X-INIT-18.                                                  RL2054.2
 219300     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 219400     MOVE   "REL-8X-TEST-18"  TO PAR-NAME.                        RL2054.2
@@ -2235,7 +2235,7 @@
 224700     ELSE                                                         RL2054.2
 224800             PERFORM PASS                                         RL2054.2
 224900             PERFORM PRINT-DETAIL.                                RL2054.2
-225000*                                                                 RL2054.2
+225000*                                                                         
 225100 REL-8X-INIT-19.                                                  RL2054.2
 225200     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 225300     MOVE   "REL-8X-TEST-19"  TO PAR-NAME.                        RL2054.2
@@ -2280,7 +2280,7 @@
 229200     ELSE                                                         RL2054.2
 229300             PERFORM PASS                                         RL2054.2
 229400             PERFORM PRINT-DETAIL.                                RL2054.2
-229500*                                                                 RL2054.2
+229500*                                                                         
 229600 REL-8X-INIT-20.                                                  RL2054.2
 229700     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 229800     MOVE   "REL-8X-TEST-20"  TO PAR-NAME.                        RL2054.2
@@ -2340,7 +2340,7 @@
 235200     ELSE                                                         RL2054.2
 235300             PERFORM PASS                                         RL2054.2
 235400             PERFORM PRINT-DETAIL.                                RL2054.2
-235500*                                                                 RL2054.2
+235500*                                                                         
 235600 REL-8X-INIT-21.                                                  RL2054.2
 235700     MOVE   "VIII-33 4.7.2 (GR7)"  TO ANSI-REFERENCE.             RL2054.2
 235800     MOVE   "REL-8X-TEST-21"  TO PAR-NAME.                        RL2054.2
@@ -2392,7 +2392,7 @@
 240400     CLOSE   RL-FS2.                                              RL2054.2
 240500 REL-8X-EXIT.                                                     RL2054.2
 240600     EXIT.                                                        RL2054.2
-240700*                                                                 RL2054.2
+240700*                                                                         
 240800 CCVS-EXIT SECTION.                                               RL2054.2
 240900 CCVS-999999.                                                     RL2054.2
 241000     GO TO CLOSE-FILES.                                           RL2054.2

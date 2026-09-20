@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2484.2
 000200 PROGRAM-ID.                                                      NC2484.2
 000300     NC248A.                                                      NC2484.2
-000400****************************************************************  NC2484.2
-000500*                                                              *  NC2484.2
-000600*    VALIDATION FOR:-                                          *  NC2484.2
-000700*                                                              *  NC2484.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2484.2
-000900*                                                              *  NC2484.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2484.2
-001100*                                                              *  NC2484.2
-001200****************************************************************  NC2484.2
-001300*                                                              *  NC2484.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2484.2
-001500*                                                              *  NC2484.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2484.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2484.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2484.2
-001900*                                                              *  NC2484.2
-002000****************************************************************  NC2484.2
-002100*                                                                 NC2484.2
-002200*    PROGRAM NC248A TESTS FORMATS 1 AND 2 OF THE "SET"         *  NC2484.2
-002300*    STATEMENT USING QUALIFICATION WITH INDEXED AND            *  NC2484.2
-002400*    RELATIVE-INDEXED IDENTIFIERS.                             *  NC2484.2
-002500*    FORMAT 4 OF THE "SET" STATEMENT IS ALSO TESTED.           *  NC2484.2
-002600*                                                              *  NC2484.2
-002700****************************************************************  NC2484.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2484.2
 002900 CONFIGURATION SECTION.                                           NC2484.2
 003000 SOURCE-COMPUTER.                                                 NC2484.2
@@ -256,7 +256,7 @@
 025800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2484.2
 025900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2484.2
 026000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2484.2
-026100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2484.2
+026100*                                                                         
 026200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2484.2
 026300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2484.2
 026400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2484.2
@@ -336,7 +336,7 @@
 033800     MOVE 62 TO TABLE2-REC (10).                                  NC2484.2
 033900     MOVE 10 TO TABLE2-REC (11).                                  NC2484.2
 034000     MOVE 04 TO TABLE2-REC (12).                                  NC2484.2
-034100*                                                                 NC2484.2
+034100*                                                                         
 034200 SET-INIT-F1-1.                                                   NC2484.2
 034300     MOVE "SET-TEST-F1-1" TO PAR-NAME.                            NC2484.2
 034400     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2484.2
@@ -360,7 +360,7 @@
 036200     MOVE 11 TO CORRECT-18V0.                                     NC2484.2
 036300 SET-WRITE-F1-1.                                                  NC2484.2
 036400     PERFORM PRINT-DETAIL.                                        NC2484.2
-036500*                                                                 NC2484.2
+036500*                                                                         
 036600 SET-INIT-F2-2.                                                   NC2484.2
 036700     MOVE "SET-TEST-F2-2" TO PAR-NAME.                            NC2484.2
 036800     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2484.2
@@ -385,7 +385,7 @@
 038700     MOVE 16 TO CORRECT-18V0.                                     NC2484.2
 038800 SET-WRITE-F2-2.                                                  NC2484.2
 038900     PERFORM PRINT-DETAIL.                                        NC2484.2
-039000*                                                                 NC2484.2
+039000*                                                                         
 039100 SET-INIT-F2-3.                                                   NC2484.2
 039200     MOVE "SET-TEST-F2-3" TO PAR-NAME.                            NC2484.2
 039300     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2484.2
@@ -410,7 +410,7 @@
 041200     MOVE 06 TO CORRECT-18V0.                                     NC2484.2
 041300 SET-WRITE-F2-3.                                                  NC2484.2
 041400     PERFORM PRINT-DETAIL.                                        NC2484.2
-041500*                                                                 NC2484.2
+041500*                                                                         
 041600 SET-INIT-F1-4.                                                   NC2484.2
 041700     MOVE "SET-TEST-F1-4" TO PAR-NAME.                            NC2484.2
 041800     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2484.2
@@ -435,7 +435,7 @@
 043700     MOVE 4 TO CORRECT-18V0.                                      NC2484.2
 043800 SET-WRITE-F1-4.                                                  NC2484.2
 043900     PERFORM PRINT-DETAIL.                                        NC2484.2
-044000*                                                                 NC2484.2
+044000*                                                                         
 044100 SET-INIT-F2-5.                                                   NC2484.2
 044200     MOVE "SET-TEST-F2-5" TO PAR-NAME.                            NC2484.2
 044300     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2484.2
@@ -460,7 +460,7 @@
 046200     MOVE 22 TO CORRECT-18V0.                                     NC2484.2
 046300 SET-WRITE-F2-5.                                                  NC2484.2
 046400     PERFORM PRINT-DETAIL.                                        NC2484.2
-046500*                                                                 NC2484.2
+046500*                                                                         
 046600 SET-INIT-F2-6.                                                   NC2484.2
 046700     MOVE "SET-TEST-F2-6" TO PAR-NAME.                            NC2484.2
 046800     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2484.2
@@ -485,7 +485,7 @@
 048700     MOVE 06 TO CORRECT-18V0.                                     NC2484.2
 048800 SET-WRITE-F2-6.                                                  NC2484.2
 048900     PERFORM PRINT-DETAIL.                                        NC2484.2
-049000*                                                                 NC2484.2
+049000*                                                                         
 049100 SET-INIT-F2-7.                                                   NC2484.2
 049200     MOVE   "SET-TEST-F2-7" TO PAR-NAME.                          NC2484.2
 049300     MOVE   "VI-128 6.22.4 GR7" TO ANSI-REFERENCE.                NC2484.2
@@ -496,7 +496,7 @@
 049800 SET-DELETE-F2-7.                                                 NC2484.2
 049900     PERFORM DE-LETE.                                             NC2484.2
 050000     GO TO   SET-WRITE-F2-7-1.                                    NC2484.2
-050100*                                                                 NC2484.2
+050100*                                                                         
 050200 SET-TEST-F2-7-1.                                                 NC2484.2
 050300     IF      TEST-7-1 = "%"                                       NC2484.2
 050400             PERFORM PASS                                         NC2484.2
@@ -514,7 +514,7 @@
 051600     MOVE   "%"       TO CORRECT-X.                               NC2484.2
 051700 SET-WRITE-F2-7-1.                                                NC2484.2
 051800     PERFORM PRINT-DETAIL.                                        NC2484.2
-051900*                                                                 NC2484.2
+051900*                                                                         
 052000 SET-INIT-F2-8.                                                   NC2484.2
 052100     MOVE   "SET-TEST-F2-8" TO PAR-NAME.                          NC2484.2
 052200     MOVE   "VI-128 6.22.4 GR7" TO ANSI-REFERENCE.                NC2484.2
@@ -527,7 +527,7 @@
 052900     GO TO   SET-WRITE-F2-8-1.                                    NC2484.2
 053000*                                                                         
 053100 SET-TEST-F2-8-1.                                                 NC2484.2
-053200     IF      TEST-8-1 = "S"                                       NC2484.2
+053200     IF      TEST-8-1 = "J"                                       NC2484.2
 053300             PERFORM PASS                                         NC2484.2
 053400             GO TO   SET-WRITE-F2-8-1                             NC2484.2
 053500     ELSE                                                         NC2484.2
@@ -540,10 +540,10 @@
 054200     MOVE   "CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE"      NC2484.2
 054300          TO RE-MARK.                                             NC2484.2
 054400     MOVE    TEST-8-1 TO COMPUTED-X.                              NC2484.2
-054500     MOVE   "S"       TO CORRECT-X.                               NC2484.2
+054500     MOVE   "J"       TO CORRECT-X.                               NC2484.2
 054600 SET-WRITE-F2-8-1.                                                NC2484.2
 054700     PERFORM PRINT-DETAIL.                                        NC2484.2
-054800*                                                                 NC2484.2
+054800*                                                                         
 054900 SET-INIT-F2-9.                                                   NC2484.2
 055000     MOVE   "SET-TEST-F2-9" TO PAR-NAME.                          NC2484.2
 055100     MOVE   "VI-128 6.22.4 GR7" TO ANSI-REFERENCE.                NC2484.2
@@ -559,7 +559,7 @@
 056100     GO TO   SET-WRITE-F2-9-3.                                    NC2484.2
 056200*                                                                         
 056300 SET-TEST-F2-9-1.                                                 NC2484.2
-056400     IF      TEST-9-1 = "1"                                       NC2484.2
+056400     IF      TEST-9-1 = "6"                                       NC2484.2
 056500             PERFORM PASS                                         NC2484.2
 056600             GO TO   SET-WRITE-F2-9-1                             NC2484.2
 056700     ELSE                                                         NC2484.2
@@ -572,10 +572,10 @@
 057400     MOVE   "CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE"      NC2484.2
 057500          TO RE-MARK.                                             NC2484.2
 057600     MOVE    TEST-9-1 TO COMPUTED-X.                              NC2484.2
-057700     MOVE   "1"       TO CORRECT-X.                               NC2484.2
+057700     MOVE   "6"       TO CORRECT-X.                               NC2484.2
 057800 SET-WRITE-F2-9-1.                                                NC2484.2
 057900     PERFORM PRINT-DETAIL.                                        NC2484.2
-058000*                                                                 NC2484.2
+058000*                                                                         
 058100 SET-TEST-F2-9-2.                                                 NC2484.2
 058200     ADD     1 TO REC-CT.                                         NC2484.2
 058300     IF      TEST-9-2 = "B"                                       NC2484.2
@@ -597,7 +597,7 @@
 059900*                                                                         
 060000 SET-TEST-F2-9-3.                                                 NC2484.2
 060100     ADD     1 TO REC-CT.                                         NC2484.2
-060200     IF      TEST-9-3 = "M"                                       NC2484.2
+060200     IF      TEST-9-3 = "*"                                       NC2484.2
 060300             PERFORM PASS                                         NC2484.2
 060400             GO TO   SET-WRITE-F2-9-3                             NC2484.2
 060500     ELSE                                                         NC2484.2
@@ -610,10 +610,10 @@
 061200     MOVE   "CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE"      NC2484.2
 061300          TO RE-MARK.                                             NC2484.2
 061400     MOVE    TEST-9-3 TO COMPUTED-X.                              NC2484.2
-061500     MOVE   "M"       TO CORRECT-X.                               NC2484.2
+061500     MOVE   "*"       TO CORRECT-X.                               NC2484.2
 061600 SET-WRITE-F2-9-3.                                                NC2484.2
 061700     PERFORM PRINT-DETAIL.                                        NC2484.2
-061800*                                                                 NC2484.2
+061800*                                                                         
 061900 CCVS-EXIT SECTION.                                               NC2484.2
 062000 CCVS-999999.                                                     NC2484.2
 062100     GO TO CLOSE-FILES.                                           NC2484.2

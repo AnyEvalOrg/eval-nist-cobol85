@@ -16,18 +16,18 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG202A
  LAST USED STATE      FAIL* TEST-1                                                                                      
                                                                                                                         
                                      COMPUTED= 23                                                                       
-                                     CORRECT = M3                                                                       
+                                     CORRECT = 53                                                                       
                                                                                                                         
  ALTER NOT CALLD      FAIL* TEST-2                                                                                      
                                                                                                                         
                                      COMPUTED= B                                                                        
-                                     CORRECT = E                                                                        
+                                     CORRECT = T                                                                        
                                                                                                                         
  PERFORM OVER/FIX     PASS  TEST-3                                                                                      
  PERFORM FIX/OVER     FAIL* TEST-4                                                                                      
                                                                                                                         
                                      COMPUTED= XY                                                                       
-                                     CORRECT = X7                                                                       
+                                     CORRECT = XU                                                                       
                                                                                                                         
  FALL THRU IMPLIED    PASS  TEST-5                                                                                      
  ***********************************************************************************************************************

@@ -1,51 +1,51 @@
 000100 IDENTIFICATION DIVISION.                                         IX2034.2
 000200 PROGRAM-ID.                                                      IX2034.2
 000300     IX203A.                                                      IX2034.2
-000400****************************************************************  IX2034.2
-000500*                                                              *  IX2034.2
-000600*    VALIDATION FOR:-                                          *  IX2034.2
-000700*                                                              *  IX2034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2034.2
-000900*                                                              *  IX2034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2034.2
-001100*                                                              *  IX2034.2
-001200****************************************************************  IX2034.2
-001300*    THIS PROGRAM IS THE THIRD OF A SERIES.  ITS FUNCTION         IX2034.2
-001400*    IS TO PROCESS THE FILE SEQUENTIALLY USING THE ACCESS MODE IS IX2034.2
-001500*    DYNAMIC CLAUSE.  THE FILE USED IS THAT RESULTING FROM IX202. IX2034.2
-001600*                                                                 IX2034.2
-001700*    FIRST, THE FILE IS VERIFIED FOR ACCURACY OF ITS 500 RECORDS. IX2034.2
-001800*    SECONDLY, RECORDS OF THE FILE ARE SELECTIVELY DELETED AND    IX2034.2
-001900*    THIRDLY THE ACCURACY OF EACH RECORD IN THE FILE IS AGAIN     IX2034.2
-002000*    VERIFIED.                                                    IX2034.2
-002100*                                                                 IX2034.2
-002200*                                                                 IX2034.2
-002300*                                                                 IX2034.2
-002400*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX2034.2
-002500*                                                                 IX2034.2
-002600*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2034.2
-002700*                    CLAUSE FOR DATA FILE IX-FS1                  IX2034.2
-002800*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2034.2
-002900*                    CLAUSE FOR INDEX FILE IX-FS1                 IX2034.2
-003000*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX2034.2
-003100*             X-62   FOR RAW-DATA                                 IX2034.2
-003200*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX2034.2
-003300*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX2034.2
-003400*                                                                 IX2034.2
-003500*         NOTE:  X-CARDS 44 AND 62       ARE OPTIONAL             IX2034.2
-003600*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX2034.2
-003700*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX2034.2
-003800*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX2034.2
-003900*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX2034.2
-004000*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX2034.2
-004100*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX2034.2
-004200*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX2034.2
-004300*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX2034.2
-004400*               THEY ARE AS FOLLOWS                               IX2034.2
-004500*                                                                 IX2034.2
-004600*                  P  SELECTS X-CARDS 62                          IX2034.2
-004700*                  J  SELECTS X-CARD 44                           IX2034.2
-004800*                                                                 IX2034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
 004900 ENVIRONMENT DIVISION.                                            IX2034.2
 005000 CONFIGURATION SECTION.                                           IX2034.2
 005100 SOURCE-COMPUTER.                                                 IX2034.2
@@ -337,7 +337,7 @@
 038500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2034.2
 038600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2034.2
 038700      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2034.2
-038800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2034.2
+038800*                                                                         
 038900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2034.2
 039000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2034.2
 039100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2034.2
@@ -411,9 +411,9 @@
 045900     EXIT.                                                        IX2034.2
 046000 SECT-IX-03-001 SECTION.                                          IX2034.2
 046100 READ-INIT-F1-01.                                                 IX2034.2
-046200*    THIS FILE "IX-FD1" IS ACCESSED SEQUENTIALLY AND HAS          IX2034.2
-046300*    ASSOCIATED WITH IT A RECORD KEY WHICH AT ALL TIMES SHOULD    IX2034.2
-046400*    CONTAIN THE INDEX OF THE RECORD PREVIOUSLY READ.             IX2034.2
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
 046500     OPEN INPUT IX-FD1.                                           IX2034.2
 046600     MOVE     ZERO TO             WRK-CS-09V00-006.               IX2034.2
 046700     MOVE     ZERO TO             WRK-CS-09V00-007.               IX2034.2
@@ -430,9 +430,9 @@
 047800     MOVE    "RECORD KEY ON OPEN"  TO FEATURE.                    IX2034.2
 047900     MOVE     "READ-INIT-F1-01" TO PAR-NAME.                      IX2034.2
 048000     PERFORM PRINT-DETAIL.                                        IX2034.2
-048100*                                                                 IX2034.2
-048200*                                                                 IX2034.2
-048300*                                                                 IX2034.2
+048100*                                                                         
+048200*                                                                         
+048300*                                                                         
 048400 READ-INIT-F1-01-0.                                               IX2034.2
 048500     MOVE    "READ-TEST-F1-01" TO PAR-NAME.                       IX2034.2
 048600     MOVE    "READ  NEXT RECORD"  TO FEATURE.                     IX2034.2
@@ -465,9 +465,9 @@
 051300              ELSE                                                IX2034.2
 051400              PERFORM PASS.                                       IX2034.2
 051500     PERFORM  PRINT-DETAIL.                                       IX2034.2
-051600*                                                                 IX2034.2
-051700*                                                                 IX2034.2
-051800*                                                                 IX2034.2
+051600*                                                                         
+051700*                                                                         
+051800*                                                                         
 051900 READ-TEST-F1-02.                                                 IX2034.2
 052000     MOVE    "READ-TEST-F1-02" TO PAR-NAME.                       IX2034.2
 052100     MOVE    "READ  NEXT RECORD"  TO FEATURE.                     IX2034.2
@@ -480,9 +480,9 @@
 052800                                   TO RE-MARK                     IX2034.2
 052900              PERFORM FAIL.                                       IX2034.2
 053000     PERFORM  PRINT-DETAIL.                                       IX2034.2
-053100*                                                                 IX2034.2
-053200*                                                                 IX2034.2
-053300*                                                                 IX2034.2
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
 053400 READ-TEST-F1-03.                                                 IX2034.2
 053500     MOVE    "READ-TEST-F1-03" TO PAR-NAME.                       IX2034.2
 053600     MOVE    "READ  NEXT RECORD"  TO FEATURE.                     IX2034.2
@@ -494,7 +494,7 @@
 054200              MOVE "IX-28; 4.5.2 FORMAT 1    " TO RE-MARK         IX2034.2
 054300              PERFORM FAIL.                                       IX2034.2
 054400     PERFORM  PRINT-DETAIL.                                       IX2034.2
-054500*                                                                 IX2034.2
+054500*                                                                         
 054600 READ-TEST-F1-04.                                                 IX2034.2
 054700     MOVE    "READ-TEST-F1-04" TO PAR-NAME.                       IX2034.2
 054800     MOVE    "READ  NEXT RECORD"  TO FEATURE.                     IX2034.2
@@ -507,7 +507,7 @@
 055500                                TO RE-MARK                        IX2034.2
 055600             PERFORM FAIL.                                        IX2034.2
 055700     PERFORM PRINT-DETAIL.                                        IX2034.2
-055800*                                                                 IX2034.2
+055800*                                                                         
 055900 READ-TEST-F1-05.                                                 IX2034.2
 056000     MOVE    "READ-TEST-F1-05" TO PAR-NAME.                       IX2034.2
 056100     MOVE    "READ  NEXT RECORD"  TO FEATURE.                     IX2034.2
@@ -521,9 +521,9 @@
 056900             PERFORM FAIL.                                        IX2034.2
 057000     PERFORM PRINT-DETAIL.                                        IX2034.2
 057100     CLOSE    IX-FD1.                                             IX2034.2
-057200*                                                                 IX2034.2
-057300*     R E A D     NEXT RECORD                                     IX2034.2
-057400*                                                                 IX2034.2
+057200*                                                                         
+057300*                                                                         
+057400*                                                                         
 057500 DELETE-INIT-GF-01.                                               IX2034.2
 057600     OPEN     I-O IX-FD1.                                         IX2034.2
 057700     MOVE     ZERO TO WRK-CS-09V00-006                            IX2034.2
@@ -570,9 +570,9 @@
 061800              ELSE                                                IX2034.2
 061900              PERFORM PASS.                                       IX2034.2
 062000     PERFORM  PRINT-DETAIL.                                       IX2034.2
-062100*                                                                 IX2034.2
-062200*                                                                 IX2034.2
-062300*                                                                 IX2034.2
+062100*                                                                         
+062200*                                                                         
+062300*                                                                         
 062400 DELETE-TEST-GF-02.                                               IX2034.2
 062500     MOVE    "DELETE   "   TO FEATURE.                            IX2034.2
 062600     MOVE     "DELETE-TEST-GF-02" TO PAR-NAME                     IX2034.2
@@ -584,9 +584,9 @@
 063200              ELSE                                                IX2034.2
 063300              PERFORM PASS.                                       IX2034.2
 063400     PERFORM  PRINT-DETAIL.                                       IX2034.2
-063500*                                                                 IX2034.2
-063600*                                                                 IX2034.2
-063700*                                                                 IX2034.2
+063500*                                                                         
+063600*                                                                         
+063700*                                                                         
 063800 DELETE-TEST-GF-03.                                               IX2034.2
 063900     MOVE    "DELETE   "   TO FEATURE.                            IX2034.2
 064000     MOVE     "DELETE-TEST-GF-03" TO PAR-NAME.                    IX2034.2
@@ -599,9 +599,9 @@
 064700         MOVE "INVALID KEY; IX-21; 4.3.2           " TO RE-MARK.  IX2034.2
 064800     PERFORM PRINT-DETAIL.                                        IX2034.2
 064900     CLOSE    IX-FD1.                                             IX2034.2
-065000*                                                                 IX2034.2
-065100*                                                                 IX2034.2
-065200*                                                                 IX2034.2
+065000*                                                                         
+065100*                                                                         
+065200*                                                                         
 065300 DELETE-INIT-GF-04.                                               IX2034.2
 065400     MOVE     "DELETE-TEST-GF-04" TO PAR-NAME.                    IX2034.2
 065500     MOVE     ZERO TO   WRK-CS-09V00-006                          IX2034.2
@@ -643,7 +643,7 @@
 069100              ELSE                                                IX2034.2
 069200              PERFORM  PASS.                                      IX2034.2
 069300     PERFORM  PRINT-DETAIL.                                       IX2034.2
-069400*                                                                 IX2034.2
+069400*                                                                         
 069500 DELETE-TEST-GF-05.                                               IX2034.2
 069600     MOVE    "DELETE   "   TO FEATURE.                            IX2034.2
 069700     MOVE     "DELETE-TEST-GF-05" TO PAR-NAME                     IX2034.2
@@ -655,7 +655,7 @@
 070300              ELSE                                                IX2034.2
 070400              PERFORM PASS.                                       IX2034.2
 070500     PERFORM  PRINT-DETAIL.                                       IX2034.2
-070600*                                                                 IX2034.2
+070600*                                                                         
 070700 DELETE-TEST-GF-06.                                               IX2034.2
 070800     MOVE    "DELETE   "   TO FEATURE.                            IX2034.2
 070900     MOVE     "DELETE-TEST-GF-06" TO PAR-NAME                     IX2034.2
@@ -667,7 +667,7 @@
 071500              ELSE                                                IX2034.2
 071600              PERFORM PASS.                                       IX2034.2
 071700     PERFORM  PRINT-DETAIL.                                       IX2034.2
-071800*                                                                 IX2034.2
+071800*                                                                         
 071900 DELETE-TEST-GF-07.                                               IX2034.2
 072000     MOVE    "DELETE   "   TO FEATURE.                            IX2034.2
 072100     MOVE     "DELETE-TEST-GF-07" TO PAR-NAME                     IX2034.2

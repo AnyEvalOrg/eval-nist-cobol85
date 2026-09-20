@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         NC1084.2
 000200 PROGRAM-ID.                                                      NC1084.2
 000300     NC108M.                                                      NC1084.2
-000400****************************************************************  NC1084.2
-000500*                                                              *  NC1084.2
-000600*    VALIDATION FOR:-                                          *  NC1084.2
-000700*                                                              *  NC1084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1084.2
-000900*                                                              *  NC1084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1084.2
-001100*                                                              *  NC1084.2
-001200****************************************************************  NC1084.2
-001300*                                                              *  NC1084.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1084.2
-001500*                                                              *  NC1084.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1084.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1084.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1084.2
-001900*                                                              *  NC1084.2
-002000****************************************************************  NC1084.2
-002100*                                                                 NC1084.2
-002200*    PROGRAM NC108M TESTS THE FOLLOWING FEATURES:                 NC1084.2
-002300*                                                                 NC1084.2
-002400*    COMPACT IDENTIFICATION DIVISION                              NC1084.2
-002500*    COMBINED DATA DESCRIPTION CLAUSES                            NC1084.2
-002600*    ABBREVIATIONS                                                NC1084.2
-002700*    COBOL CHARACTER SET                                          NC1084.2
-002800*    ALPHABET CLAUSE                                              NC1084.2
-002900*                                                                 NC1084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            NC1084.2
 003100 CONFIGURATION SECTION.                                           NC1084.2
 003200 SOURCE-COMPUTER.                                                 NC1084.2
@@ -38,19 +38,19 @@
 003800     IS ABBREV-SWITCH                                             NC1084.2
 003900         ON  ON-SWITCH                                            NC1084.2
 004000         OFF IS  OFF-SWITCH                                       NC1084.2
-004100*    ALPHABET THE-WILD-ONE IS                                     NC1084.2
-004200*     "A" THRU "H" "I" ALSO "J", ALSO "K", ALSO                   NC1084.2
-004300*    "L" ALSO "M" ALSO "N" "O" THROUGH "Z" "0" THRU "9",          NC1084.2
-004400*                                                                 NC1084.2
-004500*                                                                 NC1084.2
-004600*ALPHABET-TEST-10     *****     THE WHOLE ALPHABET IS ONE LITERAL NC1084.2
-004700*    WITH ALL 51 CHARACTERS IN THE COBOL CHARACTER SET.  TEST-10  NC1084.2
-004800*    IS ONLY A SYNTAX CHECK ON                                    NC1084.2
-004900*            ALPHABET-NAME IS LITERAL.                            NC1084.2
-005000*                                                                 NC1084.2
-005100*                                                                 NC1084.2
-005200*    THE-BIG-OL-LITERAL-ALPHABET IS "A+0B-1C*2D/3E=4FL5G,6H;7I.8J"NC1084.2
-005300*    ""9K(L)M>N<O PQRSTUVWXYZ"                                    NC1084.2
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400     ALPHABET TEST-ALPHABET IS NATIVE                             NC1084.2
 005500     CURRENCY  "<".                                               NC1084.2
 005600 INPUT-OUTPUT SECTION.                                            NC1084.2
@@ -318,7 +318,7 @@
 032000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1084.2
 032100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1084.2
 032200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1084.2
-032300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1084.2
+032300*                                                                         
 032400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1084.2
 032500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1084.2
 032600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1084.2
@@ -390,120 +390,120 @@
 039200 BAIL-OUT-EX. EXIT.                                               NC1084.2
 039300 CCVS1-EXIT.                                                      NC1084.2
 039400     EXIT.                                                        NC1084.2
-039500*IDENTIFICATION DIVISION.                                         NC1084.2
-039600*    NOTE THE ENTIRE IDENTIFICATION DIVISION IS OPTIONAL, WITH THENC1084.2
-039700*    EXCEPTION OF THE IDENTIFICATION DIVISION AND PROGRAM-ID      NC1084.2
-039800*    CLAUSES. AS A TEST, ALL THE OPTIONAL CLAUSES HAVE BEEN       NC1084.2
-039900*    REMOVED. INFORMATION NORMALLY GIVEN THERE IS LISTED BELOW    NC1084.2
-040000*    AS A COMMENT.  ADDITIONALLY, KEY WORDS ARE USED IN COMMENT   NC1084.2
-040100*    LINES TO ASCERTAIN WHETHER COMMENTS ARE BEING SYNTAX CHECKED.NC1084.2
-040200****************************************************************  NC1084.2
-040300*                                                              *  NC1084.2
-040400*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  NC1084.2
-040500*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  NC1084.2
-040600*    COMFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  NC1084.2
-040700*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  NC1084.2
-040800*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  NC1084.2
-040900*    (ISO DOCUMENT REFERENCE: ISO            ).                *  NC1084.2
-041000*                                                              *  NC1084.2
-041100*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  NC1084.2
-041200*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  NC1084.2
-041300*    DOCUMENT REFERENCE:           ).                          *  NC1084.2
-041400*                                                              *  NC1084.2
-041500*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  NC1084.2
-041600*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  NC1084.2
-041700*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  NC1084.2
-041800*                                                              *  NC1084.2
-041900*          THE FEDERAL SOFTWARE TESTING CENTRE                 *  NC1084.2
-042000*          OFFICE OF SOFTWARE DEVELOPMENT                      *  NC1084.2
-042100*                & INFORMATION TECHNOLOGY                      *  NC1084.2
-042200*          TWO SKYLINE PLACE                                   *  NC1084.2
-042300*          SUITE 1100                                          *  NC1084.2
-042400*          5203 LEESBURG PIKE                                  *  NC1084.2
-042500*          FALLS CHURCH                                        *  NC1084.2
-042600*          VA 22041                                            *  NC1084.2
-042700*          U.S.A.                                              *  NC1084.2
-042800*                                                              *  NC1084.2
-042900*    THE PROJECT TEAM MEMBERS WERE:                            *  NC1084.2
-043000*                                                              *  NC1084.2
-043100*          BIADI (BUREAU INTER ADMINISTRATION                  *  NC1084.2
-043200*                 DE DOCUMENTATION INFORMATIQUE)               *  NC1084.2
-043300*          21 RUE BARA                                         *  NC1084.2
-043400*          F-92132 ISSY                                        *  NC1084.2
-043500*          FRANCE                                              *  NC1084.2
-043600*                                                              *  NC1084.2
-043700*                                                              *  NC1084.2
-043800*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  NC1084.2
-043900*               UND DATENVERARBEITUNG MBH)                     *  NC1084.2
-044000*          SCHLOSS BIRLINGHOVEN                                *  NC1084.2
-044100*          POSTFACH 12 40                                      *  NC1084.2
-044200*          D-5205 ST. AUGUSTIN 1                               *  NC1084.2
-044300*          GERMANY FR                                          *  NC1084.2
-044400*                                                              *  NC1084.2
-044500*                                                              *  NC1084.2
-044600*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  NC1084.2
-044700*          OXFORD ROAD                                         *  NC1084.2
-044800*          MANCHESTER                                          *  NC1084.2
-044900*          M1 7ED                                              *  NC1084.2
-045000*          UNITED KINGDOM                                      *  NC1084.2
-045100*                                                              *  NC1084.2
-045200*                                                              *  NC1084.2
-045300*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  NC1084.2
-045400*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  NC1084.2
-045500*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  NC1084.2
-045600*                                                              *  NC1084.2
-045700****************************************************************  NC1084.2
-045800*                                                              *  NC1084.2
-045900*    VALIDATION FOR:-                                          *  NC1084.2
-046000*    " HIGH       ".                                              NC1084.2
-046100*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  NC1084.2
-046200*                                                              *  NC1084.2
-046300*    CREATION DATE     /     VALIDATION DATE                   *  NC1084.2
-046400*    "4.2 ".                                                      NC1084.2
-046500*                                                              *  NC1084.2
-046600****************************************************************  NC1084.2
-046700*                                                                 NC1084.2
-046800*    PROGRAM NC108M TESTS THE FOLLOWING FEATURES:                 NC1084.2
-046900*                                                                 NC1084.2
-047000*            COMPACT "IDENTIFICATION DIVISION"                    NC1084.2
-047100*            COMBINED DATA DESCRIPTION CLAUSES                    NC1084.2
-047200*            ABBREVIATIONS                                        NC1084.2
-047300*            COBOL CHARACTER SET                                  NC1084.2
-047400*            ALPHABET CLAUSE                                      NC1084.2
-047500*                                                                 NC1084.2
-047600*                                                                 NC1084.2
-047700*                                                                 NC1084.2
-047800*      THE SOURCE LINES IN THE ENVIRONMENT AND DATA DIVISION      NC1084.2
-047900*      SHOULD BE REPLACED AS FOLLOWS                              NC1084.2
-048000*        XXXXX36   REPLACE WITH SYSTEM OUTPUT DEVICE (PRINTER)    NC1084.2
-048100*                    FILE-NAME IS PRINT-FILE.                     NC1084.2
-048200*        XXXXX38   REPLACE WITH SYSTEM NAME FOR A SWITCH          NC1084.2
-048300*                    SWITCH-NAME IS ABBREV-SEITCH.                NC1084.2
-048400*        XXXXX49   REPLACE WITH SOURCE COMPUTER NAME              NC1084.2
-048500*        XXXXX50   REPLACE WITH OBJECT COMPUTER NAME              NC1084.2
-048600*                                                                 NC1084.2
-048700*    THE DOD COBOL TEST ROUTINES HAVE BEEN CREATED TO BE          NC1084.2
-048800*    USED TO VALIDATE THAT                                        NC1084.2
-048900*                                                                 NC1084.2
-049000*           1  A COBOL COMPILER CONTAINS THE ELEMENTS OF THE      NC1084.2
-049100*              ANSI COBOL.                                        NC1084.2
-049200*                                                                 NC1084.2
-049300*           2  TO PROVIDE EXAMPLES OF THE USES OF THE DIFFERENT   NC1084.2
-049400*               ELEMENTS OF THE COBOL LANGUAGE.                   NC1084.2
-049500*                                                                 NC1084.2
-049600*           3  TO BE USED AS TEST DATA FOR PRE-PROCESSORS         NC1084.2
-049700*              FLOWCHARTERS  ETC.                                 NC1084.2
-049800*                                                                 NC1084.2
-049900*           4  IT IS HOPED THAT EVALUATIONS  CORRECTIONS          NC1084.2
-050000*               SUGGESTIONS AND COMMENTS WILL BE FORWARDED TO     NC1084.2
-050100*                  NAVY PROGRAMMING LANGUAGES DIVISION            NC1084.2
-050200*                    ROOM 2C319 THE PENTAGON                      NC1084.2
-050300*                    WASHINGTON D C      20350.                   NC1084.2
-050400*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * *.NC1084.2
-050500*                                                                 NC1084.2
-050600*    PHONE    (202) 695-4750.                                     NC1084.2
-050700*                                                                 NC1084.2
-050800*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * *.NC1084.2
+039500*                                                                         
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
+039900*                                                                         
+040000*                                                                         
+040100*                                                                         
+040200*                                                                         
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
+041000*                                                                         
+041100*                                                                         
+041200*                                                                         
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
+042600*                                                                         
+042700*                                                                         
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
+043900*                                                                         
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
+044600*                                                                         
+044700*                                                                         
+044800*                                                                         
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
+046600*                                                                         
+046700*                                                                         
+046800*                                                                         
+046900*                                                                         
+047000*                                                                         
+047100*                                                                         
+047200*                                                                         
+047300*                                                                         
+047400*                                                                         
+047500*                                                                         
+047600*                                                                         
+047700*                                                                         
+047800*                                                                         
+047900*                                                                         
+048000*                                                                         
+048100*                                                                         
+048200*                                                                         
+048300*                                                                         
+048400*                                                                         
+048500*                                                                         
+048600*                                                                         
+048700*                                                                         
+048800*                                                                         
+048900*                                                                         
+049000*                                                                         
+049100*                                                                         
+049200*                                                                         
+049300*                                                                         
+049400*                                                                         
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
+050200*                                                                         
+050300*                                                                         
+050400*                                                                         
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
+050800*                                                                         
 050900 FMT-INIT-GF-1.                                                   NC1084.2
 051000     MOVE   "COMPLETE DATA FORMAT" TO FEATURE.                    NC1084.2
 051100     MOVE   "V1-6 3.2.1.1" TO ANSI-REFERENCE.                     NC1084.2
@@ -524,12 +524,12 @@
 052600 FMT-INIT-GF-2.                                                   NC1084.2
 052700     MOVE   "V1-20 5.3" TO ANSI-REFERENCE.                        NC1084.2
 052800 FMT-TEST-GF-2.                                                   NC1084.2
-052900     IF       MORE-COMPLETE-FORMAT NOT EQUAL TO "I"               NC1084.2
+052900     IF       MORE-COMPLETE-FORMAT NOT EQUAL TO "7"               NC1084.2
 053000              PERFORM FAIL                                        NC1084.2
 053100         ELSE PERFORM PASS                                        NC1084.2
 053200              GO TO FMT-WRITE-GF-2.                               NC1084.2
 053300     MOVE     MORE-COMPLETE-FORMAT TO COMPUTED-A.                 NC1084.2
-053400     MOVE     "I" TO CORRECT-A.                                   NC1084.2
+053400     MOVE     "7" TO CORRECT-A.                                   NC1084.2
 053500     GO       TO FMT-WRITE-GF-2.                                  NC1084.2
 053600 FMT-DELETE-GF-2.                                                 NC1084.2
 053700     PERFORM  DE-LETE.                                            NC1084.2
@@ -573,7 +573,7 @@
 057500     MOVE   "VI-20 5.3" TO ANSI-REFERENCE.                        NC1084.2
 057600     MOVE     SEND-JUST TO RECEIVE-JUSTRIGHT.                     NC1084.2
 057700 ABR-TEST-GF-2.                                                   NC1084.2
-057800     IF       RECEIVE-JUSTRIGHT EQUAL TO "G    RIGHT"             NC1084.2
+057800     IF       RECEIVE-JUSTRIGHT EQUAL TO "     SIGHT"             NC1084.2
 057900              PERFORM PASS GO TO ABR-WRITE-GF-2.                  NC1084.2
 058000     GO       TO ABR-FAIL-GF-2.                                   NC1084.2
 058100 ABR-DELETE-GF-2.                                                 NC1084.2
@@ -582,7 +582,7 @@
 058400 ABR-FAIL-GF-2.                                                   NC1084.2
 058500     PERFORM  FAIL.                                               NC1084.2
 058600     MOVE     RECEIVE-JUSTRIGHT TO COMPUTED-A.                    NC1084.2
-058700     MOVE     "G    RIGHT" TO CORRECT-A.                          NC1084.2
+058700     MOVE     "     SIGHT" TO CORRECT-A.                          NC1084.2
 058800 ABR-WRITE-GF-2.                                                  NC1084.2
 058900     MOVE     "  JUST" TO FEATURE                                 NC1084.2
 059000     MOVE     "ABR-TEST-GF-2 " TO PAR-NAME.                       NC1084.2
@@ -591,7 +591,7 @@
 059300     MOVE   "VI-20 5.3" TO ANSI-REFERENCE.                        NC1084.2
 059400     MOVE     SEND-JUST TO RECEIVE-JUST.                          NC1084.2
 059500 ABR-TEST-GF-3.                                                   NC1084.2
-059600     IF       RECEIVE-JUST EQUAL TO "C    RIGHT"                  NC1084.2
+059600     IF       RECEIVE-JUST EQUAL TO "     DIGHT"                  NC1084.2
 059700              PERFORM PASS GO TO ABR-WRITE-GF-3.                  NC1084.2
 059800     GO       TO ABR-FAIL-GF-3.                                   NC1084.2
 059900 ABR-DELETE-GF-3.                                                 NC1084.2
@@ -600,7 +600,7 @@
 060200 ABR-FAIL-GF-3.                                                   NC1084.2
 060300     PERFORM  FAIL.                                               NC1084.2
 060400     MOVE     RECEIVE-JUST TO COMPUTED-A.                         NC1084.2
-060500     MOVE     "C    RIGHT" TO CORRECT-A.                          NC1084.2
+060500     MOVE     "     DIGHT" TO CORRECT-A.                          NC1084.2
 060600 ABR-WRITE-GF-3.                                                  NC1084.2
 060700     MOVE     "ABR-TEST-GF-3 " TO PAR-NAME.                       NC1084.2
 060800     PERFORM  PRINT-DETAIL.                                       NC1084.2
@@ -732,8 +732,8 @@
 073400     IF       XCHAR-SET EQUAL TO                                  NC1084.2
 073500     "ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 +-*/=$,.;()><"        NC1084.2
 073600              PERFORM PASS ELSE PERFORM FAIL.                     NC1084.2
-073700*        NOTE 51 CHARACTER LITERAL INCLUDES TWO SPACES BUT NO     NC1084.2
-073800*             QUOTE.                                              NC1084.2
+073700*                                                                         
+073800*                                                                         
 073900     GO       TO CHA-WRITE-GF-1-1.                                NC1084.2
 074000 CHA-DELETE-GF-1-1.                                               NC1084.2
 074100     PERFORM  DE-LETE.                                            NC1084.2
@@ -761,7 +761,7 @@
 076300     MOVE     "CHARACTER-SET" TO FEATURE.                         NC1084.2
 076400     MOVE     "CHA-GF-1-3" TO PAR-NAME.                           NC1084.2
 076500     PERFORM  PRINT-DETAIL.                                       NC1084.2
-076600*                                                                 NC1084.2
+076600*                                                                         
 076700 ALPHABET-INIT-10.                                                NC1084.2
 076800     MOVE   "VI-15 4.5.4 GR4" TO ANSI-REFERENCE.                  NC1084.2
 076900 ALPHABET-TEST-10.                                                NC1084.2
@@ -769,7 +769,7 @@
 077100     MOVE    " ALPHABET-NAME     *****     CHECK THE ALPHABET-NAMENC1084.2
 077200-    " IN THE SPECIAL-NAMES PARAGRAPH" TO TEST-RESULTS.           NC1084.2
 077300     PERFORM PRINT-DETAIL.                                        NC1084.2
-077400*                                                                 NC1084.2
+077400*                                                                         
 077500 CCVS-EXIT SECTION.                                               NC1084.2
 077600 CCVS-999999.                                                     NC1084.2
 077700     GO TO CLOSE-FILES.                                           NC1084.2

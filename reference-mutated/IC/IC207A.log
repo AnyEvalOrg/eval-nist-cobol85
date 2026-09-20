@@ -17,7 +17,7 @@ TEST RESULT OF IC207A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  VAR. LENGTH TABLE    FAIL* LINK-TEST-02       .01        VALUE OF DN2(2)                                               
                                                                                                                         
                                      COMPUTED= Z                                                                        
-                                     CORRECT = Y                                                                        
+                                     CORRECT = T                                                                        
                                                                                                                         
  VAR. LENGTH TABLE    PASS  LINK-TEST-02       .02                                                                      
  VAR. LENGTH TABLE    PASS  LINK-TEST-02       .03                                                                      
@@ -27,14 +27,14 @@ TEST RESULT OF IC207A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CONDITION NAME       FAIL* LINK-TEST-03       .03        VALUE OF DN2(8)                                               
                                                                                                                         
                                      COMPUTED= H                                                                        
-                                     CORRECT = M                                                                        
+                                     CORRECT = A                                                                        
                                                                                                                         
  CALL PARAMETERS      PASS  LINK-TEST-04       .01                                                                      
  CALL PARAMETERS      PASS  LINK-TEST-04       .02                                                                      
  CALL PARAMETERS      FAIL* LINK-TEST-04       .03        CONTENTS OF TABLE-01                                          
                                                                                                                         
                                      COMPUTED= ABCDEFGHI                                                                
-                                     CORRECT = OBCDEFGHI                                                                
+                                     CORRECT = ABCWEFGHI                                                                
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

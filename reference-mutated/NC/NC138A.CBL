@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1384.2
 000200 PROGRAM-ID.                                                      NC1384.2
 000300     NC138A.                                                      NC1384.2
-000400****************************************************************  NC1384.2
-000500*                                                              *  NC1384.2
-000600*    VALIDATION FOR:-                                          *  NC1384.2
-000700*                                                              *  NC1384.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1384.2
-000900*                                                              *  NC1384.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1384.2
-001100*                                                              *  NC1384.2
-001200****************************************************************  NC1384.2
-001300*                                                              *  NC1384.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1384.2
-001500*                                                              *  NC1384.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1384.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1384.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1384.2
-001900*                                                              *  NC1384.2
-002000****************************************************************  NC1384.2
-002100*                                                                 NC1384.2
-002200*    PROGRAM NC138A TESTS THE USE OF SPACES, COMMAS,              NC1384.2
-002300*    SEMI-COLONS AND LEFT AND RIGHT PARENTHESIS AS SEPARATORS     NC1384.2
-002400*    IN STATEMENTS WHICH REFERENCE TABLE ITEMS.                   NC1384.2
-002500*                                                                 NC1384.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1384.2
 002700 CONFIGURATION SECTION.                                           NC1384.2
 002800 SOURCE-COMPUTER.                                                 NC1384.2
@@ -42,7 +42,7 @@
 004200 77  WRK1    PIC S999  VALUE ZERO.                                NC1384.2
 004300 77  TEMP  PIC S9(5).                                             NC1384.2
 004400 77  EXPECTED-VALUE   PIC  S9(5).                                 NC1384.2
-004500*    SUBSCRIPTS FOR REFERENCING TABLE ITEMS.                      NC1384.2
+004500*                                                                         
 004600 77  S1     PIC  S999 VALUE 1.                                    NC1384.2
 004700 77  S21    PIC  S999 VALUE 1.                                    NC1384.2
 004800 77  S22    PIC  S999 SIGN IS LEADING SEPARATE CHARACTER          NC1384.2
@@ -50,16 +50,16 @@
 005000 77  S31    PIC  S999 COMPUTATIONAL  VALUE 1.                     NC1384.2
 005100 77  S32    PIC  S999 SYNC LEFT VALUE 1.                          NC1384.2
 005200 77  S33    PIC  S999            VALUE 1.                         NC1384.2
-005300*    ONE DIMENSIONAL TABLE.                                       NC1384.2
+005300*                                                                         
 005400 01  GRP-TAB1.                                                    NC1384.2
 005500     02  ELEM1  PIC 99                                            NC1384.2
 005600         OCCURS 60 TIMES.                                         NC1384.2
-005700*    TWO DIMENSIONAL TABLE,  12 BY 5.                             NC1384.2
+005700*                                                                         
 005800 01  GRP-TAP2.                                                    NC1384.2
 005900     02  GRP-LEV2-O012F    OCCURS 12 TIMES.                       NC1384.2
 006000         03  ELEM2   PIC 9999  COMPUTATIONAL                      NC1384.2
 006100             OCCURS 5 TIMES.                                      NC1384.2
-006200*    THREE DIMENSIONAL TABLE,  4 BY 3 BY 5.                       NC1384.2
+006200*                                                                         
 006300 01  GRP-TAB3.                                                    NC1384.2
 006400     02 GRP-LEV2-00004F                                           NC1384.2
 006500           OCCURS 4 TIMES                                         NC1384.2
@@ -255,7 +255,7 @@
 025700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1384.2
 025800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1384.2
 025900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1384.2
-026000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1384.2
+026000*                                                                         
 026100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1384.2
 026200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1384.2
 026300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1384.2
@@ -330,7 +330,7 @@
 033200 SECT-NC138A-0001 SECTION.                                        NC1384.2
 033300 NC138A-0001.                                                     NC1384.2
 033400     MOVE "IV-4 4.2.1" TO ANSI-REFERENCE.                         NC1384.2
-033500*    THIS SECTION STORES THE NUMBERS 1 THROUGH 60 IN THE 3 TABLES.NC1384.2
+033500*                                                                         
 033600 MOVE-VALUE.                                                      NC1384.2
 033700     ADD 1 TO WRK1.                                               NC1384.2
 033800     MOVE WRK1 TO ELEM1 (S1)  ELEM2 (S21, S22)                    NC1384.2
@@ -351,8 +351,8 @@
 035300 SECT-TH109-0002 SECTION.                                         NC1384.2
 035400 SECT-0002-INIT.                                                  NC1384.2
 035500     MOVE "LEFT PAREN SEPARATOR" TO FEATURE.                      NC1384.2
-035600*       THIS SECTION TESTS THE USE OF LEFT PARENTHESIS AS A       NC1384.2
-035700*    SEPARATOR IN REFERENCING TABLE ITEMS.                        NC1384.2
+035600*                                                                         
+035700*                                                                         
 035800 SEP-INIT-001.                                                    NC1384.2
 035900     MOVE 6 TO S1.                                                NC1384.2
 036000 SEP-TEST-001.                                                    NC1384.2
@@ -411,8 +411,8 @@
 041300     MOVE "SEP-TEST-004" TO PAR-NAME.                             NC1384.2
 041400     MOVE 0 TO REC-CT.                                            NC1384.2
 041500     MOVE 19 TO S1.                                               NC1384.2
-041600*        THIS TEST USES SPACES AS SEPARATORS IN REFERENCING       NC1384.2
-041700*    ONE DIMENSIONAL TABLE ELEMENTS.                              NC1384.2
+041600*                                                                         
+041700*                                                                         
 041800     MOVE ZERO TO TEMP.                                           NC1384.2
 041900     MOVE 19 TO EXPECTED-VALUE.                                   NC1384.2
 042000 SEP-TEST-004-01.                                                 NC1384.2
@@ -443,11 +443,11 @@
 044500     MOVE ELEM1 (   19     )   TO  TEMP.                          NC1384.2
 044600     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
 044700     GO TO SEP-INIT-005.                                          NC1384.2
-044800*         IF THE COMPILER REJECTS ANY OF THE ABOVE TABLE          NC1384.2
-044900*    REFERENCES, DELETE THAT LINE OF CODE BY PLACING              NC1384.2
-045000*    AN * IN COLUMN 7.  LEAVE THE PERFORM...THRU STATEMENT.       NC1384.2
-045100*    THE ELEMENT DELETED APPEARS AS A FAILURE ON THE              NC1384.2
-045200*    OUTPUT REPORT.                                               NC1384.2
+044800*                                                                         
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
 045300 SEP-DELETE-004.                                                  NC1384.2
 045400     PERFORM DE-LETE.                                             NC1384.2
 045500     PERFORM SYNTAX-CHECK-WRITE.                                  NC1384.2
@@ -458,8 +458,8 @@
 046000     MOVE 03 TO S22.                                              NC1384.2
 046100     MOVE ZERO TO TEMP.                                           NC1384.2
 046200     MOVE 48 TO EXPECTED-VALUE.                                   NC1384.2
-046300*        THIS TEST USES SPACES AND COMMAS AS SEPARATORS IN        NC1384.2
-046400*    REFERENCING TWO DIMENSIONAL TABLE ELEMENTS.                  NC1384.2
+046300*                                                                         
+046400*                                                                         
 046500 SEP-TEST-005-01.                                                 NC1384.2
 046600     MOVE ELEM2 (S21 S22) TO TEMP.                                NC1384.2
 046700     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
@@ -492,11 +492,11 @@
 049400     ADD ELEM2( 3  5 )  ELEM2 ( 7 3    )  TO  TEMP.               NC1384.2
 049500     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
 049600     GO TO SEP-INIT-006.                                          NC1384.2
-049700*         IF THE COMPILER REJECTS ANY OF THE ABOVE TABLE          NC1384.2
-049800*    REFERENCES, DELETE THAT LINE OF CODE BY PLACING              NC1384.2
-049900*    AN ASTERISK IN COLUMN 7. LEAVE THE PERFORM...THRU STATEMENT. NC1384.2
-050000*    THE ELEMENT DELETED APPEARS AS A FAILURE ON THE              NC1384.2
-050100*    OUTPUT REPORT.                                               NC1384.2
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
 050200 SEP-DELETE-005.                                                  NC1384.2
 050300     PERFORM DE-LETE.                                             NC1384.2
 050400     PERFORM SYNTAX-CHECK-WRITE.                                  NC1384.2
@@ -507,8 +507,8 @@
 050900     MOVE 3 TO S31.                                               NC1384.2
 051000     MOVE 2 TO S32 S33.                                           NC1384.2
 051100     MOVE 37 TO EXPECTED-VALUE.                                   NC1384.2
-051200*         THIS TEST USES SPACES AND COMMAS AS SEPARATORS IN       NC1384.2
-051300*    REFERENCING THREE DIMENSIONAL TABLE ELEMENTS.                NC1384.2
+051200*                                                                         
+051300*                                                                         
 051400 SEP-TEST-006-01.                                                 NC1384.2
 051500     MOVE ELEM3(S31 S32 S33) TO TEMP.                             NC1384.2
 051600     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
@@ -537,11 +537,11 @@
 053900              GIVING TEMP.                                        NC1384.2
 054000     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
 054100     GO TO SEP-INIT-007.                                          NC1384.2
-054200*         IF THE COMPILER REJECTS ANY OF THE ABOVE TABLE          NC1384.2
-054300*    REFERENCES, DELETE THAT LINE OF CODE BY PLACING              NC1384.2
-054400*    AN * IN COLUMN 7.  LEAVE THE PERFORM...THRU STATEMENT.       NC1384.2
-054500*    THE ELEMENT DELETED APPEARS AS A FAILURE ON THE              NC1384.2
-054600*    OUTPUT REPORT.                                               NC1384.2
+054200*                                                                         
+054300*                                                                         
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
 054700 SEP-DELETE-006.                                                  NC1384.2
 054800     PERFORM DE-LETE.                                             NC1384.2
 054900     PERFORM SYNTAX-CHECK-WRITE.                                  NC1384.2
@@ -550,8 +550,8 @@
 055200     MOVE ZERO TO REC-CT.                                         NC1384.2
 055300     MOVE ZERO TO TEMP.                                           NC1384.2
 055400     MOVE 12 TO EXPECTED-VALUE.                                   NC1384.2
-055500*        THIS TEST USES SIGNED POSITIVE INTEGERS AS               NC1384.2
-055600*    SUBSCRIPTS AND SPACES AND COMMAS AS SEPARATORS.              NC1384.2
+055500*                                                                         
+055600*                                                                         
 055700 SEP-TEST-007-01.                                                 NC1384.2
 055800     MOVE ELEM1(+12) TO TEMP.                                     NC1384.2
 055900     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
@@ -578,11 +578,11 @@
 058000     MOVE ELEM3 ( +1,  +3,  +2 ) TO TEMP.                         NC1384.2
 058100     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
 058200     GO TO CCVS-EXIT.                                             NC1384.2
-058300*         IF THE COMPILER REJECTS ANY OF THE ABOVE TABLE          NC1384.2
-058400*    REFERENCES, DELETE THAT LINE OF CODE BY PLACING              NC1384.2
-058500*    AN * IN COLUMN 7.  LEAVE THE PERFORM...THRU STATEMENT.       NC1384.2
-058600*    THE ELEMENT DELETED APPEARS AS A FAILURE ON THE              NC1384.2
-058700*    OUTPUT REPORT.                                               NC1384.2
+058300*                                                                         
+058400*                                                                         
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
 058800 SEP-DELETE-007.                                                  NC1384.2
 058900     PERFORM DE-LETE.                                             NC1384.2
 059000     PERFORM SYNTAX-CHECK-WRITE.                                  NC1384.2
@@ -595,9 +595,9 @@
 059700     MOVE 3 TO S31.                                               NC1384.2
 059800     MOVE 2 TO S32 S33.                                           NC1384.2
 059900     MOVE 37 TO EXPECTED-VALUE.                                   NC1384.2
-060000*         THIS TEST USES SPACES AND COMMAS AND SEMI-COLONS        NC1384.2
-060100*         AS SEPARATORS IN                                        NC1384.2
-060200*         REFERENCING THREE DIMENSIONAL TABLE ELEMENTS.           NC1384.2
+060000*                                                                         
+060100*                                                                         
+060200*                                                                         
 060300 SEP-TEST-008-01.                                                 NC1384.2
 060400     MOVE ELEM3(S31 S32; S33) TO TEMP.                            NC1384.2
 060500     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
@@ -626,11 +626,11 @@
 062800              GIVING TEMP.                                        NC1384.2
 062900     PERFORM SYNTAX-CHECK THRU SYNTAX-CHECK-WRITE.                NC1384.2
 063000     GO TO SEP-INIT-007.                                          NC1384.2
-063100*         IF THE COMPILER REJECTS ANY OF THE ABOVE TABLE          NC1384.2
-063200*    REFERENCES, DELETE THAT LINE OF CODE BY PLACING              NC1384.2
-063300*    AN * IN COLUMN 7.  LEAVE THE PERFORM...THRU STATEMENT.       NC1384.2
-063400*    THE ELEMENT DELETED APPEARS AS A FAILURE ON THE              NC1384.2
-063500*    OUTPUT REPORT.                                               NC1384.2
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
+063500*                                                                         
 063600 SEP-DELETE-008.                                                  NC1384.2
 063700     PERFORM DE-LETE.                                             NC1384.2
 063800     PERFORM SYNTAX-CHECK-WRITE.                                  NC1384.2

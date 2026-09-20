@@ -1,41 +1,41 @@
 000100 IDENTIFICATION DIVISION.                                         RL1054.2
 000200 PROGRAM-ID.                                                      RL1054.2
 000300     RL105A.                                                      RL1054.2
-000400****************************************************************  RL1054.2
-000500*                                                              *  RL1054.2
-000600*    VALIDATION FOR:-                                          *  RL1054.2
-000700*                                                              *  RL1054.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1054.2
-000900*                                                              *  RL1054.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1054.2
-001100*                                                              *  RL1054.2
-001200****************************************************************  RL1054.2
-001300*GENERAL:    THIS PROGRAM PROCESSED THREE RELATIVE FILES          RL1054.2
-001400*            IDENTIFIED AS RL-FR1, RL-FR2 AND RL-FR3.  THE        RL1054.2
-001500*            FUNCTION OF THIS PROGRAM IS TO CREATE THREE RELATIVE RL1054.2
-001600*            I-O FILES RANDOMLLY (ACCESS MODE RANDOM)  AND VERIFY RL1054.2
-001700*            THAT THEY WERE CREATED CORRECTLY.  THE FILES         RL1054.2
-001800*            PROCESSED CONTAIN FIXED LENGTH RECORDS.              RL1054.2
-001900*                                                                 RL1054.2
-002000*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL1054.2
-002100*            PROGRAM ARE:                                         RL1054.2
-002200*                                                                 RL1054.2
-002300*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1054.2
-002400*                         RELATIVE  I-O DATA FILE-1               RL1054.2
-002500*                 X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1054.2
-002600*                         RELATIVE  I-O DATA FILE-2               RL1054.2
-002700*                 X-23   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1054.2
-002800*                         RELATIVE  I-O DATA FILE-3               RL1054.2
-002900*                 X-55   SYSTEM PRINTER                           RL1054.2
-003000*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL1054.2
-003100*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL1054.2
-003200*                 X-75   OBJECT OF VALUE OF CLAUSE FOR FILE-1     RL1054.2
-003300*                 X-76   OBJECT OF VALUE OF CLAUSE FOR FILE-2     RL1054.2
-003400*                 X-77   OBJECT OF VALUE OF CLAUSE FOR FILE-3     RL1054.2
-003500*                 X-82   SOURCE-COMPUTER                          RL1054.2
-003600*                 X-83   OBJECT-COMPUTER.                         RL1054.2
-003700*                                                                 RL1054.2
-003800****************************************************************  RL1054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900 ENVIRONMENT DIVISION.                                            RL1054.2
 004000 CONFIGURATION SECTION.                                           RL1054.2
 004100 SOURCE-COMPUTER.                                                 RL1054.2
@@ -345,7 +345,7 @@
 036200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1054.2
 036300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1054.2
 036400      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1054.2
-036500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1054.2
+036500*                                                                         
 036600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1054.2
 036700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1054.2
 036800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1054.2
@@ -542,7 +542,7 @@
 055900     PERFORM PRINT-DETAIL.                                        RL1054.2
 056000 REL-TEST-5.                                                      RL1054.2
 056100     ADD 1 TO SUB-1.                                              RL1054.2
-056200*    NOTE  THIS TEST DEPENDS ON TEST-4.                           RL1054.2
+056200*                                                                         
 056300     MOVE SUB-1 TO KEY-2.                                         RL1054.2
 056400     READ RL-FR2 INVALID KEY                                      RL1054.2
 056500         MOVE "E" TO ENTRY-RW (SUB-1)                             RL1054.2

@@ -1,25 +1,25 @@
 000100 IDENTIFICATION DIVISION.                                         IC2094.2
 000200 PROGRAM-ID.                                                      IC2094.2
 000300     IC209A.                                                      IC2094.2
-000400****************************************************************  IC2094.2
-000500*                                                              *  IC2094.2
-000600*    VALIDATION FOR:-                                          *  IC2094.2
-000700*                                                              *  IC2094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2094.2
-000900*                                                              *  IC2094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2094.2
-001100*                                                              *  IC2094.2
-001200****************************************************************  IC2094.2
-001300*                                                              *  IC2094.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2094.2
-001500*                                                              *  IC2094.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2094.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2094.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2094.2
-001900*                                                              *  IC2094.2
-002000****************************************************************  IC2094.2
-002100*    THIS IS MAIN PROGRAM IC209.                                  IC2094.2
-002200****************************************************************  IC2094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
 002300 ENVIRONMENT DIVISION.                                            IC2094.2
 002400 CONFIGURATION SECTION.                                           IC2094.2
 002500 SOURCE-COMPUTER.                                                 IC2094.2
@@ -228,7 +228,7 @@
 023000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2094.2
 023100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2094.2
 023200      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2094.2
-023300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2094.2
+023300*                                                                         
 023400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2094.2
 023500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2094.2
 023600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2094.2
@@ -301,11 +301,11 @@
 030300     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC2094.2
 030400     MOVE "CALL-TEST-1" TO PAR-NAME.                              IC2094.2
 030500     MOVE "MAIN PROGRAM CALLS SUBPROGRAM1" TO RE-MARK.            IC2094.2
-030600     IF TEST1 = "8" PERFORM PASS                                  IC2094.2
+030600     IF TEST1 = "Q" PERFORM PASS                                  IC2094.2
 030700        GO TO CALL-WRITE-1.                                       IC2094.2
 030800 CALL-FAIL-1.                                                     IC2094.2
 030900     MOVE TEST1 TO COMPUTED-A.                                    IC2094.2
-031000     MOVE "8" TO CORRECT-A.                                       IC2094.2
+031000     MOVE "Q" TO CORRECT-A.                                       IC2094.2
 031100     PERFORM FAIL.                                                IC2094.2
 031200 CALL-WRITE-1.                                                    IC2094.2
 031300     PERFORM PRINT-DETAIL.                                        IC2094.2
@@ -325,11 +325,11 @@
 032700     MOVE "CALL...USING DATA-NM" TO FEATURE.                      IC2094.2
 032800     MOVE "CALL-TEST-3" TO PAR-NAME.                              IC2094.2
 032900     MOVE "SUBPROGRAM1 CALLS SUBPROGRAM3" TO RE-MARK.             IC2094.2
-033000     IF TEST3 = "A" PERFORM PASS                                  IC2094.2
+033000     IF TEST3 = "W" PERFORM PASS                                  IC2094.2
 033100        GO TO CALL-WRITE-3.                                       IC2094.2
 033200 CALL-FAIL-3.                                                     IC2094.2
 033300     MOVE TEST3 TO COMPUTED-A.                                    IC2094.2
-033400     MOVE "A" TO CORRECT-A.                                       IC2094.2
+033400     MOVE "W" TO CORRECT-A.                                       IC2094.2
 033500     PERFORM FAIL.                                                IC2094.2
 033600 CALL-WRITE-3.                                                    IC2094.2
 033700     PERFORM PRINT-DETAIL.                                        IC2094.2
@@ -337,11 +337,11 @@
 033900     MOVE "CANCEL" TO FEATURE.                                    IC2094.2
 034000     MOVE "CANCEL-TEST-1" TO PAR-NAME.                            IC2094.2
 034100     MOVE "SUBPROGRAM1 CANCELS SUBPROGRAM2" TO RE-MARK.           IC2094.2
-034200     IF TEST4 = "3" PERFORM PASS                                  IC2094.2
+034200     IF TEST4 = "X" PERFORM PASS                                  IC2094.2
 034300        GO TO CANCEL-WRITE-1.                                     IC2094.2
 034400 CANCEL-FAIL-1.                                                   IC2094.2
 034500     MOVE TEST4 TO COMPUTED-A.                                    IC2094.2
-034600     MOVE "3" TO CORRECT-A.                                       IC2094.2
+034600     MOVE "X" TO CORRECT-A.                                       IC2094.2
 034700     PERFORM FAIL.                                                IC2094.2
 034800 CANCEL-WRITE-1.                                                  IC2094.2
 034900     PERFORM PRINT-DETAIL.                                        IC2094.2

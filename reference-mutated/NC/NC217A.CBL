@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2174.2
 000200 PROGRAM-ID.                                                      NC2174.2
 000300     NC217A.                                                      NC2174.2
-000400****************************************************************  NC2174.2
-000500*                                                              *  NC2174.2
-000600*    VALIDATION FOR:-                                          *  NC2174.2
-000700*                                                              *  NC2174.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2174.2
-000900*                                                              *  NC2174.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2174.2
-001100*                                                              *  NC2174.2
-001200****************************************************************  NC2174.2
-001300*                                                              *  NC2174.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2174.2
-001500*                                                              *  NC2174.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2174.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2174.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2174.2
-001900*                                                              *  NC2174.2
-002000****************************************************************  NC2174.2
-002100*                                                              *  NC2174.2
-002200*    PROGRAM NC217A TESTS THE USE OF THE "STRING" STATEMENT,   *  NC2174.2
-002300*    INCLUDING THE OPTIONAL PHRASES "POINTER", "OVERFLOW",     *  NC2174.2
-002400*    "NOT OVERFLOW" AND "END-STRING".                          *  NC2174.2
-002500*                                                              *  NC2174.2
-002600*                                                              *  NC2174.2
-002700****************************************************************  NC2174.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2174.2
 002900 CONFIGURATION SECTION.                                           NC2174.2
 003000 SOURCE-COMPUTER.                                                 NC2174.2
@@ -269,7 +269,7 @@
 027100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2174.2
 027200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2174.2
 027300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2174.2
-027400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2174.2
+027400*                                                                         
 027500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2174.2
 027600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2174.2
 027700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2174.2
@@ -367,7 +367,7 @@
 036900     MOVE "ABCDE" TO CORRECT-A.                                   NC2174.2
 037000 STR-WRITE-GF-1-1.                                                NC2174.2
 037100     PERFORM PRINT-DETAIL.                                        NC2174.2
-037200*                                                                 NC2174.2
+037200*                                                                         
 037300 STR-TEST-GF-1-2.                                                 NC2174.2
 037400     ADD 1 TO REC-CT.                                             NC2174.2
 037500     IF ID8-DU-2V0 = 6                                            NC2174.2
@@ -384,7 +384,7 @@
 038600     MOVE 6 TO CORRECT-N.                                         NC2174.2
 038700 STR-WRITE-GF-1-2.                                                NC2174.2
 038800     PERFORM PRINT-DETAIL.                                        NC2174.2
-038900*                                                                 NC2174.2
+038900*                                                                         
 039000 STR-INIT-GF-2.                                                   NC2174.2
 039100     MOVE   "STR-TEST-GF-2" TO PAR-NAME.                          NC2174.2
 039200     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -403,16 +403,16 @@
 040500     PERFORM PRINT-DETAIL.                                        NC2174.2
 040600     GO      TO STR-INIT-GF-3.                                    NC2174.2
 040700 STR-TEST-GF-2-1.                                                 NC2174.2
-040800*    THIS IS THE BLOCK TO WHICH CONTROL WILL BE SENT BY           NC2174.2
-040900*    PARAGRAPH "STR-TEST-GF-2-0".                                 NC2174.2
+040800*                                                                         
+040900*                                                                         
 041000 STR-DELETE-GF-2-1.                                               NC2174.2
-041100*    GO TO STR-DELETE-GF-2.                                       NC2174.2
+041100*                                                                         
 041200 STR-FAIL-GF-2-1.                                                 NC2174.2
 041300     PERFORM FAIL.                                                NC2174.2
 041400     MOVE    "OVERFLOW SHOULD OCCUR" TO RE-MARK.                  NC2174.2
 041500 STR-WRITE-GF-2-1.                                                NC2174.2
 041600     PERFORM PRINT-DETAIL.                                        NC2174.2
-041700*                                                                 NC2174.2
+041700*                                                                         
 041800 STR-TEST-GF-2-2.                                                 NC2174.2
 041900     ADD 1 TO REC-CT.                                             NC2174.2
 042000     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -429,7 +429,7 @@
 043100     MOVE    "ABCDE" TO CORRECT-A.                                NC2174.2
 043200 STR-WRITE-GF-2-2.                                                NC2174.2
 043300     PERFORM PRINT-DETAIL.                                        NC2174.2
-043400*                                                                 NC2174.2
+043400*                                                                         
 043500 STR-TEST-GF-2-3.                                                 NC2174.2
 043600     ADD     1 TO REC-CT.                                         NC2174.2
 043700     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -446,7 +446,7 @@
 044800     MOVE    6 TO CORRECT-N.                                      NC2174.2
 044900 STR-WRITE-GF-2-3.                                                NC2174.2
 045000     PERFORM PRINT-DETAIL.                                        NC2174.2
-045100*                                                                 NC2174.2
+045100*                                                                         
 045200 STR-INIT-GF-3.                                                   NC2174.2
 045300     MOVE   "STR-TEST-GF-3" TO PAR-NAME.                          NC2174.2
 045400     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -455,7 +455,7 @@
 045700     MOVE 1 TO ID8-DU-2V0.                                        NC2174.2
 045800     MOVE    5 TO ISUB-DU-2V0.                                    NC2174.2
 045900     MOVE 1 TO REC-CT.                                            NC2174.2
-046000*                                                                 NC2174.2
+046000*                                                                         
 046100 STR-TEST-GF-3.                                                   NC2174.2
 046200     STRING  ABCDEFG-XN-7 DELIMITED BY ID3-XN-1 (ISUB-DU-2V0)     NC2174.2
 046300             INTO ID7-XN-5 POINTER ID8-DU-2V0.                    NC2174.2
@@ -464,7 +464,7 @@
 046600     PERFORM DE-LETE.                                             NC2174.2
 046700     PERFORM PRINT-DETAIL.                                        NC2174.2
 046800     GO      TO STRING-INIT-4.                                    NC2174.2
-046900*                                                                 NC2174.2
+046900*                                                                         
 047000 STR-TEST-GF-3-1.                                                 NC2174.2
 047100     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
 047200          PERFORM PASS                                            NC2174.2
@@ -480,7 +480,7 @@
 048200     MOVE    "ABCDE" TO CORRECT-A.                                NC2174.2
 048300 STR-WRITE-GF-3-1.                                                NC2174.2
 048400     PERFORM PRINT-DETAIL.                                        NC2174.2
-048500*                                                                 NC2174.2
+048500*                                                                         
 048600 STR-TEST-GF-3-2.                                                 NC2174.2
 048700     ADD     1 TO REC-CT.                                         NC2174.2
 048800     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -497,7 +497,7 @@
 049900     MOVE    6 TO CORRECT-N.                                      NC2174.2
 050000 STR-WRITE-GF-3-2.                                                NC2174.2
 050100     PERFORM PRINT-DETAIL.                                        NC2174.2
-050200*                                                                 NC2174.2
+050200*                                                                         
 050300 STRING-INIT-4.                                                   NC2174.2
 050400     MOVE    "STR-TEST-GF-4" TO PAR-NAME.                         NC2174.2
 050500     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -506,7 +506,7 @@
 050800     MOVE 1 TO ID8-DU-2V0.                                        NC2174.2
 050900     MOVE    ZERO TO REC-CT.                                      NC2174.2
 051000     MOVE    "**** " TO P-OR-F.                                   NC2174.2
-051100*                                                                 NC2174.2
+051100*                                                                         
 051200 STRING-TEST-4.                                                   NC2174.2
 051300     STRING  ID1-1 OF ID1-XN-X-25 (ID8-DU-2V0)
 051400             ID1-2 OF ID1-XN-X-25 (ID8-DU-2V0)
@@ -540,18 +540,18 @@
 054200     MOVE    ID8-DU-2V0 TO COMPUTED-N                             NC2174.2
 054300     MOVE    6 TO CORRECT-N                                       NC2174.2
 054400     PERFORM PRINT-DETAIL.                                        NC2174.2
-054500*                                                                 NC2174.2
+054500*                                                                         
 054600 STR-INIT-GF-5.                                                   NC2174.2
 054700     MOVE    "STR-TEST-GF-5" TO PAR-NAME.                         NC2174.2
 054800     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
 054900     MOVE    "IMMEDIATE OVERFLOW" TO FEATURE.                     NC2174.2
 055000     MOVE "*****" TO ID7-XN-5.                                    NC2174.2
 055100     MOVE "*****" TO ASTER-XN-5.                                  NC2174.2
-055200* NOTE THAT THE POINTER IS SET TO A VALUE GREATER THAN            NC2174.2
-055300*    THE LENGTH OF THE RECEIVING ITEM ID7-XN-5..........          NC2174.2
+055200*                                                                         
+055300*                                                                         
 055400     MOVE    7 TO ID8-DU-2V0.                                     NC2174.2
 055500     MOVE    1 TO REC-CT.                                         NC2174.2
-055600*                                                                 NC2174.2
+055600*                                                                         
 055700 STR-TEST-GF-5-1.                                                 NC2174.2
 055800     STRING  "ABCDE" DELIMITED BY ABCDEFG-XN-7 INTO ID7-XN-5      NC2174.2
 055900             POINTER ID8-DU-2V0                                   NC2174.2
@@ -567,7 +567,7 @@
 056900     MOVE    "OVERFLOW SHOULD OCCUR" TO RE-MARK.                  NC2174.2
 057000 STR-WRITE-GF-5-1.                                                NC2174.2
 057100     PERFORM PRINT-DETAIL.                                        NC2174.2
-057200*                                                                 NC2174.2
+057200*                                                                         
 057300 STR-TEST-GF-5-2.                                                 NC2174.2
 057400     ADD 1 TO REC-CT.                                             NC2174.2
 057500     IF      ID7-XN-5 = ASTER-XN-5                                NC2174.2
@@ -584,7 +584,7 @@
 058600     MOVE    "*****" TO CORRECT-A.                                NC2174.2
 058700 STR-WRITE-GF-5-2.                                                NC2174.2
 058800     PERFORM PRINT-DETAIL.                                        NC2174.2
-058900*                                                                 NC2174.2
+058900*                                                                         
 059000 STR-TEST-GF-5-3.                                                 NC2174.2
 059100     ADD     1 TO REC-CT.                                         NC2174.2
 059200     IF      ID8-DU-2V0 = 7                                       NC2174.2
@@ -601,7 +601,7 @@
 060300     MOVE    7 TO CORRECT-N.                                      NC2174.2
 060400 STR-WRITE-GF-5-3.                                                NC2174.2
 060500     PERFORM PRINT-DETAIL.                                        NC2174.2
-060600*                                                                 NC2174.2
+060600*                                                                         
 060700 STR-INIT-GF-6.                                                   NC2174.2
 060800     MOVE    "STR-TEST-GF-6" TO PAR-NAME.                         NC2174.2
 060900     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -609,7 +609,7 @@
 061100     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 061200     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 061300     MOVE    1 TO REC-CT.                                         NC2174.2
-061400*                                                                 NC2174.2
+061400*                                                                         
 061500 STR-TEST-GF-6-1.                                                 NC2174.2
 061600     STRING  SPACE "ABCDE" DELIMITED BY " ABCDE"                  NC2174.2
 061700             INTO ID7-XN-5 OVERFLOW PERFORM PASS                  NC2174.2
@@ -624,7 +624,7 @@
 062600     MOVE    "OVERFLOW SHOULD OCCUR" TO RE-MARK.                  NC2174.2
 062700 STR-WRITE-GF-6-1.                                                NC2174.2
 062800     PERFORM PRINT-DETAIL.                                        NC2174.2
-062900*                                                                 NC2174.2
+062900*                                                                         
 063000 STR-TEST-GF-6-2.                                                 NC2174.2
 063100     ADD 1 TO REC-CT.                                             NC2174.2
 063200     IF      ID7-XN-5 = " ABCD"                                   NC2174.2
@@ -641,7 +641,7 @@
 064300     MOVE    " ABCD" TO CORRECT-A.                                NC2174.2
 064400 STR-WRITE-GF-6-2.                                                NC2174.2
 064500     PERFORM PRINT-DETAIL.                                        NC2174.2
-064600*                                                                 NC2174.2
+064600*                                                                         
 064700 STR-INIT-GF-7.                                                   NC2174.2
 064800     MOVE    "STR-TEST-GF-7" TO PAR-NAME.                         NC2174.2
 064900     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -649,7 +649,7 @@
 065100     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 065200     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 065300     MOVE    1 TO REC-CT.                                         NC2174.2
-065400*                                                                 NC2174.2
+065400*                                                                         
 065500 STR-TEST-GF-7-1.                                                 NC2174.2
 065600     STRING  "A" "B" "C" "D" "E" DELIMITED "ABCDE" INTO ID7-XN-5  NC2174.2
 065700             POINTER ID8-DU-2V0 OVERFLOW GO TO STR-FAIL-GF-7-1.   NC2174.2
@@ -664,7 +664,7 @@
 066600     MOVE    "OVERFLOW SHOULD NOT OCCUR" TO RE-MARK.              NC2174.2
 066700 STR-WRITE-GF-7-1.                                                NC2174.2
 066800     PERFORM PRINT-DETAIL.                                        NC2174.2
-066900*                                                                 NC2174.2
+066900*                                                                         
 067000 STR-TEST-GF-7-2.                                                 NC2174.2
 067100     ADD     1 TO REC-CT.                                         NC2174.2
 067200     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -681,7 +681,7 @@
 068300     MOVE    "ABCDE" TO CORRECT-A.                                NC2174.2
 068400 STR-WRITE-GF-7-2.                                                NC2174.2
 068500     PERFORM PRINT-DETAIL.                                        NC2174.2
-068600*                                                                 NC2174.2
+068600*                                                                         
 068700 STR-TEST-GF-7-3.                                                 NC2174.2
 068800     ADD     1 TO REC-CT.                                         NC2174.2
 068900     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -698,7 +698,7 @@
 070000     MOVE    6 TO CORRECT-N.                                      NC2174.2
 070100 STR-WRITE-GF-7-3.                                                NC2174.2
 070200     PERFORM PRINT-DETAIL.                                        NC2174.2
-070300*                                                                 NC2174.2
+070300*                                                                         
 070400 STR-INIT-GF-8.                                                   NC2174.2
 070500     MOVE    "STR-TEST-GF-8" TO PAR-NAME.                         NC2174.2
 070600     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -706,7 +706,7 @@
 070800     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 070900     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 071000     MOVE    1 TO REC-CT.                                         NC2174.2
-071100*                                                                 NC2174.2
+071100*                                                                         
 071200 STR-TEST-GF-8-1.                                                 NC2174.2
 071300     STRING  LOW-VALUE "ABCDE" DELIMITED BY SIZE INTO ID7-XN-5    NC2174.2
 071400             WITH POINTER ID8-DU-2V0                              NC2174.2
@@ -722,7 +722,7 @@
 072400     MOVE    "OVERFLOW SHOULD OCCUR" TO RE-MARK.                  NC2174.2
 072500 STR-WRITE-GF-8-1.                                                NC2174.2
 072600     PERFORM PRINT-DETAIL.                                        NC2174.2
-072700*                                                                 NC2174.2
+072700*                                                                         
 072800 STR-TEST-GF-8-2.                                                 NC2174.2
 072900     ADD     1 TO REC-CT.                                         NC2174.2
 073000     IF      ID7-XN-5 = ANS-XN-5-1                                NC2174.2
@@ -739,7 +739,7 @@
 074100     MOVE    ANS-XN-5-1 TO CORRECT-A.                             NC2174.2
 074200 STR-WRITE-GF-8-2.                                                NC2174.2
 074300     PERFORM PRINT-DETAIL.                                        NC2174.2
-074400*                                                                 NC2174.2
+074400*                                                                         
 074500 STR-TEST-GF-8-3.                                                 NC2174.2
 074600     ADD     1 TO REC-CT.                                         NC2174.2
 074700     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -756,7 +756,7 @@
 075800     MOVE    6 TO CORRECT-N.                                      NC2174.2
 075900 STR-WRITE-GF-8-3.                                                NC2174.2
 076000     PERFORM PRINT-DETAIL.                                        NC2174.2
-076100*                                                                 NC2174.2
+076100*                                                                         
 076200 STR-INIT-GF-9.                                                   NC2174.2
 076300     MOVE    "STR-TEST-GF-9" TO PAR-NAME.                         NC2174.2
 076400     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -764,7 +764,7 @@
 076600     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 076700     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 076800     MOVE    1 TO REC-CT.                                         NC2174.2
-076900*                                                                 NC2174.2
+076900*                                                                         
 077000 STR-TEST-GF-9-1.                                                 NC2174.2
 077100     STRING  HIGH-VALUE DELIMITED BY SIZE INTO ID7-XN-5           NC2174.2
 077200             POINTER ID8-DU-2V0                                   NC2174.2
@@ -780,7 +780,7 @@
 078200     MOVE    "OVERFLOW SHOULD NOT OCCUR" TO RE-MARK.              NC2174.2
 078300 STR-WRITE-GF-9-1.                                                NC2174.2
 078400     PERFORM PRINT-DETAIL.                                        NC2174.2
-078500*                                                                 NC2174.2
+078500*                                                                         
 078600 STR-TEST-GF-9-2.                                                 NC2174.2
 078700     ADD     1 TO REC-CT.                                         NC2174.2
 078800     IF      ID7-XN-5 = ANS-XN-5-2                                NC2174.2
@@ -797,7 +797,7 @@
 079900     MOVE    ANS-XN-5-2 TO CORRECT-A.                             NC2174.2
 080000 STR-WRITE-GF-9-2.                                                NC2174.2
 080100     PERFORM PRINT-DETAIL.                                        NC2174.2
-080200*                                                                 NC2174.2
+080200*                                                                         
 080300 STR-TEST-GF-9-3.                                                 NC2174.2
 080400     ADD     1 TO REC-CT.                                         NC2174.2
 080500     IF      ID8-DU-2V0 = 2                                       NC2174.2
@@ -814,7 +814,7 @@
 081600     MOVE    2 TO CORRECT-N.                                      NC2174.2
 081700 STR-WRITE-GF-9-3.                                                NC2174.2
 081800     PERFORM PRINT-DETAIL.                                        NC2174.2
-081900*                                                                 NC2174.2
+081900*                                                                         
 082000 STR-INIT-GF-10.                                                  NC2174.2
 082100     MOVE    "STR-TEST-GF-10" TO PAR-NAME.                        NC2174.2
 082200     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -822,7 +822,7 @@
 082400     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 082500     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 082600     MOVE    1 TO REC-CT.                                         NC2174.2
-082700*                                                                 NC2174.2
+082700*                                                                         
 082800 STR-TEST-GF-10-0.                                                NC2174.2
 082900     STRING  "A0" "B0D" "C0LKJSD" "D0321" "E0987LKJALKJKLLKJSD"   NC2174.2
 083000             DELIMITED BY ZERO INTO ID7-XN-5 POINTER ID8-DU-2V0.  NC2174.2
@@ -831,7 +831,7 @@
 083300     PERFORM DE-LETE.                                             NC2174.2
 083400     PERFORM PRINT-DETAIL.                                        NC2174.2
 083500     GO      TO STR-INIT-GF-11.                                   NC2174.2
-083600*                                                                 NC2174.2
+083600*                                                                         
 083700 STR-TEST-GF-10-1.                                                NC2174.2
 083800     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
 083900             PERFORM PASS                                         NC2174.2
@@ -847,7 +847,7 @@
 084900     MOVE    "ABCDE" TO CORRECT-A.                                NC2174.2
 085000 STR-WRITE-GF-10-1.                                               NC2174.2
 085100     PERFORM PRINT-DETAIL.                                        NC2174.2
-085200*                                                                 NC2174.2
+085200*                                                                         
 085300 STR-TEST-GF-10-2.                                                NC2174.2
 085400     ADD     1 TO REC-CT.                                         NC2174.2
 085500     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -864,7 +864,7 @@
 086600     MOVE    6 TO CORRECT-N.                                      NC2174.2
 086700 STR-WRITE-GF-10-2.                                               NC2174.2
 086800     PERFORM PRINT-DETAIL.                                        NC2174.2
-086900*                                                                 NC2174.2
+086900*                                                                         
 087000 STR-INIT-GF-11.                                                  NC2174.2
 087100     MOVE    "STR-TEST-GF-11" TO PAR-NAME.                        NC2174.2
 087200     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -872,7 +872,7 @@
 087400     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 087500     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 087600     MOVE    1 TO REC-CT.                                         NC2174.2
-087700*                                                                 NC2174.2
+087700*                                                                         
 087800 STR-TEST-GF-11.                                                  NC2174.2
 087900     STRING  "A""" "B""KJHSF" "C""321654987LLKJHAF" "D""=,l."     NC2174.2
 088000             "E""********" DELIMITED BY QUOTE INTO ID7-XN-5       NC2174.2
@@ -882,7 +882,7 @@
 088400     PERFORM DE-LETE.                                             NC2174.2
 088500     PERFORM PRINT-DETAIL.                                        NC2174.2
 088600     GO      TO STR-INIT-GF-12.                                   NC2174.2
-088700*                                                                 NC2174.2
+088700*                                                                         
 088800 STR-TEST-GF-11-1.                                                NC2174.2
 088900     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
 089000             PERFORM PASS                                         NC2174.2
@@ -899,7 +899,7 @@
 090100 STR-WRITE-GF-11-1.                                               NC2174.2
 090200     PERFORM PRINT-DETAIL.                                        NC2174.2
 090300     ADD     1 TO REC-CT.                                         NC2174.2
-090400*                                                                 NC2174.2
+090400*                                                                         
 090500 STR-TEST-GF-11-2.                                                NC2174.2
 090600     IF      ID8-DU-2V0 = 6                                       NC2174.2
 090700             PERFORM PASS                                         NC2174.2
@@ -915,14 +915,14 @@
 091700     MOVE    6 TO CORRECT-N.                                      NC2174.2
 091800 STR-WRITE-GF-11-2.                                               NC2174.2
 091900     PERFORM PRINT-DETAIL.                                        NC2174.2
-092000*                                                                 NC2174.2
+092000*                                                                         
 092100 STR-INIT-GF-12.                                                  NC2174.2
 092200     MOVE    "STR-TEST-GF-12" TO PAR-NAME.                        NC2174.2
 092300     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
 092400     MOVE    "ZERO ID DEL SIZE" TO FEATURE.                       NC2174.2
 092500     MOVE    0 TO REC-CT.                                         NC2174.2
 092600     MOVE    ALL "*" TO ID7-XN-15.                                NC2174.2
-092700*                                                                 NC2174.2
+092700*                                                                         
 092800 STR-TEST-GF-12-1.                                                NC2174.2
 092900     STRING  ZERO ABCDEFG-XN-7 DELIMITED BY SIZE ZERO ABCDEFG-XN-7NC2174.2
 093000             DELIMITED BY SIZE INTO ID7-XN-15.                    NC2174.2
@@ -940,13 +940,13 @@
 094200     MOVE    "0ABCDEFG0ABCDEF" TO CORRECT-A.                      NC2174.2
 094300 STR-WRITE-GF-12-1.                                               NC2174.2
 094400     PERFORM PRINT-DETAIL.                                        NC2174.2
-094500*                                                                 NC2174.2
+094500*                                                                         
 094600 STR-INIT-GF-13.                                                  NC2174.2
 094700     MOVE    "STR-TEST-GF-13" TO PAR-NAME.                        NC2174.2
 094800     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
 094900     MOVE    "LITERAL SERIES" TO FEATURE.                         NC2174.2
 095000     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
-095100*                                                                 NC2174.2
+095100*                                                                         
 095200 STR-TEST-GF-13.                                                  NC2174.2
 095300     STRING  "A" "B" "C" DELIMITED BY SIZE "D" "E" "F"  DELIMITED NC2174.2
 095400             BY SIZE INTO ID7-XN-5.                               NC2174.2
@@ -964,13 +964,13 @@
 096600     MOVE    "ABCDE" TO CORRECT-A.                                NC2174.2
 096700 STR-WRITE-GF-13.                                                 NC2174.2
 096800     PERFORM PRINT-DETAIL.                                        NC2174.2
-096900*                                                                 NC2174.2
+096900*                                                                         
 097000 STR-INIT-GF-14.                                                  NC2174.2
 097100     MOVE    "STR-TEST-GF-14" TO PAR-NAME.                        NC2174.2
 097200     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
 097300     MOVE    "IDENTIFIER SERIES" TO FEATURE.                      NC2174.2
 097400     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
-097500*                                                                 NC2174.2
+097500*                                                                         
 097600 STR-TEST-GF-14.                                                  NC2174.2
 097700     STRING  AB-XN-2 AB-XN-2 AB-XN-2 DELIMITED BY B-XN-1          NC2174.2
 097800     AB-XN-2 AB-XN-2 DELIMITED BY B-XN-1 INTO ID7-XN-5.           NC2174.2
@@ -988,7 +988,7 @@
 099000     MOVE "AAAAA" TO CORRECT-A.                                   NC2174.2
 099100 STR-WRITE-GF-14.                                                 NC2174.2
 099200     PERFORM PRINT-DETAIL.                                        NC2174.2
-099300*                                                                 NC2174.2
+099300*                                                                         
 099400 STR-INIT-GF-15.                                                  NC2174.2
 099500     MOVE    "STR-TEST-GF-15" TO PAR-NAME.                        NC2174.2
 099600     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -998,7 +998,7 @@
 100000     MOVE    ZERO TO ZEROX-XN-1.                                  NC2174.2
 100100     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 100200     MOVE    1 TO REC-CT.                                         NC2174.2
-100300*                                                                 NC2174.2
+100300*                                                                         
 100400 STR-TEST-GF-15-0.                                                NC2174.2
 100500     STRING  ID1-DS-LS-4 DELIMITED BY ZEROX-XN-1 SPACE DELIMITED  NC2174.2
 100600             BY SIZE ID1-DS-LS-4 DELIMITED "0" INTO               NC2174.2
@@ -1008,7 +1008,7 @@
 101000     PERFORM DE-LETE.                                             NC2174.2
 101100     PERFORM PRINT-DETAIL.                                        NC2174.2
 101200     GO      TO STR-INIT-GF-16.                                   NC2174.2
-101300*                                                                 NC2174.2
+101300*                                                                         
 101400 STR-TEST-GF-15-1.                                                NC2174.2
 101500     IF      ID7-XN-5 = "+1 +1"                                   NC2174.2
 101600             PERFORM PASS                                         NC2174.2
@@ -1024,7 +1024,7 @@
 102600     MOVE    "+1 +1" TO CORRECT-A.                                NC2174.2
 102700 STR-WRITE-GF-15-1.                                               NC2174.2
 102800     PERFORM PRINT-DETAIL.                                        NC2174.2
-102900*                                                                 NC2174.2
+102900*                                                                         
 103000 STR-TEST-GF-15-2.                                                NC2174.2
 103100     ADD     1 TO REC-CT.                                         NC2174.2
 103200     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1041,7 +1041,7 @@
 104300     MOVE 6 TO CORRECT-N.                                         NC2174.2
 104400 STR-WRITE-GF-15-2.                                               NC2174.2
 104500     PERFORM PRINT-DETAIL.                                        NC2174.2
-104600*                                                                 NC2174.2
+104600*                                                                         
 104700 STR-INIT-GF-16.                                                  NC2174.2
 104800     MOVE    "STR-TEST-GF-16" TO PAR-NAME.                        NC2174.2
 104900     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -1051,7 +1051,7 @@
 105300     MOVE    ZERO TO ZEROX-XN-1.                                  NC2174.2
 105400     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 105500     MOVE    1 TO REC-CT.                                         NC2174.2
-105600*                                                                 NC2174.2
+105600*                                                                         
 105700 STR-TEST-GF-16-0.                                                NC2174.2
 105800     STRING  ID1-DS-LS-4 DELIMITED "0" " " DELIMITED BY SIZE      NC2174.2
 105900             ID1-DS-LS-4 DELIMITED BY ZEROX-XN-1 INTO ID7-XN-5    NC2174.2
@@ -1061,7 +1061,7 @@
 106300     PERFORM DE-LETE.                                             NC2174.2
 106400     PERFORM PRINT-DETAIL.                                        NC2174.2
 106500     GO      TO STR-INIT-GF-17.                                   NC2174.2
-106600*                                                                 NC2174.2
+106600*                                                                         
 106700 STR-TEST-GF-16-1.                                                NC2174.2
 106800     IF      ID7-XN-5 = "+1 +1"                                   NC2174.2
 106900             PERFORM PASS                                         NC2174.2
@@ -1077,7 +1077,7 @@
 107900     MOVE    "+1 +1" TO CORRECT-A.                                NC2174.2
 108000 STR-WRITE-GF-16-1.                                               NC2174.2
 108100     PERFORM PRINT-DETAIL.                                        NC2174.2
-108200*                                                                 NC2174.2
+108200*                                                                         
 108300 STR-TEST-GF-16-2.                                                NC2174.2
 108400     ADD     1 TO REC-CT.                                         NC2174.2
 108500     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1094,7 +1094,7 @@
 109600     MOVE    6 TO CORRECT-N.                                      NC2174.2
 109700 STR-WRITE-GF-16-2.                                               NC2174.2
 109800     PERFORM PRINT-DETAIL.                                        NC2174.2
-109900*                                                                 NC2174.2
+109900*                                                                         
 110000 STR-INIT-GF-17.                                                  NC2174.2
 110100     MOVE    "STR-TEST-GF-17" TO PAR-NAME.                        NC2174.2
 110200     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -1103,7 +1103,7 @@
 110500     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 110600     MOVE    +1001 TO ID1-DS-TS-4.                                NC2174.2
 110700     MOVE    1 TO REC-CT.                                         NC2174.2
-110800*                                                                 NC2174.2
+110800*                                                                         
 110900 STR-TEST-GF-17-0.                                                NC2174.2
 111000     STRING  ID1-DS-TS-4 DELIMITED BY SIZE SPACE DELIMITED SIZE   NC2174.2
 111100             ID1-DS-TS-4 DELIMITED BY SIZE                        NC2174.2
@@ -1113,7 +1113,7 @@
 111500     PERFORM DE-LETE.                                             NC2174.2
 111600     PERFORM PRINT-DETAIL.                                        NC2174.2
 111700     GO      TO STR-INIT-GF-18.                                   NC2174.2
-111800*                                                                 NC2174.2
+111800*                                                                         
 111900 STR-TEST-GF-17-1.                                                NC2174.2
 112000     IF      ID7-XN-5 = "1001+"                                   NC2174.2
 112100             PERFORM PASS                                         NC2174.2
@@ -1129,7 +1129,7 @@
 113100     MOVE    "1001+" TO CORRECT-A.                                NC2174.2
 113200 STR-WRITE-GF-17-1.                                               NC2174.2
 113300     PERFORM PRINT-DETAIL.                                        NC2174.2
-113400*                                                                 NC2174.2
+113400*                                                                         
 113500 STR-TEST-GF-17-2.                                                NC2174.2
 113600     ADD     1 TO REC-CT.                                         NC2174.2
 113700     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1146,7 +1146,7 @@
 114800     MOVE    6 TO CORRECT-N.                                      NC2174.2
 114900 STR-WRITE-GF-17-2.                                               NC2174.2
 115000     PERFORM PRINT-DETAIL.                                        NC2174.2
-115100*                                                                 NC2174.2
+115100*                                                                         
 115200 STR-INIT-GF-18.                                                  NC2174.2
 115300     MOVE    "STR-TEST-GF-18" TO PAR-NAME.                        NC2174.2
 115400     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -1156,7 +1156,7 @@
 115800     MOVE    ZERO TO ZEROX-XN-1.                                  NC2174.2
 115900     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 116000     MOVE    1 TO REC-CT.                                         NC2174.2
-116100*                                                                 NC2174.2
+116100*                                                                         
 116200 STR-TEST-GF-18-0.                                                NC2174.2
 116300     STRING  ID1-DS-LS-4 DELIMITED BY ZEROX-XN-1 SPACE DELIMITED  NC2174.2
 116400             BY SIZE ID1-DS-LS-4 DELIMITED BY "0" INTO            NC2174.2
@@ -1168,7 +1168,7 @@
 117000     GO      TO STR-INIT-GF-19.                                   NC2174.2
 117100*                                                                         
 117200 STR-TEST-GF-18-1.                                                NC2174.2
-117300     IF      ID7-XN-5 = "-1 01"                                   NC2174.2
+117300     IF      ID7-XN-5 = "-1 -6"                                   NC2174.2
 117400             PERFORM PASS                                         NC2174.2
 117500             GO TO STR-WRITE-GF-18-1                              NC2174.2
 117600     ELSE                                                         NC2174.2
@@ -1179,10 +1179,10 @@
 118100 STR-FAIL-GF-18-1.                                                NC2174.2
 118200     PERFORM FAIL                                                 NC2174.2
 118300     MOVE    ID7-XN-5 TO COMPUTED-A                               NC2174.2
-118400     MOVE    "-1 01" TO CORRECT-A.                                NC2174.2
+118400     MOVE    "-1 -6" TO CORRECT-A.                                NC2174.2
 118500 STR-WRITE-GF-18-1.                                               NC2174.2
 118600     PERFORM PRINT-DETAIL.                                        NC2174.2
-118700*                                                                 NC2174.2
+118700*                                                                         
 118800 STR-TEST-GF-18-2.                                                NC2174.2
 118900     ADD     1 TO REC-CT.                                         NC2174.2
 119000     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1199,7 +1199,7 @@
 120100     MOVE    6 TO CORRECT-N.                                      NC2174.2
 120200 STR-WRITE-GF-18-2.                                               NC2174.2
 120300     PERFORM PRINT-DETAIL.                                        NC2174.2
-120400*                                                                 NC2174.2
+120400*                                                                         
 120500 STR-INIT-GF-19.                                                  NC2174.2
 120600     MOVE    "STR-TEST-GF-19" TO PAR-NAME.                        NC2174.2
 120700     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -1208,7 +1208,7 @@
 121000     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 121100     MOVE    -1001 TO ID1-DS-TS-4.                                NC2174.2
 121200     MOVE    1 TO REC-CT.                                         NC2174.2
-121300*                                                                 NC2174.2
+121300*                                                                         
 121400 STR-TEST-GF-19-0.                                                NC2174.2
 121500     STRING  ID1-DS-TS-4 DELIMITED BY SIZE SPACE DELIMITED SIZE   NC2174.2
 121600             ID1-DS-TS-4 DELIMITED BY SIZE INTO ID7-XN-5          NC2174.2
@@ -1218,7 +1218,7 @@
 122000     PERFORM DE-LETE.                                             NC2174.2
 122100     PERFORM PRINT-DETAIL.                                        NC2174.2
 122200     GO      TO STR-INIT-GF-20.                                   NC2174.2
-122300*                                                                 NC2174.2
+122300*                                                                         
 122400 STR-TEST-GF-19-1.                                                NC2174.2
 122500     IF      ID7-XN-5 = "1001-"                                   NC2174.2
 122600             PERFORM PASS                                         NC2174.2
@@ -1234,7 +1234,7 @@
 123600     MOVE    "1001-" TO CORRECT-A.                                NC2174.2
 123700 STR-WRITE-GF-19-1.                                               NC2174.2
 123800     PERFORM PRINT-DETAIL.                                        NC2174.2
-123900*                                                                 NC2174.2
+123900*                                                                         
 124000 STR-TEST-GF-19-2.                                                NC2174.2
 124100     ADD     1 TO REC-CT.                                         NC2174.2
 124200     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1251,7 +1251,7 @@
 125300     MOVE 6 TO CORRECT-N.                                         NC2174.2
 125400 STR-WRITE-GF-19-2.                                               NC2174.2
 125500     PERFORM PRINT-DETAIL.                                        NC2174.2
-125600*                                                                 NC2174.2
+125600*                                                                         
 125700 STR-INIT-GF-20.                                                  NC2174.2
 125800     MOVE    "STR-TEST-GF-20" TO PAR-NAME.                        NC2174.2
 125900     MOVE   "VI-130 6.24.3+4" TO ANSI-REFERENCE.                  NC2174.2
@@ -1260,7 +1260,7 @@
 126200     MOVE "GEE I WISH I WAS A FORTRAN PROGRAMMER" TO ANS-XN-37.   NC2174.2
 126300     MOVE    1 TO MY-BOSS-DU-2V0.                                 NC2174.2
 126400     MOVE    1 TO REC-CT.                                         NC2174.2
-126500*                                                                 NC2174.2
+126500*                                                                         
 126600 STR-TEST-GF-20-1.                                                NC2174.2
 126700     STRING  "GEE" SPACE "I WISH I" SPACES "WAS A FORTRAN" " "    NC2174.2
 126800             "PROGRAMMER"                                         NC2174.2
@@ -1278,7 +1278,7 @@
 128000     MOVE    "OVERFLOW SHOULD NOT OCCUR" TO RE-MARK.              NC2174.2
 128100 STR-WRITE-GF-20-1.                                               NC2174.2
 128200     PERFORM PRINT-DETAIL.                                        NC2174.2
-128300*                                                                 NC2174.2
+128300*                                                                         
 128400 STR-TEST-GF-20-2.                                                NC2174.2
 128500     MOVE    "STR-TEST-GF-20" TO PAR-NAME.                        NC2174.2
 128600     MOVE    1 TO REC-CT.                                         NC2174.2
@@ -1299,7 +1299,7 @@
 130100*                                                                         
 130200 STR-TEST-GF-20-3.                                                NC2174.2
 130300     ADD     1 TO REC-CT.                                         NC2174.2
-130400     IF      MY-BOSS-DU-2V0 = 30                                  NC2174.2
+130400     IF      MY-BOSS-DU-2V0 = 34                                  NC2174.2
 130500             PERFORM PASS                                         NC2174.2
 130600             GO TO STR-WRITE-GF-20-3                              NC2174.2
 130700     ELSE                                                         NC2174.2
@@ -1310,20 +1310,20 @@
 131200 STR-FAIL-GF-20-3.                                                NC2174.2
 131300     PERFORM FAIL                                                 NC2174.2
 131400     MOVE    MY-BOSS-DU-2V0 TO COMPUTED-N                         NC2174.2
-131500     MOVE    30 TO CORRECT-N.                                     NC2174.2
+131500     MOVE    34 TO CORRECT-N.                                     NC2174.2
 131600 STR-WRITE-GF-20-3.                                               NC2174.2
 131700     PERFORM PRINT-DETAIL.                                        NC2174.2
-131800*                                                                 NC2174.2
-131900*                                                                 NC2174.2
+131800*                                                                         
+131900*                                                                         
 132000 STR-INIT-GF-21.                                                  NC2174.2
-132100*    ===-->  INTO GROUP FIELD  <--===                             NC2174.2
+132100*                                                                         
 132200     MOVE   "VI-130 6.24.3 GR4" TO ANSI-REFERENCE.                NC2174.2
 132300     MOVE   "STR-TEST-GF-21" TO PAR-NAME.                         NC2174.2
 132400     MOVE   "LIT DEL BY SIZE" TO FEATURE.                         NC2174.2
 132500     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 132600     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 132700     MOVE    1 TO REC-CT.                                         NC2174.2
-132800*                                                                 NC2174.2
+132800*                                                                         
 132900 STR-TEST-GF-21-0.                                                NC2174.2
 133000     STRING "ABCDEF" DELIMITED BY SIZE INTO TEST-21-GROUP         NC2174.2
 133100             WITH POINTER ID8-DU-2V0.                             NC2174.2
@@ -1334,7 +1334,7 @@
 133600     GO TO   STR-INIT-GF-22.                                      NC2174.2
 133700*                                                                         
 133800 STR-TEST-GF-21-1.                                                NC2174.2
-133900     IF      TEST-21-GROUP = "ABCDR"                              NC2174.2
+133900     IF      TEST-21-GROUP = "ABEDE"                              NC2174.2
 134000             PERFORM PASS                                         NC2174.2
 134100             GO TO STR-WRITE-GF-21-1                              NC2174.2
 134200     ELSE                                                         NC2174.2
@@ -1345,13 +1345,13 @@
 134700 STR-FAIL-GF-21-1.                                                NC2174.2
 134800     PERFORM FAIL                                                 NC2174.2
 134900     MOVE    TEST-21-GROUP TO COMPUTED-A                          NC2174.2
-135000     MOVE   "ABCDR" TO CORRECT-A.                                 NC2174.2
+135000     MOVE   "ABEDE" TO CORRECT-A.                                 NC2174.2
 135100 STR-WRITE-GF-21-1.                                               NC2174.2
 135200     PERFORM PRINT-DETAIL.                                        NC2174.2
 135300*                                                                         
 135400 STR-TEST-GF-21-2.                                                NC2174.2
 135500     ADD 1 TO REC-CT.                                             NC2174.2
-135600     IF      ID8-DU-2V0 = 8                                       NC2174.2
+135600     IF      ID8-DU-2V0 = 0                                       NC2174.2
 135700             PERFORM PASS                                         NC2174.2
 135800             GO TO STR-WRITE-GF-21-2                              NC2174.2
 135900     ELSE                                                         NC2174.2
@@ -1362,19 +1362,19 @@
 136400 STR-FAIL-GF-21-2.                                                NC2174.2
 136500     PERFORM FAIL                                                 NC2174.2
 136600     MOVE    ID8-DU-2V0 TO COMPUTED-N                             NC2174.2
-136700     MOVE    8 TO CORRECT-N.                                      NC2174.2
+136700     MOVE    0 TO CORRECT-N.                                      NC2174.2
 136800 STR-WRITE-GF-21-2.                                               NC2174.2
 136900     PERFORM PRINT-DETAIL.                                        NC2174.2
-137000*                                                                 NC2174.2
+137000*                                                                         
 137100 STR-INIT-GF-22.                                                  NC2174.2
-137200*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+137200*                                                                         
 137300     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 137400     MOVE   "STR-TEST-GF-22" TO PAR-NAME.                         NC2174.2
 137500     MOVE   "LIT DEL BY LIT" TO FEATURE.                          NC2174.2
 137600     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 137700     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 137800     MOVE    1 TO REC-CT.                                         NC2174.2
-137900*                                                                 NC2174.2
+137900*                                                                         
 138000 STR-TEST-GF-22-1.                                                NC2174.2
 138100     STRING "ABCDEF" DELIMITED BY "ABCDEFG"                       NC2174.2
 138200             INTO ID7-XN-5 WITH POINTER ID8-DU-2V0                NC2174.2
@@ -1390,7 +1390,7 @@
 139200     MOVE    "NOT ON OVERFLOW SHOULD NOT OCCUR" TO RE-MARK.       NC2174.2
 139300 STR-WRITE-GF-22-1.                                               NC2174.2
 139400     PERFORM PRINT-DETAIL.                                        NC2174.2
-139500*                                                                 NC2174.2
+139500*                                                                         
 139600 STR-TEST-GF-22-2.                                                NC2174.2
 139700     ADD     1 TO REC-CT.                                         NC2174.2
 139800     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -1407,7 +1407,7 @@
 140900     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 141000 STR-WRITE-GF-22-2.                                               NC2174.2
 141100     PERFORM PRINT-DETAIL.                                        NC2174.2
-141200*                                                                 NC2174.2
+141200*                                                                         
 141300 STR-TEST-GF-22-3.                                                NC2174.2
 141400     ADD     1 TO REC-CT.                                         NC2174.2
 141500     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1424,16 +1424,16 @@
 142600     MOVE    6 TO CORRECT-N.                                      NC2174.2
 142700 STR-WRITE-GF-22-3.                                               NC2174.2
 142800     PERFORM PRINT-DETAIL.                                        NC2174.2
-142900*                                                                 NC2174.2
+142900*                                                                         
 143000 STR-INIT-GF-23.                                                  NC2174.2
-143100*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+143100*                                                                         
 143200     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 143300     MOVE   "STR-TEST-GF-23" TO PAR-NAME.                         NC2174.2
 143400     MOVE   "LITERAL SERIES" TO FEATURE.                          NC2174.2
 143500     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 143600     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 143700     MOVE    1 TO REC-CT.                                         NC2174.2
-143800*                                                                 NC2174.2
+143800*                                                                         
 143900 STR-TEST-GF-23-1.                                                NC2174.2
 144000     STRING "A" "B" "C" "D" "E" DELIMITED "ABCDE" INTO ID7-XN-5   NC2174.2
 144100             POINTER ID8-DU-2V0                                   NC2174.2
@@ -1449,7 +1449,7 @@
 145100     MOVE   "NOT ON OVERFLOW SHOULD HAVE EXECUTED" TO RE-MARK.    NC2174.2
 145200 STR-WRITE-GF-23-1.                                               NC2174.2
 145300     PERFORM PRINT-DETAIL.                                        NC2174.2
-145400*                                                                 NC2174.2
+145400*                                                                         
 145500 STR-TEST-GF-23-2.                                                NC2174.2
 145600     ADD     1 TO REC-CT.                                         NC2174.2
 145700     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -1466,7 +1466,7 @@
 146800     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 146900 STR-WRITE-GF-23-2.                                               NC2174.2
 147000     PERFORM PRINT-DETAIL.                                        NC2174.2
-147100*                                                                 NC2174.2
+147100*                                                                         
 147200 STR-TEST-GF-23-3.                                                NC2174.2
 147300     ADD     1 TO REC-CT.                                         NC2174.2
 147400     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1483,16 +1483,16 @@
 148500     MOVE    6 TO CORRECT-N.                                      NC2174.2
 148600 STR-WRITE-GF-23-3.                                               NC2174.2
 148700     PERFORM PRINT-DETAIL.                                        NC2174.2
-148800*                                                                 NC2174.2
+148800*                                                                         
 148900 STR-INIT-GF-24.                                                  NC2174.2
-149000*    ===-->  BOTH "OVERFLOW" PHRASES  <--===                      NC2174.2
+149000*                                                                         
 149100     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 149200     MOVE   "STR-TEST-GF-24" TO PAR-NAME.                         NC2174.2
 149300     MOVE   "LIT DEL BY LIT" TO FEATURE.                          NC2174.2
 149400     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 149500     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 149600     MOVE    1 TO REC-CT.                                         NC2174.2
-149700*                                                                 NC2174.2
+149700*                                                                         
 149800 STR-TEST-GF-24-1.                                                NC2174.2
 149900     STRING "ABCDEF" DELIMITED BY "ABCDEFG"                       NC2174.2
 150000             INTO ID7-XN-5 WITH POINTER ID8-DU-2V0                NC2174.2
@@ -1508,7 +1508,7 @@
 151000     MOVE    "NOT ON OVERFLOW SHOULD NOT OCCUR" TO RE-MARK.       NC2174.2
 151100 STR-WRITE-GF-24-1.                                               NC2174.2
 151200     PERFORM PRINT-DETAIL.                                        NC2174.2
-151300*                                                                 NC2174.2
+151300*                                                                         
 151400 STR-TEST-GF-24-2.                                                NC2174.2
 151500     ADD     1 TO REC-CT.                                         NC2174.2
 151600     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -1525,7 +1525,7 @@
 152700     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 152800 STR-WRITE-GF-24-2.                                               NC2174.2
 152900     PERFORM PRINT-DETAIL.                                        NC2174.2
-153000*                                                                 NC2174.2
+153000*                                                                         
 153100 STR-TEST-GF-24-3.                                                NC2174.2
 153200     ADD     1 TO REC-CT.                                         NC2174.2
 153300     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1542,16 +1542,16 @@
 154400     MOVE    6 TO CORRECT-N.                                      NC2174.2
 154500 STR-WRITE-GF-24-3.                                               NC2174.2
 154600     PERFORM PRINT-DETAIL.                                        NC2174.2
-154700*                                                                 NC2174.2
+154700*                                                                         
 154800 STR-INIT-GF-25.                                                  NC2174.2
-154900*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+154900*                                                                         
 155000     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 155100     MOVE   "STR-TEST-GF-25" TO PAR-NAME.                         NC2174.2
 155200     MOVE   "LITERAL SERIES" TO FEATURE.                          NC2174.2
 155300     MOVE    "*****" TO ID7-XN-5.                                 NC2174.2
 155400     MOVE    1 TO ID8-DU-2V0.                                     NC2174.2
 155500     MOVE    ZERO TO REC-CT.                                      NC2174.2
-155600*                                                                 NC2174.2
+155600*                                                                         
 155700 STR-TEST-GF-25-1.                                                NC2174.2
 155800     STRING "A" "B" "C" "D" "E" DELIMITED "ABCDE" INTO ID7-XN-5   NC2174.2
 155900             POINTER ID8-DU-2V0                                   NC2174.2
@@ -1567,7 +1567,7 @@
 156900     MOVE   "ON OVERFLOW SHOULD NOT HAVE EXECUTED" TO RE-MARK.    NC2174.2
 157000 STR-WRITE-GF-25-1.                                               NC2174.2
 157100     PERFORM PRINT-DETAIL.                                        NC2174.2
-157200*                                                                 NC2174.2
+157200*                                                                         
 157300 STR-TEST-GF-25-2.                                                NC2174.2
 157400     MOVE   "STR-TEST-GF-25-1" TO PAR-NAME.                       NC2174.2
 157500     MOVE    1 TO REC-CT.                                         NC2174.2
@@ -1585,7 +1585,7 @@
 158700     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 158800 STR-WRITE-GF-25-2.                                               NC2174.2
 158900     PERFORM PRINT-DETAIL.                                        NC2174.2
-159000*                                                                 NC2174.2
+159000*                                                                         
 159100 STR-TEST-GF-25-3.                                                NC2174.2
 159200     ADD     1 TO REC-CT.                                         NC2174.2
 159300     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1602,9 +1602,9 @@
 160400     MOVE    6 TO CORRECT-N.                                      NC2174.2
 160500 STR-WRITE-GF-25-3.                                               NC2174.2
 160600     PERFORM PRINT-DETAIL.                                        NC2174.2
-160700*                                                                 NC2174.2
+160700*                                                                         
 160800 STR-INIT-GF-26.                                                  NC2174.2
-160900*    ===-->  EXPLICIT SCOPE TERMINATOR  <--===                    NC2174.2
+160900*                                                                         
 161000     MOVE   "VI-132 6.24.4 GR11" TO ANSI-REFERENCE.               NC2174.2
 161100     MOVE   "STR-TEST-GF-26" TO PAR-NAME.                         NC2174.2
 161200     MOVE   "LIT DEL BY LIT" TO FEATURE.                          NC2174.2
@@ -1614,7 +1614,7 @@
 161600     MOVE    SPACE TO WRK-XN-00001-1.                             NC2174.2
 161700     MOVE    SPACE TO WRK-XN-00001-2.                             NC2174.2
 161800     MOVE    SPACE TO WRK-XN-00001-3.                             NC2174.2
-161900*                                                                 NC2174.2
+161900*                                                                         
 162000 STR-TEST-GF-26-0.                                                NC2174.2
 162100     STRING "ABCDEF" DELIMITED BY "ABCDEFG"                       NC2174.2
 162200             INTO ID7-XN-5 WITH POINTER ID8-DU-2V0                NC2174.2
@@ -1631,7 +1631,7 @@
 163300     PERFORM DE-LETE.                                             NC2174.2
 163400     PERFORM PRINT-DETAIL.                                        NC2174.2
 163500     GO      TO STR-INIT-GF-27.                                   NC2174.2
-163600*                                                                 NC2174.2
+163600*                                                                         
 163700 STR-TEST-GF-26-1.                                                NC2174.2
 163800     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
 163900             PERFORM PASS                                         NC2174.2
@@ -1647,7 +1647,7 @@
 164900     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 165000 STR-WRITE-GF-26-1.                                               NC2174.2
 165100     PERFORM PRINT-DETAIL.                                        NC2174.2
-165200*                                                                 NC2174.2
+165200*                                                                         
 165300 STR-TEST-GF-26-2.                                                NC2174.2
 165400     ADD     1 TO REC-CT.                                         NC2174.2
 165500     MOVE   "STR-TEST-GF-26-2" TO PAR-NAME.                       NC2174.2
@@ -1668,7 +1668,7 @@
 167000*                                                                         
 167100 STR-TEST-GF-26-3.                                                NC2174.2
 167200     ADD     1 TO REC-CT.                                         NC2174.2
-167300     IF      WRK-XN-00001-1 = "1"                                 NC2174.2
+167300     IF      WRK-XN-00001-1 = "A"                                 NC2174.2
 167400             PERFORM PASS                                         NC2174.2
 167500             GO TO STR-WRITE-GF-26-3                              NC2174.2
 167600     ELSE                                                         NC2174.2
@@ -1678,12 +1678,12 @@
 168000     GO TO STR-WRITE-GF-26-3.                                     NC2174.2
 168100 STR-FAIL-GF-26-3.                                                NC2174.2
 168200     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2174.2
-168300     MOVE   "1" TO CORRECT-X                                      NC2174.2
+168300     MOVE   "A" TO CORRECT-X                                      NC2174.2
 168400     MOVE   "ON OVERFLOW SHOULD HAVE EXECUTED" TO RE-MARK         NC2174.2
 168500     PERFORM FAIL.                                                NC2174.2
 168600 STR-WRITE-GF-26-3.                                               NC2174.2
 168700     PERFORM PRINT-DETAIL.                                        NC2174.2
-168800*                                                                 NC2174.2
+168800*                                                                         
 168900 STR-TEST-GF-26-4.                                                NC2174.2
 169000     ADD     1 TO REC-CT.                                         NC2174.2
 169100     IF      WRK-XN-00001-2 = "B"                                 NC2174.2
@@ -1701,7 +1701,7 @@
 170300     PERFORM FAIL.                                                NC2174.2
 170400 STR-WRITE-GF-26-4.                                               NC2174.2
 170500     PERFORM PRINT-DETAIL.                                        NC2174.2
-170600*                                                                 NC2174.2
+170600*                                                                         
 170700 STR-TEST-GF-26-5.                                                NC2174.2
 170800     ADD     1 TO REC-CT.                                         NC2174.2
 170900     IF      WRK-XN-00001-3 = "Z"                                 NC2174.2
@@ -1719,9 +1719,9 @@
 172100     PERFORM FAIL.                                                NC2174.2
 172200 STR-WRITE-GF-26-5.                                               NC2174.2
 172300     PERFORM PRINT-DETAIL.                                        NC2174.2
-172400*                                                                 NC2174.2
+172400*                                                                         
 172500 STR-INIT-GF-27.                                                  NC2174.2
-172600*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+172600*                                                                         
 172700     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 172800     MOVE   "STR-TEST-GF-27" TO PAR-NAME.                         NC2174.2
 172900     MOVE   "LIT DEL BY LIT" TO FEATURE.                          NC2174.2
@@ -1731,7 +1731,7 @@
 173300     MOVE    SPACE TO WRK-XN-00001-1.                             NC2174.2
 173400     MOVE    SPACE TO WRK-XN-00001-2.                             NC2174.2
 173500     MOVE    SPACE TO WRK-XN-00001-3.                             NC2174.2
-173600*                                                                 NC2174.2
+173600*                                                                         
 173700 STR-TEST-GF-27-0.                                                NC2174.2
 173800     STRING "ABCDEF" DELIMITED BY "ABCDEFG"                       NC2174.2
 173900             INTO ID7-XN-5 WITH POINTER ID8-DU-2V0                NC2174.2
@@ -1745,10 +1745,10 @@
 174700     PERFORM DE-LETE.                                             NC2174.2
 174800     PERFORM PRINT-DETAIL.                                        NC2174.2
 174900     GO TO   STR-INIT-GF-28.                                      NC2174.2
-175000*                                                                 NC2174.2
+175000*                                                                         
 175100 STR-TEST-GF-27-1.                                                NC2174.2
 175200     MOVE    1 TO REC-CT.                                         NC2174.2
-175300     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
+175300     IF      ID7-XN-5 = "ABUDE"                                   NC2174.2
 175400             PERFORM PASS                                         NC2174.2
 175500             GO TO STR-WRITE-GF-27-1                              NC2174.2
 175600     ELSE                                                         NC2174.2
@@ -1759,10 +1759,10 @@
 176100 STR-FAIL-GF-27-1.                                                NC2174.2
 176200     PERFORM FAIL                                                 NC2174.2
 176300     MOVE    ID7-XN-5 TO COMPUTED-A                               NC2174.2
-176400     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
+176400     MOVE   "ABUDE" TO CORRECT-A.                                 NC2174.2
 176500 STR-WRITE-GF-27-1.                                               NC2174.2
 176600     PERFORM PRINT-DETAIL.                                        NC2174.2
-176700*                                                                 NC2174.2
+176700*                                                                         
 176800 STR-TEST-GF-27-2.                                                NC2174.2
 176900     ADD     1 TO REC-CT.                                         NC2174.2
 177000     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1779,7 +1779,7 @@
 178100             MOVE    6 TO CORRECT-N.                              NC2174.2
 178200 STR-WRITE-GF-27-2.                                               NC2174.2
 178300             PERFORM PRINT-DETAIL.                                NC2174.2
-178400*                                                                 NC2174.2
+178400*                                                                         
 178500 STR-TEST-GF-27-3.                                                NC2174.2
 178600     ADD     1 TO REC-CT.                                         NC2174.2
 178700     IF      WRK-XN-00001-1 = "A"                                 NC2174.2
@@ -1797,7 +1797,7 @@
 179900     PERFORM FAIL.                                                NC2174.2
 180000 STR-WRITE-GF-27-3.                                               NC2174.2
 180100     PERFORM PRINT-DETAIL.                                        NC2174.2
-180200*                                                                 NC2174.2
+180200*                                                                         
 180300 STR-TEST-GF-27-4.                                                NC2174.2
 180400     ADD     1 TO REC-CT.                                         NC2174.2
 180500     IF      WRK-XN-00001-2 = "B"                                 NC2174.2
@@ -1815,7 +1815,7 @@
 181700     PERFORM FAIL.                                                NC2174.2
 181800 STR-WRITE-GF-27-4.                                               NC2174.2
 181900     PERFORM PRINT-DETAIL.                                        NC2174.2
-182000*                                                                 NC2174.2
+182000*                                                                         
 182100 STR-TEST-GF-27-5.                                                NC2174.2
 182200     ADD     1 TO REC-CT.                                         NC2174.2
 182300     IF      WRK-XN-00001-3 = "Z"                                 NC2174.2
@@ -1833,9 +1833,9 @@
 183500     PERFORM FAIL.                                                NC2174.2
 183600 STR-WRITE-GF-27-5.                                               NC2174.2
 183700     PERFORM PRINT-DETAIL.                                        NC2174.2
-183800*                                                                 NC2174.2
+183800*                                                                         
 183900 STR-INIT-GF-28.                                                  NC2174.2
-184000*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+184000*                                                                         
 184100     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 184200     MOVE   "STR-TEST-GF-28" TO PAR-NAME.                         NC2174.2
 184300     MOVE   "LITERAL SERIES" TO FEATURE.                          NC2174.2
@@ -1845,7 +1845,7 @@
 184700     MOVE    SPACE TO WRK-XN-00001-1.                             NC2174.2
 184800     MOVE    SPACE TO WRK-XN-00001-2.                             NC2174.2
 184900     MOVE    SPACE TO WRK-XN-00001-3.                             NC2174.2
-185000*                                                                 NC2174.2
+185000*                                                                         
 185100 STR-TEST-GF-28-0.                                                NC2174.2
 185200     STRING "A" "B" "C" "D" "E" DELIMITED "ABCDE" INTO ID7-XN-5   NC2174.2
 185300             POINTER ID8-DU-2V0                                   NC2174.2
@@ -1859,7 +1859,7 @@
 186100     PERFORM DE-LETE.                                             NC2174.2
 186200     PERFORM PRINT-DETAIL.                                        NC2174.2
 186300     GO TO   STR-INIT-GF-29.                                      NC2174.2
-186400*                                                                 NC2174.2
+186400*                                                                         
 186500 STR-TEST-GF-28-1.                                                NC2174.2
 186600     MOVE    1 TO REC-CT.                                         NC2174.2
 186700     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -1876,7 +1876,7 @@
 187800     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 187900 STR-WRITE-GF-28-1.                                               NC2174.2
 188000     PERFORM PRINT-DETAIL.                                        NC2174.2
-188100*                                                                 NC2174.2
+188100*                                                                         
 188200 STR-TEST-GF-28-2.                                                NC2174.2
 188300     ADD     1 TO REC-CT.                                         NC2174.2
 188400     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -1893,7 +1893,7 @@
 189500     MOVE    6 TO CORRECT-N.                                      NC2174.2
 189600 STR-WRITE-GF-28-2.                                               NC2174.2
 189700     PERFORM PRINT-DETAIL.                                        NC2174.2
-189800*                                                                 NC2174.2
+189800*                                                                         
 189900 STR-TEST-GF-28-3.                                                NC2174.2
 190000     ADD     1 TO REC-CT.                                         NC2174.2
 190100     IF      WRK-XN-00001-1 = SPACE                               NC2174.2
@@ -1911,7 +1911,7 @@
 191300     PERFORM FAIL.                                                NC2174.2
 191400 STR-WRITE-GF-28-3.                                               NC2174.2
 191500     PERFORM PRINT-DETAIL.                                        NC2174.2
-191600*                                                                 NC2174.2
+191600*                                                                         
 191700 STR-TEST-GF-28-4.                                                NC2174.2
 191800     ADD     1 TO REC-CT.                                         NC2174.2
 191900     IF      WRK-XN-00001-2 =  SPACE                              NC2174.2
@@ -1929,7 +1929,7 @@
 193100     PERFORM FAIL.                                                NC2174.2
 193200 STR-WRITE-GF-28-4.                                               NC2174.2
 193300     PERFORM PRINT-DETAIL.                                        NC2174.2
-193400*                                                                 NC2174.2
+193400*                                                                         
 193500 STR-TEST-GF-28-5.                                                NC2174.2
 193600     ADD     1 TO REC-CT.                                         NC2174.2
 193700     IF      WRK-XN-00001-3 = "Z"                                 NC2174.2
@@ -1947,9 +1947,9 @@
 194900     PERFORM FAIL.                                                NC2174.2
 195000 STR-WRITE-GF-28-5.                                               NC2174.2
 195100     PERFORM PRINT-DETAIL.                                        NC2174.2
-195200*                                                                 NC2174.2
+195200*                                                                         
 195300 STR-INIT-GF-29.                                                  NC2174.2
-195400*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+195400*                                                                         
 195500     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 195600     MOVE   "STR-TEST-GF-29" TO PAR-NAME.                         NC2174.2
 195700     MOVE   "LIT DEL BY LIT" TO FEATURE.                          NC2174.2
@@ -1959,7 +1959,7 @@
 196100     MOVE    SPACE TO WRK-XN-00001-1.                             NC2174.2
 196200     MOVE    SPACE TO WRK-XN-00001-2.                             NC2174.2
 196300     MOVE    SPACE TO WRK-XN-00001-3.                             NC2174.2
-196400*                                                                 NC2174.2
+196400*                                                                         
 196500 STR-TEST-GF-29.                                                  NC2174.2
 196600     STRING "ABCDEF" DELIMITED BY "ABCDEFG"                       NC2174.2
 196700             INTO ID7-XN-5 WITH POINTER ID8-DU-2V0                NC2174.2
@@ -1973,7 +1973,7 @@
 197500     PERFORM DE-LETE.                                             NC2174.2
 197600     PERFORM PRINT-DETAIL.                                        NC2174.2
 197700     GO TO   STR-INIT-GF-30.                                      NC2174.2
-197800*                                                                 NC2174.2
+197800*                                                                         
 197900 STR-TEST-GF-29-1.                                                NC2174.2
 198000     MOVE    1 TO REC-CT.                                         NC2174.2
 198100     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -1990,7 +1990,7 @@
 199200     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 199300 STR-WRITE-GF-29-1.                                               NC2174.2
 199400     PERFORM PRINT-DETAIL.                                        NC2174.2
-199500*                                                                 NC2174.2
+199500*                                                                         
 199600 STR-TEST-GF-29-2.                                                NC2174.2
 199700     ADD     1 TO REC-CT.                                         NC2174.2
 199800     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -2007,7 +2007,7 @@
 200900     MOVE    6 TO CORRECT-N.                                      NC2174.2
 201000 STR-WRITE-GF-29-2.                                               NC2174.2
 201100     PERFORM PRINT-DETAIL.                                        NC2174.2
-201200*                                                                 NC2174.2
+201200*                                                                         
 201300 STR-TEST-GF-29-3.                                                NC2174.2
 201400     ADD     1 TO REC-CT.                                         NC2174.2
 201500     IF      WRK-XN-00001-1 = SPACE                               NC2174.2
@@ -2026,7 +2026,7 @@
 202800     PERFORM FAIL.                                                NC2174.2
 202900 STR-WRITE-GF-29-3.                                               NC2174.2
 203000     PERFORM PRINT-DETAIL.                                        NC2174.2
-203100*                                                                 NC2174.2
+203100*                                                                         
 203200 STR-TEST-GF-29-4.                                                NC2174.2
 203300     ADD     1 TO REC-CT.                                         NC2174.2
 203400     IF      WRK-XN-00001-2 = SPACE                               NC2174.2
@@ -2045,7 +2045,7 @@
 204700     PERFORM FAIL.                                                NC2174.2
 204800 STR-WRITE-GF-29-4.                                               NC2174.2
 204900     PERFORM PRINT-DETAIL.                                        NC2174.2
-205000*                                                                 NC2174.2
+205000*                                                                         
 205100 STR-TEST-GF-29-5.                                                NC2174.2
 205200     ADD     1 TO REC-CT.                                         NC2174.2
 205300     IF      WRK-XN-00001-3 = "Z"                                 NC2174.2
@@ -2063,9 +2063,9 @@
 206500     PERFORM FAIL.                                                NC2174.2
 206600 STR-WRITE-GF-29-5.                                               NC2174.2
 206700     PERFORM PRINT-DETAIL.                                        NC2174.2
-206800*                                                                 NC2174.2
+206800*                                                                         
 206900 STR-INIT-GF-30.                                                  NC2174.2
-207000*    ===--> "NOT ON OVERFLOW" PHRASE  <--===                      NC2174.2
+207000*                                                                         
 207100     MOVE   "VI-132 6.24.4 GR9, 10" TO ANSI-REFERENCE.            NC2174.2
 207200     MOVE   "STR-TEST-GF-30" TO PAR-NAME.                         NC2174.2
 207300     MOVE   "LITERAL SERIES" TO FEATURE.                          NC2174.2
@@ -2075,7 +2075,7 @@
 207700     MOVE    SPACE TO WRK-XN-00001-1.                             NC2174.2
 207800     MOVE    SPACE TO WRK-XN-00001-2.                             NC2174.2
 207900     MOVE    SPACE TO WRK-XN-00001-3.                             NC2174.2
-208000*                                                                 NC2174.2
+208000*                                                                         
 208100 STR-TEST-GF-30.                                                  NC2174.2
 208200     STRING "A" "B" "C" "D" "E" DELIMITED "ABCDE" INTO ID7-XN-5   NC2174.2
 208300             POINTER ID8-DU-2V0                                   NC2174.2
@@ -2089,7 +2089,7 @@
 209100     PERFORM DE-LETE.                                             NC2174.2
 209200     PERFORM PRINT-DETAIL.                                        NC2174.2
 209300     GO TO   CCVS-EXIT.                                           NC2174.2
-209400*                                                                 NC2174.2
+209400*                                                                         
 209500 STR-TEST-GF-30-1.                                                NC2174.2
 209600     MOVE    1 TO REC-CT.                                         NC2174.2
 209700     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
@@ -2106,7 +2106,7 @@
 210800     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 210900 STR-WRITE-GF-30-1.                                               NC2174.2
 211000     PERFORM PRINT-DETAIL.                                        NC2174.2
-211100*                                                                 NC2174.2
+211100*                                                                         
 211200 STR-TEST-GF-30-2.                                                NC2174.2
 211300     ADD     1 TO REC-CT.                                         NC2174.2
 211400     IF      ID8-DU-2V0 = 6                                       NC2174.2
@@ -2126,7 +2126,7 @@
 212800*                                                                         
 212900 STR-TEST-GF-30-3.                                                NC2174.2
 213000     ADD     1 TO REC-CT.                                         NC2174.2
-213100     IF      WRK-XN-00001-1 = "D"                                 NC2174.2
+213100     IF      WRK-XN-00001-1 = "A"                                 NC2174.2
 213200             PERFORM PASS                                         NC2174.2
 213300             GO TO STR-WRITE-GF-30-3                              NC2174.2
 213400     ELSE                                                         NC2174.2
@@ -2136,13 +2136,13 @@
 213800     GO TO STR-WRITE-GF-30-3.                                     NC2174.2
 213900 STR-FAIL-GF-30-3.                                                NC2174.2
 214000     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2174.2
-214100     MOVE   "D"    TO CORRECT-X                                   NC2174.2
+214100     MOVE   "A"    TO CORRECT-X                                   NC2174.2
 214200     MOVE   "NOT ON OVERFLOW SHOULD HAVE EXECUTED"                NC2174.2
 214300          TO RE-MARK                                              NC2174.2
 214400     PERFORM FAIL.                                                NC2174.2
 214500 STR-WRITE-GF-30-3.                                               NC2174.2
 214600     PERFORM PRINT-DETAIL.                                        NC2174.2
-214700*                                                                 NC2174.2
+214700*                                                                         
 214800 STR-TEST-GF-30-4.                                                NC2174.2
 214900     ADD     1 TO REC-CT.                                         NC2174.2
 215000     IF      WRK-XN-00001-2 =  "B"                                NC2174.2
@@ -2161,7 +2161,7 @@
 216300     PERFORM FAIL.                                                NC2174.2
 216400 STR-WRITE-GF-30-4.                                               NC2174.2
 216500     PERFORM PRINT-DETAIL.                                        NC2174.2
-216600*                                                                 NC2174.2
+216600*                                                                         
 216700 STR-TEST-GF-30-5.                                                NC2174.2
 216800     ADD     1 TO REC-CT.                                         NC2174.2
 216900     IF      WRK-XN-00001-3 = "Z"                                 NC2174.2
@@ -2179,7 +2179,7 @@
 218100     PERFORM FAIL.                                                NC2174.2
 218200 STR-WRITE-GF-30-5.                                               NC2174.2
 218300     PERFORM PRINT-DETAIL.                                        NC2174.2
-218400*                                                                 NC2174.2
+218400*                                                                         
 218500 CCVS-EXIT SECTION.                                               NC2174.2
 218600 CCVS-999999.                                                     NC2174.2
 218700     GO TO CLOSE-FILES.                                           NC2174.2

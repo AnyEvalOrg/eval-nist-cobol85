@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         NC1014.2
 000200 PROGRAM-ID.                                                      NC1014.2
 000300     NC101A.                                                      NC1014.2
-000400****************************************************************  NC1014.2
-000500*                                                              *  NC1014.2
-000600*    VALIDATION FOR:-                                          *  NC1014.2
-000700*                                                              *  NC1014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1014.2
-000900*                                                              *  NC1014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1014.2
-001100*                                                              *  NC1014.2
-001200****************************************************************  NC1014.2
-001300*                                                              *  NC1014.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1014.2
-001500*                                                              *  NC1014.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1014.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1014.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1014.2
-001900*                                                              *  NC1014.2
-002000****************************************************************  NC1014.2
-002100****************************************************************  NC1014.2
-002200*    THIS PROGRAM TESTS THE FORMAT 1 MULTIPLY STATEMENT FOUND     NC1014.2
-002300*    IN LEVEL 1.   ALL COMBINATIONS OF THE OPTIONAL PHRASES       NC1014.2
-002400*    "SIZE ERROR", "NOT SIZE ERROR" AND "END-MULTIPLY" ARE        NC1014.2
-002500*    TESTED, AS WELL AS THE ROUNDED OPTION.                       NC1014.2
-002600*                                                                 NC1014.2
-002700*    VARIOUS COMBINATIONS OF SIGNED AND UNSIGNED NUMERIC          NC1014.2
-002800*    LITERALS, DISPLAY AND COMPUTATIONAL FIELDS ARE USED          NC1014.2
-002900*    AS OPERANDS.                                                 NC1014.2
-003000*                                                                 NC1014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100                                                                  NC1014.2
 003200                                                                  NC1014.2
 003300 ENVIRONMENT DIVISION.                                            NC1014.2
@@ -359,7 +359,7 @@
 036100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1014.2
 036200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1014.2
 036300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1014.2
-036400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1014.2
+036400*                                                                         
 036500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1014.2
 036600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1014.2
 036700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1014.2
@@ -454,13 +454,13 @@
 045600 MPY-WRITE-F1-1.                                                  NC1014.2
 045700     MOVE "MPY-TEST-F1-1 " TO PAR-NAME.                           NC1014.2
 045800     PERFORM  PRINT-DETAIL.                                       NC1014.2
-045900*                                                                 NC1014.2
+045900*                                                                         
 046000 MPY-INIT-F1-2.                                                   NC1014.2
 046100     MOVE    "VI-106 6.19.4 GR1" TO ANSI-REFERENCE.               NC1014.2
 046200     MOVE    -56 TO MULT4.                                        NC1014.2
 046300 MPY-TEST-F1-2.                                                   NC1014.2
 046400     MULTIPLY -1.3 BY MULT4 ROUNDED.                              NC1014.2
-046500     IF       MULT4 EQUAL TO 73                                   NC1014.2
+046500     IF       MULT4 EQUAL TO 77                                   NC1014.2
 046600              PERFORM PASS                                        NC1014.2
 046700     ELSE                                                         NC1014.2
 046800              GO TO MPY-FAIL-F1-2.                                NC1014.2
@@ -471,7 +471,7 @@
 047300 MPY-FAIL-F1-2.                                                   NC1014.2
 047400     PERFORM  FAIL.                                               NC1014.2
 047500     MOVE     MULT4 TO COMPUTED-N.                                NC1014.2
-047600     MOVE     +73   TO CORRECT-N.                                 NC1014.2
+047600     MOVE     +77   TO CORRECT-N.                                 NC1014.2
 047700 MPY-WRITE-F1-2.                                                  NC1014.2
 047800     MOVE "MPY-TEST-F1-2 " TO PAR-NAME.                           NC1014.2
 047900     PERFORM  PRINT-DETAIL.                                       NC1014.2
@@ -526,7 +526,7 @@
 052800     MULTIPLY 4.99 BY MULT6 ROUNDED ON SIZE ERROR                 NC1014.2
 052900              MOVE "L" TO XRAY.                                   NC1014.2
 053000 MPY-TEST-F1-4-1.                                                 NC1014.2
-053100     IF       XRAY EQUAL TO "X"                                   NC1014.2
+053100     IF       XRAY EQUAL TO "L"                                   NC1014.2
 053200              PERFORM PASS                                        NC1014.2
 053300     ELSE                                                         NC1014.2
 053400              GO TO MPY-FAIL-F1-4-1.                              NC1014.2
@@ -535,7 +535,7 @@
 053700     PERFORM  DE-LETE.                                            NC1014.2
 053800     GO TO    MPY-WRITE-F1-4-1.                                   NC1014.2
 053900 MPY-FAIL-F1-4-1.                                                 NC1014.2
-054000     MOVE    "X"   TO CORRECT-X.                                  NC1014.2
+054000     MOVE    "L"   TO CORRECT-X.                                  NC1014.2
 054100     MOVE     XRAY TO COMPUTED-X.                                 NC1014.2
 054200     MOVE  "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.               NC1014.2
 054300     PERFORM  FAIL.                                               NC1014.2
@@ -543,7 +543,7 @@
 054500     MOVE    "MPY-TEST-F1-4-1" TO PAR-NAME.                       NC1014.2
 054600     PERFORM  PRINT-DETAIL.                                       NC1014.2
 054700 MPY-TEST-F1-4-2.                                                 NC1014.2
-054800     IF       MULT6 EQUAL TO 20                                   NC1014.2
+054800     IF       MULT6 EQUAL TO 23                                   NC1014.2
 054900              PERFORM PASS                                        NC1014.2
 055000     ELSE                                                         NC1014.2
 055100              GO TO MPY-FAIL-F1-4-2.                              NC1014.2
@@ -554,7 +554,7 @@
 055600 MPY-FAIL-F1-4-2.                                                 NC1014.2
 055700     PERFORM  FAIL.                                               NC1014.2
 055800     MOVE     MULT6 TO COMPUTED-N.                                NC1014.2
-055900     MOVE     +20 TO CORRECT-N.                                   NC1014.2
+055900     MOVE     +23 TO CORRECT-N.                                   NC1014.2
 056000     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1014.2
 056100 MPY-WRITE-F1-4-2.                                                NC1014.2
 056200     MOVE    "MPY-TEST-F1-4-2" TO PAR-NAME.                       NC1014.2
@@ -610,7 +610,7 @@
 061200     MULTIPLY A12THREES-DS-06V06 BY WRK-DS-10V00                  NC1014.2
 061300         ON SIZE ERROR MOVE "1" TO WRK-XN-00001.                  NC1014.2
 061400 MPY-TEST-F1-7-1.                                                 NC1014.2
-061500     IF WRK-DS-10V00 EQUAL TO 1111111117                          NC1014.2
+061500     IF WRK-DS-10V00 EQUAL TO 1111111111                          NC1014.2
 061600         PERFORM PASS                                             NC1014.2
 061700         GO TO MPY-WRITE-F1-7-1.                                  NC1014.2
 061800     GO TO MPY-FAIL-F1-7-1.                                       NC1014.2
@@ -619,18 +619,18 @@
 062100     GO TO MPY-WRITE-F1-7-1.                                      NC1014.2
 062200 MPY-FAIL-F1-7-1.                                                 NC1014.2
 062300     MOVE  WRK-DS-10V00       TO COMPUTED-18V0.                   NC1014.2
-062400     MOVE  1111111117         TO CORRECT-18V0.                    NC1014.2
+062400     MOVE  1111111111         TO CORRECT-18V0.                    NC1014.2
 062500     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1014.2
 062600     PERFORM FAIL.                                                NC1014.2
 062700 MPY-WRITE-F1-7-1.                                                NC1014.2
 062800     MOVE "MPY-TEST-F1-7-1         " TO PAR-NAME.                 NC1014.2
 062900     PERFORM PRINT-DETAIL.                                        NC1014.2
 063000 MPY-TEST-F1-7-2.                                                 NC1014.2
-063100     IF WRK-XN-00001 EQUAL TO "1"                                 NC1014.2
+063100     IF WRK-XN-00001 EQUAL TO "7"                                 NC1014.2
 063200         PERFORM PASS                                             NC1014.2
 063300         GO TO MPY-WRITE-F1-7-2.                                  NC1014.2
 063400     MOVE    "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.             NC1014.2
-063500     MOVE "1" TO CORRECT-A.                                       NC1014.2
+063500     MOVE "7" TO CORRECT-A.                                       NC1014.2
 063600     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1014.2
 063700     PERFORM FAIL.                                                NC1014.2
 063800     GO TO MPY-WRITE-F1-7-2.                                      NC1014.2
@@ -779,10 +779,10 @@
 078100     MULTIPLY A01ONE-DS-P0801 BY WRK-CS-18V00.                    NC1014.2
 078200 MPY-TEST-F1-12.                                                  NC1014.2
 078300     MOVE WRK-CS-18V00 TO WRK-DU-18V00.                           NC1014.2
-078400     IF WRK-DU-18V00 EQUAL TO 000001000111111111                  NC1014.2
+078400     IF WRK-DU-18V00 EQUAL TO 000000000111111111                  NC1014.2
 078500         PERFORM PASS                                             NC1014.2
 078600         GO TO MPY-WRITE-F1-12.                                   NC1014.2
-078700     MOVE  000001000111111111 TO CORRECT-18V0.                    NC1014.2
+078700     MOVE  000000000111111111 TO CORRECT-18V0.                    NC1014.2
 078800     MOVE WRK-DU-18V00     TO COMPUTED-18V0.                      NC1014.2
 078900     PERFORM FAIL.                                                NC1014.2
 079000     GO TO MPY-WRITE-F1-12.                                       NC1014.2
@@ -791,10 +791,10 @@
 079300 MPY-WRITE-F1-12.                                                 NC1014.2
 079400     MOVE "MPY-TEST-F1-12         " TO PAR-NAME.                  NC1014.2
 079500     PERFORM PRINT-DETAIL.                                        NC1014.2
-079600*                                                                 NC1014.2
-079700*                                                                 NC1014.2
+079600*                                                                         
+079700*                                                                         
 079800 MPY-INIT-F1-13.                                                  NC1014.2
-079900*    ===--> NEW SIZE ERROR TESTS <--===                           NC1014.2
+079900*                                                                         
 080000     MOVE   "VI-67 6.4.2 " TO ANSI-REFERENCE.                     NC1014.2
 080100     MOVE   "MPY-TEST-F1-13       " TO PAR-NAME.                  NC1014.2
 080200     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -832,10 +832,10 @@
 083400             MOVE   "SIZE ERROR SHOULD HAVE OCCURRED" TO RE-MARK  NC1014.2
 083500             PERFORM FAIL                                         NC1014.2
 083600             PERFORM PRINT-DETAIL.                                NC1014.2
-083700*                                                                 NC1014.2
-083800*                                                                 NC1014.2
+083700*                                                                         
+083800*                                                                         
 083900 MPY-INIT-F1-14.                                                  NC1014.2
-084000*    ===--> NEW SIZE ERROR TESTS <--===                           NC1014.2
+084000*                                                                         
 084100     MOVE   "VI-67 6.4.2 " TO ANSI-REFERENCE.                     NC1014.2
 084200     MOVE   "MPY-TEST-F1-14        " TO PAR-NAME.                 NC1014.2
 084300     MOVE   "1" TO WRK-XN-00001.                                  NC1014.2
@@ -873,10 +873,10 @@
 087500             MOVE    00               TO CORRECT-N                NC1014.2
 087600             PERFORM FAIL                                         NC1014.2
 087700             PERFORM PRINT-DETAIL.                                NC1014.2
-087800*                                                                 NC1014.2
-087900*                                                                 NC1014.2
+087800*                                                                         
+087900*                                                                         
 088000 MPY-INIT-F1-15.                                                  NC1014.2
-088100*    ===--> NEW SIZE ERROR TESTS <--===                           NC1014.2
+088100*                                                                         
 088200     MOVE   "VI-67 6.4.2 " TO ANSI-REFERENCE.                     NC1014.2
 088300     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
 088400     MOVE    1111111111 TO WRK-DS-10V00.                          NC1014.2
@@ -913,10 +913,10 @@
 091500             MOVE   "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK   NC1014.2
 091600             PERFORM FAIL                                         NC1014.2
 091700             PERFORM PRINT-DETAIL.                                NC1014.2
-091800*                                                                 NC1014.2
-091900*                                                                 NC1014.2
+091800*                                                                         
+091900*                                                                         
 092000 MPY-INIT-F1-16.                                                  NC1014.2
-092100*    ===--> NEW SIZE ERROR TESTS <--===                           NC1014.2
+092100*                                                                         
 092200     MOVE   "VI-67 6.4.2 " TO ANSI-REFERENCE.                     NC1014.2
 092300     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
 092400     MOVE   -99 TO WRK-DS-02V00.                                  NC1014.2
@@ -954,11 +954,11 @@
 095600             MOVE   "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK   NC1014.2
 095700             PERFORM FAIL                                         NC1014.2
 095800             PERFORM PRINT-DETAIL.                                NC1014.2
-095900*                                                                 NC1014.2
-096000*                                                                 NC1014.2
+095900*                                                                         
+096000*                                                                         
 096100 MPY-INIT-F1-17.                                                  NC1014.2
 096200     MOVE   "VI-106 6.19.4 GR1" TO ANSI-REFERENCE.                NC1014.2
-096300*    ===--> MULTIPLE RESULT FIELDS <--===                         NC1014.2
+096300*                                                                         
 096400     MOVE   "MPY-TEST-F1-17" TO PAR-NAME.                         NC1014.2
 096500     MOVE    .00001  TO WRK-DU-4P1-1.                             NC1014.2
 096600     MOVE    12345.6 TO WRK-DU-5V1-1.                             NC1014.2
@@ -1001,11 +1001,11 @@
 100300     PRINT-DETAIL ELSE                                            NC1014.2
 100400     PERFORM FAIL MOVE WRK-DU-0V12-1 TO COMPUTED-0V18 MOVE        NC1014.2
 100500     .0000000001 TO CORRECT-0V18 PERFORM PRINT-DETAIL.            NC1014.2
-100600*                                                                 NC1014.2
+100600*                                                                         
 100700 MPY-INIT-F1-18.                                                  NC1014.2
-100800*     =>   SIZE ERROR CONDITION. <--==                            NC1014.2
-100900*    ==-->   MULTIPLE RESULT FIELDS<--==                          NC1014.2
-101000*    ===--> & SIZE ERROR CONDITIONS<--===                         NC1014.2
+100800*                                                                         
+100900*                                                                         
+101000*                                                                         
 101100     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1014.2
 101200     MOVE   "MPY-TEST-F1-18" TO PAR-NAME.                         NC1014.2
 101300     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1066,11 +1066,11 @@
 106800             MOVE    WRK-XN-00001  TO COMPUTED-X                  NC1014.2
 106900             MOVE   "1"            TO CORRECT-X                   NC1014.2
 107000             PERFORM PRINT-DETAIL.                                NC1014.2
-107100*                                                                 NC1014.2
+107100*                                                                         
 107200 MPY-INIT-F1-19.                                                  NC1014.2
-107300*    ==-->  NO   SIZE ERROR CONDITION. <--==                      NC1014.2
-107400*    ==-->   MULTIPLE RESULT FIELDS <--==                         NC1014.2
-107500*    ===--> & SIZE ERROR CONDITIONS <--===                        NC1014.2
+107300*                                                                         
+107400*                                                                         
+107500*                                                                         
 107600     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1014.2
 107700     MOVE   "MPY-TEST-F1-19" TO PAR-NAME.                         NC1014.2
 107800     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1133,11 +1133,11 @@
 113500             MOVE    WRK-XN-00001  TO COMPUTED-X                  NC1014.2
 113600             MOVE   "0"            TO CORRECT-X                   NC1014.2
 113700             PERFORM PRINT-DETAIL.                                NC1014.2
-113800*                                                                 NC1014.2
+113800*                                                                         
 113900 MPY-INIT-F1-20.                                                  NC1014.2
-114000*   ==-->   SIZE ERROR CONDITION.   <--==                         NC1014.2
-114100*   ==-->  MULTIPLE RESULT FIELDS   <--==                         NC1014.2
-114200*   ==-->  NEW SIZE ERROR TESTS     <--==                         NC1014.2
+114000*                                                                         
+114100*                                                                         
+114200*                                                                         
 114300     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1014.2
 114400     MOVE   "MPY-TEST-F1-20" TO PAR-NAME.                         NC1014.2
 114500     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1199,11 +1199,11 @@
 120100             MOVE    WRK-XN-00001  TO COMPUTED-X                  NC1014.2
 120200             MOVE   "0"            TO CORRECT-X                   NC1014.2
 120300             PERFORM PRINT-DETAIL.                                NC1014.2
-120400*                                                                 NC1014.2
+120400*                                                                         
 120500 MPY-INIT-F1-21.                                                  NC1014.2
-120600*   ==-->   NO SIZE ERROR CONDITION.  <--==                       NC1014.2
-120700*   ==-->   MULTIPLE RESULT FIELDS    <--==                       NC1014.2
-120800*   ==-->    NEW SIZE ERROR TESTS     <--==                       NC1014.2
+120600*                                                                         
+120700*                                                                         
+120800*                                                                         
 120900     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1014.2
 121000     MOVE   "MPY-TEST-F1-21" TO PAR-NAME.                         NC1014.2
 121100     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1267,11 +1267,11 @@
 126900             MOVE    WRK-XN-00001  TO COMPUTED-X                  NC1014.2
 127000             MOVE   "1"            TO CORRECT-X                   NC1014.2
 127100             PERFORM PRINT-DETAIL.                                NC1014.2
-127200*                                                                 NC1014.2
+127200*                                                                         
 127300 MPY-INIT-F1-22.                                                  NC1014.2
-127400*   ==-->   SIZE ERROR CONDITION.   <--==                         NC1014.2
-127500*   ==-->   MULTIPLE RESULT FIELDS  <--==                         NC1014.2
-127600*   ==-->   NEW SIZE ERROR TESTS    <--==                         NC1014.2
+127400*                                                                         
+127500*                                                                         
+127600*                                                                         
 127700     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1014.2
 127800     MOVE   "MPY-TEST-F1-22" TO PAR-NAME.                         NC1014.2
 127900     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1333,12 +1333,12 @@
 133500             MOVE    WRK-XN-00001  TO COMPUTED-X                  NC1014.2
 133600             MOVE   "1"            TO CORRECT-X                   NC1014.2
 133700             PERFORM PRINT-DETAIL.                                NC1014.2
-133800*                                                                 NC1014.2
-133900*                                                                 NC1014.2
+133800*                                                                         
+133900*                                                                         
 134000 MPY-INIT-F1-23.                                                  NC1014.2
-134100*   ==-->   NO SIZE ERROR CONDITION.   <--==                      NC1014.2
-134200*   ==-->   MULTIPLE RESULT FIELDS     <--==                      NC1014.2
-134300*   ==-->   NEW SIZE ERROR TESTS       <--==                      NC1014.2
+134100*                                                                         
+134200*                                                                         
+134300*                                                                         
 134400     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1014.2
 134500     MOVE   "MPY-TEST-F1-23" TO PAR-NAME.                         NC1014.2
 134600     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1402,11 +1402,11 @@
 140400             MOVE    WRK-XN-00001  TO COMPUTED-X                  NC1014.2
 140500             MOVE   "1"            TO CORRECT-X                   NC1014.2
 140600             PERFORM PRINT-DETAIL.                                NC1014.2
-140700*                                                                 NC1014.2
-140800*                                                                 NC1014.2
+140700*                                                                         
+140800*                                                                         
 140900 MPY-INIT-F1-24.                                                  NC1014.2
-141000*    ==-->EXPLICIT SCOPE TERMINATOR <--==                         NC1014.2
-141100*    ==-->   SIZE ERROR CONDITION   <--==                         NC1014.2
+141000*                                                                         
+141100*                                                                         
 141200     MOVE   "IV-41 6.4.3" TO ANSI-REFERENCE.                      NC1014.2
 141300     MOVE   "MPY-TEST-F1-24" TO PAR-NAME                          NC1014.2
 141400     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1486,10 +1486,10 @@
 148800             MOVE  "SCOPE TERMINATOR IGNORED" TO RE-MARK          NC1014.2
 148900             PERFORM FAIL                                         NC1014.2
 149000             PERFORM PRINT-DETAIL.                                NC1014.2
-149100*                                                                 NC1014.2
-149200*                                                                 NC1014.2
+149100*                                                                         
+149200*                                                                         
 149300 MPY-INIT-F1-25.                                                  NC1014.2
-149400*    ==-->EXPLICIT SCOPE TERMINATOR <--==                         NC1014.2
+149400*                                                                         
 149500     MOVE   "IV-41 6.4.3" TO ANSI-REFERENCE.                      NC1014.2
 149600     MOVE   "MPY-TEST-F1-25" TO PAR-NAME                          NC1014.2
 149700     MOVE   "1" TO WRK-XN-00001.                                  NC1014.2
@@ -1569,10 +1569,10 @@
 157100             MOVE  "SCOPE TERMINATOR IGNORED" TO RE-MARK          NC1014.2
 157200             PERFORM FAIL                                         NC1014.2
 157300             PERFORM PRINT-DETAIL.                                NC1014.2
-157400*                                                                 NC1014.2
-157500*                                                                 NC1014.2
+157400*                                                                         
+157500*                                                                         
 157600 MPY-INIT-F1-26.                                                  NC1014.2
-157700*    ==-->EXPLICIT SCOPE TERMINATOR <--==                         NC1014.2
+157700*                                                                         
 157800     MOVE   "IV-41 6.4.3" TO ANSI-REFERENCE.                      NC1014.2
 157900     MOVE   "MPY-TEST-F1-26" TO PAR-NAME                          NC1014.2
 158000     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
@@ -1658,10 +1658,10 @@
 166000                  TO RE-MARK                                      NC1014.2
 166100             PERFORM FAIL                                         NC1014.2
 166200             PERFORM PRINT-DETAIL.                                NC1014.2
-166300*                                                                 NC1014.2
-166400*                                                                 NC1014.2
+166300*                                                                         
+166400*                                                                         
 166500 MPY-INIT-F1-27.                                                  NC1014.2
-166600*    ==-->EXPLICIT SCOPE TERMINATOR <--==                         NC1014.2
+166600*                                                                         
 166700     MOVE   "IV-41 6.4.3" TO ANSI-REFERENCE.                      NC1014.2
 166800     MOVE   "1" TO WRK-XN-00001.                                  NC1014.2
 166900     MOVE   -99 TO WRK-DS-02V00.                                  NC1014.2
@@ -1746,10 +1746,10 @@
 174800             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1014.2
 174900             PERFORM FAIL                                         NC1014.2
 175000             PERFORM PRINT-DETAIL.                                NC1014.2
-175100*                                                                 NC1014.2
-175200*                                                                 NC1014.2
+175100*                                                                         
+175200*                                                                         
 175300 MPY-INIT-F1-28.                                                  NC1014.2
-175400*    ==-->EXPLICIT SCOPE TERMINATOR <--==                         NC1014.2
+175400*                                                                         
 175500     MOVE    A10ONES-DS-10V00        TO WRK-DS-10V00.             NC1014.2
 175600     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
 175700     MOVE    0  TO WRK-CS-18V00.                                  NC1014.2
@@ -1802,10 +1802,10 @@
 180400             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1014.2
 180500             PERFORM FAIL                                         NC1014.2
 180600             PERFORM PRINT-DETAIL.                                NC1014.2
-180700*                                                                 NC1014.2
-180800*                                                                 NC1014.2
+180700*                                                                         
+180800*                                                                         
 180900 MPY-INIT-F1-29.                                                  NC1014.2
-181000*    ==-->EXPLICIT SCOPE TERMINATOR <--==                         NC1014.2
+181000*                                                                         
 181100     MOVE   "0" TO WRK-XN-00001.                                  NC1014.2
 181200     MOVE   -99 TO WRK-DS-02V00.                                  NC1014.2
 181300     MOVE    ZERO TO WRK-CS-18V00.                                NC1014.2
@@ -1858,8 +1858,8 @@
 186000             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1014.2
 186100             PERFORM FAIL                                         NC1014.2
 186200             PERFORM PRINT-DETAIL.                                NC1014.2
-186300*                                                                 NC1014.2
-186400*                                                                 NC1014.2
+186300*                                                                         
+186400*                                                                         
 186500 CCVS-EXIT SECTION.                                               NC1014.2
 186600 CCVS-999999.                                                     NC1014.2
 186700     GO TO CLOSE-FILES.                                           NC1014.2

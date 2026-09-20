@@ -21,18 +21,18 @@ TEST RESULT OF ST101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SORT --- FIVE KEYS   FAIL* SORT-TEST-3                                                                                 
                                                                                                                         
                                      COMPUTED=  000106001000200002                                                      
-                                     CORRECT =  000106021000200002                                                      
+                                     CORRECT =  000106001030200002                                                      
                                                                                                                         
  SORT --- FIVE KEYS   PASS  SORT-TEST-4                                                                                 
  SORT --- FIVE KEYS   FAIL* SORT-TEST-5                                                                                 
                                                                                                                         
                                      COMPUTED=  000201001000200002                                                      
-                                     CORRECT =  000201021000200002                                                      
+                                     CORRECT =  000206001000200002                                                      
                                                                                                                         
  SORT --- FIVE KEYS   FAIL* SORT-TEST-6                                                                                 
                                                                                                                         
                                      COMPUTED=  000201002000100001                                                      
-                                     CORRECT =  000501002000100001                                                      
+                                     CORRECT =  000201002005100001                                                      
                                                                                                                         
  SORT --- FIVE KEYS   PASS  SORT-TEST-7                                                                                 
  SORT --- FIVE KEYS   PASS  SORT-TEST-8                                                                                 

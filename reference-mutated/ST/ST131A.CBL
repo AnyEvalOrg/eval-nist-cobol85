@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         ST1314.2
 000200 PROGRAM-ID.                                                      ST1314.2
 000300     ST131A.                                                      ST1314.2
-000400****************************************************************  ST1314.2
-000500*                                                              *  ST1314.2
-000600*    VALIDATION FOR:-                                          *  ST1314.2
-000700*                                                              *  ST1314.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1314.2
-000900*                                                              *  ST1314.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1314.2
-001100*                                                              *  ST1314.2
-001200****************************************************************  ST1314.2
-001300*                                                              *  ST1314.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1314.2
-001500*                                                              *  ST1314.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1314.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1314.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1314.2
-001900*                                                              *  ST1314.2
-002000****************************************************************  ST1314.2
-002100*    THIS PROGRAM CONTAINS 3 SORTS USING NUMERIC OR ALPHABETIC    ST1314.2
-002200*    KEYS - BUT NOT BOTH IN THE SAME KEY  DUE TO DIFFERING        ST1314.2
-002300*    COLLATING SEQUENCES AMONG COMPUTERS. EXTERNAL FILES ARE      ST1314.2
-002400*    GENERATED INTERNALLY FOR SUBSEQUENT USE. THE SELECT CLAUSE   ST1314.2
-002500*    IS HIGHLY DEPENDENT ON HARDWARE. THE USER SHOULD EXERCISE THEST1314.2
-002600*    VARIOUS OPTIONS OF HARDWARE ASSIGNMENTS TO THE EXTENT THEY   ST1314.2
-002700*    ARE AVAILABLE. THE SORT OF A MULTI-REEL FILE IS EXERCISED    ST1314.2
-002800*    IN PROGRAM ST202. HOWEVER THE EXERCISE OF THE "FOR MULTIPLE  ST1314.2
-002900*    REEL-UNIT" OF THE GIVING OPTION IS NOT DUE TO THE INDETER-   ST1314.2
-003000*    MINATE LENGTH OF SUCH A FILE (E.G. RECORDING DENSITY OR SIZE ST1314.2
-003100*    OF UNIT) AND PROCESSING COST. SORT INPUT-OUTPUT OPTIONS      ST1314.2
-003200*    WILL BE EXERCISED AS FOLLOWS.                                ST1314.2
-003300*        SORT 1  USING        GIVING                              ST1314.2
-003400*        SORT 2  INPUT PROC   GIVING                              ST1314.2
-003500*        SORT 3  INPUT PROC   OUTPUT PROC                         ST1314.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600                                                                  ST1314.2
 003700 ENVIRONMENT DIVISION.                                            ST1314.2
 003800 CONFIGURATION SECTION.                                           ST1314.2
@@ -375,7 +375,7 @@
 039500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1314.2
 039600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1314.2
 039700      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1314.2
-039800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1314.2
+039800*                                                                         
 039900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1314.2
 040000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1314.2
 040100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1314.2
@@ -468,14 +468,14 @@
 048800     MOVE W-S3-KEYS TO R1.                                        ST1314.2
 048900     WRITE R1.                                                    ST1314.2
 049000 F1-NOTE.                                                         ST1314.2
-049100*    NOTE.                                                        ST1314.2
-049200*      KEY-1 WILL BE 567 IN ALL RECORDS.                          ST1314.2
-049300*      KEY-2 WILL BE >A> IN FIRST LETTER WITH 4 OCCURRENCES OF THEST1314.2
-049400*        ALPHABET IN THE SECOND LETTER.                           ST1314.2
-049500*      KEY-3 WILL BE >A> OR >B> IN FIRST LETTER WITH 2 OCCURRENCESST1314.2
-049600*        OF THE ALPHABET FOR EACH IN THE SECOND LETTER.           ST1314.2
-049700*      KEY-4 WILL VARY FROM 7050 THRU 6951.                       ST1314.2
-049800*      THE LETTER "O" HAS BEEN OMITTED.                           ST1314.2
+049100*                                                                         
+049200*                                                                         
+049300*                                                                         
+049400*                                                                         
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
 049900 SRT-1 SECTION.                                                   ST1314.2
 050000 FIRST-SORT.                                                      ST1314.2
 050100     SORT SORT1                                                   ST1314.2
@@ -483,8 +483,8 @@
 050300         ON ASCENDING KEY S1-2                                    ST1314.2
 050400         USING FILE1                                              ST1314.2
 050500         GIVING FILE2.                                            ST1314.2
-050600*    NOTE SORT STATEMENT WITH ALL OPTIONAL WORDS.                 ST1314.2
-050700*    NOTE OUTPUT WILL BE TESTED IN THE FOLLOWING INPUT PROCEDURE. ST1314.2
+050600*                                                                         
+050700*                                                                         
 050800 SRT-2 SECTION.                                                   ST1314.2
 050900 SECOND-SORT.                                                     ST1314.2
 051000     SORT SORT2                                                   ST1314.2
@@ -493,7 +493,7 @@
 051300         ASCENDING S2-3                                           ST1314.2
 051400         INPUT PROCEDURE SRT-2-INPUT                              ST1314.2
 051500         GIVING FILE3.                                            ST1314.2
-051600*      NOTE SORT STATEMENT WITH ALL OPTIONAL WORDS OMITTED.       ST1314.2
+051600*                                                                         
 051700     GO TO SRT-3.                                                 ST1314.2
 051800 SRT-2-INPUT SECTION.                                             ST1314.2
 051900 OPEN-1.                                                          ST1314.2
@@ -516,7 +516,7 @@
 053600     PERFORM  PRINT-DETAIL-1.                                     ST1314.2
 053700 SORT-TEST-2.                                                     ST1314.2
 053800     PERFORM  READ-RELEASE-FILE2 35 TIMES.                        ST1314.2
-053900     IF       W-S1-KEYS EQUAL TO "567KI"                          ST1314.2
+053900     IF       W-S1-KEYS EQUAL TO "567AH"                          ST1314.2
 054000              PERFORM PASS-1 GO TO SORT-WRITE-2.                  ST1314.2
 054100     GO       TO SORT-FAIL-2.                                     ST1314.2
 054200 SORT-DELETE-2.                                                   ST1314.2
@@ -524,7 +524,7 @@
 054400     GO       TO SORT-WRITE-2.                                    ST1314.2
 054500 SORT-FAIL-2.                                                     ST1314.2
 054600     MOVE     W-S1-KEYS TO COMPUTED-A.                            ST1314.2
-054700     MOVE     "567KI" TO CORRECT-A.                               ST1314.2
+054700     MOVE     "567AH" TO CORRECT-A.                               ST1314.2
 054800     PERFORM  FAIL-1.                                             ST1314.2
 054900 SORT-WRITE-2.                                                    ST1314.2
 055000     MOVE     "SORT-TEST-2 " TO PAR-NAME.                         ST1314.2
@@ -638,11 +638,11 @@
 065800       INPUT PROCEDURE IS SRT3-INPUT                              ST1314.2
 065900       OUTPUT PROCEDURE SRT3-OUTPUT-1 THRU SRT3-OUTPUT-2.         ST1314.2
 066000 NOTE-SORT-3.                                                     ST1314.2
-066100*    NOTE SORT STATEMENT WITH INCLUSION-OMISSION OF OPTIONAL      ST1314.2
-066200*        WORDS AND THRU OPTION. THE OUTPUT OF SRT-2 IS TESTED     ST1314.2
-066300*        IN THE INPUT PROCEDURE OF THIS (THIRD) SORT.  THE OUTPUT ST1314.2
-066400*        OF THE THIRD SORT IS TESTED IN THE OUTPUT PROCEDURE      ST1314.2
-066500*        WITHOUT THE GENERATION OF AN OUTPUT FILE.                ST1314.2
+066100*                                                                         
+066200*                                                                         
+066300*                                                                         
+066400*                                                                         
+066500*                                                                         
 066600 END-FIRST-PROGRAM.                                               ST1314.2
 066700     GO TO CCVS-EXIT.                                             ST1314.2
 066800 SRT3-INPUT SECTION.                                              ST1314.2
@@ -652,7 +652,7 @@
 067200 SORT-TEST-5.                                                     ST1314.2
 067300     PERFORM  READ-RELEASE-FILE3.                                 ST1314.2
 067400     MOVE     R3-KEYS TO W-S3-KEYS.                               ST1314.2
-067500     IF       W-S2-KEYS EQUAL TO "167AZAZ"                        ST1314.2
+067500     IF       W-S2-KEYS EQUAL TO "567AZZZ"                        ST1314.2
 067600              PERFORM PASS-2 GO TO SORT-WRITE-5.                  ST1314.2
 067700     GO       TO SORT-FAIL-5.                                     ST1314.2
 067800 SORT-DELETE-5.                                                   ST1314.2
@@ -660,7 +660,7 @@
 068000     GO       TO SORT-WRITE-5.                                    ST1314.2
 068100 SORT-FAIL-5.                                                     ST1314.2
 068200     MOVE     W-S2-KEYS TO COMPUTED-A.                            ST1314.2
-068300     MOVE     "167AZAZ" TO CORRECT-A.                             ST1314.2
+068300     MOVE     "567AZZZ" TO CORRECT-A.                             ST1314.2
 068400     PERFORM  FAIL-2.                                             ST1314.2
 068500 SORT-WRITE-5.                                                    ST1314.2
 068600     MOVE     "SORT-TEST-5 " TO PAR-NAME.                         ST1314.2
@@ -719,10 +719,10 @@
 073900 READ-RELEASE-FILE3.                                              ST1314.2
 074000     READ     FILE3 AT END GO TO TERMINAL-2.                      ST1314.2
 074100     RELEASE  S3.                                                 ST1314.2
-074200*    NOTE    READ AND RELEASE ARE THE ONLY STATEMENTS NECESSARY   ST1314.2
-074300*    TO USE FILE3 AS INPUT TO THE THIRD SORT.  THIS IS SINCE      ST1314.2
-074400*    THE RECORD AREAS ARE THE SAME FROM THE CLAUSE                ST1314.2
-074500*            SAME RECORD AREA SORT3 FILE3.                        ST1314.2
+074200*                                                                         
+074300*                                                                         
+074400*                                                                         
+074500*                                                                         
 074600 TERMINAL-2.                                                      ST1314.2
 074700     PERFORM  FAIL-2.                                             ST1314.2
 074800     MOVE     "TERMINAL-2" TO PAR-NAME.                           ST1314.2
@@ -852,7 +852,7 @@
 087200     PERFORM  PRINT-DETAIL-3.                                     ST1314.2
 087300 SORT-TEST-13.                                                    ST1314.2
 087400     PERFORM  RETURN-SORT3 35 TIMES.                              ST1314.2
-087500     IF       S3-KEYS EQUAL TO "5C7AGBG7019"                      ST1314.2
+087500     IF       S3-KEYS EQUAL TO "567MGBG7019"                      ST1314.2
 087600              PERFORM PASS-3 GO TO SORT-WRITE-13.                 ST1314.2
 087700     GO       TO SORT-FAIL-13.                                    ST1314.2
 087800 SORT-DELETE-13.                                                  ST1314.2
@@ -860,7 +860,7 @@
 088000     GO       TO SORT-WRITE-13.                                   ST1314.2
 088100 SORT-FAIL-13.                                                    ST1314.2
 088200     MOVE     S3-KEYS TO COMPUTED-A.                              ST1314.2
-088300     MOVE     "5C7AGBG7019" TO CORRECT-A.                         ST1314.2
+088300     MOVE     "567MGBG7019" TO CORRECT-A.                         ST1314.2
 088400     PERFORM  FAIL-3.                                             ST1314.2
 088500 SORT-WRITE-13.                                                   ST1314.2
 088600     MOVE     "SORT-TEST-13" TO PAR-NAME.                         ST1314.2
@@ -883,7 +883,7 @@
 090300 SORT-TEST-15.                                                    ST1314.2
 090400     RETURN   SORT3 RECORD AT END                                 ST1314.2
 090500              PERFORM PASS-3 GO TO SORT-WRITE-15.                 ST1314.2
-090600*    NOTE     THE FOLLOWING SENTENCES SHOULD NOT BE EXECUTED.     ST1314.2
+090600*                                                                         
 090700     PERFORM FAIL-3.                                              ST1314.2
 090800     MOVE     "END OF FILE NOT FOUND" TO RE-MARK.                 ST1314.2
 090900     GO       TO SORT-WRITE-15.                                   ST1314.2
@@ -897,7 +897,7 @@
 091700 SRT3-OUTPUT-2 SECTION.                                           ST1314.2
 091800 RETURN-SORT3.                                                    ST1314.2
 091900     RETURN   SORT3 RECORD AT END GO TO TERMINAL-3.               ST1314.2
-092000*    NOTE     RETURN VERB WITH ALL OPTIONS EXCEPT INTO.           ST1314.2
+092000*                                                                         
 092100 TERMINAL-3.                                                      ST1314.2
 092200     PERFORM  FAIL-3.                                             ST1314.2
 092300     MOVE     "TERMINAL-3" TO PAR-NAME.                           ST1314.2

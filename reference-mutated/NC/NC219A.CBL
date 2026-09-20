@@ -1,56 +1,56 @@
 000100 IDENTIFICATION DIVISION.                                         NC2194.2
 000200 PROGRAM-ID.                                                      NC2194.2
 000300     NC219A.                                                      NC2194.2
-000400*                                                                 NC2194.2
-000500****************************************************************  NC2194.2
-000600*                                                              *  NC2194.2
-000700*    VALIDATION FOR:-                                          *  NC2194.2
-000800*                                                              *  NC2194.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2194.2
-001000*                                                              *  NC2194.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2194.2
-001200*                                                              *  NC2194.2
-001300****************************************************************  NC2194.2
-001400*                                                              *  NC2194.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2194.2
-001600*                                                              *  NC2194.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2194.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2194.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2194.2
-002000*                                                              *  NC2194.2
-002100****************************************************************  NC2194.2
-002200*    PROGRAM NC219A TESTS THE USE OF "HIGH-VALUE" & "LOW-VALUE"   NC2194.2
-002300*    IN THE LITERAL PHRASE OF THE "ALPHABET" CLAUSE OF THE        NC2194.2
-002400*    "SPECIAL-NAMES" PARAGRAPH AND THE "PROGRAM COLLATING         NC2194.2
-002500*    SEQUENCE" OF THE "OBJECT-COMPUTER PARAGRAPH.                 NC2194.2
-002600*                                                                 NC2194.2
-002700****************************************************************  NC2194.2
-002800*                                                                 NC2194.2
-002900*                                                                 NC2194.2
-003000*        ACCORDING TO THE RULES FOR PROGRAM COLLATING SEQUENCE    NC2194.2
-003100*    THE LOWEST CHARACTER SHOULD BE THE LETTER  F  FOLLOWED BY    NC2194.2
-003200*    THE LETTER  U  FOLLOWED IN ASCENDING ORDER BY THE LETTER  N  NC2194.2
-003300*    WHICH IS SET ON AN EVEN PAR WITH THE COMPUTER VALUES FOR     NC2194.2
-003400*    HIGH-VALUE AND LOW-VALUE.  THE NEXT HIGHEST CHARACTER IS THE NC2194.2
-003500*    LETTER  Y.  THE REMAINDER OF THE CHARACTERS IN THE COBOL     NC2194.2
-003600*    CHARACTER SET THEN FOLLOW IN ASCENDING ORDER BUT EXCLUDE     NC2194.2
-003700*    THE CHARACTERS AND VALUES PREVIOUSLY METIONED (F,U,N,HIGH-   NC2194.2
-003800*    VALUE, LOW-VALUE, AND Y).  LOW-VALUE FOR THE NEW PROGRAM     NC2194.2
-003900*    COLLATING SEQUENCE JUST EVALUATED SHOULD BE THE LETTER F.    NC2194.2
-004000*    HIGH-VALUE SHOULD NOW BE EVALUATED AS THE HIGHEST ORDER      NC2194.2
-004100*    CHARACTER FROM THE REMAINDER OF THE NATIVE COLLATING SEQUENCENC2194.2
-004200*    NOT INCLUDING THE CHARACTERS F,U,N,**PREVIOUS** HIGH-VALUE   NC2194.2
-004300*    OR **PREVIOUS** LOW-VALUE, AND THE LETTER  Y.                NC2194.2
-004400*                                                                 NC2194.2
-004500*        THE ALPHABET-NAME COLLATING-SEQ-2 IS NOT USED IN         NC2194.2
-004600*    THE PROGRAM EXCEPT TO TEST WHETHER THE LETTER  Q  HAS BEEN   NC2194.2
-004700*    SET TO AN EQUAL PAR WITH THE NEW HIGH-VALUE AND NEW LOW-VALUENC2194.2
-004800*    FOR PURPOSES OF THE PROGRAM COLLATING SEQUENCE.  THIS WOULD  NC2194.2
-004900*    BE TRUE IF THE ALPHABET-NAME COLLATING-SEQ-2 WERE REFERENCED NC2194.2
-005000*    IN A SORT, MERGE, OR CODE-SET CLAUSE.                        NC2194.2
-005100*                                                                 NC2194.2
-005200*                                                                 NC2194.2
-005300*                                                                 NC2194.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400 ENVIRONMENT DIVISION.                                            NC2194.2
 005500 CONFIGURATION SECTION.                                           NC2194.2
 005600 SOURCE-COMPUTER.                                                 NC2194.2
@@ -271,7 +271,7 @@
 027300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2194.2
 027400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2194.2
 027500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2194.2
-027600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2194.2
+027600*                                                                         
 027700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2194.2
 027800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2194.2
 027900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2194.2
@@ -339,16 +339,16 @@
 034100 CCVS1-EXIT.                                                      NC2194.2
 034200     EXIT.                                                        NC2194.2
 034300 SECT-NC219A-001 SECTION.                                         NC2194.2
-034400*                                                                 NC2194.2
-034500*                                                                 NC2194.2
-034600*        THE LETTER  F  IS THE LOWEST CHARACTER IN THE PROGRAM    NC2194.2
-034700*    COLLATING SEQUENCE FOLLOWED IN ASCENDING ORDER BY THE        NC2194.2
-034800*    LETTER  U.  THIS IS SHOWN IN THE ALPHABET-NAME               NC2194.2
-034900*    COLLATING-SEQ-1.                                             NC2194.2
-035000*                                                                 NC2194.2
-035100*            F  SHOULD BE LESS THAN  U.                           NC2194.2
-035200*                                                                 NC2194.2
-035300*                                                                 NC2194.2
+034400*                                                                         
+034500*                                                                         
+034600*                                                                         
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
+035200*                                                                         
+035300*                                                                         
 035400 SEQ-INIT-GF-1.                                                   NC2194.2
 035500     MOVE    "SEQ-TEST-GF-1" TO PAR-NAME.                         NC2194.2
 035600     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
@@ -367,22 +367,22 @@
 036900     MOVE "F NOT < THAN U" TO COMPUTED-A.                         NC2194.2
 037000 SEQ-WRITE-GF-1.                                                  NC2194.2
 037100     PERFORM PRINT-DETAIL.                                        NC2194.2
-037200*                                                                 NC2194.2
-037300*                                                                 NC2194.2
-037400*        THE LETTER  U  IS THE SECOND LOWEST CHARACTER IN THE     NC2194.2
-037500*    PROGRAM COLLATING SEQUENCE FOLLOWED IN ASCENDING ORDER BY THENC2194.2
-037600*    LETTER  N.  THIS IS SHOWN IN THE ALPHABET-NAME               NC2194.2
-037700*    COLLATING-SEQ-1.                                             NC2194.2
-037800*                                                                 NC2194.2
-037900*            U  SHOULD BE LESS THAN  N.                           NC2194.2
-038000*                                                                 NC2194.2
-038100*                                                                 NC2194.2
+037200*                                                                         
+037300*                                                                         
+037400*                                                                         
+037500*                                                                         
+037600*                                                                         
+037700*                                                                         
+037800*                                                                         
+037900*                                                                         
+038000*                                                                         
+038100*                                                                         
 038200 SEQ-INIT-GF-2.                                                   NC2194.2
 038300     MOVE    "SEQ-TEST-GF-2" TO PAR-NAME.                         NC2194.2
 038400     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 038500     MOVE    "U < N" TO FEATURE.                                  NC2194.2
 038600 SEQ-TEST-GF-2.                                                   NC2194.2
-038700*                                                                 NC2194.2
+038700*                                                                         
 038800     IF      U-AN-1 IS LESS THAN N-AN-1                           NC2194.2
 038900             PERFORM PASS                                         NC2194.2
 039000         ELSE                                                     NC2194.2
@@ -396,20 +396,20 @@
 039800     MOVE "U NOT < THAN N" TO COMPUTED-A.                         NC2194.2
 039900 SEQ-WRITE-GF-2.                                                  NC2194.2
 040000     PERFORM PRINT-DETAIL.                                        NC2194.2
-040100*                                                                 NC2194.2
-040200*                                                                 NC2194.2
-040300*        THE LETTER  N  IS SET TO AN EVEN PAR WITH THE **OLD**    NC2194.2
-040400*    HIGH-VALUE BUT NOT EQUAL TO THE **NEW** HIGH-VALUE.          NC2194.2
-040500*                                                                 NC2194.2
-040600*            N SHOULD NOT = HIGH-VALUE.                           NC2194.2
-040700*                                                                 NC2194.2
-040800*                                                                 NC2194.2
+040100*                                                                         
+040200*                                                                         
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
 040900 SEQ-INIT-GF-3.                                                   NC2194.2
 041000     MOVE    "SEQ-TEST-GF-3" TO PAR-NAME.                         NC2194.2
 041100     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 041200     MOVE    "N = HIGH-VALUE" TO FEATURE.                         NC2194.2
 041300 SEQ-TEST-GF-3.                                                   NC2194.2
-041400*                                                                 NC2194.2
+041400*                                                                         
 041500     IF      N-AN-1 IS EQUAL TO HIGH-VALUE                        NC2194.2
 041600             GO TO SEQ-FAIL-GF-3                                  NC2194.2
 041700         ELSE                                                     NC2194.2
@@ -423,20 +423,20 @@
 042500     MOVE "N = HIGH-VALUE" TO COMPUTED-A.                         NC2194.2
 042600 SEQ-WRITE-GF-3.                                                  NC2194.2
 042700     PERFORM PRINT-DETAIL.                                        NC2194.2
-042800*                                                                 NC2194.2
-042900*                                                                 NC2194.2
-043000*        LOW-VALUE SHOULD BE SET TO THE LETTER  F  SINCE IT       NC2194.2
-043100*    IS THE LOWEST CHARACTER IN THE PROGRAM COLLATING SEQUENCE.   NC2194.2
-043200*                                                                 NC2194.2
-043300*            F SHOULD BE EQUAL TO LOW-VALUE.                      NC2194.2
-043400*                                                                 NC2194.2
-043500*                                                                 NC2194.2
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
+043500*                                                                         
 043600 SEQ-INIT-GF-4.                                                   NC2194.2
 043700     MOVE    "SEQ-TEST-GF-4" TO PAR-NAME.                         NC2194.2
 043800     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 043900     MOVE    "F = LOW-VALUE" TO FEATURE.                          NC2194.2
 044000 SEQ-TEST-GF-4.                                                   NC2194.2
-044100*                                                                 NC2194.2
+044100*                                                                         
 044200     IF      F-AN-1 IS EQUAL TO LOW-VALUE                         NC2194.2
 044300             PERFORM PASS                                         NC2194.2
 044400         ELSE                                                     NC2194.2
@@ -450,21 +450,21 @@
 045200     MOVE "F NOT = LOW-VALUE" TO COMPUTED-A.                      NC2194.2
 045300 SEQ-WRITE-GF-4.                                                  NC2194.2
 045400     PERFORM PRINT-DETAIL.                                        NC2194.2
-045500*                                                                 NC2194.2
-045600*                                                                 NC2194.2
-045700*        THE **NEW** LOW-VALUE SHOULD BE SET TO THE LETTER  F.    NC2194.2
-045800*    THE **NEW** HIGH-VALUE SHOULD BE SET TO THE HIGHEST ORDER    NC2194.2
-045900*    CHARACTER IN THE EVALUATED PROGRAM COLLATING SEQUENCE.       NC2194.2
-046000*                                                                 NC2194.2
-046100*            HIGH-VALUE SHOULD BE GREATER THAN LOW-VALUE.         NC2194.2
-046200*                                                                 NC2194.2
-046300*                                                                 NC2194.2
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
 046400 SEQ-INIT-GF-5.                                                   NC2194.2
 046500     MOVE    "SEQ-TEST-GF-5" TO PAR-NAME.                         NC2194.2
 046600     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 046700     MOVE    "H-VALUE > L-VALUE" TO FEATURE.                      NC2194.2
 046800 SEQ-TEST-GF-5.                                                   NC2194.2
-046900*                                                                 NC2194.2
+046900*                                                                         
 047000     IF      HIGH-VALUE IS GREATER THAN NEW-LOW                   NC2194.2
 047100             PERFORM PASS                                         NC2194.2
 047200         ELSE                                                     NC2194.2
@@ -478,17 +478,17 @@
 048000     MOVE "H-VALU NOT > L-VALU" TO COMPUTED-A.                    NC2194.2
 048100 SEQ-WRITE-GF-5.                                                  NC2194.2
 048200     PERFORM PRINT-DETAIL.                                        NC2194.2
-048300*                                                                 NC2194.2
-048400*                                                                 NC2194.2
-048500*            LOW-VALUE SHOULD BE LESS THAN HIGH-VALUE.            NC2194.2
-048600*                                                                 NC2194.2
-048700*                                                                 NC2194.2
+048300*                                                                         
+048400*                                                                         
+048500*                                                                         
+048600*                                                                         
+048700*                                                                         
 048800 SEQ-INIT-GF-6.                                                   NC2194.2
 048900     MOVE    "SEQ-TEST-GF-6" TO PAR-NAME.                         NC2194.2
 049000     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 049100     MOVE    "L-VALUE < H-VALUE" TO FEATURE.                      NC2194.2
 049200 SEQ-TEST-GF-6.                                                   NC2194.2
-049300*                                                                 NC2194.2
+049300*                                                                         
 049400     IF      NEW-LOW IS LESS THAN HIGH-VALUE                      NC2194.2
 049500             PERFORM PASS                                         NC2194.2
 049600         ELSE                                                     NC2194.2
@@ -502,17 +502,17 @@
 050400     MOVE "L-VALU NOT < H-VALU" TO COMPUTED-A.                    NC2194.2
 050500 SEQ-WRITE-GF-6.                                                  NC2194.2
 050600     PERFORM PRINT-DETAIL.                                        NC2194.2
-050700*                                                                 NC2194.2
-050800*                                                                 NC2194.2
-050900*            LOW-VALUE SHOULD NOT BE EQUAL TO HIGH-VALUE.         NC2194.2
-051000*                                                                 NC2194.2
-051100*                                                                 NC2194.2
+050700*                                                                         
+050800*                                                                         
+050900*                                                                         
+051000*                                                                         
+051100*                                                                         
 051200 SEQ-INIT-GF-7.                                                   NC2194.2
 051300     MOVE    "SEQ-TEST-GF-7" TO PAR-NAME.                         NC2194.2
 051400     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 051500     MOVE    "H-VALUE = L-VALUE" TO FEATURE.                      NC2194.2
 051600 SEQ-TEST-GF-7.                                                   NC2194.2
-051700*                                                                 NC2194.2
+051700*                                                                         
 051800     IF      HIGH-VALUE IS EQUAL TO NEW-LOW                       NC2194.2
 051900             GO TO SEQ-FAIL-GF-7                                  NC2194.2
 052000         ELSE                                                     NC2194.2
@@ -526,19 +526,19 @@
 052800     MOVE "H-VALUE = L-VALUE" TO COMPUTED-A.                      NC2194.2
 052900 SEQ-WRITE-GF-7.                                                  NC2194.2
 053000     PERFORM PRINT-DETAIL.                                        NC2194.2
-053100*                                                                 NC2194.2
-053200*                                                                 NC2194.2
-053300*        LOW-VALUE SHOULD BE SET TO THE LETTER  F.                NC2194.2
-053400*                                                                 NC2194.2
-053500*            THE LETTER  Y  SHOULD NOT BE EQUAL TO LOW-VALUE.     NC2194.2
-053600*                                                                 NC2194.2
-053700*                                                                 NC2194.2
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
+053400*                                                                         
+053500*                                                                         
+053600*                                                                         
+053700*                                                                         
 053800 SEQ-INIT-GF-8.                                                   NC2194.2
 053900     MOVE    "SEQ-TEST-GF-8" TO PAR-NAME.                         NC2194.2
 054000     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 054100     MOVE    "Y = LOW-VALUE" TO FEATURE.                          NC2194.2
 054200 SEQ-TEST-GF-8.                                                   NC2194.2
-054300*                                                                 NC2194.2
+054300*                                                                         
 054400     IF      Y-AN-1 IS EQUAL TO LOW-VALUE                         NC2194.2
 054500             GO TO SEQ-FAIL-GF-8                                  NC2194.2
 054600         ELSE                                                     NC2194.2
@@ -552,23 +552,23 @@
 055400     MOVE "Y = LOW-VALUE" TO COMPUTED-A.                          NC2194.2
 055500 SEQ-WRITE-GF-8.                                                  NC2194.2
 055600     PERFORM PRINT-DETAIL.                                        NC2194.2
-055700*                                                                 NC2194.2
-055800*                                                                 NC2194.2
-055900*        THE LETTER  Q  IS MENTIONED IN THE ALPHABET-NAME         NC2194.2
-056000*    COLLATING-SEQ-2.  THIS ALPHABET-NAME CLAUSE SHOULD HAVE NO   NC2194.2
-056100*    EFFECT ON THE PROGRAM COLLATING SEQUENCE.                    NC2194.2
-056200*                                                                 NC2194.2
-056300*            FOR OUR PROGRAM COLLATING SEQUENCE  Q  SHOULD NOT    NC2194.2
-056400*            BE THE LOW ORDER CHARACTER THEREFORE IT SHOULD NOT   NC2194.2
-056500*            BE EQUAL TO THE **NEW**  LOW-VALUE.                  NC2194.2
-056600*                                                                 NC2194.2
-056700*                                                                 NC2194.2
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
 056800 SEQ-INIT-GF-9.                                                   NC2194.2
 056900     MOVE    "SEQ-TEST-GF-9" TO PAR-NAME.                         NC2194.2
 057000     MOVE    "VI-16 4.5.4 GR5/7" TO ANSI-REFERENCE.               NC2194.2
 057100     MOVE    "Q = LOW-VALUE" TO FEATURE.                          NC2194.2
 057200 SEQ-TEST-GF-9.                                                   NC2194.2
-057300*                                                                 NC2194.2
+057300*                                                                         
 057400     IF      Q-AN-1 IS EQUAL TO LOW-VALUE                         NC2194.2
 057500             GO TO SEQ-FAIL-GF-9                                  NC2194.2
 057600         ELSE                                                     NC2194.2
@@ -582,8 +582,8 @@
 058400     MOVE "Q = LOW-VALUE" TO COMPUTED-A.                          NC2194.2
 058500 SEQ-WRITE-GF-9.                                                  NC2194.2
 058600     PERFORM PRINT-DETAIL.                                        NC2194.2
-058700*                                                                 NC2194.2
-058800*                                                                 NC2194.2
+058700*                                                                         
+058800*                                                                         
 058900 CCVS-EXIT SECTION.                                               NC2194.2
 059000 CCVS-999999.                                                     NC2194.2
 059100     GO TO CLOSE-FILES.                                           NC2194.2

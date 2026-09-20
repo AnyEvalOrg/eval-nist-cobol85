@@ -21,17 +21,17 @@ TEST RESULT OF NC237A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-6                                                                               
                                                                                                                         
                                      COMPUTED= 070307                                                                   
-                                     CORRECT = 07P307                VI-121 6.21.2                                      
+                                     CORRECT = 071307                VI-121 6.21.2                                      
                                                                                                                         
  SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-7                                                                               
                                                                                                                         
                                      COMPUTED= 040604                                                                   
-                                     CORRECT = 240604                VI-121 6.21.2                                      
+                                     CORRECT = 040607                VI-121 6.21.2                                      
                                                                                                                         
  SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-8                                                                               
                                                                                                                         
                                      COMPUTED= 040604                                                                   
-                                     CORRECT = 140604                VI-121 6.21.2                                      
+                                     CORRECT = 070604                VI-121 6.21.2                                      
                                                                                                                         
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-9                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-10                                                                              

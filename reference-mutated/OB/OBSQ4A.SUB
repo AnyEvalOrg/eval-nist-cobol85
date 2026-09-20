@@ -1,22 +1,22 @@
 000100 IDENTIFICATION DIVISION.                                         OBSQ44.2
 000200 PROGRAM-ID.                                                      OBSQ44.2
 000300     OBSQ4A.                                                      OBSQ44.2
-000400****************************************************************  OBSQ44.2
-000500*                                                              *  OBSQ44.2
-000600*    VALIDATION FOR:-                                          *  OBSQ44.2
-000700*    " HIGH       ".                                              OBSQ44.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  OBSQ44.2
-000900*                                                              *  OBSQ44.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  OBSQ44.2
-001100*    "4.2 ".                                                      OBSQ44.2
-001200*                                                              *  OBSQ44.2
-001300*         THE ROUTINE OBSQ4A READS AND VALIDATES THE MULTIPLE     OBSQ44.2
-001400*    FILE TAPE CREATED IN OBSQ3A. THE FOUR FILES CONTAINED ON     OBSQ44.2
-001500*    THIS TAPE ARE SQ-FS1, SQ-FS2, SQ-FS3, AND SQ-FS4.  BOTH      OBSQ44.2
-001600*    MULTIPLE FILE TAPES ONE AND TWO ARE THEN PASSED ON TO OBSQ5A.OBSQ44.2
-001700*    OBSQ4A USES A MULTIPLE FILE CLAUSE WITH THE POSITION PHRASE  OBSQ44.2
-001800*    TO PROCESS TAPE ONE.  THIS TAPE WAS CREATED USING OPEN AND   OBSQ44.2
-001900*    CLOSE STATEMENTS WITH NO REWIND.                             OBSQ44.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
 002000 ENVIRONMENT DIVISION.                                            OBSQ44.2
 002100 CONFIGURATION SECTION.                                           OBSQ44.2
 002200 SOURCE-COMPUTER.                                                 OBSQ44.2
@@ -291,7 +291,7 @@
 033600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBSQ44.2
 033700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   OBSQ44.2
 033800      ADD PASS-COUNTER TO ERROR-HOLD.                             OBSQ44.2
-033900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBSQ44.2
+033900*                                                                         
 034000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBSQ44.2
 034100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBSQ44.2
 034200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBSQ44.2
@@ -395,7 +395,7 @@
 044000 SEQ-CLOSE-001.                                                   OBSQ44.2
 044100     CLOSE SQ-FS1.                                                OBSQ44.2
 044200 SEQ-INIT-002.                                                    OBSQ44.2
-044300*             THIS TEST READS AND VALIDATES FILE SQ-FS3.          OBSQ44.2
+044300*                                                                         
 044400     MOVE 0 TO RECORDS-COUNT, RECORDS-IN-ERROR.                   OBSQ44.2
 044500     OPEN INPUT SQ-FS3.                                           OBSQ44.2
 044600 SEQ-TEST-002.                                                    OBSQ44.2
@@ -437,7 +437,7 @@
 048200 SEQ-CLOSE-002.                                                   OBSQ44.2
 048300     CLOSE SQ-FS3.                                                OBSQ44.2
 048400 SEQ-INIT-003.                                                    OBSQ44.2
-048500*             THIS TEST READS AND VALIDATES FILE SQ-FS2.          OBSQ44.2
+048500*                                                                         
 048600     MOVE 0 TO RECORDS-COUNT, RECORDS-IN-ERROR.                   OBSQ44.2
 048700     OPEN INPUT SQ-FS2.                                           OBSQ44.2
 048800 SEQ-TEST-003.                                                    OBSQ44.2
@@ -479,7 +479,7 @@
 052400 SEQ-CLOSE-003.                                                   OBSQ44.2
 052500     CLOSE SQ-FS2.                                                OBSQ44.2
 052600 SEQ-INIT-004.                                                    OBSQ44.2
-052700*             THIS TEST READS AND VALIDATES FILE SQ-FS4.          OBSQ44.2
+052700*                                                                         
 052800     MOVE 0 TO RECORDS-COUNT, RECORDS-IN-ERROR.                   OBSQ44.2
 052900     OPEN INPUT SQ-FS4.                                           OBSQ44.2
 053000 SEQ-TEST-004.                                                    OBSQ44.2

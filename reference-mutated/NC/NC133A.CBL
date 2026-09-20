@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1334.2
 000200 PROGRAM-ID.                                                      NC1334.2
 000300     NC133A.                                                      NC1334.2
-000400****************************************************************  NC1334.2
-000500*                                                              *  NC1334.2
-000600*    VALIDATION FOR:-                                          *  NC1334.2
-000700*                                                              *  NC1334.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1334.2
-000900*                                                              *  NC1334.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1334.2
-001100*                                                              *  NC1334.2
-001200****************************************************************  NC1334.2
-001300*                                                              *  NC1334.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1334.2
-001500*                                                              *  NC1334.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1334.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1334.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1334.2
-001900*                                                              *  NC1334.2
-002000****************************************************************  NC1334.2
-002100*                                                                 NC1334.2
-002200*     PROGRAM NC133A TESTS THE USE OF FORMAT 1 OF THE SET         NC1334.2
-002300*     STATEMENT USING VARIOUS INTEGERS, INDEX-NAMES AND           NC1334.2
-002400*     IDENTIFIERS.                                                NC1334.2
-002500*     REDEFINED SINGLE LEVEL TABLES ARE USED.                     NC1334.2
-002600*                                                                 NC1334.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1334.2
 002800 CONFIGURATION SECTION.                                           NC1334.2
 002900 SOURCE-COMPUTER.                                                 NC1334.2
@@ -250,7 +250,7 @@
 025200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1334.2
 025300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1334.2
 025400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1334.2
-025500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1334.2
+025500*                                                                         
 025600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1334.2
 025700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1334.2
 025800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1334.2
@@ -340,11 +340,11 @@
 034200     PERFORM PRINT-DETAIL.                                        NC1334.2
 034300 IDX-TEST-1.                                                      NC1334.2
 034400     SET IDX-1 TO 3.                                              NC1334.2
-034500     IF ENTRY-A-1 (IDX-1) EQUAL TO "33L"                          NC1334.2
+034500     IF ENTRY-A-1 (IDX-1) EQUAL TO "335"                          NC1334.2
 034600         PERFORM PASS                                             NC1334.2
 034700         GO TO IDX-WRITE-1.                                       NC1334.2
 034800     MOVE ENTRY-A-1 (IDX-1) TO COMPUTED-A.                        NC1334.2
-034900     MOVE "33L" TO CORRECT-A.                                     NC1334.2
+034900     MOVE "335" TO CORRECT-A.                                     NC1334.2
 035000     PERFORM FAIL.                                                NC1334.2
 035100     GO TO IDX-WRITE-1.                                           NC1334.2
 035200 IDX-DELETE-1.                                                    NC1334.2
@@ -534,11 +534,11 @@
 053600     PERFORM PRINT-DETAIL.                                        NC1334.2
 053700 IDX-TEST-14.                                                     NC1334.2
 053800     SET IDX-3 TO 000000000000000004.                             NC1334.2
-053900     IF ENTRY-B-2 (IDX-3) EQUAL TO 3                              NC1334.2
+053900     IF ENTRY-B-2 (IDX-3) EQUAL TO 4                              NC1334.2
 054000         PERFORM PASS                                             NC1334.2
 054100         GO TO IDX-WRITE-14.                                      NC1334.2
 054200     MOVE ENTRY-B-2 (IDX-3) TO COMPUTED-A.                        NC1334.2
-054300     MOVE 3 TO CORRECT-A.                                         NC1334.2
+054300     MOVE 4 TO CORRECT-A.                                         NC1334.2
 054400     PERFORM FAIL.                                                NC1334.2
 054500     GO TO IDX-WRITE-14.                                          NC1334.2
 054600 IDX-DELETE-14.                                                   NC1334.2
@@ -548,11 +548,11 @@
 055000     PERFORM PRINT-DETAIL.                                        NC1334.2
 055100 IDX-TEST-15.                                                     NC1334.2
 055200     SET IDX-3 TO 000000000000000002.                             NC1334.2
-055300     IF ENTRY-B-2 (IDX-3) EQUAL TO 9                              NC1334.2
+055300     IF ENTRY-B-2 (IDX-3) EQUAL TO 2                              NC1334.2
 055400         PERFORM PASS                                             NC1334.2
 055500         GO TO IDX-WRITE-15.                                      NC1334.2
 055600     MOVE ENTRY-B-2 (IDX-3) TO COMPUTED-A.                        NC1334.2
-055700     MOVE 9 TO CORRECT-A.                                         NC1334.2
+055700     MOVE 2 TO CORRECT-A.                                         NC1334.2
 055800     PERFORM FAIL.                                                NC1334.2
 055900     GO TO IDX-WRITE-15.                                          NC1334.2
 056000 IDX-DELETE-15.                                                   NC1334.2
@@ -594,10 +594,10 @@
 059600 IDX-TEST-18.                                                     NC1334.2
 059700     MOVE 4 TO COMP-S-IDX18.                                      NC1334.2
 059800     SET IDX-2 TO COMP-S-IDX18.                                   NC1334.2
-059900     IF ENTRY-A-2 (IDX-2) EQUAL TO "48"                           NC1334.2
+059900     IF ENTRY-A-2 (IDX-2) EQUAL TO "68"                           NC1334.2
 060000         PERFORM PASS                                             NC1334.2
 060100         GO TO IDX-WRITE-18.                                      NC1334.2
-060200     MOVE "48" TO CORRECT-A.                                      NC1334.2
+060200     MOVE "68" TO CORRECT-A.                                      NC1334.2
 060300     MOVE ENTRY-A-2 (IDX-2) TO COMPUTED-A.                        NC1334.2
 060400     PERFORM FAIL.                                                NC1334.2
 060500     GO TO IDX-WRITE-18.                                          NC1334.2
@@ -654,11 +654,11 @@
 065600 IDX-TEST-22.                                                     NC1334.2
 065700     SET IDX-2 TO 2.                                              NC1334.2
 065800     SET COMP-U-IDX1 TO IDX-2.                                    NC1334.2
-065900     IF COMP-U-IDX1 EQUAL TO 2                                    NC1334.2
+065900     IF COMP-U-IDX1 EQUAL TO 5                                    NC1334.2
 066000         PERFORM PASS                                             NC1334.2
 066100         GO TO IDX-WRITE-22.                                      NC1334.2
 066200     MOVE COMP-U-IDX1 TO COMPUTED-N.                              NC1334.2
-066300     MOVE 2 TO CORRECT-N.                                         NC1334.2
+066300     MOVE 5 TO CORRECT-N.                                         NC1334.2
 066400     PERFORM FAIL.                                                NC1334.2
 066500     GO TO IDX-WRITE-22.                                          NC1334.2
 066600 IDX-DELETE-22.                                                   NC1334.2
@@ -700,12 +700,12 @@
 070200 IDX-WRITE-24.                                                    NC1334.2
 070300     MOVE "IDX-TEST-24" TO PAR-NAME.                              NC1334.2
 070400     PERFORM PRINT-DETAIL.                                        NC1334.2
-070500*IDX-TEST-25.                                                     NC1334.2
-070600*    THIS TEST WAS DELETED BY THE FCCTS SINCE IT DID NOT          NC1334.2
-070700*    APPLY TO THE REVISED FEDERAL STANDARD - FIPS PUB 21-1.       NC1334.2
-070800*IDX-TEST-26.                                                     NC1334.2
-070900*    THIS TEST WAS DELETED BY THE FCCTS SINCE IT DID NOT          NC1334.2
-071000*    APPLY TO THE REVISED FEDERAL STANDARD - FIPS PUB 21-1.       NC1334.2
+070500*                                                                         
+070600*                                                                         
+070700*                                                                         
+070800*                                                                         
+070900*                                                                         
+071000*                                                                         
 071100 CCVS-EXIT SECTION.                                               NC1334.2
 071200 CCVS-999999.                                                     NC1334.2
 071300     GO TO CLOSE-FILES.                                           NC1334.2

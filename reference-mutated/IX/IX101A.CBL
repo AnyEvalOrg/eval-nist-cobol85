@@ -1,47 +1,47 @@
 000100 IDENTIFICATION DIVISION.                                         IX1014.2
 000200 PROGRAM-ID.                                                      IX1014.2
 000300     IX101A.                                                      IX1014.2
-000400****************************************************************  IX1014.2
-000500*                                                              *  IX1014.2
-000600*    VALIDATION FOR:-                                          *  IX1014.2
-000700*                                                              *  IX1014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1014.2
-000900*                                                              *  IX1014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1014.2
-001100*                                                              *  IX1014.2
-001200****************************************************************  IX1014.2
-001300*    THIS PROGRAM IS THE FIRST OF A SERIES WHICH PROCESSES AN     IX1014.2
-001400*    INDEXED FILE.  THE FUNCTION OF THIS PROGRAM IS TO CREATE AN  IX1014.2
-001500*    INDEXED FILE SEQUENTIALLY (ACCESS MODE SEQUENTIAL) AND VERIFYIX1014.2
-001600*    THAT IT WAS CREATED AS EXPECTED.  THE FILE IS IDENTIFIED AS  IX1014.2
-001700*    "IX-FS1" AND IS PASSED TO PROGRAM IX102 FOR PROCESSING.      IX1014.2
-001800*                                                                 IX1014.2
-001900*                                                                 IX1014.2
-002000*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX1014.2
-002100*                                                                 IX1014.2
-002200*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX1014.2
-002300*                    CLAUSE FOR DATA FILE IX-FS1                  IX1014.2
-002400*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX1014.2
-002500*                    CLAUSE FOR INDEX FILE IX-FS1                 IX1014.2
-002600*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX1014.2
-002700*             X-62   IMPLEMENTOR-NAME FOR RAW-DATA (OPTIONAL)     IX1014.2
-002800*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX1014.2
-002900*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX1014.2
-003000*                                                                 IX1014.2
-003100*         NOTE:  X-CARDS 44 AND 62          ARE OPTIONAL          IX1014.2
-003200*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX1014.2
-003300*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX1014.2
-003400*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX1014.2
-003500*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX1014.2
-003600*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX1014.2
-003700*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX1014.2
-003800*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX1014.2
-003900*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX1014.2
-004000*               THEY ARE AS FOLLOWS                               IX1014.2
-004100*                                                                 IX1014.2
-004200*                  J  SELECTS X-CARD 44                           IX1014.2
-004300*                                                                 IX1014.2
-004400******************************************************            IX1014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
 004500 ENVIRONMENT DIVISION.                                            IX1014.2
 004600 CONFIGURATION SECTION.                                           IX1014.2
 004700 SOURCE-COMPUTER.                                                 IX1014.2
@@ -321,7 +321,7 @@
 036900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1014.2
 037000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1014.2
 037100      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1014.2
-037200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1014.2
+037200*                                                                         
 037300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1014.2
 037400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1014.2
 037500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1014.2

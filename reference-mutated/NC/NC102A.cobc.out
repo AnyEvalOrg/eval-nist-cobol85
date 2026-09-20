@@ -4,7 +4,7 @@ NC102A.CBL:475: warning: GO TO SECTION 'GO--PASS-F1-2' [-Wgoto-section]
   473 | 047500     MOVE    "V1-88 6.14.4 GR1"  TO ANSI-REFERENCE.               N..
   474 | 047600 GO--TEST-F1-2.                                                   N..
   475 > 047700     GO TO    GO--PASS-F1-2.                                      N..
-  476 | 047800*    NOTE THAT GO--PASS-F1-2 IS A SECTION-NAME.                   N..
+  476 | 047800*..
   477 | 047900     PERFORM  FAIL.                                               N..
 NC102A.CBL: in section 'GO--PASS-F1-2':
 NC102A.CBL: in paragraph 'GO--TEST-F2-2':
@@ -13,14 +13,14 @@ NC102A.CBL:495: warning: GO TO SECTION 'GO--PASS-F2-2' [-Wgoto-section]
   494 | 049600 GO--TEST-F2-2.                                                   N..
   495 > 049700     GO TO   GO--PASS-F2-2                                        N..
   496 | 049800             GO--FAIL-F2-2 DEPENDING ON GO-TO-DEEP.               N..
-  497 | 049900*    NOTE THAT GO--PASS-F2-2 IS A SECTION-NAME.                   N..
+  497 | 049900*..
 NC102A.CBL: in section 'GO--PASS-F2-2':
 NC102A.CBL: in paragraph 'GO--TEST-F2-6':
 NC102A.CBL:625: warning: GO TO SECTION 'GO--PASS-F2-6' [-Wgoto-section]
   623 | 062500     MOVE    1 TO GO-TO-DEEP.                                     N..
   624 | 062600 GO--TEST-F2-6.                                                   N..
   625 > 062700     GO TO   GO--PASS-F2-6 DEPENDING ON GO-TO-DEEP.               N..
-  626 | 062800*    NOTE THAT GO--PASS-F2-6 IS A SECTION-NAME.                   N..
+  626 | 062800*..
   627 | 062900     GO TO   GO--FAIL-F2-6.                                       N..
 NC102A.CBL: in section 'PFM-J-F1-10':
 NC102A.CBL: in paragraph 'PFM-WRITE-F3-4':
@@ -66,8 +66,8 @@ NC102A.CBL:1066: warning: PFM-G-F1-10 and PFM-B-F1-10 are not in the same SECTIO
  1064 | 106600     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             N..
  1065 | 106700 PFM-TEST-F1-10.                                                  N..
  1066 > 106800     PERFORM  PFM-G-F1-10 THRU PFM-B-F1-10.                       N..
- 1067 | 106900*        NOTE PERFORM SECTION-NAME THRU PARAGRAPH-NAME -- SECOND  N..
- 1068 | 107000*             PROCEDURE-NAME PHYSICALLY PRECEEDS THE FIRST BUT    N..
+ 1067 | 106900*..
+ 1068 | 107000*..
 NC102A.CBL:1066: warning: PFM-B-F1-10 is defined before PFM-G-F1-10 [-Wsuspicious-perform-thru]
 NC102A.CBL:1088: note: 'PFM-G-F1-10' defined here [-Wsuspicious-perform-thru]
  1086 | 108800 PFM-F-F1-10.                                                     N..

@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1084.2
 000200 PROGRAM-ID.                                                      SQ1084.2
 000300     SQ108A.                                                      SQ1084.2
-000400****************************************************************  SQ1084.2
-000500*                                                              *  SQ1084.2
-000600*    VALIDATION FOR:-                                          *  SQ1084.2
-000700*    " HIGH       ".                                              SQ1084.2
-000800*                                                              *  SQ1084.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1084.2
-001000*    "4.2 ".                                                      SQ1084.2
-001100*                                                              *  SQ1084.2
-001200****************************************************************  SQ1084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1084.2
-001400*        THE ROUTINE SQ108A CREATES A FIXED LENGTH MASS STORAGE   SQ1084.2
-001500*    FILE.  THE FILE IS CREATED USING WRITE STATEMENTS, VERIFIED  SQ1084.2
-001600*    IN SEQ-TEST-20 AND THEN READ USING READ...INTO STATEMENTS.   SQ1084.2
-001700*    THE READ...INTO TESTS CHECK FOR TRUNCATION AND BLANK FILL    SQ1084.2
-001800*    OF THE IDENTIFIER AREA.                                      SQ1084.2
-001900*                                                                 SQ1084.2
-002000*    USED X-CARDS:                                                SQ1084.2
-002100*         XXXXX014                                                SQ1084.2
-002200*         XXXXX055                                                SQ1084.2
-002300*     P   XXXXX062                                                SQ1084.2
-002400*         XXXXX082                                                SQ1084.2
-002500*         XXXXX083                                                SQ1084.2
-002600*     C   XXXXX084                                                SQ1084.2
-002700*                                                                 SQ1084.2
-002800*                                                                 SQ1084.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SQ1084.2
 003000 CONFIGURATION SECTION.                                           SQ1084.2
 003100 SOURCE-COMPUTER.                                                 SQ1084.2
@@ -296,7 +296,7 @@
 034500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1084.2
 034600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1084.2
 034700      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1084.2
-034800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1084.2
+034800*                                                                         
 034900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1084.2
 035000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1084.2
 035100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1084.2
@@ -387,12 +387,12 @@
 043600     MOVE NUMBER-AREA TO CORRECT-18V0.                            SQ1084.2
 043700     PERFORM PRINT-DETAIL.                                        SQ1084.2
 043800     CLOSE SQ-FS8.                                                SQ1084.2
-043900*        A MASS STORAGE SEQUENTIAL FILE WITH 141 CHARACTER        SQ1084.2
-044000*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 710 RECORDS.    SQ1084.2
+043900*                                                                         
+044000*                                                                         
 044100 RERAD-INIT-020.                                                  SQ1084.2
 044200     MOVE ZERO TO COUNT-OF-RECS.                                  SQ1084.2
-044300*        THIS TEST READS AND CHECKS THE FILE CREATED              SQ1084.2
-044400*    IN RERAD-TEST-019.                                           SQ1084.2
+044300*                                                                         
+044400*                                                                         
 044500     OPEN INPUT SQ-FS8.                                           SQ1084.2
 044600 SEQ-TEST-020.                                                    SQ1084.2
 044700     READ SQ-FS8 RECORD                                           SQ1084.2
@@ -443,10 +443,10 @@
 049200     MOVE "READ 141 INTO 87    " TO FEATURE.                      SQ1084.2
 049300     MOVE "READ...RECORD INTO...AT END  01 LEVEL" TO RE-MARK.     SQ1084.2
 049400     MOVE "READ-TEST-GF-01" TO PAR-NAME.                          SQ1084.2
-049500*        THIS TEST READS RECORDS OF 141 CHARACTERS INTO A         SQ1084.2
-049600*    WORKING-STORAGE AREA OF 87 CHARACTERS AND CHECKS THE AREA    SQ1084.2
-049700*    FOLLOWING TO ENSURE TRUNCATION TOOK PLACE.  OTHER FIELDS     SQ1084.2
-049800*    IN THE RECORD AREA ARE ALSO CHECKED.                         SQ1084.2
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
 049900     OPEN INPUT SQ-FS8.                                           SQ1084.2
 050000 READ-TEST-GF-01.                                                 SQ1084.2
 050100     MOVE SPACE TO FOLLOWS-AREA1.                                 SQ1084.2
@@ -488,8 +488,8 @@
 053700     IF EOF-FLAG EQUAL TO 1                                       SQ1084.2
 053800           GO TO SEQ-EOF-21.                                      SQ1084.2
 053900     MOVE 0 TO ERROR-FLAG.                                        SQ1084.2
-054000*        THIS TEST READS RECORDS OF 141 CHARACTERS INTO AN 02     SQ1084.2
-054100*    LEVEL IDENTIFIER WITH PIC X(120).                            SQ1084.2
+054000*                                                                         
+054100*                                                                         
 054200     MOVE "READ 141 INTO 120    " TO FEATURE.                     SQ1084.2
 054300     MOVE "READ-TEST-GF-02" TO PAR-NAME.                          SQ1084.2
 054400     MOVE "READ...INTO...AT END 02 LEVEL" TO RE-MARK.             SQ1084.2
@@ -534,9 +534,9 @@
 058300     MOVE "READ 141 INTO 148 " TO FEATURE.                        SQ1084.2
 058400     MOVE "READ-TEST-GF-03" TO PAR-NAME.                          SQ1084.2
 058500     MOVE "READ...RECORD INTO...END 01 LEVEL" TO RE-MARK.         SQ1084.2
-058600*        THIS TEST READS RECORDS OF 141 CHARACTERS INTO A WORKING-SQ1084.2
-058700*    STORAGE RECORD OF 148 CHARACTERS.  THE LAST 7 CHARACTERS ARE SQ1084.2
-058800*    TESTED TO ENSURE THAT SPACE FILLING ON THE RIGHT OCCURRED.   SQ1084.2
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
 058900 READ-TEST-GF-03.                                                 SQ1084.2
 059000     MOVE "ABCDEFG" TO AREA3-2.                                   SQ1084.2
 059100     READ SQ-FS8 RECORD INTO READ-INTO-AREA3                      SQ1084.2
@@ -582,8 +582,8 @@
 063100     MOVE "READ 141 INTO 141" TO FEATURE.                         SQ1084.2
 063200     MOVE "READ-TEST-GF-04" TO PAR-NAME.                          SQ1084.2
 063300     MOVE "READ...INTO...END  01 LEVEL" TO RE-MARK.               SQ1084.2
-063400*        THIS TEST READS RECORDS OF 141 CHARACTERS INTO A         SQ1084.2
-063500*    WORKING-STORAGE RECORD OF 141 CHARACTERS.                    SQ1084.2
+063400*                                                                         
+063500*                                                                         
 063600 READ-TEST-GF-04.                                                 SQ1084.2
 063700     READ SQ-FS8 INTO READ-INTO-AREA4                             SQ1084.2
 063800          END MOVE "UNEXPECTED EOF" TO COMPUTED-A                 SQ1084.2
@@ -628,8 +628,8 @@
 067700     MOVE "READ 141 INTO 120" TO FEATURE.                         SQ1084.2
 067800     MOVE "READ-TEST-GF-05" TO PAR-NAME.                          SQ1084.2
 067900     MOVE "READ INTO SUBSCRIPTED DATA ITEM 05 LEVEL" TO RE-MARK.  SQ1084.2
-068000*         THIS TEST READS A RECORD OF 141 CHARACTERS INTO A       SQ1084.2
-068100*    SUBSCRIPTED DATA ITEM OF 120 CHARACTERS.                     SQ1084.2
+068000*                                                                         
+068100*                                                                         
 068200 READ-TEST-GF-05.                                                 SQ1084.2
 068300     READ SQ-FS8 RECORD INTO FILE-RECORD-INFO-P1-120 (1)          SQ1084.2
 068400          AT END MOVE "UNEXPECTED EOF" TO COMPUTED-A              SQ1084.2
@@ -668,9 +668,9 @@
 071700     MOVE "READ 141 INTO 141" TO FEATURE.                         SQ1084.2
 071800     MOVE "READ-TEST-GF-06" TO PAR-NAME.                          SQ1084.2
 071900     MOVE "CHECK OF FD RECORD ON RD INTO 01 LEVEL" TO RE-MARK.    SQ1084.2
-072000*        THIS TEST READS A RECORD INTO A WORKING-STORAGE AREA     SQ1084.2
-072100*    AND CHECKS THE CONTENTS OF THE FD RECORD AREA TO ENSURE      SQ1084.2
-072200*    THAT IT IS NOT AFFECTED BY THE INTO PHRASE.                  SQ1084.2
+072000*                                                                         
+072100*                                                                         
+072200*                                                                         
 072300 READ-TEST-GF-06.                                                 SQ1084.2
 072400     READ SQ-FS8 RECORD INTO READ-INTO-AREA4                      SQ1084.2
 072500          AT END MOVE "UNEXPECTED EOF" TO COMPUTED-A              SQ1084.2
@@ -713,9 +713,9 @@
 076200 READ-WRITE-GF-06.                                                SQ1084.2
 076300     PERFORM PRINT-DETAIL.                                        SQ1084.2
 076400 SEQ-INIT-21.                                                     SQ1084.2
-076500*        THIS TEST CHECKS IF ANY ERRORS WERE ENCOUNTERED ON THE   SQ1084.2
-076600*    PRECEDING READS, AND READS THE FILE ONCE MORE EXPECTING      SQ1084.2
-076700*    THE END CONDITION TO OCCUR.                                  SQ1084.2
+076500*                                                                         
+076600*                                                                         
+076700*                                                                         
 076800     IF EOF-FLAG EQUAL TO 1                                       SQ1084.2
 076900         GO TO SEQ-EOF-21.                                        SQ1084.2
 077000 SEQ-TEST-21.                                                     SQ1084.2

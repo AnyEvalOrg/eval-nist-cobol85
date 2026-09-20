@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         OBIC34.2
 000200 PROGRAM-ID.                                                      OBIC34.2
 000300     OBIC3A.                                                      OBIC34.2
-000400****************************************************************  OBIC34.2
-000500*                                                              *  OBIC34.2
-000600*    VALIDATION FOR:-                                          *  OBIC34.2
-000700*                                                              *  OBIC34.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".OBIC34.2
-000900*                                                              *  OBIC34.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".OBIC34.2
-001100*                                                              *  OBIC34.2
-001200****************************************************************  OBIC34.2
-001300*                                                              *  OBIC34.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  OBIC34.2
-001500*                                                              *  OBIC34.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  OBIC34.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  OBIC34.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  OBIC34.2
-001900*                                                              *  OBIC34.2
-002000****************************************************************  OBIC34.2
-002100*                                                                 OBIC34.2
-002200*        THE SUBPROGRAM IC220 PRINTS THE RESULTS FOR THE TESTING  OBIC34.2
-002300*    OF A SEGMENTED LEVEL 1 SORT PROGRAM AS A SUBPROGRAM.  IT IS  OBIC34.2
-002400*    CALLED BY THE MAIN PROGRAM IC218 AND THE SUBPROGRAM IC219.   OBIC34.2
-002500*    THE LINKAGE VARIABLE PRINT-FLAG INDICATES WHETHER THE        OBIC34.2
-002600*    HEADING (FLAG=1), FOOTING (FLAG=3), OR A REPORT LINE (FLAG=2)OBIC34.2
-002700*    SHOULD BE PRINTED.                                           OBIC34.2
-002800*                                                                 OBIC34.2
-002900******************************************************************OBIC34.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            OBIC34.2
 003100 CONFIGURATION SECTION.                                           OBIC34.2
 003200 SOURCE-COMPUTER.                                                 OBIC34.2
@@ -235,7 +235,7 @@
 023700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBIC34.2
 023800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               OBIC34.2
 023900      ADD PASS-COUNTER TO ERROR-HOLD.                             OBIC34.2
-024000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBIC34.2
+024000*                                                                         
 024100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBIC34.2
 024200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBIC34.2
 024300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBIC34.2

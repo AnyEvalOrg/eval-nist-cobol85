@@ -22,14 +22,14 @@ TEST RESULT OF ST118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SORT - 8 ASC. KEYS   FAIL* SORT-TEST-12                                                                                
                                                                                                                         
                                      COMPUTED= -000000014.000000000                                                     
-                                     CORRECT = -000000094.000000000                                                     
+                                     CORRECT = -000000010.000000000                                                     
                                                                                                                         
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-13                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-14                                                                                
  SORT - 8 ASC. KEYS   FAIL* SORT-TEST-15                                                                                
                                                                                                                         
                                      COMPUTED=  .600000000000000000                                                     
-                                     CORRECT =  .600000000000000200                                                     
+                                     CORRECT =  .500000000000000000                                                     
                                                                                                                         
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-16                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-17                                                                                

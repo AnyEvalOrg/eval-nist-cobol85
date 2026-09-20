@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC2014.2
 000200 PROGRAM-ID.                                                      NC2014.2
 000300     NC201A.                                                      NC2014.2
-000400****************************************************************  NC2014.2
-000500*                                                              *  NC2014.2
-000600*    VALIDATION FOR:-                                          *  NC2014.2
-000700*                                                              *  NC2014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2014.2
-000900*                                                              *  NC2014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2014.2
-001100*                                                              *  NC2014.2
-001200****************************************************************  NC2014.2
-001300*                                                              *  NC2014.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2014.2
-001500*                                                              *  NC2014.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2014.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2014.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2014.2
-001900*                                                              *  NC2014.2
-002000****************************************************************  NC2014.2
-002100*    PROGRAM NC201A TESTS FORMAT 3 AND 4 OF THE "PERFORM"         NC2014.2
-002200*    STATEMENT.                                                   NC2014.2
-002300*    A VARIETY OF QUALIFIED DATA-NAMES AND CONDITION-NAMES        NC2014.2
-002400*    ARE USED.                                                    NC2014.2
-002500*                                                                 NC2014.2
-002600*                                                                 NC2014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700                                                                  NC2014.2
 002800 ENVIRONMENT DIVISION.                                            NC2014.2
 002900 CONFIGURATION SECTION.                                           NC2014.2
@@ -529,7 +529,7 @@
 053100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2014.2
 053200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2014.2
 053300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2014.2
-053400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2014.2
+053400*                                                                         
 053500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2014.2
 053600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2014.2
 053700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2014.2
@@ -604,8 +604,8 @@
 060600     MOVE 1 TO PERFORM2.                                          NC2014.2
 060700 PFM-TEST-F3-0.                                                   NC2014.2
 060800     PERFORM  PFM-A THRU PFM-AA UNTIL PERFORM2 EQUAL TO 48.       NC2014.2
-060900*    NOTE IN THIS TEST THE CONDITION IS NOT SATISFIED             NC2014.2
-061000*    ORIGINALLY WHEN THE PERFORM IS ENTERED.                      NC2014.2
+060900*                                                                         
+061000*                                                                         
 061100 PFM-TEST-F3-1.                                                   NC2014.2
 061200     IF PERFORM2 EQUAL TO 48 PERFORM PASS                         NC2014.2
 061300                             GO TO PFM-WRITE-F3-1.                NC2014.2
@@ -619,12 +619,12 @@
 062100     PERFORM FAIL.                                                NC2014.2
 062200 PFM-WRITE-F3-1.                                                  NC2014.2
 062300     PERFORM PRINT-DETAIL.                                        NC2014.2
-062400*                                                                 NC2014.2
+062400*                                                                         
 062500 PFM-INIT-F3-2.                                                   NC2014.2
 062600     MOVE "PFM-TEST-F3-2" TO PAR-NAME.                            NC2014.2
 062700     MOVE 50 TO PERFORM2.                                         NC2014.2
-062800*    NOTE IN THIS TEST CONDITION IS SATISFIED WHEN PERFORM IS     NC2014.2
-062900*    ENTERED AND CONTROL SHOULD NOT BE PASSED TO PFM-C.           NC2014.2
+062800*                                                                         
+062900*                                                                         
 063000 PFM-TEST-F3-2.                                                   NC2014.2
 063100     PERFORM PFM-C UNTIL PERFORM2 GREATER THAN 25.                NC2014.2
 063200     IF PERFORM2 EQUAL TO 50 PERFORM PASS                         NC2014.2
@@ -639,7 +639,7 @@
 064100     PERFORM FAIL.                                                NC2014.2
 064200 PFM-WRITE-F3-2.                                                  NC2014.2
 064300     PERFORM PRINT-DETAIL.                                        NC2014.2
-064400*                                                                 NC2014.2
+064400*                                                                         
 064500 PFM-INIT-F4-1.                                                   NC2014.2
 064600     MOVE "PFM-TEST-F4-1" TO PAR-NAME.                            NC2014.2
 064700     MOVE "PERFORM VARYING" TO FEATURE.                           NC2014.2
@@ -663,15 +663,15 @@
 066500     MOVE 12.5 TO CORRECT-N.                                      NC2014.2
 066600 PFM-WRITE-F4-1.                                                  NC2014.2
 066700     PERFORM PRINT-DETAIL.                                        NC2014.2
-066800*                                                                 NC2014.2
+066800*                                                                         
 066900 PFM-INIT-F4-2.                                                   NC2014.2
 067000     MOVE "PFM-TEST-F4-2" TO PAR-NAME.                            NC2014.2
 067100     MOVE 5.5 TO PERFORM4.                                        NC2014.2
 067200     MOVE 5.5 TO PERFORM8 (7).                                    NC2014.2
 067300 PFM-TEST-F4-2.                                                   NC2014.2
-067400*    NOTE IN THIS TEST ONE SUBSCRIPT IS VARIED.                   NC2014.2
-067500*    NOTE  THIS ALSO TESTS THAT WHEN THE CONDITION IS TRUE,       NC2014.2
-067600*    CONTROL FALLS THRU AND THE PROCEDURE IS NOT EXECUTED.        NC2014.2
+067400*                                                                         
+067500*                                                                         
+067600*                                                                         
 067700     PERFORM PFM-G VARYING PERFORM3 FROM 1 BY 2 UNTIL             NC2014.2
 067800     PERFORM3 GREATER THAN 5.                                     NC2014.2
 067900     IF PERFORM8 (1) EQUAL TO 13.5 AND PERFORM8 (3) EQUAL TO 13.8 NC2014.2
@@ -679,9 +679,9 @@
 068100     5.5 AND PERFORM3 EQUAL TO 7                                  NC2014.2
 068200               PERFORM PASS                                       NC2014.2
 068300               GO TO PFM-WRITE-F4-2.                              NC2014.2
-068400*    NOTE THE OCCURS CLAUSE IS NEEDED IN THE DATA DESCRIPTION     NC2014.2
-068500*        FOR THESE PERFORM TESTS --- MORE EXHAUSTIVE TESTS OF THE NC2014.2
-068600*        OCCURS CLAUSE CAN BE FOUND IN THE TABLE HANDLING TESTS.  NC2014.2
+068400*                                                                         
+068500*                                                                         
+068600*                                                                         
 068700     GO TO PFM-FAIL-F4-2.                                         NC2014.2
 068800 PFM-DELETE-F4-2.                                                 NC2014.2
 068900     PERFORM DE-LETE.                                             NC2014.2
@@ -709,12 +709,12 @@
 071100     MOVE "PFM-TEST-F4-2" TO PAR-NAME.                            NC2014.2
 071200 PFM-WRITE-F4-2.                                                  NC2014.2
 071300     PERFORM PRINT-DETAIL.                                        NC2014.2
-071400*                                                                 NC2014.2
+071400*                                                                         
 071500 PFM-INIT-F4-3.                                                   NC2014.2
 071600     MOVE "PFM-TEST-F4-3" TO PAR-NAME.                            NC2014.2
 071700     MOVE 1.5 TO PERFORM4.                                        NC2014.2
 071800 PFM-TEST-F4-3.                                                   NC2014.2
-071900*    NOTE IN THIS TEST TWO SUBSCRIPTS ARE VARIED.                 NC2014.2
+071900*                                                                         
 072000     PERFORM PFM-I THRU PFM-J VARYING PERFORM3                    NC2014.2
 072100     FROM PERFORM9 BY PERFORM10 UNTIL PERFORM3 EQUAL TO 1         NC2014.2
 072200     AFTER PERFORM2 FROM 2 BY PERFORM11 UNTIL PERFORM2            NC2014.2
@@ -779,13 +779,13 @@
 078100     MOVE "PFM-TEST-F4-3" TO PAR-NAME.                            NC2014.2
 078200 PFM-WRITE-F4-3.                                                  NC2014.2
 078300     PERFORM PRINT-DETAIL.                                        NC2014.2
-078400*                                                                 NC2014.2
+078400*                                                                         
 078500 PFM-INIT-F4-4.                                                   NC2014.2
 078600     MOVE "PFM-TEST-F4-4" TO PAR-NAME.                            NC2014.2
 078700     MOVE 2 TO PERFORM9.                                          NC2014.2
 078800     MOVE 2 TO PERFORM10.                                         NC2014.2
 078900 PFM-TEST-F4-4.                                                   NC2014.2
-079000*    NOTE IN THIS TEST THREE SUBSCRIPTS ARE VARIED.               NC2014.2
+079000*                                                                         
 079100     PERFORM PFM-L VARYING PERFORM3 FROM PERFORM9 BY 2            NC2014.2
 079200     UNTIL PERFORM3 GREATER THAN 4 AFTER PERFORM2 FROM 10         NC2014.2
 079300     BY -5 UNTIL PERFORM2 EQUAL TO 0  AFTER PERFORM11             NC2014.2
@@ -866,24 +866,24 @@
 086800 PFM-B.                                                           NC2014.2
 086900     PERFORM FAIL.                                                NC2014.2
 087000     MOVE "PFM-B ERRONIOUSLY ENTERED" TO RE-MARK.                 NC2014.2
-087100*    NOTE CONTROL SHOULD NEVER FALL THRU TO THIS PARAGRAPH FROM   NC2014.2
-087200*        THE PREVIOUS ONE.                                        NC2014.2
+087100*                                                                         
+087200*                                                                         
 087300     GO TO PFM-WRITE-F3-1.                                        NC2014.2
 087400 PFM-C.                                                           NC2014.2
 087500     ADD 1 TO PERFORM2.                                           NC2014.2
 087600 PFM-D.                                                           NC2014.2
 087700     PERFORM FAIL.                                                NC2014.2
 087800     MOVE "PFM-D ERRONIOUSLY ENTERED" TO RE-MARK.                 NC2014.2
-087900*    NOTE CONTROL SHOULD NEVER FALL THRU TO THIS PARAGRAPH FROM   NC2014.2
-088000*        THE PREVIOUS ONE.                                        NC2014.2
+087900*                                                                         
+088000*                                                                         
 088100     GO TO PFM-WRITE-F3-2.                                        NC2014.2
 088200 PFM-E.                                                           NC2014.2
 088300     ADD PERFORM4 3.5 GIVING PERFORM6.                            NC2014.2
 088400 PFM-F.                                                           NC2014.2
 088500     PERFORM FAIL.                                                NC2014.2
 088600     MOVE "PFM-F ERRONIOUSLY ENTERED" TO RE-MARK.                 NC2014.2
-088700*    NOTE CONTROL SHOULD NEVER FALL THRU TO THIS PARAGRAPH FROM   NC2014.2
-088800*        THE PREVIOUS ONE.                                        NC2014.2
+088700*                                                                         
+088800*                                                                         
 088900     GO TO PFM-WRITE-F4-1.                                        NC2014.2
 089000 PFM-G.                                                           NC2014.2
 089100     ADD PERFORM4 8 GIVING PERFORM8 (PERFORM3).                   NC2014.2
@@ -891,8 +891,8 @@
 089300 PFM-H.                                                           NC2014.2
 089400     PERFORM FAIL.                                                NC2014.2
 089500     MOVE "PFM-H ERRONIOUSLY ENTERED" TO RE-MARK.                 NC2014.2
-089600*    NOTE CONTROL SHOULD NEVER FALL THRU TO THIS PARAGRAPH FROM   NC2014.2
-089700*        THE PREVIOUS ONE.                                        NC2014.2
+089600*                                                                         
+089700*                                                                         
 089800     GO TO PFM-WRITE-F4-2.                                        NC2014.2
 089900 PFM-I.                                                           NC2014.2
 090000     MULTIPLY PERFORM4 BY 10 GIVING PERFORM14                     NC2014.2
@@ -902,8 +902,8 @@
 090400 PFM-K.                                                           NC2014.2
 090500     PERFORM FAIL.                                                NC2014.2
 090600     MOVE "PFM-K ERRONIOUSLY ENTERED" TO RE-MARK.                 NC2014.2
-090700*    NOTE CONTROL SHOULD NEVER FALL THRU TO THIS PARAGRAPH FROM   NC2014.2
-090800*        THE PREVIOUS ONE.                                        NC2014.2
+090700*                                                                         
+090800*                                                                         
 090900     GO TO PFM-WRITE-F4-3.                                        NC2014.2
 091000 PFM-L.                                                           NC2014.2
 091100     SUBTRACT 5.0 FROM PERFORM5 GIVING PERFORM16                  NC2014.2
@@ -912,12 +912,12 @@
 091400 PFM-M.                                                           NC2014.2
 091500     PERFORM FAIL.                                                NC2014.2
 091600     MOVE "PFM-M ERRONIOUSLY ENTERED" TO RE-MARK.                 NC2014.2
-091700*    NOTE CONTROL SHOULD NEVER FALL THRU TO THIS PARAGRAPH FROM   NC2014.2
-091800*        THE PREVIOUS ONE.                                        NC2014.2
+091700*                                                                         
+091800*                                                                         
 091900     GO TO PFM-WRITE-F4-4.                                        NC2014.2
 092000 PFM-CONTINUE.                                                    NC2014.2
 092100     EXIT.                                                        NC2014.2
-092200*                                                                 NC2014.2
+092200*                                                                         
 092300 PFM-INIT-F3-3.                                                   NC2014.2
 092400     MOVE "PFM-TEST-F3-3  " TO PAR-NAME.                          NC2014.2
 092500     MOVE "VI-122 6.20.4 GR10(C)" TO ANSI-REFERENCE.              NC2014.2
@@ -941,7 +941,7 @@
 094300     PERFORM  FAIL.                                               NC2014.2
 094400 PFM-WRITE-F3-3.                                                  NC2014.2
 094500     PERFORM  PRINT-DETAIL.                                       NC2014.2
-094600*                                                                 NC2014.2
+094600*                                                                         
 094700 PFM-INIT-F4-5.                                                   NC2014.2
 094800     MOVE     "PFM-TEST-F4-5" TO PAR-NAME.                        NC2014.2
 094900     MOVE     ZERO TO WRK-DS-02V00.                               NC2014.2
@@ -969,7 +969,7 @@
 097100     PERFORM  FAIL.                                               NC2014.2
 097200 PFM-WRITE-F4-5.                                                  NC2014.2
 097300     PERFORM  PRINT-DETAIL.                                       NC2014.2
-097400*                                                                 NC2014.2
+097400*                                                                         
 097500 PFM-INIT-F4-6.                                                   NC2014.2
 097600     MOVE     "PFM-TEST-F4-6" TO PAR-NAME.                        NC2014.2
 097700     MOVE     ZERO TO WRK-DS-02V00.                               NC2014.2
@@ -992,7 +992,7 @@
 099400     PERFORM  FAIL.                                               NC2014.2
 099500 PFM-WRITE-F4-6.                                                  NC2014.2
 099600     PERFORM  PRINT-DETAIL.                                       NC2014.2
-099700*                                                                 NC2014.2
+099700*                                                                         
 099800 PFM-INIT-F4-7.                                                   NC2014.2
 099900     MOVE     "PFM-TEST-F4-7" TO PAR-NAME.                        NC2014.2
 100000     GO TO PFM-TEST-F4-7.                                         NC2014.2
@@ -1004,7 +1004,7 @@
 100600              FROM -5.5                                           NC2014.2
 100700              BY 0.1                                              NC2014.2
 100800              UNTIL PERFORM4 > 90.                                NC2014.2
-100900     IF       PERFORM4 EQUAL TO 60.1                              NC2014.2
+100900     IF       PERFORM4 EQUAL TO 20.1                              NC2014.2
 101000              PERFORM PASS GO TO PFM-WRITE-F4-7.                  NC2014.2
 101100     GO       TO PFM-FAIL-F4-7.                                   NC2014.2
 101200*                                                                         
@@ -1015,18 +1015,18 @@
 101700 PFM-FAIL-F4-7.                                                   NC2014.2
 101800     PERFORM  FAIL.                                               NC2014.2
 101900     MOVE PERFORM4 TO COMPUTED-N.                                 NC2014.2
-102000     MOVE 60.1 TO CORRECT-N.                                      NC2014.2
+102000     MOVE 20.1 TO CORRECT-N.                                      NC2014.2
 102100 PFM-WRITE-F4-7.                                                  NC2014.2
 102200     PERFORM  PRINT-DETAIL.                                       NC2014.2
-102300*                                                                 NC2014.2
+102300*                                                                         
 102400 PFM-INIT-F4-8.                                                   NC2014.2
 102500     MOVE "PFM-TEST-F4-8" TO PAR-NAME.                            NC2014.2
 102600     MOVE ZERO TO PFM-11-COUNTER.                                 NC2014.2
 102700     MOVE ZERO TO SWITCH-PFM-1.                                   NC2014.2
-102800*    NOTE  THIS AUDIT ROUTINE TESTS NESTED PERFORMS               NC2014.2
-102900*        IF THE PROGRAM CANNOT SET RETURNS AT THE PROPER PLACE    NC2014.2
-103000*             OR  EXECUTE THEM IN PROPER SEQUENCE A FAIL WILL     NC2014.2
-103100*                 RESULT.                                         NC2014.2
+102800*                                                                         
+102900*                                                                         
+103000*                                                                         
+103100*                                                                         
 103200 PFM-TEST-F4-8.                                                   NC2014.2
 103300     GO TO PFM-PART-A.                                            NC2014.2
 103400 PFM-DELETE-F4-8.                                                 NC2014.2
@@ -1071,13 +1071,13 @@
 107300     MOVE PFM-11-COUNTER TO COMPUTED-A.                           NC2014.2
 107400 PFM-WRITE-F4-8.                                                  NC2014.2
 107500     PERFORM PRINT-DETAIL.                                        NC2014.2
-107600*                                                                 NC2014.2
+107600*                                                                         
 107700 PFM-INIT-F4-9.                                                   NC2014.2
 107800     MOVE "PFM-TEST-F4-9" TO PAR-NAME.                            NC2014.2
 107900     ADD 44 TO PFM-12-ANS1.                                       NC2014.2
 108000     ADD 46 TO PFM-12-ANS2.                                       NC2014.2
-108100*    NOTE  THIS PROGRAM TESTS THE ABILITY OF THE COMPILER TO      NC2014.2
-108200*        PERFORM A STATEMENT WITH A VARYING CLAUSE INCLUDED.      NC2014.2
+108100*                                                                         
+108200*                                                                         
 108300     GO TO PFM-TEST-F4-9.                                         NC2014.2
 108400 PFM-F4-9-A.                                                      NC2014.2
 108500     ADD 1 TO PFM-12-ANS2.                                        NC2014.2
@@ -1107,7 +1107,7 @@
 110900     MOVE "13" TO CORRECT-A.                                      NC2014.2
 111000 PFM-WRITE-F4-9.                                                  NC2014.2
 111100     PERFORM PRINT-DETAIL.                                        NC2014.2
-111200*                                                                 NC2014.2
+111200*                                                                         
 111300 PFM-INIT-F4-10.                                                  NC2014.2
 111400     MOVE     "PFM-TEST-F4-10" TO PAR-NAME.                       NC2014.2
 111500     MOVE     0 TO PERFORM18.                                     NC2014.2
@@ -1117,11 +1117,11 @@
 111900 PFM-F4-10-A.                                                     NC2014.2
 112000     ADD      1 TO PERFORM18.                                     NC2014.2
 112100     ADD      3 TO PERFORM17.                                     NC2014.2
-112200*        NOTE MANIPULATING PERFORM17 IS SUPPOSED TO AFFECT THE    NC2014.2
-112300*             NUMBER OF TIMES THIS PARAGRAPH IS PERFORMED --- IN  NC2014.2
-112400*             PARTICULAR PFM-F4-10-A WOULD HAVE BEEN EXECUTED 15  NC2014.2
-112500*             TIMES WITHOUT THE ABOVE ADDITION TO PERFORM17, BUT  NC2014.2
-112600*             IN FACT IT SHOULD NOW BE EXECUTED ONLY 8 TIMES.     NC2014.2
+112200*                                                                         
+112300*                                                                         
+112400*                                                                         
+112500*                                                                         
+112600*                                                                         
 112700 PFM-TEST-F4-10.                                                  NC2014.2
 112800     PERFORM  PFM-F4-10-A                                         NC2014.2
 112900              VARYING PERFORM17                                   NC2014.2
@@ -1140,7 +1140,7 @@
 114200     MOVE     8 TO CORRECT-N.                                     NC2014.2
 114300 PFM-WRITE-F4-10.                                                 NC2014.2
 114400     PERFORM  PRINT-DETAIL.                                       NC2014.2
-114500*                                                                 NC2014.2
+114500*                                                                         
 114600 PFM-INIT-F4-11.                                                  NC2014.2
 114700     MOVE     "PFM-TEST-F4-11" TO PAR-NAME.                       NC2014.2
 114800     MOVE     0 TO PERFORM18.                                     NC2014.2
@@ -1150,8 +1150,8 @@
 115200 PFM-F4-11-A.                                                     NC2014.2
 115300     ADD      1 TO PERFORM18.                                     NC2014.2
 115400     MOVE     46 TO START-POINT.                                  NC2014.2
-115500*        NOTE THE ABOVE MOVE HAS NO EFFECT ON THE NUMBER OF TIMES NC2014.2
-115600*             PFM-F4-11-A IS EXECUTED (15).                       NC2014.2
+115500*                                                                         
+115600*                                                                         
 115700 PFM-TEST-F4-11.                                                  NC2014.2
 115800     PERFORM  PFM-F4-11-A                                         NC2014.2
 115900              VARYING PERFORM17                                   NC2014.2
@@ -1170,7 +1170,7 @@
 117200     MOVE     15 TO CORRECT-N.                                    NC2014.2
 117300 PFM-WRITE-F4-11.                                                 NC2014.2
 117400     PERFORM  PRINT-DETAIL.                                       NC2014.2
-117500*                                                                 NC2014.2
+117500*                                                                         
 117600 PFM-INIT-F4-12.                                                  NC2014.2
 117700     MOVE     "PFM-TEST-F4-12" TO PAR-NAME.                       NC2014.2
 117800     MOVE     0 TO PERFORM18.                                     NC2014.2
@@ -1180,9 +1180,9 @@
 118200 PFM-F4-12-A.                                                     NC2014.2
 118300     ADD      1 TO PERFORM18.                                     NC2014.2
 118400     ADD      1 TO INC-VALUE.                                     NC2014.2
-118500*        NOTE THE ABOVE ADD TO INC-VALUE SHOULD ACCELERATE THE    NC2014.2
-118600*             SPEED AT WHICH PERFORM17 APPROACHES 46 --- THEREFORENC2014.2
-118700*             PFM-F4-12-A IS EXECUTED ONLY 7 TIMES INSTEAD OF 15. NC2014.2
+118500*                                                                         
+118600*                                                                         
+118700*                                                                         
 118800 PFM-TEST-F4-12.                                                  NC2014.2
 118900     PERFORM  PFM-F4-12-A                                         NC2014.2
 119000              VARYING PERFORM17                                   NC2014.2
@@ -1202,11 +1202,11 @@
 120400 PFM-WRITE-F4-12.                                                 NC2014.2
 120500     PERFORM  PRINT-DETAIL.                                       NC2014.2
 120600 PFM-INIT-F3-4.                                                   NC2014.2
-120700*    ===--> "TEST BEFORE" PHRASE <--===                           NC2014.2
+120700*                                                                         
 120800     MOVE   "VI-112 6.20.2 GR10" TO ANSI-REFERENCE.               NC2014.2
 120900     MOVE 1 TO PERFORM2.                                          NC2014.2
-121000*    NOTE IN THIS TEST THE CONDITION IS NOT SATISFIED             NC2014.2
-121100*    ORIGINALLY WHEN THE PERFORM IS ENTERED.                      NC2014.2
+121000*                                                                         
+121100*                                                                         
 121200 PFM-TEST-F3-4-0.                                                 NC2014.2
 121300     PERFORM PFM-A THRU PFM-AA TEST BEFORE                        NC2014.2
 121400             UNTIL PERFORM2 EQUAL TO 48.                          NC2014.2
@@ -1224,11 +1224,11 @@
 122600     MOVE "PFM-TEST-F3-4" TO PAR-NAME.                            NC2014.2
 122700     PERFORM PRINT-DETAIL.                                        NC2014.2
 122800 PFM-INIT-F3-5.                                                   NC2014.2
-122900*    ===--> "TEST BEFORE" PHRASE <--===                           NC2014.2
+122900*                                                                         
 123000     MOVE   "VI-112 6.20.2 GR10" TO ANSI-REFERENCE.               NC2014.2
 123100     MOVE 50 TO PERFORM2.                                         NC2014.2
-123200*    NOTE IN THIS TEST CONDITION IS SATISFIED WHEN PERFORM IS     NC2014.2
-123300*    ENTERED AND CONTROL SHOULD NOT BE PASSED TO PFM-C.           NC2014.2
+123200*                                                                         
+123300*                                                                         
 123400 PFM-TEST-F3-5-0.                                                 NC2014.2
 123500     PERFORM PFM-F3-5-C TEST BEFORE                               NC2014.2
 123600             UNTIL PERFORM2 GREATER THAN 25.                      NC2014.2
@@ -1248,7 +1248,7 @@
 125000     MOVE "PFM-TEST-F3-5" TO PAR-NAME.                            NC2014.2
 125100     PERFORM PRINT-DETAIL.                                        NC2014.2
 125200 PFM-INIT-F3-6.                                                   NC2014.2
-125300*    ===--> "TEST BEFORE" PHRASE <--===                           NC2014.2
+125300*                                                                         
 125400     MOVE   "VI-112 6.20.2 GR10" TO ANSI-REFERENCE.               NC2014.2
 125500     MOVE    ZERO TO WRK-DS-02V00.                                NC2014.2
 125600 PFM-TEST-F3-6-0.                                                 NC2014.2
@@ -1262,7 +1262,7 @@
 126400 PFM-B-F3-6.                                                      NC2014.2
 126500     ADD     1 TO WRK-DS-02V00.                                   NC2014.2
 126600 PFM-TESTT-F3-6.                                                  NC2014.2
-126700     IF      WRK-DS-02V00 EQUAL TO 19                             NC2014.2
+126700     IF      WRK-DS-02V00 EQUAL TO 93                             NC2014.2
 126800             PERFORM PASS GO TO PFM-WRITE-F3-6.                   NC2014.2
 126900     GO TO   PFM-FAIL-F3-6.                                       NC2014.2
 127000 PFM-DELETE-F3-6.                                                 NC2014.2
@@ -1270,18 +1270,18 @@
 127200     GO      TO PFM-WRITE-F3-6.                                   NC2014.2
 127300 PFM-FAIL-F3-6.                                                   NC2014.2
 127400     MOVE    WRK-DS-02V00 TO COMPUTED-N.                          NC2014.2
-127500     MOVE    19 TO CORRECT-N.                                     NC2014.2
+127500     MOVE    93 TO CORRECT-N.                                     NC2014.2
 127600     PERFORM  FAIL.                                               NC2014.2
 127700 PFM-WRITE-F3-6.                                                  NC2014.2
 127800     MOVE     "PFM-TEST-F3-6  " TO PAR-NAME.                      NC2014.2
 127900     PERFORM  PRINT-DETAIL.                                       NC2014.2
 128000 PFM-INIT-F3-7.                                                   NC2014.2
-128100*    ===--> "TEST AFTER"  PHRASE <--===                           NC2014.2
+128100*                                                                         
 128200     MOVE   "VI-112 6.20.4 GR10(C)" TO ANSI-REFERENCE.            NC2014.2
 128300     MOVE 1 TO PERFORM2.                                          NC2014.2
 128400     MOVE 5 TO PERFORM3.                                          NC2014.2
-128500*    NOTE IN THIS TEST THE CONDITION IS NOT SATISFIED             NC2014.2
-128600*    ORIGINALLY WHEN THE PERFORM IS ENTERED.                      NC2014.2
+128500*                                                                         
+128600*                                                                         
 128700 PFM-TEST-F3-7-0.                                                 NC2014.2
 128800     PERFORM PFM-A THRU PFM-AA TEST AFTER                         NC2014.2
 128900             UNTIL PERFORM2 EQUAL TO 48.                          NC2014.2
@@ -1299,11 +1299,11 @@
 130100     MOVE "PFM-TEST-F3-7" TO PAR-NAME.                            NC2014.2
 130200     PERFORM PRINT-DETAIL.                                        NC2014.2
 130300 PFM-INIT-F3-8.                                                   NC2014.2
-130400*    ===--> "TEST AFTER"  PHRASE <--===                           NC2014.2
+130400*                                                                         
 130500     MOVE   "VI-112 6.20.2 GR10" TO ANSI-REFERENCE.               NC2014.2
 130600     MOVE 50 TO PERFORM2.                                         NC2014.2
-130700*    NOTE IN THIS TEST CONDITION IS SATISFIED AFTER PERFORM IS    NC2014.2
-130800*    ENTERED AND CONTROL SHOULD BE PASSED TO PFM-C ONCE.          NC2014.2
+130700*                                                                         
+130800*                                                                         
 130900 PFM-TEST-F3-8-0.                                                 NC2014.2
 131000     PERFORM PFM-F3-8-C TEST AFTER                                NC2014.2
 131100             UNTIL PERFORM2 GREATER THAN 25.                      NC2014.2
@@ -1323,7 +1323,7 @@
 132500     MOVE "PFM-TEST-F3-8" TO PAR-NAME.                            NC2014.2
 132600     PERFORM PRINT-DETAIL.                                        NC2014.2
 132700 PFM-INIT-F3-9.                                                   NC2014.2
-132800*    ===--> "TEST AFTER " PHRASE <--===                           NC2014.2
+132800*                                                                         
 132900     MOVE   "VI-112 6.20.2 GR10" TO ANSI-REFERENCE.               NC2014.2
 133000     MOVE    ZERO TO WRK-DS-02V00.                                NC2014.2
 133100 PFM-TEST-F3-9-0.                                                 NC2014.2
@@ -1350,9 +1350,9 @@
 135200 PFM-WRITE-F3-9.                                                  NC2014.2
 135300     MOVE     "PFM-TEST-F3-9" TO PAR-NAME.                        NC2014.2
 135400     PERFORM  PRINT-DETAIL.                                       NC2014.2
-135500*                                                                 NC2014.2
+135500*                                                                         
 135600 PFM-INIT-F4-13.                                                  NC2014.2
-135700*    ===--> "WITH TEST BEFORE" PHRASE <--===                      NC2014.2
+135700*                                                                         
 135800     MOVE   "VI-114 6.20.4 GR10(d)1" TO ANSI-REFERENCE.           NC2014.2
 135900     MOVE    20  TO PERFORM2.                                     NC2014.2
 136000     MOVE     9  TO PERFORM3.                                     NC2014.2
@@ -1362,7 +1362,7 @@
 136400     MOVE     6  TO PERFORM11.                                    NC2014.2
 136500     MOVE  ZEROS TO PERFORM12.                                    NC2014.2
 136600     MOVE    SPACE TO XRAY.                                       NC2014.2
-136700*    NOTE IN THIS TEST TWO SUBSCRIPTS ARE VARIED.                 NC2014.2
+136700*                                                                         
 136800 PFM-TEST-F4-13-0.                                                NC2014.2
 136900     PERFORM PFM-I-F4-13 THRU PFM-J-F4-13 WITH TEST BEFORE        NC2014.2
 137000             VARYING PERFORM3 FROM PERFORM9 BY PERFORM10          NC2014.2
@@ -1437,9 +1437,9 @@
 143900 PFM-WRITE-F4-13.                                                 NC2014.2
 144000     MOVE "PFM-TEST-F4-13" TO PAR-NAME.                           NC2014.2
 144100     PERFORM PRINT-DETAIL.                                        NC2014.2
-144200*                                                                 NC2014.2
+144200*                                                                         
 144300 PFM-INIT-F4-14.                                                  NC2014.2
-144400*    ===--> "WITH TEST AFTER" PHRASE <--===                       NC2014.2
+144400*                                                                         
 144500     MOVE   "VI-117/8 6.20.4 GR10(d)2" TO ANSI-REFERENCE.         NC2014.2
 144600     MOVE   "PFM-TEST-F4-14" TO PAR-NAME.                         NC2014.2
 144700     MOVE    ZEROS TO PERFORM12.                                  NC2014.2
@@ -1451,7 +1451,7 @@
 145300     MOVE    2  TO PERFORM3.                                      NC2014.2
 145400     MOVE    20 TO PERFORM2.                                      NC2014.2
 145500     MOVE    1  TO REC-CT.                                        NC2014.2
-145600*    NOTE:   IN THIS TEST TWO SUBSCRIPTS ARE VARIED.              NC2014.2
+145600*                                                                         
 145700 PFM-TEST-F4-14-0.                                                NC2014.2
 145800     PERFORM PFM-I-F4-14 THRU PFM-J-F4-14 WITH TEST AFTER         NC2014.2
 145900             VARYING PERFORM3 FROM PERFORM9 BY PERFORM10          NC2014.2
@@ -1492,9 +1492,9 @@
 149400     ELSE                                                         NC2014.2
 149500             PERFORM PASS                                         NC2014.2
 149600             PERFORM PRINT-DETAIL.                                NC2014.2
-149700*                                                                 NC2014.2
+149700*                                                                         
 149800 PFM-INIT-F4-15.                                                  NC2014.2
-149900*    ===--> "     TEST AFTER " PHRASE <--===                      NC2014.2
+149900*                                                                         
 150000     MOVE   "VI-117/8 6.20.4 GR10(d)2" TO ANSI-REFERENCE.         NC2014.2
 150100     MOVE   "PFM-TEST-F4-15"           TO PAR-NAME.               NC2014.2
 150200     MOVE    ZEROS TO PERFORM12.                                  NC2014.2
@@ -1505,7 +1505,7 @@
 150700     MOVE     3 TO PERFORM9.                                      NC2014.2
 150800     MOVE    -1 TO PERFORM10.                                     NC2014.2
 150900     MOVE     6 TO PERFORM11.                                     NC2014.2
-151000*    NOTE IN THIS TEST TWO SUBSCRIPTS ARE VARIED.                 NC2014.2
+151000*                                                                         
 151100 PFM-TEST-F4-15-0.                                                NC2014.2
 151200     PERFORM PFM-I-F4-15 THRU PFM-J-F4-15 TEST AFTER              NC2014.2
 151300             VARYING PERFORM3 FROM PERFORM9 BY PERFORM10          NC2014.2
@@ -1542,16 +1542,16 @@
 154400     ELSE                                                         NC2014.2
 154500             PERFORM PASS                                         NC2014.2
 154600             PERFORM PRINT-DETAIL.                                NC2014.2
-154700*                                                                 NC2014.2
+154700*                                                                         
 154800 PFM-INIT-F4-16.                                                  NC2014.2
-154900*    ===-->  6 AFTER PHRASES          <--===                      NC2014.2
+154900*                                                                         
 155000     MOVE   "VI-110 6.20.3 SR12" TO ANSI-REFERENCE.               NC2014.2
 155100     MOVE   "PFM-TEST-F4-16"           TO PAR-NAME.               NC2014.2
 155200     MOVE    SPACES TO PERFORM-SEVEN-LEVEL-TABLE.                 NC2014.2
 155300     MOVE    0 TO PFM-7-TOT.                                      NC2014.2
 155400     MOVE     1 TO REC-CT.                                        NC2014.2
 155500     MOVE     1 TO S1 S2 S3 S4 S5 S6 S7.                          NC2014.2
-155600*    NOTE IN THIS TEST SEVEN SUBSCRIPTS ARE VARIED.               NC2014.2
+155600*                                                                         
 155700 PFM-TEST-F4-16-0.                                                NC2014.2
 155800     PERFORM PFM-I-F4-16 THRU PFM-J-F4-16                         NC2014.2
 155900             VARYING S1 FROM 1 BY 1                               NC2014.2
@@ -1666,17 +1666,17 @@
 166800     ELSE                                                         NC2014.2
 166900             PERFORM PASS                                         NC2014.2
 167000             PERFORM PRINT-DETAIL.                                NC2014.2
-167100*                                                                 NC2014.2
+167100*                                                                         
 167200 PFM-INIT-F4-17.                                                  NC2014.2
-167300*    ===-->  6 AFTER PHRASES          <--===                      NC2014.2
-167400*    ===--> "WITH TEST BEFORE" PHRASE <--===                      NC2014.2
+167300*                                                                         
+167400*                                                                         
 167500     MOVE   "PFM-TEST-F4-17"           TO PAR-NAME.               NC2014.2
 167600     MOVE   "VI-114 6.20.4 GR10(d)2" TO ANSI-REFERENCE.           NC2014.2
 167700     MOVE    SPACES TO PERFORM-SEVEN-LEVEL-TABLE.                 NC2014.2
 167800     MOVE    101 TO COUNT-DU-6V0.                                 NC2014.2
 167900     MOVE    0   TO PFM-7-TOT.                                    NC2014.2
 168000     MOVE    1 TO REC-CT.                                         NC2014.2
-168100*    NOTE IN THIS TEST SEVEN SUBSCRIPTS ARE VARIED.               NC2014.2
+168100*                                                                         
 168200 PFM-TEST-F4-17-0.                                                NC2014.2
 168300     PERFORM PFM-I-F4-17 THRU PFM-J-F4-17 WITH TEST BEFORE        NC2014.2
 168400             VARYING S1 FROM 1 BY 1                               NC2014.2
@@ -1791,17 +1791,17 @@
 179300     ELSE                                                         NC2014.2
 179400             PERFORM PASS                                         NC2014.2
 179500             PERFORM PRINT-DETAIL.                                NC2014.2
-179600*                                                                 NC2014.2
+179600*                                                                         
 179700 PFM-INIT-F4-18.                                                  NC2014.2
-179800*    ===-->  6 AFTER PHRASES          <--===                      NC2014.2
-179900*    ===-->  TEST AFTER" PHRASE       <--===                      NC2014.2
+179800*                                                                         
+179900*                                                                         
 180000     MOVE   "PFM-TEST-F4-18"           TO PAR-NAME.               NC2014.2
 180100     MOVE   "VI-119 6.20.4 GR10(d)2" TO ANSI-REFERENCE.           NC2014.2
 180200     MOVE    SPACES TO PERFORM-SEVEN-LEVEL-TABLE.                 NC2014.2
 180300     MOVE    0 TO COUNT-DU-6V0.                                   NC2014.2
 180400     MOVE    0 TO PFM-7-TOT.                                      NC2014.2
 180500     MOVE    1 TO REC-CT.                                         NC2014.2
-180600*    NOTE IN THIS TEST SEVEN SUBSCRIPTS ARE VARIED.               NC2014.2
+180600*                                                                         
 180700 PFM-TEST-F4-18-0.                                                NC2014.2
 180800     PERFORM PFM-I-F4-18 THRU PFM-J-F4-18 TEST AFTER              NC2014.2
 180900             VARYING S1 FROM 1 BY 1                               NC2014.2
@@ -1918,8 +1918,8 @@
 192000     ELSE                                                         NC2014.2
 192100             PERFORM PASS                                         NC2014.2
 192200             PERFORM PRINT-DETAIL.                                NC2014.2
-192300*                                                                 NC2014.2
-192400*                                                                 NC2014.2
+192300*                                                                         
+192400*                                                                         
 192500 PFM-INIT-F4-20.                                                  NC2014.2
 192600     MOVE   "VI-112 6.20.4 GR10(d)" TO ANSI-REFERENCE             NC2014.2
 192700     MOVE   "PFM-TEST-F4-20"        TO PAR-NAME.                  NC2014.2
@@ -1951,7 +1951,7 @@
 195300             MOVE    COUNT-DU-6V0 TO COMPUTED-N                   NC2014.2
 195400             MOVE    10 TO CORRECT-N                              NC2014.2
 195500             PERFORM PRINT-DETAIL.                                NC2014.2
-195600*                                                                 NC2014.2
+195600*                                                                         
 195700 PFM-INIT-F4-21.                                                  NC2014.2
 195800     MOVE   "VI-112 6.20.4 GR10(d)" TO ANSI-REFERENCE             NC2014.2
 195900     MOVE   "PFM-TEST-F4-21"        TO PAR-NAME.                  NC2014.2
@@ -1981,17 +1981,17 @@
 198300             MOVE    COUNT-DU-6V0 TO COMPUTED-N                   NC2014.2
 198400             MOVE    4 TO CORRECT-N                               NC2014.2
 198500             PERFORM PRINT-DETAIL.                                NC2014.2
-198600*                                                                 NC2014.2
+198600*                                                                         
 198700 PFM-INIT-F4-22.                                                  NC2014.2
-198800*    ===-->  EXPLICIT SCOPE TERMINATOR <--===                     NC2014.2
+198800*                                                                         
 198900     MOVE   "VI-110 6.20.4 GR5" TO ANSI-REFERENCE.                NC2014.2
 199000     MOVE   "PFM-TEST-F4-22"    TO PAR-NAME.                      NC2014.2
 199100     MOVE   "CHANGE BY INCR."   TO FEATURE.                       NC2014.2
 199200     MOVE   "PERFORM VARYING"   TO RE-MARK.                       NC2014.2
 199300     MOVE    44 TO PFM-12-ANS1.                                   NC2014.2
 199400     MOVE    46 TO PFM-12-ANS2.                                   NC2014.2
-199500*    NOTE  THIS PROGRAM TESTS THE ABILITY OF THE COMPILER TO      NC2014.2
-199600*        PERFORM A STATEMENT WITH A VARYING CLAUSE INCLUDED.      NC2014.2
+199500*                                                                         
+199600*                                                                         
 199700 PFM-TEST-F4-22-0.                                                NC2014.2
 199800     PERFORM VARYING PFM-12-COUNTER FROM 100 BY 4                 NC2014.2
 199900       UNTIL PFM-12-COUNTER NOT GREATER THAN 15                   NC2014.2
@@ -2022,11 +2022,11 @@
 202400 PFM-WRITE-F4-22.                                                 NC2014.2
 202500     MOVE   "PFM-TEST-F4-22" TO PAR-NAME.                         NC2014.2
 202600     PERFORM PRINT-DETAIL.                                        NC2014.2
-202700*                                                                 NC2014.2
-202800*                                                                 NC2014.2
+202700*                                                                         
+202800*                                                                         
 202900 PFM-INIT-F4-23.                                                  NC2014.2
-203000*    ===-->  ORDER OF INITIALISATION   <--===                     NC2014.2
-203100*    ===-->  OF VARYING IDENTIFIERS.   <--===                     NC2014.2
+203000*                                                                         
+203100*                                                                         
 203200     MOVE   "VI-114 6.20.4 GR10(d)1" TO ANSI-REFERENCE.           NC2014.2
 203300     MOVE   "PFM-TEST-F4-23"         TO PAR-NAME.                 NC2014.2
 203400     MOVE    SPACES TO PERFORM-SEVEN-LEVEL-TABLE.                 NC2014.2
@@ -2055,9 +2055,9 @@
 205700             PERFORM PRINT-DETAIL.                                NC2014.2
 205800     MOVE 2 TO PERFORM9.                                          NC2014.2
 205900     MOVE 2 TO PERFORM10.                                         NC2014.2
-206000*                                                                 NC2014.2
+206000*                                                                         
 206100 PFM-INIT-F4-24.                                                  NC2014.2
-206200*    ===-->  MANIPULATING SUBSCRIPTS   <--===                     NC2014.2
+206200*                                                                         
 206300     MOVE   "VI-112 6.20.4 GR10(d)" TO ANSI-REFERENCE.            NC2014.2
 206400     MOVE   "PFM-TEST-F4-24"        TO PAR-NAME.                  NC2014.2
 206500     INITIALIZE FILLER-A.                                         NC2014.2
@@ -2097,11 +2097,11 @@
 209900     MOVE   "PFM-TEST-F4-24" TO PAR-NAME.                         NC2014.2
 210000     PERFORM PRINT-DETAIL.                                        NC2014.2
 210100 PFM-TEST-F4-24-2.                                                NC2014.2
-210200     IF      S1 EQUAL TO 2                                        NC2014.2
+210200     IF      S1 EQUAL TO 1                                        NC2014.2
 210300             PERFORM PASS GO TO PFM-WRITE-F4-24-2.                NC2014.2
 210400     PERFORM FAIL.                                                NC2014.2
 210500     MOVE    S1  TO COMPUTED-N.                                   NC2014.2
-210600     MOVE    2   TO CORRECT-N.                                    NC2014.2
+210600     MOVE    1   TO CORRECT-N.                                    NC2014.2
 210700     GO TO   PFM-WRITE-F4-24-2.                                   NC2014.2
 210800 PFM-DELETE-F4-24-2.                                              NC2014.2
 210900     PERFORM DE-LETE.                                             NC2014.2

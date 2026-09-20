@@ -1,40 +1,40 @@
 000100 IDENTIFICATION DIVISION.                                         RL1194.2
 000200 PROGRAM-ID.                                                      RL1194.2
 000300     RL119A.                                                      RL1194.2
-000400****************************************************************  RL1194.2
-000500*                                                              *  RL1194.2
-000600*    VALIDATION FOR:-                                          *  RL1194.2
-000700*                                                              *  RL1194.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1194.2
-000900*                                                              *  RL1194.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1194.2
-001100*                                                              *  RL1194.2
-001200****************************************************************  RL1194.2
-001300*                                                              *  RL1194.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1194.2
-001500*                                                              *  RL1194.2
-001600*            X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   *  RL1194.2
-001700*                    RELATIVE  I-O DATA FILE                   *  RL1194.2
-001800*            X-55   SYSTEM PRINTER                             *  RL1194.2
-001900*            X-69   ADDITIONAL VALUE OF CLAUSES                *  RL1194.2
-002000*            X-74   VALUE OF IMPLEMENTOR-NAME                  *  RL1194.2
-002100*            X-75   OBJECT OF VALUE OF CLAUSE                  *  RL1194.2
-002200*            X-82   SOURCE-COMPUTER                            *  RL1194.2
-002300*            X-83   OBJECT-COMPUTER.                           *  RL1194.2
-002400*            X-92   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   *  RL1194.2
-002500*                    RELATIVE  I-O DATA FILE                   *  RL1194.2
-002600*                                                              *  RL1194.2
-002700****************************************************************  RL1194.2
-002800*    RL119A                                                    *  RL1194.2
-002900****************************************************************  RL1194.2
-003000*            THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND *  RL1194.2
-003100*            SEMANTIC ACTIONS ASSOCIATED WITH THE "STATUS"     *  RL1194.2
-003200*            CLAUSE FOR THE VALUES "35".                       *  RL1194.2
-003300*                                                              *  RL1194.2
-003400*            THE CODE FOR THE VALUE "39" HAS BEEN ASTERISKED   *  RL1194.2
-003500*            OUT AS NO SUITABLE METHOD OF TESTING THIS         *  RL1194.2
-003600*            CONDITION IS AVAILABLE AT THE TIME OF WRITING.    *  RL1194.2
-003700****************************************************************  RL1194.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
 003800 ENVIRONMENT DIVISION.                                            RL1194.2
 003900 CONFIGURATION SECTION.                                           RL1194.2
 004000 SOURCE-COMPUTER.                                                 RL1194.2
@@ -319,7 +319,7 @@
 032400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1194.2
 032500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1194.2
 032600      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1194.2
-032700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO D-END-ROUTINE-12. RL1194.2
+032700*                                                                         
 032800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1194.2
 032900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1194.2
 033000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1194.2
@@ -439,7 +439,7 @@
 044600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1194.2
 044700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1194.2
 044800      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1194.2
-044900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1194.2
+044900*                                                                         
 045000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1194.2
 045100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1194.2
 045200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1194.2
@@ -508,7 +508,7 @@
 051500 CCVS1-EXIT.                                                      RL1194.2
 051600     EXIT.                                                        RL1194.2
 051700 SECT-RL119A-001 SECTION.                                         RL1194.2
-051800*                                                                 RL1194.2
+051800*                                                                         
 051900 REL-INIT-1.                                                      RL1194.2
 052000     MOVE   "REL-TEST-1" TO PAR-NAME.                             RL1194.2
 052100     MOVE   "VIII-4 1.3.4 4B" TO ANSI-REFERENCE.                  RL1194.2
@@ -531,8 +531,8 @@
 053800             PERFORM PASS                                         RL1194.2
 053900             PERFORM PRINT-DETAIL.                                RL1194.2
 054000 REL-TEST-1-EXIT.                                                 RL1194.2
-054100*    EXIT.                                                        RL1194.2
-054200*                                                                 RL1194.2
+054100*                                                                         
+054200*                                                                         
 054300 CCVS-EXIT SECTION.                                               RL1194.2
 054400 CCVS-999999.                                                     RL1194.2
 054500     GO TO CLOSE-FILES.                                           RL1194.2

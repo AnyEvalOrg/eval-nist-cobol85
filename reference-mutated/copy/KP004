@@ -1,5 +1,5 @@
-000100*    THIS COMMENT IS THE FIRST IMAGE IN KP004                     KP0044.2
-000200*    ADD  1 TO THE LIST.                                          KP0044.2
+000100*                                                                         
+000200*                                                                         
 000300 PST-INIT-004.                                                    KP0044.2
 000400     MOVE "PSEUDO-TEXT/WORD" TO FEATURE.                          KP0044.2
 000500     MOVE    ZERO TO WRK-DS-09V00-901.                            KP0044.2

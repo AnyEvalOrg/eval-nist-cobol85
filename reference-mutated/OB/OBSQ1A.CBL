@@ -1,46 +1,46 @@
 000100 IDENTIFICATION DIVISION.                                         OBSQ14.2
 000200 PROGRAM-ID.                                                      OBSQ14.2
 000300     OBSQ1A.                                                      OBSQ14.2
-000400****************************************************************  OBSQ14.2
-000500*                                                              *  OBSQ14.2
-000600*    VALIDATION FOR:-                                          *  OBSQ14.2
-000700*    " HIGH       ".                                              OBSQ14.2
-000800*                                                              *  OBSQ14.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  OBSQ14.2
-001000*    "4.2 ".                                                      OBSQ14.2
-001100*                                                              *  OBSQ14.2
-001200*        THE ROUTINE OBSQ1A CREATES A TAPE FILE WHICH HAS FIXED   OBSQ14.2
-001300*    LENGTH RECORDS.  THE FILE IS THEN CLOSED AND OPENED AS AN    OBSQ14.2
-001400*    INPUT FILE.  THE FILE IS READ AND FIELDS IN THE INPUT RECORDSOBSQ14.2
-001500*    ARE COMPARED TO THE VALUES WRITTEN TO ENSURE THAT THE RECORDSOBSQ14.2
-001600*    WERE PROCESSED CORRECTLY.  THE FILE IS CLOSED AND OPENED     OBSQ14.2
-001700*    AGAIN AS AN INPUT FILE.  FOUR READ FORMAT OPTIONS ARE USED   OBSQ14.2
-001800*    TO READ THE FILE AND FIELDS IN THE RECORDS ARE VERIFIED.     OBSQ14.2
-001900*    THE OPEN, CLOSE, READ, AND WRITE STATEMENTS ARE TESTED FOR   OBSQ14.2
-002000*    LEVEL ONE FEATURES.                                          OBSQ14.2
-002100*                                                                 OBSQ14.2
-002200*    THIS ROUTINE TESTS THE OBSOLETE LANGUAGE FEATURE "VALUE OF". OBSQ14.2
-002300*    IT IS IDENTICAL WITH THE OLD (74) TEST PROGRAM SQ102.        OBSQ14.2
-002400*                                                                 OBSQ14.2
-002500*    USED X-CARDS:                                                OBSQ14.2
-002600*         XXXXX001                                                OBSQ14.2
-002700*         XXXXX055                                                OBSQ14.2
-002800*     P   XXXXX062                                                OBSQ14.2
-002900*         XXXXX082                                                OBSQ14.2
-003000*         XXXXX083                                                OBSQ14.2
-003100*     C   XXXXX084                                                OBSQ14.2
-003200*                                                                 OBSQ14.2
-003300*                                                                 OBSQ14.2
-003400*     OBSOLETE FEATURES WHICH ARE TESTED:                         OBSQ14.2
-003500*                                                                 OBSQ14.2
-003600*         VALUE OF                                                OBSQ14.2
-003700*         XXXXX074                                                OBSQ14.2
-003800*         IS                                                      OBSQ14.2
-003900*         XXXXX075                                                OBSQ14.2
-004000*         XXXXX069                                                OBSQ14.2
-004100*                                                                 OBSQ14.2
-004200*         DATA RECORDS ARE  ...           DATA RECORD  ...        OBSQ14.2
-004300*         LABEL RECORDS ARE ...           LABEL RECORD ...        OBSQ14.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
 004400 ENVIRONMENT DIVISION.                                            OBSQ14.2
 004500 CONFIGURATION SECTION.                                           OBSQ14.2
 004600 SOURCE-COMPUTER.                                                 OBSQ14.2
@@ -295,7 +295,7 @@
 035700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBSQ14.2
 035800      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   OBSQ14.2
 035900      ADD PASS-COUNTER TO ERROR-HOLD.                             OBSQ14.2
-036000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBSQ14.2
+036000*                                                                         
 036100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBSQ14.2
 036200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBSQ14.2
 036300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBSQ14.2
@@ -383,12 +383,12 @@
 044500     MOVE  XRECORD-NUMBER (1) TO CORRECT-18V0.                    OBSQ14.2
 044600     PERFORM PRINT-DETAIL.                                        OBSQ14.2
 044700     CLOSE SQ-FS1.                                                OBSQ14.2
-044800*        A SEQUENTIAL TAPE FILE WITH 120 CHARACTER RECORDS        OBSQ14.2
-044900*    HAS BEEN CREATED. THE FILE CONTAINS 750 RECORDS.             OBSQ14.2
+044800*                                                                         
+044900*                                                                         
 045000 SEQ-INIT-002.                                                    OBSQ14.2
 045100     MOVE ZERO TO WRK-CS-09V00.                                   OBSQ14.2
-045200*        THIS TEST READS AND CHECKS THE FILE CREATED IN           OBSQ14.2
-045300*    SEQ-TEST-001.                                                OBSQ14.2
+045200*                                                                         
+045300*                                                                         
 045400     OPEN INPUT SQ-FS1.                                           OBSQ14.2
 045500 SEQ-TEST-002.                                                    OBSQ14.2
 045600     READ SQ-FS1                                                  OBSQ14.2
@@ -430,8 +430,8 @@
 049200     MOVE ZERO TO WRK-CS-09V00.                                   OBSQ14.2
 049300     MOVE ZERO TO RECORDS-IN-ERROR.                               OBSQ14.2
 049400     OPEN INPUT   SQ-FS1.                                         OBSQ14.2
-049500*            FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED      OBSQ14.2
-049600*    IN THIS SERIES OF TESTS.                                     OBSQ14.2
+049500*                                                                         
+049600*                                                                         
 049700     MOVE "LEV 1 READ STATEMENT" TO FEATURE.                      OBSQ14.2
 049800     MOVE "READ...RECORD AT END ..." TO RE-MARK.                  OBSQ14.2
 049900     MOVE "READ-TEST-01" TO PAR-NAME.                             OBSQ14.2

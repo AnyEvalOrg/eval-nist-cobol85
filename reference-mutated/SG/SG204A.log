@@ -22,7 +22,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG204A
  SORT, INPUT PROC     FAIL* SORT-TEST-7                                                                                 
                                                                                                                         
                                      COMPUTED= 567AHBH                                                                  
-                                     CORRECT = 56SAHBH                                                                  
+                                     CORRECT = 567QHBH                                                                  
                                                                                                                         
  SORT, INPUT PROC     PASS  SORT-TEST-8                                                                                 
  SORT, OUTPUT PROC    PASS  SORT-TEST-9                                                                                 

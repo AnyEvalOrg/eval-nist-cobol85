@@ -1,25 +1,25 @@
 000100 IDENTIFICATION DIVISION.                                         IC2134.2
 000200 PROGRAM-ID.                                                      IC2134.2
 000300     IC213A.                                                      IC2134.2
-000400****************************************************************  IC2134.2
-000500*                                                              *  IC2134.2
-000600*    VALIDATION FOR:-                                          *  IC2134.2
-000700*                                                              *  IC2134.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2134.2
-000900*                                                              *  IC2134.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2134.2
-001100*                                                              *  IC2134.2
-001200****************************************************************  IC2134.2
-001300*                                                              *  IC2134.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2134.2
-001500*                                                              *  IC2134.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2134.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2134.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2134.2
-001900*                                                              *  IC2134.2
-002000****************************************************************  IC2134.2
-002100*    THIS IS MAIN PROGRAM IC213.                                  IC2134.2
-002200****************************************************************  IC2134.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
 002300 ENVIRONMENT DIVISION.                                            IC2134.2
 002400 CONFIGURATION SECTION.                                           IC2134.2
 002500 SOURCE-COMPUTER.                                                 IC2134.2
@@ -226,7 +226,7 @@
 022800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2134.2
 022900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2134.2
 023000      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2134.2
-023100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2134.2
+023100*                                                                         
 023200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2134.2
 023300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2134.2
 023400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2134.2
@@ -298,11 +298,11 @@
 030000     MOVE "CALL-TEST-1" TO PAR-NAME.                              IC2134.2
 030100     MOVE "MAIN PROGRAM CALLS SUBPROGRAM1" TO RE-MARK.            IC2134.2
 030200     CALL "IC214A" USING DN1.                                     IC2134.2
-030300     IF DN1 IS EQUAL TO 8                                         IC2134.2
+030300     IF DN1 IS EQUAL TO 4                                         IC2134.2
 030400         PERFORM PASS                                             IC2134.2
 030500         GO TO CALL-WRITE-1.                                      IC2134.2
 030600 CALL-FAIL-1.                                                     IC2134.2
-030700     MOVE 8 TO CORRECT-18V0.                                      IC2134.2
+030700     MOVE 4 TO CORRECT-18V0.                                      IC2134.2
 030800     MOVE DN1 TO COMPUTED-18V0.                                   IC2134.2
 030900     PERFORM FAIL.                                                IC2134.2
 031000 CALL-WRITE-1.                                                    IC2134.2
@@ -312,11 +312,11 @@
 031400     MOVE "CALL-TEST-2" TO PAR-NAME.                              IC2134.2
 031500     MOVE "MAIN PROGRAM CALLS SUBPROGRAM2" TO RE-MARK.            IC2134.2
 031600     CALL "IC215A" USING DN2, DN3.                                IC2134.2
-031700     IF DN2 IS EQUAL TO 3                                         IC2134.2
+031700     IF DN2 IS EQUAL TO 8                                         IC2134.2
 031800         PERFORM PASS                                             IC2134.2
 031900         GO TO CALL-WRITE-2.                                      IC2134.2
 032000 CALL-FAIL-2.                                                     IC2134.2
-032100     MOVE 3 TO CORRECT-18V0.                                      IC2134.2
+032100     MOVE 8 TO CORRECT-18V0.                                      IC2134.2
 032200     MOVE DN2 TO COMPUTED-18V0.                                   IC2134.2
 032300     PERFORM FAIL.                                                IC2134.2
 032400 CALL-WRITE-2.                                                    IC2134.2
@@ -325,11 +325,11 @@
 032700     MOVE "CANCEL" TO FEATURE.                                    IC2134.2
 032800     MOVE "CANCEL-TEST-1" TO PAR-NAME.                            IC2134.2
 032900     MOVE "SUBPROGRAM2 CANCELS SUBPROGRAM1" TO RE-MARK.           IC2134.2
-033000     IF DN3 IS EQUAL TO 5                                         IC2134.2
+033000     IF DN3 IS EQUAL TO 6                                         IC2134.2
 033100         PERFORM PASS                                             IC2134.2
 033200         GO TO CANCEL-WRITE-1.                                    IC2134.2
 033300 CANCEL-FAIL-1.                                                   IC2134.2
-033400     MOVE 5 TO CORRECT-18V0.                                      IC2134.2
+033400     MOVE 6 TO CORRECT-18V0.                                      IC2134.2
 033500     MOVE DN3 TO COMPUTED-18V0.                                   IC2134.2
 033600     PERFORM FAIL.                                                IC2134.2
 033700 CANCEL-WRITE-1.                                                  IC2134.2

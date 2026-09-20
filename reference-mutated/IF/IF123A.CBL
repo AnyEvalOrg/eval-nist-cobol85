@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1234.2
 000300     IF123A.                                                      IF1234.2
 000400                                                                  IF1234.2
-000500***********************************************************       IF1234.2
-000600*                                                         *       IF1234.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1234.2
-000800* It contains tests for the Intrinsic Function MIN.       *       IF1234.2
-000900*                                                         *       IF1234.2
-001000***********************************************************       IF1234.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1234.2
 001200 CONFIGURATION SECTION.                                           IF1234.2
 001300 SOURCE-COMPUTER.                                                 IF1234.2
@@ -28,9 +28,9 @@
 002800 01  PRINT-REC PICTURE X(120).                                    IF1234.2
 002900 01  DUMMY-RECORD PICTURE X(120).                                 IF1234.2
 003000 WORKING-STORAGE SECTION.                                         IF1234.2
-003100***********************************************************       IF1234.2
-003200* Variables specific to the Intrinsic Function Test IF123A*       IF1234.2
-003300***********************************************************       IF1234.2
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 01  A                   PIC S9(10)          VALUE 5.             IF1234.2
 003500 01  B                   PIC S9(10)          VALUE 7.             IF1234.2
 003600 01  C                   PIC S9(10)          VALUE -4.            IF1234.2
@@ -55,9 +55,9 @@
 005500 01  WS-ANUM             PIC X.                                   IF1234.2
 005600 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1234.2
 005700 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1234.2
-005800*                                                                 IF1234.2
-005900**********************************************************        IF1234.2
-006000*                                                                 IF1234.2
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
 006100 01  TEST-RESULTS.                                                IF1234.2
 006200     02 FILLER                   PIC X      VALUE SPACE.          IF1234.2
 006300     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1234.2
@@ -351,25 +351,25 @@
 035100 BAIL-OUT-EX. EXIT.                                               IF1234.2
 035200 CCVS1-EXIT.                                                      IF1234.2
 035300     EXIT.                                                        IF1234.2
-035400********************************************************          IF1234.2
-035500*                                                      *          IF1234.2
-035600*    Intrinsic Function Tests         IF123A - MIN     *          IF1234.2
-035700*                                                      *          IF1234.2
-035800********************************************************          IF1234.2
+035400*                                                                         
+035500*                                                                         
+035600*                                                                         
+035700*                                                                         
+035800*                                                                         
 035900 SECT-IF123A SECTION.                                             IF1234.2
 036000 F-MIN-INFO.                                                      IF1234.2
 036100     MOVE     "See ref. A-56 2.27" TO ANSI-REFERENCE.             IF1234.2
 036200     MOVE     "MIN Function" TO FEATURE.                          IF1234.2
-036300*****************TEST (a) - SIMPLE TEST*****************          IF1234.2
+036300*                                                                         
 036400 F-MIN-01.                                                        IF1234.2
 036500     MOVE ZERO TO WS-NUM.                                         IF1234.2
 036600 F-MIN-TEST-01.                                                   IF1234.2
 036700     COMPUTE WS-NUM = FUNCTION MIN(5, 6, 10, 3, 7).               IF1234.2
-036800     IF WS-NUM = 5 THEN                                           IF1234.2
+036800     IF WS-NUM = 9 THEN                                           IF1234.2
 036900                    PERFORM PASS                                  IF1234.2
 037000     ELSE                                                         IF1234.2
 037100                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-037200                    MOVE 5 TO CORRECT-N                           IF1234.2
+037200                    MOVE 9 TO CORRECT-N                           IF1234.2
 037300                    PERFORM FAIL.                                 IF1234.2
 037400     GO TO F-MIN-WRITE-01.                                        IF1234.2
 037500 F-MIN-DELETE-01.                                                 IF1234.2
@@ -378,7 +378,7 @@
 037800 F-MIN-WRITE-01.                                                  IF1234.2
 037900     MOVE "F-MIN-01" TO PAR-NAME.                                 IF1234.2
 038000     PERFORM  PRINT-DETAIL.                                       IF1234.2
-038100*****************TEST (b) - SIMPLE TEST*****************          IF1234.2
+038100*                                                                         
 038200 F-MIN-02.                                                        IF1234.2
 038300     EVALUATE FUNCTION MIN(-4, 7, 2304, 3, -8)                    IF1234.2
 038400     WHEN -8                                                      IF1234.2
@@ -392,7 +392,7 @@
 039200 F-MIN-WRITE-02.                                                  IF1234.2
 039300     MOVE "F-MIN-02" TO PAR-NAME.                                 IF1234.2
 039400     PERFORM  PRINT-DETAIL.                                       IF1234.2
-039500*****************TEST (c) - SIMPLE TEST*****************          IF1234.2
+039500*                                                                         
 039600 F-MIN-03.                                                        IF1234.2
 039700     IF (FUNCTION MIN(4.3, 2.6, 7.3, 9.1) >= 2.59995) AND         IF1234.2
 039800        (FUNCTION MIN(4.3, 2.6, 7.3, 9.1) <= 2.60005) THEN        IF1234.2
@@ -406,7 +406,7 @@
 040600 F-MIN-WRITE-03.                                                  IF1234.2
 040700     MOVE "F-MIN-03" TO PAR-NAME.                                 IF1234.2
 040800     PERFORM  PRINT-DETAIL.                                       IF1234.2
-040900*****************TEST (d) - SIMPLE TEST*****************          IF1234.2
+040900*                                                                         
 041000 F-MIN-04.                                                        IF1234.2
 041100     MOVE ZERO TO WS-NUM.                                         IF1234.2
 041200 F-MIN-TEST-04.                                                   IF1234.2
@@ -425,16 +425,16 @@
 042500 F-MIN-WRITE-04.                                                  IF1234.2
 042600     MOVE "F-MIN-04" TO PAR-NAME.                                 IF1234.2
 042700     PERFORM  PRINT-DETAIL.                                       IF1234.2
-042800*****************TEST (e) - SIMPLE TEST*****************          IF1234.2
+042800*                                                                         
 042900 F-MIN-05.                                                        IF1234.2
 043000     MOVE ZERO TO WS-NUM.                                         IF1234.2
 043100 F-MIN-TEST-05.                                                   IF1234.2
 043200     COMPUTE WS-NUM = FUNCTION MIN(A, B, D).                      IF1234.2
-043300     IF WS-NUM = 8 THEN                                           IF1234.2
+043300     IF WS-NUM = 6 THEN                                           IF1234.2
 043400                    PERFORM PASS                                  IF1234.2
 043500     ELSE                                                         IF1234.2
 043600                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-043700                    MOVE 8 TO CORRECT-N                           IF1234.2
+043700                    MOVE 6 TO CORRECT-N                           IF1234.2
 043800                    PERFORM FAIL.                                 IF1234.2
 043900     GO TO F-MIN-WRITE-05.                                        IF1234.2
 044000 F-MIN-DELETE-05.                                                 IF1234.2
@@ -443,7 +443,7 @@
 044300 F-MIN-WRITE-05.                                                  IF1234.2
 044400     MOVE "F-MIN-05" TO PAR-NAME.                                 IF1234.2
 044500     PERFORM  PRINT-DETAIL.                                       IF1234.2
-044600*****************TEST (f) - SIMPLE TEST*****************          IF1234.2
+044600*                                                                         
 044700 F-MIN-06.                                                        IF1234.2
 044800     MOVE ZERO TO WS-NUM.                                         IF1234.2
 044900 F-MIN-TEST-06.                                                   IF1234.2
@@ -461,7 +461,7 @@
 046100 F-MIN-WRITE-06.                                                  IF1234.2
 046200     MOVE "F-MIN-06" TO PAR-NAME.                                 IF1234.2
 046300     PERFORM  PRINT-DETAIL.                                       IF1234.2
-046400*****************TEST (g) - SIMPLE TEST*****************          IF1234.2
+046400*                                                                         
 046500 F-MIN-07.                                                        IF1234.2
 046600     MOVE ZERO TO WS-NUM.                                         IF1234.2
 046700 F-MIN-TEST-07.                                                   IF1234.2
@@ -480,7 +480,7 @@
 048000 F-MIN-WRITE-07.                                                  IF1234.2
 048100     MOVE "F-MIN-07" TO PAR-NAME.                                 IF1234.2
 048200     PERFORM  PRINT-DETAIL.                                       IF1234.2
-048300*****************TEST (h) - SIMPLE TEST*****************          IF1234.2
+048300*                                                                         
 048400 F-MIN-08.                                                        IF1234.2
 048500     MOVE ZERO TO WS-NUM.                                         IF1234.2
 048600 F-MIN-TEST-08.                                                   IF1234.2
@@ -499,16 +499,16 @@
 049900 F-MIN-WRITE-08.                                                  IF1234.2
 050000     MOVE "F-MIN-08" TO PAR-NAME.                                 IF1234.2
 050100     PERFORM  PRINT-DETAIL.                                       IF1234.2
-050200*****************TEST (i) - SIMPLE TEST*****************          IF1234.2
+050200*                                                                         
 050300 F-MIN-09.                                                        IF1234.2
 050400     MOVE ZERO TO WS-NUM.                                         IF1234.2
 050500 F-MIN-TEST-09.                                                   IF1234.2
 050600     COMPUTE WS-NUM = FUNCTION MIN(A, 4, 8, -10, C, 0).           IF1234.2
-050700     IF WS-NUM = -80 THEN                                         IF1234.2
+050700     IF WS-NUM = -11 THEN                                         IF1234.2
 050800                    PERFORM PASS                                  IF1234.2
 050900     ELSE                                                         IF1234.2
 051000                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-051100                    MOVE -80 TO CORRECT-N                         IF1234.2
+051100                    MOVE -11 TO CORRECT-N                         IF1234.2
 051200                    PERFORM FAIL.                                 IF1234.2
 051300     GO TO F-MIN-WRITE-09.                                        IF1234.2
 051400 F-MIN-DELETE-09.                                                 IF1234.2
@@ -517,7 +517,7 @@
 051700 F-MIN-WRITE-09.                                                  IF1234.2
 051800     MOVE "F-MIN-09" TO PAR-NAME.                                 IF1234.2
 051900     PERFORM  PRINT-DETAIL.                                       IF1234.2
-052000*****************TEST (j) - SIMPLE TEST*****************          IF1234.2
+052000*                                                                         
 052100 F-MIN-10.                                                        IF1234.2
 052200     MOVE ZERO TO WS-NUM.                                         IF1234.2
 052300 F-MIN-TEST-10.                                                   IF1234.2
@@ -536,7 +536,7 @@
 053600 F-MIN-WRITE-10.                                                  IF1234.2
 053700     MOVE "F-MIN-10" TO PAR-NAME.                                 IF1234.2
 053800     PERFORM  PRINT-DETAIL.                                       IF1234.2
-053900*****************TEST (k) - SIMPLE TEST*****************          IF1234.2
+053900*                                                                         
 054000 F-MIN-11.                                                        IF1234.2
 054100     MOVE SPACES TO WS-ANUM.                                      IF1234.2
 054200 F-MIN-TEST-11.                                                   IF1234.2
@@ -554,7 +554,7 @@
 055400 F-MIN-WRITE-11.                                                  IF1234.2
 055500     MOVE "F-MIN-11" TO PAR-NAME.                                 IF1234.2
 055600     PERFORM  PRINT-DETAIL.                                       IF1234.2
-055700*****************TEST (l) - SIMPLE TEST*****************          IF1234.2
+055700*                                                                         
 055800 F-MIN-12.                                                        IF1234.2
 055900     MOVE ZERO TO WS-NUM.                                         IF1234.2
 056000 F-MIN-TEST-12.                                                   IF1234.2
@@ -572,7 +572,7 @@
 057200 F-MIN-WRITE-12.                                                  IF1234.2
 057300     MOVE "F-MIN-12" TO PAR-NAME.                                 IF1234.2
 057400     PERFORM  PRINT-DETAIL.                                       IF1234.2
-057500*****************TEST (m) - SIMPLE TEST*****************          IF1234.2
+057500*                                                                         
 057600 F-MIN-13.                                                        IF1234.2
 057700     MOVE ZERO TO WS-NUM.                                         IF1234.2
 057800 F-MIN-TEST-13.                                                   IF1234.2
@@ -590,7 +590,7 @@
 059000 F-MIN-WRITE-13.                                                  IF1234.2
 059100     MOVE "F-MIN-13" TO PAR-NAME.                                 IF1234.2
 059200     PERFORM  PRINT-DETAIL.                                       IF1234.2
-059300*****************TEST (n) - SIMPLE TEST*****************          IF1234.2
+059300*                                                                         
 059400 F-MIN-14.                                                        IF1234.2
 059500     MOVE ZERO TO WS-NUM.                                         IF1234.2
 059600 F-MIN-TEST-14.                                                   IF1234.2
@@ -608,7 +608,7 @@
 060800 F-MIN-WRITE-14.                                                  IF1234.2
 060900     MOVE "F-MIN-14" TO PAR-NAME.                                 IF1234.2
 061000     PERFORM  PRINT-DETAIL.                                       IF1234.2
-061100*****************TEST (o) - SIMPLE TEST*****************          IF1234.2
+061100*                                                                         
 061200 F-MIN-15.                                                        IF1234.2
 061300     MOVE ZERO TO WS-NUM.                                         IF1234.2
 061400 F-MIN-TEST-15.                                                   IF1234.2
@@ -626,7 +626,7 @@
 062600 F-MIN-WRITE-15.                                                  IF1234.2
 062700     MOVE "F-MIN-15" TO PAR-NAME.                                 IF1234.2
 062800     PERFORM  PRINT-DETAIL.                                       IF1234.2
-062900*****************TEST (q) - SIMPLE TEST*****************          IF1234.2
+062900*                                                                         
 063000 F-MIN-17.                                                        IF1234.2
 063100     MOVE ZERO TO WS-NUM.                                         IF1234.2
 063200 F-MIN-TEST-17.                                                   IF1234.2
@@ -645,7 +645,7 @@
 064500 F-MIN-WRITE-17.                                                  IF1234.2
 064600     MOVE "F-MIN-17" TO PAR-NAME.                                 IF1234.2
 064700     PERFORM  PRINT-DETAIL.                                       IF1234.2
-064800*****************TEST (a) - COMPLEX TEST****************          IF1234.2
+064800*                                                                         
 064900 F-MIN-18.                                                        IF1234.2
 065000     MOVE ZERO TO WS-NUM.                                         IF1234.2
 065100     MOVE  1.99996 TO MIN-RANGE.                                  IF1234.2
@@ -667,7 +667,7 @@
 066700 F-MIN-WRITE-18.                                                  IF1234.2
 066800     MOVE "F-MIN-18" TO PAR-NAME.                                 IF1234.2
 066900     PERFORM  PRINT-DETAIL.                                       IF1234.2
-067000*****************TEST (b) - COMPLEX TEST****************          IF1234.2
+067000*                                                                         
 067100 F-MIN-19.                                                        IF1234.2
 067200     MOVE ZERO TO WS-NUM.                                         IF1234.2
 067300     MOVE -10.6002 TO MIN-RANGE.                                  IF1234.2
@@ -689,7 +689,7 @@
 068900 F-MIN-WRITE-19.                                                  IF1234.2
 069000     MOVE "F-MIN-19" TO PAR-NAME.                                 IF1234.2
 069100     PERFORM  PRINT-DETAIL.                                       IF1234.2
-069200*****************TEST (c) - COMPLEX TEST****************          IF1234.2
+069200*                                                                         
 069300 F-MIN-20.                                                        IF1234.2
 069400     MOVE ZERO TO WS-NUM.                                         IF1234.2
 069500     MOVE -7.00014 TO MIN-RANGE.                                  IF1234.2
@@ -711,7 +711,7 @@
 071100 F-MIN-WRITE-20.                                                  IF1234.2
 071200     MOVE "F-MIN-20" TO PAR-NAME.                                 IF1234.2
 071300     PERFORM  PRINT-DETAIL.                                       IF1234.2
-071400*****************TEST (d) - COMPLEX TEST****************          IF1234.2
+071400*                                                                         
 071500 F-MIN-21.                                                        IF1234.2
 071600     MOVE ZERO TO WS-NUM.                                         IF1234.2
 071700     MOVE 4.99990 TO MIN-RANGE.                                   IF1234.2
@@ -733,7 +733,7 @@
 073300 F-MIN-WRITE-21.                                                  IF1234.2
 073400     MOVE "F-MIN-21" TO PAR-NAME.                                 IF1234.2
 073500     PERFORM  PRINT-DETAIL.                                       IF1234.2
-073600*****************TEST (e) - COMPLEX TEST****************          IF1234.2
+073600*                                                                         
 073700 F-MIN-22.                                                        IF1234.2
 073800     MOVE ZERO TO WS-NUM.                                         IF1234.2
 073900     MOVE 8.99982 TO MIN-RANGE.                                   IF1234.2
@@ -755,7 +755,7 @@
 075500 F-MIN-WRITE-22.                                                  IF1234.2
 075600     MOVE "F-MIN-22" TO PAR-NAME.                                 IF1234.2
 075700     PERFORM  PRINT-DETAIL.                                       IF1234.2
-075800*****************TEST (f) - COMPLEX TEST****************          IF1234.2
+075800*                                                                         
 075900 F-MIN-23.                                                        IF1234.2
 076000     MOVE ZERO TO WS-NUM.                                         IF1234.2
 076100     MOVE 4.99990 TO MIN-RANGE.                                   IF1234.2
@@ -777,7 +777,7 @@
 077700 F-MIN-WRITE-23.                                                  IF1234.2
 077800     MOVE "F-MIN-23" TO PAR-NAME.                                 IF1234.2
 077900     PERFORM  PRINT-DETAIL.                                       IF1234.2
-078000*****************SPECIAL PERFORM TEST**********************       IF1234.2
+078000*                                                                         
 078100 F-MIN-24.                                                        IF1234.2
 078200     PERFORM F-MIN-TEST-24                                        IF1234.2
 078300       UNTIL FUNCTION MIN(ARG1, 20) < 10.                         IF1234.2
@@ -791,7 +791,7 @@
 079100 F-MIN-WRITE-24.                                                  IF1234.2
 079200     MOVE "F-MIN-24" TO PAR-NAME.                                 IF1234.2
 079300     PERFORM  PRINT-DETAIL.                                       IF1234.2
-079400********************END OF TESTS***************                   IF1234.2
+079400*                                                                         
 079500 CCVS-EXIT SECTION.                                               IF1234.2
 079600 CCVS-999999.                                                     IF1234.2
 079700     GO TO CLOSE-FILES.                                           IF1234.2

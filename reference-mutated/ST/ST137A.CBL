@@ -1,92 +1,92 @@
 000100 IDENTIFICATION DIVISION.                                         ST1374.2
 000200 PROGRAM-ID.                                                      ST1374.2
 000300     ST137A.                                                      ST1374.2
-000400****************************************************************  ST1374.2
-000500*                                                              *  ST1374.2
-000600*    VALIDATION FOR:-                                          *  ST1374.2
-000700*                                                              *  ST1374.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1374.2
-000900*                                                              *  ST1374.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1374.2
-001100*                                                              *  ST1374.2
-001200****************************************************************  ST1374.2
-001300*    OBJECTIVE -                                                  ST1374.2
-001400*        ROUTINE ST207 IS A TEST OF THE SORT STATEMENT USING      ST1374.2
-001500*    VARIABLE LENGTH RECORDS WHICH CONTAIN ODO (OCCURS DEPENDING  ST1374.2
-001600*    ON) CLAUSES IN THEIR RECORD DESCRIPTIONS.                    ST1374.2
-001700*                                                                 ST1374.2
-001800*                                                                 ST1374.2
-001900*    FEATURES TESTED -                                            ST1374.2
-002000*    *   COLLATING SEQUENCE IS NATIVE.  NO COLLATING SEQUENCE     ST1374.2
-002100*            STATEMENT IS USED IN THE ACTUAL SORT STATEMENT.      ST1374.2
-002200*    *   VARIABLE LENGTH RECORDS                                  ST1374.2
-002300*    *   OCCURS DEPENDING ON CLAUSES                              ST1374.2
-002400*    *   QUALIFIED ALPHANUMERIC AND NUMERIC SORT KEYS             ST1374.2
-002500*                                                                 ST1374.2
-002600*    *   SORT  SORT-FILE-NAME                                     ST1374.2
-002700*        ON ASCENDING KEY KEY-1 OF DATA-NAME-1                    ST1374.2
-002800*        ASCENDING KEY-2 OF DATA-NAME-2                           ST1374.2
-002900*        USING FILE-NAME-1                                        ST1374.2
-003000*        GIVING FILE-NAME-2.                                      ST1374.2
-003100*                                                                 ST1374.2
-003200*                                                                 ST1374.2
-003300*    ANSI X3.23-1974 REFERENCES -                                 ST1374.2
-003400*    *   SECTION 2.1  OCCURS DEPENDING ON  PAGE III-2             ST1374.2
-003500*    *   SECTION 4.4  THE SORT STATEMENT  PAGE VII-14             ST1374.2
-003600*                                                                 ST1374.2
-003700*                                                                 ST1374.2
-003800*    FILES USED -                                                 ST1374.2
-003900*    *   FILES SQ-FS1 AND SQ-FS2 ON MAGNETIC TAPE OR MASS-STORAGE ST1374.2
-004000*    ARE FIRST CREATED BY ROUTINE ST207.  THE FIRST FILE (SQ-FS1) ST1374.2
-004100*    IS THEN SORTED GIVING THE SECOND FILE (SQ-FS2).              ST1374.2
-004200*                                                                 ST1374.2
-004300*        SQ-FS1 -                                                 ST1374.2
-004400*    51 RECORDS                                                   ST1374.2
-004500*    VARIABLE LENGTH RECORDS (148 TO 1435 CHARACTERS) USING ODO   ST1374.2
-004600*    BLOCKED 1                                                    ST1374.2
-004700*    RESERVE 2 AREAS                                              ST1374.2
-004800*                                                                 ST1374.2
-004900*        SQ-FS2 -                                                 ST1374.2
-005000*    51 RECORDS                                                   ST1374.2
-005100*    VARIABLE LENGTH RECORDS FORMAT WITH ODO BUT ACTUALLY ALL     ST1374.2
-005200*        RECORDS ARE FIXED LENGTH 148 CHARACTERS.                 ST1374.2
-005300*    BLOCKED 2                                                    ST1374.2
-005400*    RESERVE 4 AREAS                                              ST1374.2
-005500*                                                                 ST1374.2
-005600*        NOTE THAT SQ-FS2 IS OVERWRITTEN AS A RESULT OF THE SORT  ST1374.2
-005700*    AND SHOULD CONTAIN A FINAL TOTAL OF 51 RECORDS.              ST1374.2
-005800*                                                                 ST1374.2
-005900*                                                                 ST1374.2
-006000*    X-CARDS USED  -                                              ST1374.2
-006100*    X-XXX014     SQ-FS1                                          ST1374.2
-006200*    X-XXX015     SQ-FS2                                          ST1374.2
-006300*    X-XXX027     SORT FILE ST-FS1                                ST1374.2
-006400*    X-XXX063     NATIVE COLLATING SEQUENCE ASCENDING ORDER (NOTE ST1374.2
-006500*        THAT THE QUOTE CHARACTER IS NOT TO APPEAR IN THE X-63    ST1374.2
-006600*        CARD AND THE DOLLAR SIGN $ IS TO APPEAR TWICE WHEREVER   ST1374.2
-006700*        THE $ BELONGS IN THE NATIVE COLLATING SEQUENCE).  IF     ST1374.2
-006800*        THE NATIVE COLLATING SEQUENCE IS ACTUALLY THE ASCII      ST1374.2
-006900*        COLLATING SEQUENCE SEE BELOW FOR A SAMPLE X-63 CARD..... ST1374.2
-007000*                                                                 ST1374.2
-007100*    X-63  " $$()*+,-./0123456789;<=>ABCDEFGHIJKLMNOPQRSTUVWXYZ". ST1374.2
-007200*                                                                 ST1374.2
-007300*                                                                 ST1374.2
-007400*    OPTIONS RECOMMENDED -                                        ST1374.2
-007500*    *   *OPT8  X  TO BE USED IF NECESSARY TO DUMP THE            ST1374.2
-007600*                  FILES AS THEY ARE CREATED AND READ DURING      ST1374.2
-007700*                  TESTS 3 THRU 6.                                ST1374.2
-007800*                                                                 ST1374.2
-007900*                                                                 ST1374.2
-008000*    TEST DESCRIPTIONS -                                          ST1374.2
-008100*    SRT-TEST-001     CHECKS THE CREATION OF SQ-FS1               ST1374.2
-008200*    SRT-TEST-002     CHECKS THE CREATION OF SQ-FS2               ST1374.2
-008300*    SRT-TEST-003     TESTS RECORDS 1-20 ON SORTED SQ-FS2         ST1374.2
-008400*    SRT-TEST-004     TESTS RECORDS 21-40 ON SORTED SQ-FS2        ST1374.2
-008500*    SRT-TEST-005     TESTS RECORDS 41-51 ON SORTED SQ-FS2        ST1374.2
-008600*    SRT-TEST-006     AN EOF CHECK ON SQ-FS2                      ST1374.2
-008700*                                                                 ST1374.2
-008800*                                                                 ST1374.2
-008900*    ************************************************************ ST1374.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
+008900*                                                                         
 009000 ENVIRONMENT DIVISION.                                            ST1374.2
 009100 CONFIGURATION SECTION.                                           ST1374.2
 009200 SOURCE-COMPUTER.                                                 ST1374.2
@@ -451,7 +451,7 @@
 046300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1374.2
 046400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1374.2
 046500      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1374.2
-046600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1374.2
+046600*                                                                         
 046700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1374.2
 046800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1374.2
 046900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1374.2

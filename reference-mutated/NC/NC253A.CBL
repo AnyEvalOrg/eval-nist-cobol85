@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC2534.2
 000200 PROGRAM-ID.                                                      NC2534.2
 000300     NC253A.                                                      NC2534.2
-000400****************************************************************  NC2534.2
-000500*                                                              *  NC2534.2
-000600*    VALIDATION FOR:-                                          *  NC2534.2
-000700*                                                              *  NC2534.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2534.2
-000900*                                                              *  NC2534.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2534.2
-001100*                                                              *  NC2534.2
-001200****************************************************************  NC2534.2
-001300*                                                              *  NC2534.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2534.2
-001500*                                                              *  NC2534.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2534.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2534.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2534.2
-001900*                                                              *  NC2534.2
-002000****************************************************************  NC2534.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100                                                                  NC2534.2
-002200*                                                                 NC2534.2
-002300*    PROGRAM NC202A TESTS FORMAT3 OF THE SUBTRACT STATEMENT.      NC2534.2
-002400*                                                                 NC2534.2
-002500*                                                                 NC2534.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC2534.2
 002700 CONFIGURATION SECTION.                                           NC2534.2
 002800 SOURCE-COMPUTER.                                                 NC2534.2
@@ -457,7 +457,7 @@
 045900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2534.2
 046000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2534.2
 046100      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2534.2
-046200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2534.2
+046200*                                                                         
 046300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2534.2
 046400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2534.2
 046500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2534.2
@@ -524,7 +524,7 @@
 052600 BAIL-OUT-EX. EXIT.                                               NC2534.2
 052700 CCVS1-EXIT.                                                      NC2534.2
 052800     EXIT.                                                        NC2534.2
-052900*                                                                 NC2534.2
+052900*                                                                         
 053000 SECT-NC253A-001 SECTION.                                         NC2534.2
 053100 BUILD-TABLE1.                                                    NC2534.2
 053200     MOVE 06 TO RECORD1 OF TABLE1.                                NC2534.2
@@ -536,7 +536,7 @@
 053800     MOVE 03 TO RECORD2 OF TABLE2 (1).                            NC2534.2
 053900     MOVE 04 TO RECORD2 OF TABLE2 (2).                            NC2534.2
 054000     MOVE 09 TO RECORD3 OF TABLE2.                                NC2534.2
-054100*                                                                 NC2534.2
+054100*                                                                         
 054200 SUB-INIT-F3-1.                                                   NC2534.2
 054300     PERFORM END-ROUTINE.                                         NC2534.2
 054400     MOVE "SUB-TEST-F3-1" TO PAR-NAME.                            NC2534.2
@@ -555,7 +555,7 @@
 055700 SUB-TEST-F3-1.                                                   NC2534.2
 055800     SUBTRACT CORRESPONDING GRP-FOR-ADD-CORR-1 FROM               NC2534.2
 055900         GRP-FOR-ADD-CORR-R.                                      NC2534.2
-056000     IF GRP-FOR-ADD-CORR-R EQUAL TO "112233445066778899F0"        NC2534.2
+056000     IF GRP-FOR-ADD-CORR-R EQUAL TO "11223344506677889900"        NC2534.2
 056100         PERFORM PASS                                             NC2534.2
 056200         GO TO SUB-WRITE-F3-1.                                    NC2534.2
 056300     GO TO SUB-FAIL-F3-1.                                         NC2534.2
@@ -564,18 +564,18 @@
 056600     GO TO SUB-WRITE-F3-1.                                        NC2534.2
 056700 SUB-FAIL-F3-1.                                                   NC2534.2
 056800     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2534.2
-056900     MOVE "112233445066778899F0" TO CORRECT-A.                    NC2534.2
+056900     MOVE "11223344506677889900" TO CORRECT-A.                    NC2534.2
 057000     PERFORM FAIL.                                                NC2534.2
 057100 SUB-WRITE-F3-1.                                                  NC2534.2
 057200     PERFORM PRINT-DETAIL.                                        NC2534.2
-057300*                                                                 NC2534.2
+057300*                                                                         
 057400 SUB-INIT-F3-2.                                                   NC2534.2
 057500     MOVE "SUB-TEST-F3-2" TO PAR-NAME.                            NC2534.2
 057600     MOVE ZERO TO GRP-FOR-ADD-CORR-R.                             NC2534.2
 057700 SUB-TEST-F3-2.                                                   NC2534.2
 057800     SUBTRACT CORRESPONDING GRP-ADD-SUB-CORR FROM                 NC2534.2
 057900         GRP-FOR-ADD-CORR-R ROUNDED.                              NC2534.2
-058000     IF GRP-FOR-ADD-CORR-R EQUAL TO "1122334460667W889900"        NC2534.2
+058000     IF GRP-FOR-ADD-CORR-R EQUAL TO "11223344606677889900"        NC2534.2
 058100         PERFORM PASS                                             NC2534.2
 058200         GO TO SUB-WRITE-F3-2.                                    NC2534.2
 058300     GO TO SUB-FAIL-F3-2.                                         NC2534.2
@@ -584,11 +584,11 @@
 058600     GO TO SUB-WRITE-F3-2.                                        NC2534.2
 058700 SUB-FAIL-F3-2.                                                   NC2534.2
 058800     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2534.2
-058900     MOVE "1122334460667W889900" TO CORRECT-A.                    NC2534.2
+058900     MOVE "11223344606677889900" TO CORRECT-A.                    NC2534.2
 059000     PERFORM FAIL.                                                NC2534.2
 059100 SUB-WRITE-F3-2.                                                  NC2534.2
 059200     PERFORM PRINT-DETAIL.                                        NC2534.2
-059300*                                                                 NC2534.2
+059300*                                                                         
 059400 SUB-INIT-F3-3.                                                   NC2534.2
 059500     MOVE  1      TO SUBTR-13 OF SUBTR-12.                        NC2534.2
 059600     MOVE -1.725  TO SUBTR-14 OF SUBTR-12.                        NC2534.2
@@ -615,7 +615,7 @@
 061700     MOVE "ON SIZE ERROR SHOULD BE EXECUTED" TO RE-MARK.          NC2534.2
 061800 SUB-WRITE-F3-3-1.                                                NC2534.2
 061900     PERFORM PRINT-DETAIL.                                        NC2534.2
-062000*                                                                 NC2534.2
+062000*                                                                         
 062100 SUB-INIT-F3-3-2.                                                 NC2534.2
 062200     MOVE "SUB-TEST-F3-3-2" TO PAR-NAME.                          NC2534.2
 062300 SUB-TEST-F3-3-2.                                                 NC2534.2
@@ -634,7 +634,7 @@
 063600        TO RE-MARK.                                               NC2534.2
 063700 SUB-WRITE-F3-3-2.                                                NC2534.2
 063800     PERFORM PRINT-DETAIL.                                        NC2534.2
-063900*                                                                 NC2534.2
+063900*                                                                         
 064000 SUB-INIT-F3-3-3.                                                 NC2534.2
 064100     MOVE "SUB-TEST-F3-3-3" TO PAR-NAME.                          NC2534.2
 064200 SUB-TEST-F3-3-3.                                                 NC2534.2
@@ -653,7 +653,7 @@
 065500        TO RE-MARK.                                               NC2534.2
 065600 SUB-WRITE-F3-3-3.                                                NC2534.2
 065700     PERFORM PRINT-DETAIL.                                        NC2534.2
-065800*                                                                 NC2534.2
+065800*                                                                         
 065900 SUB-INIT-3-3-4.                                                  NC2534.2
 066000     MOVE "SUB-TEST-3-3-4" TO PAR-NAME.                           NC2534.2
 066100 SUB-TEST-3-3-4.                                                  NC2534.2
@@ -671,7 +671,7 @@
 067300     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC2534.2
 067400 SUB-WRITE-3-3-4.                                                 NC2534.2
 067500     PERFORM PRINT-DETAIL.                                        NC2534.2
-067600*                                                                 NC2534.2
+067600*                                                                         
 067700 SUB-INIT-F3-4.                                                   NC2534.2
 067800     MOVE "SUB-TEST-F3-4" TO PAR-NAME.                            NC2534.2
 067900     MOVE "050506060000" TO CORR-DATA-2.                          NC2534.2
@@ -691,7 +691,7 @@
 069300     PERFORM FAIL.                                                NC2534.2
 069400 SUB-WRITE-F3-4.                                                  NC2534.2
 069500     PERFORM PRINT-DETAIL.                                        NC2534.2
-069600*                                                                 NC2534.2
+069600*                                                                         
 069700 SUB-INIT-F3-5.                                                   NC2534.2
 069800     MOVE "SUB-TEST-F3-5" TO PAR-NAME.                            NC2534.2
 069900     MOVE 999955995511 TO CORR-DATA-1.                            NC2534.2
@@ -711,13 +711,13 @@
 071300     PERFORM FAIL.                                                NC2534.2
 071400 SUB-WRITE-F3-5.                                                  NC2534.2
 071500     PERFORM PRINT-DETAIL.                                        NC2534.2
-071600*                                                                 NC2534.2
+071600*                                                                         
 071700 SUB-INIT-F3-6.                                                   NC2534.2
 071800     MOVE "555555000055" TO CORR-DATA-6.                          NC2534.2
 071900     MOVE "SUB-TEST-F3-6" TO PAR-NAME.                            NC2534.2
 072000 SUB-TEST-F3-6.                                                   NC2534.2
 072100     SUBTRACT CORRESPONDING CORR-DATA-6 FROM CORR-DATA-1          NC2534.2
-072200     IF CORR-DATA-1 EQUAL TO 892155998511                         NC2534.2
+072200     IF CORR-DATA-1 EQUAL TO 892155995511                         NC2534.2
 072300         PERFORM PASS                                             NC2534.2
 072400         GO TO SUB-WRITE-F3-6.                                    NC2534.2
 072500     GO TO SUB-FAIL-F3-6.                                         NC2534.2
@@ -725,12 +725,12 @@
 072700     PERFORM DE-LETE.                                             NC2534.2
 072800     GO TO SUB-WRITE-F3-6.                                        NC2534.2
 072900 SUB-FAIL-F3-6.                                                   NC2534.2
-073000     MOVE 892155998511 TO CORRECT-A.                              NC2534.2
+073000     MOVE 892155995511 TO CORRECT-A.                              NC2534.2
 073100     MOVE CORR-DATA-1 TO COMPUTED-A.                              NC2534.2
 073200     PERFORM FAIL.                                                NC2534.2
 073300 SUB-WRITE-F3-6.                                                  NC2534.2
 073400     PERFORM PRINT-DETAIL.                                        NC2534.2
-073500*                                                                 NC2534.2
+073500*                                                                         
 073600 SUB-INIT-F3-7.                                                   NC2534.2
 073700     MOVE "SUB-TEST-F3-7" TO PAR-NAME.                            NC2534.2
 073800     MOVE 99999999999999 TO CORR-DATA-5.                          NC2534.2
@@ -750,7 +750,7 @@
 075200     MOVE "88889999999999" TO CORRECT-A.                          NC2534.2
 075300 SUB-WRITE-F3-7.                                                  NC2534.2
 075400     PERFORM PRINT-DETAIL.                                        NC2534.2
-075500*                                                                 NC2534.2
+075500*                                                                         
 075600 SUB-INIT-F3-8.                                                   NC2534.2
 075700     MOVE   "SUB-TEST-F3-8" TO PAR-NAME.                          NC2534.2
 075800     MOVE   "VI-134 6.25.4 GR3" TO ANSI-REFERENCE.                NC2534.2
@@ -775,9 +775,9 @@
 077700     MOVE  "02030402" TO CORRECT-A.                               NC2534.2
 077800 SUB-WRITE-F3-8.                                                  NC2534.2
 077900     PERFORM PRINT-DETAIL.                                        NC2534.2
-078000*                                                                 NC2534.2
+078000*                                                                         
 078100 SUB-INIT-F3-9.                                                   NC2534.2
-078200*    ===-->  NO SIZE ERROR  <--===                                NC2534.2
+078200*                                                                         
 078300     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 078400     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 078500     MOVE    0      TO REC-CT.                                    NC2534.2
@@ -791,7 +791,7 @@
 079300     SUBTRACT CORRESPONDING SUBTR-12 FROM SUBTR-16 ROUNDED        NC2534.2
 079400             ON SIZE ERROR                                        NC2534.2
 079500             MOVE   "G" TO WRK-AN-00001.                          NC2534.2
-079600*                                                                 NC2534.2
+079600*                                                                         
 079700 SUB-INIT-F3-9-1.                                                 NC2534.2
 079800     MOVE   "SUB-TEST-F3-9-1" TO PAR-NAME.                        NC2534.2
 079900     ADD     1 TO REC-CT.                                         NC2534.2
@@ -811,7 +811,7 @@
 081300     PERFORM FAIL.                                                NC2534.2
 081400 SUB-WRITE-F3-9-1.                                                NC2534.2
 081500     PERFORM PRINT-DETAIL.                                        NC2534.2
-081600*                                                                 NC2534.2
+081600*                                                                         
 081700 SUB-INIT-F3-9-2.                                                 NC2534.2
 081800     MOVE  "SUB-TEST-F3-9-2" TO PAR-NAME.                         NC2534.2
 081900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -831,7 +831,7 @@
 083300     PERFORM FAIL.                                                NC2534.2
 083400 SUB-WRITE-F3-9-2.                                                NC2534.2
 083500     PERFORM PRINT-DETAIL.                                        NC2534.2
-083600*                                                                 NC2534.2
+083600*                                                                         
 083700 SUB-INIT-F3-9-3.                                                 NC2534.2
 083800     MOVE  "SUB-TEST-F3-9-3" TO PAR-NAME.                         NC2534.2
 083900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -851,7 +851,7 @@
 085300     PERFORM FAIL.                                                NC2534.2
 085400 SUB-WRITE-F3-9-3.                                                NC2534.2
 085500     PERFORM PRINT-DETAIL.                                        NC2534.2
-085600*                                                                 NC2534.2
+085600*                                                                         
 085700 SUB-INIT-F3-9-4.                                                 NC2534.2
 085800     MOVE  "SUB-TEST-F3-9-4" TO PAR-NAME.                         NC2534.2
 085900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -871,10 +871,10 @@
 087300     PERFORM FAIL.                                                NC2534.2
 087400 SUB-WRITE-F3-9-4.                                                NC2534.2
 087500     PERFORM PRINT-DETAIL.                                        NC2534.2
-087600*                                                                 NC2534.2
+087600*                                                                         
 087700 SUB-INIT-F3-10.                                                  NC2534.2
-087800*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-087900*    ===-->      SIZE ERROR        <--===                         NC2534.2
+087800*                                                                         
+087900*                                                                         
 088000     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 088100     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 088200     MOVE    0      TO REC-CT.                                    NC2534.2
@@ -888,7 +888,7 @@
 089000     SUBTRACT CORRESPONDING SUBTR-12 FROM SUBTR-16 ROUNDED        NC2534.2
 089100         NOT ON SIZE ERROR                                        NC2534.2
 089200             MOVE   "G" TO WRK-AN-00001.                          NC2534.2
-089300*                                                                 NC2534.2
+089300*                                                                         
 089400 SUB-INIT-F3-10-1.                                                NC2534.2
 089500     MOVE   "SUB-TEST-F3-10-1" TO PAR-NAME.                       NC2534.2
 089600     ADD     1 TO REC-CT.                                         NC2534.2
@@ -908,7 +908,7 @@
 091000     PERFORM FAIL.                                                NC2534.2
 091100 SUB-WRITE-F3-10-1.                                               NC2534.2
 091200     PERFORM PRINT-DETAIL.                                        NC2534.2
-091300*                                                                 NC2534.2
+091300*                                                                         
 091400 SUB-INIT-F3-10-2.                                                NC2534.2
 091500     MOVE  "SUB-TEST-F3-10-2" TO PAR-NAME.                        NC2534.2
 091600     ADD    1 TO REC-CT.                                          NC2534.2
@@ -928,7 +928,7 @@
 093000     PERFORM FAIL.                                                NC2534.2
 093100 SUB-WRITE-F3-10-2.                                               NC2534.2
 093200     PERFORM PRINT-DETAIL.                                        NC2534.2
-093300*                                                                 NC2534.2
+093300*                                                                         
 093400 SUB-INIT-F3-10-3.                                                NC2534.2
 093500     MOVE  "SUB-TEST-F3-10-3" TO PAR-NAME.                        NC2534.2
 093600     ADD    1 TO REC-CT.                                          NC2534.2
@@ -948,7 +948,7 @@
 095000     PERFORM FAIL.                                                NC2534.2
 095100 SUB-WRITE-F3-10-3.                                               NC2534.2
 095200     PERFORM PRINT-DETAIL.                                        NC2534.2
-095300*                                                                 NC2534.2
+095300*                                                                         
 095400 SUB-INIT-F3-10-4.                                                NC2534.2
 095500     MOVE  "SUB-TEST-F3-10-4" TO PAR-NAME.                        NC2534.2
 095600     ADD    1 TO REC-CT.                                          NC2534.2
@@ -967,10 +967,10 @@
 096900     PERFORM FAIL.                                                NC2534.2
 097000 SUB-WRITE-F3-10-4.                                               NC2534.2
 097100     PERFORM PRINT-DETAIL.                                        NC2534.2
-097200*                                                                 NC2534.2
+097200*                                                                         
 097300 SUB-INIT-F3-11.                                                  NC2534.2
-097400*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-097500*    ===-->   NO SIZE ERROR        <--===                         NC2534.2
+097400*                                                                         
+097500*                                                                         
 097600     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 097700     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 097800     MOVE    0      TO REC-CT.                                    NC2534.2
@@ -984,7 +984,7 @@
 098600     SUBTRACT CORRESPONDING SUBTR-12 FROM SUBTR-16 ROUNDED        NC2534.2
 098700         NOT ON SIZE ERROR                                        NC2534.2
 098800             MOVE   "G" TO WRK-AN-00001.                          NC2534.2
-098900*                                                                 NC2534.2
+098900*                                                                         
 099000 SUB-INIT-F3-11-1.                                                NC2534.2
 099100     MOVE   "SUB-TEST-F3-11-1" TO PAR-NAME.                       NC2534.2
 099200     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1004,7 +1004,7 @@
 100600     PERFORM FAIL.                                                NC2534.2
 100700 SUB-WRITE-F3-11-1.                                               NC2534.2
 100800     PERFORM PRINT-DETAIL.                                        NC2534.2
-100900*                                                                 NC2534.2
+100900*                                                                         
 101000 SUB-INIT-F3-11-2.                                                NC2534.2
 101100     MOVE  "SUB-TEST-F3-11-1" TO PAR-NAME.                        NC2534.2
 101200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1024,7 +1024,7 @@
 102600     PERFORM FAIL.                                                NC2534.2
 102700 SUB-WRITE-F3-11-2.                                               NC2534.2
 102800     PERFORM PRINT-DETAIL.                                        NC2534.2
-102900*                                                                 NC2534.2
+102900*                                                                         
 103000 SUB-INIT-F3-11-3.                                                NC2534.2
 103100     MOVE  "SUB-TEST-F3-11-3" TO PAR-NAME.                        NC2534.2
 103200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1044,7 +1044,7 @@
 104600     PERFORM FAIL.                                                NC2534.2
 104700 SUB-WRITE-F3-11-3.                                               NC2534.2
 104800     PERFORM PRINT-DETAIL.                                        NC2534.2
-104900*                                                                 NC2534.2
+104900*                                                                         
 105000 SUB-INIT-F3-11-4.                                                NC2534.2
 105100     MOVE  "SUB-TEST-F3-11-4" TO PAR-NAME.                        NC2534.2
 105200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1064,10 +1064,10 @@
 106600     PERFORM FAIL.                                                NC2534.2
 106700 SUB-WRITE-F3-11-4.                                               NC2534.2
 106800     PERFORM PRINT-DETAIL.                                        NC2534.2
-106900*                                                                 NC2534.2
+106900*                                                                         
 107000 SUB-INIT-F3-12.                                                  NC2534.2
-107100*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-107200*    ===-->      SIZE ERROR        <--===                         NC2534.2
+107100*                                                                         
+107200*                                                                         
 107300     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 107400     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 107500     MOVE    0      TO REC-CT.                                    NC2534.2
@@ -1083,7 +1083,7 @@
 108500             MOVE   "A" TO WRK-AN-00001                           NC2534.2
 108600         NOT ON SIZE ERROR                                        NC2534.2
 108700             MOVE   "B" TO WRK-AN-00001.                          NC2534.2
-108800*                                                                 NC2534.2
+108800*                                                                         
 108900 SUB-INIT-F3-12-1.                                                NC2534.2
 109000     MOVE   "SUB-TEST-F3-12-1" TO PAR-NAME.                       NC2534.2
 109100     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1103,7 +1103,7 @@
 110500     PERFORM FAIL.                                                NC2534.2
 110600 SUB-WRITE-F3-12-1.                                               NC2534.2
 110700     PERFORM PRINT-DETAIL.                                        NC2534.2
-110800*                                                                 NC2534.2
+110800*                                                                         
 110900 SUB-INIT-F3-12-2.                                                NC2534.2
 111000     MOVE  "SUB-TEST-F3-12-2" TO PAR-NAME.                        NC2534.2
 111100     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1123,7 +1123,7 @@
 112500     PERFORM FAIL.                                                NC2534.2
 112600 SUB-WRITE-F3-12-2.                                               NC2534.2
 112700     PERFORM PRINT-DETAIL.                                        NC2534.2
-112800*                                                                 NC2534.2
+112800*                                                                         
 112900 SUB-INIT-F3-12-3.                                                NC2534.2
 113000     MOVE  "SUB-TEST-F3-12-3" TO PAR-NAME.                        NC2534.2
 113100     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1143,7 +1143,7 @@
 114500     PERFORM FAIL.                                                NC2534.2
 114600 SUB-WRITE-F3-12-3.                                               NC2534.2
 114700     PERFORM PRINT-DETAIL.                                        NC2534.2
-114800*                                                                 NC2534.2
+114800*                                                                         
 114900 SUB-INIT-F3-12-4.                                                NC2534.2
 115000     MOVE  "SUB-TEST-F3-12-4" TO PAR-NAME.                        NC2534.2
 115100     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1162,10 +1162,10 @@
 116400     PERFORM FAIL.                                                NC2534.2
 116500 SUB-WRITE-F3-12-4.                                               NC2534.2
 116600     PERFORM PRINT-DETAIL.                                        NC2534.2
-116700*                                                                 NC2534.2
+116700*                                                                         
 116800 SUB-INIT-F3-13.                                                  NC2534.2
-116900*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-117000*    ===-->   NO SIZE ERROR        <--===                         NC2534.2
+116900*                                                                         
+117000*                                                                         
 117100     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 117200     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 117300     MOVE    0      TO REC-CT.                                    NC2534.2
@@ -1181,7 +1181,7 @@
 118300             MOVE   "A" TO WRK-AN-00001                           NC2534.2
 118400         NOT ON SIZE ERROR                                        NC2534.2
 118500             MOVE   "B" TO WRK-AN-00001.                          NC2534.2
-118600*                                                                 NC2534.2
+118600*                                                                         
 118700 SUB-INIT-F3-13-1.                                                NC2534.2
 118800     MOVE   "SUB-TEST-F3-13-1" TO PAR-NAME.                       NC2534.2
 118900     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1201,7 +1201,7 @@
 120300     PERFORM FAIL.                                                NC2534.2
 120400 SUB-WRITE-F3-13-1.                                               NC2534.2
 120500     PERFORM PRINT-DETAIL.                                        NC2534.2
-120600*                                                                 NC2534.2
+120600*                                                                         
 120700 SUB-INIT-F3-13-2.                                                NC2534.2
 120800     MOVE  "SUB-TEST-F3-13-2" TO PAR-NAME.                        NC2534.2
 120900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1221,7 +1221,7 @@
 122300            PERFORM FAIL.                                         NC2534.2
 122400 SUB-WRITE-F3-13-2.                                               NC2534.2
 122500            PERFORM PRINT-DETAIL.                                 NC2534.2
-122600*                                                                 NC2534.2
+122600*                                                                         
 122700 SUB-INIT-F3-13-3.                                                NC2534.2
 122800     MOVE  "SUB-TEST-F3-13-3" TO PAR-NAME.                        NC2534.2
 122900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1241,7 +1241,7 @@
 124300     PERFORM FAIL.                                                NC2534.2
 124400 SUB-WRITE-F3-13-3.                                               NC2534.2
 124500     PERFORM PRINT-DETAIL.                                        NC2534.2
-124600*                                                                 NC2534.2
+124600*                                                                         
 124700 SUB-INIT-F3-13-4.                                                NC2534.2
 124800     MOVE  "SUB-TEST-F3-13-4" TO PAR-NAME.                        NC2534.2
 124900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1258,10 +1258,10 @@
 126000     PERFORM FAIL.                                                NC2534.2
 126100 SUB-WRITE-F3-13-4.                                               NC2534.2
 126200     PERFORM PRINT-DETAIL.                                        NC2534.2
-126300*                                                                 NC2534.2
+126300*                                                                         
 126400 SUB-INIT-F3-14.                                                  NC2534.2
-126500*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-126600*    ===-->      SIZE ERROR        <--===                         NC2534.2
+126500*                                                                         
+126600*                                                                         
 126700     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 126800     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 126900     MOVE    SPACE  TO WRK-XN-00001.                              NC2534.2
@@ -1278,7 +1278,7 @@
 128000             MOVE   "A" TO WRK-AN-00001                           NC2534.2
 128100     END-SUBTRACT                                                 NC2534.2
 128200     MOVE   "Z"  TO WRK-XN-00001.                                 NC2534.2
-128300*                                                                 NC2534.2
+128300*                                                                         
 128400 SUB-INIT-F3-14-1.                                                NC2534.2
 128500     MOVE   "SUB-TEST-F3-14-1" TO PAR-NAME.                       NC2534.2
 128600     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1298,7 +1298,7 @@
 130000     PERFORM FAIL.                                                NC2534.2
 130100 SUB-WRITE-F3-14-1.                                               NC2534.2
 130200     PERFORM PRINT-DETAIL.                                        NC2534.2
-130300*                                                                 NC2534.2
+130300*                                                                         
 130400 SUB-INIT-F3-14-2.                                                NC2534.2
 130500     MOVE  "SUB-TEST-F3-14-2" TO PAR-NAME.                        NC2534.2
 130600     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1318,7 +1318,7 @@
 132000     PERFORM FAIL.                                                NC2534.2
 132100 SUB-WRITE-F3-14-2.                                               NC2534.2
 132200     PERFORM PRINT-DETAIL.                                        NC2534.2
-132300*                                                                 NC2534.2
+132300*                                                                         
 132400 SUB-INIT-F3-14-3.                                                NC2534.2
 132500     MOVE  "SUB-TEST-F3-14-3" TO PAR-NAME.                        NC2534.2
 132600     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1338,7 +1338,7 @@
 134000     PERFORM FAIL.                                                NC2534.2
 134100 SUB-WRITE-F3-14-3.                                               NC2534.2
 134200     PERFORM PRINT-DETAIL.                                        NC2534.2
-134300*                                                                 NC2534.2
+134300*                                                                         
 134400 SUB-INIT-F3-14-4.                                                NC2534.2
 134500     MOVE  "SUB-TEST-F3-14-4" TO PAR-NAME.                        NC2534.2
 134600     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1357,7 +1357,7 @@
 135900     PERFORM FAIL.                                                NC2534.2
 136000 SUB-WRITE-F3-14-4.                                               NC2534.2
 136100     PERFORM PRINT-DETAIL.                                        NC2534.2
-136200*                                                                 NC2534.2
+136200*                                                                         
 136300 SUB-INIT-F3-14-5.                                                NC2534.2
 136400     MOVE   "SUB-TEST-F3-14-5" TO PAR-NAME.                       NC2534.2
 136500     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1376,10 +1376,10 @@
 137800     PERFORM FAIL.                                                NC2534.2
 137900 SUB-WRITE-F3-14-5.                                               NC2534.2
 138000     PERFORM PRINT-DETAIL.                                        NC2534.2
-138100*                                                                 NC2534.2
+138100*                                                                         
 138200 SUB-INIT-F3-15.                                                  NC2534.2
-138300*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-138400*    ===-->   NO SIZE ERROR        <--===                         NC2534.2
+138300*                                                                         
+138400*                                                                         
 138500     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 138600     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 138700     MOVE    SPACE  TO WRK-XN-00001.                              NC2534.2
@@ -1396,7 +1396,7 @@
 139800             MOVE   "A" TO WRK-AN-00001                           NC2534.2
 139900     END-SUBTRACT                                                 NC2534.2
 140000     MOVE   "Z"  TO WRK-XN-00001.                                 NC2534.2
-140100*                                                                 NC2534.2
+140100*                                                                         
 140200 SUB-INIT-F3-15-1.                                                NC2534.2
 140300     MOVE   "SUB-TEST-F3-15-1" TO PAR-NAME.                       NC2534.2
 140400     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1413,7 +1413,7 @@
 141500     PERFORM FAIL.                                                NC2534.2
 141600 SUB-WRITE-F3-15-1.                                               NC2534.2
 141700     PERFORM PRINT-DETAIL.                                        NC2534.2
-141800*                                                                 NC2534.2
+141800*                                                                         
 141900 SUB-INIT-F3-15-2.                                                NC2534.2
 142000     MOVE  "SUB-TEST-F3-15-2" TO PAR-NAME.                        NC2534.2
 142100     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1433,7 +1433,7 @@
 143500     PERFORM FAIL.                                                NC2534.2
 143600 SUB-WRITE-F3-15-2.                                               NC2534.2
 143700     PERFORM PRINT-DETAIL.                                        NC2534.2
-143800*                                                                 NC2534.2
+143800*                                                                         
 143900 SUB-INIT-F3-15-3.                                                NC2534.2
 144000     MOVE  "SUB-TEST-F3-15-3" TO PAR-NAME.                        NC2534.2
 144100     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1453,7 +1453,7 @@
 145500     PERFORM FAIL.                                                NC2534.2
 145600 SUB-WRITE-F3-15-3.                                               NC2534.2
 145700     PERFORM PRINT-DETAIL.                                        NC2534.2
-145800*                                                                 NC2534.2
+145800*                                                                         
 145900 SUB-INIT-F3-15-4.                                                NC2534.2
 146000     MOVE  "SUB-TEST-F3-15-4" TO PAR-NAME.                        NC2534.2
 146100     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1473,7 +1473,7 @@
 147500     PERFORM FAIL.                                                NC2534.2
 147600 SUB-WRITE-F3-15-4.                                               NC2534.2
 147700     PERFORM PRINT-DETAIL.                                        NC2534.2
-147800*                                                                 NC2534.2
+147800*                                                                         
 147900 SUB-INIT-F3-15-5.                                                NC2534.2
 148000     MOVE   "SUB-TEST-F3-15-5" TO PAR-NAME.                       NC2534.2
 148100     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1492,10 +1492,10 @@
 149400     PERFORM FAIL.                                                NC2534.2
 149500 SUB-WRITE-F3-15-5.                                               NC2534.2
 149600     PERFORM PRINT-DETAIL.                                        NC2534.2
-149700*                                                                 NC2534.2
+149700*                                                                         
 149800 SUB-INIT-F3-16.                                                  NC2534.2
-149900*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-150000*    ===-->      SIZE ERROR        <--===                         NC2534.2
+149900*                                                                         
+150000*                                                                         
 150100     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 150200     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 150300     MOVE    SPACE  TO WRK-XN-00001.                              NC2534.2
@@ -1514,7 +1514,7 @@
 151600             MOVE   "B" TO WRK-AN-00001                           NC2534.2
 151700     END-SUBTRACT                                                 NC2534.2
 151800     MOVE   "Z" TO WRK-XN-00001.                                  NC2534.2
-151900*                                                                 NC2534.2
+151900*                                                                         
 152000 SUB-INIT-F3-16-1.                                                NC2534.2
 152100     MOVE   "SUB-TEST-F3-16-1" TO PAR-NAME.                       NC2534.2
 152200     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1534,7 +1534,7 @@
 153600     PERFORM FAIL.                                                NC2534.2
 153700 SUB-WRITE-F3-16-1.                                               NC2534.2
 153800     PERFORM PRINT-DETAIL.                                        NC2534.2
-153900*                                                                 NC2534.2
+153900*                                                                         
 154000 SUB-INIT-F3-16-2.                                                NC2534.2
 154100     MOVE  "SUB-TEST-F3-16-2" TO PAR-NAME.                        NC2534.2
 154200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1554,7 +1554,7 @@
 155600     PERFORM FAIL.                                                NC2534.2
 155700 SUB-WRITE-F3-16-2.                                               NC2534.2
 155800     PERFORM PRINT-DETAIL.                                        NC2534.2
-155900*                                                                 NC2534.2
+155900*                                                                         
 156000 SUB-INIT-F3-16-3.                                                NC2534.2
 156100     MOVE  "SUB-TEST-F3-16-3" TO PAR-NAME.                        NC2534.2
 156200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1574,7 +1574,7 @@
 157600     PERFORM FAIL.                                                NC2534.2
 157700 SUB-WRITE-F3-16-3.                                               NC2534.2
 157800     PERFORM PRINT-DETAIL.                                        NC2534.2
-157900*                                                                 NC2534.2
+157900*                                                                         
 158000 SUB-INIT-F3-16-4.                                                NC2534.2
 158100     MOVE  "SUB-TEST-F3-16-4" TO PAR-NAME.                        NC2534.2
 158200     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1593,7 +1593,7 @@
 159500     PERFORM FAIL.                                                NC2534.2
 159600 SUB-WRITE-F3-16-4.                                               NC2534.2
 159700     PERFORM PRINT-DETAIL.                                        NC2534.2
-159800*                                                                 NC2534.2
+159800*                                                                         
 159900 SUB-INIT-F3-16-5.                                                NC2534.2
 160000     MOVE   "SUB-TEST-F3-16-5" TO PAR-NAME.                       NC2534.2
 160100     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1612,10 +1612,10 @@
 161400     PERFORM FAIL.                                                NC2534.2
 161500 SUB-WRITE-F3-16-5.                                               NC2534.2
 161600     PERFORM PRINT-DETAIL.                                        NC2534.2
-161700*                                                                 NC2534.2
+161700*                                                                         
 161800 SUB-INIT-F3-17.                                                  NC2534.2
-161900*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-162000*    ===-->   NO SIZE ERROR        <--===                         NC2534.2
+161900*                                                                         
+162000*                                                                         
 162100     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 162200     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 162300     MOVE    SPACE  TO WRK-XN-00001.                              NC2534.2
@@ -1634,7 +1634,7 @@
 163600             MOVE   "B" TO WRK-AN-00001                           NC2534.2
 163700     END-SUBTRACT                                                 NC2534.2
 163800     MOVE   "Z" TO WRK-XN-00001.                                  NC2534.2
-163900*                                                                 NC2534.2
+163900*                                                                         
 164000 SUB-INIT-F3-17-1.                                                NC2534.2
 164100     MOVE   "SUB-TEST-F3-17-1" TO PAR-NAME.                       NC2534.2
 164200     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1654,7 +1654,7 @@
 165600     PERFORM FAIL.                                                NC2534.2
 165700 SUB-WRITE-F3-17-1.                                               NC2534.2
 165800     PERFORM PRINT-DETAIL.                                        NC2534.2
-165900*                                                                 NC2534.2
+165900*                                                                         
 166000 SUB-INIT-F3-17-2.                                                NC2534.2
 166100     MOVE  "SUB-TEST-F3-17-2" TO PAR-NAME.                        NC2534.2
 166200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1674,7 +1674,7 @@
 167600     PERFORM FAIL.                                                NC2534.2
 167700 SUB-WRITE-F3-17-2.                                               NC2534.2
 167800     PERFORM PRINT-DETAIL.                                        NC2534.2
-167900*                                                                 NC2534.2
+167900*                                                                         
 168000 SUB-INIT-F3-17-3.                                                NC2534.2
 168100     MOVE  "SUB-TEST-F3-17-3" TO PAR-NAME.                        NC2534.2
 168200     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1694,7 +1694,7 @@
 169600     PERFORM FAIL.                                                NC2534.2
 169700 SUB-WRITE-F3-17-3.                                               NC2534.2
 169800     PERFORM PRINT-DETAIL.                                        NC2534.2
-169900*                                                                 NC2534.2
+169900*                                                                         
 170000 SUB-INIT-F3-17-4.                                                NC2534.2
 170100     MOVE  "SUB-TEST-F3-17-4" TO PAR-NAME.                        NC2534.2
 170200     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1714,7 +1714,7 @@
 171600     PERFORM FAIL.                                                NC2534.2
 171700 SUB-WRITE-F3-17-4.                                               NC2534.2
 171800     PERFORM PRINT-DETAIL.                                        NC2534.2
-171900*                                                                 NC2534.2
+171900*                                                                         
 172000 SUB-INIT-F3-17-5.                                                NC2534.2
 172100     MOVE   "SUB-TEST-F3-17-5" TO PAR-NAME.                       NC2534.2
 172200     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1733,10 +1733,10 @@
 173500     PERFORM FAIL.                                                NC2534.2
 173600 SUB-WRITE-F3-17-5.                                               NC2534.2
 173700     PERFORM PRINT-DETAIL.                                        NC2534.2
-173800*                                                                 NC2534.2
+173800*                                                                         
 173900 SUB-INIT-F3-18.                                                  NC2534.2
-174000*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-174100*    ===-->      SIZE ERROR        <--===                         NC2534.2
+174000*                                                                         
+174100*                                                                         
 174200     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 174300     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 174400     MOVE    SPACE  TO WRK-XN-00001.                              NC2534.2
@@ -1755,7 +1755,7 @@
 175700             MOVE   "B" TO WRK-AN-00001                           NC2534.2
 175800     END-SUBTRACT                                                 NC2534.2
 175900     MOVE   "Z" TO WRK-XN-00001.                                  NC2534.2
-176000*                                                                 NC2534.2
+176000*                                                                         
 176100 SUB-INIT-F3-18-1.                                                NC2534.2
 176200     MOVE   "SUB-TEST-F3-18-1" TO PAR-NAME.                       NC2534.2
 176300     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1775,7 +1775,7 @@
 177700     PERFORM FAIL.                                                NC2534.2
 177800 SUB-WRITE-F3-18-1.                                               NC2534.2
 177900     PERFORM PRINT-DETAIL.                                        NC2534.2
-178000*                                                                 NC2534.2
+178000*                                                                         
 178100 SUB-INIT-F3-18-2.                                                NC2534.2
 178200     MOVE  "SUB-TEST-F3-18-2" TO PAR-NAME.                        NC2534.2
 178300     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1792,7 +1792,7 @@
 179400     PERFORM FAIL.                                                NC2534.2
 179500 SUB-WRITE-F3-18-2.                                               NC2534.2
 179600     PERFORM PRINT-DETAIL.                                        NC2534.2
-179700*                                                                 NC2534.2
+179700*                                                                         
 179800 SUB-INIT-F3-18-3.                                                NC2534.2
 179900     MOVE  "SUB-TEST-F3-18-3" TO PAR-NAME.                        NC2534.2
 180000     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1812,7 +1812,7 @@
 181400     PERFORM FAIL.                                                NC2534.2
 181500 SUB-WRITE-F3-18-3.                                               NC2534.2
 181600     PERFORM PRINT-DETAIL.                                        NC2534.2
-181700*                                                                 NC2534.2
+181700*                                                                         
 181800 SUB-INIT-F3-18-4.                                                NC2534.2
 181900     MOVE  "SUB-TEST-F3-18-4" TO PAR-NAME.                        NC2534.2
 182000     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1831,7 +1831,7 @@
 183300     PERFORM FAIL.                                                NC2534.2
 183400 SUB-WRITE-F3-18-4.                                               NC2534.2
 183500     PERFORM PRINT-DETAIL.                                        NC2534.2
-183600*                                                                 NC2534.2
+183600*                                                                         
 183700 SUB-INIT-F3-18-5.                                                NC2534.2
 183800     MOVE   "SUB-TEST-F3-18-5" TO PAR-NAME.                       NC2534.2
 183900     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1850,10 +1850,10 @@
 185200     PERFORM FAIL.                                                NC2534.2
 185300 SUB-WRITE-F3-18-5.                                               NC2534.2
 185400     PERFORM PRINT-DETAIL.                                        NC2534.2
-185500*                                                                 NC2534.2
+185500*                                                                         
 185600 SUB-INIT-F3-19.                                                  NC2534.2
-185700*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2534.2
-185800*    ===-->   NO SIZE ERROR        <--===                         NC2534.2
+185700*                                                                         
+185800*                                                                         
 185900     MOVE   "VI-133 6.25" TO ANSI-REFERENCE.                      NC2534.2
 186000     MOVE    SPACE  TO WRK-AN-00001.                              NC2534.2
 186100     MOVE    0      TO REC-CT.                                    NC2534.2
@@ -1871,7 +1871,7 @@
 187300             MOVE   "B" TO WRK-AN-00001                           NC2534.2
 187400     END-SUBTRACT                                                 NC2534.2
 187500     MOVE   "Z" TO WRK-XN-00001.                                  NC2534.2
-187600*                                                                 NC2534.2
+187600*                                                                         
 187700 SUB-INIT-F3-19-1.                                                NC2534.2
 187800     MOVE   "SUB-TEST-F3-19-1" TO PAR-NAME.                       NC2534.2
 187900     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1891,7 +1891,7 @@
 189300     PERFORM FAIL.                                                NC2534.2
 189400 SUB-WRITE-F3-19-1.                                               NC2534.2
 189500     PERFORM PRINT-DETAIL.                                        NC2534.2
-189600*                                                                 NC2534.2
+189600*                                                                         
 189700 SUB-INIT-F3-19-2.                                                NC2534.2
 189800     MOVE  "SUB-TEST-F3-19-2" TO PAR-NAME.                        NC2534.2
 189900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1911,7 +1911,7 @@
 191300     PERFORM FAIL.                                                NC2534.2
 191400 SUB-WRITE-F3-19-2.                                               NC2534.2
 191500     PERFORM PRINT-DETAIL.                                        NC2534.2
-191600*                                                                 NC2534.2
+191600*                                                                         
 191700 SUB-INIT-F3-19-3.                                                NC2534.2
 191800     MOVE  "SUB-TEST-F3-19-3" TO PAR-NAME.                        NC2534.2
 191900     ADD    1 TO REC-CT.                                          NC2534.2
@@ -1931,7 +1931,7 @@
 193300     PERFORM FAIL.                                                NC2534.2
 193400 SUB-WRITE-F3-19-3.                                               NC2534.2
 193500     PERFORM PRINT-DETAIL.                                        NC2534.2
-193600*                                                                 NC2534.2
+193600*                                                                         
 193700 SUB-INIT-F3-19-4.                                                NC2534.2
 193800     MOVE  "SUB-TEST-F3-19-4" TO PAR-NAME.                        NC2534.2
 193900     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1951,7 +1951,7 @@
 195300     PERFORM FAIL.                                                NC2534.2
 195400 SUB-WRITE-F3-19-4.                                               NC2534.2
 195500     PERFORM PRINT-DETAIL.                                        NC2534.2
-195600*                                                                 NC2534.2
+195600*                                                                         
 195700 SUB-INIT-F3-19-5.                                                NC2534.2
 195800     MOVE   "SUB-TEST-F3-19-5" TO PAR-NAME.                       NC2534.2
 195900     ADD     1 TO REC-CT.                                         NC2534.2
@@ -1970,7 +1970,7 @@
 197200     PERFORM FAIL.                                                NC2534.2
 197300 SUB-WRITE-F3-19-5.                                               NC2534.2
 197400     PERFORM PRINT-DETAIL.                                        NC2534.2
-197500*                                                                 NC2534.2
+197500*                                                                         
 197600 CCVS-EXIT SECTION.                                               NC2534.2
 197700 CCVS-999999.                                                     NC2534.2
 197800     GO TO CLOSE-FILES.                                           NC2534.2

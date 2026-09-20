@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC1314.2
 000200 PROGRAM-ID.                                                      NC1314.2
 000300     NC131A.                                                      NC1314.2
-000400****************************************************************  NC1314.2
-000500*                                                              *  NC1314.2
-000600*    VALIDATION FOR:-                                          *  NC1314.2
-000700*                                                              *  NC1314.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1314.2
-000900*                                                              *  NC1314.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1314.2
-001100*                                                              *  NC1314.2
-001200****************************************************************  NC1314.2
-001300*                                                              *  NC1314.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1314.2
-001500*                                                              *  NC1314.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1314.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1314.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1314.2
-001900*                                                              *  NC1314.2
-002000****************************************************************  NC1314.2
-002100*                                                                 NC1314.2
-002200*    PROGRAM NC131A TESTS FORMAT 1 OF THE SET STATEMENT USING     NC1314.2
-002300*    VARIOUS COMBINATIONS OF INDEX-NAMES, IDENTIFIERS & INTEGERS  NC1314.2
-002400*                                                                 NC1314.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC1314.2
 002600 CONFIGURATION SECTION.                                           NC1314.2
 002700 SOURCE-COMPUTER.                                                 NC1314.2
@@ -240,7 +240,7 @@
 024200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1314.2
 024300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1314.2
 024400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1314.2
-024500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1314.2
+024500*                                                                         
 024600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1314.2
 024700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1314.2
 024800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1314.2
@@ -412,7 +412,7 @@
 041400     PERFORM BLANK-LINE-PRINT.                                    NC1314.2
 041500     MOVE "END OF TABLE LIST" TO RE-MARK.                         NC1314.2
 041600     PERFORM PRINT-DETAIL.                                        NC1314.2
-041700*                                                                 NC1314.2
+041700*                                                                         
 041800 IDX-INIT-8.                                                      NC1314.2
 041900     MOVE   "VI-127 6.23.4 GR3(c)" TO ANSI-REFERENCE.             NC1314.2
 042000     SET     INDEX1 TO 4.                                         NC1314.2
@@ -436,7 +436,7 @@
 043800 OK8-2.                                                           NC1314.2
 043900     MOVE   "IDX-TEST-8-2" TO PAR-NAME.                           NC1314.2
 044000     PERFORM PRINT-DETAIL.                                        NC1314.2
-044100*                                                                 NC1314.2
+044100*                                                                         
 044200 IDX-INIT-9.                                                      NC1314.2
 044300     MOVE   "VI-127 6.23.4 GR3(c)" TO ANSI-REFERENCE.             NC1314.2
 044400     SET     INDEX1 TO 4.                                         NC1314.2
@@ -460,7 +460,7 @@
 046200 OK9-2.                                                           NC1314.2
 046300     MOVE   "IDX-TEST-9-2" TO PAR-NAME.                           NC1314.2
 046400     PERFORM PRINT-DETAIL.                                        NC1314.2
-046500*                                                                 NC1314.2
+046500*                                                                         
 046600 CCVS-EXIT SECTION.                                               NC1314.2
 046700 CCVS-999999.                                                     NC1314.2
 046800     GO TO CLOSE-FILES.                                           NC1314.2

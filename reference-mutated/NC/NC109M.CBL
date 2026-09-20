@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1094.2
 000200 PROGRAM-ID.                                                      NC1094.2
 000300     NC109M.                                                      NC1094.2
-000400****************************************************************  NC1094.2
-000500*                                                              *  NC1094.2
-000600*    VALIDATION FOR:-                                          *  NC1094.2
-000700*                                                              *  NC1094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1094.2
-000900*                                                              *  NC1094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1094.2
-001100*                                                              *  NC1094.2
-001200****************************************************************  NC1094.2
-001300*                                                              *  NC1094.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1094.2
-001500*                                                              *  NC1094.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1094.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1094.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1094.2
-001900*                                                              *  NC1094.2
-002000****************************************************************  NC1094.2
-002100*                                                                 NC1094.2
-002200*      PROGRAM NC109M TESTS FORMAT 1 OF THE ACCEPT STATEMENT      NC1094.2
-002300*      AND THE GENERAL FORMAT OF THE DISPLAY STATEMENT.           NC1094.2
-002400*                                                                 NC1094.2
-002500*                                                                 NC1094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600                                                                  NC1094.2
 002700 ENVIRONMENT DIVISION.                                            NC1094.2
 002800 CONFIGURATION SECTION.                                           NC1094.2
@@ -367,7 +367,7 @@
 036900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1094.2
 037000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1094.2
 037100      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1094.2
-037200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1094.2
+037200*                                                                         
 037300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1094.2
 037400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1094.2
 037500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1094.2
@@ -449,7 +449,7 @@
 045100     ACCEPT   ACCEPT-D1.                                          NC1094.2
 045200     IF       ACCEPT-D1 EQUAL TO ACCEPT-D2                        NC1094.2
 045300              PERFORM PASS GO TO ACC-WRITE-GF-1.                  NC1094.2
-045400*        NOTE ACCEPT ALPHABETIC LITERAL TO ALPHANUMERIC FIELD.    NC1094.2
+045400*                                                                         
 045500     GO TO   ACC-FAIL-GF-1.                                       NC1094.2
 045600 ACC-DELETE-GF-1.                                                 NC1094.2
 045700     MOVE     "ACC-TEST-GF-1" TO PAR-NAME.                        NC1094.2
@@ -472,7 +472,7 @@
 047400     ACCEPT   ACCEPT-D3.                                          NC1094.2
 047500     IF       ACCEPT-D3  EQUAL TO ACCEPT-D4                       NC1094.2
 047600              PERFORM PASS GO TO ACC-WRITE-GF-2.                  NC1094.2
-047700*        NOTE ACCEPT NUMERIC LITERAL TO NUMERIC FIELD SAME LENGTH.NC1094.2
+047700*                                                                         
 047800     GO       TO ACC-FAIL-GF-2.                                   NC1094.2
 047900 ACC-DELETE-GF-2.                                                 NC1094.2
 048000     PERFORM  DE-LETE.                                            NC1094.2
@@ -491,7 +491,7 @@
 049300     ACCEPT   ACCEPT-D5.                                          NC1094.2
 049400     IF       ACCEPT-D5  EQUAL TO ACCEPT-D6                       NC1094.2
 049500              PERFORM PASS GO TO ACC-WRITE-GF-3.                  NC1094.2
-049600*        NOTE ACCEPT SPECIAL CHARACTERS.                          NC1094.2
+049600*                                                                         
 049700     GO       TO ACC-FAIL-GF-3.                                   NC1094.2
 049800 ACC-DELETE-GF-3.                                                 NC1094.2
 049900     PERFORM  DE-LETE.                                            NC1094.2
@@ -510,8 +510,8 @@
 051200     ACCEPT   ACCEPT-D7.                                          NC1094.2
 051300     IF       ACCEPT-D7  EQUAL TO ACCEPT-D8                       NC1094.2
 051400              PERFORM PASS GO TO ACC-WRITE-GF-4.                  NC1094.2
-051500*        NOTE ACCEPT HIGH-VALUE.                                  NC1094.2
-051600*        NOTE CHANGED TO ACCEPT AN ALPHANUMERIC 9.                NC1094.2
+051500*                                                                         
+051600*                                                                         
 051700     GO       TO ACC-FAIL-GF-4.                                   NC1094.2
 051800 ACC-DELETE-GF-4.                                                 NC1094.2
 051900     PERFORM  DE-LETE.                                            NC1094.2
@@ -530,8 +530,8 @@
 053200     ACCEPT   ACCEPT-D9.                                          NC1094.2
 053300     IF       ACCEPT-D9  EQUAL TO ACCEPT-D10                      NC1094.2
 053400              PERFORM PASS GO TO ACC-WRITE-GF-5.                  NC1094.2
-053500*        NOTE CHANGED TO ACCEPT AN ALPHANUMERIC 0.                NC1094.2
-053600*        NOTE ACCEPT LOW-VALUE.                                   NC1094.2
+053500*                                                                         
+053600*                                                                         
 053700     GO       TO ACC-FAIL-GF-5.                                   NC1094.2
 053800 ACC-DELETE-GF-5.                                                 NC1094.2
 053900     PERFORM  DE-LETE.                                            NC1094.2
@@ -550,7 +550,7 @@
 055200     ACCEPT   ACCEPT-D11.                                         NC1094.2
 055300     IF       ACCEPT-D11 EQUAL TO ACCEPT-D12                      NC1094.2
 055400              PERFORM PASS GO TO ACC-WRITE-GF-6.                  NC1094.2
-055500*        NOTE ACCEPT ALPHABETIC LITERAL TO ALPHABETIC FIELD.      NC1094.2
+055500*                                                                         
 055600     GO       TO ACC-FAIL-GF-6.                                   NC1094.2
 055700 ACC-DELETE-GF-6.                                                 NC1094.2
 055800     PERFORM  DE-LETE.                                            NC1094.2
@@ -569,8 +569,8 @@
 057100     ACCEPT   ACCEPT-D13.                                         NC1094.2
 057200     IF       ACCEPT-D13 EQUAL TO ACCEPT-D14                      NC1094.2
 057300              PERFORM PASS GO TO ACC-WRITE-GF-7.                  NC1094.2
-057400*        NOTE ACCEPT NUMERIC LITERAL TO NUMERIC FIELD OF DIFFERENTNC1094.2
-057500*             LENGTH.                                             NC1094.2
+057400*                                                                         
+057500*                                                                         
 057600     GO       TO ACC-FAIL-GF-7.                                   NC1094.2
 057700 ACC-DELETE-GF-7.                                                 NC1094.2
 057800     PERFORM  DE-LETE.                                            NC1094.2
@@ -589,7 +589,7 @@
 059100     ACCEPT   ACCEPT-D15.                                         NC1094.2
 059200     IF       ACCEPT-D15 EQUAL TO ACCEPT-D16                      NC1094.2
 059300              PERFORM PASS GO TO ACC-WRITE-GF-8.                  NC1094.2
-059400*        NOTE ACCEPT SINGLE SPACE.                                NC1094.2
+059400*                                                                         
 059500     GO       TO ACC-FAIL-GF-8.                                   NC1094.2
 059600 ACC-DELETE-GF-8.                                                 NC1094.2
 059700     PERFORM  DE-LETE.                                            NC1094.2
@@ -608,7 +608,7 @@
 061000     ACCEPT   ACCEPT-D17.                                         NC1094.2
 061100     IF       ACCEPT-D17 EQUAL TO ACCEPT-D18                      NC1094.2
 061200              PERFORM PASS GO TO ACC-WRITE-GF-9.                  NC1094.2
-061300*        NOTE ACCEPT A QUOTE.                                     NC1094.2
+061300*                                                                         
 061400     GO       TO ACC-FAIL-GF-9.                                   NC1094.2
 061500 ACC-DELETE-GF-9.                                                 NC1094.2
 061600     PERFORM  DE-LETE.                                            NC1094.2
@@ -627,7 +627,7 @@
 062900     ACCEPT   TAB-ACCEPT (2).                                     NC1094.2
 063000     IF       ACCEPT-D21 EQUAL TO ACCEPT-D22                      NC1094.2
 063100              PERFORM PASS GO TO ACC-WRITE-GF-10.                 NC1094.2
-063200*        NOTE ACCEPT TO SUBSCRIPTED AREA.                         NC1094.2
+063200*                                                                         
 063300     GO       TO ACC-FAIL-GF-10.                                  NC1094.2
 063400 ACC-DELETE-GF-10.                                                NC1094.2
 063500     PERFORM  DE-LETE.                                            NC1094.2
@@ -647,7 +647,7 @@
 064900     MOVE     "ACC-TEST-GF-11" TO PAR-NAME.                       NC1094.2
 065000     IF       X80-CHARACTER-FIELD EQUAL TO ACCEPT-RESULTS         NC1094.2
 065100              PERFORM PASS GO TO ACC-WRITE-GF-11.                 NC1094.2
-065200*        NOTE ACCEPT 80-CHARACTER LITERAL.                        NC1094.2
+065200*                                                                         
 065300     GO       TO ACC-FAIL-GF-11.                                  NC1094.2
 065400 ACC-DELETE-GF-11.                                                NC1094.2
 065500     PERFORM  DE-LETE.                                            NC1094.2
@@ -679,18 +679,18 @@
 068100     PERFORM PRINT-DETAIL.                                        NC1094.2
 068200     PERFORM BLANK-LINE-PRINT 4 TIMES.                            NC1094.2
 068300     MOVE     "DISPLAY" TO FEATURE.                               NC1094.2
-068400*        NOTE FOR THE SAKE OF CONVENIENCE IN READING THE OUTPUT,  NC1094.2
-068500*             THE DISPLAY TESTS ARE CONSTRUCTED ON THE ASSUMPTION NC1094.2
-068600*             THAT THE DISPLAYED OUTPUT WILL BE PRINTED ALONG     NC1094.2
-068700*             WITH THE OUTPUT FROM THE WRITE STATEMENTS ---       NC1094.2
-068800*             HOWEVER IT IS NOT CONSIDERED NONSTANDARD IF THE     NC1094.2
-068900*             DISPLAYED DATA APPEARS ELSEWHERE IN THE LISTING, OR NC1094.2
-069000*             FOR THAT MATTER, ON SOME OTHER DEVICE.              NC1094.2
+068400*                                                                         
+068500*                                                                         
+068600*                                                                         
+068700*                                                                         
+068800*                                                                         
+068900*                                                                         
+069000*                                                                         
 069100 DISP-TEST-GF-1.                                                  NC1094.2
 069200     MOVE     "DISP-TEST-GF-1 " TO PAR-NAME.                      NC1094.2
 069300     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 069400     DISPLAY  DISPLAY-A.                                          NC1094.2
-069500*        NOTE GROUP OF ALPHABETIC DATA ITEMS.                     NC1094.2
+069500*                                                                         
 069600     MOVE     DISPLAY-A TO DIS-PLAYER.                            NC1094.2
 069700     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 069800     GO       TO DISP-WRITE-GF-1.                                 NC1094.2
@@ -705,7 +705,7 @@
 070700 DISP-TEST-GF-2.                                                  NC1094.2
 070800     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 070900     DISPLAY  "ALPHABETIC LITERAL".                               NC1094.2
-071000*        NOTE ALPHABETIC LITERAL.                                 NC1094.2
+071000*                                                                         
 071100     MOVE     "ALPHABETIC LITERAL" TO DIS-PLAYER.                 NC1094.2
 071200     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 071300     GO       TO DISP-WRITE-GF-2.                                 NC1094.2
@@ -721,7 +721,7 @@
 072300 DISP-TEST-GF-3.                                                  NC1094.2
 072400     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 072500     DISPLAY  DISPLAY-N.                                          NC1094.2
-072600*        NOTE NUMERIC DATA ITEM.                                  NC1094.2
+072600*                                                                         
 072700     MOVE     DISPLAY-N TO DIS-PLAYER.                            NC1094.2
 072800     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 072900     GO       TO DISP-WRITE-GF-3.                                 NC1094.2
@@ -736,7 +736,7 @@
 073800 DISP-TEST-GF-4.                                                  NC1094.2
 073900     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 074000     DISPLAY  9876543210.                                         NC1094.2
-074100*        NOTE NUMERIC LITERAL.                                    NC1094.2
+074100*                                                                         
 074200     MOVE     9876543210 TO DIS-PLAYER.                           NC1094.2
 074300     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 074400     GO       TO DISP-WRITE-GF-4.                                 NC1094.2
@@ -752,7 +752,7 @@
 075400 DISP-TEST-GF-5.                                                  NC1094.2
 075500     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 075600     DISPLAY  DISPLAY-X.                                          NC1094.2
-075700*        NOTE ALPHANUMERIC DATA ITEM.                             NC1094.2
+075700*                                                                         
 075800     MOVE     DISPLAY-X TO DIS-PLAYER.                            NC1094.2
 075900     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 076000     GO       TO DISP-WRITE-GF-5.                                 NC1094.2
@@ -767,7 +767,7 @@
 076900 DISP-TEST-GF-6.                                                  NC1094.2
 077000     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 077100     DISPLAY  "12345 ///// ALPHANUMERIC LITERAL".                 NC1094.2
-077200*        NOTE ALPHANUMERIC LITERAL.                               NC1094.2
+077200*                                                                         
 077300     MOVE     "12345 ///// ALPHANUMERIC LITERAL" TO DIS-PLAYER.   NC1094.2
 077400     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 077500     GO       TO DISP-WRITE-GF-6.                                 NC1094.2
@@ -786,7 +786,7 @@
 078800     MOVE     "DISP-TEST-GF-7 " TO PAR-NAME.                      NC1094.2
 078900     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 079000     DISPLAY  DISPLAY-A DISPLAY-N DISPLAY-X " SERIES".            NC1094.2
-079100*        NOTE SERIES OF THREE DATA ITEMS AND A LITERAL.           NC1094.2
+079100*                                                                         
 079200     MOVE     "ALPHABETIC0123456789A1B2C3D4E5 SERIES"             NC1094.2
 079300              TO DIS-PLAYER.                                      NC1094.2
 079400     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
@@ -802,8 +802,8 @@
 080400 DISP-TEST-GF-8.                                                  NC1094.2
 080500     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 080600     DISPLAY  ZERO SPACE QUOTE.                                   NC1094.2
-080700*        NOTE SERIES OF FIGURATIVE CONSTANTS --- ONLY ONE OCCUR-  NC1094.2
-080800*             RANCE OF EACH CHARACTER SHOULD APPEAR.              NC1094.2
+080700*                                                                         
+080800*                                                                         
 080900     MOVE     ZERO-SPACE-QUOTE TO DIS-PLAYER.                     NC1094.2
 081000     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 081100     GO       TO DISP-WRITE-GF-8.                                 NC1094.2
@@ -819,7 +819,7 @@
 082100 DISP-TEST-GF-9.                                                  NC1094.2
 082200     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 082300     DISPLAY  DISPLAY-C.                                          NC1094.2
-082400*        NOTE DISPLAY DATA ITEM WHICH CONTAINS A REDEFINES CLAUSE.NC1094.2
+082400*                                                                         
 082500     MOVE     "REDEFINE-INFO" TO DIS-PLAYER.                      NC1094.2
 082600     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 082700     GO       TO DISP-WRITE-GF-9.                                 NC1094.2
@@ -834,13 +834,13 @@
 083600 DISP-TEST-GF-10.                                                 NC1094.2
 083700     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 083800     DISPLAY  DISPLAY-F.                                          NC1094.2
-083900*        NOTE 200-CHARACTER GROUP ITEM --- ACTUAL NUMBER OF       NC1094.2
-084000*             CHARACTERS DISPLAYED DEPENDS UPON THE SYSTEM.       NC1094.2
+083900*                                                                         
+084000*                                                                         
 084100     MOVE     DISPLAY-G TO DIS-PLAYER.                            NC1094.2
 084200     MOVE     1 TO DISPLAY-SWITCH.                                NC1094.2
-084300*        NOTE THE "CORRECT" RESULT IS WRITTEN AS TWO 100-CHARACTERNC1094.2
-084400*             LINES, BUT THE DIVISION OF THE DISPLAYED "COMPUTED" NC1094.2
-084500*             DATA DEPENDS UPON THE SYSTEM.                       NC1094.2
+084300*                                                                         
+084400*                                                                         
+084500*                                                                         
 084600     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 084700     GO       TO DISP-WRITE-GF-10.                                NC1094.2
 084800 DISP-DELETE-GF-10.                                               NC1094.2
@@ -856,7 +856,7 @@
 085800     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 085900     DISPLAY  X21 X20 X19 X18 X17 X16 X15 X14 X13 X12 X11 X10 X9  NC1094.2
 086000              X8  X7  X6  X5  X4  X3  X2  X1.                     NC1094.2
-086100*        NOTE 21 ELEMENTARY ALPHABETIC DATA ITEMS.                NC1094.2
+086100*                                                                         
 086200     MOVE     "UTSRQPONMLKJIHGFEDCBA" TO DIS-PLAYER.              NC1094.2
 086300     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 086400     GO       TO DISP-WRITE-GF-11.                                NC1094.2
@@ -877,7 +877,7 @@
 087900              XTAB (13)  XTAB (14)  XTAB (15)  XTAB (16)          NC1094.2
 088000              XTAB (17)  XTAB (18)  XTAB (19)  XTAB (20)          NC1094.2
 088100              XTAB (21).                                          NC1094.2
-088200*        NOTE 21 SUBSCRIPTED DATA ITEMS.                          NC1094.2
+088200*                                                                         
 088300     MOVE     "ABCDEFGHIJKLMNOPQRSTU" TO DIS-PLAYER.              NC1094.2
 088400     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 088500     GO       TO DISP-WRITE-GF-12.                                NC1094.2
@@ -898,7 +898,7 @@
 090000     MOVE       "QUOTE   ASTERISK * NUMERIC LITERALS 21 35 IDENTIFNC1094.2
 090100-    "IER DATA A B C D E 0102030405 (TOTAL 21 OPERANDS) END OF DATNC1094.2
 090200-    "A" TO DIS-PLAYER.                                           NC1094.2
-090300*        NOTE 21 MIXED IDENTIFIERS AND LITERALS.                  NC1094.2
+090300*                                                                         
 090400     MOVE    QUOTE TO QUOTE-SLOT.                                 NC1094.2
 090500     PERFORM DISPLAY-SUPPORT-2.                                   NC1094.2
 090600     GO      TO DISP-WRITE-GF-13.                                 NC1094.2
@@ -908,13 +908,13 @@
 091000     MOVE   "DISP-TEST-GF-13 " TO PAR-NAME.                       NC1094.2
 091100     PERFORM PRINT-DETAIL.                                        NC1094.2
 091200 DISP-INIT-GF-14.                                                 NC1094.2
-091300*    ===---> "ALL" LITERAL  <--===                                NC1094.2
+091300*                                                                         
 091400     MOVE   "V1-78 6.10.4" TO ANSI-REFERENCE.                     NC1094.2
 091500     MOVE     "DISP-TEST-GF-14 GR3 " TO PAR-NAME.                 NC1094.2
 091600 DISP-TEST-GF-14.                                                 NC1094.2
 091700     PERFORM  DISPLAY-SUPPORT-1.                                  NC1094.2
 091800     DISPLAY  ALL "ABCD"                                          NC1094.2
-091900*        NOTE "ALL" LITERAL.                                      NC1094.2
+091900*                                                                         
 092000     MOVE     "ABCD" TO DIS-PLAYER.                               NC1094.2
 092100     PERFORM  DISPLAY-SUPPORT-2.                                  NC1094.2
 092200     GO       TO DISP-WRITE-GF-14.                                NC1094.2

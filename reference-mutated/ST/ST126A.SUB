@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         ST1264.2
 000200 PROGRAM-ID.                                                      ST1264.2
 000300     ST126A.                                                      ST1264.2
-000400****************************************************************  ST1264.2
-000500*                                                              *  ST1264.2
-000600*    VALIDATION FOR:-                                          *  ST1264.2
-000700*                                                              *  ST1264.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1264.2
-000900*                                                              *  ST1264.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1264.2
-001100*                                                              *  ST1264.2
-001200****************************************************************  ST1264.2
-001300*                                                              *  ST1264.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1264.2
-001500*                                                              *  ST1264.2
-001600*        X-01                                                  *  ST1264.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  ST1264.2
-001800*        X-69                                                  *  ST1264.2
-001900*        X-74                                                  *  ST1264.2
-002000*        X-75                                                  *  ST1264.2
-002100*        X-82  - SOURCE COMPUTER NAME.                         *  ST1264.2
-002200*        X-83  - OBJECT COMPUTER NAME.                         *  ST1264.2
-002300*                                                              *  ST1264.2
-002400****************************************************************  ST1264.2
-002500*                                                              *  ST1264.2
-002600*    PROGRAM ST126A VERIFIES THE CONTENT OF THE THREE FILES    *  ST1264.2
-002700*    PRODUCED BY ST125A.                                       *  ST1264.2
-002800*                                                              *  ST1264.2
-002900****************************************************************  ST1264.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            ST1264.2
 003100 CONFIGURATION SECTION.                                           ST1264.2
 003200 SOURCE-COMPUTER.                                                 ST1264.2
@@ -268,7 +268,7 @@
 028500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1264.2
 028600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1264.2
 028700      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1264.2
-028800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1264.2
+028800*                                                                         
 028900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1264.2
 029000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1264.2
 029100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1264.2
@@ -376,7 +376,7 @@
 039300 SORT-INIT-B.                                                     ST1264.2
 039400     MOVE     ZERO TO UTILITY-3.                                  ST1264.2
 039500     PERFORM  READ-SORTIN 4 TIMES.                                ST1264.2
-039600*        NOTE SORT-TEST-2 CHECKS THE SIXTH RECORD IN THE FILE.    ST1264.2
+039600*                                                                         
 039700 SORT-TEST-2.                                                     ST1264.2
 039800     PERFORM  READ-SORTIN.                                        ST1264.2
 039900     MOVE     "SORT-TEST-2" TO PAR-NAME.                          ST1264.2
@@ -440,7 +440,7 @@
 045700 SORT-INIT-D.                                                     ST1264.2
 045800     PERFORM  READ-SORTIN 4 TIMES.                                ST1264.2
 045900     MOVE     SPACE TO UTILITY-3.                                 ST1264.2
-046000*        NOTE SORT-TEST-4 CHECKS THE SIXTH RECORD IN THE FILE.    ST1264.2
+046000*                                                                         
 046100 SORT-TEST-4.                                                     ST1264.2
 046200     PERFORM  READ-SORTIN.                                        ST1264.2
 046300     MOVE     "SORT-TEST-4" TO PAR-NAME.                          ST1264.2
@@ -465,7 +465,7 @@
 048200 SORT-INIT-E.                                                     ST1264.2
 048300     MOVE     +1.1111112 TO UTILITY-1.                            ST1264.2
 048400     MOVE     SPACE TO UTILITY-3.                                 ST1264.2
-048500*        NOTE SORT-TEST-5 CHECKS THE SEVENTH RECORD IN THE FILE.  ST1264.2
+048500*                                                                         
 048600 SORT-TEST-5.                                                     ST1264.2
 048700     PERFORM  READ-SORTIN.                                        ST1264.2
 048800     MOVE     "SORT-TEST-5" TO PAR-NAME.                          ST1264.2
@@ -489,7 +489,7 @@
 050600 SORT-INIT-F.                                                     ST1264.2
 050700     PERFORM  READ-SORTIN.                                        ST1264.2
 050800     MOVE     888888888888888888 TO UTILITY-2.                    ST1264.2
-050900*        NOTE SORT-TEST-6 CHECKS THE NINTH RECORD IN THE FILE.    ST1264.2
+050900*                                                                         
 051000 SORT-TEST-6.                                                     ST1264.2
 051100     PERFORM  READ-SORTIN.                                        ST1264.2
 051200     MOVE     "SORT-TEST-6" TO PAR-NAME.                          ST1264.2
@@ -540,8 +540,8 @@
 055700     MOVE     "EOF PREMATURELY FOUND" TO RE-MARK.                 ST1264.2
 055800     PERFORM  FAIL.                                               ST1264.2
 055900     PERFORM  PRINT-DETAIL.                                       ST1264.2
-056000*                                                                 ST1264.2
-056100*                                                                 ST1264.2
+056000*                                                                         
+056100*                                                                         
 056200 ST126A-001-02.                                                   ST1264.2
 056300     MOVE     "SORT, MIXED CLASSES" TO FEATURE.                   ST1264.2
 056400     MOVE     ZERO TO UTIL-CTR.                                   ST1264.2
@@ -575,7 +575,7 @@
 059200 SORT-INIT-B-2.                                                   ST1264.2
 059300     MOVE     ZERO TO UTILITY-3.                                  ST1264.2
 059400     PERFORM  READ-SORTIN-2 4 TIMES.                              ST1264.2
-059500*        NOTE SORT-TEST-2-2 CHECKS THE 6TH RECORD IN THE FILE.    ST1264.2
+059500*                                                                         
 059600 SORT-TEST-2-2.                                                   ST1264.2
 059700     PERFORM  READ-SORTIN-2.                                      ST1264.2
 059800     MOVE     "SORT-TEST-2-2" TO PAR-NAME.                        ST1264.2
@@ -639,7 +639,7 @@
 065600 SORT-INIT-D-2.                                                   ST1264.2
 065700     PERFORM  READ-SORTIN-2 4 TIMES.                              ST1264.2
 065800     MOVE     SPACE TO UTILITY-3.                                 ST1264.2
-065900*        NOTE SORT-TEST-4-2 CHECKS THE SIXTH RECORD IN THE FILE.  ST1264.2
+065900*                                                                         
 066000 SORT-TEST-4-2.                                                   ST1264.2
 066100     PERFORM  READ-SORTIN-2.                                      ST1264.2
 066200     MOVE     "SORT-TEST-4-2" TO PAR-NAME.                        ST1264.2
@@ -664,7 +664,7 @@
 068100 SORT-INIT-E-2.                                                   ST1264.2
 068200     MOVE     +1.1111112 TO UTILITY-1.                            ST1264.2
 068300     MOVE     SPACE TO UTILITY-3.                                 ST1264.2
-068400*        NOTE SORT-TEST-5-2 CHECKS THE 7TH RECORD IN THE FILE.    ST1264.2
+068400*                                                                         
 068500 SORT-TEST-5-2.                                                   ST1264.2
 068600     PERFORM  READ-SORTIN-2.                                      ST1264.2
 068700     MOVE     "SORT-TEST-5-2" TO PAR-NAME.                        ST1264.2
@@ -688,7 +688,7 @@
 070500 SORT-INIT-F-2.                                                   ST1264.2
 070600     PERFORM  READ-SORTIN-2.                                      ST1264.2
 070700     MOVE     888888888888888888 TO UTILITY-2.                    ST1264.2
-070800*        NOTE SORT-TEST-6-2 CHECKS THE 9TH RECORD IN THE FILE.    ST1264.2
+070800*                                                                         
 070900 SORT-TEST-6-2.                                                   ST1264.2
 071000     PERFORM  READ-SORTIN-2.                                      ST1264.2
 071100     MOVE     "SORT-TEST-6-2" TO PAR-NAME.                        ST1264.2
@@ -739,8 +739,8 @@
 075600     MOVE     "EOF PREMATURELY FOUND" TO RE-MARK.                 ST1264.2
 075700     PERFORM  FAIL.                                               ST1264.2
 075800     PERFORM  PRINT-DETAIL.                                       ST1264.2
-075900*                                                                 ST1264.2
-076000*                                                                 ST1264.2
+075900*                                                                         
+076000*                                                                         
 076100 ST126A-001-03.                                                   ST1264.2
 076200     MOVE    "SORT, MIXED CLASSES" TO FEATURE.                    ST1264.2
 076300     MOVE     ZERO TO UTIL-CTR.                                   ST1264.2
@@ -774,7 +774,7 @@
 079100 SORT-INIT-B-3.                                                   ST1264.2
 079200     MOVE     ZERO TO UTILITY-3.                                  ST1264.2
 079300     PERFORM  READ-SORTIN-3 4 TIMES.                              ST1264.2
-079400*        NOTE SORT-TEST-2-3 CHECKS THE 6TH RECORD IN THE FILE.    ST1264.2
+079400*                                                                         
 079500 SORT-TEST-2-3.                                                   ST1264.2
 079600     PERFORM  READ-SORTIN-3.                                      ST1264.2
 079700     MOVE     "SORT-TEST-2-3" TO PAR-NAME.                        ST1264.2
@@ -838,7 +838,7 @@
 085500 SORT-INIT-D-3.                                                   ST1264.2
 085600     PERFORM  READ-SORTIN-3 4 TIMES.                              ST1264.2
 085700     MOVE     SPACE TO UTILITY-3.                                 ST1264.2
-085800*        NOTE SORT-TEST-4-3 CHECKS THE SIXTH RECORD IN THE FILE.  ST1264.2
+085800*                                                                         
 085900 SORT-TEST-4-3.                                                   ST1264.2
 086000     PERFORM  READ-SORTIN-3.                                      ST1264.2
 086100     MOVE     "SORT-TEST-4-3" TO PAR-NAME.                        ST1264.2
@@ -863,7 +863,7 @@
 088000 SORT-INIT-E-3.                                                   ST1264.2
 088100     MOVE     +1.1111112 TO UTILITY-1.                            ST1264.2
 088200     MOVE     SPACE TO UTILITY-3.                                 ST1264.2
-088300*        NOTE SORT-TEST-5-3 CHECKS THE 7TH RECORD IN THE FILE.    ST1264.2
+088300*                                                                         
 088400 SORT-TEST-5-3.                                                   ST1264.2
 088500     PERFORM  READ-SORTIN-3.                                      ST1264.2
 088600     MOVE     "SORT-TEST-5-3" TO PAR-NAME.                        ST1264.2
@@ -887,7 +887,7 @@
 090400 SORT-INIT-F-3.                                                   ST1264.2
 090500     PERFORM  READ-SORTIN-3.                                      ST1264.2
 090600     MOVE     888888888888888888 TO UTILITY-2.                    ST1264.2
-090700*        NOTE SORT-TEST-6-3 CHECKS THE 9TH RECORD IN THE FILE.    ST1264.2
+090700*                                                                         
 090800 SORT-TEST-6-3.                                                   ST1264.2
 090900     PERFORM  READ-SORTIN-3.                                      ST1264.2
 091000     MOVE     "SORT-TEST-6-3" TO PAR-NAME.                        ST1264.2

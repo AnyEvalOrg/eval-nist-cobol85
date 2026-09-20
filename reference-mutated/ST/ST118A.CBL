@@ -1,55 +1,55 @@
 000100 IDENTIFICATION DIVISION.                                         ST1184.2
 000200 PROGRAM-ID.                                                      ST1184.2
 000300     ST118A.                                                      ST1184.2
-000400****************************************************************  ST1184.2
-000500*                                                              *  ST1184.2
-000600*    VALIDATION FOR:-                                          *  ST1184.2
-000700*                                                              *  ST1184.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1184.2
-000900*                                                              *  ST1184.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1184.2
-001100*                                                              *  ST1184.2
-001200****************************************************************  ST1184.2
-001300*                                                              *  ST1184.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1184.2
-001500*                                                              *  ST1184.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1184.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1184.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1184.2
-001900*                                                              *  ST1184.2
-002000****************************************************************  ST1184.2
-002100*    ST118 IS A COMPLETELY SELF-CONTAINED PROGRAM.  THE INPUT     ST1184.2
-002200*    PROCEDURE BUILDS THE EIGHT-RECORD FILE SHOWN BELOW. THE      ST1184.2
-002300*    OUTPUT PROCEDURE CHECKS THE SORTED FILE AND GENERATES THE    ST1184.2
-002400*    REPORT.                                                      ST1184.2
-002500*    SORT    SORT    SORT    SORT    SORT   SORT     SORT    SORT ST1184.2
-002600*    KEY-1   KEY-2   KEY-3   KEY-4   KEY-5  KEY-6    KEY-7   KEY-8ST1184.2
-002700*    S9(6)   A(5)    SV9(16) X(10)   A(20)  X(10)    999     S99  ST1184.2
-002800*    SIGN    JUST    SIGN    JUST                           SIGN  ST1184.2
-002900*    LEADING RIGHT   TRAILIN RIGHT                          TRAIL ST1184.2
-003000*    SEPARAT         SEPARAT                                      ST1184.2
-003100*                                                                 ST1184.2
-003200*    +123456     BBB -.1234   BBBBBB A      AAAAAAAA 501     +99  ST1184.2
-003300*    -054321       X -.1234   BBBBBB A      AAAAAAAA 501     +99  ST1184.2
-003400*    -054321     BBB +.6      BBBBBB A      AAAAAAAA 501     +99  ST1184.2
-003500*    -054321     BBB -.1234        X A      AAAAAAAA 501     +99  ST1184.2
-003600*    -054321     BBB -.1234   BBBBBB Z      AAAAAAAA 501     +99  ST1184.2
-003700*    -054321     BBB -.1234   BBBBBB A      Z        501     +99  ST1184.2
-003800*    -054321     BBB -.1234   BBBBBB A      AAAAAAAA 418     +99  ST1184.2
-003900*    -054321     BBB -.1234   BBBBBB A      AAAAAAAA 501     -14  ST1184.2
-004000*                                                                 ST1184.2
-004100*    THIS PROGRAM CHECKS THE COMPILER"S ABILITY TO HANDLE EIGHT   ST1184.2
-004200*    ASCENDING KEYS IN ONE FILE.                                  ST1184.2
-004300*                                                                 ST1184.2
-004400*    ASCENDING KEYS IN ONE FILE.  EACH OF THE KEYS IDENTIFIED     ST1184.2
-004500*    IN THE SORT STATEMENT ARE ELEMENTARY DATA ITEMS AND USE      ST1184.2
-004600*    VARIOUS COMBINATIONS OF PICTURE CHARACTER-STRING SYMBOLS AND ST1184.2
-004700*    CLAUSES FOR DESCRIBING THE GENERAL CHARACTERISTICS OF THE    ST1184.2
-004800*    DATA ITEM.                                                   ST1184.2
-004900*    THIS PROGRAM IS A REWRITE OF ST108.  THE PURPOSE OF THIS     ST1184.2
-005000*    PROGRAM IS TO VERIFY THAT RECORDS ARE PROPERLY SORTED WHEN   ST1184.2
-005100*    THE SORT KEYS OF THE SORT STATEMENT USE DATA DEFINITIONS     ST1184.2
-005200*    WHICH INCLUDE THE SIGN CLAUSE.                               ST1184.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
 005300 ENVIRONMENT DIVISION.                                            ST1184.2
 005400 CONFIGURATION SECTION.                                           ST1184.2
 005500 SOURCE-COMPUTER.                                                 ST1184.2
@@ -274,8 +274,8 @@
 027400     MOVE     "A"                 TO SORTKEY-5.                   ST1184.2
 027500     MOVE     "AAAAAAAA"          TO SORTKEY-6.                   ST1184.2
 027600     MOVE     -501                TO SORTKEY-7.                   ST1184.2
-027700*       NOTE THIS ITEM IS INTENTIONALLY MOVED TO AN UNSIGNED      ST1184.2
-027800*             FIELD.                                              ST1184.2
+027700*                                                                         
+027800*                                                                         
 027900     MOVE     +99                 TO SORTKEY-8.                   ST1184.2
 028000 RELEASE-RECORD.                                                  ST1184.2
 028100     RELEASE  SORTFILE-REC.                                       ST1184.2
@@ -292,10 +292,10 @@
 029200 B-IS-LESS-THAN-SPACE SECTION.                                    ST1184.2
 029300 SORT-INIT-A.                                                     ST1184.2
 029400     MOVE     "SORT - 8 ASC. KEYS" TO FEATURE.                    ST1184.2
-029500*        NOTE THE RECORDS SHOULD BE SORTED INTO THE FOLLOWING     ST1184.2
-029600*             ORDER --- 8 7 6 5 4 3 1 2 --- THAT IS,              ST1184.2
-029700*             THE 8TH RECORD SORTS UP TO THE 1ST POSITION,        ST1184.2
-029800*             THE 7TH RECORD SORTS UP TO THE 2ND POSITION, ETC.   ST1184.2
+029500*                                                                         
+029600*                                                                         
+029700*                                                                         
+029800*                                                                         
 029900 SORT-TEST-1.                                                     ST1184.2
 030000     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
 030100     IF       SORTKEY-7 EQUAL TO 418                              ST1184.2
@@ -353,12 +353,12 @@
 035300     PERFORM  PRINT-DETAIL.                                       ST1184.2
 035400 SORT-TEST-6.                                                     ST1184.2
 035500     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-035600     IF       SORTKEY-3 EQUAL TO +.6000000000500000               ST1184.2
+035600     IF       SORTKEY-3 EQUAL TO +.6000000001000000               ST1184.2
 035700              PERFORM PASS GO TO SORT-WRITE-6.                    ST1184.2
 035800 SORT-FAIL-6.                                                     ST1184.2
 035900     PERFORM  FAIL.                                               ST1184.2
 036000     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         ST1184.2
-036100     MOVE     +.6000000000500000     TO CORRECT-0V18.             ST1184.2
+036100     MOVE     +.6000000001000000     TO CORRECT-0V18.             ST1184.2
 036200 SORT-WRITE-6.                                                    ST1184.2
 036300     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1184.2
 036400     PERFORM  PRINT-DETAIL.                                       ST1184.2
@@ -403,10 +403,10 @@
 040300     MOVE     "UNNECESSARY." TO RE-MARK.                          ST1184.2
 040400     PERFORM  PRINT-DETAIL.                                       ST1184.2
 040500     MOVE     "SORT - 8 ASC. KEYS" TO FEATURE.                    ST1184.2
-040600*        NOTE THE RECORDS SHOULD BE SORTED INTO THE FOLLOWING     ST1184.2
-040700*             ORDER --- 8 1 7 2 6 5 3 4 --- THAT IS,              ST1184.2
-040800*             THE 1ST RECORD IS SORTED DOWN TO THE 8TH POSITION,  ST1184.2
-040900*             THE 2ND RECORD SORTS UP TO THE 1ST POSITION, ETC.   ST1184.2
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
 041000 SORT-TEST-9.                                                     ST1184.2
 041100     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
 041200     IF       SORTKEY-2 EQUAL TO "    X"                          ST1184.2
@@ -442,12 +442,12 @@
 044200     PERFORM  PRINT-DETAIL.                                       ST1184.2
 044300 SORT-TEST-12.                                                    ST1184.2
 044400     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-044500     IF       SORTKEY-8 EQUAL TO -94                              ST1184.2
+044500     IF       SORTKEY-8 EQUAL TO -10                              ST1184.2
 044600              PERFORM PASS GO TO SORT-WRITE-12.                   ST1184.2
 044700 SORT-FAIL-12.                                                    ST1184.2
 044800     PERFORM  FAIL.                                               ST1184.2
 044900     MOVE     SORTKEY-8 TO COMPUTED-N.                            ST1184.2
-045000     MOVE     -94 TO CORRECT-N.                                   ST1184.2
+045000     MOVE     -10 TO CORRECT-N.                                   ST1184.2
 045100 SORT-WRITE-12.                                                   ST1184.2
 045200     MOVE     "SORT-TEST-12" TO PAR-NAME.                         ST1184.2
 045300     PERFORM  PRINT-DETAIL.                                       ST1184.2
@@ -475,12 +475,12 @@
 047500     PERFORM  PRINT-DETAIL.                                       ST1184.2
 047600 SORT-TEST-15.                                                    ST1184.2
 047700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-047800     IF       SORTKEY-3 EQUAL TO +.6000000000000002               ST1184.2
+047800     IF       SORTKEY-3 EQUAL TO +.5000000000000000               ST1184.2
 047900              PERFORM PASS GO TO SORT-WRITE-15.                   ST1184.2
 048000 SORT-FAIL-15.                                                    ST1184.2
 048100     PERFORM  FAIL.                                               ST1184.2
 048200     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         ST1184.2
-048300     MOVE     +.6000000000000002     TO CORRECT-0V18.             ST1184.2
+048300     MOVE     +.5000000000000000     TO CORRECT-0V18.             ST1184.2
 048400 SORT-WRITE-15.                                                   ST1184.2
 048500     MOVE     "SORT-TEST-15" TO PAR-NAME.                         ST1184.2
 048600     PERFORM  PRINT-DETAIL.                                       ST1184.2
@@ -550,7 +550,7 @@
 055200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1184.2
 055300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1184.2
 055400      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1184.2
-055500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1184.2
+055500*                                                                         
 055600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1184.2
 055700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1184.2
 055800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1184.2

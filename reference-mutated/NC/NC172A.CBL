@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         NC1724.2
 000200 PROGRAM-ID.                                                      NC1724.2
 000300     NC172A.                                                      NC1724.2
-000400****************************************************************  NC1724.2
-000500*                                                              *  NC1724.2
-000600*    VALIDATION FOR:-                                          *  NC1724.2
-000700*                                                              *  NC1724.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1724.2
-000900*                                                              *  NC1724.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1724.2
-001100*                                                              *  NC1724.2
-001200****************************************************************  NC1724.2
-001300*                                                              *  NC1724.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1724.2
-001500*                                                              *  NC1724.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1724.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1724.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1724.2
-001900*                                                              *  NC1724.2
-002000****************************************************************  NC1724.2
-002100*    THIS PROGRAM TESTS THE FORMAT 2 DIVIDE STATEMENT FOUND       NC1724.2
-002200*    IN LEVEL 1.   ALL COMBINATIONS OF THE OPTIONAL PHRASES       NC1724.2
-002300*    "SIZE ERROR", "NOT SIZE ERROR" AND "END-MULTIPLY" ARE        NC1724.2
-002400*    TESTED, AS WELL AS THE ROUNDED OPTION.                       NC1724.2
-002500*                                                                 NC1724.2
-002600*    VARIOUS COMBINATIONS OF SIGNED AND UNSIGNED NUMERIC          NC1724.2
-002700*    LITERALS, DISPLAY AND COMPUTATIONAL FIELDS ARE USED          NC1724.2
-002800*    AS OPERANDS.                                                 NC1724.2
-002900*                                                                 NC1724.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000                                                                  NC1724.2
 003100                                                                  NC1724.2
 003200 ENVIRONMENT DIVISION.                                            NC1724.2
@@ -358,7 +358,7 @@
 036000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1724.2
 036100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1724.2
 036200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1724.2
-036300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1724.2
+036300*                                                                         
 036400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1724.2
 036500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1724.2
 036600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1724.2
@@ -611,7 +611,7 @@
 061300         GIVING WRK-DS-18V00 ON SIZE ERROR                        NC1724.2
 061400         MOVE "1" TO WRK-XN-00001.                                NC1724.2
 061500 DIV-TEST-F2-7-1.                                                 NC1724.2
-061600     IF WRK-DS-18V00 EQUAL TO 000000000000040000                  NC1724.2
+061600     IF WRK-DS-18V00 EQUAL TO 000000000000100000                  NC1724.2
 061700         PERFORM PASS                                             NC1724.2
 061800         GO TO DIV-WRITE-F2-7-1.                                  NC1724.2
 061900     GO TO DIV-FAIL-F2-7-1.                                       NC1724.2
@@ -619,7 +619,7 @@
 062100     PERFORM DE-LETE.                                             NC1724.2
 062200     GO TO DIV-WRITE-F2-7-1.                                      NC1724.2
 062300 DIV-FAIL-F2-7-1.                                                 NC1724.2
-062400     MOVE  000000000000040000 TO CORRECT-18V0.                    NC1724.2
+062400     MOVE  000000000000100000 TO CORRECT-18V0.                    NC1724.2
 062500     MOVE  WRK-DS-18V00       TO COMPUTED-18V0.                   NC1724.2
 062600     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1724.2
 062700     PERFORM FAIL.                                                NC1724.2
@@ -738,10 +738,10 @@
 074000     MOVE "DIV-TEST-F2-10-1         " TO PAR-NAME.                NC1724.2
 074100     PERFORM PRINT-DETAIL.                                        NC1724.2
 074200 DIV-TEST-F2-10-2.                                                NC1724.2
-074300     IF WRK-XN-00001 EQUAL TO "T"                                 NC1724.2
+074300     IF WRK-XN-00001 EQUAL TO "4"                                 NC1724.2
 074400         PERFORM PASS                                             NC1724.2
 074500         GO TO DIV-WRITE-F2-10-2.                                 NC1724.2
-074600     MOVE "T" TO CORRECT-A.                                       NC1724.2
+074600     MOVE "4" TO CORRECT-A.                                       NC1724.2
 074700     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1724.2
 074800     MOVE   "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.    NC1724.2
 074900     PERFORM FAIL.                                                NC1724.2
@@ -757,7 +757,7 @@
 075900 DIV-TEST-F2-11.                                                  NC1724.2
 076000     DIVIDE A01ONE-CS-00V01 INTO A99-CS-02V00 GIVING              NC1724.2
 076100         WRK-DS-05V00.                                            NC1724.2
-076200     IF WRK-DS-05V00 EQUAL TO 00290                               NC1724.2
+076200     IF WRK-DS-05V00 EQUAL TO 04990                               NC1724.2
 076300        PERFORM PASS                                              NC1724.2
 076400         GO TO DIV-WRITE-F2-11.                                   NC1724.2
 076500     GO TO DIV-FAIL-F2-11.                                        NC1724.2
@@ -765,7 +765,7 @@
 076700     PERFORM DE-LETE.                                             NC1724.2
 076800     GO TO DIV-WRITE-F2-11.                                       NC1724.2
 076900 DIV-FAIL-F2-11.                                                  NC1724.2
-077000     MOVE  00290              TO CORRECT-N.                       NC1724.2
+077000     MOVE  04990              TO CORRECT-N.                       NC1724.2
 077100     MOVE  WRK-DS-05V00       TO COMPUTED-N.                      NC1724.2
 077200     PERFORM FAIL.                                                NC1724.2
 077300 DIV-WRITE-F2-11.                                                 NC1724.2
@@ -809,11 +809,11 @@
 081100 DIV-WRITE-F2-13.                                                 NC1724.2
 081200     MOVE "DIV-TEST-F2-13 " TO PAR-NAME.                          NC1724.2
 081300     PERFORM PRINT-DETAIL.                                        NC1724.2
-081400*                                                                 NC1724.2
-081500*                                                                 NC1724.2
+081400*                                                                         
+081500*                                                                         
 081600 DIV-INIT-F2-14.                                                  NC1724.2
-081700*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-081800*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+081700*                                                                         
+081800*                                                                         
 081900     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 082000     MOVE   "DIV-TEST-F2-14-1" TO PAR-NAME.                       NC1724.2
 082100     MOVE   "P"     TO XRAY.                                      NC1724.2
@@ -854,11 +854,11 @@
 085600     ELSE                                                         NC1724.2
 085700             PERFORM PASS                                         NC1724.2
 085800             PERFORM PRINT-DETAIL.                                NC1724.2
-085900*                                                                 NC1724.2
-086000*                                                                 NC1724.2
+085900*                                                                         
+086000*                                                                         
 086100 DIV-INIT-F2-15.                                                  NC1724.2
-086200*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-086300*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+086200*                                                                         
+086300*                                                                         
 086400     MOVE   "DIV-TEST-F2-15-1" TO PAR-NAME.                       NC1724.2
 086500     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 086600     MOVE    A18ONES-DS-09V09 TO WRK-DS-09V09.                    NC1724.2
@@ -899,11 +899,11 @@
 090100     ELSE                                                         NC1724.2
 090200             PERFORM PASS                                         NC1724.2
 090300             PERFORM PRINT-DETAIL.                                NC1724.2
-090400*                                                                 NC1724.2
-090500*                                                                 NC1724.2
+090400*                                                                         
+090500*                                                                         
 090600 DIV-INIT-F2-16.                                                  NC1724.2
-090700*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-090800*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+090700*                                                                         
+090800*                                                                         
 090900     MOVE   "DIV-TEST-F2-16-1" TO PAR-NAME.                       NC1724.2
 091000     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 091100     MOVE   "P"     TO XRAY.                                      NC1724.2
@@ -946,11 +946,11 @@
 094800     ELSE                                                         NC1724.2
 094900             PERFORM PASS                                         NC1724.2
 095000             PERFORM PRINT-DETAIL.                                NC1724.2
-095100*                                                                 NC1724.2
-095200*                                                                 NC1724.2
+095100*                                                                         
+095200*                                                                         
 095300 DIV-INIT-F2-17.                                                  NC1724.2
-095400*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-095500*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+095400*                                                                         
+095500*                                                                         
 095600     MOVE   "DIV-TEST-F2-17-1" TO PAR-NAME.                       NC1724.2
 095700     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 095800     MOVE    A18ONES-DS-09V09 TO WRK-DS-09V09.                    NC1724.2
@@ -993,12 +993,12 @@
 099500     ELSE                                                         NC1724.2
 099600             PERFORM PASS                                         NC1724.2
 099700             PERFORM PRINT-DETAIL.                                NC1724.2
-099800*                                                                 NC1724.2
-099900*                                                                 NC1724.2
+099800*                                                                         
+099900*                                                                         
 100000 DIV-INIT-F2-18.                                                  NC1724.2
 100100     MOVE "DIVIDE-INTO-GIVING" TO FEATURE.                        NC1724.2
-100200*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-100300*            ==-->  MULTIPLE RESULT FIELDS <--==                  NC1724.2
+100200*                                                                         
+100300*                                                                         
 100400     MOVE   "DIV-TEST-F2-18" TO PAR-NAME.                         NC1724.2
 100500     MOVE   "V1-81 6.11.4 GR2" TO ANSI-REFERENCE.                 NC1724.2
 100600     MOVE    1 TO REC-CT.                                         NC1724.2
@@ -1081,11 +1081,11 @@
 108300             MOVE    WRK-DU-2V0-3 TO COMPUTED-N                   NC1724.2
 108400             MOVE    2            TO CORRECT-N                    NC1724.2
 108500             PERFORM PRINT-DETAIL.                                NC1724.2
-108600*                                                                 NC1724.2
-108700*                                                                 NC1724.2
+108600*                                                                         
+108700*                                                                         
 108800 DIV-INIT-F2-19.                                                  NC1724.2
-108900*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-109000*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+108900*                                                                         
+109000*                                                                         
 109100     MOVE   "DIV-TEST-F2-19" TO PAR-NAME.                         NC1724.2
 109200     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 109300     MOVE   "0"  TO WRK-XN-00001.                                 NC1724.2
@@ -1189,11 +1189,11 @@
 119100             MOVE    WRK-XN-00001 TO COMPUTED-X                   NC1724.2
 119200             MOVE   "1"           TO CORRECT-X                    NC1724.2
 119300             PERFORM PRINT-DETAIL.                                NC1724.2
-119400*                                                                 NC1724.2
-119500*                                                                 NC1724.2
+119400*                                                                         
+119500*                                                                         
 119600 DIV-INIT-F2-20.                                                  NC1724.2
-119700*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-119800*            ==-->  NEW SIZE ERROR TESTS   <--==                  NC1724.2
+119700*                                                                         
+119800*                                                                         
 119900     MOVE   "DIV-TEST-F2-20" TO PAR-NAME.                         NC1724.2
 120000     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 120100     MOVE   "0"  TO WRK-XN-00001.                                 NC1724.2
@@ -1297,11 +1297,11 @@
 129900             MOVE    WRK-XN-00001 TO COMPUTED-X                   NC1724.2
 130000             MOVE   "0"           TO CORRECT-X                    NC1724.2
 130100             PERFORM PRINT-DETAIL.                                NC1724.2
-130200*                                                                 NC1724.2
-130300*                                                                 NC1724.2
+130200*                                                                         
+130300*                                                                         
 130400 DIV-INIT-F2-21.                                                  NC1724.2
-130500*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-130600*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+130500*                                                                         
+130600*                                                                         
 130700     MOVE   "DIV-TEST-F2-21" TO PAR-NAME.                         NC1724.2
 130800     MOVE   "V1-67 6.4.2"      TO ANSI-REFERENCE.                 NC1724.2
 130900     MOVE   "0"  TO WRK-XN-00001.                                 NC1724.2
@@ -1404,11 +1404,11 @@
 140600             MOVE    WRK-XN-00001 TO COMPUTED-X                   NC1724.2
 140700             MOVE   "0"           TO CORRECT-X                    NC1724.2
 140800             PERFORM PRINT-DETAIL.                                NC1724.2
-140900*                                                                 NC1724.2
-141000*                                                                 NC1724.2
+140900*                                                                         
+141000*                                                                         
 141100 DIV-INIT-F2-22.                                                  NC1724.2
-141200*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-141300*            ==-->  NEW SIZE ERROR TESTS   <--==                  NC1724.2
+141200*                                                                         
+141300*                                                                         
 141400     MOVE   "DIV-TEST-F2-22" TO PAR-NAME.                         NC1724.2
 141500     MOVE   "V1-67 6.4.2"    TO ANSI-REFERENCE.                   NC1724.2
 141600     MOVE   "0"  TO WRK-XN-00001.                                 NC1724.2
@@ -1512,11 +1512,11 @@
 151400             MOVE    WRK-XN-00001 TO COMPUTED-X                   NC1724.2
 151500             MOVE   "0"           TO CORRECT-X                    NC1724.2
 151600             PERFORM PRINT-DETAIL.                                NC1724.2
-151700*                                                                 NC1724.2
-151800*                                                                 NC1724.2
+151700*                                                                         
+151800*                                                                         
 151900 DIV-INIT-F2-23.                                                  NC1724.2
-152000*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-152100*            ==-->    NEW SIZE ERROR TESTS <--==                  NC1724.2
+152000*                                                                         
+152100*                                                                         
 152200     MOVE   "DIV-TEST-F2-23" TO PAR-NAME.                         NC1724.2
 152300     MOVE   "V1-67 6.4.2"    TO ANSI-REFERENCE.                   NC1724.2
 152400     MOVE   "0"  TO WRK-XN-00001.                                 NC1724.2
@@ -1622,11 +1622,11 @@
 162400             MOVE    WRK-XN-00001 TO COMPUTED-X                   NC1724.2
 162500             MOVE   "0"           TO CORRECT-X                    NC1724.2
 162600             PERFORM PRINT-DETAIL.                                NC1724.2
-162700*                                                                 NC1724.2
-162800*                                                                 NC1724.2
+162700*                                                                         
+162800*                                                                         
 162900 DIV-INIT-F2-24.                                                  NC1724.2
-163000*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-163100*            ==-->  NEW SIZE ERROR TESTS   <--==                  NC1724.2
+163000*                                                                         
+163100*                                                                         
 163200     MOVE   "DIV-TEST-F2-24" TO PAR-NAME.                         NC1724.2
 163300     MOVE   "V1-67 6.4.2"    TO ANSI-REFERENCE.                   NC1724.2
 163400     MOVE   "0"  TO WRK-XN-00001.                                 NC1724.2
@@ -1733,11 +1733,11 @@
 173500             MOVE    WRK-XN-00001 TO COMPUTED-X                   NC1724.2
 173600             MOVE   "2"           TO CORRECT-X                    NC1724.2
 173700             PERFORM PRINT-DETAIL.                                NC1724.2
-173800*                                                                 NC1724.2
-173900*                                                                 NC1724.2
+173800*                                                                         
+173900*                                                                         
 174000 DIV-INIT-F2-25.                                                  NC1724.2
-174100*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-174200*            ==-->EXPLICIT SCOPE TERMINATOR<--==                  NC1724.2
+174100*                                                                         
+174200*                                                                         
 174300     MOVE   "DIV-TEST-F2-25" TO PAR-NAME.                         NC1724.2
 174400     MOVE   "1V-41 6.4.3"      TO ANSI-REFERENCE.                 NC1724.2
 174500     MOVE   "0"     TO WRK-XN-00001.                              NC1724.2
@@ -1821,11 +1821,11 @@
 182300             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1724.2
 182400             PERFORM FAIL                                         NC1724.2
 182500             PERFORM PRINT-DETAIL.                                NC1724.2
-182600*                                                                 NC1724.2
-182700*                                                                 NC1724.2
+182600*                                                                         
+182700*                                                                         
 182800 DIV-INIT-F2-26.                                                  NC1724.2
-182900*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-183000*            ==-->EXPLICIT SCOPE TERMINATOR<--==                  NC1724.2
+182900*                                                                         
+183000*                                                                         
 183100     MOVE   "DIV-TEST-F2-26" TO PAR-NAME.                         NC1724.2
 183200     MOVE   "1V-41 6.4.3"      TO ANSI-REFERENCE.                 NC1724.2
 183300     MOVE    1      TO REC-CT.                                    NC1724.2
@@ -1910,12 +1910,12 @@
 191200             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1724.2
 191300             PERFORM FAIL                                         NC1724.2
 191400             PERFORM PRINT-DETAIL.                                NC1724.2
-191500*                                                                 NC1724.2
-191600*                                                                 NC1724.2
+191500*                                                                         
+191600*                                                                         
 191700 DIV-INIT-F2-27.                                                  NC1724.2
 191800     MOVE   "DIVIDE INTO GIVING" TO FEATURE.                      NC1724.2
-191900*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-192000*            ==-->EXPLICIT SCOPE TERMINATOR<--==                  NC1724.2
+191900*                                                                         
+192000*                                                                         
 192100     MOVE    0      TO WRK-CS-18V00.                              NC1724.2
 192200     MOVE   "0"     TO WRK-XN-00001.                              NC1724.2
 192300     MOVE    0      TO WRK-DS-05V00.                              NC1724.2
@@ -2000,11 +2000,11 @@
 200200             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1724.2
 200300             PERFORM FAIL                                         NC1724.2
 200400             PERFORM PRINT-DETAIL.                                NC1724.2
-200500*                                                                 NC1724.2
-200600*                                                                 NC1724.2
+200500*                                                                         
+200600*                                                                         
 200700 DIV-INIT-F2-28.                                                  NC1724.2
-200800*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-200900*            ==-->EXPLICIT SCOPE TERMINATOR<--==                  NC1724.2
+200800*                                                                         
+200900*                                                                         
 201000     MOVE    A18ONES-DS-09V09 TO WRK-DS-09V09.                    NC1724.2
 201100     MOVE    1      TO REC-CT.                                    NC1724.2
 201200     MOVE    0      TO WRK-DS-05V00.                              NC1724.2
@@ -2087,11 +2087,11 @@
 208900             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1724.2
 209000             PERFORM FAIL                                         NC1724.2
 209100             PERFORM PRINT-DETAIL.                                NC1724.2
-209200*                                                                 NC1724.2
-209300*                                                                 NC1724.2
+209200*                                                                         
+209300*                                                                         
 209400 DIV-INIT-F2-29.                                                  NC1724.2
-209500*            ==-->    SIZE ERROR CONDITION <--==                  NC1724.2
-209600*            ==-->EXPLICIT SCOPE TERMINATOR<--==                  NC1724.2
+209500*                                                                         
+209600*                                                                         
 209700     MOVE    1      TO REC-CT.                                    NC1724.2
 209800     MOVE    0      TO WRK-CS-18V00.                              NC1724.2
 209900     MOVE   "0"     TO WRK-XN-00001.                              NC1724.2
@@ -2148,11 +2148,11 @@
 215000             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1724.2
 215100             PERFORM FAIL                                         NC1724.2
 215200             PERFORM PRINT-DETAIL.                                NC1724.2
-215300*                                                                 NC1724.2
-215400*                                                                 NC1724.2
+215300*                                                                         
+215400*                                                                         
 215500 DIV-INIT-F2-30.                                                  NC1724.2
-215600*            ==--> NO SIZE ERROR CONDITION <--==                  NC1724.2
-215700*            ==-->EXPLICIT SCOPE TERMINATOR<--==                  NC1724.2
+215600*                                                                         
+215700*                                                                         
 215800     MOVE    A18ONES-DS-09V09 TO WRK-DS-09V09.                    NC1724.2
 215900     MOVE   "0"     TO WRK-XN-00001.                              NC1724.2
 216000     MOVE    0      TO WRK-CS-18V00.                              NC1724.2
@@ -2206,8 +2206,8 @@
 220800             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1724.2
 220900             PERFORM FAIL                                         NC1724.2
 221000             PERFORM PRINT-DETAIL.                                NC1724.2
-221100*                                                                 NC1724.2
-221200*                                                                 NC1724.2
+221100*                                                                         
+221200*                                                                         
 221300 CCVS-EXIT SECTION.                                               NC1724.2
 221400 CCVS-999999.                                                     NC1724.2
 221500     GO TO CLOSE-FILES.                                           NC1724.2

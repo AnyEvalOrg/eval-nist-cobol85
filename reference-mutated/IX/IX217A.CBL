@@ -1,55 +1,55 @@
 000100 IDENTIFICATION DIVISION.                                         IX2174.2
 000200 PROGRAM-ID.                                                      IX2174.2
 000300     IX217A.                                                      IX2174.2
-000400****************************************************************  IX2174.2
-000500*                                                              *  IX2174.2
-000600*    VALIDATION FOR:-                                          *  IX2174.2
-000700*                                                              *  IX2174.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2174.2
-000900*                                                              *  IX2174.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2174.2
-001100*                                                              *  IX2174.2
-001200****************************************************************  IX2174.2
-001300*                                                                 IX2174.2
-001400*                      THE FUNCTION OF THIS PROGRAM IS TO CREATE  IX2174.2
-001500*     THE  OPTIONAL  BUT  NOT EXISTING INDEXED FILES BY THE OPEN  IX2174.2
-001600*     I-O  AND  THE OPEN EXTEND STATEMENTS. THE FILE STATUS CODE  IX2174.2
-001700*     FOR  BOTH  FILES  MUST  BE  "05" AFTER PROCESSING THE OPEN  IX2174.2
-001800*     STATEMENT. FILE IX-FS1 CONTAINS 50 RECORDS AFTER CORRECT    IX2174.2
-001900*     EXECUTION AND FILE IX-VS1 CONTAINS 25 LONG RECORDS (240)    IX2174.2
-002000*     AND 25 SHORT RECORDS (200) AFTER CORRECT EXECUTION.         IX2174.2
-002100*                                                                 IX2174.2
-002200*                                                                 IX2174.2
-002300*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX2174.2
-002400*                                                                 IX2174.2
-002500*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2174.2
-002600*                    CLAUSE FOR DATA FILE IX-FS1                  IX2174.2
-002700*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2174.2
-002800*                    CLAUSE FOR DATA FILE IX-VS1                  IX2174.2
-002900*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2174.2
-003000*                    CLAUSE FOR INDEX FILE IX-FS1                 IX2174.2
-003100*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2174.2
-003200*                    CLAUSE FOR INDEX FILE IX-VS1                 IX2174.2
-003300*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX2174.2
-003400*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX2174.2
-003500*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX2174.2
-003600*                                                                 IX2174.2
-003700*         NOTE:  X-CARDS 44 AND 62          ARE OPTIONAL          IX2174.2
-003800*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX2174.2
-003900*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX2174.2
-004000*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX2174.2
-004100*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX2174.2
-004200*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX2174.2
-004300*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX2174.2
-004400*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX2174.2
-004500*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX2174.2
-004600*               THEY ARE AS FOLLOWS                               IX2174.2
-004700*                                                                 IX2174.2
-004800*                  J  SELECTS X-CARD 44                           IX2174.2
-004900*                  J  SELECTS X-CARD 45                           IX2174.2
-005000*                  C  SELECTS X-CARD 84                           IX2174.2
-005100*                                                                 IX2174.2
-005200******************************************************            IX2174.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
 005300 ENVIRONMENT DIVISION.                                            IX2174.2
 005400 CONFIGURATION SECTION.                                           IX2174.2
 005500 SOURCE-COMPUTER.                                                 IX2174.2
@@ -370,7 +370,7 @@
 037600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2174.2
 037700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2174.2
 037800      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2174.2
-037900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2174.2
+037900*                                                                         
 038000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2174.2
 038100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2174.2
 038200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2174.2
@@ -443,12 +443,12 @@
 044900 CCVS1-EXIT.                                                      IX2174.2
 045000     EXIT.                                                        IX2174.2
 045100                                                                  IX2174.2
-045200******************************************************************IX2174.2
-045300*   TEST  1                                                      *IX2174.2
-045400*         OPEN I-O  (ACCESS IS DYNAMIC) OPTIONAL NOT EXISTING FILEIX2174.2
-045500*                                       05  EXPECTED             *IX2174.2
-045600*         IX-3, 1.3.4 (1) D                                      *IX2174.2
-045700******************************************************************IX2174.2
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
 045800 SECT-IX-01-001 SECTION.                                          IX2174.2
 045900 OPN-INIT-GF-01.                                                  IX2174.2
 046000     MOVE SPACES TO IX-FS1-STATUS.                                IX2174.2
@@ -470,11 +470,11 @@
 047600 OPN-WRITE-GF-01.                                                 IX2174.2
 047700     PERFORM PRINT-DETAIL.                                        IX2174.2
 047800                                                                  IX2174.2
-047900******************************************************************IX2174.2
-048000*   TEST  2                                                      *IX2174.2
-048100*         WRITE                            00 EXPECTED           *IX2174.2
-048200*         IX-3, 1.3.4 (1) A                                      *IX2174.2
-048300******************************************************************IX2174.2
+047900*                                                                         
+048000*                                                                         
+048100*                                                                         
+048200*                                                                         
+048300*                                                                         
 048400 WRI-INIT-GF-01.                                                  IX2174.2
 048500     MOVE    240 TO REC-LENGTH.                                   IX2174.2
 048600     MOVE   ZERO TO STATUS-ERROR.                                 IX2174.2
@@ -515,11 +515,11 @@
 052100     PERFORM PRINT-DETAIL.                                        IX2174.2
 052200                                                                  IX2174.2
 052300     CLOSE    IX-FS1.                                             IX2174.2
-052400******************************************************************IX2174.2
-052500*   TEST  3                                                      *IX2174.2
-052600*         READ                               00 EXPECTED         *IX2174.2
-052700*         IX-3, 1.3.4 (1) A                                      *IX2174.2
-052800******************************************************************IX2174.2
+052400*                                                                         
+052500*                                                                         
+052600*                                                                         
+052700*                                                                         
+052800*                                                                         
 052900 READ-INIT-F1-01.                                                 IX2174.2
 053000     OPEN     INPUT     IX-FS1.                                   IX2174.2
 053100     MOVE   ZERO TO WRK-DU-09V00-001.                             IX2174.2
@@ -555,12 +555,12 @@
 056100 READ-TEST-F1-01-3.                                               IX2174.2
 056200     CLOSE   IX-FS1.                                              IX2174.2
 056300                                                                  IX2174.2
-056400******************************************************************IX2174.2
-056500*   TEST  4                                                      *IX2174.2
-056600*       OPEN EXTEND (ACCESS IS DYNAMIC) OPTIONAL NOT EXISTING FILEIX2174.2
-056700*                                       05  EXPECTED             *IX2174.2
-056800*         IX-3, 1.3.4 (1) D                                      *IX2174.2
-056900******************************************************************IX2174.2
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
 057000 OPN-INIT-GF-02.                                                  IX2174.2
 057100     MOVE SPACES TO IX-VS1-STATUS.                                IX2174.2
 057200     MOVE "OPEN EXTEND: 05 EXP." TO FEATURE.                      IX2174.2
@@ -581,11 +581,11 @@
 058700 OPN-WRITE-GF-02.                                                 IX2174.2
 058800     PERFORM PRINT-DETAIL.                                        IX2174.2
 058900                                                                  IX2174.2
-059000******************************************************************IX2174.2
-059100*   TEST  5                                                      *IX2174.2
-059200*         WRITE                            00 EXPECTED           *IX2174.2
-059300*         IX-3, 1.3.4 (1) A                                      *IX2174.2
-059400******************************************************************IX2174.2
+059000*                                                                         
+059100*                                                                         
+059200*                                                                         
+059300*                                                                         
+059400*                                                                         
 059500 WRI-INIT-GF-02.                                                  IX2174.2
 059600     MOVE    240 TO REC-LENGTH.                                   IX2174.2
 059700     MOVE   ZERO TO STATUS-ERROR.                                 IX2174.2
@@ -636,11 +636,11 @@
 064200     PERFORM PRINT-DETAIL.                                        IX2174.2
 064300                                                                  IX2174.2
 064400     CLOSE    IX-VS1.                                             IX2174.2
-064500******************************************************************IX2174.2
-064600*   TEST  6                                                      *IX2174.2
-064700*         READ                               00 EXPECTED         *IX2174.2
-064800*         IX-3, 1.3.4 (1) A                                      *IX2174.2
-064900******************************************************************IX2174.2
+064500*                                                                         
+064600*                                                                         
+064700*                                                                         
+064800*                                                                         
+064900*                                                                         
 065000 READ-INIT-F1-02.                                                 IX2174.2
 065100     OPEN     INPUT     IX-VS1.                                   IX2174.2
 065200     MOVE   ZERO TO WRK-DU-09V00-001.                             IX2174.2

@@ -25,7 +25,7 @@ TEST RESULT OF NC201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PERFORM VARYING      FAIL* PFM-TEST-F4-7                                                                               
                                                                                                                         
                                      COMPUTED=  000000090.100000000                                                     
-                                     CORRECT =  000000060.100000000  VI-122 6.20.4 GR10(C)                              
+                                     CORRECT =  000000020.100000000  VI-122 6.20.4 GR10(C)                              
                                                                                                                         
  PERFORM VARYING      PASS  PFM-TEST-F4-8                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-9                                                                               
@@ -37,7 +37,7 @@ TEST RESULT OF NC201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PERFORM VARYING      FAIL* PFM-TEST-F3-6                                                                               
                                                                                                                         
                                      COMPUTED=  000000099.000000000                                                     
-                                     CORRECT =  000000019.000000000  VI-112 6.20.2 GR10                                 
+                                     CORRECT =  000000093.000000000  VI-112 6.20.2 GR10                                 
                                                                                                                         
  PERFORM VARYING      PASS  PFM-TEST-F3-7                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F3-8                                                                               
@@ -86,7 +86,7 @@ TEST RESULT OF NC201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CHANGE BY INCR.      FAIL* PFM-TEST-F4-24                                                                              
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000002.000000000  VI-112 6.20.4 GR10(d)                              
+                                     CORRECT =  000000001.000000000  VI-112 6.20.4 GR10(d)                              
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

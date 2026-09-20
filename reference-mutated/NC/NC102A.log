@@ -36,7 +36,7 @@ TEST RESULT OF NC102A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NESTED PERFORM       FAIL* PFM-TEST-F1-4                                                                               
                                                                                                                         
                                      COMPUTED=  000000312.000000000                                                     
-                                     CORRECT =  000000382.000000000  V1-111 6.20.4 GR10                                 
+                                     CORRECT =  000000372.000000000  V1-111 6.20.4 GR10                                 
                                                                                                                         
  PERFORM SECTION-NAME PASS  PFM-TEST-F1-5                                                                               
  PERFORM EXIT PARAS   PASS  PFM-TEST-F2-2                                                                               
@@ -60,7 +60,7 @@ TEST RESULT OF NC102A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NESTED PERFORM       FAIL* PFM-TEST-F1-8                                                                               
                                                                                                                         
                                      COMPUTED=  000133333.000000000                                                     
-                                     CORRECT =  000033333.000000000  V1-111 6.20.4 GR10                                 
+                                     CORRECT =  000133133.000000000  V1-111 6.20.4 GR10                                 
                                                                                                                         
  NESTED PERFORM       PASS  PFM-TEST-F2-5                                                                               
  NESTED PERFORM       PASS  PFM-TEST-F1-9                                                                               
@@ -76,7 +76,7 @@ TEST RESULT OF NC102A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PERFORM UNTIL        FAIL* PFM-TEST-F3-2                                                                               
                                                                                                                         
                                      COMPUTED=  000000050.000000000                                                     
-                                     CORRECT =  000000070.000000000  V1-108 6.20.2                                      
+                                     CORRECT =  000000020.000000000  V1-108 6.20.2                                      
                                                                                                                         
  PERFORM UNTIL        PASS  PFM-TEST-F3-3                                                                               
  PERFORM UNTIL        PASS  PFM-TEST-F3-4                                                                               

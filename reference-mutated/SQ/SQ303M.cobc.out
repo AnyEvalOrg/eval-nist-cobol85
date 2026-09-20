@@ -3,5 +3,5 @@ SQ303M.CBL:42: warning: OPEN REVERSED is not implemented [-Wpending]
    40 | 004000                                                                  S..
    41 | 004100 SQ303M-CONTROL.                                                  S..
    42 > 004200     OPEN INPUT TFIL REVERSED.                                    S..
-   43 | 004300*Message expected for above statement: OBSOLETE                   S..
+   43 | 004300*..
    44 | 004400                                                                  S..

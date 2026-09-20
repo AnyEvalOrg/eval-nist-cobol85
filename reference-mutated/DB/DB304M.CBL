@@ -1,9 +1,9 @@
 000100 IDENTIFICATION DIVISION.                                         DB3044.2
 000200 PROGRAM-ID.                                                      DB3044.2
 000300     DB304M.                                                      DB3044.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF OBSOLETE             DB3044.2
-000500*LEVEL 2 COMMUNICATION FEATURES THAT ARE USED IN DEBUGGING.       DB3044.2
-000600*THIS TEST NEED NOT BE RUN IF COMMUNICATIONS NOT IMPLEMTENTED.    DB3044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
 000700 ENVIRONMENT DIVISION.                                            DB3044.2
 000800 CONFIGURATION SECTION.                                           DB3044.2
 000900 SOURCE-COMPUTER.                                                 DB3044.2
@@ -26,7 +26,7 @@
 002600 BUGGING SECTION.                                                 DB3044.2
 002700                                                                  DB3044.2
 002800     USE FOR DEBUGGING ON COMMNAME.                               DB3044.2
-002900*Message expected for above statement: OBSOLETE                   DB3044.2
+002900*                                                                         
 003000                                                                  DB3044.2
 003100                                                                  DB3044.2
 003200                                                                  DB3044.2
@@ -38,4 +38,4 @@
 003800     DISPLAY "THIS IS A DUMMY PROCEDURE".                         DB3044.2
 003900     STOP RUN.                                                    DB3044.2
 004000                                                                  DB3044.2
-004100*TOTAL NUMBER OF FLAGS EXPECTED = 1.                              DB3044.2
+004100*                                                                         

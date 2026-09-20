@@ -22,17 +22,17 @@ TEST RESULT OF IC235A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL USING DN SERIES FAIL* CALL-TEST-06       .03        ALPHABETIC PARAMETER                                          
                                                                                                                         
                                      COMPUTED= YES                                                                      
-                                     CORRECT = YE1                                                                      
+                                     CORRECT = YEC                                                                      
                                                                                                                         
  CALL USING DN SERIES FAIL* CALL-TEST-06       .04        COMPUTATIONAL PARAMETER                                       
                                                                                                                         
                                      COMPUTED=  0000.76540000000000                                                     
-                                     CORRECT =  0000.36540000000000                                                     
+                                     CORRECT =  0000.72540000000000                                                     
                                                                                                                         
  CALL USING DN SERIES FAIL* CALL-TEST-06       .05        SIGNED NUMERIC PARAMETER                                      
                                                                                                                         
                                      COMPUTED=  000000000000000025                                                      
-                                     CORRECT =  000000000000000075                                                      
+                                     CORRECT =  000000000000000085                                                      
                                                                                                                         
  CALL USING DN SERIES PASS  CALL-TEST-06       .06                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .07                                                                      

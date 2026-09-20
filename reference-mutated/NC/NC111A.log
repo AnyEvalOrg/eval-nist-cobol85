@@ -22,23 +22,23 @@ TEST RESULT OF NC111A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                           TRACT, MULTIPLY, AND DIVIDE                                   
                                                           TESTS.                                                        
  TRUNCATION           PASS  TRU-TEST-GF-1                                                                               
- TRUNCATION           FAIL* TRU-TEST-GF-2                                                                               
+ TRUNCATION           PASS  TRU-TEST-GF-2                                                                               
+ TRUNCATION           FAIL* TRU-TEST-GF-3                                                                               
                                                                                                                         
-                                     COMPUTED=  000000003.000000000                                                     
-                                     CORRECT =  000000000.000000000  V1-67 6.4.1                                        
+                                     COMPUTED= -000000003.000000000                                                     
+                                     CORRECT = -000000002.000000000  V1-67 6.4.1                                        
                                                                                                                         
- TRUNCATION           PASS  TRU-TEST-GF-3                                                                               
- TRUNCATION           FAIL* TRU-TEST-GF-4                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000008.000000000                                                     
-                                     CORRECT =  000000003.000000000  V1-67 6.4.1                                        
-                                                                                                                        
+ TRUNCATION           PASS  TRU-TEST-GF-4                                                                               
  TRUNCATION           FAIL* TRU-TEST-GF-5                                                                               
                                                                                                                         
                                      COMPUTED= -000000008.000000000                                                     
-                                     CORRECT = -000000004.000000000  V1-67 6.4.1                                        
+                                     CORRECT =  000000000.000000000  V1-67 6.4.1                                        
                                                                                                                         
- TRUNCATION           PASS  TRU-TEST-GF-6                                                                               
+ TRUNCATION           FAIL* TRU-TEST-GF-6                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000003.000000000                                                     
+                                     CORRECT =  000000008.000000000  V1-67 6.4.1                                        
+                                                                                                                        
  TRUNCATION           PASS  TRU-TEST-GF-7                                                                               
  ***********************************************************************************************************************                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        

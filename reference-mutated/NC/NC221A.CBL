@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC2214.2
 000200 PROGRAM-ID.                                                      NC2214.2
 000300     NC221A.                                                      NC2214.2
-000400****************************************************************  NC2214.2
-000500*                                                              *  NC2214.2
-000600*    VALIDATION FOR:-                                          *  NC2214.2
-000700*                                                              *  NC2214.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2214.2
-000900*                                                              *  NC2214.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2214.2
-001100*                                                              *  NC2214.2
-001200****************************************************************  NC2214.2
-001300*                                                              *  NC2214.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2214.2
-001500*                                                              *  NC2214.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2214.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2214.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2214.2
-001900*                                                              *  NC2214.2
-002000****************************************************************  NC2214.2
-002100*                                                              *  NC2214.2
-002200*    PROGRAM NC221A TEST THE USE OF INDEXED IDENTIFIERS WITH   *  NC2214.2
-002300*    FORMATS 1, 2 AND 3 OF THE "INSPECT" STATEMENT.            *  NC2214.2
-002400*                                                              *  NC2214.2
-002500****************************************************************  NC2214.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC2214.2
 002700 CONFIGURATION SECTION.                                           NC2214.2
 002800 SOURCE-COMPUTER.                                                 NC2214.2
@@ -90,18 +90,18 @@
 009000 01  ANS-XN-83-6 PIC X(83) VALUE                                  NC2214.2
 009100     "AH YES OH YES W.C. FRITOES HERE. ANYONE WHO HATES DOGS AND KNC2214.2
 009200-    "IDS CAN NOT BE ALL BAD.".                                   NC2214.2
-009300*01  TEST-RESULTS.                                                NC2214.2
-009400*    02 FILLER                   PIC X      VALUE SPACE.          NC2214.2
-009500*    02 FEATURE                  PIC X(20)  VALUE SPACE.          NC2214.2
-009600*    02 FILLER                   PIC X      VALUE SPACE.          NC2214.2
-009700*    02 P-OR-F                   PIC X(5)   VALUE SPACE.          NC2214.2
-009800*    02 FILLER                   PIC X      VALUE SPACE.          NC2214.2
-009900*    02  PAR-NAME.                                                NC2214.2
-010000*      03 FILLER                 PIC X(19)  VALUE SPACE.          NC2214.2
-010100*      03  PARDOT-X              PIC X      VALUE SPACE.          NC2214.2
-010200*      03 DOTVALUE               PIC 99     VALUE ZERO.           NC2214.2
-010300*    02 FILLER                   PIC X(8)   VALUE SPACE.          NC2214.2
-010400*    02 RE-MARK                  PIC X(61).                       NC2214.2
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
 010500 01  TEST-RESULTS.                                                NC2214.2
 010600     02 FILLER                   PIC X      VALUE SPACE.          NC2214.2
 010700     02 FEATURE                  PIC X(20)  VALUE SPACE.          NC2214.2
@@ -289,7 +289,7 @@
 029100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2214.2
 029200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2214.2
 029300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2214.2
-029400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2214.2
+029400*                                                                         
 029500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2214.2
 029600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2214.2
 029700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2214.2
@@ -375,7 +375,7 @@
 037700     MOVE "HE" TO TABLE4-LETTER (3).                              NC2214.2
 037800     MOVE "LL" TO TABLE4-LETTER (4).                              NC2214.2
 037900     MOVE "H " TO TABLE4-LETTER (5).                              NC2214.2
-038000*                                                                 NC2214.2
+038000*                                                                         
 038100 INS-INIT-F1-1.                                                   NC2214.2
 038200     MOVE "INS-TEST-F1-1"     TO PAR-NAME.                        NC2214.2
 038300     MOVE "IV-21 4.3.8.2"     TO ANSI-REFERENCE.                  NC2214.2
@@ -399,7 +399,7 @@
 040100     MOVE 1 TO CORRECT-N.                                         NC2214.2
 040200 INS-WRITE-F1-1.                                                  NC2214.2
 040300     PERFORM PRINT-DETAIL.                                        NC2214.2
-040400*                                                                 NC2214.2
+040400*                                                                         
 040500 INS-INIT-F1-2.                                                   NC2214.2
 040600     MOVE "INS-TEST-F1-2"        TO PAR-NAME.                     NC2214.2
 040700     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -411,7 +411,7 @@
 041300     INSPECT TABLE1-REC (INDEX1 + 1)                              NC2214.2
 041400        TALLYING WRK-DU-999 (INDEX2 + 1)                          NC2214.2
 041500        FOR CHARACTERS AFTER " W".                                NC2214.2
-041600     IF WRK-DU-999 (INDEX2 + 1) EQUAL TO 62                       NC2214.2
+041600     IF WRK-DU-999 (INDEX2 + 1) EQUAL TO 67                       NC2214.2
 041700        PERFORM PASS                                              NC2214.2
 041800        GO TO INS-WRITE-F1-2.                                     NC2214.2
 041900     GO TO INS-FAIL-F1-2.                                         NC2214.2
@@ -421,10 +421,10 @@
 042300 INS-FAIL-F1-2.                                                   NC2214.2
 042400     PERFORM FAIL.                                                NC2214.2
 042500     MOVE WRK-DU-999 (INDEX2 + 1) TO COMPUTED-N.                  NC2214.2
-042600     MOVE 62 TO CORRECT-N.                                        NC2214.2
+042600     MOVE 67 TO CORRECT-N.                                        NC2214.2
 042700 INS-WRITE-F1-2.                                                  NC2214.2
 042800     PERFORM PRINT-DETAIL.                                        NC2214.2
-042900*                                                                 NC2214.2
+042900*                                                                         
 043000 INS-INIT-F1-3.                                                   NC2214.2
 043100     MOVE "INS-TEST-F1-3" TO PAR-NAME.                            NC2214.2
 043200     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -436,7 +436,7 @@
 043800     INSPECT TABLE1-REC (INDEX1 - 1)                              NC2214.2
 043900        TALLYING WRK-DU-999 (INDEX2 - 2)                          NC2214.2
 044000        FOR ALL " " BEFORE INITIAL "W.C.".                        NC2214.2
-044100     IF WRK-DU-999 (INDEX2 - 2) EQUAL TO 5                        NC2214.2
+044100     IF WRK-DU-999 (INDEX2 - 2) EQUAL TO 7                        NC2214.2
 044200        PERFORM PASS                                              NC2214.2
 044300        GO TO INS-WRITE-F1-3.                                     NC2214.2
 044400     GO TO INS-FAIL-F1-3.                                         NC2214.2
@@ -446,10 +446,10 @@
 044800 INS-FAIL-F1-3.                                                   NC2214.2
 044900     PERFORM FAIL.                                                NC2214.2
 045000     MOVE WRK-DU-999 (INDEX2 - 2) TO COMPUTED-N.                  NC2214.2
-045100     MOVE 5 TO CORRECT-N.                                         NC2214.2
+045100     MOVE 7 TO CORRECT-N.                                         NC2214.2
 045200 INS-WRITE-F1-3.                                                  NC2214.2
 045300     PERFORM PRINT-DETAIL.                                        NC2214.2
-045400*                                                                 NC2214.2
+045400*                                                                         
 045500 INS-INIT-F2-4.                                                   NC2214.2
 045600     MOVE "INS-TEST-F2-4" TO PAR-NAME.                            NC2214.2
 045700     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -490,7 +490,7 @@
 049200     PERFORM PRINT-DETAIL.                                        NC2214.2
 049300 INS-WRITE-F2-4.                                                  NC2214.2
 049400     PERFORM PRINT-DETAIL.                                        NC2214.2
-049500*                                                                 NC2214.2
+049500*                                                                         
 049600 INS-INIT-F2-5.                                                   NC2214.2
 049700     MOVE "INS-TEST-F2-5" TO PAR-NAME.                            NC2214.2
 049800     MOVE "IV-21 4.3.8.2"      TO ANSI-REFERENCE.                 NC2214.2
@@ -534,7 +534,7 @@
 053600     PERFORM PRINT-DETAIL.                                        NC2214.2
 053700 INS-WRITE-F2-5.                                                  NC2214.2
 053800     PERFORM PRINT-DETAIL.                                        NC2214.2
-053900*                                                                 NC2214.2
+053900*                                                                         
 054000 INS-INIT-F2-6.                                                   NC2214.2
 054100     MOVE "INS-TEST-F2-6" TO PAR-NAME.                            NC2214.2
 054200     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -576,7 +576,7 @@
 057800     PERFORM PRINT-DETAIL.                                        NC2214.2
 057900 INS-WRITE-F2-6.                                                  NC2214.2
 058000     PERFORM PRINT-DETAIL.                                        NC2214.2
-058100*                                                                 NC2214.2
+058100*                                                                         
 058200 INS-INIT-F2-7.                                                   NC2214.2
 058300     MOVE "INS-TEST-F2-7"     TO PAR-NAME.                        NC2214.2
 058400     MOVE "IV-21 4.3.8.2"     TO ANSI-REFERENCE.                  NC2214.2
@@ -620,7 +620,7 @@
 062200     PERFORM PRINT-DETAIL.                                        NC2214.2
 062300 INS-WRITE-F2-7.                                                  NC2214.2
 062400     PERFORM PRINT-DETAIL.                                        NC2214.2
-062500*                                                                 NC2214.2
+062500*                                                                         
 062600 INS-INIT-F3-8.                                                   NC2214.2
 062700     MOVE "INS-TEST-F3-8"       TO PAR-NAME.                      NC2214.2
 062800     MOVE "IV-21 4.3.8.2"       TO ANSI-REFERENCE.                NC2214.2
@@ -656,7 +656,7 @@
 065800     PERFORM FAIL.                                                NC2214.2
 065900 INS-WRITE-F3-8-1.                                                NC2214.2
 066000     PERFORM PRINT-DETAIL.                                        NC2214.2
-066100*                                                                 NC2214.2
+066100*                                                                         
 066200 INS-TEST-F3-8-2.                                                 NC2214.2
 066300     ADD 1 TO REC-CT.                                             NC2214.2
 066400     IF TABLE1-REC (INDEX1 - 2) EQUAL TO ANS-XN-83-5              NC2214.2
@@ -687,7 +687,7 @@
 068900     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2214.2
 069000 INS-WRITE-F3-8-2.                                                NC2214.2
 069100     PERFORM PRINT-DETAIL.                                        NC2214.2
-069200*                                                                 NC2214.2
+069200*                                                                         
 069300 INS-INIT-F3-9.                                                   NC2214.2
 069400     MOVE "INS-TEST-F3-9"        TO PAR-NAME.                     NC2214.2
 069500     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -723,7 +723,7 @@
 072500     PERFORM FAIL.                                                NC2214.2
 072600 INS-WRITE-F3-9-1.                                                NC2214.2
 072700     PERFORM PRINT-DETAIL.                                        NC2214.2
-072800*                                                                 NC2214.2
+072800*                                                                         
 072900 INS-TEST-F3-9-2.                                                 NC2214.2
 073000     ADD 1 TO REC-CT.                                             NC2214.2
 073100     IF TABLE1-REC (INDEX1) EQUAL TO ANS-XN-83-6                  NC2214.2
@@ -754,7 +754,7 @@
 075600     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2214.2
 075700 INS-WRITE-F3-9-2.                                                NC2214.2
 075800     PERFORM PRINT-DETAIL.                                        NC2214.2
-075900*                                                                 NC2214.2
+075900*                                                                         
 076000 INS-INIT-F3-10.                                                  NC2214.2
 076100     MOVE "INS-TEST-F3-10"       TO PAR-NAME.                     NC2214.2
 076200     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -790,7 +790,7 @@
 079200     PERFORM FAIL.                                                NC2214.2
 079300 INS-WRITE-F3-10-1.                                               NC2214.2
 079400     PERFORM PRINT-DETAIL.                                        NC2214.2
-079500*                                                                 NC2214.2
+079500*                                                                         
 079600 INS-TEST-F3-10-2.                                                NC2214.2
 079700     ADD 1 TO REC-CT.                                             NC2214.2
 079800     IF TABLE1-REC (INDEX1) EQUAL TO ANS-XN-83-3                  NC2214.2
@@ -821,7 +821,7 @@
 082300     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2214.2
 082400 INS-WRITE-F3-10-2.                                               NC2214.2
 082500     PERFORM PRINT-DETAIL.                                        NC2214.2
-082600*                                                                 NC2214.2
+082600*                                                                         
 082700 INS-INIT-F3-11.                                                  NC2214.2
 082800     MOVE "INS-TEST-F3-11"       TO PAR-NAME.                     NC2214.2
 082900     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -855,7 +855,7 @@
 085700     PERFORM FAIL.                                                NC2214.2
 085800 INS-WRITE-F3-11-1.                                               NC2214.2
 085900     PERFORM PRINT-DETAIL.                                        NC2214.2
-086000*                                                                 NC2214.2
+086000*                                                                         
 086100 INS-TEST-F3-11-2.                                                NC2214.2
 086200     ADD 1 TO REC-CT.                                             NC2214.2
 086300     IF TABLE1-REC (INDEX1) EQUAL TO ANS-XN-83-6                  NC2214.2
@@ -886,7 +886,7 @@
 088800     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2214.2
 088900 INS-WRITE-F3-11-2.                                               NC2214.2
 089000     PERFORM PRINT-DETAIL.                                        NC2214.2
-089100*                                                                 NC2214.2
+089100*                                                                         
 089200 INS-INIT-F3-12.                                                  NC2214.2
 089300     MOVE "INS-TEST-F3-12"       TO PAR-NAME.                     NC2214.2
 089400     MOVE "IV-21 4.3.8.2"        TO ANSI-REFERENCE.               NC2214.2
@@ -909,7 +909,7 @@
 091100     PERFORM PRINT-DETAIL.                                        NC2214.2
 091200     GO TO CCVS-999999.                                           NC2214.2
 091300 INS-TEST-F3-12-1.                                                NC2214.2
-091400     IF WRK-DU-999 (INDEX2) EQUAL TO 01                           NC2214.2
+091400     IF WRK-DU-999 (INDEX2) EQUAL TO 51                           NC2214.2
 091500        PERFORM PASS                                              NC2214.2
 091600        GO TO INS-WRITE-F3-12-1                                   NC2214.2
 091700        ELSE                                                      NC2214.2
@@ -919,11 +919,11 @@
 092100     GO TO INS-WRITE-F3-12-1.                                     NC2214.2
 092200 INS-FAIL-F3-12-1.                                                NC2214.2
 092300     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N                       NC2214.2
-092400     MOVE 01 TO CORRECT-N                                         NC2214.2
+092400     MOVE 51 TO CORRECT-N                                         NC2214.2
 092500     PERFORM FAIL.                                                NC2214.2
 092600 INS-WRITE-F3-12-1.                                               NC2214.2
 092700     PERFORM PRINT-DETAIL.                                        NC2214.2
-092800*                                                                 NC2214.2
+092800*                                                                         
 092900 INS-TEST-F3-12-2.                                                NC2214.2
 093000     ADD 1 TO REC-CT.                                             NC2214.2
 093100     IF TABLE1-REC (INDEX1) EQUAL TO ANS-XN-83-3                  NC2214.2

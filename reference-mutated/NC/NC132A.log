@@ -18,7 +18,7 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* SUB-SCRIPT-3                                                                                
                                                                                                                         
                                      COMPUTED= 111                                                                      
-                                     CORRECT = 11Y                   IV-21 4.3.8.2                                      
+                                     CORRECT = 115                   IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-4                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-5                                                                                
@@ -28,7 +28,7 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* SUB-SCRIPT-10                                                                               
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = K                     IV-21 4.3.8.2                                      
+                                     CORRECT = 7                     IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-11                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-12                                                                               
@@ -59,7 +59,7 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* SUB-SCRIPT-24                                                                               
                                                                                                                         
                                      COMPUTED= 0000                                                                     
-                                     CORRECT = 2000                  IV-21 4.3.8.2                                      
+                                     CORRECT = 0004                  IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-25                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-26                                                                               

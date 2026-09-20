@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         SM1054.2
 000200 PROGRAM-ID.                                                      SM1054.2
 000300     SM105A.                                                      SM1054.2
-000400****************************************************************  SM1054.2
-000500*                                                              *  SM1054.2
-000600*    VALIDATION FOR:-                                          *  SM1054.2
-000700*                                                              *  SM1054.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM1054.2
-000900*                                                              *  SM1054.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM1054.2
-001100*                                                              *  SM1054.2
-001200****************************************************************  SM1054.2
-001300*                                                              *  SM1054.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM1054.2
-001500*                                                              *  SM1054.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM1054.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM1054.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM1054.2
-001900*                                                              *  SM1054.2
-002000****************************************************************  SM1054.2
-002100*                                                              *  SM1054.2
-002200*    PROGRAM NC105A TESTS THE USE OF THE "COPY" STATEMENT IN   *  SM1054.2
-002300*    THE DATA DIVISION FOR A SORT DESCRIPTION ENTRY AND THE    *  SM1054.2
-002400*    ASSOCIATED RECORD DESCRIPTION ENTRIES.                    *  SM1054.2
-002500*                                                              *  SM1054.2
-002600****************************************************************  SM1054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700                                                                  SM1054.2
 002800 ENVIRONMENT DIVISION.                                            SM1054.2
 002900 CONFIGURATION SECTION.                                           SM1054.2
@@ -49,28 +49,28 @@
 004900                                                                  SM1054.2
 005000                                                                  SM1054.2
 005100                                                                  SM1054.2
-005200*                                                                 SM1054.2
-005300*********************** COPY STATEMENT USED **********************SM1054.2
-005400*                                                                 SM1054.2
-005500*SD  SORTFILE-1E                                      COPY K5SDA. SM1054.2
-005600*                                                                 SM1054.2
-005700******************** COPIED TEXT BEGINS BELOW ********************SM1054.2
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
 005800 SD  SORTFILE-1E                                       COPY K5SDA.SM1054.2
-005900*********************** END OF COPIED TEXT ***********************SM1054.2
+005900*                                                                         
 006000                                                                  SM1054.2
 006100                                                                  SM1054.2
 006200                                                                  SM1054.2
 006300                                                                  SM1054.2
 006400                                                                  SM1054.2
 006500 01  S-RECORD.                                                    SM1054.2
-006600*                                                                 SM1054.2
-006700*********************** COPY STATEMENT USED **********************SM1054.2
-006800*                                                                 SM1054.2
-006900*                                                     COPY K501A. SM1054.2
-007000*                                                                 SM1054.2
-007100******************** COPIED TEXT BEGINS BELOW ********************SM1054.2
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
 007200                                                       COPY K501A.SM1054.2
-007300*********************** END OF COPIED TEXT ***********************SM1054.2
+007300*                                                                         
 007400 FD  SORTOUT-1E                                                   SM1054.2
 007500     BLOCK CONTAINS 10 RECORDS                                    SM1054.2
 007600     LABEL RECORDS ARE STANDARD                                   SM1054.2
@@ -274,7 +274,7 @@
 028100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM1054.2
 028200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM1054.2
 028300      ADD PASS-COUNTER TO ERROR-HOLD.                             SM1054.2
-028400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM1054.2
+028400*                                                                         
 028500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM1054.2
 028600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM1054.2
 028700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM1054.2
@@ -362,7 +362,7 @@
 036900     RELEASE S-RECORD.                                            SM1054.2
 037000     MOVE 009000000900008 TO RDF-KEYS.                            SM1054.2
 037100     RELEASE S-RECORD.                                            SM1054.2
-037200*    NOTE HI-LOW CONTROL RECORDS DONE.                            SM1054.2
+037200*                                                                         
 037300     MOVE 300003000000000 TO WKEYS-RDF.                           SM1054.2
 037400 IN-3.                                                            SM1054.2
 037500     PERFORM IN-4 2 TIMES.                                        SM1054.2
@@ -399,7 +399,7 @@
 040600     MOVE     "COPY SORT DESCR" TO FEATURE.                       SM1054.2
 040700 COPY-TEST-1.                                                     SM1054.2
 040800     PERFORM  RET-1.                                              SM1054.2
-040900     IF       RDF-KEYS EQUAL TO 009070000900009                   SM1054.2
+040900     IF       RDF-KEYS EQUAL TO 009000000900009                   SM1054.2
 041000              PERFORM PASS-1 GO TO COPY-WRITE-1.                  SM1054.2
 041100     GO       TO COPY-FAIL-1-1.                                   SM1054.2
 041200 COPY-DELETE-1.                                                   SM1054.2
@@ -407,7 +407,7 @@
 041400     GO       TO COPY-WRITE-1.                                    SM1054.2
 041500 COPY-FAIL-1-1.                                                   SM1054.2
 041600     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM1054.2
-041700     MOVE     009070000900009 TO CORRECT-18V0.                    SM1054.2
+041700     MOVE     009000000900009 TO CORRECT-18V0.                    SM1054.2
 041800     PERFORM  FAIL-1.                                             SM1054.2
 041900 COPY-WRITE-1.                                                    SM1054.2
 042000     MOVE     "COPY-TEST-1 " TO PAR-NAME.                         SM1054.2
@@ -445,7 +445,7 @@
 045200 OUTP2 SECTION.                                                   SM1054.2
 045300 COPY-TEST-4.                                                     SM1054.2
 045400     PERFORM  RET-2 48 TIMES.                                     SM1054.2
-045500     IF       RDF-KEYS EQUAL TO 206001006200002                   SM1054.2
+045500     IF       RDF-KEYS EQUAL TO 206001000200002                   SM1054.2
 045600              PERFORM PASS-1 GO TO COPY-WRITE-4.                  SM1054.2
 045700     GO       TO COPY-FAIL-1-4.                                   SM1054.2
 045800 COPY-DELETE-4.                                                   SM1054.2
@@ -453,7 +453,7 @@
 046000     GO       TO COPY-WRITE-4.                                    SM1054.2
 046100 COPY-FAIL-1-4.                                                   SM1054.2
 046200     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM1054.2
-046300     MOVE     206001006200002 TO CORRECT-18V0.                    SM1054.2
+046300     MOVE     206001000200002 TO CORRECT-18V0.                    SM1054.2
 046400     PERFORM  FAIL-1.                                             SM1054.2
 046500 COPY-WRITE-4.                                                    SM1054.2
 046600     MOVE     "COPY-TEST-4 " TO PAR-NAME.                         SM1054.2
@@ -505,7 +505,7 @@
 051200     PERFORM  PRINT-DETAIL-1.                                     SM1054.2
 051300 COPY-TEST-8.                                                     SM1054.2
 051400     PERFORM  RET-2.                                              SM1054.2
-051500     IF       RDF-KEYS EQUAL TO 100009000000000                   SM1054.2
+051500     IF       RDF-KEYS EQUAL TO 900009000000000                   SM1054.2
 051600              PERFORM PASS-1 GO TO COPY-WRITE-8.                  SM1054.2
 051700     GO       TO COPY-FAIL-1-8.                                   SM1054.2
 051800 COPY-DELETE-8.                                                   SM1054.2
@@ -513,7 +513,7 @@
 052000     GO       TO COPY-WRITE-8.                                    SM1054.2
 052100 COPY-FAIL-1-8.                                                   SM1054.2
 052200     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM1054.2
-052300     MOVE     100009000000000 TO CORRECT-18V0.                    SM1054.2
+052300     MOVE     900009000000000 TO CORRECT-18V0.                    SM1054.2
 052400     PERFORM  FAIL-1.                                             SM1054.2
 052500 COPY-WRITE-8.                                                    SM1054.2
 052600     MOVE     "COPY-TEST-8 " TO PAR-NAME.                         SM1054.2
@@ -521,7 +521,7 @@
 052800 COPY-TEST-9.                                                     SM1054.2
 052900     RETURN   SORTFILE-1E END                                     SM1054.2
 053000              PERFORM PASS-1 GO TO COPY-WRITE-9.                  SM1054.2
-053100*    NOTE     THE FOLLOWING STATEMENTS SHOULD NOT BE EXECUTED.    SM1054.2
+053100*                                                                         
 053200     PERFORM  FAIL-1.                                             SM1054.2
 053300     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM1054.2
 053400     MOVE     "END OF FILE NOT FOUND" TO RE-MARK.                 SM1054.2

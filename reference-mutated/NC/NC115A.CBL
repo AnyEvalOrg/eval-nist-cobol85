@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1154.2
 000200 PROGRAM-ID.                                                      NC1154.2
 000300     NC115A.                                                      NC1154.2
-000400****************************************************************  NC1154.2
-000500*                                                              *  NC1154.2
-000600*    VALIDATION FOR:-                                          *  NC1154.2
-000700*                                                              *  NC1154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1154.2
-000900*                                                              *  NC1154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1154.2
-001100*                                                              *  NC1154.2
-001200****************************************************************  NC1154.2
-001300*                                                              *  NC1154.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1154.2
-001500*                                                              *  NC1154.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1154.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1154.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1154.2
-001900*                                                              *  NC1154.2
-002000****************************************************************  NC1154.2
-002100*                                                                 NC1154.2
-002200*    PROGRAM NC115A TESTS FORMATS 1, 2, AND 3 OF                  NC1154.2
-002300*    THE INSPECT STATEMENT.                                       NC1154.2
-002400*                                                                 NC1154.2
-002500******************************************************************NC1154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1154.2
 002700 CONFIGURATION SECTION.                                           NC1154.2
 002800 SOURCE-COMPUTER.                                                 NC1154.2
@@ -281,7 +281,7 @@
 028300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1154.2
 028400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1154.2
 028500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1154.2
-028600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1154.2
+028600*                                                                         
 028700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1154.2
 028800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1154.2
 028900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1154.2
@@ -381,7 +381,7 @@
 038300 INSP-TEST-F1-2-0.                                                NC1154.2
 038400     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL "A".          NC1154.2
 038500 INSP-TEST-F1-2-1.                                                NC1154.2
-038600     IF      WRK-DU-999-1 EQUAL TO 0                              NC1154.2
+038600     IF      WRK-DU-999-1 EQUAL TO 9                              NC1154.2
 038700     PERFORM PASS                                                 NC1154.2
 038800     GO      TO INSP-WRITE-F1-2.                                  NC1154.2
 038900     GO TO INSP-FAIL-F1-2.                                        NC1154.2
@@ -391,7 +391,7 @@
 039300 INSP-FAIL-F1-2.                                                  NC1154.2
 039400     PERFORM FAIL.                                                NC1154.2
 039500     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-039600     MOVE 0 TO CORRECT-N.                                         NC1154.2
+039600     MOVE 9 TO CORRECT-N.                                         NC1154.2
 039700 INSP-WRITE-F1-2.                                                 NC1154.2
 039800     MOVE "INSP-TEST-F1-2" TO PAR-NAME.                           NC1154.2
 039900     MOVE "TALLY ALL LITERAL" TO FEATURE.                         NC1154.2
@@ -402,7 +402,7 @@
 040400 INSP-TEST-F1-3-0.                                                NC1154.2
 040500     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL SPACE.        NC1154.2
 040600 INSP-TEST-F1-3-1.                                                NC1154.2
-040700     IF      WRK-DU-999-1 EQUAL TO 12                             NC1154.2
+040700     IF      WRK-DU-999-1 EQUAL TO 37                             NC1154.2
 040800     PERFORM PASS                                                 NC1154.2
 040900     GO      TO INSP-WRITE-F1-3.                                  NC1154.2
 041000     GO TO INSP-FAIL-F1-3.                                        NC1154.2
@@ -412,7 +412,7 @@
 041400 INSP-FAIL-F1-3.                                                  NC1154.2
 041500     PERFORM FAIL.                                                NC1154.2
 041600     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-041700     MOVE 12 TO CORRECT-N.                                        NC1154.2
+041700     MOVE 37 TO CORRECT-N.                                        NC1154.2
 041800 INSP-WRITE-F1-3.                                                 NC1154.2
 041900     MOVE "INSP-TEST-F1-3" TO PAR-NAME.                           NC1154.2
 042000     MOVE "TALLY FOR ALL SPACE" TO FEATURE.                       NC1154.2
@@ -467,7 +467,7 @@
 046900     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL " "           NC1154.2
 047000         BEFORE INITIAL "W".                                      NC1154.2
 047100 INSP-TEST-F1-6-1.                                                NC1154.2
-047200     IF      WRK-DU-999-1 EQUAL TO 3                              NC1154.2
+047200     IF      WRK-DU-999-1 EQUAL TO 0                              NC1154.2
 047300     PERFORM PASS                                                 NC1154.2
 047400     GO      TO INSP-WRITE-F1-6.                                  NC1154.2
 047500     GO TO INSP-FAIL-F1-6.                                        NC1154.2
@@ -477,7 +477,7 @@
 047900 INSP-FAIL-F1-6.                                                  NC1154.2
 048000     PERFORM FAIL.                                                NC1154.2
 048100     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-048200     MOVE 3 TO CORRECT-N.                                         NC1154.2
+048200     MOVE 0 TO CORRECT-N.                                         NC1154.2
 048300 INSP-WRITE-F1-6.                                                 NC1154.2
 048400     MOVE "INSP-TEST-F1-6" TO PAR-NAME.                           NC1154.2
 048500     MOVE "ALL BEFORE INITIAL" TO FEATURE.                        NC1154.2

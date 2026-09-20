@@ -1,57 +1,57 @@
 000100 IDENTIFICATION DIVISION.                                         ST1274.2
 000200 PROGRAM-ID.                                                      ST1274.2
 000300     ST127A.                                                      ST1274.2
-000400****************************************************************  ST1274.2
-000500*                                                              *  ST1274.2
-000600*    VALIDATION FOR:-                                          *  ST1274.2
-000700*                                                              *  ST1274.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1274.2
-000900*                                                              *  ST1274.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1274.2
-001100*                                                              *  ST1274.2
-001200****************************************************************  ST1274.2
-001300*                                                              *  ST1274.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1274.2
-001500*                                                              *  ST1274.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1274.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1274.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1274.2
-001900*        X-27  - SORT-FILE-NAME-1                              *  ST1274.2
-002000*                                                              *  ST1274.2
-002100****************************************************************  ST1274.2
-002200*    ST127A IS A COMPLETELY SELF-CONTAINED PROGRAM.  THE INPUT    ST1274.2
-002300*    PROCEDURE BUILDS THE 17-RECORD FILE SHOWN BELOW. THE         ST1274.2
-002400*    OUTPUT PROCEDURE CHECKS THE SORTED FILE AND GENERATES THE    ST1274.2
-002500*    REPORT.                                                      ST1274.2
-002600*    SORT    SORT   SORT    SORT   SORT   SORT   SORT  SORT  LAST ST1274.2
-002700*    KEY-1   KEY-2  KEY-3   KEY-4  KEY-5  KEY-6  KEY-7 KEY-8 CHAR ST1274.2
-002800*    S9(6)   A(5)   SV9(16) X(10)  A(20)  X(10)  999   S99   PIC XST1274.2
-002900*    USAGE   JUST           JUST                       USAGE      ST1274.2
-003000*    COMP    RIGHT          RIGHT                      COMP       ST1274.2
-003100*                                                                 ST1274.2
-003200*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     1  ST1274.2
-003300*    +123456  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99        ST1274.2
-003400*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     2  ST1274.2
-003500*    -054321    X  -.1234  BBBBBB A     AAAAAAAA  501  +99        ST1274.2
-003600*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     3  ST1274.2
-003700*    -054321  BBB  +.6     BBBBBB A     AAAAAAAA  501  +99        ST1274.2
-003800*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     4  ST1274.2
-003900*    -054321  BBB  -.1234       X A     AAAAAAAA  501  +99        ST1274.2
-004000*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     5  ST1274.2
-004100*    -054321  BBB  -.1234  BBBBBB Z     AAAAAAAA  501  +99        ST1274.2
-004200*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     6  ST1274.2
-004300*    -054321  BBB  -.1234  BBBBBB A     Z         501  +99        ST1274.2
-004400*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     7  ST1274.2
-004500*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  418  +99        ST1274.2
-004600*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     8  ST1274.2
-004700*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  -14        ST1274.2
-004800*    -054321  BBB  -.1234  BBBBBB A     AAAAAAAA  501  +99     9  ST1274.2
-004900*                                                                 ST1274.2
-005000*    THIS PROGRAM TESTS THE USE OF THE "DUPLICATES" PHRASE OF     ST1274.2
-005100*    THE  "SORT" STATEMENT.  THE ORDER OF RECORDS HAVING          ST1274.2
-005200*    DUPLICATE KEYS AFTER THE EXECUTION OF A "SORT" STATEMENT     ST1274.2
-005300*    MUST BE THE SAME AS THE ORDER OF THOSE RECORDS ON INPUT      ST1274.2
-005400*    TO THE "SORT" STATEMENT.                                     ST1274.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
 005500                                                                  ST1274.2
 005600 ENVIRONMENT DIVISION.                                            ST1274.2
 005700 CONFIGURATION SECTION.                                           ST1274.2
@@ -330,8 +330,8 @@
 033000     MOVE     "A"                 TO SORTKEY-5.                   ST1274.2
 033100     MOVE     "AAAAAAAA"          TO SORTKEY-6.                   ST1274.2
 033200     MOVE     -501                TO SORTKEY-7.                   ST1274.2
-033300*       NOTE THIS ITEM IS INTENTIONALLY MOVED TO AN UNSIGNED      ST1274.2
-033400*             FIELD.                                              ST1274.2
+033300*                                                                         
+033400*                                                                         
 033500     MOVE     +99                 TO SORTKEY-8.                   ST1274.2
 033600     MOVE      SPACE              TO SORT-IDENTIFIER.             ST1274.2
 033700 RELEASE-RECORD.                                                  ST1274.2
@@ -355,12 +355,12 @@
 035500*                                                                         
 035600 SORT-TEST-1.                                                     ST1274.2
 035700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-035800     IF       SORTKEY-7 EQUAL TO 218                              ST1274.2
+035800     IF       SORTKEY-7 EQUAL TO 118                              ST1274.2
 035900              PERFORM PASS GO TO SORT-WRITE-1.                    ST1274.2
 036000 SORT-FAIL-1.                                                     ST1274.2
 036100     PERFORM  FAIL.                                               ST1274.2
 036200     MOVE     SORTKEY-7 TO COMPUTED-N.                            ST1274.2
-036300     MOVE     218 TO CORRECT-N.                                   ST1274.2
+036300     MOVE     118 TO CORRECT-N.                                   ST1274.2
 036400 SORT-WRITE-1.                                                    ST1274.2
 036500     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         ST1274.2
 036600     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -421,12 +421,12 @@
 042100     PERFORM  PRINT-DETAIL.                                       ST1274.2
 042200 SORT-TEST-7.                                                     ST1274.2
 042300     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-042400     IF       SORTKEY-2 EQUAL TO "G   X"                          ST1274.2
+042400     IF       SORTKEY-2 EQUAL TO "    E"                          ST1274.2
 042500              PERFORM PASS GO TO SORT-WRITE-7.                    ST1274.2
 042600 SORT-FAIL-7.                                                     ST1274.2
 042700     PERFORM  FAIL.                                               ST1274.2
 042800     MOVE     SORTKEY-2 TO COMPUTED-A.                            ST1274.2
-042900     MOVE     "G   X" TO CORRECT-A.                               ST1274.2
+042900     MOVE     "    E" TO CORRECT-A.                               ST1274.2
 043000 SORT-WRITE-7.                                                    ST1274.2
 043100     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         ST1274.2
 043200     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -460,10 +460,10 @@
 046000     MOVE     "UNNECESSARY." TO RE-MARK.                          ST1274.2
 046100     PERFORM  PRINT-DETAIL.                                       ST1274.2
 046200     MOVE     "SORT - 8 ASC. KEYS" TO FEATURE.                    ST1274.2
-046300*        NOTE THE RECORDS SHOULD BE SORTED INTO THE FOLLOWING     ST1274.2
-046400*             ORDER --- 8 1 7 2 6 5 3 4 --- THAT IS,              ST1274.2
-046500*             THE 1ST RECORD IS SORTED DOWN TO THE 8TH POSITION,  ST1274.2
-046600*             THE 2ND RECORD SORTS UP TO THE 1ST POSITION, ETC.   ST1274.2
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
+046600*                                                                         
 046700 SORT-TEST-9.                                                     ST1274.2
 046800     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
 046900     IF       SORTKEY-2 EQUAL TO "    X"                          ST1274.2
@@ -475,9 +475,9 @@
 047500 SORT-WRITE-9.                                                    ST1274.2
 047600     MOVE     "SORT-TEST-9 " TO PAR-NAME.                         ST1274.2
 047700     PERFORM  PRINT-DETAIL.                                       ST1274.2
-047800*                                                                 ST1274.2
-047900*    PERFORM  RETURN-DUPLICATE-RECORDS.                           ST1274.2
-048000*                                                                 ST1274.2
+047800*                                                                         
+047900*                                                                         
+048000*                                                                         
 048100 SORT-TEST-10.                                                    ST1274.2
 048200     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
 048300     IF       SORTKEY-4 EQUAL TO "         X"                     ST1274.2
@@ -525,12 +525,12 @@
 052500     PERFORM  PRINT-DETAIL.                                       ST1274.2
 052600 SORT-TEST-14.                                                    ST1274.2
 052700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-052800     IF       SORTKEY-5 EQUAL TO "Z            R      "           ST1274.2
+052800     IF       SORTKEY-5 EQUAL TO "X                   "           ST1274.2
 052900              PERFORM PASS GO TO SORT-WRITE-14.                   ST1274.2
 053000 SORT-FAIL-14.                                                    ST1274.2
 053100     PERFORM  FAIL.                                               ST1274.2
 053200     MOVE     SORTKEY-5 TO COMPUTED-A.                            ST1274.2
-053300     MOVE     "Z            R      " TO CORRECT-A.                ST1274.2
+053300     MOVE     "X                   " TO CORRECT-A.                ST1274.2
 053400 SORT-WRITE-14.                                                   ST1274.2
 053500     MOVE     "SORT-TEST-14" TO PAR-NAME.                         ST1274.2
 053600     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -611,7 +611,7 @@
 061300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1274.2
 061400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1274.2
 061500      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1274.2
-061600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1274.2
+061600*                                                                         
 061700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1274.2
 061800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1274.2
 061900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1274.2
@@ -683,18 +683,18 @@
 068500 BAIL-OUT-EX. EXIT.                                               ST1274.2
 068600 CCVS1-EXIT.                                                      ST1274.2
 068700     EXIT.                                                        ST1274.2
-068800*                                                                 ST1274.2
+068800*                                                                         
 068900 OUTPROC-EXIT SECTION.                                            ST1274.2
 069000 EXIT-ONLY.                                                       ST1274.2
 069100     PERFORM  CLOSE-FILES.                                        ST1274.2
-069200*                                                                 ST1274.2
+069200*                                                                         
 069300 RETURN-DUPLICATE-RECORDS SECTION.                                ST1274.2
-069400*================================                                 ST1274.2
+069400*                                                                         
 069500 SORT-INIT-18.                                                    ST1274.2
 069600     MOVE     "DUPLICATE KEYS" TO FEATURE.                        ST1274.2
-069700*        NOTE THE RECORDS SHOULD BE SORTED INTO THE FOLLOWING     ST1274.2
-069800*             ORDER OF THE LAST CHARACTER OF THE RECORD:          ST1274.2
-069900*             ---- 1 2 3 4 5 6 7 8 9 ---                          ST1274.2
+069700*                                                                         
+069800*                                                                         
+069900*                                                                         
 070000 SORT-TEST-18-1.                                                  ST1274.2
 070100     MOVE    "SORT-TEST-18-1" TO PAR-NAME.                        ST1274.2
 070200     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -716,7 +716,7 @@
 071800     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 071900     MOVE    "1" TO CORRECT-X.                                    ST1274.2
 072000     PERFORM PRINT-DETAIL.                                        ST1274.2
-072100*                                                                 ST1274.2
+072100*                                                                         
 072200 SORT-TEST-19-1.                                                  ST1274.2
 072300     MOVE    "SORT-TEST-19-1" TO PAR-NAME.                        ST1274.2
 072400     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -738,7 +738,7 @@
 074000     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 074100     MOVE    "2" TO CORRECT-X.                                    ST1274.2
 074200     PERFORM PRINT-DETAIL.                                        ST1274.2
-074300*                                                                 ST1274.2
+074300*                                                                         
 074400 SORT-TEST-20-1.                                                  ST1274.2
 074500     MOVE    "SORT-TEST-20-1" TO PAR-NAME.                        ST1274.2
 074600     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -760,7 +760,7 @@
 076200     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 076300     MOVE    "3" TO CORRECT-X.                                    ST1274.2
 076400     PERFORM PRINT-DETAIL.                                        ST1274.2
-076500*                                                                 ST1274.2
+076500*                                                                         
 076600 SORT-TEST-21-1.                                                  ST1274.2
 076700     MOVE    "SORT-TEST-21-1" TO PAR-NAME.                        ST1274.2
 076800     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -782,7 +782,7 @@
 078400     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 078500     MOVE    "4" TO CORRECT-X.                                    ST1274.2
 078600     PERFORM PRINT-DETAIL.                                        ST1274.2
-078700*                                                                 ST1274.2
+078700*                                                                         
 078800 SORT-TEST-22-1.                                                  ST1274.2
 078900     MOVE    "SORT-TEST-22-1" TO PAR-NAME.                        ST1274.2
 079000     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -804,7 +804,7 @@
 080600     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 080700     MOVE    "5" TO CORRECT-X.                                    ST1274.2
 080800     PERFORM PRINT-DETAIL.                                        ST1274.2
-080900*                                                                 ST1274.2
+080900*                                                                         
 081000 SORT-TEST-23-1.                                                  ST1274.2
 081100     MOVE    "SORT-TEST-23-1" TO PAR-NAME.                        ST1274.2
 081200     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -826,7 +826,7 @@
 082800     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 082900     MOVE    "6" TO CORRECT-X.                                    ST1274.2
 083000     PERFORM PRINT-DETAIL.                                        ST1274.2
-083100*                                                                 ST1274.2
+083100*                                                                         
 083200 SORT-TEST-24-1.                                                  ST1274.2
 083300     MOVE    "SORT-TEST-24-1" TO PAR-NAME.                        ST1274.2
 083400     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -848,7 +848,7 @@
 085000     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 085100     MOVE    "7" TO CORRECT-X.                                    ST1274.2
 085200     PERFORM PRINT-DETAIL.                                        ST1274.2
-085300*                                                                 ST1274.2
+085300*                                                                         
 085400 SORT-TEST-25-1.                                                  ST1274.2
 085500     MOVE    "SORT-TEST-25-1" TO PAR-NAME.                        ST1274.2
 085600     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -870,7 +870,7 @@
 087200     MOVE     SORT-IDENTIFIER TO COMPUTED-X.                      ST1274.2
 087300     MOVE    "8" TO CORRECT-X.                                    ST1274.2
 087400     PERFORM PRINT-DETAIL.                                        ST1274.2
-087500*                                                                 ST1274.2
+087500*                                                                         
 087600 SORT-TEST-26-1.                                                  ST1274.2
 087700     MOVE    "SORT-TEST-26-1" TO PAR-NAME.                        ST1274.2
 087800     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
@@ -893,13 +893,13 @@
 089500     MOVE    "9" TO CORRECT-X.                                    ST1274.2
 089600     PERFORM PRINT-DETAIL.                                        ST1274.2
 089700                                                                  ST1274.2
-089800*                                                                 ST1274.2
+089800*                                                                         
 089900 DUPLICATE-RECORD-EXIT.                                           ST1274.2
 090000     EXIT.                                                        ST1274.2
-090100*                                                                 ST1274.2
-090200*                                                                 ST1274.2
+090100*                                                                         
+090200*                                                                         
 090300 CHECK-KEYS SECTION.                                              ST1274.2
-090400*==================                                               ST1274.2
+090400*                                                                         
 090500 CHK-TEST-1.                                                      ST1274.2
 090600     MOVE    "CHK-TEST-1" TO PAR-NAME.                            ST1274.2
 090700     IF       SORTKEY-1 = WS-1                                    ST1274.2
@@ -911,7 +911,7 @@
 091300     MOVE     SORTKEY-1 TO COMPUTED-N.                            ST1274.2
 091400     MOVE     WS-1      TO CORRECT-N.                             ST1274.2
 091500     PERFORM PRINT-DETAIL.                                        ST1274.2
-091600*                                                                 ST1274.2
+091600*                                                                         
 091700 CHK-TEST-2.                                                      ST1274.2
 091800     MOVE    "CHK-TEST-2" TO PAR-NAME.                            ST1274.2
 091900     IF       SORTKEY-2 = WS-2                                    ST1274.2
@@ -923,7 +923,7 @@
 092500     MOVE     SORTKEY-1 TO COMPUTED-N.                            ST1274.2
 092600     MOVE     WS-1      TO CORRECT-N.                             ST1274.2
 092700     PERFORM PRINT-DETAIL.                                        ST1274.2
-092800*                                                                 ST1274.2
+092800*                                                                         
 092900 CHK-TEST-3.                                                      ST1274.2
 093000     MOVE    "CHK-TEST-3" TO PAR-NAME.                            ST1274.2
 093100     IF       SORTKEY-3 = WS-3                                    ST1274.2
@@ -935,7 +935,7 @@
 093700     MOVE     SORTKEY-3 TO COMPUTED-X.                            ST1274.2
 093800     MOVE     WS-1      TO CORRECT-X.                             ST1274.2
 093900     PERFORM PRINT-DETAIL.                                        ST1274.2
-094000*                                                                 ST1274.2
+094000*                                                                         
 094100 CHK-TEST-4.                                                      ST1274.2
 094200     MOVE    "CHK-TEST-4" TO PAR-NAME.                            ST1274.2
 094300     IF       SORTKEY-4 = WS-4                                    ST1274.2
@@ -959,7 +959,7 @@
 096100     MOVE     SORTKEY-5 TO COMPUTED-X.                            ST1274.2
 096200     MOVE     WS-5      TO CORRECT-X.                             ST1274.2
 096300     PERFORM PRINT-DETAIL.                                        ST1274.2
-096400*                                                                 ST1274.2
+096400*                                                                         
 096500 CHK-TEST-6.                                                      ST1274.2
 096600     MOVE    "CHK-TEST-6" TO PAR-NAME.                            ST1274.2
 096700     IF       SORTKEY-6 = WS-6                                    ST1274.2
@@ -971,7 +971,7 @@
 097300     MOVE     SORTKEY-6 TO COMPUTED-X.                            ST1274.2
 097400     MOVE     WS-6      TO CORRECT-X.                             ST1274.2
 097500     PERFORM PRINT-DETAIL.                                        ST1274.2
-097600*                                                                 ST1274.2
+097600*                                                                         
 097700 CHK-TEST-7.                                                      ST1274.2
 097800     MOVE    "CHK-TEST-7" TO PAR-NAME.                            ST1274.2
 097900     IF       SORTKEY-7 = WS-7                                    ST1274.2
@@ -983,7 +983,7 @@
 098500     MOVE     SORTKEY-7 TO COMPUTED-X.                            ST1274.2
 098600     MOVE     WS-7      TO CORRECT-X.                             ST1274.2
 098700     PERFORM PRINT-DETAIL.                                        ST1274.2
-098800*                                                                 ST1274.2
+098800*                                                                         
 098900 CHK-TEST-8.                                                      ST1274.2
 099000     MOVE    "CHK-TEST-8" TO PAR-NAME.                            ST1274.2
 099100     IF       SORTKEY-8 = WS-8                                    ST1274.2

@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2054.2
 000200 PROGRAM-ID.                                                      NC2054.2
 000300     NC205A.                                                      NC2054.2
-000400*                                                              *  NC2054.2
-000500****************************************************************  NC2054.2
-000600*                                                              *  NC2054.2
-000700*    VALIDATION FOR:-                                          *  NC2054.2
-000800*                                                              *  NC2054.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2054.2
-001000*                                                              *  NC2054.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2054.2
-001200*                                                              *  NC2054.2
-001300****************************************************************  NC2054.2
-001400*                                                              *  NC2054.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2054.2
-001600*                                                              *  NC2054.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2054.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2054.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2054.2
-002000*                                                              *  NC2054.2
-002100****************************************************************  NC2054.2
-002200*                                                              *  NC2054.2
-002300*    PROGRAM NC205A TESTS THE CONTINUATION OF COBOL WORDS,     *  NC2054.2
-002400*    NUMERIC AND NON-NUMERIC LITERALS AND PICTURE STRINGS USING*  NC2054.2
-002500*    A HYPHEN IN THE INDICATOR AREA OF CONTINUATION LINES.     *  NC2054.2
-002600*                                                              *  NC2054.2
-002700****************************************************************  NC2054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2054.2
 002900 CONFIGURATION SECTION.                                           NC2054.2
 003000 SOURCE-COMPUTER.                                                 NC2054.2
@@ -326,7 +326,7 @@
 032800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2054.2
 032900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2054.2
 033000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2054.2
-033100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2054.2
+033100*                                                                         
 033200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2054.2
 033300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2054.2
 033400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2054.2
@@ -420,7 +420,7 @@
 042200     MOVE     45678 TO CORRECT-N.                                 NC2054.2
 042300 CON-WRITE-GF-1.                                                  NC2054.2
 042400     PERFORM  PRINT-DETAIL.                                       NC2054.2
-042500*                                                                 NC2054.2
+042500*                                                                         
 042600 CON-INIT-GF-2.                                                   NC2054.2
 042700     MOVE     "CON-TEST-GF-2" TO PAR-NAME.                        NC2054.2
 042800     MOVE     "  NUM NON-INTEGER" TO FEATURE.                     NC2054.2
@@ -433,7 +433,7 @@
 043500-             7                                                   NC2054.2
 043600-             7                                                   NC2054.2
 043700-             7 TO CONT-B.                                        NC2054.2
-043800     IF CONT-B EQUAL TO -992.777                                  NC2054.2
+043800     IF CONT-B EQUAL TO -999.777                                  NC2054.2
 043900           PERFORM PASS                                           NC2054.2
 044000           GO TO CON-WRITE-GF-2.                                  NC2054.2
 044100     GO TO CON-FAIL-GF-2.                                         NC2054.2
@@ -443,12 +443,12 @@
 044500 CON-FAIL-GF-2.                                                   NC2054.2
 044600     PERFORM  FAIL.                                               NC2054.2
 044700     MOVE CONT-B   TO COMPUTED-N.                                 NC2054.2
-044800     MOVE -992.777 TO CORRECT-N.                                  NC2054.2
+044800     MOVE -999.777 TO CORRECT-N.                                  NC2054.2
 044900 CON-WRITE-GF-2.                                                  NC2054.2
 045000     PERFORM  PRINT-DETAIL.                                       NC2054.2
-045100*                                                                 NC2054.2
-045200*    N.B. CONTIN-TEST-3 HAS BEEN REMOVED, AND SUBSEQUENT          NC2054.2
-045300*    TESTS HAVE BEEN RE-NUMBERED.                                 NC2054.2
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
 045400 CON-INIT-GF-3.                                                   NC2054.2
 045500     MOVE     "  COMP CONDITIONAL" TO FEATURE.                    NC2054.2
 045600     MOVE     "CON-TEST-GF-3" TO PAR-NAME.                        NC2054.2
@@ -566,7 +566,7 @@
 056800     PERFORM FAIL.                                                NC2054.2
 056900 CON-WRITE-GF-3.                                                  NC2054.2
 057000     PERFORM  PRINT-DETAIL.                                       NC2054.2
-057100*                                                                 NC2054.2
+057100*                                                                         
 057200 CON-INIT-GF-4.                                                   NC2054.2
 057300     MOVE     "  RESERVED WORDS" TO FEATURE                       NC2054.2
 057400     MOVE     "CON-TEST-GF-4" TO PAR-NAME.                        NC2054.2
@@ -598,7 +598,7 @@
 060000     MOVE     "SIZE ERROR EXPECTED" TO RE-MARK.                   NC2054.2
 060100 CON-WRITE-GF-4.                                                  NC2054.2
 060200     PERFORM  PRINT-DETAIL.                                       NC2054.2
-060300*                                                                 NC2054.2
+060300*                                                                         
 060400 CON-INIT-GF-5.                                                   NC2054.2
 060500     MOVE     "  DATA-NAMES" TO FEATURE.                          NC2054.2
 060600     MOVE     "CON-TEST-GF-5" TO PAR-NAME.                        NC2054.2
@@ -611,7 +611,7 @@
 061300-                                           -D CONT               NC2054.2
 061400-                                                  -F GIVING CONT-NC2054.2
 061500-    C.                                                           NC2054.2
-061600     IF       CONT-C EQUAL TO 10000                               NC2054.2
+061600     IF       CONT-C EQUAL TO 11000                               NC2054.2
 061700              PERFORM PASS GO TO CON-WRITE-GF-5.                  NC2054.2
 061800     GO       TO CON-FAIL-GF-5.                                   NC2054.2
 061900 CON-DELETE-GF-5.                                                 NC2054.2
@@ -620,10 +620,10 @@
 062200 CON-FAIL-GF-5.                                                   NC2054.2
 062300     PERFORM  FAIL.                                               NC2054.2
 062400     MOVE     CONT-C TO COMPUTED-A.                               NC2054.2
-062500     MOVE     10000 TO CORRECT-A.                                 NC2054.2
+062500     MOVE     11000 TO CORRECT-A.                                 NC2054.2
 062600 CON-WRITE-GF-5.                                                  NC2054.2
 062700     PERFORM  PRINT-DETAIL.                                       NC2054.2
-062800*                                                                 NC2054.2
+062800*                                                                         
 062900 CON-TEST-GF-6.                                                   NC2054.2
 063000     MOVE     "CON-TEST-GF-6" TO PAR-NAME.                        NC2054.2
 063100     MOVE     "  PARAGRAPH-NAMES" TO FEATURE.                     NC2054.2
@@ -642,17 +642,17 @@
 064400     MOVE     "CNTD PARA-NAME NOT FOUND" TO RE-MARK.              NC2054.2
 064500 CON-WRITE-GF-6.                                                  NC2054.2
 064600     PERFORM  PRINT-DETAIL.                                       NC2054.2
-064700*                                                                 NC2054.2
-064800*    N.B. THE REFERENCE TO THE OLD TEST CALLED                    NC2054.2
-064900*        CONTIN-TEST-8 HAS BEEN REMOVED.                          NC2054.2
-065000*        NOTE TEST MOVED TO SQ215.                                NC2054.2
-065100*                                                                 NC2054.2
+064700*                                                                         
+064800*                                                                         
+064900*                                                                         
+065000*                                                                         
+065100*                                                                         
 065200 CON-INIT-GF-7.                                                   NC2054.2
 065300     MOVE     "  RECORD, ITEM DESCR" TO FEATURE.                  NC2054.2
 065400     MOVE     "CON-TEST-GF-7" TO PAR-NAME.                        NC2054.2
-065500*     N.B.  CONT-A IS NOT EXPLICITLY INITIALISED HERE             NC2054.2
-065600*           BECAUSE THE -VALUE IS- CLAUSE OF THE                  NC2054.2
-065700*           DEFINITION IS UNDER TEST IN THE NEXT PARAGRAPH.       NC2054.2
+065500*                                                                         
+065600*                                                                         
+065700*                                                                         
 065800 CON-TEST-GF-7.                                                   NC2054.2
 065900     MOVE     CONT-A TO CONT-GRP.                                 NC2054.2
 066000     IF LEVEL-04 EQUAL TO "GOVERNMENT"                            NC2054.2
@@ -686,7 +686,7 @@
 068800     MOVE     "CDE12345" TO CORRECT-A.                            NC2054.2
 068900 CON-WRITE-GF-8.                                                  NC2054.2
 069000     PERFORM  PRINT-DETAIL.                                       NC2054.2
-069100*                                                                 NC2054.2
+069100*                                                                         
 069200 CON-INIT-GF-9.                                                   NC2054.2
 069300     MOVE   "CON-WRITE-GF-9" TO PAR-NAME.                         NC2054.2
 069400     MOVE     1234567890   TO SPACING-SEND.                       NC2054.2
@@ -776,15 +776,15 @@
 077800     MOVE     1234567890 TO CORRECT-18V0.                         NC2054.2
 077900 CON-WRITE-GF-9.                                                  NC2054.2
 078000     PERFORM PRINT-DETAIL.                                        NC2054.2
-078100*                                                                 NC2054.2
+078100*                                                                         
 078200 CON-INIT-GF-10.                                                  NC2054.2
-078300*    ===-->  PICTURE CHARACTER STRING CONTINUED  <--===           NC2054.2
+078300*                                                                         
 078400     MOVE   "IV-44 7.2.2"              TO ANSI-REFERENCE.         NC2054.2
 078500     MOVE   "PICTURE STRING CONTINUED" TO FEATURE                 NC2054.2
 078600     MOVE   "CON-TEST-GF-10"           TO PAR-NAME.               NC2054.2
 078700 CON-TEST-GF-10-1.                                                NC2054.2
 078800     MOVE    654321.987654 TO WS-TEST-12-DATA.                    NC2054.2
-078900     IF WS-TEST-12-DATA = 644321.987654                           NC2054.2
+078900     IF WS-TEST-12-DATA = 654321.987654                           NC2054.2
 079000             PERFORM PASS                                         NC2054.2
 079100             GO TO CON-WRITE-GF-10.                               NC2054.2
 079200     GO TO CON-FAIL-GF-10.                                        NC2054.2
@@ -794,7 +794,7 @@
 079600 CON-FAIL-GF-10.                                                  NC2054.2
 079700     PERFORM  FAIL.                                               NC2054.2
 079800     MOVE     WS-TEST-12-DATA TO COMPUTED-N.                      NC2054.2
-079900     MOVE     644321.987654   TO CORRECT-N.                       NC2054.2
+079900     MOVE     654321.987654   TO CORRECT-N.                       NC2054.2
 080000 CON-WRITE-GF-10.                                                 NC2054.2
 080100     PERFORM  PRINT-DETAIL.                                       NC2054.2
 080200 CCVS-EXIT SECTION.                                               NC2054.2

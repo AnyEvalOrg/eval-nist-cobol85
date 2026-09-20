@@ -1,28 +1,28 @@
 000100    IDENTIFICATION DIVISION.                                      NC1134.2
 000200    PROGRAM-ID.                                                   NC1134.2
 000300     NC113M.                                                      NC1134.2
-000400****************************************************************  NC1134.2
-000500*                                                              *  NC1134.2
-000600*    VALIDATION FOR:-                                          *  NC1134.2
-000700*                                                              *  NC1134.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1134.2
-000900*                                                              *  NC1134.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1134.2
-001100*                                                              *  NC1134.2
-001200****************************************************************  NC1134.2
-001300*                                                              *  NC1134.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1134.2
-001500*                                                              *  NC1134.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1134.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1134.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1134.2
-001900*                                                              *  NC1134.2
-002000****************************************************************  NC1134.2
-002100*                                                                 NC1134.2
-002200*   PROGRAM NC113M VERIFIES CORRECT USE OF AREA A WITHIN          NC1134.2
-002300*                      A PROGRAM.                                 NC1134.2
-002400*                                                                 NC1134.2
-002500*                                                                 NC1134.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600    ENVIRONMENT DIVISION.                                         NC1134.2
 002700    CONFIGURATION SECTION.                                        NC1134.2
 002800    SOURCE-COMPUTER.                                              NC1134.2
@@ -138,7 +138,7 @@
 013800    MAR-TEST-7.                                                   NC1134.2
 013900     MOVE "MAR-TEST-7"     TO PAR-NAME.                           NC1134.2
 014000     PERFORM PRINT-DETAIL.                                        NC1134.2
-014100*    GO TO MAR-TEST-8.                                            NC1134.2
+014100*                                                                         
 014200    MAR-TEST-12.                                                  NC1134.2
 014300     MOVE "MAR-TEST-12"    TO PAR-NAME.                           NC1134.2
 014400     PERFORM PRINT-DETAIL.                                        NC1134.2

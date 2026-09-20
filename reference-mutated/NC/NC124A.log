@@ -229,20 +229,20 @@ TEST RESULT OF NC124A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PICTURE CHARACTER P  FAIL* PICTURE-TEST-27                                                                             
                                                                                                                         
                                      COMPUTED= 200                                                                      
-                                     CORRECT = 300                   VI-31                                              
+                                     CORRECT = 260                   VI-31                                              
                                                                                                                         
  PICTURE CHARACTER P  PASS  PICTURE-TEST-28                                                                             
  PICTURE CHARACTER P  FAIL* PICTURE-TEST-29                                                                             
                                                                                                                         
                                      COMPUTED= 100                                                                      
-                                     CORRECT = 10D                   VI-31                                              
+                                     CORRECT = 105                   VI-31                                              
                                                                                                                         
  PICTURE CHARACTER P  PASS  PICTURE-TEST-30                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-31                                                                             
  PICTURE CHARACTER P  FAIL* PICTURE-TEST-32                                                                             
                                                                                                                         
                                      COMPUTED=  .001000000000000000                                                     
-                                     CORRECT =  .091000000000000000  VI-31                                              
+                                     CORRECT =  .201000000000000000  VI-31                                              
                                                                                                                         
  PICTURE CHARACTER P  PASS  PICTURE-TEST-33                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-34                                                                             

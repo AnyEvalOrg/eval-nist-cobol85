@@ -1,114 +1,114 @@
 000100 IDENTIFICATION DIVISION.                                         IX2154.2
 000200 PROGRAM-ID.                                                      IX2154.2
 000300     IX215A.                                                      IX2154.2
-000400****************************************************************  IX2154.2
-000500*                                                              *  IX2154.2
-000600*    VALIDATION FOR:-                                          *  IX2154.2
-000700*                                                              *  IX2154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2154.2
-000900*                                                              *  IX2154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2154.2
-001100*                                                              *  IX2154.2
-001200****************************************************************  IX2154.2
-001300*    THE PURPOSE OF THIS PROGRAM IS TO TEST THE ABILITY TO        IX2154.2
-001400*    DESCRIBE THE PRIME RECORD KEY AND THE ALTERNATE RECORD KEYS  IX2154.2
-001500*    IN A REDEFINES CLAUSES AND TO TEST THE USE OF QUALIFICATION  IX2154.2
-001600*    OF THE RECORD KEYS.  THE PROGRAM IS BROKEN INTO THREE SEC-   IX2154.2
-001700*    TIONS.  THE FIRST SECTION TESTS THE ABILITY TO USE A         IX2154.2
-001800*    REDEFINED DATA ITEM OR A DATA ITEM SUBORDINATE TO IT CON-    IX2154.2
-001900*    TAINING THE LEFTMOST CHARACTER POSTIONS OF THE REDEFINED DATAIX2154.2
-002000*    ITEM IN THE KEY PHRASE OF THE START STATEMENT.  THE SECOND   IX2154.2
-002100*    SECTION TESTS THE ABILITY TO USE A RECORD KEY WHICH IS NESTEDIX2154.2
-002200*    IN REDEFINES OR A DATA ITEM SUBORDINATE TO IT THAT CONTAINS  IX2154.2
-002300*    THE LEFTMOST CHARACTER POSITIONS OF A REDEFINED DATA ITEM    IX2154.2
-002400*    WHICH IS NESTED IN REDEFINES IN THE KEY PHRASE OF THE START  IX2154.2
-002500*    STATEMENT.  THE THIRD SECTION TESTS THE USE OF QUALIFICATION IX2154.2
-002600*    OF THE RECORD KEYS.  DIFFERENT KEY VALUES ARE USED FOR       IX2154.2
-002700*    TESTING.  IF A KEY VALUE IS PROVIDED WHICH MATCHES A RECORD  IX2154.2
-002800*    IN THE FILE THE EXECUTION OF A START STATEMENT FOLLOWED BY A IX2154.2
-002900*    READ NEXT STATEMENT IS EXPECTED TO MADE AVAILABLE THE RECORD.IX2154.2
-003000*    IF A KEY VALUE IS PROVIDED WHICH DOES NOT MATCH ANY RECORD INIX2154.2
-003100*    THE FILE THEN THE INVALID KEY PATH IS EXPECTED TO BE TAKEN.  IX2154.2
-003200*                                                                 IX2154.2
-003300*       REFERENCE    AMERICAN NATIONAL STANDARD                   IX2154.2
-003400*                    PROGRAMMING LANGUAGE COBOL, X3.23-1985.      IX2154.2
-003500*                    SECTION IX, INDEX I-O, THE START             IX2154.2
-003600*                    STATEMENT.  PARAGRAPHS 4.7.3 (2), (3), (4);  IX2154.2
-003700*                                           4.7.4 (1), (4), (5),  IX2154.2
-003800*                                           (10)   AND            IX2154.2
-003900*                    THE REDEFINES CLAUSE PAGE VI-39 5.10.4 (1),  IX2154.2
-004000*                                                          (2).   IX2154.2
-004100*                                                                 IX2154.2
-004200*    BEFORE EACH TEST THE RECORD KEY IS LOAD WITH A KEY VALUE     IX2154.2
-004300*    WHICH MAY OR MAY NOT BE A VALID KEY FOR THE FILE.  ALSO      IX2154.2
-004400*    BEFORE EACH STEP IN A TEST AN INITIALIZATION PROCEDURE MAY ORIX2154.2
-004500*    MAY NOT BE PERFORMED WHICH MAKES AVAILABLE RECORD NUMBER 200.IX2154.2
-004600*    IF DURING THIS PROCEDURE AN INVALID KEY OCCURS THE TEST IS   IX2154.2
-004700*    DELETED.                                                     IX2154.2
-004800*                                                                 IX2154.2
-004900*    BEFORE EACH SECTION A INDEXED FILE IS CREATED CONTAINING TWO IX2154.2
-005000*    ALTERNATE KEY AND THE ONE REQUIRED RECORD KEY FOR THE FILE.  IX2154.2
-005100*    IMMEDIATELY FOLLOWING FILE CREATION THE FILE IS READ AND THE IX2154.2
-005200*    RECORDS OF THE FILE VERIFIED FOR ACCURACY.  NEXT THE TESTS   IX2154.2
-005300*    ARE EXECUTED USING THE READ, DELETE, REWRITE, and START      IX2154.2
-005400*    STATEMENTS.                                                  IX2154.2
-005500*                                                                 IX2154.2
-005600*    THE RECORDS IN THE FILE ARE CREATED IN SEQUENTIAL ORDER BY   IX2154.2
-005700*    RECORD KEY VALUE.  FOLLOWING IS A SAMPLE OF THE DATA CONTENTSIX2154.2
-005800*    FOR THE RECORD KEY AND TWO ALTERNATE RECORD KEYS IN THE FILE.IX2154.2
-005900*                                                                 IX2154.2
-006000*  REC-NO RECORD-KEY     ALTERNATE-KEY-1      ALTERNATE-KEY-2     IX2154.2
-006100*  ------ ----------     ---------------      ---------------     IX2154.2
-006200*  001   BBBBBBBBBC002  EEEEEEEEEF002ALTKEY1  WWWWWWWWWV398ALTKEY2IX2154.2
-006300*  002   BBBBBBBBCC004  EEEEEEEEFF004ALTKEY1  WWWWWWWWVV396ALTKEY2IX2154.2
-006400*  003   BBBBBBBCCC006  EEEEEEEFFF006ALTKEY1  WWWWWWWVVV394ALTKEY2IX2154.2
-006500*   .          .                  .                     .         IX2154.2
-006600*   .          .                  .                     .         IX2154.2
-006700*   .          .                  .                     .         IX2154.2
-006800*  010   CCCCCCCCCC020  FFFFFFFFFF020ALTKEY1  VVVVVVVVVV380ALTKEY2IX2154.2
-006900*  011   CCCCCCCCCD022  FFFFFFFFFG022ALTKEY1  VVVVVVVVVV380ALTKEY2IX2154.2
-007000*  012   CCCCCCCCDD024  FFFFFFFFGG024ALTKEY1  VVVVVVVVUU376ALTKEY2IX2154.2
-007100*   .          .                  .                     .         IX2154.2
-007200*   .          .                  .                     .         IX2154.2
-007300*   .          .                  .                     .         IX2154.2
-007400*  200   UUUUUUUUUU400  YYYYYYYYYY400ALTKEY1   DDDDDDDDDD000ALTKEYIX2154.2
-007500*                                                                 IX2154.2
-007600*   NOTE 1 - ALTERNATE-KEY-2 CONTAINS DUPLICATE KEYS EVERY 10TH   IX2154.2
-007700*            AND 11TH RECORDS.                                    IX2154.2
-007800*                                                                 IX2154.2
-007900*   NOTE 2 - THE FIRST 50 RECORDS AND LAST 25 RECORDS OF THE FILE IX2154.2
-008000*            FOLLOW THE ABOVE SEQUENTIAL KEY PATTERN.  FOR THE    IX2154.2
-008100*            MIDDEL 125 RECORDS ONLY THE NUMBER PART OF THE KEYS  IX2154.2
-008200*            ARE VARIED AND VARIED IN THE SEQUENCE SHOWN ABOVE.   IX2154.2
-008300*            THAT IS, RECORD KEY AND ALTERNATE-KEY-1 ARE          IX2154.2
-008400*            INCREMENTED BY 2 ANDT THE ALTERNATE KEY-2 IS         IX2154.2
-008500*            DECREMENTED BY 2 EACH TIME A RECORD IS WRITTEN TO THEIX2154.2
-008600*            FILE.  THE FILE IS DESIGNED TO BE LARGE ENOUGH SO    IX2154.2
-008700*            THAT AN I-O OPERATION IS REQUIRED FOR EACH RECORD    IX2154.2
-008800*            ACCESSED FROM THE FILE.                              IX2154.2
-008900*                                                                 IX2154.2
-009000*   X-CARD'S WHICH MUST BE REPLACED WITH IMPLEMENTOR-NAMES' IN    IX2154.2
-009100*   THIS PROGRAM ARE:                                             IX2154.2
-009200*                                                                 IX2154.2
-009300*            X-24      IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   IX2154.2
-009400*                        INDEXED FILE-1.                          IX2154.2
-009500*            X-25      IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   IX2154.2
-009600*                        INDEXED FILE-2.                          IX2154.2
-009700*            X-26      IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   IX2154.2
-009800*                        INDEXED FILE-3.                          IX2154.2
-009900*            X-44      SYSTEM-NAME IN ASSIGN TO CLAUSE FOR INDEXEDIX2154.2
-010000*                        FILE-1 IF NEEDED.                        IX2154.2
-010100*            X-45      SYSTEM-NAME IN ASSIGN TO CLAUSE FOR INDEXEDIX2154.2
-010200*                        FILE-2 IF NEEDED.                        IX2154.2
-010300*            X-46      SYSTEM-NAME IN ASSIGN TO CLAUSE FOR INDEXEDIX2154.2
-010400*                        FILE-3 IF NEEDED.                        IX2154.2
-010500*            X-55      SYSTEM PRINTER.                            IX2154.2
-010600*            X-62   FOR RAW-DATA                                  IX2154.2
-010700*            X-82      SOURCE-COMPUTER.                           IX2154.2
-010800*            X-83      OBJECT-COMPUTER.                           IX2154.2
-010900*                                                                 IX2154.2
-011000******************************************************************IX2154.2
-011100*                                                                 IX2154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
+008900*                                                                         
+009000*                                                                         
+009100*                                                                         
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
+010500*                                                                         
+010600*                                                                         
+010700*                                                                         
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
+011100*                                                                         
 011200 ENVIRONMENT DIVISION.                                            IX2154.2
 011300 CONFIGURATION SECTION.                                           IX2154.2
 011400 SOURCE-COMPUTER.                                                 IX2154.2
@@ -716,7 +716,7 @@
 077000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2154.2
 077100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2154.2
 077200      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2154.2
-077300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2154.2
+077300*                                                                         
 077400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2154.2
 077500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2154.2
 077600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2154.2

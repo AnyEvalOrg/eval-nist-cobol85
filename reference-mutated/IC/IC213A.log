@@ -16,17 +16,17 @@ TEST RESULT OF IC213A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL...USING DATA-NM FAIL* CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000008                                                      
+                                     CORRECT =  000000000000000004                                                      
                                                                                                                         
  CALL...USING DATA-NM FAIL* CALL-TEST-2                   MAIN PROGRAM CALLS SUBPROGRAM2                                
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000003                                                      
+                                     CORRECT =  000000000000000008                                                      
                                                                                                                         
  CANCEL               FAIL* CANCEL-TEST-1                 SUBPROGRAM2 CANCELS SUBPROGRAM1                               
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000005                                                      
+                                     CORRECT =  000000000000000006                                                      
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

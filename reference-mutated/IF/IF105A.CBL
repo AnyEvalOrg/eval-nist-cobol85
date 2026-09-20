@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1054.2
 000300     IF105A.                                                      IF1054.2
 000400                                                                  IF1054.2
-000500***********************************************************       IF1054.2
-000600*                                                         *       IF1054.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1054.2
-000800* It contains tests for the Intrinsic Function CHAR.      *       IF1054.2
-000900*                                                         *       IF1054.2
-001000*                                                         *       IF1054.2
-001100***********************************************************       IF1054.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1054.2
 001300 CONFIGURATION SECTION.                                           IF1054.2
 001400 SOURCE-COMPUTER.                                                 IF1054.2
@@ -29,9 +29,9 @@
 002900 01  PRINT-REC PICTURE X(120).                                    IF1054.2
 003000 01  DUMMY-RECORD PICTURE X(120).                                 IF1054.2
 003100 WORKING-STORAGE SECTION.                                         IF1054.2
-003200***********************************************************       IF1054.2
-003300* Variables specific to the Intrinsic Function Test IF105A*       IF1054.2
-003400***********************************************************       IF1054.2
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 01  B                   PIC S9(10)     VALUE 37.                 IF1054.2
 003600 01  C                   PIC S9(10)     VALUE 2.                  IF1054.2
 003700 01  D                   PIC S9(10)     VALUE 100.                IF1054.2
@@ -39,9 +39,9 @@
 003900     02 IND OCCURS 5 TIMES PIC 9(3).                              IF1054.2
 004000 01  TEMP                PIC S9(5)V9(5).                          IF1054.2
 004100 01  WS-ANUM          PIC X.                                      IF1054.2
-004200*                                                                 IF1054.2
-004300**********************************************************        IF1054.2
-004400*                                                                 IF1054.2
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
 004500 01  TEST-RESULTS.                                                IF1054.2
 004600     02 FILLER                   PIC X      VALUE SPACE.          IF1054.2
 004700     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1054.2
@@ -335,16 +335,16 @@
 033500 BAIL-OUT-EX. EXIT.                                               IF1054.2
 033600 CCVS1-EXIT.                                                      IF1054.2
 033700     EXIT.                                                        IF1054.2
-033800********************************************************          IF1054.2
-033900*                                                      *          IF1054.2
-034000*    Intrinsic Function Tests         IF105A - CHAR    *          IF1054.2
-034100*                                                      *          IF1054.2
-034200********************************************************          IF1054.2
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
+034100*                                                                         
+034200*                                                                         
 034300 SECT-IF105A SECTION.                                             IF1054.2
 034400 F-CHAR-INFO.                                                     IF1054.2
 034500     MOVE     "See ref. A-37 2.9" TO ANSI-REFERENCE.              IF1054.2
 034600     MOVE     "CHAR Function" TO FEATURE.                         IF1054.2
-034700*****************TEST (a) ******************************          IF1054.2
+034700*                                                                         
 034800 F-CHAR-01.                                                       IF1054.2
 034900     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 035000 F-CHAR-TEST-01.                                                  IF1054.2
@@ -362,7 +362,7 @@
 036200 F-CHAR-WRITE-01.                                                 IF1054.2
 036300     MOVE "F-CHAR-01" TO PAR-NAME.                                IF1054.2
 036400     PERFORM  PRINT-DETAIL.                                       IF1054.2
-036500*****************TEST (b) ******************************          IF1054.2
+036500*                                                                         
 036600 F-CHAR-TEST-02.                                                  IF1054.2
 036700     IF FUNCTION CHAR(B) = "$" THEN                               IF1054.2
 036800                                 PERFORM PASS                     IF1054.2
@@ -375,7 +375,7 @@
 037500 F-CHAR-WRITE-02.                                                 IF1054.2
 037600     MOVE "F-CHAR-02" TO PAR-NAME.                                IF1054.2
 037700     PERFORM  PRINT-DETAIL.                                       IF1054.2
-037800*****************TEST (c) ******************************          IF1054.2
+037800*                                                                         
 037900 F-CHAR-03.                                                       IF1054.2
 038000     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 038100 F-CHAR-TEST-03.                                                  IF1054.2
@@ -393,7 +393,7 @@
 039300 F-CHAR-WRITE-03.                                                 IF1054.2
 039400     MOVE "F-CHAR-03" TO PAR-NAME.                                IF1054.2
 039500     PERFORM  PRINT-DETAIL.                                       IF1054.2
-039600*****************TEST (d) ******************************          IF1054.2
+039600*                                                                         
 039700 F-CHAR-04.                                                       IF1054.2
 039800     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 039900 F-CHAR-TEST-04.                                                  IF1054.2
@@ -411,7 +411,7 @@
 041100 F-CHAR-WRITE-04.                                                 IF1054.2
 041200     MOVE "F-CHAR-04" TO PAR-NAME.                                IF1054.2
 041300     PERFORM  PRINT-DETAIL.                                       IF1054.2
-041400*****************TEST (e) ******************************          IF1054.2
+041400*                                                                         
 041500 F-CHAR-05.                                                       IF1054.2
 041600     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 041700 F-CHAR-TEST-05.                                                  IF1054.2
@@ -429,7 +429,7 @@
 042900 F-CHAR-WRITE-05.                                                 IF1054.2
 043000     MOVE "F-CHAR-05" TO PAR-NAME.                                IF1054.2
 043100     PERFORM  PRINT-DETAIL.                                       IF1054.2
-043200*****************TEST (f) ******************************          IF1054.2
+043200*                                                                         
 043300 F-CHAR-06.                                                       IF1054.2
 043400     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 043500 F-CHAR-TEST-06.                                                  IF1054.2
@@ -447,7 +447,7 @@
 044700 F-CHAR-WRITE-06.                                                 IF1054.2
 044800     MOVE "F-CHAR-06" TO PAR-NAME.                                IF1054.2
 044900     PERFORM  PRINT-DETAIL.                                       IF1054.2
-045000*****************TEST (g) ******************************          IF1054.2
+045000*                                                                         
 045100 F-CHAR-07.                                                       IF1054.2
 045200     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 045300 F-CHAR-TEST-07.                                                  IF1054.2
@@ -465,7 +465,7 @@
 046500 F-CHAR-WRITE-07.                                                 IF1054.2
 046600     MOVE "F-CHAR-07" TO PAR-NAME.                                IF1054.2
 046700     PERFORM  PRINT-DETAIL.                                       IF1054.2
-046800*****************TEST (h) ******************************          IF1054.2
+046800*                                                                         
 046900 F-CHAR-08.                                                       IF1054.2
 047000     MOVE SPACE TO WS-ANUM.                                       IF1054.2
 047100 F-CHAR-TEST-08.                                                  IF1054.2
@@ -481,7 +481,7 @@
 048100 F-CHAR-WRITE-08.                                                 IF1054.2
 048200     MOVE "F-CHAR-08" TO PAR-NAME.                                IF1054.2
 048300     PERFORM  PRINT-DETAIL.                                       IF1054.2
-048400*******************END OF TESTS**************************         IF1054.2
+048400*                                                                         
 048500 CCVS-EXIT SECTION.                                               IF1054.2
 048600 CCVS-999999.                                                     IF1054.2
 048700     GO TO CLOSE-FILES.                                           IF1054.2

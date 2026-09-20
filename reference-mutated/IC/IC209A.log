@@ -16,18 +16,18 @@ TEST RESULT OF IC209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL...USING DATA-NM FAIL* CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
                                                                                                                         
                                      COMPUTED= Y                                                                        
-                                     CORRECT = 8                                                                        
+                                     CORRECT = Q                                                                        
                                                                                                                         
  CALL...USING DATA-NM PASS  CALL-TEST-2                   SUBPROGRAM1 CALLS SUBPROGRAM2                                 
  CALL...USING DATA-NM FAIL* CALL-TEST-3                   SUBPROGRAM1 CALLS SUBPROGRAM3                                 
                                                                                                                         
                                      COMPUTED= Y                                                                        
-                                     CORRECT = A                                                                        
+                                     CORRECT = W                                                                        
                                                                                                                         
  CANCEL               FAIL* CANCEL-TEST-1                 SUBPROGRAM1 CANCELS SUBPROGRAM2                               
                                                                                                                         
                                      COMPUTED= Y                                                                        
-                                     CORRECT = 3                                                                        
+                                     CORRECT = X                                                                        
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

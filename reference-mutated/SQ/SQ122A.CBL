@@ -1,61 +1,61 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1224.2
 000200 PROGRAM-ID.                                                      SQ1224.2
 000300     SQ122A.                                                      SQ1224.2
-000400****************************************************************  SQ1224.2
-000500*                                                              *  SQ1224.2
-000600*    VALIDATION FOR:-                                          *  SQ1224.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1224.2
-000800*    USING CCVS85 VERSION 3.1                                  *  SQ1224.2
-000900*                                                              *  SQ1224.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  SQ1224.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1224.2
-001200*                                                              *  SQ1224.2
-001300****************************************************************  SQ1224.2
-001400*                                                              *  SQ1224.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1224.2
-001600*                                                              *  SQ1224.2
-001700*            X-14   SEQUENTIAL MASS STORAGE FILE               *  SQ1224.2
-001800*            X-55   SYSTEM PRINTER                             *  SQ1224.2
-001900*            X-82   SOURCE-COMPUTER                            *  SQ1224.2
-002000*            X-83   OBJECT-COMPUTER                            *  SQ1224.2
-002100*            X-84   LABEL RECORDS OPTION                       *  SQ1224.2
-002200*                                                              *  SQ1224.2
-002300****************************************************************  SQ1224.2
-002400*                                                              *  SQ1224.2
-002500*    A ONE RECORD FILE WITH TWO CHARACTERS PER BLOCK IS CREATED*  SQ1224.2
-002600*    WITH THE INTENTION THAT IT SHOULD END PART-WAY THROUGH A  *  SQ1224.2
-002700*    BLOCK.                     THE FILE IS RE-OPENED AND      *  SQ1224.2
-002800*    THREE READ STATEMENTS EXECUTED.  THE FIRST SHOULD BE      *  SQ1224.2
-002900*    EXECUTED SUCCESSFULLY, THE SECOND RAISE THE AT END        *  SQ1224.2
-003000*    CONDITION, AND THE THIRD, WHICH IS A READ AFTER END OF    *  SQ1224.2
-003100*    FILE, SHOULD CAUSE THE I-O STATUS CODE 46.                *  SQ1224.2
-003200*                                                              *  SQ1224.2
-003300****************************************************************  SQ1224.2
-003400*                                                                 SQ1224.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 ENVIRONMENT DIVISION.                                            SQ1224.2
 003600 CONFIGURATION SECTION.                                           SQ1224.2
 003700 SOURCE-COMPUTER.                                                 SQ1224.2
 003800     GNU-Linux.                                                   SQ1224.2
 003900 OBJECT-COMPUTER.                                                 SQ1224.2
 004000     GNU-Linux.                                                   SQ1224.2
-004100*                                                                 SQ1224.2
+004100*                                                                         
 004200 INPUT-OUTPUT SECTION.                                            SQ1224.2
 004300 FILE-CONTROL.                                                    SQ1224.2
 004400     SELECT PRINT-FILE ASSIGN TO                                  SQ1224.2
 004500     "REPORT".                                                    SQ1224.2
-004600*                                                                 SQ1224.2
+004600*                                                                         
 004700     SELECT SQ-FS4 ASSIGN                                         SQ1224.2
 004800     "XXXXX014"                                                   SQ1224.2
 004900            FILE STATUS IS SQ-FS4-STATUS.                         SQ1224.2
-005000*                                                                 SQ1224.2
-005100*                                                                 SQ1224.2
+005000*                                                                         
+005100*                                                                         
 005200 DATA DIVISION.                                                   SQ1224.2
 005300 FILE SECTION.                                                    SQ1224.2
 005400 FD  PRINT-FILE                                                   SQ1224.2
 005800               .                                                  SQ1224.2
 005900 01  PRINT-REC    PICTURE X(120).                                 SQ1224.2
 006000 01  DUMMY-RECORD PICTURE X(120).                                 SQ1224.2
-006100*                                                                 SQ1224.2
+006100*                                                                         
 006200 FD  SQ-FS4                                                       SQ1224.2
 006400     BLOCK  2 RECORDS                                             SQ1224.2
 006500     RECORD 125                                                   SQ1224.2
@@ -63,27 +63,27 @@
 006700 01  SQ-FS4R1-F-G-125.                                            SQ1224.2
 006800     05  SQ-FS4-FIRST  PIC X(120).                                SQ1224.2
 006900     05  SQ-FS4-REC-NO PIC 99999.                                 SQ1224.2
-007000*                                                                 SQ1224.2
+007000*                                                                         
 007100 WORKING-STORAGE SECTION.                                         SQ1224.2
-007200*                                                                 SQ1224.2
-007300***************************************************************   SQ1224.2
-007400*                                                             *   SQ1224.2
-007500*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1224.2
-007600*                                                             *   SQ1224.2
-007700***************************************************************   SQ1224.2
-007800*                                                                 SQ1224.2
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
 007900 01  SQ-FS4-STATUS.                                               SQ1224.2
 008000   03  SQ-FS4-KEY-1   PIC X.                                      SQ1224.2
 008100   03  SQ-FS4-KEY-2   PIC X.                                      SQ1224.2
-008200*                                                                 SQ1224.2
-008300***************************************************************   SQ1224.2
-008400*                                                             *   SQ1224.2
-008500*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1224.2
-008600*                                                             *   SQ1224.2
-008700***************************************************************   SQ1224.2
-008800*                                                                 SQ1224.2
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
 008900 01  REC-SKEL-SUB   PIC 99.                                       SQ1224.2
-009000*                                                                 SQ1224.2
+009000*                                                                         
 009100 01  FILE-RECORD-INFORMATION-REC.                                 SQ1224.2
 009200     03 FILE-RECORD-INFO-SKELETON.                                SQ1224.2
 009300        05 FILLER                 PICTURE X(48)       VALUE       SQ1224.2
@@ -135,7 +135,7 @@
 013900           07 FILLER              PIC X(9).                       SQ1224.2
 014000           07 ALTERNATE-KEY2      PIC X(29).                      SQ1224.2
 014100           07 FILLER              PIC X(7).                       SQ1224.2
-014200*                                                                 SQ1224.2
+014200*                                                                         
 014300 01  TEST-RESULTS.                                                SQ1224.2
 014400     02 FILLER              PIC X      VALUE SPACE.               SQ1224.2
 014500     02  PAR-NAME.                                                SQ1224.2
@@ -175,7 +175,7 @@
 017900         04 FILLER                           PIC X.               SQ1224.2
 018000     03 FILLER PIC X(2) VALUE SPACE.                              SQ1224.2
 018100     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ1224.2
-018200*                                                                 SQ1224.2
+018200*                                                                         
 018300 01  CCVS-C-1.                                                    SQ1224.2
 018400     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ1224.2
 018500     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ1224.2
@@ -191,7 +191,7 @@
 019500     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ1224.2
 019600     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ1224.2
 019700     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ1224.2
-019800*                                                                 SQ1224.2
+019800*                                                                         
 019900 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ1224.2
 020000 01  REC-CT            PIC 99       VALUE ZERO.                   SQ1224.2
 020100 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ1224.2
@@ -216,7 +216,7 @@
 022000   02  FILLER            PIC X(28)  VALUE                         SQ1224.2
 022100            " COPY - NOT FOR DISTRIBUTION".                       SQ1224.2
 022200   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1224.2
-022300*                                                                 SQ1224.2
+022300*                                                                         
 022400 01  CCVS-H-2B.                                                   SQ1224.2
 022500   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1224.2
 022600   02  TEST-ID           PIC X(9).                                SQ1224.2
@@ -278,8 +278,8 @@
 028200-    "******************************".                            SQ1224.2
 028300 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1224.2
 028400     "SQ122A".                                                    SQ1224.2
-028500*                                                                 SQ1224.2
-028600*                                                                 SQ1224.2
+028500*                                                                         
+028600*                                                                         
 028700 PROCEDURE DIVISION.                                              SQ1224.2
 028800 DECLARATIVES.                                                    SQ1224.2
 028900 SECT-SQ122A-0002 SECTION.                                        SQ1224.2
@@ -300,17 +300,17 @@
 030400             PERFORM DECL-FAIL                                    SQ1224.2
 030500             GO TO ABNORMAL-TERM-DECL                             SQ1224.2
 030600     END-IF.                                                      SQ1224.2
-030700*                                                                 SQ1224.2
+030700*                                                                         
 030800 DECL-PASS.                                                       SQ1224.2
 030900     MOVE   "PASS " TO P-OR-F.                                    SQ1224.2
 031000     ADD     1 TO PASS-COUNTER.                                   SQ1224.2
 031100     PERFORM DECL-PRINT-DETAIL.                                   SQ1224.2
-031200*                                                                 SQ1224.2
+031200*                                                                         
 031300 DECL-FAIL.                                                       SQ1224.2
 031400     MOVE   "FAIL*" TO P-OR-F.                                    SQ1224.2
 031500     ADD     1 TO ERROR-COUNTER.                                  SQ1224.2
 031600     PERFORM DECL-PRINT-DETAIL.                                   SQ1224.2
-031700*                                                                 SQ1224.2
+031700*                                                                         
 031800 DECL-PRINT-DETAIL.                                               SQ1224.2
 031900     IF REC-CT NOT EQUAL TO ZERO                                  SQ1224.2
 032000             MOVE "." TO PARDOT-X                                 SQ1224.2
@@ -328,7 +328,7 @@
 033200     IF REC-CT EQUAL TO ZERO                                      SQ1224.2
 033300         MOVE    SPACE TO PAR-NAME.                               SQ1224.2
 033400     MOVE    SPACE TO RE-MARK.                                    SQ1224.2
-033500*                                                                 SQ1224.2
+033500*                                                                         
 033600 DECL-WRITE-LINE.                                                 SQ1224.2
 033700     ADD     1 TO RECORD-COUNT.                                   SQ1224.2
 033800     IF RECORD-COUNT GREATER 50                                   SQ1224.2
@@ -343,11 +343,11 @@
 034700         MOVE    DUMMY-HOLD TO DUMMY-RECORD                       SQ1224.2
 034800         MOVE    ZERO TO RECORD-COUNT.                            SQ1224.2
 034900     PERFORM DECL-WRT-LN.                                         SQ1224.2
-035000*                                                                 SQ1224.2
+035000*                                                                         
 035100 DECL-WRT-LN.                                                     SQ1224.2
 035200     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1224.2
 035300     MOVE    SPACE TO DUMMY-RECORD.                               SQ1224.2
-035400*                                                                 SQ1224.2
+035400*                                                                         
 035500 DECL-FAIL-ROUTINE.                                               SQ1224.2
 035600     IF COMPUTED-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.      SQ1224.2
 035700     IF CORRECT-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.       SQ1224.2
@@ -366,7 +366,7 @@
 037000     MOVE    SPACES TO COR-ANSI-REFERENCE.                        SQ1224.2
 037100 DECL-FAIL-EX.                                                    SQ1224.2
 037200     EXIT.                                                        SQ1224.2
-037300*                                                                 SQ1224.2
+037300*                                                                         
 037400 DECL-BAIL.                                                       SQ1224.2
 037500     IF COMPUTED-A NOT EQUAL TO SPACE GO TO DECL-BAIL-WRITE.      SQ1224.2
 037600     IF CORRECT-A EQUAL TO SPACE GO TO DECL-BAIL-EX.              SQ1224.2
@@ -377,18 +377,18 @@
 038100     PERFORM DECL-WRITE-LINE 2 TIMES.                             SQ1224.2
 038200 DECL-BAIL-EX.                                                    SQ1224.2
 038300     EXIT.                                                        SQ1224.2
-038400*                                                                 SQ1224.2
+038400*                                                                         
 038500 ABNORMAL-TERM-DECL.                                              SQ1224.2
 038600     MOVE SPACE TO DUMMY-RECORD.                                  SQ1224.2
 038700     PERFORM DECL-WRITE-LINE.                                     SQ1224.2
 038800     MOVE "ABNORMAL TERMINATION AT THIS POINT IS ACCEPTABLE"      SQ1224.2
 038900             TO DUMMY-RECORD.                                     SQ1224.2
 039000     PERFORM DECL-WRITE-LINE 3 TIMES.                             SQ1224.2
-039100*                                                                 SQ1224.2
+039100*                                                                         
 039200 END-DECLS.                                                       SQ1224.2
 039300 END DECLARATIVES.                                                SQ1224.2
-039400*                                                                 SQ1224.2
-039500*                                                                 SQ1224.2
+039400*                                                                         
+039500*                                                                         
 039600 CCVS1 SECTION.                                                   SQ1224.2
 039700 OPEN-FILES.                                                      SQ1224.2
 039800     OPEN    OUTPUT PRINT-FILE.                                   SQ1224.2
@@ -399,39 +399,39 @@
 040300     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1224.2
 040400     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1224.2
 040500     GO TO CCVS1-EXIT.                                            SQ1224.2
-040600*                                                                 SQ1224.2
+040600*                                                                         
 040700 CCVS-INIT-FILE.                                                  SQ1224.2
 040800     ADD     1 TO REC-SKL-SUB.                                    SQ1224.2
 040900     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1224.2
 041000                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1224.2
-041100*                                                                 SQ1224.2
+041100*                                                                         
 041200 CLOSE-FILES.                                                     SQ1224.2
 041300     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1224.2
 041400     CLOSE   PRINT-FILE.                                          SQ1224.2
 041500 TERMINATE-CCVS.                                                  SQ1224.2
 041600     STOP    RUN.                                                 SQ1224.2
-041700*                                                                 SQ1224.2
+041700*                                                                         
 041800 INSPT.                                                           SQ1224.2
 041900     MOVE   "INSPT" TO P-OR-F.                                    SQ1224.2
 042000     ADD     1 TO INSPECT-COUNTER.                                SQ1224.2
 042100     PERFORM PRINT-DETAIL.                                        SQ1224.2
-042200*                                                                 SQ1224.2
+042200*                                                                         
 042300 PASS.                                                            SQ1224.2
 042400     MOVE   "PASS " TO P-OR-F.                                    SQ1224.2
 042500     ADD     1 TO PASS-COUNTER.                                   SQ1224.2
 042600     PERFORM PRINT-DETAIL.                                        SQ1224.2
-042700*                                                                 SQ1224.2
+042700*                                                                         
 042800 FAIL.                                                            SQ1224.2
 042900     MOVE   "FAIL*" TO P-OR-F.                                    SQ1224.2
 043000     ADD     1 TO ERROR-COUNTER.                                  SQ1224.2
 043100     PERFORM PRINT-DETAIL.                                        SQ1224.2
-043200*                                                                 SQ1224.2
+043200*                                                                         
 043300 DE-LETE.                                                         SQ1224.2
 043400     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1224.2
 043500     MOVE   "*****" TO P-OR-F.                                    SQ1224.2
 043600     ADD     1 TO DELETE-COUNTER.                                 SQ1224.2
 043700     PERFORM PRINT-DETAIL.                                        SQ1224.2
-043800*                                                                 SQ1224.2
+043800*                                                                         
 043900 PRINT-DETAIL.                                                    SQ1224.2
 044000     IF REC-CT NOT EQUAL TO ZERO                                  SQ1224.2
 044100         MOVE   "." TO PARDOT-X                                   SQ1224.2
@@ -448,7 +448,7 @@
 045200     MOVE    SPACE TO CORRECT-X.                                  SQ1224.2
 045300     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1224.2
 045400     MOVE    SPACE TO RE-MARK.                                    SQ1224.2
-045500*                                                                 SQ1224.2
+045500*                                                                         
 045600 HEAD-ROUTINE.                                                    SQ1224.2
 045700     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1224.2
 045800     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1224.2
@@ -464,7 +464,7 @@
 046800 END-RTN-EXIT.                                                    SQ1224.2
 046900     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1224.2
 047000     PERFORM WRITE-LINE 2 TIMES.                                  SQ1224.2
-047100*                                                                 SQ1224.2
+047100*                                                                         
 047200 END-ROUTINE-1.                                                   SQ1224.2
 047300     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1224.2
 047400     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1224.2
@@ -497,7 +497,7 @@
 050100     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1224.2
 050200     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1224.2
 050300     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1224.2
-050400*                                                                 SQ1224.2
+050400*                                                                         
 050500 WRITE-LINE.                                                      SQ1224.2
 050600     ADD     1 TO RECORD-COUNT.                                   SQ1224.2
 050700     IF RECORD-COUNT GREATER 50                                   SQ1224.2
@@ -510,7 +510,7 @@
 051400         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1224.2
 051500         MOVE  ZERO TO RECORD-COUNT.                              SQ1224.2
 051600     PERFORM WRT-LN.                                              SQ1224.2
-051700*                                                                 SQ1224.2
+051700*                                                                         
 051800 WRT-LN.                                                          SQ1224.2
 051900     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1224.2
 052000     MOVE    SPACE TO DUMMY-RECORD.                               SQ1224.2
@@ -548,17 +548,17 @@
 055200     EXIT.                                                        SQ1224.2
 055300 CCVS1-EXIT.                                                      SQ1224.2
 055400     EXIT.                                                        SQ1224.2
-055500*                                                                 SQ1224.2
-055600****************************************************************  SQ1224.2
-055700*                                                              *  SQ1224.2
-055800*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1224.2
-055900*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1224.2
-056000*                                                              *  SQ1224.2
-056100****************************************************************  SQ1224.2
-056200*                                                                 SQ1224.2
+055500*                                                                         
+055600*                                                                         
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
 056300 SECT-SQ122A-0004 SECTION.                                        SQ1224.2
 056400 STA-INIT.                                                        SQ1224.2
-056500*                                                                 SQ1224.2
+056500*                                                                         
 056600     MOVE   "SQ-FS4" TO XFILE-NAME (1).                           SQ1224.2
 056700     MOVE   "R1-F-G" TO XRECORD-NAME (1).                         SQ1224.2
 056800     MOVE    CCVS-PGM-ID TO XPROGRAM-NAME (1).                    SQ1224.2
@@ -569,9 +569,9 @@
 057300     MOVE   "SQ" TO XFILE-ORGANIZATION (1).                       SQ1224.2
 057400     MOVE   "S"  TO XLABEL-TYPE (1).                              SQ1224.2
 057500     MOVE    ZERO TO XRECORD-NUMBER (1).                          SQ1224.2
-057600*                                                                 SQ1224.2
-057700*    OPEN THE FILE IN THE OUTPUT MODE                             SQ1224.2
-057800*                                                                 SQ1224.2
+057600*                                                                         
+057700*                                                                         
+057800*                                                                         
 057900 SEQ-INIT-01.                                                     SQ1224.2
 058000     MOVE    0 TO REC-CT.                                         SQ1224.2
 058100     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1224.2
@@ -579,9 +579,9 @@
 058300     MOVE   "SEQ-TEST-OP-01" TO PAR-NAME.                         SQ1224.2
 058400 SEQ-TEST-OP-01.                                                  SQ1224.2
 058500     OPEN    OUTPUT SQ-FS4.                                       SQ1224.2
-058600*                                                                 SQ1224.2
-058700*    CHECK I-O STATUS RETURNED FROM OPEN OUTPUT                   SQ1224.2
-058800*                                                                 SQ1224.2
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
 058900     ADD    1 TO REC-CT.                                          SQ1224.2
 059000 SEQ-TEST-OP-01-01.                                               SQ1224.2
 059100     IF SQ-FS4-STATUS = "00"                                      SQ1224.2
@@ -594,10 +594,10 @@
 059800         MOVE   "VII-3, VII-23" TO ANSI-REFERENCE                 SQ1224.2
 059900         PERFORM FAIL.                                            SQ1224.2
 060000 SEQ-TEST-01-01-END.                                              SQ1224.2
-060100*                                                                 SQ1224.2
-060200*                                                                 SQ1224.2
-060300*    THE FILE HAS BEEN CREATED.  WE NOW WRITE ONE RECORD TO IT.   SQ1224.2
-060400*                                                                 SQ1224.2
+060100*                                                                         
+060200*                                                                         
+060300*                                                                         
+060400*                                                                         
 060500 SEQ-INIT-02.                                                     SQ1224.2
 060600     MOVE    0 TO REC-CT.                                         SQ1224.2
 060700     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1224.2
@@ -608,9 +608,9 @@
 061200     MOVE    FILE-RECORD-INFO-P1-120 (1) TO SQ-FS4-FIRST.         SQ1224.2
 061300     MOVE    XRECORD-NUMBER (1) TO SQ-FS4-REC-NO.                 SQ1224.2
 061400     WRITE   SQ-FS4R1-F-G-125.                                    SQ1224.2
-061500*                                                                 SQ1224.2
-061600*    CHECK I-O STATUS RETURNED FROM WRITE                         SQ1224.2
-061700*                                                                 SQ1224.2
+061500*                                                                         
+061600*                                                                         
+061700*                                                                         
 061800     ADD    1 TO REC-CT.                                          SQ1224.2
 061900 SEQ-TEST-WR-02-01.                                               SQ1224.2
 062000     IF SQ-FS4-STATUS = "00"                                      SQ1224.2
@@ -623,10 +623,10 @@
 062700         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1224.2
 062800         PERFORM FAIL.                                            SQ1224.2
 062900 SEQ-TEST-02-01-END.                                              SQ1224.2
-063000*                                                                 SQ1224.2
-063100*                                                                 SQ1224.2
-063200*    HAVING WRITTEN ONE RECORD, CLOSE THE FILE.                   SQ1224.2
-063300*                                                                 SQ1224.2
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
 063400 SEQ-INIT-03.                                                     SQ1224.2
 063500     MOVE    0 TO REC-CT.                                         SQ1224.2
 063600     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1224.2
@@ -634,9 +634,9 @@
 063800     MOVE   "SEQ-TEST-CL-03" TO PAR-NAME.                         SQ1224.2
 063900 SEQ-TEST-CL-03.                                                  SQ1224.2
 064000     CLOSE   SQ-FS4.                                              SQ1224.2
-064100*                                                                 SQ1224.2
-064200*    CHECK I-O STATUS RETURNED FROM CLOSE                         SQ1224.2
-064300*                                                                 SQ1224.2
+064100*                                                                         
+064200*                                                                         
+064300*                                                                         
 064400     ADD    1 TO REC-CT.                                          SQ1224.2
 064500 SEQ-TEST-CL-03-01.                                               SQ1224.2
 064600     IF SQ-FS4-STATUS = "00"                                      SQ1224.2
@@ -649,11 +649,11 @@
 065300         MOVE   "VII-3, VII-38,4.2.4(4)" TO ANSI-REFERENCE        SQ1224.2
 065400         PERFORM FAIL.                                            SQ1224.2
 065500 SEQ-TEST-03-01-END.                                              SQ1224.2
-065600*                                                                 SQ1224.2
-065700*                                                                 SQ1224.2
-065800*    CREATION OF THE FILE IS NOW COMPLETE.  THE NEXT ACTION       SQ1224.2
-065900*    IS TO OPEN THE FILE IN THE INPUT MODE                        SQ1224.2
-066000*                                                                 SQ1224.2
+065600*                                                                         
+065700*                                                                         
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
 066100 SEQ-INIT-04.                                                     SQ1224.2
 066200     MOVE    0 TO REC-CT.                                         SQ1224.2
 066300     MOVE    ZERO TO XRECORD-NUMBER (1).                          SQ1224.2
@@ -661,16 +661,16 @@
 066500     MOVE   "OPEN, TO READ FILE"  TO FEATURE.                     SQ1224.2
 066600     MOVE   "SEQ-TEST-OP-04" TO PAR-NAME.                         SQ1224.2
 066700 SEQ-TEST-OP-04.                                                  SQ1224.2
-066800*                                                                 SQ1224.2
-066900*    OPEN THE TEST FILE AND CLEAR THE RECORD AREA, JUST IN        SQ1224.2
-067000*    CASE THERE IS A SINGLE BUFFER WHICH STILL HAS A COPY OF      SQ1224.2
-067100*    THE LAST RECORD WRITTEN IN IT.                               SQ1224.2
-067200*                                                                 SQ1224.2
+066800*                                                                         
+066900*                                                                         
+067000*                                                                         
+067100*                                                                         
+067200*                                                                         
 067300     OPEN    INPUT SQ-FS4.                                        SQ1224.2
 067400     MOVE    SPACE TO SQ-FS4R1-F-G-125.                           SQ1224.2
-067500*                                                                 SQ1224.2
-067600*    CHECK I-O STATUS RETURNED FROM OPEN INPUT                    SQ1224.2
-067700*                                                                 SQ1224.2
+067500*                                                                         
+067600*                                                                         
+067700*                                                                         
 067800     ADD    1 TO REC-CT.                                          SQ1224.2
 067900 SEQ-TEST-OP-04-01.                                               SQ1224.2
 068000     IF SQ-FS4-STATUS = "00"                                      SQ1224.2
@@ -683,10 +683,10 @@
 068700         MOVE   "VII-3, VII-23" TO ANSI-REFERENCE                 SQ1224.2
 068800         PERFORM FAIL.                                            SQ1224.2
 068900 SEQ-TEST-04-01-END.                                              SQ1224.2
-069000*                                                                 SQ1224.2
-069100*                                                                 SQ1224.2
-069200*    READ THE FIRST (AND ONLY) RECORD FROM THE FILE               SQ1224.2
-069300*                                                                 SQ1224.2
+069000*                                                                         
+069100*                                                                         
+069200*                                                                         
+069300*                                                                         
 069400 SEQ-INIT-05.                                                     SQ1224.2
 069500     MOVE    0 TO REC-CT.                                         SQ1224.2
 069600     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1224.2
@@ -695,9 +695,9 @@
 069900 SEQ-TEST-RD-05.                                                  SQ1224.2
 070000     READ    SQ-FS4.                                              SQ1224.2
 070100     MOVE    SQ-FS4R1-F-G-125 TO FILE-RECORD-INFO (2).            SQ1224.2
-070200*                                                                 SQ1224.2
-070300*    CHECK I-O STATUS RETURNED FROM READ                          SQ1224.2
-070400*                                                                 SQ1224.2
+070200*                                                                         
+070300*                                                                         
+070400*                                                                         
 070500     ADD    1 TO REC-CT.                                          SQ1224.2
 070600 SEQ-TEST-RD-05-01.                                               SQ1224.2
 070700     IF SQ-FS4-STATUS = "00"                                      SQ1224.2
@@ -710,10 +710,10 @@
 071400         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1224.2
 071500         PERFORM FAIL.                                            SQ1224.2
 071600 SEQ-TEST-05-01-END.                                              SQ1224.2
-071700*                                                                 SQ1224.2
-071800*                                                                 SQ1224.2
-071900*    READ AGAIN, TO RAISE THE AT END CONDITION                    SQ1224.2
-072000*                                                                 SQ1224.2
+071700*                                                                         
+071800*                                                                         
+071900*                                                                         
+072000*                                                                         
 072100 SEQ-INIT-06.                                                     SQ1224.2
 072200     MOVE    0 TO REC-CT.                                         SQ1224.2
 072300     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1224.2
@@ -721,9 +721,9 @@
 072500     MOVE   "SEQ-TEST-RD-06" TO PAR-NAME.                         SQ1224.2
 072600 SEQ-TEST-RD-06.                                                  SQ1224.2
 072700     READ    SQ-FS4.                                              SQ1224.2
-072800*                                                                 SQ1224.2
-072900*    CHECK I-O STATUS RETURNED FROM READ                          SQ1224.2
-073000*                                                                 SQ1224.2
+072800*                                                                         
+072900*                                                                         
+073000*                                                                         
 073100     ADD    1 TO REC-CT.                                          SQ1224.2
 073200 SEQ-TEST-RD-06-01.                                               SQ1224.2
 073300     IF SQ-FS4-STATUS = "10"                                      SQ1224.2
@@ -736,10 +736,10 @@
 074000         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1224.2
 074100         PERFORM FAIL.                                            SQ1224.2
 074200 SEQ-TEST-06-01-END.                                              SQ1224.2
-074300*                                                                 SQ1224.2
-074400*                                                                 SQ1224.2
-074500*    READ AGAIN, AFTER AT END, TO RAISE I-O STATUS 46             SQ1224.2
-074600*                                                                 SQ1224.2
+074300*                                                                         
+074400*                                                                         
+074500*                                                                         
+074600*                                                                         
 074700 SEQ-INIT-07.                                                     SQ1224.2
 074800     MOVE    0 TO REC-CT.                                         SQ1224.2
 074900     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1224.2

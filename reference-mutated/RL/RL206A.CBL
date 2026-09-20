@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         RL2064.2
 000200 PROGRAM-ID.                                                      RL2064.2
 000300     RL206A.                                                      RL2064.2
-000400****************************************************************  RL2064.2
-000500*                                                              *  RL2064.2
-000600*    VALIDATION FOR:-                                          *  RL2064.2
-000700*                                                              *  RL2064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2064.2
-000900*                                                              *  RL2064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2064.2
-001100*                                                              *  RL2064.2
-001200****************************************************************  RL2064.2
-001300*GENERAL:    THIS RUN UNIT IS THE FIRST OF A SERIES WHICH         RL2064.2
-001400*            PROCESSES A RELATIVE I-O FILE.  THE FUNCTION OF THIS RL2064.2
-001500*            PROGRAM IS TO CREATE A RELATIVE FILE SEQUENTIALLY    RL2064.2
-001600*            (ACCESS MODE SEQUENTIAL) AND VERIFY THAT IT WAS      RL2064.2
-001700*            CREATED CORRECTLY.  THE FILE IS IDENTIFED AS "RL-FS1"RL2064.2
-001800*            AND IS PASSED TO SUBSEQUENT RUN UNITS FOR PROCESSING.RL2064.2
-001900*                                                                 RL2064.2
-002000*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL2064.2
-002100*            PROGRAM ARE:                                         RL2064.2
-002200*                                                                 RL2064.2
-002300*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL2064.2
-002400*                         RELATIVE  I-O DATA FILE                 RL2064.2
-002500*                 X-55   SYSTEM PRINTER                           RL2064.2
-002600*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL2064.2
-002700*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL2064.2
-002800*                 X-75   OBJECT OF VALUE OF CLAUSE                RL2064.2
-002900*                 X-82   SOURCE-COMPUTER                          RL2064.2
-003000*                 X-83   OBJECT-COMPUTER.                         RL2064.2
-003100*                                                                 RL2064.2
-003200****************************************************************  RL2064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            RL2064.2
 003400 CONFIGURATION SECTION.                                           RL2064.2
 003500 SOURCE-COMPUTER.                                                 RL2064.2
@@ -43,8 +43,8 @@
 004300     SELECT   RL-FS1 ASSIGN TO                                    RL2064.2
 004400     "XXXXX021"                                                   RL2064.2
 004500             ORGANIZATION IS RELATIVE.                            RL2064.2
-004600*    ABSENCE OF THE ACCESS CLAUSE IS TREATED AS THOUGH            RL2064.2
-004700*     SEQUENTIAL HAD BEEN SPECIFIED.                              RL2064.2
+004600*                                                                         
+004700*                                                                         
 004800 DATA DIVISION.                                                   RL2064.2
 004900 FILE SECTION.                                                    RL2064.2
 005000 FD  PRINT-FILE.                                                  RL2064.2
@@ -310,7 +310,7 @@
 031700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2064.2
 031800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2064.2
 031900      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2064.2
-032000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2064.2
+032000*                                                                         
 032100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2064.2
 032200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2064.2
 032300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2064.2
@@ -455,7 +455,7 @@
 046200     CLOSE   RL-FS1.                                              RL2064.2
 046300     GO TO   CCVS-EXIT.                                           RL2064.2
 046400 SIZE-TEST-1 SECTION.                                             RL2064.2
-046500*===================                                              RL2064.2
+046500*                                                                         
 046600 REL-SIZE-TEST-1.                                                 RL2064.2
 046700     IF      WRK-CS-09V00 > 32                                    RL2064.2
 046800             PERFORM SIZE-TEST-2.                                 RL2064.2
@@ -483,7 +483,7 @@
 049000             PERFORM PRINT-DETAIL                                 RL2064.2
 049100     ELSE                                                         RL2064.2
 049200             PERFORM PASS.                                        RL2064.2
-049300*            PERFORM PRINT-DETAIL.                                RL2064.2
+049300*                                                                         
 049400 SIZE-TEST-2-EXIT.                                                RL2064.2
 049500     EXIT.                                                        RL2064.2
 049600 SIZE-TEST-3 SECTION.                                             RL2064.2
@@ -496,7 +496,7 @@
 050300             PERFORM PRINT-DETAIL                                 RL2064.2
 050400     ELSE                                                         RL2064.2
 050500             PERFORM PASS.                                        RL2064.2
-050600*            PERFORM PRINT-DETAIL.                                RL2064.2
+050600*                                                                         
 050700 SIZE-TEST-3-EXIT.                                                RL2064.2
 050800     EXIT.                                                        RL2064.2
 050900 SIZE-TEST-4 SECTION.                                             RL2064.2
@@ -509,7 +509,7 @@
 051600             PERFORM PRINT-DETAIL                                 RL2064.2
 051700     ELSE                                                         RL2064.2
 051800             PERFORM PASS.                                        RL2064.2
-051900*            PERFORM PRINT-DETAIL.                                RL2064.2
+051900*                                                                         
 052000 SIZE-TEST-4-EXIT.                                                RL2064.2
 052100     EXIT.                                                        RL2064.2
 052200 SIZE-TEST-5 SECTION.                                             RL2064.2
@@ -522,7 +522,7 @@
 052900             PERFORM PRINT-DETAIL                                 RL2064.2
 053000     ELSE                                                         RL2064.2
 053100             PERFORM PASS.                                        RL2064.2
-053200*            PERFORM PRINT-DETAIL.                                RL2064.2
+053200*                                                                         
 053300 SIZE-TEST-5-EXIT.                                                RL2064.2
 053400     EXIT.                                                        RL2064.2
 053500 SIZE-TEST-6 SECTION.                                             RL2064.2
@@ -535,7 +535,7 @@
 054200             PERFORM PRINT-DETAIL                                 RL2064.2
 054300     ELSE                                                         RL2064.2
 054400             PERFORM PASS.                                        RL2064.2
-054500*            PERFORM PRINT-DETAIL.                                RL2064.2
+054500*                                                                         
 054600 SIZE-TEST-6-EXIT.                                                RL2064.2
 054700     EXIT.                                                        RL2064.2
 054800 SIZE-TEST-7 SECTION.                                             RL2064.2
@@ -548,7 +548,7 @@
 055500             PERFORM PRINT-DETAIL                                 RL2064.2
 055600     ELSE                                                         RL2064.2
 055700             PERFORM PASS.                                        RL2064.2
-055800*            PERFORM PRINT-DETAIL.                                RL2064.2
+055800*                                                                         
 055900 SIZE-TEST-7-EXIT.                                                RL2064.2
 056000     EXIT.                                                        RL2064.2
 056100 CCVS-EXIT SECTION.                                               RL2064.2

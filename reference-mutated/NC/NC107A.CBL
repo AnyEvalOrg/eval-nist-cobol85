@@ -1,41 +1,41 @@
 000100 IDENTIFICATION DIVISION.                                         NC1074.2
 000200 PROGRAM-ID.                                                      NC1074.2
 000300     NC107A.                                                      NC1074.2
-000400****************************************************************  NC1074.2
-000500*                                                              *  NC1074.2
-000600*    VALIDATION FOR:-                                          *  NC1074.2
-000700*                                                              *  NC1074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1074.2
-000900*                                                              *  NC1074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1074.2
-001100*                                                              *  NC1074.2
-001200****************************************************************  NC1074.2
-001300*                                                              *  NC1074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1074.2
-001500*                                                              *  NC1074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1074.2
-001900*                                                              *  NC1074.2
-002000****************************************************************  NC1074.2
-002100*                                                                 NC1074.2
-002200*    PROGRAM NC107A TESTS THE FOLLOWING FEATURES:                 NC1074.2
-002300*                                                                 NC1074.2
-002400*                  FIGURATIVE CONSTANTS                           NC1074.2
-002500*                  CONTINUATION LINES                             NC1074.2
-002600*                  SEPARATORS                                     NC1074.2
-002700*                  JUSTIFIED CLAUSE                               NC1074.2
-002800*                  SYNCHRONISED CLAUSE                            NC1074.2
-002900*                  BLANK WHEN ZERO CLAUSE                         NC1074.2
-003000*                  MAXIMUM LENGTH DATA-NAMES, LITERALS            NC1074.2
-003100*                    AND PARAGRAPH-NAMES.                         NC1074.2
-003200*                  REDEFINES CLAUSE                               NC1074.2
-003300*                  USAGE CLAUSE                                   NC1074.2
-003400*                  VALUE CLAUSE                                   NC1074.2
-003500*                  CURRENCY SIGN CLAUSE                           NC1074.2
-003600*                  DECIMAL-POINT IS COMMA CLAUSE                  NC1074.2
-003700*                  NUMERIC PARAGRAPH NAMES                        NC1074.2
-003800*                  CONTINUE STATEMENT                             NC1074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900                                                                  NC1074.2
 004000 ENVIRONMENT DIVISION.                                            NC1074.2
 004100 CONFIGURATION SECTION.                                           NC1074.2
@@ -232,23 +232,23 @@
 023200                                  VALUE 4.                        NC1074.2
 023300     02 U24             PICTURE 9 USAGE IS BINARY                 NC1074.2
 023400                                  VALUE 4.                        NC1074.2
-023500*                                                                 NC1074.2
-023600*    TWO-DIMENSIONAL TABLE USED IN VALUE CLAUSE:                  NC1074.2
-023700*                                                                 NC1074.2
+023500*                                                                         
+023600*                                                                         
+023700*                                                                         
 023800 01  VALUE-TABLE.                                                 NC1074.2
 023900   03  VALUE-TABLE-1              OCCURS 10.                      NC1074.2
 024000     05  VALUE-TABLE-2            OCCURS 10                       NC1074.2
 024100                                  PIC XX   VALUE "AZ".            NC1074.2
-024200*                                                                 NC1074.2
-024300*                                                                 NC1074.2
+024200*                                                                         
+024300*                                                                         
 024400 01  TEST-FIELD                   PIC X(10).                      NC1074.2
-024500*                                                                 NC1074.2
-024600*                                                                 NC1074.2
+024500*                                                                         
+024600*                                                                         
 024700 01  SEP-01. 02 SEP-02. 03 SEP-03. 04 SEP-04 PICTURE X(9) VALUE   NC1074.2
 024800     "SEPARATOR".                                                 NC1074.2
-024900*                                                                 NC1074.2
-025000*    GROUP ITEMS USED IN JUSTIFIED TESTS.                         NC1074.2
-025100*                                                                 NC1074.2
+024900*                                                                         
+025000*                                                                         
+025100*                                                                         
 025200 01  GROUP-TO-JUST-1.                                             NC1074.2
 025300     02  FILLER          PICTURE X   VALUE "A".                   NC1074.2
 025400     02  FILLER          PICTURE X   VALUE "B".                   NC1074.2
@@ -262,9 +262,9 @@
 026200     02  NJUST-XN-3      PICTURE X(3)    VALUE "ABC".             NC1074.2
 026300     02  NJUST-XN-5      PICTURE X(5)    VALUE "CDEFG".           NC1074.2
 026400     02  NJUST-XN-15     PICTURE X(15)   VALUE "ABCDEFGHIJKLMNO". NC1074.2
-026500*                                                                 NC1074.2
-026600*    DATA ITEMS WITH JUSTIFIED CLAUSE.                            NC1074.2
-026700*                                                                 NC1074.2
+026500*                                                                         
+026600*                                                                         
+026700*                                                                         
 026800 01  XJ-00005            PICTURE X(5)    JUSTIFIED RIGHT.         NC1074.2
 026900 01  AJ-00005            PICTURE A(5)    JUSTIFIED RIGHT.         NC1074.2
 027000 01  XJ-00007            PICTURE X(7)    JUST RIGHT.              NC1074.2
@@ -273,10 +273,10 @@
 027300     02  XN-00005-NJUST      PICTURE X(5).                        NC1074.2
 027400     02  XJ-00009            PICTURE X(9)    JUST.                NC1074.2
 027500     02  AJ-00009            PICTURE A(9)    JUST.                NC1074.2
-027600*                                                                 NC1074.2
-027700*    INITIALIZATION TAKES PLACE INDEPENDENT OF ANY                NC1074.2
-027800*    JUSTIFIED CLAUSE.                                            NC1074.2
-027900*                                                                 NC1074.2
+027600*                                                                         
+027700*                                                                         
+027800*                                                                         
+027900*                                                                         
 028000 01  XJ-00002   PICTURE X(2)   JUST  VALUE "AB".                  NC1074.2
 028100 01  XJ-00003            PICTURE X(3)        JUST   VALUE "XY".   NC1074.2
 028200 01  TEST-RESULTS.                                                NC1074.2
@@ -466,7 +466,7 @@
 046800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1074.2
 046900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1074.2
 047000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1074.2
-047100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1074.2
+047100*                                                                         
 047200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1074.2
 047300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1074.2
 047400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1074.2
@@ -539,24 +539,24 @@
 054100 CCVS1-EXIT.                                                      NC1074.2
 054200     EXIT.                                                        NC1074.2
 054300 SECT-NC107A-001 SECTION.                                         NC1074.2
-054400*REMARKS-TEST.                                                    NC1074.2
-054500*    MOVE   "IV-11 7.2.4" TO ANSI-REFERENCE.                      NC1074.2
-054600*    MOVE   "COBOL REMARKS PARA" TO FEATURE.                      NC1074.2
-054700*    MOVE   "REMARKS" TO PAR-NAME.                                NC1074.2
-054800*    MOVE     "PHONY LINES SHOULDNT EXECUT" TO RE-MARK.           NC1074.2
-054900*    PERFORM  PRINT-DETAIL.                                       NC1074.2
-055000*NOTE-TEST-1.                                                     NC1074.2
-055100*    PERFORM FAIL.                                                NC1074.2
-055200*       NOTE ENTER                         GO TO NOTE-WRITE-1     NC1074.2
-055300*            USE                           GO TO NOTE-WRITE-1     NC1074.2
-055400*            DECLARATIVES                  GO TO NOTE-WRITE-1     NC1074.2
-055500*            DATA DIVISION                 GO TO NOTE-WRITE-1     NC1074.2
-055600*            COPY (SEE ALSO PROGRAM LB104) GO TO NOTE-WRITE-1     NC1074.2
-055700*            THE COMPILER SHOULD "IGNORE" THE ABOVE WORDS.        NC1074.2
-055800*    PERFORM PASS                                                 NC1074.2
-055900*    GO      TO NOTE-WRITE-1.                                     NC1074.2
-056000*NOTE-DELETE-1.                                                   NC1074.2
-056100*    PERFORM DE-LETE.                                             NC1074.2
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
+054800*                                                                         
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
 056200 NOTE-WRITE-1.                                                    NC1074.2
 056300     MOVE   "NOTE RESERVED WORDS" TO FEATURE.                     NC1074.2
 056400     MOVE   "NOTE-TEST-1" TO PAR-NAME.                            NC1074.2
@@ -775,10 +775,10 @@
 077700 SEP-TEST-1-1.                                                    NC1074.2
 077800                                                     PERFORM FAIL.NC1074.2
 077900                                                GO TO SEP-WRITE-1.NC1074.2
-078000*                                                             NOTENC1074.2
-078100*                                                       SEP-TEST-1NC1074.2
-078200*                                            ENTIRE PARAGRAPH IS "NC1074.2
-078300*                                    RIGHT-JUSTIFIED, TO MARGIN R.NC1074.2
+078000*                                                                         
+078100*                                                                         
+078200*                                                                         
+078300*                                                                         
 078400 SEP-DELETE-1.                                                    NC1074.2
 078500     PERFORM  DE-LETE.                                            NC1074.2
 078600 SEP-WRITE-1.                                                     NC1074.2
@@ -923,7 +923,7 @@
 092500     PERFORM  PRINT-DETAIL.                                       NC1074.2
 092600 SEP-TEST-5 SECTION.                                              NC1074.2
 092700 SEP-TEST-5-PARA.                                                 NC1074.2
-092800*    ==-->  SEMICOLON AS SEPARATOR  <--==                         NC1074.2
+092800*                                                                         
 092900     MOVE   "IV-4 4.2.1(2)" TO ANSI-REFERENCE.                    NC1074.2
 093000 S5. PERFORM PASS, IF P-OR-F EQUAL TO "PASS " GO TO               NC1074.2
 093100     SEP-WRITE-5; ELSE PERFORM FAIL, GO TO SEP-WRITE-5.           NC1074.2
@@ -934,11 +934,11 @@
 093600     PERFORM  PRINT-DETAIL.                                       NC1074.2
 093700 JUST-INIT-01.                                                    NC1074.2
 093800     MOVE   "IV-24 5.6.4" TO ANSI-REFERENCE.                      NC1074.2
-093900*                                                                 NC1074.2
-094000*    INITIALIZATION TAKES PLACE INDEPENDENT OF ANY JUSTIFIED      NC1074.2
-094100*    CLAUSE.                                                      NC1074.2
-094200*    REFERENCE - X3.23-1985, PAGE VI-49, 5.15.4(1)C.              NC1074.2
-094300*                                                                 NC1074.2
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
 094400     MOVE "JUST WITH VALUE" TO FEATURE.                           NC1074.2
 094500     MOVE "JUST-TEST-01" TO PAR-NAME.                             NC1074.2
 094600 JUST-TEST-01-1.                                                  NC1074.2
@@ -973,18 +973,18 @@
 097500     PERFORM PRINT-DETAIL.                                        NC1074.2
 097600 JUST-INIT-02.                                                    NC1074.2
 097700     MOVE   "IV-24 5.6.4" TO ANSI-REFERENCE.                      NC1074.2
-097800*                                                                 NC1074.2
-097900*    JUSTIFIED RECEIVING ITEM TESTS                               NC1074.2
-098000*        IF THE SENDING ITEM IS LARGER THAN THE RECEIVING ITEM,   NC1074.2
-098100*    THEN THE LEFTMOST CHARACTERS ARE TRUNCATED.  IF THE SENDING  NC1074.2
-098200*    ITEM IS SMALLER THAN THE RECEIVING ITEM, THEN THE DATA IS    NC1074.2
-098300*    ALIGNED TO THE RIGHT WITH SPACES IN THE LEFTMOST CHARACTER   NC1074.2
-098400*    POSITIONS.                                                   NC1074.2
-098500*    REFERENCE - X3.23-1985, PAGE VI-24, 6.5.4.(1)                NC1074.2
-098600*                                                                 NC1074.2
-098700*    JUST-TEST-02 CONTAINS STATEMENTS OF THE FORM                 NC1074.2
-098800*        MOVE ALPHANUMERIC LITERAL TO ALPHANUMERIC JUSTIFIED ITEM.NC1074.2
-098900*                                                                 NC1074.2
+097800*                                                                         
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
+098200*                                                                         
+098300*                                                                         
+098400*                                                                         
+098500*                                                                         
+098600*                                                                         
+098700*                                                                         
+098800*                                                                         
+098900*                                                                         
 099000     MOVE "MOVE - JUST REC ITEM" TO FEATURE.                      NC1074.2
 099100     MOVE "JUST-TEST-02" TO PAR-NAME.                             NC1074.2
 099200 JUST-TEST-02-1-0.                                                NC1074.2
@@ -1040,10 +1040,10 @@
 104200     PERFORM PRINT-DETAIL.                                        NC1074.2
 104300 JUST-INIT-03.                                                    NC1074.2
 104400     MOVE   "IV-24 5.6.4" TO ANSI-REFERENCE.                      NC1074.2
-104500*                                                                 NC1074.2
-104600*    JUST-TEST-03 CONTAINS STATEMENTS OF THE FORM                 NC1074.2
-104700*        MOVE ALPHANUMERIC ITEM TO ALPHABETIC JUSTIFIED ITEM.     NC1074.2
-104800*                                                                 NC1074.2
+104500*                                                                         
+104600*                                                                         
+104700*                                                                         
+104800*                                                                         
 104900     MOVE "MOVE - JUST REC ITEM" TO FEATURE.                      NC1074.2
 105000     MOVE "JUST-TEST-03" TO PAR-NAME.                             NC1074.2
 105100 JUST-TEST-03-1-0.                                                NC1074.2
@@ -1099,10 +1099,10 @@
 110100     PERFORM PRINT-DETAIL.                                        NC1074.2
 110200 JUST-INIT-04.                                                    NC1074.2
 110300     MOVE   "IV-24 5.6.4" TO ANSI-REFERENCE.                      NC1074.2
-110400*                                                                 NC1074.2
-110500*    JUST-TEST-04 CONTAINS STATEMENTS OF THE FORM                 NC1074.2
-110600*        MOVE GROUP ITEM TO ALPHABETIC JUSTIFIED ITEM.            NC1074.2
-110700*                                                                 NC1074.2
+110400*                                                                         
+110500*                                                                         
+110600*                                                                         
+110700*                                                                         
 110800     MOVE "MOVE - JUST REC ITEM" TO FEATURE.                      NC1074.2
 110900     MOVE "JUST-TEST-04" TO PAR-NAME.                             NC1074.2
 111000 JUST-TEST-04-1-0.                                                NC1074.2
@@ -1158,10 +1158,10 @@
 116000     PERFORM PRINT-DETAIL.                                        NC1074.2
 116100 JUST-INIT-05.                                                    NC1074.2
 116200     MOVE   "IV-24 5.6.4" TO ANSI-REFERENCE.                      NC1074.2
-116300*                                                                 NC1074.2
-116400*    JUST-TEST-05 CONTAINS MOVE STATEMENTS WITH A JUSTIFIED       NC1074.2
-116500*    SENDING ITEM.                                                NC1074.2
-116600*                                                                 NC1074.2
+116300*                                                                         
+116400*                                                                         
+116500*                                                                         
+116600*                                                                         
 116700     MOVE "MOVE-JUST SEND ITEM" TO FEATURE.                       NC1074.2
 116800     MOVE "JUST-TEST-05" TO PAR-NAME.                             NC1074.2
 116900     MOVE "12345ABCDEFGHUXYZ   PQR" TO GROUP-WITH-JUST-ITEMS.     NC1074.2
@@ -1202,10 +1202,10 @@
 120400     PERFORM PRINT-DETAIL.                                        NC1074.2
 120500 JUST-INIT-06.                                                    NC1074.2
 120600     MOVE   "IV-24 5.6.4" TO ANSI-REFERENCE.                      NC1074.2
-120700*                                                                 NC1074.2
-120800*    JUST-TEST-06 CONTAINS MOVE STATEMENTS WITH A JUSTIFIED       NC1074.2
-120900*    SENDING ITEM AND A JUSTIFIED RECEIVING ITEM.                 NC1074.2
-121000*                                                                 NC1074.2
+120700*                                                                         
+120800*                                                                         
+120900*                                                                         
+121000*                                                                         
 121100     MOVE "MOVE - JUST TO JUST" TO FEATURE.                       NC1074.2
 121200     MOVE "JUST-TEST-06" TO PAR-NAME.                             NC1074.2
 121300     MOVE "12345ABCDEFGHIXYZ   PQR" TO GROUP-WITH-JUST-ITEMS.     NC1074.2

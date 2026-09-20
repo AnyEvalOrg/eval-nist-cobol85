@@ -37,7 +37,7 @@ TEST RESULT OF IX214A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:23 FAIL* START-TEST-GF-16              FROM START-TEST-GF-07; IX-4 1.3.4 (3) C                       
                                                                                                                         
                                      COMPUTED= 23                                                                       
-                                     CORRECT = 22                                                                       
+                                     CORRECT = 27                                                                       
                                                                                                                         
  FILE STATUS START:00 PASS  START-TEST-GF-17                                                                            
  FILE STATUS START:23 FAIL* START-TEST-GF-18              FROM START-TEST-GF-09; IX-4 1.3.4 (3) C                                                                                                                                               
@@ -56,7 +56,7 @@ TEST RESULT OF IX214A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
                                                                                                                         
                                      COMPUTED= 23                                                                       
-                                     CORRECT = 2P                                                                       
+                                     CORRECT = 26                                                                       
                                                                                                                         
  STR NLT ALTKY W/O DU PASS  START-TEST-GF-19                                                                            
  STR NLT ALTKY W/O DU PASS  START-TEST-GF-20                                                                            
@@ -71,7 +71,7 @@ TEST RESULT OF IX214A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:00 FAIL* START-TEST-GF-20              IX-3; 1.3.4 (1) A;FROM START-TEST-GF-20                       
                                                                                                                         
                                      COMPUTED= 00                                                                       
-                                     CORRECT = 08                                                                       
+                                     CORRECT = 90                                                                       
                                                                                                                         
  FILE STATUS START:00 PASS  START-TEST-GF-30                                                                            
  FILE STATUS START:23 PASS  START-TEST-GF-31                                                                            

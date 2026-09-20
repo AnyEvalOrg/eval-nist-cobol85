@@ -32,13 +32,13 @@ TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MAX Function     FAIL* F-ORD-MAX-13                                                                                
                                                                                                                         
                                      COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000003.000000000  See ref. A-61 2.32                                 
+                                     CORRECT =  000000001.000000000  See ref. A-61 2.32                                 
                                                                                                                         
  ORD-MAX Function     PASS  F-ORD-MAX-14                                                                                
  ORD-MAX Function     FAIL* F-ORD-MAX-15                                                                                
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000003.000000000  See ref. A-61 2.32                                 
+                                     CORRECT =  000000008.000000000  See ref. A-61 2.32                                 
                                                                                                                         
  ORD-MAX Function     PASS  F-ORD-MAX-16                                                                                                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        

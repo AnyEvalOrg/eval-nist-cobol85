@@ -1,84 +1,84 @@
 000100 IDENTIFICATION DIVISION.                                         IX1074.2
 000200 PROGRAM-ID.                                                      IX1074.2
 000300     IX107A.                                                      IX1074.2
-000400****************************************************************  IX1074.2
-000500*                                                              *  IX1074.2
-000600*    VALIDATION FOR:-                                          *  IX1074.2
-000700*                                                              *  IX1074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1074.2
-000900*                                                              *  IX1074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1074.2
-001100*                                                              *  IX1074.2
-001200****************************************************************  IX1074.2
-001300*                                                                 IX1074.2
-001400*       THIS ROUTINE TESTS THE FOLLOWING COBOL ELEMENTS FOR PROPERIX1074.2
-001500*    SYNTAX WHEN USING AN INDEXED SEQUENTIAL I-O FILE.            IX1074.2
-001600*                                                                 IX1074.2
-001700*             SAME AREA FILE-NAME-1 FILE-NAME-2                   IX1074.2
-001800*             READ .... RECORD AT END ....                        IX1074.2
-001900*             READ .... RECORD END ...                            IX1074.2
-002000*             READ .... AT END ....                               IX1074.2
-002100*             READ .... END ....                                  IX1074.2
-002200*             READ .... RECORD INVALID KEY ...                    IX1074.2
-002300*             READ .... INVALID KEY ...                           IX1074.2
-002400*             READ .... RECORD INVALID ...                        IX1074.2
-002500*             READ .... INVALID ...                               IX1074.2
-002600*                                                                 IX1074.2
-002700*       THERE ARE TWO FILES USED IN THIS ROUTINE. FOLLOWING       IX1074.2
-002800*    CREATION OF EACH FILE THE ROUTINE READS AND VERIFIES THE FILEIX1074.2
-002900*    BEFORE ANY OF THE ABOVE TESTS ARE MADE.  ONE FILE SPECIFIES  IX1074.2
-003000*    AN ACCESS MODE AS RANDOM AND THE OTHER FILE SPECIFIES AN     IX1074.2
-003100*    ACCESS MODE AS SEQUENTIAL.  THE FILES REFERENCED IN THE SAME IX1074.2
-003200*    CLAUSE NEED NOT HAVE THE SAME ACCESS MODE.                   IX1074.2
-003300*                                                                 IX1074.2
-003400*        REFERENCES: SECTION IX-15, SEE VII-19 2.13.3 (4) SAME    IX1074.2
-003500*                    AREA                                         IX1074.2
-003600*                                                                 IX1074.2
-003700*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX1074.2
-003800*                                                                 IX1074.2
-003900*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX1074.2
-004000*                    CLAUSE FOR DATA FILE IX-FS1                  IX1074.2
-004100*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1074.2
-004200*                    CLAUSE FOR DATA FILE IX-FD2                  IX1074.2
-004300*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX1074.2
-004400*                    CLAUSE FOR INDEX FILE IX-FS1                 IX1074.2
-004500*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1074.2
-004600*                    CLAUSE FOR INDEX FILE IX-FD2                 IX1074.2
-004700*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX1074.2
-004800*             X-62   FOR RAW-DATA                                 IX1074.2
-004900*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX1074.2
-005000*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX1074.2
-005100*             X-84   PRINTER-FILE LABELS (OPTIONAL)  C            IX1074.2
-005200*                                                                 IX1074.2
-005300*        NOTE:  X-CARDS 44,45, 62 AND 84      ARE OPTIONAL        IX1074.2
-005400*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX1074.2
-005500*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX1074.2
-005600*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX1074.2
-005700*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX1074.2
-005800*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX1074.2
-005900*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX1074.2
-006000*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX1074.2
-006100*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX1074.2
-006200*               THEY ARE AS FOLLOWS                               IX1074.2
-006300*                                                                 IX1074.2
-006400*                  C  SELECTS OBSOLETE FEATURES (E.G. LABEL ..)   IX1074.2
-006500*                  J  SELECTS X-CARDS 44 AND 45                   IX1074.2
-006600*                                                                 IX1074.2
-006700*        NOTE:  THERE IS OPTIONAL SOURCE CODE IN THIS PROGRAM     IX1074.2
-006800*               FOR THE CONVENIENCE OF THE USER.  THIS OPTIONAL   IX1074.2
-006900*               CODE IS IDENTIFIED BY THE LETTER T   OR U IN      IX1074.2
-007000*               POSITION 7  OF THE SOURCE LINE. FOR CODE          IX1074.2
-007100*               WITH LETTERS T OR U ONLY ONE SHOULD BE SELECTED.  IX1074.2
-007200*               EITHER THE T"S OR THE U"S SHOULD BE USED EXCLU-   IX1074.2
-007300*               SIVELY, NOT BOTH.  THE T"S PROVIDE A 29 CHARACTER IX1074.2
-007400*               INDEXED KEY SIZE FOR THE FILE AND THE U"S PROVIDE IX1074.2
-007500*               AN INDEXED KEY NOT GREATER THAN 8 CHARACTERS.     IX1074.2
-007600*               IF THE VP-ROUTINE IS USED THE APPROPRIATE         IX1074.2
-007700*               SOURCE CODE MAY BE SELECTED BY SPECIFYING THE     IX1074.2
-007800*               RESPECTIVE LETTER IN THE "*OPT" VP-ROUTINE CONTROLIX1074.2
-007900*               CARD.                                             IX1074.2
-008000*                                                                 IX1074.2
-008100******************************************************            IX1074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
 008200 ENVIRONMENT DIVISION.                                            IX1074.2
 008300 CONFIGURATION SECTION.                                           IX1074.2
 008400 SOURCE-COMPUTER.                                                 IX1074.2
@@ -389,7 +389,7 @@
 044200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1074.2
 044300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1074.2
 044400      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1074.2
-044500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1074.2
+044500*                                                                         
 044600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1074.2
 044700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1074.2
 044800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1074.2
@@ -502,8 +502,8 @@
 055500     CLOSE    IX-FS1.                                             IX1074.2
 055600 READ-INIT-F1-01.                                                 IX1074.2
 055700     MOVE ZERO TO WRK-CS-09V00.                                   IX1074.2
-055800*        THIS TEST READS AND CHECKS THE FILE CREATED IN           IX1074.2
-055900*    READ-TEST-001.                                               IX1074.2
+055800*                                                                         
+055900*                                                                         
 056000     OPEN INPUT IX-FS1.                                           IX1074.2
 056100 READ-TEST-F1-01.                                                 IX1074.2
 056200     READ IX-FS1                                                  IX1074.2
@@ -546,8 +546,8 @@
 059900     MOVE ZERO TO WRK-CS-09V00.                                   IX1074.2
 060000     MOVE ZERO TO RECORDS-IN-ERROR.                               IX1074.2
 060100     OPEN INPUT   IX-FS1.                                         IX1074.2
-060200*            FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED      IX1074.2
-060300*    IN THIS SERIES OF TESTS.                                     IX1074.2
+060200*                                                                         
+060300*                                                                         
 060400     MOVE "READ...RECORD AT END ..." TO FEATURE.                  IX1074.2
 060500     MOVE "READ-TEST-F1-02" TO PAR-NAME.                          IX1074.2
 060600     MOVE ZERO TO ERROR-FLAG.                                     IX1074.2
@@ -723,8 +723,8 @@
 077600     MOVE   ZERO TO WRK-DU-05V00-002.                             IX1074.2
 077700     MOVE ZERO TO WRK-CS-09V00.                                   IX1074.2
 077800     MOVE    ZERO TO RECORDS-IN-ERROR.                            IX1074.2
-077900*        THIS TEST READS AND CHECKS THE FILE CREATED IN           IX1074.2
-078000*    READ-TEST-GF-02.                                             IX1074.2
+077900*                                                                         
+078000*                                                                         
 078100     OPEN INPUT IX-FD2.                                           IX1074.2
 078200 READ-TEST-F2-07.                                                 IX1074.2
 078300     ADD    00001 TO WRK-DU-05V00-002.                            IX1074.2
@@ -769,8 +769,8 @@
 082200     MOVE ZERO TO WRK-CS-09V00.                                   IX1074.2
 082300     MOVE ZERO TO RECORDS-IN-ERROR.                               IX1074.2
 082400     OPEN INPUT IX-FD2.                                           IX1074.2
-082500*        FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED          IX1074.2
-082600*    IN THIS SERIES OF TESTS.                                     IX1074.2
+082500*                                                                         
+082600*                                                                         
 082700     MOVE "LEV 1 READ STATEMENT" TO FEATURE.                      IX1074.2
 082800     MOVE     ZERO TO EOF-FLAG.                                   IX1074.2
 082900     MOVE "READ...RECORD INVALID KEY ..." TO FEATURE.             IX1074.2

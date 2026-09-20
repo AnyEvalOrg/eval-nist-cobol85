@@ -2,30 +2,30 @@
 000200 PROGRAM-ID.                                                      NC2434.2
 000300     NC243A.                                                      NC2434.2
 000400                                                                  NC2434.2
-000500****************************************************************  NC2434.2
-000600*                                                              *  NC2434.2
-000700*    VALIDATION FOR:-                                          *  NC2434.2
-000800*                                                              *  NC2434.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2434.2
-001000*                                                              *  NC2434.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2434.2
-001200*                                                              *  NC2434.2
-001300****************************************************************  NC2434.2
-001400*                                                              *  NC2434.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2434.2
-001600*                                                              *  NC2434.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2434.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2434.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2434.2
-002000*                                                              *  NC2434.2
-002100****************************************************************  NC2434.2
-002200*                                                              *  NC2434.2
-002300*    PROGRAM NC243A TESTS THE CONSTRUCTION AND ACCES OF A      *  NC2434.2
-002400*    SEVEN-DIMENSIONAL TABLE.   THE CONSTRUCTION IS VIA        *  NC2434.2
-002500*    SUBSCRIPTED LOOPS AND ACCESS IS BY FORMAT 4 "PERFORM"     *  NC2434.2
-002600*    STATEMENTS USING INDICES.                                 *  NC2434.2
-002700*                                                              *  NC2434.2
-002800****************************************************************  NC2434.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            NC2434.2
 003000 CONFIGURATION SECTION.                                           NC2434.2
 003100 SOURCE-COMPUTER.                                                 NC2434.2
@@ -296,7 +296,7 @@
 029800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2434.2
 029900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2434.2
 030000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2434.2
-030100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2434.2
+030100*                                                                         
 030200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2434.2
 030300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2434.2
 030400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2434.2
@@ -586,7 +586,7 @@
 058800     PERFORM  PRINT-DETAIL.                                       NC2434.2
 058900 END-3LEVEL-TEST.                                                 NC2434.2
 059000     EXIT.                                                        NC2434.2
-059100*                                                                 NC2434.2
+059100*                                                                         
 059200 TH7-INIT-1.                                                      NC2434.2
 059300     MOVE   "TH7-TEST"   TO PAR-NAME.                             NC2434.2
 059400     MOVE   "VI-2 1.3.4" TO ANSI-REFERENCE.                       NC2434.2
@@ -694,7 +694,7 @@
 069600             MOVE    L7-HOLD TO CORRECT-X                         NC2434.2
 069700             PERFORM FAIL                                         NC2434.2
 069800             PERFORM PRINT-DETAIL.                                NC2434.2
-069900*                                                                 NC2434.2
+069900*                                                                         
 070000 CCVS-EXIT SECTION.                                               NC2434.2
 070100 CCVS-999999.                                                     NC2434.2
 070200     GO TO CLOSE-FILES.                                           NC2434.2

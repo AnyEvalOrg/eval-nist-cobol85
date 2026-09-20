@@ -24,12 +24,12 @@ TEST RESULT OF NC173A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE BY GIVING     FAIL* DIV-TEST-F3-7-1    .01        WRONGLY AFFECTED BY SIZE ERROR                                
                                                                                                                         
                                      COMPUTED=  000000000000000000                                                      
-                                     CORRECT =  000000000000010000   V1-82 6.11.4 GR3                                   
+                                     CORRECT =  000000000009000000   V1-82 6.11.4 GR3                                   
                                                                                                                         
  DIVIDE BY GIVING     FAIL* DIV-TEST-F3-7-2    .02        ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = C                     V1-82 6.11.4 GR3                                   
+                                     CORRECT = 0                     V1-82 6.11.4 GR3                                   
                                                                                                                         
  DIVIDE BY GIVING     PASS  DIV-TEST-F3-8-1    .01                                                                      
  DIVIDE BY GIVING     PASS  DIV-TEST-F3-8-2    .02                                                                      
@@ -37,7 +37,7 @@ TEST RESULT OF NC173A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE BY GIVING     FAIL* DIV-TEST-F3-9-2    .02        ON SIZE ERROR SHOULD NOT BE EXECUTED                          
                                                                                                                         
                                      COMPUTED= 0                                                                        
-                                     CORRECT = B                     V1-82 6.11.4 GR3                                   
+                                     CORRECT = 7                     V1-82 6.11.4 GR3                                   
                                                                                                                         
  DIVIDE BY GIVING     PASS  DIV-TEST-F3-10-1   .01                                                                      
  DIVIDE BY GIVING     PASS  DIV-TEST-F3-10-2   .02                                                                                                                                                                                              

@@ -1,9 +1,9 @@
 000100 IDENTIFICATION DIVISION.                                         RW3024.2
 000200 PROGRAM-ID.                                                      RW3024.2
 000300     RW302M.                                                      RW3024.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF                      RW3024.2
-000500*OBSOLETE FEATURES THAT ARE USED IN REPORT                        RW3024.2
-000600*WRITING.                                                         RW3024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
 000700 ENVIRONMENT DIVISION.                                            RW3024.2
 000800 CONFIGURATION SECTION.                                           RW3024.2
 000900 SOURCE-COMPUTER.                                                 RW3024.2
@@ -25,19 +25,19 @@
 002500                                                                  RW3024.2
 002600 I-O-CONTROL.                                                     RW3024.2
 002700     MULTIPLE FILE TAPE CONTAINS TFIL.                            RW3024.2
-002800*Message expected for above statement: OBSOLETE                   RW3024.2
+002800*                                                                         
 002900                                                                  RW3024.2
 003000                                                                  RW3024.2
 003100 DATA DIVISION.                                                   RW3024.2
 003200 FILE SECTION.                                                    RW3024.2
 003300 FD TFIL                                                          RW3024.2
 003400     LABEL RECORDS STANDARD                                       RW3024.2
-003500*Message expected for above statement: OBSOLETE                   RW3024.2
+003500*                                                                         
 003600     VALUE OF                                                     RW3024.2
 003700     OCLABELID                                                    RW3024.2
 003800     IS                                                           RW3024.2
 003900     "OCDUMMY".                                                   RW3024.2
-004000*Message expected for above statement: OBSOLETE                   RW3024.2
+004000*                                                                         
 004100                                                                  RW3024.2
 004200                                                                  RW3024.2
 004300 01 FREC.                                                         RW3024.2
@@ -76,4 +76,4 @@
 007600     STOP RUN.                                                    RW3024.2
 007700                                                                  RW3024.2
 007800                                                                  RW3024.2
-007900*TOTAL NUMBER OF FLAGS EXPECTED = 3.                              RW3024.2
+007900*                                                                         

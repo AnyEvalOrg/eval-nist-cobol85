@@ -1,24 +1,24 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2104.2
 000200 PROGRAM-ID.                                                      SQ2104.2
 000300     SQ210M.                                                      SQ2104.2
-000400****************************************************************  SQ2104.2
-000500*                                                              *  SQ2104.2
-000600*    VALIDATION FOR:-                                          *  SQ2104.2
-000700*    " HIGH       ".                                              SQ2104.2
-000800*                                                              *  SQ2104.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2104.2
-001000*    "4.2 ".                                                      SQ2104.2
-001100*                                                              *  SQ2104.2
-001200*        THE ROUTINE SQ210M TESTS THE USE OF THE LEVEL 2 WRITE    SQ2104.2
-001300*    STATEMENT AND THE LINAGE CLAUSE FOR A FILE DESIGNATED AS     SQ2104.2
-001400*    PRINTER OUTPUT.  THESE STATEMENTS CONTROL THE VERTICAL       SQ2104.2
-001500*    POSITIONING OF EACH LINE ON A PRINTED PAGE.  THE LINAGE      SQ2104.2
-001600*    CLAUSE SPECIFICALLY CONTROLS THE VERTICAL FORMAT OF LOGICAL  SQ2104.2
-001700*    PRINT PAGE.  SQ210M TESTS THE USE OF A MIXTURE OF INTEGER ANDSQ2104.2
-001800*    DATA-NAME ITEMS IN THE LINAGE CLAUSE.  VALUES OF DATA-NAMES  SQ2104.2
-001900*    ARE CHANGED IN ORDER TO CHECK REDEFINITION OF LOGICAL PAGE   SQ2104.2
-002000*    FORMATS.  IT IS ASSUMED THAT ALL LEVEL 2 NUCLEUS OPTIONS     SQ2104.2
-002100*    ARE AVAILABLE IN TESTING SQ210M.                             SQ2104.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
 002200 ENVIRONMENT DIVISION.                                            SQ2104.2
 002300 CONFIGURATION SECTION.                                           SQ2104.2
 002400 SOURCE-COMPUTER.                                                 SQ2104.2
@@ -227,7 +227,7 @@
 027500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2104.2
 027600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2104.2
 027700      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2104.2
-027800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2104.2
+027800*                                                                         
 027900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2104.2
 028000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2104.2
 028100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2104.2
@@ -295,8 +295,8 @@
 034300     MOVE COMMENT-LINE-2 TO PRINT-REC.                            SQ2104.2
 034400     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      SQ2104.2
 034500 WRITE-TEST-GF-01.                                                SQ2104.2
-034600*             THIS TEST CHECKS A LINAGE CLAUSE WHICH CONTAINS     SQ2104.2
-034700*             PHRASES WITH BOTH INTEGER AND DATA NAME ITEMS.      SQ2104.2
+034600*                                                                         
+034700*                                                                         
 034800     MOVE "LINAGE INT / D-N MIX" TO FEATURE.                      SQ2104.2
 034900     MOVE "WRITE-TEST-GF-01" TO PAR-NAME.                         SQ2104.2
 035000     PERFORM PRINT-DETAIL.                                        SQ2104.2

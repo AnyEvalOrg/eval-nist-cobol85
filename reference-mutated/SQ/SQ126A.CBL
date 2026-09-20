@@ -1,45 +1,45 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1264.2
 000200 PROGRAM-ID.                                                      SQ1264.2
 000300     SQ126A.                                                      SQ1264.2
-000400****************************************************************  SQ1264.2
-000500*                                                              *  SQ1264.2
-000600*    VALIDATION FOR:-                                          *  SQ1264.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1264.2
-000800*                                                              *  SQ1264.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1264.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1264.2
-001100*                                                              *  SQ1264.2
-001200****************************************************************  SQ1264.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1264.2
-001400*                                                                 SQ1264.2
-001500*                                                                 SQ1264.2
-001600******************************************************************SQ1264.2
-001700*                                                                *SQ1264.2
-001800*    NEW TESTS:                                                  *SQ1264.2
-001900*                                                                *SQ1264.2
-002000*    READ ... AT END  ... NOT AT END ...                         *SQ1264.2
-002100*                                                                *SQ1264.2
-002200*    READ ... RECORD AT END ... NOT END                          *SQ1264.2
-002300*                                                                *SQ1264.2
-002400*    IF ... READ ... AT END ... NOT AT END ... END-READ          *SQ1264.2
-002500*                                                                *SQ1264.2
-002600*    IF ... READ ... RECORD END ... NOT END ... END-READ ...     *SQ1264.2
-002700*                                                                *SQ1264.2
-002800******************************************************************SQ1264.2
-002900*                                                                 SQ1264.2
-003000*        THE ROUTINE SQ126A TESTS THE USE OF THE NOT AT END       SQ1264.2
-003100*    PHRASE FOR THE READ STATEMENT AND ALSO THE END-READ PHRASE.  SQ1264.2
-003200*                                                                 SQ1264.2
-003300*                                                                 SQ1264.2
-003400*    USED X-CARDS:                                                SQ1264.2
-003500*         XXXXX001                                                SQ1264.2
-003600*         XXXXX055                                                SQ1264.2
-003700*     P   XXXXX062                                                SQ1264.2
-003800*         XXXXX082                                                SQ1264.2
-003900*         XXXXX083                                                SQ1264.2
-004000*     C   XXXXX084                                                SQ1264.2
-004100*                                                                 SQ1264.2
-004200*                                                                 SQ1264.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
 004300 ENVIRONMENT DIVISION.                                            SQ1264.2
 004400 CONFIGURATION SECTION.                                           SQ1264.2
 004500 SOURCE-COMPUTER.                                                 SQ1264.2
@@ -357,7 +357,7 @@
 040600     ADD INSPECT-COUNTER TO ERROR-HOLD.                           SQ1264.2
 040700     ADD DELETE-CNT TO ERROR-HOLD.                                SQ1264.2
 040800     ADD PASS-COUNTER TO ERROR-HOLD.                              SQ1264.2
-040900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1264.2
+040900*                                                                         
 041000     MOVE PASS-COUNTER TO CCVS-E-4-1.                             SQ1264.2
 041100     MOVE ERROR-HOLD TO CCVS-E-4-2.                               SQ1264.2
 041200     MOVE CCVS-E-4 TO CCVS-E-2-2.                                 SQ1264.2
@@ -464,21 +464,21 @@
 051300     MOVE XRECORD-NUMBER (1) TO CORRECT-18V0.                     SQ1264.2
 051400     PERFORM PRINT-DETAIL.                                        SQ1264.2
 051500     CLOSE SQ-FS1.                                                SQ1264.2
-051600*        A SEQUENTIAL TAPE FILE WITH 120 CHARACTER RECORDS        SQ1264.2
-051700*    HAS BEEN CREATED. THE FILE CONTAINS 750 RECORDS.             SQ1264.2
+051600*                                                                         
+051700*                                                                         
 051800 READ-INIT-GF-01.                                                 SQ1264.2
 051900     MOVE ZERO TO WRK-CS-09V00.                                   SQ1264.2
 052000     MOVE ZERO TO SWITCH-READ1.                                   SQ1264.2
-052100*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ1264.2
-052200*    READ-TEST-001 AND CHECKS THE NOT AT END CONDITION.           SQ1264.2
+052100*                                                                         
+052200*                                                                         
 052300     OPEN                                                         SQ1264.2
 052400        INPUT SQ-FS1.                                             SQ1264.2
 052500 READ-TEST-GF-01.                                                 SQ1264.2
-052600******************************************************************SQ1264.2
-052700*                                                                *SQ1264.2
-052800*    READ ... AT END  --- NOT AT END ...                         *SQ1264.2
-052900*                                                                *SQ1264.2
-053000******************************************************************SQ1264.2
+052600*                                                                         
+052700*                                                                         
+052800*                                                                         
+052900*                                                                         
+053000*                                                                         
 053100     READ SQ-FS1 AT END                                           SQ1264.2
 053200         GO TO READ-TEST-GF-01-1                                  SQ1264.2
 053300         NOT AT END                                               SQ1264.2
@@ -541,11 +541,11 @@
 059000     MOVE "READ-TEST-GF-02" TO PAR-NAME.                          SQ1264.2
 059100     MOVE ZERO TO ERROR-FLAG.                                     SQ1264.2
 059200 READ-TEST-GF-02.                                                 SQ1264.2
-059300******************************************************************SQ1264.2
-059400*                                                                *SQ1264.2
-059500*   READ ... RECORD AT END ... NOT END                           *SQ1264.2
-059600*                                                                *SQ1264.2
-059700******************************************************************SQ1264.2
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
 059800     READ SQ-FS1 RECORD AT END                                    SQ1264.2
 059900         MOVE "UNEXPECTED EOF" TO COMPUTED-A                      SQ1264.2
 060000         MOVE 1 TO EOF-FLAG                                       SQ1264.2
@@ -584,11 +584,11 @@
 063300     MOVE "READ-TEST-GF-03-1" TO PAR-NAME.                        SQ1264.2
 063400     MOVE "NOT AT END;END-READ" TO FEATURE.                       SQ1264.2
 063500 READ-TEST-GF-03.                                                 SQ1264.2
-063600******************************************************************SQ1264.2
-063700*                                                                *SQ1264.2
-063800*    IF ... READ ... AT END ... NOT AT END ... END-READ          *SQ1264.2
-063900*                                                                *SQ1264.2
-064000******************************************************************SQ1264.2
+063600*                                                                         
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
 064100     IF SWITCH-READ2 = 1                                          SQ1264.2
 064200         READ SQ-FS1 AT END                                       SQ1264.2
 064300             MOVE "UNEXPECTED EOF" TO COMPUTED-A                  SQ1264.2
@@ -633,11 +633,11 @@
 068200     MOVE "READ...RECORD END...NOT END;END-READ" TO RE-MARK.      SQ1264.2
 068300     MOVE "READ-TEST-GF-04-1" TO PAR-NAME.                        SQ1264.2
 068400 READ-TEST-GF-04.                                                 SQ1264.2
-068500******************************************************************SQ1264.2
-068600*                                                                *SQ1264.2
-068700*   IF ... READ ... RECORD END ... NOT END ... END-READ ...      *SQ1264.2
-068800*                                                                *SQ1264.2
-068900******************************************************************SQ1264.2
+068500*                                                                         
+068600*                                                                         
+068700*                                                                         
+068800*                                                                         
+068900*                                                                         
 069000     IF SWITCH-READ3 = 1                                          SQ1264.2
 069100         READ SQ-FS1 RECORD END                                   SQ1264.2
 069200             MOVE "UNEXPECTED EOF" TO COMPUTED-A                  SQ1264.2

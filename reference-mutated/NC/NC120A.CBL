@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1204.2
 000200 PROGRAM-ID.                                                      NC1204.2
 000300     NC120A.                                                      NC1204.2
-000400****************************************************************  NC1204.2
-000500*                                                              *  NC1204.2
-000600*    VALIDATION FOR:-                                          *  NC1204.2
-000700*                                                              *  NC1204.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1204.2
-000900*                                                              *  NC1204.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1204.2
-001100*                                                              *  NC1204.2
-001200****************************************************************  NC1204.2
-001300*                                                              *  NC1204.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1204.2
-001500*                                                              *  NC1204.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1204.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1204.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1204.2
-001900*                                                              *  NC1204.2
-002000****************************************************************  NC1204.2
-002100*                                                                 NC1204.2
-002200*    PROGRAM NC120A TESTS THE USE OF THE "SIGN" CLAUSE WITH       NC1204.2
-002300*    FORMATS 1 AND 2 OF THE MULTIPLY STATEMENT.                   NC1204.2
-002400*    ALL COMBINATIONS OF THE SIGN CLAUSE ARE USED WITH            NC1204.2
-002500*    DATA ITEMS OF VARIOUS LENGTHS.                               NC1204.2
-002600*                                                                 NC1204.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1204.2
 002800 CONFIGURATION SECTION.                                           NC1204.2
 002900 SOURCE-COMPUTER.                                                 NC1204.2
@@ -320,7 +320,7 @@
 032200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1204.2
 032300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1204.2
 032400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1204.2
-032500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1204.2
+032500*                                                                         
 032600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1204.2
 032700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1204.2
 032800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1204.2
@@ -500,7 +500,7 @@
 050200     MOVE "SIG-TEST-GF-1-1 " TO PAR-NAME.                         NC1204.2
 050300     PERFORM  PRINT-DETAIL.                                       NC1204.2
 050400 SIG-TEST-GF-1-2.                                                 NC1204.2
-050500     IF       MULT5 EQUAL TO 7                                    NC1204.2
+050500     IF       MULT5 EQUAL TO 5                                    NC1204.2
 050600              PERFORM PASS                                        NC1204.2
 050700              ELSE                                                NC1204.2
 050800              GO TO SIG-FAIL-GF-1-2.                              NC1204.2
@@ -511,7 +511,7 @@
 051300 SIG-FAIL-GF-1-2.                                                 NC1204.2
 051400     PERFORM  FAIL.                                               NC1204.2
 051500     MOVE     MULT5 TO COMPUTED-N.                                NC1204.2
-051600     MOVE     +7 TO CORRECT-N.                                    NC1204.2
+051600     MOVE     +5 TO CORRECT-N.                                    NC1204.2
 051700     MOVE     4 TO MULT5.                                         NC1204.2
 051800     MOVE     "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.        NC1204.2
 051900 SIG-WRITE-GF-1-2.                                                NC1204.2
@@ -794,7 +794,7 @@
 079600     MULTIPLY 99.4 BY WRK-DS-02V00 ROUNDED                        NC1204.2
 079700         ON SIZE ERROR MOVE "0" TO WRK-XN-00001.                  NC1204.2
 079800 SIG-TEST-GF-11-1.                                                NC1204.2
-079900     IF WRK-DS-02V00 EQUAL TO -19                                 NC1204.2
+079900     IF WRK-DS-02V00 EQUAL TO -49                                 NC1204.2
 080000         PERFORM PASS                                             NC1204.2
 080100         GO TO SIG-WRITE-GF-11-1.                                 NC1204.2
 080200     GO TO SIG-FAIL-GF-11-1.                                      NC1204.2
@@ -803,7 +803,7 @@
 080500     GO TO SIG-WRITE-GF-11-1.                                     NC1204.2
 080600 SIG-FAIL-GF-11-1.                                                NC1204.2
 080700     MOVE  WRK-DS-02V00       TO COMPUTED-N.                      NC1204.2
-080800     MOVE  -19                TO CORRECT-N.                       NC1204.2
+080800     MOVE  -49                TO CORRECT-N.                       NC1204.2
 080900     PERFORM FAIL.                                                NC1204.2
 081000 SIG-WRITE-GF-11-1.                                               NC1204.2
 081100     MOVE "SIG-TEST-GF-11-1         " TO PAR-NAME.                NC1204.2

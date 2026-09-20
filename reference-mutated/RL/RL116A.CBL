@@ -1,47 +1,47 @@
 000100 IDENTIFICATION DIVISION.                                         RL1164.2
 000200 PROGRAM-ID.                                                      RL1164.2
 000300     RL116A.                                                      RL1164.2
-000400****************************************************************  RL1164.2
-000500*                                                              *  RL1164.2
-000600*    VALIDATION FOR:-                                          *  RL1164.2
-000700*                                                              *  RL1164.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1164.2
-000900*                                                              *  RL1164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1164.2
-001100*                                                              *  RL1164.2
-001200****************************************************************  RL1164.2
-001300*                                                              *  RL1164.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1164.2
-001500*                                                              *  RL1164.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  RL1164.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  RL1164.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  RL1164.2
-001900*                                                              *  RL1164.2
-002000****************************************************************  RL1164.2
-002100*                                                              *  RL1164.2
-002200*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1164.2
-002300*                                                              *  RL1164.2
-002400*            X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   *  RL1164.2
-002500*                    RELATIVE  I-O DATA FILE                   *  RL1164.2
-002600*            X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   *  RL1164.2
-002700*                    RELATIVE  I-O DATA FILE                   *  RL1164.2
-002800*            X-55   SYSTEM PRINTER                             *  RL1164.2
-002900*            X-69   ADDITIONAL VALUE OF CLAUSES                *  RL1164.2
-003000*            X-74   VALUE OF IMPLEMENTOR-NAME                  *  RL1164.2
-003100*            X-75   OBJECT OF VALUE OF CLAUSE                  *  RL1164.2
-003200*            X-82   SOURCE-COMPUTER                            *  RL1164.2
-003300*            X-83   OBJECT-COMPUTER.                           *  RL1164.2
-003400*                                                              *  RL1164.2
-003500****************************************************************  RL1164.2
-003600*    RL116A                                                    *  RL1164.2
-003700****************************************************************  RL1164.2
-003800*            THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND    RL1164.2
-003900*            SEMANTIC ACTIONS ASSOCIATED WITH THE "STATUS"        RL1164.2
-004000*            CLAUSE FOR THE VALUES "00" AND "10".                 RL1164.2
-004100*                                                                 RL1164.2
-004200*                                                                 RL1164.2
-004300*                                                                 RL1164.2
-004400***************************************************               RL1164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
 004500 ENVIRONMENT DIVISION.                                            RL1164.2
 004600 CONFIGURATION SECTION.                                           RL1164.2
 004700 SOURCE-COMPUTER.                                                 RL1164.2
@@ -308,7 +308,7 @@
 031800 RL-FD2-01-01.                                                    RL1164.2
 031900     MOVE   "PASS " TO P-OR-F.                                    RL1164.2
 032000     ADD     1 TO PASS-COUNTER.                                   RL1164.2
-032100*                                                                 RL1164.2
+032100*                                                                         
 032200     IF      REC-CT NOT EQUAL TO ZERO                             RL1164.2
 032300             MOVE "." TO PARDOT-X                                 RL1164.2
 032400             MOVE REC-CT TO DOTVALUE.                             RL1164.2
@@ -447,7 +447,7 @@
 045900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1164.2
 046000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1164.2
 046100      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1164.2
-046200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1164.2
+046200*                                                                         
 046300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1164.2
 046400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1164.2
 046500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1164.2
@@ -530,7 +530,7 @@
 054200     MOVE     "RL"            TO  XFILE-ORGANIZATION (2).         RL1164.2
 054300     MOVE     "S"             TO  XLABEL-TYPE        (2).         RL1164.2
 054400     MOVE     000001          TO  XRECORD-NUMBER     (2).         RL1164.2
-054500*INITIALIZE  RECORD WORK AREA NUMBER 2.                           RL1164.2
+054500*                                                                         
 054600     MOVE     1         TO  WRK-CS-09V00-012.                     RL1164.2
 054700     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     RL1164.2
 054800                            WRK-CS-09V00-015 WRK-CS-09V00-016     RL1164.2
@@ -540,7 +540,7 @@
 055200     MOVE     01 TO REC-CT.                                       RL1164.2
 055300     OPEN     OUTPUT    RL-FD2.                                   RL1164.2
 055400     MOVE     RL-FD2-STATUS TO WRK-XN-0002-001.                   RL1164.2
-055500*CAPTURE STATUS KEY AFTER  OPEN STATEMENT IS EXECUTED.            RL1164.2
+055500*                                                                         
 055600 REL-INIT-1.                                                      RL1164.2
 055700     MOVE   "REL-TEST-1" TO PAR-NAME.                             RL1164.2
 055800     MOVE   "VII-3 1.3.4 1A" TO ANSI-REFERENCE.                   RL1164.2
@@ -560,7 +560,7 @@
 057200     ELSE                                                         RL1164.2
 057300             PERFORM PASS                                         RL1164.2
 057400             PERFORM PRINT-DETAIL.                                RL1164.2
-057500*                                                                 RL1164.2
+057500*                                                                         
 057600 REL-INIT-2.                                                      RL1164.2
 057700     MOVE   "REL-TEST-2" TO PAR-NAME.                             RL1164.2
 057800     MOVE   "VII-3 1.3.4 2A" TO ANSI-REFERENCE.                   RL1164.2
@@ -596,7 +596,7 @@
 060800             PERFORM PASS.                                        RL1164.2
 060900     PERFORM PRINT-DETAIL.                                        RL1164.2
 061000 REL-TEST-2-EXIT.                                                 RL1164.2
-061100*                                                                 RL1164.2
+061100*                                                                         
 061200 CCVS-EXIT SECTION.                                               RL1164.2
 061300 CCVS-999999.                                                     RL1164.2
 061400     GO TO CLOSE-FILES.                                           RL1164.2

@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SM2014.2
 000200 PROGRAM-ID.                                                      SM2014.2
 000300     SM201A.                                                      SM2014.2
-000400****************************************************************  SM2014.2
-000500*                                                              *  SM2014.2
-000600*    VALIDATION FOR:-                                          *  SM2014.2
-000700*                                                              *  SM2014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2014.2
-000900*                                                              *  SM2014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2014.2
-001100*                                                              *  SM2014.2
-001200****************************************************************  SM2014.2
-001300*                                                              *  SM2014.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2014.2
-001500*                                                              *  SM2014.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2014.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2014.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2014.2
-001900*                                                              *  SM2014.2
-002000****************************************************************  SM2014.2
-002100*                                                              *  SM2014.2
-002200*    PROGRAM SM201A TESTS THE "REPLACING" PHRASE OF THE "COPY" *  SM2014.2
-002300*    STATEMENT IN THE WORKING-STORAGE SECTION AND              *  SM2014.2
-002400*    PROCEDURE DIVISION AND PRODUCES A SEQUENTIAL OUTPUT FILE  *  SM2014.2
-002500*    USING "COPY"ED CODE, WHICH IS SUBSEQUENTLY CHECKED BY     *  SM2014.2
-002600*    SM202A.                                                   *  SM2014.2
-002700*                                                              *  SM2014.2
-002800****************************************************************  SM2014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SM2014.2
 003000 CONFIGURATION SECTION.                                           SM2014.2
 003100 SOURCE-COMPUTER.                                                 SM2014.2
@@ -48,35 +48,35 @@
 004800                                                                  SM2014.2
 004900                                                                  SM2014.2
 005000                                                                  SM2014.2
-005100*                                                                 SM2014.2
-005200*********************** COPY STATEMENT USED **********************SM2014.2
-005300*                                                                 SM2014.2
-005400*FD  TEST-FILE                                         COPY K1FDA SM2014.2
-005500*             REPLACING                                           SM2014.2
-005600*             PROOF-REC BY TST-TEST.                              SM2014.2
-005700*                                                                 SM2014.2
-005800******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
 005900 FD  TEST-FILE                                         COPY K1FDA SM2014.2
 006000              REPLACING                                           SM2014.2
 006100              PROOF-REC BY TST-TEST.                              SM2014.2
-006200*********************** END OF COPIED TEXT ***********************SM2014.2
+006200*                                                                         
 006300                                                                  SM2014.2
 006400                                                                  SM2014.2
 006500                                                                  SM2014.2
 006600                                                                  SM2014.2
 006700                                                                  SM2014.2
-006800*                                                                 SM2014.2
-006900*********************** COPY STATEMENT USED **********************SM2014.2
-007000*                                                                 SM2014.2
-007100*01  TST-TEST                                          COPY K101A SM2014.2
-007200*             REPLACING                                           SM2014.2
-007300*                       TST-FLD-1 BY TF-1.                        SM2014.2
-007400*                                                                 SM2014.2
-007500******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
 007600 01  TST-TEST                                          COPY K101A SM2014.2
 007700              REPLACING                                           SM2014.2
 007800                        TST-FLD-1 BY TF-1.                        SM2014.2
-007900*********************** END OF COPIED TEXT ***********************SM2014.2
+007900*                                                                         
 008000 WORKING-STORAGE SECTION.                                         SM2014.2
 008100 77  RCD-1 PICTURE 9(5) VALUE 97532.                              SM2014.2
 008200 77  RCD-2 PICTURE 9(5) VALUE 23479.                              SM2014.2
@@ -85,22 +85,22 @@
 008500 77  RCD-5 PICTURE 9(5) VALUE 14003.                              SM2014.2
 008600 77  RCD-6 PICTURE 9(5) VALUE 19922.                              SM2014.2
 008700 77  RCD-7 PICTURE 9(5) VALUE 03543.                              SM2014.2
-008800*                                                                 SM2014.2
-008900*********************** COPY STATEMENT USED **********************SM2014.2
-009000*                                                                 SM2014.2
-009100*01  TEXT-TEST-1 COPY K101A                                       SM2014.2
-009200*            REPLACING ==02 TST-FLD-1  PICTURE 9(5). 02 FILLER    SM2014.2
-009300*                      PICTURE X(115)==                           SM2014.2
-009400*            BY        ==02 FILLER PICTURE X(115).  02 TXT-FLD-1  SM2014.2
-009500*                      PIC 9(5)==.                                SM2014.2
-009600*                                                                 SM2014.2
-009700******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+008800*                                                                         
+008900*                                                                         
+009000*                                                                         
+009100*                                                                         
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
 009800 01  TEXT-TEST-1 COPY K101A                                       SM2014.2
 009900             REPLACING ==02 TST-FLD-1  PICTURE 9(5). 02 FILLER    SM2014.2
 010000                       PICTURE X(115)==                           SM2014.2
 010100             BY        ==02 FILLER PICTURE X(115).  02 TXT-FLD-1  SM2014.2
 010200                       PIC 9(5)==.                                SM2014.2
-010300*********************** END OF COPIED TEXT ***********************SM2014.2
+010300*                                                                         
 010400 01  WSTR-1.                                                      SM2014.2
 010500     02  WSTR-1A PICTURE XXX VALUE "ABC".                         SM2014.2
 010600                                                                  SM2014.2
@@ -109,62 +109,62 @@
 010900                                                                  SM2014.2
 011000                                                                  SM2014.2
 011100 01  WSTR-2.                                                      SM2014.2
-011200*                                                                 SM2014.2
-011300*********************** COPY STATEMENT USED **********************SM2014.2
-011400*                                                                 SM2014.2
-011500*                                                      COPY K1WKA SM2014.2
-011600*             REPLACING WSTR-2A BY WSTR999.                       SM2014.2
-011700*                                                                 SM2014.2
-011800******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+011200*                                                                         
+011300*                                                                         
+011400*                                                                         
+011500*                                                                         
+011600*                                                                         
+011700*                                                                         
+011800*                                                                         
 011900                                                       COPY K1WKA SM2014.2
 012000              REPLACING WSTR-2A BY WSTR999.                       SM2014.2
-012100*********************** END OF COPIED TEXT ***********************SM2014.2
+012100*                                                                         
 012200                                                                  SM2014.2
 012300                                                                  SM2014.2
 012400                                                                  SM2014.2
 012500                                                                  SM2014.2
 012600                                                                  SM2014.2
 012700 01  WSTR-3.                                                      SM2014.2
-012800*                                                                 SM2014.2
-012900*********************** COPY STATEMENT USED **********************SM2014.2
-013000*                                                                 SM2014.2
-013100*                                                      COPY K1WKA.SM2014.2
-013200*                                                                 SM2014.2
-013300******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+012800*                                                                         
+012900*                                                                         
+013000*                                                                         
+013100*                                                                         
+013200*                                                                         
+013300*                                                                         
 013400                                                       COPY K1WKA.SM2014.2
-013500*********************** END OF COPIED TEXT ***********************SM2014.2
+013500*                                                                         
 013600                                                                  SM2014.2
 013700                                                                  SM2014.2
 013800                                                                  SM2014.2
 013900                                                                  SM2014.2
 014000                                                                  SM2014.2
-014100*                                                                 SM2014.2
-014200*********************** COPY STATEMENT USED **********************SM2014.2
-014300*                                                                 SM2014.2
-014400*01  WSTR-4.                                           COPY K1WKB SM2014.2
-014500*             REPLACING WSTR4A BY WSTR91                          SM2014.2
-014600*                       WSTR4B BY WSTR92                          SM2014.2
-014700*                       WSTR4C BY WSTR93.                         SM2014.2
-014800*                                                                 SM2014.2
-014900******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+014100*                                                                         
+014200*                                                                         
+014300*                                                                         
+014400*                                                                         
+014500*                                                                         
+014600*                                                                         
+014700*                                                                         
+014800*                                                                         
+014900*                                                                         
 015000 01  WSTR-4.                                           COPY K1WKB SM2014.2
 015100              REPLACING WSTR4A BY WSTR91                          SM2014.2
 015200                        WSTR4B BY WSTR92                          SM2014.2
 015300                        WSTR4C BY WSTR93.                         SM2014.2
-015400*********************** END OF COPIED TEXT ***********************SM2014.2
+015400*                                                                         
 015500                                                                  SM2014.2
 015600                                                                  SM2014.2
 015700                                                                  SM2014.2
 015800                                                                  SM2014.2
 015900                                                                  SM2014.2
-016000*                                                                 SM2014.2
-016100*********************** COPY STATEMENT USED **********************SM2014.2
-016200*                                                                 SM2014.2
-016300*01  WSTR-5.                                           COPY K1WKB.SM2014.2
-016400*                                                                 SM2014.2
-016500******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+016000*                                                                         
+016100*                                                                         
+016200*                                                                         
+016300*                                                                         
+016400*                                                                         
+016500*                                                                         
 016600 01  WSTR-5.                                           COPY K1WKB.SM2014.2
-016700*********************** END OF COPIED TEXT ***********************SM2014.2
+016700*                                                                         
 016800 01  TEST-RESULTS.                                                SM2014.2
 016900     02 FILLER                   PIC X      VALUE SPACE.          SM2014.2
 017000     02 FEATURE                  PIC X(20)  VALUE SPACE.          SM2014.2
@@ -352,7 +352,7 @@
 035400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2014.2
 035500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2014.2
 035600      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2014.2
-035700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2014.2
+035700*                                                                         
 035800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2014.2
 035900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2014.2
 036000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2014.2
@@ -432,7 +432,7 @@
 043400 COPY-TEST-1.                                                     SM2014.2
 043500     IF       WSTR-1A EQUAL TO WSTR999                            SM2014.2
 043600              PERFORM PASS GO TO COPY-WRITE-1.                    SM2014.2
-043700*        NOTE TESTS COPYING WITH REPLACEMENT IN WORKING-STORAGE.  SM2014.2
+043700*                                                                         
 043800     GO       TO COPY-FAIL-1.                                     SM2014.2
 043900 COPY-DELETE-1.                                                   SM2014.2
 044000     PERFORM  DE-LETE.                                            SM2014.2
@@ -448,8 +448,8 @@
 045000 COPY-TEST-2.                                                     SM2014.2
 045100     IF       WSTR-2A EQUAL TO "ABC"                              SM2014.2
 045200              PERFORM PASS GO TO COPY-WRITE-2.                    SM2014.2
-045300*    NOTE     TESTS ORDINARY COPY OF ENTRIES WHICH ARE ALSO COPIEDSM2014.2
-045400*             BY COPY REPLACING.                                  SM2014.2
+045300*                                                                         
+045400*                                                                         
 045500     GO       TO COPY-FAIL-2.                                     SM2014.2
 045600 COPY-DELETE-2.                                                   SM2014.2
 045700     PERFORM  DE-LETE.                                            SM2014.2
@@ -467,8 +467,8 @@
 046900 COPY-TEST-3.                                                     SM2014.2
 047000     IF       WSTR91 EQUAL TO "ABC"                               SM2014.2
 047100              PERFORM PASS GO TO COPY-WRITE-3.                    SM2014.2
-047200*        NOTE COPY-TEST-3, 4, AND 5 TEST COPYING WITH A           SM2014.2
-047300*             SERIES OF REPLACEMENTS.                             SM2014.2
+047200*                                                                         
+047300*                                                                         
 047400     GO       TO COPY-FAIL-3.                                     SM2014.2
 047500 COPY-DELETE-3.                                                   SM2014.2
 047600     PERFORM  DE-LETE.                                            SM2014.2
@@ -481,7 +481,7 @@
 048300     MOVE     "COPY-TEST-3 " TO PAR-NAME.                         SM2014.2
 048400     PERFORM  PRINT-DETAIL.                                       SM2014.2
 048500 COPY-TEST-4.                                                     SM2014.2
-048600     IF       WSTR92 EQUAL TO "DE5"                               SM2014.2
+048600     IF       WSTR92 EQUAL TO "DEF"                               SM2014.2
 048700              PERFORM PASS GO TO COPY-WRITE-4.                    SM2014.2
 048800     GO       TO COPY-FAIL-4.                                     SM2014.2
 048900 COPY-DELETE-4.                                                   SM2014.2
@@ -489,7 +489,7 @@
 049100     GO       TO COPY-WRITE-4.                                    SM2014.2
 049200 COPY-FAIL-4.                                                     SM2014.2
 049300     MOVE     WSTR92 TO COMPUTED-A.                               SM2014.2
-049400     MOVE     "DE5" TO CORRECT-A.                                 SM2014.2
+049400     MOVE     "DEF" TO CORRECT-A.                                 SM2014.2
 049500     PERFORM  FAIL.                                               SM2014.2
 049600 COPY-WRITE-4.                                                    SM2014.2
 049700     MOVE     "COPY-TEST-4 " TO PAR-NAME.                         SM2014.2
@@ -511,7 +511,7 @@
 051300 COPY-INIT-B.                                                     SM2014.2
 051400     MOVE     "  (NOT REPLACING)" TO FEATURE.                     SM2014.2
 051500 COPY-TEST-6.                                                     SM2014.2
-051600     IF       WSTR4A EQUAL TO "ABP"                               SM2014.2
+051600     IF       WSTR4A EQUAL TO "ABC"                               SM2014.2
 051700              PERFORM PASS GO TO COPY-WRITE-6.                    SM2014.2
 051800*                                                                         
 051900*                                                                         
@@ -521,13 +521,13 @@
 052300     GO       TO COPY-WRITE-6.                                    SM2014.2
 052400 COPY-FAIL-6.                                                     SM2014.2
 052500     MOVE     WSTR4A TO COMPUTED-A.                               SM2014.2
-052600     MOVE     "ABP" TO CORRECT-A.                                 SM2014.2
+052600     MOVE     "ABC" TO CORRECT-A.                                 SM2014.2
 052700     PERFORM  FAIL.                                               SM2014.2
 052800 COPY-WRITE-6.                                                    SM2014.2
 052900     MOVE     "COPY-TEST-6 " TO PAR-NAME.                         SM2014.2
 053000     PERFORM  PRINT-DETAIL.                                       SM2014.2
 053100 COPY-TEST-7.                                                     SM2014.2
-053200     IF       WSTR4B EQUAL TO "CEF"                               SM2014.2
+053200     IF       WSTR4B EQUAL TO "DEF"                               SM2014.2
 053300              PERFORM PASS GO TO COPY-WRITE-7.                    SM2014.2
 053400     GO       TO COPY-FAIL-7.                                     SM2014.2
 053500 COPY-DELETE-7.                                                   SM2014.2
@@ -535,7 +535,7 @@
 053700     GO       TO COPY-WRITE-7.                                    SM2014.2
 053800 COPY-FAIL-7.                                                     SM2014.2
 053900     MOVE     WSTR4B TO COMPUTED-A.                               SM2014.2
-054000     MOVE     "CEF" TO CORRECT-A.                                 SM2014.2
+054000     MOVE     "DEF" TO CORRECT-A.                                 SM2014.2
 054100     PERFORM  FAIL.                                               SM2014.2
 054200 COPY-WRITE-7.                                                    SM2014.2
 054300     MOVE     "COPY-TEST-7 " TO PAR-NAME.                         SM2014.2
@@ -561,17 +561,17 @@
 056300                                                                  SM2014.2
 056400                                                                  SM2014.2
 056500                                                                  SM2014.2
-056600*                                                                 SM2014.2
-056700*********************** COPY STATEMENT USED **********************SM2014.2
-056800*                                                                 SM2014.2
-056900*                                                      COPY K1PRB SM2014.2
-057000*             REPLACING WSTR4C BY WSTR4B.                         SM2014.2
-057100*                                                                 SM2014.2
-057200******************** COPIED TEXT BEGINS BELOW ********************SM2014.2
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
+057200*                                                                         
 057300                                                       COPY K1PRB SM2014.2
 057400              REPLACING WSTR4C BY WSTR4B.                         SM2014.2
-057500*********************** END OF COPIED TEXT ***********************SM2014.2
-057600*    NOTE     COPY A PROCEDURE WHICH REFERENCES COPIED DATA.      SM2014.2
+057500*                                                                         
+057600*                                                                         
 057700     IF       WSTR-4 EQUAL TO "DEFABCDEF"                         SM2014.2
 057800              PERFORM PASS GO TO COPY-WRITE-9.                    SM2014.2
 057900     GO       TO COPY-FAIL-9.                                     SM2014.2

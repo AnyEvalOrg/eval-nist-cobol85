@@ -1,18 +1,18 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2044.2
 000200 PROGRAM-ID.                                                      SQ2044.2
 000300     SQ204A.                                                      SQ2044.2
-000400****************************************************************  SQ2044.2
-000500*                                                              *  SQ2044.2
-000600*    VALIDATION FOR:-                                          *  SQ2044.2
-000700*    " HIGH       ".                                              SQ2044.2
-000800*                                                              *  SQ2044.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2044.2
-001000*    "4.2 ".                                                      SQ2044.2
-001100*                                                              *  SQ2044.2
-001200*        THIS ROUTINE       TESTS THE USE OF THE OPEN EXTEND      SQ2044.2
-001300*    STATEMENT FOR BOTH MAGNETIC TAPE AND MASS STORAGE.  FILES    SQ2044.2
-001400*    ARE FIRST CREATED USING THE NORMAL OPEN OUTPUT STATEMENT     SQ2044.2
-001500*                                                                 SQ2044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
 001600 ENVIRONMENT DIVISION.                                            SQ2044.2
 001700 CONFIGURATION SECTION.                                           SQ2044.2
 001800 SOURCE-COMPUTER.                                                 SQ2044.2
@@ -276,7 +276,7 @@
 032600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2044.2
 032700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2044.2
 032800      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2044.2
-032900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2044.2
+032900*                                                                         
 033000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2044.2
 033100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2044.2
 033200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2044.2
@@ -339,10 +339,10 @@
 038900     EXIT.                                                        SQ2044.2
 039000 SECT-SQ204A-0001 SECTION.                                        SQ2044.2
 039100 WRITE-INIT-GF-01.                                                SQ2044.2
-039200*             THIS IS A TEST FOR OPEN EXTEND FOR MAGNETIC TAPE.   SQ2044.2
-039300*             A FILE OF 750 RECORDS IS CREATED THEN RE-OPENED     SQ2044.2
-039400*             WITH EXTEND.  250 RECORDS ARE ADDED TO THE FILE.    SQ2044.2
-039500*             THE FILE IS THEN READ AND VALIDATED.                SQ2044.2
+039200*                                                                         
+039300*                                                                         
+039400*                                                                         
+039500*                                                                         
 039600     MOVE "SQ-FS1" TO XFILE-NAME (1).                             SQ2044.2
 039700     MOVE "R1-F-G" TO XRECORD-NAME (1).                           SQ2044.2
 039800     MOVE "SQ204A" TO XPROGRAM-NAME (1).                          SQ2044.2
@@ -448,10 +448,10 @@
 049800 READ-CLOSE-GF-01.                                                SQ2044.2
 049900     CLOSE SQ-FS1.                                                SQ2044.2
 050000 WRITE-INIT-GF-02.                                                SQ2044.2
-050100*             THIS IS A TEST FOR OPEN EXTEND FOR MASS STORAGE.    SQ2044.2
-050200*             A FILE OF 750 RECORDS IS CREATED THEN RE-OPENED     SQ2044.2
-050300*             WITH EXTEND.  250 RECORDS ARE ADDED TO THE FILE.    SQ2044.2
-050400*             THE FILE IS THEN READ AND VALIDATED.                SQ2044.2
+050100*                                                                         
+050200*                                                                         
+050300*                                                                         
+050400*                                                                         
 050500     MOVE "SQ-FS2" TO XFILE-NAME (2).                             SQ2044.2
 050600     MOVE "R1-F-G" TO XRECORD-NAME (2).                           SQ2044.2
 050700     MOVE "SQ204A" TO XPROGRAM-NAME (2).                          SQ2044.2

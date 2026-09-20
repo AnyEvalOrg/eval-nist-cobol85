@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC2524.2
 000200 PROGRAM-ID.                                                      NC2524.2
 000300     NC252A.                                                      NC2524.2
-000400****************************************************************  NC2524.2
-000500*                                                              *  NC2524.2
-000600*    VALIDATION FOR:-                                          *  NC2524.2
-000700*                                                              *  NC2524.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2524.2
-000900*                                                              *  NC2524.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2524.2
-001100*                                                              *  NC2524.2
-001200****************************************************************  NC2524.2
-001300*                                                              *  NC2524.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2524.2
-001500*                                                              *  NC2524.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2524.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2524.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2524.2
-001900*                                                              *  NC2524.2
-002000****************************************************************  NC2524.2
-002100*                                                              *  NC2524.2
-002200*    THIS PROGRAM TESTS THE "REDEFINES" AND "RENAMES" CLAUSES. *  NC2524.2
-002300*                                                              *  NC2524.2
-002400****************************************************************  NC2524.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC2524.2
 002600 CONFIGURATION SECTION.                                           NC2524.2
 002700 SOURCE-COMPUTER.                                                 NC2524.2
@@ -435,7 +435,7 @@
 043500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2524.2
 043600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2524.2
 043700      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2524.2
-043800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2524.2
+043800*                                                                         
 043900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2524.2
 044000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2524.2
 044100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2524.2
@@ -511,7 +511,7 @@
 051100         MOVE 6 TO CORRECT-A                                      NC2524.2
 051200         PERFORM FAIL                                             NC2524.2
 051300         GO TO RDF-WRITE-1.                                       NC2524.2
-051400*    NOTE 88 LEVEL CONDITION TEST ON REDEFINED FIELD.             NC2524.2
+051400*                                                                         
 051500     PERFORM PASS.                                                NC2524.2
 051600     GO TO RDF-WRITE-1.                                           NC2524.2
 051700 RDF-DELETE-1.                                                    NC2524.2
@@ -523,7 +523,7 @@
 052300     IF RDF3-5-16 EQUAL TO 66                                     NC2524.2
 052400         PERFORM PASS                                             NC2524.2
 052500         GO TO RDF-WRITE-2.                                       NC2524.2
-052600*    NOTE USING A RENAMES DATANAME THAT IS ALSO REDEFINED.        NC2524.2
+052600*                                                                         
 052700     MOVE RDF3-5-16 TO COMPUTED-A.                                NC2524.2
 052800     MOVE 66 TO CORRECT-A.                                        NC2524.2
 052900     PERFORM FAIL.                                                NC2524.2
@@ -537,10 +537,10 @@
 053700     IF   AN0002-O036F-X-0002  (8)  EQUAL TO  "LK"                NC2524.2
 053800          PERFORM  PASS                                           NC2524.2
 053900          GO TO   RDF-WRITE-003.                                  NC2524.2
-054000*                                                                 NC2524.2
-054100*    NOTE  REFERENCING    SUBSCRIPTED DATA ITEM WHICH IS          NC2524.2
-054200*          SUBORDINATE TO A REDEFINES CLAUSE.                     NC2524.2
-054300*                                                                 NC2524.2
+054000*                                                                         
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
 054400     MOVE  AN0002-O036F-X-0002 (8) TO  COMPUTED-A.                NC2524.2
 054500     MOVE   "LK"  TO CORRECT-A.                                   NC2524.2
 054600     PERFORM  FAIL.                                               NC2524.2
@@ -554,9 +554,9 @@
 055400     IF RDFDATA7 EQUAL TO "ABC98765DE911644ALLD"                  NC2524.2
 055500         PERFORM PASS                                             NC2524.2
 055600         GO TO RDF-WRITE-4.                                       NC2524.2
-055700*    NOTE THIS IS THE FIRST REFERENCE TO THESE REDEFINED          NC2524.2
-055800*        DATANAMES, SO, THE FIELDS CONTAIN THE WORKING-STORAGE    NC2524.2
-055900*        ASSIGNED VALUES.                                         NC2524.2
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
 056000     MOVE RDFDATA7 TO COMPUTED-A.                                 NC2524.2
 056100     MOVE "ABC98765DE911644ALLD" TO CORRECT-A.                    NC2524.2
 056200     PERFORM FAIL.                                                NC2524.2
@@ -623,8 +623,8 @@
 062300 RDF-TEST-9.                                                      NC2524.2
 062400     MOVE ZERO TO REDEF12.                                        NC2524.2
 062500     MOVE SPACE TO REDEF11.                                       NC2524.2
-062600*    NOTE  CHECKS RDFDATA18 WHICH SHOULD NOT BE DISTURBED BY THE  NC2524.2
-062700*        MOVE SPACE STATEMENT TO A SHORTER REDEFINED AREA.        NC2524.2
+062600*                                                                         
+062700*                                                                         
 062800     IF RDFDATA18 EQUAL TO ZERO                                   NC2524.2
 062900         PERFORM PASS                                             NC2524.2
 063000         GO TO RDF-WRITE-9.                                       NC2524.2
@@ -686,7 +686,7 @@
 068600     PERFORM DE-LETE.                                             NC2524.2
 068700 RDF-TEST-12.                                                     NC2524.2
 068800     MOVE 11 TO RDFDATA16.                                        NC2524.2
-068900*    NOTE 88 LEVEL TEST ON REDEFINED AREA.                        NC2524.2
+068900*                                                                         
 069000     IF  SOFT                                                     NC2524.2
 069100         PERFORM PASS                                             NC2524.2
 069200     ELSE                                                         NC2524.2
@@ -739,7 +739,7 @@
 073900              GO TO RNM-WRITE-1.                                  NC2524.2
 074000     MOVE RENAME4 TO COMPUTED-A.                                  NC2524.2
 074100     MOVE "ABCD" TO CORRECT-A.                                    NC2524.2
-074200*    NOTE  CORRECT ANSWER IS   ABCD-BLANK.                        NC2524.2
+074200*                                                                         
 074300     PERFORM FAIL.                                                NC2524.2
 074400     GO TO RNM-WRITE-1.                                           NC2524.2
 074500 RNM-DELETE-1.                                                    NC2524.2
@@ -793,11 +793,11 @@
 079300     MOVE "RENAM-TEST-4" TO PAR-NAME.                             NC2524.2
 079400     PERFORM PRINT-DETAIL.                                        NC2524.2
 079500 RENAM-TEST-5.                                                    NC2524.2
-079600     IF RENAMES-TEST-3 EQUAL TO "X  V23"                          NC2524.2
+079600     IF RENAMES-TEST-3 EQUAL TO "X  123"                          NC2524.2
 079700         PERFORM PASS                                             NC2524.2
 079800         GO TO RENAM-WRITE-5.                                     NC2524.2
 079900     MOVE RENAMES-TEST-3 TO COMPUTED-A.                           NC2524.2
-080000     MOVE "X  V23" TO CORRECT-A.                                  NC2524.2
+080000     MOVE "X  123" TO CORRECT-A.                                  NC2524.2
 080100     PERFORM FAIL.                                                NC2524.2
 080200     GO TO RENAM-WRITE-5.                                         NC2524.2
 080300 RENAM-DELETE-5.                                                  NC2524.2
@@ -853,8 +853,8 @@
 085300 RENAM-TEST-9.                                                    NC2524.2
 085400     IF       UNIT-1 EQUAL TO "VERMONTOHIO"                       NC2524.2
 085500              PERFORM PASS GO TO RENAM-WRITE-9.                   NC2524.2
-085600*        NOTE THIS TEST FURTHER CHECKS THE RESULTS OF             NC2524.2
-085700*             THE PREVIOUS TEST - THIS ITEM SHOULD BE UNCHANGED.  NC2524.2
+085600*                                                                         
+085700*                                                                         
 085800     GO       TO RENAM-FAIL-9.                                    NC2524.2
 085900 RENAM-DELETE-9.                                                  NC2524.2
 086000     PERFORM  DE-LETE.                                            NC2524.2
@@ -978,7 +978,7 @@
 097800     PERFORM  PRINT-DETAIL.                                       NC2524.2
 097900 RENAM-INIT-E.                                                    NC2524.2
 098000     MOVE     "  ADD, SIZE ERROR" TO FEATURE.                     NC2524.2
-098100*        NOTE THE NEXT TWO TESTS ARE INTERRELATED.                NC2524.2
+098100*                                                                         
 098200 RENAM-TEST-16.                                                   NC2524.2
 098300     MOVE     8000 TO WIDGET-4.                                   NC2524.2
 098400     ADD      3500 TO RENAME-12 ON SIZE ERROR                     NC2524.2
@@ -1025,7 +1025,7 @@
 102500     MOVE     "  THROUGH" TO FEATURE.                             NC2524.2
 102600     MOVE     "RENAM-TEST-18" TO PAR-NAME.                        NC2524.2
 102700     PERFORM  PRINT-DETAIL.                                       NC2524.2
-102800*                                                                 NC2524.2
+102800*                                                                         
 102900 COMPUTING SECTION.                                               NC2524.2
 103000 COMPUTE-INIT.                                                    NC2524.2
 103100     MOVE SPACES TO TEST-RESULTS.                                 NC2524.2
@@ -1377,11 +1377,11 @@
 137700     MOVE 10 TO W-2.                                              NC2524.2
 137800     COMPUTE W-2 = 96 + TWENTY ON SIZE ERROR                      NC2524.2
 137900     MOVE 8 TO XRAY.                                              NC2524.2
-138000     IF XRAY IS EQUAL TO "8"                                      NC2524.2
+138000     IF XRAY IS EQUAL TO "5"                                      NC2524.2
 138100              PERFORM PASS                                        NC2524.2
 138200              GO TO COMP-WRITE-23.                                NC2524.2
 138300     PERFORM FAIL.                                                NC2524.2
-138400     MOVE "8" TO CORRECT-A.                                       NC2524.2
+138400     MOVE "5" TO CORRECT-A.                                       NC2524.2
 138500     MOVE XRAY TO COMPUTED-A.                                     NC2524.2
 138600     MOVE "OSE NOT EXECUTED" TO RE-MARK.                          NC2524.2
 138700     GO TO COMP-WRITE-23.                                         NC2524.2
@@ -1473,11 +1473,11 @@
 147300 COMP-TEST-29.                                                    NC2524.2
 147400     MOVE     ZERO TO WRK-DS-18V00.                               NC2524.2
 147500     COMPUTE  WRK-DS-18V00 = A18ONES-DS-18V00 + A18ONES-DS-18V00. NC2524.2
-147600     IF       WRK-DS-18V00 = 222222222242222222                   NC2524.2
+147600     IF       WRK-DS-18V00 = 222222222222222222                   NC2524.2
 147700              PERFORM PASS                                        NC2524.2
 147800              GO TO COMP-WRITE-29.                                NC2524.2
 147900     MOVE     WRK-DS-18V00 TO COMPUTED-18V0.                      NC2524.2
-148000     MOVE     222222222242222222 TO CORRECT-18V0.                 NC2524.2
+148000     MOVE     222222222222222222 TO CORRECT-18V0.                 NC2524.2
 148100     PERFORM  FAIL.                                               NC2524.2
 148200     GO TO COMP-WRITE-29.                                         NC2524.2
 148300 COMP-DELETE-29.                                                  NC2524.2
@@ -1488,11 +1488,11 @@
 148800 COMP-TEST-30.                                                    NC2524.2
 148900     MOVE     ZERO TO WRK-DS-18V00.                               NC2524.2
 149000     COMPUTE  WRK-DS-18V00 = A18TWOS-DS-18V00 - A18ONES-DS-18V00. NC2524.2
-149100     IF       WRK-DS-18V00 = 111111131111111111                   NC2524.2
+149100     IF       WRK-DS-18V00 = 111111111111111111                   NC2524.2
 149200              PERFORM PASS                                        NC2524.2
 149300              GO TO COMP-WRITE-30.                                NC2524.2
 149400     MOVE     WRK-DS-18V00 TO COMPUTED-18V0.                      NC2524.2
-149500     MOVE     111111131111111111 TO CORRECT-18V0.                 NC2524.2
+149500     MOVE     111111111111111111 TO CORRECT-18V0.                 NC2524.2
 149600     PERFORM  FAIL.                                               NC2524.2
 149700     GO TO COMP-WRITE-30.                                         NC2524.2
 149800 COMP-DELETE-30.                                                  NC2524.2
@@ -1503,11 +1503,11 @@
 150300 COMP-TEST-31.                                                    NC2524.2
 150400     MOVE   ZERO TO   TA--X.                                      NC2524.2
 150500     COMPUTE     TA--X  =  3 * A02TWOS-DU-02V00.                  NC2524.2
-150600        IF TA--X = 66                                             NC2524.2
+150600        IF TA--X = 61                                             NC2524.2
 150700              PERFORM PASS                                        NC2524.2
 150800              GO TO COMP-WRITE-31.                                NC2524.2
 150900     MOVE       TA--X TO COMPUTED-N                               NC2524.2
-151000     MOVE     66 TO CORRECT-N.                                    NC2524.2
+151000     MOVE     61 TO CORRECT-N.                                    NC2524.2
 151100     PERFORM  FAIL.                                               NC2524.2
 151200     GO TO COMP-WRITE-31.                                         NC2524.2
 151300 COMP-DELETE-31.                                                  NC2524.2
@@ -1579,7 +1579,7 @@
 157900     IF       TEST-2NUC-COND-99                                   NC2524.2
 158000              PERFORM PASS                                        NC2524.2
 158100              GO TO COMP-WRITE-36.                                NC2524.2
-158200*    NOTE     THIS TEST DEPENDS UPON THE RESULT OF COMP-TEST-35.  NC2524.2
+158200*                                                                         
 158300     MOVE     WRK-DS-02V00 TO COMPUTED-N.                         NC2524.2
 158400     MOVE     99 TO CORRECT-N.                                    NC2524.2
 158500     PERFORM  FAIL.                                               NC2524.2
@@ -1607,7 +1607,7 @@
 160700        IF WRK-DS-0201P = ZERO                                    NC2524.2
 160800              PERFORM PASS                                        NC2524.2
 160900              GO TO COMP-WRITE-38.                                NC2524.2
-161000*    NOTE     THIS TEST DEPENDS UPON THE RESULT OF COMP-TEST-37.  NC2524.2
+161000*                                                                         
 161100     MOVE     WRK-DS-0201P TO COMPUTED-N.                         NC2524.2
 161200     MOVE     ZERO TO CORRECT-N.                                  NC2524.2
 161300     PERFORM  FAIL.                                               NC2524.2
@@ -1654,10 +1654,10 @@
 165400     COMPUTE  WHOLE-FIELD =                                       NC2524.2
 165500     (ONE + (TWO - (THREE + (FOUR - (FIVE + (SIX - (SEVEN +       NC2524.2
 165600         (EIGHT - (NINE + (TEN - EVEN-NAME1)))))))))).            NC2524.2
-165700        IF WHOLE-FIELD = 10    PERFORM PASS                       NC2524.2
+165700        IF WHOLE-FIELD = 80    PERFORM PASS                       NC2524.2
 165800         GO TO COMP-WRITE-44.                                     NC2524.2
 165900     MOVE WHOLE-FIELD TO COMPUTED-18V0.                           NC2524.2
-166000     MOVE 10 TO CORRECT-18V0.                                     NC2524.2
+166000     MOVE 80 TO CORRECT-18V0.                                     NC2524.2
 166100     PERFORM FAIL.                                                NC2524.2
 166200     GO TO COMP-WRITE-44.                                         NC2524.2
 166300 COMP-DELETE-44.                                                  NC2524.2
@@ -1672,10 +1672,10 @@
 167200     COMPUTE  WRK-DS-05V00-0002                                   NC2524.2
 167300              WRK-DS-04V01-0005   ROUNDED                         NC2524.2
 167400              WRK-DS-03V04-0003F-0014  (2, 2, 2) =  174 / 16.     NC2524.2
-167500*                                                                 NC2524.2
-167600*    IDENTIFIER SERIES  -  WITH AND WITHOUT ROUNDED  -            NC2524.2
-167700*             SUBSCRIPTED DATA ITEM.                              NC2524.2
-167800*                                                                 NC2524.2
+167500*                                                                         
+167600*                                                                         
+167700*                                                                         
+167800*                                                                         
 167900     MOVE "COMP-TEST-045-1" TO PAR-NAME.                          NC2524.2
 168000        IF WRK-DS-05V00-0002 NOT = 10                             NC2524.2
 168100              MOVE      +00010  TO  CORRECT-N                     NC2524.2

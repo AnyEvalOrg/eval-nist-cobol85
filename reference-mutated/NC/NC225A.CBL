@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         NC2254.2
 000200 PROGRAM-ID.                                                      NC2254.2
 000300     NC225A.                                                      NC2254.2
-000400****************************************************************  NC2254.2
-000500*                                                              *  NC2254.2
-000600*    VALIDATION FOR:-                                          *  NC2254.2
-000700*                                                              *  NC2254.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2254.2
-000900*                                                              *  NC2254.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2254.2
-001100*                                                              *  NC2254.2
-001200****************************************************************  NC2254.2
-001300*                                                              *  NC2254.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2254.2
-001500*                                                              *  NC2254.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2254.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2254.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2254.2
-001900*                                                              *  NC2254.2
-002000****************************************************************  NC2254.2
-002100*                                                              *  NC2254.2
-002200*    PROGRAM NC225A TESTS THE USE OF THE "EVALUATE" STATEMENT. *  NC2254.2
-002300*    VARIOUS COMBINATIONS OF IDENTIFIERS, LITERALS, ARITHMETIC *  NC2254.2
-002400*    EXPRESSIONS AND CONDITIONAL EXPRESSIONS AS WELL AS THE    *  NC2254.2
-002500*    OPTIONAL WORDS "TRUE" AND "FALSE" ARE USED AS SELECTION   *  NC2254.2
-002600*    SUBJECTS AND SELECTION OBJECTS.                           *  NC2254.2
-002700*    MULTIPLE SELECTION SUBJECTS AND SETS OF SELECTION         *  NC2254.2
-002800*    OBJECTS ARE ALSO TESTED.                                  *  NC2254.2
-002900*                                                              *  NC2254.2
-003000****************************************************************  NC2254.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            NC2254.2
 003200 CONFIGURATION SECTION.                                           NC2254.2
 003300 SOURCE-COMPUTER.                                                 NC2254.2
@@ -70,7 +70,7 @@
 007000     05      TABLE-1             PIC 9(8)                         NC2254.2
 007100                                 OCCURS 2.                        NC2254.2
 007200   03         TEST-5-DATA        PIC X(6).                        NC2254.2
-007300*                                                                 NC2254.2
+007300*                                                                         
 007400 01  TEST-RESULTS.                                                NC2254.2
 007500     02 FILLER                   PIC X      VALUE SPACE.          NC2254.2
 007600     02 FEATURE                  PIC X(20)  VALUE SPACE.          NC2254.2
@@ -258,7 +258,7 @@
 026000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2254.2
 026100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2254.2
 026200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2254.2
-026300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2254.2
+026300*                                                                         
 026400                                                                  NC2254.2
 026500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2254.2
 026600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2254.2
@@ -327,9 +327,9 @@
 032900 BAIL-OUT-EX. EXIT.                                               NC2254.2
 033000 CCVS1-EXIT.                                                      NC2254.2
 033100     EXIT.                                                        NC2254.2
-033200*                                                                 NC2254.2
+033200*                                                                         
 033300 SECT-NC225A-001-1 SECTION.                                       NC2254.2
-033400*                                                                 NC2254.2
+033400*                                                                         
 033500 EVA-INIT-GF-1.                                                   NC2254.2
 033600     MOVE   "EVALUATE STATEMENT"  TO FEATURE.                     NC2254.2
 033700     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
@@ -355,7 +355,7 @@
 035700     PERFORM FAIL.                                                NC2254.2
 035800 EVA-WRITE-GF-1-1.                                                NC2254.2
 035900     PERFORM PRINT-DETAIL.                                        NC2254.2
-036000*                                                                 NC2254.2
+036000*                                                                         
 036100 EVA-TEST-GF-1-2.                                                 NC2254.2
 036200     ADD     1       TO REC-CT.                                   NC2254.2
 036300     MOVE   "EVA-TEST-GF-1-2" TO PAR-NAME.                        NC2254.2
@@ -372,7 +372,7 @@
 037400     PERFORM FAIL.                                                NC2254.2
 037500 EVA-WRITE-GF-1-2.                                                NC2254.2
 037600     PERFORM PRINT-DETAIL.                                        NC2254.2
-037700*                                                                 NC2254.2
+037700*                                                                         
 037800 EVA-INIT-GF-2.                                                   NC2254.2
 037900     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 038000     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -397,7 +397,7 @@
 039900     PERFORM FAIL.                                                NC2254.2
 040000 EVA-WRITE-GF-2-1.                                                NC2254.2
 040100     PERFORM PRINT-DETAIL.                                        NC2254.2
-040200*                                                                 NC2254.2
+040200*                                                                         
 040300 EVA-TEST-GF-2-2.                                                 NC2254.2
 040400     ADD     1 TO REC-CT.                                         NC2254.2
 040500     MOVE   "EVA-TEST-GF-2-2" TO PAR-NAME.                        NC2254.2
@@ -414,7 +414,7 @@
 041600     PERFORM FAIL.                                                NC2254.2
 041700 EVA-WRITE-GF-2-2.                                                NC2254.2
 041800     PERFORM PRINT-DETAIL.                                        NC2254.2
-041900*                                                                 NC2254.2
+041900*                                                                         
 042000 EVA-INIT-GF-3.                                                   NC2254.2
 042100     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 042200     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -440,7 +440,7 @@
 044200     PERFORM FAIL.                                                NC2254.2
 044300 EVA-WRITE-GF-3-1.                                                NC2254.2
 044400     PERFORM PRINT-DETAIL.                                        NC2254.2
-044500*                                                                 NC2254.2
+044500*                                                                         
 044600 EVA-TEST-GF-3-2.                                                 NC2254.2
 044700     ADD     1       TO REC-CT.                                   NC2254.2
 044800     MOVE   "EVA-TEST-GF-3-2" TO PAR-NAME.                        NC2254.2
@@ -457,7 +457,7 @@
 045900     PERFORM FAIL.                                                NC2254.2
 046000 EVA-WRITE-GF-3-2.                                                NC2254.2
 046100     PERFORM PRINT-DETAIL.                                        NC2254.2
-046200*                                                                 NC2254.2
+046200*                                                                         
 046300 EVA-INIT-GF-4.                                                   NC2254.2
 046400     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 046500     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -483,7 +483,7 @@
 048500     PERFORM FAIL.                                                NC2254.2
 048600 EVA-WRITE-GF-4-1.                                                NC2254.2
 048700     PERFORM PRINT-DETAIL.                                        NC2254.2
-048800*                                                                 NC2254.2
+048800*                                                                         
 048900 EVA-TEST-GF-4-2.                                                 NC2254.2
 049000     ADD     1 TO REC-CT.                                         NC2254.2
 049100     EVALUATE WRK-XN-00001-1                                      NC2254.2
@@ -500,7 +500,7 @@
 050200 EVA-WRITE-GF-4-2.                                                NC2254.2
 050300     MOVE   "EVA-TEST-GF-4-2" TO PAR-NAME.                        NC2254.2
 050400     PERFORM PRINT-DETAIL.                                        NC2254.2
-050500*                                                                 NC2254.2
+050500*                                                                         
 050600 EVA-INIT-GF-5.                                                   NC2254.2
 050700     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 050800     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -525,7 +525,7 @@
 052700     PERFORM FAIL.                                                NC2254.2
 052800 EVA-WRITE-GF-5-1.                                                NC2254.2
 052900     PERFORM PRINT-DETAIL.                                        NC2254.2
-053000*                                                                 NC2254.2
+053000*                                                                         
 053100 EVA-TEST-GF-5-2.                                                 NC2254.2
 053200     ADD     1       TO REC-CT.                                   NC2254.2
 053300     MOVE   "EVA-TEST-GF-5-2" TO PAR-NAME.                        NC2254.2
@@ -542,7 +542,7 @@
 054400     PERFORM FAIL.                                                NC2254.2
 054500 EVA-WRITE-GF-5-2.                                                NC2254.2
 054600     PERFORM PRINT-DETAIL.                                        NC2254.2
-054700*                                                                 NC2254.2
+054700*                                                                         
 054800 EVA-INIT-GF-6.                                                   NC2254.2
 054900     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 055000     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -567,7 +567,7 @@
 056900     PERFORM FAIL.                                                NC2254.2
 057000 EVA-WRITE-GF-6-1.                                                NC2254.2
 057100     PERFORM PRINT-DETAIL.                                        NC2254.2
-057200*                                                                 NC2254.2
+057200*                                                                         
 057300 EVA-TEST-GF-6-2.                                                 NC2254.2
 057400     ADD     1 TO REC-CT.                                         NC2254.2
 057500     MOVE   "EVA-TEST-GF-6-2" TO PAR-NAME.                        NC2254.2
@@ -584,7 +584,7 @@
 058600     PERFORM FAIL.                                                NC2254.2
 058700 EVA-WRITE-GF-6-2.                                                NC2254.2
 058800     PERFORM PRINT-DETAIL.                                        NC2254.2
-058900*                                                                 NC2254.2
+058900*                                                                         
 059000 EVA-INIT-GF-7.                                                   NC2254.2
 059100     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 059200     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -609,7 +609,7 @@
 061100     PERFORM FAIL.                                                NC2254.2
 061200 EVA-WRITE-GF-7-1.                                                NC2254.2
 061300     PERFORM PRINT-DETAIL.                                        NC2254.2
-061400*                                                                 NC2254.2
+061400*                                                                         
 061500 EVA-TEST-GF-7-2.                                                 NC2254.2
 061600     ADD     1       TO REC-CT.                                   NC2254.2
 061700     MOVE   "EVA-TEST-GF-7-2" TO PAR-NAME.                        NC2254.2
@@ -627,7 +627,7 @@
 062900     PERFORM FAIL.                                                NC2254.2
 063000 EVA-WRITE-GF-7-2.                                                NC2254.2
 063100     PERFORM PRINT-DETAIL.                                        NC2254.2
-063200*                                                                 NC2254.2
+063200*                                                                         
 063300 EVA-INIT-GF-8.                                                   NC2254.2
 063400     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 063500     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -653,7 +653,7 @@
 065500     PERFORM FAIL.                                                NC2254.2
 065600 EVA-WRITE-GF-8-1.                                                NC2254.2
 065700     PERFORM PRINT-DETAIL.                                        NC2254.2
-065800*                                                                 NC2254.2
+065800*                                                                         
 065900 EVA-TEST-GF-8-2.                                                 NC2254.2
 066000     ADD     1 TO REC-CT.                                         NC2254.2
 066100     MOVE   "EVA-TEST-GF-8-2" TO PAR-NAME.                        NC2254.2
@@ -670,7 +670,7 @@
 067200     PERFORM FAIL.                                                NC2254.2
 067300 EVA-WRITE-GF-8-2.                                                NC2254.2
 067400     PERFORM PRINT-DETAIL.                                        NC2254.2
-067500*                                                                 NC2254.2
+067500*                                                                         
 067600 EVA-INIT-GF-9.                                                   NC2254.2
 067700     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 067800     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -698,7 +698,7 @@
 070000     PERFORM FAIL.                                                NC2254.2
 070100 EVA-WRITE-GF-9-1.                                                NC2254.2
 070200     PERFORM PRINT-DETAIL.                                        NC2254.2
-070300*                                                                 NC2254.2
+070300*                                                                         
 070400 EVA-TEST-GF-9-2.                                                 NC2254.2
 070500     ADD     1       TO REC-CT.                                   NC2254.2
 070600     MOVE   "EVA-TEST-GF-9-2" TO PAR-NAME.                        NC2254.2
@@ -716,7 +716,7 @@
 071800     PERFORM FAIL.                                                NC2254.2
 071900 EVA-WRITE-GF-9-2.                                                NC2254.2
 072000     PERFORM PRINT-DETAIL.                                        NC2254.2
-072100*                                                                 NC2254.2
+072100*                                                                         
 072200 EVA-INIT-GF-10.                                                  NC2254.2
 072300     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 072400     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -744,7 +744,7 @@
 074600     PERFORM FAIL.                                                NC2254.2
 074700 EVA-WRITE-GF-10-1.                                               NC2254.2
 074800     PERFORM PRINT-DETAIL.                                        NC2254.2
-074900*                                                                 NC2254.2
+074900*                                                                         
 075000 EVA-TEST-GF-10-2.                                                NC2254.2
 075100     ADD     1 TO REC-CT.                                         NC2254.2
 075200     MOVE   "EVA-TEST-GF-10-2" TO PAR-NAME.                       NC2254.2
@@ -762,7 +762,7 @@
 076400     PERFORM FAIL.                                                NC2254.2
 076500 EVA-WRITE-GF-10-2.                                               NC2254.2
 076600     PERFORM PRINT-DETAIL.                                        NC2254.2
-076700*                                                                 NC2254.2
+076700*                                                                         
 076800 EVA-INIT-GF-11.                                                  NC2254.2
 076900     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 077000     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -790,7 +790,7 @@
 079200     PERFORM FAIL.                                                NC2254.2
 079300 EVA-WRITE-GF-11-1.                                               NC2254.2
 079400     PERFORM PRINT-DETAIL.                                        NC2254.2
-079500*                                                                 NC2254.2
+079500*                                                                         
 079600 EVA-TEST-GF-11-2.                                                NC2254.2
 079700     ADD     1       TO REC-CT.                                   NC2254.2
 079800     MOVE   "EVA-TEST-GF-11-2" TO PAR-NAME.                       NC2254.2
@@ -808,7 +808,7 @@
 081000     PERFORM FAIL.                                                NC2254.2
 081100 EVA-WRITE-GF-11-2.                                               NC2254.2
 081200     PERFORM PRINT-DETAIL.                                        NC2254.2
-081300*                                                                 NC2254.2
+081300*                                                                         
 081400 EVA-INIT-GF-12.                                                  NC2254.2
 081500     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 081600     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -836,7 +836,7 @@
 083800     PERFORM FAIL.                                                NC2254.2
 083900 EVA-WRITE-GF-12-1.                                               NC2254.2
 084000     PERFORM PRINT-DETAIL.                                        NC2254.2
-084100*                                                                 NC2254.2
+084100*                                                                         
 084200 EVA-TEST-GF-12-2.                                                NC2254.2
 084300     ADD     1 TO REC-CT.                                         NC2254.2
 084400     MOVE   "EVA-TEST-GF-12-2" TO PAR-NAME.                       NC2254.2
@@ -854,7 +854,7 @@
 085600     PERFORM FAIL.                                                NC2254.2
 085700 EVA-WRITE-GF-12-2.                                               NC2254.2
 085800     PERFORM PRINT-DETAIL.                                        NC2254.2
-085900*                                                                 NC2254.2
+085900*                                                                         
 086000 EVA-INIT-GF-13.                                                  NC2254.2
 086100     MOVE   "VI-84 6.12.4 GR1(a)" TO ANSI-REFERENCE.              NC2254.2
 086200     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -880,7 +880,7 @@
 088200     PERFORM FAIL.                                                NC2254.2
 088300 EVA-WRITE-GF-13-1.                                               NC2254.2
 088400     PERFORM PRINT-DETAIL.                                        NC2254.2
-088500*                                                                 NC2254.2
+088500*                                                                         
 088600 EVA-TEST-GF-13-2.                                                NC2254.2
 088700     ADD     1       TO REC-CT.                                   NC2254.2
 088800     MOVE   "EVA-TEST-GF-13-2" TO PAR-NAME.                       NC2254.2
@@ -898,7 +898,7 @@
 090000     PERFORM FAIL.                                                NC2254.2
 090100 EVA-WRITE-GF-13-2.                                               NC2254.2
 090200     PERFORM PRINT-DETAIL.                                        NC2254.2
-090300*                                                                 NC2254.2
+090300*                                                                         
 090400 EVA-INIT-GF-14.                                                  NC2254.2
 090500     MOVE   "VI-84 6.12.4 GR1(A)" TO ANSI-REFERENCE.              NC2254.2
 090600     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -924,7 +924,7 @@
 092600     PERFORM FAIL.                                                NC2254.2
 092700 EVA-WRITE-GF-14-1.                                               NC2254.2
 092800     PERFORM PRINT-DETAIL.                                        NC2254.2
-092900*                                                                 NC2254.2
+092900*                                                                         
 093000 EVA-TEST-GF-14-2.                                                NC2254.2
 093100     ADD     1 TO REC-CT.                                         NC2254.2
 093200     MOVE   "EVA-TEST-GF-14-2" TO PAR-NAME.                       NC2254.2
@@ -942,7 +942,7 @@
 094400     PERFORM FAIL.                                                NC2254.2
 094500 EVA-WRITE-GF-14-2.                                               NC2254.2
 094600     PERFORM PRINT-DETAIL.                                        NC2254.2
-094700*                                                                 NC2254.2
+094700*                                                                         
 094800 EVA-INIT-GF-15.                                                  NC2254.2
 094900     MOVE   "VI-84 6.12.4 GR1(b)" TO ANSI-REFERENCE.              NC2254.2
 095000     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -968,7 +968,7 @@
 097000     PERFORM FAIL.                                                NC2254.2
 097100 EVA-WRITE-GF-15-1.                                               NC2254.2
 097200     PERFORM PRINT-DETAIL.                                        NC2254.2
-097300*                                                                 NC2254.2
+097300*                                                                         
 097400 EVA-TEST-GF-15-2.                                                NC2254.2
 097500     ADD     1       TO REC-CT.                                   NC2254.2
 097600     MOVE   "EVA-TEST-GF-15-2" TO PAR-NAME.                       NC2254.2
@@ -986,7 +986,7 @@
 098800     PERFORM FAIL.                                                NC2254.2
 098900 EVA-WRITE-GF-15-2.                                               NC2254.2
 099000     PERFORM PRINT-DETAIL.                                        NC2254.2
-099100*                                                                 NC2254.2
+099100*                                                                         
 099200 EVA-INIT-GF-16.                                                  NC2254.2
 099300     MOVE   "VI-84 6.12.4 GR1(b)" TO ANSI-REFERENCE.              NC2254.2
 099400     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1012,7 +1012,7 @@
 101400     PERFORM FAIL.                                                NC2254.2
 101500 EVA-WRITE-GF-16-1.                                               NC2254.2
 101600     PERFORM PRINT-DETAIL.                                        NC2254.2
-101700*                                                                 NC2254.2
+101700*                                                                         
 101800 EVA-TEST-GF-16-2.                                                NC2254.2
 101900     ADD     1 TO REC-CT.                                         NC2254.2
 102000     MOVE   "EVA-TEST-GF-16-2" TO PAR-NAME.                       NC2254.2
@@ -1030,7 +1030,7 @@
 103200     PERFORM FAIL.                                                NC2254.2
 103300 EVA-WRITE-GF-16-2.                                               NC2254.2
 103400     PERFORM PRINT-DETAIL.                                        NC2254.2
-103500*                                                                 NC2254.2
+103500*                                                                         
 103600 EVA-INIT-GF-17.                                                  NC2254.2
 103700     MOVE   "VI-84 6.12.4 GR1(d)" TO ANSI-REFERENCE.              NC2254.2
 103800     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1056,7 +1056,7 @@
 105800     PERFORM FAIL.                                                NC2254.2
 105900 EVA-WRITE-GF-17-1.                                               NC2254.2
 106000     PERFORM PRINT-DETAIL.                                        NC2254.2
-106100*                                                                 NC2254.2
+106100*                                                                         
 106200 EVA-TEST-GF-17-2.                                                NC2254.2
 106300     ADD     1       TO REC-CT.                                   NC2254.2
 106400     MOVE   "EVA-TEST-GF-17-2" TO PAR-NAME.                       NC2254.2
@@ -1074,7 +1074,7 @@
 107600     PERFORM FAIL.                                                NC2254.2
 107700 EVA-WRITE-GF-17-2.                                               NC2254.2
 107800     PERFORM PRINT-DETAIL.                                        NC2254.2
-107900*                                                                 NC2254.2
+107900*                                                                         
 108000 EVA-TEST-GF-17-3.                                                NC2254.2
 108100     ADD     1       TO REC-CT.                                   NC2254.2
 108200     MOVE   "EVA-TEST-GF-17-3" TO PAR-NAME.                       NC2254.2
@@ -1091,7 +1091,7 @@
 109300     PERFORM FAIL.                                                NC2254.2
 109400 EVA-WRITE-GF-17-3.                                               NC2254.2
 109500     PERFORM PRINT-DETAIL.                                        NC2254.2
-109600*                                                                 NC2254.2
+109600*                                                                         
 109700 EVA-INIT-GF-18.                                                  NC2254.2
 109800     MOVE   "VI-84 6.12.4 GR1(d)" TO ANSI-REFERENCE.              NC2254.2
 109900     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1117,7 +1117,7 @@
 111900     PERFORM FAIL.                                                NC2254.2
 112000 EVA-WRITE-GF-18-1.                                               NC2254.2
 112100     PERFORM PRINT-DETAIL.                                        NC2254.2
-112200*                                                                 NC2254.2
+112200*                                                                         
 112300 EVA-TEST-GF-18-2.                                                NC2254.2
 112400     ADD     1 TO REC-CT.                                         NC2254.2
 112500     MOVE   "EVA-TEST-GF-18-2" TO PAR-NAME.                       NC2254.2
@@ -1135,7 +1135,7 @@
 113700     PERFORM FAIL.                                                NC2254.2
 113800 EVA-WRITE-GF-18-2.                                               NC2254.2
 113900     PERFORM PRINT-DETAIL.                                        NC2254.2
-114000*                                                                 NC2254.2
+114000*                                                                         
 114100 EVA-TEST-GF-18-3.                                                NC2254.2
 114200     ADD     1       TO REC-CT.                                   NC2254.2
 114300     MOVE   "EVA-TEST-GF-18-3" TO PAR-NAME.                       NC2254.2
@@ -1152,7 +1152,7 @@
 115400     PERFORM FAIL.                                                NC2254.2
 115500 EVA-WRITE-GF-18-3.                                               NC2254.2
 115600     PERFORM PRINT-DETAIL.                                        NC2254.2
-115700*                                                                 NC2254.2
+115700*                                                                         
 115800 EVA-INIT-GF-19.                                                  NC2254.2
 115900     MOVE   "VI-84 6.12.4 GR1(c)" TO ANSI-REFERENCE.              NC2254.2
 116000     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1178,7 +1178,7 @@
 118000     PERFORM FAIL.                                                NC2254.2
 118100 EVA-WRITE-GF-19-1.                                               NC2254.2
 118200     PERFORM PRINT-DETAIL.                                        NC2254.2
-118300*                                                                 NC2254.2
+118300*                                                                         
 118400 EVA-TEST-GF-19-2.                                                NC2254.2
 118500     ADD     1       TO REC-CT.                                   NC2254.2
 118600     MOVE   "EVA-TEST-GF-19-2" TO PAR-NAME.                       NC2254.2
@@ -1196,7 +1196,7 @@
 119800     PERFORM FAIL.                                                NC2254.2
 119900 EVA-WRITE-GF-19-2.                                               NC2254.2
 120000     PERFORM PRINT-DETAIL.                                        NC2254.2
-120100*                                                                 NC2254.2
+120100*                                                                         
 120200 EVA-TEST-GF-19-3.                                                NC2254.2
 120300     ADD     1       TO REC-CT.                                   NC2254.2
 120400     MOVE   "EVA-TEST-GF-19-3" TO PAR-NAME.                       NC2254.2
@@ -1214,7 +1214,7 @@
 121600     PERFORM FAIL.                                                NC2254.2
 121700 EVA-WRITE-GF-19-3.                                               NC2254.2
 121800     PERFORM PRINT-DETAIL.                                        NC2254.2
-121900*                                                                 NC2254.2
+121900*                                                                         
 122000 EVA-INIT-GF-20.                                                  NC2254.2
 122100     MOVE   "VI-84 6.12.4 GR1(c)" TO ANSI-REFERENCE.              NC2254.2
 122200     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1240,7 +1240,7 @@
 124200     PERFORM FAIL.                                                NC2254.2
 124300 EVA-WRITE-GF-20-1.                                               NC2254.2
 124400     PERFORM PRINT-DETAIL.                                        NC2254.2
-124500*                                                                 NC2254.2
+124500*                                                                         
 124600 EVA-TEST-GF-20-2.                                                NC2254.2
 124700     ADD     1 TO REC-CT.                                         NC2254.2
 124800     MOVE   "EVA-TEST-GF-20-2" TO PAR-NAME.                       NC2254.2
@@ -1277,7 +1277,7 @@
 127900     PERFORM FAIL.                                                NC2254.2
 128000 EVA-WRITE-GF-20-3.                                               NC2254.2
 128100     PERFORM PRINT-DETAIL.                                        NC2254.2
-128200*                                                                 NC2254.2
+128200*                                                                         
 128300 EVA-INIT-GF-21.                                                  NC2254.2
 128400     MOVE   "VI-84 6.12.4 GR1(e)" TO ANSI-REFERENCE.              NC2254.2
 128500     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1303,7 +1303,7 @@
 130500     PERFORM FAIL.                                                NC2254.2
 130600 EVA-WRITE-GF-21-1.                                               NC2254.2
 130700     PERFORM PRINT-DETAIL.                                        NC2254.2
-130800*                                                                 NC2254.2
+130800*                                                                         
 130900 EVA-INIT-GF-22.                                                  NC2254.2
 131000     MOVE   "VI-84 6.12.4 GR1(e)" TO ANSI-REFERENCE.              NC2254.2
 131100     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1329,7 +1329,7 @@
 133100     PERFORM FAIL.                                                NC2254.2
 133200 EVA-WRITE-GF-22-1.                                               NC2254.2
 133300     PERFORM PRINT-DETAIL.                                        NC2254.2
-133400*                                                                 NC2254.2
+133400*                                                                         
 133500 EVA-INIT-GF-23.                                                  NC2254.2
 133600     MOVE   "VI-84 6.12.4 GR1(e)" TO ANSI-REFERENCE.              NC2254.2
 133700     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1355,7 +1355,7 @@
 135700     PERFORM FAIL.                                                NC2254.2
 135800 EVA-WRITE-GF-23-1.                                               NC2254.2
 135900     PERFORM PRINT-DETAIL.                                        NC2254.2
-136000*                                                                 NC2254.2
+136000*                                                                         
 136100 EVA-INIT-GF-24.                                                  NC2254.2
 136200     MOVE   "VI-84 6.12.4 GR1(e)" TO ANSI-REFERENCE.              NC2254.2
 136300     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1381,7 +1381,7 @@
 138300     PERFORM FAIL.                                                NC2254.2
 138400 EVA-WRITE-GF-24-1.                                               NC2254.2
 138500     PERFORM PRINT-DETAIL.                                        NC2254.2
-138600*                                                                 NC2254.2
+138600*                                                                         
 138700 EVA-INIT-GF-25.                                                  NC2254.2
 138800     MOVE   "VI-84 6.12.4 GR3(b)" TO ANSI-REFERENCE.              NC2254.2
 138900     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1408,7 +1408,7 @@
 141000     PERFORM FAIL.                                                NC2254.2
 141100 EVA-WRITE-GF-25-1.                                               NC2254.2
 141200     PERFORM PRINT-DETAIL.                                        NC2254.2
-141300*                                                                 NC2254.2
+141300*                                                                         
 141400 EVA-INIT-GF-26.                                                  NC2254.2
 141500     MOVE   "VI-84 6.12.4 GR3(b)" TO ANSI-REFERENCE.              NC2254.2
 141600     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1435,7 +1435,7 @@
 143700     PERFORM FAIL.                                                NC2254.2
 143800 EVA-WRITE-GF-26-1.                                               NC2254.2
 143900     PERFORM PRINT-DETAIL.                                        NC2254.2
-144000*                                                                 NC2254.2
+144000*                                                                         
 144100 EVA-INIT-GF-27.                                                  NC2254.2
 144200     MOVE   "VI-84 6.12.4 GR3(c)" TO ANSI-REFERENCE.              NC2254.2
 144300     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1462,7 +1462,7 @@
 146400     PERFORM FAIL.                                                NC2254.2
 146500 EVA-WRITE-GF-27-1.                                               NC2254.2
 146600     PERFORM PRINT-DETAIL.                                        NC2254.2
-146700*                                                                 NC2254.2
+146700*                                                                         
 146800 EVA-INIT-GF-28.                                                  NC2254.2
 146900     MOVE   "VI-84 6.12.4 GR3(c)" TO ANSI-REFERENCE.              NC2254.2
 147000     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1489,7 +1489,7 @@
 149100     PERFORM FAIL.                                                NC2254.2
 149200 EVA-WRITE-GF-28-1.                                               NC2254.2
 149300     PERFORM PRINT-DETAIL.                                        NC2254.2
-149400*                                                                 NC2254.2
+149400*                                                                         
 149500 EVA-INIT-GF-29.                                                  NC2254.2
 149600     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 149700     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1517,7 +1517,7 @@
 151900     PERFORM FAIL.                                                NC2254.2
 152000 EVA-WRITE-GF-29-1.                                               NC2254.2
 152100     PERFORM PRINT-DETAIL.                                        NC2254.2
-152200*                                                                 NC2254.2
+152200*                                                                         
 152300 EVA-INIT-GF-30.                                                  NC2254.2
 152400     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 152500     MOVE    1  TO REC-CT.                                        NC2254.2
@@ -1545,7 +1545,7 @@
 154700     PERFORM FAIL.                                                NC2254.2
 154800 EVA-WRITE-GF-30-1.                                               NC2254.2
 154900     PERFORM PRINT-DETAIL.                                        NC2254.2
-155000*                                                                 NC2254.2
+155000*                                                                         
 155100 EVA-INIT-GF-31.                                                  NC2254.2
 155200     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 155300     MOVE   "EVA-TEST-GF-31-1"   TO PAR-NAME.                     NC2254.2
@@ -1629,7 +1629,7 @@
 163100     PERFORM FAIL.                                                NC2254.2
 163200 EVA-WRITE-GF-31-2.                                               NC2254.2
 163300     PERFORM PRINT-DETAIL.                                        NC2254.2
-163400*                                                                 NC2254.2
+163400*                                                                         
 163500 EVA-INIT-GF-32.                                                  NC2254.2
 163600     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 163700     MOVE   "EVA-TEST-GF-32-1"   TO PAR-NAME.                     NC2254.2
@@ -1698,7 +1698,7 @@
 170000     PERFORM PRINT-DETAIL.                                        NC2254.2
 170100 EVA-TEST-GF-32-2.                                                NC2254.2
 170200     ADD     1 TO REC-CT.                                         NC2254.2
-170300     IF      WRK-XN-00001-2 = "F"                                 NC2254.2
+170300     IF      WRK-XN-00001-2 = "D"                                 NC2254.2
 170400             PERFORM PASS                                         NC2254.2
 170500             GO TO EVA-WRITE-GF-32-2                              NC2254.2
 170600     ELSE                                                         NC2254.2
@@ -1709,11 +1709,11 @@
 171100 EVA-FAIL-GF-32-2.                                                NC2254.2
 171200     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 171300     MOVE    WRK-XN-00001-2 TO COMPUTED-X                         NC2254.2
-171400     MOVE   "F"             TO CORRECT-X                          NC2254.2
+171400     MOVE   "D"             TO CORRECT-X                          NC2254.2
 171500     PERFORM FAIL.                                                NC2254.2
 171600 EVA-WRITE-GF-32-2.                                               NC2254.2
 171700     PERFORM PRINT-DETAIL.                                        NC2254.2
-171800*                                                                 NC2254.2
+171800*                                                                         
 171900 EVA-INIT-GF-33.                                                  NC2254.2
 172000     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 172100     MOVE   "EVA-TEST-GF-33-1"   TO PAR-NAME.                     NC2254.2
@@ -1765,7 +1765,7 @@
 176700                  MOVE  "H" TO WRK-XN-00001-2                     NC2254.2
 176800     END-EVALUATE.                                                NC2254.2
 176900 EVA-TEST-GF-33-1.                                                NC2254.2
-177000     IF      WRK-XN-00001-1 = "7"                                 NC2254.2
+177000     IF      WRK-XN-00001-1 = "E"                                 NC2254.2
 177100             PERFORM PASS                                         NC2254.2
 177200             GO TO EVA-WRITE-GF-33-1                              NC2254.2
 177300     ELSE                                                         NC2254.2
@@ -1776,7 +1776,7 @@
 177800 EVA-FAIL-GF-33-1.                                                NC2254.2
 177900     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 178000     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2254.2
-178100     MOVE   "7"             TO CORRECT-X                          NC2254.2
+178100     MOVE   "E"             TO CORRECT-X                          NC2254.2
 178200     PERFORM FAIL.                                                NC2254.2
 178300 EVA-WRITE-GF-33-1.                                               NC2254.2
 178400     PERFORM PRINT-DETAIL.                                        NC2254.2
@@ -1797,7 +1797,7 @@
 179900     PERFORM FAIL.                                                NC2254.2
 180000 EVA-WRITE-GF-33-2.                                               NC2254.2
 180100     PERFORM PRINT-DETAIL.                                        NC2254.2
-180200*                                                                 NC2254.2
+180200*                                                                         
 180300 EVA-INIT-GF-34.                                                  NC2254.2
 180400     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 180500     MOVE   "EVA-TEST-GF-34-1"   TO PAR-NAME.                     NC2254.2
@@ -1866,7 +1866,7 @@
 186800     PERFORM PRINT-DETAIL.                                        NC2254.2
 186900 EVA-TEST-GF-34-2.                                                NC2254.2
 187000     ADD     1 TO REC-CT.                                         NC2254.2
-187100     IF      WRK-XN-00001-2 = "C"                                 NC2254.2
+187100     IF      WRK-XN-00001-2 = "H"                                 NC2254.2
 187200             PERFORM PASS                                         NC2254.2
 187300             GO TO EVA-WRITE-GF-34-2                              NC2254.2
 187400     ELSE                                                         NC2254.2
@@ -1877,11 +1877,11 @@
 187900 EVA-FAIL-GF-34-2.                                                NC2254.2
 188000     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 188100     MOVE    WRK-XN-00001-2 TO COMPUTED-X                         NC2254.2
-188200     MOVE   "C"             TO CORRECT-X                          NC2254.2
+188200     MOVE   "H"             TO CORRECT-X                          NC2254.2
 188300     PERFORM FAIL.                                                NC2254.2
 188400 EVA-WRITE-GF-34-2.                                               NC2254.2
 188500     PERFORM PRINT-DETAIL.                                        NC2254.2
-188600*                                                                 NC2254.2
+188600*                                                                         
 188700 EVA-INIT-GF-35.                                                  NC2254.2
 188800     MOVE   "VI-84 6.12.4 GR3" TO ANSI-REFERENCE.                 NC2254.2
 188900     MOVE   "EVA-TEST-GF-35-1" TO PAR-NAME.                       NC2254.2
@@ -1916,7 +1916,7 @@
 191800     PERFORM FAIL.                                                NC2254.2
 191900 EVA-WRITE-GF-35-1.                                               NC2254.2
 192000     PERFORM PRINT-DETAIL.                                        NC2254.2
-192100*                                                                 NC2254.2
+192100*                                                                         
 192200 CCVS-EXIT SECTION.                                               NC2254.2
 192300 CCVS-999999.                                                     NC2254.2
 192400     GO TO CLOSE-FILES.                                           NC2254.2

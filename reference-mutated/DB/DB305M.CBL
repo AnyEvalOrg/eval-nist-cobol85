@@ -1,8 +1,8 @@
 000100 IDENTIFICATION DIVISION.                                         DB3054.2
 000200 PROGRAM-ID.                                                      DB3054.2
 000300     DB305M.                                                      DB3054.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF LEVEL 1              DB3054.2
-000500*OBSOLETE FEATURES THAT ARE USED IN DEBUGGING.                    DB3054.2
+000400*                                                                         
+000500*                                                                         
 000600 ENVIRONMENT DIVISION.                                            DB3054.2
 000700 CONFIGURATION SECTION.                                           DB3054.2
 000800 SOURCE-COMPUTER.                                                 DB3054.2
@@ -31,7 +31,7 @@
 003100 BUGGING SECTION.                                                 DB3054.2
 003200                                                                  DB3054.2
 003300     USE FOR DEBUGGING ON ALL PROCEDURES.                         DB3054.2
-003400*Message expected for above statement: OBSOLETE                   DB3054.2
+003400*                                                                         
 003500                                                                  DB3054.2
 003600 END DECLARATIVES.                                                DB3054.2
 003700                                                                  DB3054.2
@@ -41,4 +41,4 @@
 004100     DISPLAY "THIS IS A DUMMY PROCEDURE".                         DB3054.2
 004200     STOP RUN.                                                    DB3054.2
 004300                                                                  DB3054.2
-004400*TOTAL NUMBER OF FLAGS EXPECTED = 1.                              DB3054.2
+004400*                                                                         

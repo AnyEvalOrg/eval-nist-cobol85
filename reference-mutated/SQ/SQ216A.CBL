@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2164.2
 000200 PROGRAM-ID.                                                      SQ2164.2
 000300     SQ216A.                                                      SQ2164.2
-000400****************************************************************  SQ2164.2
-000500*                                                              *  SQ2164.2
-000600*    VALIDATION FOR:-                                          *  SQ2164.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2164.2
-000800*                                                              *  SQ2164.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2164.2
-001100*                                                              *  SQ2164.2
-001200*        THIS ROUTINE TESTS THE CLAUSE:                           SQ2164.2
-001300*             PADDING CHARACTER IS   "9" (LITERAL).               SQ2164.2
-001400*                                                                 SQ2164.2
-001500*        THE ROUTINE SQ216A CREATES A TAPE FILE WHICH HAS 750 FIXESQ2164.2
-001600*    LENGTH RECORDS.  THE FILE IS THEN CLOSED AND OPENED AS AN    SQ2164.2
-001700*    INPUT FILE.  THE FILE IS READ AND FIELDS IN THE INPUT RECORDSSQ2164.2
-001800*    ARE COMPARED TO THE VALUES WRITTEN TO ENSURE THAT THE RECORDSSQ2164.2
-001900*    WERE PROCESSED CORRECTLY.  THE FILE IS CLOSED AND OPENED     SQ2164.2
-002000*    AGAIN AS AN INPUT FILE.  FOUR READ FORMAT OPTIONS ARE USED   SQ2164.2
-002100*    TO READ THE FILE AND FIELDS IN THE RECORDS ARE VERIFIED.     SQ2164.2
-002200*    THE OPEN, CLOSE, READ, AND WRITE STATEMENTS ARE TESTED FOR   SQ2164.2
-002300*    LEVEL TWO            PADDING CHARCTER IS "9".                SQ2164.2
-002400*                                                                 SQ2164.2
-002500*    THE LAST 9 RECORDS MUST BE FILLED WITH THE PADDING CHARACTER SQ2164.2
-002600*     "9".                                                        SQ2164.2
-002700*                                                                 SQ2164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            SQ2164.2
 002900 CONFIGURATION SECTION.                                           SQ2164.2
 003000 SOURCE-COMPUTER.                                                 SQ2164.2
@@ -281,7 +281,7 @@
 033000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2164.2
 033100      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2164.2
 033200      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2164.2
-033300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2164.2
+033300*                                                                         
 033400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2164.2
 033500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2164.2
 033600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2164.2
@@ -370,12 +370,12 @@
 041900     PERFORM PASS.                                                SQ2164.2
 042000     PERFORM PRINT-DETAIL.                                        SQ2164.2
 042100     CLOSE SQ-FS1.                                                SQ2164.2
-042200*        A SEQUENTIAL TAPE FILE WITH 120 CHARACTER RECORDS        SQ2164.2
-042300*    HAS BEEN CREATED. THE FILE CONTAINS 750 RECORDS.             SQ2164.2
+042200*                                                                         
+042300*                                                                         
 042400 READ-INIT-F1-01.                                                 SQ2164.2
 042500     MOVE ZERO TO WRK-CS-09V00.                                   SQ2164.2
-042600*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ2164.2
-042700*    WRITE-TEST-GF-01.                                            SQ2164.2
+042600*                                                                         
+042700*                                                                         
 042800     OPEN INPUT SQ-FS1.                                           SQ2164.2
 042900 READ-TEST-F1-01.                                                 SQ2164.2
 043000     READ SQ-FS1                                                  SQ2164.2
@@ -418,8 +418,8 @@
 046700     MOVE ZERO TO WRK-CS-09V00.                                   SQ2164.2
 046800     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ2164.2
 046900     OPEN INPUT   SQ-FS1.                                         SQ2164.2
-047000*            FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED      SQ2164.2
-047100*    IN THIS SERIES OF TESTS.                                     SQ2164.2
+047000*                                                                         
+047100*                                                                         
 047200     MOVE "LEV 2 PADDING CHARS " TO FEATURE.                      SQ2164.2
 047300     MOVE "READ...RECORD AT END ..." TO RE-MARK.                  SQ2164.2
 047400     MOVE "READ-TEST-F1-02" TO PAR-NAME.                          SQ2164.2

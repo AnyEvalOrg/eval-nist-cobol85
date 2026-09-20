@@ -32,15 +32,15 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET SWITCH ON/OFF    PASS  SWH-TEST-GF-11-1                                                                            
  SET SWITCH ON/OFF    PASS  SWH-TEST-GF-11-2                                                                            
  SET SWITCH ON/OFF    PASS  SWH-TEST-GF-12                                                                              
- RELATION             FAIL* RELAT-TEST-GF-1                                                                             
-                                                                                                                        
-                                     COMPUTED= 3                                                                        
-                                     CORRECT = 2                     V1-54 6.3.1.1                                      
-                                                                                                                        
- RELATION             FAIL* RELAT-TEST-GF-2                                                                             
-                                                                                                                        
-                                     COMPUTED= 3                                                                        
-                                     CORRECT = 8                     V1-54 6.3.1.1                                                                                                                                                              
+ RELATION             PASS  RELAT-TEST-GF-1                                                                             
+ RELATION             PASS  RELAT-TEST-GF-2                                                                             
+ RELATION             PASS  RELAT-TEST-GF-3                                                                             
+ RELATION             PASS  RELAT-TEST-GF-4                                                                             
+ RELATION             PASS  RELAT-TEST-GF-5                                                                             
+ RELATION             PASS  RELAT-TEST-GF-6                                                                             
+ ABBREV. RELATION     PASS  RELAT-TEST-GF-7                                                                             
+ ABBREV. RELATION     PASS  RELAT-TEST-GF-8                                                                             
+ ABBREV. RELATION     PASS  RELAT-TEST-GF-9                                                                                                                                                                                                     
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,18 +54,6 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                                                                                                        
- RELATION             FAIL* RELAT-TEST-GF-3                                                                             
-                                                                                                                        
-                                     COMPUTED= 3                                                                        
-                                     CORRECT = 5                     V1-54 6.3.1.1                                      
-                                                                                                                        
- RELATION             PASS  RELAT-TEST-GF-4                                                                             
- RELATION             PASS  RELAT-TEST-GF-5                                                                             
- RELATION             PASS  RELAT-TEST-GF-6                                                                             
- ABBREV. RELATION     PASS  RELAT-TEST-GF-7                                                                             
- ABBREV. RELATION     PASS  RELAT-TEST-GF-8                                                                             
- ABBREV. RELATION     PASS  RELAT-TEST-GF-9                                                                             
  ABBREV. RELATION     PASS  RELAT-TEST-GF-10                                                                            
  ABBREV. RELATION     PASS  RELAT-TEST-GF-11                                                                            
  ABBREV. RELATION     PASS  RELAT-TEST-GF-12                                                                            
@@ -96,7 +84,19 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    NUMERIC            PASS  CLASS-TEST-GF-7                                                                             
    NUMERIC            PASS  CLASS-TEST-GF-8                                                                             
    NOT NUMERIC        PASS  CLASS-TEST-GF-9                                                                             
-   NOT NUMERIC        PASS  CLASS-TEST-GF-10                                                                                                                                                                                                    
+   NOT NUMERIC        PASS  CLASS-TEST-GF-10                                                                            
+   NOT NUMERIC        PASS  CLASS-TEST-GF-11                                                                            
+   NOT NUMERIC        PASS  CLASS-TEST-GF-12                                                                            
+   ALPHABETIC         PASS  CLASS-TEST-GF-13                                                                            
+   ALPHABETIC         PASS  CLASS-TEST-GF-14                                                                            
+   NOT ALPHABETIC     PASS  CLASS-TEST-GF-15                                                                            
+   NOT ALPHABETIC     PASS  CLASS-TEST-GF-16                                                                            
+   NOT ALPHABETIC     PASS  CLASS-TEST-GF-17                                                                            
+   NOT ALPHABETIC     PASS  CLASS-TEST-GF-18                                                                            
+   NOT ALPHABETIC     PASS  CLASS-TEST-GF-19                                                                            
+   NOT ALPHABETIC     PASS  CLASS-TEST-GF-20                                                                            
+   ALPHABETIC-UPPER   PASS  CLASS-TEST-GF-35                                                                            
+   ALPHABETIC-LOWER   PASS  CLASS-TEST-GF-36                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,18 +110,6 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-   NOT NUMERIC        PASS  CLASS-TEST-GF-11                                                                            
-   NOT NUMERIC        PASS  CLASS-TEST-GF-12                                                                            
-   ALPHABETIC         PASS  CLASS-TEST-GF-13                                                                            
-   ALPHABETIC         PASS  CLASS-TEST-GF-14                                                                            
-   NOT ALPHABETIC     PASS  CLASS-TEST-GF-15                                                                            
-   NOT ALPHABETIC     PASS  CLASS-TEST-GF-16                                                                            
-   NOT ALPHABETIC     PASS  CLASS-TEST-GF-17                                                                            
-   NOT ALPHABETIC     PASS  CLASS-TEST-GF-18                                                                            
-   NOT ALPHABETIC     PASS  CLASS-TEST-GF-19                                                                            
-   NOT ALPHABETIC     PASS  CLASS-TEST-GF-20                                                                            
-   ALPHABETIC-UPPER   PASS  CLASS-TEST-GF-35                                                                            
-   ALPHABETIC-LOWER   PASS  CLASS-TEST-GF-36                                                                            
  UPPER & LOWER CASE   PASS  CLASS-TEST-GF-37                                                                            
  UPPER & LOWER CASE   PASS  CLASS-TEST-GF-38                                                                            
  NEW CLASS TESTS      PASS  CLASS-TEST-GF-39                                                                            
@@ -145,8 +133,8 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC174A                                                
                                                                                                                         
-                                                    074 OF 077  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    077 OF 077  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

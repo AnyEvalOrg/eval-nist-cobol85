@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1354.2
 000300     IF135A.                                                      IF1354.2
 000400                                                                  IF1354.2
-000500***********************************************************       IF1354.2
-000600*                                                         *       IF1354.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1354.2
-000800* It contains tests for the Intrinsic Function SIN.       *       IF1354.2
-000900*                                                         *       IF1354.2
-001000***********************************************************       IF1354.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1354.2
 001200 CONFIGURATION SECTION.                                           IF1354.2
 001300 SOURCE-COMPUTER.                                                 IF1354.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1354.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1354.2
 002600 WORKING-STORAGE SECTION.                                         IF1354.2
-002700***********************************************************       IF1354.2
-002800* Variables specific to the Intrinsic Function Test IF135A*       IF1354.2
-002900***********************************************************       IF1354.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(5)V9(5)      VALUE -0.00004.      IF1354.2
 003100 01  B                   PIC S9(5)V9(5)      VALUE 14000.105.     IF1354.2
 003200 01  C                   PIC S9(10)          VALUE 100000.        IF1354.2
@@ -41,9 +41,9 @@
 004100 01  WS-NUM              PIC S9(5)V9(6).                          IF1354.2
 004200 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1354.2
 004300 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1354.2
-004400*                                                                 IF1354.2
-004500**********************************************************        IF1354.2
-004600*                                                                 IF1354.2
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 01  TEST-RESULTS.                                                IF1354.2
 004800     02 FILLER                   PIC X      VALUE SPACE.          IF1354.2
 004900     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1354.2
@@ -337,16 +337,16 @@
 033700 BAIL-OUT-EX. EXIT.                                               IF1354.2
 033800 CCVS1-EXIT.                                                      IF1354.2
 033900     EXIT.                                                        IF1354.2
-034000********************************************************          IF1354.2
-034100*                                                      *          IF1354.2
-034200*    Intrinsic Function Tests         IF135A - SIN     *          IF1354.2
-034300*                                                      *          IF1354.2
-034400********************************************************          IF1354.2
+034000*                                                                         
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
 034500 SECT-IF135A SECTION.                                             IF1354.2
 034600 F-SIN-INFO.                                                      IF1354.2
 034700     MOVE     "See ref. A-68 2.39" TO ANSI-REFERENCE.             IF1354.2
 034800     MOVE     "SIN Function" TO FEATURE.                          IF1354.2
-034900*****************TEST (a) - SIMPLE TEST*****************          IF1354.2
+034900*                                                                         
 035000 F-SIN-01.                                                        IF1354.2
 035100     MOVE ZERO TO WS-NUM.                                         IF1354.2
 035200     MOVE -0.000020 TO MIN-RANGE.                                 IF1354.2
@@ -368,7 +368,7 @@
 036800 F-SIN-WRITE-01.                                                  IF1354.2
 036900     MOVE "F-SIN-01" TO PAR-NAME.                                 IF1354.2
 037000     PERFORM  PRINT-DETAIL.                                       IF1354.2
-037100*****************TEST (b) - SIMPLE TEST*****************          IF1354.2
+037100*                                                                         
 037200 F-SIN-02.                                                        IF1354.2
 037300     EVALUATE FUNCTION SIN(PI)                                    IF1354.2
 037400     WHEN -0.000020  THRU  0.000020                               IF1354.2
@@ -382,7 +382,7 @@
 038200 F-SIN-WRITE-02.                                                  IF1354.2
 038300     MOVE "F-SIN-02" TO PAR-NAME.                                 IF1354.2
 038400     PERFORM  PRINT-DETAIL.                                       IF1354.2
-038500*****************TEST (c) - SIMPLE TEST*****************          IF1354.2
+038500*                                                                         
 038600 F-SIN-03.                                                        IF1354.2
 038700     MOVE -0.000020 TO MIN-RANGE.                                 IF1354.2
 038800     MOVE  0.000020 TO MAX-RANGE.                                 IF1354.2
@@ -399,7 +399,7 @@
 039900 F-SIN-WRITE-03.                                                  IF1354.2
 040000     MOVE "F-SIN-03" TO PAR-NAME.                                 IF1354.2
 040100     PERFORM  PRINT-DETAIL.                                       IF1354.2
-040200*****************TEST (d) - SIMPLE TEST*****************          IF1354.2
+040200*                                                                         
 040300 F-SIN-04.                                                        IF1354.2
 040400     MOVE ZERO TO WS-NUM.                                         IF1354.2
 040500     MOVE  0.000999 TO MIN-RANGE.                                 IF1354.2
@@ -421,7 +421,7 @@
 042100 F-SIN-WRITE-04.                                                  IF1354.2
 042200     MOVE "F-SIN-04" TO PAR-NAME.                                 IF1354.2
 042300     PERFORM  PRINT-DETAIL.                                       IF1354.2
-042400*****************TEST (e) - SIMPLE TEST*****************          IF1354.2
+042400*                                                                         
 042500 F-SIN-05.                                                        IF1354.2
 042600     MOVE ZERO TO WS-NUM.                                         IF1354.2
 042700     MOVE  0.000089 TO MIN-RANGE.                                 IF1354.2
@@ -443,7 +443,7 @@
 044300 F-SIN-WRITE-05.                                                  IF1354.2
 044400     MOVE "F-SIN-05" TO PAR-NAME.                                 IF1354.2
 044500     PERFORM  PRINT-DETAIL.                                       IF1354.2
-044600*****************TEST (f) - SIMPLE TEST*****************          IF1354.2
+044600*                                                                         
 044700 F-SIN-06.                                                        IF1354.2
 044800     MOVE ZERO TO WS-NUM.                                         IF1354.2
 044900     MOVE -0.000040 TO MIN-RANGE.                                 IF1354.2
@@ -465,7 +465,7 @@
 046500 F-SIN-WRITE-06.                                                  IF1354.2
 046600     MOVE "F-SIN-06" TO PAR-NAME.                                 IF1354.2
 046700     PERFORM  PRINT-DETAIL.                                       IF1354.2
-046800*****************TEST (g) - SIMPLE TEST*****************          IF1354.2
+046800*                                                                         
 046900 F-SIN-07.                                                        IF1354.2
 047000     MOVE ZERO TO WS-NUM.                                         IF1354.2
 047100     MOVE -0.756817 TO MIN-RANGE.                                 IF1354.2
@@ -487,7 +487,7 @@
 048700 F-SIN-WRITE-07.                                                  IF1354.2
 048800     MOVE "F-SIN-07" TO PAR-NAME.                                 IF1354.2
 048900     PERFORM  PRINT-DETAIL.                                       IF1354.2
-049000*****************TEST (h) - SIMPLE TEST*****************          IF1354.2
+049000*                                                                         
 049100 F-SIN-08.                                                        IF1354.2
 049200     MOVE ZERO TO WS-NUM.                                         IF1354.2
 049300     MOVE  0.141117  TO MIN-RANGE.                                IF1354.2
@@ -509,7 +509,7 @@
 050900 F-SIN-WRITE-08.                                                  IF1354.2
 051000     MOVE "F-SIN-08" TO PAR-NAME.                                 IF1354.2
 051100     PERFORM  PRINT-DETAIL.                                       IF1354.2
-051200*****************TEST (a) - COMPLEX TEST****************          IF1354.2
+051200*                                                                         
 051300 F-SIN-09.                                                        IF1354.2
 051400     MOVE ZERO TO WS-NUM.                                         IF1354.2
 051500     MOVE  0.865990 TO MIN-RANGE.                                 IF1354.2
@@ -531,7 +531,7 @@
 053100 F-SIN-WRITE-09.                                                  IF1354.2
 053200     MOVE "F-SIN-09" TO PAR-NAME.                                 IF1354.2
 053300     PERFORM  PRINT-DETAIL.                                       IF1354.2
-053400*****************TEST (b) - COMPLEX TEST****************          IF1354.2
+053400*                                                                         
 053500 F-SIN-10.                                                        IF1354.2
 053600     MOVE ZERO TO WS-NUM.                                         IF1354.2
 053700     MOVE  0.999960 TO MIN-RANGE.                                 IF1354.2
@@ -553,7 +553,7 @@
 055300 F-SIN-WRITE-10.                                                  IF1354.2
 055400     MOVE "F-SIN-10" TO PAR-NAME.                                 IF1354.2
 055500     PERFORM  PRINT-DETAIL.                                       IF1354.2
-055600*****************TEST (c) - COMPLEX TEST****************          IF1354.2
+055600*                                                                         
 055700 F-SIN-11.                                                        IF1354.2
 055800     MOVE ZERO TO WS-NUM.                                         IF1354.2
 055900     MOVE -1.00000 TO MIN-RANGE.                                  IF1354.2
@@ -575,7 +575,7 @@
 057500 F-SIN-WRITE-11.                                                  IF1354.2
 057600     MOVE "F-SIN-11" TO PAR-NAME.                                 IF1354.2
 057700     PERFORM  PRINT-DETAIL.                                       IF1354.2
-057800*****************TEST (d) - COMPLEX TEST****************          IF1354.2
+057800*                                                                         
 057900 F-SIN-12.                                                        IF1354.2
 058000     MOVE ZERO TO WS-NUM.                                         IF1354.2
 058100     MOVE -0.866060  TO MIN-RANGE.                                IF1354.2
@@ -597,7 +597,7 @@
 059700 F-SIN-WRITE-12.                                                  IF1354.2
 059800     MOVE "F-SIN-12" TO PAR-NAME.                                 IF1354.2
 059900     PERFORM  PRINT-DETAIL.                                       IF1354.2
-060000*****************TEST (e) - COMPLEX TEST****************          IF1354.2
+060000*                                                                         
 060100 F-SIN-13.                                                        IF1354.2
 060200     MOVE ZERO TO WS-NUM.                                         IF1354.2
 060300     MOVE -1.00000 TO MIN-RANGE.                                  IF1354.2
@@ -619,7 +619,7 @@
 061900 F-SIN-WRITE-13.                                                  IF1354.2
 062000     MOVE "F-SIN-13" TO PAR-NAME.                                 IF1354.2
 062100     PERFORM  PRINT-DETAIL.                                       IF1354.2
-062200*****************TEST (f) - COMPLEX TEST****************          IF1354.2
+062200*                                                                         
 062300 F-SIN-14.                                                        IF1354.2
 062400     MOVE ZERO TO WS-NUM.                                         IF1354.2
 062500     MOVE  0.999960 TO MIN-RANGE.                                 IF1354.2
@@ -641,7 +641,7 @@
 064100 F-SIN-WRITE-14.                                                  IF1354.2
 064200     MOVE "F-SIN-14" TO PAR-NAME.                                 IF1354.2
 064300     PERFORM  PRINT-DETAIL.                                       IF1354.2
-064400*****************TEST (g) - COMPLEX TEST****************          IF1354.2
+064400*                                                                         
 064500 F-SIN-15.                                                        IF1354.2
 064600     MOVE ZERO TO WS-NUM.                                         IF1354.2
 064700     MOVE  0.999960 TO MIN-RANGE.                                 IF1354.2
@@ -663,7 +663,7 @@
 066300 F-SIN-WRITE-15.                                                  IF1354.2
 066400     MOVE "F-SIN-15" TO PAR-NAME.                                 IF1354.2
 066500     PERFORM  PRINT-DETAIL.                                       IF1354.2
-066600*****************TEST (h) - COMPLEX TEST****************          IF1354.2
+066600*                                                                         
 066700 F-SIN-16.                                                        IF1354.2
 066800     MOVE ZERO TO WS-NUM.                                         IF1354.2
 066900     MOVE  0.866489 TO MIN-RANGE.                                 IF1354.2
@@ -685,7 +685,7 @@
 068500 F-SIN-WRITE-16.                                                  IF1354.2
 068600     MOVE "F-SIN-16" TO PAR-NAME.                                 IF1354.2
 068700     PERFORM  PRINT-DETAIL.                                       IF1354.2
-068800*****************TEST (i) - COMPLEX TEST****************          IF1354.2
+068800*                                                                         
 068900 F-SIN-17.                                                        IF1354.2
 069000     MOVE ZERO TO WS-NUM.                                         IF1354.2
 069100     MOVE  0.000999 TO MIN-RANGE.                                 IF1354.2
@@ -707,7 +707,7 @@
 070700 F-SIN-WRITE-17.                                                  IF1354.2
 070800     MOVE "F-SIN-17" TO PAR-NAME.                                 IF1354.2
 070900     PERFORM  PRINT-DETAIL.                                       IF1354.2
-071000*****************TEST (j) - COMPLEX TEST****************          IF1354.2
+071000*                                                                         
 071100 F-SIN-18.                                                        IF1354.2
 071200     MOVE ZERO TO WS-NUM.                                         IF1354.2
 071300     MOVE -1.00000 TO MIN-RANGE.                                  IF1354.2
@@ -729,7 +729,7 @@
 072900 F-SIN-WRITE-18.                                                  IF1354.2
 073000     MOVE "F-SIN-18" TO PAR-NAME.                                 IF1354.2
 073100     PERFORM  PRINT-DETAIL.                                       IF1354.2
-073200*****************TEST (k) - COMPLEX TEST****************          IF1354.2
+073200*                                                                         
 073300 F-SIN-19.                                                        IF1354.2
 073400     MOVE ZERO TO WS-NUM.                                         IF1354.2
 073500     MOVE  0.034898 TO MIN-RANGE.                                 IF1354.2
@@ -751,7 +751,7 @@
 075100 F-SIN-WRITE-19.                                                  IF1354.2
 075200     MOVE "F-SIN-19" TO PAR-NAME.                                 IF1354.2
 075300     PERFORM  PRINT-DETAIL.                                       IF1354.2
-075400*****************TEST (l) - COMPLEX TEST****************          IF1354.2
+075400*                                                                         
 075500 F-SIN-20.                                                        IF1354.2
 075600     MOVE ZERO TO WS-NUM.                                         IF1354.2
 075700     MOVE  0.999807 TO MIN-RANGE.                                 IF1354.2
@@ -773,7 +773,7 @@
 077300 F-SIN-WRITE-20.                                                  IF1354.2
 077400     MOVE "F-SIN-20" TO PAR-NAME.                                 IF1354.2
 077500     PERFORM  PRINT-DETAIL.                                       IF1354.2
-077600*****************TEST (m) - COMPLEX TEST****************          IF1354.2
+077600*                                                                         
 077700 F-SIN-21.                                                        IF1354.2
 077800     MOVE ZERO TO WS-NUM.                                         IF1354.2
 077900     MOVE  0.857132 TO MIN-RANGE.                                 IF1354.2
@@ -795,7 +795,7 @@
 079500 F-SIN-WRITE-21.                                                  IF1354.2
 079600     MOVE "F-SIN-21" TO PAR-NAME.                                 IF1354.2
 079700     PERFORM  PRINT-DETAIL.                                       IF1354.2
-079800*****************TEST (n) - COMPLEX TEST****************          IF1354.2
+079800*                                                                         
 079900 F-SIN-22.                                                        IF1354.2
 080000     MOVE ZERO TO WS-NUM.                                         IF1354.2
 080100     MOVE -0.017453  TO MIN-RANGE.                                IF1354.2
@@ -817,7 +817,7 @@
 081700 F-SIN-WRITE-22.                                                  IF1354.2
 081800     MOVE "F-SIN-22" TO PAR-NAME.                                 IF1354.2
 081900     PERFORM  PRINT-DETAIL.                                       IF1354.2
-082000*****************TEST (o) - COMPLEX TEST****************          IF1354.2
+082000*                                                                         
 082100 F-SIN-23.                                                        IF1354.2
 082200     MOVE ZERO TO WS-NUM.                                         IF1354.2
 082300     MOVE -0.999430 TO MIN-RANGE.                                 IF1354.2
@@ -839,7 +839,7 @@
 083900 F-SIN-WRITE-23.                                                  IF1354.2
 084000     MOVE "F-SIN-23" TO PAR-NAME.                                 IF1354.2
 084100     PERFORM  PRINT-DETAIL.                                       IF1354.2
-084200*****************TEST (p) - COMPLEX TEST****************          IF1354.2
+084200*                                                                         
 084300 F-SIN-24.                                                        IF1354.2
 084400     MOVE ZERO TO WS-NUM.                                         IF1354.2
 084500     MOVE  0.909261 TO MIN-RANGE.                                 IF1354.2
@@ -861,7 +861,7 @@
 086100 F-SIN-WRITE-24.                                                  IF1354.2
 086200     MOVE "F-SIN-24" TO PAR-NAME.                                 IF1354.2
 086300     PERFORM  PRINT-DETAIL.                                       IF1354.2
-086400*****************TEST (q) - COMPLEX TEST****************          IF1354.2
+086400*                                                                         
 086500 F-SIN-25.                                                        IF1354.2
 086600     MOVE ZERO TO WS-NUM.                                         IF1354.2
 086700     MOVE  0.997454 TO MIN-RANGE.                                 IF1354.2
@@ -883,7 +883,7 @@
 088300 F-SIN-WRITE-25.                                                  IF1354.2
 088400     MOVE "F-SIN-25" TO PAR-NAME.                                 IF1354.2
 088500     PERFORM  PRINT-DETAIL.                                       IF1354.2
-088600*****************TEST (r) - COMPLEX TEST****************          IF1354.2
+088600*                                                                         
 088700 F-SIN-26.                                                        IF1354.2
 088800     MOVE ZERO TO WS-NUM.                                         IF1354.2
 088900     MOVE -0.000040 TO MIN-RANGE.                                 IF1354.2
@@ -905,7 +905,7 @@
 090500 F-SIN-WRITE-26.                                                  IF1354.2
 090600     MOVE "F-SIN-26" TO PAR-NAME.                                 IF1354.2
 090700     PERFORM  PRINT-DETAIL.                                       IF1354.2
-090800*****************TEST (s) - COMPLEX TEST****************          IF1354.2
+090800*                                                                         
 090900 F-SIN-27.                                                        IF1354.2
 091000     MOVE ZERO TO WS-NUM.                                         IF1354.2
 091100     MOVE -0.544043 TO MIN-RANGE.                                 IF1354.2
@@ -927,7 +927,7 @@
 092700 F-SIN-WRITE-27.                                                  IF1354.2
 092800     MOVE "F-SIN-27" TO PAR-NAME.                                 IF1354.2
 092900     PERFORM  PRINT-DETAIL.                                       IF1354.2
-093000*****************TEST (t) - COMPLEX TEST****************          IF1354.2
+093000*                                                                         
 093100 F-SIN-28.                                                        IF1354.2
 093200     MOVE ZERO TO WS-NUM.                                         IF1354.2
 093300     MOVE  0.017451 TO MIN-RANGE.                                 IF1354.2
@@ -949,7 +949,7 @@
 094900 F-SIN-WRITE-28.                                                  IF1354.2
 095000     MOVE "F-SIN-28" TO PAR-NAME.                                 IF1354.2
 095100     PERFORM  PRINT-DETAIL.                                       IF1354.2
-095200*****************TEST (u) - COMPLEX TEST****************          IF1354.2
+095200*                                                                         
 095300 F-SIN-29.                                                        IF1354.2
 095400     MOVE ZERO TO WS-NUM.                                         IF1354.2
 095500     MOVE 0.999960 TO MIN-RANGE.                                  IF1354.2
@@ -971,7 +971,7 @@
 097100 F-SIN-WRITE-29.                                                  IF1354.2
 097200     MOVE "F-SIN-29" TO PAR-NAME.                                 IF1354.2
 097300     PERFORM  PRINT-DETAIL.                                       IF1354.2
-097400*****************TEST (v) - COMPLEX TEST****************          IF1354.2
+097400*                                                                         
 097500 F-SIN-30.                                                        IF1354.2
 097600     MOVE ZERO TO WS-NUM.                                         IF1354.2
 097700     MOVE 0.789040 TO MIN-RANGE.                                  IF1354.2
@@ -993,7 +993,7 @@
 099300 F-SIN-WRITE-30.                                                  IF1354.2
 099400     MOVE "F-SIN-30" TO PAR-NAME.                                 IF1354.2
 099500     PERFORM  PRINT-DETAIL.                                       IF1354.2
-099600*****************TEST (w) - COMPLEX TEST****************          IF1354.2
+099600*                                                                         
 099700 F-SIN-31.                                                        IF1354.2
 099800     MOVE ZERO TO WS-NUM.                                         IF1354.2
 099900     MOVE -0.000040 TO MIN-RANGE.                                 IF1354.2
@@ -1016,7 +1016,7 @@
 101600 F-SIN-WRITE-31.                                                  IF1354.2
 101700     MOVE "F-SIN-31" TO PAR-NAME.                                 IF1354.2
 101800     PERFORM  PRINT-DETAIL.                                       IF1354.2
-101900*****************SPECIAL PERFORM TEST**********************       IF1354.2
+101900*                                                                         
 102000 F-SIN-32.                                                        IF1354.2
 102100     PERFORM F-SIN-TEST-32                                        IF1354.2
 102200       UNTIL FUNCTION SIN(ARG1) < 0.                              IF1354.2
@@ -1030,7 +1030,7 @@
 103000 F-SIN-WRITE-32.                                                  IF1354.2
 103100     MOVE "F-SIN-32" TO PAR-NAME.                                 IF1354.2
 103200     PERFORM  PRINT-DETAIL.                                       IF1354.2
-103300********************END OF TESTS***************                   IF1354.2
+103300*                                                                         
 103400 CCVS-EXIT SECTION.                                               IF1354.2
 103500 CCVS-999999.                                                     IF1354.2
 103600     GO TO CLOSE-FILES.                                           IF1354.2

@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         ST1354.2
 000200 PROGRAM-ID.                                                      ST1354.2
 000300     ST135A.                                                      ST1354.2
-000400****************************************************************  ST1354.2
-000500*                                                              *  ST1354.2
-000600*    VALIDATION FOR:-                                          *  ST1354.2
-000700*                                                              *  ST1354.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1354.2
-000900*                                                              *  ST1354.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1354.2
-001100*                                                              *  ST1354.2
-001200****************************************************************  ST1354.2
-001300*                                                              *  ST1354.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1354.2
-001500*                                                              *  ST1354.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1354.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1354.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1354.2
-001900*                                                              *  ST1354.2
-002000****************************************************************  ST1354.2
-002100*                                                                 ST1354.2
-002200*    ST205 BUILDS A FILE, SORTS IT, AND CHECKS IT IN AN OUTPUT    ST1354.2
-002300*    PROCEDURE. THE UNUSUAL FEATURE OF THIS PROGRAM IS THAT THE   ST1354.2
-002400*    FILES SHARE A NETWORK OF SAME AREA, SAME RECORD AREA, AND    ST1354.2
-002500*    SAME SORT AREA. IN ORDER TO THOROUGHLY EXERCISE THE "SAME"   ST1354.2
-002600*    OPTIONS, TWO DUMMY FILES, CALLED USELESS-FILE AND DEADWEIGHT-ST1354.2
-002700*    FILE, ARE OPENED, CLOSED, READ, AND WRITTEN UPON. HOWEVER,   ST1354.2
-002800*    THE CONTENTS OF THESE TWO FILES ARE NEVER CHECKED.           ST1354.2
-002900*    SEE THE I-O-CONTROL PARAGRAPH FOR THE ACTUAL ORGANIZATION.   ST1354.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000                                                                  ST1354.2
 003100 ENVIRONMENT DIVISION.                                            ST1354.2
 003200 CONFIGURATION SECTION.                                           ST1354.2
@@ -290,7 +290,7 @@
 031200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1354.2
 031300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1354.2
 031400      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1354.2
-031500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1354.2
+031500*                                                                         
 031600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1354.2
 031700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1354.2
 031800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1354.2
@@ -370,7 +370,7 @@
 039200     MOVE     +10 TO UTIL-CTR.                                    ST1354.2
 039300 BUILD-LOOP.                                                      ST1354.2
 039400     MOVE     UTIL-CTR TO SORTIN-KEY.                             ST1354.2
-039500*        NOTE UTIL-CTR IS INTENTIONALLY MOVED TO AN UNSIGNED ITEM.ST1354.2
+039500*                                                                         
 039600     MOVE     "A" TO SORTIN-NON-KEY-1.                            ST1354.2
 039700     MOVE     "B" TO SORTIN-NON-KEY-2.                            ST1354.2
 039800     WRITE    SORTIN-REC.                                         ST1354.2

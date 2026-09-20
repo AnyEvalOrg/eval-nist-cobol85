@@ -1,12 +1,12 @@
 000100 IDENTIFICATION DIVISION.                                         IF1414.2
 000200 PROGRAM-ID.                                                      IF1414.2
 000300     IF141A.                                                      IF1414.2
-000400***********************************************************       IF1414.2
-000500*                                                         *       IF1414.2
-000600* This program forms part of the CCVS85 COBOL Test Suite. *       IF1414.2
-000700* It contains tests for the Intrinsic Function VARIANCE   *       IF1414.2
-000800*                                                         *       IF1414.2
-000900***********************************************************       IF1414.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
 001000 ENVIRONMENT DIVISION.                                            IF1414.2
 001100 CONFIGURATION SECTION.                                           IF1414.2
 001200 SOURCE-COMPUTER.                                                 IF1414.2
@@ -23,9 +23,9 @@
 002300 01  PRINT-REC PICTURE X(120).                                    IF1414.2
 002400 01  DUMMY-RECORD PICTURE X(120).                                 IF1414.2
 002500 WORKING-STORAGE SECTION.                                         IF1414.2
-002600***********************************************************       IF1414.2
-002700* Variables specific to the Intrinsic Function Test IF141A*       IF1414.2
-002800***********************************************************       IF1414.2
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 01  A                   PIC S9(10)          VALUE 5.             IF1414.2
 003000 01  B                   PIC S9(10)          VALUE 7.             IF1414.2
 003100 01  C                   PIC S9(10)          VALUE -4.            IF1414.2
@@ -44,9 +44,9 @@
 004400 01  WS-NUM              PIC S9(5)V9(6).                          IF1414.2
 004500 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1414.2
 004600 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1414.2
-004700*                                                                 IF1414.2
-004800**********************************************************        IF1414.2
-004900*                                                                 IF1414.2
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
 005000 01  TEST-RESULTS.                                                IF1414.2
 005100     02 FILLER                   PIC X      VALUE SPACE.          IF1414.2
 005200     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1414.2
@@ -340,16 +340,16 @@
 034000 BAIL-OUT-EX. EXIT.                                               IF1414.2
 034100 CCVS1-EXIT.                                                      IF1414.2
 034200     EXIT.                                                        IF1414.2
-034300********************************************************          IF1414.2
-034400*                                                      *          IF1414.2
-034500*    Intrinsic Function Tests     IF141A - VARIANCE    *          IF1414.2
-034600*                                                      *          IF1414.2
-034700********************************************************          IF1414.2
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
+034600*                                                                         
+034700*                                                                         
 034800 SECT-IF141A SECTION.                                             IF1414.2
 034900 F-VARIANCE-INFO.                                                 IF1414.2
 035000     MOVE     "See ref. A-74 2.45" TO ANSI-REFERENCE.             IF1414.2
 035100     MOVE     "VARIANCE Function"     TO FEATURE.                 IF1414.2
-035200*****************TEST (a) - SIMPLE TEST*****************          IF1414.2
+035200*                                                                         
 035300 F-VARIANCE-01.                                                   IF1414.2
 035400     MOVE ZERO TO WS-NUM.                                         IF1414.2
 035500     MOVE  48.6865 TO MIN-RANGE.                                  IF1414.2
@@ -371,7 +371,7 @@
 037100 F-VARIANCE-WRITE-01.                                             IF1414.2
 037200     MOVE "F-VARIANCE-01" TO PAR-NAME.                            IF1414.2
 037300     PERFORM  PRINT-DETAIL.                                       IF1414.2
-037400*****************TEST (b) - SIMPLE TEST*****************          IF1414.2
+037400*                                                                         
 037500 F-VARIANCE-02.                                                   IF1414.2
 037600     EVALUATE FUNCTION VARIANCE(3.9, -0.3, 8.7, 100.2)            IF1414.2
 037700     WHEN  1741.70 THRU  1741.77                                  IF1414.2
@@ -385,7 +385,7 @@
 038500 F-VARIANCE-WRITE-02.                                             IF1414.2
 038600     MOVE "F-VARIANCE-02" TO PAR-NAME.                            IF1414.2
 038700     PERFORM  PRINT-DETAIL.                                       IF1414.2
-038800*****************TEST (c) - SIMPLE TEST*****************          IF1414.2
+038800*                                                                         
 038900 F-VARIANCE-03.                                                   IF1414.2
 039000     MOVE  27.2494 TO MIN-RANGE.                                  IF1414.2
 039100     MOVE  27.2505 TO MAX-RANGE.                                  IF1414.2
@@ -402,7 +402,7 @@
 040200 F-VARIANCE-WRITE-03.                                             IF1414.2
 040300     MOVE "F-VARIANCE-03" TO PAR-NAME.                            IF1414.2
 040400     PERFORM  PRINT-DETAIL.                                       IF1414.2
-040500*****************TEST (d) - SIMPLE TEST*****************          IF1414.2
+040500*                                                                         
 040600 F-VARIANCE-04.                                                   IF1414.2
 040700     MOVE ZERO TO WS-NUM.                                         IF1414.2
 040800     MOVE  283.728 TO MIN-RANGE.                                  IF1414.2
@@ -424,7 +424,7 @@
 042400 F-VARIANCE-WRITE-04.                                             IF1414.2
 042500     MOVE "F-VARIANCE-04" TO PAR-NAME.                            IF1414.2
 042600     PERFORM  PRINT-DETAIL.                                       IF1414.2
-042700*****************TEST (e) - SIMPLE TEST*****************          IF1414.2
+042700*                                                                         
 042800 F-VARIANCE-05.                                                   IF1414.2
 042900     MOVE ZERO TO WS-NUM.                                         IF1414.2
 043000     MOVE  94.6981 TO MIN-RANGE.                                  IF1414.2
@@ -447,7 +447,7 @@
 044700 F-VARIANCE-WRITE-05.                                             IF1414.2
 044800     MOVE "F-VARIANCE-05" TO PAR-NAME.                            IF1414.2
 044900     PERFORM  PRINT-DETAIL.                                       IF1414.2
-045000*****************TEST (f) - SIMPLE TEST*****************          IF1414.2
+045000*                                                                         
 045100 F-VARIANCE-06.                                                   IF1414.2
 045200     MOVE ZERO TO WS-NUM.                                         IF1414.2
 045300     MOVE  156.194 TO MIN-RANGE.                                  IF1414.2
@@ -470,7 +470,7 @@
 047000 F-VARIANCE-WRITE-06.                                             IF1414.2
 047100     MOVE "F-VARIANCE-06" TO PAR-NAME.                            IF1414.2
 047200     PERFORM  PRINT-DETAIL.                                       IF1414.2
-047300*****************TEST (g) - SIMPLE TEST*****************          IF1414.2
+047300*                                                                         
 047400 F-VARIANCE-07.                                                   IF1414.2
 047500     MOVE ZERO TO WS-NUM.                                         IF1414.2
 047600     MOVE  4.66657 TO MIN-RANGE.                                  IF1414.2
@@ -493,7 +493,7 @@
 049300 F-VARIANCE-WRITE-07.                                             IF1414.2
 049400     MOVE "F-VARIANCE-07" TO PAR-NAME.                            IF1414.2
 049500     PERFORM  PRINT-DETAIL.                                       IF1414.2
-049600*****************TEST (h) - SIMPLE TEST*****************          IF1414.2
+049600*                                                                         
 049700 F-VARIANCE-08.                                                   IF1414.2
 049800     MOVE ZERO TO WS-NUM.                                         IF1414.2
 049900     MOVE  2.66661 TO MIN-RANGE.                                  IF1414.2
@@ -516,7 +516,7 @@
 051600 F-VARIANCE-WRITE-08.                                             IF1414.2
 051700     MOVE "F-VARIANCE-08" TO PAR-NAME.                            IF1414.2
 051800     PERFORM  PRINT-DETAIL.                                       IF1414.2
-051900*****************TEST (i) - SIMPLE TEST*****************          IF1414.2
+051900*                                                                         
 052000 F-VARIANCE-09.                                                   IF1414.2
 052100     MOVE ZERO TO WS-NUM.                                         IF1414.2
 052200     MOVE 5.35989 TO MIN-RANGE.                                   IF1414.2
@@ -538,7 +538,7 @@
 053800 F-VARIANCE-WRITE-09.                                             IF1414.2
 053900     MOVE "F-VARIANCE-09" TO PAR-NAME.                            IF1414.2
 054000     PERFORM  PRINT-DETAIL.                                       IF1414.2
-054100*****************TEST (k) - SIMPLE TEST*****************          IF1414.2
+054100*                                                                         
 054200 F-VARIANCE-11.                                                   IF1414.2
 054300     MOVE ZERO TO WS-NUM.                                         IF1414.2
 054400     MOVE -0.000020 TO MIN-RANGE.                                 IF1414.2
@@ -560,7 +560,7 @@
 056000 F-VARIANCE-WRITE-11.                                             IF1414.2
 056100     MOVE "F-VARIANCE-11" TO PAR-NAME.                            IF1414.2
 056200     PERFORM  PRINT-DETAIL.                                       IF1414.2
-056300*****************TEST (a) - COMPLEX TEST****************          IF1414.2
+056300*                                                                         
 056400 F-VARIANCE-12.                                                   IF1414.2
 056500     MOVE ZERO TO WS-NUM.                                         IF1414.2
 056600     MOVE 78.9968 TO MIN-RANGE.                                   IF1414.2
@@ -582,7 +582,7 @@
 058200 F-VARIANCE-WRITE-12.                                             IF1414.2
 058300     MOVE "F-VARIANCE-12" TO PAR-NAME.                            IF1414.2
 058400     PERFORM  PRINT-DETAIL.                                       IF1414.2
-058500*****************TEST (b) - COMPLEX TEST****************          IF1414.2
+058500*                                                                         
 058600 F-VARIANCE-13.                                                   IF1414.2
 058700     MOVE ZERO TO WS-NUM.                                         IF1414.2
 058800     MOVE  139.234 TO MIN-RANGE.                                  IF1414.2
@@ -604,7 +604,7 @@
 060400 F-VARIANCE-WRITE-13.                                             IF1414.2
 060500     MOVE "F-VARIANCE-13" TO PAR-NAME.                            IF1414.2
 060600     PERFORM  PRINT-DETAIL.                                       IF1414.2
-060700*****************TEST (c) - COMPLEX TEST****************          IF1414.2
+060700*                                                                         
 060800 F-VARIANCE-14.                                                   IF1414.2
 060900     MOVE ZERO TO WS-NUM.                                         IF1414.2
 061000     MOVE  374.658 TO MIN-RANGE.                                  IF1414.2
@@ -626,7 +626,7 @@
 062600 F-VARIANCE-WRITE-14.                                             IF1414.2
 062700     MOVE "F-VARIANCE-14" TO PAR-NAME.                            IF1414.2
 062800     PERFORM  PRINT-DETAIL.                                       IF1414.2
-062900*****************TEST (d) - COMPLEX TEST****************          IF1414.2
+062900*                                                                         
 063000 F-VARIANCE-15.                                                   IF1414.2
 063100     MOVE ZERO TO WS-NUM.                                         IF1414.2
 063200     MOVE 0.999960 TO MIN-RANGE.                                  IF1414.2
@@ -649,7 +649,7 @@
 064900 F-VARIANCE-WRITE-15.                                             IF1414.2
 065000     MOVE "F-VARIANCE-15" TO PAR-NAME.                            IF1414.2
 065100     PERFORM  PRINT-DETAIL.                                       IF1414.2
-065200*****************TEST (e) - COMPLEX TEST****************          IF1414.2
+065200*                                                                         
 065300 F-VARIANCE-16.                                                   IF1414.2
 065400     MOVE ZERO TO WS-NUM.                                         IF1414.2
 065500     MOVE -0.000040 TO MIN-RANGE.                                 IF1414.2
@@ -672,7 +672,7 @@
 067200 F-VARIANCE-WRITE-16.                                             IF1414.2
 067300     MOVE "F-VARIANCE-16" TO PAR-NAME.                            IF1414.2
 067400     PERFORM  PRINT-DETAIL.                                       IF1414.2
-067500*****************SPECIAL PERFORM TEST**********************       IF1414.2
+067500*                                                                         
 067600 F-VARIANCE-17.                                                   IF1414.2
 067700     PERFORM F-VARIANCE-TEST-17                                   IF1414.2
 067800       UNTIL FUNCTION VARIANCE(1, 1, ARG3) > 3.                   IF1414.2
@@ -686,7 +686,7 @@
 068600 F-VARIANCE-WRITE-17.                                             IF1414.2
 068700     MOVE "F-VARIANCE-17" TO PAR-NAME.                            IF1414.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1414.2
-068900********************END OF TESTS***************                   IF1414.2
+068900*                                                                         
 069000 CCVS-EXIT SECTION.                                               IF1414.2
 069100 CCVS-999999.                                                     IF1414.2
 069200     GO TO CLOSE-FILES.                                           IF1414.2

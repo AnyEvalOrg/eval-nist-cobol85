@@ -24,7 +24,7 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-7-1               WRONGLY AFFECTED BY SIZE ERROR                                
                                                                                                                         
                                      COMPUTED=  000000000000000000                                                      
-                                     CORRECT =  000000000000040000   V1-81 6.11.4 GR2                                   
+                                     CORRECT =  000000000000100000   V1-81 6.11.4 GR2                                   
                                                                                                                         
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-7-2                                                                             
  DIVIDE INTO GIVING   PASS  DIV-TEST-F2-8-1                                                                             
@@ -35,12 +35,12 @@ TEST RESULT OF NC172A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-10-2              ON SIZE ERROR SHOULD NOT BE EXECUTED                          
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = T                     V1-81 6.11.4 GR2                                   
+                                     CORRECT = 4                     V1-81 6.11.4 GR2                                   
                                                                                                                         
  DIVIDE INTO GIVING   FAIL* DIV-TEST-F2-11                                                                              
                                                                                                                         
                                      COMPUTED=  000000990.000000000                                                     
-                                     CORRECT =  000000290.000000000  V1-81 6.11.4 GR2                                                                                                                                                           
+                                     CORRECT =  000004990.000000000  V1-81 6.11.4 GR2                                                                                                                                                           
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         

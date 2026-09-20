@@ -17,22 +17,10 @@ TEST RESULT OF NC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT - QUAL.     PASS  SUBTRACT-TEST-F2-1                                                                          
  MOVE CORRESPONDING   PASS  MOV-TEST-F2-1                                                                               
  MOVE CORRESPONDING   PASS  MOV-TEST-F2-2                                                                               
- MOVE CORRESPONDING   FAIL* MOV-TEST-F2-3-1    .01        DE-EDITING MOVE ERROR                                         
-                                                                                                                        
-                                     COMPUTED= -000000123.450000000                                                     
-                                     CORRECT = -000000120.450000000  VI-104 6.18.4 GR4(b)                               
-                                                                                                                        
+ MOVE CORRESPONDING   PASS  MOV-TEST-F2-3-1    .01                                                                      
  MOVE CORRESPONDING   PASS  MOV-TEST-F2-3-2    .02                                                                      
- MOVE CORRESPONDING   FAIL* MOV-TEST-F2-4-1    .01        DE-EDITING MOVE ERROR                                         
-                                                                                                                        
-                                     COMPUTED= -000000042.987600000                                                     
-                                     CORRECT = -000000002.987600000  VI-104 6.18.4 GR4(b)                               
-                                                                                                                        
- MOVE CORRESPONDING   FAIL* MOV-TEST-F2-4-2    .02        EDITED DATA MOVE ERROR                                        
-                                                                                                                        
-                                     COMPUTED= -42 .98 76/00                                                            
-                                     CORRECT = 742 .98 76/00         VI-104 6.18.4 GR4(b)                               
-                                                                                                                        
+ MOVE CORRESPONDING   PASS  MOV-TEST-F2-4-1    .01                                                                      
+ MOVE CORRESPONDING   PASS  MOV-TEST-F2-4-2    .02                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -40,8 +28,8 @@ TEST RESULT OF NC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC222A                                                
                                                                                                                         
-                                                    005 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    008 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

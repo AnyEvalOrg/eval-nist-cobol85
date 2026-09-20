@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1084.2
 000300     IF108A.                                                      IF1084.2
 000400                                                                  IF1084.2
-000500***********************************************************       IF1084.2
-000600*                                                         *       IF1084.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1084.2
-000800* It contains tests for the Intrinsic Function            *       IF1084.2
-000900* DATE-OF-INTEGER.                                        *       IF1084.2
-001000*                                                         *       IF1084.2
-001100***********************************************************       IF1084.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1084.2
 001300 CONFIGURATION SECTION.                                           IF1084.2
 001400 SOURCE-COMPUTER.                                                 IF1084.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1084.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1084.2
 002700 WORKING-STORAGE SECTION.                                         IF1084.2
-002800***********************************************************       IF1084.2
-002900* Variables specific to the Intrinsic Function Test IF108A*       IF1084.2
-003000***********************************************************       IF1084.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)     VALUE 400.                IF1084.2
 003200 01  C                   PIC S9(10)     VALUE 300.                IF1084.2
 003300 01  D                   PIC S9(10)     VALUE 1.                  IF1084.2
@@ -36,9 +36,9 @@
 003600     02 IND OCCURS 5 TIMES PIC 9.                                 IF1084.2
 003700 01  TEMP                PIC S9(5)V9(5).                          IF1084.2
 003800 01  WS-DATE             PIC 9(8).                                IF1084.2
-003900*                                                                 IF1084.2
-004000**********************************************************        IF1084.2
-004100*                                                                 IF1084.2
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 01  TEST-RESULTS.                                                IF1084.2
 004300     02 FILLER                   PIC X      VALUE SPACE.          IF1084.2
 004400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1084.2
@@ -298,16 +298,16 @@
 029800 BAIL-OUT-EX. EXIT.                                               IF1084.2
 029900 CCVS1-EXIT.                                                      IF1084.2
 030000     EXIT.                                                        IF1084.2
-030100********************************************************          IF1084.2
-030200*                                                      *          IF1084.2
-030300*    Intrinsic Function Test  IF108A - DATE-OF-INTEGER *          IF1084.2
-030400*                                                      *          IF1084.2
-030500********************************************************          IF1084.2
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
+030500*                                                                         
 030600 SECT-IF108A SECTION.                                             IF1084.2
 030700 F-DATEOFINT-INFO.                                                IF1084.2
 030800     MOVE     "See ref. A-41 2.12" TO ANSI-REFERENCE.             IF1084.2
 030900     MOVE     "DATE-OF-INTEGER"     TO FEATURE.                   IF1084.2
-031000*****************TEST (a) ******************************          IF1084.2
+031000*                                                                         
 031100 F-DATEOFINT-01.                                                  IF1084.2
 031200     MOVE ZERO TO WS-DATE.                                        IF1084.2
 031300 F-DATEOFINT-TEST-01.                                             IF1084.2
@@ -325,7 +325,7 @@
 032500 F-DATEOFINT-WRITE-01.                                            IF1084.2
 032600     MOVE "F-DATEOFINT-01" TO PAR-NAME.                           IF1084.2
 032700     PERFORM  PRINT-DETAIL.                                       IF1084.2
-032800*****************TEST (b) ******************************          IF1084.2
+032800*                                                                         
 032900 F-DATEOFINT-TEST-02.                                             IF1084.2
 033000     EVALUATE FUNCTION DATE-OF-INTEGER(A)                         IF1084.2
 033100     WHEN     16020204                                            IF1084.2
@@ -339,7 +339,7 @@
 033900 F-DATEOFINT-WRITE-02.                                            IF1084.2
 034000     MOVE "F-DATEOFINT-02" TO PAR-NAME.                           IF1084.2
 034100     PERFORM  PRINT-DETAIL.                                       IF1084.2
-034200*****************TEST (c) ******************************          IF1084.2
+034200*                                                                         
 034300 F-DATEOFINT-TEST-03.                                             IF1084.2
 034400     IF FUNCTION DATE-OF-INTEGER(IND(1)) = 16010104 THEN          IF1084.2
 034500                        PERFORM PASS                              IF1084.2
@@ -352,7 +352,7 @@
 035200 F-DATEOFINT-WRITE-03.                                            IF1084.2
 035300     MOVE "F-DATEOFINT-03" TO PAR-NAME.                           IF1084.2
 035400     PERFORM  PRINT-DETAIL.                                       IF1084.2
-035500*****************TEST (d) ******************************          IF1084.2
+035500*                                                                         
 035600 F-DATEOFINT-04.                                                  IF1084.2
 035700     MOVE ZERO TO WS-DATE.                                        IF1084.2
 035800 F-DATEOFINT-TEST-04.                                             IF1084.2
@@ -370,7 +370,7 @@
 037000 F-DATEOFINT-WRITE-04.                                            IF1084.2
 037100     MOVE "F-DATEOFINT-04" TO PAR-NAME.                           IF1084.2
 037200     PERFORM  PRINT-DETAIL.                                       IF1084.2
-037300*****************TEST (e) ******************************          IF1084.2
+037300*                                                                         
 037400 F-DATEOFINT-05.                                                  IF1084.2
 037500     MOVE ZERO TO WS-DATE.                                        IF1084.2
 037600 F-DATEOFINT-TEST-05.                                             IF1084.2
@@ -388,15 +388,15 @@
 038800 F-DATEOFINT-WRITE-05.                                            IF1084.2
 038900     MOVE "F-DATEOFINT-05" TO PAR-NAME.                           IF1084.2
 039000     PERFORM  PRINT-DETAIL.                                       IF1084.2
-039100*****************TEST (f) ******************************          IF1084.2
+039100*                                                                         
 039200 F-DATEOFINT-06.                                                  IF1084.2
 039300     MOVE ZERO TO WS-DATE.                                        IF1084.2
 039400 F-DATEOFINT-TEST-06.                                             IF1084.2
 039500     COMPUTE WS-DATE = FUNCTION DATE-OF-INTEGER(C).               IF1084.2
-039600     IF WS-DATE = 16011427 THEN                                   IF1084.2
+039600     IF WS-DATE = 16011026 THEN                                   IF1084.2
 039700                        PERFORM PASS                              IF1084.2
 039800     ELSE                                                         IF1084.2
-039900                        MOVE  16011427  TO CORRECT-N              IF1084.2
+039900                        MOVE  16011026  TO CORRECT-N              IF1084.2
 040000                        MOVE WS-DATE TO COMPUTED-N                IF1084.2
 040100                        PERFORM FAIL.                             IF1084.2
 040200     GO TO F-DATEOFINT-WRITE-06.                                  IF1084.2
@@ -406,15 +406,15 @@
 040600 F-DATEOFINT-WRITE-06.                                            IF1084.2
 040700     MOVE "F-DATEOFINT-06" TO PAR-NAME.                           IF1084.2
 040800     PERFORM  PRINT-DETAIL.                                       IF1084.2
-040900*****************TEST (g) ******************************          IF1084.2
+040900*                                                                         
 041000 F-DATEOFINT-07.                                                  IF1084.2
 041100     MOVE ZERO TO WS-DATE.                                        IF1084.2
 041200 F-DATEOFINT-TEST-07.                                             IF1084.2
 041300     COMPUTE WS-DATE = FUNCTION DATE-OF-INTEGER(365).             IF1084.2
-041400     IF WS-DATE = 16011241 THEN                                   IF1084.2
+041400     IF WS-DATE = 16019231 THEN                                   IF1084.2
 041500                        PERFORM PASS                              IF1084.2
 041600     ELSE                                                         IF1084.2
-041700                        MOVE  16011241  TO CORRECT-N              IF1084.2
+041700                        MOVE  16019231  TO CORRECT-N              IF1084.2
 041800                        MOVE WS-DATE TO COMPUTED-N                IF1084.2
 041900                        PERFORM FAIL.                             IF1084.2
 042000     GO TO F-DATEOFINT-WRITE-07.                                  IF1084.2
@@ -424,7 +424,7 @@
 042400 F-DATEOFINT-WRITE-07.                                            IF1084.2
 042500     MOVE "F-DATEOFINT-07" TO PAR-NAME.                           IF1084.2
 042600     PERFORM  PRINT-DETAIL.                                       IF1084.2
-042700*****************TEST (h) ******************************          IF1084.2
+042700*                                                                         
 042800 F-DATEOFINT-08.                                                  IF1084.2
 042900     MOVE ZERO TO WS-DATE.                                        IF1084.2
 043000 F-DATEOFINT-TEST-08.                                             IF1084.2
@@ -442,16 +442,16 @@
 044200 F-DATEOFINT-WRITE-08.                                            IF1084.2
 044300     MOVE "F-DATEOFINT-08" TO PAR-NAME.                           IF1084.2
 044400     PERFORM  PRINT-DETAIL.                                       IF1084.2
-044500*****************TEST (i) ******************************          IF1084.2
+044500*                                                                         
 044600 F-DATEOFINT-09.                                                  IF1084.2
 044700     MOVE ZERO TO WS-DATE.                                        IF1084.2
 044800 F-DATEOFINT-TEST-09.                                             IF1084.2
 044900     COMPUTE WS-DATE = FUNCTION DATE-OF-INTEGER(D) +              IF1084.2
 045000                    FUNCTION DATE-OF-INTEGER(D).                  IF1084.2
-045100     IF WS-DATE = 32040202 THEN                                   IF1084.2
+045100     IF WS-DATE = 32720202 THEN                                   IF1084.2
 045200                        PERFORM PASS                              IF1084.2
 045300     ELSE                                                         IF1084.2
-045400                        MOVE  32040202  TO CORRECT-N              IF1084.2
+045400                        MOVE  32720202  TO CORRECT-N              IF1084.2
 045500                        MOVE WS-DATE TO COMPUTED-N                IF1084.2
 045600                        PERFORM FAIL.                             IF1084.2
 045700     GO TO F-DATEOFINT-WRITE-09.                                  IF1084.2
@@ -462,7 +462,7 @@
 046200     MOVE "F-DATEOFINT-09" TO PAR-NAME.                           IF1084.2
 046300     PERFORM  PRINT-DETAIL.                                       IF1084.2
 046400                                                                  IF1084.2
-046500***************** SPECIAL TEST 1 ***********************          IF1084.2
+046500*                                                                         
 046600                                                                  IF1084.2
 046700 F-DATEOFINT-10.                                                  IF1084.2
 046800     MOVE 1 TO ARG1.                                              IF1084.2
@@ -473,17 +473,17 @@
 047300     ELSE                                                         IF1084.2
 047400                            PERFORM FAIL.                         IF1084.2
 047500     GO TO F-DATEOFINT-WRITE-10.                                  IF1084.2
-047600*                                                                 IF1084.2
+047600*                                                                         
 047700 F-DATEOFINT-TEST-10.                                             IF1084.2
 047800     COMPUTE ARG1 = ARG1 + 1.                                     IF1084.2
-047900*                                                                 IF1084.2
+047900*                                                                         
 048000 F-DATEOFINT-DELETE-10.                                           IF1084.2
 048100     PERFORM  DE-LETE.                                            IF1084.2
 048200     GO TO    F-DATEOFINT-WRITE-10.                               IF1084.2
 048300 F-DATEOFINT-WRITE-10.                                            IF1084.2
 048400     MOVE "F-DATEOFINT-10" TO PAR-NAME.                           IF1084.2
 048500     PERFORM  PRINT-DETAIL.                                       IF1084.2
-048600*******************END OF TESTS**************************         IF1084.2
+048600*                                                                         
 048700 CCVS-EXIT SECTION.                                               IF1084.2
 048800 CCVS-999999.                                                     IF1084.2
 048900     GO TO CLOSE-FILES.                                           IF1084.2

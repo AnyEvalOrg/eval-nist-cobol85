@@ -1,45 +1,45 @@
 000100 IDENTIFICATION DIVISION.                                         ST1464.2
 000200 PROGRAM-ID.                                                      ST1464.2
 000300     ST146A.                                                      ST1464.2
-000400****************************************************************  ST1464.2
-000500*                                                              *  ST1464.2
-000600*    VALIDATION FOR:-                                          *  ST1464.2
-000700*                                                              *  ST1464.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1464.2
-000900*                                                              *  ST1464.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1464.2
-001100*                                                              *  ST1464.2
-001200****************************************************************  ST1464.2
-001300*                                                              *  ST1464.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1464.2
-001500*                                                              *  ST1464.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1464.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1464.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1464.2
-001900*                                                              *  ST1464.2
-002000****************************************************************  ST1464.2
-002100*                                                                 ST1464.2
-002200*    ST146A TESTS OPERATIONS INVOLVING FORMAT 2  OCCURS CLAUSES,  ST1464.2
-002300*    I.E.  ...OCCURS INTEGER-1 TO INTEGER-2 TIMES DEPENDING ON    ST1464.2
-002400*          DATA-NAME-1 ....                                       ST1464.2
-002500*    X3.23-1976, PAGE III-4, 2.1.4(3) STATES, IN PART, THAT       ST1464.2
-002600*    INTEGER-2 REPRESENTS THE MAXIMUM NUMBER OF OCCURRENCES AND   ST1464.2
-002700*    THAT ONLY THE NUMBER OF OCCURRENCES, AND NOT THE ITEM LENGTH,ST1464.2
-002800*    IS VARIABLE.  WHENEVER THE PARENT GROUP ITEM IS REFERENCED,  ST1464.2
-002900*    ONLY THE PORTION OF THE TABLE SPECIFIED BY THE CURRENT VALUE ST1464.2
-003000*    OF DATA-NAME-1 WILL BE USED IN THE OPERATION.                ST1464.2
-003100*                                                                 ST1464.2
-003200*    THE SORT VERB IS EXERCIZED BUT NOT CHECKED FOR ITS           ST1464.2
-003300*    CAPABILITY TO MEANINGFULLY SORT A FILE.  INSTEAD, THE        ST1464.2
-003400*    OBJECT OF ST146A IS TO CHECK THE BEHAVIOR OF VARIABLE        ST1464.2
-003500*    LENGTH TABLES BEING HANDLED IN THE IMPLICIT MOVES            ST1464.2
-003600*    RESULTING FROM                                               ST1464.2
-003700*        RELEASE ... FROM ...                                     ST1464.2
-003800*            AND                                                  ST1464.2
-003900*        RETURN ... INTO ...                                      ST1464.2
-004000*            STATEMENTS.                                          ST1464.2
-004100*                                                                 ST1464.2
-004200*                                                                 ST1464.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
 004300 ENVIRONMENT DIVISION.                                            ST1464.2
 004400 CONFIGURATION SECTION.                                           ST1464.2
 004500 SOURCE-COMPUTER.                                                 ST1464.2
@@ -351,7 +351,7 @@
 036300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1464.2
 036400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1464.2
 036500      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1464.2
-036600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1464.2
+036600*                                                                         
 036700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1464.2
 036800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1464.2
 036900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1464.2

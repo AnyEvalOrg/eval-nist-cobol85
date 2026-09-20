@@ -1,9 +1,9 @@
 000100 IDENTIFICATION DIVISION.                                         SQ3024.2
 000200 PROGRAM-ID.                                                      SQ3024.2
 000300     SQ302M.                                                      SQ3024.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF                      SQ3024.2
-000500*OBSOLETE FEATURES THAT ARE USED IN MINIMUM SUBSET                SQ3024.2
-000600*SEQUENTIAL INPUT-OUTPUT.                                         SQ3024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
 000700 ENVIRONMENT DIVISION.                                            SQ3024.2
 000800 CONFIGURATION SECTION.                                           SQ3024.2
 000900 SOURCE-COMPUTER.                                                 SQ3024.2
@@ -27,20 +27,20 @@
 002700                                                                  SQ3024.2
 002800 I-O-CONTROL.                                                     SQ3024.2
 002900     MULTIPLE FILE TFIL.                                          SQ3024.2
-003000*Message expected for above statement: OBSOLETE                   SQ3024.2
+003000*                                                                         
 003100                                                                  SQ3024.2
 003200 DATA DIVISION.                                                   SQ3024.2
 003300 FILE SECTION.                                                    SQ3024.2
 003400 FD TFIL                                                          SQ3024.2
 003500     LABEL RECORDS STANDARD                                       SQ3024.2
-003600*Message expected for above statement: OBSOLETE                   SQ3024.2
+003600*                                                                         
 003700     VALUE OF                                                     SQ3024.2
 003800     OCLABELID                                                    SQ3024.2
 003900     IS                                                           SQ3024.2
 004000     "OCDUMMY"                                                    SQ3024.2
-004100*Message expected for above statement: OBSOLETE                   SQ3024.2
+004100*                                                                         
 004200     DATA RECORDS ARE FREC.                                       SQ3024.2
-004300*Message expected for above statement: OBSOLETE                   SQ3024.2
+004300*                                                                         
 004400                                                                  SQ3024.2
 004500 01 FREC.                                                         SQ3024.2
 004600     03 RKEY PIC 9(8).                                            SQ3024.2
@@ -65,4 +65,4 @@
 006500     DISPLAY "THIS IS A DUMMY PARAGRAPH".                         SQ3024.2
 006600     STOP RUN.                                                    SQ3024.2
 006700                                                                  SQ3024.2
-006800*TOTAL NUMBER OF FLAGS EXPECTED = 4.                              SQ3024.2
+006800*                                                                         

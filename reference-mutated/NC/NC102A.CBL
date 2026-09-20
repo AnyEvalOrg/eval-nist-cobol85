@@ -2,28 +2,28 @@
 000200 PROGRAM-ID.                                                      NC1024.2
 000300     NC102A.                                                      NC1024.2
 000400                                                                  NC1024.2
-000500****************************************************************  NC1024.2
-000600*                                                              *  NC1024.2
-000700*    VALIDATION FOR:-                                          *  NC1024.2
-000800*                                                              *  NC1024.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1024.2
-001000*                                                              *  NC1024.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1024.2
-001200*                                                              *  NC1024.2
-001300****************************************************************  NC1024.2
-001400*                                                              *  NC1024.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1024.2
-001600*                                                              *  NC1024.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC1024.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC1024.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC1024.2
-002000*                                                              *  NC1024.2
-002100****************************************************************  NC1024.2
-002200*                                                                 NC1024.2
-002300*    THIS PROGRAM TESTS FORMATS 1, 2 AND 3 OF THE "PERFORM"       NC1024.2
-002400*    STATEMENT, FORMATS 1 AND 2 OF THE "GO" STATEMENT AND         NC1024.2
-002500*    THE "EXIT" STATEMENT.                                        NC1024.2
-002600*                                                                 NC1024.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1024.2
 002800 CONFIGURATION SECTION.                                           NC1024.2
 002900 SOURCE-COMPUTER.                                                 NC1024.2
@@ -313,7 +313,7 @@
 031500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1024.2
 031600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1024.2
 031700      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1024.2
-031800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1024.2
+031800*                                                                         
 031900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1024.2
 032000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1024.2
 032100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1024.2
@@ -413,9 +413,9 @@
 041500     GO TO    GO--B                                               NC1024.2
 041600              GO--D                                               NC1024.2
 041700              GO--C DEPENDING ON GO-TO-DEPEND.                    NC1024.2
-041800*    NOTE GO--TEST-F2-1 THRU GO--E TEST THE GO TO                 NC1024.2
-041900*    DEPENDING OPTION FOR GO-TO-DEPEND EQUAL TO 0,1,3,2,4.        NC1024.2
-042000*    NOTE INITIAL VALUE OF GO-TO-DEPEND IS ZERO.                  NC1024.2
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
 042100     GO TO    GO--A.                                              NC1024.2
 042200 GO--DELETE-F2-1.                                                 NC1024.2
 042300     MOVE "GO--TEST-F2-1" TO PAR-NAME.                            NC1024.2
@@ -432,8 +432,8 @@
 043400     PERFORM  FAIL                                                NC1024.2
 043500              MOVE 1 TO GO-TO-DEPEND                              NC1024.2
 043600              GO TO GO--TEST-F2-1.                                NC1024.2
-043700*    NOTE CONTROL SHOULD FALL THRU TO GO--A FOR GO-TO-DEPEND      NC1024.2
-043800*    EQUAL TO 0, 4.                                               NC1024.2
+043700*                                                                         
+043800*                                                                         
 043900 GO--B.                                                           NC1024.2
 044000     MOVE "GO--B" TO PAR-NAME.                                    NC1024.2
 044100     IF       GO-TO-DEPEND NOT EQUAL TO 1                         NC1024.2
@@ -473,7 +473,7 @@
 047500     MOVE    "V1-88 6.14.4 GR1"  TO ANSI-REFERENCE.               NC1024.2
 047600 GO--TEST-F1-2.                                                   NC1024.2
 047700     GO TO    GO--PASS-F1-2.                                      NC1024.2
-047800*    NOTE THAT GO--PASS-F1-2 IS A SECTION-NAME.                   NC1024.2
+047800*                                                                         
 047900     PERFORM  FAIL.                                               NC1024.2
 048000     GO TO    GO--WRITE-F1-2.                                     NC1024.2
 048100 GO--DELETE-F1-2.                                                 NC1024.2
@@ -486,15 +486,15 @@
 048800     MOVE "GO TO" TO FEATURE.                                     NC1024.2
 048900     MOVE "GO--TEST-F1-2" TO PAR-NAME.                            NC1024.2
 049000     PERFORM PRINT-DETAIL.                                        NC1024.2
-049100*                                                                 NC1024.2
-049200*                                                                 NC1024.2
+049100*                                                                         
+049200*                                                                         
 049300 GO--INIT-F2-2.                                                   NC1024.2
 049400     MOVE    "V1-88 6.14.4 GR3"  TO ANSI-REFERENCE.               NC1024.2
 049500     MOVE    1 TO GO-TO-DEEP.                                     NC1024.2
 049600 GO--TEST-F2-2.                                                   NC1024.2
 049700     GO TO   GO--PASS-F2-2                                        NC1024.2
 049800             GO--FAIL-F2-2 DEPENDING ON GO-TO-DEEP.               NC1024.2
-049900*    NOTE THAT GO--PASS-F2-2 IS A SECTION-NAME.                   NC1024.2
+049900*                                                                         
 050000     GO TO   GO--FAIL-F2-2.                                       NC1024.2
 050100 GO--DELETE-F2-2.                                                 NC1024.2
 050200     PERFORM DE-LETE.                                             NC1024.2
@@ -584,8 +584,8 @@
 058600 GO--WRITE-F2-4.                                                  NC1024.2
 058700     MOVE     "GO--TEST-F2-4 " TO PAR-NAME.                       NC1024.2
 058800     PERFORM  PRINT-DETAIL.                                       NC1024.2
-058900*                                                                 NC1024.2
-059000*                                                                 NC1024.2
+058900*                                                                         
+059000*                                                                         
 059100 GO--INIT-F2-5.                                                   NC1024.2
 059200     MOVE    "V1-88 6.14.4 GR3"  TO ANSI-REFERENCE.               NC1024.2
 059300     MOVE     "87654321" TO GO-TABLE.                             NC1024.2
@@ -615,15 +615,15 @@
 061700 GO--WRITE-F2-5.                                                  NC1024.2
 061800     MOVE     "GO--TEST-F2-5 " TO PAR-NAME.                       NC1024.2
 061900     PERFORM  PRINT-DETAIL.                                       NC1024.2
-062000*                                                                 NC1024.2
-062100*                                                                 NC1024.2
+062000*                                                                         
+062100*                                                                         
 062200 GO--INIT-F2-6.                                                   NC1024.2
-062300*==--> SINGLE PROCEDURE GO DEPENDING <--==                        NC1024.2
+062300*                                                                         
 062400     MOVE    "V1-88 6.14.4 GR3"  TO ANSI-REFERENCE.               NC1024.2
 062500     MOVE    1 TO GO-TO-DEEP.                                     NC1024.2
 062600 GO--TEST-F2-6.                                                   NC1024.2
 062700     GO TO   GO--PASS-F2-6 DEPENDING ON GO-TO-DEEP.               NC1024.2
-062800*    NOTE THAT GO--PASS-F2-6 IS A SECTION-NAME.                   NC1024.2
+062800*                                                                         
 062900     GO TO   GO--FAIL-F2-6.                                       NC1024.2
 063000 GO--DELETE-F2-6.                                                 NC1024.2
 063100     PERFORM DE-LETE.                                             NC1024.2
@@ -641,11 +641,11 @@
 064300     MOVE "GO TO DEPENDING" TO FEATURE.                           NC1024.2
 064400     MOVE "GO--TEST-F2-6" TO PAR-NAME.                            NC1024.2
 064500     PERFORM PRINT-DETAIL.                                        NC1024.2
-064600*                                                                 NC1024.2
-064700*                                                                 NC1024.2
+064600*                                                                         
+064700*                                                                         
 064800 GO--INIT-F2-7.                                                   NC1024.2
 064900     MOVE    "V1-88 6.14.4 GR3"  TO ANSI-REFERENCE.               NC1024.2
-065000*    ==--> OPTIONAL "TO"  <--==                                   NC1024.2
+065000*                                                                         
 065100     MOVE   "87654321" TO GO-TABLE.                               NC1024.2
 065200     MOVE    0 TO GO-TO-DEEP.                                     NC1024.2
 065300 GO--TEST-F2-7-0.                                                 NC1024.2
@@ -673,8 +673,8 @@
 067500 GO--WRITE-F2-7.                                                  NC1024.2
 067600     MOVE     "GO--TEST-F2-7 " TO PAR-NAME.                       NC1024.2
 067700     PERFORM  PRINT-DETAIL.                                       NC1024.2
-067800*                                                                 NC1024.2
-067900*                                                                 NC1024.2
+067800*                                                                         
+067900*                                                                         
 068000 GO--INIT-F1-3.                                                   NC1024.2
 068100     MOVE    "V1-88 6.14.4 GR1"  TO ANSI-REFERENCE.               NC1024.2
 068200 GOTO-TEST-F1-3.                                                  NC1024.2
@@ -710,8 +710,8 @@
 071200     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             NC1024.2
 071300     MOVE    1 TO PERFORM-KEY.                                    NC1024.2
 071400 PFM-TEST-F1-1.                                                   NC1024.2
-071500*    NOTE THIS TEST IS FOR OPTION 1 AND TESTS SIMPLE OUT OF       NC1024.2
-071600*    LINE PERFORM.                                                NC1024.2
+071500*                                                                         
+071600*                                                                         
 071700     PERFORM PFM-A.                                               NC1024.2
 071800     IF      PERFORM1 EQUAL TO "ABC"                              NC1024.2
 071900             PERFORM PASS                                         NC1024.2
@@ -728,8 +728,8 @@
 073000     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             NC1024.2
 073100     MOVE    2 TO PERFORM-KEY.                                    NC1024.2
 073200 PFM-TEST-F1-2.                                                   NC1024.2
-073300*    NOTE THIS TEST IS DESIGNED TO TEST ENTERING A PROCEDURE      NC1024.2
-073400*    IN LINE WHICH IS ALSO REFERENCED BY AN OUT OF LINE PERFORM.  NC1024.2
+073300*                                                                         
+073400*                                                                         
 073500     GO TO    PFM-A.                                              NC1024.2
 073600 PFM-DELETE-F1-2.                                                 NC1024.2
 073700     PERFORM  DE-LETE.                                            NC1024.2
@@ -744,8 +744,8 @@
 074600              PERFORM FAIL                                        NC1024.2
 074700              PERFORM PRINT-DETAIL                                NC1024.2
 074800              GO TO PFM-TEST-F1-2.                                NC1024.2
-074900*    NOTE FOR PFM-TEST-F1-1 CONTROL SHOULD NOT BE TRANSFERRED     NC1024.2
-075000*    TO THIS PARAGRAPH BUT FOR PFM-TEST-F1-2 IT SHOULD BE.        NC1024.2
+074900*                                                                         
+075000*                                                                         
 075100     IF       PERFORM1 EQUAL TO "XYZ"                             NC1024.2
 075200              PERFORM PASS                                        NC1024.2
 075300              ELSE                                                NC1024.2
@@ -760,7 +760,7 @@
 076200 PFM-TEST-F2-1.                                                   NC1024.2
 076300     PERFORM PFM-C 3 TIMES.                                       NC1024.2
 076400     PERFORM PFM-C THREE TIMES.                                   NC1024.2
-076500*    NOTE THIS TEST IS FOR OPTION 2.                              NC1024.2
+076500*                                                                         
 076600     IF      PERFORM2 EQUAL TO 56                                 NC1024.2
 076700             PERFORM PASS                                         NC1024.2
 076800     ELSE                                                         NC1024.2
@@ -776,10 +776,10 @@
 077800     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             NC1024.2
 077900 PFM-TEST-F1-3.                                                   NC1024.2
 078000     PERFORM PFM-E THRU PFM-H.                                    NC1024.2
-078100*    NOTE THIS TEST IS FOR A NESTED PERFORM WITH THE INCLUDED     NC1024.2
-078200*    PERFORM TOTALLY INCLUDED IN THE SEQUENCE REFERENCED BY THE   NC1024.2
-078300*    FIRST PERFORM - IT ALSO TESTS THE EXIT VERB AND PERFORM      NC1024.2
-078400*    THRU.                                                        NC1024.2
+078100*                                                                         
+078200*                                                                         
+078300*                                                                         
+078400*                                                                         
 078500     IF       PERFORM1 NOT EQUAL TO "CSW"                         NC1024.2
 078600              MOVE "CSW" TO CORRECT-A                             NC1024.2
 078700              MOVE PERFORM1 TO COMPUTED-A                         NC1024.2
@@ -812,10 +812,10 @@
 081400              MOVE PERFORM1 TO COMPUTED-A                         NC1024.2
 081500              PERFORM FAIL                                        NC1024.2
 081600              GO TO PFM-WRITE-F1-4.                               NC1024.2
-081700     IF       PERFORM2 EQUAL TO 382                               NC1024.2
+081700     IF       PERFORM2 EQUAL TO 372                               NC1024.2
 081800              PERFORM PASS                                        NC1024.2
 081900     ELSE                                                         NC1024.2
-082000              MOVE 382 TO CORRECT-N                               NC1024.2
+082000              MOVE 372 TO CORRECT-N                               NC1024.2
 082100               MOVE PERFORM2 TO COMPUTED-N                        NC1024.2
 082200              PERFORM FAIL.                                       NC1024.2
 082300     GO TO    PFM-WRITE-F1-4.                                     NC1024.2
@@ -829,7 +829,7 @@
 083100     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             NC1024.2
 083200 PFM-TEST-F1-5.                                                   NC1024.2
 083300     PERFORM  PFM-N.                                              NC1024.2
-083400*    NOTE PFM-N IS A SECTION-NAME.                                NC1024.2
+083400*                                                                         
 083500     GO TO    PFM-WRITE-F1-5.                                     NC1024.2
 083600 PFM-DELETE-F1-5.                                                 NC1024.2
 083700     PERFORM  DE-LETE.                                            NC1024.2
@@ -841,7 +841,7 @@
 084300     MOVE    "V1-108 6.20.2"  TO ANSI-REFERENCE.                  NC1024.2
 084400 PFM-TEST-F2-2.                                                   NC1024.2
 084500     PERFORM  PFM-V THRU PFM-Z 5 TIMES.                           NC1024.2
-084600*        NOTE THESE ARE ALL EXIT PARAGRAPHS.                      NC1024.2
+084600*                                                                         
 084700     PERFORM  PASS.                                               NC1024.2
 084800     GO       TO PFM-WRITE-F2-2.                                  NC1024.2
 084900 PFM-DELETE-F2-2.                                                 NC1024.2
@@ -1001,7 +1001,7 @@
 100300 PFM-E-F1-8.                                                      NC1024.2
 100400     ADD      100000 TO P-COUNT.                                  NC1024.2
 100500 PFM-TESTT-F1-8.                                                  NC1024.2
-100600     IF       P-COUNT EQUAL TO 033333                             NC1024.2
+100600     IF       P-COUNT EQUAL TO 133133                             NC1024.2
 100700              PERFORM PASS GO TO PFM-WRITE-F1-8.                  NC1024.2
 100800     GO       TO PFM-FAIL-F1-8.                                   NC1024.2
 100900 PFM-DELETE-F1-8.                                                 NC1024.2
@@ -1009,7 +1009,7 @@
 101100     GO       TO PFM-WRITE-F1-8.                                  NC1024.2
 101200 PFM-FAIL-F1-8.                                                   NC1024.2
 101300     MOVE     P-COUNT TO COMPUTED-N.                              NC1024.2
-101400     MOVE     033333 TO CORRECT-N.                                NC1024.2
+101400     MOVE     133133 TO CORRECT-N.                                NC1024.2
 101500     PERFORM  FAIL.                                               NC1024.2
 101600 PFM-WRITE-F1-8.                                                  NC1024.2
 101700     MOVE "NESTED PERFORM      " TO FEATURE.                      NC1024.2
@@ -1064,9 +1064,9 @@
 106600     MOVE    "V1-111 6.20.4 GR10"  TO ANSI-REFERENCE.             NC1024.2
 106700 PFM-TEST-F1-10.                                                  NC1024.2
 106800     PERFORM  PFM-G-F1-10 THRU PFM-B-F1-10.                       NC1024.2
-106900*        NOTE PERFORM SECTION-NAME THRU PARAGRAPH-NAME -- SECOND  NC1024.2
-107000*             PROCEDURE-NAME PHYSICALLY PRECEEDS THE FIRST BUT    NC1024.2
-107100*             LOGICALLY FOLLOWS IT.                               NC1024.2
+106900*                                                                         
+107000*                                                                         
+107100*                                                                         
 107200     GO       TO PFM-WRITE-F1-10.                                 NC1024.2
 107300 PFM-DELETE-F1-10.                                                NC1024.2
 107400     PERFORM  DE-LETE.                                            NC1024.2
@@ -1090,10 +1090,10 @@
 109200     GO       TO PFM-E-F1-10.                                     NC1024.2
 109300 PFM-I-F1-10.                                                     NC1024.2
 109400     GO       TO PFM-D-F1-10.                                     NC1024.2
-109500*        NOTE SINCE THIS PARAGRAPH SHOULD NEVER BE ENTERED, IT IS NC1024.2
-109600*             NOT POSSIBLE TO EXECUTE THE LAST SENTENCE IN PFM-   NC1024.2
-109700*             G-F1-10 EVEN THOUGH PFM-G-F1-10 IS A SECTION WHICH  NC1024.2
-109800*             IS THE OBJECT OF A PERFORM -- ALL THIS IS LEGAL.    NC1024.2
+109500*                                                                         
+109600*                                                                         
+109700*                                                                         
+109800*                                                                         
 109900 PFM-J-F1-10 SECTION.                                             NC1024.2
 110000                                                                  NC1024.2
 110100 PFM-K-F1-10.                                                     NC1024.2
@@ -1115,11 +1115,11 @@
 111700     PERFORM  PFM-T PERFORM2 TIMES.                               NC1024.2
 111800     MOVE     7 TO PERFORM5.                                      NC1024.2
 111900     PERFORM  PFM-U PERFORM5 TIMES.                               NC1024.2
-112000*        NOTE THE STANDARD SPECIFIES THAT THE COMPILER MUST       NC1024.2
-112100*             SIMPLY IGNORE THE FIRST TWO PERFORM5, AND MUST      NC1024.2
-112200*             PERFORM PFM-U SEVEN TIMES --- NOTE THAT PERFORM5    NC1024.2
-112300*             IS INCREMENTED IN PFM-U, BUT THIS SHOULD HAVE NO    NC1024.2
-112400*             EFFECT ON THE NUMBER OF TIMES PFM-U IS PERFORMED.   NC1024.2
+112000*                                                                         
+112100*                                                                         
+112200*                                                                         
+112300*                                                                         
+112400*                                                                         
 112500     IF       PERFORM5 EQUAL TO 707                               NC1024.2
 112600             PERFORM PASS GO TO PFM-WRITE-F2-6.                   NC1024.2
 112700     GO      TO PFM-FAIL-F2-6.                                    NC1024.2
@@ -1134,11 +1134,11 @@
 113600     MOVE   "PERFORM ... TIMES" TO FEATURE.                       NC1024.2
 113700     MOVE   "PFM-TEST-F2-6" TO PAR-NAME.                          NC1024.2
 113800     PERFORM PRINT-DETAIL.                                        NC1024.2
-113900*                                                                 NC1024.2
-114000*                                                                 NC1024.2
+113900*                                                                         
+114000*                                                                         
 114100 PFM-INIT-F1-11.                                                  NC1024.2
 114200     MOVE    "V1-110 6.20.4 GR6"  TO ANSI-REFERENCE.              NC1024.2
-114300*    ==--> IN LINE PERFORM <--==                                  NC1024.2
+114300*                                                                         
 114400     MOVE    0   TO WRK-DU-2V0-1.                                 NC1024.2
 114500     MOVE    0   TO WRK-DU-2V0-2.                                 NC1024.2
 114600 PFM-TEST-F1-11-0.                                                NC1024.2
@@ -1171,10 +1171,10 @@
 117300 PFM-WRITE-F1-11-2.                                               NC1024.2
 117400     MOVE   "PFM-TEST-F1-11-2" TO PAR-NAME.                       NC1024.2
 117500     PERFORM PRINT-DETAIL.                                        NC1024.2
-117600*                                                                 NC1024.2
-117700*                                                                 NC1024.2
+117600*                                                                         
+117700*                                                                         
 117800 PFM-INIT-F2-7.                                                   NC1024.2
-117900*    ==--> IN LINE PERFORM <--==                                  NC1024.2
+117900*                                                                         
 118000     MOVE   "V1-110 6.20.4 GR6"  TO ANSI-REFERENCE.               NC1024.2
 118100     MOVE   "PERFORM .... TIMES" TO FEATURE.                      NC1024.2
 118200     MOVE    0   TO P-COUNT.                                      NC1024.2
@@ -1211,10 +1211,10 @@
 121300 PFM-WRITE-F2-7-2.                                                NC1024.2
 121400     MOVE   "PFM-TEST-F2-7-2" TO PAR-NAME.                        NC1024.2
 121500     PERFORM PRINT-DETAIL.                                        NC1024.2
-121600*                                                                 NC1024.2
-121700*                                                                 NC1024.2
+121600*                                                                         
+121700*                                                                         
 121800 PFM-INIT-F2-8.                                                   NC1024.2
-121900*    ==--> IN LINE PERFORM <--==                                  NC1024.2
+121900*                                                                         
 122000     MOVE   "V1-110 6.20.4 GR6"  TO ANSI-REFERENCE.               NC1024.2
 122100     MOVE   "PERFORM .... TIMES" TO FEATURE.                      NC1024.2
 122200     MOVE    0   TO P-COUNT.                                      NC1024.2
@@ -1252,8 +1252,8 @@
 125400 PFM-WRITE-F2-8-2.                                                NC1024.2
 125500     MOVE   "PFM-TEST-F2-8-2" TO PAR-NAME.                        NC1024.2
 125600     PERFORM PRINT-DETAIL.                                        NC1024.2
-125700*                                                                 NC1024.2
-125800*                                                                 NC1024.2
+125700*                                                                         
+125800*                                                                         
 125900 PFM-INIT-F3-1.                                                   NC1024.2
 126000     MOVE   "PERFORM UNTIL"  TO FEATURE.                          NC1024.2
 126100     MOVE   "V1-108 6.20.2"  TO ANSI-REFERENCE.                   NC1024.2
@@ -1262,8 +1262,8 @@
 126400 PFM-TEST-F3-1.                                                   NC1024.2
 126500     PERFORM PFM-F3-1-A THRU PFM-F3-1-AA                          NC1024.2
 126600       UNTIL PERFORM2 EQUAL TO 48.                                NC1024.2
-126700*    NOTE IN THIS TEST THE CONDITION IS NOT SATISFIED             NC1024.2
-126800*    ORIGINALLY WHEN THE PERFORM IS ENTERED.                      NC1024.2
+126700*                                                                         
+126800*                                                                         
 126900     IF      PERFORM2 = 48                                        NC1024.2
 127000             PERFORM PASS                                         NC1024.2
 127100             GO TO   PFM-WRITE-F3-1.                              NC1024.2
@@ -1282,8 +1282,8 @@
 128400 PFM-WRITE-F3-1.                                                  NC1024.2
 128500     MOVE   "PFM-TEST-F3-1" TO PAR-NAME.                          NC1024.2
 128600     PERFORM PRINT-DETAIL.                                        NC1024.2
-128700*                                                                 NC1024.2
-128800*                                                                 NC1024.2
+128700*                                                                         
+128800*                                                                         
 128900 PFM-INIT-F3-2.                                                   NC1024.2
 129000     MOVE   "V1-108 6.20.2"  TO ANSI-REFERENCE.                   NC1024.2
 129100     MOVE    50 TO PERFORM2.                                      NC1024.2
@@ -1291,7 +1291,7 @@
 129300*                                                                         
 129400 PFM-TEST-F3-2-0.                                                 NC1024.2
 129500     PERFORM PFM-F3-2-C UNTIL PERFORM2 GREATER THAN 25.           NC1024.2
-129600     IF      PERFORM2 EQUAL TO 70                                 NC1024.2
+129600     IF      PERFORM2 EQUAL TO 20                                 NC1024.2
 129700             PERFORM PASS                                         NC1024.2
 129800             GO TO   PFM-WRITE-F3-2.                              NC1024.2
 129900     GO TO   PFM-FAIL-F3-2.                                       NC1024.2
@@ -1302,13 +1302,13 @@
 130400     ADD     1 TO PERFORM2.                                       NC1024.2
 130500 PFM-FAIL-F3-2.                                                   NC1024.2
 130600     MOVE    PERFORM2 TO COMPUTED-N.                              NC1024.2
-130700     MOVE    70 TO CORRECT-N.                                     NC1024.2
+130700     MOVE    20 TO CORRECT-N.                                     NC1024.2
 130800     PERFORM FAIL.                                                NC1024.2
 130900 PFM-WRITE-F3-2.                                                  NC1024.2
 131000     MOVE   "PFM-TEST-F3-2" TO PAR-NAME.                          NC1024.2
 131100     PERFORM PRINT-DETAIL.                                        NC1024.2
-131200*                                                                 NC1024.2
-131300*                                                                 NC1024.2
+131200*                                                                         
+131300*                                                                         
 131400 PFM-INIT-F3-3.                                                   NC1024.2
 131500     MOVE   "V1-108 6.20.2"  TO ANSI-REFERENCE.                   NC1024.2
 131600     MOVE    ZERO TO WRK-DS-02V00.                                NC1024.2
@@ -1334,10 +1334,10 @@
 133600 PFM-WRITE-F3-3.                                                  NC1024.2
 133700     MOVE   "PFM-TEST-F3-3  " TO PAR-NAME.                        NC1024.2
 133800     PERFORM PRINT-DETAIL.                                        NC1024.2
-133900*                                                                 NC1024.2
-134000*                                                                 NC1024.2
+133900*                                                                         
+134000*                                                                         
 134100 PFM-INIT-F3-4.                                                   NC1024.2
-134200*    ==--> IN-LINE PERFORM <--==                                  NC1024.2
+134200*                                                                         
 134300     MOVE   "V1-110 6.20.4 GR6"  TO ANSI-REFERENCE.               NC1024.2
 134400     MOVE    ZERO TO WRK-DU-6V0-1.                                NC1024.2
 134500 PFM-TEST-F3-4-0.                                                 NC1024.2
@@ -1428,8 +1428,8 @@
 143000 PFM-D.                                                           NC1024.2
 143100     PERFORM  FAIL.                                               NC1024.2
 143200     GO TO    PFM-TEST-F1-3.                                      NC1024.2
-143300*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               NC1024.2
-143400*    FROM THE PREVIOUS ONE.                                       NC1024.2
+143300*                                                                         
+143400*                                                                         
 143500 PFM-E.                                                           NC1024.2
 143600     MOVE "CSW" TO PERFORM1.                                      NC1024.2
 143700     PERFORM  PFM-F THRU PFM-G.                                   NC1024.2
@@ -1444,8 +1444,8 @@
 144600 PFM-I.                                                           NC1024.2
 144700     PERFORM  FAIL.                                               NC1024.2
 144800     GO TO    PFM-WRITE-F3-4.                                     NC1024.2
-144900*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               NC1024.2
-145000*    FROM THE PREVIOUS ONE.                                       NC1024.2
+144900*                                                                         
+145000*                                                                         
 145100 PFM-J.                                                           NC1024.2
 145200     MOVE "YES" TO PERFORM1.                                      NC1024.2
 145300     PERFORM  PFM-L.                                              NC1024.2
@@ -1453,16 +1453,16 @@
 145500 PFM-K.                                                           NC1024.2
 145600     PERFORM  FAIL.                                               NC1024.2
 145700     GO TO    PFM-WRITE-F1-4.                                     NC1024.2
-145800*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               NC1024.2
-145900*    FROM THE PREVIOUS ONE.                                       NC1024.2
+145800*                                                                         
+145900*                                                                         
 146000 PFM-L.                                                           NC1024.2
 146100     MOVE     4 TO PERFORM2.                                      NC1024.2
 146200     ADD      100 TO PERFORM2.                                    NC1024.2
 146300 PFM-M.                                                           NC1024.2
 146400     PERFORM  FAIL.                                               NC1024.2
 146500     GO TO    PFM-WRITE-F1-4.                                     NC1024.2
-146600*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               NC1024.2
-146700*    FROM THE PREVIOUS ONE.                                       NC1024.2
+146600*                                                                         
+146700*                                                                         
 146800 PFM-N        SECTION.                                            NC1024.2
 146900 PFM-O.                                                           NC1024.2
 147000     PERFORM  FAIL.                                               NC1024.2
@@ -1473,8 +1473,8 @@
 147500 PFM-R.                                                           NC1024.2
 147600     PERFORM  FAIL.                                               NC1024.2
 147700     GO TO    PFM-WRITE-F1-5.                                     NC1024.2
-147800*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH FROM THE      NC1024.2
-147900*        PREVIOUS ONE.                                            NC1024.2
+147800*                                                                         
+147900*                                                                         
 148000 PFM-S.                                                           NC1024.2
 148100     ADD      1 TO PERFORM5.                                      NC1024.2
 148200 PFM-T.                                                           NC1024.2

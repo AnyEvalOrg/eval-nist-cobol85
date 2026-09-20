@@ -29,7 +29,7 @@ TEST RESULT OF NC134A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* TABTEST-6                                                                                   
                                                                                                                         
                                      COMPUTED= 001002003                                                                
-                                     CORRECT = 0010020Z3             IV-21 4.3.8.2                                      
+                                     CORRECT = 001002503             IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  TABTEST-7                                                                                   
  SUBSCRIPTING         PASS  TABTEST-8                                                                                   
@@ -38,7 +38,7 @@ TEST RESULT OF NC134A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* TABTEST-11                                                                                  
                                                                                                                         
                                      COMPUTED= 298299300                                                                
-                                     CORRECT = X98299300             IV-21 4.3.8.2                                      
+                                     CORRECT = 298299301             IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         FAIL* TABTEST-12                                                                                                                                                                                                          
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
@@ -56,7 +56,7 @@ TEST RESULT OF NC134A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
                                                                                                                         
                                      COMPUTED= 001002003                                                                
-                                     CORRECT = 00100J003             IV-21 4.3.8.2                                      
+                                     CORRECT = 001006003             IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  TABTEST-13                                                                                  
  SUBSCRIPTING         PASS  TABTEST-14                                                                                  

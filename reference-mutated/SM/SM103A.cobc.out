@@ -5,4 +5,4 @@ SM103A.CBL:489: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   488 | 050000     PERFORM PRINT-DETAIL.                                        S..
   489 > 050100     GO TO   CCVS-EXIT.                                           S..
   490 | 050200 COPY-TEST-4-0.                                                   S..
-  491 | 050300********************* COPY TEXT USED ***************************  S..
+  491 | 050300*..

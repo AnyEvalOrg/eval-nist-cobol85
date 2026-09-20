@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         IC1094.2
 000200 PROGRAM-ID.                                                      IC1094.2
 000300     IC109A.                                                      IC1094.2
-000400****************************************************************  IC1094.2
-000500*                                                              *  IC1094.2
-000600*    VALIDATION FOR:-                                          *  IC1094.2
-000700*                                                              *  IC1094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1094.2
-000900*                                                              *  IC1094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1094.2
-001100*                                                              *  IC1094.2
-001200****************************************************************  IC1094.2
-001300*                                                              *  IC1094.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1094.2
-001500*                                                              *  IC1094.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1094.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1094.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1094.2
-001900*                                                              *  IC1094.2
-002000****************************************************************  IC1094.2
-002100*        THE SUBPROGRAM IC109 IS THE FIRST SUBPROGRAM IN A        IC1094.2
-002200*    SEQUENCE OF CALLS WHICH START IN THE MAIN PROGRAM IC108.     IC1094.2
-002300*    IC109 CALLS IC110 WITH ONE OPERAND IN THE WORKING-STORAGE    IC1094.2
-002400*    SECTION AND ONE OPERAND IN THE LINKAGE SECTION.              IC1094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            IC1094.2
 002600 CONFIGURATION SECTION.                                           IC1094.2
 002700 SOURCE-COMPUTER.                                                 IC1094.2

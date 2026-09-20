@@ -19,33 +19,33 @@
 001900     "4.2 ".                                                      DB1014.2
 002000 SECURITY.                                                        DB1014.2
 002100     NONE.                                                        DB1014.2
-002200*                                                                 DB1014.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB1014.2
-002400*                                                                 DB1014.2
-002500*                       PROGRAM ABSTRACT                          DB1014.2
-002600*                                                                 DB1014.2
-002700*    DB101A TESTS THE BASIC OPERATION OF THE DEBUG MODULE WHEN    DB1014.2
-002800*    BOTH THE COMPILE AND OBJECT TIME DEBUGGING SWITCHES ARE      DB1014.2
-002900*    TURNED ON.  THE PROGRAM CONTAINS BOTH DEBUG LINES AND SIMPLE DB1014.2
-003000*    DEBUGGING PROCEDURES.  THE DEBUGGING PROCEDURES ARE SPECI-   DB1014.2
-003100*    FIED FOR PROCEDURE-NAMES AND PROCEDURE-NAME SERIES.  THE     DB1014.2
-003200*    FOLLOWING CONDITIONS ARE EVALUATED FOR THE "DEBUG-ITEM"      DB1014.2
-003300*    REGISTER                                                     DB1014.2
-003400*                                                                 DB1014.2
-003500*        (1)  START OF PROGRAM                                    DB1014.2
-003600*        (2)  REFERENCE BY "ALTER"                                DB1014.2
-003700*        (3)  REFERENCE BY "GO TO"                                DB1014.2
-003800*        (4)  REFERENCE BY "PERFORM"                              DB1014.2
-003900*        (5)  SEQUENTIAL PASSAGE OF CONTROL  (FALL THROUGH)       DB1014.2
-004000*                                                                 DB1014.2
-004100*    BEFORE BEGINNING EXECUTION OF THE OBJECT PROGRAM,            DB1014.2
-004200*    WHATEVER JOB CONTROL LANGUAGE IS NECESSARY TO ACTIVATE       DB1014.2
-004300*    (TURN ON) THE OBJECT TIME DEBUGGING SWITCH SHOULD BE         DB1014.2
-004400*    SUBMITTED.                                                   DB1014.2
-004500*                                                                 DB1014.2
-004600*                                                                 DB1014.2
-004700*                                                                 DB1014.2
-004800*                                                                 DB1014.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
 004900 ENVIRONMENT DIVISION.                                            DB1014.2
 005000 CONFIGURATION SECTION.                                           DB1014.2
 005100 SOURCE-COMPUTER.                                                 DB1014.2
@@ -253,12 +253,12 @@
 025300     PERFORM DB-COMMON.                                           DB1014.2
 025400     ADD 1 TO RESULT-FLAG.                                        DB1014.2
 025500 END DECLARATIVES.                                                DB1014.2
-025600******************************************************************DB1014.2
-025700*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-025800*    OUTPUT REPORT AS "START-PROGRAM-TEST" SHOULD POINT TO THE   *DB1014.2
-025900*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-026000*    WHICH READS, "OPEN OUTPUT PRINT-FILE."                      *DB1014.2
-026100******************************************************************DB1014.2
+025600*                                                                         
+025700*                                                                         
+025800*                                                                         
+025900*                                                                         
+026000*                                                                         
+026100*                                                                         
 026200 CCVS1 SECTION.                                                   DB1014.2
 026300 OPEN-FILES.                                                      DB1014.2
 026400     OPEN     OUTPUT PRINT-FILE.                                  DB1014.2
@@ -303,7 +303,7 @@
 030500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB1014.2
 030600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB1014.2
 030700      ADD PASS-COUNTER TO ERROR-HOLD.                             DB1014.2
-030800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB1014.2
+030800*                                                                         
 030900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB1014.2
 031000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB1014.2
 031100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB1014.2
@@ -397,12 +397,12 @@
 039900     MOVE "DEBUG ON PROC-NAME" TO FEATURE.                        DB1014.2
 040000     MOVE "START-PROGRAM-TEST" TO PAR-NAME.                       DB1014.2
 040100     PERFORM PRINT-DETAIL.                                        DB1014.2
-040200******************************************************************DB1014.2
-040300*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-040400*    OUTPUT REPORT AS "FALL-THROUGH-TEST" SHOULD POINT TO THE    *DB1014.2
-040500*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-040600*    WHICH READS, "MOVE 0 TO RESULT-FLAG."                       *DB1014.2
-040700******************************************************************DB1014.2
+040200*                                                                         
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
 040800     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
 040900 FALL-THROUGH-TEST.                                               DB1014.2
 041000     IF RESULT-FLAG IS NOT EQUAL TO 2                             DB1014.2
@@ -436,12 +436,12 @@
 043800     MOVE "DEBUG ON PROC-NAME" TO FEATURE.                        DB1014.2
 043900     MOVE "FALL-THROUGH-TEST" TO PAR-NAME.                        DB1014.2
 044000     PERFORM PRINT-DETAIL.                                        DB1014.2
-044100******************************************************************DB1014.2
-044200*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-044300*    OUTPUT REPORT AS "PROC-SERIES-TEST" SHOULD POINT TO THE     *DB1014.2
-044400*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-044500*    WHICH READS, "MOVE 0 TO RESULT-FLAG."                       *DB1014.2
-044600******************************************************************DB1014.2
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
+044600*                                                                         
 044700     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
 044800 PROC-SERIES-TEST.                                                DB1014.2
 044900     IF RESULT-FLAG IS NOT EQUAL TO 2                             DB1014.2
@@ -476,12 +476,12 @@
 047800     MOVE "PROC-SERIES-TEST" TO PAR-NAME.                         DB1014.2
 047900     PERFORM PRINT-DETAIL.                                        DB1014.2
 048000     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
-048100******************************************************************DB1014.2
-048200*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-048300*    OUTPUT REPORT AS "GO-TO-TEST" SHOULD POINT TO THE           *DB1014.2
-048400*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-048500*    WHICH READS, "GO TO GO-TO-TEST.".                           *DB1014.2
-048600******************************************************************DB1014.2
+048100*                                                                         
+048200*                                                                         
+048300*                                                                         
+048400*                                                                         
+048500*                                                                         
+048600*                                                                         
 048700 ALTERABLE-PARAGRAPH.                                             DB1014.2
 048800     GO TO GO-TO-TEST.                                            DB1014.2
 048900 FILLER-PARAGRAPH.                                                DB1014.2
@@ -522,13 +522,13 @@
 052400     MOVE "GO-TO-TEST" TO PAR-NAME.                               DB1014.2
 052500     PERFORM PRINT-DETAIL.                                        DB1014.2
 052600     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
-052700******************************************************************DB1014.2
-052800*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-052900*    OUTPUT REPORT AS "ALTER-TEST" SHOULD POINT TO THE           *DB1014.2
-053000*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-053100*    WHICH READS, "ALTER ALTERABLE-PARAGRAPH TO PROCEED TO       *DB1014.2
-053200*    ALTERED-GO-TO-TEST.".                                       *DB1014.2
-053300******************************************************************DB1014.2
+052700*                                                                         
+052800*                                                                         
+052900*                                                                         
+053000*                                                                         
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
 053400 ALTER-TEST-INIT.                                                 DB1014.2
 053500     ALTER ALTERABLE-PARAGRAPH TO PROCEED TO ALTERED-GO-TO-TEST.  DB1014.2
 053600 ALTER-TEST.                                                      DB1014.2
@@ -564,12 +564,12 @@
 056600     MOVE "ALTER-TEST" TO PAR-NAME.                               DB1014.2
 056700     PERFORM PRINT-DETAIL.                                        DB1014.2
 056800     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
-056900******************************************************************DB1014.2
-057000*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-057100*    OUTPUT REPORT AS "ALTERED-GO-TO-TEST" SHOULD POINT TO THE   *DB1014.2
-057200*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-057300*    WHICH READS, "GO TO ALTERABLE-PARAGRAPH.".                  *DB1014.2
-057400******************************************************************DB1014.2
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
+057200*                                                                         
+057300*                                                                         
+057400*                                                                         
 057500 ALTER-WRITE-END.                                                 DB1014.2
 057600     GO TO ALTERABLE-PARAGRAPH.                                   DB1014.2
 057700 ALTERED-GO-TO-TEST.                                              DB1014.2
@@ -605,12 +605,12 @@
 060700     MOVE "ALTERED-GO-TO-TEST" TO PAR-NAME.                       DB1014.2
 060800     PERFORM PRINT-DETAIL.                                        DB1014.2
 060900     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
-061000******************************************************************DB1014.2
-061100*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-061200*    OUTPUT REPORT AS "PERF-ITERATION-TEST" SHOULD POINT TO THE  *DB1014.2
-061300*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-061400*    WHICH READS, "PERFORM LOOP-ROUTINE FIVE TIMES.".            *DB1014.2
-061500******************************************************************DB1014.2
+061000*                                                                         
+061100*                                                                         
+061200*                                                                         
+061300*                                                                         
+061400*                                                                         
+061500*                                                                         
 061600 PERF-ITERATION-TEST.                                             DB1014.2
 061700     PERFORM LOOP-ROUTINE FIVE TIMES.                             DB1014.2
 061800     IF RESULT-FLAG IS NOT EQUAL TO 5                             DB1014.2
@@ -655,15 +655,15 @@
 065700 PERF-ITERATION-END.                                              DB1014.2
 065800     GO TO PERFORM-THRU-TEST.                                     DB1014.2
 065900 LOOP-ROUTINE.                                                    DB1014.2
-066000**NESTED PERFORMS ARE USED HERE TO ATTEMPT TO PREVENT OPTIMIZER   DB1014.2
-066100* ACTION RESULTING IN LOOP UNFOLDING AND REDUCTION.               DB1014.2
+066000*                                                                         
+066100*                                                                         
 066200     PERFORM DO-NOTHING.                                          DB1014.2
-066300******************************************************************DB1014.2
-066400*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-066500*    OUTPUT REPORT AS "PERFORM-THRU-TEST" SHOULD POINT TO THE    *DB1014.2
-066600*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-066700*    WHICH READS, "ADD A B C GIVING D.".                         *DB1014.2
-066800******************************************************************DB1014.2
+066300*                                                                         
+066400*                                                                         
+066500*                                                                         
+066600*                                                                         
+066700*                                                                         
+066800*                                                                         
 066900 DO-NOTHING.                                                      DB1014.2
 067000     ADD A B C GIVING D.                                          DB1014.2
 067100 DO-NOTHING-1.                                                    DB1014.2
@@ -709,12 +709,12 @@
 071100     MOVE "DEBUG ON PROC-NAME" TO FEATURE.                        DB1014.2
 071200     PERFORM PRINT-DETAIL.                                        DB1014.2
 071300     MOVE 0 TO RESULT-FLAG.                                       DB1014.2
-071400******************************************************************DB1014.2
-071500*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1014.2
-071600*    OUTPUT REPORT AS "SIMPLE-PERFORM-TEST" SHOULD POINT TO THE  *DB1014.2
-071700*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1014.2
-071800*    WHICH READS, "PERFORM LOOP-ROUTINE.".                       *DB1014.2
-071900******************************************************************DB1014.2
+071400*                                                                         
+071500*                                                                         
+071600*                                                                         
+071700*                                                                         
+071800*                                                                         
+071900*                                                                         
 072000 SIMPLE-PERFORM-TEST.                                             DB1014.2
 072100     PERFORM LOOP-ROUTINE.                                        DB1014.2
 072200     IF RESULT-FLAG IS NOT EQUAL TO 1                             DB1014.2
@@ -787,8 +787,8 @@
 078900 DEBUG-LINE-TEST-04.                                              DB1014.2
 079000     MOVE "NESTED COMMENTS" TO RE-MARK.                           DB1014.2
 079100D    PERFORM                                                      DB1014.2
-079200*        FAIL.  GO TO DEBUG-LINE-WRITE-04.                        DB1014.2
-079300*DEBUG-LINE-TEST-04-A.    PERFORM                                 DB1014.2
+079200*                                                                         
+079300*                                                                         
 079400D                         PASS.  GO TO DEBUG-LINE-WRITE-04.       DB1014.2
 079500 DEBUG-LINE-TEST-04-B.                                            DB1014.2
 079600     MOVE "    FAILURE 04B" TO COMPUTED-A.                        DB1014.2
@@ -801,14 +801,14 @@
 080300     PERFORM PRINT-DETAIL.                                        DB1014.2
 080400 DEBUG-LINE-TEST-05.                                              DB1014.2
 080500     MOVE "NESTED INSIDE COMMENTS" TO RE-MARK.                    DB1014.2
-080600*    PERFORM FAIL.                                                DB1014.2
-080700*    GO TO DEBUG-LINE-WRITE-05.                                   DB1014.2
-080800*DEBUG-LINE-TEST-05-A.                                            DB1014.2
+080600*                                                                         
+080700*                                                                         
+080800*                                                                         
 080900D    PERFORM PASS.                                                DB1014.2
 081000D    GO TO DEBUG-LINE-WRITE-05.                                   DB1014.2
-081100*DEBUG-LINE-TEST-05-B.                                            DB1014.2
-081200*    MOVE "    FAILURE 05B" TO COMPUTED-A.                        DB1014.2
-081300*    PERFORM FAIL.  GO TO DEBUG-LINE-WRITE-05.                    DB1014.2
+081100*                                                                         
+081200*                                                                         
+081300*                                                                         
 081400 DEBUG-LINE-TEST-05-C.                                            DB1014.2
 081500     MOVE "    FAILURE 05C" TO COMPUTED-A.                        DB1014.2
 081600     PERFORM FAIL.   GO TO DEBUG-LINE-WRITE-05.                   DB1014.2

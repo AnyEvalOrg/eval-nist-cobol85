@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         RL2124.2
 000200 PROGRAM-ID.                                                      RL2124.2
 000300     RL212A.                                                      RL2124.2
-000400****************************************************************  RL2124.2
-000500*                                                              *  RL2124.2
-000600*    VALIDATION FOR:-                                          *  RL2124.2
-000700*                                                              *  RL2124.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2124.2
-000900*                                                              *  RL2124.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2124.2
-001100*                                                              *  RL2124.2
-001200****************************************************************  RL2124.2
-001300*    THIS RUN UNIT IS THE FIRST OF A SERIES OF TWO PROGRAMS    *  RL2124.2
-001400*    PROCESSES A RELATIVE I-O FILE.  THE FUNCTION OF THIS      *  RL2124.2
-001500*    PROGRAM IS TO CREATE A RELATIVE FILE SEQUENTIALLY         *  RL2124.2
-001600*    (ACCESS MODE SEQUENTIAL) AND VERIFY THAT IT WAS           *  RL2124.2
-001700*    CREATED CORRECTLY.  THE FILE IS IDENTIFED AS "RL-FS1"     *  RL2124.2
-001800*    AND WILL CONTAIN 500 RECORDS OF 120 CHARACTERS.           *  RL2124.2
-001900*                                                              *  RL2124.2
-002000*        X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS     *  RL2124.2
-002100*        PROGRAM ARE:                                          *  RL2124.2
-002200*                                                              *  RL2124.2
-002300*             X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR  *  RL2124.2
-002400*                     RELATIVE  I-O DATA FILE                  *  RL2124.2
-002500*             X-55   SYSTEM PRINTER                            *  RL2124.2
-002600*             X-69   ADDITIONAL VALUE OF CLAUSES               *  RL2124.2
-002700*             X-74   VALUE OF IMPLEMENTOR-NAME                 *  RL2124.2
-002800*             X-75   OBJECT OF VALUE OF CLAUSE                 *  RL2124.2
-002900*             X-82   SOURCE-COMPUTER                           *  RL2124.2
-003000*             X-83   OBJECT-COMPUTER.                          *  RL2124.2
-003100*                                                              *  RL2124.2
-003200****************************************************************  RL2124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            RL2124.2
 003400 CONFIGURATION SECTION.                                           RL2124.2
 003500 SOURCE-COMPUTER.                                                 RL2124.2
@@ -43,8 +43,8 @@
 004300     SELECT   RL-FS1 ASSIGN TO                                    RL2124.2
 004400     "XXXXX021"                                                   RL2124.2
 004500             ORGANIZATION IS RELATIVE.                            RL2124.2
-004600*    ABSENCE OF THE ACCESS CLAUSE IS TREATED AS THOUGH            RL2124.2
-004700*     SEQUENTIAL HAD BEEN SPECIFIED.                              RL2124.2
+004600*                                                                         
+004700*                                                                         
 004800 DATA DIVISION.                                                   RL2124.2
 004900 FILE SECTION.                                                    RL2124.2
 005000 FD  PRINT-FILE.                                                  RL2124.2
@@ -303,7 +303,7 @@
 031000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2124.2
 031100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2124.2
 031200      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2124.2
-031300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2124.2
+031300*                                                                         
 031400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2124.2
 031500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2124.2
 031600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2124.2

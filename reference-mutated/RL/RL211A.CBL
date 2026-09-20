@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         RL2114.2
 000200 PROGRAM-ID.                                                      RL2114.2
 000300     RL211A.                                                      RL2114.2
-000400****************************************************************  RL2114.2
-000500*                                                              *  RL2114.2
-000600*    VALIDATION FOR:-                                          *  RL2114.2
-000700*                                                              *  RL2114.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2114.2
-000900*                                                              *  RL2114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2114.2
-001100*                                                              *  RL2114.2
-001200****************************************************************  RL2114.2
-001300*    THE FUNCTION OF THIS PROGRAM IS TO CREATE A RELATIVE FILE *  RL2114.2
-001400*    SEQUENTIALLY WITH VARIABLE LENGTH RECORDS AND VERIFY THAT *  RL2114.2
-001500*    IT WAS CREATED CORRECTLY.                                 *  RL2114.2
-001600*    THE PROGRAM WILL CREATE A RELATIVE FILE OF 500 VARIABLE   *  RL2114.2
-001700*    LENGTH RECORDS.                                           *  RL2114.2
-001800*    THE RECORD SIZE WILL BE 120 TO 140 CHARACTERS.            *  RL2114.2
-001900*                                                                 RL2114.2
-002000*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL2114.2
-002100*            PROGRAM ARE:                                         RL2114.2
-002200*                                                                 RL2114.2
-002300*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL2114.2
-002400*                         RELATIVE  I-O DATA FILE                 RL2114.2
-002500*                 X-55   SYSTEM PRINTER                           RL2114.2
-002600*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL2114.2
-002700*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL2114.2
-002800*                 X-75   OBJECT OF VALUE OF CLAUSE                RL2114.2
-002900*                 X-82   SOURCE-COMPUTER                          RL2114.2
-003000*                 X-83   OBJECT-COMPUTER.                         RL2114.2
-003100*                                                                 RL2114.2
-003200****************************************************************  RL2114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            RL2114.2
 003400 CONFIGURATION SECTION.                                           RL2114.2
 003500 SOURCE-COMPUTER.                                                 RL2114.2
@@ -43,8 +43,8 @@
 004300     SELECT   RL-VS1 ASSIGN TO                                    RL2114.2
 004400     "XXXXX021"                                                   RL2114.2
 004500             ORGANIZATION IS RELATIVE.                            RL2114.2
-004600*    ABSENCE OF THE ACCESS CLAUSE IS TREATED AS THOUGH            RL2114.2
-004700*     SEQUENTIAL HAD BEEN SPECIFIED.                              RL2114.2
+004600*                                                                         
+004700*                                                                         
 004800 DATA DIVISION.                                                   RL2114.2
 004900 FILE SECTION.                                                    RL2114.2
 005000 FD  PRINT-FILE.                                                  RL2114.2
@@ -313,7 +313,7 @@
 032000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2114.2
 032100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2114.2
 032200      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2114.2
-032300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2114.2
+032300*                                                                         
 032400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2114.2
 032500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2114.2
 032600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2114.2
@@ -445,12 +445,12 @@
 045200     MOVE   "REL-TEST-1" TO PAR-NAME.                             RL2114.2
 045300     IF      WRK-CS-09V00 < 11                                    RL2114.2
 045400             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-045500                                 "A                 Y  "          RL2114.2
+045500                                 "A                    "          RL2114.2
 045600                     PERFORM PASS                                 RL2114.2
 045700*                                                                         
 045800             ELSE                                                 RL2114.2
 045900                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-046000                     MOVE   "A                 Y  " TO CORRECT-X  RL2114.2
+046000                     MOVE   "A                    " TO CORRECT-X  RL2114.2
 046100                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 046200                     PERFORM FAIL                                 RL2114.2
 046300                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -461,7 +461,7 @@
 046800             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
 046900                                 "ABCDEFGHIJK          "          RL2114.2
 047000                     PERFORM PASS                                 RL2114.2
-047100*                    PERFORM PRINT-DETAIL                         RL2114.2
+047100*                                                                         
 047200             ELSE                                                 RL2114.2
 047300                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
 047400                     MOVE   "ABCDEFGHIJK          " TO CORRECT-X  RL2114.2
@@ -473,12 +473,12 @@
 048000     MOVE   "REL-TEST-3" TO PAR-NAME.                             RL2114.2
 048100     IF     (WRK-CS-09V00 > 20 AND < 31)                          RL2114.2
 048200             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-048300                                 "LBCDEFGHIJKLMNOPQRSTU"          RL2114.2
+048300                                 "ABCDEFGHIJKLMNOPQRSTU"          RL2114.2
 048400                     PERFORM PASS                                 RL2114.2
 048500*                                                                         
 048600             ELSE                                                 RL2114.2
 048700                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-048800                     MOVE   "LBCDEFGHIJKLMNOPQRSTU" TO CORRECT-X  RL2114.2
+048800                     MOVE   "ABCDEFGHIJKLMNOPQRSTU" TO CORRECT-X  RL2114.2
 048900                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 049000                     PERFORM FAIL                                 RL2114.2
 049100                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -489,7 +489,7 @@
 049600             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
 049700                                 "ABCDEF               "          RL2114.2
 049800                     PERFORM PASS                                 RL2114.2
-049900*                    PERFORM PRINT-DETAIL                         RL2114.2
+049900*                                                                         
 050000             ELSE                                                 RL2114.2
 050100                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
 050200                     MOVE   "ABCDEF               " TO CORRECT-X  RL2114.2
@@ -501,12 +501,12 @@
 050800     MOVE   "REL-TEST-5" TO PAR-NAME.                             RL2114.2
 050900     IF      WRK-CS-09V00 = 32                                    RL2114.2
 051000             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-051100                                 "ABCMEFGHIJKLMNOP     "          RL2114.2
+051100                                 "ABCDEFGHIJKLMNOP     "          RL2114.2
 051200                     PERFORM PASS                                 RL2114.2
 051300*                                                                         
 051400             ELSE                                                 RL2114.2
 051500                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-051600                     MOVE   "ABCMEFGHIJKLMNOP     " TO CORRECT-X  RL2114.2
+051600                     MOVE   "ABCDEFGHIJKLMNOP     " TO CORRECT-X  RL2114.2
 051700                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 051800                     PERFORM FAIL                                 RL2114.2
 051900                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -517,7 +517,7 @@
 052400             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
 052500                                 "ABCDEFGHIJKLMNOPQRSTU"          RL2114.2
 052600                     PERFORM PASS                                 RL2114.2
-052700*                    PERFORM PRINT-DETAIL                         RL2114.2
+052700*                                                                         
 052800             ELSE                                                 RL2114.2
 052900                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
 053000                     MOVE   "ABCDEFGHIJKLMNOPQRSTU" TO CORRECT-X  RL2114.2

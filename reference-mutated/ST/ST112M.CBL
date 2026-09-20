@@ -1,23 +1,23 @@
 000100 IDENTIFICATION DIVISION.                                         ST1124.2
 000200 PROGRAM-ID.                                                      ST1124.2
 000300     ST112M.                                                      ST1124.2
-000400****************************************************************  ST1124.2
-000500*                                                              *  ST1124.2
-000600*    VALIDATION FOR:-                                          *  ST1124.2
-000700*                                                              *  ST1124.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1124.2
-000900*                                                              *  ST1124.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1124.2
-001100*                                                              *  ST1124.2
-001200****************************************************************  ST1124.2
-001300*                                                              *  ST1124.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1124.2
-001500*                                                              *  ST1124.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1124.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1124.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1124.2
-001900*                                                              *  ST1124.2
-002000****************************************************************  ST1124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100 ENVIRONMENT DIVISION.                                            ST1124.2
 002200 CONFIGURATION SECTION.                                           ST1124.2
 002300 SOURCE-COMPUTER.                                                 ST1124.2
@@ -231,7 +231,7 @@
 023800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1124.2
 023900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1124.2
 024000      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1124.2
-024100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1124.2
+024100*                                                                         
 024200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1124.2
 024300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1124.2
 024400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1124.2
@@ -364,8 +364,8 @@
 037100     IF      UTIL-CTR = 3                                         ST1124.2
 037200             GO TO   ST112M-002-01.                               ST1124.2
 037300     CLOSE   SORTOUT-1L REEL.                                     ST1124.2
-037400*    THE FOLLOWING OPTION CARDS APPEAR ONLY FOR *OPT3 = I (NO     ST1124.2
-037500*    CLOSE REEL)                                                  ST1124.2
+037400*                                                                         
+037500*                                                                         
 037600     GO TO   BUILD-REEL.                                          ST1124.2
 037700 ST112M-002-01.                                                   ST1124.2
 037800     MOVE    COMMENT-SENTENCE TO PRINT-REC.                       ST1124.2

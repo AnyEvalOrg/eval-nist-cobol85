@@ -25,7 +25,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG106A
  SORT - 8 ASC. KEYS   FAIL* SORT-TEST-15                                                                                
                                                                                                                         
                                      COMPUTED=  .600000000000000000                                                     
-                                     CORRECT =  .600000003000000000                                                     
+                                     CORRECT =  .600000000800000000                                                     
                                                                                                                         
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-16                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-17                                                                                

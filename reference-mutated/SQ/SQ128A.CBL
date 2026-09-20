@@ -1,18 +1,18 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1284.2
 000200 PROGRAM-ID.                                                      SQ1284.2
 000300     SQ128A.                                                      SQ1284.2
-000400****************************************************************  SQ1284.2
-000500*                                                              *  SQ1284.2
-000600*    VALIDATION FOR:-                                          *  SQ1284.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1284.2
-000800*                                                              *  SQ1284.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1284.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1284.2
-001100*                                                              *  SQ1284.2
-001200*         THE ROUTINE SQ128A TESTS THE USE OF THE LEVEL 1 OPEN    SQ1284.2
-001300*    SERIES AND CLOSE SERIES STATEMENTS.  INPUT AND OUTPUT CLAUSESSQ1284.2
-001400*    ARE USED IN SERIES TOGETHER AND SEPARATELY.  SEVERAL FILES   SQ1284.2
-001500*    ARE CREATED AND PROCESSED ON BOTH TAPE AND MASS STORAGE.     SQ1284.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
 001600 ENVIRONMENT DIVISION.                                            SQ1284.2
 001700 CONFIGURATION SECTION.                                           SQ1284.2
 001800 SOURCE-COMPUTER.                                                 SQ1284.2
@@ -274,7 +274,7 @@
 032400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1284.2
 032500      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1284.2
 032600      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1284.2
-032700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1284.2
+032700*                                                                         
 032800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1284.2
 032900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1284.2
 033000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1284.2
@@ -391,8 +391,8 @@
 044100     MOVE XRECORD-NUMBER (2) TO CORRECT-18V0.                     SQ1284.2
 044200     PERFORM PRINT-DETAIL.                                        SQ1284.2
 044300 CLOSE-INIT-GF-01.                                                SQ1284.2
-044400*             THIS TEST CLOSES THE TWO OUTPUT FILES FROM          SQ1284.2
-044500*             SEQ-TEST-001 WITH ONE CLOSE STATEMENT.              SQ1284.2
+044400*                                                                         
+044500*                                                                         
 044600     CLOSE SQ-FS1,                                                SQ1284.2
 044700           SQ-FS2.                                                SQ1284.2
 044800 CLOSE-WRITE-GF-01.                                               SQ1284.2
@@ -402,8 +402,8 @@
 045200     PERFORM PASS.                                                SQ1284.2
 045300     PERFORM PRINT-DETAIL.                                        SQ1284.2
 045400 OPEN-TEST-GF-02.                                                 SQ1284.2
-045500*             THIS TEST OPENS FOR INPUT THE TWO FILES CREATED IN  SQ1284.2
-045600*             SEQ-TEST-001.                                       SQ1284.2
+045500*                                                                         
+045600*                                                                         
 045700     OPEN INPUT SQ-FS1,                                           SQ1284.2
 045800                SQ-FS2.                                           SQ1284.2
 045900     MOVE "OPEN INPUT 1 & 2" TO FEATURE.                          SQ1284.2
@@ -411,8 +411,8 @@
 046100     PERFORM PASS.                                                SQ1284.2
 046200     PERFORM PRINT-DETAIL.                                        SQ1284.2
 046300 READ-TEST-F1-01.                                                 SQ1284.2
-046400*             THIS PART OF THE TEST READS AND VALIDATES ONE       SQ1284.2
-046500*             RECORD FROM FILES SQ-FS1 AND SQ-FS2.                SQ1284.2
+046400*                                                                         
+046500*                                                                         
 046600     READ SQ-FS1 AT END GO TO READ-FAIL-F1-01.                    SQ1284.2
 046700     MOVE SQ-FS1R1-F-G-120 TO FILE-RECORD-INFO-P1-120 (1).        SQ1284.2
 046800     IF XFILE-NAME (1) NOT EQUAL TO "SQ-FS1"                      SQ1284.2
@@ -453,8 +453,8 @@
 050300 OPEN-INIT-03.                                                    SQ1284.2
 050400     CLOSE SQ-FS1.                                                SQ1284.2
 050500 OPEN-TEST-GF-03.                                                 SQ1284.2
-050600*             THIS TEST OPENS A FILE FOR INPUT AND A FILE FOR     SQ1284.2
-050700*             OUTPUT WITH THE SAME OPEN STATEMENT.                SQ1284.2
+050600*                                                                         
+050700*                                                                         
 050800     OPEN INPUT SQ-FS1                                            SQ1284.2
 050900          OUTPUT SQ-FS3.                                          SQ1284.2
 051000     MOVE 00001 TO XRECORD-NUMBER (3).                            SQ1284.2
@@ -473,8 +473,8 @@
 052300     PERFORM PASS.                                                SQ1284.2
 052400     PERFORM PRINT-DETAIL.                                        SQ1284.2
 052500 CLOSE-TEST-02.                                                   SQ1284.2
-052600*             THIS TEST CLOSES ONE OUTPUT FILE AND TWO INPUT FILESSQ1284.2
-052700*             WITH ONE CLOSE STATEMENT.                           SQ1284.2
+052600*                                                                         
+052700*                                                                         
 052800     CLOSE SQ-FS1,                                                SQ1284.2
 052900           SQ-FS2,                                                SQ1284.2
 053000           SQ-FS3.                                                SQ1284.2

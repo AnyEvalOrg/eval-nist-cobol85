@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC2234.2
 000200 PROGRAM-ID.                                                      NC2234.2
 000300     NC223A.                                                      NC2234.2
-000400****************************************************************  NC2234.2
-000500*                                                              *  NC2234.2
-000600*    VALIDATION FOR:-                                          *  NC2234.2
-000700*                                                              *  NC2234.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2234.2
-000900*                                                              *  NC2234.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2234.2
-001100*                                                              *  NC2234.2
-001200****************************************************************  NC2234.2
-001300*                                                              *  NC2234.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2234.2
-001500*                                                              *  NC2234.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2234.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2234.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2234.2
-001900*                                                              *  NC2234.2
-002000****************************************************************  NC2234.2
-002100*    PROGRAM NC223A TESTS THE "INITIALISE" STATEMENT USING     *  NC2234.2
-002200*    USING VARIOUS COMBINATIONS OD OPTIONAL PHRASES AND A      *  NC2234.2
-002300*    VARIETY OF RECEIVING AREAS.                               *  NC2234.2
-002400*                                                              *  NC2234.2
-002500****************************************************************  NC2234.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC2234.2
 002700 CONFIGURATION SECTION.                                           NC2234.2
 002800 SOURCE-COMPUTER.                                                 NC2234.2
@@ -240,7 +240,7 @@
 024200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2234.2
 024300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2234.2
 024400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2234.2
-024500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2234.2
+024500*                                                                         
 024600                                                                  NC2234.2
 024700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2234.2
 024800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2234.2
@@ -309,7 +309,7 @@
 031100 CCVS1-EXIT.                                                      NC2234.2
 031200     EXIT.                                                        NC2234.2
 031300 SECT-NC223A-001 SECTION.                                         NC2234.2
-031400*                                                                 NC2234.2
+031400*                                                                         
 031500 INI-INIT-GF-1.                                                   NC2234.2
 031600     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
 031700     MOVE   "VI-92 6.16.2 GR5" TO ANSI-REFERENCE.                 NC2234.2
@@ -338,7 +338,7 @@
 034000     PERFORM FAIL.                                                NC2234.2
 034100 INI-WRITE-GF-1-1.                                                NC2234.2
 034200     PERFORM PRINT-DETAIL.                                        NC2234.2
-034300*                                                                 NC2234.2
+034300*                                                                         
 034400 INI-TEST-GF-1-2.                                                 NC2234.2
 034500     ADD     1 TO REC-CT.                                         NC2234.2
 034600     MOVE   "INI-TEST-GF-1-2" TO PAR-NAME.                        NC2234.2
@@ -357,7 +357,7 @@
 035900     PERFORM FAIL.                                                NC2234.2
 036000 INI-WRITE-GF-1-2.                                                NC2234.2
 036100     PERFORM PRINT-DETAIL.                                        NC2234.2
-036200*                                                                 NC2234.2
+036200*                                                                         
 036300 INI-TEST-GF-1-3.                                                 NC2234.2
 036400     ADD     1 TO REC-CT.                                         NC2234.2
 036500     MOVE   "INI-TEST-GF-1-3" TO PAR-NAME.                        NC2234.2
@@ -376,7 +376,7 @@
 037800     PERFORM FAIL.                                                NC2234.2
 037900 INI-WRITE-GF-1-3.                                                NC2234.2
 038000     PERFORM PRINT-DETAIL.                                        NC2234.2
-038100*                                                                 NC2234.2
+038100*                                                                         
 038200 INI-TEST-GF-1-4.                                                 NC2234.2
 038300     ADD     1 TO REC-CT.                                         NC2234.2
 038400     MOVE   "INI-TEST-GF-1-4" TO PAR-NAME.                        NC2234.2
@@ -395,7 +395,7 @@
 039700     PERFORM FAIL.                                                NC2234.2
 039800 INI-WRITE-GF-1-4.                                                NC2234.2
 039900     PERFORM PRINT-DETAIL.                                        NC2234.2
-040000*                                                                 NC2234.2
+040000*                                                                         
 040100 INI-TEST-GF-1-5.                                                 NC2234.2
 040200     ADD     1 TO REC-CT.                                         NC2234.2
 040300     MOVE   "INI-TEST-GF-1-5" TO PAR-NAME.                        NC2234.2
@@ -414,7 +414,7 @@
 041600             PERFORM FAIL.                                        NC2234.2
 041700 INI-WRITE-GF-1-5.                                                NC2234.2
 041800             PERFORM PRINT-DETAIL.                                NC2234.2
-041900*                                                                 NC2234.2
+041900*                                                                         
 042000 INI-TEST-GF-1-6.                                                 NC2234.2
 042100     ADD     1 TO REC-CT.                                         NC2234.2
 042200     MOVE   "INI-TEST-GF-1-6" TO PAR-NAME.                        NC2234.2
@@ -433,7 +433,7 @@
 043500     PERFORM FAIL.                                                NC2234.2
 043600 INI-WRITE-GF-1-6.                                                NC2234.2
 043700     PERFORM PRINT-DETAIL.                                        NC2234.2
-043800*                                                                 NC2234.2
+043800*                                                                         
 043900 INI-TEST-GF-1-7.                                                 NC2234.2
 044000     ADD     1 TO REC-CT.                                         NC2234.2
 044100     MOVE   "INI-TEST-GF-1-7" TO PAR-NAME.                        NC2234.2
@@ -452,7 +452,7 @@
 045400     PERFORM FAIL.                                                NC2234.2
 045500 INI-WRITE-GF-1-7.                                                NC2234.2
 045600     PERFORM PRINT-DETAIL.                                        NC2234.2
-045700*                                                                 NC2234.2
+045700*                                                                         
 045800 INI-TEST-GF-1-8.                                                 NC2234.2
 045900     ADD     1 TO REC-CT.                                         NC2234.2
 046000     MOVE   "INI-TEST-GF-1-8" TO PAR-NAME.                        NC2234.2
@@ -471,7 +471,7 @@
 047300     PERFORM FAIL.                                                NC2234.2
 047400 INI-WRITE-GF-1-8.                                                NC2234.2
 047500     PERFORM PRINT-DETAIL.                                        NC2234.2
-047600*                                                                 NC2234.2
+047600*                                                                         
 047700 INI-TEST-GF-1-9.                                                 NC2234.2
 047800     ADD     1 TO REC-CT.                                         NC2234.2
 047900     MOVE   "INI-TEST-GF-1-9" TO PAR-NAME.                        NC2234.2
@@ -490,7 +490,7 @@
 049200     PERFORM FAIL.                                                NC2234.2
 049300 INI-WRITE-GF-1-9.                                                NC2234.2
 049400     PERFORM PRINT-DETAIL.                                        NC2234.2
-049500*                                                                 NC2234.2
+049500*                                                                         
 049600 INI-TEST-GF-1-10.                                                NC2234.2
 049700     ADD     1 TO REC-CT.                                         NC2234.2
 049800     MOVE   "INI-TEST-GF-1-10" TO PAR-NAME.                       NC2234.2
@@ -509,7 +509,7 @@
 051100     PERFORM FAIL.                                                NC2234.2
 051200 INI-WRITE-GF-1-10.                                               NC2234.2
 051300     PERFORM PRINT-DETAIL.                                        NC2234.2
-051400*                                                                 NC2234.2
+051400*                                                                         
 051500 INI-INIT-GF-2.                                                   NC2234.2
 051600     MOVE   "VI-91/2 6.16.2 GR2" TO ANSI-REFERENCE.               NC2234.2
 051700     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
@@ -522,7 +522,7 @@
 052400     PERFORM DE-LETE.                                             NC2234.2
 052500     PERFORM PRINT-DETAIL.                                        NC2234.2
 052600     GO TO   INI-INIT-GF-3.                                       NC2234.2
-052700*                                                                 NC2234.2
+052700*                                                                         
 052800 INI-TEST-GF-2-1.                                                 NC2234.2
 052900     MOVE   "INI-TEST-GF-2-1" TO PAR-NAME.                        NC2234.2
 053000     IF      TEST-1-5 = "AAAAAA"                                  NC2234.2
@@ -540,7 +540,7 @@
 054200     PERFORM FAIL.                                                NC2234.2
 054300 INI-WRITE-GF-2-1.                                                NC2234.2
 054400     PERFORM PRINT-DETAIL.                                        NC2234.2
-054500*                                                                 NC2234.2
+054500*                                                                         
 054600 INI-TEST-GF-2-2.                                                 NC2234.2
 054700     ADD 1 TO REC-CT.                                             NC2234.2
 054800     MOVE   "INI-TEST-GF-2-2" TO PAR-NAME.                        NC2234.2
@@ -559,7 +559,7 @@
 056100     PERFORM FAIL.                                                NC2234.2
 056200 INI-WRITE-GF-2-2.                                                NC2234.2
 056300     PERFORM PRINT-DETAIL.                                        NC2234.2
-056400*                                                                 NC2234.2
+056400*                                                                         
 056500 INI-TEST-GF-2-3.                                                 NC2234.2
 056600     ADD 1 TO REC-CT.                                             NC2234.2
 056700     MOVE   "INI-TEST-GF-2-3" TO PAR-NAME.                        NC2234.2
@@ -579,7 +579,7 @@
 058100     PERFORM FAIL.                                                NC2234.2
 058200 INI-WRITE-GF-2-3.                                                NC2234.2
 058300     PERFORM PRINT-DETAIL.                                        NC2234.2
-058400*                                                                 NC2234.2
+058400*                                                                         
 058500 INI-TEST-GF-2-4.                                                 NC2234.2
 058600     ADD     1 TO REC-CT.                                         NC2234.2
 058700     MOVE   "INI-TEST-GF-2-4" TO PAR-NAME.                        NC2234.2
@@ -599,7 +599,7 @@
 060100     PERFORM FAIL.                                                NC2234.2
 060200 INI-WRITE-GF-2-4.                                                NC2234.2
 060300     PERFORM PRINT-DETAIL.                                        NC2234.2
-060400*                                                                 NC2234.2
+060400*                                                                         
 060500 INI-TEST-GF-2-5.                                                 NC2234.2
 060600     ADD     1 TO REC-CT.                                         NC2234.2
 060700     MOVE   "INI-TEST-GF-2-5" TO PAR-NAME.                        NC2234.2
@@ -619,7 +619,7 @@
 062100     PERFORM FAIL.                                                NC2234.2
 062200 INI-WRITE-GF-2-5.                                                NC2234.2
 062300     PERFORM PRINT-DETAIL.                                        NC2234.2
-062400*                                                                 NC2234.2
+062400*                                                                         
 062500 INI-TEST-GF-2-6.                                                 NC2234.2
 062600     ADD     1 TO REC-CT.                                         NC2234.2
 062700     MOVE   "INI-TEST-GF-2-6" TO PAR-NAME.                        NC2234.2
@@ -639,7 +639,7 @@
 064100     PERFORM FAIL.                                                NC2234.2
 064200 INI-WRITE-GF-2-6.                                                NC2234.2
 064300     PERFORM PRINT-DETAIL.                                        NC2234.2
-064400*                                                                 NC2234.2
+064400*                                                                         
 064500 INI-TEST-GF-2-7.                                                 NC2234.2
 064600     ADD     1 TO REC-CT.                                         NC2234.2
 064700     MOVE   "INI-TEST-GF-2-7" TO PAR-NAME.                        NC2234.2
@@ -659,7 +659,7 @@
 066100     PERFORM FAIL.                                                NC2234.2
 066200 INI-WRITE-GF-2-7.                                                NC2234.2
 066300     PERFORM PRINT-DETAIL.                                        NC2234.2
-066400*                                                                 NC2234.2
+066400*                                                                         
 066500 INI-TEST-GF-2-8.                                                 NC2234.2
 066600     ADD     1 TO REC-CT.                                         NC2234.2
 066700     MOVE   "INI-TEST-GF-2-8" TO PAR-NAME.                        NC2234.2
@@ -679,7 +679,7 @@
 068100     PERFORM FAIL.                                                NC2234.2
 068200 INI-WRITE-GF-2-8.                                                NC2234.2
 068300     PERFORM PRINT-DETAIL.                                        NC2234.2
-068400*                                                                 NC2234.2
+068400*                                                                         
 068500 INI-TEST-GF-2-9.                                                 NC2234.2
 068600     ADD     1 TO REC-CT.                                         NC2234.2
 068700     MOVE   "INI-TEST-GF-2-9" TO PAR-NAME.                        NC2234.2
@@ -699,7 +699,7 @@
 070100     PERFORM FAIL.                                                NC2234.2
 070200 INI-WRITE-GF-2-9.                                                NC2234.2
 070300     PERFORM PRINT-DETAIL.                                        NC2234.2
-070400*                                                                 NC2234.2
+070400*                                                                         
 070500 INI-TEST-GF-2-10.                                                NC2234.2
 070600     ADD     1 TO REC-CT.                                         NC2234.2
 070700     MOVE   "INI-TEST-GF-2-10" TO PAR-NAME.                       NC2234.2
@@ -719,7 +719,7 @@
 072100     PERFORM FAIL.                                                NC2234.2
 072200 INI-WRITE-GF-2-10.                                               NC2234.2
 072300     PERFORM PRINT-DETAIL.                                        NC2234.2
-072400*                                                                 NC2234.2
+072400*                                                                         
 072500 INI-INIT-GF-3.                                                   NC2234.2
 072600     MOVE   "VI-91/2 6.16.2 GR2" TO ANSI-REFERENCE.               NC2234.2
 072700     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
@@ -734,7 +734,7 @@
 073600     GO TO   INI-INIT-GF-4.                                       NC2234.2
 073700 INI-TEST-GF-3-1.                                                 NC2234.2
 073800     MOVE   "INI-TEST-GF-3-1" TO PAR-NAME.                        NC2234.2
-073900     IF      TEST-1-3 = "***N******"                              NC2234.2
+073900     IF      TEST-1-3 = "**********"                              NC2234.2
 074000             PERFORM PASS                                         NC2234.2
 074100             GO TO INI-WRITE-GF-3-1                               NC2234.2
 074200     ELSE                                                         NC2234.2
@@ -743,7 +743,7 @@
 074500     PERFORM DE-LETE.                                             NC2234.2
 074600     GO TO INI-WRITE-GF-3-1.                                      NC2234.2
 074700 INI-FAIL-GF-3-1.                                                 NC2234.2
-074800     MOVE   "***N******"  TO CORRECT-X                            NC2234.2
+074800     MOVE   "**********"  TO CORRECT-X                            NC2234.2
 074900     MOVE    TEST-1-3 TO COMPUTED-X                               NC2234.2
 075000     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 075100     PERFORM FAIL.                                                NC2234.2
@@ -753,7 +753,7 @@
 075500 INI-TEST-GF-3-2.                                                 NC2234.2
 075600     ADD     1 TO REC-CT.                                         NC2234.2
 075700     MOVE   "INI-TEST-GF-3-2" TO PAR-NAME.                        NC2234.2
-075800     IF      TEST-1-8 = "**I*******"                              NC2234.2
+075800     IF      TEST-1-8 = "**********"                              NC2234.2
 075900             PERFORM PASS                                         NC2234.2
 076000             GO TO INI-WRITE-GF-3-2                               NC2234.2
 076100     ELSE                                                         NC2234.2
@@ -762,13 +762,13 @@
 076400     PERFORM DE-LETE.                                             NC2234.2
 076500     GO TO INI-WRITE-GF-3-2.                                      NC2234.2
 076600 INI-FAIL-GF-3-2.                                                 NC2234.2
-076700     MOVE   "**I*******"   TO CORRECT-X                           NC2234.2
+076700     MOVE   "**********"   TO CORRECT-X                           NC2234.2
 076800     MOVE    TEST-1-8 TO COMPUTED-X                               NC2234.2
 076900     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 077000     PERFORM FAIL.                                                NC2234.2
 077100 INI-WRITE-GF-3-2.                                                NC2234.2
 077200     PERFORM PRINT-DETAIL.                                        NC2234.2
-077300*                                                                 NC2234.2
+077300*                                                                         
 077400 INI-TEST-GF-3-3.                                                 NC2234.2
 077500     ADD     1 TO REC-CT.                                         NC2234.2
 077600     MOVE   "INI-TEST-GF-3-3" TO PAR-NAME.                        NC2234.2
@@ -788,7 +788,7 @@
 079000     PERFORM FAIL.                                                NC2234.2
 079100 INI-WRITE-GF-3-3.                                                NC2234.2
 079200     PERFORM PRINT-DETAIL.                                        NC2234.2
-079300*                                                                 NC2234.2
+079300*                                                                         
 079400 INI-TEST-GF-3-4.                                                 NC2234.2
 079500     ADD     1 TO REC-CT.                                         NC2234.2
 079600     MOVE   "INI-TEST-GF-3-4" TO PAR-NAME.                        NC2234.2
@@ -808,7 +808,7 @@
 081000     PERFORM FAIL.                                                NC2234.2
 081100 INI-WRITE-GF-3-4.                                                NC2234.2
 081200     PERFORM PRINT-DETAIL.                                        NC2234.2
-081300*                                                                 NC2234.2
+081300*                                                                         
 081400 INI-TEST-GF-3-5.                                                 NC2234.2
 081500     ADD     1 TO REC-CT.                                         NC2234.2
 081600     MOVE   "INI-TEST-GF-3-5" TO PAR-NAME.                        NC2234.2
@@ -828,7 +828,7 @@
 083000     PERFORM FAIL.                                                NC2234.2
 083100 INI-WRITE-GF-3-5.                                                NC2234.2
 083200     PERFORM PRINT-DETAIL.                                        NC2234.2
-083300*                                                                 NC2234.2
+083300*                                                                         
 083400 INI-TEST-GF-3-6.                                                 NC2234.2
 083500     ADD     1 TO REC-CT.                                         NC2234.2
 083600     MOVE   "INI-TEST-GF-3-6" TO PAR-NAME.                        NC2234.2
@@ -848,7 +848,7 @@
 085000     PERFORM FAIL.                                                NC2234.2
 085100 INI-WRITE-GF-3-6.                                                NC2234.2
 085200     PERFORM PRINT-DETAIL.                                        NC2234.2
-085300*                                                                 NC2234.2
+085300*                                                                         
 085400 INI-TEST-GF-3-7.                                                 NC2234.2
 085500     ADD     1 TO REC-CT.                                         NC2234.2
 085600     MOVE   "INI-TEST-GF-3-7" TO PAR-NAME.                        NC2234.2
@@ -868,7 +868,7 @@
 087000     PERFORM FAIL.                                                NC2234.2
 087100 INI-WRITE-GF-3-7.                                                NC2234.2
 087200     PERFORM PRINT-DETAIL.                                        NC2234.2
-087300*                                                                 NC2234.2
+087300*                                                                         
 087400 INI-TEST-GF-3-8.                                                 NC2234.2
 087500     ADD     1 TO REC-CT.                                         NC2234.2
 087600     MOVE   "INI-TEST-GF-3-8" TO PAR-NAME.                        NC2234.2
@@ -888,7 +888,7 @@
 089000     PERFORM FAIL.                                                NC2234.2
 089100 INI-WRITE-GF-3-8.                                                NC2234.2
 089200     PERFORM PRINT-DETAIL.                                        NC2234.2
-089300*                                                                 NC2234.2
+089300*                                                                         
 089400 INI-TEST-GF-3-9.                                                 NC2234.2
 089500     ADD     1 TO REC-CT.                                         NC2234.2
 089600     MOVE   "INI-TEST-GF-3-9" TO PAR-NAME.                        NC2234.2
@@ -908,7 +908,7 @@
 091000     PERFORM FAIL.                                                NC2234.2
 091100 INI-WRITE-GF-3-9.                                                NC2234.2
 091200     PERFORM PRINT-DETAIL.                                        NC2234.2
-091300*                                                                 NC2234.2
+091300*                                                                         
 091400 INI-TEST-GF-3-10.                                                NC2234.2
 091500     ADD     1 TO REC-CT.                                         NC2234.2
 091600     MOVE   "INI-TEST-GF-3-10" TO PAR-NAME.                       NC2234.2
@@ -928,7 +928,7 @@
 093000     PERFORM FAIL.                                                NC2234.2
 093100 INI-WRITE-GF-3-10.                                               NC2234.2
 093200     PERFORM PRINT-DETAIL.                                        NC2234.2
-093300*                                                                 NC2234.2
+093300*                                                                         
 093400 INI-INIT-GF-4.                                                   NC2234.2
 093500     MOVE   "VI-91/2 6.16.2 GR2" TO ANSI-REFERENCE.               NC2234.2
 093600     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
@@ -943,7 +943,7 @@
 094500     GO TO   INI-INIT-GF-5.                                       NC2234.2
 094600 INI-TEST-GF-4-1.                                                 NC2234.2
 094700     MOVE   "INI-TEST-GF-4-1" TO PAR-NAME.                        NC2234.2
-094800     IF      TEST-1-4 = "DDFDD/DD"                                NC2234.2
+094800     IF      TEST-1-4 = "DD DD/DD"                                NC2234.2
 094900             PERFORM PASS                                         NC2234.2
 095000             GO TO INI-WRITE-GF-4-1                               NC2234.2
 095100     ELSE                                                         NC2234.2
@@ -952,7 +952,7 @@
 095400     PERFORM DE-LETE.                                             NC2234.2
 095500     GO TO INI-WRITE-GF-4-1.                                      NC2234.2
 095600 INI-FAIL-GF-4-1.                                                 NC2234.2
-095700     MOVE   "DDFDD/DD" TO CORRECT-X                               NC2234.2
+095700     MOVE   "DD DD/DD" TO CORRECT-X                               NC2234.2
 095800     MOVE    TEST-1-4  TO COMPUTED-X                              NC2234.2
 095900     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 096000     PERFORM FAIL.                                                NC2234.2
@@ -962,7 +962,7 @@
 096400 INI-TEST-GF-4-2.                                                 NC2234.2
 096500     ADD     1 TO REC-CT.                                         NC2234.2
 096600     MOVE   "INI-TEST-GF-4-2" TO PAR-NAME.                        NC2234.2
-096700     IF      TEST-1-9 = "DD DM/DD"                                NC2234.2
+096700     IF      TEST-1-9 = "DD DD/DD"                                NC2234.2
 096800             PERFORM PASS                                         NC2234.2
 096900             GO TO INI-WRITE-GF-4-2                               NC2234.2
 097000     ELSE                                                         NC2234.2
@@ -971,13 +971,13 @@
 097300     PERFORM DE-LETE.                                             NC2234.2
 097400     GO TO INI-WRITE-GF-4-2.                                      NC2234.2
 097500 INI-FAIL-GF-4-2.                                                 NC2234.2
-097600     MOVE   "DD DM/DD" TO CORRECT-X                               NC2234.2
+097600     MOVE   "DD DD/DD" TO CORRECT-X                               NC2234.2
 097700     MOVE    TEST-1-9  TO COMPUTED-X                              NC2234.2
 097800     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 097900     PERFORM FAIL.                                                NC2234.2
 098000 INI-WRITE-GF-4-2.                                                NC2234.2
 098100     PERFORM PRINT-DETAIL.                                        NC2234.2
-098200*                                                                 NC2234.2
+098200*                                                                         
 098300 INI-TEST-GF-4-3.                                                 NC2234.2
 098400     ADD     1 TO REC-CT.                                         NC2234.2
 098500     MOVE   "INI-TEST-GF-4-3" TO PAR-NAME.                        NC2234.2
@@ -997,7 +997,7 @@
 099900     PERFORM FAIL.                                                NC2234.2
 100000 INI-WRITE-GF-4-3.                                                NC2234.2
 100100     PERFORM PRINT-DETAIL.                                        NC2234.2
-100200*                                                                 NC2234.2
+100200*                                                                         
 100300 INI-TEST-GF-4-4.                                                 NC2234.2
 100400     ADD     1 TO REC-CT.                                         NC2234.2
 100500     MOVE   "INI-TEST-GF-4-4" TO PAR-NAME.                        NC2234.2
@@ -1017,7 +1017,7 @@
 101900     PERFORM FAIL.                                                NC2234.2
 102000 INI-WRITE-GF-4-4.                                                NC2234.2
 102100     PERFORM PRINT-DETAIL.                                        NC2234.2
-102200*                                                                 NC2234.2
+102200*                                                                         
 102300 INI-TEST-GF-4-5.                                                 NC2234.2
 102400     ADD     1 TO REC-CT.                                         NC2234.2
 102500     MOVE   "INI-TEST-GF-4-5" TO PAR-NAME.                        NC2234.2
@@ -1037,7 +1037,7 @@
 103900     PERFORM FAIL.                                                NC2234.2
 104000 INI-WRITE-GF-4-5.                                                NC2234.2
 104100     PERFORM PRINT-DETAIL.                                        NC2234.2
-104200*                                                                 NC2234.2
+104200*                                                                         
 104300 INI-TEST-GF-4-6.                                                 NC2234.2
 104400     ADD     1 TO REC-CT.                                         NC2234.2
 104500     MOVE   "INI-TEST-GF-4-6" TO PAR-NAME.                        NC2234.2
@@ -1057,7 +1057,7 @@
 105900     PERFORM FAIL.                                                NC2234.2
 106000 INI-WRITE-GF-4-6.                                                NC2234.2
 106100     PERFORM PRINT-DETAIL.                                        NC2234.2
-106200*                                                                 NC2234.2
+106200*                                                                         
 106300 INI-TEST-GF-4-7.                                                 NC2234.2
 106400     ADD     1 TO REC-CT.                                         NC2234.2
 106500     MOVE   "INI-TEST-GF-4-7" TO PAR-NAME.                        NC2234.2
@@ -1081,7 +1081,7 @@
 108300 INI-TEST-GF-4-8.                                                 NC2234.2
 108400     ADD     1 TO REC-CT.                                         NC2234.2
 108500     MOVE   "INI-TEST-GF-4-8" TO PAR-NAME.                        NC2234.2
-108600     IF      TEST-1-7 = "D $0.00"                                 NC2234.2
+108600     IF      TEST-1-7 = "  $0.00"                                 NC2234.2
 108700             PERFORM PASS                                         NC2234.2
 108800             GO TO INI-WRITE-GF-4-8                               NC2234.2
 108900     ELSE                                                         NC2234.2
@@ -1090,14 +1090,14 @@
 109200     PERFORM DE-LETE.                                             NC2234.2
 109300     GO TO INI-WRITE-GF-4-8.                                      NC2234.2
 109400 INI-FAIL-GF-4-8.                                                 NC2234.2
-109500     MOVE   "D $0.00"  TO CORRECT-X                               NC2234.2
+109500     MOVE   "  $0.00"  TO CORRECT-X                               NC2234.2
 109600     MOVE    TEST-1-7 TO COMPUTED-X                               NC2234.2
 109700     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 109800          TO RE-MARK                                              NC2234.2
 109900     PERFORM FAIL.                                                NC2234.2
 110000 INI-WRITE-GF-4-8.                                                NC2234.2
 110100     PERFORM PRINT-DETAIL.                                        NC2234.2
-110200*                                                                 NC2234.2
+110200*                                                                         
 110300 INI-TEST-GF-4-9.                                                 NC2234.2
 110400     ADD     1 TO REC-CT.                                         NC2234.2
 110500     MOVE   "INI-TEST-GF-4-9" TO PAR-NAME.                        NC2234.2
@@ -1117,7 +1117,7 @@
 111900     PERFORM FAIL.                                                NC2234.2
 112000 INI-WRITE-GF-4-9.                                                NC2234.2
 112100     PERFORM PRINT-DETAIL.                                        NC2234.2
-112200*                                                                 NC2234.2
+112200*                                                                         
 112300 INI-TEST-GF-4-10.                                                NC2234.2
 112400     ADD     1 TO REC-CT.                                         NC2234.2
 112500     MOVE   "INI-TEST-GF-4-10" TO PAR-NAME.                       NC2234.2
@@ -1137,7 +1137,7 @@
 113900     PERFORM FAIL.                                                NC2234.2
 114000 INI-WRITE-GF-4-10.                                               NC2234.2
 114100     PERFORM PRINT-DETAIL.                                        NC2234.2
-114200*                                                                 NC2234.2
+114200*                                                                         
 114300 INI-INIT-GF-5.                                                   NC2234.2
 114400     MOVE   "VI-91/2 6.16.2 GR2" TO ANSI-REFERENCE.               NC2234.2
 114500     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
@@ -1167,7 +1167,7 @@
 116900     PERFORM FAIL.                                                NC2234.2
 117000 INI-WRITE-GF-5-1.                                                NC2234.2
 117100     PERFORM PRINT-DETAIL.                                        NC2234.2
-117200*                                                                 NC2234.2
+117200*                                                                         
 117300 INI-TEST-GF-5-2.                                                 NC2234.2
 117400     ADD     1 TO REC-CT.                                         NC2234.2
 117500     MOVE   "INI-TEST-GF-5-2" TO PAR-NAME.                        NC2234.2
@@ -1186,7 +1186,7 @@
 118800     PERFORM FAIL.                                                NC2234.2
 118900 INI-WRITE-GF-5-2.                                                NC2234.2
 119000     PERFORM PRINT-DETAIL.                                        NC2234.2
-119100*                                                                 NC2234.2
+119100*                                                                         
 119200 INI-TEST-GF-5-3.                                                 NC2234.2
 119300     ADD     1 TO REC-CT.                                         NC2234.2
 119400     MOVE   "INI-TEST-GF-5-3" TO PAR-NAME.                        NC2234.2
@@ -1206,7 +1206,7 @@
 120800     PERFORM FAIL.                                                NC2234.2
 120900 INI-WRITE-GF-5-3.                                                NC2234.2
 121000     PERFORM PRINT-DETAIL.                                        NC2234.2
-121100*                                                                 NC2234.2
+121100*                                                                         
 121200 INI-TEST-GF-5-4.                                                 NC2234.2
 121300     ADD     1 TO REC-CT.                                         NC2234.2
 121400     MOVE   "INI-TEST-GF-5-4" TO PAR-NAME.                        NC2234.2
@@ -1226,7 +1226,7 @@
 122800     PERFORM FAIL.                                                NC2234.2
 122900 INI-WRITE-GF-5-4.                                                NC2234.2
 123000     PERFORM PRINT-DETAIL.                                        NC2234.2
-123100*                                                                 NC2234.2
+123100*                                                                         
 123200 INI-TEST-GF-5-5.                                                 NC2234.2
 123300     ADD     1 TO REC-CT.                                         NC2234.2
 123400     MOVE   "INI-TEST-GF-5-5" TO PAR-NAME.                        NC2234.2
@@ -1246,7 +1246,7 @@
 124800     PERFORM FAIL.                                                NC2234.2
 124900 INI-WRITE-GF-5-5.                                                NC2234.2
 125000     PERFORM PRINT-DETAIL.                                        NC2234.2
-125100*                                                                 NC2234.2
+125100*                                                                         
 125200 INI-TEST-GF-5-6.                                                 NC2234.2
 125300     ADD     1 TO REC-CT.                                         NC2234.2
 125400     MOVE   "INI-TEST-GF-5-6" TO PAR-NAME.                        NC2234.2
@@ -1266,7 +1266,7 @@
 126800     PERFORM FAIL.                                                NC2234.2
 126900 INI-WRITE-GF-5-6.                                                NC2234.2
 127000     PERFORM PRINT-DETAIL.                                        NC2234.2
-127100*                                                                 NC2234.2
+127100*                                                                         
 127200 INI-TEST-GF-5-7.                                                 NC2234.2
 127300     ADD     1 TO REC-CT.                                         NC2234.2
 127400     MOVE   "INI-TEST-GF-5-7" TO PAR-NAME.                        NC2234.2
@@ -1286,7 +1286,7 @@
 128800     PERFORM FAIL.                                                NC2234.2
 128900 INI-WRITE-GF-5-7.                                                NC2234.2
 129000     PERFORM PRINT-DETAIL.                                        NC2234.2
-129100*                                                                 NC2234.2
+129100*                                                                         
 129200 INI-TEST-GF-5-8.                                                 NC2234.2
 129300     ADD     1 TO REC-CT.                                         NC2234.2
 129400     MOVE   "INI-TEST-GF-5-8" TO PAR-NAME.                        NC2234.2
@@ -1306,7 +1306,7 @@
 130800     PERFORM FAIL.                                                NC2234.2
 130900 INI-WRITE-GF-5-8.                                                NC2234.2
 131000     PERFORM PRINT-DETAIL.                                        NC2234.2
-131100*                                                                 NC2234.2
+131100*                                                                         
 131200 INI-TEST-GF-5-9.                                                 NC2234.2
 131300     ADD     1 TO REC-CT.                                         NC2234.2
 131400     MOVE   "INI-TEST-GF-5-9" TO PAR-NAME.                        NC2234.2
@@ -1326,7 +1326,7 @@
 132800     PERFORM FAIL.                                                NC2234.2
 132900 INI-WRITE-GF-5-9.                                                NC2234.2
 133000     PERFORM PRINT-DETAIL.                                        NC2234.2
-133100*                                                                 NC2234.2
+133100*                                                                         
 133200 INI-TEST-GF-5-10.                                                NC2234.2
 133300     ADD     1 TO REC-CT.                                         NC2234.2
 133400     MOVE   "INI-TEST-GF-5-10" TO PAR-NAME.                       NC2234.2
@@ -1346,7 +1346,7 @@
 134800     PERFORM FAIL.                                                NC2234.2
 134900 INI-WRITE-GF-5-10.                                               NC2234.2
 135000     PERFORM PRINT-DETAIL.                                        NC2234.2
-135100*                                                                 NC2234.2
+135100*                                                                         
 135200 INI-INIT-GF-6.                                                   NC2234.2
 135300     MOVE   "VI-91/2 6.16.2 GR2" TO ANSI-REFERENCE.               NC2234.2
 135400     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
@@ -1376,7 +1376,7 @@
 137800     PERFORM FAIL.                                                NC2234.2
 137900 INI-WRITE-GF-6-1.                                                NC2234.2
 138000     PERFORM PRINT-DETAIL.                                        NC2234.2
-138100*                                                                 NC2234.2
+138100*                                                                         
 138200 INI-TEST-GF-6-2.                                                 NC2234.2
 138300     ADD     1 TO REC-CT.                                         NC2234.2
 138400     MOVE   "INI-TEST-GF-6-2" TO PAR-NAME.                        NC2234.2
@@ -1395,7 +1395,7 @@
 139700     PERFORM FAIL.                                                NC2234.2
 139800 INI-WRITE-GF-6-2.                                                NC2234.2
 139900     PERFORM PRINT-DETAIL.                                        NC2234.2
-140000*                                                                 NC2234.2
+140000*                                                                         
 140100 INI-TEST-GF-6-3.                                                 NC2234.2
 140200     ADD     1 TO REC-CT.                                         NC2234.2
 140300     MOVE   "INI-TEST-GF-6-3" TO PAR-NAME.                        NC2234.2
@@ -1415,7 +1415,7 @@
 141700     PERFORM FAIL.                                                NC2234.2
 141800 INI-WRITE-GF-6-3.                                                NC2234.2
 141900     PERFORM PRINT-DETAIL.                                        NC2234.2
-142000*                                                                 NC2234.2
+142000*                                                                         
 142100 INI-TEST-GF-6-4.                                                 NC2234.2
 142200     ADD     1 TO REC-CT.                                         NC2234.2
 142300     MOVE   "INI-TEST-GF-6-4" TO PAR-NAME.                        NC2234.2
@@ -1435,7 +1435,7 @@
 143700     PERFORM FAIL.                                                NC2234.2
 143800 INI-WRITE-GF-6-4.                                                NC2234.2
 143900     PERFORM PRINT-DETAIL.                                        NC2234.2
-144000*                                                                 NC2234.2
+144000*                                                                         
 144100 INI-TEST-GF-6-5.                                                 NC2234.2
 144200     ADD     1 TO REC-CT.                                         NC2234.2
 144300     MOVE   "INI-TEST-GF-6-5" TO PAR-NAME.                        NC2234.2
@@ -1455,7 +1455,7 @@
 145700     PERFORM FAIL.                                                NC2234.2
 145800 INI-WRITE-GF-6-5.                                                NC2234.2
 145900     PERFORM PRINT-DETAIL.                                        NC2234.2
-146000*                                                                 NC2234.2
+146000*                                                                         
 146100 INI-TEST-GF-6-6.                                                 NC2234.2
 146200     ADD     1 TO REC-CT.                                         NC2234.2
 146300     MOVE   "INI-TEST-GF-6-6" TO PAR-NAME.                        NC2234.2
@@ -1475,7 +1475,7 @@
 147700     PERFORM FAIL.                                                NC2234.2
 147800 INI-WRITE-GF-6-6.                                                NC2234.2
 147900     PERFORM PRINT-DETAIL.                                        NC2234.2
-148000*                                                                 NC2234.2
+148000*                                                                         
 148100 INI-TEST-GF-6-7.                                                 NC2234.2
 148200     ADD     1 TO REC-CT.                                         NC2234.2
 148300     MOVE   "INI-TEST-GF-6-7" TO PAR-NAME.                        NC2234.2
@@ -1495,7 +1495,7 @@
 149700     PERFORM FAIL.                                                NC2234.2
 149800 INI-WRITE-GF-6-7.                                                NC2234.2
 149900     PERFORM PRINT-DETAIL.                                        NC2234.2
-150000*                                                                 NC2234.2
+150000*                                                                         
 150100 INI-TEST-GF-6-8.                                                 NC2234.2
 150200     ADD     1 TO REC-CT.                                         NC2234.2
 150300     MOVE   "INI-TEST-GF-6-8" TO PAR-NAME.                        NC2234.2
@@ -1515,7 +1515,7 @@
 151700     PERFORM FAIL.                                                NC2234.2
 151800 INI-WRITE-GF-6-8.                                                NC2234.2
 151900     PERFORM PRINT-DETAIL.                                        NC2234.2
-152000*                                                                 NC2234.2
+152000*                                                                         
 152100 INI-TEST-GF-6-9.                                                 NC2234.2
 152200     ADD     1 TO REC-CT.                                         NC2234.2
 152300     MOVE   "INI-TEST-GF-6-9" TO PAR-NAME.                        NC2234.2
@@ -1534,7 +1534,7 @@
 153600     PERFORM FAIL.                                                NC2234.2
 153700 INI-WRITE-GF-6-9.                                                NC2234.2
 153800     PERFORM PRINT-DETAIL.                                        NC2234.2
-153900*                                                                 NC2234.2
+153900*                                                                         
 154000 INI-TEST-GF-6-10.                                                NC2234.2
 154100     ADD     1 TO REC-CT.                                         NC2234.2
 154200     MOVE   "INI-TEST-GF-6-10" TO PAR-NAME.                       NC2234.2
@@ -1554,9 +1554,9 @@
 155600     PERFORM FAIL.                                                NC2234.2
 155700 INI-WRITE-GF-6-10.                                               NC2234.2
 155800     PERFORM PRINT-DETAIL.                                        NC2234.2
-155900*                                                                 NC2234.2
+155900*                                                                         
 156000 INI-INIT-GF-7.                                                   NC2234.2
-156100*    ===-->  MULTIPLE "REPLACING" PHRASES"  <--===                NC2234.2
+156100*                                                                         
 156200     MOVE   "VI-91 6.16.2" TO ANSI-REFERENCE.                     NC2234.2
 156300     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
 156400     MOVE    1 TO REC-CT.                                         NC2234.2
@@ -1599,7 +1599,7 @@
 160100     PERFORM FAIL.                                                NC2234.2
 160200 INI-WRITE-GF-7-1.                                                NC2234.2
 160300     PERFORM PRINT-DETAIL.                                        NC2234.2
-160400*                                                                 NC2234.2
+160400*                                                                         
 160500 INI-TEST-GF-7-2.                                                 NC2234.2
 160600     ADD     1 TO REC-CT.                                         NC2234.2
 160700     MOVE   "INI-TEST-GF-7-2" TO PAR-NAME.                        NC2234.2
@@ -1618,7 +1618,7 @@
 162000     PERFORM FAIL.                                                NC2234.2
 162100 INI-WRITE-GF-7-2.                                                NC2234.2
 162200     PERFORM PRINT-DETAIL.                                        NC2234.2
-162300*                                                                 NC2234.2
+162300*                                                                         
 162400 INI-TEST-GF-7-3.                                                 NC2234.2
 162500     ADD     1 TO REC-CT.                                         NC2234.2
 162600     MOVE   "INI-TEST-GF-7-3" TO PAR-NAME.                        NC2234.2
@@ -1638,7 +1638,7 @@
 164000     PERFORM FAIL.                                                NC2234.2
 164100 INI-WRITE-GF-7-3.                                                NC2234.2
 164200     PERFORM PRINT-DETAIL.                                        NC2234.2
-164300*                                                                 NC2234.2
+164300*                                                                         
 164400 INI-TEST-GF-7-4.                                                 NC2234.2
 164500     ADD     1 TO REC-CT.                                         NC2234.2
 164600     MOVE   "INI-TEST-GF-7-4" TO PAR-NAME.                        NC2234.2
@@ -1658,7 +1658,7 @@
 166000     PERFORM FAIL.                                                NC2234.2
 166100 INI-WRITE-GF-7-4.                                                NC2234.2
 166200     PERFORM PRINT-DETAIL.                                        NC2234.2
-166300*                                                                 NC2234.2
+166300*                                                                         
 166400 INI-TEST-GF-7-5.                                                 NC2234.2
 166500     ADD     1 TO REC-CT.                                         NC2234.2
 166600     MOVE   "INI-TEST-GF-7-5" TO PAR-NAME.                        NC2234.2
@@ -1682,7 +1682,7 @@
 168400 INI-TEST-GF-7-6.                                                 NC2234.2
 168500     ADD     1 TO REC-CT.                                         NC2234.2
 168600     MOVE   "INI-TEST-GF-7-6" TO PAR-NAME.                        NC2234.2
-168700     IF      TEST-1-5 = "AAAQAA"                                  NC2234.2
+168700     IF      TEST-1-5 = "AAAAAA"                                  NC2234.2
 168800             PERFORM PASS                                         NC2234.2
 168900             GO TO INI-WRITE-GF-7-6                               NC2234.2
 169000     ELSE                                                         NC2234.2
@@ -1691,14 +1691,14 @@
 169300     PERFORM DE-LETE.                                             NC2234.2
 169400     GO TO INI-WRITE-GF-7-6.                                      NC2234.2
 169500 INI-FAIL-GF-7-6.                                                 NC2234.2
-169600     MOVE   "AAAQAA"  TO CORRECT-X                                NC2234.2
+169600     MOVE   "AAAAAA"  TO CORRECT-X                                NC2234.2
 169700     MOVE    TEST-1-5 TO COMPUTED-X                               NC2234.2
 169800     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 169900         TO RE-MARK                                               NC2234.2
 170000     PERFORM FAIL.                                                NC2234.2
 170100 INI-WRITE-GF-7-6.                                                NC2234.2
 170200     PERFORM PRINT-DETAIL.                                        NC2234.2
-170300*                                                                 NC2234.2
+170300*                                                                         
 170400 INI-TEST-GF-7-7.                                                 NC2234.2
 170500     ADD     1 TO REC-CT.                                         NC2234.2
 170600     MOVE   "INI-TEST-GF-7-7" TO PAR-NAME.                        NC2234.2
@@ -1718,7 +1718,7 @@
 172000     PERFORM FAIL.                                                NC2234.2
 172100 INI-WRITE-GF-7-7.                                                NC2234.2
 172200     PERFORM PRINT-DETAIL.                                        NC2234.2
-172300*                                                                 NC2234.2
+172300*                                                                         
 172400 INI-TEST-GF-7-8.                                                 NC2234.2
 172500     ADD     1 TO REC-CT.                                         NC2234.2
 172600     MOVE   "INI-TEST-GF-7-8" TO PAR-NAME.                        NC2234.2
@@ -1738,7 +1738,7 @@
 174000     PERFORM FAIL.                                                NC2234.2
 174100 INI-WRITE-GF-7-8.                                                NC2234.2
 174200     PERFORM PRINT-DETAIL.                                        NC2234.2
-174300*                                                                 NC2234.2
+174300*                                                                         
 174400 INI-TEST-GF-7-9.                                                 NC2234.2
 174500     ADD     1 TO REC-CT.                                         NC2234.2
 174600     MOVE   "INI-TEST-GF-7-9" TO PAR-NAME.                        NC2234.2
@@ -1758,7 +1758,7 @@
 176000     PERFORM FAIL.                                                NC2234.2
 176100 INI-WRITE-GF-7-9.                                                NC2234.2
 176200     PERFORM PRINT-DETAIL.                                        NC2234.2
-176300*                                                                 NC2234.2
+176300*                                                                         
 176400 INI-TEST-GF-7-10.                                                NC2234.2
 176500     ADD     1 TO REC-CT.                                         NC2234.2
 176600     MOVE   "INI-TEST-GF-7-10" TO PAR-NAME.                       NC2234.2
@@ -1778,9 +1778,9 @@
 178000     PERFORM FAIL.                                                NC2234.2
 178100 INI-WRITE-GF-7-10.                                               NC2234.2
 178200     PERFORM PRINT-DETAIL.                                        NC2234.2
-178300*                                                                 NC2234.2
+178300*                                                                         
 178400 INI-INIT-GF-8.                                                   NC2234.2
-178500*    ===-->  MULTIPLE RECEIVING AREAS       <--===                NC2234.2
+178500*                                                                         
 178600     MOVE   "VI-91 6.16.4 GR2" TO ANSI-REFERENCE.                 NC2234.2
 178700     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
 178800     MOVE    1 TO REC-CT.                                         NC2234.2
@@ -1817,7 +1817,7 @@
 181900 INI-TEST-GF-8-2.                                                 NC2234.2
 182000     ADD     1 TO REC-CT.                                         NC2234.2
 182100     MOVE   "INI-TEST-GF-8-2" TO PAR-NAME.                        NC2234.2
-182200     IF      TEST-1-7 = "  $0Y00"                                 NC2234.2
+182200     IF      TEST-1-7 = "  $0.00"                                 NC2234.2
 182300             PERFORM PASS                                         NC2234.2
 182400             GO TO INI-WRITE-GF-8-2                               NC2234.2
 182500     ELSE                                                         NC2234.2
@@ -1826,13 +1826,13 @@
 182800     PERFORM DE-LETE.                                             NC2234.2
 182900     GO TO INI-WRITE-GF-8-2.                                      NC2234.2
 183000 INI-FAIL-GF-8-2.                                                 NC2234.2
-183100     MOVE   "  $0Y00"  TO CORRECT-X                               NC2234.2
+183100     MOVE   "  $0.00"  TO CORRECT-X                               NC2234.2
 183200     MOVE    TEST-1-7 TO COMPUTED-X                               NC2234.2
 183300     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 183400     PERFORM FAIL.                                                NC2234.2
 183500 INI-WRITE-GF-8-2.                                                NC2234.2
 183600     PERFORM PRINT-DETAIL.                                        NC2234.2
-183700*                                                                 NC2234.2
+183700*                                                                         
 183800 INI-TEST-GF-8-3.                                                 NC2234.2
 183900     ADD     1 TO REC-CT.                                         NC2234.2
 184000     MOVE   "INI-TEST-GF-8-3" TO PAR-NAME.                        NC2234.2
@@ -1851,7 +1851,7 @@
 185300     PERFORM FAIL.                                                NC2234.2
 185400 INI-WRITE-GF-8-3.                                                NC2234.2
 185500     PERFORM PRINT-DETAIL.                                        NC2234.2
-185600*                                                                 NC2234.2
+185600*                                                                         
 185700 INI-TEST-GF-8-4.                                                 NC2234.2
 185800     ADD     1 TO REC-CT.                                         NC2234.2
 185900     MOVE   "INI-TEST-GF-8-4" TO PAR-NAME.                        NC2234.2
@@ -1870,7 +1870,7 @@
 187200     PERFORM FAIL.                                                NC2234.2
 187300 INI-WRITE-GF-8-4.                                                NC2234.2
 187400     PERFORM PRINT-DETAIL.                                        NC2234.2
-187500*                                                                 NC2234.2
+187500*                                                                         
 187600 INI-TEST-GF-8-5.                                                 NC2234.2
 187700     ADD     1 TO REC-CT.                                         NC2234.2
 187800     MOVE   "INI-TEST-GF-8-5" TO PAR-NAME.                        NC2234.2
@@ -1889,7 +1889,7 @@
 189100     PERFORM FAIL.                                                NC2234.2
 189200 INI-WRITE-GF-8-5.                                                NC2234.2
 189300     PERFORM PRINT-DETAIL.                                        NC2234.2
-189400*                                                                 NC2234.2
+189400*                                                                         
 189500 INI-TEST-GF-8-6.                                                 NC2234.2
 189600     ADD     1 TO REC-CT.                                         NC2234.2
 189700     MOVE   "INI-TEST-GF-8-6" TO PAR-NAME.                        NC2234.2
@@ -1908,7 +1908,7 @@
 191000     PERFORM FAIL.                                                NC2234.2
 191100 INI-WRITE-GF-8-6.                                                NC2234.2
 191200     PERFORM PRINT-DETAIL.                                        NC2234.2
-191300*                                                                 NC2234.2
+191300*                                                                         
 191400 INI-TEST-GF-8-7.                                                 NC2234.2
 191500     ADD     1 TO REC-CT.                                         NC2234.2
 191600     MOVE   "INI-TEST-GF-8-7" TO PAR-NAME.                        NC2234.2
@@ -1927,7 +1927,7 @@
 192900     PERFORM FAIL.                                                NC2234.2
 193000 INI-WRITE-GF-8-7.                                                NC2234.2
 193100     PERFORM PRINT-DETAIL.                                        NC2234.2
-193200*                                                                 NC2234.2
+193200*                                                                         
 193300 INI-TEST-GF-8-8.                                                 NC2234.2
 193400     ADD     1 TO REC-CT.                                         NC2234.2
 193500     MOVE   "INI-TEST-GF-8-8" TO PAR-NAME.                        NC2234.2
@@ -1946,7 +1946,7 @@
 194800     PERFORM FAIL.                                                NC2234.2
 194900 INI-WRITE-GF-8-8.                                                NC2234.2
 195000     PERFORM PRINT-DETAIL.                                        NC2234.2
-195100*                                                                 NC2234.2
+195100*                                                                         
 195200 INI-TEST-GF-8-9.                                                 NC2234.2
 195300     ADD     1 TO REC-CT.                                         NC2234.2
 195400     MOVE   "INI-TEST-GF-8-9" TO PAR-NAME.                        NC2234.2
@@ -1965,7 +1965,7 @@
 196700     PERFORM FAIL.                                                NC2234.2
 196800 INI-WRITE-GF-8-9.                                                NC2234.2
 196900     PERFORM PRINT-DETAIL.                                        NC2234.2
-197000*                                                                 NC2234.2
+197000*                                                                         
 197100 INI-TEST-GF-8-10.                                                NC2234.2
 197200     ADD     1 TO REC-CT.                                         NC2234.2
 197300     MOVE   "INI-TEST-GF-8-10" TO PAR-NAME.                       NC2234.2
@@ -1984,7 +1984,7 @@
 198600     PERFORM FAIL.                                                NC2234.2
 198700 INI-WRITE-GF-8-10.                                               NC2234.2
 198800     PERFORM PRINT-DETAIL.                                        NC2234.2
-198900*                                                                 NC2234.2
+198900*                                                                         
 199000 INI-TEST-GF-8-11.                                                NC2234.2
 199100     ADD     1 TO REC-CT.                                         NC2234.2
 199200     MOVE   "INI-TEST-GF-8-11" TO PAR-NAME.                       NC2234.2
@@ -2003,7 +2003,7 @@
 200500     PERFORM FAIL.                                                NC2234.2
 200600 INI-WRITE-GF-8-11.                                               NC2234.2
 200700     PERFORM PRINT-DETAIL.                                        NC2234.2
-200800*                                                                 NC2234.2
+200800*                                                                         
 200900 INI-TEST-GF-8-12.                                                NC2234.2
 201000     ADD     1 TO REC-CT.                                         NC2234.2
 201100     MOVE   "INI-TEST-GF-8-12" TO PAR-NAME.                       NC2234.2
@@ -2022,10 +2022,10 @@
 202400     PERFORM FAIL.                                                NC2234.2
 202500 INI-WRITE-GF-8-12.                                               NC2234.2
 202600     PERFORM PRINT-DETAIL.                                        NC2234.2
-202700*                                                                 NC2234.2
+202700*                                                                         
 202800 INI-INIT-GF-9.                                                   NC2234.2
-202900*    ===-->  MULTIPLE RECEIVING AREAS AND   <--===                NC2234.2
-203000*    ===-->  MULTIPLE "REPLACING" PHRASES"  <--===                NC2234.2
+202900*                                                                         
+203000*                                                                         
 203100     MOVE   "VI-91 6.16.2" TO ANSI-REFERENCE.                     NC2234.2
 203200     MOVE   "INITIALIZE STATEMENT" TO FEATURE.                    NC2234.2
 203300     MOVE    1 TO REC-CT.                                         NC2234.2
@@ -2073,7 +2073,7 @@
 207500     PERFORM FAIL.                                                NC2234.2
 207600 INI-WRITE-GF-9-1.                                                NC2234.2
 207700     PERFORM PRINT-DETAIL.                                        NC2234.2
-207800*                                                                 NC2234.2
+207800*                                                                         
 207900 INI-TEST-GF-9-2.                                                 NC2234.2
 208000     ADD     1 TO REC-CT.                                         NC2234.2
 208100     MOVE   "INI-TEST-GF-9-2" TO PAR-NAME.                        NC2234.2
@@ -2092,7 +2092,7 @@
 209400     PERFORM FAIL.                                                NC2234.2
 209500 INI-WRITE-GF-9-2.                                                NC2234.2
 209600     PERFORM PRINT-DETAIL.                                        NC2234.2
-209700*                                                                 NC2234.2
+209700*                                                                         
 209800 INI-TEST-GF-9-3.                                                 NC2234.2
 209900     ADD     1 TO REC-CT.                                         NC2234.2
 210000     MOVE   "INI-TEST-GF-9-3" TO PAR-NAME.                        NC2234.2
@@ -2111,7 +2111,7 @@
 211300     PERFORM FAIL.                                                NC2234.2
 211400 INI-WRITE-GF-9-3.                                                NC2234.2
 211500     PERFORM PRINT-DETAIL.                                        NC2234.2
-211600*                                                                 NC2234.2
+211600*                                                                         
 211700 INI-TEST-GF-9-4.                                                 NC2234.2
 211800     ADD     1 TO REC-CT.                                         NC2234.2
 211900     MOVE   "INI-TEST-GF-9-4" TO PAR-NAME.                        NC2234.2
@@ -2130,7 +2130,7 @@
 213200     PERFORM FAIL.                                                NC2234.2
 213300 INI-WRITE-GF-9-4.                                                NC2234.2
 213400     PERFORM PRINT-DETAIL.                                        NC2234.2
-213500*                                                                 NC2234.2
+213500*                                                                         
 213600 INI-TEST-GF-9-5.                                                 NC2234.2
 213700     ADD     1 TO REC-CT.                                         NC2234.2
 213800     MOVE   "INI-TEST-GF-9-5" TO PAR-NAME.                        NC2234.2
@@ -2149,7 +2149,7 @@
 215100     PERFORM FAIL.                                                NC2234.2
 215200 INI-WRITE-GF-9-5.                                                NC2234.2
 215300     PERFORM PRINT-DETAIL.                                        NC2234.2
-215400*                                                                 NC2234.2
+215400*                                                                         
 215500 INI-TEST-GF-9-6.                                                 NC2234.2
 215600     ADD     1 TO REC-CT.                                         NC2234.2
 215700     MOVE   "INI-TEST-GF-9-6" TO PAR-NAME.                        NC2234.2
@@ -2168,7 +2168,7 @@
 217000     PERFORM FAIL.                                                NC2234.2
 217100 INI-WRITE-GF-9-6.                                                NC2234.2
 217200     PERFORM PRINT-DETAIL.                                        NC2234.2
-217300*                                                                 NC2234.2
+217300*                                                                         
 217400 INI-TEST-GF-9-7.                                                 NC2234.2
 217500     ADD     1 TO REC-CT.                                         NC2234.2
 217600     MOVE   "INI-TEST-GF-9-7" TO PAR-NAME.                        NC2234.2
@@ -2187,7 +2187,7 @@
 218900     PERFORM FAIL.                                                NC2234.2
 219000 INI-WRITE-GF-9-7.                                                NC2234.2
 219100     PERFORM PRINT-DETAIL.                                        NC2234.2
-219200*                                                                 NC2234.2
+219200*                                                                         
 219300 INI-TEST-GF-9-8.                                                 NC2234.2
 219400     ADD     1 TO REC-CT.                                         NC2234.2
 219500     MOVE   "INI-TEST-GF-9-8" TO PAR-NAME.                        NC2234.2
@@ -2206,7 +2206,7 @@
 220800     PERFORM FAIL.                                                NC2234.2
 220900 INI-WRITE-GF-9-8.                                                NC2234.2
 221000     PERFORM PRINT-DETAIL.                                        NC2234.2
-221100*                                                                 NC2234.2
+221100*                                                                         
 221200 INI-TEST-GF-9-9.                                                 NC2234.2
 221300     ADD     1 TO REC-CT.                                         NC2234.2
 221400     MOVE   "INI-TEST-GF-9-9" TO PAR-NAME.                        NC2234.2
@@ -2225,7 +2225,7 @@
 222700     PERFORM FAIL.                                                NC2234.2
 222800 INI-WRITE-GF-9-9.                                                NC2234.2
 222900     PERFORM PRINT-DETAIL.                                        NC2234.2
-223000*                                                                 NC2234.2
+223000*                                                                         
 223100 INI-TEST-GF-9-10.                                                NC2234.2
 223200     ADD     1 TO REC-CT.                                         NC2234.2
 223300     MOVE   "INI-TEST-GF-9-10" TO PAR-NAME.                       NC2234.2
@@ -2244,7 +2244,7 @@
 224600     PERFORM FAIL.                                                NC2234.2
 224700 INI-WRITE-GF-9-10.                                               NC2234.2
 224800     PERFORM PRINT-DETAIL.                                        NC2234.2
-224900*                                                                 NC2234.2
+224900*                                                                         
 225000 INI-TEST-GF-9-11.                                                NC2234.2
 225100     ADD     1 TO REC-CT.                                         NC2234.2
 225200     MOVE   "INI-TEST-GF-9-11" TO PAR-NAME.                       NC2234.2
@@ -2263,7 +2263,7 @@
 226500     PERFORM FAIL.                                                NC2234.2
 226600 INI-WRITE-GF-9-11.                                               NC2234.2
 226700     PERFORM PRINT-DETAIL.                                        NC2234.2
-226800*                                                                 NC2234.2
+226800*                                                                         
 226900 INI-TEST-GF-9-12.                                                NC2234.2
 227000     ADD     1 TO REC-CT.                                         NC2234.2
 227100     MOVE   "INI-TEST-GF-9-12" TO PAR-NAME.                       NC2234.2
@@ -2282,7 +2282,7 @@
 228400     PERFORM FAIL.                                                NC2234.2
 228500 INI-WRITE-GF-9-12.                                               NC2234.2
 228600     PERFORM PRINT-DETAIL.                                        NC2234.2
-228700*                                                                 NC2234.2
+228700*                                                                         
 228800 CCVS-EXIT SECTION.                                               NC2234.2
 228900 CCVS-999999.                                                     NC2234.2
 229000     GO TO CLOSE-FILES.                                           NC2234.2

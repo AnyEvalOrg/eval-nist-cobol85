@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         SM1044.2
 000200 PROGRAM-ID.                                                      SM1044.2
 000300     SM104A.                                                      SM1044.2
-000400****************************************************************  SM1044.2
-000500*                                                              *  SM1044.2
-000600*    VALIDATION FOR:-                                          *  SM1044.2
-000700*                                                              *  SM1044.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM1044.2
-000900*                                                              *  SM1044.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM1044.2
-001100*                                                              *  SM1044.2
-001200****************************************************************  SM1044.2
-001300*                                                              *  SM1044.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM1044.2
-001500*                                                              *  SM1044.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM1044.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM1044.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM1044.2
-001900*                                                              *  SM1044.2
-002000****************************************************************  SM1044.2
-002100*                                                              *  SM1044.2
-002200*    PROGRAM SM104A READS AND CHECKS THE FILE PRODUCED BY      *  SM1044.2
-002300*    SM103A TO VERIFY THE PROPER EXECUTION OF THE "COPY"       *  SM1044.2
-002400*    STATEMENTS IN THAT PROGRAM.                               *  SM1044.2
-002500*                                                              *  SM1044.2
-002600****************************************************************  SM1044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            SM1044.2
 002800 CONFIGURATION SECTION.                                           SM1044.2
 002900 SOURCE-COMPUTER.                                                 SM1044.2
@@ -35,9 +35,9 @@
 003500     SELECT PRINT-FILE ASSIGN TO                                  SM1044.2
 003600     "REPORT".                                                    SM1044.2
 003700     SELECT TEST-FILE ASSIGN TO                                   SM1044.2
-003800* THE FOLLOWING LINE WILL BE CHANGED BY TPF ONLY WHEN THE         SM1044.2
-003900* PROGRAM-ID IS PART OF THE REPLACEMENT BY THE X-CARD             SM1044.2
-004000* DURING EXTRACTION.                                              SM1044.2
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100     "XXXXX001".                                                  SM1044.2
 004200 DATA DIVISION.                                                   SM1044.2
 004300 FILE SECTION.                                                    SM1044.2
@@ -239,7 +239,7 @@
 024600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM1044.2
 024700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM1044.2
 024800      ADD PASS-COUNTER TO ERROR-HOLD.                             SM1044.2
-024900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM1044.2
+024900*                                                                         
 025000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM1044.2
 025100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM1044.2
 025200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM1044.2
@@ -323,27 +323,27 @@
 033000                                                                  SM1044.2
 033100                                                                  SM1044.2
 033200                                                                  SM1044.2
-033300*                                                                 SM1044.2
-033400******************* COPY WITHIN NOTE USED ************************SM1044.2
-033500*                                                                 SM1044.2
-033600*        NOTE                                         COPY K4NTA. SM1044.2
-033700*                                                                 SM1044.2
-033800**************** NO TEXT EXPANSION SHOULD OCCUR ******************SM1044.2
-033900*        NOTE                                          COPY K4NTA.SM1044.2
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
 034000 COPY-PASS-1.                                                     SM1044.2
 034100     PERFORM PASS.                                                SM1044.2
-034200*        NOTE K4NTA IS IN THE LIBRARY BUT IT SHOULD               SM1044.2
-034300*             NOT BE COPIED.                                      SM1044.2
+034200*                                                                         
+034300*                                                                         
 034400 COPY-WRITE-1.                                                    SM1044.2
 034500     MOVE     "COPY-TEST-1" TO PAR-NAME.                          SM1044.2
 034600     PERFORM  PRINT-DETAIL.                                       SM1044.2
 034700 COPY-TEST-2.                                                     SM1044.2
-034800*        NOTE THE WORDS COPY WHICH ARE IN THIS NOTE SHOULD        SM1044.2
-034900*             NOT BE TREATED AS COPY VERBS, AND THE FOLLOWING     SM1044.2
-035000*             "STATEMENTS" SHOULD BE TREATED AS PART OF THIS NOTE.SM1044.2
-035100*             PERFORM FAIL.                                       SM1044.2
-035200*             MOVE "SEE COPY-TEST-2" TO RE-MARK.                  SM1044.2
-035300*             GO TO COPY-WRITE-2.                                 SM1044.2
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
+035200*                                                                         
+035300*                                                                         
 035400 COPY-PASS-2.                                                     SM1044.2
 035500     PERFORM PASS.                                                SM1044.2
 035600 COPY-WRITE-2.                                                    SM1044.2

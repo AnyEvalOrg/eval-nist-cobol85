@@ -5,4 +5,4 @@ RL206A.CBL:456: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   455 | 046200     CLOSE   RL-FS1.                                              R..
   456 > 046300     GO TO   CCVS-EXIT.                                           R..
   457 | 046400 SIZE-TEST-1 SECTION.                                             R..
-  458 | 046500*===================                                              R..
+  458 | 046500*..

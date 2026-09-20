@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2384.2
 000200 PROGRAM-ID.                                                      NC2384.2
 000300     NC238A.                                                      NC2384.2
-000400****************************************************************  NC2384.2
-000500*                                                              *  NC2384.2
-000600*    VALIDATION FOR:-                                          *  NC2384.2
-000700*                                                              *  NC2384.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2384.2
-000900*                                                              *  NC2384.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2384.2
-001100*                                                              *  NC2384.2
-001200****************************************************************  NC2384.2
-001300*                                                              *  NC2384.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2384.2
-001500*                                                              *  NC2384.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2384.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2384.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2384.2
-001900*                                                              *  NC2384.2
-002000****************************************************************  NC2384.2
-002100*                                                                 NC2384.2
-002200*    PROGRAM NC238A TESTS FORMATS 1 AND 2 OF THE "SEARCH"      *  NC2384.2
-002300*    STATEMENT USING A TWO-DIMENDIONAL TABLE WITH ASCENDING    *  NC2384.2
-002400*    AND DESCENDING KEYS AND MULTIPLE INDICES.  SINGLE AND     *  NC2384.2
-002500*    MULTIPLE CONDITIONS ARE USED IN THE "WHEN" PHRASE.        *  NC2384.2
-002600*                                                              *  NC2384.2
-002700****************************************************************  NC2384.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2384.2
 002900 CONFIGURATION SECTION.                                           NC2384.2
 003000 SOURCE-COMPUTER.                                                 NC2384.2
@@ -293,7 +293,7 @@
 029500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2384.2
 029600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2384.2
 029700      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2384.2
-029800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2384.2
+029800*                                                                         
 029900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2384.2
 030000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2384.2
 030100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2384.2
@@ -385,7 +385,7 @@
 038700     EXIT.                                                        NC2384.2
 038800 BUILD-EXIT.                                                      NC2384.2
 038900     EXIT.                                                        NC2384.2
-039000*                                                                 NC2384.2
+039000*                                                                         
 039100 SCH-INIT-F1-1.                                                   NC2384.2
 039200     MOVE "SCH-TEST-F1-1" TO PAR-NAME.                            NC2384.2
 039300     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -409,7 +409,7 @@
 041100     PERFORM FAIL.                                                NC2384.2
 041200 SCH-WRITE-F1-1.                                                  NC2384.2
 041300     PERFORM PRINT-DETAIL.                                        NC2384.2
-041400*                                                                 NC2384.2
+041400*                                                                         
 041500 SCH-INIT-F1-2.                                                   NC2384.2
 041600     MOVE "SCH-TEST-F1-2" TO PAR-NAME.                            NC2384.2
 041700     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -437,7 +437,7 @@
 043900     PERFORM FAIL.                                                NC2384.2
 044000 SCH-WRITE-F1-2.                                                  NC2384.2
 044100     PERFORM PRINT-DETAIL.                                        NC2384.2
-044200*                                                                 NC2384.2
+044200*                                                                         
 044300 SCH-INIT-F1-3.                                                   NC2384.2
 044400     MOVE "SCH-TEST-F1-3" TO PAR-NAME.                            NC2384.2
 044500     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -466,7 +466,7 @@
 046800     PERFORM FAIL.                                                NC2384.2
 046900 SCH-WRITE-F1-3.                                                  NC2384.2
 047000     PERFORM PRINT-DETAIL.                                        NC2384.2
-047100*                                                                 NC2384.2
+047100*                                                                         
 047200 SCH-INIT-F1-4.                                                   NC2384.2
 047300     MOVE "SCH-TEST-F1-4" TO PAR-NAME.                            NC2384.2
 047400     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -492,7 +492,7 @@
 049400     PERFORM FAIL.                                                NC2384.2
 049500 SCH-WRITE-F1-4.                                                  NC2384.2
 049600     PERFORM PRINT-DETAIL.                                        NC2384.2
-049700*                                                                 NC2384.2
+049700*                                                                         
 049800 SCH-INIT-F1-5.                                                   NC2384.2
 049900     MOVE "SCH-TEST-F1-5" TO PAR-NAME.                            NC2384.2
 050000     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -523,7 +523,7 @@
 052500     PERFORM FAIL.                                                NC2384.2
 052600 SCH-WRITE-F1-5.                                                  NC2384.2
 052700     PERFORM PRINT-DETAIL.                                        NC2384.2
-052800*                                                                 NC2384.2
+052800*                                                                         
 052900 SCH-INIT-F2-6.                                                   NC2384.2
 053000     MOVE "SCH-TEST-F2-6" TO PAR-NAME.                            NC2384.2
 053100     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -547,7 +547,7 @@
 054900     PERFORM FAIL.                                                NC2384.2
 055000 SCH-WRITE-F2-6.                                                  NC2384.2
 055100     PERFORM PRINT-DETAIL.                                        NC2384.2
-055200*                                                                 NC2384.2
+055200*                                                                         
 055300 SCH-INIT-F2-7.                                                   NC2384.2
 055400     MOVE "SCH-TEST-F2-7" TO PAR-NAME.                            NC2384.2
 055500     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -573,7 +573,7 @@
 057500     PERFORM FAIL.                                                NC2384.2
 057600 SCH-WRITE-F2-7.                                                  NC2384.2
 057700     PERFORM PRINT-DETAIL.                                        NC2384.2
-057800*                                                                 NC2384.2
+057800*                                                                         
 057900 SCH-INIT-F2-8.                                                   NC2384.2
 058000     MOVE "SCH-TEST-F2-8" TO PAR-NAME.                            NC2384.2
 058100     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -600,7 +600,7 @@
 060200     PERFORM FAIL.                                                NC2384.2
 060300 SCH-WRITE-F2-8.                                                  NC2384.2
 060400     PERFORM PRINT-DETAIL.                                        NC2384.2
-060500*                                                                 NC2384.2
+060500*                                                                         
 060600 SCH-INIT-F2-9.                                                   NC2384.2
 060700     MOVE "SCH-TEST-F2-9" TO PAR-NAME.                            NC2384.2
 060800     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2384.2
@@ -625,9 +625,9 @@
 062700     PERFORM FAIL.                                                NC2384.2
 062800 SCH-WRITE-F2-9.                                                  NC2384.2
 062900     PERFORM PRINT-DETAIL.                                        NC2384.2
-063000*                                                                 NC2384.2
+063000*                                                                         
 063100 SCH-INIT-F2-10.                                                  NC2384.2
-063200*    ===-->  ARITHMETIC EXPRESSION OF ZERO  <--===                NC2384.2
+063200*                                                                         
 063300     MOVE "SCH-TEST-F2-10" TO PAR-NAME.                           NC2384.2
 063400     MOVE   "VI-51 6.2" TO ANSI-REFERENCE.                        NC2384.2
 063500     MOVE "SEARCH ALL " TO FEATURE.                               NC2384.2
@@ -650,7 +650,7 @@
 065200     PERFORM FAIL.                                                NC2384.2
 065300 SCH-WRITE-F2-10.                                                 NC2384.2
 065400     PERFORM PRINT-DETAIL.                                        NC2384.2
-065500*                                                                 NC2384.2
+065500*                                                                         
 065600 CCVS-EXIT SECTION.                                               NC2384.2
 065700 CCVS-999999.                                                     NC2384.2
 065800     GO TO CLOSE-FILES.                                           NC2384.2

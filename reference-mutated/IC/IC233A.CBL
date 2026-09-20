@@ -1,42 +1,42 @@
 000100 IDENTIFICATION DIVISION.                                         IC2334.2
 000200 PROGRAM-ID.                                                      IC2334.2
 000300     IC233A.                                                      IC2334.2
-000400****************************************************************  IC2334.2
-000500*                                                              *  IC2334.2
-000600*    VALIDATION FOR:-                                          *  IC2334.2
-000700*                                                              *  IC2334.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2334.2
-000900*                                                              *  IC2334.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2334.2
-001100*                                                              *  IC2334.2
-001200****************************************************************  IC2334.2
-001300*                                                              *  IC2334.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2334.2
-001500*                                                              *  IC2334.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2334.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2334.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2334.2
-001900*        X-18  - OPTIONAL SEQUENTIAL MASS STORAGE FILE.        *  IC2334.2
-002000****************************************************************  IC2334.2
-002100*                                                              *  IC2334.2
-002200*    PROGRAMS IC233A AND IC233A-1 TEST THAT A "USE" PROCEDURE  *  IC2334.2
-002300*    IN A CALLING PROGRAM IS INVOKED BY A QUALIFYING CONDITION *  IC2334.2
-002400*    OCCURRING IN A CONTAINED PROGRAM.                         *  IC2334.2
-002500*                                                              *  IC2334.2
-002600*    BOTH PROGRAMS WILL BE COMPILED IN ONE INVOCATION OF THE   *  IC2334.2
-002700*    COMPILER AS SHOWN BELOW:                                  *  IC2334.2
-002800*    IDENTIFICATION DIVISION.                                  *  IC2334.2
-002900*    PROGRAM-ID. IC233A.                                       *  IC2334.2
-003000*              .                                               *  IC2334.2
-003100*              .                                               *  IC2334.2
-003200*              .                                               *  IC2334.2
-003300*    IDENTIFICATION DIVISION.                                  *  IC2334.2
-003400*    PROGRAM-ID. IC233A-1.                                     *  IC2334.2
-003500*              .                                               *  IC2334.2
-003600*              .                                               *  IC2334.2
-003700*    END PROGRAM IC233A-1.                                     *  IC2334.2
-003800*    END PROGRAM IC233A.                                       *  IC2334.2
-003900****************************************************************  IC2334.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
 004000 ENVIRONMENT DIVISION.                                            IC2334.2
 004100 CONFIGURATION SECTION.                                           IC2334.2
 004200 SOURCE-COMPUTER.                                                 IC2334.2
@@ -308,7 +308,7 @@
 031000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2334.2
 031100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2334.2
 031200      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2334.2
-031300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2334.2
+031300*                                                                         
 031400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2334.2
 031500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2334.2
 031600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2334.2
@@ -392,111 +392,111 @@
 039400     PERFORM DE-LETE.                                             IC2334.2
 039500 USE-WRITE-1.                                                     IC2334.2
 039600     PERFORM PRINT-DETAIL.                                        IC2334.2
-039700*                                                                 IC2334.2
+039700*                                                                         
 039800 CCVS-EXIT SECTION.                                               IC2334.2
 039900 CCVS-999999.                                                     IC2334.2
 040000     GO TO CLOSE-FILES.                                           IC2334.2
-040100*                                                                 IC2334.2
+040100*                                                                         
 040200 IDENTIFICATION DIVISION.                                         IC2334.2
 040300 PROGRAM-ID.                                                      IC2334.2
 040400     IC233A-1.                                                    IC2334.2
-040500****************************************************************  IC2334.2
-040600*                                                              *  IC2334.2
-040700*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2334.2
-040800*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2334.2
-040900*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2334.2
-041000*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2334.2
-041100*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2334.2
-041200*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2334.2
-041300*                                                              *  IC2334.2
-041400*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2334.2
-041500*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2334.2
-041600*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2334.2
-041700*                                                              *  IC2334.2
-041800*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2334.2
-041900*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2334.2
-042000*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2334.2
-042100*                                                              *  IC2334.2
-042200*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2334.2
-042300*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2334.2
-042400*                & INFORMATION TECHNOLOGY                      *  IC2334.2
-042500*          TWO SKYLINE PLACE                                   *  IC2334.2
-042600*          SUITE 1100                                          *  IC2334.2
-042700*          5203 LEESBURG PIKE                                  *  IC2334.2
-042800*          FALLS CHURCH                                        *  IC2334.2
-042900*          VA 22041                                            *  IC2334.2
-043000*          U.S.A.                                              *  IC2334.2
-043100*                                                              *  IC2334.2
-043200*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2334.2
-043300*                                                              *  IC2334.2
-043400*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2334.2
-043500*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2334.2
-043600*          21 RUE BARA                                         *  IC2334.2
-043700*          F-92132 ISSY                                        *  IC2334.2
-043800*          FRANCE                                              *  IC2334.2
-043900*                                                              *  IC2334.2
-044000*                                                              *  IC2334.2
-044100*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2334.2
-044200*               UND DATENVERARBEITUNG MBH)                     *  IC2334.2
-044300*          SCHLOSS BIRLINGHOVEN                                *  IC2334.2
-044400*          POSTFACH 12 40                                      *  IC2334.2
-044500*          D-5205 ST. AUGUSTIN 1                               *  IC2334.2
-044600*          GERMANY FR                                          *  IC2334.2
-044700*                                                              *  IC2334.2
-044800*                                                              *  IC2334.2
-044900*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2334.2
-045000*          OXFORD ROAD                                         *  IC2334.2
-045100*          MANCHESTER                                          *  IC2334.2
-045200*          M1 7ED                                              *  IC2334.2
-045300*          UNITED KINGDOM                                      *  IC2334.2
-045400*                                                              *  IC2334.2
-045500*                                                              *  IC2334.2
-045600*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2334.2
-045700*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2334.2
-045800*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2334.2
-045900*                                                              *  IC2334.2
-046000****************************************************************  IC2334.2
-046100*                                                              *  IC2334.2
-046200*    VALIDATION FOR:-                                          *  IC2334.2
-046300*                                                              *  IC2334.2
-046400*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2334.2
-046500*                                                              *  IC2334.2
-046600*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2334.2
-046700*                                                              *  IC2334.2
-046800****************************************************************  IC2334.2
-046900*                                                              *  IC2334.2
-047000*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2334.2
-047100*                                                              *  IC2334.2
-047200*        X-55  - SYSTEM PRINTER NAME.                          *  IC2334.2
-047300*        X-82  - SOURCE COMPUTER NAME.                         *  IC2334.2
-047400*        X-83  - OBJECT COMPUTER NAME.                         *  IC2334.2
-047500*        X-92  - TEST-FILE.                                    *  IC2334.2
-047600*                                                              *  IC2334.2
-047700****************************************************************  IC2334.2
-047800*                                                              *  IC2334.2
-047900*    PROGRAMS IC233A AND IC233A-1 TEST THAT A "USE" PROCEDURE  *  IC2334.2
-048000*    IN A CALLING PROGRAM IS INVOKED BY A QUALIFYING CONDITION *  IC2334.2
-048100*    OCCURRING IN A CONTAINED PROGRAM.                         *  IC2334.2
-048200*                                                              *  IC2334.2
-048300*    BOTH PROGRAMS WILL BE COMPILED IN ONE INVOCATION OF THE   *  IC2334.2
-048400*    COMPILER AS SHOWN BELOW:                                  *  IC2334.2
-048500*    IDENTIFICATION DIVISION.                                  *  IC2334.2
-048600*    PROGRAM-ID. IC233A.                                       *  IC2334.2
-048700*              .                                               *  IC2334.2
-048800*              .                                               *  IC2334.2
-048900*              .                                               *  IC2334.2
-049000*    IDENTIFICATION DIVISION.                                  *  IC2334.2
-049100*    PROGRAM-ID. IC233A-1.                                     *  IC2334.2
-049200*              .                                               *  IC2334.2
-049300*              .                                               *  IC2334.2
-049400*    END PROGRAM IC233A-1.                                     *  IC2334.2
-049500*    END PROGRAM IC233A.                                       *  IC2334.2
-049600****************************************************************  IC2334.2
-049700*ENVIRONMENT DIVISION.                                            IC2334.2
-049800*INPUT-OUTPUT SECTION.                                            IC2334.2
-049900*FILE-CONTROL.                                                    IC2334.2
-050000*    SELECT TEST-FILE ASSIGN TO                                   IC2334.2
-050100*    "XXXXX018".                                                  IC2334.2
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
+041000*                                                                         
+041100*                                                                         
+041200*                                                                         
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
+042600*                                                                         
+042700*                                                                         
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
+043900*                                                                         
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
+044600*                                                                         
+044700*                                                                         
+044800*                                                                         
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
+046600*                                                                         
+046700*                                                                         
+046800*                                                                         
+046900*                                                                         
+047000*                                                                         
+047100*                                                                         
+047200*                                                                         
+047300*                                                                         
+047400*                                                                         
+047500*                                                                         
+047600*                                                                         
+047700*                                                                         
+047800*                                                                         
+047900*                                                                         
+048000*                                                                         
+048100*                                                                         
+048200*                                                                         
+048300*                                                                         
+048400*                                                                         
+048500*                                                                         
+048600*                                                                         
+048700*                                                                         
+048800*                                                                         
+048900*                                                                         
+049000*                                                                         
+049100*                                                                         
+049200*                                                                         
+049300*                                                                         
+049400*                                                                         
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
 050200 DATA DIVISION.                                                   IC2334.2
 050300 FILE SECTION.                                                    IC2334.2
 050400 WORKING-STORAGE SECTION.                                         IC2334.2

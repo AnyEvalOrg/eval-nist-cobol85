@@ -30,12 +30,12 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    ROUNDED,SIZE ERROR PASS  ADD-TEST-F1-11-1                                                                            
    ROUNDED,SIZE ERROR PASS  ADD-TEST-F1-11-2                                                                            
    COMP VS. DISPLAY   PASS  ADD-TEST-F1-12                                                                              
-   COMP VS. DISPLAY   FAIL* ADD-TEST-F1-13                                                                              
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-13                                                                              
+   COMP VS. DISPLAY   FAIL* ADD-TEST-F1-14                                                                              
                                                                                                                         
-                                     COMPUTED=  222222222222222222                                                      
-                                     CORRECT =  222222222222222422   VI-74 6.6.4 GR4                                    
+                                     COMPUTED=  000000099.000000000                                                     
+                                     CORRECT =  000000099.050000000  VI-74 6.6.4 GR4                                    
                                                                                                                         
-   COMP VS. DISPLAY   PASS  ADD-TEST-F1-14                                                                              
    COMP VS. DISPLAY   PASS  ADD-TEST-F1-15-1                                                                            
    COMP VS. DISPLAY   PASS  ADD-TEST-F1-15-2                                                                            
    COMP VS. DISPLAY   PASS  ADD-TEST-F1-16                                                                              
@@ -63,12 +63,12 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-25                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-26                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-27                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-28                                                                              
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-28                                                                              
+ ADD LIMIT TESTS      FAIL* ADD-TEST-F1-29                                                                              
                                                                                                                         
                                      COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000022   V1-67 6.4.2                                        
+                                     CORRECT =  000000000000000071   V1-67 6.4.2                                        
                                                                                                                         
- ADD LIMIT TESTS      PASS  ADD-TEST-F1-29                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-30                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-31                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-32                                                                              
@@ -80,18 +80,18 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-38                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-39                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-40                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-41                                                                              
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-41                                                                              
+ ADD LIMIT TESTS      FAIL* ADD-TEST-F1-42                                                                              
                                                                                                                         
                                      COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000091   V1-67 6.4.2                                        
+                                     CORRECT =  000000000000000020   V1-67 6.4.2                                        
                                                                                                                         
- ADD LIMIT TESTS      PASS  ADD-TEST-F1-42                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-43                                                                              
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-43                                                                              
+ ADD LIMIT TESTS      FAIL* ADD-TEST-F1-44                                                                              
                                                                                                                         
                                      COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000023   V1-67 6.4.2                                        
+                                     CORRECT =  000000000000000041   V1-67 6.4.2                                        
                                                                                                                         
- ADD LIMIT TESTS      PASS  ADD-TEST-F1-44                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-45                                                                              
  ADD-TO-SERIES        PASS  ADD-TEST-F1-46     .01                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-46     .02                                                                      

@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2144.2
 000200 PROGRAM-ID.                                                      SQ2144.2
 000300     SQ214A.                                                      SQ2144.2
-000400****************************************************************  SQ2144.2
-000500*                                                              *  SQ2144.2
-000600*    VALIDATION FOR:-                                          *  SQ2144.2
-000700*    " HIGH       ".                                              SQ2144.2
-000800*                                                              *  SQ2144.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2144.2
-001000*    "4.2 ".                                                      SQ2144.2
-001100*                                                              *  SQ2144.2
-001200*                                                                 SQ2144.2
-001300*                                                                 SQ2144.2
-001400*    SQ214A TESTS OPERATIONS INVOLVING FORMAT 2 OCCURS CLAUSES,   SQ2144.2
-001500*    I.E.  ...OCCURS INTEGER-1 TO INTEGER-2 TIMES DEPENDING ON    SQ2144.2
-001600*          DATA-NAME-1 ....                                       SQ2144.2
-001700*    X3.23-1976, PAGE III-4, 2.1.4(3) STATES, IN PART, THAT       SQ2144.2
-001800*    INTEGER-2 REPRESENTS THE MAXIMUM NUMBER OF OCCURRENCES AND   SQ2144.2
-001900*    THAT ONLY THE NUMBER OF OCCURRENCES, AND NOT THE ITEM LENGTH,SQ2144.2
-002000*    IS VARIABLE.  WHENEVER THE PARENT GROUP ITEM IS REFERENCED,  SQ2144.2
-002100*    ONLY THE PORTION OF THE TABLE SPECIFIED BY THE CURRENT VALUE SQ2144.2
-002200*    OF DATA-NAME-1 WILL BE USED IN THE OPERATION.                SQ2144.2
-002300*                                                                 SQ2144.2
-002400*    THE FOLLOWING VERBS ARE EXERCIZED,                           SQ2144.2
-002500*        READ                                                     SQ2144.2
-002600*        WRITE                                                    SQ2144.2
-002700*                                                                 SQ2144.2
-002800*                                                                 SQ2144.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SQ2144.2
 003000 CONFIGURATION SECTION.                                           SQ2144.2
 003100 SOURCE-COMPUTER.                                                 SQ2144.2
@@ -303,7 +303,7 @@
 035200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2144.2
 035300      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2144.2
 035400      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2144.2
-035500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2144.2
+035500*                                                                         
 035600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2144.2
 035700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2144.2
 035800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2144.2

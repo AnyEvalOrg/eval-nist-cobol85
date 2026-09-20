@@ -19,26 +19,26 @@
 001900     "4.2 ".                                                      DB1034.2
 002000 SECURITY.                                                        DB1034.2
 002100     NONE.                                                        DB1034.2
-002200*                                                                 DB1034.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB1034.2
-002400*                                                                 DB1034.2
-002500*                       PROGRAM ABSTRACT                          DB1034.2
-002600*                                                                 DB1034.2
-002700*    DB103M TESTS THE BASIC OPERATION OF DEBUG MODULE FACILITIES  DB1034.2
-002800*    WHEN THE COMPILE TIME DEBUGGING SWITCH IS OFF.  ALL DEBUG    DB1034.2
-002900*    LINES  SHOULD BE TREATED AS COMMENTS AND NO CODE SHOULD      DB1034.2
-003000*    BE GENERATED FOR EITHER DEBUG LINES OR DEBUGGING PROCED-     DB1034.2
-003100*    URES.                                                        DB1034.2
-003200*                                                                 DB1034.2
-003300*    THE OBJECT PROGRAM FOR DB103M SHOULD BE EXECUTED TWICE;ONCE  DB1034.2
-003400*    WITH THE OBJECT TIME DEBUGGING SWITCH ENABLED (ON), AND ONCE DB1034.2
-003500*    WITH THE OBJECT TIME DEBUGGING SWITCH DISABLED (OFF).  BOTH  DB1034.2
-003600*    EXECUTION RUNS SHOULD YIELD THE SAME RESULTS AS THE SETTING  DB1034.2
-003700*    OF THE OBJECT TIME DEBUGGING SWITCH SHOULD MAKE NO DIFFER-   DB1034.2
-003800*    ENCE SINCE THE COMPILE TIME DEBUGGING SWITCH WAS INITIALLY   DB1034.2
-003900*    DISABLED.                                                    DB1034.2
-004000*                                                                 DB1034.2
-004100*                                                                 DB1034.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 ENVIRONMENT DIVISION.                                            DB1034.2
 004300 CONFIGURATION SECTION.                                           DB1034.2
 004400 SOURCE-COMPUTER.                                                 DB1034.2
@@ -289,7 +289,7 @@
 029100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB1034.2
 029200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB1034.2
 029300      ADD PASS-COUNTER TO ERROR-HOLD.                             DB1034.2
-029400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB1034.2
+029400*                                                                         
 029500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB1034.2
 029600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB1034.2
 029700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB1034.2
@@ -546,8 +546,8 @@
 054800 PERF-ITERATION-END.                                              DB1034.2
 054900     GO TO PERFORM-THRU-TEST.                                     DB1034.2
 055000 LOOP-ROUTINE.                                                    DB1034.2
-055100**NESTED PERFORMS ARE USED HERE TO ATTEMPT TO PREVENT OPTIMIZER   DB1034.2
-055200* ACTION RESULTING IN LOOP UNFOLDING AND REDUCTION.               DB1034.2
+055100*                                                                         
+055200*                                                                         
 055300     PERFORM DO-NOTHING.                                          DB1034.2
 055400 DO-NOTHING.                                                      DB1034.2
 055500     ADD A B C GIVING D.                                          DB1034.2
@@ -645,9 +645,9 @@
 064700 DEBUG-LINE-TEST-04.                                              DB1034.2
 064800     MOVE "NESTED COMMENTS" TO RE-MARK.                           DB1034.2
 064900D    PERFORM FAIL.                                                DB1034.2
-065000*    PERFORM FAIL.  MOVE "COMMENTS EXECUTED" TO COMPUTED-A.       DB1034.2
-065100*    GO TO DEBUG-LINE-WRITE-04.                                   DB1034.2
-065200*DEBUG-LINE-TEST-04-A.                                            DB1034.2
+065000*                                                                         
+065100*                                                                         
+065200*                                                                         
 065300D    GO TO DEBUG-LINE-WRITE-04.                                   DB1034.2
 065400 DEBUG-LINE-TEST-04-B.                                            DB1034.2
 065500     PERFORM PASS.                                                DB1034.2
@@ -659,14 +659,14 @@
 066100     PERFORM PRINT-DETAIL.                                        DB1034.2
 066200 DEBUG-LINE-TEST-05.                                              DB1034.2
 066300     MOVE "NESTED INSIDE COMMENTS" TO RE-MARK.                    DB1034.2
-066400*    PERFORM FAIL.  MOVE "COMMENTS EXECUTED" TO COMPUTED-A.       DB1034.2
-066500*    GO TO DEBUG-LINE-WRITE-05.                                   DB1034.2
+066400*                                                                         
+066500*                                                                         
 066600DDEBUG-LINE-TEST-05-A.                                            DB1034.2
 066700D    PERFORM FAIL.                                                DB1034.2
 066800D    GO TO DEBUG-LINE-WRITE-05.                                   DB1034.2
-066900*DEBUG-LINE-TEST-05-B.                                            DB1034.2
-067000*    MOVE "    FAILURE 05B" TO COMPUTED-A.                        DB1034.2
-067100*    PERFORM FAIL.  GO TO DEBUG-LINE-WRITE-05.                    DB1034.2
+066900*                                                                         
+067000*                                                                         
+067100*                                                                         
 067200 DEBUG-LINE-TEST-05-C.                                            DB1034.2
 067300     PERFORM PASS.                                                DB1034.2
 067400     GO TO DEBUG-LINE-WRITE-05.                                   DB1034.2

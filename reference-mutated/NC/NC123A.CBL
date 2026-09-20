@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC1234.2
 000200 PROGRAM-ID.                                                      NC1234.2
 000300     NC123A.                                                      NC1234.2
-000400****************************************************************  NC1234.2
-000500*                                                              *  NC1234.2
-000600*    VALIDATION FOR:-                                          *  NC1234.2
-000700*                                                              *  NC1234.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1234.2
-000900*                                                              *  NC1234.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1234.2
-001100*                                                              *  NC1234.2
-001200****************************************************************  NC1234.2
-001300*                                                              *  NC1234.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1234.2
-001500*                                                              *  NC1234.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1234.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1234.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1234.2
-001900*                                                              *  NC1234.2
-002000****************************************************************  NC1234.2
-002100*                                                                 NC1234.2
-002200*    PROGRAM NC123A TESTS THE USE OF INDEXED IDENTIFIERS WITH     NC1234.2
-002300*    FORMATS 1 AND 2 OF THE "ADD" AND "SUBTRACT" STATEMENTS AND   NC1234.2
-002400*    FORMAT 2 OF THE "GO" STATEMENT.                              NC1234.2
-002500*    ONE AND TWO LEVELS OF INDEXING ARE USED AS WELL AS           NC1234.2
-002600*    RELATIVE INDEXING.                                           NC1234.2
-002700*                                                                 NC1234.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC1234.2
 002900 CONFIGURATION SECTION.                                           NC1234.2
 003000 SOURCE-COMPUTER.                                                 NC1234.2
@@ -251,7 +251,7 @@
 025300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1234.2
 025400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1234.2
 025500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1234.2
-025600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1234.2
+025600*                                                                         
 025700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1234.2
 025800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1234.2
 025900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1234.2
@@ -419,7 +419,7 @@
 042100     MOVE "IND-TEST-GF-3-1" TO PAR-NAME.                          NC1234.2
 042200     PERFORM PRINT-DETAIL.                                        NC1234.2
 042300 IND-TEST-GF-3-2.                                                 NC1234.2
-042400     IF  NUM-9V9 = 4.0                                            NC1234.2
+042400     IF  NUM-9V9 = 7.0                                            NC1234.2
 042500         PERFORM PASS                                             NC1234.2
 042600         GO TO IND-WRITE-GF-3-2.                                  NC1234.2
 042700     GO TO IND-FAIL-GF-3-2.                                       NC1234.2
@@ -429,7 +429,7 @@
 043100 IND-FAIL-GF-3-2.                                                 NC1234.2
 043200     PERFORM FAIL.                                                NC1234.2
 043300     MOVE NUM-9V9 TO COMPUTED-14V4.                               NC1234.2
-043400     MOVE 4.0 TO CORRECT-14V4.                                    NC1234.2
+043400     MOVE 7.0 TO CORRECT-14V4.                                    NC1234.2
 043500     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1234.2
 043600 IND-WRITE-GF-3-2.                                                NC1234.2
 043700     MOVE "IND-TEST-GF-3-2" TO PAR-NAME.                          NC1234.2
@@ -501,7 +501,7 @@
 050300     MOVE "IND-TEST-GF-6-1" TO PAR-NAME.                          NC1234.2
 050400     PERFORM PRINT-DETAIL.                                        NC1234.2
 050500 IND-TEST-GF-6-2.                                                 NC1234.2
-050600     IF   TABLE2-NUM (INDEX2) = 3.0                               NC1234.2
+050600     IF   TABLE2-NUM (INDEX2) = 9.1                               NC1234.2
 050700        PERFORM PASS                                              NC1234.2
 050800        GO TO IND-WRITE-GF-6-2.                                   NC1234.2
 050900     GO TO IND-FAIL-GF-6-2.                                       NC1234.2
@@ -510,7 +510,7 @@
 051200     GO TO IND-WRITE-GF-6-2.                                      NC1234.2
 051300 IND-FAIL-GF-6-2.                                                 NC1234.2
 051400     PERFORM FAIL.                                                NC1234.2
-051500     MOVE 3.0 TO CORRECT-14V4.                                    NC1234.2
+051500     MOVE 9.1 TO CORRECT-14V4.                                    NC1234.2
 051600     MOVE TABLE2-NUM (INDEX2) TO COMPUTED-14V4.                   NC1234.2
 051700     MOVE "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.                NC1234.2
 051800 IND-WRITE-GF-6-2.                                                NC1234.2
@@ -878,7 +878,7 @@
 088000 IND-TEST-GF-24-0.                                                NC1234.2
 088100     SUBTRACT TABLE1-NUM (INDEX1) FROM 8 GIVING NUM-9V9.          NC1234.2
 088200 IND-TEST-GF-24-1.                                                NC1234.2
-088300     IF NUM-9V9 EQUAL TO 6.0                                      NC1234.2
+088300     IF NUM-9V9 EQUAL TO 3.0                                      NC1234.2
 088400        PERFORM PASS                                              NC1234.2
 088500        ELSE GO TO IND-FAIL-GF-24.                                NC1234.2
 088600     GO TO IND-WRITE-GF-24.                                       NC1234.2
@@ -888,7 +888,7 @@
 089000 IND-FAIL-GF-24.                                                  NC1234.2
 089100     PERFORM FAIL.                                                NC1234.2
 089200     MOVE NUM-9V9 TO COMPUTED-14V4.                               NC1234.2
-089300     MOVE 6.0 TO CORRECT-14V4.                                    NC1234.2
+089300     MOVE 3.0 TO CORRECT-14V4.                                    NC1234.2
 089400 IND-WRITE-GF-24.                                                 NC1234.2
 089500     MOVE "IND-TEST-GF-24" TO PAR-NAME.                           NC1234.2
 089600     PERFORM PRINT-DETAIL.                                        NC1234.2

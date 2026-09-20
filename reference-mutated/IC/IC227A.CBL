@@ -1,73 +1,73 @@
 000100 IDENTIFICATION DIVISION.                                         IC2274.2
 000200 PROGRAM-ID.                                                      IC2274.2
 000300     IC227A.                                                      IC2274.2
-000400****************************************************************  IC2274.2
-000500*                                                              *  IC2274.2
-000600*    VALIDATION FOR:-                                          *  IC2274.2
-000700*                                                              *  IC2274.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2274.2
-000900*                                                              *  IC2274.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2274.2
-001100*                                                              *  IC2274.2
-001200****************************************************************  IC2274.2
-001300*                                                              *  IC2274.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2274.2
-001500*                                                              *  IC2274.2
-001600*            X-55   SYSTEM PRINTER                             *  IC2274.2
-001700*            X-82   SOURCE-COMPUTER                            *  IC2274.2
-001800*            X-83   OBJECT-COMPUTER.                           *  IC2274.2
-001900*                                                              *  IC2274.2
-002000****************************************************************  IC2274.2
-002100*                                                              *  IC2274.2
-002200*    PROGRAMS IC227A AND IC227A-1 TEST LEVEL 2 LANGUAGE        *  IC2274.2
-002300*    ELEMENTS FROM THE INTER-PROGRAM COMMUNICATION MODULE.     *  IC2274.2
-002400*    THE PARTICULAR ELEMENTS TESTED ARE:                       *  IC2274.2
-002500*        THE "EXTERNAL" CLAUSE IN THE FILE DESCRIPTION ENTRY   *  IC2274.2
-002600*                                                              *  IC2274.2
-002700*    ALTHOUGH IC227A AND IC227A-1 ARE SEPARATELY COMPILED      *  IC2274.2
-002800*    PROGRAMS, BOTH ARE INTENDED TO BE COMPILED BY THE SAME    *  IC2274.2
-002900*    INVOCATION OF THE COMPILER, IN ORDER TO TEST STREAM       *  IC2274.2
-003000*    COMPILATION AND RECOGNITION OF THE END PROGRAM HEADER.    *  IC2274.2
-003100*                                                              *  IC2274.2
-003200*    THE STRUCTURE OF THE SOURCE FILE IS:                         IC2274.2
-003300*                                                              *  IC2274.2
-003400*    IDENTIFICATION DIVISION.                                  *  IC2274.2
-003500*    PROGRAM-ID.  IC227A.                                      *  IC2274.2
-003600*              .                                               *  IC2274.2
-003700*              .                                               *  IC2274.2
-003800*              .                                               *  IC2274.2
-003900*    END PROGRAM IC227A.                                       *  IC2274.2
-004000*    IDENTIFICATION DIVISION.                                  *  IC2274.2
-004100*    PROGRAM-ID.  IC227A-1.                                    *  IC2274.2
-004200*              .                                               *  IC2274.2
-004300*              .                                               *  IC2274.2
-004400*              .                                               *  IC2274.2
-004500*    END PROGRAM IC227A-1.                                     *  IC2274.2
-004600*                                                              *  IC2274.2
-004700****************************************************************  IC2274.2
-004800*                                                                 IC2274.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
 004900 ENVIRONMENT DIVISION.                                            IC2274.2
 005000 CONFIGURATION SECTION.                                           IC2274.2
 005100 SOURCE-COMPUTER.                                                 IC2274.2
 005200     GNU-Linux.                                                   IC2274.2
 005300 OBJECT-COMPUTER.                                                 IC2274.2
 005400     GNU-Linux.                                                   IC2274.2
-005500*                                                                 IC2274.2
+005500*                                                                         
 005600 INPUT-OUTPUT SECTION.                                            IC2274.2
 005700 FILE-CONTROL.                                                    IC2274.2
 005800     SELECT PRINT-FILE ASSIGN TO                                  IC2274.2
 005900     "REPORT".                                                    IC2274.2
-006000*                                                                 IC2274.2
+006000*                                                                         
 006100     SELECT EXTERNAL-FILE ASSIGN TO                               IC2274.2
 006200     "XXXXX014"                                                   IC2274.2
 006300     FILE STATUS IS EXTERNAL-FILE-FS.                             IC2274.2
-006400*                                                                 IC2274.2
+006400*                                                                         
 006500 DATA DIVISION.                                                   IC2274.2
 006600 FILE SECTION.                                                    IC2274.2
 006700 FD  PRINT-FILE.                                                  IC2274.2
 006800 01  PRINT-REC PICTURE X(120).                                    IC2274.2
 006900 01  DUMMY-RECORD PICTURE X(120).                                 IC2274.2
-007000*                                                                 IC2274.2
+007000*                                                                         
 007100 FD  EXTERNAL-FILE                                                IC2274.2
 007200         IS EXTERNAL                                              IC2274.2
 007300         RECORD CONTAINS 18 CHARACTERS.                           IC2274.2
@@ -76,38 +76,38 @@
 007600     03  EXT-DATA-2              PIC X(6).                        IC2274.2
 007700     03  EXT-DATA-3              PIC 9(6).                        IC2274.2
 007800     03  EXT-DATA-4              PIC 9(4).                        IC2274.2
-007900*                                                                 IC2274.2
+007900*                                                                         
 008000 WORKING-STORAGE SECTION.                                         IC2274.2
-008100*                                                                 IC2274.2
-008200***************************************************************   IC2274.2
-008300*                                                             *   IC2274.2
-008400*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   IC2274.2
-008500*                                                             *   IC2274.2
-008600***************************************************************   IC2274.2
-008700*                                                                 IC2274.2
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
 008800 01  EXTERNAL-RECORD-HOLD.                                        IC2274.2
 008900     03  WSE-DATA-1              PIC X(2).                        IC2274.2
 009000     03  WSE-DATA-2              PIC X(6).                        IC2274.2
 009100     03  WSE-DATA-3              PIC 9(6).                        IC2274.2
 009200     03  WSE-DATA-4              PIC 9(4).                        IC2274.2
-009300*                                                                 IC2274.2
+009300*                                                                         
 009400 01  EXTERNAL-RECORD-WORK.                                        IC2274.2
 009500     03  WRK-DATA-1              PIC X(2).                        IC2274.2
 009600     03  WRK-DATA-2              PIC X(6).                        IC2274.2
 009700     03  WRK-DATA-3              PIC 9(6).                        IC2274.2
 009800     03  WRK-DATA-4              PIC 9(4).                        IC2274.2
-009900*                                                                 IC2274.2
+009900*                                                                         
 010000 01  EXTERNAL-FILE-FS            PIC XX.                          IC2274.2
 010100 01  F-S-PARAM                   PIC XX.                          IC2274.2
 010200 01  ACTION-CODE                 PIC 99.                          IC2274.2
 010300 77  ID1 PICTURE X(8) VALUE "IC227A-1".                           IC2274.2
-010400*                                                                 IC2274.2
-010500***************************************************************   IC2274.2
-010600*                                                             *   IC2274.2
-010700*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   IC2274.2
-010800*                                                             *   IC2274.2
-010900***************************************************************   IC2274.2
-011000*                                                                 IC2274.2
+010400*                                                                         
+010500*                                                                         
+010600*                                                                         
+010700*                                                                         
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
 011100 01  TEST-RESULTS.                                                IC2274.2
 011200     02 FILLER                   PIC X      VALUE SPACE.          IC2274.2
 011300     02 FEATURE                  PIC X(20)  VALUE SPACE.          IC2274.2
@@ -249,8 +249,8 @@
 024900-    "******************************".                            IC2274.2
 025000 01  CCVS-PGM-ID                     PIC X(9)   VALUE             IC2274.2
 025100     "IC227A".                                                    IC2274.2
-025200*                                                                 IC2274.2
-025300*                                                                 IC2274.2
+025200*                                                                         
+025300*                                                                         
 025400 PROCEDURE DIVISION.                                              IC2274.2
 025500 CCVS1 SECTION.                                                   IC2274.2
 025600 OPEN-FILES.                                                      IC2274.2
@@ -263,7 +263,7 @@
 026300     PERFORM END-ROUTINE THRU END-ROUTINE-13. CLOSE PRINT-FILE.   IC2274.2
 026400 TERMINATE-CCVS.                                                  IC2274.2
 026500     STOP     RUN.                                                IC2274.2
-026600*                                                                 IC2274.2
+026600*                                                                         
 026700 INSPT.                                                           IC2274.2
 026800     MOVE   "INSPT" TO P-OR-F.                                    IC2274.2
 026900     ADD     1 TO INSPECT-COUNTER.                                IC2274.2
@@ -273,12 +273,12 @@
 027300     MOVE   "PASS " TO P-OR-F.                                    IC2274.2
 027400     ADD     1 TO PASS-COUNTER.                                   IC2274.2
 027500     PERFORM PRINT-DETAIL.                                        IC2274.2
-027600*                                                                 IC2274.2
+027600*                                                                         
 027700 FAIL.                                                            IC2274.2
 027800     MOVE   "FAIL*" TO P-OR-F.                                    IC2274.2
 027900     ADD     1 TO ERROR-COUNTER.                                  IC2274.2
 028000     PERFORM PRINT-DETAIL.                                        IC2274.2
-028100*                                                                 IC2274.2
+028100*                                                                         
 028200 DE-LETE.                                                         IC2274.2
 028300     MOVE   "****TEST DELETED****" TO RE-MARK.                    IC2274.2
 028400     MOVE   "*****" TO P-OR-F.                                    IC2274.2
@@ -300,7 +300,7 @@
 030000     MOVE SPACE TO CORRECT-X.                                     IC2274.2
 030100     IF     REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.         IC2274.2
 030200     MOVE     SPACE TO RE-MARK.                                   IC2274.2
-030300*                                                                 IC2274.2
+030300*                                                                         
 030400 HEAD-ROUTINE.                                                    IC2274.2
 030500     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  IC2274.2
 030600     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  IC2274.2
@@ -315,13 +315,13 @@
 031500     PERFORM WRITE-LINE 5 TIMES.                                  IC2274.2
 031600 END-RTN-EXIT.                                                    IC2274.2
 031700     MOVE CCVS-E-1 TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.   IC2274.2
-031800*                                                                 IC2274.2
+031800*                                                                         
 031900 END-ROUTINE-1.                                                   IC2274.2
 032000      ADD     ERROR-COUNTER   TO ERROR-HOLD                       IC2274.2
 032100      ADD     INSPECT-COUNTER TO ERROR-HOLD.                      IC2274.2
 032200      ADD     DELETE-COUNTER  TO ERROR-HOLD.                      IC2274.2
 032300      ADD     PASS-COUNTER    TO ERROR-HOLD.                      IC2274.2
-032400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2274.2
+032400*                                                                         
 032500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2274.2
 032600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2274.2
 032700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2274.2
@@ -347,7 +347,7 @@
 034700     MOVE "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.             IC2274.2
 034800     MOVE CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.           IC2274.2
 034900     MOVE CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.           IC2274.2
-035000*                                                                 IC2274.2
+035000*                                                                         
 035100 WRITE-LINE.                                                      IC2274.2
 035200     ADD 1 TO RECORD-COUNT.                                       IC2274.2
 035300     IF RECORD-COUNT GREATER 50                                   IC2274.2
@@ -390,25 +390,25 @@
 039000 BAIL-OUT-EX. EXIT.                                               IC2274.2
 039100 CCVS1-EXIT.                                                      IC2274.2
 039200     EXIT.                                                        IC2274.2
-039300*                                                                 IC2274.2
-039400****************************************************************  IC2274.2
-039500*                                                              *  IC2274.2
-039600*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  IC2274.2
-039700*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  IC2274.2
-039800*                                                              *  IC2274.2
-039900****************************************************************  IC2274.2
-040000*                                                                 IC2274.2
+039300*                                                                         
+039400*                                                                         
+039500*                                                                         
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
+039900*                                                                         
+040000*                                                                         
 040100 SECT-IC227A-01 SECTION.                                          IC2274.2
 040200 EXT-INIT-01.                                                     IC2274.2
-040300*                                                                 IC2274.2
-040400*    *************************************************            IC2274.2
-040500*    *                                               *            IC2274.2
-040600*    *    MAKE EXTERNAL FILE RECORD AREA AVAILABLE   *            IC2274.2
-040700*    *                                               *            IC2274.2
-040800*    *************************************************            IC2274.2
-040900*                                                                 IC2274.2
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
 041000     OPEN    OUTPUT EXTERNAL-FILE.                                IC2274.2
-041100*                                                                 IC2274.2
+041100*                                                                         
 041200     MOVE    1 TO REC-CT.                                         IC2274.2
 041300     MOVE   "EXTERNAL FILE RECORD" TO FEATURE.                    IC2274.2
 041400     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -425,13 +425,13 @@
 042500 EXT-REC-DELETE-01.                                               IC2274.2
 042600     PERFORM DE-LETE.                                             IC2274.2
 042700     GO TO   EXT-REC-DELETE-01-02.                                IC2274.2
-042800*                                                                 IC2274.2
-042900*    *************************************************            IC2274.2
-043000*    *                                               *            IC2274.2
-043100*    *   CHECK THAT SUBPROGRAM SEES SAME RECORD AREA *            IC2274.2
-043200*    *                                               *            IC2274.2
-043300*    *************************************************            IC2274.2
-043400*                                                                 IC2274.2
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
 043500 EXT-REC-TEST-01.                                                 IC2274.2
 043600     MOVE    1 TO ACTION-CODE.                                    IC2274.2
 043700     CALL   "IC227A-1" USING ACTION-CODE                          IC2274.2
@@ -479,16 +479,16 @@
 047900         PERFORM FAIL                                             IC2274.2
 048000     END-IF.                                                      IC2274.2
 048100 EXT-REC-TEST-01-END.                                             IC2274.2
-048200*                                                                 IC2274.2
-048300*                                                                 IC2274.2
+048200*                                                                         
+048300*                                                                         
 048400 EXT-INIT-02.                                                     IC2274.2
-048500*                                                                 IC2274.2
-048600*    *************************************************            IC2274.2
-048700*    *                                               *            IC2274.2
-048800*    *    WRITE RECORD FROM PARAMETERS TO FILE       *            IC2274.2
-048900*    *                                               *            IC2274.2
-049000*    *************************************************            IC2274.2
-049100*                                                                 IC2274.2
+048500*                                                                         
+048600*                                                                         
+048700*                                                                         
+048800*                                                                         
+048900*                                                                         
+049000*                                                                         
+049100*                                                                         
 049200     MOVE    1 TO REC-CT.                                         IC2274.2
 049300     MOVE   "EXTERNAL FILE WRITE" TO FEATURE.                     IC2274.2
 049400     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -506,13 +506,13 @@
 050600     MOVE    EXTERNAL-RECORD-WORK TO EXTERNAL-FILE-RECORD.        IC2274.2
 050700     WRITE   EXTERNAL-FILE-RECORD.                                IC2274.2
 050800     GO TO   EXT-FILE-DELETE-02-02.                               IC2274.2
-050900*                                                                 IC2274.2
-051000*    *************************************************            IC2274.2
-051100*    *                                               *            IC2274.2
-051200*    *   CHECK THAT SUBPROGRAM WILL WRITE            *            IC2274.2
-051300*    *                                               *            IC2274.2
-051400*    *************************************************            IC2274.2
-051500*                                                                 IC2274.2
+050900*                                                                         
+051000*                                                                         
+051100*                                                                         
+051200*                                                                         
+051300*                                                                         
+051400*                                                                         
+051500*                                                                         
 051600 EXT-FILE-TEST-02.                                                IC2274.2
 051700     MOVE    2 TO ACTION-CODE.                                    IC2274.2
 051800     CALL   "IC227A-1" USING CONTENT   ACTION-CODE                IC2274.2
@@ -541,18 +541,18 @@
 054100          MOVE   "<>" TO CORRECT-A                                IC2274.2
 054200          MOVE    EXTERNAL-FILE-FS TO COMPUTED-A                  IC2274.2
 054300          PERFORM FAIL.                                           IC2274.2
-054400*                                                                 IC2274.2
+054400*                                                                         
 054500 EXT-FILE-TEST-02-END.                                            IC2274.2
-054600*                                                                 IC2274.2
-054700*                                                                 IC2274.2
+054600*                                                                         
+054700*                                                                         
 054800 EXT-INIT-03.                                                     IC2274.2
-054900*                                                                 IC2274.2
-055000*    *************************************************            IC2274.2
-055100*    *                                               *            IC2274.2
-055200*    *    WRITE A RECORD FROM THE MAIN PROGRAM       *            IC2274.2
-055300*    *                                               *            IC2274.2
-055400*    *************************************************            IC2274.2
-055500*                                                                 IC2274.2
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
 055600     MOVE    1 TO REC-CT.                                         IC2274.2
 055700     MOVE   "EXTERNAL FILE WRITE" TO FEATURE.                     IC2274.2
 055800     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -566,7 +566,7 @@
 056600 EXT-FILE-DELETE-03.                                              IC2274.2
 056700     PERFORM DE-LETE.                                             IC2274.2
 056800     GO TO   EXT-FILE-TEST-03-END.                                IC2274.2
-056900*                                                                 IC2274.2
+056900*                                                                         
 057000 EXT-FILE-TEST-03-01.                                             IC2274.2
 057100     WRITE   EXTERNAL-FILE-RECORD.                                IC2274.2
 057200     IF EXTERNAL-FILE-FS IS EQUAL TO "00"                         IC2274.2
@@ -576,18 +576,18 @@
 057600          MOVE   "00" TO CORRECT-A                                IC2274.2
 057700          MOVE    EXTERNAL-FILE-FS TO COMPUTED-A                  IC2274.2
 057800          PERFORM FAIL.                                           IC2274.2
-057900*                                                                 IC2274.2
+057900*                                                                         
 058000 EXT-FILE-TEST-03-END.                                            IC2274.2
-058100*                                                                 IC2274.2
-058200*                                                                 IC2274.2
+058100*                                                                         
+058200*                                                                         
 058300 EXT-INIT-04.                                                     IC2274.2
-058400*                                                                 IC2274.2
-058500*    *************************************************            IC2274.2
-058600*    *                                               *            IC2274.2
-058700*    *    CLOSE THE FILE THROUGH THE SUBPROGRAM      *            IC2274.2
-058800*    *                                               *            IC2274.2
-058900*    *************************************************            IC2274.2
-059000*                                                                 IC2274.2
+058400*                                                                         
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
+059000*                                                                         
 059100     MOVE    1 TO REC-CT.                                         IC2274.2
 059200     MOVE   "EXTERNAL FILE CLOSE" TO FEATURE.                     IC2274.2
 059300     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -599,7 +599,7 @@
 059900     PERFORM DE-LETE.                                             IC2274.2
 060000     CLOSE   EXTERNAL-FILE.                                       IC2274.2
 060100     GO TO   EXT-FILE-DELETE-04-02.                               IC2274.2
-060200*                                                                 IC2274.2
+060200*                                                                         
 060300 EXT-FILE-TEST-04-01.                                             IC2274.2
 060400     MOVE    3 TO ACTION-CODE.                                    IC2274.2
 060500     CALL   "IC227A-1" USING CONTENT   ACTION-CODE                IC2274.2
@@ -628,18 +628,18 @@
 062800          MOVE   "<>" TO CORRECT-A                                IC2274.2
 062900          MOVE    EXTERNAL-FILE-FS TO COMPUTED-A                  IC2274.2
 063000          PERFORM FAIL.                                           IC2274.2
-063100*                                                                 IC2274.2
+063100*                                                                         
 063200 EXT-FILE-TEST-04-END.                                            IC2274.2
-063300*                                                                 IC2274.2
-063400*                                                                 IC2274.2
+063300*                                                                         
+063400*                                                                         
 063500 EXT-INIT-05.                                                     IC2274.2
-063600*                                                                 IC2274.2
-063700*    *************************************************            IC2274.2
-063800*    *                                               *            IC2274.2
-063900*    *    OPEN FILE FOR INPUT FROM SUBPROGRAM        *            IC2274.2
-064000*    *                                               *            IC2274.2
-064100*    *************************************************            IC2274.2
-064200*                                                                 IC2274.2
+063600*                                                                         
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
+064100*                                                                         
+064200*                                                                         
 064300     MOVE    1 TO REC-CT.                                         IC2274.2
 064400     MOVE   "EXTERNAL FILE OPEN"  TO FEATURE.                     IC2274.2
 064500     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -681,7 +681,7 @@
 068100          MOVE   "<>" TO CORRECT-A                                IC2274.2
 068200          MOVE    EXTERNAL-FILE-FS TO COMPUTED-A                  IC2274.2
 068300          PERFORM FAIL.                                           IC2274.2
-068400*    GO TO   EXT-FILE-TEST-05-03.                                 IC2274.2
+068400*                                                                         
 068500 EXT-FILE-DELETE-05-03.                                           IC2274.2
 068600     ADD     1 TO REC-CT.                                         IC2274.2
 068700     PERFORM DE-LETE.                                             IC2274.2
@@ -710,19 +710,19 @@
 071000          MOVE   "OPEN   OPEN   OPEN"  TO CORRECT-A               IC2274.2
 071100          MOVE    EXTERNAL-RECORD-WORK TO COMPUTED-A              IC2274.2
 071200          PERFORM FAIL.                                           IC2274.2
-071300*                                                                 IC2274.2
+071300*                                                                         
 071400 EXT-FILE-TEST-05-END.                                            IC2274.2
-071500*                                                                 IC2274.2
-071600*                                                                 IC2274.2
+071500*                                                                         
+071600*                                                                         
 071700 EXT-INIT-06.                                                     IC2274.2
-071800*                                                                 IC2274.2
-071900*    *************************************************            IC2274.2
-072000*    *                                               *            IC2274.2
-072100*    *    READ THE FIRST RECORD FROM THE FILE WITH   *            IC2274.2
-072200*    *    THE MAIN PROGRAM .                         *            IC2274.2
-072300*    *                                               *            IC2274.2
-072400*    *************************************************            IC2274.2
-072500*                                                                 IC2274.2
+071800*                                                                         
+071900*                                                                         
+072000*                                                                         
+072100*                                                                         
+072200*                                                                         
+072300*                                                                         
+072400*                                                                         
+072500*                                                                         
 072600     MOVE    1 TO REC-CT.                                         IC2274.2
 072700     MOVE   "EXTERNAL FILE READ"  TO FEATURE.                     IC2274.2
 072800     MOVE   "X-23 4.5.1"          TO ANSI-REFERENCE.              IC2274.2
@@ -761,19 +761,19 @@
 076100          MOVE    EXTERNAL-FILE-RECORD TO COMPUTED-A              IC2274.2
 076200          MOVE    EXTERNAL-RECORD-HOLD TO CORRECT-A               IC2274.2
 076300          PERFORM FAIL.                                           IC2274.2
-076400*                                                                 IC2274.2
+076400*                                                                         
 076500 EXT-FILE-TEST-06-END.                                            IC2274.2
-076600*                                                                 IC2274.2
-076700*                                                                 IC2274.2
+076600*                                                                         
+076700*                                                                         
 076800 EXT-INIT-07.                                                     IC2274.2
-076900*                                                                 IC2274.2
-077000*    *************************************************            IC2274.2
-077100*    *                                               *            IC2274.2
-077200*    *    READ SECOND RECORD FROM THE FILE THROUGH   *            IC2274.2
-077300*    *    THE SUBPROGRAM                             *            IC2274.2
-077400*    *                                               *            IC2274.2
-077500*    *************************************************            IC2274.2
-077600*                                                                 IC2274.2
+076900*                                                                         
+077000*                                                                         
+077100*                                                                         
+077200*                                                                         
+077300*                                                                         
+077400*                                                                         
+077500*                                                                         
+077600*                                                                         
 077700     MOVE    1 TO REC-CT.                                         IC2274.2
 077800     MOVE   "EXTERNAL FILE READ"  TO FEATURE.                     IC2274.2
 077900     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -844,20 +844,20 @@
 084400          MOVE    EXTERNAL-RECORD-HOLD TO CORRECT-A               IC2274.2
 084500          MOVE    EXTERNAL-RECORD-WORK TO COMPUTED-A              IC2274.2
 084600          PERFORM FAIL.                                           IC2274.2
-084700*                                                                 IC2274.2
+084700*                                                                         
 084800 EXT-FILE-TEST-07-END.                                            IC2274.2
-084900*                                                                 IC2274.2
-085000*                                                                 IC2274.2
+084900*                                                                         
+085000*                                                                         
 085100 EXT-INIT-08.                                                     IC2274.2
-085200*                                                                 IC2274.2
-085300*    *************************************************            IC2274.2
-085400*    *                                               *            IC2274.2
-085500*    *    ATTEMPT TO READ A THIRD RECORD FROM THE    *            IC2274.2
-085600*    *    FILE THROUGH THE SUBPROGRAM.  THIS SHOULD  *            IC2274.2
-085700*    *    CAUSE AN END OF FILE CONDITION.            *            IC2274.2
-085800*    *                                               *            IC2274.2
-085900*    *************************************************            IC2274.2
-086000*                                                                 IC2274.2
+085200*                                                                         
+085300*                                                                         
+085400*                                                                         
+085500*                                                                         
+085600*                                                                         
+085700*                                                                         
+085800*                                                                         
+085900*                                                                         
+086000*                                                                         
 086100     MOVE    1 TO REC-CT.                                         IC2274.2
 086200     MOVE   "EXTERNAL FILE EOF"   TO FEATURE.                     IC2274.2
 086300     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -899,7 +899,7 @@
 089900          MOVE   "<>" TO CORRECT-A                                IC2274.2
 090000          MOVE    EXTERNAL-FILE-FS TO COMPUTED-A                  IC2274.2
 090100          PERFORM FAIL.                                           IC2274.2
-090200*    GO TO   EXT-FILE-TEST-08-03.                                 IC2274.2
+090200*                                                                         
 090300 EXT-FILE-DELETE-08-03.                                           IC2274.2
 090400     ADD     1 TO REC-CT.                                         IC2274.2
 090500     PERFORM DE-LETE.                                             IC2274.2
@@ -914,7 +914,7 @@
 091400          MOVE    EXTERNAL-FILE-RECORD TO COMPUTED-A              IC2274.2
 091500          MOVE    EXTERNAL-RECORD-HOLD TO CORRECT-A               IC2274.2
 091600          PERFORM FAIL.                                           IC2274.2
-091700*    GO TO   EXT-FILE-TEST-08-04.                                 IC2274.2
+091700*                                                                         
 091800 EXT-FILE-DELETE-08-04.                                           IC2274.2
 091900     ADD     1 TO REC-CT.                                         IC2274.2
 092000     PERFORM DE-LETE.                                             IC2274.2
@@ -928,19 +928,19 @@
 092800          MOVE    EXTERNAL-RECORD-HOLD TO CORRECT-A               IC2274.2
 092900          MOVE    EXTERNAL-RECORD-WORK TO COMPUTED-A              IC2274.2
 093000          PERFORM FAIL.                                           IC2274.2
-093100*                                                                 IC2274.2
+093100*                                                                         
 093200 EXT-FILE-TEST-08-END.                                            IC2274.2
-093300*                                                                 IC2274.2
-093400*                                                                 IC2274.2
+093300*                                                                         
+093400*                                                                         
 093500 EXT-INIT-09.                                                     IC2274.2
-093600*                                                                 IC2274.2
-093700*    *************************************************            IC2274.2
-093800*    *                                               *            IC2274.2
-093900*    *    CLOSE THE EXTERNAL FILE FROM THE MAIN      *            IC2274.2
-094000*    *    PROGRAM.                                   *            IC2274.2
-094100*    *                                               *            IC2274.2
-094200*    *************************************************            IC2274.2
-094300*                                                                 IC2274.2
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
 094400     MOVE    1 TO REC-CT.                                         IC2274.2
 094500     MOVE   "EXTERNAL FILE CLOSE" TO FEATURE.                     IC2274.2
 094600     MOVE   "X-23 4.5.1" TO ANSI-REFERENCE.                       IC2274.2
@@ -960,8 +960,8 @@
 096000          MOVE    EXTERNAL-FILE-FS TO COMPUTED-A                  IC2274.2
 096100          PERFORM FAIL.                                           IC2274.2
 096200 EXT-FILE-TEST-09-END.                                            IC2274.2
-096300*                                                                 IC2274.2
-096400*                                                                 IC2274.2
+096300*                                                                         
+096400*                                                                         
 096500 CCVS-EXIT SECTION.                                               IC2274.2
 096600 CCVS-999999.                                                     IC2274.2
 096700     GO TO CLOSE-FILES.                                           IC2274.2
@@ -969,120 +969,120 @@
 096900 IDENTIFICATION DIVISION.                                         IC2274.2
 097000 PROGRAM-ID.                                                      IC2274.2
 097100     IC227A-1.                                                    IC2274.2
-097200****************************************************************  IC2274.2
-097300*                                                              *  IC2274.2
-097400*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2274.2
-097500*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2274.2
-097600*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2274.2
-097700*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2274.2
-097800*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2274.2
-097900*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2274.2
-098000*                                                              *  IC2274.2
-098100*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2274.2
-098200*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2274.2
-098300*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2274.2
-098400*                                                              *  IC2274.2
-098500*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2274.2
-098600*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2274.2
-098700*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2274.2
-098800*                                                              *  IC2274.2
-098900*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2274.2
-099000*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2274.2
-099100*                & INFORMATION TECHNOLOGY                      *  IC2274.2
-099200*          TWO SKYLINE PLACE                                   *  IC2274.2
-099300*          SUITE 1100                                          *  IC2274.2
-099400*          5203 LEESBURG PIKE                                  *  IC2274.2
-099500*          FALLS CHURCH                                        *  IC2274.2
-099600*          VA 22041                                            *  IC2274.2
-099700*          U.S.A.                                              *  IC2274.2
-099800*                                                              *  IC2274.2
-099900*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2274.2
-100000*                                                              *  IC2274.2
-100100*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2274.2
-100200*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2274.2
-100300*          21 RUE BARA                                         *  IC2274.2
-100400*          F-92132 ISSY                                        *  IC2274.2
-100500*          FRANCE                                              *  IC2274.2
-100600*                                                              *  IC2274.2
-100700*                                                              *  IC2274.2
-100800*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2274.2
-100900*               UND DATENVERARBEITUNG MBH)                     *  IC2274.2
-101000*          SCHLOSS BIRLINGHOVEN                                *  IC2274.2
-101100*          POSTFACH 12 40                                      *  IC2274.2
-101200*          D-5205 ST. AUGUSTIN 1                               *  IC2274.2
-101300*          GERMANY FR                                          *  IC2274.2
-101400*                                                              *  IC2274.2
-101500*                                                              *  IC2274.2
-101600*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2274.2
-101700*          OXFORD ROAD                                         *  IC2274.2
-101800*          MANCHESTER                                          *  IC2274.2
-101900*          M1 7ED                                              *  IC2274.2
-102000*          UNITED KINGDOM                                      *  IC2274.2
-102100*                                                              *  IC2274.2
-102200*                                                              *  IC2274.2
-102300*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2274.2
-102400*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2274.2
-102500*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2274.2
-102600*                                                              *  IC2274.2
-102700*    REVISED 1986 AUGUST                                       *  IC2274.2
-102800*                                                              *  IC2274.2
-102900****************************************************************  IC2274.2
-103000*                                                              *  IC2274.2
-103100*    VALIDATION FOR:-                                          *  IC2274.2
-103200*                                                              *  IC2274.2
-103300*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2274.2
-103400*                                                              *  IC2274.2
-103500*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2274.2
-103600*                                                              *  IC2274.2
-103700****************************************************************  IC2274.2
-103800*                                                              *  IC2274.2
-103900*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2274.2
-104000*                                                              *  IC2274.2
-104100*            X-82   SOURCE-COMPUTER                            *  IC2274.2
-104200*            X-83   OBJECT-COMPUTER.                           *  IC2274.2
-104300*                                                              *  IC2274.2
-104400****************************************************************  IC2274.2
-104500*                                                              *  IC2274.2
-104600*    PROGRAMS IC227A AND IC227A-1 TEST LEVEL 2 LANGUAGE        *  IC2274.2
-104700*    ELEMENTS FROM THE INTER-PROGRAM COMMUNICATION MODULE.     *  IC2274.2
-104800*    THE PARTICULAR ELEMENTS TESTED ARE:                       *  IC2274.2
-104900*        THE "EXTERNAL" CLAUSE IN THE FILE DESCRIPTION ENTRY   *  IC2274.2
-105000*                                                              *  IC2274.2
-105100*    ALTHOUGH IC227A AND IC227A-1 ARE SEPARATELY COMPILED      *  IC2274.2
-105200*    PROGRAMS, BOTH ARE INTENDED TO BE COMPILED BY THE SAME    *  IC2274.2
-105300*    INVOCATION OF THE COMPILER, IN ORDER TO TEST STREAM       *  IC2274.2
-105400*    COMPILATION AND RECOGNITION OF THE END PROGRAM HEADER.    *  IC2274.2
-105500*                                                              *  IC2274.2
-105600*    THE STRUCTURE OF THE SOURCE FILE IS:                      *  IC2274.2
-105700*                                                              *  IC2274.2
-105800*    IDENTIFICATION DIVISION.                                  *  IC2274.2
-105900*    PROGRAM-ID.  IC227A.                                      *  IC2274.2
-106000*              .                                               *  IC2274.2
-106100*              .                                               *  IC2274.2
-106200*              .                                               *  IC2274.2
-106300*    END PROGRAM IC227A.                                       *  IC2274.2
-106400*    IDENTIFICATION DIVISION.                                  *  IC2274.2
-106500*    PROGRAM-ID.  IC227A-1.                                    *  IC2274.2
-106600*              .                                               *  IC2274.2
-106700*              .                                               *  IC2274.2
-106800*              .                                               *  IC2274.2
-106900*    END PROGRAM IC227A-1.                                     *  IC2274.2
-107000*                                                              *  IC2274.2
-107100****************************************************************  IC2274.2
-107200*                                                                 IC2274.2
+097200*                                                                         
+097300*                                                                         
+097400*                                                                         
+097500*                                                                         
+097600*                                                                         
+097700*                                                                         
+097800*                                                                         
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
+098200*                                                                         
+098300*                                                                         
+098400*                                                                         
+098500*                                                                         
+098600*                                                                         
+098700*                                                                         
+098800*                                                                         
+098900*                                                                         
+099000*                                                                         
+099100*                                                                         
+099200*                                                                         
+099300*                                                                         
+099400*                                                                         
+099500*                                                                         
+099600*                                                                         
+099700*                                                                         
+099800*                                                                         
+099900*                                                                         
+100000*                                                                         
+100100*                                                                         
+100200*                                                                         
+100300*                                                                         
+100400*                                                                         
+100500*                                                                         
+100600*                                                                         
+100700*                                                                         
+100800*                                                                         
+100900*                                                                         
+101000*                                                                         
+101100*                                                                         
+101200*                                                                         
+101300*                                                                         
+101400*                                                                         
+101500*                                                                         
+101600*                                                                         
+101700*                                                                         
+101800*                                                                         
+101900*                                                                         
+102000*                                                                         
+102100*                                                                         
+102200*                                                                         
+102300*                                                                         
+102400*                                                                         
+102500*                                                                         
+102600*                                                                         
+102700*                                                                         
+102800*                                                                         
+102900*                                                                         
+103000*                                                                         
+103100*                                                                         
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
+103500*                                                                         
+103600*                                                                         
+103700*                                                                         
+103800*                                                                         
+103900*                                                                         
+104000*                                                                         
+104100*                                                                         
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
+104700*                                                                         
+104800*                                                                         
+104900*                                                                         
+105000*                                                                         
+105100*                                                                         
+105200*                                                                         
+105300*                                                                         
+105400*                                                                         
+105500*                                                                         
+105600*                                                                         
+105700*                                                                         
+105800*                                                                         
+105900*                                                                         
+106000*                                                                         
+106100*                                                                         
+106200*                                                                         
+106300*                                                                         
+106400*                                                                         
+106500*                                                                         
+106600*                                                                         
+106700*                                                                         
+106800*                                                                         
+106900*                                                                         
+107000*                                                                         
+107100*                                                                         
+107200*                                                                         
 107300 ENVIRONMENT DIVISION.                                            IC2274.2
 107400 CONFIGURATION SECTION.                                           IC2274.2
 107500 SOURCE-COMPUTER.                                                 IC2274.2
 107600     GNU-Linux.                                                   IC2274.2
 107700 OBJECT-COMPUTER.                                                 IC2274.2
 107800     GNU-Linux.                                                   IC2274.2
-107900*                                                                 IC2274.2
+107900*                                                                         
 108000 INPUT-OUTPUT SECTION.                                            IC2274.2
 108100 FILE-CONTROL.                                                    IC2274.2
 108200     SELECT EXTERNAL-FILE ASSIGN TO                               IC2274.2
 108300     "XXXXX014"                                                   IC2274.2
 108400     FILE STATUS IS LINKAGE-FS.                                   IC2274.2
-108500*                                                                 IC2274.2
+108500*                                                                         
 108600 DATA DIVISION.                                                   IC2274.2
 108700 FILE SECTION.                                                    IC2274.2
 108800 FD  EXTERNAL-FILE                                                IC2274.2
@@ -1093,108 +1093,108 @@
 109300     03  EXT-DATA-2              PIC X(6).                        IC2274.2
 109400     03  EXT-DATA-3              PIC 9(6).                        IC2274.2
 109500     03  EXT-DATA-4              PIC 9(4).                        IC2274.2
-109600*                                                                 IC2274.2
+109600*                                                                         
 109700 WORKING-STORAGE SECTION.                                         IC2274.2
-109800*                                                                 IC2274.2
-109900***************************************************************   IC2274.2
-110000*                                                             *   IC2274.2
-110100*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   IC2274.2
-110200*                                                             *   IC2274.2
-110300***************************************************************   IC2274.2
-110400*                                                                 IC2274.2
+109800*                                                                         
+109900*                                                                         
+110000*                                                                         
+110100*                                                                         
+110200*                                                                         
+110300*                                                                         
+110400*                                                                         
 110500 01  EXTERNAL-RECORD-WORK.                                        IC2274.2
 110600     03  WRK-DATA-1              PIC X(2).                        IC2274.2
 110700     03  WRK-DATA-2              PIC X(6).                        IC2274.2
 110800     03  WRK-DATA-3              PIC 9(6).                        IC2274.2
 110900     03  WRK-DATA-4              PIC 9(4).                        IC2274.2
-111000*                                                                 IC2274.2
+111000*                                                                         
 111100 LINKAGE SECTION.                                                 IC2274.2
-111200*                                                                 IC2274.2
+111200*                                                                         
 111300 01  LINKAGE-RECORD-WORK.                                         IC2274.2
 111400     05  WRK-DATA-1              PIC X(2).                        IC2274.2
 111500     05  WRK-DATA-2              PIC X(6).                        IC2274.2
 111600     05  WRK-DATA-3              PIC 9(6).                        IC2274.2
 111700     05  WRK-DATA-4              PIC 9(4).                        IC2274.2
-111800*                                                                 IC2274.2
+111800*                                                                         
 111900 01  LINKAGE-FS                  PIC XX.                          IC2274.2
 112000 01  ACTION-CODE                 PIC 99.                          IC2274.2
-112100*                                                                 IC2274.2
-112200*                                                                 IC2274.2
+112100*                                                                         
+112200*                                                                         
 112300 PROCEDURE DIVISION USING ACTION-CODE                             IC2274.2
 112400                          LINKAGE-RECORD-WORK                     IC2274.2
 112500                          LINKAGE-FS.                             IC2274.2
-112600*                                                                 IC2274.2
+112600*                                                                         
 112700 SECT-IC227A-1-01 SECTION.                                        IC2274.2
 112800 EXT-DECODE-01.                                                   IC2274.2
-112900*                                                                 IC2274.2
-113000*    *************************************************            IC2274.2
-113100*    *                                               *            IC2274.2
-113200*    *    USE THE ACTION CODE PARAMETER TO IDENTIFY  *            IC2274.2
-113300*    *    THE FUNCTION REQUIRED ON THIS ENTRY.       *            IC2274.2
-113400*    *                                               *            IC2274.2
-113500*    *************************************************            IC2274.2
-113600*                                                                 IC2274.2
+112900*                                                                         
+113000*                                                                         
+113100*                                                                         
+113200*                                                                         
+113300*                                                                         
+113400*                                                                         
+113500*                                                                         
+113600*                                                                         
 113700     GO TO   SUBPROGRAM-FUNCTION-01                               IC2274.2
 113800             SUBPROGRAM-FUNCTION-02                               IC2274.2
 113900             SUBPROGRAM-FUNCTION-03                               IC2274.2
 114000             SUBPROGRAM-FUNCTION-04                               IC2274.2
 114100             SUBPROGRAM-FUNCTION-05                               IC2274.2
 114200                 DEPENDING ON ACTION-CODE.                        IC2274.2
-114300*                                                                 IC2274.2
-114400*    CONTROL SHOULD NEVER REACH HERE, BUT ...                     IC2274.2
-114500*                                                                 IC2274.2
+114300*                                                                         
+114400*                                                                         
+114500*                                                                         
 114600     MOVE   "FFFFFFFFFFFFFFFFFF" TO LINKAGE-RECORD-WORK           IC2274.2
 114700     MOVE   "FF"                 TO LINKAGE-FS                    IC2274.2
 114800     EXIT PROGRAM.                                                IC2274.2
-114900*                                                                 IC2274.2
-115000*                                                                 IC2274.2
+114900*                                                                         
+115000*                                                                         
 115100 SUBPROGRAM-FUNCTION-01.                                          IC2274.2
 115200     MOVE    EXTERNAL-FILE-RECORD TO EXTERNAL-RECORD-WORK         IC2274.2
 115300     MOVE    LINKAGE-RECORD-WORK  TO EXTERNAL-FILE-RECORD         IC2274.2
 115400     MOVE    EXTERNAL-RECORD-WORK TO LINKAGE-RECORD-WORK.         IC2274.2
 115500     MOVE   "XX"                  TO LINKAGE-FS.                  IC2274.2
 115600     EXIT PROGRAM.                                                IC2274.2
-115700*                                                                 IC2274.2
-115800*                                                                 IC2274.2
+115700*                                                                         
+115800*                                                                         
 115900 SUBPROGRAM-FUNCTION-02.                                          IC2274.2
-116000*                                                                 IC2274.2
-116100*        WRITE A RECORD TO THE EXTERNAL FILE                      IC2274.2
-116200*                                                                 IC2274.2
+116000*                                                                         
+116100*                                                                         
+116200*                                                                         
 116300     MOVE    LINKAGE-RECORD-WORK TO EXTERNAL-FILE-RECORD.         IC2274.2
 116400     WRITE   EXTERNAL-FILE-RECORD.                                IC2274.2
 116500     EXIT    PROGRAM.                                             IC2274.2
-116600*                                                                 IC2274.2
-116700*                                                                 IC2274.2
+116600*                                                                         
+116700*                                                                         
 116800 SUBPROGRAM-FUNCTION-03.                                          IC2274.2
-116900*                                                                 IC2274.2
-117000*        CLOSE THE EXTERNAL FILE                                  IC2274.2
-117100*                                                                 IC2274.2
+116900*                                                                         
+117000*                                                                         
+117100*                                                                         
 117200     CLOSE   EXTERNAL-FILE.                                       IC2274.2
 117300     EXIT    PROGRAM.                                             IC2274.2
-117400*                                                                 IC2274.2
-117500*                                                                 IC2274.2
+117400*                                                                         
+117500*                                                                         
 117600 SUBPROGRAM-FUNCTION-04.                                          IC2274.2
-117700*                                                                 IC2274.2
-117800*        OPEN THE EXTERNAL FILE FOR INPUT                         IC2274.2
-117900*                                                                 IC2274.2
+117700*                                                                         
+117800*                                                                         
+117900*                                                                         
 118000     OPEN    INPUT EXTERNAL-FILE.                                 IC2274.2
 118100     MOVE   "OPEN   OPEN   OPEN"  TO EXTERNAL-FILE-RECORD.        IC2274.2
 118200     MOVE    EXTERNAL-FILE-RECORD TO LINKAGE-RECORD-WORK.         IC2274.2
 118300     EXIT    PROGRAM.                                             IC2274.2
-118400*                                                                 IC2274.2
-118500*                                                                 IC2274.2
+118400*                                                                         
+118500*                                                                         
 118600 SUBPROGRAM-FUNCTION-05.                                          IC2274.2
-118700*                                                                 IC2274.2
-118800*        READ A RECORD FROM THE EXTERNAL FILE                     IC2274.2
-118900*                                                                 IC2274.2
+118700*                                                                         
+118800*                                                                         
+118900*                                                                         
 119000     READ    EXTERNAL-FILE                                        IC2274.2
 119100                AT END GO TO SUBPROGRAM-FUNCTION-05-EOF.          IC2274.2
 119200     MOVE    EXTERNAL-FILE-RECORD TO LINKAGE-RECORD-WORK.         IC2274.2
 119300     EXIT    PROGRAM.                                             IC2274.2
-119400*                                                                 IC2274.2
+119400*                                                                         
 119500 SUBPROGRAM-FUNCTION-05-EOF.                                      IC2274.2
 119600     MOVE    EXTERNAL-FILE-RECORD TO LINKAGE-RECORD-WORK.         IC2274.2
 119700     MOVE   "END-FILE  END-FILE"  TO EXTERNAL-FILE-RECORD.        IC2274.2
 119800     EXIT    PROGRAM.                                             IC2274.2
-119900*                                                                 IC2274.2
+119900*                                                                         
 120000 END PROGRAM IC227A-1.                                            IC2274.2

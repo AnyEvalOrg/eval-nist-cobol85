@@ -1,9 +1,9 @@
 000100 IDENTIFICATION DIVISION.                                         IX3024.2
 000200 PROGRAM-ID.                                                      IX3024.2
 000300     IX302M.                                                      IX3024.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF                      IX3024.2
-000500*OBSOLETE FEATURES THAT ARE USED IN INTERMEDIATE SUBSET INDEXED   IX3024.2
-000600*INPUT-OUTPUT.                                                    IX3024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
 000700 ENVIRONMENT DIVISION.                                            IX3024.2
 000800 CONFIGURATION SECTION.                                           IX3024.2
 000900 SOURCE-COMPUTER.                                                 IX3024.2
@@ -28,22 +28,22 @@
 002800         RECORD KEY IS FKEY.                                      IX3024.2
 002900 I-O-CONTROL.                                                     IX3024.2
 003000     MULTIPLE FILE TFIL.                                          IX3024.2
-003100*Message expected for above statement: OBSOLETE                   IX3024.2
+003100*                                                                         
 003200                                                                  IX3024.2
 003300 DATA DIVISION.                                                   IX3024.2
 003400 FILE SECTION.                                                    IX3024.2
 003500 FD TFIL                                                          IX3024.2
 003600     LABEL RECORDS STANDARD                                       IX3024.2
-003700*Message expected for above statement: OBSOLETE                   IX3024.2
+003700*                                                                         
 003800                                                                  IX3024.2
 003900     VALUE OF                                                     IX3024.2
 004000     OCLABELID                                                    IX3024.2
 004100     IS                                                           IX3024.2
 004200     "OCDUMMY"                                                    IX3024.2
-004300*Message expected for above statement: OBSOLETE                   IX3024.2
+004300*                                                                         
 004400                                                                  IX3024.2
 004500     DATA RECORDS ARE FREC.                                       IX3024.2
-004600*Message expected for above statement: OBSOLETE                   IX3024.2
+004600*                                                                         
 004700                                                                  IX3024.2
 004800 01 FREC.                                                         IX3024.2
 004900     03 RKEY PIC X(8).                                            IX3024.2
@@ -68,4 +68,4 @@
 006800     DISPLAY "THIS IS A DUMMY PARAGRAPH".                         IX3024.2
 006900     STOP RUN.                                                    IX3024.2
 007000                                                                  IX3024.2
-007100*TOTAL NUMBER OF FLAGS EXPECTED = 4.                              IX3024.2
+007100*                                                                         

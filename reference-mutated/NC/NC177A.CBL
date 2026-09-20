@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1774.2
 000200 PROGRAM-ID.                                                      NC1774.2
 000300     NC177A.                                                      NC1774.2
-000400****************************************************************  NC1774.2
-000500*                                                              *  NC1774.2
-000600*    VALIDATION FOR:-                                          *  NC1774.2
-000700*                                                              *  NC1774.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1774.2
-000900*                                                              *  NC1774.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1774.2
-001100*                                                              *  NC1774.2
-001200****************************************************************  NC1774.2
-001300*                                                              *  NC1774.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1774.2
-001500*                                                              *  NC1774.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1774.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1774.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1774.2
-001900*                                                              *  NC1774.2
-002000****************************************************************  NC1774.2
-002100*                                                                 NC1774.2
-002200*    PROGRAM NC177A TESTS FORMAT 2 OF THE ADD STATEMENT.          NC1774.2
-002300*    VARIOUS COMBINATINS OF DATA-ITEMS AND ALL                    NC1774.2
-002400*    OPTIONAL PHRASES ARE TESTED.                                 NC1774.2
-002500*                                                                 NC1774.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1774.2
 002700 CONFIGURATION SECTION.                                           NC1774.2
 002800 SOURCE-COMPUTER.                                                 NC1774.2
@@ -389,7 +389,7 @@
 039100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1774.2
 039200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1774.2
 039300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1774.2
-039400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1774.2
+039400*                                                                         
 039500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1774.2
 039600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1774.2
 039700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1774.2
@@ -483,7 +483,7 @@
 048500     PERFORM  PRINT-DETAIL.                                       NC1774.2
 048600 ADD-TEST-F2-2.                                                   NC1774.2
 048700     ADD      N-16 N-4 GIVING N-3 ROUNDED.                        NC1774.2
-048800     IF       N-3 EQUAL TO 52800                                  NC1774.2
+048800     IF       N-3 EQUAL TO 52866                                  NC1774.2
 048900              PERFORM PASS                                        NC1774.2
 049000              GO TO ADD-WRITE-F2-2.                               NC1774.2
 049100     GO TO    ADD-FAIL-F2-2.                                      NC1774.2
@@ -492,7 +492,7 @@
 049400     GO TO    ADD-WRITE-F2-2.                                     NC1774.2
 049500 ADD-FAIL-F2-2.                                                   NC1774.2
 049600     MOVE     N-3 TO COMPUTED-N.                                  NC1774.2
-049700     MOVE     52800 TO CORRECT-N.                                 NC1774.2
+049700     MOVE     52866 TO CORRECT-N.                                 NC1774.2
 049800     PERFORM  FAIL.                                               NC1774.2
 049900 ADD-WRITE-F2-2.                                                  NC1774.2
 050000     MOVE "ADD-TEST-F2-2 " TO PAR-NAME.                           NC1774.2
@@ -502,8 +502,8 @@
 050400     ADD      N-13 1 GIVING N-3 ON SIZE ERROR                     NC1774.2
 050500              PERFORM PASS                                        NC1774.2
 050600              GO TO ADD-WRITE-F2-3-1.                             NC1774.2
-050700*    NOTE WHEN SIZE ERROR CONDITION OCCURS, VALUE OF              NC1774.2
-050800*    N-3  SHOULD NOT BE CHANGED.                                  NC1774.2
+050700*                                                                         
+050800*                                                                         
 050900     GO TO    ADD-FAIL-F2-3-1.                                    NC1774.2
 051000 ADD-DELETE-F2-3-1.                                               NC1774.2
 051100     PERFORM  DE-LETE.                                            NC1774.2
@@ -559,7 +559,7 @@
 056100     MOVE     ZERO TO WRK-DS-09V09.                               NC1774.2
 056200     ADD      A06THREES-DS-03V03                                  NC1774.2
 056300              A12THREES-DS-06V06 GIVING WRK-DS-09V09.             NC1774.2
-056400     IF       WRK-DS-09V09 EQUAL TO 000333616.666333000           NC1774.2
+056400     IF       WRK-DS-09V09 EQUAL TO 050333666.666333000           NC1774.2
 056500              PERFORM PASS GO TO ADD-WRITE-F2-5.                  NC1774.2
 056600     GO       TO ADD-FAIL-F2-5.                                   NC1774.2
 056700 ADD-DELETE-F2-5.                                                 NC1774.2
@@ -567,7 +567,7 @@
 056900     GO       TO ADD-WRITE-F2-5.                                  NC1774.2
 057000 ADD-FAIL-F2-5.                                                   NC1774.2
 057100     MOVE     WRK-DS-09V09 TO COMPUTED-N.                         NC1774.2
-057200     MOVE     000333616.666333000 TO CORRECT-N.                   NC1774.2
+057200     MOVE     050333666.666333000 TO CORRECT-N.                   NC1774.2
 057300     PERFORM  FAIL.                                               NC1774.2
 057400 ADD-WRITE-F2-5.                                                  NC1774.2
 057500     MOVE     "ADD-TEST-F2-5" TO PAR-NAME.                        NC1774.2
@@ -628,7 +628,7 @@
 063000 ADD-TEST-F2-8-2.                                                 NC1774.2
 063100     IF       WRK-DS-10V00 EQUAL TO ZERO                          NC1774.2
 063200              PERFORM PASS GO TO ADD-WRITE-F2-8-2.                NC1774.2
-063300*    NOTE     THIS TEST DEPENDS UPON THE RESULT OF ADD-TEST-F2-8-1NC1774.2
+063300*                                                                         
 063400     GO       TO ADD-FAIL-F2-8-2.                                 NC1774.2
 063500 ADD-DELETE-F2-8-2.                                               NC1774.2
 063600     PERFORM  DE-LETE.                                            NC1774.2
@@ -662,7 +662,7 @@
 066400     IF       WRK-DS-05V00 EQUAL TO ZERO                          NC1774.2
 066500              PERFORM PASS GO TO ADD-WRITE-F2-9-2.                NC1774.2
 066600     GO       TO ADD-FAIL-F2-9-2.                                 NC1774.2
-066700*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF ADD-TEST-F2-9-1   NC1774.2
+066700*                                                                         
 066800 ADD-DELETE-F2-9-2.                                               NC1774.2
 066900     PERFORM  DE-LETE.                                            NC1774.2
 067000     GO       TO ADD-WRITE-F2-9-2.                                NC1774.2
@@ -696,7 +696,7 @@
 069800 ADD-TEST-F2-10-2.                                                NC1774.2
 069900     IF       WRK-DS-06V06 EQUAL TO 666999.666333                 NC1774.2
 070000              PERFORM PASS GO TO ADD-WRITE-F2-10-2.               NC1774.2
-070100*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF ADD-TEST-F2-10-1  NC1774.2
+070100*                                                                         
 070200     GO       TO ADD-FAIL-F2-10-2.                                NC1774.2
 070300 ADD-DELETE-F2-10-2.                                              NC1774.2
 070400     PERFORM  DE-LETE.                                            NC1774.2
@@ -920,10 +920,10 @@
 092200     MOVE ZERO TO WRK-CS-18V00.                                   NC1774.2
 092300     ADD A14TWOS-CS-18V00  A14TWOS-CS-18V00                       NC1774.2
 092400             GIVING WRK-CS-18V00.                                 NC1774.2
-092500     IF WRK-CS-18V00 EQUAL TO -800044444444444444                 NC1774.2
+092500     IF WRK-CS-18V00 EQUAL TO -000044244444444444                 NC1774.2
 092600         PERFORM PASS                                             NC1774.2
 092700         GO TO ADD-WRITE-F2-21.                                   NC1774.2
-092800     MOVE -800044444444444444 TO CORRECT-18V0.                    NC1774.2
+092800     MOVE -000044244444444444 TO CORRECT-18V0.                    NC1774.2
 092900     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1774.2
 093000     PERFORM FAIL.                                                NC1774.2
 093100     GO TO ADD-WRITE-F2-21.                                       NC1774.2
@@ -948,9 +948,9 @@
 095000 ADD-WRITE-F2-22.                                                 NC1774.2
 095100     MOVE "ADD-TEST-F2-22 " TO PAR-NAME.                          NC1774.2
 095200     PERFORM PRINT-DETAIL.                                        NC1774.2
-095300*                                                                 NC1774.2
+095300*                                                                         
 095400 ADD-INIT-F2-23.                                                  NC1774.2
-095500*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
+095500*                                                                         
 095600     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 095700     MOVE     ZERO TO WRK-DS-10V00.                               NC1774.2
 095800 ADD-TEST-F2-23.                                                  NC1774.2
@@ -969,9 +969,9 @@
 097100 ADD-WRITE-F2-23.                                                 NC1774.2
 097200     MOVE     "ADD-TEST-F2-23" TO PAR-NAME.                       NC1774.2
 097300     PERFORM  PRINT-DETAIL.                                       NC1774.2
-097400*                                                                 NC1774.2
+097400*                                                                         
 097500 ADD-INIT-F2-24.                                                  NC1774.2
-097600*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
+097600*                                                                         
 097700     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 097800     MOVE     ZERO TO WRK-DS-06V06.                               NC1774.2
 097900 ADD-TEST-F2-24.                                                  NC1774.2
@@ -992,9 +992,9 @@
 099400 ADD-WRITE-F2-24.                                                 NC1774.2
 099500     MOVE     "ADD-TEST-F2-24" TO PAR-NAME.                       NC1774.2
 099600     PERFORM  PRINT-DETAIL.                                       NC1774.2
-099700*                                                                 NC1774.2
+099700*                                                                         
 099800 ADD-INIT-F2-25.                                                  NC1774.2
-099900*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
+099900*                                                                         
 100000     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 100100     MOVE     ZERO TO WRK-DS-10V00.                               NC1774.2
 100200 ADD-TEST-F2-25.                                                  NC1774.2
@@ -1014,9 +1014,9 @@
 101600 ADD-WRITE-F2-25.                                                 NC1774.2
 101700     MOVE     "ADD-TEST-F2-25" TO PAR-NAME.                       NC1774.2
 101800     PERFORM  PRINT-DETAIL.                                       NC1774.2
-101900*                                                                 NC1774.2
+101900*                                                                         
 102000 ADD-INIT-F2-26.                                                  NC1774.2
-102100*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
+102100*                                                                         
 102200     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 102300     MOVE     ZERO TO WRK-DS-06V06.                               NC1774.2
 102400 ADD-TEST-F2-26.                                                  NC1774.2
@@ -1038,9 +1038,9 @@
 104000 ADD-WRITE-F2-26.                                                 NC1774.2
 104100     MOVE     "ADD-TEST-F2-26" TO PAR-NAME.                       NC1774.2
 104200     PERFORM  PRINT-DETAIL.                                       NC1774.2
-104300*                                                                 NC1774.2
+104300*                                                                         
 104400 ADD-INIT-F2-27.                                                  NC1774.2
-104500*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
+104500*                                                                         
 104600     MOVE   "VI-74 6.6.4 GR2" TO ANSI-REFERENCE.                  NC1774.2
 104700     MOVE   "ADD-TEST-F2-27" TO PAR-NAME.                         NC1774.2
 104800     MOVE    1    TO REC-CT.                                      NC1774.2
@@ -1096,10 +1096,10 @@
 109800     ELSE                                                         NC1774.2
 109900     PERFORM FAIL MOVE WRK-DU-2V0-3 TO COMPUTED-N MOVE 9          NC1774.2
 110000     TO CORRECT-N PERFORM PRINT-DETAIL.                           NC1774.2
-110100*                                                                 NC1774.2
+110100*                                                                         
 110200 ADD-INIT-F2-28.                                                  NC1774.2
-110300*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
-110400*    ==-->      SIZE ERROR        <--==                           NC1774.2
+110300*                                                                         
+110400*                                                                         
 110500     MOVE   "VI-67 6.4.2"    TO ANSI-REFERENCE.                   NC1774.2
 110600     MOVE    1     TO REC-CT.                                     NC1774.2
 110700     MOVE    1.1   TO WRK-DU-1V1-1.                               NC1774.2
@@ -1180,10 +1180,10 @@
 118200             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1774.2
 118300             PERFORM FAIL                                         NC1774.2
 118400             PERFORM PRINT-DETAIL.                                NC1774.2
-118500*                                                                 NC1774.2
+118500*                                                                         
 118600 ADD-INIT-F2-29.                                                  NC1774.2
-118700*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
-118800*    ==-->   NO SIZE ERROR        <--==                           NC1774.2
+118700*                                                                         
+118800*                                                                         
 118900     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 119000     MOVE    1     TO REC-CT.                                     NC1774.2
 119100     MOVE    1.1   TO WRK-DU-1V1-1.                               NC1774.2
@@ -1260,10 +1260,10 @@
 126200             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1774.2
 126300             PERFORM FAIL                                         NC1774.2
 126400             PERFORM PRINT-DETAIL.                                NC1774.2
-126500*                                                                 NC1774.2
+126500*                                                                         
 126600 ADD-INIT-F2-30.                                                  NC1774.2
-126700*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
-126800*    ==-->      SIZE ERROR        <--==                           NC1774.2
+126700*                                                                         
+126800*                                                                         
 126900     MOVE   "VI-67 6.4.2"    TO ANSI-REFERENCE.                   NC1774.2
 127000     MOVE    1     TO REC-CT.                                     NC1774.2
 127100     MOVE    1.1   TO WRK-DU-1V1-1.                               NC1774.2
@@ -1344,10 +1344,10 @@
 134600             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1774.2
 134700             PERFORM FAIL                                         NC1774.2
 134800             PERFORM PRINT-DETAIL.                                NC1774.2
-134900*                                                                 NC1774.2
+134900*                                                                         
 135000 ADD-INIT-F2-31.                                                  NC1774.2
-135100*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
-135200*    ==-->   NO SIZE ERROR        <--==                           NC1774.2
+135100*                                                                         
+135200*                                                                         
 135300     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 135400     MOVE    1     TO REC-CT.                                     NC1774.2
 135500     MOVE    1.1   TO WRK-DU-1V1-1.                               NC1774.2
@@ -1424,10 +1424,10 @@
 142600             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1774.2
 142700             PERFORM FAIL                                         NC1774.2
 142800             PERFORM PRINT-DETAIL.                                NC1774.2
-142900*                                                                 NC1774.2
+142900*                                                                         
 143000 ADD-INIT-F2-32.                                                  NC1774.2
-143100*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
-143200*    ==-->      SIZE ERROR        <--==                           NC1774.2
+143100*                                                                         
+143200*                                                                         
 143300     MOVE   "VI-67 6.4.2"    TO ANSI-REFERENCE.                   NC1774.2
 143400     MOVE    1     TO REC-CT.                                     NC1774.2
 143500     MOVE    1.1   TO WRK-DU-1V1-1.                               NC1774.2
@@ -1510,10 +1510,10 @@
 151200             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1774.2
 151300             PERFORM FAIL                                         NC1774.2
 151400             PERFORM PRINT-DETAIL.                                NC1774.2
-151500*                                                                 NC1774.2
+151500*                                                                         
 151600 ADD-INIT-F2-33.                                                  NC1774.2
-151700*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1774.2
-151800*    ==-->   NO SIZE ERROR        <--==                           NC1774.2
+151700*                                                                         
+151800*                                                                         
 151900     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1774.2
 152000     MOVE    1     TO REC-CT.                                     NC1774.2
 152100     MOVE    1.1   TO WRK-DU-1V1-1.                               NC1774.2
@@ -1592,10 +1592,10 @@
 159400             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1774.2
 159500             PERFORM FAIL                                         NC1774.2
 159600             PERFORM PRINT-DETAIL.                                NC1774.2
-159700*                                                                 NC1774.2
+159700*                                                                         
 159800 ADD-INIT-F2-34.                                                  NC1774.2
-159900*    ==-->EXPLICIT SCOPE TERMINATOR<--==                          NC1774.2
-160000*    ==-->      SIZE ERROR        <--==                           NC1774.2
+159900*                                                                         
+160000*                                                                         
 160100     MOVE   "VI-67 6.4.3" TO ANSI-REFERENCE.                      NC1774.2
 160200     MOVE   "ADD-TEST-F2-34" TO PAR-NAME.                         NC1774.2
 160300     MOVE    ZERO  TO WRK-DS-10V00.                               NC1774.2
@@ -1682,10 +1682,10 @@
 168400                  TO RE-MARK                                      NC1774.2
 168500             PERFORM FAIL                                         NC1774.2
 168600             PERFORM PRINT-DETAIL.                                NC1774.2
-168700*                                                                 NC1774.2
+168700*                                                                         
 168800 ADD-INIT-F2-35.                                                  NC1774.2
-168900*    ==-->EXPLICIT SCOPE TERMINATOR<--==                          NC1774.2
-169000*    ==-->   NO SIZE ERROR        <--==                           NC1774.2
+168900*                                                                         
+169000*                                                                         
 169100     MOVE   "VI-67 6.4.3" TO ANSI-REFERENCE.                      NC1774.2
 169200     MOVE   "ADD-TEST-F2-35" TO PAR-NAME.                         NC1774.2
 169300     MOVE    1     TO REC-CT.                                     NC1774.2
@@ -1773,10 +1773,10 @@
 177500                  TO RE-MARK                                      NC1774.2
 177600             PERFORM FAIL                                         NC1774.2
 177700             PERFORM PRINT-DETAIL.                                NC1774.2
-177800*                                                                 NC1774.2
+177800*                                                                         
 177900 ADD-INIT-F2-36.                                                  NC1774.2
-178000*    ==-->EXPLICIT SCOPE TERMINATOR<--==                          NC1774.2
-178100*    ==-->      SIZE ERROR        <--==                           NC1774.2
+178000*                                                                         
+178100*                                                                         
 178200     MOVE   "VI-67 6.4.3" TO ANSI-REFERENCE.                      NC1774.2
 178300     MOVE   "ADD-TEST-F2-36" TO PAR-NAME.                         NC1774.2
 178400     MOVE    ZERO  TO WRK-DS-10V00.                               NC1774.2
@@ -1863,10 +1863,10 @@
 186500                  TO RE-MARK                                      NC1774.2
 186600             PERFORM FAIL                                         NC1774.2
 186700             PERFORM PRINT-DETAIL.                                NC1774.2
-186800*                                                                 NC1774.2
+186800*                                                                         
 186900 ADD-INIT-F2-37.                                                  NC1774.2
-187000*    ==-->EXPLICIT SCOPE TERMINATOR<--==                          NC1774.2
-187100*    ==-->   NO SIZE ERROR        <--==                           NC1774.2
+187000*                                                                         
+187100*                                                                         
 187200     MOVE   "VI-67 6.4.3" TO ANSI-REFERENCE.                      NC1774.2
 187300     MOVE   "ADD-TEST-F2-37" TO PAR-NAME.                         NC1774.2
 187400     MOVE    1     TO REC-CT.                                     NC1774.2
@@ -1954,10 +1954,10 @@
 195600                  TO RE-MARK                                      NC1774.2
 195700             PERFORM FAIL                                         NC1774.2
 195800             PERFORM PRINT-DETAIL.                                NC1774.2
-195900*                                                                 NC1774.2
+195900*                                                                         
 196000 ADD-INIT-F2-38.                                                  NC1774.2
-196100*    ==-->EXPLICIT SCOPE TERMINATOR<--==                          NC1774.2
-196200*    ==-->      SIZE ERROR        <--==                           NC1774.2
+196100*                                                                         
+196200*                                                                         
 196300     MOVE   "VI-67 6.4.3" TO ANSI-REFERENCE.                      NC1774.2
 196400     MOVE   "ADD-TEST-F2-38" TO PAR-NAME.                         NC1774.2
 196500     MOVE    ZERO  TO WRK-DS-10V00.                               NC1774.2
@@ -2018,10 +2018,10 @@
 202000                  TO RE-MARK                                      NC1774.2
 202100             PERFORM FAIL                                         NC1774.2
 202200             PERFORM PRINT-DETAIL.                                NC1774.2
-202300*                                                                 NC1774.2
+202300*                                                                         
 202400 ADD-INIT-F2-39.                                                  NC1774.2
-202500*    ==-->EXPLICIT SCOPE TERMINATOR<--==                          NC1774.2
-202600*    ==-->    NO SIZE ERROR        <--==                          NC1774.2
+202500*                                                                         
+202600*                                                                         
 202700     MOVE   "VI-67 6.4.3" TO ANSI-REFERENCE.                      NC1774.2
 202800     MOVE   "ADD-TEST-F2-39" TO PAR-NAME.                         NC1774.2
 202900     MOVE    1     TO REC-CT.                                     NC1774.2
@@ -2083,10 +2083,10 @@
 208500                  TO RE-MARK                                      NC1774.2
 208600             PERFORM FAIL                                         NC1774.2
 208700             PERFORM PRINT-DETAIL.                                NC1774.2
-208800*                                                                 NC1774.2
+208800*                                                                         
 208900 ADD-INIT-F2-40.                                                  NC1774.2
 209000     MOVE   "VI-73 6.6.2" TO ANSI-REFERENCE.                      NC1774.2
-209100*    ==-->  OPTIONAL WORD "TO"  <--==                             NC1774.2
+209100*                                                                         
 209200     MOVE     ZERO TO WRK-DS-09V09.                               NC1774.2
 209300 ADD-TEST-F2-40-0.                                                NC1774.2
 209400     ADD      A06THREES-DS-03V03                                  NC1774.2
@@ -2105,10 +2105,10 @@
 210700 ADD-WRITE-F2-40.                                                 NC1774.2
 210800     MOVE     "ADD-TEST-F2-40" TO PAR-NAME.                       NC1774.2
 210900     PERFORM  PRINT-DETAIL.                                       NC1774.2
-211000*                                                                 NC1774.2
+211000*                                                                         
 211100 ADD-INIT-F2-41.                                                  NC1774.2
 211200     MOVE   "VI-73 6.6.2" TO ANSI-REFERENCE.                      NC1774.2
-211300*    ==-->  OPTIONAL WORD "TO"  <--==                             NC1774.2
+211300*                                                                         
 211400     MOVE     ZERO TO WRK-DS-06V06.                               NC1774.2
 211500 ADD-TEST-F2-41-0.                                                NC1774.2
 211600     ADD      A05ONES-DS-05V00                                    NC1774.2
@@ -2129,7 +2129,7 @@
 213100 ADD-WRITE-F2-41.                                                 NC1774.2
 213200     MOVE     "ADD-TEST-F2-41" TO PAR-NAME.                       NC1774.2
 213300     PERFORM PRINT-DETAIL.                                        NC1774.2
-213400*                                                                 NC1774.2
+213400*                                                                         
 213500 CCVS-EXIT SECTION.                                               NC1774.2
 213600 CCVS-999999.                                                     NC1774.2
 213700     GO TO CLOSE-FILES.                                           NC1774.2

@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1314.2
 000300     IF131A.                                                      IF1314.2
 000400                                                                  IF1314.2
-000500***********************************************************       IF1314.2
-000600*                                                         *       IF1314.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1314.2
-000800* It contains tests for the Intrinsic Function            *       IF1314.2
-000900* RANDOM.                                                 *       IF1314.2
-001000*                                                         *       IF1314.2
-001100***********************************************************       IF1314.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1314.2
 001300 CONFIGURATION SECTION.                                           IF1314.2
 001400 SOURCE-COMPUTER.                                                 IF1314.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1314.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1314.2
 002700 WORKING-STORAGE SECTION.                                         IF1314.2
-002800***********************************************************       IF1314.2
-002900* Variables specific to the Intrinsic Function Test IF131A*       IF1314.2
-003000***********************************************************       IF1314.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 4.             IF1314.2
 003200 01  Q                   PIC S9(10)          VALUE 3.             IF1314.2
 003300 01  ARR                                     VALUE "40537".       IF1314.2
@@ -36,9 +36,9 @@
 003600 01  WS-NUM              PIC S9(5)V9(6).                          IF1314.2
 003700 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1314.2
 003800 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1314.2
-003900*                                                                 IF1314.2
-004000**********************************************************        IF1314.2
-004100*                                                                 IF1314.2
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 01  TEST-RESULTS.                                                IF1314.2
 004300     02 FILLER                   PIC X      VALUE SPACE.          IF1314.2
 004400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1314.2
@@ -332,16 +332,16 @@
 033200 BAIL-OUT-EX. EXIT.                                               IF1314.2
 033300 CCVS1-EXIT.                                                      IF1314.2
 033400     EXIT.                                                        IF1314.2
-033500********************************************************          IF1314.2
-033600*                                                      *          IF1314.2
-033700*    Intrinsic Function Tests         IF131A - RANDOM  *          IF1314.2
-033800*                                                      *          IF1314.2
-033900********************************************************          IF1314.2
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
 034000 SECT-IF131A SECTION.                                             IF1314.2
 034100 F-RANDOM-INFO.                                                   IF1314.2
 034200     MOVE     "See ref. A-64 2.35" TO ANSI-REFERENCE.             IF1314.2
 034300     MOVE     "RANDOM Function" TO FEATURE.                       IF1314.2
-034400*****************TEST (a) ******************************          IF1314.2
+034400*                                                                         
 034500 F-RANDOM-01.                                                     IF1314.2
 034600     MOVE ZERO TO WS-NUM.                                         IF1314.2
 034700     MOVE 0 TO MIN-RANGE.                                         IF1314.2
@@ -363,7 +363,7 @@
 036300 F-RANDOM-WRITE-01.                                               IF1314.2
 036400     MOVE "F-RANDOM-01" TO PAR-NAME.                              IF1314.2
 036500     PERFORM  PRINT-DETAIL.                                       IF1314.2
-036600*****************TEST (b) ******************************          IF1314.2
+036600*                                                                         
 036700 F-RANDOM-02.                                                     IF1314.2
 036800     EVALUATE FUNCTION RANDOM(3)                                  IF1314.2
 036900     WHEN 0 THRU 1                                                IF1314.2
@@ -377,7 +377,7 @@
 037700 F-RANDOM-WRITE-02.                                               IF1314.2
 037800     MOVE "F-RANDOM-02" TO PAR-NAME.                              IF1314.2
 037900     PERFORM  PRINT-DETAIL.                                       IF1314.2
-038000*****************TEST (c) ******************************          IF1314.2
+038000*                                                                         
 038100 F-RANDOM-03.                                                     IF1314.2
 038200     MOVE 0 TO MIN-RANGE.                                         IF1314.2
 038300     MOVE 1 TO MAX-RANGE.                                         IF1314.2
@@ -394,7 +394,7 @@
 039400 F-RANDOM-WRITE-03.                                               IF1314.2
 039500     MOVE "F-RANDOM-03" TO PAR-NAME.                              IF1314.2
 039600     PERFORM  PRINT-DETAIL.                                       IF1314.2
-039700*****************TEST (d) ******************************          IF1314.2
+039700*                                                                         
 039800 F-RANDOM-04.                                                     IF1314.2
 039900     MOVE ZERO TO WS-NUM.                                         IF1314.2
 040000     MOVE 0 TO MIN-RANGE.                                         IF1314.2
@@ -416,7 +416,7 @@
 041600 F-RANDOM-WRITE-04.                                               IF1314.2
 041700     MOVE "F-RANDOM-04" TO PAR-NAME.                              IF1314.2
 041800     PERFORM  PRINT-DETAIL.                                       IF1314.2
-041900*****************TEST (e) ******************************          IF1314.2
+041900*                                                                         
 042000 F-RANDOM-05.                                                     IF1314.2
 042100     MOVE ZERO TO WS-NUM.                                         IF1314.2
 042200     MOVE 0 TO MIN-RANGE.                                         IF1314.2
@@ -438,7 +438,7 @@
 043800 F-RANDOM-WRITE-05.                                               IF1314.2
 043900     MOVE "F-RANDOM-05" TO PAR-NAME.                              IF1314.2
 044000     PERFORM  PRINT-DETAIL.                                       IF1314.2
-044100*****************TEST (f) ******************************          IF1314.2
+044100*                                                                         
 044200 F-RANDOM-06.                                                     IF1314.2
 044300     MOVE ZERO TO WS-NUM.                                         IF1314.2
 044400     MOVE 1 TO MIN-RANGE.                                         IF1314.2
@@ -460,7 +460,7 @@
 046000 F-RANDOM-WRITE-06.                                               IF1314.2
 046100     MOVE "F-RANDOM-06" TO PAR-NAME.                              IF1314.2
 046200     PERFORM  PRINT-DETAIL.                                       IF1314.2
-046300*****************TEST (g) ******************************          IF1314.2
+046300*                                                                         
 046400 F-RANDOM-07.                                                     IF1314.2
 046500     MOVE ZERO TO WS-NUM.                                         IF1314.2
 046600     MOVE 0 TO MIN-RANGE.                                         IF1314.2
@@ -483,7 +483,7 @@
 048300 F-RANDOM-WRITE-07.                                               IF1314.2
 048400     MOVE "F-RANDOM-07" TO PAR-NAME.                              IF1314.2
 048500     PERFORM  PRINT-DETAIL.                                       IF1314.2
-048600*****************TEST (h) ******************************          IF1314.2
+048600*                                                                         
 048700 F-RANDOM-08.                                                     IF1314.2
 048800     MOVE ZERO TO WS-NUM.                                         IF1314.2
 048900     MOVE 0 TO MIN-RANGE.                                         IF1314.2
@@ -506,7 +506,7 @@
 050600 F-RANDOM-WRITE-08.                                               IF1314.2
 050700     MOVE "F-RANDOM-08" TO PAR-NAME.                              IF1314.2
 050800     PERFORM  PRINT-DETAIL.                                       IF1314.2
-050900********************END OF TESTS***************                   IF1314.2
+050900*                                                                         
 051000 CCVS-EXIT SECTION.                                               IF1314.2
 051100 CCVS-999999.                                                     IF1314.2
 051200     GO TO CLOSE-FILES.                                           IF1314.2

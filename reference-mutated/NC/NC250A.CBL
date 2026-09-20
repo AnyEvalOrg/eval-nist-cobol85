@@ -2,28 +2,28 @@
 000200 PROGRAM-ID.                                                      NC2504.2
 000300     NC250A.                                                      NC2504.2
 000400                                                                  NC2504.2
-000500****************************************************************  NC2504.2
-000600*                                                              *  NC2504.2
-000700*    VALIDATION FOR:-                                          *  NC2504.2
-000800*                                                              *  NC2504.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2504.2
-001000*                                                              *  NC2504.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2504.2
-001200*                                                              *  NC2504.2
-001300****************************************************************  NC2504.2
-001400*                                                              *  NC2504.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2504.2
-001600*                                                              *  NC2504.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2504.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2504.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2504.2
-002000*                                                              *  NC2504.2
-002100****************************************************************  NC2504.2
-002200*                                                                 NC2504.2
-002300*    PROGRAM NC250A TESTS THE GENERAL FORMAT OF THE "IF" STATEMENTNC2504.2
-002400*    A VARIETY OF QUALIFIED DATA-NAMES AND CONDITION-NAMES        NC2504.2
-002500*    ARE USED.                                                    NC2504.2
-002600*                                                                 NC2504.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700                                                                  NC2504.2
 002800 ENVIRONMENT DIVISION.                                            NC2504.2
 002900 CONFIGURATION SECTION.                                           NC2504.2
@@ -526,7 +526,7 @@
 052600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2504.2
 052700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2504.2
 052800      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2504.2
-052900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2504.2
+052900*                                                                         
 053000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2504.2
 053100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2504.2
 053200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2504.2
@@ -594,7 +594,7 @@
 059400 CCVS1-EXIT.                                                      NC2504.2
 059500     EXIT.                                                        NC2504.2
 059600 SECT-NC201A-001 SECTION.                                         NC2504.2
-059700*                                                                 NC2504.2
+059700*                                                                         
 059800 IF--INIT-A.                                                      NC2504.2
 059900     MOVE   "VI-89 6.15" TO ANSI-REFERENCE.                       NC2504.2
 060000     PERFORM END-ROUTINE.                                         NC2504.2
@@ -614,7 +614,7 @@
 061400     MOVE "  FIG. CONSTANTS    " TO FEATURE.                      NC2504.2
 061500 IF--TEST-1.                                                      NC2504.2
 061600     IF ZEROES IS EQUAL TO IF-D3 PERFORM PASS ELSE PERFORM FAIL.  NC2504.2
-061700*        NOTE FIGURATIVE ZEROES VS ALPHANUMERIC FIELD.            NC2504.2
+061700*                                                                         
 061800     GO TO IF--WRITE-1.                                           NC2504.2
 061900 IF--DELETE-1.                                                    NC2504.2
 062000     PERFORM DE-LETE.                                             NC2504.2
@@ -623,7 +623,7 @@
 062300     PERFORM PRINT-DETAIL.                                        NC2504.2
 062400 IF--TEST-2.                                                      NC2504.2
 062500     IF SPACES EQUAL TO IF-D4 PERFORM PASS ELSE PERFORM FAIL.     NC2504.2
-062600*        NOTE FIGURATIVE SPACES VS ALPHANUMERIC FIELD.            NC2504.2
+062600*                                                                         
 062700     GO TO IF--WRITE-2.                                           NC2504.2
 062800 IF--DELETE-2.                                                    NC2504.2
 062900     PERFORM DE-LETE.                                             NC2504.2
@@ -632,7 +632,7 @@
 063200     PERFORM PRINT-DETAIL.                                        NC2504.2
 063300 IF--TEST-3.                                                      NC2504.2
 063400     IF QUOTES EQUAL TO IF-D5 PERFORM PASS ELSE PERFORM FAIL.     NC2504.2
-063500*        NOTE FIGURATIVE QUOTES VS ALPHANUMERIC FIELD.            NC2504.2
+063500*                                                                         
 063600     GO TO IF--WRITE-3.                                           NC2504.2
 063700 IF--DELETE-3.                                                    NC2504.2
 063800     PERFORM DE-LETE.                                             NC2504.2
@@ -641,7 +641,7 @@
 064100     PERFORM PRINT-DETAIL.                                        NC2504.2
 064200 IF--TEST-4.                                                      NC2504.2
 064300     IF IF-D6 EQUAL TO ALL "BA" PERFORM PASS ELSE PERFORM FAIL.   NC2504.2
-064400*        NOTE ALL ANY LITERAL VS ALPHANUMERIC FIELD.              NC2504.2
+064400*                                                                         
 064500     GO TO IF--WRITE-4.                                           NC2504.2
 064600 IF--DELETE-4.                                                    NC2504.2
 064700     PERFORM DE-LETE.                                             NC2504.2
@@ -651,7 +651,7 @@
 065100 IF--TEST-5.                                                      NC2504.2
 065200     IF IF-D4 GREATER THAN SPACES PERFORM FAIL ELSE               NC2504.2
 065300     PERFORM PASS.                                                NC2504.2
-065400*        NOTE FIG-SPACES VS ALPHANUMERIC FIELD.                   NC2504.2
+065400*                                                                         
 065500     GO TO IF--WRITE-5.                                           NC2504.2
 065600 IF--DELETE-5.                                                    NC2504.2
 065700     PERFORM DE-LETE.                                             NC2504.2
@@ -660,7 +660,7 @@
 066000     PERFORM PRINT-DETAIL.                                        NC2504.2
 066100 IF--TEST-6.                                                      NC2504.2
 066200     IF QUOTES GREATER THAN IF-D5 PERFORM FAIL ELSE PERFORM PASS. NC2504.2
-066300*        NOTE FIG-QUOTES VS ALPHANUMERIC FIELD.                   NC2504.2
+066300*                                                                         
 066400     GO TO IF--WRITE-6.                                           NC2504.2
 066500 IF--DELETE-6.                                                    NC2504.2
 066600     PERFORM DE-LETE.                                             NC2504.2
@@ -670,7 +670,7 @@
 067000 IF--TEST-7.                                                      NC2504.2
 067100     IF ALL "BA" GREATER THAN IF-D6 PERFORM FAIL                  NC2504.2
 067200     ELSE PERFORM PASS.                                           NC2504.2
-067300*    NOTE ALL ANY LITERAL VS ALPHA FIELD.                         NC2504.2
+067300*                                                                         
 067400     GO TO IF--WRITE-7.                                           NC2504.2
 067500 IF--DELETE-7.                                                    NC2504.2
 067600     PERFORM DE-LETE.                                             NC2504.2
@@ -681,8 +681,8 @@
 068100     MOVE "  UNEQUAL LENGTHS   " TO FEATURE.                      NC2504.2
 068200 IF--TEST-8.                                                      NC2504.2
 068300     IF IF-D22 GREATER THAN IF-D19 PERFORM FAIL ELSE PERFORM PASS.NC2504.2
-068400*        NOTE ALPHANUMERIC GROUP VS ALPHANUMERIC FIELD.           NC2504.2
-068500*    NOTE UNEQUAL LENGTHS.                                        NC2504.2
+068400*                                                                         
+068500*                                                                         
 068600     GO TO IF--WRITE-8.                                           NC2504.2
 068700 IF--DELETE-8.                                                    NC2504.2
 068800     PERFORM DE-LETE.                                             NC2504.2
@@ -693,7 +693,7 @@
 069300     MOVE "  POSITIVE          " TO FEATURE.                      NC2504.2
 069400 IF--TEST-9.                                                      NC2504.2
 069500     IF IF-D1 IS NOT POSITIVE PERFORM PASS ELSE PERFORM FAIL.     NC2504.2
-069600*        NOTE POSITIVE TEST ON ZERO VALUE.                        NC2504.2
+069600*                                                                         
 069700     GO TO IF--WRITE-9.                                           NC2504.2
 069800 IF--DELETE-9.                                                    NC2504.2
 069900     PERFORM DE-LETE.                                             NC2504.2
@@ -702,7 +702,7 @@
 070200     PERFORM PRINT-DETAIL.                                        NC2504.2
 070300 IF--TEST-10.                                                     NC2504.2
 070400     IF IF-D8 POSITIVE PERFORM PASS ELSE      PERFORM FAIL.       NC2504.2
-070500*        NOTE POSITIVE TEST ON UNSIGNED VALUE.                    NC2504.2
+070500*                                                                         
 070600     GO TO IF--WRITE-10.                                          NC2504.2
 070700 IF--DELETE-10.                                                   NC2504.2
 070800     PERFORM DE-LETE.                                             NC2504.2
@@ -711,7 +711,7 @@
 071100     PERFORM PRINT-DETAIL.                                        NC2504.2
 071200 IF--TEST-11.                                                     NC2504.2
 071300     IF IF-D16 POSITIVE PERFORM PASS ELSE PERFORM FAIL.           NC2504.2
-071400*        NOTE POSITIVE TEST ON SCALED VALUE.                      NC2504.2
+071400*                                                                         
 071500     GO TO IF--WRITE-11.                                          NC2504.2
 071600 IF--DELETE-11.                                                   NC2504.2
 071700     PERFORM DE-LETE.                                             NC2504.2
@@ -720,7 +720,7 @@
 072000     PERFORM PRINT-DETAIL.                                        NC2504.2
 072100 IF--TEST-12.                                                     NC2504.2
 072200     IF IF-D27 POSITIVE PERFORM PASS ELSE PERFORM FAIL.           NC2504.2
-072300*        NOTE POSITIVE TEST ON COMPUTATIONAL FIELD.               NC2504.2
+072300*                                                                         
 072400     GO TO IF--WRITE-12.                                          NC2504.2
 072500 IF--DELETE-12.                                                   NC2504.2
 072600     PERFORM DE-LETE.                                             NC2504.2
@@ -729,7 +729,7 @@
 072900     PERFORM PRINT-DETAIL.                                        NC2504.2
 073000 IF--TEST-13.                                                     NC2504.2
 073100     IF IF-D28 POSITIVE PERFORM PASS ELSE PERFORM FAIL.           NC2504.2
-073200*        NOTE POSITIVE TEST ON NUMERIC DISPLAY IFELD.             NC2504.2
+073200*                                                                         
 073300     GO TO IF--WRITE-13.                                          NC2504.2
 073400 IF--DELETE-13.                                                   NC2504.2
 073500     PERFORM DE-LETE.                                             NC2504.2
@@ -738,7 +738,7 @@
 073800     PERFORM PRINT-DETAIL.                                        NC2504.2
 073900 IF--TEST-14.                                                     NC2504.2
 074000     IF IF-D31 IS POSITIVE PERFORM FAIL ELSE PERFORM PASS.        NC2504.2
-074100*        NOTE POSITIVE TEST ON NEGATIVE FIELD.                    NC2504.2
+074100*                                                                         
 074200     GO TO IF--WRITE-14.                                          NC2504.2
 074300 IF--DELETE-14.                                                   NC2504.2
 074400     PERFORM DE-LETE.                                             NC2504.2
@@ -747,7 +747,7 @@
 074700     PERFORM PRINT-DETAIL.                                        NC2504.2
 074800 IF--TEST-15.                                                     NC2504.2
 074900     IF IF-D31 IS NOT POSITIVE PERFORM PASS ELSE PERFORM FAIL.    NC2504.2
-075000*        NOTE NOT POSITIVE TEST ON NEGATIVE VALUE.                NC2504.2
+075000*                                                                         
 075100     GO TO IF--WRITE-15.                                          NC2504.2
 075200 IF--DELETE-15.                                                   NC2504.2
 075300     PERFORM DE-LETE.                                             NC2504.2
@@ -756,7 +756,7 @@
 075600     PERFORM PRINT-DETAIL.                                        NC2504.2
 075700 IF--TEST-16.                                                     NC2504.2
 075800     IF IF-D28 IS NOT POSITIVE PERFORM FAIL ELSE PERFORM PASS.    NC2504.2
-075900*        NOTE NOT POSITIVE TEST ON UNSIGNED FIELD.                NC2504.2
+075900*                                                                         
 076000     GO TO IF--WRITE-16.                                          NC2504.2
 076100 IF--DELETE-16.                                                   NC2504.2
 076200     PERFORM DE-LETE.                                             NC2504.2
@@ -767,7 +767,7 @@
 076700     MOVE "  NEGATIVE          " TO FEATURE.                      NC2504.2
 076800 IF--TEST-17.                                                     NC2504.2
 076900     IF IF-D31 IS NEGATIVE PERFORM PASS ELSE PERFORM FAIL.        NC2504.2
-077000*        NOTE NEGATIVE TEST ON NEGATIVE VALUE.                    NC2504.2
+077000*                                                                         
 077100     GO TO IF--WRITE-17.                                          NC2504.2
 077200 IF--DELETE-17.                                                   NC2504.2
 077300     PERFORM DE-LETE.                                             NC2504.2
@@ -776,7 +776,7 @@
 077600     PERFORM PRINT-DETAIL.                                        NC2504.2
 077700 IF--TEST-18.                                                     NC2504.2
 077800     IF IF-D31 IS NOT NEGATIVE PERFORM FAIL ELSE PERFORM PASS.    NC2504.2
-077900*        NOTE NOT NEGATIVE TEST ON NEGATIVE VALUE.                NC2504.2
+077900*                                                                         
 078000     GO TO IF--WRITE-18.                                          NC2504.2
 078100 IF--DELETE-18.                                                   NC2504.2
 078200     PERFORM DE-LETE.                                             NC2504.2
@@ -785,7 +785,7 @@
 078500     PERFORM PRINT-DETAIL.                                        NC2504.2
 078600 IF--TEST-19.                                                     NC2504.2
 078700     IF IF-D16 NOT NEGATIVE PERFORM PASS ELSE PERFORM FAIL.       NC2504.2
-078800*        NOTE NOT NEGATIVE TEST ON UNSIGNED FIELD.                NC2504.2
+078800*                                                                         
 078900     GO TO IF--WRITE-19.                                          NC2504.2
 079000 IF--DELETE-19.                                                   NC2504.2
 079100     PERFORM DE-LETE.                                             NC2504.2
@@ -796,7 +796,7 @@
 079600     MOVE "  ZERO              " TO FEATURE.                      NC2504.2
 079700 IF--TEST-20.                                                     NC2504.2
 079800     IF IF-D1 IS ZERO PERFORM PASS ELSE PERFORM FAIL.             NC2504.2
-079900*        NOTE ZERO TEST ON ZERO VALUE.                            NC2504.2
+079900*                                                                         
 080000     GO TO IF--WRITE-20.                                          NC2504.2
 080100 IF--DELETE-20.                                                   NC2504.2
 080200     PERFORM DE-LETE.                                             NC2504.2
@@ -809,7 +809,7 @@
 080900     MOVE IF-D10 TO COMPUTED-A                                    NC2504.2
 081000     MOVE ZERO TO CORRECT-N                                       NC2504.2
 081100     PERFORM FAIL.                                                NC2504.2
-081200*    NOTE NOT EQUAL TO ZERO TEST ON NON-ZERO VALUE.               NC2504.2
+081200*                                                                         
 081300     GO TO IF--WRITE-21.                                          NC2504.2
 081400 IF--DELETE-21.                                                   NC2504.2
 081500     PERFORM DE-LETE.                                             NC2504.2
@@ -821,7 +821,7 @@
 082100 IF--TEST-22.                                                     NC2504.2
 082200     MOVE 1 TO IF-D32. IF A OF IF-D32 PERFORM PASS                NC2504.2
 082300     ELSE PERFORM FAIL.                                           NC2504.2
-082400*        NOTE TEST OF SIGNED NUMERIC FIELD FOR SINGLE VALUE.      NC2504.2
+082400*                                                                         
 082500     GO TO IF--WRITE-22.                                          NC2504.2
 082600 IF--DELETE-22.                                                   NC2504.2
 082700     PERFORM DE-LETE.                                             NC2504.2
@@ -831,7 +831,7 @@
 083100 IF--TEST-23.                                                     NC2504.2
 083200     MOVE 3 TO IF-D32. IF B OF IF-D32 PERFORM PASS                NC2504.2
 083300     ELSE PERFORM FAIL.                                           NC2504.2
-083400*        NOTE TEST OF SIGNED NUMERIC FIELD FOR MULTIPLE VALUES.   NC2504.2
+083400*                                                                         
 083500     GO TO IF--WRITE-23.                                          NC2504.2
 083600 IF--DELETE-23.                                                   NC2504.2
 083700     PERFORM DE-LETE.                                             NC2504.2
@@ -841,7 +841,7 @@
 084100 IF--TEST-24.                                                     NC2504.2
 084200             MOVE ZERO   TO IF-D32. IF C OF IF-D32 PERFORM PASS   NC2504.2
 084300     ELSE PERFORM FAIL.                                           NC2504.2
-084400*        NOTE TEST OF SIGNED NUMERIC FIELD FOR FIG-ZERO.          NC2504.2
+084400*                                                                         
 084500     GO TO IF--WRITE-24.                                          NC2504.2
 084600 IF--DELETE-24.                                                   NC2504.2
 084700     PERFORM DE-LETE.                                             NC2504.2
@@ -851,7 +851,7 @@
 085100 IF--TEST-25.                                                     NC2504.2
 085200     MOVE +12.34 TO IF-D32.                                       NC2504.2
 085300     IF D OF IF-D32 PERFORM PASS ELSE PERFORM FAIL.               NC2504.2
-085400*    NOTE SIGNED CONDITION-NAME.                                  NC2504.2
+085400*                                                                         
 085500     GO TO IF--WRITE-25.                                          NC2504.2
 085600 IF--DELETE-25.                                                   NC2504.2
 085700     PERFORM DE-LETE.                                             NC2504.2
@@ -861,7 +861,7 @@
 086100 IF--TEST-26.                                                     NC2504.2
 086200     MOVE QUOTE  TO IF-D33. IF B OF IF-D33 AND NOT B OF IF-D32    NC2504.2
 086300     PERFORM PASS ELSE PERFORM FAIL.                              NC2504.2
-086400*        NOTE TEST OF ALPHANUMERIC FIELD FOR FIG-QUOTES.          NC2504.2
+086400*                                                                         
 086500     GO TO IF--WRITE-26.                                          NC2504.2
 086600 IF--DELETE-26.                                                   NC2504.2
 086700     PERFORM DE-LETE.                                             NC2504.2
@@ -871,7 +871,7 @@
 087100 IF--TEST-27.                                                     NC2504.2
 087200     MOVE SPACE TO IF-D33. IF C OF IF-D33 PERFORM PASS            NC2504.2
 087300     ELSE PERFORM FAIL.                                           NC2504.2
-087400*        NOTE TEST OF ALPHANUMERIC FIELD FOR FIG-SPACES.          NC2504.2
+087400*                                                                         
 087500     GO TO IF--WRITE-27.                                          NC2504.2
 087600 IF--DELETE-27.                                                   NC2504.2
 087700     PERFORM DE-LETE.                                             NC2504.2
@@ -881,7 +881,7 @@
 088100 IF--TEST-28.                                                     NC2504.2
 088200     MOVE "BACB" TO IF-D33. IF D OF IF-D33 PERFORM PASS           NC2504.2
 088300     ELSE PERFORM FAIL.                                           NC2504.2
-088400*        NOTE TEST OF ALPHANUMERIC FIELD FOR ALL ANY LITERAL.     NC2504.2
+088400*                                                                         
 088500     GO TO IF--WRITE-28.                                          NC2504.2
 088600 IF--DELETE-28.                                                   NC2504.2
 088700     PERFORM DE-LETE.                                             NC2504.2
@@ -908,7 +908,7 @@
 090800 IF--TEST-31.                                                     NC2504.2
 090900     MOVE .21 TO IF-D32.                                          NC2504.2
 091000     IF E PERFORM PASS ELSE PERFORM FAIL.                         NC2504.2
-091100*    NOTE TESTS VALUE SERIES.                                     NC2504.2
+091100*                                                                         
 091200     GO TO IF--WRITE-31.                                          NC2504.2
 091300 IF--DELETE-31.                                                   NC2504.2
 091400     PERFORM DE-LETE.                                             NC2504.2
@@ -918,7 +918,7 @@
 091800 IF--TEST-32.                                                     NC2504.2
 091900     MOVE 1279.99 TO IF-D32.                                      NC2504.2
 092000     IF F PERFORM PASS ELSE PERFORM FAIL.                         NC2504.2
-092100*    NOTE TESTS VALUE RANGE SERIES.                               NC2504.2
+092100*                                                                         
 092200     GO TO IF--WRITE-32.                                          NC2504.2
 092300 IF--DELETE-32.                                                   NC2504.2
 092400     PERFORM DE-LETE.                                             NC2504.2
@@ -928,7 +928,7 @@
 092800 IF--TEST-33.                                                     NC2504.2
 092900     MOVE -4321.88 TO IF-D32.                                     NC2504.2
 093000     IF G PERFORM PASS ELSE PERFORM FAIL.                         NC2504.2
-093100*    NOTE TESTS VALUE SERIES RANGE SERIES.                        NC2504.2
+093100*                                                                         
 093200     GO TO IF--WRITE-33.                                          NC2504.2
 093300 IF--DELETE-33.                                                   NC2504.2
 093400     PERFORM DE-LETE.                                             NC2504.2
@@ -1303,7 +1303,7 @@
 130300     IF  WRK-XN-00001 EQUAL TO "Z" AND                            NC2504.2
 130400              WRK-DS-01V00 EQUAL TO 1                             NC2504.2
 130500              PERFORM PASS ELSE PERFORM FAIL.                     NC2504.2
-130600*    NOTE     COMBINATION OF RELATIONAL AND SIZE ERROR CONDITIONS.NC2504.2
+130600*                                                                         
 130700     GO       TO IF--WRITE-71.                                    NC2504.2
 130800 IF--DELETE-71.                                                   NC2504.2
 130900     PERFORM  DE-LETE.                                            NC2504.2
@@ -1318,7 +1318,7 @@
 131800     MOVE     "X    " TO WRK-XN-00005.                            NC2504.2
 131900     IF       WRK-XN-00001 IS EQUAL TO WRK-XN-00005               NC2504.2
 132000              PERFORM PASS ELSE PERFORM FAIL.                     NC2504.2
-132100*    NOTE     EQUAL QUANTITIES IN UNEQUAL LENGTH FIELDS.          NC2504.2
+132100*                                                                         
 132200     GO       TO IF--WRITE-73.                                    NC2504.2
 132300 IF--DELETE-73.                                                   NC2504.2
 132400     PERFORM  DE-LETE.                                            NC2504.2
@@ -1330,7 +1330,7 @@
 133000     MOVE     "Y    " TO WRK-XN-00005.                            NC2504.2
 133100     IF       WRK-XN-00001 IS NOT EQUAL TO WRK-XN-00005           NC2504.2
 133200              PERFORM PASS ELSE PERFORM FAIL.                     NC2504.2
-133300*    NOTE     UNEQUAL QUANTITIES IN UNEQUAL LENGTH FIELDS.        NC2504.2
+133300*                                                                         
 133400     GO       TO IF--WRITE-74.                                    NC2504.2
 133500 IF--DELETE-74.                                                   NC2504.2
 133600     PERFORM  DE-LETE.                                            NC2504.2
@@ -1342,7 +1342,7 @@
 134200     MOVE     "X   X" TO WRK-XN-00005.                            NC2504.2
 134300     IF       WRK-XN-00001 IS NOT EQUAL TO WRK-XN-00005           NC2504.2
 134400              PERFORM PASS ELSE PERFORM FAIL.                     NC2504.2
-134500*    NOTE     UNEQUAL QUANTITIES IN UNEQUAL LENGTH FIELDS.        NC2504.2
+134500*                                                                         
 134600     GO       TO IF--WRITE-75.                                    NC2504.2
 134700 IF--DELETE-75.                                                   NC2504.2
 134800     PERFORM  DE-LETE.                                            NC2504.2
@@ -1354,7 +1354,7 @@
 135400 IF--TEST-77.                                                     NC2504.2
 135500     IF       IF-D37 NOT EQUAL TO IF-D21                          NC2504.2
 135600              PERFORM PASS GO TO IF--WRITE-77.                    NC2504.2
-135700*    NOTE     NUMERIC VS GROUP COMPARISON, UNEQUAL LENGTHS.       NC2504.2
+135700*                                                                         
 135800     GO       TO IF--FAIL-77.                                     NC2504.2
 135900 IF--DELETE-77.                                                   NC2504.2
 136000     PERFORM DE-LETE.                                             NC2504.2
@@ -1368,7 +1368,7 @@
 136800 IF--TEST-78.                                                     NC2504.2
 136900     IF       IF-D37 EQUAL TO IF-D38                              NC2504.2
 137000              PERFORM PASS GO TO IF--WRITE-78.                    NC2504.2
-137100*    NOTE     NUMERIC VS ALPHANUMERIC COMPARISON, UNEQUAL LENGTHS.NC2504.2
+137100*                                                                         
 137200     GO       TO IF--FAIL-78.                                     NC2504.2
 137300 IF--DELETE-78.                                                   NC2504.2
 137400     PERFORM  DE-LETE.                                            NC2504.2
@@ -1405,12 +1405,12 @@
 140500     PERFORM PRINT-DETAIL.                                        NC2504.2
 140600     MOVE "ACCEPT SUBSCRIPTED 88 LEVEL" TO RE-MARK.               NC2504.2
 140700     PERFORM PRINT-DETAIL.                                        NC2504.2
-140800*    NOTE *******                  ******                *********NC2504.2
-140900*        *****  A NOTE AS THE FIRST STATEMENT IN THIS ******      NC2504.2
-141000*               PARAGRAPH WILL BYPASS ALL THE SPECIAL *****       NC2504.2
-141100*               CONDITION-NAME TESTS, BUT A NOTE STATEMENT        NC2504.2
-141200*               MIGHT NEED TO BE INSERTED IN EACH TEST            NC2504.2
-141300*               SO THE SYNTAX WOULD BE IGNORED BY THE COMPILER.   NC2504.2
+140800*                                                                         
+140900*                                                                         
+141000*                                                                         
+141100*                                                                         
+141200*                                                                         
+141300*                                                                         
 141400     MOVE "OCCURS WITH 88 LEVEL" TO FEATURE.                      NC2504.2
 141500     MOVE 123 TO TABLE-80.                                        NC2504.2
 141600     GO TO IF--TEST-80.                                           NC2504.2
@@ -1425,8 +1425,8 @@
 142500     IF A80 (2)                                                   NC2504.2
 142600         PERFORM PASS ELSE                                        NC2504.2
 142700     PERFORM FAIL.                                                NC2504.2
-142800*    NOTE ELMT(2) SHOULD CONTAIN A 2 WHICH IS CONTAINED IN        NC2504.2
-142900*        THE VALUE OF THE A80 88 LEVEL.                           NC2504.2
+142800*                                                                         
+142900*                                                                         
 143000     GO TO IF-WRITE-80.                                           NC2504.2
 143100 IF--DELETE-80.                                                   NC2504.2
 143200     PERFORM DE-LETE.                                             NC2504.2
@@ -1437,8 +1437,8 @@
 143700     IF C80 (1)                                                   NC2504.2
 143800         PERFORM FAIL ELSE                                        NC2504.2
 143900     PERFORM PASS.                                                NC2504.2
-144000*    NOTE ELMT(1) SHOULD CONTAIN A 1 WHICH IS NOT CONTAINED       NC2504.2
-144100*        IN THE VALUE OF THE C80 88 LEVEL.                        NC2504.2
+144000*                                                                         
+144100*                                                                         
 144200     GO TO IF-WRITE-81.                                           NC2504.2
 144300 IF-DELETE-81.                                                    NC2504.2
 144400     PERFORM DE-LETE.                                             NC2504.2
@@ -1449,8 +1449,8 @@
 144900     IF B80 (3)                                                   NC2504.2
 145000         PERFORM FAIL ELSE                                        NC2504.2
 145100     PERFORM PASS.                                                NC2504.2
-145200*    NOTE ELMT(3) SHOULD CONTAIN A 3 WHICH IS NOT CONTAINED       NC2504.2
-145300*        IN THE VALUE OF THE B80 88 LEVEL.                        NC2504.2
+145200*                                                                         
+145300*                                                                         
 145400     GO TO IF-WRITE-82.                                           NC2504.2
 145500 IF-DELETE-82.                                                    NC2504.2
 145600     PERFORM DE-LETE.                                             NC2504.2
@@ -1461,9 +1461,9 @@
 146100     IF NOT A80 OF TABLE-80 (3)                                   NC2504.2
 146200         PERFORM FAIL ELSE                                        NC2504.2
 146300     PERFORM PASS.                                                NC2504.2
-146400*    NOTE ELMT(3) SHOULD CONTAIN A 3 BUT THE NOT CONDITION        NC2504.2
-146500*        SHOULD CAUSE THE TEST TO FAIL EVEN THOUGH THE A80        NC2504.2
-146600*        VALUE INCLUDES THE VALUE 3.                              NC2504.2
+146400*                                                                         
+146500*                                                                         
+146600*                                                                         
 146700     GO TO IF-WRITE-83.                                           NC2504.2
 146800 IF-DELETE-83.                                                    NC2504.2
 146900     PERFORM DE-LETE.                                             NC2504.2
@@ -1474,8 +1474,8 @@
 147400     IF NOT B80 (1)                                               NC2504.2
 147500         PERFORM PASS ELSE                                        NC2504.2
 147600     PERFORM FAIL.                                                NC2504.2
-147700*    NOTE ELMT(1) CONTAINS A 1 AND THE VALUE OF B80 IS 8          NC2504.2
-147800*        SO, SAYING NOT 8 IS TRUE.                                NC2504.2
+147700*                                                                         
+147800*                                                                         
 147900     GO TO IF-WRITE-84.                                           NC2504.2
 148000 IF-DELETE-84.                                                    NC2504.2
 148100     PERFORM DE-LETE.                                             NC2504.2
@@ -1486,7 +1486,7 @@
 148600     IF C80 OF TABLE-80 (2)                                       NC2504.2
 148700         PERFORM FAIL ELSE                                        NC2504.2
 148800     PERFORM PASS.                                                NC2504.2
-148900*    NOTE ELMT(2) IS 2 AND THE VALUES OF C80 DO NOT CONTAIN A 2.  NC2504.2
+148900*                                                                         
 149000     GO TO IF-WRITE-85.                                           NC2504.2
 149100 IF-DELETE-85.                                                    NC2504.2
 149200     PERFORM DE-LETE.                                             NC2504.2
@@ -1497,7 +1497,7 @@
 149700     IF A86                                                       NC2504.2
 149800         PERFORM FAIL ELSE                                        NC2504.2
 149900     PERFORM PASS.                                                NC2504.2
-150000*    NOTE A86 (ABC   ) SHOULD NOT EQUAL TABLE-86 (ABCABC).        NC2504.2
+150000*                                                                         
 150100     GO TO IF-WRITE-86.                                           NC2504.2
 150200 IF-DELETE-86.                                                    NC2504.2
 150300     PERFORM DE-LETE.                                             NC2504.2
@@ -1508,8 +1508,8 @@
 150800     IF NOT B86                                                   NC2504.2
 150900         PERFORM FAIL ELSE                                        NC2504.2
 151000     PERFORM PASS.                                                NC2504.2
-151100*    NOTE B86 (ABCABC) SHOULD EQUAL TABLE-86 (ABCABC) THUS        NC2504.2
-151200*        FAILING THE TEST.                                        NC2504.2
+151100*                                                                         
+151200*                                                                         
 151300     GO TO IF-WRITE-87.                                           NC2504.2
 151400 IF-DELETE-87.                                                    NC2504.2
 151500     PERFORM DE-LETE.                                             NC2504.2
@@ -1521,7 +1521,7 @@
 152100     IF C86                                                       NC2504.2
 152200         PERFORM PASS ELSE                                        NC2504.2
 152300     PERFORM FAIL.                                                NC2504.2
-152400*    NOTE TABLE-86 (   ABC) SHOULD EQUAL C86 (   ABC).            NC2504.2
+152400*                                                                         
 152500     GO TO IF-WRITE-88.                                           NC2504.2
 152600 IF-DELETE-88.                                                    NC2504.2
 152700     PERFORM DE-LETE.                                             NC2504.2
@@ -1948,7 +1948,7 @@
 194800     PERFORM PRINT-DETAIL.                                        NC2504.2
 194900     MOVE SPACE TO TEST-RESULTS.                                  NC2504.2
 195000 IF-INIT-124.                                                     NC2504.2
-195100*    ===-->  ARITHMETIC EXPRESSION CONTAINING ZERO  <--===        NC2504.2
+195100*                                                                         
 195200     MOVE   "VI-58 6.3.1.5 AND VI-51 6.2" TO ANSI-REFERENCE.      NC2504.2
 195300     MOVE    4 TO WRK-DU-1V0-1.                                   NC2504.2
 195400     MOVE   "IF-TEST-124" TO PAR-NAME.                            NC2504.2

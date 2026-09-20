@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2354.2
 000200 PROGRAM-ID.                                                      NC2354.2
 000300     NC235A.                                                      NC2354.2
-000400*                                                                 NC2354.2
-000500****************************************************************  NC2354.2
-000600*                                                              *  NC2354.2
-000700*    VALIDATION FOR:-                                          *  NC2354.2
-000800*                                                              *  NC2354.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2354.2
-001000*                                                              *  NC2354.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2354.2
-001200*                                                              *  NC2354.2
-001300****************************************************************  NC2354.2
-001400*                                                              *  NC2354.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2354.2
-001600*                                                              *  NC2354.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2354.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2354.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2354.2
-002000*                                                              *  NC2354.2
-002100****************************************************************  NC2354.2
-002200*    PROGRAM NC235A TESTS THE USE OF FORMATS 1 AND 2 OF THE    *  NC2354.2
-002300*    "SEARCH" STATEMENT ON A ONE DIMENSIONAL TABLE WITH A      *  NC2354.2
-002400*    VARIABLE NUMBER OF OCCURRENCES.   THE TABLE IS DEFINED    *  NC2354.2
-002500*    USING FORMAT 2 OF THE "OCCURS" CLAUSE.                    *  NC2354.2
-002600*                                                              *  NC2354.2
-002700****************************************************************  NC2354.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2354.2
 002900 CONFIGURATION SECTION.                                           NC2354.2
 003000 SOURCE-COMPUTER.                                                 NC2354.2
@@ -247,7 +247,7 @@
 024900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2354.2
 025000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2354.2
 025100      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2354.2
-025200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2354.2
+025200*                                                                         
 025300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2354.2
 025400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2354.2
 025500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2354.2
@@ -328,7 +328,7 @@
 033000     MOVE "INIT-TBL-TH309" TO PAR-NAME.                           NC2354.2
 033100     MOVE "LEVEL 3 TBL HANDLING" TO FEATURE.                      NC2354.2
 033200     PERFORM PRINT-DETAIL.                                        NC2354.2
-033300*                                                                 NC2354.2
+033300*                                                                         
 033400 IDX-INIT-F2-1.                                                   NC2354.2
 033500     MOVE "IDX-TEST-F2-1 " TO PAR-NAME.                           NC2354.2
 033600     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -350,7 +350,7 @@
 035200     PERFORM FAIL.                                                NC2354.2
 035300 IDX-WRITE-F2-1.                                                  NC2354.2
 035400     PERFORM PRINT-DETAIL.                                        NC2354.2
-035500*                                                                 NC2354.2
+035500*                                                                         
 035600 IDX-INIT-F2-2.                                                   NC2354.2
 035700     MOVE "IDX-TEST-F2-2 " TO PAR-NAME.                           NC2354.2
 035800     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -372,7 +372,7 @@
 037400     PERFORM FAIL.                                                NC2354.2
 037500 IDX-WRITE-F2-2.                                                  NC2354.2
 037600     PERFORM PRINT-DETAIL.                                        NC2354.2
-037700*                                                                 NC2354.2
+037700*                                                                         
 037800 IDX-INIT-F2-3.                                                   NC2354.2
 037900     MOVE "IDX-TEST-F2-3 " TO PAR-NAME.                           NC2354.2
 038000     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -393,7 +393,7 @@
 039500     PERFORM FAIL.                                                NC2354.2
 039600 IDX-WRITE-F2-3.                                                  NC2354.2
 039700     PERFORM PRINT-DETAIL.                                        NC2354.2
-039800*                                                                 NC2354.2
+039800*                                                                         
 039900 IDX-INIT-F1-4.                                                   NC2354.2
 040000     MOVE "IDX-TEST-F1-4" TO PAR-NAME.                            NC2354.2
 040100     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -415,7 +415,7 @@
 041700     PERFORM FAIL.                                                NC2354.2
 041800 IDX-WRITE-F1-4.                                                  NC2354.2
 041900     PERFORM PRINT-DETAIL.                                        NC2354.2
-042000*                                                                 NC2354.2
+042000*                                                                         
 042100 IDX-INIT-F1-5.                                                   NC2354.2
 042200     MOVE "IDX-TEST-F1-5 " TO PAR-NAME.                           NC2354.2
 042300     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -437,7 +437,7 @@
 043900     PERFORM FAIL.                                                NC2354.2
 044000 IDX-WRITE-F1-5.                                                  NC2354.2
 044100     PERFORM PRINT-DETAIL.                                        NC2354.2
-044200*                                                                 NC2354.2
+044200*                                                                         
 044300 IDX-INIT-F1-6.                                                   NC2354.2
 044400     MOVE "IDX-TEST-F1-6 " TO PAR-NAME.                           NC2354.2
 044500     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -459,7 +459,7 @@
 046100     PERFORM FAIL.                                                NC2354.2
 046200 IDX-WRITE-F1-6.                                                  NC2354.2
 046300     PERFORM PRINT-DETAIL.                                        NC2354.2
-046400*                                                                 NC2354.2
+046400*                                                                         
 046500 IDX-INIT-F1-7.                                                   NC2354.2
 046600     MOVE "IDX-TEST-F1-7 " TO PAR-NAME.                           NC2354.2
 046700     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -481,7 +481,7 @@
 048300     PERFORM FAIL.                                                NC2354.2
 048400 IDX-WRITE-F1-7.                                                  NC2354.2
 048500     PERFORM PRINT-DETAIL.                                        NC2354.2
-048600*                                                                 NC2354.2
+048600*                                                                         
 048700 IDX-INIT-F2-8.                                                   NC2354.2
 048800     MOVE "IDX-TEST-F2-8 " TO PAR-NAME.                           NC2354.2
 048900     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -504,7 +504,7 @@
 050600     PERFORM FAIL.                                                NC2354.2
 050700 IDX-WRITE-F2-8.                                                  NC2354.2
 050800     PERFORM PRINT-DETAIL.                                        NC2354.2
-050900*                                                                 NC2354.2
+050900*                                                                         
 051000 IDX-INIT-F2-9.                                                   NC2354.2
 051100     MOVE "IDX-TEST-F2-9 " TO PAR-NAME.                           NC2354.2
 051200     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -525,7 +525,7 @@
 052700     MOVE "AA" TO COMPUTED-A.                                     NC2354.2
 052800 IDX-WRITE-F2-9.                                                  NC2354.2
 052900     PERFORM PRINT-DETAIL.                                        NC2354.2
-053000*                                                                 NC2354.2
+053000*                                                                         
 053100 IDX-INIT-F2-10.                                                  NC2354.2
 053200     MOVE "IDX-TEST-F2-10 " TO PAR-NAME.                          NC2354.2
 053300     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -547,7 +547,7 @@
 054900     PERFORM FAIL.                                                NC2354.2
 055000 IDX-WRITE-F2-10.                                                 NC2354.2
 055100     PERFORM PRINT-DETAIL.                                        NC2354.2
-055200*                                                                 NC2354.2
+055200*                                                                         
 055300 IDX-INIT-F2-11.                                                  NC2354.2
 055400     MOVE "IDX-TEST-F2-11 " TO PAR-NAME.                          NC2354.2
 055500     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -569,7 +569,7 @@
 057100     PERFORM FAIL.                                                NC2354.2
 057200 IDX-WRITE-F2-11.                                                 NC2354.2
 057300     PERFORM PRINT-DETAIL.                                        NC2354.2
-057400*                                                                 NC2354.2
+057400*                                                                         
 057500 IDX-INIT-F2-12.                                                  NC2354.2
 057600     MOVE "IDX-TEST-F2-12 " TO PAR-NAME.                          NC2354.2
 057700     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -591,7 +591,7 @@
 059300     PERFORM FAIL.                                                NC2354.2
 059400 IDX-WRITE-F2-12.                                                 NC2354.2
 059500     PERFORM PRINT-DETAIL.                                        NC2354.2
-059600*                                                                 NC2354.2
+059600*                                                                         
 059700 IDX-INIT-F2-13.                                                  NC2354.2
 059800     MOVE "IDX-TEST-F2-13 " TO PAR-NAME.                          NC2354.2
 059900     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2354.2
@@ -613,7 +613,7 @@
 061500 IDX-WRITE-F2-13.                                                 NC2354.2
 061600     PERFORM PRINT-DETAIL.                                        NC2354.2
 061700     GO TO CCVS-EXIT.                                             NC2354.2
-061800*                                                                 NC2354.2
+061800*                                                                         
 061900 PUTOUT-COMPUTED-A.                                               NC2354.2
 062000     IF TH309-ENTRY (SUB-1) EQUAL TO CORRECT-A                    NC2354.2
 062100         MOVE "SEE NOTE 1 FOR DIAGNOSTIC" TO RE-MARK ELSE         NC2354.2

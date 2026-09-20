@@ -19,26 +19,26 @@
 001900     "4.2 ".                                                      DB2034.2
 002000 SECURITY.                                                        DB2034.2
 002100     NONE.                                                        DB2034.2
-002200*                                                                 DB2034.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB2034.2
-002400*                                                                 DB2034.2
-002500*                       PROGRAM ABSTRACT                          DB2034.2
-002600*                                                                 DB2034.2
-002700*    DB203A TESTS THE CAPABILITY OF THE DEBUG MODULE TO HANDLE    DB2034.2
-002800*    DEBUGGING PROCEDURES WHICH ARE MONITORING I-O FUNCTIONS      DB2034.2
-002900*    OF THE RELATIVE I-O OR INDEXED I-O MODULES.  THIS PROGRAM    DB2034.2
-003000*    IS TO BE COMPILED AND EXECUTED WITH BOTH COMPILE AND OBJECT  DB2034.2
-003100*    TIME DEBUGGING SWITCHES ON.  THE DEBUGGING PROCEDURES        DB2034.2
-003200*    SHOULD BE INCLUDED IN COMPILATION AND GENERATE CODE.         DB2034.2
-003300*    DURING EXECUTION, A FILE IS ASSIGNED IN DYNAMIC MODE,        DB2034.2
-003400*    CREATED SEQUENTIALLY, AND ACCESSED BOTH SEQUENTIALLY         DB2034.2
-003500*    AND RANDOMLY.  ITS RECORDS ARE 80 CHARACTERS IN LENGTH.      DB2034.2
-003600*    EXECUTION OF "OPEN", "READ", "WRITE", "REWRITE", "START",    DB2034.2
-003700*    AND "DELETE" FUNCTIONS SHOULD TRIGGER THE APPROPRIATE        DB2034.2
-003800*    DEBUGGING PROCEDURES.                                        DB2034.2
-003900*                                                                 DB2034.2
-004000*                                                                 DB2034.2
-004100*                                                                 DB2034.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 ENVIRONMENT DIVISION.                                            DB2034.2
 004300 CONFIGURATION SECTION.                                           DB2034.2
 004400 SOURCE-COMPUTER.                                                 DB2034.2
@@ -48,7 +48,7 @@
 004800     GNU-Linux.                                                   DB2034.2
 004900 SPECIAL-NAMES.                                                   DB2034.2
 005000     SYSOUT                                                       DB2034.2
-005100*      XXXXX056  REPLACE WITH DISPLAY IMPLEMENTOR NAME            DB2034.2
+005100*                                                                         
 005200         IS THE-SYSTEM-PRINTER.                                   DB2034.2
 005300 INPUT-OUTPUT SECTION.                                            DB2034.2
 005400 FILE-CONTROL.                                                    DB2034.2
@@ -56,7 +56,7 @@
 005600     "REPORT".                                                    DB2034.2
 005700     SELECT IND-FILE ASSIGN TO                                    DB2034.2
 005800     "XXXXX024"                                                   DB2034.2
-006000*      XXXXX044  REPLACE WITH INDEX-FILE-NAME (*OPT J ONLY)       DB2034.2
+006000*                                                                         
 006100     ORGANIZATION IS INDEXED                                      DB2034.2
 006200     ACCESS MODE IS DYNAMIC                                       DB2034.2
 006300     RECORD KEY IS IND-KEY.                                       DB2034.2
@@ -69,9 +69,9 @@
 007000 01  PRINT-REC PICTURE X(120).                                    DB2034.2
 007100 01  DUMMY-RECORD PICTURE X(120).                                 DB2034.2
 007200 FD  IND-FILE                                                     DB2034.2
-007500*      XXXXX074  REPLACE WITH IMPLEMENTOR NAME (*OPT C ONLY)      DB2034.2
-007800*      XXXXX075  REPLACE WITH VALUE CLAUSE OBJECT (*OPT C ONLY)   DB2034.2
-008000*      XXXXX069  REPLACE WITH ADDITIONAL INFO (*OPT G ONLY)       DB2034.2
+007500*                                                                         
+007800*                                                                         
+008000*                                                                         
 008100     LABEL RECORDS ARE STANDARD.                                  DB2034.2
 008200 01  IND-REC-1.                                                   DB2034.2
 008300     02  FILLER PIC X(128).                                       DB2034.2
@@ -321,7 +321,7 @@
 032900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB2034.2
 033000      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB2034.2
 033100      ADD PASS-COUNTER TO ERROR-HOLD.                             DB2034.2
-033200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB2034.2
+033200*                                                                         
 033300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB2034.2
 033400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB2034.2
 033500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB2034.2
@@ -484,12 +484,12 @@
 049200     MOVE "DEBUG READ RANDOM" TO FEATURE.                         DB2034.2
 049300 READ-TEST-1.                                                     DB2034.2
 049400     MOVE "04" TO IND-KEY.                                        DB2034.2
-049500******************************************************************DB2034.2
-049600*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2034.2
-049700*    "READ-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2034.2
-049800*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "READ       *DB2034.2
-049900*    IND-FILE KEY IS IND-KEY INVALID KEY GO TO ABORT-PGM.".      *DB2034.2
-050000******************************************************************DB2034.2
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
 050100     READ IND-FILE  KEY IS IND-KEY                                DB2034.2
 050200         INVALID KEY GO TO ABORT-PGM.                             DB2034.2
 050300     IF KEY-1 IS EQUAL TO 1                                       DB2034.2
@@ -583,12 +583,12 @@
 059100     MOVE FILE-RECORD-INFO (1) TO IND-REC-2.                      DB2034.2
 059200     MOVE "04" TO IND-KEY.                                        DB2034.2
 059300     MOVE IND-REC-2 TO CONTENTS-REC.                              DB2034.2
-059400******************************************************************DB2034.2
-059500*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2034.2
-059600*    "REWRITE-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT  *DB2034.2
-059700*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS,             *DB2034.2
-059800*    "REWRITE IND-REC-1  INVALID KEY  GO TO ABORT-PGM.".         *DB2034.2
-059900******************************************************************DB2034.2
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
 060000     REWRITE IND-REC-1  INVALID KEY  GO TO ABORT-PGM.             DB2034.2
 060100     IF KEY-1 IS EQUAL TO 1                                       DB2034.2
 060200         PERFORM PASS                                             DB2034.2

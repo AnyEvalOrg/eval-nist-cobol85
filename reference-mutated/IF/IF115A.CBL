@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1154.2
 000300     IF115A.                                                      IF1154.2
 000400                                                                  IF1154.2
-000500***********************************************************       IF1154.2
-000600*                                                         *       IF1154.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1154.2
-000800* It contains tests for the Intrinsic Function LENGTH.    *       IF1154.2
-000900*                                                         *       IF1154.2
-001000*                                                         *       IF1154.2
-001100***********************************************************       IF1154.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1154.2
 001300 CONFIGURATION SECTION.                                           IF1154.2
 001400 SOURCE-COMPUTER.                                                 IF1154.2
@@ -25,17 +25,17 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1154.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1154.2
 002700 WORKING-STORAGE SECTION.                                         IF1154.2
-002800***********************************************************       IF1154.2
-002900* Variables specific to the Intrinsic Function Test IF115A*       IF1154.2
-003000***********************************************************       IF1154.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  K                PIC A(1)     VALUE "D".                     IF1154.2
 003200 01  M                PIC A(17)    VALUE "longstringofchars".     IF1154.2
 003300 01  N                PIC A(3)     VALUE "abc".                   IF1154.2
 003400 01  C                PIC S9(10).                                 IF1154.2
 003500 01  WS-INT           PIC S9(10).                                 IF1154.2
-003600*                                                                 IF1154.2
-003700**********************************************************        IF1154.2
-003800*                                                                 IF1154.2
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900 01  TEST-RESULTS.                                                IF1154.2
 004000     02 FILLER                   PIC X      VALUE SPACE.          IF1154.2
 004100     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1154.2
@@ -295,16 +295,16 @@
 029500 BAIL-OUT-EX. EXIT.                                               IF1154.2
 029600 CCVS1-EXIT.                                                      IF1154.2
 029700     EXIT.                                                        IF1154.2
-029800********************************************************          IF1154.2
-029900*                                                      *          IF1154.2
-030000*    Intrinsic Function Tests         IF115A - LENGTH  *          IF1154.2
-030100*                                                      *          IF1154.2
-030200********************************************************          IF1154.2
+029800*                                                                         
+029900*                                                                         
+030000*                                                                         
+030100*                                                                         
+030200*                                                                         
 030300 SECT-IF115A SECTION.                                             IF1154.2
 030400 F-LENGTH-INFO.                                                   IF1154.2
 030500     MOVE     "See ref. A-48 2.19" TO ANSI-REFERENCE.             IF1154.2
 030600     MOVE     "LENGTH Function"     TO FEATURE.                   IF1154.2
-030700*****************TEST (a) ******************************          IF1154.2
+030700*                                                                         
 030800 F-LENGTH-01.                                                     IF1154.2
 030900     MOVE ZERO TO WS-INT.                                         IF1154.2
 031000 F-LENGTH-TEST-01.                                                IF1154.2
@@ -322,7 +322,7 @@
 032200 F-LENGTH-WRITE-01.                                               IF1154.2
 032300     MOVE "F-LENGTH-01" TO PAR-NAME.                              IF1154.2
 032400     PERFORM  PRINT-DETAIL.                                       IF1154.2
-032500*****************TEST (b) ******************************          IF1154.2
+032500*                                                                         
 032600 F-LENGTH-TEST-02.                                                IF1154.2
 032700     EVALUATE FUNCTION LENGTH("ABCDEFGHIJKLMNOPQRST")             IF1154.2
 032800     WHEN 20                                                      IF1154.2
@@ -336,7 +336,7 @@
 033600 F-LENGTH-WRITE-02.                                               IF1154.2
 033700     MOVE "F-LENGTH-02" TO PAR-NAME.                              IF1154.2
 033800     PERFORM  PRINT-DETAIL.                                       IF1154.2
-033900*****************TEST (c) ******************************          IF1154.2
+033900*                                                                         
 034000 F-LENGTH-03.                                                     IF1154.2
 034100     MOVE ZERO TO WS-INT.                                         IF1154.2
 034200 F-LENGTH-TEST-03.                                                IF1154.2
@@ -353,7 +353,7 @@
 035300 F-LENGTH-WRITE-03.                                               IF1154.2
 035400     MOVE "F-LENGTH-03" TO PAR-NAME.                              IF1154.2
 035500     PERFORM  PRINT-DETAIL.                                       IF1154.2
-035600*****************TEST (d) ******************************          IF1154.2
+035600*                                                                         
 035700 F-LENGTH-04.                                                     IF1154.2
 035800     MOVE ZERO TO WS-INT.                                         IF1154.2
 035900 F-LENGTH-TEST-04.                                                IF1154.2
@@ -371,7 +371,7 @@
 037100 F-LENGTH-WRITE-04.                                               IF1154.2
 037200     MOVE "F-LENGTH-04" TO PAR-NAME.                              IF1154.2
 037300     PERFORM  PRINT-DETAIL.                                       IF1154.2
-037400*****************TEST (e) ******************************          IF1154.2
+037400*                                                                         
 037500 F-LENGTH-05.                                                     IF1154.2
 037600     MOVE ZERO TO WS-INT.                                         IF1154.2
 037700 F-LENGTH-TEST-05.                                                IF1154.2
@@ -389,7 +389,7 @@
 038900 F-LENGTH-WRITE-05.                                               IF1154.2
 039000     MOVE "F-LENGTH-05" TO PAR-NAME.                              IF1154.2
 039100     PERFORM  PRINT-DETAIL.                                       IF1154.2
-039200*****************TEST (f) ******************************          IF1154.2
+039200*                                                                         
 039300 F-LENGTH-06.                                                     IF1154.2
 039400     MOVE ZERO TO WS-INT.                                         IF1154.2
 039500 F-LENGTH-TEST-06.                                                IF1154.2
@@ -407,7 +407,7 @@
 040700 F-LENGTH-WRITE-06.                                               IF1154.2
 040800     MOVE "F-LENGTH-06" TO PAR-NAME.                              IF1154.2
 040900     PERFORM  PRINT-DETAIL.                                       IF1154.2
-041000*****************TEST (g) ******************************          IF1154.2
+041000*                                                                         
 041100 F-LENGTH-07.                                                     IF1154.2
 041200     MOVE ZERO TO WS-INT.                                         IF1154.2
 041300 F-LENGTH-TEST-07.                                                IF1154.2
@@ -425,7 +425,7 @@
 042500 F-LENGTH-WRITE-07.                                               IF1154.2
 042600     MOVE "F-LENGTH-07" TO PAR-NAME.                              IF1154.2
 042700     PERFORM  PRINT-DETAIL.                                       IF1154.2
-042800*****************TEST (h) ******************************          IF1154.2
+042800*                                                                         
 042900 F-LENGTH-08.                                                     IF1154.2
 043000     MOVE ZERO TO WS-INT.                                         IF1154.2
 043100 F-LENGTH-TEST-08.                                                IF1154.2
@@ -444,7 +444,7 @@
 044400 F-LENGTH-WRITE-08.                                               IF1154.2
 044500     MOVE "F-LENGTH-08" TO PAR-NAME.                              IF1154.2
 044600     PERFORM  PRINT-DETAIL.                                       IF1154.2
-044700*******************END OF TESTS**************************         IF1154.2
+044700*                                                                         
 044800 CCVS-EXIT SECTION.                                               IF1154.2
 044900 CCVS-999999.                                                     IF1154.2
 045000     GO TO CLOSE-FILES.                                           IF1154.2

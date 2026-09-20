@@ -1,41 +1,41 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2124.2
 000200 PROGRAM-ID.                                                      SQ2124.2
 000300     SQ212A.                                                      SQ2124.2
-000400****************************************************************  SQ2124.2
-000500*                                                              *  SQ2124.2
-000600*    VALIDATION FOR:-                                          *  SQ2124.2
-000700*    " HIGH       ".                                              SQ2124.2
-000800*                                                              *  SQ2124.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2124.2
-001000*    "4.2 ".                                                      SQ2124.2
-001100*                                                              *  SQ2124.2
-001200*        THIS ROUTINE CHECKS THE                                  SQ2124.2
-001300*                   FILE STATUS VALUE  44 (BOUNDARY VIOLATION)    SQ2124.2
-001400*                                                                 SQ2124.2
-001500*         FOR:    WRITE SMALLER OR LAGER RECORDS                  SQ2124.2
-001600*         AND:    REWRITE SMALLER OR LAGER RECORDS                SQ2124.2
-001700*                                                                 SQ2124.2
-001800*         FOR A FILE WITH VARIABLE LENGTH RECORDS FOLLOWING:      SQ2124.2
-001900*                                                                 SQ2124.2
-002000*           RECORD IS VARYING IN SIZE FROM 18 TO 2048 CHARACTERS  SQ2124.2
-002100*             DEPENDING ON DATA-NAME-1.                           SQ2124.2
-002200*                                                                 SQ2124.2
-002300*    AN  ATTEMPT  IS  MADE  TO WRITE 3 SMALLER RECORDS. THEN 2031 SQ2124.2
-002400*    RECORDS  SHOULD  BE WRITTEN AND THEN FUTHER 9 LARGER RECORDS SQ2124.2
-002500*    SHOULD  CAUSE  A  BOUNDARY  VIOLATION  WITH  STATUS CODE 44. SQ2124.2
-002600*    THEN  THE  FILE  IS  CLOSED  AND  OPENED  AGAIN  FOR  INPUT. SQ2124.2
-002700*    2031  RECORDS WILL BE READ. THEN THE RECORD NO 2031 IS TRIED SQ2124.2
-002800*    BE   READ.  THIS  READ  STATEMENT  MUST  CAUSE  THE  AT  END SQ2124.2
-002900*    CONDITION.  IF  THERE  IS  ANOTHER RECORD, IT DOES MEAN THAT SQ2124.2
-003000*    EITHER A SMALLER OR A LARGER RECORD HAVE BEEN WRITTEN.       SQ2124.2
-003100*    (SEE VII-5; 1.3.7 AND VII-54; GR (13) ).                     SQ2124.2
-003200*                                                                 SQ2124.2
-003300*                                                                 SQ2124.2
-003400*    THIS  ROUTINE  BUILDS  A  SEQUENTIAL MASS STORAGE FILE WHICH SQ2124.2
-003500*    CONTAINS  2031 RECORDS OF A LENGTH OF 18 TO 2048 CHARACTERS. SQ2124.2
-003600*    THE  MASS STORAGE FILE IS READ AND FIELDS IN THE RECORDS ARE SQ2124.2
-003700*    CHECKED AGAINST THE EXPECTED VALUES.                         SQ2124.2
-003800*                                                                 SQ2124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900 ENVIRONMENT DIVISION.                                            SQ2124.2
 004000 CONFIGURATION SECTION.                                           SQ2124.2
 004100 SOURCE-COMPUTER.                                                 SQ2124.2
@@ -300,7 +300,7 @@
 032500 TEST-STATUS-44-1-PASS.                                           SQ2124.2
 032600     PERFORM PASS1.                                               SQ2124.2
 032700 TEST-STATUS-44-1-WRITE.                                          SQ2124.2
-032800*          RWRT SHORTER & LONGER                                  SQ2124.2
+032800*                                                                         
 032900     PERFORM PRINT-DETAIL1.                                       SQ2124.2
 033000     ADD 1 TO RECORDS-IN-ERROR.                                   SQ2124.2
 033100     GO TO EXIT-PARA.                                             SQ2124.2
@@ -327,7 +327,7 @@
 035200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2124.2
 035300      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2124.2
 035400      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2124.2
-035500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE1-12.  SQ2124.2
+035500*                                                                         
 035600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2124.2
 035700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2124.2
 035800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2124.2
@@ -437,7 +437,7 @@
 050000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2124.2
 050100      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2124.2
 050200      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2124.2
-050300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2124.2
+050300*                                                                         
 050400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2124.2
 050500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2124.2
 050600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2124.2
@@ -501,11 +501,11 @@
 056400 SECT-SQ212A-0002 SECTION.                                        SQ2124.2
 056500 WRITE-INIT-GF-01.                                                SQ2124.2
 056600     MOVE ZERO TO COUNT-OF-RECS.                                  SQ2124.2
-056700******************************************************************SQ2124.2
-056800*                                                                *SQ2124.2
-056900*    ATTEMPT IS MADE TO WRITE 3 SHORTER RECORDS.                 *SQ2124.2
-057000*                                                                *SQ2124.2
-057100******************************************************************SQ2124.2
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
 057200     MOVE "3 SHORTER RECORDS" TO RE-MARK.                         SQ2124.2
 057300     MOVE 14   TO RECORD-LENGTH.                                  SQ2124.2
 057400     MOVE 1 TO SWITCH-WRITE-REWRITE.                              SQ2124.2
@@ -523,16 +523,16 @@
 058600     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          SQ2124.2
 058700     MOVE "FILE CONTAINS 18 THRU 2048 CHAR RECS" TO RE-MARK.      SQ2124.2
 058800     PERFORM PRINT-DETAIL.                                        SQ2124.2
-058900*        A SEQUENTIAL MASS STORAGE FILE CONTAINING 2031           SQ2124.2
-059000*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS RECORDS         SQ2124.2
-059100*    OF 18  THROUGH 2048 CHARACTERS BEGINNING WITH THE 18 CHAR RECSQ2124.2
-059200*    AND ENDING WITH THE 2048 CHAR REC.                           SQ2124.2
-059300*                                                                 SQ2124.2
-059400******************************************************************SQ2124.2
-059500*                                                                *SQ2124.2
-059600*   RECORD NO.  2031 TO 2080  SHOULD NOT BE WRITTEN              *SQ2124.2
-059700*                                                                *SQ2124.2
-059800******************************************************************SQ2124.2
+058900*                                                                         
+059000*                                                                         
+059100*                                                                         
+059200*                                                                         
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
 059900 TEST-STATUS-44.                                                  SQ2124.2
 060000     MOVE "9 LONGER RECORDS" TO RE-MARK.                          SQ2124.2
 060100     MOVE "WRITE LONGER RECORDS" TO FEATURE.                      SQ2124.2
@@ -541,10 +541,10 @@
 060400     CLOSE SQ-VS7.                                                SQ2124.2
 060500     GO TO READ-INIT-F1-01.                                       SQ2124.2
 060600 WRITE-RECORDS-1.                                                 SQ2124.2
-060700******************************************************************SQ2124.2
-060800*   MOVE  ...  TO  OUTPUT-RECORD          1030 RECORDS           *SQ2124.2
-060900*   WRITE   OUTPUT-RECORD.                                       *SQ2124.2
-061000******************************************************************SQ2124.2
+060700*                                                                         
+060800*                                                                         
+060900*                                                                         
+061000*                                                                         
 061100     ADD 1 TO COUNT-OF-RECS.                                      SQ2124.2
 061200     ADD 1 TO RECORD-LENGTH.                                      SQ2124.2
 061300     MOVE COUNT-OF-RECS TO RECORD-NUMBER.                         SQ2124.2
@@ -552,9 +552,9 @@
 061500     MOVE SPACE TO SQ-VS7-STATUS.                                 SQ2124.2
 061600     WRITE SQ-VSR7R1-M-G-2048.                                    SQ2124.2
 061700 WRITE-RECORDS-2.                                                 SQ2124.2
-061800******************************************************************SQ2124.2
-061900*WRITE ...  FROM  ....  .                 1000 RECORDS           *SQ2124.2
-062000******************************************************************SQ2124.2
+061800*                                                                         
+061900*                                                                         
+062000*                                                                         
 062100     ADD 1 TO COUNT-OF-RECS.                                      SQ2124.2
 062200     ADD 1 TO RECORD-LENGTH.                                      SQ2124.2
 062300     MOVE COUNT-OF-RECS TO RECORD-NUMBER.                         SQ2124.2
@@ -585,9 +585,9 @@
 064800     PERFORM PRINT-DETAIL.                                        SQ2124.2
 064900     GO TO READ-INIT-F1-02.                                       SQ2124.2
 065000 READ-REC-1.                                                      SQ2124.2
-065100******************************************************************SQ2124.2
-065200*   READ      <FILE>     AT END ...                              *SQ2124.2
-065300******************************************************************SQ2124.2
+065100*                                                                         
+065200*                                                                         
+065300*                                                                         
 065400     IF EOF-FLAG EQUAL TO 1                                       SQ2124.2
 065500         GO TO READ-REC-1-EXIT.                                   SQ2124.2
 065600     READ SQ-VS7 AT END                                           SQ2124.2
@@ -607,9 +607,9 @@
 067000 READ-REC-1-EXIT.                                                 SQ2124.2
 067100     EXIT.                                                        SQ2124.2
 067200 READ-REC-2.                                                      SQ2124.2
-067300******************************************************************SQ2124.2
-067400*   READ  <FILE> INTO ....  AT END                               *SQ2124.2
-067500******************************************************************SQ2124.2
+067300*                                                                         
+067400*                                                                         
+067500*                                                                         
 067600     READ SQ-VS7 INTO VAR-RECORD-18-2048 AT END                   SQ2124.2
 067700         MOVE 1 TO EOF-FLAG                                       SQ2124.2
 067800         GO TO READ-REC-2-EXIT.                                   SQ2124.2
@@ -674,11 +674,11 @@
 073700     CLOSE SQ-VS7.                                                SQ2124.2
 073800 REWRITE-44-1.                                                    SQ2124.2
 073900     OPEN I-O SQ-VS7.                                             SQ2124.2
-074000******************************************************************SQ2124.2
-074100*                                                                *SQ2124.2
-074200*         READ   1ST  RECORD; REWRITE SMALLER RECORD.            *SQ2124.2
-074300*                                                                *SQ2124.2
-074400******************************************************************SQ2124.2
+074000*                                                                         
+074100*                                                                         
+074200*                                                                         
+074300*                                                                         
+074400*                                                                         
 074500     READ SQ-VS7                                                  SQ2124.2
 074600     MOVE 15 TO RECORD-LENGTH.                                    SQ2124.2
 074700     MOVE 2 TO SWITCH-WRITE-REWRITE.                              SQ2124.2
@@ -686,11 +686,11 @@
 074900     MOVE "RWRT SMALLER RECORD" TO FEATURE.                       SQ2124.2
 075000     REWRITE SQ-VSR7R1-M-G-2048.                                  SQ2124.2
 075100 REWRITE-44-2.                                                    SQ2124.2
-075200******************************************************************SQ2124.2
-075300*                                                                *SQ2124.2
-075400*         READ   2ND  RECORD; REWRITE LARGER  RECORD.            *SQ2124.2
-075500*                                                                *SQ2124.2
-075600******************************************************************SQ2124.2
+075200*                                                                         
+075300*                                                                         
+075400*                                                                         
+075500*                                                                         
+075600*                                                                         
 075700     READ SQ-VS7.                                                 SQ2124.2
 075800     MOVE 2500 TO RECORD-LENGTH.                                  SQ2124.2
 075900     MOVE "REWRITE-44-2" TO PAR-NAME.                             SQ2124.2

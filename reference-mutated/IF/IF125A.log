@@ -16,7 +16,7 @@ TEST RESULT OF IF125A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NUMVAL Function      FAIL* F-NUMVAL-01                                                                                 
                                                                                                                         
                                      COMPUTED=  000000009.000000000                                                     
-                                     CORRECT =  000000005.000000000  See ref. A-58 2.29                                 
+                                     CORRECT =  000000007.000000000  See ref. A-58 2.29                                 
                                                                                                                         
  NUMVAL Function      PASS  F-NUMVAL-02                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-03                                                                                 
@@ -29,12 +29,12 @@ TEST RESULT OF IF125A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NUMVAL Function      FAIL* F-NUMVAL-10                                                                                 
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000009.000000000  See ref. A-58 2.29                                 
+                                     CORRECT =  000000006.000000000  See ref. A-58 2.29                                 
                                                                                                                         
  NUMVAL Function      FAIL* F-NUMVAL-11                                                                                 
                                                                                                                         
                                      COMPUTED=  000000203.000000000                                                     
-                                     CORRECT =  000000293.000000000  See ref. A-58 2.29                                 
+                                     CORRECT =  000000204.000000000  See ref. A-58 2.29                                 
                                                                                                                         
  NUMVAL Function      PASS  F-NUMVAL-12                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-13                                                                                 

@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1254.2
 000300     IF125A.                                                      IF1254.2
 000400                                                                  IF1254.2
-000500***********************************************************       IF1254.2
-000600*                                                         *       IF1254.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1254.2
-000800* It contains tests for the Intrinsic Function NUMVAL.    *       IF1254.2
-000900*                                                         *       IF1254.2
-001000*                                                         *       IF1254.2
-001100***********************************************************       IF1254.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1254.2
 001300 CONFIGURATION SECTION.                                           IF1254.2
 001400 SOURCE-COMPUTER.                                                 IF1254.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1254.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1254.2
 002700 WORKING-STORAGE SECTION.                                         IF1254.2
-002800***********************************************************       IF1254.2
-002900* Variables specific to the Intrinsic Function Test IF125A*       IF1254.2
-003000***********************************************************       IF1254.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC X(1)       VALUE "4".                IF1254.2
 003200 01  B                   PIC X(5)       VALUE "203".              IF1254.2
 003300 01  C                   PIC X(4)       VALUE ".429".             IF1254.2
@@ -39,9 +39,9 @@
 003900 01  I                   PIC X(9)       VALUE " 92.92  -".        IF1254.2
 004000 01  TEMP                PIC S9(5)V9(5).                          IF1254.2
 004100                                                                  IF1254.2
-004200*                                                                 IF1254.2
-004300**********************************************************        IF1254.2
-004400*                                                                 IF1254.2
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
 004500 01  TEST-RESULTS.                                                IF1254.2
 004600     02 FILLER                   PIC X      VALUE SPACE.          IF1254.2
 004700     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1254.2
@@ -301,24 +301,24 @@
 030100 BAIL-OUT-EX. EXIT.                                               IF1254.2
 030200 CCVS1-EXIT.                                                      IF1254.2
 030300     EXIT.                                                        IF1254.2
-030400********************************************************          IF1254.2
-030500*                                                      *          IF1254.2
-030600*    Intrinsic Function Tests         IF125A - NUMVAL  *          IF1254.2
-030700*                                                      *          IF1254.2
-030800********************************************************          IF1254.2
+030400*                                                                         
+030500*                                                                         
+030600*                                                                         
+030700*                                                                         
+030800*                                                                         
 030900 SECT-IF125A SECTION.                                             IF1254.2
 031000 F-NUMVAL-INFO.                                                   IF1254.2
 031100     MOVE     "See ref. A-58 2.29" TO ANSI-REFERENCE.             IF1254.2
 031200     MOVE     "NUMVAL Function"     TO FEATURE.                   IF1254.2
-031300*****************TEST (a) ******************************          IF1254.2
+031300*                                                                         
 031400 F-NUMVAL-01.                                                     IF1254.2
 031500     MOVE ZERO TO TEMP.                                           IF1254.2
 031600 F-NUMVAL-TEST-01.                                                IF1254.2
 031700     COMPUTE TEMP = FUNCTION NUMVAL ("9").                        IF1254.2
-031800     IF TEMP = 5 THEN                                             IF1254.2
+031800     IF TEMP = 7 THEN                                             IF1254.2
 031900                        PERFORM PASS                              IF1254.2
 032000     ELSE                                                         IF1254.2
-032100                        MOVE 5 TO CORRECT-N                       IF1254.2
+032100                        MOVE 7 TO CORRECT-N                       IF1254.2
 032200                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 032300                        PERFORM FAIL.                             IF1254.2
 032400     GO TO F-NUMVAL-WRITE-01.                                     IF1254.2
@@ -328,7 +328,7 @@
 032800 F-NUMVAL-WRITE-01.                                               IF1254.2
 032900     MOVE "F-NUMVAL-01" TO PAR-NAME.                              IF1254.2
 033000     PERFORM  PRINT-DETAIL.                                       IF1254.2
-033100*****************TEST (b) ******************************          IF1254.2
+033100*                                                                         
 033200 F-NUMVAL-02.                                                     IF1254.2
 033300     MOVE 77  TO TEMP.                                            IF1254.2
 033400 F-NUMVAL-TEST-02.                                                IF1254.2
@@ -346,7 +346,7 @@
 034600 F-NUMVAL-WRITE-02.                                               IF1254.2
 034700     MOVE "F-NUMVAL-02" TO PAR-NAME.                              IF1254.2
 034800     PERFORM  PRINT-DETAIL.                                       IF1254.2
-034900*****************TEST (c) ******************************          IF1254.2
+034900*                                                                         
 035000 F-NUMVAL-TEST-03.                                                IF1254.2
 035100     IF (FUNCTION NUMVAL (".935") >= 0.934981) AND                IF1254.2
 035200        (FUNCTION NUMVAL (".935") <= 0.935019)                    IF1254.2
@@ -360,7 +360,7 @@
 036000 F-NUMVAL-WRITE-03.                                               IF1254.2
 036100     MOVE "F-NUMVAL-03" TO PAR-NAME.                              IF1254.2
 036200     PERFORM  PRINT-DETAIL.                                       IF1254.2
-036300*****************TEST (d) ******************************          IF1254.2
+036300*                                                                         
 036400 F-NUMVAL-04.                                                     IF1254.2
 036500     MOVE ZERO TO TEMP.                                           IF1254.2
 036600 F-NUMVAL-TEST-04.                                                IF1254.2
@@ -379,7 +379,7 @@
 037900 F-NUMVAL-WRITE-04.                                               IF1254.2
 038000     MOVE "F-NUMVAL-04" TO PAR-NAME.                              IF1254.2
 038100     PERFORM  PRINT-DETAIL.                                       IF1254.2
-038200*****************TEST (e) ******************************          IF1254.2
+038200*                                                                         
 038300 F-NUMVAL-05.                                                     IF1254.2
 038400     MOVE ZERO TO TEMP.                                           IF1254.2
 038500 F-NUMVAL-TEST-05.                                                IF1254.2
@@ -398,7 +398,7 @@
 039800 F-NUMVAL-WRITE-05.                                               IF1254.2
 039900     MOVE "F-NUMVAL-05" TO PAR-NAME.                              IF1254.2
 040000     PERFORM  PRINT-DETAIL.                                       IF1254.2
-040100*****************TEST (f) ******************************          IF1254.2
+040100*                                                                         
 040200 F-NUMVAL-06.                                                     IF1254.2
 040300     MOVE ZERO TO TEMP.                                           IF1254.2
 040400 F-NUMVAL-TEST-06.                                                IF1254.2
@@ -417,7 +417,7 @@
 041700 F-NUMVAL-WRITE-06.                                               IF1254.2
 041800     MOVE "F-NUMVAL-06" TO PAR-NAME.                              IF1254.2
 041900     PERFORM  PRINT-DETAIL.                                       IF1254.2
-042000*****************TEST (g) ******************************          IF1254.2
+042000*                                                                         
 042100 F-NUMVAL-07.                                                     IF1254.2
 042200     MOVE ZERO TO TEMP.                                           IF1254.2
 042300 F-NUMVAL-TEST-07.                                                IF1254.2
@@ -436,7 +436,7 @@
 043600 F-NUMVAL-WRITE-07.                                               IF1254.2
 043700     MOVE "F-NUMVAL-07" TO PAR-NAME.                              IF1254.2
 043800     PERFORM  PRINT-DETAIL.                                       IF1254.2
-043900*****************TEST (h) ******************************          IF1254.2
+043900*                                                                         
 044000 F-NUMVAL-08.                                                     IF1254.2
 044100     MOVE ZERO TO TEMP.                                           IF1254.2
 044200 F-NUMVAL-TEST-08.                                                IF1254.2
@@ -455,7 +455,7 @@
 045500 F-NUMVAL-WRITE-08.                                               IF1254.2
 045600     MOVE "F-NUMVAL-08" TO PAR-NAME.                              IF1254.2
 045700     PERFORM  PRINT-DETAIL.                                       IF1254.2
-045800*****************TEST (i) ******************************          IF1254.2
+045800*                                                                         
 045900 F-NUMVAL-09.                                                     IF1254.2
 046000     MOVE ZERO TO TEMP.                                           IF1254.2
 046100 F-NUMVAL-TEST-09.                                                IF1254.2
@@ -474,15 +474,15 @@
 047400 F-NUMVAL-WRITE-09.                                               IF1254.2
 047500     MOVE "F-NUMVAL-09" TO PAR-NAME.                              IF1254.2
 047600     PERFORM  PRINT-DETAIL.                                       IF1254.2
-047700*****************TEST (j) ******************************          IF1254.2
+047700*                                                                         
 047800 F-NUMVAL-10.                                                     IF1254.2
 047900     MOVE ZERO TO TEMP.                                           IF1254.2
 048000 F-NUMVAL-TEST-10.                                                IF1254.2
 048100     COMPUTE TEMP = FUNCTION NUMVAL (A).                          IF1254.2
-048200     IF TEMP = 9 THEN                                             IF1254.2
+048200     IF TEMP = 6 THEN                                             IF1254.2
 048300                        PERFORM PASS                              IF1254.2
 048400     ELSE                                                         IF1254.2
-048500                        MOVE  9  TO CORRECT-N                     IF1254.2
+048500                        MOVE  6  TO CORRECT-N                     IF1254.2
 048600                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 048700                        PERFORM FAIL.                             IF1254.2
 048800     GO TO F-NUMVAL-WRITE-10.                                     IF1254.2
@@ -492,15 +492,15 @@
 049200 F-NUMVAL-WRITE-10.                                               IF1254.2
 049300     MOVE "F-NUMVAL-10" TO PAR-NAME.                              IF1254.2
 049400     PERFORM  PRINT-DETAIL.                                       IF1254.2
-049500*****************TEST (k) ******************************          IF1254.2
+049500*                                                                         
 049600 F-NUMVAL-11.                                                     IF1254.2
 049700     MOVE ZERO TO TEMP.                                           IF1254.2
 049800 F-NUMVAL-TEST-11.                                                IF1254.2
 049900     COMPUTE TEMP = FUNCTION NUMVAL (B).                          IF1254.2
-050000     IF TEMP = 293 THEN                                           IF1254.2
+050000     IF TEMP = 204 THEN                                           IF1254.2
 050100                        PERFORM PASS                              IF1254.2
 050200     ELSE                                                         IF1254.2
-050300                        MOVE  293  TO CORRECT-N                   IF1254.2
+050300                        MOVE  204  TO CORRECT-N                   IF1254.2
 050400                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 050500                        PERFORM FAIL.                             IF1254.2
 050600     GO TO F-NUMVAL-WRITE-11.                                     IF1254.2
@@ -510,7 +510,7 @@
 051000 F-NUMVAL-WRITE-11.                                               IF1254.2
 051100     MOVE "F-NUMVAL-11" TO PAR-NAME.                              IF1254.2
 051200     PERFORM  PRINT-DETAIL.                                       IF1254.2
-051300*****************TEST (l) ******************************          IF1254.2
+051300*                                                                         
 051400 F-NUMVAL-12.                                                     IF1254.2
 051500     MOVE ZERO TO TEMP.                                           IF1254.2
 051600 F-NUMVAL-TEST-12.                                                IF1254.2
@@ -529,7 +529,7 @@
 052900 F-NUMVAL-WRITE-12.                                               IF1254.2
 053000     MOVE "F-NUMVAL-12" TO PAR-NAME.                              IF1254.2
 053100     PERFORM  PRINT-DETAIL.                                       IF1254.2
-053200*****************TEST (m) ******************************          IF1254.2
+053200*                                                                         
 053300 F-NUMVAL-13.                                                     IF1254.2
 053400     MOVE ZERO TO TEMP.                                           IF1254.2
 053500 F-NUMVAL-TEST-13.                                                IF1254.2
@@ -548,7 +548,7 @@
 054800 F-NUMVAL-WRITE-13.                                               IF1254.2
 054900     MOVE "F-NUMVAL-13" TO PAR-NAME.                              IF1254.2
 055000     PERFORM  PRINT-DETAIL.                                       IF1254.2
-055100*****************TEST (n) ******************************          IF1254.2
+055100*                                                                         
 055200 F-NUMVAL-14.                                                     IF1254.2
 055300     MOVE ZERO TO TEMP.                                           IF1254.2
 055400 F-NUMVAL-TEST-14.                                                IF1254.2
@@ -567,7 +567,7 @@
 056700 F-NUMVAL-WRITE-14.                                               IF1254.2
 056800     MOVE "F-NUMVAL-14" TO PAR-NAME.                              IF1254.2
 056900     PERFORM  PRINT-DETAIL.                                       IF1254.2
-057000*****************TEST (o) ******************************          IF1254.2
+057000*                                                                         
 057100 F-NUMVAL-15.                                                     IF1254.2
 057200     MOVE ZERO TO TEMP.                                           IF1254.2
 057300 F-NUMVAL-TEST-15.                                                IF1254.2
@@ -586,7 +586,7 @@
 058600 F-NUMVAL-WRITE-15.                                               IF1254.2
 058700     MOVE "F-NUMVAL-15" TO PAR-NAME.                              IF1254.2
 058800     PERFORM  PRINT-DETAIL.                                       IF1254.2
-058900*****************TEST (p) ******************************          IF1254.2
+058900*                                                                         
 059000 F-NUMVAL-16.                                                     IF1254.2
 059100     MOVE ZERO TO TEMP.                                           IF1254.2
 059200 F-NUMVAL-TEST-16.                                                IF1254.2
@@ -605,7 +605,7 @@
 060500 F-NUMVAL-WRITE-16.                                               IF1254.2
 060600     MOVE "F-NUMVAL-16" TO PAR-NAME.                              IF1254.2
 060700     PERFORM  PRINT-DETAIL.                                       IF1254.2
-060800*****************TEST (q) ******************************          IF1254.2
+060800*                                                                         
 060900 F-NUMVAL-17.                                                     IF1254.2
 061000     MOVE ZERO TO TEMP.                                           IF1254.2
 061100 F-NUMVAL-TEST-17.                                                IF1254.2
@@ -624,7 +624,7 @@
 062400 F-NUMVAL-WRITE-17.                                               IF1254.2
 062500     MOVE "F-NUMVAL-17" TO PAR-NAME.                              IF1254.2
 062600     PERFORM  PRINT-DETAIL.                                       IF1254.2
-062700*****************TEST (r) ******************************          IF1254.2
+062700*                                                                         
 062800 F-NUMVAL-18.                                                     IF1254.2
 062900     MOVE ZERO TO TEMP.                                           IF1254.2
 063000 F-NUMVAL-TEST-18.                                                IF1254.2
@@ -643,7 +643,7 @@
 064300 F-NUMVAL-WRITE-18.                                               IF1254.2
 064400     MOVE "F-NUMVAL-18" TO PAR-NAME.                              IF1254.2
 064500     PERFORM  PRINT-DETAIL.                                       IF1254.2
-064600*****************TEST (s) ******************************          IF1254.2
+064600*                                                                         
 064700 F-NUMVAL-19.                                                     IF1254.2
 064800     MOVE ZERO TO TEMP.                                           IF1254.2
 064900 F-NUMVAL-TEST-19.                                                IF1254.2
@@ -661,7 +661,7 @@
 066100 F-NUMVAL-WRITE-19.                                               IF1254.2
 066200     MOVE "F-NUMVAL-19" TO PAR-NAME.                              IF1254.2
 066300     PERFORM  PRINT-DETAIL.                                       IF1254.2
-066400*****************TEST (t) ******************************          IF1254.2
+066400*                                                                         
 066500 F-NUMVAL-20.                                                     IF1254.2
 066600     MOVE ZERO TO TEMP.                                           IF1254.2
 066700 F-NUMVAL-TEST-20.                                                IF1254.2
@@ -680,7 +680,7 @@
 068000 F-NUMVAL-WRITE-20.                                               IF1254.2
 068100     MOVE "F-NUMVAL-20" TO PAR-NAME.                              IF1254.2
 068200     PERFORM  PRINT-DETAIL.                                       IF1254.2
-068300*******************END OF TESTS**************************         IF1254.2
+068300*                                                                         
 068400 CCVS-EXIT SECTION.                                               IF1254.2
 068500 CCVS-999999.                                                     IF1254.2
 068600     GO TO CLOSE-FILES.                                           IF1254.2

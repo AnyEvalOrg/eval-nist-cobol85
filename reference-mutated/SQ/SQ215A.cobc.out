@@ -5,18 +5,18 @@ SQ215A.CBL:580: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   579 | 058300         PERFORM FAIL                                             S..
   580 > 058400         GO TO   CCVS-EXIT                                        S..
   581 | 058500     END-IF.                                                      S..
-  582 | 058600*                                                                 S..
+  582 | 058600*..
 SQ215A.CBL: in paragraph 'WRITE-TEST-01-01':
 SQ215A.CBL:601: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   599 | 060300         MOVE   "VII-3, VII-53, FILE STATUS" TO ANSI-REFERENCE    S..
   600 | 060400         PERFORM FAIL                                             S..
   601 > 060500         GO TO   CCVS-EXIT                                        S..
   602 | 060600     END-IF.                                                      S..
-  603 | 060700*                                                                 S..
+  603 | 060700*..
 SQ215A.CBL: in paragraph 'CLOSE-TEST-01':
 SQ215A.CBL:622: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   620 | 062400         MOVE   "VII-3, VII-38, FILE STATUS" TO ANSI-REFERENCE    S..
   621 | 062500         PERFORM FAIL                                             S..
   622 > 062600         GO TO   CCVS-EXIT                                        S..
   623 | 062700     END-IF.                                                      S..
-  624 | 062800*                                                                 S..
+  624 | 062800*..

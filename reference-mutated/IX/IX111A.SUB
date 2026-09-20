@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         IX1114.2
 000200 PROGRAM-ID.                                                      IX1114.2
 000300     IX111A.                                                      IX1114.2
-000400****************************************************************  IX1114.2
-000500*                                                              *  IX1114.2
-000600*    VALIDATION FOR:-                                          *  IX1114.2
-000700*                                                              *  IX1114.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1114.2
-000900*                                                              *  IX1114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1114.2
-001100*                                                              *  IX1114.2
-001200****************************************************************  IX1114.2
-001300*                                                                 IX1114.2
-001400*    1. THE ROUTINE CHECKS THE PERMANENT ERROR CONDITIONS WITH    IX1114.2
-001500*       UNSUCCESSFUL COMPLETION FOR AN OPEN STATEMENT FOR A FILE  IX1114.2
-001600*       WHICH IS NOT PRESENT (STATUS CODE 35 EXPECTED).           IX1114.2
-001700*       THIS PROGRAM USES THE FILE IX-NOP WHICH DOES NOT EXIST.   IX1114.2
-001800*                                                                 IX1114.2
-001900*    2. THE ROUTINE CHECKS THE FILE STATUS CODES:                 IX1114.2
-002000*           35  -  AFTER OPEN INPUT  (NOT EXISTING FILE)          IX1114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100                                                                  IX1114.2
-002200*    3. X-CARDS USED IN THIS PROGRAM (WITH THE OPT CODE):         IX1114.2
-002300*                                                                 IX1114.2
-002400*                 XXXXX025    (FOR THE NON EXISTING IX-NOP)       IX1114.2
-002500*                 XXXXX055.                                       IX1114.2
-002600*                 XXXXX082.                                       IX1114.2
-002700*                 XXXXX083.                                       IX1114.2
-002800*                                                                 IX1114.2
-002900*                                                                 IX1114.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            IX1114.2
 003100 CONFIGURATION SECTION.                                           IX1114.2
 003200 SOURCE-COMPUTER.                                                 IX1114.2
@@ -37,7 +37,7 @@
 003700 FILE-CONTROL.                                                    IX1114.2
 003800     SELECT PRINT-FILE ASSIGN TO                                  IX1114.2
 003900     "REPORT".                                                    IX1114.2
-004000*                                                                 IX1114.2
+004000*                                                                         
 004100     SELECT IX-NOP ASSIGN                                         IX1114.2
 004200     "XXXXX025"                                                   IX1114.2
 004300     ORGANIZATION IS INDEXED                                      IX1114.2
@@ -238,12 +238,12 @@
 024000     MOVE   "PASS " TO P-OR-F.                                    IX1114.2
 024100     ADD     1 TO PASS-COUNTER.                                   IX1114.2
 024200     PERFORM PRINT-DETAIL-DECL.                                   IX1114.2
-024300*                                                                 IX1114.2
+024300*                                                                         
 024400 FAIL-DECL.                                                       IX1114.2
 024500     MOVE   "FAIL*" TO P-OR-F.                                    IX1114.2
 024600     ADD     1 TO ERROR-COUNTER.                                  IX1114.2
 024700     PERFORM PRINT-DETAIL-DECL.                                   IX1114.2
-024800*                                                                 IX1114.2
+024800*                                                                         
 024900 PRINT-DETAIL-DECL.                                               IX1114.2
 025000     IF REC-CT NOT EQUAL TO ZERO                                  IX1114.2
 025100         MOVE   "." TO PARDOT-X                                   IX1114.2
@@ -260,11 +260,11 @@
 026200     MOVE    SPACE TO CORRECT-X.                                  IX1114.2
 026300     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             IX1114.2
 026400     MOVE    SPACE TO RE-MARK.                                    IX1114.2
-026500*                                                                 IX1114.2
+026500*                                                                         
 026600 WRITE-LINE-DECL.                                                 IX1114.2
 026700     ADD     1 TO RECORD-COUNT.                                   IX1114.2
 026800     PERFORM WRT-LN-DECL.                                         IX1114.2
-026900*                                                                 IX1114.2
+026900*                                                                         
 027000 WRT-LN-DECL.                                                     IX1114.2
 027100     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                IX1114.2
 027200     MOVE    SPACE TO DUMMY-RECORD.                               IX1114.2
@@ -302,14 +302,14 @@
 030400     MOVE    SPACES TO INF-ANSI-REFERENCE.                        IX1114.2
 030500 BAIL-OUT-EX-DECL.                                                IX1114.2
 030600     EXIT.                                                        IX1114.2
-030700*                                                                 IX1114.2
+030700*                                                                         
 030800 ABNORMAL-TERM-DECL.                                              IX1114.2
 030900     MOVE    SPACE TO DUMMY-RECORD.                               IX1114.2
 031000     PERFORM WRITE-LINE-DECL.                                     IX1114.2
 031100     MOVE    "ABNORMAL TERMINATION AT THIS POINT IS ACCEPTABLE"   IX1114.2
 031200                     TO DUMMY-RECORD.                             IX1114.2
 031300     PERFORM WRITE-LINE-DECL 3 TIMES.                             IX1114.2
-031400*                                                                 IX1114.2
+031400*                                                                         
 031500 EXIT-DECL.                                                       IX1114.2
 031600     EXIT.                                                        IX1114.2
 031700 END DECLARATIVES.                                                IX1114.2
@@ -345,7 +345,7 @@
 034700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1114.2
 034800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1114.2
 034900      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1114.2
-035000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1114.2
+035000*                                                                         
 035100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1114.2
 035200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1114.2
 035300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1114.2
@@ -421,11 +421,11 @@
 042300 SECT-IX111A-0003 SECTION.                                        IX1114.2
 042400 SEQ-INIT-010.                                                    IX1114.2
 042500                                                                  IX1114.2
-042600******************************************************************IX1114.2
-042700*   TEST  1                                                      *IX1114.2
-042800*         OPEN INPUT  (FILE DOES NOT EXIST)   35  EXPECTED       *IX1114.2
-042900*         IX-4, 1.3.4 (4) B                                      *IX1114.2
-043000******************************************************************IX1114.2
+042600*                                                                         
+042700*                                                                         
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
 043100 OPN-INIT-GF-01-0.                                                IX1114.2
 043200     MOVE SPACES TO IX-NOP-STATUS.                                IX1114.2
 043300     MOVE "OPEN INPUT   35 EXP." TO FEATURE.                      IX1114.2

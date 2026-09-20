@@ -16,17 +16,17 @@ TEST RESULT OF IC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL...USING DATA-NM FAIL* CALL-TEST-01                                                                                
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000007                                                      
+                                     CORRECT =  000000000000000008                                                      
                                                                                                                         
  CALL...USING DATA-NM FAIL* CALL-TEST-02                                                                                
                                                                                                                         
                                      COMPUTED=  000000000000000002                                                      
-                                     CORRECT =  000000000000000006                                                      
+                                     CORRECT =  000000000000000007                                                      
                                                                                                                         
  CALL...USING DATA-NM FAIL* CALL-TEST-03                                                                                
                                                                                                                         
                                      COMPUTED=  000000000000000003                                                      
-                                     CORRECT =  000000000000000006                                                      
+                                     CORRECT =  000000000000000002                                                      
                                                                                                                         
  CALL...USING DATA-NM PASS  CALL-TEST-04                                                                                
  CALL...USING DATA-NM PASS  CALL-TEST-05                                                                                

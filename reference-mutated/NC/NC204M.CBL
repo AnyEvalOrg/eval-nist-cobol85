@@ -1,36 +1,36 @@
 000100 IDENTIFICATION DIVISION.                                         NC2044.2
 000200 PROGRAM-ID.                                                      NC2044.2
 000300     NC204M.                                                      NC2044.2
-000400****************************************************************  NC2044.2
-000500*                                                              *  NC2044.2
-000600*    VALIDATION FOR:-                                          *  NC2044.2
-000700*                                                              *  NC2044.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2044.2
-000900*                                                              *  NC2044.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2044.2
-001100*                                                              *  NC2044.2
-001200****************************************************************  NC2044.2
-001300*                                                              *  NC2044.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2044.2
-001500*                                                              *  NC2044.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2044.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2044.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2044.2
-001900*                                                              *  NC2044.2
-002000****************************************************************  NC2044.2
-002100*                                                              *  NC2044.2
-002200*    PROGRAM NC204M TESTS FORMAT 1 OF THE ACCEPT STATEMENT AND *  NC2044.2
-002300*    THE GENERAL FORMAT OF THE DISPLAY STATEMENT.              *  NC2044.2
-002400*                                                              *  NC2044.2
-002500*     X CARDS USED ARE:-                                       *  NC2044.2
-002600*                                                              *  NC2044.2
-002700*      X-55  - SYSTEM PRINTER NAME.                             * NC2044.2
-002800*      X-56  - DISPLAY MNEMONIC NAME.                           * NC2044.2
-002900*      X-57  - ACCEPT MNEMONIC NAME.                           *  NC2044.2
-003000*      X-82  - SOURCE COMPUTER NAME.                            * NC2044.2
-003100*      X-83  - OBJECT COMPUTER NAME.                            * NC2044.2
-003200*                                                              *  NC2044.2
-003300****************************************************************  NC2044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 ENVIRONMENT DIVISION.                                            NC2044.2
 003500 CONFIGURATION SECTION.                                           NC2044.2
 003600 SOURCE-COMPUTER.                                                 NC2044.2
@@ -420,7 +420,7 @@
 042200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2044.2
 042300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2044.2
 042400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2044.2
-042500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2044.2
+042500*                                                                         
 042600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2044.2
 042700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2044.2
 042800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2044.2
@@ -496,13 +496,13 @@
 049800     PERFORM PRINT-DETAIL.                                        NC2044.2
 049900     PERFORM BLANK-LINE-PRINT.                                    NC2044.2
 050000     MOVE   "DISPLAY UPON" TO FEATURE.                            NC2044.2
-050100*        NOTE FOR THE SAKE OF CONVENIENCE IN READING THE OUTPUT,  NC2044.2
-050200*             THE DISPLAY TESTS ARE CONSTRUCTED ON THE ASSUMPTION NC2044.2
-050300*             THAT THE DISPLAYED OUTPUT WILL BE PRINTED ALONG     NC2044.2
-050400*             WITH THE OUTPUT FROM THE WRITE STATEMENTS. NOTE ,   NC2044.2
-050500*             HOWEVER, IT IS NOT CONSIDERED NONSTANDARD IF THE    NC2044.2
-050600*             DISPLAYED OUTPUT APPEARS ELSEWHERE IN THE LISTING.  NC2044.2
-050700*                                                                 NC2044.2
+050100*                                                                         
+050200*                                                                         
+050300*                                                                         
+050400*                                                                         
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
 050800 DIS-INIT-GF-1.                                                   NC2044.2
 050900     MOVE     "DIS-TEST-GF-1 " TO PAR-NAME.                       NC2044.2
 051000     MOVE     "ALPHABETIC"     TO DISPLAY-A.                      NC2044.2
@@ -517,7 +517,7 @@
 051900 DIS-WRITE-GF-1.                                                  NC2044.2
 052000     MOVE     "DIS-TEST-GF-1 " TO PAR-NAME.                       NC2044.2
 052100     PERFORM  PRINT-DETAIL.                                       NC2044.2
-052200*                                                                 NC2044.2
+052200*                                                                         
 052300 DIS-INIT-GF-2.                                                   NC2044.2
 052400     MOVE     "DIS-TEST-GF-2 " TO PAR-NAME.                       NC2044.2
 052500 DIS-TEST-GF-2.                                                   NC2044.2
@@ -531,7 +531,7 @@
 053300 DIS-WRITE-GF-2.                                                  NC2044.2
 053400     MOVE     "DIS-TEST-GF-2 " TO PAR-NAME.                       NC2044.2
 053500     PERFORM  PRINT-DETAIL.                                       NC2044.2
-053600*                                                                 NC2044.2
+053600*                                                                         
 053700 DIS-INIT-GF-3.                                                   NC2044.2
 053800     MOVE     "DIS-TEST-GF-3 " TO PAR-NAME.                       NC2044.2
 053900     MOVE     0123456789       TO DISPLAY-N.                      NC2044.2
@@ -546,7 +546,7 @@
 054800 DIS-WRITE-GF-3.                                                  NC2044.2
 054900     MOVE     "DIS-TEST-GF-3 " TO PAR-NAME.                       NC2044.2
 055000     PERFORM  PRINT-DETAIL.                                       NC2044.2
-055100*                                                                 NC2044.2
+055100*                                                                         
 055200 DIS-INIT-GF-4.                                                   NC2044.2
 055300     MOVE     "DIS-TEST-GF-4 " TO PAR-NAME.                       NC2044.2
 055400 DIS-TEST-GF-4.                                                   NC2044.2
@@ -560,7 +560,7 @@
 056200 DIS-WRITE-GF-4.                                                  NC2044.2
 056300     MOVE     "DIS-TEST-GF-4 " TO PAR-NAME.                       NC2044.2
 056400     PERFORM  PRINT-DETAIL.                                       NC2044.2
-056500*                                                                 NC2044.2
+056500*                                                                         
 056600 DIS-INIT-GF-5.                                                   NC2044.2
 056700     MOVE     "DIS-TEST-GF-5 " TO PAR-NAME.                       NC2044.2
 056800     MOVE     "A1B2C3D4E5"     TO DISPLAY-X.                      NC2044.2
@@ -575,7 +575,7 @@
 057700 DIS-WRITE-GF-5.                                                  NC2044.2
 057800     MOVE     "DIS-TEST-GF-5 " TO PAR-NAME.                       NC2044.2
 057900     PERFORM  PRINT-DETAIL.                                       NC2044.2
-058000*                                                                 NC2044.2
+058000*                                                                         
 058100 DIS-INIT-GF-6.                                                   NC2044.2
 058200     MOVE     "DIS-TEST-GF-6 " TO PAR-NAME.                       NC2044.2
 058300 DIS-TEST-GF-6.                                                   NC2044.2
@@ -590,7 +590,7 @@
 059200 DIS-WRITE-GF-6.                                                  NC2044.2
 059300     MOVE     "DIS-TEST-GF-6 " TO PAR-NAME.                       NC2044.2
 059400     PERFORM  PRINT-DETAIL.                                       NC2044.2
-059500*                                                                 NC2044.2
+059500*                                                                         
 059600 DIS-INIT-GF-7.                                                   NC2044.2
 059700     MOVE     "DIS-TEST-GF-7 " TO PAR-NAME.                       NC2044.2
 059800     MOVE     "ALPHABETIC"     TO DISPLAY-A.                      NC2044.2
@@ -609,13 +609,13 @@
 061100 DIS-WRITE-GF-7.                                                  NC2044.2
 061200     MOVE     "DIS-TEST-GF-7 " TO PAR-NAME.                       NC2044.2
 061300     PERFORM  PRINT-DETAIL.                                       NC2044.2
-061400*                                                                 NC2044.2
+061400*                                                                         
 061500 DIS-INIT-GF-8.                                                   NC2044.2
 061600     MOVE     "DIS-TEST-GF-8 " TO PAR-NAME.                       NC2044.2
 061700 DIS-TEST-GF-8.                                                   NC2044.2
 061800     PERFORM  DISPLAY-SUPPORT-1.                                  NC2044.2
 061900     DISPLAY ZERO SPACE QUOTE UPON DISPLAY-OUTPUT-DEVICE.         NC2044.2
-062000*    DISPLAY FIGURATIVE CONSTANT ONE ZERO EXPECTED.               NC2044.2
+062000*                                                                         
 062100     MOVE      ZERO-SPACE-QUOTE TO DIS-PLAYER.                    NC2044.2
 062200     PERFORM  DISPLAY-SUPPORT-2.                                  NC2044.2
 062300     GO       TO DIS-WRITE-GF-8.                                  NC2044.2
@@ -624,14 +624,14 @@
 062600 DIS-WRITE-GF-8.                                                  NC2044.2
 062700     MOVE     "DIS-TEST-GF-8 " TO PAR-NAME.                       NC2044.2
 062800     PERFORM  PRINT-DETAIL.                                       NC2044.2
-062900*                                                                 NC2044.2
+062900*                                                                         
 063000 DIS-INIT-GF-9.                                                   NC2044.2
 063100     MOVE "DIS-TEST-GF-9 " TO PAR-NAME.                           NC2044.2
 063200     MOVE "REDEFINE-INFO" TO DISPLAY-B.                           NC2044.2
 063300 DIS-TEST-GF-9.                                                   NC2044.2
 063400     PERFORM  DISPLAY-SUPPORT-1.                                  NC2044.2
 063500     DISPLAY  DISPLAY-C UPON DISPLAY-OUTPUT-DEVICE.               NC2044.2
-063600*    DISPLAY  REDEFINES FIELD.                                    NC2044.2
+063600*                                                                         
 063700     MOVE     "REDEFINE-INFO" TO DIS-PLAYER.                      NC2044.2
 063800     PERFORM  DISPLAY-SUPPORT-2.                                  NC2044.2
 063900     GO       TO DIS-WRITE-GF-9.                                  NC2044.2
@@ -640,7 +640,7 @@
 064200 DIS-WRITE-GF-9.                                                  NC2044.2
 064300     MOVE     "DIS-TEST-GF-9 " TO PAR-NAME.                       NC2044.2
 064400     PERFORM  PRINT-DETAIL.                                       NC2044.2
-064500*                                                                 NC2044.2
+064500*                                                                         
 064600 DIS-INIT-GF-10.                                                  NC2044.2
 064700     MOVE     "DIS-TEST-GF-10" TO PAR-NAME.                       NC2044.2
 064800     MOVE "D001*002*003*004*005*006*007*008*009*010*011*012*013*01NC2044.2
@@ -653,18 +653,18 @@
 065500     MOVE     DISPLAY-G TO DIS-PLAYER.                            NC2044.2
 065600     MOVE     1 TO DISPLAY-SWITCH.                                NC2044.2
 065700     PERFORM  DISPLAY-SUPPORT-2.                                  NC2044.2
-065800*        NOTE THE "CORRECT" RESULT IS WRITTEN AS TWO              NC2044.2
-065900*             100-CHARACTER LINES, BUT THE WAY THAT THE           NC2044.2
-066000*             "COMPUTED" RESULT IS SPLIT UP IS NOT                NC2044.2
-066100*             DEFINED BY THE STANDARD --- REGARDLESS OF           NC2044.2
-066200*             THIS, ALL 200 CHARACTERS MUST BE DISPLAYED.         NC2044.2
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
+066200*                                                                         
 066300     GO       TO DIS-WRITE-GF-10.                                 NC2044.2
 066400 DIS-DELETE-GF-10.                                                NC2044.2
 066500     PERFORM  DE-LETE.                                            NC2044.2
 066600 DIS-WRITE-GF-10.                                                 NC2044.2
 066700     MOVE     "DIS-TEST-GF-10" TO PAR-NAME.                       NC2044.2
 066800     PERFORM  PRINT-DETAIL.                                       NC2044.2
-066900*                                                                 NC2044.2
+066900*                                                                         
 067000 DIS-INIT-GF-11.                                                  NC2044.2
 067100     MOVE "DIS-TEST-GF-11"             TO PAR-NAME.               NC2044.2
 067200     MOVE "ABCDEFGHIJKLMNOPQRSTUVWXYZ" TO GRP-ALPHABETIC.         NC2044.2
@@ -685,7 +685,7 @@
 068700 DIS-WRITE-GF-11.                                                 NC2044.2
 068800     MOVE     "DIS-TEST-GF-11" TO PAR-NAME.                       NC2044.2
 068900     PERFORM  PRINT-DETAIL.                                       NC2044.2
-069000*                                                                 NC2044.2
+069000*                                                                         
 069100 DIS-INIT-GF-12.                                                  NC2044.2
 069200     MOVE     "DIS-TEST-GF-12" TO PAR-NAME.                       NC2044.2
 069300 DIS-TEST-GF-12.                                                  NC2044.2
@@ -700,7 +700,7 @@
 070200 DIS-WRITE-GF-12.                                                 NC2044.2
 070300     MOVE     "DIS-TEST-GF-12" TO PAR-NAME.                       NC2044.2
 070400     PERFORM  PRINT-DETAIL.                                       NC2044.2
-070500*                                                                 NC2044.2
+070500*                                                                         
 070600 DIS-INIT-GF-13.                                                  NC2044.2
 070700     MOVE     "DIS-TEST-GF-13"        TO PAR-NAME.                NC2044.2
 070800     MOVE     "ABCDEFGHIJKLMNOPQRSTU" TO QUAL-TAB-VALUE.          NC2044.2
@@ -721,7 +721,7 @@
 072300     SUB-TAB OF GRP-2 (1),                                        NC2044.2
 072400     SUB-TAB OF GRP-2 (2),                                        NC2044.2
 072500     SUB-TAB OF GRP-2 (3)  UPON DISPLAY-OUTPUT-DEVICE.            NC2044.2
-072600*        NOTE DISPLAY 21 VARIABLES, SUBSCRIPTED, QUALIFIED, BOTH. NC2044.2
+072600*                                                                         
 072700     MOVE     QUAL-TAB-VALUE TO DIS-PLAYER.                       NC2044.2
 072800     PERFORM  DISPLAY-SUPPORT-2.                                  NC2044.2
 072900     GO       TO DIS-WRITE-GF-13.                                 NC2044.2
@@ -730,7 +730,7 @@
 073200 DIS-WRITE-GF-13.                                                 NC2044.2
 073300     MOVE     "DIS-TEST-GF-13" TO PAR-NAME.                       NC2044.2
 073400     PERFORM  PRINT-DETAIL.                                       NC2044.2
-073500*                                                                 NC2044.2
+073500*                                                                         
 073600 DIS-INIT-GF-14.                                                  NC2044.2
 073700     MOVE     "DIS-TEST-GF-14" TO PAR-NAME.                       NC2044.2
 073800     MOVE     "SEE NOTE IN DIS-TEST-GF-14" TO RE-MARK.            NC2044.2
@@ -757,7 +757,7 @@
 075900              PIECE (2, 5)                                        NC2044.2
 076000              A1 OF TRUE-PAIR                                     NC2044.2
 076100              A2 IN TRUE-PAIR UPON DISPLAY-OUTPUT-DEVICE.         NC2044.2
-076200*        NOTE 21 OPERANDS, 111 CHARACTERS.                        NC2044.2
+076200*                                                                         
 076300     MOVE     DISPLAY-MIXTURE TO DIS-PLAYER.                      NC2044.2
 076400     PERFORM  DISPLAY-SUPPORT-2.                                  NC2044.2
 076500     GO       TO DIS-WRITE-GF-14.                                 NC2044.2
@@ -766,9 +766,9 @@
 076800 DIS-WRITE-GF-14.                                                 NC2044.2
 076900     MOVE     "DIS-TEST-GF-14" TO PAR-NAME.                       NC2044.2
 077000     PERFORM  PRINT-DETAIL.                                       NC2044.2
-077100*                                                                 NC2044.2
+077100*                                                                         
 077200 DISP-INIT-GF-15.                                                 NC2044.2
-077300*    ==--> SINGLE IDENTIFIER WITH "WITH NO ADVANCING" PHRASE <--==NC2044.2
+077300*                                                                         
 077400     MOVE   "VI-79 6.10.4 GR8" TO ANSI-REFERENCE.                 NC2044.2
 077500     MOVE   "DIS-TEST-GF-15 " TO PAR-NAME.                        NC2044.2
 077600     MOVE   "PLEASE PERFORM A VISUAL CHECK ON THE POSITIONING"    NC2044.2
@@ -788,9 +788,9 @@
 079000     PERFORM DE-LETE.                                             NC2044.2
 079100 DIS-WRITE-GF-15.                                                 NC2044.2
 079200     PERFORM PRINT-DETAIL.                                        NC2044.2
-079300*                                                                 NC2044.2
+079300*                                                                         
 079400 DISP-INIT-GF-16.                                                 NC2044.2
-079500*    ==--> MULTPL IDENTIFIERS WITH "WITH NO ADVANCING" PHRASE <--=NC2044.2
+079500*                                                                         
 079600     MOVE   "VI-79 6.10.4 GR8" TO ANSI-REFERENCE.                 NC2044.2
 079700     MOVE   "DIS-TEST-GF-16 " TO PAR-NAME.                        NC2044.2
 079800     MOVE   "PLEASE PERFORM A VISUAL CHECK ON THE POSITIONING"    NC2044.2
@@ -815,7 +815,7 @@
 081700 DIS-WRITE-GF-16.                                                 NC2044.2
 081800     MOVE   "DIS-TEST-GF-16 " TO PAR-NAME.                        NC2044.2
 081900     PERFORM PRINT-DETAIL.                                        NC2044.2
-082000*                                                                 NC2044.2
+082000*                                                                         
 082100 AC-CEPT SECTION.                                                 NC2044.2
 082200 ACC-INIT-F1.                                                     NC2044.2
 082300     MOVE   "ACCEPT     " TO FEATURE.                             NC2044.2
@@ -841,7 +841,7 @@
 084300     MOVE     "LAST 7 OF 27-CHAR FIELD" TO RE-MARK.               NC2044.2
 084400 ACC-WRITE-F1-1.                                                  NC2044.2
 084500     PERFORM  PRINT-DETAIL.                                       NC2044.2
-084600*                                                                 NC2044.2
+084600*                                                                         
 084700 ACC-INIT-F1-2.                                                   NC2044.2
 084800     MOVE     "ACC-TEST-F1-2 " TO PAR-NAME.                       NC2044.2
 084900     MOVE     0123456789       TO ACCEPT-D4.                      NC2044.2
@@ -859,7 +859,7 @@
 086100     PERFORM  FAIL.                                               NC2044.2
 086200 ACC-WRITE-F1-2.                                                  NC2044.2
 086300     PERFORM  PRINT-DETAIL.                                       NC2044.2
-086400*                                                                 NC2044.2
+086400*                                                                         
 086500 ACC-INIT-F1-3.                                                   NC2044.2
 086600     MOVE     "ACC-TEST-F1-3 " TO PAR-NAME.                       NC2044.2
 086700     MOVE     "().+-*/$, ="    TO ACCEPT-D6.                      NC2044.2
@@ -867,7 +867,7 @@
 086900     ACCEPT   ACCEPT-D5 FROM ACCEPT-INPUT-DEVICE.                 NC2044.2
 087000     IF       ACCEPT-D5  EQUAL TO ACCEPT-D6                       NC2044.2
 087100              PERFORM PASS GO TO ACC-WRITE-F1-3.                  NC2044.2
-087200*        NOTE ACCEPT SPECIAL CHARACTERS.                          NC2044.2
+087200*                                                                         
 087300     GO       TO ACC-FAIL-F1-3.                                   NC2044.2
 087400 ACC-DELETE-F1-3.                                                 NC2044.2
 087500     PERFORM  DE-LETE.                                            NC2044.2
@@ -878,7 +878,7 @@
 088000     PERFORM  FAIL.                                               NC2044.2
 088100 ACC-WRITE-F1-3.                                                  NC2044.2
 088200     PERFORM  PRINT-DETAIL.                                       NC2044.2
-088300*                                                                 NC2044.2
+088300*                                                                         
 088400 ACC-INIT-F1-4.                                                   NC2044.2
 088500     MOVE     "ACC-TEST-F1-4 " TO PAR-NAME.                       NC2044.2
 088600     MOVE     "9"              TO ACCEPT-D8.                      NC2044.2
@@ -897,7 +897,7 @@
 089900     PERFORM  FAIL.                                               NC2044.2
 090000 ACC-WRITE-F1-4.                                                  NC2044.2
 090100     PERFORM  PRINT-DETAIL.                                       NC2044.2
-090200*                                                                 NC2044.2
+090200*                                                                         
 090300 ACC-INIT-F1-5.                                                   NC2044.2
 090400     MOVE     "ACC-TEST-F1-5 " TO PAR-NAME.                       NC2044.2
 090500     MOVE     "0"              TO ACCEPT-D10.                     NC2044.2
@@ -916,7 +916,7 @@
 091800     PERFORM  FAIL.                                               NC2044.2
 091900 ACC-WRITE-F1-5.                                                  NC2044.2
 092000     PERFORM  PRINT-DETAIL.                                       NC2044.2
-092100*                                                                 NC2044.2
+092100*                                                                         
 092200 ACC-INIT-F1-6.                                                   NC2044.2
 092300     MOVE     "ACC-TEST-F1-6 "       TO PAR-NAME.                 NC2044.2
 092400     MOVE     " ABC            XYZ " TO ACCEPT-D12.               NC2044.2
@@ -934,7 +934,7 @@
 093600     PERFORM  FAIL.                                               NC2044.2
 093700 ACC-WRITE-F1-6.                                                  NC2044.2
 093800     PERFORM  PRINT-DETAIL.                                       NC2044.2
-093900*                                                                 NC2044.2
+093900*                                                                         
 094000 ACC-INIT-F1-7.                                                   NC2044.2
 094100     MOVE     "ACC-TEST-F1-7 " TO PAR-NAME.                       NC2044.2
 094200     MOVE     " 9"             TO ACCEPT-D16.                     NC2044.2
@@ -952,7 +952,7 @@
 095400     MOVE    " 9    (SPACE 9)" TO CORRECT-A.                      NC2044.2
 095500 ACC-WRITE-F1-7.                                                  NC2044.2
 095600     PERFORM  PRINT-DETAIL.                                       NC2044.2
-095700*                                                                 NC2044.2
+095700*                                                                         
 095800 ACC-INIT-F1-8.                                                   NC2044.2
 095900     MOVE     "ACC-TEST-F1-8 " TO PAR-NAME.                       NC2044.2
 096000     MOVE     QUOTE            TO ACCEPT-D18.                     NC2044.2
@@ -970,7 +970,7 @@
 097200     MOVE     ACCEPT-D18 TO CORRECT-A.                            NC2044.2
 097300 ACC-WRITE-F1-8.                                                  NC2044.2
 097400     PERFORM  PRINT-DETAIL.                                       NC2044.2
-097500*                                                                 NC2044.2
+097500*                                                                         
 097600 ACC-INIT-F1-9.                                                   NC2044.2
 097700     MOVE     "ACC-TEST-F1-9 " TO PAR-NAME.                       NC2044.2
 097800     MOVE     "Q"              TO ACCEPT-D20.                     NC2044.2
@@ -988,7 +988,7 @@
 099000     MOVE     ACCEPT-D20 TO CORRECT-A.                            NC2044.2
 099100 ACC-WRITE-F1-9.                                                  NC2044.2
 099200     PERFORM  PRINT-DETAIL.                                       NC2044.2
-099300*                                                                 NC2044.2
+099300*                                                                         
 099400 ACC-INIT-F1-10.                                                  NC2044.2
 099500     MOVE     "ACC-TEST-F1-10" TO PAR-NAME.                       NC2044.2
 099600     MOVE     "....ABCD...."   TO ACCEPT-D22.                     NC2044.2
@@ -1006,7 +1006,7 @@
 100800     MOVE     ACCEPT-D22 TO CORRECT-A.                            NC2044.2
 100900 ACC-WRITE-F1-10.                                                 NC2044.2
 101000     PERFORM  PRINT-DETAIL.                                       NC2044.2
-101100*                                                                 NC2044.2
+101100*                                                                         
 101200 ACC-INIT-F1-11.                                                  NC2044.2
 101300     MOVE     "ACC-TEST-F1-11"       TO PAR-NAME.                 NC2044.2
 101400     MOVE     "--------------------" TO ACCEPT-D23.               NC2044.2
@@ -1025,7 +1025,7 @@
 102700     MOVE     ACCEPT-D24 TO CORRECT-A.                            NC2044.2
 102800 ACC-WRITE-F1-11.                                                 NC2044.2
 102900     PERFORM  PRINT-DETAIL.                                       NC2044.2
-103000*                                                                 NC2044.2
+103000*                                                                         
 103100 ACC-INIT-F1-12.                                                  NC2044.2
 103200     MOVE     "ACC-TEST-F1-12" TO PAR-NAME.                       NC2044.2
 103300     MOVE                                                         NC2044.2
@@ -1058,7 +1058,7 @@
 106000 ACC-WRITE-F1-12.                                                 NC2044.2
 106100     MOVE     "ACC-TEST-F1-12" TO PAR-NAME.                       NC2044.2
 106200     PERFORM PRINT-DETAIL.                                        NC2044.2
-106300*                                                                 NC2044.2
+106300*                                                                         
 106400 ACC-INIT-F1-13.                                                  NC2044.2
 106500     MOVE   "ACC-TEST-F1-13" TO PAR-NAME.                         NC2044.2
 106600     MOVE "D001*002*003*004*005*006*007*008*009*010*011*012*013*01NC2044.2
@@ -1110,7 +1110,7 @@
 111200 ACC-WRITE-F1-13.                                                 NC2044.2
 111300     MOVE   "ACC-TEST-F1-13" TO PAR-NAME.                         NC2044.2
 111400     PERFORM PRINT-DETAIL.                                        NC2044.2
-111500*                                                                 NC2044.2
+111500*                                                                         
 111600 ACC-INIT-F1-14.                                                  NC2044.2
 111700     MOVE   "VI-71 6.5.4 GR4(A)" TO ANSI-REFERENCE.               NC2044.2
 111800     MOVE    SPACES TO ACCEPT-TEST-14-DATA.                       NC2044.2
@@ -1140,7 +1140,7 @@
 114200             PERFORM FAIL.                                        NC2044.2
 114300 ACC-WRITE-F1-14-1.                                               NC2044.2
 114400             PERFORM PRINT-DETAIL.                                NC2044.2
-114500*                                                                 NC2044.2
+114500*                                                                         
 114600 ACC-INIT-F1-14-2.                                                NC2044.2
 114700     MOVE   "ACC-TEST-F1-14-2" TO PAR-NAME.                       NC2044.2
 114800 ACC-TEST-F1-14-2.                                                NC2044.2

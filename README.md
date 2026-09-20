@@ -10,28 +10,28 @@ binary metric is pass@1 (one generation, one epoch, no model judge).
 
 <!-- population:begin -->
 The indexed population contains 381 standalone `.CBL` programs.
-The shipped dataset contains **97** programs validated against GnuCOBOL logs.
-Exclusions are **58 original + 215 insufficient-site + 11 execution-evidence**;
+The shipped dataset contains **78** programs validated against GnuCOBOL logs.
+Exclusions are **58 original + 235 insufficient-site + 10 execution-evidence**;
 **0** candidates await fresh operator logs.
 
 | Module | Shipped eligible programs |
 |---|---:|
-| NC | 49 |
-| SM | 4 |
+| NC | 37 |
+| SM | 1 |
 | IC | 9 |
-| SQ | 1 |
-| RL | 1 |
+| SQ | 0 |
+| RL | 0 |
 | IX | 3 |
 | ST | 3 |
-| SG | 2 |
+| SG | 3 |
 | OB | 0 |
 | IF | 22 |
-| RW | 3 |
+| RW | 0 |
 | DB | 0 |
-| **Total** | **97** |
+| **Total** | **78** |
 
-There are 108 mutation candidates with 364 planted sites;
-331 sites belong to the shipped population.
+There are 88 mutation candidates with 293 planted sites;
+263 sites belong to the shipped population.
 
 <!-- population:end -->
 
@@ -44,7 +44,12 @@ Each candidate source in `reference-mutated/<MODULE>/<PROG>.CBL` uses
 HMAC-SHA256(NIST_MUTATION_SALT, program name) as its random seed. The script
 changes K = max(3, nearest integer to 10% of supported sites). It changes a numeric
 digit or an alphanumeric character in both the IF expectation and its matching
-MOVE to CORRECT. Replacements preserve byte width and fixed-format columns.
+MOVE to CORRECT. Replacements preserve byte width, character class and fixed-format
+columns. Both the compared item and CORRECT field must have a resolved PICTURE
+and USAGE: replacements respect numeric precision, scale, signs, supported editing,
+and elementary or simple group layouts (including fixed OCCURS). Ambiguous names,
+unresolved COPY layouts, unsupported usages, floating editing and reference
+modification are excluded before sampling.
 COMPUTED receives the actual data item without modification. A faithful conversion
 must therefore reproduce the resulting FAIL rows and their evidence values.
 
@@ -53,7 +58,7 @@ fall-through failure blocks after a conditional PASS/GO TO WRITE. A narrow new
 form accepts IF NOT = / NOT EQUAL TO followed by GO TO a local FAIL block,
 then unconditional PASS/GO TO WRITE. The FAIL block permits only paired evidence
 MOVEs, diagnostic MOVEs, and PERFORM FAIL. It cannot alter the tested data or
-perform user code. This adds NC132A, NC239A, and RW101A (three sites each).
+perform user code. These sites must also pass the field-format checks.
 Programs with at least three legacy sites use that matcher; the extension applies
 below that threshold. All selections use the operator secret. Matching requires
 a test/check paragraph (or the strictly checked new jump form), an unambiguous
@@ -79,12 +84,14 @@ reject a different secret. `NIST_PRIVATE_DIR` is required and must resolve outsi
 the repository. The manifest is excluded from wheels, source distributions, package
 data, prompts and candidate sandboxes; ignore rules also guard accidental copies.
 
-Within each selected test block and its immediately preceding comments, literal
-occurrences in comments are rewritten. Remaining comment lines are conservatively
-blanked because prose may disclose an expectation without spelling its literal.
-Blanking preserves line numbers and fixed-format columns; every edit is privately
-audited. The original reference tree remains provenance only. The mutator copies
-`.DAT`/`.inp`, `.SUB`, `lib/`, `copy/` and `copyalt/` dependencies without old logs.
+All fixed-format comment bodies are blanked uniformly in every generated program,
+including unselected and unsupported test paragraphs. The edits depend only on the
+original source, never on selection or replacement values. This also removes prose
+expectations and continuation comments. Line numbers, indicators and byte widths
+are preserved; indexed-program edits are privately audited. The same treatment
+applies to `.SUB`, `lib/`, `copy/` and `copyalt/` source dependencies. `.DAT` and
+`.inp` input bytes are copied unchanged. The original reference tree remains
+provenance only; old candidate logs are invalidated when sources change.
 
 The tree includes **44 `.SUB` continuation drivers**, absent from index.json.
 They inherit predecessor files: report.pl removes `XXXXX*` only before `.CBL`
@@ -218,9 +225,7 @@ gcloud builds submit --config=reference/cloudbuild.yaml .
 python scripts/build_dataset.py
 python -m pytest -q -p no:cacheprovider tests
 python scripts/prove_supervisor.py
-python -m pip wheel --no-deps --no-build-isolation -w .build/dist .
-python -m pip install --no-deps --target .build/wheel-env/site-packages .build/dist/eval_nist_cobol85-1.0.0-py3-none-any.whl
-python scripts/verify_wheel.py .build/wheel-env/site-packages
+python scripts/verify_wheel.py  # builds and verifies a fresh wheel from this checkout
 python run.py --task nist_cobol85_python --sample-id NC101A --model provider/model
 ```
 
@@ -245,9 +250,10 @@ by name. After installing fresh operator logs, run `python scripts/build_dataset
 to validate and admit them. A complete regeneration removes all stale candidate logs;
 if none are validated, the dataset status is `awaiting_mutated_logs` and loading it
 fails with an actionable error. Tests needing real mutated logs skip with a reason
-until the new Cloud Build logs arrive. Tests that require mutation metadata use only
-small synthetic programs and a test salt, never the operator's private manifest.
-Fault-injection tests alter synthetic evidence. A wheel test checks that private
+until the new Cloud Build logs arrive. Mutation and fault-injection tests use small
+synthetic programs and a test salt. A read-only corpus audit additionally checks
+every replacement in the operator's private manifest against freshly parsed source
+field descriptions; it never reads the operator salt or publishes literal values. A wheel test checks that private
 mutation metadata cannot enter package data, including an accidentally staged file.
 
 The README population block is rendered from `data/eligibility.json` by the builder.

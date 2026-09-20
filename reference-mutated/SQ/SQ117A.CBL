@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1174.2
 000200 PROGRAM-ID.                                                      SQ1174.2
 000300     SQ117A.                                                      SQ1174.2
-000400****************************************************************  SQ1174.2
-000500*                                                              *  SQ1174.2
-000600*    VALIDATION FOR:-                                          *  SQ1174.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1174.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ1174.2
-000900*                                                              *  SQ1174.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  SQ1174.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1174.2
-001200*                                                              *  SQ1174.2
-001300****************************************************************  SQ1174.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
 001400                                                                  SQ1174.2
-001500*        THIS ROUTINE CREATES A SEQUENTIAL MASS STORAGE FILE      SQ1174.2
-001600*    USING WRITE...FROM STATEMENTS.  THE FILE IS READ AND FIELDS  SQ1174.2
-001700*    IN THE RECORDS ARE CHECKED TO ENSURE THAT TRUNCATION AND     SQ1174.2
-001800*    BLANK FILLING OF THE RECORD OCCURS WHEN REQUIRED.            SQ1174.2
-001900*                                                                 SQ1174.2
-002000*    USED X-CARDS:                                                SQ1174.2
-002100*         XXXXX014                                                SQ1174.2
-002200*         XXXXX055                                                SQ1174.2
-002300*     P   XXXXX062                                                SQ1174.2
-002400*         XXXXX082                                                SQ1174.2
-002500*         XXXXX083                                                SQ1174.2
-002600*     C   XXXXX084                                                SQ1174.2
-002700*                                                                 SQ1174.2
-002800*                                                                 SQ1174.2
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SQ1174.2
 003000 CONFIGURATION SECTION.                                           SQ1174.2
 003100 SOURCE-COMPUTER.                                                 SQ1174.2
@@ -295,7 +295,7 @@
 034400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1174.2
 034500      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1174.2
 034600      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1174.2
-034700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1174.2
+034700*                                                                         
 034800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1174.2
 034900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1174.2
 035000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1174.2
@@ -376,11 +376,11 @@
 042500     MOVE FILE-RECORD-INFO-P1-120 (1) TO AREA4-1.                 SQ1174.2
 042600     MOVE END-OF-RECORD-AREA TO AREA4-2.                          SQ1174.2
 042700     WRITE SQ-FS9R1-F-G-141 FROM WRITE-FROM-AREA4.                SQ1174.2
-042800*        THIS TEST CONTAINS A WRITE RECORD FROM IDENTIFIER        SQ1174.2
-042900*    STATEMENT WITH THE SIZE OF THE IDENTIFIER EQUAL TO THE SIZE  SQ1174.2
-043000*    OF FILE RECORD.  THE IDENTIFIER AREA IS CHECKED AFTER THE    SQ1174.2
-043100*    WRITE TO ENSURE THIS AREA WAS LEFT INTACT BY THE WRITE       SQ1174.2
-043200*    STATEMENT.                                                   SQ1174.2
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
 043300     IF FILE-RECORD-INFO-P1-120 (1) NOT EQUAL TO AREA4-1          SQ1174.2
 043400             MOVE  1 TO ERROR-FLAG.                               SQ1174.2
 043500     IF END-OF-RECORD-AREA NOT EQUAL TO AREA4-2                   SQ1174.2
@@ -402,9 +402,9 @@
 045100     MOVE "WRITE...FROM EQUAL" TO FEATURE.                        SQ1174.2
 045200     PERFORM PRINT-DETAIL.                                        SQ1174.2
 045300 WRITE-INIT-GF-02-A.                                              SQ1174.2
-045400*        THIS TEST WRITES A RECORD FROM AN IDENTIFIER WHICH IS    SQ1174.2
-045500*    LARGER THAN THE SIZE OF THE FILE RECORD.  THE RIGHTMOST 7    SQ1174.2
-045600*    CHARACTERS SHOULD BE TRUNCATED IN THE OUTPUT RECORD.         SQ1174.2
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
 045700     ADD 1 TO COUNT-OF-RECS.                                      SQ1174.2
 045800     MOVE COUNT-OF-RECS TO XRECORD-NUMBER (1).                    SQ1174.2
 045900     MOVE COUNT-OF-RECS TO NUMBER-AREA.                           SQ1174.2
@@ -417,12 +417,12 @@
 046600         GO TO WRITE-INIT-GF-03-A.                                SQ1174.2
 046700     GO TO WRITE-INIT-GF-02-A.                                    SQ1174.2
 046800 WRITE-INIT-GF-03-A.                                              SQ1174.2
-046900*        THIS TEST WRITES A RECORD FROM AN IDENTIFIER OF 87       SQ1174.2
-047000*    CHARACTERS LENGTH.  IN THE OUTPUT RECORD CHARACTERS 88       SQ1174.2
-047100*    THROUGH 141 SHOULD BE BLANK.  ONLY THE NUMBER OF CHARACTERS  SQ1174.2
-047200*    IN THE FROM IDENTIFIER SHOULD BE MOVED TO THE OUTPUT RECORD. SQ1174.2
-047300*    THE CHARACTERS IN THE AREA FOLLOWING IDENTIFIER              SQ1174.2
-047400*    ARE NOT MOVED INTO THE OUTPUT AREA.                          SQ1174.2
+046900*                                                                         
+047000*                                                                         
+047100*                                                                         
+047200*                                                                         
+047300*                                                                         
+047400*                                                                         
 047500     ADD 1 TO COUNT-OF-RECS.                                      SQ1174.2
 047600     MOVE COUNT-OF-RECS TO XRECORD-NUMBER (1).                    SQ1174.2
 047700     MOVE FILE-RECORD-INFO-P1-120 (1) TO AREA1-1.                 SQ1174.2
@@ -432,10 +432,10 @@
 048100         GO TO WRITE-INIT-GF-04-A.                                SQ1174.2
 048200     GO TO WRITE-INIT-GF-03-A.                                    SQ1174.2
 048300 WRITE-INIT-GF-04-A.                                              SQ1174.2
-048400*        THIS TEST WRITES A RECORD FROM AN IDENTIFIER OF 120      SQ1174.2
-048500*    CHARACTERS.  THE LAST 21 CHARACTERS IN THE FD RECORD AREA    SQ1174.2
-048600*    ARE SET TO JUNK WHICH SHOULD BE REPLACED WITH BLANKS DURING  SQ1174.2
-048700*    THE WRITE...FROM STATEMENT.  THE IDENTIFIER IS LEVEL 02.     SQ1174.2
+048400*                                                                         
+048500*                                                                         
+048600*                                                                         
+048700*                                                                         
 048800     ADD 1 TO COUNT-OF-RECS.                                      SQ1174.2
 048900     MOVE COUNT-OF-RECS TO XRECORD-NUMBER (1).                    SQ1174.2
 049000     MOVE FILE-RECORD-INFO-P1-120 (1) TO AREA2-1.                 SQ1174.2
@@ -445,10 +445,10 @@
 049400         GO TO WRITE-INIT-GF-05-A.                                SQ1174.2
 049500     GO TO WRITE-INIT-GF-04-A.                                    SQ1174.2
 049600 WRITE-INIT-GF-05-A.                                              SQ1174.2
-049700*        THIS TEST WRITES A RECORD OF 121 CHARACTERS FROM A       SQ1174.2
-049800*    SUBSCRIPTED DATA ITEM. THE LAST 21 CHARACTERS IN THE FD      SQ1174.2
-049900*    RECORD AREA ARE SET TO JUNK WHICH SHOULD BE REPLACED WITH    SQ1174.2
-050000*    BLANKS DURING THE WRITE...FROM STATEMENT. IDENT IS LEVEL 05. SQ1174.2
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
 050100     ADD 1 TO COUNT-OF-RECS.                                      SQ1174.2
 050200     MOVE COUNT-OF-RECS TO XRECORD-NUMBER (1).                    SQ1174.2
 050300     MOVE "AREA SHOULD BE BLANK" TO SQ-FS9R1-PART2.               SQ1174.2
@@ -457,8 +457,8 @@
 050600         GO TO WRITE-INIT-GF-06-A.                                SQ1174.2
 050700     GO TO WRITE-INIT-GF-05-A.                                    SQ1174.2
 050800 WRITE-INIT-GF-06-A.                                              SQ1174.2
-050900*        THIS TEST WRITES RECORDS FROM AN IDENTIFIER THE SAME     SQ1174.2
-051000*    SIZE AS THE OUTPUT RECORD AREA.                              SQ1174.2
+050900*                                                                         
+051000*                                                                         
 051100     ADD 1 TO COUNT-OF-RECS.                                      SQ1174.2
 051200     MOVE COUNT-OF-RECS TO XRECORD-NUMBER (1).                    SQ1174.2
 051300     MOVE COUNT-OF-RECS TO NUMBER-AREA.                           SQ1174.2

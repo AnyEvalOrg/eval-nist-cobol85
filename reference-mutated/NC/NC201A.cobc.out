@@ -7,7 +7,7 @@ NC201A.CBL:185: warning: SYNCHRONIZED LEFT/RIGHT is not implemented [-Wpending]
 NC201A.CBL: in section 'SECT-NC201A-001':
 NC201A.CBL: in paragraph 'PFM-TEST-F4-8':
 NC201A.CBL:1031: warning: GO TO SECTION 'PFM-PART-A' [-Wgoto-section]
- 1029 | 103100*                 RESULT.                                         N..
+ 1029 | 103100*..
  1030 | 103200 PFM-TEST-F4-8.                                                   N..
  1031 > 103300     GO TO PFM-PART-A.                                            N..
  1032 | 103400 PFM-DELETE-F4-8.                                                 N..

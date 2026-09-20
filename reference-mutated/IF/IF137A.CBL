@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1374.2
 000300     IF137A.                                                      IF1374.2
 000400                                                                  IF1374.2
-000500***********************************************************       IF1374.2
-000600*                                                         *       IF1374.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1374.2
-000800* It contains tests for the Intrinsic Function            *       IF1374.2
-000900* STANDARD-DEVIATION.                                     *       IF1374.2
-001000*                                                         *       IF1374.2
-001100***********************************************************       IF1374.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1374.2
 001300 CONFIGURATION SECTION.                                           IF1374.2
 001400 SOURCE-COMPUTER.                                                 IF1374.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1374.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1374.2
 002700 WORKING-STORAGE SECTION.                                         IF1374.2
-002800***********************************************************       IF1374.2
-002900* Variables specific to the Intrinsic Function Test IF137A*       IF1374.2
-003000***********************************************************       IF1374.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 5.             IF1374.2
 003200 01  B                   PIC S9(10)          VALUE 7.             IF1374.2
 003300 01  C                   PIC S9(10)          VALUE -4.            IF1374.2
@@ -46,9 +46,9 @@
 004600 01  WS-NUM              PIC S9(5)V9(6).                          IF1374.2
 004700 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1374.2
 004800 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1374.2
-004900*                                                                 IF1374.2
-005000**********************************************************        IF1374.2
-005100*                                                                 IF1374.2
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
 005200 01  TEST-RESULTS.                                                IF1374.2
 005300     02 FILLER                   PIC X      VALUE SPACE.          IF1374.2
 005400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1374.2
@@ -342,16 +342,16 @@
 034200 BAIL-OUT-EX. EXIT.                                               IF1374.2
 034300 CCVS1-EXIT.                                                      IF1374.2
 034400     EXIT.                                                        IF1374.2
-034500********************************************************          IF1374.2
-034600*                                                      *          IF1374.2
-034700* Intrinsic Function Tests IF137A - STANDARD-DEVIATION *          IF1374.2
-034800*                                                      *          IF1374.2
-034900********************************************************          IF1374.2
+034500*                                                                         
+034600*                                                                         
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
 035000 SECT-IF137A SECTION.                                             IF1374.2
 035100 F-STD-DEV-INFO.                                                  IF1374.2
 035200     MOVE     "See ref. A-70 2.41" TO ANSI-REFERENCE.             IF1374.2
 035300     MOVE     "STANDARD-DEVIATION" TO FEATURE.                    IF1374.2
-035400*****************TEST (a) - SIMPLE TEST*****************          IF1374.2
+035400*                                                                         
 035500 F-STD-DEV-01.                                                    IF1374.2
 035600     MOVE ZERO TO WS-NUM.                                         IF1374.2
 035700     MOVE  6.97750 TO MIN-RANGE.                                  IF1374.2
@@ -374,7 +374,7 @@
 037400 F-STD-DEV-WRITE-01.                                              IF1374.2
 037500     MOVE "F-STD-DEV-01" TO PAR-NAME.                             IF1374.2
 037600     PERFORM  PRINT-DETAIL.                                       IF1374.2
-037700*****************TEST (b) - SIMPLE TEST*****************          IF1374.2
+037700*                                                                         
 037800 F-STD-DEV-02.                                                    IF1374.2
 037900     EVALUATE FUNCTION STANDARD-DEVIATION(3.9, -0.3, 8.7, 100.2)  IF1374.2
 038000     WHEN  41.7333 THRU  41.7350                                  IF1374.2
@@ -388,7 +388,7 @@
 038800 F-STD-DEV-WRITE-02.                                              IF1374.2
 038900     MOVE "F-STD-DEV-02" TO PAR-NAME.                             IF1374.2
 039000     PERFORM  PRINT-DETAIL.                                       IF1374.2
-039100*****************TEST (c) - SIMPLE TEST*****************          IF1374.2
+039100*                                                                         
 039200 F-STD-DEV-03.                                                    IF1374.2
 039300     MOVE  5.22005 TO MIN-RANGE.                                  IF1374.2
 039400     MOVE  5.22025 TO MAX-RANGE.                                  IF1374.2
@@ -407,7 +407,7 @@
 040700 F-STD-DEV-WRITE-03.                                              IF1374.2
 040800     MOVE "F-STD-DEV-03" TO PAR-NAME.                             IF1374.2
 040900     PERFORM  PRINT-DETAIL.                                       IF1374.2
-041000*****************TEST (d) - SIMPLE TEST*****************          IF1374.2
+041000*                                                                         
 041100 F-STD-DEV-04.                                                    IF1374.2
 041200     MOVE ZERO TO WS-NUM.                                         IF1374.2
 041300     MOVE  16.8440 TO MIN-RANGE.                                  IF1374.2
@@ -430,7 +430,7 @@
 043000 F-STD-DEV-WRITE-04.                                              IF1374.2
 043100     MOVE "F-STD-DEV-04" TO PAR-NAME.                             IF1374.2
 043200     PERFORM  PRINT-DETAIL.                                       IF1374.2
-043300*****************TEST (e) - SIMPLE TEST*****************          IF1374.2
+043300*                                                                         
 043400 F-STD-DEV-05.                                                    IF1374.2
 043500     MOVE ZERO TO WS-NUM.                                         IF1374.2
 043600     MOVE  9.73119 TO MIN-RANGE.                                  IF1374.2
@@ -453,7 +453,7 @@
 045300 F-STD-DEV-WRITE-05.                                              IF1374.2
 045400     MOVE "F-STD-DEV-05" TO PAR-NAME.                             IF1374.2
 045500     PERFORM  PRINT-DETAIL.                                       IF1374.2
-045600*****************TEST (f) - SIMPLE TEST*****************          IF1374.2
+045600*                                                                         
 045700 F-STD-DEV-06.                                                    IF1374.2
 045800     MOVE ZERO TO WS-NUM.                                         IF1374.2
 045900     MOVE  12.4976 TO MIN-RANGE.                                  IF1374.2
@@ -476,7 +476,7 @@
 047600 F-STD-DEV-WRITE-06.                                              IF1374.2
 047700     MOVE "F-STD-DEV-06" TO PAR-NAME.                             IF1374.2
 047800     PERFORM  PRINT-DETAIL.                                       IF1374.2
-047900*****************TEST (g) - SIMPLE TEST*****************          IF1374.2
+047900*                                                                         
 048000 F-STD-DEV-07.                                                    IF1374.2
 048100     MOVE ZERO TO WS-NUM.                                         IF1374.2
 048200     MOVE  2.16020 TO MIN-RANGE.                                  IF1374.2
@@ -499,7 +499,7 @@
 049900 F-STD-DEV-WRITE-07.                                              IF1374.2
 050000     MOVE "F-STD-DEV-07" TO PAR-NAME.                             IF1374.2
 050100     PERFORM  PRINT-DETAIL.                                       IF1374.2
-050200*****************TEST (h) - SIMPLE TEST*****************          IF1374.2
+050200*                                                                         
 050300 F-STD-DEV-08.                                                    IF1374.2
 050400     MOVE ZERO TO WS-NUM.                                         IF1374.2
 050500     MOVE  1.63296 TO MIN-RANGE.                                  IF1374.2
@@ -522,7 +522,7 @@
 052200 F-STD-DEV-WRITE-08.                                              IF1374.2
 052300     MOVE "F-STD-DEV-08" TO PAR-NAME.                             IF1374.2
 052400     PERFORM  PRINT-DETAIL.                                       IF1374.2
-052500*****************TEST (i) - SIMPLE TEST*****************          IF1374.2
+052500*                                                                         
 052600 F-STD-DEV-09.                                                    IF1374.2
 052700     MOVE ZERO TO WS-NUM.                                         IF1374.2
 052800     MOVE 2.31511 TO MIN-RANGE.                                   IF1374.2
@@ -544,7 +544,7 @@
 054400 F-STD-DEV-WRITE-09.                                              IF1374.2
 054500     MOVE "F-STD-DEV-09" TO PAR-NAME.                             IF1374.2
 054600     PERFORM  PRINT-DETAIL.                                       IF1374.2
-054700*****************TEST (j) - SIMPLE TEST*****************          IF1374.2
+054700*                                                                         
 054800 F-STD-DEV-10.                                                    IF1374.2
 054900     MOVE ZERO TO WS-NUM.                                         IF1374.2
 055000     MOVE  0.028559  TO MIN-RANGE.                                IF1374.2
@@ -568,7 +568,7 @@
 056800 F-STD-DEV-WRITE-10.                                              IF1374.2
 056900     MOVE "F-STD-DEV-10" TO PAR-NAME.                             IF1374.2
 057000     PERFORM  PRINT-DETAIL.                                       IF1374.2
-057100*****************TEST (k) - SIMPLE TEST*****************          IF1374.2
+057100*                                                                         
 057200 F-STD-DEV-11.                                                    IF1374.2
 057300     MOVE ZERO TO WS-NUM.                                         IF1374.2
 057400     MOVE -0.000020 TO MIN-RANGE.                                 IF1374.2
@@ -591,7 +591,7 @@
 059100 F-STD-DEV-WRITE-11.                                              IF1374.2
 059200     MOVE "F-STD-DEV-11" TO PAR-NAME.                             IF1374.2
 059300     PERFORM  PRINT-DETAIL.                                       IF1374.2
-059400*****************TEST (a) - COMPLEX TEST****************          IF1374.2
+059400*                                                                         
 059500 F-STD-DEV-12.                                                    IF1374.2
 059600     MOVE ZERO TO WS-NUM.                                         IF1374.2
 059700     MOVE  11.7995 TO MIN-RANGE.                                  IF1374.2
@@ -614,7 +614,7 @@
 061400 F-STD-DEV-WRITE-12.                                              IF1374.2
 061500     MOVE "F-STD-DEV-12" TO PAR-NAME.                             IF1374.2
 061600     PERFORM  PRINT-DETAIL.                                       IF1374.2
-061700*****************TEST (b) - COMPLEX TEST****************          IF1374.2
+061700*                                                                         
 061800 F-STD-DEV-13.                                                    IF1374.2
 061900     MOVE ZERO TO WS-NUM.                                         IF1374.2
 062000     MOVE  19.3556 TO MIN-RANGE.                                  IF1374.2
@@ -637,7 +637,7 @@
 063700 F-STD-DEV-WRITE-13.                                              IF1374.2
 063800     MOVE "F-STD-DEV-13" TO PAR-NAME.                             IF1374.2
 063900     PERFORM  PRINT-DETAIL.                                       IF1374.2
-064000*****************TEST (c) - COMPLEX TEST****************          IF1374.2
+064000*                                                                         
 064100 F-STD-DEV-14.                                                    IF1374.2
 064200     MOVE ZERO TO WS-NUM.                                         IF1374.2
 064300     MOVE 77.9969 TO MIN-RANGE.                                   IF1374.2
@@ -659,7 +659,7 @@
 065900 F-STD-DEV-WRITE-14.                                              IF1374.2
 066000     MOVE "F-STD-DEV-14" TO PAR-NAME.                             IF1374.2
 066100     PERFORM  PRINT-DETAIL.                                       IF1374.2
-066200*****************TEST (d) - COMPLEX TEST****************          IF1374.2
+066200*                                                                         
 066300 F-STD-DEV-15.                                                    IF1374.2
 066400     MOVE ZERO TO WS-NUM.                                         IF1374.2
 066500     MOVE 0.99996 TO MIN-RANGE.                                   IF1374.2
@@ -682,7 +682,7 @@
 068200 F-STD-DEV-WRITE-15.                                              IF1374.2
 068300     MOVE "F-STD-DEV-15" TO PAR-NAME.                             IF1374.2
 068400     PERFORM  PRINT-DETAIL.                                       IF1374.2
-068500*****************TEST (e) - COMPLEX TEST****************          IF1374.2
+068500*                                                                         
 068600 F-STD-DEV-16.                                                    IF1374.2
 068700     MOVE ZERO TO WS-NUM.                                         IF1374.2
 068800     MOVE -0.000040 TO MIN-RANGE.                                 IF1374.2
@@ -705,7 +705,7 @@
 070500 F-STD-DEV-WRITE-16.                                              IF1374.2
 070600     MOVE "F-STD-DEV-16" TO PAR-NAME.                             IF1374.2
 070700     PERFORM  PRINT-DETAIL.                                       IF1374.2
-070800*****************SPECIAL PERFORM TEST**********************       IF1374.2
+070800*                                                                         
 070900 F-STD-DEV-17.                                                    IF1374.2
 071000     PERFORM F-STD-DEV-TEST-17                                    IF1374.2
 071100       UNTIL FUNCTION STANDARD-DEVIATION(1, 1, ARG3) > 1.         IF1374.2
@@ -719,7 +719,7 @@
 071900 F-STD-DEV-WRITE-17.                                              IF1374.2
 072000     MOVE "F-STD-DEV-17" TO PAR-NAME.                             IF1374.2
 072100     PERFORM  PRINT-DETAIL.                                       IF1374.2
-072200********************END OF TESTS***************                   IF1374.2
+072200*                                                                         
 072300 CCVS-EXIT SECTION.                                               IF1374.2
 072400 CCVS-999999.                                                     IF1374.2
 072500     GO TO CLOSE-FILES.                                           IF1374.2

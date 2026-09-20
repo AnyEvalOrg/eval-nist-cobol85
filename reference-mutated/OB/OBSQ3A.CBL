@@ -1,25 +1,25 @@
 000100 IDENTIFICATION DIVISION.                                         OBSQ34.2
 000200 PROGRAM-ID.                                                      OBSQ34.2
 000300     OBSQ3A.                                                      OBSQ34.2
-000400****************************************************************  OBSQ34.2
-000500*                                                              *  OBSQ34.2
-000600*    VALIDATION FOR:-                                          *  OBSQ34.2
-000700*    " HIGH       ".                                              OBSQ34.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  OBSQ34.2
-000900*                                                              *  OBSQ34.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  OBSQ34.2
-001100*    "4.2 ".                                                      OBSQ34.2
-001200*                                                              *  OBSQ34.2
-001300*    THIS ROUTINE TESTS THE USE OF MULTIPLE FILE CLAUSE           OBSQ34.2
-001400*    OF THE I-O-CONTROL PARAGRAPH.  TWO TAPES ARE CREATED         OBSQ34.2
-001500*    CONTAINING 4 FILES EACH.  TAPE ONE IS CREATED WITHOUT THE    OBSQ34.2
-001600*    USE OF THE NO REWIND OPTION WITH THE OPEN AND CLOSE          OBSQ34.2
-001700*   STATEMENTS. IT IS THEN PASSED ON TO OBSQ4A AND OBSQ5A WHERE ITOBSQ34.2
-001800*    IS READ AND VALIDATED.  TAPE TWO IS CREATED USING THE        OBSQ34.2
-001900*    POSITION PHRASE OF THE MULTIPLE FILE CLAUSE AND WITH THE USE OBSQ34.2
-002000*    OF THE NO REWIND OPTION WITH THE OPEN AND CLOSE STATEMENT.   OBSQ34.2
-002100*    TAPE TWO IS THEN PASSED ON TO OBSQ5A WHERE IT IS READ AND    OBSQ34.2
-002200*    VALIDATED.                                                   OBSQ34.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
 002300 ENVIRONMENT DIVISION.                                            OBSQ34.2
 002400 CONFIGURATION SECTION.                                           OBSQ34.2
 002500 SOURCE-COMPUTER.                                                 OBSQ34.2
@@ -330,7 +330,7 @@
 037500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBSQ34.2
 037600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   OBSQ34.2
 037700      ADD PASS-COUNTER TO ERROR-HOLD.                             OBSQ34.2
-037800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBSQ34.2
+037800*                                                                         
 037900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBSQ34.2
 038000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBSQ34.2
 038100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBSQ34.2
@@ -393,9 +393,9 @@
 043800     EXIT.                                                        OBSQ34.2
 043900 SECT-OBSQ3A-0001 SECTION.                                        OBSQ34.2
 044000 SEQ-INIT-001.                                                    OBSQ34.2
-044100*             THIS TEST CREATES FILE SQ-FS1 AS THE FIRST FILE     OBSQ34.2
-044200*             ON MULTIPLE FILE TAPE ONE.  THIS FILE IS CLOSED     OBSQ34.2
-044300*             WITH NO REWIND.                                     OBSQ34.2
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
 044400     PERFORM BUILD-RECORD.                                        OBSQ34.2
 044500     MOVE "SQ-FS1" TO XFILE-NAME (1).                             OBSQ34.2
 044600     MOVE "RC"    TO CHARS-OR-RECORDS (1).                        OBSQ34.2
@@ -417,9 +417,9 @@
 046200 SEQ-CLOSE-001.                                                   OBSQ34.2
 046300     CLOSE SQ-FS1 WITH NO REWIND.                                 OBSQ34.2
 046400 SEQ-INIT-002.                                                    OBSQ34.2
-046500*             THIS TEST CREATES FILE SQ-FS2 AS THE SECOND FILE    OBSQ34.2
-046600*             ON MULTIPLE FILE TAPE ONE.  THIS FILE IS OPENED     OBSQ34.2
-046700*             AND CLOSED WITH NO REWIND.                          OBSQ34.2
+046500*                                                                         
+046600*                                                                         
+046700*                                                                         
 046800     PERFORM BUILD-RECORD.                                        OBSQ34.2
 046900     MOVE "SQ-FS2" TO XFILE-NAME (1).                             OBSQ34.2
 047000     MOVE "RC"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2
@@ -441,9 +441,9 @@
 048600 SEQ-CLOSE-002.                                                   OBSQ34.2
 048700     CLOSE SQ-FS2 WITH NO REWIND.                                 OBSQ34.2
 048800 SEQ-INIT-003.                                                    OBSQ34.2
-048900*             THIS TEST CREATES FILE SQ-FS3 AS THE THIRD FILE     OBSQ34.2
-049000*             ON MULTIPLE FILE TAPE ONE.  THIS FILE IS OPENED     OBSQ34.2
-049100*             AND CLOSED WITH NO REWIND.                          OBSQ34.2
+048900*                                                                         
+049000*                                                                         
+049100*                                                                         
 049200     PERFORM BUILD-RECORD.                                        OBSQ34.2
 049300     MOVE "SQ-FS3" TO XFILE-NAME (1).                             OBSQ34.2
 049400     MOVE "CH"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2
@@ -465,9 +465,9 @@
 051000 SEQ-CLOSE-003.                                                   OBSQ34.2
 051100     CLOSE SQ-FS3 WITH NO REWIND.                                 OBSQ34.2
 051200 SEQ-INIT-004.                                                    OBSQ34.2
-051300*             THIS TEST CREATES FILE SQ-FS4 AS THE FOURTH AND LASTOBSQ34.2
-051400*             FILE ON MULTIPLE FILE TAPE ONE.  THIS FILE IS OPENEDOBSQ34.2
-051500*             WITH NO REWIND.                                     OBSQ34.2
+051300*                                                                         
+051400*                                                                         
+051500*                                                                         
 051600     PERFORM BUILD-RECORD.                                        OBSQ34.2
 051700     MOVE "SQ-FS4" TO XFILE-NAME (1).                             OBSQ34.2
 051800     MOVE "RC"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2
@@ -489,9 +489,9 @@
 053400 SEQ-CLOSE-004.                                                   OBSQ34.2
 053500     CLOSE SQ-FS4.                                                OBSQ34.2
 053600 SEQ-INIT-005.                                                    OBSQ34.2
-053700*             THIS TEST CREATES FILE SQ-FS5 AS THE FIRST FILE ON  OBSQ34.2
-053800*             MULTIPLE FILE TAPE TWO.  THE POSITION PHRASE IS     OBSQ34.2
-053900*             USED IN THE MULTIPLE FILE CLAUSE.                   OBSQ34.2
+053700*                                                                         
+053800*                                                                         
+053900*                                                                         
 054000     PERFORM BUILD-RECORD.                                        OBSQ34.2
 054100     MOVE "SQ-FS5" TO XFILE-NAME (1).                             OBSQ34.2
 054200     MOVE "RC"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2
@@ -513,9 +513,9 @@
 055800 SEQ-CLOSE-005.                                                   OBSQ34.2
 055900     CLOSE SQ-FS5.                                                OBSQ34.2
 056000 SEQ-INIT-006.                                                    OBSQ34.2
-056100*             THIS  TEST CREATES FILE SQ-FS6 AS THE SECOND FILE   OBSQ34.2
-056200*             ON MULTIPLE FILE TAPE TWO.  THE POSITION PHRASE IS  OBSQ34.2
-056300*             USED IN THE MULTIPLE FILE CLAUSE.                   OBSQ34.2
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
 056400     PERFORM BUILD-RECORD.                                        OBSQ34.2
 056500     MOVE "SQ-FS6" TO XFILE-NAME (1).                             OBSQ34.2
 056600     MOVE "RC"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2
@@ -537,9 +537,9 @@
 058200 SEQ-CLOSE-006.                                                   OBSQ34.2
 058300     CLOSE SQ-FS6.                                                OBSQ34.2
 058400 SEQ-INIT-007.                                                    OBSQ34.2
-058500*             THIS TEST CREATES FILE SQ-FS7 AS THE THIRD FILE     OBSQ34.2
-058600*             ON MULTIPLE FILE TAPE TWO.  THE POSITION PHRASE IS  OBSQ34.2
-058700*             USED IN THE MULTIPLE FILE CLAUSE.                   OBSQ34.2
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
 058800     PERFORM BUILD-RECORD.                                        OBSQ34.2
 058900     MOVE "SQ-FS7" TO XFILE-NAME (1).                             OBSQ34.2
 059000     MOVE "CH"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2
@@ -561,9 +561,9 @@
 060600 SEQ-CLOSE-007.                                                   OBSQ34.2
 060700     CLOSE SQ-FS7.                                                OBSQ34.2
 060800 SEQ-INIT-008.                                                    OBSQ34.2
-060900*             THIS TEST CREATES FILE SQ-FS8 AS THE FOURTH AND LASTOBSQ34.2
-061000*             FILE ON MULTIPLE FILE TAPE TWO.  THE POSITION PHRASEOBSQ34.2
-061100*             IS USED IN THE MULTIPLE FILE CLAUSE.                OBSQ34.2
+060900*                                                                         
+061000*                                                                         
+061100*                                                                         
 061200     PERFORM BUILD-RECORD.                                        OBSQ34.2
 061300     MOVE "SQ-FS8" TO XFILE-NAME (1).                             OBSQ34.2
 061400     MOVE "CH"     TO CHARS-OR-RECORDS (1).                       OBSQ34.2

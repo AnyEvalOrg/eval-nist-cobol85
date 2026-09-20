@@ -27,7 +27,7 @@
 002700         (LESS THAN SEGMENT-LIMIT) WITH THE INITIAL STATE         SG2014.2
 002800         ON SEGMENTS GREATER THAN 49.                             SG2014.2
 002900                                                                  SG2014.2
-003000*                                                                 SG2014.2
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            SG2014.2
 003200 CONFIGURATION SECTION.                                           SG2014.2
 003300 SOURCE-COMPUTER.                                                 SG2014.2
@@ -220,7 +220,7 @@
 022200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG2014.2
 022300      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG2014.2
 022400      ADD PASS-COUNTER TO ERROR-HOLD.                             SG2014.2
-022500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG2014.2
+022500*                                                                         
 022600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG2014.2
 022700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG2014.2
 022800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG2014.2
@@ -334,11 +334,11 @@
 033600     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 033700     PERFORM 32.                                                  SG2014.2
 033800     PERFORM 32.                                                  SG2014.2
-033900     IF TEST-CHECK EQUAL TO "EOOD"                                SG2014.2
+033900     IF TEST-CHECK EQUAL TO "COOD"                                SG2014.2
 034000         PERFORM PASS                                             SG2014.2
 034100         GO TO SEG-WRITE-4.                                       SG2014.2
 034200     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-034300     MOVE "EOOD" TO CORRECT-A.                                    SG2014.2
+034300     MOVE "COOD" TO CORRECT-A.                                    SG2014.2
 034400     PERFORM FAIL.                                                SG2014.2
 034500     GO TO SEG-WRITE-4.                                           SG2014.2
 034600 SEG-DELETE-4.                                                    SG2014.2
@@ -478,11 +478,11 @@
 048000     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 048100     PERFORM 41.                                                  SG2014.2
 048200     PERFORM 41.                                                  SG2014.2
-048300     IF TEST-CHECK EQUAL TO "GOWD"                                SG2014.2
+048300     IF TEST-CHECK EQUAL TO "JOOD"                                SG2014.2
 048400         PERFORM PASS                                             SG2014.2
 048500         GO TO SEG-WRITE-13.                                      SG2014.2
 048600     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-048700     MOVE "GOWD" TO CORRECT-A.                                    SG2014.2
+048700     MOVE "JOOD" TO CORRECT-A.                                    SG2014.2
 048800     PERFORM FAIL.                                                SG2014.2
 048900     GO TO SEG-WRITE-13.                                          SG2014.2
 049000 SEG-DELETE-13.                                                   SG2014.2
@@ -574,11 +574,11 @@
 057600     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 057700     PERFORM 47.                                                  SG2014.2
 057800     PERFORM 47.                                                  SG2014.2
-057900     IF TEST-CHECK EQUAL TO "GIOD"                                SG2014.2
+057900     IF TEST-CHECK EQUAL TO "GPOD"                                SG2014.2
 058000         PERFORM PASS                                             SG2014.2
 058100         GO TO SEG-WRITE-19.                                      SG2014.2
 058200     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-058300     MOVE "GIOD" TO CORRECT-A.                                    SG2014.2
+058300     MOVE "GPOD" TO CORRECT-A.                                    SG2014.2
 058400     PERFORM FAIL.                                                SG2014.2
 058500     GO TO SEG-WRITE-19.                                          SG2014.2
 058600 SEG-DELETE-19.                                                   SG2014.2

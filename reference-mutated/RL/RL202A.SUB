@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         RL2024.2
 000200 PROGRAM-ID.                                                      RL2024.2
 000300     RL202A.                                                      RL2024.2
-000400****************************************************************  RL2024.2
-000500*                                                              *  RL2024.2
-000600*    VALIDATION FOR:-                                          *  RL2024.2
-000700*                                                              *  RL2024.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2024.2
-000900*                                                              *  RL2024.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2024.2
-001100*                                                              *  RL2024.2
-001200****************************************************************  RL2024.2
-001300*GENERAL:    THE FUNCTION OF THIS PROGRAM IS TO PROCESS A RELATIVERL2024.2
-001400*            I-O FILE RANDOMLY (ACCESS MODE IS DYNAMIC). THE FILE RL2024.2
-001500*            USED AS INPUT IS THAT FILE CREATED BY RL201.         RL2024.2
-001600*                                                                 RL2024.2
-001700*            FIRST THE FILE IS VERIFED AS TO THE EXISTANCE AND    RL2024.2
-001800*            ACCURACY OF THE 500  RECORDS CREATED IN THE FIRST    RL2024.2
-001900*            PROGRAM.  SECONDLY, RECORDS OF THE FILE ARE SEL-     RL2024.2
-002000*            ECTIVELY UPDATED; AND THIRDLY, THE ACCURACY OF EACH  RL2024.2
-002100*            RECORD IN THE FILE IS AGAIN VERIFIED.                RL2024.2
-002200*                                                                 RL2024.2
-002300*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL2024.2
-002400*            PROGRAM ARE:                                         RL2024.2
-002500*                                                                 RL2024.2
-002600*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL2024.2
-002700*                         RELATIVE  I-O DATA FILE                 RL2024.2
-002800*                 X-55   SYSTEM PRINTER                           RL2024.2
-002900*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL2024.2
-003000*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL2024.2
-003100*                 X-75   OBJECT OF VALUE OF CLAUSE                RL2024.2
-003200*                 X-82   SOURCE-COMPUTER                          RL2024.2
-003300*                 X-83   OBJECT-COMPUTER.                         RL2024.2
-003400*                                                                 RL2024.2
-003500***************************************************               RL2024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            RL2024.2
 003700 CONFIGURATION SECTION.                                           RL2024.2
 003800 SOURCE-COMPUTER.                                                 RL2024.2
@@ -315,7 +315,7 @@
 032200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2024.2
 032300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2024.2
 032400      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2024.2
-032500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2024.2
+032500*                                                                         
 032600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2024.2
 032700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2024.2
 032800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2024.2
@@ -390,7 +390,7 @@
 039700     MOVE     ZERO TO   RL-FD1-KEY.                               RL2024.2
 039800     MOVE     ZERO TO   WRK-CS-09V00-002                          RL2024.2
 039900     MOVE     ZERO  TO  WRK-CS-09V00-003                          RL2024.2
-040000*                                                                 RL2024.2
+040000*                                                                         
 040100     MOVE     01 TO REC-CT.                                       RL2024.2
 040200     MOVE    "READ RANDOM"  TO FEATURE.                           RL2024.2
 040300 REL-TEST-003-R.                                                  RL2024.2
@@ -419,9 +419,9 @@
 042600              ELSE                                                RL2024.2
 042700              PERFORM PASS.                                       RL2024.2
 042800     PERFORM PRINT-DETAIL.                                        RL2024.2
-042900*                                                                 RL2024.2
-043000*01                                                               RL2024.2
-043100*                                                                 RL2024.2
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
 043200     ADD      1 TO REC-CT.                                        RL2024.2
 043300     IF       XRECORD-NUMBER (1) NOT EQUAL TO 500                 RL2024.2
 043400              MOVE "WRONG RECORD/NOT 500" TO CORRECT-A            RL2024.2
@@ -430,9 +430,9 @@
 043700              ELSE                                                RL2024.2
 043800              PERFORM PASS.                                       RL2024.2
 043900     PERFORM PRINT-DETAIL.                                        RL2024.2
-044000*                                                                 RL2024.2
-044100*02                                                               RL2024.2
-044200*                                                                 RL2024.2
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
 044300     ADD      1 TO REC-CT.                                        RL2024.2
 044400     IF      WRK-CS-09V00-003 NOT EQUAL TO 501                    RL2024.2
 044500              MOVE "INCORRECT RECORD COUNT" TO RE-MARK            RL2024.2
@@ -442,9 +442,9 @@
 044900              ELSE                                                RL2024.2
 045000              PERFORM PASS.                                       RL2024.2
 045100     PERFORM PRINT-DETAIL.                                        RL2024.2
-045200*                                                                 RL2024.2
-045300*03                                                               RL2024.2
-045400*                                                                 RL2024.2
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
 045500     ADD      1 TO REC-CT.                                        RL2024.2
 045600     IF       I-O-ERROR-RL-FD1 EQUAL TO "YES"                     RL2024.2
 045700              MOVE WRK-CS-09V00-002 TO COMPUTED-18V0              RL2024.2
@@ -453,9 +453,9 @@
 046000              ELSE                                                RL2024.2
 046100              PERFORM PASS.                                       RL2024.2
 046200     PERFORM PRINT-DETAIL.                                        RL2024.2
-046300*                                                                 RL2024.2
-046400*04                                                               RL2024.2
-046500*                                                                 RL2024.2
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
 046600     ADD      1 TO REC-CT.                                        RL2024.2
 046700     CLOSE    RL-FD1.                                             RL2024.2
 046800 REL-INIT-004-R .                                                 RL2024.2
@@ -466,7 +466,7 @@
 047300     MOVE     ZERO TO WRK-CS-09V00-003.                           RL2024.2
 047400      MOVE    ZERO TO WRK-CS-09V00-004.                           RL2024.2
 047500      MOVE    ZERO TO WRK-CS-09V00-005.                           RL2024.2
-047600*                                                                 RL2024.2
+047600*                                                                         
 047700     MOVE     01 TO REC-CT.                                       RL2024.2
 047800     MOVE     SPACE TO  FILE-RECORD-INFO-P1-120 (1).              RL2024.2
 047900     MOVE    "REWRITE"  TO FEATURE.                               RL2024.2
@@ -495,9 +495,9 @@
 050200              GO TO REL-TEST-004-R.                               RL2024.2
 050300     PERFORM   PASS.                                              RL2024.2
 050400     PERFORM   PRINT-DETAIL.                                      RL2024.2
-050500*                                                                 RL2024.2
-050600*01                                                               RL2024.2
-050700*                                                                 RL2024.2
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
 050800     ADD     1  TO REC-CT.                                        RL2024.2
 050900     GO TO    REL-TEST-004-3.                                     RL2024.2
 051000 REL-TEST-004-2.                                                  RL2024.2
@@ -512,9 +512,9 @@
 051900              ELSE                                                RL2024.2
 052000              PERFORM PASS.                                       RL2024.2
 052100     PERFORM PRINT-DETAIL.                                        RL2024.2
-052200*                                                                 RL2024.2
-052300*02                                                               RL2024.2
-052400*                                                                 RL2024.2
+052200*                                                                         
+052300*                                                                         
+052400*                                                                         
 052500     ADD      1 TO REC-CT.                                        RL2024.2
 052600     IF       WRK-CS-09V00-005 NOT EQUAL TO ZERO                  RL2024.2
 052700              MOVE "INVALID KEY ON REWRITE" TO COMPUTED-A         RL2024.2
@@ -523,9 +523,9 @@
 053000              ELSE                                                RL2024.2
 053100              PERFORM PASS.                                       RL2024.2
 053200     PERFORM PRINT-DETAIL.                                        RL2024.2
-053300*                                                                 RL2024.2
-053400*03                                                               RL2024.2
-053500*                                                                 RL2024.2
+053300*                                                                         
+053400*                                                                         
+053500*                                                                         
 053600     ADD      1 TO REC-CT.                                        RL2024.2
 053700     CLOSE    RL-FD1.                                             RL2024.2
 053800 REL-INIT-005.                                                    RL2024.2
@@ -537,7 +537,7 @@
 054400     MOVE    ZERO TO WRK-CS-09V00-002.                            RL2024.2
 054500     MOVE     SPACE TO  FILE-RECORD-INFO-P1-120 (1).              RL2024.2
 054600     MOVE     01 TO REC-CT.                                       RL2024.2
-054700*                                                                 RL2024.2
+054700*                                                                         
 054800     MOVE    "READ RANDOM"  TO FEATURE.                           RL2024.2
 054900 REL-TEST-005-R.                                                  RL2024.2
 055000     SUBTRACT 1 FROM    WRK-CS-09V00-003.                         RL2024.2
@@ -565,7 +565,7 @@
 057200     PERFORM   PASS.                                              RL2024.2
 057300     PERFORM   PRINT-DETAIL.                                      RL2024.2
 057400     ADD      1  TO REC-CT.                                       RL2024.2
-057500*01                                                               RL2024.2
+057500*                                                                         
 057600     GO TO    REL-TEST-005-3.                                     RL2024.2
 057700 REL-TEST-005-3.                                                  RL2024.2
 057800     IF       WRK-CS-09V00-004 NOT EQUAL TO 400                   RL2024.2
@@ -576,10 +576,10 @@
 058300              ELSE                                                RL2024.2
 058400              PERFORM PASS.                                       RL2024.2
 058500     PERFORM PRINT-DETAIL.                                        RL2024.2
-058600*                                                                 RL2024.2
-058700*                                                                 RL2024.2
-058800*02                                                               RL2024.2
-058900*                                                                 RL2024.2
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
 059000     ADD      1 TO REC-CT.                                        RL2024.2
 059100     IF       WRK-CS-09V00-005 NOT EQUAL TO 100                   RL2024.2
 059200              MOVE "UPDATED RECORDS" TO COMPUTED-A                RL2024.2
@@ -589,9 +589,9 @@
 059600              ELSE                                                RL2024.2
 059700              PERFORM PASS.                                       RL2024.2
 059800     PERFORM PRINT-DETAIL.                                        RL2024.2
-059900*                                                                 RL2024.2
-060000*03                                                               RL2024.2
-060100*                                                                 RL2024.2
+059900*                                                                         
+060000*                                                                         
+060100*                                                                         
 060200     ADD      1 TO REC-CT.                                        RL2024.2
 060300     IF      WRK-CS-09V00-002 GREATER 1                           RL2024.2
 060400             MOVE WRK-CS-09V00-002 TO COMPUTED-N                  RL2024.2
@@ -600,9 +600,9 @@
 060700              ELSE                                                RL2024.2
 060800              PERFORM PASS.                                       RL2024.2
 060900     PERFORM PRINT-DETAIL.                                        RL2024.2
-061000*                                                                 RL2024.2
-061100*04                                                               RL2024.2
-061200*                                                                 RL2024.2
+061000*                                                                         
+061100*                                                                         
+061200*                                                                         
 061300     ADD      1 TO REC-CT.                                        RL2024.2
 061400     CLOSE    RL-FD1.                                             RL2024.2
 061500 CCVS-EXIT SECTION.                                               RL2024.2

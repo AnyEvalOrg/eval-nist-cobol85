@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1244.2
 000300     IF124A.                                                      IF1244.2
 000400                                                                  IF1244.2
-000500***********************************************************       IF1244.2
-000600*                                                         *       IF1244.2
-000700*   This program is intended to form part of the CCVS85   *       IF1244.2
-000800*   COBOL Test Suite. It contains tests for the           *       IF1244.2
-000900*   Intrinsic Function MOD.                               *       IF1244.2
-001000*                                                         *       IF1244.2
-001100***********************************************************       IF1244.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1244.2
 001300 CONFIGURATION SECTION.                                           IF1244.2
 001400 SOURCE-COMPUTER.                                                 IF1244.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1244.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1244.2
 002700 WORKING-STORAGE SECTION.                                         IF1244.2
-002800***********************************************************       IF1244.2
-002900* Variables specific to the Intrinsic Function Test IF124A*       IF1244.2
-003000***********************************************************       IF1244.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 5.             IF1244.2
 003200 01  B                   PIC S9(10)          VALUE 7.             IF1244.2
 003300 01  C                   PIC S9(10)          VALUE -4.            IF1244.2
@@ -36,9 +36,9 @@
 003600 01  WS-NUM              PIC S9(5)V9(6).                          IF1244.2
 003700 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1244.2
 003800 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1244.2
-003900*                                                                 IF1244.2
-004000***********************************************************       IF1244.2
-004100*                                                                 IF1244.2
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 01  TEST-RESULTS.                                                IF1244.2
 004300     02 FILLER                   PIC X      VALUE SPACE.          IF1244.2
 004400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1244.2
@@ -332,25 +332,25 @@
 033200 BAIL-OUT-EX. EXIT.                                               IF1244.2
 033300 CCVS1-EXIT.                                                      IF1244.2
 033400     EXIT.                                                        IF1244.2
-033500********************************************************          IF1244.2
-033600*                                                      *          IF1244.2
-033700*    Intrinsic Function Tests         IF124A - MOD     *          IF1244.2
-033800*                                                      *          IF1244.2
-033900********************************************************          IF1244.2
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
 034000 SECT-IF124A SECTION.                                             IF1244.2
 034100 F-MOD-INFO.                                                      IF1244.2
 034200     MOVE     "See ref. A-58 2.28" TO ANSI-REFERENCE.             IF1244.2
 034300     MOVE     "MOD Function" TO FEATURE.                          IF1244.2
-034400*****************TEST (a) - SIMPLE TEST*****************          IF1244.2
+034400*                                                                         
 034500 F-MOD-01.                                                        IF1244.2
 034600     MOVE ZERO TO WS-NUM.                                         IF1244.2
 034700 F-MOD-TEST-01.                                                   IF1244.2
 034800     COMPUTE WS-NUM = FUNCTION MOD(6, 6).                         IF1244.2
-034900     IF WS-NUM = 4 THEN                                           IF1244.2
+034900     IF WS-NUM = 1 THEN                                           IF1244.2
 035000                    PERFORM PASS                                  IF1244.2
 035100     ELSE                                                         IF1244.2
 035200                    MOVE WS-NUM TO COMPUTED-N                     IF1244.2
-035300                    MOVE 4 TO CORRECT-N                           IF1244.2
+035300                    MOVE 1 TO CORRECT-N                           IF1244.2
 035400                    PERFORM FAIL.                                 IF1244.2
 035500     GO TO F-MOD-WRITE-01.                                        IF1244.2
 035600 F-MOD-DELETE-01.                                                 IF1244.2
@@ -359,7 +359,7 @@
 035900 F-MOD-WRITE-01.                                                  IF1244.2
 036000     MOVE "F-MOD-01" TO PAR-NAME.                                 IF1244.2
 036100     PERFORM  PRINT-DETAIL.                                       IF1244.2
-036200*****************TEST (b) - SIMPLE TEST*****************          IF1244.2
+036200*                                                                         
 036300 F-MOD-02.                                                        IF1244.2
 036400     EVALUATE FUNCTION MOD(11, 5)                                 IF1244.2
 036500     WHEN 1                                                       IF1244.2
@@ -373,7 +373,7 @@
 037300 F-MOD-WRITE-02.                                                  IF1244.2
 037400     MOVE "F-MOD-02" TO PAR-NAME.                                 IF1244.2
 037500     PERFORM  PRINT-DETAIL.                                       IF1244.2
-037600*****************TEST (c) - SIMPLE TEST*****************          IF1244.2
+037600*                                                                         
 037700 F-MOD-03.                                                        IF1244.2
 037800     IF FUNCTION MOD(10, 20) = 10 THEN                            IF1244.2
 037900                    PERFORM PASS                                  IF1244.2
@@ -386,7 +386,7 @@
 038600 F-MOD-WRITE-03.                                                  IF1244.2
 038700     MOVE "F-MOD-03" TO PAR-NAME.                                 IF1244.2
 038800     PERFORM  PRINT-DETAIL.                                       IF1244.2
-038900*****************TEST (d) - SIMPLE TEST*****************          IF1244.2
+038900*                                                                         
 039000 F-MOD-04.                                                        IF1244.2
 039100     MOVE ZERO TO WS-NUM.                                         IF1244.2
 039200 F-MOD-TEST-04.                                                   IF1244.2
@@ -404,16 +404,16 @@
 040400 F-MOD-WRITE-04.                                                  IF1244.2
 040500     MOVE "F-MOD-04" TO PAR-NAME.                                 IF1244.2
 040600     PERFORM  PRINT-DETAIL.                                       IF1244.2
-040700*****************TEST (e) - SIMPLE TEST*****************          IF1244.2
+040700*                                                                         
 040800 F-MOD-05.                                                        IF1244.2
 040900     MOVE ZERO TO WS-NUM.                                         IF1244.2
 041000 F-MOD-TEST-05.                                                   IF1244.2
 041100     COMPUTE WS-NUM = FUNCTION MOD(A, -3).                        IF1244.2
-041200     IF WS-NUM = -5 THEN                                          IF1244.2
+041200     IF WS-NUM = -4 THEN                                          IF1244.2
 041300                    PERFORM PASS                                  IF1244.2
 041400     ELSE                                                         IF1244.2
 041500                    MOVE WS-NUM TO COMPUTED-N                     IF1244.2
-041600                    MOVE -5 TO CORRECT-N                          IF1244.2
+041600                    MOVE -4 TO CORRECT-N                          IF1244.2
 041700                    PERFORM FAIL.                                 IF1244.2
 041800     GO TO F-MOD-WRITE-05.                                        IF1244.2
 041900 F-MOD-DELETE-05.                                                 IF1244.2
@@ -422,7 +422,7 @@
 042200 F-MOD-WRITE-05.                                                  IF1244.2
 042300     MOVE "F-MOD-05" TO PAR-NAME.                                 IF1244.2
 042400     PERFORM  PRINT-DETAIL.                                       IF1244.2
-042500*****************TEST (f) - SIMPLE TEST*****************          IF1244.2
+042500*                                                                         
 042600 F-MOD-06.                                                        IF1244.2
 042700     MOVE ZERO TO WS-NUM.                                         IF1244.2
 042800 F-MOD-TEST-06.                                                   IF1244.2
@@ -440,7 +440,7 @@
 044000 F-MOD-WRITE-06.                                                  IF1244.2
 044100     MOVE "F-MOD-06" TO PAR-NAME.                                 IF1244.2
 044200     PERFORM  PRINT-DETAIL.                                       IF1244.2
-044300*****************TEST (g) - SIMPLE TEST*****************          IF1244.2
+044300*                                                                         
 044400 F-MOD-07.                                                        IF1244.2
 044500     MOVE ZERO TO WS-NUM.                                         IF1244.2
 044600 F-MOD-TEST-07.                                                   IF1244.2
@@ -458,7 +458,7 @@
 045800 F-MOD-WRITE-07.                                                  IF1244.2
 045900     MOVE "F-MOD-07" TO PAR-NAME.                                 IF1244.2
 046000     PERFORM  PRINT-DETAIL.                                       IF1244.2
-046100*****************TEST (h) - SIMPLE TEST*****************          IF1244.2
+046100*                                                                         
 046200 F-MOD-08.                                                        IF1244.2
 046300     MOVE ZERO TO WS-NUM.                                         IF1244.2
 046400 F-MOD-TEST-08.                                                   IF1244.2
@@ -476,16 +476,16 @@
 047600 F-MOD-WRITE-08.                                                  IF1244.2
 047700     MOVE "F-MOD-08" TO PAR-NAME.                                 IF1244.2
 047800     PERFORM  PRINT-DETAIL.                                       IF1244.2
-047900*****************TEST (i) - SIMPLE TEST*****************          IF1244.2
+047900*                                                                         
 048000 F-MOD-09.                                                        IF1244.2
 048100     MOVE ZERO TO WS-NUM.                                         IF1244.2
 048200 F-MOD-TEST-09.                                                   IF1244.2
 048300     COMPUTE WS-NUM = FUNCTION MOD(-11, 5).                       IF1244.2
-048400     IF WS-NUM = 8 THEN                                           IF1244.2
+048400     IF WS-NUM = 6 THEN                                           IF1244.2
 048500                    PERFORM PASS                                  IF1244.2
 048600     ELSE                                                         IF1244.2
 048700                    MOVE WS-NUM TO COMPUTED-N                     IF1244.2
-048800                    MOVE 8 TO CORRECT-N                           IF1244.2
+048800                    MOVE 6 TO CORRECT-N                           IF1244.2
 048900                    PERFORM FAIL.                                 IF1244.2
 049000     GO TO F-MOD-WRITE-09.                                        IF1244.2
 049100 F-MOD-DELETE-09.                                                 IF1244.2
@@ -494,7 +494,7 @@
 049400 F-MOD-WRITE-09.                                                  IF1244.2
 049500     MOVE "F-MOD-09" TO PAR-NAME.                                 IF1244.2
 049600     PERFORM  PRINT-DETAIL.                                       IF1244.2
-049700*****************TEST (a) - COMPLEX TEST****************          IF1244.2
+049700*                                                                         
 049800 F-MOD-11.                                                        IF1244.2
 049900     MOVE ZERO TO WS-NUM.                                         IF1244.2
 050000     MOVE -0.000020 TO MIN-RANGE.                                 IF1244.2
@@ -516,7 +516,7 @@
 051600 F-MOD-WRITE-11.                                                  IF1244.2
 051700     MOVE "F-MOD-11" TO PAR-NAME.                                 IF1244.2
 051800     PERFORM  PRINT-DETAIL.                                       IF1244.2
-051900*****************TEST (b) - COMPLEX TEST****************          IF1244.2
+051900*                                                                         
 052000 F-MOD-12.                                                        IF1244.2
 052100     MOVE ZERO TO WS-NUM.                                         IF1244.2
 052200     MOVE  0.999980 TO MIN-RANGE.                                 IF1244.2
@@ -538,7 +538,7 @@
 053800 F-MOD-WRITE-12.                                                  IF1244.2
 053900     MOVE "F-MOD-12" TO PAR-NAME.                                 IF1244.2
 054000     PERFORM  PRINT-DETAIL.                                       IF1244.2
-054100*****************TEST (c) - COMPLEX TEST****************          IF1244.2
+054100*                                                                         
 054200 F-MOD-13.                                                        IF1244.2
 054300     MOVE ZERO TO WS-NUM.                                         IF1244.2
 054400     MOVE  6.99986 TO MIN-RANGE.                                  IF1244.2
@@ -560,7 +560,7 @@
 056000 F-MOD-WRITE-13.                                                  IF1244.2
 056100     MOVE "F-MOD-13" TO PAR-NAME.                                 IF1244.2
 056200     PERFORM  PRINT-DETAIL.                                       IF1244.2
-056300*****************TEST (d) - COMPLEX TEST****************          IF1244.2
+056300*                                                                         
 056400 F-MOD-14.                                                        IF1244.2
 056500     MOVE ZERO TO WS-NUM.                                         IF1244.2
 056600     MOVE -2.00004 TO MIN-RANGE.                                  IF1244.2
@@ -583,7 +583,7 @@
 058300 F-MOD-WRITE-14.                                                  IF1244.2
 058400     MOVE "F-MOD-14" TO PAR-NAME.                                 IF1244.2
 058500     PERFORM  PRINT-DETAIL.                                       IF1244.2
-058600*****************TEST (e) - COMPLEX TEST****************          IF1244.2
+058600*                                                                         
 058700 F-MOD-15.                                                        IF1244.2
 058800     MOVE ZERO TO WS-NUM.                                         IF1244.2
 058900     MOVE  0.999980 TO MIN-RANGE.                                 IF1244.2
@@ -606,7 +606,7 @@
 060600 F-MOD-WRITE-15.                                                  IF1244.2
 060700     MOVE "F-MOD-15" TO PAR-NAME.                                 IF1244.2
 060800     PERFORM  PRINT-DETAIL.                                       IF1244.2
-060900*****************TEST (f) - COMPLEX TEST****************          IF1244.2
+060900*                                                                         
 061000 F-MOD-16.                                                        IF1244.2
 061100     MOVE ZERO TO WS-NUM.                                         IF1244.2
 061200     MOVE  1.99996 TO MIN-RANGE.                                  IF1244.2
@@ -629,7 +629,7 @@
 062900 F-MOD-WRITE-16.                                                  IF1244.2
 063000     MOVE "F-MOD-16" TO PAR-NAME.                                 IF1244.2
 063100     PERFORM  PRINT-DETAIL.                                       IF1244.2
-063200*****************TEST (g) - COMPLEX TEST****************          IF1244.2
+063200*                                                                         
 063300 F-MOD-17.                                                        IF1244.2
 063400     MOVE ZERO TO WS-NUM.                                         IF1244.2
 063500     MOVE  1.99996 TO MIN-RANGE.                                  IF1244.2
@@ -651,7 +651,7 @@
 065100 F-MOD-WRITE-17.                                                  IF1244.2
 065200     MOVE "F-MOD-17" TO PAR-NAME.                                 IF1244.2
 065300     PERFORM  PRINT-DETAIL.                                       IF1244.2
-065400*****************TEST (h) - COMPLEX TEST****************          IF1244.2
+065400*                                                                         
 065500 F-MOD-18.                                                        IF1244.2
 065600     MOVE ZERO TO WS-NUM.                                         IF1244.2
 065700     MOVE  0.999980 TO MIN-RANGE.                                 IF1244.2
@@ -674,7 +674,7 @@
 067400 F-MOD-WRITE-18.                                                  IF1244.2
 067500     MOVE "F-MOD-18" TO PAR-NAME.                                 IF1244.2
 067600     PERFORM  PRINT-DETAIL.                                       IF1244.2
-067700*****************TEST (i) - COMPLEX TEST****************          IF1244.2
+067700*                                                                         
 067800 F-MOD-19.                                                        IF1244.2
 067900     MOVE ZERO TO WS-NUM.                                         IF1244.2
 068000     MOVE 6.99986 TO MIN-RANGE.                                   IF1244.2
@@ -696,7 +696,7 @@
 069600 F-MOD-WRITE-19.                                                  IF1244.2
 069700     MOVE "F-MOD-19" TO PAR-NAME.                                 IF1244.2
 069800     PERFORM  PRINT-DETAIL.                                       IF1244.2
-069900*****************TEST (j) - COMPLEX TEST****************          IF1244.2
+069900*                                                                         
 070000 F-MOD-20.                                                        IF1244.2
 070100     MOVE ZERO TO WS-NUM.                                         IF1244.2
 070200     MOVE -0.000020 TO MIN-RANGE.                                 IF1244.2
@@ -718,7 +718,7 @@
 071800 F-MOD-WRITE-20.                                                  IF1244.2
 071900     MOVE "F-MOD-20" TO PAR-NAME.                                 IF1244.2
 072000     PERFORM  PRINT-DETAIL.                                       IF1244.2
-072100*****************TEST (k) - COMPLEX TEST****************          IF1244.2
+072100*                                                                         
 072200 F-MOD-21.                                                        IF1244.2
 072300     MOVE ZERO TO WS-NUM.                                         IF1244.2
 072400     MOVE 0.999980 TO MIN-RANGE.                                  IF1244.2
@@ -741,7 +741,7 @@
 074100 F-MOD-WRITE-21.                                                  IF1244.2
 074200     MOVE "F-MOD-21" TO PAR-NAME.                                 IF1244.2
 074300     PERFORM  PRINT-DETAIL.                                       IF1244.2
-074400*****************SPECIAL PERFORM TEST**********************       IF1244.2
+074400*                                                                         
 074500 F-MOD-22.                                                        IF1244.2
 074600     PERFORM F-MOD-TEST-22                                        IF1244.2
 074700       UNTIL FUNCTION MOD(5, ARG2) >= 2.                          IF1244.2
@@ -755,7 +755,7 @@
 075500 F-MOD-WRITE-22.                                                  IF1244.2
 075600     MOVE "F-MOD-22" TO PAR-NAME.                                 IF1244.2
 075700     PERFORM  PRINT-DETAIL.                                       IF1244.2
-075800********************END OF TESTS***************                   IF1244.2
+075800*                                                                         
 075900 CCVS-EXIT SECTION.                                               IF1244.2
 076000 CCVS-999999.                                                     IF1244.2
 076100     GO TO CLOSE-FILES.                                           IF1244.2

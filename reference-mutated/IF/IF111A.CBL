@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1114.2
 000300     IF111A.                                                      IF1114.2
 000400                                                                  IF1114.2
-000500***********************************************************       IF1114.2
-000600*                                                         *       IF1114.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1114.2
-000800* It contains tests for the Intrinsic Function            *       IF1114.2
-000900* INTEGER.                                                *       IF1114.2
-001000*                                                         *       IF1114.2
-001100***********************************************************       IF1114.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1114.2
 001300 CONFIGURATION SECTION.                                           IF1114.2
 001400 SOURCE-COMPUTER.                                                 IF1114.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1114.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1114.2
 002700 WORKING-STORAGE SECTION.                                         IF1114.2
-002800***********************************************************       IF1114.2
-002900* Variables specific to the Intrinsic Function Test IF111A*       IF1114.2
-003000***********************************************************       IF1114.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 500000.        IF1114.2
 003200 01  B                   PIC S9(10)          VALUE 1.             IF1114.2
 003300 01  E                   PIC S9(6)V9(5)      VALUE 399999.122.    IF1114.2
@@ -40,9 +40,9 @@
 004000     02  IND OCCURS 5 TIMES PIC 9.                                IF1114.2
 004100 01  TEMP                PIC S9(5)V9(5).                          IF1114.2
 004200 01  WS-INT              PIC S9(10).                              IF1114.2
-004300*                                                                 IF1114.2
-004400**********************************************************        IF1114.2
-004500*                                                                 IF1114.2
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
 004600 01  TEST-RESULTS.                                                IF1114.2
 004700     02 FILLER                   PIC X      VALUE SPACE.          IF1114.2
 004800     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1114.2
@@ -302,16 +302,16 @@
 030200 BAIL-OUT-EX. EXIT.                                               IF1114.2
 030300 CCVS1-EXIT.                                                      IF1114.2
 030400     EXIT.                                                        IF1114.2
-030500********************************************************          IF1114.2
-030600*                                                      *          IF1114.2
-030700*    Intrinsic Function Tests         IF111A - INTEGER    *       IF1114.2
-030800*                                                      *          IF1114.2
-030900********************************************************          IF1114.2
+030500*                                                                         
+030600*                                                                         
+030700*                                                                         
+030800*                                                                         
+030900*                                                                         
 031000 SECT-IF111A SECTION.                                             IF1114.2
 031100 F-INTEGER-INFO.                                                  IF1114.2
 031200     MOVE     "See ref. A-44 2.15" TO ANSI-REFERENCE.             IF1114.2
 031300     MOVE     "INTEGER Function"     TO FEATURE.                  IF1114.2
-031400*****************TEST (a) ******************************          IF1114.2
+031400*                                                                         
 031500 F-INTEGER-01.                                                    IF1114.2
 031600     MOVE ZERO TO WS-INT.                                         IF1114.2
 031700 F-INTEGER-TEST-01.                                               IF1114.2
@@ -329,7 +329,7 @@
 032900 F-INTEGER-WRITE-01.                                              IF1114.2
 033000     MOVE "F-INTEGER-01" TO PAR-NAME.                             IF1114.2
 033100     PERFORM  PRINT-DETAIL.                                       IF1114.2
-033200*****************TEST (b) ******************************          IF1114.2
+033200*                                                                         
 033300 F-INTEGER-02.                                                    IF1114.2
 033400     MOVE ZERO TO WS-INT.                                         IF1114.2
 033500 F-INTEGER-TEST-02.                                               IF1114.2
@@ -345,7 +345,7 @@
 034500 F-INTEGER-WRITE-02.                                              IF1114.2
 034600     MOVE "F-INTEGER-02" TO PAR-NAME.                             IF1114.2
 034700     PERFORM  PRINT-DETAIL.                                       IF1114.2
-034800*****************TEST (c) ******************************          IF1114.2
+034800*                                                                         
 034900 F-INTEGER-03.                                                    IF1114.2
 035000     MOVE ZERO TO WS-INT.                                         IF1114.2
 035100 F-INTEGER-TEST-03.                                               IF1114.2
@@ -361,7 +361,7 @@
 036100 F-INTEGER-WRITE-03.                                              IF1114.2
 036200     MOVE "F-INTEGER-03" TO PAR-NAME.                             IF1114.2
 036300     PERFORM  PRINT-DETAIL.                                       IF1114.2
-036400*****************TEST (d) ******************************          IF1114.2
+036400*                                                                         
 036500 F-INTEGER-04.                                                    IF1114.2
 036600     MOVE ZERO TO WS-INT.                                         IF1114.2
 036700 F-INTEGER-TEST-04.                                               IF1114.2
@@ -379,7 +379,7 @@
 037900 F-INTEGER-WRITE-04.                                              IF1114.2
 038000     MOVE "F-INTEGER-04" TO PAR-NAME.                             IF1114.2
 038100     PERFORM  PRINT-DETAIL.                                       IF1114.2
-038200*****************TEST (e) ******************************          IF1114.2
+038200*                                                                         
 038300 F-INTEGER-05.                                                    IF1114.2
 038400     MOVE ZERO TO WS-INT.                                         IF1114.2
 038500 F-INTEGER-TEST-05.                                               IF1114.2
@@ -397,7 +397,7 @@
 039700 F-INTEGER-WRITE-05.                                              IF1114.2
 039800     MOVE "F-INTEGER-05" TO PAR-NAME.                             IF1114.2
 039900     PERFORM  PRINT-DETAIL.                                       IF1114.2
-040000*****************TEST (f) ******************************          IF1114.2
+040000*                                                                         
 040100 F-INTEGER-06.                                                    IF1114.2
 040200     MOVE ZERO TO WS-INT.                                         IF1114.2
 040300 F-INTEGER-TEST-06.                                               IF1114.2
@@ -415,15 +415,15 @@
 041500 F-INTEGER-WRITE-06.                                              IF1114.2
 041600     MOVE "F-INTEGER-06" TO PAR-NAME.                             IF1114.2
 041700     PERFORM  PRINT-DETAIL.                                       IF1114.2
-041800*****************TEST (g) ******************************          IF1114.2
+041800*                                                                         
 041900 F-INTEGER-07.                                                    IF1114.2
 042000     MOVE ZERO TO WS-INT.                                         IF1114.2
 042100 F-INTEGER-TEST-07.                                               IF1114.2
 042200     COMPUTE WS-INT = FUNCTION INTEGER(230492.4828).              IF1114.2
-042300     IF WS-INT = 235492 THEN                                      IF1114.2
+042300     IF WS-INT = 232492 THEN                                      IF1114.2
 042400                    PERFORM PASS                                  IF1114.2
 042500     ELSE                                                         IF1114.2
-042600                    MOVE  235492  TO CORRECT-N                    IF1114.2
+042600                    MOVE  232492  TO CORRECT-N                    IF1114.2
 042700                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 042800                    PERFORM FAIL.                                 IF1114.2
 042900     GO TO F-INTEGER-WRITE-07.                                    IF1114.2
@@ -433,7 +433,7 @@
 043300 F-INTEGER-WRITE-07.                                              IF1114.2
 043400     MOVE "F-INTEGER-07" TO PAR-NAME.                             IF1114.2
 043500     PERFORM  PRINT-DETAIL.                                       IF1114.2
-043600*****************TEST (h) ******************************          IF1114.2
+043600*                                                                         
 043700 F-INTEGER-08.                                                    IF1114.2
 043800     MOVE ZERO TO WS-INT.                                         IF1114.2
 043900 F-INTEGER-TEST-08.                                               IF1114.2
@@ -451,15 +451,15 @@
 045100 F-INTEGER-WRITE-08.                                              IF1114.2
 045200     MOVE "F-INTEGER-08" TO PAR-NAME.                             IF1114.2
 045300     PERFORM  PRINT-DETAIL.                                       IF1114.2
-045400*****************TEST (i) ******************************          IF1114.2
+045400*                                                                         
 045500 F-INTEGER-09.                                                    IF1114.2
 045600     MOVE ZERO TO WS-INT.                                         IF1114.2
 045700 F-INTEGER-TEST-09.                                               IF1114.2
 045800     COMPUTE WS-INT = FUNCTION INTEGER(A).                        IF1114.2
-045900     IF WS-INT = 500003 THEN                                      IF1114.2
+045900     IF WS-INT = 500030 THEN                                      IF1114.2
 046000                    PERFORM PASS                                  IF1114.2
 046100     ELSE                                                         IF1114.2
-046200                    MOVE  500003  TO CORRECT-N                    IF1114.2
+046200                    MOVE  500030  TO CORRECT-N                    IF1114.2
 046300                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 046400                    PERFORM FAIL.                                 IF1114.2
 046500     GO TO F-INTEGER-WRITE-09.                                    IF1114.2
@@ -469,7 +469,7 @@
 046900 F-INTEGER-WRITE-09.                                              IF1114.2
 047000     MOVE "F-INTEGER-09" TO PAR-NAME.                             IF1114.2
 047100     PERFORM  PRINT-DETAIL.                                       IF1114.2
-047200*****************TEST (j) ******************************          IF1114.2
+047200*                                                                         
 047300 F-INTEGER-10.                                                    IF1114.2
 047400     MOVE ZERO TO WS-INT.                                         IF1114.2
 047500 F-INTEGER-TEST-10.                                               IF1114.2
@@ -487,7 +487,7 @@
 048700 F-INTEGER-WRITE-10.                                              IF1114.2
 048800     MOVE "F-INTEGER-10" TO PAR-NAME.                             IF1114.2
 048900     PERFORM  PRINT-DETAIL.                                       IF1114.2
-049000*****************TEST (k) ******************************          IF1114.2
+049000*                                                                         
 049100 F-INTEGER-11.                                                    IF1114.2
 049200     MOVE ZERO TO WS-INT.                                         IF1114.2
 049300 F-INTEGER-TEST-11.                                               IF1114.2
@@ -505,7 +505,7 @@
 050500 F-INTEGER-WRITE-11.                                              IF1114.2
 050600     MOVE "F-INTEGER-11" TO PAR-NAME.                             IF1114.2
 050700     PERFORM  PRINT-DETAIL.                                       IF1114.2
-050800*****************TEST (l) ******************************          IF1114.2
+050800*                                                                         
 050900 F-INTEGER-12.                                                    IF1114.2
 051000     MOVE ZERO TO WS-INT.                                         IF1114.2
 051100 F-INTEGER-TEST-12.                                               IF1114.2
@@ -523,15 +523,15 @@
 052300 F-INTEGER-WRITE-12.                                              IF1114.2
 052400     MOVE "F-INTEGER-12" TO PAR-NAME.                             IF1114.2
 052500     PERFORM  PRINT-DETAIL.                                       IF1114.2
-052600*****************TEST (m) ******************************          IF1114.2
+052600*                                                                         
 052700 F-INTEGER-13.                                                    IF1114.2
 052800     MOVE ZERO TO WS-INT.                                         IF1114.2
 052900 F-INTEGER-TEST-13.                                               IF1114.2
 053000     COMPUTE WS-INT = FUNCTION INTEGER(IND(2)).                   IF1114.2
-053100     IF WS-INT = 7 THEN                                           IF1114.2
+053100     IF WS-INT = 5 THEN                                           IF1114.2
 053200                    PERFORM PASS                                  IF1114.2
 053300     ELSE                                                         IF1114.2
-053400                    MOVE  7  TO CORRECT-N                         IF1114.2
+053400                    MOVE  5  TO CORRECT-N                         IF1114.2
 053500                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 053600                    PERFORM FAIL.                                 IF1114.2
 053700     GO TO F-INTEGER-WRITE-13.                                    IF1114.2
@@ -541,7 +541,7 @@
 054100 F-INTEGER-WRITE-13.                                              IF1114.2
 054200     MOVE "F-INTEGER-13" TO PAR-NAME.                             IF1114.2
 054300     PERFORM  PRINT-DETAIL.                                       IF1114.2
-054400*****************TEST (n) ******************************          IF1114.2
+054400*                                                                         
 054500 F-INTEGER-14.                                                    IF1114.2
 054600     MOVE ZERO TO WS-INT.                                         IF1114.2
 054700 F-INTEGER-TEST-14.                                               IF1114.2
@@ -559,7 +559,7 @@
 055900 F-INTEGER-WRITE-14.                                              IF1114.2
 056000     MOVE "F-INTEGER-14" TO PAR-NAME.                             IF1114.2
 056100     PERFORM  PRINT-DETAIL.                                       IF1114.2
-056200*****************TEST (o) ******************************          IF1114.2
+056200*                                                                         
 056300 F-INTEGER-15.                                                    IF1114.2
 056400     MOVE ZERO TO WS-INT.                                         IF1114.2
 056500 F-INTEGER-TEST-15.                                               IF1114.2
@@ -577,7 +577,7 @@
 057700 F-INTEGER-WRITE-15.                                              IF1114.2
 057800     MOVE "F-INTEGER-15" TO PAR-NAME.                             IF1114.2
 057900     PERFORM  PRINT-DETAIL.                                       IF1114.2
-058000*****************TEST (p) ******************************          IF1114.2
+058000*                                                                         
 058100 F-INTEGER-16.                                                    IF1114.2
 058200     MOVE ZERO TO WS-INT.                                         IF1114.2
 058300 F-INTEGER-TEST-16.                                               IF1114.2
@@ -595,7 +595,7 @@
 059500 F-INTEGER-WRITE-16.                                              IF1114.2
 059600     MOVE "F-INTEGER-16" TO PAR-NAME.                             IF1114.2
 059700     PERFORM  PRINT-DETAIL.                                       IF1114.2
-059800*****************TEST (q) ******************************          IF1114.2
+059800*                                                                         
 059900 F-INTEGER-17.                                                    IF1114.2
 060000     MOVE ZERO TO WS-INT.                                         IF1114.2
 060100 F-INTEGER-TEST-17.                                               IF1114.2
@@ -613,7 +613,7 @@
 061300 F-INTEGER-WRITE-17.                                              IF1114.2
 061400     MOVE "F-INTEGER-17" TO PAR-NAME.                             IF1114.2
 061500     PERFORM  PRINT-DETAIL.                                       IF1114.2
-061600*****************TEST (r) ******************************          IF1114.2
+061600*                                                                         
 061700 F-INTEGER-18.                                                    IF1114.2
 061800     MOVE ZERO TO WS-INT.                                         IF1114.2
 061900 F-INTEGER-TEST-18.                                               IF1114.2
@@ -631,7 +631,7 @@
 063100 F-INTEGER-WRITE-18.                                              IF1114.2
 063200     MOVE "F-INTEGER-18" TO PAR-NAME.                             IF1114.2
 063300     PERFORM  PRINT-DETAIL.                                       IF1114.2
-063400*****************TEST (s) ******************************          IF1114.2
+063400*                                                                         
 063500 F-INTEGER-19.                                                    IF1114.2
 063600     MOVE ZERO TO WS-INT.                                         IF1114.2
 063700 F-INTEGER-TEST-19.                                               IF1114.2
@@ -649,7 +649,7 @@
 064900 F-INTEGER-WRITE-19.                                              IF1114.2
 065000     MOVE "F-INTEGER-19" TO PAR-NAME.                             IF1114.2
 065100     PERFORM  PRINT-DETAIL.                                       IF1114.2
-065200*****************TEST (t) ******************************          IF1114.2
+065200*                                                                         
 065300 F-INTEGER-20.                                                    IF1114.2
 065400     MOVE ZERO TO TEMP.                                           IF1114.2
 065500 F-INTEGER-TEST-20.                                               IF1114.2
@@ -668,7 +668,7 @@
 066800 F-INTEGER-WRITE-20.                                              IF1114.2
 066900     MOVE "F-INTEGER-20" TO PAR-NAME.                             IF1114.2
 067000     PERFORM  PRINT-DETAIL.                                       IF1114.2
-067100*****************TEST (u) ******************************          IF1114.2
+067100*                                                                         
 067200 F-INTEGER-21.                                                    IF1114.2
 067300     MOVE ZERO TO WS-INT.                                         IF1114.2
 067400 F-INTEGER-TEST-21.                                               IF1114.2
@@ -686,7 +686,7 @@
 068600 F-INTEGER-WRITE-21.                                              IF1114.2
 068700     MOVE "F-INTEGER-21" TO PAR-NAME.                             IF1114.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1114.2
-068900*****************TEST (v) ******************************          IF1114.2
+068900*                                                                         
 069000 F-INTEGER-22.                                                    IF1114.2
 069100     MOVE ZERO TO WS-INT.                                         IF1114.2
 069200 F-INTEGER-TEST-22.                                               IF1114.2
@@ -705,9 +705,9 @@
 070500 F-INTEGER-WRITE-22.                                              IF1114.2
 070600     MOVE "F-INTEGER-22" TO PAR-NAME.                             IF1114.2
 070700     PERFORM  PRINT-DETAIL.                                       IF1114.2
-070800***************** SPECIAL TEST 1 ***********************          IF1114.2
+070800*                                                                         
 070900 F-DATEOFINT-23.                                                  IF1114.2
-071000*** ARG1:=4.4 ***                                                 IF1114.2
+071000*                                                                         
 071100     PERFORM F-DATEOFINT-TEST-23                                  IF1114.2
 071200             UNTIL FUNCTION INTEGER(ARG1) < 0.                    IF1114.2
 071300     IF ARG1 < 0 THEN                                             IF1114.2
@@ -715,17 +715,17 @@
 071500     ELSE                                                         IF1114.2
 071600                            PERFORM FAIL.                         IF1114.2
 071700     GO TO F-DATEOFINT-WRITE-23.                                  IF1114.2
-071800*                                                                 IF1114.2
+071800*                                                                         
 071900 F-DATEOFINT-TEST-23.                                             IF1114.2
 072000     COMPUTE ARG1 = ARG1 - 1.                                     IF1114.2
-072100*                                                                 IF1114.2
+072100*                                                                         
 072200 F-DATEOFINT-DELETE-23.                                           IF1114.2
 072300     PERFORM  DE-LETE.                                            IF1114.2
 072400     GO TO    F-DATEOFINT-WRITE-23.                               IF1114.2
 072500 F-DATEOFINT-WRITE-23.                                            IF1114.2
 072600     MOVE "F-DATEOFINT-23" TO PAR-NAME.                           IF1114.2
 072700     PERFORM  PRINT-DETAIL.                                       IF1114.2
-072800*******************END OF TESTS**************************         IF1114.2
+072800*                                                                         
 072900 CCVS-EXIT SECTION.                                               IF1114.2
 073000 CCVS-999999.                                                     IF1114.2
 073100     GO TO CLOSE-FILES.                                           IF1114.2

@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1404.2
 000200 PROGRAM-ID.                                                      NC1404.2
 000300     NC140A.                                                      NC1404.2
-000400****************************************************************  NC1404.2
-000500*                                                              *  NC1404.2
-000600*    VALIDATION FOR:-                                          *  NC1404.2
-000700*                                                              *  NC1404.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1404.2
-000900*                                                              *  NC1404.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1404.2
-001100*                                                              *  NC1404.2
-001200****************************************************************  NC1404.2
-001300*                                                              *  NC1404.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1404.2
-001500*                                                              *  NC1404.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1404.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1404.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1404.2
-001900*                                                              *  NC1404.2
-002000****************************************************************  NC1404.2
-002100*                                                                 NC1404.2
-002200*    PROGRAM NC140A TESTS FORMAT 2 OF THE "SET" STATEMENT         NC1404.2
-002300*    USING A VARIETY OF DATA-NAMES CONTAINING POSITIVE AND        NC1404.2
-002400*    NEGATIVE VALUES, AS WELL AS POSITIVE AND NEGATIVE INTEGERS.  NC1404.2
-002500*                                                                 NC1404.2
-002600****************************************************************  NC1404.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1404.2
 002800 CONFIGURATION SECTION.                                           NC1404.2
 002900 SOURCE-COMPUTER.                                                 NC1404.2
@@ -43,7 +43,7 @@
 004300 01  GRP-TABLE1.                                                  NC1404.2
 004400     02  ELEM1  PIC S999    OCCURS 100 TIMES                      NC1404.2
 004500              INDEXED BY INDEX1.                                  NC1404.2
-004600*    TWO DIMENSIONAL TABLE.                                       NC1404.2
+004600*                                                                         
 004700 01  GRP-TABLE2.                                                  NC1404.2
 004800     02  GROUP1    OCCURS 10 TIMES                                NC1404.2
 004900              INDEXED BY IN1.                                     NC1404.2
@@ -51,12 +51,12 @@
 005100              USAGE IS COMPUTATIONAL                              NC1404.2
 005200              OCCURS 10 TIMES                                     NC1404.2
 005300              INDEXED BY IN2.                                     NC1404.2
-005400*    SUBSCRIPTS FOR TABLE REFERENCES.                             NC1404.2
+005400*                                                                         
 005500 01  GRP-SUB.                                                     NC1404.2
 005600     02  S1  PIC  S999  VALUE 1.                                  NC1404.2
 005700     02  S21 PIC  S999  VALUE 1.                                  NC1404.2
 005800     02  S22 PIC  S999  VALUE 1.                                  NC1404.2
-005900*    DATA ITEMS USED IN SET STATEMENTS, FORMAT 2.                 NC1404.2
+005900*                                                                         
 006000 77  CS-3     PICTURE S999    COMPUTATIONAL   VALUE ZERO.         NC1404.2
 006100 77  CU-3     PICTURE  999    COMPUTATIONAL   VALUE ZERO.         NC1404.2
 006200 77  DS-3     PICTURE S999    DISPLAY         VALUE ZERO.         NC1404.2
@@ -255,7 +255,7 @@
 025700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1404.2
 025800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1404.2
 025900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1404.2
-026000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1404.2
+026000*                                                                         
 026100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1404.2
 026200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1404.2
 026300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1404.2
@@ -327,18 +327,18 @@
 032900 BAIL-OUT-EX. EXIT.                                               NC1404.2
 033000 CCVS1-EXIT.                                                      NC1404.2
 033100     EXIT.                                                        NC1404.2
-033200**********************************                                NC1404.2
-033300*STATEMENT DELETION INSTRUCTIONS                                  NC1404.2
-033400*       IF THE COMPILER REJECTS ANY SET STATEMENTS IN THESE TESTS,NC1404.2
-033500*    DELETE THAT LINE OF CODE BY PLACING AN * IN COLUMN 7.  LEAVE NC1404.2
-033600*    THE PERFORM ... THRU STATEMENT.  THE TEST DELETED APPEARS AS NC1404.2
-033700*    A FAILURE ON THE OUTPUT REPORT.                              NC1404.2
-033800**********************************                                NC1404.2
+033200*                                                                         
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
 033900 SECT-NC140A-0001 SECTION.                                        NC1404.2
 034000 NC140A-0001.                                                     NC1404.2
 034100     MOVE "VI-127 6.22.4" TO ANSI-REFERENCE.                      NC1404.2
-034200*    THIS SECTION STORES VALUES IN THE TWO TABLES                 NC1404.2
-034300*    USED IN TESTING THE INDEX VALUES.                            NC1404.2
+034200*                                                                         
+034300*                                                                         
 034400 MOVE-VALUE.                                                      NC1404.2
 034500     ADD 1 TO WRK1.                                               NC1404.2
 034600     MOVE WRK1 TO ELEM1 (S1) ELEM2 (S21 S22).                     NC1404.2
@@ -355,9 +355,9 @@
 035700 SECT-TH111-0002 SECTION.                                         NC1404.2
 035800 SET-INIT-001.                                                    NC1404.2
 035900     MOVE ZERO TO REC-CT.                                         NC1404.2
-036000*        THIS TEST VERIFIES THAT THE SET INDEX-NAME UP BY INTEGER NC1404.2
-036100*    FUNCTIONS CORRECTLY. THE INTEGER MAY BE POSITIVE, NEGATIVE,  NC1404.2
-036200*    OR UNSIGNED.                                                 NC1404.2
+036000*                                                                         
+036100*                                                                         
+036200*                                                                         
 036300     MOVE ZERO TO TEMP.                                           NC1404.2
 036400     MOVE 6 TO EXPECTED-VALUE.                                    NC1404.2
 036500     MOVE "SET IN UP BY INTEGER" TO FEATURE.                      NC1404.2
@@ -415,9 +415,9 @@
 041700     MOVE ZERO TO TEMP.                                           NC1404.2
 041800     MOVE 54 TO EXPECTED-VALUE.                                   NC1404.2
 041900     MOVE "SET IN DOWN BY INTEG" TO FEATURE.                      NC1404.2
-042000*       THIS TEST VERIFIES THAT THE SET INDEX-NAME DOWN BY        NC1404.2
-042100*    INTEGER FUNCTIONS CORRECTLY.  THE INTEGER MAY BE POSITIVE,   NC1404.2
-042200*    NEGATIVE, OR UNSIGNED.                                       NC1404.2
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
 042300 SET-TEST-002-01.                                                 NC1404.2
 042400     SET INDEX1 TO 95.                                            NC1404.2
 042500     SET INDEX1 DOWN BY 41.                                       NC1404.2
@@ -475,10 +475,10 @@
 047700     MOVE ZERO TO TEMP.                                           NC1404.2
 047800     MOVE 39 TO EXPECTED-VALUE.                                   NC1404.2
 047900     MOVE "SET IN UP BY DATA-NM" TO FEATURE.                      NC1404.2
-048000*        THIS TEST VERIFIES THAT THE SET INDEX-NAME UP BY         NC1404.2
-048100*    DATA-NAME FUNCTIONS CORRECTLY.  THE VALUE STORED IN DATA-NAMENC1404.2
-048200*    MAY BE POSITIVE, NEGATIVE OR ZERO.  VARIOUS DATA TYPES ARE   NC1404.2
-048300*    USED IN THE TEST.                                            NC1404.2
+048000*                                                                         
+048100*                                                                         
+048200*                                                                         
+048300*                                                                         
 048400 SET-TEST-003-01.                                                 NC1404.2
 048500     SET INDEX1 TO 21.                                            NC1404.2
 048600     MOVE +18 TO CS-3.                                            NC1404.2
@@ -602,10 +602,10 @@
 060400     MOVE ZERO TO TEMP.                                           NC1404.2
 060500     MOVE 77 TO EXPECTED-VALUE.                                   NC1404.2
 060600     MOVE "SET IN DOWN BY DNAME" TO FEATURE.                      NC1404.2
-060700*        THIS TEST VERIFIES THAT THE SET INDEX-NAME DOWN BY       NC1404.2
-060800*    DATA-NAME FUNCTIONS CORRECTLY.  THE VALUE STORED IN DATA-NAMENC1404.2
-060900*    MAY BE POSITIVE, NEGATIVE OR ZERO.  VARIOUS DATA TYPES ARE   NC1404.2
-061000*    USED IN THE TEST.                                            NC1404.2
+060700*                                                                         
+060800*                                                                         
+060900*                                                                         
+061000*                                                                         
 061100 SET-TEST-004-01.                                                 NC1404.2
 061200     SET INDEX1 TO 100.                                           NC1404.2
 061300     MOVE +23 TO CS-3.                                            NC1404.2

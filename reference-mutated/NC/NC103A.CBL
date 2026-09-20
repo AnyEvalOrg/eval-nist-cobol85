@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC1034.2
 000200 PROGRAM-ID.                                                      NC1034.2
 000300     NC103A.                                                      NC1034.2
-000400****************************************************************  NC1034.2
-000500*                                                              *  NC1034.2
-000600*    VALIDATION FOR:-                                          *  NC1034.2
-000700*                                                              *  NC1034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1034.2
-000900*                                                              *  NC1034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1034.2
-001100*                                                              *  NC1034.2
-001200****************************************************************  NC1034.2
-001300*                                                              *  NC1034.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1034.2
-001500*                                                              *  NC1034.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1034.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1034.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1034.2
-001900*                                                              *  NC1034.2
-002000****************************************************************  NC1034.2
-002100*                                                                 NC1034.2
-002200*    PROGRAM NC103A TESTS THE GENERAL FORMAT OF THE "IF"          NC1034.2
-002300*    STATEMENT AND  "NEXT SENTENCE".                              NC1034.2
-002400*                                                                 NC1034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC1034.2
 002600 CONFIGURATION SECTION.                                           NC1034.2
 002700 SOURCE-COMPUTER.                                                 NC1034.2
@@ -414,7 +414,7 @@
 041600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1034.2
 041700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1034.2
 041800      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1034.2
-041900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1034.2
+041900*                                                                         
 042000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1034.2
 042100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1034.2
 042200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1034.2
@@ -1222,8 +1222,8 @@
 122400              PERFORM FAIL                                        NC1034.2
 122500              ELSE                                                NC1034.2
 122600              PERFORM PASS.                                       NC1034.2
-122700*        THIS TEST ASSUMES THAT BLANK PRECEDES THE LETTERS OF     NC1034.2
-122800*    THE ALPHABET IN THE COLLATING SEQUENCE.                      NC1034.2
+122700*                                                                         
+122800*                                                                         
 122900     GO TO    IF--WRITE-GF-50.                                    NC1034.2
 123000 IF--DELETE-GF-50.                                                NC1034.2
 123100     PERFORM  DE-LETE.                                            NC1034.2
@@ -2040,8 +2040,8 @@
 204200     MOVE     "COMPARE NUM VS ALPH" TO FEATURE.                   NC1034.2
 204300     MOVE     "IF--TEST-GF-97" TO PAR-NAME.                       NC1034.2
 204400     PERFORM  PRINT-DETAIL.                                       NC1034.2
-204500*                                                                 NC1034.2
-204600*                                                                 NC1034.2
+204500*                                                                         
+204600*                                                                         
 204700 IF--INIT-GF-98.                                                  NC1034.2
 204800     MOVE  "V1-89 6.15.4 GR2" TO ANSI-REFERENCE.                  NC1034.2
 204900     MOVE   -123456789012345678  TO WRK-DS-18V0-1.                NC1034.2
@@ -2057,10 +2057,10 @@
 205900     MOVE "EQUAL - NO TO" TO FEATURE.                             NC1034.2
 206000     MOVE "PSEUDO-MOVE TO STRIP MINUS SIGN" TO RE-MARK.           NC1034.2
 206100     PERFORM PRINT-DETAIL.                                        NC1034.2
-206200*                                                                 NC1034.2
-206300*                                                                 NC1034.2
+206200*                                                                         
+206300*                                                                         
 206400 IF--INIT-GF-99.                                                  NC1034.2
-206500*    ==--> OPTIONAL WORD "THEN" <--==                             NC1034.2
+206500*                                                                         
 206600     MOVE  "COMPARE--EQUAL" TO FEATURE.                           NC1034.2
 206700     MOVE  "V1-89 6.15.2  " TO ANSI-REFERENCE.                    NC1034.2
 206800     MOVE   0 TO IF-D1.                                           NC1034.2
@@ -2075,10 +2075,10 @@
 207700 IF--WRITE-GF-99.                                                 NC1034.2
 207800     MOVE  "IF--TEST-GF-99" TO PAR-NAME.                          NC1034.2
 207900     PERFORM PRINT-DETAIL.                                        NC1034.2
-208000*                                                                 NC1034.2
-208100*                                                                 NC1034.2
+208000*                                                                         
+208100*                                                                         
 208200 IF--INIT-GF-100.                                                 NC1034.2
-208300*    ==-->  EXPLICIT SCOPE TERMINATOR  <--==                      NC1034.2
+208300*                                                                         
 208400     MOVE   "V1-89 6.4.3  " TO ANSI-REFERENCE.                    NC1034.2
 208500     MOVE    ZERO TO WRK-DU-02V00.                                NC1034.2
 208600     MOVE    ZERO TO IF-D2.                                       NC1034.2
@@ -2108,12 +2108,12 @@
 211000 IF--WRITE-GF-100-2.                                              NC1034.2
 211100     MOVE "IF--TEST-GF-100-2" TO PAR-NAME.                        NC1034.2
 211200     PERFORM PRINT-DETAIL.                                        NC1034.2
-211300*                                                                 NC1034.2
-211400*                                                                 NC1034.2
+211300*                                                                         
+211400*                                                                         
 211500 IF--INIT-GF-101.                                                 NC1034.2
 211600     MOVE    " BABBAGE" TO IF-D38.                                NC1034.2
 211700 IF--TEST-GF-101.                                                 NC1034.2
-211800*    ==-->  EXPLICIT SCOPE TERMINATOR  <--==                      NC1034.2
+211800*                                                                         
 211900     MOVE   "V1-89 6.4.3  " TO ANSI-REFERENCE.                    NC1034.2
 212000     IF       IF-D38  EQUAL TO " BABBAGE            "             NC1034.2
 212100              PERFORM PASS                                        NC1034.2
@@ -2130,8 +2130,8 @@
 213200 IF--WRITE-GF-101.                                                NC1034.2
 213300     MOVE     "IF--TEST-GF-101" TO PAR-NAME.                      NC1034.2
 213400     PERFORM  PRINT-DETAIL.                                       NC1034.2
-213500*                                                                 NC1034.2
-213600*                                                                 NC1034.2
+213500*                                                                         
+213600*                                                                         
 213700 CCVS-EXIT SECTION.                                               NC1034.2
 213800 CCVS-999999.                                                     NC1034.2
 213900     GO TO CLOSE-FILES.                                           NC1034.2

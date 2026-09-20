@@ -1,29 +1,29 @@
 000100 identification division.                                         NC1274.2
 000200 program-id.                                                      NC1274.2
 000300     nc127A.                                                      NC1274.2
-000400****************************************************************  NC1274.2
-000500*                                                              *  NC1274.2
-000600*    VALIDATION FOR:-                                          *  NC1274.2
-000700*                                                              *  NC1274.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1274.2
-000900*                                                              *  NC1274.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1274.2
-001100*                                                              *  NC1274.2
-001200****************************************************************  NC1274.2
-001300*                                                              *  NC1274.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1274.2
-001500*                                                              *  NC1274.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1274.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1274.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1274.2
-001900*                                                              *  NC1274.2
-002000****************************************************************  NC1274.2
-002100*                                                                 NC1274.2
-002200*   program nc127a is written using lower case letters            NC1274.2
-002300*   throughout, with the exception of standard COBOL text         NC1274.2
-002400*   which is copied into every CCVS8x program from a library      NC1274.2
-002500*   and some alphanumeric literals.                               NC1274.2
-002600*                                                                 NC1274.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 environment division.                                            NC1274.2
 002800 configuration section.                                           NC1274.2
 002900 source-computer.                                                 NC1274.2
@@ -230,7 +230,7 @@
 023200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1274.2
 023300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1274.2
 023400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1274.2
-023500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1274.2
+023500*                                                                         
 023600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1274.2
 023700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1274.2
 023800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1274.2

@@ -1,97 +1,97 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1234.2
 000200 PROGRAM-ID.                                                      SQ1234.2
 000300     SQ123A.                                                      SQ1234.2
-000400****************************************************************  SQ1234.2
-000500*                                                              *  SQ1234.2
-000600*    VALIDATION FOR:-                                          *  SQ1234.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1234.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ1234.2
-000900*                             REVISED 1986, AUGUST             *  SQ1234.2
-001000*                                                              *  SQ1234.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ1234.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1234.2
-001300*                                                              *  SQ1234.2
-001400****************************************************************  SQ1234.2
-001500*                                                              *  SQ1234.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1234.2
-001700*                                                              *  SQ1234.2
-001800*            X-14   SEQUENTIAL NON-UNIT MASS STORAGE FILE      *  SQ1234.2
-001900*            X-55   SYSTEM PRINTER                             *  SQ1234.2
-002000*            X-82   SOURCE-COMPUTER                            *  SQ1234.2
-002100*            X-83   OBJECT-COMPUTER.                           *  SQ1234.2
-002200*                                                              *  SQ1234.2
-002300****************************************************************  SQ1234.2
-002400*                                                              *  SQ1234.2
-002500*    THIS PROGRAM OPENS FOR OUTPUT A FILE WHICH IS ASSIGNED    *  SQ1234.2
-002600*    TO A MEDIUM WHICH IS NOT A REEL/UNIT MEDIUM.  A CLOSE     *  SQ1234.2
-002700*    REEL STATEMENT IS EXECUTED.  THIS SHOULD HAVE NO EFFECT   *  SQ1234.2
-002800*    ON THE FILE, EXCEPT TO CAUSE I-O STATUS 07.  THE FILE     *  SQ1234.2
-002900*    SHOULD REMAIN OPEN.  A NORMAL, UNQUALIFIED, CLOSE         *  SQ1234.2
-003000*    STATEMENT IS THEN EXECUTED, WHICH SHOULD BE SUCCESSFUL    *  SQ1234.2
-003100*    AND CLOSE THE FILE.  THERE IS AN ERROR DECLARATIVE FOR    *  SQ1234.2
-003200*    THE FILE, WHICH SHOULD NOT BE ENTERED.                    *  SQ1234.2
-003300*                                                              *  SQ1234.2
-003400****************************************************************  SQ1234.2
-003500*                                                                 SQ1234.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            SQ1234.2
 003700 CONFIGURATION SECTION.                                           SQ1234.2
 003800 SOURCE-COMPUTER.                                                 SQ1234.2
 003900     GNU-Linux.                                                   SQ1234.2
 004000 OBJECT-COMPUTER.                                                 SQ1234.2
 004100     GNU-Linux.                                                   SQ1234.2
-004200*                                                                 SQ1234.2
+004200*                                                                         
 004300 INPUT-OUTPUT SECTION.                                            SQ1234.2
 004400 FILE-CONTROL.                                                    SQ1234.2
 004500     SELECT PRINT-FILE ASSIGN TO                                  SQ1234.2
 004600     "REPORT".                                                    SQ1234.2
-004700*                                                                 SQ1234.2
+004700*                                                                         
 005400     SELECT SQ-FS4 ASSIGN                                         SQ1234.2
 005500     "XXXXX014"                                                   SQ1234.2
 005600            SEQUENTIAL                                            SQ1234.2
 005700            ACCESS IS SEQUENTIAL                                  SQ1234.2
 005800            STATUS IS SQ-FS4-STATUS.                              SQ1234.2
-005900*                                                                 SQ1234.2
-006000*                                                                 SQ1234.2
+005900*                                                                         
+006000*                                                                         
 006100 DATA DIVISION.                                                   SQ1234.2
 006200 FILE SECTION.                                                    SQ1234.2
 006300 FD  PRINT-FILE                                                   SQ1234.2
 006700               .                                                  SQ1234.2
 006800 01  PRINT-REC    PICTURE X(120).                                 SQ1234.2
 006900 01  DUMMY-RECORD PICTURE X(120).                                 SQ1234.2
-008500*                                                                 SQ1234.2
+008500*                                                                         
 008600 FD  SQ-FS4                                                       SQ1234.2
 008800                .                                                 SQ1234.2
 008900 01  SQ-FS4R1-F-G-120  PIC X(120).                                SQ1234.2
-009000*                                                                 SQ1234.2
+009000*                                                                         
 009100 WORKING-STORAGE SECTION.                                         SQ1234.2
-009200*                                                                 SQ1234.2
-009300***************************************************************   SQ1234.2
-009400*                                                             *   SQ1234.2
-009500*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1234.2
-009600*                                                             *   SQ1234.2
-009700***************************************************************   SQ1234.2
-009800*                                                                 SQ1234.2
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
 009900 01  SQ-FS4-STATUS.                                               SQ1234.2
 010000   03  SQ-FS4-KEY-1   PIC X.                                      SQ1234.2
 010100   03  SQ-FS4-KEY-2   PIC X.                                      SQ1234.2
-010200*                                                                 SQ1234.2
+010200*                                                                         
 010300 01  DELETE-SW.                                                   SQ1234.2
 010400     03  DELETE-SW-1 PIC X.                                       SQ1234.2
 010500     03  DELETE-SW-1-GROUP.                                       SQ1234.2
 010600         05  DELETE-SW-2 PIC X.                                   SQ1234.2
-010700*                                                                 SQ1234.2
+010700*                                                                         
 010800 01  DECL-EXEC-I  PIC X(12).                                      SQ1234.2
 010900 01  DECL-EXEC-O  PIC X(12).                                      SQ1234.2
 011000 01  DECL-EXEC-SW PIC X.                                          SQ1234.2
-011100*                                                                 SQ1234.2
-011200***************************************************************   SQ1234.2
-011300*                                                             *   SQ1234.2
-011400*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1234.2
-011500*                                                             *   SQ1234.2
-011600***************************************************************   SQ1234.2
-011700*                                                                 SQ1234.2
+011100*                                                                         
+011200*                                                                         
+011300*                                                                         
+011400*                                                                         
+011500*                                                                         
+011600*                                                                         
+011700*                                                                         
 011800 01  REC-SKEL-SUB   PIC 99.                                       SQ1234.2
-011900*                                                                 SQ1234.2
+011900*                                                                         
 012000 01  FILE-RECORD-INFORMATION-REC.                                 SQ1234.2
 012100     03 FILE-RECORD-INFO-SKELETON.                                SQ1234.2
 012200        05 FILLER                 PICTURE X(48)       VALUE       SQ1234.2
@@ -143,7 +143,7 @@
 016800           07 FILLER              PIC X(9).                       SQ1234.2
 016900           07 ALTERNATE-KEY2      PIC X(29).                      SQ1234.2
 017000           07 FILLER              PIC X(7).                       SQ1234.2
-017100*                                                                 SQ1234.2
+017100*                                                                         
 017200 01  TEST-RESULTS.                                                SQ1234.2
 017300     02 FILLER              PIC X      VALUE SPACE.               SQ1234.2
 017400     02  PAR-NAME.                                                SQ1234.2
@@ -183,7 +183,7 @@
 020800         04 FILLER                           PIC X.               SQ1234.2
 020900     03 FILLER PIC X(2) VALUE SPACE.                              SQ1234.2
 021000     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ1234.2
-021100*                                                                 SQ1234.2
+021100*                                                                         
 021200 01  CCVS-C-1.                                                    SQ1234.2
 021300     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ1234.2
 021400     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ1234.2
@@ -199,7 +199,7 @@
 022400     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ1234.2
 022500     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ1234.2
 022600     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ1234.2
-022700*                                                                 SQ1234.2
+022700*                                                                         
 022800 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ1234.2
 022900 01  REC-CT            PIC 99       VALUE ZERO.                   SQ1234.2
 023000 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ1234.2
@@ -224,7 +224,7 @@
 024900   02  FILLER            PIC X(28)  VALUE                         SQ1234.2
 025000            " COPY - NOT FOR DISTRIBUTION".                       SQ1234.2
 025100   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1234.2
-025200*                                                                 SQ1234.2
+025200*                                                                         
 025300 01  CCVS-H-2B.                                                   SQ1234.2
 025400   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1234.2
 025500   02  TEST-ID           PIC X(9).                                SQ1234.2
@@ -286,34 +286,34 @@
 031100-    "******************************".                            SQ1234.2
 031200 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1234.2
 031300     "SQ123A".                                                    SQ1234.2
-031400*                                                                 SQ1234.2
-031500*                                                                 SQ1234.2
+031400*                                                                         
+031500*                                                                         
 031600 PROCEDURE DIVISION.                                              SQ1234.2
 031700 DECLARATIVES.                                                    SQ1234.2
-031800*                                                                 SQ1234.2
-031900*    FIRST, A DECLARATIVE FOR THE PRINT FILE, IN CASE THERE       SQ1234.2
-032000*    IS AN ERROR ON PRINTING DURING EXECUTION OF THE OUTPUT       SQ1234.2
-032100*    DECLARATIVE.  PAGE VII-51, 4.6.4(7) STATES THAT THE          SQ1234.2
-032200*    INVOCATION OF THE SAME DECLARATIVE TWICE IS ILLEGAL.         SQ1234.2
-032300*                                                                 SQ1234.2
+031800*                                                                         
+031900*                                                                         
+032000*                                                                         
+032100*                                                                         
+032200*                                                                         
+032300*                                                                         
 032400 SECT-SQ123A-0000 SECTION.                                        SQ1234.2
 032500     USE AFTER STANDARD ERROR PROCEDURE ON PRINT-FILE.            SQ1234.2
 032600 PRINT-FILE-ERROR-PROCESS.                                        SQ1234.2
 032700     EXIT.                                                        SQ1234.2
-032800*                                                                 SQ1234.2
+032800*                                                                         
 032900 SECT-SQ123A-0001 SECTION.                                        SQ1234.2
 033000     USE AFTER EXCEPTION PROCEDURE INPUT.                         SQ1234.2
 033100 INPUT-ERROR-PROCESS.                                             SQ1234.2
 033200     MOVE   "EXECUTED" TO DECL-EXEC-I.                            SQ1234.2
-033300*                                                                 SQ1234.2
+033300*                                                                         
 033400 SECT-SQ123A-0002 SECTION.                                        SQ1234.2
 033500     USE AFTER STANDARD EXCEPTION PROCEDURE OUTPUT.               SQ1234.2
 033600 OUTPUT-ERROR-PROCESS.                                            SQ1234.2
 033700     MOVE   "EXECUTED" TO DECL-EXEC-O.                            SQ1234.2
-033800*                                                                 SQ1234.2
+033800*                                                                         
 033900     IF DECL-EXEC-SW NOT = SPACE                                  SQ1234.2
 034000         GO TO   END-DECLS.                                       SQ1234.2
-034100*                                                                 SQ1234.2
+034100*                                                                         
 034200     MOVE    1 TO REC-CT.                                         SQ1234.2
 034300     MOVE   "CLOSE AFTER CLOSE REEL"  TO FEATURE.                 SQ1234.2
 034400     MOVE   "DECL-CLOSE-02" TO PAR-NAME.                          SQ1234.2
@@ -329,26 +329,26 @@
 035400     MOVE   "VII-3, VII-38,4.2.4(3)F" TO ANSI-REFERENCE           SQ1234.2
 035500     PERFORM DECL-FAIL.                                           SQ1234.2
 035600 DECL-TEST-01-END.                                                SQ1234.2
-035700*                                                                 SQ1234.2
+035700*                                                                         
 035800     GO TO   END-DECLS.                                           SQ1234.2
-035900*                                                                 SQ1234.2
-036000*                                                                 SQ1234.2
+035900*                                                                         
+036000*                                                                         
 036100 DECL-PASS.                                                       SQ1234.2
 036200     MOVE   "PASS " TO P-OR-F.                                    SQ1234.2
 036300     ADD     1 TO PASS-COUNTER.                                   SQ1234.2
 036400     PERFORM DECL-PRINT-DETAIL.                                   SQ1234.2
-036500*                                                                 SQ1234.2
+036500*                                                                         
 036600 DECL-FAIL.                                                       SQ1234.2
 036700     MOVE   "FAIL*" TO P-OR-F.                                    SQ1234.2
 036800     ADD     1 TO ERROR-COUNTER.                                  SQ1234.2
 036900     PERFORM DECL-PRINT-DETAIL.                                   SQ1234.2
-037000*                                                                 SQ1234.2
+037000*                                                                         
 037100 DECL-DE-LETE.                                                    SQ1234.2
 037200     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1234.2
 037300     MOVE   "*****" TO P-OR-F.                                    SQ1234.2
 037400     ADD     1 TO DELETE-COUNTER.                                 SQ1234.2
 037500     PERFORM DECL-PRINT-DETAIL.                                   SQ1234.2
-037600*                                                                 SQ1234.2
+037600*                                                                         
 037700 DECL-PRINT-DETAIL.                                               SQ1234.2
 037800     IF REC-CT NOT EQUAL TO ZERO                                  SQ1234.2
 037900             MOVE "." TO PARDOT-X                                 SQ1234.2
@@ -366,7 +366,7 @@
 039100     IF REC-CT EQUAL TO ZERO                                      SQ1234.2
 039200         MOVE    SPACE TO PAR-NAME.                               SQ1234.2
 039300     MOVE    SPACE TO RE-MARK.                                    SQ1234.2
-039400*                                                                 SQ1234.2
+039400*                                                                         
 039500 DECL-WRITE-LINE.                                                 SQ1234.2
 039600     ADD     1 TO RECORD-COUNT.                                   SQ1234.2
 039700     IF RECORD-COUNT GREATER 50                                   SQ1234.2
@@ -381,11 +381,11 @@
 040600         MOVE    DUMMY-HOLD TO DUMMY-RECORD                       SQ1234.2
 040700         MOVE    ZERO TO RECORD-COUNT.                            SQ1234.2
 040800     PERFORM DECL-WRT-LN.                                         SQ1234.2
-040900*                                                                 SQ1234.2
+040900*                                                                         
 041000 DECL-WRT-LN.                                                     SQ1234.2
 041100     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1234.2
 041200     MOVE    SPACE TO DUMMY-RECORD.                               SQ1234.2
-041300*                                                                 SQ1234.2
+041300*                                                                         
 041400 DECL-FAIL-ROUTINE.                                               SQ1234.2
 041500     IF COMPUTED-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.      SQ1234.2
 041600     IF CORRECT-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.       SQ1234.2
@@ -404,7 +404,7 @@
 042900     MOVE    SPACES TO COR-ANSI-REFERENCE.                        SQ1234.2
 043000 DECL-FAIL-EX.                                                    SQ1234.2
 043100     EXIT.                                                        SQ1234.2
-043200*                                                                 SQ1234.2
+043200*                                                                         
 043300 DECL-BAIL.                                                       SQ1234.2
 043400     IF COMPUTED-A NOT EQUAL TO SPACE GO TO DECL-BAIL-WRITE.      SQ1234.2
 043500     IF CORRECT-A EQUAL TO SPACE GO TO DECL-BAIL-EX.              SQ1234.2
@@ -415,11 +415,11 @@
 044000     PERFORM DECL-WRITE-LINE 2 TIMES.                             SQ1234.2
 044100 DECL-BAIL-EX.                                                    SQ1234.2
 044200     EXIT.                                                        SQ1234.2
-044300*                                                                 SQ1234.2
+044300*                                                                         
 044400 END-DECLS.                                                       SQ1234.2
 044500 END DECLARATIVES.                                                SQ1234.2
-044600*                                                                 SQ1234.2
-044700*                                                                 SQ1234.2
+044600*                                                                         
+044700*                                                                         
 044800 CCVS1 SECTION.                                                   SQ1234.2
 044900 OPEN-FILES.                                                      SQ1234.2
 046000     OPEN    OUTPUT PRINT-FILE.                                   SQ1234.2
@@ -430,39 +430,39 @@
 046500     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1234.2
 046600     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1234.2
 046700     GO TO CCVS1-EXIT.                                            SQ1234.2
-046800*                                                                 SQ1234.2
+046800*                                                                         
 046900 CCVS-INIT-FILE.                                                  SQ1234.2
 047000     ADD     1 TO REC-SKL-SUB.                                    SQ1234.2
 047100     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1234.2
 047200                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1234.2
-047300*                                                                 SQ1234.2
+047300*                                                                         
 047400 CLOSE-FILES.                                                     SQ1234.2
 047500     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1234.2
 047600     CLOSE   PRINT-FILE.                                          SQ1234.2
 048900 TERMINATE-CCVS.                                                  SQ1234.2
 049100     STOP    RUN.                                                 SQ1234.2
-049200*                                                                 SQ1234.2
+049200*                                                                         
 049300 INSPT.                                                           SQ1234.2
 049400     MOVE   "INSPT" TO P-OR-F.                                    SQ1234.2
 049500     ADD     1 TO INSPECT-COUNTER.                                SQ1234.2
 049600     PERFORM PRINT-DETAIL.                                        SQ1234.2
-049700*                                                                 SQ1234.2
+049700*                                                                         
 049800 PASS.                                                            SQ1234.2
 049900     MOVE   "PASS " TO P-OR-F.                                    SQ1234.2
 050000     ADD     1 TO PASS-COUNTER.                                   SQ1234.2
 050100     PERFORM PRINT-DETAIL.                                        SQ1234.2
-050200*                                                                 SQ1234.2
+050200*                                                                         
 050300 FAIL.                                                            SQ1234.2
 050400     MOVE   "FAIL*" TO P-OR-F.                                    SQ1234.2
 050500     ADD     1 TO ERROR-COUNTER.                                  SQ1234.2
 050600     PERFORM PRINT-DETAIL.                                        SQ1234.2
-050700*                                                                 SQ1234.2
+050700*                                                                         
 050800 DE-LETE.                                                         SQ1234.2
 050900     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1234.2
 051000     MOVE   "*****" TO P-OR-F.                                    SQ1234.2
 051100     ADD     1 TO DELETE-COUNTER.                                 SQ1234.2
 051200     PERFORM PRINT-DETAIL.                                        SQ1234.2
-051300*                                                                 SQ1234.2
+051300*                                                                         
 051400 PRINT-DETAIL.                                                    SQ1234.2
 051500     IF REC-CT NOT EQUAL TO ZERO                                  SQ1234.2
 051600         MOVE   "." TO PARDOT-X                                   SQ1234.2
@@ -479,7 +479,7 @@
 052700     MOVE    SPACE TO CORRECT-X.                                  SQ1234.2
 052800     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1234.2
 052900     MOVE    SPACE TO RE-MARK.                                    SQ1234.2
-053000*                                                                 SQ1234.2
+053000*                                                                         
 053100 HEAD-ROUTINE.                                                    SQ1234.2
 053200     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1234.2
 053300     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1234.2
@@ -495,7 +495,7 @@
 054300 END-RTN-EXIT.                                                    SQ1234.2
 054400     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1234.2
 054500     PERFORM WRITE-LINE 2 TIMES.                                  SQ1234.2
-054600*                                                                 SQ1234.2
+054600*                                                                         
 054700 END-ROUTINE-1.                                                   SQ1234.2
 054800     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1234.2
 054900     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1234.2
@@ -528,7 +528,7 @@
 057600     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1234.2
 057700     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1234.2
 057800     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1234.2
-057900*                                                                 SQ1234.2
+057900*                                                                         
 058000 WRITE-LINE.                                                      SQ1234.2
 058100     ADD     1 TO RECORD-COUNT.                                   SQ1234.2
 058200     IF RECORD-COUNT GREATER 50                                   SQ1234.2
@@ -541,7 +541,7 @@
 058900         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1234.2
 059000         MOVE  ZERO TO RECORD-COUNT.                              SQ1234.2
 059100     PERFORM WRT-LN.                                              SQ1234.2
-059200*                                                                 SQ1234.2
+059200*                                                                         
 059300 WRT-LN.                                                          SQ1234.2
 059400     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1234.2
 059500     MOVE    SPACE TO DUMMY-RECORD.                               SQ1234.2
@@ -579,18 +579,18 @@
 062700     EXIT.                                                        SQ1234.2
 062800 CCVS1-EXIT.                                                      SQ1234.2
 062900     EXIT.                                                        SQ1234.2
-063000*                                                                 SQ1234.2
-063100****************************************************************  SQ1234.2
-063200*                                                              *  SQ1234.2
-063300*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1234.2
-063400*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1234.2
-063500*                                                              *  SQ1234.2
-063600****************************************************************  SQ1234.2
-063700*                                                                 SQ1234.2
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
+063700*                                                                         
 063800 SECT-SQ123A-0004 SECTION.                                        SQ1234.2
 063900 STA-INIT.                                                        SQ1234.2
 064000     MOVE    SPACE TO DELETE-SW.                                  SQ1234.2
-064100*                                                                 SQ1234.2
+064100*                                                                         
 064200     MOVE   "SQ-FS4" TO XFILE-NAME (1).                           SQ1234.2
 064300     MOVE   "R1-F-G" TO XRECORD-NAME (1).                         SQ1234.2
 064400     MOVE    CCVS-PGM-ID TO XPROGRAM-NAME (1).                    SQ1234.2
@@ -601,9 +601,9 @@
 064900     MOVE   "SQ" TO XFILE-ORGANIZATION (1).                       SQ1234.2
 065000     MOVE   "S"  TO XLABEL-TYPE (1).                              SQ1234.2
 065100     MOVE    ZERO TO XRECORD-NUMBER (1).                          SQ1234.2
-065200*                                                                 SQ1234.2
-065300*    OPEN THE FILE IN THE OUTPUT MODE                             SQ1234.2
-065400*                                                                 SQ1234.2
+065200*                                                                         
+065300*                                                                         
+065400*                                                                         
 065500 SEQ-INIT-01.                                                     SQ1234.2
 065600     MOVE    0 TO REC-CT.                                         SQ1234.2
 065700     MOVE   "*"  TO DECL-EXEC-SW.                                 SQ1234.2
@@ -618,9 +618,9 @@
 066600     GO TO   SEQ-DELETE-01-01.                                    SQ1234.2
 066700 SEQ-TEST-OP-01.                                                  SQ1234.2
 066800     OPEN    OUTPUT SQ-FS4.                                       SQ1234.2
-066900*                                                                 SQ1234.2
-067000*    CHECK I-O STATUS RETURNED FROM OPEN OUTPUT                   SQ1234.2
-067100*                                                                 SQ1234.2
+066900*                                                                         
+067000*                                                                         
+067100*                                                                         
 067200     ADD    1 TO REC-CT.                                          SQ1234.2
 067300     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 067400         GO TO   SEQ-DELETE-01-01.                                SQ1234.2
@@ -639,9 +639,9 @@
 068700         MOVE   "VII-3, VII-23" TO ANSI-REFERENCE                 SQ1234.2
 068800         PERFORM FAIL.                                            SQ1234.2
 068900 SEQ-TEST-01-01-END.                                              SQ1234.2
-069000*                                                                 SQ1234.2
-069100*    CHECK EXECUTION OF INPUT DECLARATIVE                         SQ1234.2
-069200*                                                                 SQ1234.2
+069000*                                                                         
+069100*                                                                         
+069200*                                                                         
 069300     ADD     1 TO REC-CT.                                         SQ1234.2
 069400     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 069500         GO TO   SEQ-DELETE-01-02.                                SQ1234.2
@@ -660,9 +660,9 @@
 070800         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ1234.2
 070900         PERFORM FAIL.                                            SQ1234.2
 071000 SEQ-TEST-01-02-END.                                              SQ1234.2
-071100*                                                                 SQ1234.2
-071200*    CHECK EXECUTION OF OUTPUT DECLARATIVE                        SQ1234.2
-071300*                                                                 SQ1234.2
+071100*                                                                         
+071200*                                                                         
+071300*                                                                         
 071400     ADD     1 TO REC-CT.                                         SQ1234.2
 071500     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 071600         GO TO   SEQ-DELETE-01-03.                                SQ1234.2
@@ -681,10 +681,10 @@
 072900         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ1234.2
 073000         PERFORM FAIL.                                            SQ1234.2
 073100 SEQ-TEST-01-03-END.                                              SQ1234.2
-073200*                                                                 SQ1234.2
-073300*                                                                 SQ1234.2
-073400*    THE FILE HAS BEEN CREATED.  WE NOW EXECUTE CLOSE REEL        SQ1234.2
-073500*                                                                 SQ1234.2
+073200*                                                                         
+073300*                                                                         
+073400*                                                                         
+073500*                                                                         
 073600 SEQ-INIT-02.                                                     SQ1234.2
 073700     MOVE    0 TO REC-CT.                                         SQ1234.2
 073800     MOVE   "*"  TO DECL-EXEC-SW.                                 SQ1234.2
@@ -701,9 +701,9 @@
 074900     GO TO   SEQ-DELETE-02-01.                                    SQ1234.2
 075000 SEQ-TEST-CR-02.                                                  SQ1234.2
 075100     CLOSE   SQ-FS4 REEL.                                         SQ1234.2
-075200*                                                                 SQ1234.2
-075300*    CHECK I-O STATUS RETURNED FROM CLOSE REEL                    SQ1234.2
-075400*                                                                 SQ1234.2
+075200*                                                                         
+075300*                                                                         
+075400*                                                                         
 075500     ADD    1 TO REC-CT.                                          SQ1234.2
 075600     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 075700         GO TO   SEQ-DELETE-02-01.                                SQ1234.2
@@ -722,9 +722,9 @@
 077000         MOVE   "VII-3, VII-38,4.2.4(3)F" TO ANSI-REFERENCE       SQ1234.2
 077100         PERFORM FAIL.                                            SQ1234.2
 077200 SEQ-TEST-02-01-END.                                              SQ1234.2
-077300*                                                                 SQ1234.2
-077400*    CHECK EXECUTION OF INPUT DECLARATIVE                         SQ1234.2
-077500*                                                                 SQ1234.2
+077300*                                                                         
+077400*                                                                         
+077500*                                                                         
 077600     ADD     1 TO REC-CT.                                         SQ1234.2
 077700     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 077800         GO TO   SEQ-DELETE-02-02.                                SQ1234.2
@@ -743,9 +743,9 @@
 079100         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ1234.2
 079200         PERFORM FAIL.                                            SQ1234.2
 079300 SEQ-TEST-02-02-END.                                              SQ1234.2
-079400*                                                                 SQ1234.2
-079500*    CHECK EXECUTION OF OUTPUT DECLARATIVE                        SQ1234.2
-079600*                                                                 SQ1234.2
+079400*                                                                         
+079500*                                                                         
+079600*                                                                         
 079700     ADD     1 TO REC-CT.                                         SQ1234.2
 079800     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 079900         GO TO   SEQ-DELETE-02-03.                                SQ1234.2
@@ -765,10 +765,10 @@
 081300         PERFORM FAIL.                                            SQ1234.2
 081400 SEQ-TEST-02-03-END.                                              SQ1234.2
 081500     MOVE    SPACE TO DELETE-SW-2.                                SQ1234.2
-081600*                                                                 SQ1234.2
-081700*                                                                 SQ1234.2
-081800*    NOW EXECUTE A NORMAL CLOSE ON THE EMPTY FILE.                SQ1234.2
-081900*                                                                 SQ1234.2
+081600*                                                                         
+081700*                                                                         
+081800*                                                                         
+081900*                                                                         
 082000 SEQ-INIT-03.                                                     SQ1234.2
 082100     MOVE    0 TO REC-CT.                                         SQ1234.2
 082200     MOVE    SPACE TO DECL-EXEC-SW.                               SQ1234.2
@@ -785,9 +785,9 @@
 083300     GO TO   SEQ-DELETE-03-01.                                    SQ1234.2
 083400 SEQ-TEST-CL-03.                                                  SQ1234.2
 083500     CLOSE   SQ-FS4.                                              SQ1234.2
-083600*                                                                 SQ1234.2
-083700*    CHECK I-O STATUS RETURNED FROM CLOSE                         SQ1234.2
-083800*                                                                 SQ1234.2
+083600*                                                                         
+083700*                                                                         
+083800*                                                                         
 083900     ADD    1 TO REC-CT.                                          SQ1234.2
 084000     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 084100         GO TO   SEQ-DELETE-03-01.                                SQ1234.2
@@ -806,9 +806,9 @@
 085400         MOVE   "VII-3, VII-38,4.2.4(4)" TO ANSI-REFERENCE        SQ1234.2
 085500         PERFORM FAIL.                                            SQ1234.2
 085600 SEQ-TEST-03-01-END.                                              SQ1234.2
-085700*                                                                 SQ1234.2
-085800*    CHECK EXECUTION OF INPUT DECLARATIVE                         SQ1234.2
-085900*                                                                 SQ1234.2
+085700*                                                                         
+085800*                                                                         
+085900*                                                                         
 086000     ADD     1 TO REC-CT.                                         SQ1234.2
 086100     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 086200         GO TO   SEQ-DELETE-03-02.                                SQ1234.2
@@ -827,9 +827,9 @@
 087500         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ1234.2
 087600         PERFORM FAIL.                                            SQ1234.2
 087700 SEQ-TEST-03-02-END.                                              SQ1234.2
-087800*                                                                 SQ1234.2
-087900*    CHECK EXECUTION OF OUTPUT DECLARATIVE                        SQ1234.2
-088000*                                                                 SQ1234.2
+087800*                                                                         
+087900*                                                                         
+088000*                                                                         
 088100     ADD     1 TO REC-CT.                                         SQ1234.2
 088200     IF DELETE-SW NOT = SPACE                                     SQ1234.2
 088300         GO TO   SEQ-DELETE-03-03.                                SQ1234.2
@@ -849,8 +849,8 @@
 089700         PERFORM FAIL.                                            SQ1234.2
 089800 SEQ-TEST-03-03-END.                                              SQ1234.2
 089900     MOVE    SPACE TO DELETE-SW-2.                                SQ1234.2
-090000*                                                                 SQ1234.2
-090100*                                                                 SQ1234.2
+090000*                                                                         
+090100*                                                                         
 090200 CCVS-EXIT SECTION.                                               SQ1234.2
 090300 CCVS-999999.                                                     SQ1234.2
 090400     GO TO   CLOSE-FILES.                                         SQ1234.2

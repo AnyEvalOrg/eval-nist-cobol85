@@ -1,41 +1,41 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1214.2
 000200 PROGRAM-ID.                                                      SQ1214.2
 000300     SQ121A.                                                      SQ1214.2
-000400****************************************************************  SQ1214.2
-000500*                                                              *  SQ1214.2
-000600*    VALIDATION FOR:-                                          *  SQ1214.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1214.2
-000800*                                                              *  SQ1214.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1214.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1214.2
-001100*                                                              *  SQ1214.2
-001200****************************************************************  SQ1214.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1214.2
-001400*         THE ROUTINE SQ121A TESTS THE USE OF THE USE AFTER ERROR SQ1214.2
-001500*    PROCEDURE ON I-O.  SQ121A IS BASICALLY A REWRITE OF SQ115A   SQ1214.2
-001600*    WITH THE ADDITION OF THE USE PROCEDURE.                      SQ1214.2
-001700*        THIS ROUTINE CREATES A MASS STORAGE FILE CONTAINING      SQ1214.2
-001800*    550 RECORDS.  EACH RECORD CONTAINS 126 CHARACTERS. THE       SQ1214.2
-001900*    FILE IS CLOSED AND OPENED AS AN INPUT-OUTPUT FILE. EVERY     SQ1214.2
-002000*    TENTH RECORD IS REWRITTEN.  THE FILE IS CLOSED AND OPENED    SQ1214.2
-002100*    AGAIN AS AN INPUT FILE.  FIELDS IN EACH RECORD ARE CHECKED   SQ1214.2
-002200*    TO ENSURE THAT THE RECORDS REWRITTEN ARE CORRECT AND THAT    SQ1214.2
-002300*    THE RECORDS WHICH WERE NOT UPDATED WERE NOT CHANGED.         SQ1214.2
-002400*    THE READ STATEMENT WITHIN THE REWRITE SECTION OF SQ121A DOES SQ1214.2
-002500*    NOT HAVE AN AT END CLAUSE.  EOF PROCESSING IS HANDLED BY     SQ1214.2
-002600*    SETTING AN EOF-FLAG IN THE DECLARATIVE SECTION.  ANY         SQ1214.2
-002700*    PERMANENT ERRORS ENCOUNTERED DURING THE REWRITE OF SQ-FS5    SQ1214.2
-002800*    ARE TREATED AS INFORMATION ITEMS.                            SQ1214.2
-002900*                                                                 SQ1214.2
-003000*    USED X-CARDS:                                                SQ1214.2
-003100*         XXXXX014                                                SQ1214.2
-003200*         XXXXX055                                                SQ1214.2
-003300*     P   XXXXX062                                                SQ1214.2
-003400*         XXXXX082                                                SQ1214.2
-003500*         XXXXX083                                                SQ1214.2
-003600*     C   XXXXX084                                                SQ1214.2
-003700*                                                                 SQ1214.2
-003800*                                                                 SQ1214.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900 ENVIRONMENT DIVISION.                                            SQ1214.2
 004000 CONFIGURATION SECTION.                                           SQ1214.2
 004100 SOURCE-COMPUTER.                                                 SQ1214.2
@@ -306,7 +306,7 @@
 035500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1214.2
 035600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1214.2
 035700      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1214.2
-035800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1214.2
+035800*                                                                         
 035900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1214.2
 036000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1214.2
 036100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1214.2
@@ -397,12 +397,12 @@
 044600     MOVE COUNT-OF-RECORDS TO CORRECT-18V0.                       SQ1214.2
 044700     PERFORM PRINT-DETAIL.                                        SQ1214.2
 044800     CLOSE SQ-FS5.                                                SQ1214.2
-044900*         A SEQUENTIAL MASS STORAGE FILE WITH 126 CHARACTER       SQ1214.2
-045000*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 550 RECORDS.    SQ1214.2
+044900*                                                                         
+045000*                                                                         
 045100 SEQ-INIT-014.                                                    SQ1214.2
 045200     MOVE ZERO TO COUNT-OF-RECORDS.                               SQ1214.2
-045300*        THIS TEST READS AND CHECKS THE FILE CREATED              SQ1214.2
-045400*    IN SEQ-TEST-013.                                             SQ1214.2
+045300*                                                                         
+045400*                                                                         
 045500     OPEN INPUT SQ-FS5.                                           SQ1214.2
 045600 SEQ-TEST-014.                                                    SQ1214.2
 045700     READ SQ-FS5 AT END                                           SQ1214.2
@@ -448,8 +448,8 @@
 049700     OPEN I-O SQ-FS5.                                             SQ1214.2
 049800     MOVE ZERO TO COUNT-OF-RECORDS.                               SQ1214.2
 049900     MOVE ZERO TO EOF-FLAG.                                       SQ1214.2
-050000*        THIS TEST REWRITES EVERY TENTH RECORD                    SQ1214.2
-050100*    OF THE FILE SQ-FS5.                                          SQ1214.2
+050000*                                                                         
+050100*                                                                         
 050200 REWRITE-TEST-GF-01.                                              SQ1214.2
 050300     PERFORM READ-SQ-FS5 THRU READ-SQ-FS5-EXIT 10 TIMES.          SQ1214.2
 050400     IF EOF-FLAG EQUAL TO 1                                       SQ1214.2
@@ -495,8 +495,8 @@
 054400     MOVE ZERO TO COUNT-OF-RECORDS.                               SQ1214.2
 054500     MOVE ZERO TO EOF-FLAG.                                       SQ1214.2
 054600     OPEN INPUT SQ-FS5.                                           SQ1214.2
-054700*        THIS TEST READS AND CHECKS THE FILE WHICH WAS            SQ1214.2
-054800*    REWRITTEN IN REWRITE-TEST-01.                                SQ1214.2
+054700*                                                                         
+054800*                                                                         
 054900     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1214.2
 055000     MOVE ZERO TO LOOP-COUNT.                                     SQ1214.2
 055100 REWRITE-TEST-GF-02.                                              SQ1214.2

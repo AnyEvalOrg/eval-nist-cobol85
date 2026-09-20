@@ -19,33 +19,33 @@
 001900     "4.2 ".                                                      DB2014.2
 002000 SECURITY.                                                        DB2014.2
 002100     NONE.                                                        DB2014.2
-002200*                                                                 DB2014.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB2014.2
-002400*                                                                 DB2014.2
-002500*                       PROGRAM ABSTRACT                          DB2014.2
-002600*                                                                 DB2014.2
-002700*    DB201A TESTS THE CAPABILITY OF THE DEBUG MODULE TO HANDLE    DB2014.2
-002800*    DEBUGGING PROCEDURES WHICH ARE MONITORING IDENTIFIERS        DB2014.2
-002900*    SPECIFIED WITH AND WITHOUT THE "ALL REFERENCES" OPTION.      DB2014.2
-003000*    THIS PROGRAM IS TO BE COMPILED AND EXECUTED WITH BOTH        DB2014.2
-003100*    COMPILE AND OBJECT TIME DEBUGGING SWITCHES ENABLED.  THE     DB2014.2
-003200*    DEBUGGING PROCEDURES SHOULD BE INCLUDED IN COMPILATION       DB2014.2
-003300*    AND GENERATE CODE.  DEBUGGING ACTIONS ON THE FOLLOWING       DB2014.2
-003400*    CONDITIONS ARE ANALYZED                                      DB2014.2
-003500*                                                                 DB2014.2
-003600*        (1)  REFERENCE TO IDENTIFIER WITHIN "VARYING", "AFTER",  DB2014.2
-003700*             AND "UNTIL" PHRASES OF "PERFORM" STATEMENTS.        DB2014.2
-003800*        (2)  REFERENCE TO CHANGED AND UNCHANGED IDENTIFIER       DB2014.2
-003900*             FIELDS.                                             DB2014.2
-004000*        (3)  REFERENCE TO SUBSCRIPTED IDENTIFIERS.               DB2014.2
-004100*        (4)  REFERENCE TO QUALIFIED IDENTIFIERS.                 DB2014.2
-004200*        (5)  REFERENCE TO IDENTIFIER USED IN "GO TO DEPENDING".  DB2014.2
-004300*        (6)  REFERENCE TO IDENTIFIER IN UNEXECUTED STATEMENTS.   DB2014.2
-004400*        (7)  MULTIPLE REFERENCES TO SAME IDENTIFIER IN SAME      DB2014.2
-004500*             STATEMENT.                                          DB2014.2
-004600*                                                                 DB2014.2
-004700*                                                                 DB2014.2
-004800*                                                                 DB2014.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
 004900 ENVIRONMENT DIVISION.                                            DB2014.2
 005000 CONFIGURATION SECTION.                                           DB2014.2
 005100 SOURCE-COMPUTER.                                                 DB2014.2
@@ -331,7 +331,7 @@
 033300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB2014.2
 033400      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB2014.2
 033500      ADD PASS-COUNTER TO ERROR-HOLD.                             DB2014.2
-033600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB2014.2
+033600*                                                                         
 033700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB2014.2
 033800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB2014.2
 033900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB2014.2
@@ -400,13 +400,13 @@
 040200     MOVE 2 TO GO-TO-DEP-KEY.                                     DB2014.2
 040300     MOVE SPACES TO ITEM-1  ITEM-2.                               DB2014.2
 040400     MOVE 0 TO KEY-1  KEY-2.                                      DB2014.2
-040500******************************************************************DB2014.2
-040600*    THE DEBUG-LINE (INSPT) TESTS NAMED IN THE OUTPUT REPORT AS  *DB2014.2
-040700*    "G-T-D-2A" AND "G-T-D-3A" SHOULD EACH POINT TO THE          *DB2014.2
-040800*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB2014.2
-040900*    WHICH READS, "GO TO G-T-D-1 G-T-D-2 G-T-D-5 DEPENDING ON    *DB2014.2
-041000*    GO-TO-DEP-KEY.".                                            *DB2014.2
-041100******************************************************************DB2014.2
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
+041000*                                                                         
+041100*                                                                         
 041200     GO TO G-T-D-1  G-T-D-2  G-T-D-5  DEPENDING ON GO-TO-DEP-KEY. DB2014.2
 041300 GO-TO-DEPENDING-DELETE.                                          DB2014.2
 041400     GO TO G-T-D-2-DELETE.                                        DB2014.2
@@ -563,13 +563,13 @@
 056500     MOVE SPACES TO ITEM-1.                                       DB2014.2
 056600     MOVE "PERFORM-VARY-1" TO PAR-NAME.                           DB2014.2
 056700     MOVE 0 TO KEY-1.                                             DB2014.2
-056800******************************************************************DB2014.2
-056900*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2014.2
-057000*    "P-V-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT WHICH     *DB2014.2
-057100*    FOLLOWS THIS COMMENT SET AND WHICH READS, "PERFORM          *DB2014.2
-057200*    P-V-1-SUBR VARYING ID-1 FROM 1 BY 1 UNTIL ID-1A IS GREATER  *DB2014.2
-057300*    THAN 5.".                                                   *DB2014.2
-057400******************************************************************DB2014.2
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
+057200*                                                                         
+057300*                                                                         
+057400*                                                                         
 057500 PERFORM-VARY-1.                                                  DB2014.2
 057600     PERFORM P-V-1-SUBR  VARYING ID-1 FROM 1 BY 1                 DB2014.2
 057700         UNTIL ID-1A IS GREATER THAN 5.                           DB2014.2
@@ -763,12 +763,12 @@
 076500     MOVE "MOVE-TEST-1" TO PAR-NAME.                              DB2014.2
 076600     MOVE SPACES TO ITEM-1.                                       DB2014.2
 076700     MOVE 0 TO KEY-1.                                             DB2014.2
-076800******************************************************************DB2014.2
-076900*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2014.2
-077000*    "MOVE-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2014.2
-077100*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "MOVE 3 TO  *DB2014.2
-077200*    ID-2.".                                                     *DB2014.2
-077300******************************************************************DB2014.2
+076800*                                                                         
+076900*                                                                         
+077000*                                                                         
+077100*                                                                         
+077200*                                                                         
+077300*                                                                         
 077400 MOVE-TEST-1.                                                     DB2014.2
 077500     MOVE 3 TO ID-2.                                              DB2014.2
 077600     IF KEY-1 IS EQUAL TO 1                                       DB2014.2
@@ -876,12 +876,12 @@
 087800     MOVE 0 TO KEY-1.                                             DB2014.2
 087900     MOVE "SRC OPR/ALL REF" TO FEATURE.                           DB2014.2
 088000     MOVE "MOVE-TEST-4" TO PAR-NAME.                              DB2014.2
-088100******************************************************************DB2014.2
-088200*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2014.2
-088300*    "MOVE-TEST-4A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2014.2
-088400*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "MOVE ID-2  *DB2014.2
-088500*    TO ID-3.".                                                  *DB2014.2
-088600******************************************************************DB2014.2
+088100*                                                                         
+088200*                                                                         
+088300*                                                                         
+088400*                                                                         
+088500*                                                                         
+088600*                                                                         
 088700 MOVE-TEST-4.                                                     DB2014.2
 088800     MOVE ID-2 TO ID-3.                                           DB2014.2
 088900     IF KEY-1 IS EQUAL TO 1                                       DB2014.2
@@ -959,12 +959,12 @@
 096100     MOVE 0 TO KEY-1  ID-3.                                       DB2014.2
 096200     MOVE "MULT SRC OPR/ALL REF" TO FEATURE.                      DB2014.2
 096300     MOVE "ADD-TEST-1" TO PAR-NAME.                               DB2014.2
-096400******************************************************************DB2014.2
-096500*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2014.2
-096600*    "ADD-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT      *DB2014.2
-096700*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS,             *DB2014.2
-096800*    "ADD  ID-2  ID-2  ID-2  ID-2    TO    ID-3.".               *DB2014.2
-096900******************************************************************DB2014.2
+096400*                                                                         
+096500*                                                                         
+096600*                                                                         
+096700*                                                                         
+096800*                                                                         
+096900*                                                                         
 097000 ADD-TEST-1.                                                      DB2014.2
 097100     ADD  ID-2  ID-2  ID-2  ID-2    TO    ID-3.                   DB2014.2
 097200     IF KEY-1 IS EQUAL TO 1                                       DB2014.2
@@ -1126,12 +1126,12 @@
 112800     MOVE SPACE TO ITEM-1.                                        DB2014.2
 112900     MOVE 0 TO KEY-1.                                             DB2014.2
 113000     SET I TO 5.                                                  DB2014.2
-113100******************************************************************DB2014.2
-113200*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2014.2
-113300*    "SUBSC-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT    *DB2014.2
-113400*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "MOVE       *DB2014.2
-113500*    "ABCDE" TO B-LEVEL1 (I).".                                  *DB2014.2
-113600******************************************************************DB2014.2
+113100*                                                                         
+113200*                                                                         
+113300*                                                                         
+113400*                                                                         
+113500*                                                                         
+113600*                                                                         
 113700 SUBSC-TEST-1.                                                    DB2014.2
 113800     MOVE "ABCDE" TO B-LEVEL-1 (I).                               DB2014.2
 113900     IF KEY-1 IS EQUAL TO 1                                       DB2014.2
@@ -1290,12 +1290,12 @@
 129200     MOVE "1-LEVEL QUALIFICATN" TO FEATURE.                       DB2014.2
 129300     MOVE SPACES TO ITEM-1.                                       DB2014.2
 129400     MOVE 0 TO KEY-1.                                             DB2014.2
-129500******************************************************************DB2014.2
-129600*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2014.2
-129700*    "QUAL-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2014.2
-129800*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS,             *DB2014.2
-129900*    "MOVE "XY" TO  AB2 OF A2.".                                 *DB2014.2
-130000******************************************************************DB2014.2
+129500*                                                                         
+129600*                                                                         
+129700*                                                                         
+129800*                                                                         
+129900*                                                                         
+130000*                                                                         
 130100 QUAL-TEST-1.                                                     DB2014.2
 130200     MOVE "XY" TO  AB2 OF A2.                                     DB2014.2
 130300     IF KEY-1 IS EQUAL TO 1                                       DB2014.2

@@ -20,29 +20,29 @@
 002000     NONE                                                         OBNC14.2
 002100                                                                  OBNC14.2
 002200                                                                  OBNC14.2
-002300****************************************************************  OBNC14.2
-002400*                                                              *  OBNC14.2
-002500*    VALIDATION FOR:-                                          *  OBNC14.2
-002600*                                                              *  OBNC14.2
-002700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".OBNC14.2
-002800*                                                              *  OBNC14.2
-002900*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".OBNC14.2
-003000*                                                              *  OBNC14.2
-003100****************************************************************  OBNC14.2
-003200*                                                              *  OBNC14.2
-003300*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  OBNC14.2
-003400*                                                              *  OBNC14.2
-003500*        X-55  - SYSTEM PRINTER NAME.                          *  OBNC14.2
-003600*        X-82  - SOURCE COMPUTER NAME.                         *  OBNC14.2
-003700*        X-83  - OBJECT COMPUTER NAME.                         *  OBNC14.2
-003800*                                                              *  OBNC14.2
-003900****************************************************************  OBNC14.2
-004000*                                                                 OBNC14.2
-004100*     PROGRAM OBNC1M CONTAINS CCVS74 TESTS OF LEVEL 1 LANGUAGE    OBNC14.2
-004200*      ELEMENTS DEFINED AS OBSOLETE IN THE 1985 STANDARDS.        OBNC14.2
-004300*                                                                 OBNC14.2
-004400*                                                                 OBNC14.2
-004500****************************************************************  OBNC14.2
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
 004600                                                                  OBNC14.2
 004700                                                                  OBNC14.2
 004800     A COMMENT ENTRY PARAGRAPH IS TO BE TREATED AS                OBNC14.2
@@ -431,7 +431,7 @@
 043300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBNC14.2
 043400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               OBNC14.2
 043500      ADD PASS-COUNTER TO ERROR-HOLD.                             OBNC14.2
-043600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBNC14.2
+043600*                                                                         
 043700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBNC14.2
 043800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBNC14.2
 043900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBNC14.2
@@ -509,17 +509,17 @@
 051100     MOVE   "REMARKS" TO PAR-NAME.                                OBNC14.2
 051200     MOVE   "PHONY LINES SHOULDNT EXECUT" TO RE-MARK.             OBNC14.2
 051300     PERFORM PRINT-DETAIL.                                        OBNC14.2
-051400*    THE FOLLOWING HAS BEEN MOVED FROM THE END TO ENSURE          OBNC14.2
-051500*    EXECUTION                                                    OBNC14.2
+051400*                                                                         
+051500*                                                                         
 051600 NOTE-TEST-6.                                                     OBNC14.2
-051700*    PERFORM  FAIL.                                               OBNC14.2
-051800*        NOTE ENTER                         GO TO NOTE-WRITE-6    OBNC14.2
-051900*             USE                           GO TO NOTE-WRITE-6    OBNC14.2
-052000*             DECLARATIVES                  GO TO NOTE-WRITE-6    OBNC14.2
-052100*             DATA DIVISION                 GO TO NOTE-WRITE-6    OBNC14.2
-052200*             COPY (SEE ALSO PROGRAM LB104) GO TO NOTE-WRITE-6    OBNC14.2
-052300*             THE COMPILER SHOULD "IGNORE" THE ABOVE WORDS.       OBNC14.2
-052400*    PERFORM PASS.                                                OBNC14.2
+051700*                                                                         
+051800*                                                                         
+051900*                                                                         
+052000*                                                                         
+052100*                                                                         
+052200*                                                                         
+052300*                                                                         
+052400*                                                                         
 052500     GO TO   NOTE-WRITE-6.                                        OBNC14.2
 052600 NOTE-DELETE-6.                                                   OBNC14.2
 052700     PERFORM DE-LETE.                                             OBNC14.2
@@ -567,7 +567,7 @@
 056900     PERFORM PRINT-DETAIL.                                        OBNC14.2
 057000 ALTER-TEST-2.                                                    OBNC14.2
 057100     ALTER   ALTER-D TO ALTER-F.                                  OBNC14.2
-057200*    NOTE THE WORDS "PROCEED TO" ARE OPTIONAL.                    OBNC14.2
+057200*                                                                         
 057300     GO TO   ALTER-D.                                             OBNC14.2
 057400 ALTER-DELETE-2.                                                  OBNC14.2
 057500     PERFORM DE-LETE.                                             OBNC14.2
@@ -584,7 +584,7 @@
 058600     PERFORM PRINT-DETAIL.                                        OBNC14.2
 058700 ALTER-TEST-3.                                                    OBNC14.2
 058800     ALTER   ALTER-G TO PROCEED TO ALTER-I.                       OBNC14.2
-058900*    NOTE COMPOUND ALTERS, MULTIPLE ALTERS OF THE SAME SEQUENCE.  OBNC14.2
+058900*                                                                         
 059000     GO TO   ALTER-G.                                             OBNC14.2
 059100 ALTER-DELETE-3.                                                  OBNC14.2
 059200     PERFORM DE-LETE.                                             OBNC14.2
@@ -606,11 +606,11 @@
 060800 ALTER-WRITE-3.                                                   OBNC14.2
 060900     MOVE   "ALTER-TEST-3" TO PAR-NAME.                           OBNC14.2
 061000     PERFORM PRINT-DETAIL.                                        OBNC14.2
-061100*                                                                 OBNC14.2
+061100*                                                                         
 061200 GO--TEST-1.                                                      OBNC14.2
 061300     ALTER GO--A TO PROCEED TO GO--C.                             OBNC14.2
-061400*    NOTE THE GO STATEMENT IN GO--A IS NOT LEGAL UNLESS IT IS     OBNC14.2
-061500*        ALTERED AS SHOWN ABOVE BEFORE CONTROL PASSES TO IT.      OBNC14.2
+061400*                                                                         
+061500*                                                                         
 061600     GO TO GO--A.                                                 OBNC14.2
 061700 GO--DELETE-1.                                                    OBNC14.2
 061800     PERFORM DE-LETE.                                             OBNC14.2
@@ -649,14 +649,14 @@
 065100 STOP-WRITE-GF-1.                                                 OBNC14.2
 065200     MOVE "STOP-TEST-GF-1" TO PAR-NAME.                           OBNC14.2
 065300     PERFORM  PRINT-DETAIL.                                       OBNC14.2
-065400*STOP-NOTE.                                                       OBNC14.2
-065500*        NOTE THE ABOVE TEST TESTS THE BASIC FUNCTIONING OF THE   OBNC14.2
-065600*             STOP VERB WITH LITERAL - A MESSAGE TO THE OPERATOR  OBNC14.2
-065700*             AND RESTART ABILITY. THE FOLLOWING TESTS ASCERTAIN  OBNC14.2
-065800*             THAT THE "LITERAL" MAY BE ANY LEGAL COBOL LITERAL.  OBNC14.2
-065900*             THE USER MUST VISUALLY CHECK THE MESSAGES TO THE    OBNC14.2
-066000*             OPERATOR AND SEE THAT THEY ARE IDENTICAL TO THE     OBNC14.2
-066100*             DATA SHOWN IN THE OUTPUT LISTING.                   OBNC14.2
+065400*                                                                         
+065500*                                                                         
+065600*                                                                         
+065700*                                                                         
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
 066200 STOP-INIT-GF-2.                                                  OBNC14.2
 066300     MOVE     "SEE STOP-NOTE PARAGRAPH" TO RE-MARK.               OBNC14.2
 066400     PERFORM  PRINT-DETAIL.                                       OBNC14.2

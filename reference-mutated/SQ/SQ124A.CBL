@@ -1,56 +1,56 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1244.2
 000200 PROGRAM-ID.                                                      SQ1244.2
 000300     SQ124A.                                                      SQ1244.2
-000400****************************************************************  SQ1244.2
-000500*                                                              *  SQ1244.2
-000600*    VALIDATION FOR:-                                          *  SQ1244.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1244.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ1244.2
-000900*                             REVISED 1986, AUGUST             *  SQ1244.2
-001000*                                                              *  SQ1244.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ1244.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1244.2
-001300*                                                              *  SQ1244.2
-001400****************************************************************  SQ1244.2
-001500*                                                              *  SQ1244.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1244.2
-001700*                                                              *  SQ1244.2
-001800*            X-14   SEQUENTIAL NON-UNIT MASS STORAGE FILE      *  SQ1244.2
-001900*            X-55   SYSTEM PRINTER                             *  SQ1244.2
-002000*            X-82   SOURCE-COMPUTER                            *  SQ1244.2
-002100*            X-83   OBJECT-COMPUTER.                           *  SQ1244.2
-002200*                                                              *  SQ1244.2
-002300****************************************************************  SQ1244.2
-002400*                                                              *  SQ1244.2
-002500*    THIS PROGRAM OPENS FOR OUTPUT A FILE WHICH IS ASSIGNED    *  SQ1244.2
-002600*    TO A MEDIUM WHICH IS NOT A REEL/UNIT MEDIUM.  ONE RECORD  *  SQ1244.2
-002700*    IS WRITTEN TO THE FILE AND A CLOSE UNIT STATEMENT IS      *  SQ1244.2
-002800*    EXECUTED.  THIS SHOULD HAVE NO EFFECT ON THE FILE, EXCEPT *  SQ1244.2
-002900*    TO CAUSE I-O STATUS 07.  THE FILE SHOULD REMAIN OPEN.  A  *  SQ1244.2
-003000*    SECOND RECORD IS THEN WRITTEN AND A  NORMAL, UNQUALIFIED, *  SQ1244.2
-003100*    CLOSE STATEMENT IS EXECUTED. THIS SHOULD BE SUCCESSFUL    *  SQ1244.2
-003200*    AND CLOSE THE FILE.  THE FILE IS THEN REOPENED FOR INPUT  *  SQ1244.2
-003300*    AND THE TWO RECORDS CHECKED.  A CLOSE UNIT STATEMENT IS   *  SQ1244.2
-003400*    EXECUTED BEFORE THE FIRST RECORD IS READ, AND AGAIN THIS  *  SQ1244.2
-003500*    SHOULD HAVE NO EFFECT ON SUBSEQUENT OPERATIONS ON THE     *  SQ1244.2
-003600*    FILE.  AFTER THE TWO RECORDS HAVE BEEN READ, A FURTHER    *  SQ1244.2
-003700*    READ STATEMENT IS EXECUTED TO RAISE THE AT END CONDITION, *  SQ1244.2
-003800*    WHICH IS CHECKED, AND THE FILE IS CLOSED.                 *  SQ1244.2
-003900*                                                              *  SQ1244.2
-004000****************************************************************  SQ1244.2
-004100*                                                                 SQ1244.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 ENVIRONMENT DIVISION.                                            SQ1244.2
 004300 CONFIGURATION SECTION.                                           SQ1244.2
 004400 SOURCE-COMPUTER.                                                 SQ1244.2
 004500     GNU-Linux.                                                   SQ1244.2
 004600 OBJECT-COMPUTER.                                                 SQ1244.2
 004700     GNU-Linux.                                                   SQ1244.2
-004800*                                                                 SQ1244.2
+004800*                                                                         
 004900 INPUT-OUTPUT SECTION.                                            SQ1244.2
 005000 FILE-CONTROL.                                                    SQ1244.2
 005100     SELECT PRINT-FILE ASSIGN TO                                  SQ1244.2
 005200     "REPORT".                                                    SQ1244.2
-005300*                                                                 SQ1244.2
+005300*                                                                         
 006000     SELECT SQ-FS4 ASSIGN                                         SQ1244.2
 006100     "XXXXX014"                                                   SQ1244.2
 006200            ORGANIZATION IS SEQUENTIAL                            SQ1244.2
@@ -58,15 +58,15 @@
 006400            FILE STATUS SQ-FS4-STATUS                             SQ1244.2
 006500                          IN STATUS-GROUP                         SQ1244.2
 006600            .                                                     SQ1244.2
-006700*                                                                 SQ1244.2
-006800*                                                                 SQ1244.2
+006700*                                                                         
+006800*                                                                         
 006900 DATA DIVISION.                                                   SQ1244.2
 007000 FILE SECTION.                                                    SQ1244.2
 007100 FD  PRINT-FILE                                                   SQ1244.2
 007500               .                                                  SQ1244.2
 007600 01  PRINT-REC    PICTURE X(120).                                 SQ1244.2
 007700 01  DUMMY-RECORD PICTURE X(120).                                 SQ1244.2
-009300*                                                                 SQ1244.2
+009300*                                                                         
 009400 FD  SQ-FS4                                                       SQ1244.2
 009600                .                                                 SQ1244.2
 009700 01  SQ-FS4R1-F-G-120.                                            SQ1244.2
@@ -97,38 +97,38 @@
 012200           07 FFILE-ORGANIZATION  PIC X(2).                       SQ1244.2
 012300           07 FILLER              PIC X(6).                       SQ1244.2
 012400           07 FLABEL-TYPE         PIC X(1).                       SQ1244.2
-012500*                                                                 SQ1244.2
+012500*                                                                         
 012600 WORKING-STORAGE SECTION.                                         SQ1244.2
-012700*                                                                 SQ1244.2
-012800***************************************************************   SQ1244.2
-012900*                                                             *   SQ1244.2
-013000*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1244.2
-013100*                                                             *   SQ1244.2
-013200***************************************************************   SQ1244.2
-013300*                                                                 SQ1244.2
+012700*                                                                         
+012800*                                                                         
+012900*                                                                         
+013000*                                                                         
+013100*                                                                         
+013200*                                                                         
+013300*                                                                         
 013400 01  STATUS-GROUP.                                                SQ1244.2
 013500     03  SQ-FS4-STATUS.                                           SQ1244.2
 013600       05  SQ-FS4-KEY-1   PIC X.                                  SQ1244.2
 013700       05  SQ-FS4-KEY-2   PIC X.                                  SQ1244.2
-013800*                                                                 SQ1244.2
+013800*                                                                         
 013900 01  DELETE-SW.                                                   SQ1244.2
 014000     03  DELETE-SW-1 PIC X.                                       SQ1244.2
 014100     03  DELETE-SW-1-GROUP.                                       SQ1244.2
 014200         05  DELETE-SW-2 PIC X.                                   SQ1244.2
 014300         05  DELETE-SW-2-GROUP.                                   SQ1244.2
 014400             07  DELETE-SW-3 PIC X.                               SQ1244.2
-014500*                                                                 SQ1244.2
+014500*                                                                         
 014600 01  AT-END-SW  PIC X(12).                                        SQ1244.2
 014700 01  NOT-END-SW PIC X(12).                                        SQ1244.2
-014800*                                                                 SQ1244.2
-014900***************************************************************   SQ1244.2
-015000*                                                             *   SQ1244.2
-015100*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1244.2
-015200*                                                             *   SQ1244.2
-015300***************************************************************   SQ1244.2
-015400*                                                                 SQ1244.2
+014800*                                                                         
+014900*                                                                         
+015000*                                                                         
+015100*                                                                         
+015200*                                                                         
+015300*                                                                         
+015400*                                                                         
 015500 01  REC-SKEL-SUB   PIC 99.                                       SQ1244.2
-015600*                                                                 SQ1244.2
+015600*                                                                         
 015700 01  FILE-RECORD-INFORMATION-REC.                                 SQ1244.2
 015800     03 FILE-RECORD-INFO-SKELETON.                                SQ1244.2
 015900        05 FILLER                 PICTURE X(48)       VALUE       SQ1244.2
@@ -180,7 +180,7 @@
 020500           07 FILLER              PIC X(9).                       SQ1244.2
 020600           07 ALTERNATE-KEY2      PIC X(29).                      SQ1244.2
 020700           07 FILLER              PIC X(7).                       SQ1244.2
-020800*                                                                 SQ1244.2
+020800*                                                                         
 020900 01  TEST-RESULTS.                                                SQ1244.2
 021000     02 FILLER              PIC X      VALUE SPACE.               SQ1244.2
 021100     02  PAR-NAME.                                                SQ1244.2
@@ -220,7 +220,7 @@
 024500         04 FILLER                           PIC X.               SQ1244.2
 024600     03 FILLER PIC X(2) VALUE SPACE.                              SQ1244.2
 024700     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ1244.2
-024800*                                                                 SQ1244.2
+024800*                                                                         
 024900 01  CCVS-C-1.                                                    SQ1244.2
 025000     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ1244.2
 025100     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ1244.2
@@ -236,7 +236,7 @@
 026100     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ1244.2
 026200     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ1244.2
 026300     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ1244.2
-026400*                                                                 SQ1244.2
+026400*                                                                         
 026500 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ1244.2
 026600 01  REC-CT            PIC 99       VALUE ZERO.                   SQ1244.2
 026700 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ1244.2
@@ -261,7 +261,7 @@
 028600   02  FILLER            PIC X(28)  VALUE                         SQ1244.2
 028700            " COPY - NOT FOR DISTRIBUTION".                       SQ1244.2
 028800   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1244.2
-028900*                                                                 SQ1244.2
+028900*                                                                         
 029000 01  CCVS-H-2B.                                                   SQ1244.2
 029100   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1244.2
 029200   02  TEST-ID           PIC X(9).                                SQ1244.2
@@ -323,8 +323,8 @@
 034800-    "******************************".                            SQ1244.2
 034900 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1244.2
 035000     "SQ124A".                                                    SQ1244.2
-035100*                                                                 SQ1244.2
-035200*                                                                 SQ1244.2
+035100*                                                                         
+035200*                                                                         
 035300 PROCEDURE DIVISION.                                              SQ1244.2
 035400 CCVS1 SECTION.                                                   SQ1244.2
 035500 OPEN-FILES.                                                      SQ1244.2
@@ -336,39 +336,39 @@
 037100     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1244.2
 037200     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1244.2
 037300     GO TO CCVS1-EXIT.                                            SQ1244.2
-037400*                                                                 SQ1244.2
+037400*                                                                         
 037500 CCVS-INIT-FILE.                                                  SQ1244.2
 037600     ADD     1 TO REC-SKL-SUB.                                    SQ1244.2
 037700     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1244.2
 037800                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1244.2
-037900*                                                                 SQ1244.2
+037900*                                                                         
 038000 CLOSE-FILES.                                                     SQ1244.2
 038100     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1244.2
 038200     CLOSE   PRINT-FILE.                                          SQ1244.2
 039500 TERMINATE-CCVS.                                                  SQ1244.2
 039700     STOP    RUN.                                                 SQ1244.2
-039800*                                                                 SQ1244.2
+039800*                                                                         
 039900 INSPT.                                                           SQ1244.2
 040000     MOVE   "INSPT" TO P-OR-F.                                    SQ1244.2
 040100     ADD     1 TO INSPECT-COUNTER.                                SQ1244.2
 040200     PERFORM PRINT-DETAIL.                                        SQ1244.2
-040300*                                                                 SQ1244.2
+040300*                                                                         
 040400 PASS.                                                            SQ1244.2
 040500     MOVE   "PASS " TO P-OR-F.                                    SQ1244.2
 040600     ADD     1 TO PASS-COUNTER.                                   SQ1244.2
 040700     PERFORM PRINT-DETAIL.                                        SQ1244.2
-040800*                                                                 SQ1244.2
+040800*                                                                         
 040900 FAIL.                                                            SQ1244.2
 041000     MOVE   "FAIL*" TO P-OR-F.                                    SQ1244.2
 041100     ADD     1 TO ERROR-COUNTER.                                  SQ1244.2
 041200     PERFORM PRINT-DETAIL.                                        SQ1244.2
-041300*                                                                 SQ1244.2
+041300*                                                                         
 041400 DE-LETE.                                                         SQ1244.2
 041500     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1244.2
 041600     MOVE   "*****" TO P-OR-F.                                    SQ1244.2
 041700     ADD     1 TO DELETE-COUNTER.                                 SQ1244.2
 041800     PERFORM PRINT-DETAIL.                                        SQ1244.2
-041900*                                                                 SQ1244.2
+041900*                                                                         
 042000 PRINT-DETAIL.                                                    SQ1244.2
 042100     IF REC-CT NOT EQUAL TO ZERO                                  SQ1244.2
 042200         MOVE   "." TO PARDOT-X                                   SQ1244.2
@@ -385,7 +385,7 @@
 043300     MOVE    SPACE TO CORRECT-X.                                  SQ1244.2
 043400     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1244.2
 043500     MOVE    SPACE TO RE-MARK.                                    SQ1244.2
-043600*                                                                 SQ1244.2
+043600*                                                                         
 043700 HEAD-ROUTINE.                                                    SQ1244.2
 043800     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1244.2
 043900     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1244.2
@@ -401,7 +401,7 @@
 044900 END-RTN-EXIT.                                                    SQ1244.2
 045000     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1244.2
 045100     PERFORM WRITE-LINE 2 TIMES.                                  SQ1244.2
-045200*                                                                 SQ1244.2
+045200*                                                                         
 045300 END-ROUTINE-1.                                                   SQ1244.2
 045400     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1244.2
 045500     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1244.2
@@ -434,7 +434,7 @@
 048200     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1244.2
 048300     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1244.2
 048400     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1244.2
-048500*                                                                 SQ1244.2
+048500*                                                                         
 048600 WRITE-LINE.                                                      SQ1244.2
 048700     ADD     1 TO RECORD-COUNT.                                   SQ1244.2
 048800     IF RECORD-COUNT GREATER 50                                   SQ1244.2
@@ -447,7 +447,7 @@
 049500         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1244.2
 049600         MOVE  ZERO TO RECORD-COUNT.                              SQ1244.2
 049700     PERFORM WRT-LN.                                              SQ1244.2
-049800*                                                                 SQ1244.2
+049800*                                                                         
 049900 WRT-LN.                                                          SQ1244.2
 050000     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1244.2
 050100     MOVE    SPACE TO DUMMY-RECORD.                               SQ1244.2
@@ -485,18 +485,18 @@
 053300     EXIT.                                                        SQ1244.2
 053400 CCVS1-EXIT.                                                      SQ1244.2
 053500     EXIT.                                                        SQ1244.2
-053600*                                                                 SQ1244.2
-053700****************************************************************  SQ1244.2
-053800*                                                              *  SQ1244.2
-053900*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1244.2
-054000*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1244.2
-054100*                                                              *  SQ1244.2
-054200****************************************************************  SQ1244.2
-054300*                                                                 SQ1244.2
+053600*                                                                         
+053700*                                                                         
+053800*                                                                         
+053900*                                                                         
+054000*                                                                         
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
 054400 SECT-SQ124A-0004 SECTION.                                        SQ1244.2
 054500 STA-INIT.                                                        SQ1244.2
 054600     MOVE    SPACE TO DELETE-SW.                                  SQ1244.2
-054700*                                                                 SQ1244.2
+054700*                                                                         
 054800     MOVE   "SQ-FS4" TO XFILE-NAME (1).                           SQ1244.2
 054900     MOVE   "R1-F-G" TO XRECORD-NAME (1).                         SQ1244.2
 055000     MOVE    CCVS-PGM-ID TO XPROGRAM-NAME (1).                    SQ1244.2
@@ -507,11 +507,11 @@
 055500     MOVE   "SQ" TO XFILE-ORGANIZATION (1).                       SQ1244.2
 055600     MOVE   "S"  TO XLABEL-TYPE (1).                              SQ1244.2
 055700     MOVE    ZERO TO XRECORD-NUMBER (1).                          SQ1244.2
-055800*                                                                 SQ1244.2
-055900*    OPEN THE FILE IN THE OUTPUT MODE                             SQ1244.2
-056000*    DELETION OF THE OPEN OPERATION DELETES EVERY TEST            SQ1244.2
-056100*    IN THE PROGRAM                                               SQ1244.2
-056200*                                                                 SQ1244.2
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
 056300 SEQ-INIT-01.                                                     SQ1244.2
 056400     MOVE    0 TO REC-CT.                                         SQ1244.2
 056500     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -523,9 +523,9 @@
 057100     GO TO   SEQ-DELETE-01-01.                                    SQ1244.2
 057200 SEQ-TEST-OP-01.                                                  SQ1244.2
 057300     OPEN    OUTPUT SQ-FS4.                                       SQ1244.2
-057400*                                                                 SQ1244.2
-057500*    CHECK I-O STATUS RETURNED FROM OPEN OUTPUT                   SQ1244.2
-057600*                                                                 SQ1244.2
+057400*                                                                         
+057500*                                                                         
+057600*                                                                         
 057700     ADD    1 TO REC-CT.                                          SQ1244.2
 057800     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 057900         GO TO   SEQ-DELETE-01-01.                                SQ1244.2
@@ -544,12 +544,12 @@
 059200         MOVE   "VII-3, VII-23" TO ANSI-REFERENCE                 SQ1244.2
 059300         PERFORM FAIL.                                            SQ1244.2
 059400 SEQ-TEST-01-01-END.                                              SQ1244.2
-059500*                                                                 SQ1244.2
-059600*                                                                 SQ1244.2
-059700*    THE FILE HAS BEEN CREATED.  WE NOW WRITE ONE RECORD          SQ1244.2
-059800*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-059900*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-060000*                                                                 SQ1244.2
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
+060000*                                                                         
 060100 SEQ-INIT-02.                                                     SQ1244.2
 060200     MOVE    0 TO REC-CT.                                         SQ1244.2
 060300     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -565,9 +565,9 @@
 061300 SEQ-TEST-WR-02.                                                  SQ1244.2
 061400     MOVE    FILE-RECORD-INFO (1) TO SQ-FS4R1-F-G-120.            SQ1244.2
 061500     WRITE   SQ-FS4R1-F-G-120.                                    SQ1244.2
-061600*                                                                 SQ1244.2
-061700*    CHECK I-O STATUS RETURNED FROM WRITE                         SQ1244.2
-061800*                                                                 SQ1244.2
+061600*                                                                         
+061700*                                                                         
+061800*                                                                         
 061900     ADD    1 TO REC-CT.                                          SQ1244.2
 062000     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 062100         GO TO   SEQ-DELETE-02-01.                                SQ1244.2
@@ -586,12 +586,12 @@
 063400         PERFORM FAIL.                                            SQ1244.2
 063500 SEQ-TEST-02-01-END.                                              SQ1244.2
 063600     MOVE    SPACE TO DELETE-SW-2.                                SQ1244.2
-063700*                                                                 SQ1244.2
-063800*                                                                 SQ1244.2
-063900*    ONE RECORD HAS BEEN WRITTEN.  WE NOW EXECUTE CLOSE REEL      SQ1244.2
-064000*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-064100*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-064200*                                                                 SQ1244.2
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
+064100*                                                                         
+064200*                                                                         
 064300 SEQ-INIT-03.                                                     SQ1244.2
 064400     MOVE    0 TO REC-CT.                                         SQ1244.2
 064500     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -605,9 +605,9 @@
 065300     GO TO   SEQ-DELETE-03-01.                                    SQ1244.2
 065400 SEQ-TEST-CR-03.                                                  SQ1244.2
 065500     CLOSE   SQ-FS4 UNIT.                                         SQ1244.2
-065600*                                                                 SQ1244.2
-065700*    CHECK I-O STATUS RETURNED FROM CLOSE REEL                    SQ1244.2
-065800*                                                                 SQ1244.2
+065600*                                                                         
+065700*                                                                         
+065800*                                                                         
 065900     ADD    1 TO REC-CT.                                          SQ1244.2
 066000     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 066100         GO TO   SEQ-DELETE-03-01.                                SQ1244.2
@@ -627,11 +627,11 @@
 067500         PERFORM FAIL.                                            SQ1244.2
 067600 SEQ-TEST-03-01-END.                                              SQ1244.2
 067700     MOVE    SPACE TO DELETE-SW-2.                                SQ1244.2
-067800*                                                                 SQ1244.2
-067900*    THE FILE SHOULD STILL BE OPEN. WE NOW WRITE ONE MORE RECORD  SQ1244.2
-068000*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-068100*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-068200*                                                                 SQ1244.2
+067800*                                                                         
+067900*                                                                         
+068000*                                                                         
+068100*                                                                         
+068200*                                                                         
 068300 SEQ-INIT-04.                                                     SQ1244.2
 068400     MOVE    0 TO REC-CT.                                         SQ1244.2
 068500     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -647,9 +647,9 @@
 069500 SEQ-TEST-WR-04.                                                  SQ1244.2
 069600     MOVE    FILE-RECORD-INFO (1) TO SQ-FS4R1-F-G-120.            SQ1244.2
 069700     WRITE   SQ-FS4R1-F-G-120.                                    SQ1244.2
-069800*                                                                 SQ1244.2
-069900*    CHECK I-O STATUS RETURNED FROM WRITE                         SQ1244.2
-070000*                                                                 SQ1244.2
+069800*                                                                         
+069900*                                                                         
+070000*                                                                         
 070100     ADD    1 TO REC-CT.                                          SQ1244.2
 070200     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 070300         GO TO   SEQ-DELETE-04-01.                                SQ1244.2
@@ -668,12 +668,12 @@
 071600         PERFORM FAIL.                                            SQ1244.2
 071700 SEQ-TEST-04-01-END.                                              SQ1244.2
 071800     MOVE    SPACE TO DELETE-SW-2.                                SQ1244.2
-071900*                                                                 SQ1244.2
-072000*                                                                 SQ1244.2
-072100*    NOW EXECUTE A NORMAL CLOSE ON THE FILE.                      SQ1244.2
-072200*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-072300*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-072400*                                                                 SQ1244.2
+071900*                                                                         
+072000*                                                                         
+072100*                                                                         
+072200*                                                                         
+072300*                                                                         
+072400*                                                                         
 072500 SEQ-INIT-05.                                                     SQ1244.2
 072600     MOVE    0 TO REC-CT.                                         SQ1244.2
 072700     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -687,9 +687,9 @@
 073500     GO TO   SEQ-DELETE-05-01.                                    SQ1244.2
 073600 SEQ-TEST-CL-05.                                                  SQ1244.2
 073700     CLOSE   SQ-FS4.                                              SQ1244.2
-073800*                                                                 SQ1244.2
-073900*    CHECK I-O STATUS RETURNED FROM CLOSE                         SQ1244.2
-074000*                                                                 SQ1244.2
+073800*                                                                         
+073900*                                                                         
+074000*                                                                         
 074100     ADD    1 TO REC-CT.                                          SQ1244.2
 074200     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 074300         GO TO   SEQ-DELETE-05-01.                                SQ1244.2
@@ -709,12 +709,12 @@
 075700         PERFORM FAIL.                                            SQ1244.2
 075800 SEQ-TEST-05-01-END.                                              SQ1244.2
 075900     MOVE    SPACE TO DELETE-SW-2.                                SQ1244.2
-076000*                                                                 SQ1244.2
-076100*                                                                 SQ1244.2
-076200*    NOW OPEN THE FILE FOR INPUT.                                 SQ1244.2
-076300*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-076400*    AND ALSO DELETES THE SUBSEQUENT OPERATIONS.                  SQ1244.2
-076500*                                                                 SQ1244.2
+076000*                                                                         
+076100*                                                                         
+076200*                                                                         
+076300*                                                                         
+076400*                                                                         
+076500*                                                                         
 076600 SEQ-INIT-06.                                                     SQ1244.2
 076700     MOVE    0 TO REC-CT.                                         SQ1244.2
 076800     MOVE    ZERO TO XRECORD-NUMBER (1).                          SQ1244.2
@@ -730,9 +730,9 @@
 077800 SEQ-TEST-OP-06.                                                  SQ1244.2
 077900     OPEN    INPUT SQ-FS4.                                        SQ1244.2
 078000     MOVE    SPACE TO SQ-FS4R1-F-G-120.                           SQ1244.2
-078100*                                                                 SQ1244.2
-078200*    CHECK I-O STATUS RETURNED FROM OPEN                          SQ1244.2
-078300*                                                                 SQ1244.2
+078100*                                                                         
+078200*                                                                         
+078300*                                                                         
 078400     ADD    1 TO REC-CT.                                          SQ1244.2
 078500     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 078600         GO TO   SEQ-DELETE-06-01.                                SQ1244.2
@@ -751,14 +751,14 @@
 079900         MOVE   "VII-3, VII-43,4.3.4(23)" TO ANSI-REFERENCE       SQ1244.2
 080000         PERFORM FAIL.                                            SQ1244.2
 080100 SEQ-TEST-06-01-END.                                              SQ1244.2
-080200*                                                                 SQ1244.2
-080300*                                                                 SQ1244.2
-080400*    WE NOW EXECUTE CLOSE REEL BEFORE ANY RECORD HAS BEEN READ.   SQ1244.2
-080500*    APART FROM SETTING I-O STATUS 07 THIS SHOULD HAVE NO EFFECT  SQ1244.2
-080600*    ON THE FILE OR THE SUBSEQUENT RETRIEVAL OF RECORDS.          SQ1244.2
-080700*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-080800*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-080900*                                                                 SQ1244.2
+080200*                                                                         
+080300*                                                                         
+080400*                                                                         
+080500*                                                                         
+080600*                                                                         
+080700*                                                                         
+080800*                                                                         
+080900*                                                                         
 081000 SEQ-INIT-07.                                                     SQ1244.2
 081100     MOVE    0 TO REC-CT.                                         SQ1244.2
 081200     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -772,9 +772,9 @@
 082000     GO TO   SEQ-DELETE-07-01.                                    SQ1244.2
 082100 SEQ-TEST-CU-07.                                                  SQ1244.2
 082200     CLOSE   SQ-FS4 UNIT.                                         SQ1244.2
-082300*                                                                 SQ1244.2
-082400*    CHECK I-O STATUS RETURNED FROM CLOSE REEL                    SQ1244.2
-082500*                                                                 SQ1244.2
+082300*                                                                         
+082400*                                                                         
+082500*                                                                         
 082600     ADD    1 TO REC-CT.                                          SQ1244.2
 082700     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 082800         GO TO   SEQ-DELETE-07-01.                                SQ1244.2
@@ -794,11 +794,11 @@
 084200         PERFORM FAIL.                                            SQ1244.2
 084300 SEQ-TEST-07-01-END.                                              SQ1244.2
 084400     MOVE    SPACE TO DELETE-SW-3.                                SQ1244.2
-084500*                                                                 SQ1244.2
-084600*    THE FILE SHOULD STILL BE OPEN. WE NOW READ A RECORD.         SQ1244.2
-084700*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-084800*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-084900*                                                                 SQ1244.2
+084500*                                                                         
+084600*                                                                         
+084700*                                                                         
+084800*                                                                         
+084900*                                                                         
 085000 SEQ-INIT-08.                                                     SQ1244.2
 085100     MOVE    0 TO REC-CT.                                         SQ1244.2
 085200     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -820,9 +820,9 @@
 086800         MOVE   "EXECUTED" TO AT-END-SW                           SQ1244.2
 086900     NOT END                                                      SQ1244.2
 087000         MOVE   "EXECUTED" TO NOT-END-SW.                         SQ1244.2
-087100*                                                                 SQ1244.2
-087200*    CHECK I-O STATUS RETURNED FROM READ                          SQ1244.2
-087300*                                                                 SQ1244.2
+087100*                                                                         
+087200*                                                                         
+087300*                                                                         
 087400     ADD    1 TO REC-CT.                                          SQ1244.2
 087500     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 087600         GO TO   SEQ-DELETE-08-01.                                SQ1244.2
@@ -840,9 +840,9 @@
 088800         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1244.2
 088900         PERFORM FAIL.                                            SQ1244.2
 089000 SEQ-TEST-08-01-END.                                              SQ1244.2
-089100*                                                                 SQ1244.2
-089200*    CHECK EXECUTION OF THE AT END PATH                           SQ1244.2
-089300*                                                                 SQ1244.2
+089100*                                                                         
+089200*                                                                         
+089300*                                                                         
 089400     ADD     1 TO REC-CT.                                         SQ1244.2
 089500     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 089600         GO TO   SEQ-DELETE-08-02.                                SQ1244.2
@@ -860,9 +860,9 @@
 090800         MOVE   "VII-46, 4.4.4(11)" TO ANSI-REFERENCE             SQ1244.2
 090900         PERFORM FAIL.                                            SQ1244.2
 091000 SEQ-TEST-08-02-END.                                              SQ1244.2
-091100*                                                                 SQ1244.2
-091200*    CHECK EXECUTION OF THE NOT AT END PATH                       SQ1244.2
-091300*                                                                 SQ1244.2
+091100*                                                                         
+091200*                                                                         
+091300*                                                                         
 091400     ADD     1 TO REC-CT.                                         SQ1244.2
 091500     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 091600         GO TO   SEQ-DELETE-08-03.                                SQ1244.2
@@ -881,9 +881,9 @@
 092900         MOVE   "VII-46, 4.4.4(11)" TO ANSI-REFERENCE             SQ1244.2
 093000         PERFORM FAIL.                                            SQ1244.2
 093100 SEQ-TEST-08-03-END.                                              SQ1244.2
-093200*                                                                 SQ1244.2
-093300*    CHECK THE RECORD NUMBER OF THE RECORD JUST READ.             SQ1244.2
-093400*                                                                 SQ1244.2
+093200*                                                                         
+093300*                                                                         
+093400*                                                                         
 093500     ADD     1 TO REC-CT.                                         SQ1244.2
 093600     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 093700         GO TO   SEQ-DELETE-08-04.                                SQ1244.2
@@ -901,12 +901,12 @@
 094900         PERFORM FAIL.                                            SQ1244.2
 095000 SEQ-TEST-08-04-END.                                              SQ1244.2
 095100     MOVE    SPACE TO DELETE-SW-3.                                SQ1244.2
-095200*                                                                 SQ1244.2
-095300*                                                                 SQ1244.2
-095400*    WE NOW READ THE SECOND AND FINAL RECORD.                     SQ1244.2
-095500*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-095600*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-095700*                                                                 SQ1244.2
+095200*                                                                         
+095300*                                                                         
+095400*                                                                         
+095500*                                                                         
+095600*                                                                         
+095700*                                                                         
 095800 SEQ-INIT-09.                                                     SQ1244.2
 095900     MOVE    0 TO REC-CT.                                         SQ1244.2
 096000     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -928,9 +928,9 @@
 097600          MOVE   "EXECUTED" TO AT-END-SW                          SQ1244.2
 097700     NOT AT END                                                   SQ1244.2
 097800          MOVE   "EXECUTED" TO NOT-END-SW.                        SQ1244.2
-097900*                                                                 SQ1244.2
-098000*    CHECK I-O STATUS RETURNED FROM READ                          SQ1244.2
-098100*                                                                 SQ1244.2
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
 098200     ADD    1 TO REC-CT.                                          SQ1244.2
 098300     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 098400         GO TO   SEQ-DELETE-09-01.                                SQ1244.2
@@ -948,9 +948,9 @@
 099600         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1244.2
 099700         PERFORM FAIL.                                            SQ1244.2
 099800 SEQ-TEST-09-01-END.                                              SQ1244.2
-099900*                                                                 SQ1244.2
-100000*    CHECK EXECUTION OF THE AT END PATH                           SQ1244.2
-100100*                                                                 SQ1244.2
+099900*                                                                         
+100000*                                                                         
+100100*                                                                         
 100200     ADD     1 TO REC-CT.                                         SQ1244.2
 100300     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 100400         GO TO   SEQ-DELETE-09-02.                                SQ1244.2
@@ -968,9 +968,9 @@
 101600         MOVE   "VII-46, 4.4.4(11)" TO ANSI-REFERENCE             SQ1244.2
 101700         PERFORM FAIL.                                            SQ1244.2
 101800 SEQ-TEST-09-02-END.                                              SQ1244.2
-101900*                                                                 SQ1244.2
-102000*    CHECK EXECUTION OF THE NOT AT END PATH                       SQ1244.2
-102100*                                                                 SQ1244.2
+101900*                                                                         
+102000*                                                                         
+102100*                                                                         
 102200     ADD     1 TO REC-CT.                                         SQ1244.2
 102300     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 102400         GO TO   SEQ-DELETE-09-03.                                SQ1244.2
@@ -989,9 +989,9 @@
 103700         MOVE   "VII-46, 4.4.4(11)" TO ANSI-REFERENCE             SQ1244.2
 103800         PERFORM FAIL.                                            SQ1244.2
 103900 SEQ-TEST-09-03-END.                                              SQ1244.2
-104000*                                                                 SQ1244.2
-104100*    CHECK THE RECORD NUMBER OF THE RECORD JUST READ.             SQ1244.2
-104200*                                                                 SQ1244.2
+104000*                                                                         
+104100*                                                                         
+104200*                                                                         
 104300     ADD     1 TO REC-CT.                                         SQ1244.2
 104400     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 104500         GO TO   SEQ-DELETE-09-04.                                SQ1244.2
@@ -1009,12 +1009,12 @@
 105700         PERFORM FAIL.                                            SQ1244.2
 105800 SEQ-TEST-09-04-END.                                              SQ1244.2
 105900     MOVE    SPACE TO DELETE-SW-3.                                SQ1244.2
-106000*                                                                 SQ1244.2
-106100*                                                                 SQ1244.2
-106200*    WE NOW ATTEMPT ANOTHER READ, WHICH SHOULD RAISE AT END.      SQ1244.2
-106300*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS      SQ1244.2
-106400*    BUT DOES NOT AFFECT SUBSEQUENT OPERATIONS.                   SQ1244.2
-106500*                                                                 SQ1244.2
+106000*                                                                         
+106100*                                                                         
+106200*                                                                         
+106300*                                                                         
+106400*                                                                         
+106500*                                                                         
 106600 SEQ-INIT-10.                                                     SQ1244.2
 106700     MOVE    0 TO REC-CT.                                         SQ1244.2
 106800     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -1036,9 +1036,9 @@
 108400          MOVE   "EXECUTED" TO AT-END-SW                          SQ1244.2
 108500     NOT AT END                                                   SQ1244.2
 108600          MOVE   "EXECUTED" TO NOT-END-SW.                        SQ1244.2
-108700*                                                                 SQ1244.2
-108800*    CHECK I-O STATUS RETURNED FROM READ                          SQ1244.2
-108900*                                                                 SQ1244.2
+108700*                                                                         
+108800*                                                                         
+108900*                                                                         
 109000     ADD    1 TO REC-CT.                                          SQ1244.2
 109100     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 109200         GO TO   SEQ-DELETE-10-01.                                SQ1244.2
@@ -1057,9 +1057,9 @@
 110500         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1244.2
 110600         PERFORM FAIL.                                            SQ1244.2
 110700 SEQ-TEST-10-01-END.                                              SQ1244.2
-110800*                                                                 SQ1244.2
-110900*    CHECK EXECUTION OF THE AT END PATH                           SQ1244.2
-111000*                                                                 SQ1244.2
+110800*                                                                         
+110900*                                                                         
+111000*                                                                         
 111100     ADD     1 TO REC-CT.                                         SQ1244.2
 111200     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 111300         GO TO   SEQ-DELETE-10-02.                                SQ1244.2
@@ -1078,9 +1078,9 @@
 112600         MOVE   "VII-46, 4.4.4(10)" TO ANSI-REFERENCE             SQ1244.2
 112700         PERFORM FAIL.                                            SQ1244.2
 112800 SEQ-TEST-10-02-END.                                              SQ1244.2
-112900*                                                                 SQ1244.2
-113000*    CHECK EXECUTION OF THE NOT AT END PATH                       SQ1244.2
-113100*                                                                 SQ1244.2
+112900*                                                                         
+113000*                                                                         
+113100*                                                                         
 113200     ADD     1 TO REC-CT.                                         SQ1244.2
 113300     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 113400         GO TO   SEQ-DELETE-10-03.                                SQ1244.2
@@ -1099,11 +1099,11 @@
 114700         PERFORM FAIL.                                            SQ1244.2
 114800 SEQ-TEST-10-03-END.                                              SQ1244.2
 114900     MOVE    SPACE TO DELETE-SW-3.                                SQ1244.2
-115000*                                                                 SQ1244.2
-115100*                                                                 SQ1244.2
-115200*    NOW EXECUTE A NORMAL CLOSE ON THE FILE.                      SQ1244.2
-115300*    DELETION OF THE OPERATION DELETES ITS SUBORDINATE TESTS.     SQ1244.2
-115400*                                                                 SQ1244.2
+115000*                                                                         
+115100*                                                                         
+115200*                                                                         
+115300*                                                                         
+115400*                                                                         
 115500 SEQ-INIT-11.                                                     SQ1244.2
 115600     MOVE    0 TO REC-CT.                                         SQ1244.2
 115700     MOVE   "**" TO SQ-FS4-STATUS.                                SQ1244.2
@@ -1117,9 +1117,9 @@
 116500     GO TO   SEQ-DELETE-11-01.                                    SQ1244.2
 116600 SEQ-TEST-CL-11.                                                  SQ1244.2
 116700     CLOSE   SQ-FS4.                                              SQ1244.2
-116800*                                                                 SQ1244.2
-116900*    CHECK I-O STATUS RETURNED FROM CLOSE                         SQ1244.2
-117000*                                                                 SQ1244.2
+116800*                                                                         
+116900*                                                                         
+117000*                                                                         
 117100     ADD    1 TO REC-CT.                                          SQ1244.2
 117200     IF DELETE-SW NOT = SPACE                                     SQ1244.2
 117300         GO TO   SEQ-DELETE-11-01.                                SQ1244.2
@@ -1138,7 +1138,7 @@
 118600         MOVE   "VII-3, VII-38,4.2.4(4)" TO ANSI-REFERENCE        SQ1244.2
 118700         PERFORM FAIL.                                            SQ1244.2
 118800 SEQ-TEST-11-01-END.                                              SQ1244.2
-118900*                                                                 SQ1244.2
+118900*                                                                         
 119000 CCVS-EXIT SECTION.                                               SQ1244.2
 119100 CCVS-999999.                                                     SQ1244.2
 119200     GO TO   CLOSE-FILES.                                         SQ1244.2

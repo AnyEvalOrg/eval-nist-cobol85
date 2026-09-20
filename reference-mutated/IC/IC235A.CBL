@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         IC2354.2
 000200 PROGRAM-ID.                                                      IC2354.2
 000300     IC235A.                                                      IC2354.2
-000400****************************************************************  IC2354.2
-000500*                                                              *  IC2354.2
-000600*    VALIDATION FOR:-                                          *  IC2354.2
-000700*                                                              *  IC2354.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2354.2
-000900*                                                              *  IC2354.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2354.2
-001100*                                                              *  IC2354.2
-001200****************************************************************  IC2354.2
-001300*                                                              *  IC2354.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2354.2
-001500*                                                              *  IC2354.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2354.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2354.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2354.2
-001900*                                                              *  IC2354.2
-002000****************************************************************  IC2354.2
-002100*        THIS PROGRAM TESTS THE USE OF MULTIPLE DATA-NAMES        IC2354.2
-002200*    IN THE USING PHRASE OF THE CALL STATEMENT.  TWO 01 GROUP     IC2354.2
-002300*    ITEMS AND AN ELEMENTARY 77 ITEM ARE THE PARAMETERS.  THE     IC2354.2
-002400*    DATA DEFINITIONS FOR THE GROUP ITEM PARAMETERS ARE NOT       IC2354.2
-002500*    THE SAME AS IN THE SUBPROGRAM BUT THE NUMBER OF CHARACTERS   IC2354.2
-002600*    ARE IDENTICAL.                                               IC2354.2
-002700*        THIS PROGRAM ALSO CALLS A SUBPROGRAM WITH MORE           IC2354.2
-002800*    THAN ONE EXIT PROGRAM STATEMENT.                             IC2354.2
-002900*         REFERENCE:  AMERICAN NATIONAL STANDARD                  IC2354.2
-003000*                     PROGRAMMING LANGUAGE COBOL, X3.23-1985.     IC2354.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            IC2354.2
 003200 CONFIGURATION SECTION.                                           IC2354.2
 003300 SOURCE-COMPUTER.                                                 IC2354.2
@@ -253,7 +253,7 @@
 025500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2354.2
 025600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2354.2
 025700      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2354.2
-025800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2354.2
+025800*                                                                         
 025900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2354.2
 026000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2354.2
 026100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2354.2
@@ -321,9 +321,9 @@
 032300 CCVS1-EXIT.                                                      IC2354.2
 032400     EXIT.                                                        IC2354.2
 032500 SECT-IC235-0001 SECTION.                                         IC2354.2
-032600*        THE TESTS IN THIS SECTION CALL A SUBPROGRAM WHICH        IC2354.2
-032700*    HAS FOUR EXIT PROGRAM STATEMENTS.  A DIFFERENT EXIT IS       IC2354.2
-032800*    TAKEN FOR EACH CALL TO THE SUBPROGRAM.                       IC2354.2
+032600*                                                                         
+032700*                                                                         
+032800*                                                                         
 032900 EXIT-INIT.                                                       IC2354.2
 033000     MOVE "MULTIPLE EXIT PROGRM" TO FEATURE.                      IC2354.2
 033100 EXIT-INIT-001.                                                   IC2354.2
@@ -394,9 +394,9 @@
 039600     PERFORM PRINT-DETAIL.                                        IC2354.2
 039700     GO TO SECT-IC235-0002.                                       IC2354.2
 039800 EXIT-DELETES.                                                    IC2354.2
-039900*        IF THE SUBPROGRAM WITH MULTIPLE EXIT PROGRAM             IC2354.2
-040000*    STATEMENTS CANNOT BE INCLUDED IN THE RUN UNIT                IC2354.2
-040100*    DELETE PARAGRAPH EXIT-INIT-001 THRU EXIT-WRITE-004.          IC2354.2
+039900*                                                                         
+040000*                                                                         
+040100*                                                                         
 040200     PERFORM DE-LETE.                                             IC2354.2
 040300     MOVE "EXIT-TEST-01" TO PAR-NAME.                             IC2354.2
 040400     PERFORM PRINT-DETAIL.                                        IC2354.2
@@ -410,10 +410,10 @@
 041200     MOVE "EXIT-TEST-04" TO PAR-NAME.                             IC2354.2
 041300     PERFORM PRINT-DETAIL.                                        IC2354.2
 041400 SECT-IC235-0002 SECTION.                                         IC2354.2
-041500*        THIS SECTION CALLS A SUBPROGRAM WITH TWO GROUP ITEMS     IC2354.2
-041600*    AND ONE ELEMENTARY ITEM IN THE USING PHRASE. THE ITEM        IC2354.2
-041700*    DESCRIPTIONS ARE DIFFERENT IN THE SUBPROGRAM FROM THE MAIN   IC2354.2
-041800*    PROGRAM, BUT THE NUMBER OF CHARACTERS IS IDENTICAL.          IC2354.2
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
 041900 CALL-INIT-06.                                                    IC2354.2
 042000     MOVE "CALL-TEST-06" TO PAR-NAME.                             IC2354.2
 042100     MOVE 0 TO NUMER-FIELD  ELEM-77 NUM-ITEM.                     IC2354.2
@@ -429,8 +429,8 @@
 043100     PERFORM DE-LETE.                                             IC2354.2
 043200     PERFORM PRINT-DETAIL.                                        IC2354.2
 043300     GO TO CCVS-EXIT.                                             IC2354.2
-043400*       IF IC235A-1 CANNOT BE INCLUDED IN THE RUN UNIT            IC2354.2
-043500*    DELETE THE PARAGRAPH CALL-TEST-06.                           IC2354.2
+043400*                                                                         
+043500*                                                                         
 043600 CALL-TEST-06-01.                                                 IC2354.2
 043700     IF ALPHA-NUM-FIELD NOT EQUAL TO "IC235A-1"                   IC2354.2
 043800         GO TO CALL-FAIL-06-01.                                   IC2354.2
@@ -457,37 +457,37 @@
 045900     ADD 1 TO REC-CT.                                             IC2354.2
 046000     PERFORM PRINT-DETAIL.                                        IC2354.2
 046100 CALL-TEST-06-03.                                                 IC2354.2
-046200     IF ALPHA-FIELD EQUAL TO "YE1"                                IC2354.2
+046200     IF ALPHA-FIELD EQUAL TO "YEC"                                IC2354.2
 046300         PERFORM PASS                                             IC2354.2
 046400         GO TO CALL-WRITE-06-03.                                  IC2354.2
 046500 CALL-FAIL-06-03.                                                 IC2354.2
 046600     PERFORM FAIL.                                                IC2354.2
 046700     MOVE ALPHA-FIELD TO COMPUTED-A.                              IC2354.2
-046800     MOVE "YE1" TO CORRECT-A.                                     IC2354.2
+046800     MOVE "YEC" TO CORRECT-A.                                     IC2354.2
 046900     MOVE "ALPHABETIC PARAMETER" TO RE-MARK.                      IC2354.2
 047000 CALL-WRITE-06-03.                                                IC2354.2
 047100     ADD 1 TO REC-CT.                                             IC2354.2
 047200     PERFORM PRINT-DETAIL.                                        IC2354.2
 047300 CALL-TEST-06-04.                                                 IC2354.2
-047400     IF ELEM-77 EQUAL TO 0.3654                                   IC2354.2
+047400     IF ELEM-77 EQUAL TO 0.7254                                   IC2354.2
 047500         PERFORM PASS                                             IC2354.2
 047600         GO TO CALL-WRITE-06-04.                                  IC2354.2
 047700 CALL-FAIL-06-04.                                                 IC2354.2
 047800     PERFORM FAIL.                                                IC2354.2
 047900     MOVE ELEM-77 TO COMPUTED-4V14.                               IC2354.2
-048000     MOVE 0.3654 TO CORRECT-4V14.                                 IC2354.2
+048000     MOVE 0.7254 TO CORRECT-4V14.                                 IC2354.2
 048100     MOVE "COMPUTATIONAL PARAMETER" TO RE-MARK.                   IC2354.2
 048200 CALL-WRITE-06-04.                                                IC2354.2
 048300     ADD 1 TO REC-CT.                                             IC2354.2
 048400     PERFORM PRINT-DETAIL.                                        IC2354.2
 048500 CALL-TEST-06-05.                                                 IC2354.2
-048600     IF NUM-ITEM EQUAL TO 75                                      IC2354.2
+048600     IF NUM-ITEM EQUAL TO 85                                      IC2354.2
 048700         PERFORM PASS                                             IC2354.2
 048800         GO TO CALL-WRITE-06-05.                                  IC2354.2
 048900 CALL-FAIL-06-05.                                                 IC2354.2
 049000     PERFORM FAIL.                                                IC2354.2
 049100     MOVE NUM-ITEM TO COMPUTED-18V0.                              IC2354.2
-049200     MOVE 75 TO CORRECT-18V0.                                     IC2354.2
+049200     MOVE 85 TO CORRECT-18V0.                                     IC2354.2
 049300     MOVE "SIGNED NUMERIC PARAMETER" TO RE-MARK.                  IC2354.2
 049400 CALL-WRITE-06-05.                                                IC2354.2
 049500     ADD 1 TO REC-CT.                                             IC2354.2
@@ -530,7 +530,7 @@
 053200     MOVE   "XVII-46 (59)" TO ANSI-REFERENCE.                     IC2354.2
 053300     ADD 1 TO REC-CT.                                             IC2354.2
 053400     PERFORM PRINT-DETAIL.                                        IC2354.2
-053500*                                                                 IC2354.2
+053500*                                                                         
 053600     GO TO CCVS-EXIT.                                             IC2354.2
 053700 CCVS-EXIT SECTION.                                               IC2354.2
 053800 CCVS-999999.                                                     IC2354.2
@@ -538,31 +538,31 @@
 054000 IDENTIFICATION DIVISION.                                         IC2354.2
 054100 PROGRAM-ID.                                                      IC2354.2
 054200     IC235A-1.                                                    IC2354.2
-054300****************************************************************  IC2354.2
-054400*                                                              *  IC2354.2
-054500*    VALIDATION FOR:-                                          *  IC2354.2
-054600*                                                              *  IC2354.2
-054700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2354.2
-054800*                                                              *  IC2354.2
-054900*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2354.2
-055000*                                                              *  IC2354.2
-055100****************************************************************  IC2354.2
-055200*                                                              *  IC2354.2
-055300*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2354.2
-055400*                                                              *  IC2354.2
-055500*        X-55  - SYSTEM PRINTER NAME.                          *  IC2354.2
-055600*        X-82  - SOURCE COMPUTER NAME.                         *  IC2354.2
-055700*        X-83  - OBJECT COMPUTER NAME.                         *  IC2354.2
-055800*                                                              *  IC2354.2
-055900****************************************************************  IC2354.2
-056000*        THE SUBPROGRAM IC235A-1 HAS THREE OPERANDS IN THE        IC2354.2
-056100*    USING PHRASE OF THE PROCEDURE DIVISION HEADER.  TWO          IC2354.2
-056200*    OPERANDS ARE 01 GROUP ITEMS AND THE THIRD OPERAND IS         IC2354.2
-056300*    AN ELEMENTARY 77 ITEM.  THE DATA DESCRIPTIONS OF THESE       IC2354.2
-056400*    OPERANDS IN THE LINKAGE SECTION ARE NOT THE SAME AS THE      IC2354.2
-056500*    DATA DESCRIPTIONS IN THE WORKING-STORAGE SECTION OF THE      IC2354.2
-056600*    CALLING PROGRAM, BUT AN EQUAL NUMBER OF CHARACTER            IC2354.2
-056700*    POSITIONS ARE DEFINED.  THE CALLING PROGRAM IS IC235.        IC2354.2
+054300*                                                                         
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
+054800*                                                                         
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
 056800 ENVIRONMENT DIVISION.                                            IC2354.2
 056900 INPUT-OUTPUT SECTION.                                            IC2354.2
 057000 FILE-CONTROL.                                                    IC2354.2
@@ -593,8 +593,8 @@
 059500 PROCEDURE DIVISION USING GRP-01 ELEM-01 GRP-02                   IC2354.2
 059600                          ELEM-NON-01 SUBSCRIPTED-DATA.           IC2354.2
 059700 SECT-IC235A-1-001 SECTION.                                       IC2354.2
-059800*        THIS SECTION SETS THE PARAMETER FIELDS REFERRED TO       IC2354.2
-059900*    IN THE USING PHRASE AND DEFINED IN THE LINKAGE SECTION.      IC2354.2
+059800*                                                                         
+059900*                                                                         
 060000 CALL-TEST-06.                                                    IC2354.2
 060100     MOVE AN-CONSTANT TO AN-FIELD.                                IC2354.2
 060200     ADD 25 TO NUM-DISPLAY.                                       IC2354.2
@@ -610,34 +610,34 @@
 061200 IDENTIFICATION DIVISION.                                         IC2354.2
 061300 PROGRAM-ID.                                                      IC2354.2
 061400     IC235A-2.                                                    IC2354.2
-061500****************************************************************  IC2354.2
-061600*                                                              *  IC2354.2
-061700*    VALIDATION FOR:-                                          *  IC2354.2
-061800*                                                              *  IC2354.2
-061900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2354.2
-062000*                                                              *  IC2354.2
-062100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2354.2
-062200*                                                              *  IC2354.2
-062300****************************************************************  IC2354.2
-062400*                                                              *  IC2354.2
-062500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2354.2
-062600*                                                              *  IC2354.2
-062700*        X-55  - SYSTEM PRINTER NAME.                          *  IC2354.2
-062800*        X-82  - SOURCE COMPUTER NAME.                         *  IC2354.2
-062900*        X-83  - OBJECT COMPUTER NAME.                         *  IC2354.2
-063000*                                                              *  IC2354.2
-063100****************************************************************  IC2354.2
-063200*        THE SUBPROGRAM IC235A-2 HAS TWO OPERANDS IN THE          IC2354.2
-063300*    PROCEDURE DIVISION HEADER AND THE ROUTINE CONTAINS           IC2354.2
-063400*    FOUR EXIT PROGRAM STATEMENTS.  THE CALLING PROGRAM           IC2354.2
-063500*    IS IC235.                                                    IC2354.2
+061500*                                                                         
+061600*                                                                         
+061700*                                                                         
+061800*                                                                         
+061900*                                                                         
+062000*                                                                         
+062100*                                                                         
+062200*                                                                         
+062300*                                                                         
+062400*                                                                         
+062500*                                                                         
+062600*                                                                         
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
+063500*                                                                         
 063600 ENVIRONMENT DIVISION.                                            IC2354.2
 063700 DATA DIVISION.                                                   IC2354.2
 063800 LINKAGE SECTION.                                                 IC2354.2
 063900 77  DN1 PICTURE 999.                                             IC2354.2
 064000 77  DN2 PICTURE S99 COMPUTATIONAL.                               IC2354.2
 064100 PROCEDURE DIVISION  USING DN1 DN2.                               IC2354.2
-064200*        THIS SUBPROGRAM CONTANS FOUR EXIT PROGRAM STATEMENTS.    IC2354.2
+064200*                                                                         
 064300 SECT-IC235A-2-0001 SECTION.                                      IC2354.2
 064400 EXIT-TEST-001.                                                   IC2354.2
 064500     IF DN1 IS NOT EQUAL TO 1                                     IC2354.2
@@ -658,7 +658,7 @@
 066000     MOVE 4 TO DN2.                                               IC2354.2
 066100     GO TO EXIT-STATEMENT-004.                                    IC2354.2
 066200 EXTRANEOUS-PARAGRAPH.                                            IC2354.2
-066300*        THIS PARAGRAPH IS NEVER EXECUTED.                        IC2354.2
+066300*                                                                         
 066400     MOVE 5 TO DN2.                                               IC2354.2
 066500 EXIT-STATEMENT-004.                                              IC2354.2
 066600     EXIT PROGRAM.                                                IC2354.2

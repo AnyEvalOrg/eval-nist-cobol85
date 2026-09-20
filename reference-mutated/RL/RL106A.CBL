@@ -1,41 +1,41 @@
 000100 IDENTIFICATION DIVISION.                                         RL1064.2
 000200 PROGRAM-ID.                                                      RL1064.2
 000300     RL106A.                                                      RL1064.2
-000400****************************************************************  RL1064.2
-000500*                                                              *  RL1064.2
-000600*    VALIDATION FOR:-                                          *  RL1064.2
-000700*                                                              *  RL1064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1064.2
-000900*                                                              *  RL1064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1064.2
-001100*                                                              *  RL1064.2
-001200****************************************************************  RL1064.2
-001300*GENERAL:    THIS PROGRAM PROCESSES THREE RLEATIVE I-O FILES      RL1064.2
-001400*            IDENTIFIED AS RL-FR4,RL-FR5 AND RL-FR6.  THE FUNCTIONRL1064.2
-001500*            OF THIS PROGRAM IS TO CREATE THREE RELATIVE FILES    RL1064.2
-001600*            RANDOMLLY (ACCESS MODE RANDOM) AND VERIFY THAT THEY  RL1064.2
-001700*            WERE CREATED CORRECTLY.  THE FILES PROCESSED         RL1064.2
-001800*            CONTAIN VARIABLE LENGTH RECORDS.                     RL1064.2
-001900*                                                                 RL1064.2
-002000*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL1064.2
-002100*            PROGRAM ARE:                                         RL1064.2
-002200*                                                                 RL1064.2
-002300*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1064.2
-002400*                         RELATIVE  I-O DATA FILE-1               RL1064.2
-002500*                 X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1064.2
-002600*                         RELATIVE  I-O DATA FILE-2               RL1064.2
-002700*                 X-23   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1064.2
-002800*                         RELATIVE  I-O DATA FILE-3               RL1064.2
-002900*                 X-55   SYSTEM PRINTER                           RL1064.2
-003000*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL1064.2
-003100*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL1064.2
-003200*                 X-75   OBJECT OF VALUE OF CLAUSE FOR FILE-1     RL1064.2
-003300*                 X-76   OBJECT OF VALUE OF CLAUSE FOR FILE-2     RL1064.2
-003400*                 X-77   OBJECT OF VALUE OF CLAUSE FOR FILE-3     RL1064.2
-003500*                 X-82   SOURCE-COMPUTER                          RL1064.2
-003600*                 X-83   OBJECT-COMPUTER.                         RL1064.2
-003700*                                                                 RL1064.2
-003800****************************************************************  RL1064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900 ENVIRONMENT DIVISION.                                            RL1064.2
 004000 CONFIGURATION SECTION.                                           RL1064.2
 004100 SOURCE-COMPUTER.                                                 RL1064.2
@@ -370,7 +370,7 @@
 038600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1064.2
 038700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1064.2
 038800      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1064.2
-038900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1064.2
+038900*                                                                         
 039000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1064.2
 039100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1064.2
 039200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1064.2
@@ -490,7 +490,7 @@
 050600     GO TO REL-TEST-8-WRITE.                                      RL1064.2
 050700 REL-DELETE-8.                                                    RL1064.2
 050800     PERFORM DE-LETE.                                             RL1064.2
-050900*NOTE  RL-FR4  IS NOT CREATED  -  SO SKIP TO REL-TEST-11.         RL1064.2
+050900*                                                                         
 051000     MOVE "REL-TEST-8         " TO PAR-NAME.                      RL1064.2
 051100     PERFORM PRINT-DETAIL.                                        RL1064.2
 051200     GO TO REL-TEST-11.                                           RL1064.2
@@ -503,7 +503,7 @@
 051900     MOVE "REL-TEST-8         " TO PAR-NAME.                      RL1064.2
 052000     PERFORM PRINT-DETAIL.                                        RL1064.2
 052100     CLOSE RL-FR4.                                                RL1064.2
-052200*                                                                 RL1064.2
+052200*                                                                         
 052300     GO TO INIT-TEST-9.                                           RL1064.2
 052400 WRITE-FOR-TEST-8.                                                RL1064.2
 052500     MOVE RECORD-BUILD TO GRP-1SEQ-RECORD-4B.                     RL1064.2
@@ -556,10 +556,10 @@
 057200         MOVE "INVAILD KEY RL-FR4  " TO RE-MARK                   RL1064.2
 057300         PERFORM FAIL                                             RL1064.2
 057400         GO TO REL-TEST-10-WRITE.                                 RL1064.2
-057500*    NOTE  *** IF REC-NUMBER-4B CONTAINS THE RECORD NUMBER        RL1064.2
-057600*          THEN FIXED LENGTH RECORDS WERE WRITTEN INSTEAD         RL1064.2
-057700*          OF VARIABLE LENGTH RECORDS.                            RL1064.2
-057800*    NOTE  CHECK LENGTH OF RECORD 10.                             RL1064.2
+057500*                                                                         
+057600*                                                                         
+057700*                                                                         
+057800*                                                                         
 057900 COMPARE-FOR-TEST-10.                                             RL1064.2
 058000     IF REC-NUMBER-4B EQUAL TO "10"                               RL1064.2
 058100          MOVE "FIXED LENGTH RECORDS" TO COMPUTED-A.              RL1064.2
@@ -581,7 +581,7 @@
 059700     GO TO REL-TEST-11-WRITE.                                     RL1064.2
 059800 REL-DELETE-11.                                                   RL1064.2
 059900     PERFORM DE-LETE.                                             RL1064.2
-060000*    NOTE RL-FR5 IS NOT CREATED  SO SKIP TO REL-TEST-15.          RL1064.2
+060000*                                                                         
 060100     MOVE "REL-TEST-11        " TO PAR-NAME.                      RL1064.2
 060200     PERFORM PRINT-DETAIL.                                        RL1064.2
 060300     GO TO REL-TEST-15.                                           RL1064.2
@@ -608,7 +608,7 @@
 062400     CLOSE RL-FR5.                                                RL1064.2
 062500     MOVE "REL-TEST-11        " TO PAR-NAME.                      RL1064.2
 062600     PERFORM PRINT-DETAIL.                                        RL1064.2
-062700*                                                                 RL1064.2
+062700*                                                                         
 062800 INIT-TEST-12.                                                    RL1064.2
 062900     OPEN INPUT RL-FR5.                                           RL1064.2
 063000     MOVE 01 TO SUB-1  KEY-2.                                     RL1064.2
@@ -621,8 +621,8 @@
 063700     IF SUB-1 EQUAL TO 11                                         RL1064.2
 063800         GO TO COMPARE-FOR-TEST-12.                               RL1064.2
 063900     ADD 1 TO SUB-1.                                              RL1064.2
-064000*    NOTE  BLANK OUT GARBAGE IN INPUT AREA.                       RL1064.2
-064100*    MOVE SPACE TO GRP-1SEQ-RECORD-5B.                            RL1064.2
+064000*                                                                         
+064100*                                                                         
 064200     MOVE SUB-1 TO KEY-2.                                         RL1064.2
 064300     GO TO REL-TEST-12.                                           RL1064.2
 064400 COMPARE-FOR-TEST-12.                                             RL1064.2
@@ -646,10 +646,10 @@
 066200         MOVE "INVALID KEY RL-FR5 " TO RE-MARK                    RL1064.2
 066300         PERFORM FAIL                                             RL1064.2
 066400         GO TO REL-TEST-13-WRITE.                                 RL1064.2
-066500*    NOTE  *** IF REC-NUMBER-5B CONTAINS THE RECORD NUMBER        RL1064.2
-066600*          THEN FIXED LENGTH RECORDS WERE WRITTEN INSTEAD         RL1064.2
-066700*          OF VARIABLE LENGTH RECORDS.                            RL1064.2
-066800*    NOTE CHECK LENGTH OF RECORD 5.                               RL1064.2
+066500*                                                                         
+066600*                                                                         
+066700*                                                                         
+066800*                                                                         
 066900 REL-TEST-13.                                                     RL1064.2
 067000     IF REC-NUMBER-5B EQUAL TO "05"                               RL1064.2
 067100         MOVE "FIXED LENGTH RECORDS" TO COMPUTED-A.               RL1064.2
@@ -665,7 +665,7 @@
 068100         MOVE "INVALID KEY ON RECORD 6 " TO RE-MARK               RL1064.2
 068200         PERFORM FAIL                                             RL1064.2
 068300         GO TO REL-TEST-14-WRITE.                                 RL1064.2
-068400*    NOTE  CHECK LENGTH OF RECORD 6.                              RL1064.2
+068400*                                                                         
 068500     IF REC-NUMBER-5B EQUAL TO "06"                               RL1064.2
 068600         MOVE "FIXED LENGTH RECORDS" TO COMPUTED-A.               RL1064.2
 068700 REL-TEST-14-WRITE.                                               RL1064.2
@@ -690,9 +690,9 @@
 070600 REL-DELETE-15.                                                   RL1064.2
 070700     PERFORM DE-LETE.                                             RL1064.2
 070800     MOVE "REL-TEST-15        " TO PAR-NAME.                      RL1064.2
-070900*    NOTE  THIS IS THE FINAL SERIES OF TESTS,  IF THESE ARE       RL1064.2
-071000*          DELETED, THE PROGRAM IS AT AN END  SO,                 RL1064.2
-071100*          SKIP TO      END-PARAGRAPH.                            RL1064.2
+070900*                                                                         
+071000*                                                                         
+071100*                                                                         
 071200     PERFORM  PRINT-DETAIL.                                       RL1064.2
 071300     GO TO    CCVS-EXIT.                                          RL1064.2
 071400 REL-TEST-12-LONG-REC.                                            RL1064.2
@@ -718,7 +718,7 @@
 073400     MOVE "REL-TEST-15        " TO PAR-NAME.                      RL1064.2
 073500     PERFORM PRINT-DETAIL.                                        RL1064.2
 073600     CLOSE RL-FR6.                                                RL1064.2
-073700*                                                                 RL1064.2
+073700*                                                                         
 073800 INIT-TEST-16.                                                    RL1064.2
 073900     OPEN INPUT RL-FR6.                                           RL1064.2
 074000     MOVE 01 TO SUB-1  KEY-3.                                     RL1064.2
@@ -764,10 +764,10 @@
 078000     IF REC-NUMBER-6B EQUAL TO "02"                               RL1064.2
 078100        MOVE "FIXED LENGTH RECORDS" TO COMPUTED-A.                RL1064.2
 078200         GO TO REL-TEST-17-WRITE.                                 RL1064.2
-078300*    NOTE CHECK LENGTH OF RECORD 2.                               RL1064.2
-078400*    NOTE  *** IF REC-NUMBER-6B CONTAINS THE RECORD NUMBER        RL1064.2
-078500*          THEN FIXED LENGTH RECORDS WERE WRITTEN INSTEAD         RL1064.2
-078600*          OF VARIABLE LENGTH RECORDS.                            RL1064.2
+078300*                                                                         
+078400*                                                                         
+078500*                                                                         
+078600*                                                                         
 078700 REL-TEST-17-WRITE.                                               RL1064.2
 078800     MOVE "INFO ONLY-SEE PROGRAM" TO RE-MARK.                     RL1064.2
 078900     MOVE "REL-TEST-17        " TO PAR-NAME.                      RL1064.2
@@ -781,8 +781,8 @@
 079700         MOVE "ATTEMPT TO READ LAST RECORD" TO RE-MARK            RL1064.2
 079800         PERFORM FAIL                                             RL1064.2
 079900         GO TO REL-TEST-18-WRITE.                                 RL1064.2
-080000*    NOTE  *** RECORD 12 WAS A LONG RECORD AND                    RL1064.2
-080100*          REC-NUMBER-6B SHOULD CONTAIN 12.                       RL1064.2
+080000*                                                                         
+080100*                                                                         
 080200 REL-TEST-18.                                                     RL1064.2
 080300     IF REC-NUMBER-6B EQUAL TO "12"                               RL1064.2
 080400          PERFORM PASS                                            RL1064.2

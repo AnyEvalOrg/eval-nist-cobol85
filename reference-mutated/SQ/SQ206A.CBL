@@ -1,20 +1,20 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2064.2
 000200 PROGRAM-ID.                                                      SQ2064.2
 000300     SQ206A.                                                      SQ2064.2
-000400****************************************************************  SQ2064.2
-000500*                                                              *  SQ2064.2
-000600*    VALIDATION FOR:-                                          *  SQ2064.2
-000700*    " HIGH       ".                                              SQ2064.2
-000800*                                                              *  SQ2064.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2064.2
-001000*    "4.2 ".                                                      SQ2064.2
-001100*                                                              *  SQ2064.2
-001200*         THE ROUTINE SQ206A TESTS THE USE OF THE CLAUSES SAME    SQ2064.2
-001300*    RECORD AREA AND SAME AREA OF THE I-O-CONTROL PARAGRAPH.      SQ2064.2
-001400*    TAPE FILES AND MASS-STORAGE FILES ARE CREATED WHICH          SQ2064.2
-001500*    REFERENCE THE SAME RECORD AREA OR ARE NAMED IN A SAME AREA   SQ2064.2
-001600*    CLAUSE.  THE FILES ARE PROCESSED AND THE CONTENTS OF THE     SQ2064.2
-001700*    RECORDS VERIFIED AGAINST THE EXPECTED RESULTS.               SQ2064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
 001800 ENVIRONMENT DIVISION.                                            SQ2064.2
 001900 CONFIGURATION SECTION.                                           SQ2064.2
 002000 SOURCE-COMPUTER.                                                 SQ2064.2
@@ -289,7 +289,7 @@
 034100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2064.2
 034200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2064.2
 034300      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2064.2
-034400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2064.2
+034400*                                                                         
 034500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2064.2
 034600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2064.2
 034700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2064.2
@@ -352,10 +352,10 @@
 040400     EXIT.                                                        SQ2064.2
 040500 SECT-SQ206A-0001 SECTION.                                        SQ2064.2
 040600 WRITE-INIT-GF-01.                                                SQ2064.2
-040700*             IN THIS TEST TWO FILES ARE CREATED USING THE SAME   SQ2064.2
-040800*             RECORD AREA.  THE LOGICAL RECORD WRITTEN ON SQ-FS1  SQ2064.2
-040900*             REMAINS IN THE RECORD AREA TO BE WRITTEN ON SQ-FS3. SQ2064.2
-041000*             ONLY THE FILE NAMES CHANGE.                         SQ2064.2
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
+041000*                                                                         
 041100     MOVE "R1-F-G" TO XRECORD-NAME (1).                           SQ2064.2
 041200     MOVE "SQ206"  TO XPROGRAM-NAME (1).                          SQ2064.2
 041300     MOVE 120      TO XRECORD-LENGTH (1).                         SQ2064.2
@@ -416,9 +416,9 @@
 046800     PERFORM PRINT-DETAIL.                                        SQ2064.2
 046900     CLOSE SQ-FS4.                                                SQ2064.2
 047000 READ-INIT-GF-01.                                                 SQ2064.2
-047100*             THIS TEST READS AND VALIDATES SQ-FS1 WHICH WAS      SQ2064.2
-047200*             CREATED IN WRITE-TEST-GF-01. SQ-FS1 IS OPENED FOR   SQ2064.2
-047300*             INPUT IN WRITE-INIT-GF-02.                          SQ2064.2
+047100*                                                                         
+047200*                                                                         
+047300*                                                                         
 047400     MOVE 0 TO WRK-RECORD-COUNT, RECORDS-IN-ERROR.                SQ2064.2
 047500 READ-TEST-GF-01.                                                 SQ2064.2
 047600     READ SQ-FS1                                                  SQ2064.2
@@ -461,9 +461,9 @@
 051300 READ-CLOSE-GF-01.                                                SQ2064.2
 051400     CLOSE SQ-FS1.                                                SQ2064.2
 051500 READ-INIT-GF-02.                                                 SQ2064.2
-051600*             THIS TEST READS AND VALIDATES SQ-FS3 WHICH WAS      SQ2064.2
-051700*             CREATED IN WRITE-TEST-GF-01. SQ-FS3 IS OPENED FOR   SQ2064.2
-051800*             INPUT IN WRITE-INIT-GF-02.                          SQ2064.2
+051600*                                                                         
+051700*                                                                         
+051800*                                                                         
 051900     MOVE 0 TO WRK-RECORD-COUNT, RECORDS-IN-ERROR.                SQ2064.2
 052000 READ-TEST-GF-02.                                                 SQ2064.2
 052100     READ SQ-FS3                                                  SQ2064.2
@@ -506,9 +506,9 @@
 055800 READ-CLOSE-GF-02.                                                SQ2064.2
 055900     CLOSE SQ-FS3.                                                SQ2064.2
 056000 READ-INIT-GF-03.                                                 SQ2064.2
-056100*             IN THIS TEST SQ-FS2 IS CREATED AND SQ-FS4 IS READ   SQ2064.2
-056200*             AND VALIDATED USING SAME RECORD AREA.  SQ-FS4 WAS   SQ2064.2
-056300*             CREATED IN WRITE-TEST-GF-02.                        SQ2064.2
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
 056400     MOVE "SQ-FS2" TO XFILE-NAME (2).                             SQ2064.2
 056500     MOVE "R1-F-G" TO XRECORD-NAME (2).                           SQ2064.2
 056600     MOVE "SQ206"  TO XPROGRAM-NAME (2).                          SQ2064.2
@@ -538,9 +538,9 @@
 059000     PERFORM PRINT-DETAIL.                                        SQ2064.2
 059100     CLOSE SQ-FS2.                                                SQ2064.2
 059200 READ-INIT-GF-04.                                                 SQ2064.2
-059300*             THIS TEST READS AND VALIDATES SQ-FS4 WHICH WAS      SQ2064.2
-059400*             CREATED IN WRITE-TEST-GF-02. SQ-FS4 IS OPENED FOR   SQ2064.2
-059500*             INPUT IN WRITE-INIT-GF-03.                          SQ2064.2
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
 059600     MOVE 0 TO WRK-RECORD-COUNT, RECORDS-IN-ERROR.                SQ2064.2
 059700 READ-TEST-GF-04.                                                 SQ2064.2
 059800     READ SQ-FS4                                                  SQ2064.2
@@ -583,8 +583,8 @@
 063500 READ-CLOSE-GF-04.                                                SQ2064.2
 063600     CLOSE SQ-FS4.                                                SQ2064.2
 063700 READ-INIT-GF-05.                                                 SQ2064.2
-063800*             THIS TEST READS AND VALIDATE SQ-FS2 WHICH WAS       SQ2064.2
-063900*             CREATED IN WRITE-TEST-GF-02.                        SQ2064.2
+063800*                                                                         
+063900*                                                                         
 064000     MOVE 0 TO WRK-RECORD-COUNT, RECORDS-IN-ERROR.                SQ2064.2
 064100     OPEN INPUT SQ-FS2.                                           SQ2064.2
 064200 READ-TEST-GF-05.                                                 SQ2064.2

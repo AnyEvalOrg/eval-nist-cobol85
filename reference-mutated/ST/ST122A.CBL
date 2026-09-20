@@ -1,44 +1,44 @@
 000100 IDENTIFICATION DIVISION.                                         ST1224.2
 000200 PROGRAM-ID.                                                      ST1224.2
 000300     ST122A.                                                      ST1224.2
-000400****************************************************************  ST1224.2
-000500*                                                              *  ST1224.2
-000600*    VALIDATION FOR:-                                          *  ST1224.2
-000700*                                                              *  ST1224.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1224.2
-000900*                                                              *  ST1224.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1224.2
-001100*                                                              *  ST1224.2
-001200****************************************************************  ST1224.2
-001300*                                                              *  ST1224.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1224.2
-001500*                                                              *  ST1224.2
-001600*        X-01                                                  *  ST1224.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  ST1224.2
-001800*        X-69                                                  *  ST1224.2
-001900*        X-74                                                  *  ST1224.2
-002000*        X-75                                                  *  ST1224.2
-002100*        X-82  - SOURCE COMPUTER NAME.                         *  ST1224.2
-002200*        X-83  - OBJECT COMPUTER NAME.                         *  ST1224.2
-002300*                                                              *  ST1224.2
-002400****************************************************************  ST1224.2
-002500*   ST122 BUILDS A FILE WHICH IS SORTED IN ST123 AND CHECKED IN*  ST1224.2
-002600*   ST124. THE CREATED FILE CONSISTS OF 40 RECORDS OF VARYING  *  ST1224.2
-002700*   LENGTH (50, 75, 100 CHARACTERS). THE THREE RECORDS SHOWN   *  ST1224.2
-002800*   BELOW REOCCUR UNTIL 40 IS REACHED.                         *  ST1224.2
-002900*      NON-KEY KEY-1        KEY-2               FILLER         *  ST1224.2
-003000*      X(2)     X(10)       X(38)                              *  ST1224.2
-003100*                                                              *  ST1224.2
-003200*      "BB"  "LOWEST TWO" "MIDDLE TWO-FIRST"  X(25) VALUE ZERO *  ST1224.2
-003300*      "CC"  "LOWEST TWO" "MIDDLE TWO-SECOND" X(50) VALUE QUOTE*  ST1224.2
-003400*      "AA"  "LOWEST ONE" "MIDDLE ONE-ONLY"   (NONE)           *  ST1224.2
-003500*                                                              *  ST1224.2
-003600*    PROGRAMS ST122A, ST123A AND ST124A WILL BE USED           *  ST1224.2
-003700*    ONLY IF LEVEL 2 OF THE SEQUENTIAL I-O MODULE IS SUPPORTED *  ST1224.2
-003800*    AS THE "RECORD IS VARYING IN SIZE" CLAUSE IS USED IN      *  ST1224.2
-003900*    ST123A.                                                   *  ST1224.2
-004000*                                                              *  ST1224.2
-004100****************************************************************  ST1224.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200                                                                  ST1224.2
 004300 ENVIRONMENT DIVISION.                                            ST1224.2
 004400 CONFIGURATION SECTION.                                           ST1224.2
@@ -272,7 +272,7 @@
 027900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1224.2
 028000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1224.2
 028100      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1224.2
-028200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1224.2
+028200*                                                                         
 028300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1224.2
 028400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1224.2
 028500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1224.2

@@ -33,7 +33,7 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:23 FAIL* START-TEST-GF-12              IX-3; 1.3.4 (1) A; FROM START-TEST-GF-03                      
                                                                                                                         
                                      COMPUTED= 23                                                                       
-                                     CORRECT = A3                                                                       
+                                     CORRECT = 33                                                                       
                                                                                                                         
  FILE STATUS START:23 PASS  START-TEST-GF-13                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-14                                                                            
@@ -71,7 +71,7 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:00 FAIL* START-TEST-GF-33              IX-3; 1.3.4 (1) A; SEE START-TEST-GF-24                       
                                                                                                                         
                                      COMPUTED= 00                                                                       
-                                     CORRECT = 0A                                                                       
+                                     CORRECT = 10                                                                       
                                                                                                                         
  FILE STATUS START:23 PASS  START-TEST-GF-34                                                                            
  FILE STATUS START:23 PASS  START-TEST-GF-35                                                                            
@@ -90,13 +90,13 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:23 FAIL* START-TEST-GF-48              IX-4; 1.3.4 (3) C; SEE START-TEST-GF-39                       
                                                                                                                         
                                      COMPUTED= 23                                                                       
-                                     CORRECT = U3                                                                       
+                                     CORRECT = 26                                                                       
                                                                                                                         
  FILE STATUS START:23 PASS  START-TEST-GF-49                                                                            
  FILE STATUS START:00 FAIL* START-TEST-GF-50              FROM START-TEST-007.05                                        
                                                                                                                         
                                      COMPUTED= 00                                                                       
-                                     CORRECT = 0L                                                                                                                                                                                               
+                                     CORRECT = 10                                                                                                                                                                                               
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         

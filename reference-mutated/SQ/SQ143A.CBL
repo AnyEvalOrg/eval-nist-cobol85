@@ -1,83 +1,83 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1434.2
 000200 PROGRAM-ID.                                                      SQ1434.2
 000300     SQ143A.                                                      SQ1434.2
-000400****************************************************************  SQ1434.2
-000500*                                                              *  SQ1434.2
-000600*    VALIDATION FOR:-                                          *  SQ1434.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1434.2
-000800*    USING CCVS85 VERSION 3.0.                                 *  SQ1434.2
-000900*                                                              *  SQ1434.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  SQ1434.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1434.2
-001200*                                                              *  SQ1434.2
-001300****************************************************************  SQ1434.2
-001400*                                                              *  SQ1434.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1434.2
-001600*                                                              *  SQ1434.2
-001700*            X-01   SEQUENTIAL TAPE                            *  SQ1434.2
-001800*            X-55   SYSTEM PRINTER                             *  SQ1434.2
-001900*            X-82   SOURCE-COMPUTER                            *  SQ1434.2
-002000*            X-83   OBJECT-COMPUTER.                           *  SQ1434.2
-002100*            X-84   LABEL RECORDS OPTION                       *  SQ1434.2
-002200*                                                              *  SQ1434.2
-002300****************************************************************  SQ1434.2
-002400*                                                              *  SQ1434.2
-002500*    THIS PROGRAM CHECKS FOR THE CORRECT RESPONSE TO CLOSING   *  SQ1434.2
-002600*    AN UNOPENED FILE.  THE TEST FOR CORRECT I-O STATUS CODE   *  SQ1434.2
-002700*    42 IS IN THE MAIN LINE CODE, THEREFORE AN ABNORMAL        *  SQ1434.2
-002800*    TERMINATION IS POSSIBLE BEFORE THE TEST OF THE I-O STATUS *  SQ1434.2
-002900*    CODE IS ACCOMPLISHED.                                     *  SQ1434.2
-003000*                                                              *  SQ1434.2
-003100****************************************************************  SQ1434.2
-003200*                                                                 SQ1434.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            SQ1434.2
 003400 CONFIGURATION SECTION.                                           SQ1434.2
 003500 SOURCE-COMPUTER.                                                 SQ1434.2
 003600     GNU-Linux.                                                   SQ1434.2
 003700 OBJECT-COMPUTER.                                                 SQ1434.2
 003800     GNU-Linux.                                                   SQ1434.2
-003900*                                                                 SQ1434.2
+003900*                                                                         
 004000 INPUT-OUTPUT SECTION.                                            SQ1434.2
 004100 FILE-CONTROL.                                                    SQ1434.2
 004200     SELECT PRINT-FILE ASSIGN TO                                  SQ1434.2
 004300     "REPORT".                                                    SQ1434.2
-004400*                                                                 SQ1434.2
+004400*                                                                         
 004500     SELECT SQ-FS1 ASSIGN TO                                      SQ1434.2
 004600     "XXXXX001"                                                   SQ1434.2
 004700            FILE STATUS IS SQ-FS1-STATUS.                         SQ1434.2
-004800*                                                                 SQ1434.2
-004900*                                                                 SQ1434.2
+004800*                                                                         
+004900*                                                                         
 005000 DATA DIVISION.                                                   SQ1434.2
 005100 FILE SECTION.                                                    SQ1434.2
 005200 FD  PRINT-FILE                                                   SQ1434.2
 005600               .                                                  SQ1434.2
 005700 01  PRINT-REC    PICTURE X(120).                                 SQ1434.2
 005800 01  DUMMY-RECORD PICTURE X(120).                                 SQ1434.2
-005900*                                                                 SQ1434.2
+005900*                                                                         
 006000 FD  SQ-FS1                                                       SQ1434.2
 006200                .                                                 SQ1434.2
 006300 01  SQ-FS1R1-F-G-120 PIC X(120).                                 SQ1434.2
-006400*                                                                 SQ1434.2
+006400*                                                                         
 006500 WORKING-STORAGE SECTION.                                         SQ1434.2
-006600*                                                                 SQ1434.2
-006700***************************************************************   SQ1434.2
-006800*                                                             *   SQ1434.2
-006900*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1434.2
-007000*                                                             *   SQ1434.2
-007100***************************************************************   SQ1434.2
-007200*                                                                 SQ1434.2
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
 007300 01  SQ-FS1-STATUS.                                               SQ1434.2
 007400   03  SQ-FS1-KEY-1   PIC X.                                      SQ1434.2
 007500   03  SQ-FS1-KEY-2   PIC X.                                      SQ1434.2
-007600*                                                                 SQ1434.2
-007700***************************************************************   SQ1434.2
-007800*                                                             *   SQ1434.2
-007900*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1434.2
-008000*                                                             *   SQ1434.2
-008100***************************************************************   SQ1434.2
-008200*                                                                 SQ1434.2
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
 008300 01  REC-SKEL-SUB   PIC 99.                                       SQ1434.2
-008400*                                                                 SQ1434.2
+008400*                                                                         
 008500 01  FILE-RECORD-INFORMATION-REC.                                 SQ1434.2
 008600     03 FILE-RECORD-INFO-SKELETON.                                SQ1434.2
 008700        05 FILLER                 PICTURE X(48)       VALUE       SQ1434.2
@@ -129,7 +129,7 @@
 013300           07 FILLER              PIC X(9).                       SQ1434.2
 013400           07 ALTERNATE-KEY2      PIC X(29).                      SQ1434.2
 013500           07 FILLER              PIC X(7).                       SQ1434.2
-013600*                                                                 SQ1434.2
+013600*                                                                         
 013700 01  TEST-RESULTS.                                                SQ1434.2
 013800     02 FILLER              PIC X      VALUE SPACE.               SQ1434.2
 013900     02 FEATURE             PIC X(24)  VALUE SPACE.               SQ1434.2
@@ -205,7 +205,7 @@
 020900   02  FILLER            PIC X(28)  VALUE                         SQ1434.2
 021000            " COPY - NOT FOR DISTRIBUTION".                       SQ1434.2
 021100   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1434.2
-021200*                                                                 SQ1434.2
+021200*                                                                         
 021300 01  CCVS-H-2B.                                                   SQ1434.2
 021400   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1434.2
 021500   02  TEST-ID           PIC X(9).                                SQ1434.2
@@ -267,7 +267,7 @@
 027100-    "******************************".                            SQ1434.2
 027200 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1434.2
 027300     "SQ143A".                                                    SQ1434.2
-027400*                                                                 SQ1434.2
+027400*                                                                         
 027500 PROCEDURE DIVISION.                                              SQ1434.2
 027600 CCVS1 SECTION.                                                   SQ1434.2
 027700 OPEN-FILES.                                                      SQ1434.2
@@ -279,18 +279,18 @@
 028300     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1434.2
 028400     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1434.2
 028500     GO TO CCVS1-EXIT.                                            SQ1434.2
-028600*                                                                 SQ1434.2
+028600*                                                                         
 028700 CCVS-INIT-FILE.                                                  SQ1434.2
 028800     ADD     1 TO REC-SKL-SUB.                                    SQ1434.2
 028900     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1434.2
 029000                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1434.2
-029100*                                                                 SQ1434.2
+029100*                                                                         
 029200 CLOSE-FILES.                                                     SQ1434.2
 029300     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1434.2
 029400     CLOSE   PRINT-FILE.                                          SQ1434.2
 029500 TERMINATE-CCVS.                                                  SQ1434.2
 029600     STOP    RUN.                                                 SQ1434.2
-029700*                                                                 SQ1434.2
+029700*                                                                         
 029800 INSPT.                                                           SQ1434.2
 029900     MOVE   "INSPT" TO P-OR-F.                                    SQ1434.2
 030000     ADD     1 TO INSPECT-COUNTER.                                SQ1434.2
@@ -300,18 +300,18 @@
 030400     MOVE   "PASS " TO P-OR-F.                                    SQ1434.2
 030500     ADD     1 TO PASS-COUNTER.                                   SQ1434.2
 030600     PERFORM PRINT-DETAIL.                                        SQ1434.2
-030700*                                                                 SQ1434.2
+030700*                                                                         
 030800 FAIL.                                                            SQ1434.2
 030900     MOVE   "FAIL*" TO P-OR-F.                                    SQ1434.2
 031000     ADD     1 TO ERROR-COUNTER.                                  SQ1434.2
 031100     PERFORM PRINT-DETAIL.                                        SQ1434.2
-031200*                                                                 SQ1434.2
+031200*                                                                         
 031300 DE-LETE.                                                         SQ1434.2
 031400     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1434.2
 031500     MOVE   "*****" TO P-OR-F.                                    SQ1434.2
 031600     ADD     1 TO DELETE-COUNTER.                                 SQ1434.2
 031700     PERFORM PRINT-DETAIL.                                        SQ1434.2
-031800*                                                                 SQ1434.2
+031800*                                                                         
 031900 PRINT-DETAIL.                                                    SQ1434.2
 032000     IF REC-CT NOT EQUAL TO ZERO                                  SQ1434.2
 032100         MOVE   "." TO PARDOT-X                                   SQ1434.2
@@ -328,7 +328,7 @@
 033200     MOVE    SPACE TO CORRECT-X.                                  SQ1434.2
 033300     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1434.2
 033400     MOVE    SPACE TO RE-MARK.                                    SQ1434.2
-033500*                                                                 SQ1434.2
+033500*                                                                         
 033600 HEAD-ROUTINE.                                                    SQ1434.2
 033700     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1434.2
 033800     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1434.2
@@ -344,7 +344,7 @@
 034800 END-RTN-EXIT.                                                    SQ1434.2
 034900     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1434.2
 035000     PERFORM WRITE-LINE 2 TIMES.                                  SQ1434.2
-035100*                                                                 SQ1434.2
+035100*                                                                         
 035200 END-ROUTINE-1.                                                   SQ1434.2
 035300     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1434.2
 035400     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1434.2
@@ -377,7 +377,7 @@
 038100     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1434.2
 038200     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1434.2
 038300     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1434.2
-038400*                                                                 SQ1434.2
+038400*                                                                         
 038500 WRITE-LINE.                                                      SQ1434.2
 038600     ADD     1 TO RECORD-COUNT.                                   SQ1434.2
 038700     IF RECORD-COUNT GREATER 50                                   SQ1434.2
@@ -390,7 +390,7 @@
 039400         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1434.2
 039500         MOVE  ZERO TO RECORD-COUNT.                              SQ1434.2
 039600     PERFORM WRT-LN.                                              SQ1434.2
-039700*                                                                 SQ1434.2
+039700*                                                                         
 039800 WRT-LN.                                                          SQ1434.2
 039900     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1434.2
 040000     MOVE    SPACE TO DUMMY-RECORD.                               SQ1434.2
@@ -428,20 +428,20 @@
 043200     EXIT.                                                        SQ1434.2
 043300 CCVS1-EXIT.                                                      SQ1434.2
 043400     EXIT.                                                        SQ1434.2
-043500*                                                                 SQ1434.2
-043600****************************************************************  SQ1434.2
-043700*                                                              *  SQ1434.2
-043800*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1434.2
-043900*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1434.2
-044000*                                                              *  SQ1434.2
-044100****************************************************************  SQ1434.2
-044200*                                                                 SQ1434.2
+043500*                                                                         
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
+043900*                                                                         
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
 044300 SECT-SQ143A-0001 SECTION.                                        SQ1434.2
 044400 CLOSE-INIT-01.                                                   SQ1434.2
-044500*                                                                 SQ1434.2
-044600*        THIS TEST CLOSES A FILE THAT HAS NEVER BEEN OPENED.      SQ1434.2
-044700*        I-O STATUS CODE 42 SHOULD BE GENERATED.                  SQ1434.2
-044800*                                                                 SQ1434.2
+044500*                                                                         
+044600*                                                                         
+044700*                                                                         
+044800*                                                                         
 044900     MOVE "CLOSE UNOPENED FILE" TO FEATURE.                       SQ1434.2
 045000     MOVE "**" TO SQ-FS1-STATUS.                                  SQ1434.2
 045100     MOVE  "CLOSE-TEST-01" TO PAR-NAME.                           SQ1434.2
@@ -452,12 +452,12 @@
 045600 CLOSE-TEST-01.                                                   SQ1434.2
 045700     IF REC-CT = 0                                                SQ1434.2
 045800         OPEN INPUT SQ-FS1.                                       SQ1434.2
-045900*    THIS IF STATEMENT SHOULD NEVER BE TRUE.  IT IS INCLUDED IN   SQ1434.2
-046000*    AN ATTEMPT TO AVOID A COMPILER DETECTING THE CLOSE OF AN     SQ1434.2
-046100*    UNOPENED FILE WITHOUT EXECUTING THE PROGRAM.  HOWEVER, IF    SQ1434.2
-046200*    THE DETECTION IS MADE AT COMPILE TIME, THE TEST SHOULD BE    SQ1434.2
-046300*    CONSIDERED PASSED.                                           SQ1434.2
-046400*                                                                 SQ1434.2
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
 046500     CLOSE SQ-FS1.                                                SQ1434.2
 046600     IF SQ-FS1-STATUS = "42"                                      SQ1434.2
 046700             PERFORM PASS                                         SQ1434.2
@@ -469,7 +469,7 @@
 047300             MOVE "VII-3, FILE STATUS" TO ANSI-REFERENCE          SQ1434.2
 047400             PERFORM FAIL                                         SQ1434.2
 047500     END-IF.                                                      SQ1434.2
-047600*                                                                 SQ1434.2
+047600*                                                                         
 047700 CCVS-EXIT SECTION.                                               SQ1434.2
 047800 CCVS-999999.                                                     SQ1434.2
 047900     GO TO CLOSE-FILES.                                           SQ1434.2

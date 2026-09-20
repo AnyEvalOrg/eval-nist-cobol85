@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         NC2154.2
 000200 PROGRAM-ID.                                                      NC2154.2
 000300     NC215A.                                                      NC2154.2
-000400****************************************************************  NC2154.2
-000500*                                                              *  NC2154.2
-000600*    VALIDATION FOR:-                                          *  NC2154.2
-000700*                                                              *  NC2154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2154.2
-000900*                                                              *  NC2154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2154.2
-001100*                                                              *  NC2154.2
-001200****************************************************************  NC2154.2
-001300*                                                              *  NC2154.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2154.2
-001500*                                                              *  NC2154.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2154.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2154.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2154.2
-001900*                                                              *  NC2154.2
-002000****************************************************************  NC2154.2
-002100*                                                                 NC2154.2
-002200*                                                              *  NC2154.2
-002300*    PROGRAM NC215A TESTS THE LITERAL PHRASE OF THE "ALPHABET" *  NC2154.2
-002400*    CLAUSE OF THE "SPECIAL-NAMES" PARAGRAPH AND THE           *  NC2154.2
-002500*    "PROGRAM COLLATING SEQUENCE" OF THE "OBJECT COMPUTER      *  NC2154.2
-002600*    PARAGRAPH.                                                *  NC2154.2
-002700*                                                              *  NC2154.2
-002800****************************************************************  NC2154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            NC2154.2
 003000 CONFIGURATION SECTION.                                           NC2154.2
 003100 SOURCE-COMPUTER.                                                 NC2154.2
@@ -37,19 +37,19 @@
 003700     ALPHABET                                                     NC2154.2
 003800     THE-WILD-ONE IS "A" THRU "H" "I" ALSO "J", ALSO "K", ALSO    NC2154.2
 003900     "L" ALSO "M" ALSO "N" "O" THROUGH "Z" "0" THRU "9",          NC2154.2
-004000*                                                                 NC2154.2
-004100*                                                                 NC2154.2
-004200*ALPHABET-TEST-10     *****     THE WHOLE ALPHABET IS ONE LITERAL NC2154.2
-004300*    WITH ALL 51 CHARACTERS IN THE COBOL CHARACTER SET.  TEST-10  NC2154.2
-004400*    IS ONLY A SYNTAX CHECK ON                                    NC2154.2
-004500*            ALPHABET-NAME IS LITERAL.                            NC2154.2
-004600*                                                                 NC2154.2
-004700*                                                                 NC2154.2
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
 004800     ALPHABET                                                     NC2154.2
 004900     THE-BIG-OL-LITERAL-ALPHABET IS "A+0B-1C*2D/3E=4Fl5G,6H;7I.8J"NC2154.2
 005000-    ""9K(L)M>N<O PQRSTUVWXYZ".                                   NC2154.2
-005100*                                                                 NC2154.2
-005200*                                                                 NC2154.2
+005100*                                                                         
+005200*                                                                         
 005300 INPUT-OUTPUT SECTION.                                            NC2154.2
 005400 FILE-CONTROL.                                                    NC2154.2
 005500     SELECT PRINT-FILE ASSIGN TO                                  NC2154.2
@@ -259,7 +259,7 @@
 026100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2154.2
 026200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2154.2
 026300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2154.2
-026400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2154.2
+026400*                                                                         
 026500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2154.2
 026600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2154.2
 026700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2154.2
@@ -345,7 +345,7 @@
 034700     PERFORM FAIL.                                                NC2154.2
 034800 SEQ-WRITE-GF-1.                                                  NC2154.2
 034900     PERFORM PRINT-DETAIL.                                        NC2154.2
-035000*                                                                 NC2154.2
+035000*                                                                         
 035100 SEQ-INIT-GF-2.                                                   NC2154.2
 035200     MOVE      "SEQ-TEST-GF-2" TO PAR-NAME.                       NC2154.2
 035300     MOVE "VI-15 4.5.4 GR4(D)" TO ANSI-REFERENCE.                 NC2154.2
@@ -367,7 +367,7 @@
 036900     PERFORM FAIL.                                                NC2154.2
 037000 SEQ-WRITE-GF-2.                                                  NC2154.2
 037100     PERFORM PRINT-DETAIL.                                        NC2154.2
-037200*                                                                 NC2154.2
+037200*                                                                         
 037300 SEQ-INIT-GF-3.                                                   NC2154.2
 037400     MOVE      "SEQ-TEST-GF-3" TO PAR-NAME.                       NC2154.2
 037500     MOVE "VI-15 4.5.4 GR4(D)" TO ANSI-REFERENCE.                 NC2154.2
@@ -392,7 +392,7 @@
 039400     PERFORM FAIL.                                                NC2154.2
 039500 SEQ-WRITE-GF-3.                                                  NC2154.2
 039600     PERFORM PRINT-DETAIL.                                        NC2154.2
-039700*                                                                 NC2154.2
+039700*                                                                         
 039800 SEQ-INIT-GF-4.                                                   NC2154.2
 039900     MOVE      "SEQ-TEST-GF-4" TO PAR-NAME.                       NC2154.2
 040000     MOVE "VI-15 4.5.4 GR4(D)" TO ANSI-REFERENCE.                 NC2154.2
@@ -412,7 +412,7 @@
 041400     PERFORM FAIL.                                                NC2154.2
 041500 SEQ-WRITE-GF-4.                                                  NC2154.2
 041600     PERFORM PRINT-DETAIL.                                        NC2154.2
-041700*                                                                 NC2154.2
+041700*                                                                         
 041800 SEQ-INIT-GF-5.                                                   NC2154.2
 041900     MOVE      "SEQ-TEST-GF-5" TO PAR-NAME.                       NC2154.2
 042000     MOVE "VI-15 4.5.4 GR4(D)" TO ANSI-REFERENCE.                 NC2154.2
@@ -432,7 +432,7 @@
 043400     PERFORM FAIL.                                                NC2154.2
 043500 SEQ-WRITE-GF-5.                                                  NC2154.2
 043600     PERFORM PRINT-DETAIL.                                        NC2154.2
-043700*                                                                 NC2154.2
+043700*                                                                         
 043800 SEQ-INIT-GF-6.                                                   NC2154.2
 043900     MOVE      "SEQ-TEST-GF-6" TO PAR-NAME.                       NC2154.2
 044000     MOVE "VI-15 4.5.4 GR4(D)" TO ANSI-REFERENCE.                 NC2154.2
@@ -451,7 +451,7 @@
 045300     PERFORM FAIL.                                                NC2154.2
 045400 SEQ-WRITE-GF-6.                                                  NC2154.2
 045500     PERFORM PRINT-DETAIL.                                        NC2154.2
-045600*                                                                 NC2154.2
+045600*                                                                         
 045700 SEQ-INIT-GF-7.                                                   NC2154.2
 045800     MOVE      "SEQ-TEST-GF-7" TO PAR-NAME.                       NC2154.2
 045900     MOVE "VI-15 4.5.4 GR4(D)" TO ANSI-REFERENCE.                 NC2154.2
@@ -470,7 +470,7 @@
 047200     PERFORM FAIL.                                                NC2154.2
 047300 SEQ-WRITE-GF-7.                                                  NC2154.2
 047400     PERFORM PRINT-DETAIL.                                        NC2154.2
-047500*                                                                 NC2154.2
+047500*                                                                         
 047600 ALPHABET-TEST-10.                                                NC2154.2
 047700     PERFORM END-ROUTINE.                                         NC2154.2
 047800     MOVE    " ALPHABET-NAME     *****     CHECK THE ALPHABET-NAMENC2154.2

@@ -1,9 +1,9 @@
 000100 IDENTIFICATION DIVISION.                                         SQ3034.2
 000200 PROGRAM-ID.                                                      SQ3034.2
 000300     SQ303M.                                                      SQ3034.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF                      SQ3034.2
-000500*OBSOLETE FEATURES THAT ARE USED IN HIGH SUBSET SEQUENTIAL        SQ3034.2
-000600*INPUT-OUTPUT.                                                    SQ3034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
 000700 ENVIRONMENT DIVISION.                                            SQ3034.2
 000800 CONFIGURATION SECTION.                                           SQ3034.2
 000900 SOURCE-COMPUTER.                                                 SQ3034.2
@@ -24,7 +24,7 @@
 002400                                                                  SQ3034.2
 002500 I-O-CONTROL.                                                     SQ3034.2
 002600     MULTIPLE FILE TAPE CONTAINS TFIL2.                           SQ3034.2
-002700*Message expected for above statement: OBSOLETE                   SQ3034.2
+002700*                                                                         
 002800                                                                  SQ3034.2
 002900 DATA DIVISION.                                                   SQ3034.2
 003000 FILE SECTION.                                                    SQ3034.2
@@ -40,10 +40,10 @@
 004000                                                                  SQ3034.2
 004100 SQ303M-CONTROL.                                                  SQ3034.2
 004200     OPEN INPUT TFIL REVERSED.                                    SQ3034.2
-004300*Message expected for above statement: OBSOLETE                   SQ3034.2
+004300*                                                                         
 004400                                                                  SQ3034.2
 004500     CLOSE TFIL.                                                  SQ3034.2
 004600     STOP RUN.                                                    SQ3034.2
 004700                                                                  SQ3034.2
 004800                                                                  SQ3034.2
-004900*TOTAL NUMBER OF FLAGS EXPECTED = 2.                              SQ3034.2
+004900*                                                                         

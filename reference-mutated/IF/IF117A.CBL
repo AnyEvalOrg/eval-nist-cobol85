@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1174.2
 000300     IF117A.                                                      IF1174.2
 000400                                                                  IF1174.2
-000500***********************************************************       IF1174.2
-000600*                                                         *       IF1174.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1174.2
-000800* It contains tests for the Intrinsic Function LOG10.     *       IF1174.2
-000900*                                                         *       IF1174.2
-001000***********************************************************       IF1174.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1174.2
 001200 CONFIGURATION SECTION.                                           IF1174.2
 001300 SOURCE-COMPUTER.                                                 IF1174.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1174.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1174.2
 002600 WORKING-STORAGE SECTION.                                         IF1174.2
-002700***********************************************************       IF1174.2
-002800* Variables specific to the Intrinsic Function Test IF117A*       IF1174.2
-002900***********************************************************       IF1174.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 600000.        IF1174.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1174.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1174.2
@@ -42,9 +42,9 @@
 004200 01  WS-NUM              PIC S9(5)V9(6).                          IF1174.2
 004300 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1174.2
 004400 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1174.2
-004500*                                                                 IF1174.2
-004600**********************************************************        IF1174.2
-004700*                                                                 IF1174.2
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
 004800 01  TEST-RESULTS.                                                IF1174.2
 004900     02 FILLER                   PIC X      VALUE SPACE.          IF1174.2
 005000     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1174.2
@@ -338,16 +338,16 @@
 033800 BAIL-OUT-EX. EXIT.                                               IF1174.2
 033900 CCVS1-EXIT.                                                      IF1174.2
 034000     EXIT.                                                        IF1174.2
-034100********************************************************          IF1174.2
-034200*                                                      *          IF1174.2
-034300*    Intrinsic Function Tests         IF117A - LOG10   *          IF1174.2
-034400*                                                      *          IF1174.2
-034500********************************************************          IF1174.2
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
 034600 SECT-IF117A SECTION.                                             IF1174.2
 034700 F-LOG10-INFO.                                                    IF1174.2
 034800     MOVE     "See ref. A-49 2.21" TO ANSI-REFERENCE.             IF1174.2
 034900     MOVE     "LOG10 Function" TO FEATURE.                        IF1174.2
-035000*****************TEST (a) - SIMPLE TEST*****************          IF1174.2
+035000*                                                                         
 035100 F-LOG10-01.                                                      IF1174.2
 035200     MOVE ZERO TO WS-NUM.                                         IF1174.2
 035300     MOVE -0.000020 TO MIN-RANGE.                                 IF1174.2
@@ -369,7 +369,7 @@
 036900 F-LOG10-WRITE-01.                                                IF1174.2
 037000     MOVE "F-LOG10-01" TO PAR-NAME.                               IF1174.2
 037100     PERFORM  PRINT-DETAIL.                                       IF1174.2
-037200*****************TEST (b) - SIMPLE TEST*****************          IF1174.2
+037200*                                                                         
 037300 F-LOG10-02.                                                      IF1174.2
 037400     EVALUATE FUNCTION LOG10(10)                                  IF1174.2
 037500     WHEN 0.999980 THRU 1.000020                                  IF1174.2
@@ -383,7 +383,7 @@
 038300 F-LOG10-WRITE-02.                                                IF1174.2
 038400     MOVE "F-LOG10-02" TO PAR-NAME.                               IF1174.2
 038500     PERFORM  PRINT-DETAIL.                                       IF1174.2
-038600*****************TEST (c) - SIMPLE TEST*****************          IF1174.2
+038600*                                                                         
 038700 F-LOG10-03.                                                      IF1174.2
 038800     MOVE -2.00004 TO MIN-RANGE.                                  IF1174.2
 038900     MOVE -1.99996 TO MAX-RANGE.                                  IF1174.2
@@ -400,7 +400,7 @@
 040000 F-LOG10-WRITE-03.                                                IF1174.2
 040100     MOVE "F-LOG10-03" TO PAR-NAME.                               IF1174.2
 040200     PERFORM  PRINT-DETAIL.                                       IF1174.2
-040300*****************TEST (d) - SIMPLE TEST*****************          IF1174.2
+040300*                                                                         
 040400 F-LOG10-04.                                                      IF1174.2
 040500     MOVE ZERO TO WS-NUM.                                         IF1174.2
 040600     MOVE -3.00006 TO MIN-RANGE.                                  IF1174.2
@@ -422,7 +422,7 @@
 042200 F-LOG10-WRITE-04.                                                IF1174.2
 042300     MOVE "F-LOG10-04" TO PAR-NAME.                               IF1174.2
 042400     PERFORM  PRINT-DETAIL.                                       IF1174.2
-042500*****************TEST (e) - SIMPLE TEST*****************          IF1174.2
+042500*                                                                         
 042600 F-LOG10-05.                                                      IF1174.2
 042700     MOVE ZERO TO WS-NUM.                                         IF1174.2
 042800     MOVE  1.99996 TO MIN-RANGE.                                  IF1174.2
@@ -444,7 +444,7 @@
 044400 F-LOG10-WRITE-05.                                                IF1174.2
 044500     MOVE "F-LOG10-05" TO PAR-NAME.                               IF1174.2
 044600     PERFORM  PRINT-DETAIL.                                       IF1174.2
-044700*****************TEST (f) - SIMPLE TEST*****************          IF1174.2
+044700*                                                                         
 044800 F-LOG10-06.                                                      IF1174.2
 044900     MOVE ZERO TO WS-NUM.                                         IF1174.2
 045000     MOVE  0.999936 TO MIN-RANGE.                                 IF1174.2
@@ -466,7 +466,7 @@
 046600 F-LOG10-WRITE-06.                                                IF1174.2
 046700     MOVE "F-LOG10-06" TO PAR-NAME.                               IF1174.2
 046800     PERFORM  PRINT-DETAIL.                                       IF1174.2
-046900*****************TEST (h) - SIMPLE TEST*****************          IF1174.2
+046900*                                                                         
 047000 F-LOG10-08.                                                      IF1174.2
 047100     MOVE ZERO TO WS-NUM.                                         IF1174.2
 047200     MOVE -2.04579 TO MIN-RANGE.                                  IF1174.2
@@ -488,7 +488,7 @@
 048800 F-LOG10-WRITE-08.                                                IF1174.2
 048900     MOVE "F-LOG10-08" TO PAR-NAME.                               IF1174.2
 049000     PERFORM  PRINT-DETAIL.                                       IF1174.2
-049100*****************TEST (i) - SIMPLE TEST*****************          IF1174.2
+049100*                                                                         
 049200 F-LOG10-09.                                                      IF1174.2
 049300     MOVE ZERO TO WS-NUM.                                         IF1174.2
 049400     MOVE  2.00039 TO MIN-RANGE.                                  IF1174.2
@@ -510,7 +510,7 @@
 051000 F-LOG10-WRITE-09.                                                IF1174.2
 051100     MOVE "F-LOG10-09" TO PAR-NAME.                               IF1174.2
 051200     PERFORM  PRINT-DETAIL.                                       IF1174.2
-051300*****************TEST (j) - SIMPLE TEST*****************          IF1174.2
+051300*                                                                         
 051400 F-LOG10-10.                                                      IF1174.2
 051500     MOVE ZERO TO WS-NUM.                                         IF1174.2
 051600     MOVE  3.99992 TO MIN-RANGE.                                  IF1174.2
@@ -532,7 +532,7 @@
 053200 F-LOG10-WRITE-10.                                                IF1174.2
 053300     MOVE "F-LOG10-10" TO PAR-NAME.                               IF1174.2
 053400     PERFORM  PRINT-DETAIL.                                       IF1174.2
-053500*****************TEST (k) - SIMPLE TEST*****************          IF1174.2
+053500*                                                                         
 053600 F-LOG10-11.                                                      IF1174.2
 053700     MOVE ZERO TO WS-NUM.                                         IF1174.2
 053800     MOVE  3.48129 TO MIN-RANGE.                                  IF1174.2
@@ -554,7 +554,7 @@
 055400 F-LOG10-WRITE-11.                                                IF1174.2
 055500     MOVE "F-LOG10-11" TO PAR-NAME.                               IF1174.2
 055600     PERFORM  PRINT-DETAIL.                                       IF1174.2
-055700*****************TEST (l) - SIMPLE TEST*****************          IF1174.2
+055700*                                                                         
 055800 F-LOG10-12.                                                      IF1174.2
 055900     MOVE ZERO TO WS-NUM.                                         IF1174.2
 056000     MOVE -4.30111 TO MIN-RANGE.                                  IF1174.2
@@ -576,7 +576,7 @@
 057600 F-LOG10-WRITE-12.                                                IF1174.2
 057700     MOVE "F-LOG10-12" TO PAR-NAME.                               IF1174.2
 057800     PERFORM  PRINT-DETAIL.                                       IF1174.2
-057900*****************TEST (m) - SIMPLE TEST*****************          IF1174.2
+057900*                                                                         
 058000 F-LOG10-13.                                                      IF1174.2
 058100     MOVE ZERO TO WS-NUM.                                         IF1174.2
 058200     MOVE  5.77803 TO MIN-RANGE.                                  IF1174.2
@@ -598,7 +598,7 @@
 059800 F-LOG10-WRITE-13.                                                IF1174.2
 059900     MOVE "F-LOG10-13" TO PAR-NAME.                               IF1174.2
 060000     PERFORM  PRINT-DETAIL.                                       IF1174.2
-060100*****************TEST (n) - SIMPLE TEST*****************          IF1174.2
+060100*                                                                         
 060200 F-LOG10-14.                                                      IF1174.2
 060300     MOVE ZERO TO WS-NUM.                                         IF1174.2
 060400     MOVE  4.50507 TO MIN-RANGE.                                  IF1174.2
@@ -620,7 +620,7 @@
 062000 F-LOG10-WRITE-14.                                                IF1174.2
 062100     MOVE "F-LOG10-14" TO PAR-NAME.                               IF1174.2
 062200     PERFORM  PRINT-DETAIL.                                       IF1174.2
-062300*****************TEST (o) - SIMPLE TEST*****************          IF1174.2
+062300*                                                                         
 062400 F-LOG10-15.                                                      IF1174.2
 062500     MOVE ZERO TO WS-NUM.                                         IF1174.2
 062600     MOVE -4.69906 TO MIN-RANGE.                                  IF1174.2
@@ -642,7 +642,7 @@
 064200 F-LOG10-WRITE-15.                                                IF1174.2
 064300     MOVE "F-LOG10-15" TO PAR-NAME.                               IF1174.2
 064400     PERFORM  PRINT-DETAIL.                                       IF1174.2
-064500*****************TEST (p) - SIMPLE TEST*****************          IF1174.2
+064500*                                                                         
 064600 F-LOG10-16.                                                      IF1174.2
 064700     MOVE ZERO TO WS-NUM.                                         IF1174.2
 064800     MOVE  0.477111 TO MIN-RANGE.                                 IF1174.2
@@ -664,7 +664,7 @@
 066400 F-LOG10-WRITE-16.                                                IF1174.2
 066500     MOVE "F-LOG10-16" TO PAR-NAME.                               IF1174.2
 066600     PERFORM  PRINT-DETAIL.                                       IF1174.2
-066700*****************TEST (a) - COMPLEX TEST****************          IF1174.2
+066700*                                                                         
 066800 F-LOG10-17.                                                      IF1174.2
 066900     MOVE ZERO TO WS-NUM.                                         IF1174.2
 067000     MOVE  0.434437 TO MIN-RANGE.                                 IF1174.2
@@ -686,7 +686,7 @@
 068600 F-LOG10-WRITE-17.                                                IF1174.2
 068700     MOVE "F-LOG10-17" TO PAR-NAME.                               IF1174.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1174.2
-068900*****************TEST (b) - COMPLEX TEST****************          IF1174.2
+068900*                                                                         
 069000 F-LOG10-18.                                                      IF1174.2
 069100     MOVE ZERO TO WS-NUM.                                         IF1174.2
 069200     MOVE -1.00004 TO MIN-RANGE.                                  IF1174.2
@@ -708,7 +708,7 @@
 070800 F-LOG10-WRITE-18.                                                IF1174.2
 070900     MOVE "F-LOG10-18" TO PAR-NAME.                               IF1174.2
 071000     PERFORM  PRINT-DETAIL.                                       IF1174.2
-071100*****************TEST (c) - COMPLEX TEST****************          IF1174.2
+071100*                                                                         
 071200 F-LOG10-19.                                                      IF1174.2
 071300     MOVE ZERO TO WS-NUM.                                         IF1174.2
 071400     MOVE  0.417999 TO MIN-RANGE.                                 IF1174.2
@@ -730,7 +730,7 @@
 073000 F-LOG10-WRITE-19.                                                IF1174.2
 073100     MOVE "F-LOG10-19" TO PAR-NAME.                               IF1174.2
 073200     PERFORM  PRINT-DETAIL.                                       IF1174.2
-073300*****************TEST (d) - COMPLEX TEST****************          IF1174.2
+073300*                                                                         
 073400 F-LOG10-20.                                                      IF1174.2
 073500     MOVE ZERO TO WS-NUM.                                         IF1174.2
 073600     MOVE -0.045759  TO MIN-RANGE.                                IF1174.2
@@ -752,7 +752,7 @@
 075200 F-LOG10-WRITE-20.                                                IF1174.2
 075300     MOVE "F-LOG10-20" TO PAR-NAME.                               IF1174.2
 075400     PERFORM  PRINT-DETAIL.                                       IF1174.2
-075500*****************TEST (e) - COMPLEX TEST****************          IF1174.2
+075500*                                                                         
 075600 F-LOG10-21.                                                      IF1174.2
 075700     MOVE ZERO TO WS-NUM.                                         IF1174.2
 075800     MOVE  1.04135 TO MIN-RANGE.                                  IF1174.2
@@ -774,7 +774,7 @@
 077400 F-LOG10-WRITE-21.                                                IF1174.2
 077500     MOVE "F-LOG10-21" TO PAR-NAME.                               IF1174.2
 077600     PERFORM  PRINT-DETAIL.                                       IF1174.2
-077700*****************TEST (f) - COMPLEX TEST****************          IF1174.2
+077700*                                                                         
 077800 F-LOG10-22.                                                      IF1174.2
 077900     MOVE ZERO TO WS-NUM.                                         IF1174.2
 078000     MOVE -1.92090 TO MIN-RANGE.                                  IF1174.2
@@ -796,7 +796,7 @@
 079600 F-LOG10-WRITE-22.                                                IF1174.2
 079700     MOVE "F-LOG10-22" TO PAR-NAME.                               IF1174.2
 079800     PERFORM  PRINT-DETAIL.                                       IF1174.2
-079900*****************TEST (g) - COMPLEX TEST****************          IF1174.2
+079900*                                                                         
 080000 F-LOG10-23.                                                      IF1174.2
 080100     MOVE ZERO TO WS-NUM.                                         IF1174.2
 080200     MOVE  0.845064 TO MIN-RANGE.                                 IF1174.2
@@ -818,7 +818,7 @@
 081800 F-LOG10-WRITE-23.                                                IF1174.2
 081900     MOVE "F-LOG10-23" TO PAR-NAME.                               IF1174.2
 082000     PERFORM  PRINT-DETAIL.                                       IF1174.2
-082100*****************TEST (h) - COMPLEX TEST****************          IF1174.2
+082100*                                                                         
 082200 F-LOG10-24.                                                      IF1174.2
 082300     MOVE ZERO TO WS-NUM.                                         IF1174.2
 082400     MOVE  1.30097 TO MIN-RANGE.                                  IF1174.2
@@ -840,7 +840,7 @@
 084000 F-LOG10-WRITE-24.                                                IF1174.2
 084100     MOVE "F-LOG10-24" TO PAR-NAME.                               IF1174.2
 084200     PERFORM  PRINT-DETAIL.                                       IF1174.2
-084300*****************TEST (i) - COMPLEX TEST****************          IF1174.2
+084300*                                                                         
 084400 F-LOG10-25.                                                      IF1174.2
 084500     MOVE ZERO TO WS-NUM.                                         IF1174.2
 084600     MOVE  0.477102 TO MIN-RANGE.                                 IF1174.2
@@ -862,7 +862,7 @@
 086200 F-LOG10-WRITE-25.                                                IF1174.2
 086300     MOVE "F-LOG10-25" TO PAR-NAME.                               IF1174.2
 086400     PERFORM  PRINT-DETAIL.                                       IF1174.2
-086500*****************TEST (j) -COMPLEX TEST*****************          IF1174.2
+086500*                                                                         
 086600 F-LOG10-26.                                                      IF1174.2
 086700     MOVE ZERO TO WS-NUM.                                         IF1174.2
 086800     MOVE  0.274690 TO MIN-RANGE.                                 IF1174.2
@@ -884,7 +884,7 @@
 088400 F-LOG10-WRITE-26.                                                IF1174.2
 088500     MOVE "F-LOG10-26" TO PAR-NAME.                               IF1174.2
 088600     PERFORM  PRINT-DETAIL.                                       IF1174.2
-088700*****************TEST (k) - COMPLEX TEST****************          IF1174.2
+088700*                                                                         
 088800 F-LOG10-27.                                                      IF1174.2
 088900     MOVE ZERO TO WS-NUM.                                         IF1174.2
 089000     MOVE  0.904045 TO MIN-RANGE.                                 IF1174.2
@@ -906,7 +906,7 @@
 090600 F-LOG10-WRITE-27.                                                IF1174.2
 090700     MOVE "F-LOG10-27" TO PAR-NAME.                               IF1174.2
 090800     PERFORM  PRINT-DETAIL.                                       IF1174.2
-090900*****************TEST (l) - COMPLEX TEST****************          IF1174.2
+090900*                                                                         
 091000 F-LOG10-28.                                                      IF1174.2
 091100     MOVE ZERO TO WS-NUM.                                         IF1174.2
 091200     MOVE  0.698942 TO MIN-RANGE.                                 IF1174.2
@@ -928,7 +928,7 @@
 092800 F-LOG10-WRITE-28.                                                IF1174.2
 092900     MOVE "F-LOG10-28" TO PAR-NAME.                               IF1174.2
 093000     PERFORM  PRINT-DETAIL.                                       IF1174.2
-093100*****************TEST (m) - COMPLEX TEST****************          IF1174.2
+093100*                                                                         
 093200 F-LOG10-29.                                                      IF1174.2
 093300     MOVE ZERO TO WS-NUM.                                         IF1174.2
 093400     MOVE  0.645227 TO MIN-RANGE.                                 IF1174.2
@@ -950,7 +950,7 @@
 095000 F-LOG10-WRITE-29.                                                IF1174.2
 095100     MOVE "F-LOG10-29" TO PAR-NAME.                               IF1174.2
 095200     PERFORM  PRINT-DETAIL.                                       IF1174.2
-095300*****************TEST (n) - COMPLEX TEST****************          IF1174.2
+095300*                                                                         
 095400 F-LOG10-30.                                                      IF1174.2
 095500     MOVE ZERO TO WS-NUM.                                         IF1174.2
 095600     MOVE 4.84490 TO MIN-RANGE.                                   IF1174.2
@@ -972,7 +972,7 @@
 097200 F-LOG10-WRITE-30.                                                IF1174.2
 097300     MOVE "F-LOG10-30" TO PAR-NAME.                               IF1174.2
 097400     PERFORM  PRINT-DETAIL.                                       IF1174.2
-097500*****************TEST (o) - COMPLEX TEST****************          IF1174.2
+097500*                                                                         
 097600 F-LOG10-31.                                                      IF1174.2
 097700     MOVE ZERO TO WS-NUM.                                         IF1174.2
 097800     MOVE -0.521411 TO MIN-RANGE.                                 IF1174.2
@@ -994,7 +994,7 @@
 099400 F-LOG10-WRITE-31.                                                IF1174.2
 099500     MOVE "F-LOG10-31" TO PAR-NAME.                               IF1174.2
 099600     PERFORM  PRINT-DETAIL.                                       IF1174.2
-099700*****************TEST (p) - COMPLEX TEST****************          IF1174.2
+099700*                                                                         
 099800 F-LOG10-32.                                                      IF1174.2
 099900     MOVE ZERO TO WS-NUM.                                         IF1174.2
 100000     MOVE -0.000040 TO MIN-RANGE.                                 IF1174.2
@@ -1017,7 +1017,7 @@
 101700 F-LOG10-WRITE-32.                                                IF1174.2
 101800     MOVE "F-LOG10-32" TO PAR-NAME.                               IF1174.2
 101900     PERFORM  PRINT-DETAIL.                                       IF1174.2
-102000*****************SPECIAL PERFORM TEST**********************       IF1174.2
+102000*                                                                         
 102100 F-LOG10-33.                                                      IF1174.2
 102200     PERFORM F-LOG10-TEST-33                                      IF1174.2
 102300       UNTIL FUNCTION LOG10(ARG1) < 0.30.                         IF1174.2
@@ -1031,7 +1031,7 @@
 103100 F-LOG10-WRITE-33.                                                IF1174.2
 103200     MOVE "F-LOG10-33" TO PAR-NAME.                               IF1174.2
 103300     PERFORM  PRINT-DETAIL.                                       IF1174.2
-103400********************END OF TESTS***************                   IF1174.2
+103400*                                                                         
 103500 CCVS-EXIT SECTION.                                               IF1174.2
 103600 CCVS-999999.                                                     IF1174.2
 103700     GO TO CLOSE-FILES.                                           IF1174.2

@@ -19,36 +19,36 @@
 001900     "4.2 ".                                                      DB1044.2
 002000 SECURITY.                                                        DB1044.2
 002100     NONE.                                                        DB1044.2
-002200*                                                                 DB1044.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB1044.2
-002400*                                                                 DB1044.2
-002500*                       PROGRAM ABSTRACT                          DB1044.2
-002600*                                                                 DB1044.2
-002700*    DB104A TESTS THE CAPABILITY OF THE DEBUG MODULE TO HANDLE    DB1044.2
-002800*    PROCEDURES TIED TO SORT INPUT, SORT OUTPUT, AND FILE         DB1044.2
-002900*    DECLARATIVE PROCEDURES.  THIS PROGRAM IS TO BE COMPILED AND  DB1044.2
-003000*    EXECUTED WITH BOTH COMPILE AND OBJECT TIME DEBUGGING         DB1044.2
-003100*    SWITCHES ENABLED.  THE PROGRAM FIRST BUILDS A SEQUENTIAL     DB1044.2
-003200*    FILE CONTAINING 99 EIGHTY CHARACTER RECORDS.  THIS FILE      DB1044.2
-003300*    IS THEN SORTED.                                              DB1044.2
-003400*                                                                 DB1044.2
-003500*    ALL DEBUGGING PROCEDURES SHOULD BE INCLUDED IN COMPILATION   DB1044.2
-003600*    AND GENERATE CODE.  BEFORE BEGINNING EXECUTION OF THE OBJECT DB1044.2
-003700*    PROGRAM, THE JOB CONTROL LANGUAGE NECESSARY TO ACTIVATE      DB1044.2
-003800*    THE OBJECT TIME DEBUGGING SWITCH MUST BE SUBMITTED.          DB1044.2
-003900*                                                                 DB1044.2
-004000*    EXECUTION OF THE PROGRAM"S SORT SHOULD TRIGGER DEBUGGING     DB1044.2
-004100*    PROCEDURES AT THE BEGINNING OF THE SORT INPUT AND SORT       DB1044.2
-004200*    OUTPUT PROCEDURES.  DURING EXECUTION OF THE SORT INPUT       DB1044.2
-004300*    PROCEDURE, END-OF-FILE CONDITION ON THE INPUT FILE SHOULD    DB1044.2
-004400*    TRIGGER A DECLARATIVE PROCEDURE ASSOCIATED WITH THE FILE,    DB1044.2
-004500*    AND THIS IN TURN SHOULD CAUSE EXECUTION OF A DEBUGGING       DB1044.2
-004600*    PROCEDURE MONITORING THE FILE DECLARATIVE PROCEDURE.         DB1044.2
-004700*                                                                 DB1044.2
-004800*    THE PERFORMANCE OF THE SORT VERB IS NOT CHECKED IN DB104.    DB1044.2
-004900*                                                                 DB1044.2
-005000*                                                                 DB1044.2
-005100*                                                                 DB1044.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
 005200 ENVIRONMENT DIVISION.                                            DB1044.2
 005300 CONFIGURATION SECTION.                                           DB1044.2
 005400 SOURCE-COMPUTER.                                                 DB1044.2
@@ -63,10 +63,10 @@
 006300     SELECT GEN-FILE ASSIGN TO                                    DB1044.2
 006400     "XXXXX014"                                                   DB1044.2
 006500     FILE STATUS IS GEN-STATUS.                                   DB1044.2
-006600*      XXXXX014  REPLACE WITH SEQUENTIAL ACCESS SCRATCH FILE NAME DB1044.2
+006600*                                                                         
 006700     SELECT SORT-FILE ASSIGN TO                                   DB1044.2
 006800     "XXXXX027".                                                  DB1044.2
-006900*      XXXXX27  REPLACE WITH SORT FILE NAME                       DB1044.2
+006900*                                                                         
 007000 DATA DIVISION.                                                   DB1044.2
 007100 FILE SECTION.                                                    DB1044.2
 007200 FD  PRINT-FILE                                                   DB1044.2
@@ -76,9 +76,9 @@
 007600 01  PRINT-REC PICTURE X(120).                                    DB1044.2
 007700 01  DUMMY-RECORD PICTURE X(120).                                 DB1044.2
 007800 FD  GEN-FILE                                                     DB1044.2
-008100*      XXXXX074  REPLACE WITH IMPLEMENTOR NAME (*OPT C ONLY)      DB1044.2
-008400*      XXXXX075  REPLACE WITH VALUE CLAUSE OBJECT (*OPT C ONLY)   DB1044.2
-008600*      XXXXX069  REPLACE WITH ADDITIONAL INFO (*OPT G ONLY)       DB1044.2
+008100*                                                                         
+008400*                                                                         
+008600*                                                                         
 008700     LABEL RECORD IS STANDARD.                                    DB1044.2
 008800 01  GEN-REC PIC X(80).                                           DB1044.2
 008900 SD  SORT-FILE.                                                   DB1044.2
@@ -345,7 +345,7 @@
 035200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB1044.2
 035300      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB1044.2
 035400      ADD PASS-COUNTER TO ERROR-HOLD.                             DB1044.2
-035500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB1044.2
+035500*                                                                         
 035600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB1044.2
 035700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB1044.2
 035800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB1044.2
@@ -430,12 +430,12 @@
 043700     MOVE 95 TO XRECORD-NUMBER (1).                               DB1044.2
 043800     PERFORM GEN-LOOP.                                            DB1044.2
 043900     CLOSE GEN-FILE.                                              DB1044.2
-044000******************************************************************DB1044.2
-044100*    THE DEBUG-LINE (INSPT) SUBTESTS FOR THE TESTS NAMED IN THE  *DB1044.2
-044200*    OUTPUT REPORT AS "SORT-IN-2" AND "SORT-OUT-2" SHOULD POINT  *DB1044.2
-044300*    TO THE "SORT" STATEMENT WHICH APPEARS IN THE PARAGRAPH      *DB1044.2
-044400*    BELOW NAMED "BEGIN-TESTS".                                  *DB1044.2
-044500******************************************************************DB1044.2
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
 044600 BEGIN-TESTS.                                                     DB1044.2
 044700     MOVE 0 TO RESULT-FLAG.                                       DB1044.2
 044800     SORT SORT-FILE ON ASCENDING KEY SORT-REC-NO                  DB1044.2
@@ -492,21 +492,21 @@
 049900 SORT-IN-5.                                                       DB1044.2
 050000     OPEN INPUT GEN-FILE.                                         DB1044.2
 050100     MOVE 0 TO RESULT-FLAG.                                       DB1044.2
-050200******************************************************************DB1044.2
-050300*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB1044.2
-050400*    OUTPUT REPORT AS "SORT-USE-TEST" SHOULD POINT TO THE        *DB1044.2
-050500*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB1044.2
-050600*    WHICH READS, "READ GEN-FILE".                               *DB1044.2
-050700******************************************************************DB1044.2
+050200*                                                                         
+050300*                                                                         
+050400*                                                                         
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
 050800 SORT-USE-TEST.                                                   DB1044.2
 050900     READ GEN-FILE                                                DB1044.2
-051000*        AT END GO TO SORT-USE-DELETE.                            DB1044.2
-051100*                                                                 DB1044.2
-051200*    IN CASE IMPLEMENTATION FAILS TO NOTIFY PROGRAM OF            DB1044.2
-051300*    END-OF-FILE VIA STATUS OR DECLARATIVE PROC, REMOVE ASTERISK  DB1044.2
-051400*    FROM THE FIRST OF THESE COMMENT LINES AND PERMIT THE AT END  DB1044.2
-051500*    CLAUSE TO BE COMPILED; THIS WILL RESULT IN TEST DELETION.    DB1044.2
-051600*                                                                 DB1044.2
+051000*                                                                         
+051100*                                                                         
+051200*                                                                         
+051300*                                                                         
+051400*                                                                         
+051500*                                                                         
+051600*                                                                         
 051700     IF RESULT-FLAG IS EQUAL TO 3                                 DB1044.2
 051800         CLOSE GEN-FILE GO TO SORT-USE-1.                         DB1044.2
 051900     IF RESULT-FLAG IS EQUAL TO 4                                 DB1044.2

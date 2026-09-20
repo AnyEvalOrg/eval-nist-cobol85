@@ -10,5 +10,5 @@ DB304M.CBL:28: warning: USE FOR DEBUGGING is obsolete in COBOL 85 [-Wobsolete]
    26 | 002600 BUGGING SECTION.                                                 D..
    27 | 002700                                                                  D..
    28 > 002800     USE FOR DEBUGGING ON COMMNAME.                               D..
-   29 | 002900*Message expected for above statement: OBSOLETE                   D..
+   29 | 002900*..
    30 | 003000                                                                  D..

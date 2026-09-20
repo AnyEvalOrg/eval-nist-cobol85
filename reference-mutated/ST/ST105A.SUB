@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         ST1054.2
 000200 PROGRAM-ID.                                                      ST1054.2
 000300     ST105A.                                                      ST1054.2
-000400****************************************************************  ST1054.2
-000500*                                                              *  ST1054.2
-000600*    VALIDATION FOR:-                                          *  ST1054.2
-000700*                                                              *  ST1054.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1054.2
-000900*                                                              *  ST1054.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1054.2
-001100*                                                              *  ST1054.2
-001200****************************************************************  ST1054.2
-001300*                                                              *  ST1054.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1054.2
-001500*                                                              *  ST1054.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1054.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1054.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1054.2
-001900*                                                              *  ST1054.2
-002000****************************************************************  ST1054.2
-002100*    THIS PROGRAM TESTS THE SORT WITH USING AND OUTPUT PROCEDURE. ST1054.2
-002200*    SORTIN-1E, THE INPUT FILE, WAS CREATED IN ST104 EXPRESSLY FORST1054.2
-002300*    USE IN THIS PROGRAM. EACH RECORD PASSED TO SORTOUT-1E, THE   ST1054.2
-002400*    OUTPUT FILE, IS CHECKED BY THIS PROGRAM. SORTOUT-1E WILL NOT ST1054.2
-002500*    BE USED BY ANY FURTHER PROGRAM.                              ST1054.2
-002600*    RECORDS ARE RETURNED USING THE "RETURN INTO" PHRASE.         ST1054.2
-002700*    SORTIN-1E CONTAINS 203 RECORDS, ARRANGED SO THAT THE KEYS    ST1054.2
-002800*    START AT 000.000 AND RISE IN INCREMENTS OF 2.142 UNTIL THEY  ST1054.2
-002900*    REACH 216.342, AND THEN DESCEND TO 000.000 IN THE SAME       ST1054.2
-003000*    INCREMENTS. ALL RECORDS CONTAIN THE NUMBER +987654321078     ST1054.2
-003100*    IN A NON-KEY AREA.                                           ST1054.2
-003200*    SORTOUT-1E WILL BE SORTED IN DESCENDING ORDER. ALL RECORDS   ST1054.2
-003300*    OCCUR IN IDENTICAL PAIRS EXCEPT THE FIRST ONE.               ST1054.2
-003400*                                                                 ST1054.2
-003500*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * *.ST1054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600                                                                  ST1054.2
 003700 ENVIRONMENT DIVISION.                                            ST1054.2
 003800 CONFIGURATION SECTION.                                           ST1054.2
@@ -274,7 +274,7 @@
 028600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1054.2
 028700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1054.2
 028800      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1054.2
-028900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1054.2
+028900*                                                                         
 029000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1054.2
 029100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1054.2
 029200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1054.2

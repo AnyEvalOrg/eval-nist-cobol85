@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         NC1704.2
 000200 PROGRAM-ID.                                                      NC1704.2
 000300     NC170A.                                                      NC1704.2
-000400****************************************************************  NC1704.2
-000500*                                                              *  NC1704.2
-000600*    VALIDATION FOR:-                                          *  NC1704.2
-000700*                                                              *  NC1704.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1704.2
-000900*                                                              *  NC1704.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1704.2
-001100*                                                              *  NC1704.2
-001200****************************************************************  NC1704.2
-001300*                                                              *  NC1704.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1704.2
-001500*                                                              *  NC1704.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1704.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1704.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1704.2
-001900*                                                              *  NC1704.2
-002000****************************************************************  NC1704.2
-002100*                                                                 NC1704.2
-002200*    THIS PROGRAM TESTS THE FORMAT 2 MULTIPLY STATEMENT FOUND     NC1704.2
-002300*    IN LEVEL 1.   ALL COMBINATIONS OF THE OPTIONAL PHRASES       NC1704.2
-002400*    "SIZE ERROR", "NOT SIZE ERROR" AND "END-MULTIPLY" ARE        NC1704.2
-002500*    TESTED, AS WELL AS THE ROUNDED OPTION.                       NC1704.2
-002600*                                                                 NC1704.2
-002700*    VARIOUS COMBINATIONS OF SIGNED AND UNSIGNED NUMERIC          NC1704.2
-002800*    LITERALS, DISPLAY AND COMPUTATIONAL FIELDS ARE USED          NC1704.2
-002900*    AS OPERANDS.                                                 NC1704.2
-003000*                                                                 NC1704.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100                                                                  NC1704.2
 003200 ENVIRONMENT DIVISION.                                            NC1704.2
 003300 CONFIGURATION SECTION.                                           NC1704.2
@@ -358,7 +358,7 @@
 036000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1704.2
 036100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1704.2
 036200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1704.2
-036300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1704.2
+036300*                                                                         
 036400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1704.2
 036500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1704.2
 036600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1704.2
@@ -634,10 +634,10 @@
 063600     MOVE "MPY-TEST-F2-7-1         " TO PAR-NAME.                 NC1704.2
 063700     PERFORM PRINT-DETAIL.                                        NC1704.2
 063800 MPY-TEST-F2-7-2.                                                 NC1704.2
-063900     IF      WRK-XN-00001 EQUAL TO "1"                            NC1704.2
+063900     IF      WRK-XN-00001 EQUAL TO "8"                            NC1704.2
 064000             PERFORM PASS                                         NC1704.2
 064100             GO TO MPY-WRITE-F2-7-2.                              NC1704.2
-064200     MOVE "1" TO CORRECT-A.                                       NC1704.2
+064200     MOVE "8" TO CORRECT-A.                                       NC1704.2
 064300     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1704.2
 064400     MOVE    "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.             NC1704.2
 064500     PERFORM FAIL.                                                NC1704.2
@@ -672,10 +672,10 @@
 067400     MOVE "MPY-TEST-F2-8-1         " TO PAR-NAME.                 NC1704.2
 067500     PERFORM PRINT-DETAIL.                                        NC1704.2
 067600 MPY-TEST-F2-8-2.                                                 NC1704.2
-067700     IF WRK-XN-00001 EQUAL TO "H"                                 NC1704.2
+067700     IF WRK-XN-00001 EQUAL TO "1"                                 NC1704.2
 067800         PERFORM PASS                                             NC1704.2
 067900         GO TO MPY-WRITE-F2-8-2.                                  NC1704.2
-068000     MOVE    "H"           TO CORRECT-A.                          NC1704.2
+068000     MOVE    "1"           TO CORRECT-A.                          NC1704.2
 068100     MOVE     WRK-XN-00001 TO COMPUTED-A.                         NC1704.2
 068200     MOVE    "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.   NC1704.2
 068300     PERFORM FAIL.                                                NC1704.2
@@ -695,10 +695,10 @@
 069700         GIVING WRK-DS-10V00 ROUNDED ON SIZE ERROR                NC1704.2
 069800         MOVE "1" TO WRK-XN-00001.                                NC1704.2
 069900 MPY-TEST-F2-9-1.                                                 NC1704.2
-070000     IF WRK-DS-10V00 EQUAL TO 0003000000                          NC1704.2
+070000     IF WRK-DS-10V00 EQUAL TO 0000000000                          NC1704.2
 070100         PERFORM PASS                                             NC1704.2
 070200         GO TO MPY-WRITE-F2-9-1.                                  NC1704.2
-070300     MOVE  0003000000         TO CORRECT-18V0.                    NC1704.2
+070300     MOVE  0000000000         TO CORRECT-18V0.                    NC1704.2
 070400     MOVE  WRK-DS-10V00       TO COMPUTED-18V0.                   NC1704.2
 070500     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1704.2
 070600     PERFORM FAIL.                                                NC1704.2
@@ -746,10 +746,10 @@
 074800     MOVE   "MPY-TEST-F2-10-1       " TO PAR-NAME.                NC1704.2
 074900     PERFORM PRINT-DETAIL.                                        NC1704.2
 075000 MPY-TEST-F2-10-2.                                                NC1704.2
-075100     IF      WRK-XN-00001 EQUAL TO "L"                            NC1704.2
+075100     IF      WRK-XN-00001 EQUAL TO "1"                            NC1704.2
 075200             PERFORM PASS                                         NC1704.2
 075300             GO TO MPY-WRITE-F2-10-2.                             NC1704.2
-075400     MOVE   "L" TO CORRECT-A.                                     NC1704.2
+075400     MOVE   "1" TO CORRECT-A.                                     NC1704.2
 075500     MOVE    WRK-XN-00001 TO COMPUTED-A.                          NC1704.2
 075600     MOVE   "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.    NC1704.2
 075700     PERFORM FAIL.                                                NC1704.2
@@ -767,10 +767,10 @@
 076900     MULTIPLY A99-CS-02V00 BY A01ONE-CS-00V01 GIVING WRK-CS-02V02.NC1704.2
 077000 MPY-TEST-F2-11-1.                                                NC1704.2
 077100     MOVE    WRK-CS-02V02 TO WRK-DS-06V06.                        NC1704.2
-077200     IF      WRK-DS-12V00-S EQUAL TO 000009900000                 NC1704.2
+077200     IF      WRK-DS-12V00-S EQUAL TO 000049900000                 NC1704.2
 077300             PERFORM PASS                                         NC1704.2
 077400             GO TO   MPY-WRITE-F2-11.                             NC1704.2
-077500     MOVE    000009900000     TO CORRECT-18V0.                    NC1704.2
+077500     MOVE    000049900000     TO CORRECT-18V0.                    NC1704.2
 077600     MOVE    WRK-DS-12V00-S   TO COMPUTED-18V0.                   NC1704.2
 077700     PERFORM FAIL.                                                NC1704.2
 077800     GO TO   MPY-WRITE-F2-11.                                     NC1704.2
@@ -847,10 +847,10 @@
 084900     MULTIPLY A01ONES-CS-18V00 BY A18SIXES-CU-18V00               NC1704.2
 085000         GIVING WRK-DU-18V00.                                     NC1704.2
 085100 MPY-TEST-F2-15.                                                  NC1704.2
-085200     IF WRK-DU-18V00 EQUAL TO 666666666666666666                  NC1704.2
+085200     IF WRK-DU-18V00 EQUAL TO 666666666666666662                  NC1704.2
 085300         PERFORM PASS                                             NC1704.2
 085400         GO TO MPY-WRITE-F2-15.                                   NC1704.2
-085500     MOVE 666666666666666666 TO CORRECT-18V0.                     NC1704.2
+085500     MOVE 666666666666666662 TO CORRECT-18V0.                     NC1704.2
 085600     MOVE WRK-DU-18V00 TO COMPUTED-18V0.                          NC1704.2
 085700     PERFORM FAIL.                                                NC1704.2
 085800     GO TO MPY-WRITE-F2-15.                                       NC1704.2
@@ -859,10 +859,10 @@
 086100 MPY-WRITE-F2-15.                                                 NC1704.2
 086200     MOVE "MPY-TEST-F2-15 " TO PAR-NAME.                          NC1704.2
 086300     PERFORM PRINT-DETAIL.                                        NC1704.2
-086400*                                                                 NC1704.2
-086500*                                                                 NC1704.2
+086400*                                                                         
+086500*                                                                         
 086600 MPY-INIT-F2-16.                                                  NC1704.2
-086700*    ==-->  NEW SIZE ERROR TESTS    <--==                         NC1704.2
+086700*                                                                         
 086800     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 086900     MOVE   "H"  TO XRAY.                                         NC1704.2
 087000     MOVE  80.12 TO MULT1.                                        NC1704.2
@@ -901,10 +901,10 @@
 090300             MOVE   "SIZE ERROR SHOULD HAVE OCCURED" TO RE-MARK   NC1704.2
 090400             PERFORM FAIL                                         NC1704.2
 090500             PERFORM PRINT-DETAIL.                                NC1704.2
-090600*                                                                 NC1704.2
-090700*                                                                 NC1704.2
+090600*                                                                         
+090700*                                                                         
 090800 MPY-INIT-F2-17.                                                  NC1704.2
-090900*    ==-->  NEW SIZE ERROR TESTS    <--==                         NC1704.2
+090900*                                                                         
 091000     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 091100     MOVE   "1" TO WRK-XN-00001.                                  NC1704.2
 091200     MOVE    ZERO TO WRK-DS-10V00.                                NC1704.2
@@ -944,10 +944,10 @@
 094600             MOVE   "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK   NC1704.2
 094700             PERFORM FAIL                                         NC1704.2
 094800             PERFORM PRINT-DETAIL.                                NC1704.2
-094900*                                                                 NC1704.2
-095000*                                                                 NC1704.2
+094900*                                                                         
+095000*                                                                         
 095100 MPY-INIT-F2-18.                                                  NC1704.2
-095200*    ==-->  NEW SIZE ERROR TESTS    <--==                         NC1704.2
+095200*                                                                         
 095300     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 095400     MOVE    1   TO REC-CT.                                       NC1704.2
 095500     MOVE  80.12 TO MULT1.                                        NC1704.2
@@ -987,10 +987,10 @@
 098900             MOVE   "SIZE ERROR SHOULD HAVE OCCURED" TO RE-MARK   NC1704.2
 099000             PERFORM FAIL                                         NC1704.2
 099100             PERFORM PRINT-DETAIL.                                NC1704.2
-099200*                                                                 NC1704.2
-099300*                                                                 NC1704.2
+099200*                                                                         
+099300*                                                                         
 099400 MPY-INIT-F2-19.                                                  NC1704.2
-099500*    ==-->  NEW SIZE ERROR TESTS    <--==                         NC1704.2
+099500*                                                                         
 099600     MOVE    1   TO REC-CT.                                       NC1704.2
 099700     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 099800     MOVE   "0" TO WRK-XN-00001.                                  NC1704.2
@@ -1030,10 +1030,10 @@
 103200             MOVE   "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK   NC1704.2
 103300             PERFORM FAIL                                         NC1704.2
 103400             PERFORM PRINT-DETAIL.                                NC1704.2
-103500*                                                                 NC1704.2
-103600*                                                                 NC1704.2
+103500*                                                                         
+103600*                                                                         
 103700 MPY-INIT-F2-20.                                                  NC1704.2
-103800*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+103800*                                                                         
 103900     MOVE   "V1-107 6.19.4 GR2" TO ANSI-REFERENCE.                NC1704.2
 104000     MOVE   "MPY-TEST-F2-20" TO PAR-NAME.                         NC1704.2
 104100     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1081,11 +1081,11 @@
 108300     ELSE                                                         NC1704.2
 108400     PERFORM FAIL MOVE WRK-NE-3 TO COMPUTED-A MOVE "$09.99  "     NC1704.2
 108500     TO CORRECT-A PERFORM PRINT-DETAIL.                           NC1704.2
-108600*                                                                 NC1704.2
-108700*                                                                 NC1704.2
+108600*                                                                         
+108700*                                                                         
 108800 MPY-INIT-F2-21.                                                  NC1704.2
-108900*    ==-->    SIZE ERROR CONDITION  <--==                         NC1704.2
-109000*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+108900*                                                                         
+109000*                                                                         
 109100     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 109200     MOVE   "MPY-TEST-F2-21" TO PAR-NAME.                         NC1704.2
 109300     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1157,10 +1157,10 @@
 115900             MOVE   "1"            TO CORRECT-X                   NC1704.2
 116000             PERFORM FAIL                                         NC1704.2
 116100             PERFORM PRINT-DETAIL.                                NC1704.2
-116200*                                                                 NC1704.2
+116200*                                                                         
 116300 MPY-INIT-F2-22.                                                  NC1704.2
-116400*    ==--> NO SIZE ERROR CONDITION  <--==                         NC1704.2
-116500*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+116400*                                                                         
+116500*                                                                         
 116600     MOVE   "MPY-TEST-F2-22" TO PAR-NAME.                         NC1704.2
 116700     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 116800     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1233,10 +1233,10 @@
 123500             MOVE   "0"            TO CORRECT-X                   NC1704.2
 123600             PERFORM FAIL                                         NC1704.2
 123700             PERFORM PRINT-DETAIL.                                NC1704.2
-123800*                                                                 NC1704.2
+123800*                                                                         
 123900 MPY-INIT-F2-23.                                                  NC1704.2
-124000*    ==-->    SIZE ERROR CONDITION  <--==                         NC1704.2
-124100*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+124000*                                                                         
+124100*                                                                         
 124200     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 124300     MOVE   "MPY-TEST-F2-23" TO PAR-NAME.                         NC1704.2
 124400     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1308,10 +1308,10 @@
 131000             MOVE   "0"            TO CORRECT-X                   NC1704.2
 131100             PERFORM FAIL                                         NC1704.2
 131200             PERFORM PRINT-DETAIL.                                NC1704.2
-131300*                                                                 NC1704.2
+131300*                                                                         
 131400 MPY-INIT-F2-24.                                                  NC1704.2
-131500*    ==--> NO SIZE ERROR CONDITION  <--==                         NC1704.2
-131600*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+131500*                                                                         
+131600*                                                                         
 131700     MOVE   "V1-67 6.4.2" TO ANSI-REFERENCE.                      NC1704.2
 131800     MOVE   "MPY-TEST-F2-24" TO PAR-NAME.                         NC1704.2
 131900     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1384,10 +1384,10 @@
 138600             MOVE   "1"            TO CORRECT-X                   NC1704.2
 138700             PERFORM FAIL                                         NC1704.2
 138800             PERFORM PRINT-DETAIL.                                NC1704.2
-138900*                                                                 NC1704.2
+138900*                                                                         
 139000 MPY-INIT-F2-25.                                                  NC1704.2
-139100*    ==-->   SIZE ERROR CONDITION   <--==                         NC1704.2
-139200*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+139100*                                                                         
+139200*                                                                         
 139300     MOVE   "V1-67 6.4.2"    TO ANSI-REFERENCE.                   NC1704.2
 139400     MOVE   "MPY-TEST-F2-25" TO PAR-NAME.                         NC1704.2
 139500     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1460,11 +1460,11 @@
 146200             MOVE   "1"            TO CORRECT-X                   NC1704.2
 146300             PERFORM FAIL                                         NC1704.2
 146400             PERFORM PRINT-DETAIL.                                NC1704.2
-146500*                                                                 NC1704.2
-146600*                                                                 NC1704.2
+146500*                                                                         
+146600*                                                                         
 146700 MPY-INIT-F2-26.                                                  NC1704.2
-146800*    ==-->  NO SIZE ERROR CONDITION <--==                         NC1704.2
-146900*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1704.2
+146800*                                                                         
+146900*                                                                         
 147000     MOVE   "MPY-TEST-F2-26" TO PAR-NAME.                         NC1704.2
 147100     MOVE   "V1-67 6.4.2"    TO ANSI-REFERENCE.                   NC1704.2
 147200     MOVE    999999 TO WRK-DU-6V0-1.                              NC1704.2
@@ -1537,9 +1537,9 @@
 153900             MOVE   "2"            TO CORRECT-X                   NC1704.2
 154000             PERFORM FAIL                                         NC1704.2
 154100             PERFORM PRINT-DETAIL.                                NC1704.2
-154200*                                                                 NC1704.2
+154200*                                                                         
 154300 MPY-INIT-F2-27.                                                  NC1704.2
-154400*    ==--> EXPLICIT SCOPE TERMINATOR <--==                        NC1704.2
+154400*                                                                         
 154500     MOVE   "1V-41 6.4.3"    TO ANSI-REFERENCE.                   NC1704.2
 154600     MOVE    "MPY-TEST-F2-27" TO PAR-NAME.                        NC1704.2
 154700     MOVE    "A" TO XRAY.                                         NC1704.2
@@ -1622,9 +1622,9 @@
 162400             MOVE "SIZE ERROR SHOULD HAVE OCCURRED" TO RE-MARK    NC1704.2
 162500             PERFORM FAIL                                         NC1704.2
 162600             PERFORM PRINT-DETAIL.                                NC1704.2
-162700*                                                                 NC1704.2
+162700*                                                                         
 162800 MPY-INIT-F2-28.                                                  NC1704.2
-162900*    ==-->  EXPLICIT SCOPE TERMINATOR  <--==                      NC1704.2
+162900*                                                                         
 163000     MOVE   "1V-41 6.4.3"    TO ANSI-REFERENCE.                   NC1704.2
 163100     MOVE    "MPY-TEST-F2-28" TO PAR-NAME.                        NC1704.2
 163200     MOVE   "1"   TO WRK-XN-00001.                                NC1704.2
@@ -1709,10 +1709,10 @@
 171100                TO RE-MARK                                        NC1704.2
 171200             PERFORM FAIL                                         NC1704.2
 171300             PERFORM PRINT-DETAIL.                                NC1704.2
-171400*                                                                 NC1704.2
+171400*                                                                         
 171500 MPY-INIT-F2-29.                                                  NC1704.2
-171600*    ==--> EXPLICIT SCOPE TERMINATOR <--==                        NC1704.2
-171700*    ==-->    SIZE ERROR CONDITION   <--==                        NC1704.2
+171600*                                                                         
+171700*                                                                         
 171800     MOVE   "1V-41 6.4.3"    TO ANSI-REFERENCE.                   NC1704.2
 171900     MOVE    "MPY-TEST-F2-29" TO PAR-NAME.                        NC1704.2
 172000     MOVE    "A" TO XRAY.                                         NC1704.2
@@ -1800,10 +1800,10 @@
 180200                  TO RE-MARK                                      NC1704.2
 180300             PERFORM FAIL                                         NC1704.2
 180400             PERFORM PRINT-DETAIL.                                NC1704.2
-180500*                                                                 NC1704.2
+180500*                                                                         
 180600 MPY-INIT-F2-30.                                                  NC1704.2
-180700*    ==--> EXPLICIT SCOPE TERMINATOR <--==                        NC1704.2
-180800*    ==-->  NO SIZE ERROR CONDITION  <--==                        NC1704.2
+180700*                                                                         
+180800*                                                                         
 180900     MOVE   "MPY-TEST-F2-30" TO PAR-NAME                          NC1704.2
 181000     MOVE   "1V-41 6.4.3"    TO ANSI-REFERENCE.                   NC1704.2
 181100     MOVE   "1"   TO WRK-XN-00001.                                NC1704.2
@@ -1888,10 +1888,10 @@
 189000                TO RE-MARK                                        NC1704.2
 189100             PERFORM FAIL                                         NC1704.2
 189200             PERFORM PRINT-DETAIL.                                NC1704.2
-189300*                                                                 NC1704.2
+189300*                                                                         
 189400 MPY-INIT-F2-31.                                                  NC1704.2
-189500*    ==--> EXPLICIT SCOPE TERMINATOR <--==                        NC1704.2
-189600*    ==-->  NO SIZE ERROR CONDITION  <--==                        NC1704.2
+189500*                                                                         
+189600*                                                                         
 189700     MOVE   "1V-41 6.4.3"    TO ANSI-REFERENCE.                   NC1704.2
 189800     MOVE   "MPY-TEST-F2-31" TO PAR-NAME                          NC1704.2
 189900     MOVE 80.12  TO MULT1.                                        NC1704.2
@@ -1948,9 +1948,9 @@
 195000             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1704.2
 195100             PERFORM FAIL                                         NC1704.2
 195200             PERFORM PRINT-DETAIL.                                NC1704.2
-195300*                                                                 NC1704.2
+195300*                                                                         
 195400 MPY-INIT-F2-32.                                                  NC1704.2
-195500*    ==--> EXPLICIT SCOPE TERMINATOR <--==                        NC1704.2
+195500*                                                                         
 195600     MOVE   "1V-41 6.4.3"    TO ANSI-REFERENCE.                   NC1704.2
 195700     MOVE   "MPY-TEST-F2-32" TO PAR-NAME                          NC1704.2
 195800     MOVE   "0"   TO WRK-XN-00001.                                NC1704.2
@@ -2006,8 +2006,8 @@
 200800             MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         NC1704.2
 200900             PERFORM FAIL                                         NC1704.2
 201000             PERFORM PRINT-DETAIL.                                NC1704.2
-201100*                                                                 NC1704.2
-201200*                                                                 NC1704.2
+201100*                                                                         
+201200*                                                                         
 201300 CCVS-EXIT SECTION.                                               NC1704.2
 201400 CCVS-999999.                                                     NC1704.2
 201500     GO TO CLOSE-FILES.                                           NC1704.2

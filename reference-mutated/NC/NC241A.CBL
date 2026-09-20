@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2414.2
 000200 PROGRAM-ID.                                                      NC2414.2
 000300     NC241A.                                                      NC2414.2
-000400****************************************************************  NC2414.2
-000500*                                                              *  NC2414.2
-000600*    VALIDATION FOR:-                                          *  NC2414.2
-000700*                                                              *  NC2414.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2414.2
-000900*                                                              *  NC2414.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2414.2
-001100*                                                              *  NC2414.2
-001200****************************************************************  NC2414.2
-001300*                                                              *  NC2414.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2414.2
-001500*                                                              *  NC2414.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2414.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2414.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2414.2
-001900*                                                              *  NC2414.2
-002000****************************************************************  NC2414.2
-002100*                                                                 NC2414.2
-002200*    PROGRAM NC241A TESTS THE CONSTRUCTION AND ACCESS OF A     *  NC2414.2
-002300*    THREE-DIMENSIONAL TABLE USING INDICES.  THE CONTENT OF    *  NC2414.2
-002400*    TABLE ELEMENTS IS VERIFIED BY USE OF THE FORMAT 4         *  NC2414.2
-002500*    "PERFORM" STATEMENT.                                      *  NC2414.2
-002600*                                                              *  NC2414.2
-002700****************************************************************  NC2414.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800                                                                  NC2414.2
 002900 ENVIRONMENT DIVISION.                                            NC2414.2
 003000 CONFIGURATION SECTION.                                           NC2414.2
@@ -268,7 +268,7 @@
 027000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2414.2
 027100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2414.2
 027200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2414.2
-027300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2414.2
+027300*                                                                         
 027400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2414.2
 027500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2414.2
 027600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2414.2
@@ -368,7 +368,7 @@
 037000     MOVE "PERFORM VARYING USING INDEX" TO RE-MARK.               NC2414.2
 037100     PERFORM FAIL.                                                NC2414.2
 037200     PERFORM PRINT-DETAIL.                                        NC2414.2
-037300*                                                                 NC2414.2
+037300*                                                                         
 037400 TH1-INIT-GF-2.                                                   NC2414.2
 037500     MOVE "GRP10" TO GRP-HOLD-AREA.                               NC2414.2
 037600     MOVE "TH1-TEST-GF-2      " TO PAR-NAME.                      NC2414.2
@@ -392,7 +392,7 @@
 039400     PERFORM FAIL.                                                NC2414.2
 039500 TH1-WRITE-GF-2.                                                  NC2414.2
 039600     PERFORM PRINT-DETAIL.                                        NC2414.2
-039700*                                                                 NC2414.2
+039700*                                                                         
 039800 TH1-INIT-GF-3.                                                   NC2414.2
 039900     MOVE "GRP07" TO GRP-HOLD-AREA.                               NC2414.2
 040000     MOVE "TH1-TEST-GF-3      " TO PAR-NAME.                      NC2414.2
@@ -416,7 +416,7 @@
 041800     PERFORM FAIL.                                                NC2414.2
 041900 TH1-WRITE-GF-3.                                                  NC2414.2
 042000     PERFORM PRINT-DETAIL.                                        NC2414.2
-042100*                                                                 NC2414.2
+042100*                                                                         
 042200 TH1-INIT-GF-4.                                                   NC2414.2
 042300     MOVE "TH1-TEST-GF-4      " TO PAR-NAME.                      NC2414.2
 042400     MOVE "GRP01" TO GRP-HOLD-AREA.                               NC2414.2
@@ -440,11 +440,11 @@
 044200 TH1-WRITE-GF-4.                                                  NC2414.2
 044300     PERFORM PRINT-DETAIL.                                        NC2414.2
 044400     GO TO TH2-INIT-GF-1.                                         NC2414.2
-044500*                                                                 NC2414.2
+044500*                                                                         
 044600 FIND-LEVEL-1-ENTRY.                                              NC2414.2
 044700     IF ENTRY-1 (IDX-1) = GRP-HOLD-AREA                           NC2414.2
 044800         MOVE "PASS" TO TEST-CHECK.                               NC2414.2
-044900*                                                                 NC2414.2
+044900*                                                                         
 045000 TH2-INIT-GF-1.                                                   NC2414.2
 045100     MOVE "TH2-TEST-GF-1      " TO PAR-NAME.                      NC2414.2
 045200     MOVE "PERFORM VARYING LEV2" TO FEATURE.                      NC2414.2
@@ -470,7 +470,7 @@
 047200     PERFORM FAIL.                                                NC2414.2
 047300 TH2-WRITE-GF-1.                                                  NC2414.2
 047400     PERFORM PRINT-DETAIL.                                        NC2414.2
-047500*                                                                 NC2414.2
+047500*                                                                         
 047600 TH2-INIT-GF-2.                                                   NC2414.2
 047700     MOVE "TH2-TEST-GF-2      " TO PAR-NAME.                      NC2414.2
 047800     MOVE SPACES TO TEST-CHECK.                                   NC2414.2
@@ -495,7 +495,7 @@
 049700     PERFORM FAIL.                                                NC2414.2
 049800 TH2-WRITE-GF-2.                                                  NC2414.2
 049900     PERFORM PRINT-DETAIL.                                        NC2414.2
-050000*                                                                 NC2414.2
+050000*                                                                         
 050100 TH2-INIT-GF-3.                                                   NC2414.2
 050200     MOVE "TH2-TEST-GF-3      " TO PAR-NAME.                      NC2414.2
 050300     MOVE SPACES TO TEST-CHECK.                                   NC2414.2
@@ -520,7 +520,7 @@
 052200     PERFORM FAIL.                                                NC2414.2
 052300 TH2-WRITE-GF-3.                                                  NC2414.2
 052400     PERFORM PRINT-DETAIL.                                        NC2414.2
-052500*                                                                 NC2414.2
+052500*                                                                         
 052600 TH2-INIT-GF-4.                                                   NC2414.2
 052700     MOVE "TH2-TEST-GF-4      " TO PAR-NAME.                      NC2414.2
 052800     MOVE SPACES TO TEST-CHECK.                                   NC2414.2
@@ -547,11 +547,11 @@
 054900 TH2-WRITE-GF-4.                                                  NC2414.2
 055000     PERFORM PRINT-DETAIL.                                        NC2414.2
 055100     GO TO TH3-INIT-GF-1.                                         NC2414.2
-055200*                                                                 NC2414.2
+055200*                                                                         
 055300 FIND-LEVEL-2-ENTRY.                                              NC2414.2
 055400     IF ENTRY-2 (IDX-1, IDX-2) = SEC-HOLD-AREA                    NC2414.2
 055500         MOVE "PASS" TO TEST-CHECK.                               NC2414.2
-055600*                                                                 NC2414.2
+055600*                                                                         
 055700 TH3-INIT-GF-1.                                                   NC2414.2
 055800     MOVE "PERFORM VARYING LEV3" TO FEATURE.                      NC2414.2
 055900     MOVE SPACES TO TEST-CHECK.                                   NC2414.2
@@ -578,7 +578,7 @@
 058000     PERFORM FAIL.                                                NC2414.2
 058100 TH3-WRITE-GF-1.                                                  NC2414.2
 058200     PERFORM PRINT-DETAIL.                                        NC2414.2
-058300*                                                                 NC2414.2
+058300*                                                                         
 058400 TH3-INIT-GF-2.                                                   NC2414.2
 058500     MOVE "TH3-TEST-GF-2      " TO PAR-NAME.                      NC2414.2
 058600     MOVE "ELEM (10,10,10)" TO ELEM-HOLD-AREA.                    NC2414.2
@@ -604,7 +604,7 @@
 060600     PERFORM FAIL.                                                NC2414.2
 060700 TH3-WRITE-GF-2.                                                  NC2414.2
 060800     PERFORM PRINT-DETAIL.                                        NC2414.2
-060900*                                                                 NC2414.2
+060900*                                                                         
 061000 TH3-INIT-GF-3.                                                   NC2414.2
 061100     MOVE "TH3-TEST-GF-3      " TO PAR-NAME.                      NC2414.2
 061200     MOVE "ELEM (08,07,06)" TO ELEM-HOLD-AREA.                    NC2414.2
@@ -630,7 +630,7 @@
 063200     PERFORM FAIL.                                                NC2414.2
 063300 TH3-WRITE-GF-3.                                                  NC2414.2
 063400     PERFORM PRINT-DETAIL.                                        NC2414.2
-063500*                                                                 NC2414.2
+063500*                                                                         
 063600 TH3-INIT-GF-4.                                                   NC2414.2
 063700     MOVE "TH3-TEST-GF-4      " TO PAR-NAME.                      NC2414.2
 063800     MOVE SPACES TO TEST-CHECK.                                   NC2414.2
@@ -657,11 +657,11 @@
 065900 TH3-WRITE-GF-4.                                                  NC2414.2
 066000     PERFORM PRINT-DETAIL.                                        NC2414.2
 066100     GO TO END-3LEVEL-TEST.                                       NC2414.2
-066200*                                                                 NC2414.2
+066200*                                                                         
 066300 FIND-LEVEL-3-ENTRY.                                              NC2414.2
 066400     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) = ELEM-HOLD-AREA            NC2414.2
 066500         MOVE "PASS" TO TEST-CHECK.                               NC2414.2
-066600*                                                                 NC2414.2
+066600*                                                                         
 066700 END-3LEVEL-TEST.                                                 NC2414.2
 066800     EXIT.                                                        NC2414.2
 066900 CCVS-EXIT SECTION.                                               NC2414.2

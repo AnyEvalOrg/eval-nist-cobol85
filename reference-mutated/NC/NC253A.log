@@ -18,27 +18,15 @@ TEST RESULT OF NC253A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                                                                                         
                                                                                                                         
- SUBTRACT SERIES      FAIL* SUB-TEST-F3-1                                                                               
-                                                                                                                        
-                                     COMPUTED= 11223344506677889900                                                     
-                                     CORRECT = 112233445066778899F0  VI-134 6.25.4 GR3                                  
-                                                                                                                        
- SUBTRACT SERIES      FAIL* SUB-TEST-F3-2                                                                               
-                                                                                                                        
-                                     COMPUTED= 11223344606677889900                                                     
-                                     CORRECT = 1122334460667W889900  VI-134 6.25.4 GR3                                  
-                                                                                                                        
+ SUBTRACT SERIES      PASS  SUB-TEST-F3-1                                                                               
+ SUBTRACT SERIES      PASS  SUB-TEST-F3-2                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-3-1                                                                             
  SUBTRACT SERIES      PASS  SUB-TEST-F3-3-2                                                                             
  SUBTRACT SERIES      PASS  SUB-TEST-F3-3-3                                                                             
  SUBTRACT SERIES      PASS  SUB-TEST-3-3-4                                                                              
  SUBTRACT SERIES      PASS  SUB-TEST-F3-4                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-5                                                                               
- SUBTRACT SERIES      FAIL* SUB-TEST-F3-6                                                                               
-                                                                                                                        
-                                     COMPUTED= 892155995511                                                             
-                                     CORRECT = 892155998511          VI-134 6.25.4 GR3                                  
-                                                                                                                        
+ SUBTRACT SERIES      PASS  SUB-TEST-F3-6                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-7                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-8                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-9-1    .01                                                                      
@@ -48,11 +36,7 @@ TEST RESULT OF NC253A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT SERIES      PASS  SUB-TEST-F3-10-1   .01                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-10-2   .02                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-10-3   .03                                                                      
- SUBTRACT SERIES      PASS  SUB-TEST-F3-10-4   .04                                                                                                                                                                                              
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+ SUBTRACT SERIES      PASS  SUB-TEST-F3-10-4   .04                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-11-1   .01                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-11-1   .02                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-11-3   .03                                                                      
@@ -64,7 +48,11 @@ TEST RESULT OF NC253A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT SERIES      PASS  SUB-TEST-F3-13-1   .01                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-13-2   .02                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-13-3   .03                                                                      
- SUBTRACT SERIES      PASS  SUB-TEST-F3-13-4   .04                                                                      
+ SUBTRACT SERIES      PASS  SUB-TEST-F3-13-4   .04                                                                                                                                                                                              
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
  SUBTRACT SERIES      PASS  SUB-TEST-F3-14-1   .01                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-14-2   .02                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-14-3   .03                                                                      
@@ -102,12 +90,8 @@ TEST RESULT OF NC253A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC253A                                                
                                                                                                                         
-                                                    058 OF 061  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                                                                                                                                          
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+                                                    061 OF 061  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

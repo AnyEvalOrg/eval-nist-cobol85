@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1354.2
 000200 PROGRAM-ID.                                                      NC1354.2
 000300     NC135A.                                                      NC1354.2
-000400****************************************************************  NC1354.2
-000500*                                                              *  NC1354.2
-000600*    VALIDATION FOR:-                                          *  NC1354.2
-000700*                                                              *  NC1354.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1354.2
-000900*                                                              *  NC1354.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1354.2
-001100*                                                              *  NC1354.2
-001200****************************************************************  NC1354.2
-001300*                                                              *  NC1354.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1354.2
-001500*                                                              *  NC1354.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1354.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1354.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1354.2
-001900*                                                              *  NC1354.2
-002000****************************************************************  NC1354.2
-002100*                                                                 NC1354.2
-002200*     PROGRAM NC135A TESTS THE USE OF INDEX-NAMES TO REFERENCE    NC1354.2
-002300*     3 DIMENSIONAL TABLE WHICH HAS BEEN REDEFINED.               NC1354.2
-002400*     FORMAT 2 OF THE SET STATEMENT AND RELATIVE INDEXING ARE     NC1354.2
-002500*     ALSO TESTED.                                                NC1354.2
-002600*                                                                 NC1354.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1354.2
 002800 CONFIGURATION SECTION.                                           NC1354.2
 002900 SOURCE-COMPUTER.                                                 NC1354.2
@@ -248,7 +248,7 @@
 025000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1354.2
 025100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1354.2
 025200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1354.2
-025300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1354.2
+025300*                                                                         
 025400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1354.2
 025500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1354.2
 025600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1354.2
@@ -344,13 +344,13 @@
 034600               GO TO PARAGRAPH-NAME-8.                            NC1354.2
 034700     SET INXEX1 UP BY 001.                                        NC1354.2
 034800     GO TO PARAGRAPH-NAME-5.                                      NC1354.2
-034900*    THIS SECTION GENERATES VALUES FOR A 10X10X3 TABLE            NC1354.2
-035000*    AND THE TABLE IS USED IN THE TESTS IN THIS ROUTINE.          NC1354.2
+034900*                                                                         
+035000*                                                                         
 035100 PARAGRAPH-NAME-8.                                                NC1354.2
 035200     EXIT.                                                        NC1354.2
 035300 SECTION-NAME-2 SECTION.                                          NC1354.2
 035400 PARAGRAPH-NAME-9.                                                NC1354.2
-035500*                                                                 NC1354.2
+035500*                                                                         
 035600     MOVE SPACE TO COMPUTED-A  CORRECT-A.                         NC1354.2
 035700     MOVE "INDEXING" TO FEATURE.                                  NC1354.2
 035800     SET INXEX1 INXEX2 INXEX3 TO  01.                             NC1354.2
@@ -437,7 +437,7 @@
 043900     SET INXEX3 TO 03.                                            NC1354.2
 044000     SET INXEX1 DOWN BY 01.                                       NC1354.2
 044100     SET  INXEX2 DOWN BY  IDEN-1.                                 NC1354.2
-044200*    NOTE IDEN-1 IS EQUAL TO 03.                                  NC1354.2
+044200*                                                                         
 044300     SET INXEX3 DOWN BY 2.                                        NC1354.2
 044400     IF TABLE-1  (INXEX1  INXEX2  INXEX3) EQUAL TO 259            NC1354.2
 044500         PERFORM PASS                                             NC1354.2

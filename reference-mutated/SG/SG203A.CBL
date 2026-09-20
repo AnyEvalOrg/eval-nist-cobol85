@@ -23,7 +23,7 @@
 002300         VARIOUS OPTIONS OF THE PERFORM AND ALTER STATEMENTS      SG2034.2
 002400         ARE USED IN CONJUNCTION WITH THE SEGMENT-LIMIT CLAUSE    SG2034.2
 002500         CHECKING INITIAL AND LAST-USED STATES.                   SG2034.2
-002600*                                                                 SG2034.2
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            SG2034.2
 002800 CONFIGURATION SECTION.                                           SG2034.2
 002900 SOURCE-COMPUTER.                                                 SG2034.2
@@ -217,7 +217,7 @@
 021900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG2034.2
 022000      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG2034.2
 022100      ADD PASS-COUNTER TO ERROR-HOLD.                             SG2034.2
-022200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG2034.2
+022200*                                                                         
 022300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG2034.2
 022400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG2034.2
 022500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG2034.2
@@ -284,7 +284,7 @@
 028600 29 SECTION 29.                                                   SG2034.2
 028700 PARA-29.                                                         SG2034.2
 028800     MOVE "GOOD" TO TEST-CHECK.                                   SG2034.2
-028900*    NOTE       *******TEST 1 BEGINS HERE**********.              SG2034.2
+028900*                                                                         
 029000 67  SECTION 67.                                                  SG2034.2
 029100 PARA-67.                                                         SG2034.2
 029200     IF TEST-CHECK EQUAL TO "GOOD"                                SG2034.2
@@ -301,7 +301,7 @@
 030300     MOVE "TEST BEGINS IN PARA-67" TO RE-MARK.                    SG2034.2
 030400     MOVE "FALL THRU IND SEG" TO FEATURE.                         SG2034.2
 030500     PERFORM PRINT-DETAIL.                                        SG2034.2
-030600*    NOTE       *******TEST 2 BEGINS HERE**********.              SG2034.2
+030600*                                                                         
 030700 30 SECTION 30.                                                   SG2034.2
 030800 PARA-30.                                                         SG2034.2
 030900     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
@@ -326,7 +326,7 @@
 032800     MOVE "SEGM-TEST-02" TO PAR-NAME.                             SG2034.2
 032900     MOVE "TEST BEGINS IN PARA-31" TO RE-MARK.                    SG2034.2
 033000     PERFORM PRINT-DETAIL.                                        SG2034.2
-033100*    NOTE       *******TEST 3 BEGINS HERE**********.              SG2034.2
+033100*                                                                         
 033200 53  SECTION 53.                                                  SG2034.2
 033300 PARA-53.                                                         SG2034.2
 033400     GO TO PARA-54.                                               SG2034.2
@@ -347,7 +347,7 @@
 034900     MOVE "TEST BEGINS IN PARA-99" TO RE-MARK.                    SG2034.2
 035000     MOVE "PERFORM IND SEG " TO FEATURE.                          SG2034.2
 035100     PERFORM PRINT-DETAIL.                                        SG2034.2
-035200*    NOTE       *******TEST 4 BEGINS HERE**********.              SG2034.2
+035200*                                                                         
 035300     ALTER PARA-32 TO PARA-32A.                                   SG2034.2
 035400     GO TO PARA-34.                                               SG2034.2
 035500 54  SECTION 54.                                                  SG2034.2
@@ -394,7 +394,7 @@
 039600     MOVE "TEST BEGINS IN PARA-55" TO RE-MARK.                    SG2034.2
 039700     MOVE "ALTER OVLY FIXED SEG" TO FEATURE.                      SG2034.2
 039800     PERFORM PRINT-DETAIL.                                        SG2034.2
-039900*    NOTE       *******TEST 5 BEGINS HERE**********.              SG2034.2
+039900*                                                                         
 040000 56  SECTION 56.                                                  SG2034.2
 040100 PARA-56.                                                         SG2034.2
 040200     ALTER PARA-34 TO PROCEED TO PARA-56A.                        SG2034.2
@@ -414,7 +414,7 @@
 041600     MOVE "SEGM-TEST-05" TO PAR-NAME.                             SG2034.2
 041700     MOVE "TEST BEGINS IN PARA-56" TO RE-MARK.                    SG2034.2
 041800     PERFORM PRINT-DETAIL.                                        SG2034.2
-041900*    NOTE       *******TEST 6 BEGINS HERE**********.              SG2034.2
+041900*                                                                         
 042000 57  SECTION 57.                                                  SG2034.2
 042100 PARA-57.                                                         SG2034.2
 042200     MOVE "GOOD" TO TEST-CHECK.                                   SG2034.2
@@ -425,13 +425,13 @@
 042700 PARA-00A.                                                        SG2034.2
 042800     MOVE "BAD " TO TEST-CHECK.                                   SG2034.2
 042900 PARA-00B.                                                        SG2034.2
-043000*    NOTE  THIS PARAGRAPH SERVES NO PURPOSE OTHER THAN TO         SG2034.2
-043100*        VERIFY THAT FALLING THRU WILL NOT DISTURB PROGRAM FLOW.  SG2034.2
+043000*                                                                         
+043100*                                                                         
 043200 59  SECTION 59.                                                  SG2034.2
 043300 PARA-59.                                                         SG2034.2
-043400*    THIS SECTION SERVES NO PURPOSE EXCEPT TO VERIFY THAT         SG2034.2
-043500*        PROGRAM FLOW WILL NOT BE AFFECTED AND THE FOLLOWING      SG2034.2
-043600*            STATEMENT WILL BE IGNORED.                           SG2034.2
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
 043700     IF       TEST-CHECK EQUAL TO "BAD "                          SG2034.2
 043800               MOVE "BAD " TO TEST-CHECK.                         SG2034.2
 043900 01 SECTION 01.                                                   SG2034.2
@@ -450,7 +450,7 @@
 045200     MOVE "TEST BEGINS IN PARA-01" TO RE-MARK.                    SG2034.2
 045300     MOVE "FALL THRU IND SEG" TO FEATURE.                         SG2034.2
 045400     PERFORM PRINT-DETAIL.                                        SG2034.2
-045500*    NOTE       *******TEST 7 BEGINS HERE**********.              SG2034.2
+045500*                                                                         
 045600 02 SECTION 02.                                                   SG2034.2
 045700 PARA-02.                                                         SG2034.2
 045800     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
@@ -469,7 +469,7 @@
 047100     MOVE "TEST BEGINS IN PARA-02" TO RE-MARK.                    SG2034.2
 047200     MOVE "PERFORM  IND SEG" TO FEATURE.                          SG2034.2
 047300     PERFORM PRINT-DETAIL.                                        SG2034.2
-047400*    NOTE       *******TEST 8 BEGINS HERE**********.              SG2034.2
+047400*                                                                         
 047500 35 SECTION 35.                                                   SG2034.2
 047600 PARA-35.                                                         SG2034.2
 047700     ALTER PARA-34 TO PROCEED TO PARA-35A.                        SG2034.2
@@ -490,7 +490,7 @@
 049200     MOVE "TEST BEGINS IN PARA-35" TO RE-MARK.                    SG2034.2
 049300     MOVE "ALTER OVLY FIXED SEG" TO FEATURE.                      SG2034.2
 049400     PERFORM PRINT-DETAIL.                                        SG2034.2
-049500*    NOTE       *******TEST 9 BEGINS HERE**********.              SG2034.2
+049500*                                                                         
 049600 36 SECTION 36.                                                   SG2034.2
 049700 PARA-36.                                                         SG2034.2
 049800     GO TO PARA-36A.                                              SG2034.2
@@ -513,7 +513,7 @@
 051500     MOVE "TEST BEGINS IN PARA-36" TO RE-MARK.                    SG2034.2
 051600     MOVE "GO TO NON-RES SEG" TO FEATURE.                         SG2034.2
 051700     PERFORM PRINT-DETAIL.                                        SG2034.2
-051800*    NOTE       *******TEST 10 BEGINS HERE*********.              SG2034.2
+051800*                                                                         
 051900     GO TO PARA-58.                                               SG2034.2
 052000 85  SECTION 85.                                                  SG2034.2
 052100 PARA-85.                                                         SG2034.2
@@ -555,7 +555,7 @@
 055700     MOVE "TEST BEGINS IN PARA-37" TO RE-MARK.                    SG2034.2
 055800     MOVE "INITIAL STATE" TO FEATURE.                             SG2034.2
 055900     PERFORM PRINT-DETAIL.                                        SG2034.2
-056000*    NOTE       *******TEST 11 BEGINS HERE*********.              SG2034.2
+056000*                                                                         
 056100 38 SECTION 38.                                                   SG2034.2
 056200 PARA-38.                                                         SG2034.2
 056300     PERFORM PARA-58D.                                            SG2034.2
@@ -573,7 +573,7 @@
 057500     MOVE "SEGM-TEST-11" TO PAR-NAME.                             SG2034.2
 057600     MOVE "TEST BEGINS IN PARA-38" TO RE-MARK.                    SG2034.2
 057700     PERFORM PRINT-DETAIL.                                        SG2034.2
-057800*    NOTE       *******TEST 12 BEGINS HERE*********.              SG2034.2
+057800*                                                                         
 057900 03 SECTION 03.                                                   SG2034.2
 058000 PARA-03.                                                         SG2034.2
 058100     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
@@ -593,7 +593,7 @@
 059500     MOVE "TEST BEGINS IN PARA-03" TO RE-MARK.                    SG2034.2
 059600     MOVE "LAST USED STATE" TO FEATURE.                           SG2034.2
 059700     PERFORM PRINT-DETAIL.                                        SG2034.2
-059800*    NOTE       *******TEST 13 BEGINS HERE*********.              SG2034.2
+059800*                                                                         
 059900 39 SECTION 39.                                                   SG2034.2
 060000 PARA-39A.                                                        SG2034.2
 060100     GO TO PARA-39B.                                              SG2034.2
@@ -622,7 +622,7 @@
 062400     MOVE "SEGM-TEST-13" TO PAR-NAME.                             SG2034.2
 062500     MOVE "TEST BEGINS IN PARA-04" TO RE-MARK.                    SG2034.2
 062600     PERFORM PRINT-DETAIL.                                        SG2034.2
-062700*    NOTE       *******TEST 14 BEGINS HERE*********.              SG2034.2
+062700*                                                                         
 062800     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
 062900     MOVE 0 TO TEST-COUNTER.                                      SG2034.2
 063000 40 SECTION 40.                                                   SG2034.2
@@ -645,15 +645,15 @@
 064700     MOVE "TEST BEGINS IN PARA-40B" TO RE-MARK.                   SG2034.2
 064800     MOVE "INITIAL STATE" TO FEATURE.                             SG2034.2
 064900     PERFORM PRINT-DETAIL.                                        SG2034.2
-065000*    NOTE       *******TEST 15 BEGINS HERE*********.              SG2034.2
+065000*                                                                         
 065100     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
 065200     IF TEST-COUNTER EQUAL TO 2 GO TO PARA-68C.                   SG2034.2
-065300*    NOTE ***** THE PREVIOUS IF STMT WAS INSERTED TO KEEP TEST-14 SG2034.2
-065400*        FROM LOOPING IF SEGMENT 68 WAS NOT IN THE INITIAL STATE  SG2034.2
-065500*        EACH TIME IT WAS ENTERED -- TEST-15 WILL ALSO FAIL       SG2034.2
-065600*        IN THIS CASE *****.                                      SG2034.2
+065300*                                                                         
+065400*                                                                         
+065500*                                                                         
+065600*                                                                         
 065700     MOVE 2 TO TEST-COUNTER.                                      SG2034.2
-065800*    NOTE FALL THRU.                                              SG2034.2
+065800*                                                                         
 065900 68  SECTION 68.                                                  SG2034.2
 066000 PARA-68.                                                         SG2034.2
 066100     GO TO PARA-68A.                                              SG2034.2
@@ -686,7 +686,7 @@
 068800 41  SECTION 41.                                                  SG2034.2
 068900 PARA-41A.                                                        SG2034.2
 069000     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
-069100*    NOTE     *****    TEST 16 BEGINS HERE   *****.               SG2034.2
+069100*                                                                         
 069200     PERFORM TEST-16.                                             SG2034.2
 069300     ALTER PARA-41B TO PARA-41D.                                  SG2034.2
 069400     PERFORM PARA-41B THRU PARA-41E.                              SG2034.2
@@ -726,12 +726,12 @@
 072800 45  SECTION 45.                                                  SG2034.2
 072900 PARA-45A.                                                        SG2034.2
 073000     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
-073100*    NOTE     *****    TEST 17 BEGINS HERE   *****.               SG2034.2
+073100*                                                                         
 073200     PERFORM PARA-45C.                                            SG2034.2
-073300*    NOTE PERFORM PARAGRAPH THAT ALTERS A PARAGRAPH IN A UNIQUE   SG2034.2
-073400*         SEGMENT CONTAINING THE SAME PRIORITY NUMBER.            SG2034.2
+073300*                                                                         
+073400*                                                                         
 073500     PERFORM 45A THRU 45B.                                        SG2034.2
-073600*    NOTE THE WRITE PARAGRAPH FOR THIS TEST IS IN SEGMENT 46.     SG2034.2
+073600*                                                                         
 073700     GO TO 45A.                                                   SG2034.2
 073800 DELETE-45.                                                       SG2034.2
 073900     PERFORM DE-LETE.                                             SG2034.2
@@ -751,9 +751,9 @@
 075300     GO TO PARA-45G.                                              SG2034.2
 075400 PARA-45F.                                                        SG2034.2
 075500     MOVE "BETR" TO TEST-CHECK.                                   SG2034.2
-075600*    NOTE THE GO TO STMT IN PARA-45A SHOULD SHIFT CONTROL THRU    SG2034.2
-075700*    THIS PARAGRAPH AND FALL THRU TO THE EXIT FOLLOWED BY THE     SG2034.2
-075800*         COMPARISON OF TEST-CHECK.                               SG2034.2
+075600*                                                                         
+075700*                                                                         
+075800*                                                                         
 075900 PARA-45G.                                                        SG2034.2
 076000     EXIT.                                                        SG2034.2
 076100 46  SECTION 46.                                                  SG2034.2
@@ -771,7 +771,7 @@
 077300 TEST-18 SECTION 47.                                              SG2034.2
 077400 PARA-47.                                                         SG2034.2
 077500     MOVE SPACE TO TEST-CHECK.                                    SG2034.2
-077600*    NOTE ************** TEST 18 BEGINS HERE ***************.     SG2034.2
+077600*                                                                         
 077700     ALTER PARA-05 TO PROCEED TO 69.                              SG2034.2
 077800     GO TO 05.                                                    SG2034.2
 077900 05 SECTION 05.                                                   SG2034.2

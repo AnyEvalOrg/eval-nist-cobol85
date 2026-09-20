@@ -1,42 +1,42 @@
 000100 IDENTIFICATION DIVISION.                                         IC2254.2
 000200 PROGRAM-ID.                                                      IC2254.2
 000300     IC225A.                                                      IC2254.2
-000400****************************************************************  IC2254.2
-000500*                                                              *  IC2254.2
-000600*    VALIDATION FOR:-                                          *  IC2254.2
-000700*                                                              *  IC2254.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2254.2
-000900*                                                              *  IC2254.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2254.2
-001100*                                                              *  IC2254.2
-001200****************************************************************  IC2254.2
-001300*                                                              *  IC2254.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2254.2
-001500*                                                              *  IC2254.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2254.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2254.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2254.2
-001900*                                                              *  IC2254.2
-002000****************************************************************  IC2254.2
-002100*                                                              *  IC2254.2
-002200*    PROGRAM IC225A AND IC225A-1 WILL TEST THE NEW LANGUAGE    *  IC2254.2
-002300*    ELEMENTS FOR THE LEVEL 2 INTER-PROGRAM COMMUNICATION      *  IC2254.2
-002400*    MODULE.                                                   *  IC2254.2
-002500*    THE NEW LANGUAGE ELEMENTS TO BE TESTED WILL BE:           *  IC2254.2
-002600*          "BY REFERENCE"     PHRASE                           *  IC2254.2
-002700*    THE TWO PROGRAMS WILL BE COMPILED IN THE SAME FLOW        *  IC2254.2
-002800*    (TO TEST THE "END PROGRAM" STATEMENT) AS SHOWN BELOW:     *  IC2254.2
-002900*    IDENTIFICATION DIVISION.                                  *  IC2254.2
-003000*    PROGRAM-ID. IC225A.                                       *  IC2254.2
-003100*              .                                               *  IC2254.2
-003200*              .                                               *  IC2254.2
-003300*              .                                               *  IC2254.2
-003400*    END PROGRAM IC225A.                                       *  IC2254.2
-003500*    PROGRAM-ID. IC225A-1.                                     *  IC2254.2
-003600*              .                                               *  IC2254.2
-003700*              .                                               *  IC2254.2
-003800*              .                                               *  IC2254.2
-003900****************************************************************  IC2254.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
 004000 ENVIRONMENT DIVISION.                                            IC2254.2
 004100 CONFIGURATION SECTION.                                           IC2254.2
 004200 SOURCE-COMPUTER.                                                 IC2254.2
@@ -250,7 +250,7 @@
 025200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2254.2
 025300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2254.2
 025400      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2254.2
-025500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2254.2
+025500*                                                                         
 025600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2254.2
 025700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2254.2
 025800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2254.2
@@ -323,11 +323,11 @@
 032500     MOVE   "CALL-TEST-01" TO PAR-NAME.                           IC2254.2
 032600     MOVE     "LEV 2 CALL STATEMENT" TO FEATURE.                  IC2254.2
 032700     MOVE 0 TO CALL-COUNT.                                        IC2254.2
-032800*        THIS TEST HAS CALL STATEMENTS WITH AN IDENTIFIER         IC2254.2
-032900*    CONTAINING THE NAME OF THE SUBPROGRAM TO BE CALLED.          IC2254.2
-033000*        CALL-TEST-01 CONTAINS THE BASIC LEVEL 2 CALL STATEMENT.  IC2254.2
-033100*    IF IT CANNOT BE COMPILED AND EXECUTED CORRECTLY, THERE IS    IC2254.2
-033200*    NO USE IN RUNNING THE LEVEL 2 IPC ROUTINES.                  IC2254.2
+032800*                                                                         
+032900*                                                                         
+033000*                                                                         
+033100*                                                                         
+033200*                                                                         
 033300 CALL-INIT-01-01.                                                 IC2254.2
 033400     MOVE    1    TO REC-CT.                                      IC2254.2
 033500     MOVE    ZERO TO DN3, DN4.                                    IC2254.2
@@ -387,7 +387,7 @@
 038900             MOVE   "VALUE OF DN4 HAS BEEN CHANGED" TO RE-MARK    IC2254.2
 039000             PERFORM FAIL                                         IC2254.2
 039100             PERFORM PRINT-DETAIL.                                IC2254.2
-039200*                                                                 IC2254.2
+039200*                                                                         
 039300 CALL-INIT-01-02.                                                 IC2254.2
 039400     MOVE    1    TO REC-CT.                                      IC2254.2
 039500     MOVE    2    TO DN1, DN2, DN3                                IC2254.2
@@ -449,7 +449,7 @@
 045100             MOVE   "VALUE OF DN4 HAS BEEN CHANGED" TO RE-MARK    IC2254.2
 045200             PERFORM FAIL                                         IC2254.2
 045300             PERFORM PRINT-DETAIL.                                IC2254.2
-045400*                                                                 IC2254.2
+045400*                                                                         
 045500 CALL-INIT-01-03.                                                 IC2254.2
 045600     MOVE    1    TO REC-CT.                                      IC2254.2
 045700     MOVE    3    TO DN1, DN2, DN3                                IC2254.2
@@ -512,11 +512,11 @@
 051400             MOVE   "INCORRECT DN4 VALUE RETURNED" TO RE-MARK     IC2254.2
 051500             PERFORM FAIL                                         IC2254.2
 051600             PERFORM PRINT-DETAIL.                                IC2254.2
-051700*                                                                 IC2254.2
+051700*                                                                         
 051800 CALL-TEST-02.                                                    IC2254.2
 051900     MOVE   "DATA-NAME USED TWICE" TO FEATURE.                    IC2254.2
-052000*            THIS TEST USES A DATA-NAME MORE THAN ONCE IN         IC2254.2
-052100*            A USING PHRASE OF A CALL STATEMENT.                  IC2254.2
+052000*                                                                         
+052100*                                                                         
 052200 CALL-INIT-02-01.                                                 IC2254.2
 052300     MOVE    1 TO REC-CT.                                         IC2254.2
 052400     MOVE    1 TO DN1.                                            IC2254.2
@@ -578,7 +578,7 @@
 058000             MOVE   "INCORRECT DN4 VALUE RETURNED" TO RE-MARK     IC2254.2
 058100             PERFORM FAIL                                         IC2254.2
 058200             PERFORM PRINT-DETAIL.                                IC2254.2
-058300*                                                                 IC2254.2
+058300*                                                                         
 058400 CALL-INIT-02-02.                                                 IC2254.2
 058500     MOVE 1 TO REC-CT.                                            IC2254.2
 058600     MOVE 0 TO DN4, DN3, DN2, DN1.                                IC2254.2
@@ -638,7 +638,7 @@
 064000             MOVE   "VALUE OF DN4 HAS BEEN CHANGED" TO RE-MARK    IC2254.2
 064100             PERFORM FAIL                                         IC2254.2
 064200             PERFORM PRINT-DETAIL.                                IC2254.2
-064300*                                                                 IC2254.2
+064300*                                                                         
 064400 CALL-INIT-02-03.                                                 IC2254.2
 064500     MOVE 1 TO REC-CT.                                            IC2254.2
 064600     MOVE 0 TO DN4, DN3.                                          IC2254.2
@@ -701,11 +701,11 @@
 070300             MOVE   "VALUE OF DN4 HAS BEEN CHANGED" TO RE-MARK    IC2254.2
 070400             PERFORM FAIL                                         IC2254.2
 070500             PERFORM PRINT-DETAIL.                                IC2254.2
-070600*                                                                 IC2254.2
+070600*                                                                         
 070700 CALL-TEST-03.                                                    IC2254.2
-070800*    THIS TEST USES THE ON OVERFLOW PHRASE IN THE CALL            IC2254.2
-070900*    STATEMENT.  THIS IS A SYNTACTICAL CHECK ONLY, THE            IC2254.2
-071000*    ON OVERFLOW CONDITION SHOULD NEVER OCCUR.                    IC2254.2
+070800*                                                                         
+070900*                                                                         
+071000*                                                                         
 071100     MOVE "CALL-TEST-03" TO PAR-NAME.                             IC2254.2
 071200     MOVE "ON OVERFLOW PHRASE" TO FEATURE.                        IC2254.2
 071300 CALL-INIT-03-01.                                                 IC2254.2
@@ -773,7 +773,7 @@
 077500             MOVE   "INCORRECT DN4 VALUE RETURNED" TO RE-MARK     IC2254.2
 077600             PERFORM FAIL                                         IC2254.2
 077700             PERFORM PRINT-DETAIL.                                IC2254.2
-077800*                                                                 IC2254.2
+077800*                                                                         
 077900 CALL-INIT-03-02.                                                 IC2254.2
 078000     MOVE   "CALL-TEST-03-02-0" TO PAR-NAME.                      IC2254.2
 078100     MOVE    0 TO DN3, DN4.                                       IC2254.2
@@ -838,7 +838,7 @@
 084000             MOVE   "VALUE OF DN4 HAS BEEN CHANGED" TO RE-MARK    IC2254.2
 084100             PERFORM FAIL                                         IC2254.2
 084200             PERFORM PRINT-DETAIL.                                IC2254.2
-084300*                                                                 IC2254.2
+084300*                                                                         
 084400 CALL-INIT-03-03.                                                 IC2254.2
 084500     MOVE   "CALL-TEST-03-03-0" TO PAR-NAME.                      IC2254.2
 084600     MOVE    0 TO DN3, DN4.                                       IC2254.2
@@ -901,13 +901,13 @@
 090300             MOVE   "VALUE OF DN4 HAS BEEN CHANGED" TO RE-MARK    IC2254.2
 090400             PERFORM FAIL                                         IC2254.2
 090500             PERFORM PRINT-DETAIL.                                IC2254.2
-090600*                                                                 IC2254.2
+090600*                                                                         
 090700     GO TO EXIT-IC225A.                                           IC2254.2
-090800*                                                                 IC2254.2
+090800*                                                                         
 090900 CALL-DELETE-03.                                                  IC2254.2
-091000*        IF THE ON OVERFLOW PHRASE IS NOT RECOGNIZED, DELETE ALL  IC2254.2
-091100*    OF THE ABOVE CALL-TEST-03 PARAGRAPHS, STARTING WITH          IC2254.2
-091200*    CALL-TEST-03-01.                                             IC2254.2
+091000*                                                                         
+091100*                                                                         
+091200*                                                                         
 091300     PERFORM DE-LETE.                                             IC2254.2
 091400     PERFORM PRINT-DETAIL.                                        IC2254.2
 091500 EXIT-IC225A.                                                     IC2254.2
@@ -931,104 +931,104 @@
 093300 IDENTIFICATION DIVISION.                                         IC2254.2
 093400 PROGRAM-ID.                                                      IC2254.2
 093500     IC225A-1.                                                    IC2254.2
-093600****************************************************************  IC2254.2
-093700*                                                              *  IC2254.2
-093800*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2254.2
-093900*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2254.2
-094000*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2254.2
-094100*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2254.2
-094200*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2254.2
-094300*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2254.2
-094400*                                                              *  IC2254.2
-094500*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2254.2
-094600*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2254.2
-094700*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2254.2
-094800*                                                              *  IC2254.2
-094900*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2254.2
-095000*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2254.2
-095100*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2254.2
-095200*                                                              *  IC2254.2
-095300*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2254.2
-095400*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2254.2
-095500*                & INFORMATION TECHNOLOGY                      *  IC2254.2
-095600*          TWO SKYLINE PLACE                                   *  IC2254.2
-095700*          SUITE 1100                                          *  IC2254.2
-095800*          5203 LEESBURG PIKE                                  *  IC2254.2
-095900*          FALLS CHURCH                                        *  IC2254.2
-096000*          VA 22041                                            *  IC2254.2
-096100*          U.S.A.                                              *  IC2254.2
-096200*                                                              *  IC2254.2
-096300*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2254.2
-096400*                                                              *  IC2254.2
-096500*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2254.2
-096600*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2254.2
-096700*          21 RUE BARA                                         *  IC2254.2
-096800*          F-92132 ISSY                                        *  IC2254.2
-096900*          FRANCE                                              *  IC2254.2
-097000*                                                              *  IC2254.2
-097100*                                                              *  IC2254.2
-097200*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2254.2
-097300*               UND DATENVERARBEITUNG MBH)                     *  IC2254.2
-097400*          SCHLOSS BIRLINGHOVEN                                *  IC2254.2
-097500*          POSTFACH 12 40                                      *  IC2254.2
-097600*          D-5205 ST. AUGUSTIN 1                               *  IC2254.2
-097700*          GERMANY FR                                          *  IC2254.2
-097800*                                                              *  IC2254.2
-097900*                                                              *  IC2254.2
-098000*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2254.2
-098100*          OXFORD ROAD                                         *  IC2254.2
-098200*          MANCHESTER                                          *  IC2254.2
-098300*          M1 7ED                                              *  IC2254.2
-098400*          UNITED KINGDOM                                      *  IC2254.2
-098500*                                                              *  IC2254.2
-098600*                                                              *  IC2254.2
-098700*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2254.2
-098800*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2254.2
-098900*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2254.2
-099000*                                                              *  IC2254.2
-099100****************************************************************  IC2254.2
-099200*                                                              *  IC2254.2
-099300*    VALIDATION FOR:-                                          *  IC2254.2
-099400*                                                              *  IC2254.2
-099500*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2254.2
-099600*                                                              *  IC2254.2
-099700*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2254.2
-099800*                                                              *  IC2254.2
-099900****************************************************************  IC2254.2
-100000*                                                              *  IC2254.2
-100100*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2254.2
-100200*                                                              *  IC2254.2
-100300*        X-55  - SYSTEM PRINTER NAME.                          *  IC2254.2
-100400*        X-82  - SOURCE COMPUTER NAME.                         *  IC2254.2
-100500*        X-83  - OBJECT COMPUTER NAME.                         *  IC2254.2
-100600*                                                              *  IC2254.2
-100700****************************************************************  IC2254.2
-100800*                                                              *  IC2254.2
-100900*    PROGRAM IC225A AND IC225A-1 WILL TEST THE NEW LANGUAGE    *  IC2254.2
-101000*    ELEMENTS FOR THE LEVEL 2 INTER-PROGRAM COMMUNICATION      *  IC2254.2
-101100*    MODULE.                                                   *  IC2254.2
-101200*    THE NEW LANGUAGE ELEMENTS TO BE TESTED WILL BE:           *  IC2254.2
-101300*          "BY REFERENCE"     PHRASE                           *  IC2254.2
-101400*    THE TWO PROGRAMS WILL BE COMPILED IN THE SAME FLOW        *  IC2254.2
-101500*    (TO TEST THE "END PROGRAM" STATEMENT) AS SHOWN BELOW:     *  IC2254.2
-101600*    IDENTIFICATION DIVISION.                                  *  IC2254.2
-101700*    PROGRAM-ID. IC225A.                                       *  IC2254.2
-101800*              .                                               *  IC2254.2
-101900*              .                                               *  IC2254.2
-102000*              .                                               *  IC2254.2
-102100*    END PROGRAM IC225A.                                       *  IC2254.2
-102200*    PROGRAM-ID. IC225A-1.                                     *  IC2254.2
-102300*              .                                               *  IC2254.2
-102400*              .                                               *  IC2254.2
-102500*              .                                               *  IC2254.2
-102600****************************************************************  IC2254.2
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
+094600*                                                                         
+094700*                                                                         
+094800*                                                                         
+094900*                                                                         
+095000*                                                                         
+095100*                                                                         
+095200*                                                                         
+095300*                                                                         
+095400*                                                                         
+095500*                                                                         
+095600*                                                                         
+095700*                                                                         
+095800*                                                                         
+095900*                                                                         
+096000*                                                                         
+096100*                                                                         
+096200*                                                                         
+096300*                                                                         
+096400*                                                                         
+096500*                                                                         
+096600*                                                                         
+096700*                                                                         
+096800*                                                                         
+096900*                                                                         
+097000*                                                                         
+097100*                                                                         
+097200*                                                                         
+097300*                                                                         
+097400*                                                                         
+097500*                                                                         
+097600*                                                                         
+097700*                                                                         
+097800*                                                                         
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
+098200*                                                                         
+098300*                                                                         
+098400*                                                                         
+098500*                                                                         
+098600*                                                                         
+098700*                                                                         
+098800*                                                                         
+098900*                                                                         
+099000*                                                                         
+099100*                                                                         
+099200*                                                                         
+099300*                                                                         
+099400*                                                                         
+099500*                                                                         
+099600*                                                                         
+099700*                                                                         
+099800*                                                                         
+099900*                                                                         
+100000*                                                                         
+100100*                                                                         
+100200*                                                                         
+100300*                                                                         
+100400*                                                                         
+100500*                                                                         
+100600*                                                                         
+100700*                                                                         
+100800*                                                                         
+100900*                                                                         
+101000*                                                                         
+101100*                                                                         
+101200*                                                                         
+101300*                                                                         
+101400*                                                                         
+101500*                                                                         
+101600*                                                                         
+101700*                                                                         
+101800*                                                                         
+101900*                                                                         
+102000*                                                                         
+102100*                                                                         
+102200*                                                                         
+102300*                                                                         
+102400*                                                                         
+102500*                                                                         
+102600*                                                                         
 102700 ENVIRONMENT DIVISION.                                            IC2254.2
 102800 CONFIGURATION SECTION.                                           IC2254.2
 102900 SOURCE-COMPUTER.                                                 IC2254.2
 103000     GNU-Linux.                                                   IC2254.2
 103100 OBJECT-COMPUTER.                                                 IC2254.2
 103200     GNU-Linux.                                                   IC2254.2
-103300*INPUT-OUTPUT SECTION.                                            IC2254.2
+103300*                                                                         
 103400 DATA DIVISION.                                                   IC2254.2
 103500 FILE SECTION.                                                    IC2254.2
 103600 WORKING-STORAGE SECTION.                                         IC2254.2

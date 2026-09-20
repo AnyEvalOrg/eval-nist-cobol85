@@ -2,28 +2,28 @@
 000200 PROGRAM-ID.                                                      ST1364.2
 000300     ST136A.                                                      ST1364.2
 000400                                                                  ST1364.2
-000500****************************************************************  ST1364.2
-000600*                                                              *  ST1364.2
-000700*    VALIDATION FOR:-                                          *  ST1364.2
-000800*                                                              *  ST1364.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1364.2
-001000*                                                              *  ST1364.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1364.2
-001200*                                                              *  ST1364.2
-001300****************************************************************  ST1364.2
-001400*                                                              *  ST1364.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1364.2
-001600*                                                              *  ST1364.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  ST1364.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  ST1364.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  ST1364.2
-002000*                                                              *  ST1364.2
-002100****************************************************************  ST1364.2
-002200*    ST206 TESTS THE FROM OPTION OF THE RELEASE VERB. TEN RECORDS ST1364.2
-002300*    ARE CREATED WITH THE NUMERICAL KEY DESCENDING FROM 10 THRU 1.ST1364.2
-002400*    THE RECORDS ARE THEN SORTED INTO ASCENDING SEQUENCE AND THE  ST1364.2
-002500*    RESULTS ARE SPOT-CHECKED.                                    ST1364.2
-002600*                                                                 ST1364.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            ST1364.2
 002800 CONFIGURATION SECTION.                                           ST1364.2
 002900 SOURCE-COMPUTER.                                                 ST1364.2
@@ -269,7 +269,7 @@
 027600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1364.2
 027700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1364.2
 027800      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1364.2
-027900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1364.2
+027900*                                                                         
 028000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1364.2
 028100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1364.2
 028200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1364.2
@@ -391,9 +391,9 @@
 039800     MOVE     ALL-Z TO SORTFILE-NON-KEY-1.                        ST1364.2
 039900     MOVE     -12345 TO SORTFILE-KEY.                             ST1364.2
 040000     MOVE     ALL-X TO SORTFILE-NON-KEY-2.                        ST1364.2
-040100*        NOTE A FALSE RECORD HAS BEEN MOVED TO SORTFILE-REC ---   ST1364.2
-040200*             THE RELEASE STATEMENT WHICH FOLLOWS SHOULD CLOBBER  ST1364.2
-040300*             IT COMPLETELY.                                      ST1364.2
+040100*                                                                         
+040200*                                                                         
+040300*                                                                         
 040400     MOVE     WORK-REC TO HOLD-REC.                               ST1364.2
 040500     RELEASE  SORTFILE-REC FROM WORK-REC.                         ST1364.2
 040600     SUBTRACT 1 FROM UTIL-CTR.                                    ST1364.2

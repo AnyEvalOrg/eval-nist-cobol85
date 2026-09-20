@@ -32,6 +32,9 @@ def test_mutated_inventory_and_exact_edits(synthetic_mutation):
 
 
 def fixed(code):
+    code = ('DATA DIVISION.\nWORKING-STORAGE SECTION.\n'
+            '01 DATA-ITEM PIC 99.\n01 CORRECT-N PIC -9(9).9(9).\n'
+            'PROCEDURE DIVISION.\n' + code)
     return ''.join('       '+line+'\n' for line in code.splitlines())
 
 
@@ -82,7 +85,11 @@ def test_source_drift_refuses(synthetic_mutation):
 def test_supporting_inputs_are_copied_exactly():
     for path in (ROOT/'reference').rglob('*'):
         if path.is_file() and (path.suffix in {'.DAT','.inp','.SUB'} or path.parent.name in {'lib','copy','copyalt'}):
-            assert (ROOT/'reference-mutated'/path.relative_to(ROOT/'reference')).read_bytes() == path.read_bytes()
+            from scripts.mutate_suite import scrub_comments
+            expected = path.read_bytes()
+            if path.suffix in {'.CBL', '.SUB'} or path.parent.name in {'copy', 'copyalt'}:
+                expected = scrub_comments(expected.decode('latin1')).encode('latin1')
+            assert (ROOT/'reference-mutated'/path.relative_to(ROOT/'reference')).read_bytes() == expected
     assert (ROOT/'reference-mutated/report.pl').read_bytes() == (ROOT/'reference/report.pl').read_bytes()
 
 
@@ -301,12 +308,8 @@ def test_comments_do_not_disclose_original_expectations(synthetic_mutation):
         assert lines[line][column:column+len(edit['mutated'])] == edit['mutated']
     for site in details['mutations']:
         index = next(i for i, line in enumerate(lines) if line.strip() == site['paragraph']+'.')
-        new = site['replacements'][0]['mutated']
-        assert lines[index-1] == '      * EXPECTED VALUE IS '+new+'.'
-        assert not lines[index+1][7:].strip()
-        assert lines[index+2] == '      * ASSERTION CONSTANT '+new+'.'
-        assert not lines[index+3][7:].strip()
-        assert lines[index+4] == '      *' + ' '*70 + 'EXPECTED ' + new
+        for i in (index-1, index+1, index+2, index+3, index+4):
+            assert not lines[i][7:].strip()
     assert any(edit['action'] == 'strip' for edit in details['comment_changes'])
 
 
@@ -346,3 +349,24 @@ def test_generation_invalidates_every_candidate_and_uses_external_manifest(tmp_p
     assert len(records) == 1 and manifest['status'] == 'ready'
     assert eligibility['mutation_summary']['pending'] == 0
     assert eligibility['mutation_summary']['shipped_sites'] == 3
+
+
+def test_comment_edits_are_independent_of_selection(monkeypatch, synthetic_mutation):
+    source = synthetic_mutation['original']
+    source = source.replace('       TEST-', '      * EXPECTED VALUE 42, FORTY TWO.\n       TEST-')
+    source += '       TEST-UNSUPPORTED.\n      * EXPECTED VALUE SEVEN.\n           CONTINUE.\n'
+    monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-one')
+    first, a = mutate(source, 'SYNTH')
+    monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-two')
+    second, b = mutate(source, 'SYNTH')
+    assert {s['paragraph'] for s in a['mutations']} != {s['paragraph'] for s in b['mutations']}
+    assert a['comment_changes'] == b['comment_changes']
+    assert [l for l in first.splitlines() if l[6:7] in {'*', '/'}] == [l for l in second.splitlines() if l[6:7] in {'*', '/'}]
+    assert all(not l[7:].strip() for l in first.splitlines() if l[6:7] in {'*', '/'})
+
+
+def test_unknown_fields_are_not_selected(synthetic_mutation):
+    source = synthetic_mutation['original'].replace('01 DATA-ITEM PIC 99.', '01 OTHER PIC 99.')
+    assert not find_sites(source)
+    source = synthetic_mutation['original'].replace('01 CORRECT-N PIC -9(9).9(9).', '01 OTHER PIC X.')
+    assert not find_sites(source)

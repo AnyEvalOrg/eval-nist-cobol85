@@ -1,17 +1,17 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2024.2
 000200 PROGRAM-ID.                                                      SQ2024.2
 000300     SQ202A.                                                      SQ2024.2
-000400****************************************************************  SQ2024.2
-000500*                                                              *  SQ2024.2
-000600*    VALIDATION FOR:-                                          *  SQ2024.2
-000700*    " HIGH       ".                                              SQ2024.2
-000800*                                                              *  SQ2024.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2024.2
-001000*    "4.2 ".                                                      SQ2024.2
-001100*                                                              *  SQ2024.2
-001200*  THE ROUTINE SQ202A (OLD SQ203) CREATES A MAGNETIC TAPE FILE ANDSQ2024.2
-001300*    PASSES IT ON TO SQ203A TO BE OPENED AS INPUT UNDER A SELECT  SQ2024.2
-001400*    OPTIONAL CLAUSE.                                             SQ2024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
 001500 ENVIRONMENT DIVISION.                                            SQ2024.2
 001600 CONFIGURATION SECTION.                                           SQ2024.2
 001700 SOURCE-COMPUTER.                                                 SQ2024.2
@@ -262,7 +262,7 @@
 031100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2024.2
 031200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2024.2
 031300      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2024.2
-031400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2024.2
+031400*                                                                         
 031500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2024.2
 031600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2024.2
 031700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2024.2

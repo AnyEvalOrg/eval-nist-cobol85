@@ -34,14 +34,14 @@ SG203A.CBL: in section '45':
 SG203A.CBL: in paragraph 'PARA-45A':
 SG203A.CBL:735: warning: GO TO SECTION '45A' [-Wgoto-section]
   733 | 073500     PERFORM 45A THRU 45B.                                        S..
-  734 | 073600*    NOTE THE WRITE PARAGRAPH FOR THIS TEST IS IN SEGMENT 46.     S..
+  734 | 073600*..
   735 > 073700     GO TO 45A.                                                   S..
   736 | 073800 DELETE-45.                                                       S..
   737 | 073900     PERFORM DE-LETE.                                             S..
 SG203A.CBL: in section 'TEST-18':
 SG203A.CBL: in paragraph 'PARA-47':
 SG203A.CBL:776: warning: GO TO SECTION '05' [-Wgoto-section]
-  774 | 077600*    NOTE ************** TEST 18 BEGINS HERE ***************.     S..
+  774 | 077600*..
   775 | 077700     ALTER PARA-05 TO PROCEED TO 69.                              S..
   776 > 077800     GO TO 05.                                                    S..
   777 | 077900 05 SECTION 05.                                                   S..

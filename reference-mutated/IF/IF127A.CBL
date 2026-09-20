@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1274.2
 000300     IF127A.                                                      IF1274.2
 000400                                                                  IF1274.2
-000500***********************************************************       IF1274.2
-000600*                                                         *       IF1274.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1274.2
-000800* It contains tests for the Intrinsic Function ORD.       *       IF1274.2
-000900*                                                         *       IF1274.2
-001000*                                                         *       IF1274.2
-001100***********************************************************       IF1274.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1274.2
 001300 CONFIGURATION SECTION.                                           IF1274.2
 001400 SOURCE-COMPUTER.                                                 IF1274.2
@@ -29,18 +29,18 @@
 002900 01  PRINT-REC PICTURE X(120).                                    IF1274.2
 003000 01  DUMMY-RECORD PICTURE X(120).                                 IF1274.2
 003100 WORKING-STORAGE SECTION.                                         IF1274.2
-003200***********************************************************       IF1274.2
-003300* Variables specific to the Intrinsic Function Test IF127A*       IF1274.2
-003400***********************************************************       IF1274.2
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 01  A                   PIC X          VALUE "F".                IF1274.2
 003600 01  B                   PIC X          VALUE "d".                IF1274.2
 003700 01  C                   PIC X          VALUE "3".                IF1274.2
 003800 01  ARG1                PIC X          VALUE "A".                IF1274.2
 003900 01  TEMP                PIC S9(10).                              IF1274.2
 004000 01  WS-INT              PIC S9(10).                              IF1274.2
-004100*                                                                 IF1274.2
-004200**********************************************************        IF1274.2
-004300*                                                                 IF1274.2
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
 004400 01  TEST-RESULTS.                                                IF1274.2
 004500     02 FILLER                   PIC X      VALUE SPACE.          IF1274.2
 004600     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1274.2
@@ -334,24 +334,24 @@
 033400 BAIL-OUT-EX. EXIT.                                               IF1274.2
 033500 CCVS1-EXIT.                                                      IF1274.2
 033600     EXIT.                                                        IF1274.2
-033700********************************************************          IF1274.2
-033800*                                                      *          IF1274.2
-033900*    Intrinsic Function Tests         IF127A - ORD     *          IF1274.2
-034000*                                                      *          IF1274.2
-034100********************************************************          IF1274.2
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
+034100*                                                                         
 034200 SECT-IF127A SECTION.                                             IF1274.2
 034300 F-ORD-INFO.                                                      IF1274.2
 034400     MOVE     "See ref. A-60 2.31" TO ANSI-REFERENCE.             IF1274.2
 034500     MOVE     "ORD Function"     TO FEATURE.                      IF1274.2
-034600*****************TEST (a) ******************************          IF1274.2
+034600*                                                                         
 034700 F-ORD-01.                                                        IF1274.2
 034800     MOVE ZERO TO WS-INT.                                         IF1274.2
 034900 F-ORD-TEST-01.                                                   IF1274.2
 035000     COMPUTE WS-INT = FUNCTION ORD("A").                          IF1274.2
-035100     IF WS-INT = 62 THEN                                          IF1274.2
+035100     IF WS-INT = 61 THEN                                          IF1274.2
 035200                        PERFORM PASS                              IF1274.2
 035300     ELSE                                                         IF1274.2
-035400                        MOVE 62  TO CORRECT-N                     IF1274.2
+035400                        MOVE 61  TO CORRECT-N                     IF1274.2
 035500                        MOVE WS-INT TO COMPUTED-N                 IF1274.2
 035600                        PERFORM FAIL.                             IF1274.2
 035700     GO TO F-ORD-WRITE-01.                                        IF1274.2
@@ -361,7 +361,7 @@
 036100 F-ORD-WRITE-01.                                                  IF1274.2
 036200     MOVE "F-ORD-01" TO PAR-NAME.                                 IF1274.2
 036300     PERFORM  PRINT-DETAIL.                                       IF1274.2
-036400*****************TEST (b) ******************************          IF1274.2
+036400*                                                                         
 036500 F-ORD-TEST-02.                                                   IF1274.2
 036600     EVALUATE FUNCTION ORD("m")                                   IF1274.2
 036700     WHEN 110                                                     IF1274.2
@@ -375,7 +375,7 @@
 037500 F-ORD-WRITE-02.                                                  IF1274.2
 037600     MOVE "F-ORD-02" TO PAR-NAME.                                 IF1274.2
 037700     PERFORM  PRINT-DETAIL.                                       IF1274.2
-037800*****************TEST (c) ******************************          IF1274.2
+037800*                                                                         
 037900 F-ORD-03.                                                        IF1274.2
 038000     MOVE ZERO TO WS-INT.                                         IF1274.2
 038100 F-ORD-TEST-03.                                                   IF1274.2
@@ -390,7 +390,7 @@
 039000 F-ORD-WRITE-03.                                                  IF1274.2
 039100     MOVE "F-ORD-03" TO PAR-NAME.                                 IF1274.2
 039200     PERFORM  PRINT-DETAIL.                                       IF1274.2
-039300*****************TEST (d) ******************************          IF1274.2
+039300*                                                                         
 039400 F-ORD-04.                                                        IF1274.2
 039500     MOVE ZERO TO WS-INT.                                         IF1274.2
 039600 F-ORD-TEST-04.                                                   IF1274.2
@@ -408,15 +408,15 @@
 040800 F-ORD-WRITE-04.                                                  IF1274.2
 040900     MOVE "F-ORD-04" TO PAR-NAME.                                 IF1274.2
 041000     PERFORM  PRINT-DETAIL.                                       IF1274.2
-041100*****************TEST (e) ******************************          IF1274.2
+041100*                                                                         
 041200 F-ORD-05.                                                        IF1274.2
 041300     MOVE ZERO TO WS-INT.                                         IF1274.2
 041400 F-ORD-TEST-05.                                                   IF1274.2
 041500     COMPUTE WS-INT = FUNCTION ORD(B).                            IF1274.2
-041600     IF WS-INT = 501 THEN                                         IF1274.2
+041600     IF WS-INT = 102 THEN                                         IF1274.2
 041700                        PERFORM PASS                              IF1274.2
 041800     ELSE                                                         IF1274.2
-041900                        MOVE 501  TO CORRECT-N                    IF1274.2
+041900                        MOVE 102  TO CORRECT-N                    IF1274.2
 042000                        MOVE WS-INT TO COMPUTED-N                 IF1274.2
 042100                        PERFORM FAIL.                             IF1274.2
 042200     GO TO F-ORD-WRITE-05.                                        IF1274.2
@@ -426,15 +426,15 @@
 042600 F-ORD-WRITE-05.                                                  IF1274.2
 042700     MOVE "F-ORD-05" TO PAR-NAME.                                 IF1274.2
 042800     PERFORM  PRINT-DETAIL.                                       IF1274.2
-042900*****************TEST (f) ******************************          IF1274.2
+042900*                                                                         
 043000 F-ORD-06.                                                        IF1274.2
 043100     MOVE ZERO TO WS-INT.                                         IF1274.2
 043200 F-ORD-TEST-06.                                                   IF1274.2
 043300     COMPUTE WS-INT = FUNCTION ORD(C).                            IF1274.2
-043400     IF WS-INT = 02 THEN                                          IF1274.2
+043400     IF WS-INT = 62 THEN                                          IF1274.2
 043500                        PERFORM PASS                              IF1274.2
 043600     ELSE                                                         IF1274.2
-043700                        MOVE 02  TO CORRECT-N                     IF1274.2
+043700                        MOVE 62  TO CORRECT-N                     IF1274.2
 043800                        MOVE WS-INT TO COMPUTED-N                 IF1274.2
 043900                        PERFORM FAIL.                             IF1274.2
 044000     GO TO F-ORD-WRITE-06.                                        IF1274.2
@@ -444,7 +444,7 @@
 044400 F-ORD-WRITE-06.                                                  IF1274.2
 044500     MOVE "F-ORD-06" TO PAR-NAME.                                 IF1274.2
 044600     PERFORM  PRINT-DETAIL.                                       IF1274.2
-044700*****************TEST (g) ******************************          IF1274.2
+044700*                                                                         
 044800 F-ORD-07.                                                        IF1274.2
 044900     MOVE ZERO TO WS-INT.                                         IF1274.2
 045000 F-ORD-TEST-07.                                                   IF1274.2
@@ -462,7 +462,7 @@
 046200 F-ORD-WRITE-07.                                                  IF1274.2
 046300     MOVE "F-ORD-07" TO PAR-NAME.                                 IF1274.2
 046400     PERFORM  PRINT-DETAIL.                                       IF1274.2
-046500*****************TEST (h) ******************************          IF1274.2
+046500*                                                                         
 046600 F-ORD-08.                                                        IF1274.2
 046700     MOVE ZERO TO WS-INT.                                         IF1274.2
 046800 F-ORD-TEST-08.                                                   IF1274.2
@@ -481,7 +481,7 @@
 048100 F-ORD-WRITE-08.                                                  IF1274.2
 048200     MOVE "F-ORD-08" TO PAR-NAME.                                 IF1274.2
 048300     PERFORM  PRINT-DETAIL.                                       IF1274.2
-048400*****************SPECIAL TEST 1******************************     IF1274.2
+048400*                                                                         
 048500 F-ORD-09.                                                        IF1274.2
 048600     PERFORM F-ORD-TEST-09 UNTIL FUNCTION ORD(ARG1) = 67.         IF1274.2
 048700     IF ARG1 = "B" THEN                                           IF1274.2
@@ -489,17 +489,17 @@
 048900     ELSE                                                         IF1274.2
 049000                        PERFORM FAIL.                             IF1274.2
 049100     GO TO F-ORD-WRITE-09.                                        IF1274.2
-049200*                                                                 IF1274.2
+049200*                                                                         
 049300 F-ORD-TEST-09.                                                   IF1274.2
 049400     MOVE "B" TO ARG1.                                            IF1274.2
-049500*                                                                 IF1274.2
+049500*                                                                         
 049600 F-ORD-DELETE-09.                                                 IF1274.2
 049700     PERFORM  DE-LETE.                                            IF1274.2
 049800     GO TO    F-ORD-WRITE-09.                                     IF1274.2
 049900 F-ORD-WRITE-09.                                                  IF1274.2
 050000     MOVE "F-ORD-09" TO PAR-NAME.                                 IF1274.2
 050100     PERFORM  PRINT-DETAIL.                                       IF1274.2
-050200*******************END OF TESTS**************************         IF1274.2
+050200*                                                                         
 050300 CCVS-EXIT SECTION.                                               IF1274.2
 050400 CCVS-999999.                                                     IF1274.2
 050500     GO TO CLOSE-FILES.                                           IF1274.2

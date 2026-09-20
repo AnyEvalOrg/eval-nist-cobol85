@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         SM2044.2
 000200 PROGRAM-ID.                                                      SM2044.2
 000300     SM204A.                                                      SM2044.2
-000400****************************************************************  SM2044.2
-000500*                                                              *  SM2044.2
-000600*    VALIDATION FOR:-                                          *  SM2044.2
-000700*                                                              *  SM2044.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2044.2
-000900*                                                              *  SM2044.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2044.2
-001100*                                                              *  SM2044.2
-001200****************************************************************  SM2044.2
-001300*                                                              *  SM2044.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2044.2
-001500*                                                              *  SM2044.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2044.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2044.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2044.2
-001900*                                                              *  SM2044.2
-002000****************************************************************  SM2044.2
-002100*                                                              *  SM2044.2
-002200*    SM204A CHECKS THE FILE PRODUCED BY PROGRAM SM203A TO      *  SM2044.2
-002300*    VERIFY THE PROPER EXECUTION OF THE "COPY"ED STATEMENTS    *  SM2044.2
-002400*    IN THAT PROGRAM'S ENVIRONMENT DIVISION.                   *  SM2044.2
-002500*                                                              *  SM2044.2
-002600****************************************************************  SM2044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            SM2044.2
 002800 CONFIGURATION SECTION.                                           SM2044.2
 002900 SOURCE-COMPUTER.                                                 SM2044.2
@@ -35,9 +35,9 @@
 003500     SELECT PRINT-FILE ASSIGN TO                                  SM2044.2
 003600     "REPORT".                                                    SM2044.2
 003700     SELECT TEST-FILE ASSIGN TO                                   SM2044.2
-003800* THE FOLLOWING LINE WILL BE CHANGED BY TPF ONLY WHEN THE         SM2044.2
-003900* PROGRAM-ID IS PART OF THE REPLACEMENT BY THE X-CARD             SM2044.2
-004000* DURING EXTRACTION.                                              SM2044.2
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100     "XXXXX002".                                                  SM2044.2
 004200 DATA DIVISION.                                                   SM2044.2
 004300 FILE SECTION.                                                    SM2044.2
@@ -238,7 +238,7 @@
 024500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2044.2
 024600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2044.2
 024700      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2044.2
-024800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2044.2
+024800*                                                                         
 024900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2044.2
 025000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2044.2
 025100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2044.2

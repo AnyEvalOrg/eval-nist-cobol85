@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1064.2
 000200 PROGRAM-ID.                                                      NC1064.2
 000300     NC106A.                                                      NC1064.2
-000400****************************************************************  NC1064.2
-000500*                                                              *  NC1064.2
-000600*    VALIDATION FOR:-                                          *  NC1064.2
-000700*                                                              *  NC1064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1064.2
-000900*                                                              *  NC1064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1064.2
-001100*                                                              *  NC1064.2
-001200****************************************************************  NC1064.2
-001300*                                                              *  NC1064.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1064.2
-001500*                                                              *  NC1064.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1064.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1064.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1064.2
-001900*                                                              *  NC1064.2
-002000****************************************************************  NC1064.2
-002100*                                                                 NC1064.2
-002200*    PROGRAM NC106A TESTS FORMAT 1  OF THE SUBTRACT               NC1064.2
-002300*    STATEMENT.  VARIOUS COMBINATINS OF DATA-ITEMS AND ALL        NC1064.2
-002400*    OPTIONAL PHRASES ARE TESTED.                                 NC1064.2
-002500*                                                                 NC1064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600                                                                  NC1064.2
 002700 ENVIRONMENT DIVISION.                                            NC1064.2
 002800 CONFIGURATION SECTION.                                           NC1064.2
@@ -460,7 +460,7 @@
 046200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1064.2
 046300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1064.2
 046400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1064.2
-046500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1064.2
+046500*                                                                         
 046600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1064.2
 046700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1064.2
 046800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1064.2
@@ -554,7 +554,7 @@
 055600     PERFORM  PRINT-DETAIL.                                       NC1064.2
 055700 SUB-TEST-F1-2.                                                   NC1064.2
 055800     SUBTRACT N-17 FROM N-18 ROUNDED.                             NC1064.2
-055900     IF       N-18 EQUAL TO -9                                    NC1064.2
+055900     IF       N-18 EQUAL TO -5                                    NC1064.2
 056000              PERFORM PASS                                        NC1064.2
 056100              GO TO SUB-WRITE-F1-2.                               NC1064.2
 056200     GO TO    SUB-FAIL-F1-2.                                      NC1064.2
@@ -563,7 +563,7 @@
 056500     GO TO    SUB-WRITE-F1-2.                                     NC1064.2
 056600 SUB-FAIL-F1-2.                                                   NC1064.2
 056700     MOVE     N-18 TO COMPUTED-N.                                 NC1064.2
-056800     MOVE     -9 TO CORRECT-N.                                    NC1064.2
+056800     MOVE     -5 TO CORRECT-N.                                    NC1064.2
 056900     PERFORM  FAIL.                                               NC1064.2
 057000 SUB-WRITE-F1-2.                                                  NC1064.2
 057100     MOVE "SUB-TEST-F1-2 " TO PAR-NAME.                           NC1064.2
@@ -661,7 +661,7 @@
 066300     SUBTRACT A05ONES-DS-05V00                                    NC1064.2
 066400              A05ONES-DS-00V05                                    NC1064.2
 066500              A06ONES-DS-03V03 FROM WRK-DS-06V06.                 NC1064.2
-066600     IF       WRK-DS-06V06 EQUAL TO 362111.111223                 NC1064.2
+066600     IF       WRK-DS-06V06 EQUAL TO 302111.111223                 NC1064.2
 066700              PERFORM PASS GO TO SUB-WRITE-F1-6.                  NC1064.2
 066800     GO       TO SUB-FAIL-F1-6.                                   NC1064.2
 066900 SUB-DELETE-F1-6.                                                 NC1064.2
@@ -669,7 +669,7 @@
 067100     GO       TO SUB-WRITE-F1-6.                                  NC1064.2
 067200 SUB-FAIL-F1-6.                                                   NC1064.2
 067300     MOVE     WRK-DS-06V06 TO COMPUTED-N.                         NC1064.2
-067400     MOVE     362111.111223 TO CORRECT-N.                         NC1064.2
+067400     MOVE     302111.111223 TO CORRECT-N.                         NC1064.2
 067500     PERFORM  FAIL.                                               NC1064.2
 067600 SUB-WRITE-F1-6.                                                  NC1064.2
 067700     MOVE     "SUB-TEST-F1-6" TO PAR-NAME.                        NC1064.2
@@ -711,7 +711,7 @@
 071300 SUB-TEST-F1-8-2.                                                 NC1064.2
 071400     IF       WRK-DS-02V00 EQUAL TO -11                           NC1064.2
 071500              PERFORM PASS GO TO SUB-WRITE-F1-8-2.                NC1064.2
-071600*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SUB-TEST-F1-8-1   NC1064.2
+071600*                                                                         
 071700     GO       TO SUB-FAIL-F1-8-2.                                 NC1064.2
 071800 SUB-DELETE-F1-8-2.                                               NC1064.2
 071900     PERFORM  DE-LETE.                                            NC1064.2
@@ -746,7 +746,7 @@
 074800 SUB-TEST-F1-9-2.                                                 NC1064.2
 074900     IF       WRK-DS-05V00 EQUAL TO ZERO                          NC1064.2
 075000              PERFORM PASS GO TO SUB-WRITE-F1-9-2.                NC1064.2
-075100*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SUB-TEST-F1-9-1   NC1064.2
+075100*                                                                         
 075200     GO       TO SUB-FAIL-F1-9-2.                                 NC1064.2
 075300 SUB-DELETE-F1-9-2.                                               NC1064.2
 075400     PERFORM  DE-LETE.                                            NC1064.2
@@ -782,7 +782,7 @@
 078400 SUB-TEST-F1-10-2.                                                NC1064.2
 078500     IF       WRK-DS-06V06 EQUAL TO -666990.666333                NC1064.2
 078600              PERFORM PASS GO TO SUB-WRITE-F1-10-2.               NC1064.2
-078700*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SUB-TEST-F1-10-1  NC1064.2
+078700*                                                                         
 078800     GO       TO SUB-FAIL-F1-10-2.                                NC1064.2
 078900 SUB-DELETE-F1-10-2.                                              NC1064.2
 079000     PERFORM  DE-LETE.                                            NC1064.2
@@ -861,7 +861,7 @@
 086300 SUB-TEST-F1-14-2.                                                NC1064.2
 086400     IF       WRK-CS-02V02 EQUAL TO 99                            NC1064.2
 086500              PERFORM PASS GO TO SUB-WRITE-F1-14-2.               NC1064.2
-086600*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SUB-TEST-F1-14-1  NC1064.2
+086600*                                                                         
 086700     GO       TO SUB-FAIL-F1-14-2.                                NC1064.2
 086800 SUB-DELETE-F1-14-2.                                              NC1064.2
 086900     PERFORM  DE-LETE.                                            NC1064.2
@@ -876,7 +876,7 @@
 087800     PERFORM  PRINT-DETAIL.                                       NC1064.2
 087900 SUB-TEST-F1-15.                                                  NC1064.2
 088000     SUBTRACT SUBTR-1 SUBTR-3 FROM SUBTR-7.                       NC1064.2
-088100     IF       SUBTR-7 EQUAL TO 89                                 NC1064.2
+088100     IF       SUBTR-7 EQUAL TO 99                                 NC1064.2
 088200              PERFORM PASS GO TO SUB-WRITE-F1-15.                 NC1064.2
 088300     GO       TO SUB-FAIL-F1-15.                                  NC1064.2
 088400 SUB-DELETE-F1-15.                                                NC1064.2
@@ -884,14 +884,14 @@
 088600     GO       TO SUB-WRITE-F1-15.                                 NC1064.2
 088700 SUB-FAIL-F1-15.                                                  NC1064.2
 088800     MOVE     SUBTR-7 TO COMPUTED-N.                              NC1064.2
-088900     MOVE     89        TO CORRECT-N.                             NC1064.2
+088900     MOVE     99        TO CORRECT-N.                             NC1064.2
 089000     PERFORM FAIL.                                                NC1064.2
 089100 SUB-WRITE-F1-15.                                                 NC1064.2
 089200     MOVE     "SUB-TEST-F1-15" TO PAR-NAME.                       NC1064.2
 089300     PERFORM PRINT-DETAIL.                                        NC1064.2
 089400 SUB-TEST-F1-16.                                                  NC1064.2
 089500     SUBTRACT SUBTR-5 -98 SUBTR-3 -1 FROM SUBTR-10.               NC1064.2
-089600     IF       SUBTR-10 EQUAL TO 100                               NC1064.2
+089600     IF       SUBTR-10 EQUAL TO 190                               NC1064.2
 089700              PERFORM PASS GO TO SUB-WRITE-F1-16.                 NC1064.2
 089800     GO       TO SUB-FAIL-F1-16.                                  NC1064.2
 089900 SUB-DELETE-F1-16.                                                NC1064.2
@@ -899,7 +899,7 @@
 090100     GO       TO SUB-WRITE-F1-16.                                 NC1064.2
 090200 SUB-FAIL-F1-16.                                                  NC1064.2
 090300     MOVE     SUBTR-10  TO COMPUTED-N.                            NC1064.2
-090400     MOVE     100       TO CORRECT-N.                             NC1064.2
+090400     MOVE     190       TO CORRECT-N.                             NC1064.2
 090500     PERFORM FAIL.                                                NC1064.2
 090600 SUB-WRITE-F1-16.                                                 NC1064.2
 090700     MOVE     "SUB-TEST-F1-16" TO PAR-NAME.                       NC1064.2
@@ -933,7 +933,7 @@
 093500     MOVE     "SUB-TEST-F1-18-1" TO PAR-NAME.                     NC1064.2
 093600     PERFORM PRINT-DETAIL.                                        NC1064.2
 093700 SUB-TEST-F1-18-2.                                                NC1064.2
-093800     IF       SUBTR-8 EQUAL TO -2.99                              NC1064.2
+093800     IF       SUBTR-8 EQUAL TO -9.99                              NC1064.2
 093900              PERFORM PASS GO TO SUB-WRITE-F1-18-2.               NC1064.2
 094000*                                                                         
 094100     GO       TO SUB-FAIL-F1-18-2.                                NC1064.2
@@ -943,7 +943,7 @@
 094500 SUB-FAIL-F1-18-2.                                                NC1064.2
 094600     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1064.2
 094700     MOVE     SUBTR-8   TO COMPUTED-N.                            NC1064.2
-094800     MOVE     -2.99     TO CORRECT-N.                             NC1064.2
+094800     MOVE     -9.99     TO CORRECT-N.                             NC1064.2
 094900     PERFORM FAIL.                                                NC1064.2
 095000 SUB-WRITE-F1-18-2.                                               NC1064.2
 095100     MOVE     "SUB-TEST-F1-18-2" TO PAR-NAME.                     NC1064.2
@@ -966,10 +966,10 @@
 096800 SUB-TEST-F1-20.                                                  NC1064.2
 096900     MOVE     -980 TO WRK-CS-03V00.                               NC1064.2
 097000     MOVE     SPACE TO SIZE-ERR.                                  NC1064.2
-097100*        NOTE IN THIS TEST, 1 IS SUBTRACTED FROM A 3-DIGIT COMP   NC1064.2
-097200*             SYNC FIELD UNTIL A SIZE ERROR OCCURS --- IF THE     NC1064.2
-097300*             VALUE OF THE FIELD REACHES -1180 WITHOUT A SIZE     NC1064.2
-097400*             ERROR, THEN THE ATTEMPTED SUBTRACTIONS ARE STOPPED. NC1064.2
+097100*                                                                         
+097200*                                                                         
+097300*                                                                         
+097400*                                                                         
 097500     PERFORM  SUB-A-F1-20 THRU SUB-B-F1-20 200 TIMES.             NC1064.2
 097600     IF       SIZE-ERR EQUAL TO SPACE                             NC1064.2
 097700              MOVE "SIZE ERROR NOT ENCOUNTERED" TO RE-MARK        NC1064.2
@@ -996,9 +996,9 @@
 099800     MOVE     "SUBT, COMP, SIZE ERR" TO FEATURE.                  NC1064.2
 099900     MOVE     "SUB-TEST-F1-20" TO PAR-NAME.                       NC1064.2
 100000     PERFORM  PRINT-DETAIL.                                       NC1064.2
-100100*                                                                 NC1064.2
+100100*                                                                         
 100200 SUB-INIT-F1-21.                                                  NC1064.2
-100300*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1064.2
+100300*                                                                         
 100400     MOVE     "VI-67 6.4.2" TO ANSI-REFERENCE.                    NC1064.2
 100500     MOVE     -11 TO WRK-DS-02V00.                                NC1064.2
 100600 SUB-TEST-F1-21.                                                  NC1064.2
@@ -1015,9 +1015,9 @@
 101700 SUB-WRITE-F1-21.                                                 NC1064.2
 101800     MOVE     "SUB-TEST-F1-21" TO PAR-NAME.                       NC1064.2
 101900     PERFORM  PRINT-DETAIL.                                       NC1064.2
-102000*                                                                 NC1064.2
+102000*                                                                         
 102100 SUB-INIT-F1-22.                                                  NC1064.2
-102200*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1064.2
+102200*                                                                         
 102300     MOVE     "VI-67 6.4.2" TO ANSI-REFERENCE.                    NC1064.2
 102400     MOVE     ZERO TO WRK-DS-06V06.                               NC1064.2
 102500 SUB-TEST-F1-22.                                                  NC1064.2
@@ -1039,9 +1039,9 @@
 104100 SUB-WRITE-F1-22.                                                 NC1064.2
 104200     MOVE     "SUB-TEST-F1-22" TO PAR-NAME.                       NC1064.2
 104300     PERFORM  PRINT-DETAIL.                                       NC1064.2
-104400*                                                                 NC1064.2
+104400*                                                                         
 104500 SUB-INIT-F1-23.                                                  NC1064.2
-104600*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1064.2
+104600*                                                                         
 104700     MOVE     "VI-67 6.4.2" TO ANSI-REFERENCE.                    NC1064.2
 104800     MOVE     -11 TO WRK-DS-02V00.                                NC1064.2
 104900 SUB-TEST-F1-23.                                                  NC1064.2
@@ -1059,9 +1059,9 @@
 106100 SUB-WRITE-F1-23.                                                 NC1064.2
 106200     MOVE     "SUB-TEST-F1-23" TO PAR-NAME.                       NC1064.2
 106300     PERFORM  PRINT-DETAIL.                                       NC1064.2
-106400*                                                                 NC1064.2
+106400*                                                                         
 106500 SUB-INIT-F1-24.                                                  NC1064.2
-106600*    ==-->  NEW SIZE ERROR TESTS  <--==                           NC1064.2
+106600*                                                                         
 106700     MOVE     "VI-67 6.4.2" TO ANSI-REFERENCE.                    NC1064.2
 106800     MOVE     ZERO TO WRK-DS-06V06.                               NC1064.2
 106900 SUB-TEST-F1-24.                                                  NC1064.2
@@ -1084,9 +1084,9 @@
 108600 SUB-WRITE-F1-24.                                                 NC1064.2
 108700     MOVE     "SUB-TEST-F1-24" TO PAR-NAME.                       NC1064.2
 108800     PERFORM  PRINT-DETAIL.                                       NC1064.2
-108900*                                                                 NC1064.2
+108900*                                                                         
 109000 SUB-INIT-F1-25.                                                  NC1064.2
-109100*    ==-->  MULTIPLE OPERANDS  <--==                              NC1064.2
+109100*                                                                         
 109200     MOVE "VI-67 6.4.2" TO ANSI-REFERENCE.                        NC1064.2
 109300     MOVE "SUBTR LIMIT TESTS " TO FEATURE.                        NC1064.2
 109400     MOVE  1 TO DNAME1   DNAME2   DNAME3   DNAME4   DNAME5.       NC1064.2
@@ -1099,9 +1099,9 @@
 110100     MOVE 21 TO DNAME32  DNAME33  DNAME34  DNAME35  DNAME36.      NC1064.2
 110200     MOVE 21 TO DNAME37  DNAME38  DNAME39  DNAME40  DNAME41.      NC1064.2
 110300     MOVE 21 TO DNAME42.                                          NC1064.2
-110400*    THE FOLLOWING 22 TESTS VERIFY THE ABILITY OF THE COMPILER    NC1064.2
-110500*    TO HANDLE A MAXIMUM OF 42 OPERANDS IN A SUBTRACT STATEMENT.  NC1064.2
-110600*    A DELETION IN THIS PARAGRAPH WILL SKIP THE LIMIT TESTS.      NC1064.2
+110400*                                                                         
+110500*                                                                         
+110600*                                                                         
 110700     GO TO SUB-TEST-F1-25-0.                                      NC1064.2
 110800 SUB-DELETE-F1-25-0.                                              NC1064.2
 110900     PERFORM DE-LETE.                                             NC1064.2
@@ -1468,9 +1468,9 @@
 147000 SUB-WRITE-F1-26-21.                                              NC1064.2
 147100     MOVE "SUB-TEST-F1-26-21 " TO PAR-NAME.                       NC1064.2
 147200     PERFORM PRINT-DETAIL.                                        NC1064.2
-147300*                                                                 NC1064.2
+147300*                                                                         
 147400 SUB-INIT-F1-27.                                                  NC1064.2
-147500*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
+147500*                                                                         
 147600     MOVE   "VI-134 6.25.4 GR1" TO ANSI-REFERENCE.                NC1064.2
 147700     MOVE   "SUB-TEST-F1-27" TO PAR-NAME.                         NC1064.2
 147800     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -1527,10 +1527,10 @@
 152900     PERFORM FAIL MOVE WRK-DU-16V2-1 TO WRK-NE-X-1                NC1064.2
 153000     MOVE WRK-NE-X-1 TO COMPUTED-A                                NC1064.2
 153100     MOVE "9999999999999987.65" TO CORRECT-A PERFORM PRINT-DETAIL.NC1064.2
-153200*                                                                 NC1064.2
+153200*                                                                         
 153300 SUB-INIT-F1-28.                                                  NC1064.2
-153400*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
-153500*    ==-->      NO SIZE ERROR       <--==                         NC1064.2
+153400*                                                                         
+153500*                                                                         
 153600     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1064.2
 153700     MOVE   "SUB-TEST-F1-28" TO PAR-NAME.                         NC1064.2
 153800     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -1612,10 +1612,10 @@
 161400             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1064.2
 161500             PERFORM FAIL                                         NC1064.2
 161600             PERFORM PRINT-DETAIL.                                NC1064.2
-161700*                                                                 NC1064.2
+161700*                                                                         
 161800 SUB-INIT-F1-29.                                                  NC1064.2
-161900*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
-162000*    ==-->       SIZE ERROR         <--==                         NC1064.2
+161900*                                                                         
+162000*                                                                         
 162100     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1064.2
 162200     MOVE   "SUB-TEST-F1-29" TO PAR-NAME.                         NC1064.2
 162300     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -1697,10 +1697,10 @@
 169900             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1064.2
 170000             PERFORM FAIL                                         NC1064.2
 170100             PERFORM PRINT-DETAIL.                                NC1064.2
-170200*                                                                 NC1064.2
+170200*                                                                         
 170300 SUB-INIT-F1-30.                                                  NC1064.2
-170400*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
-170500*    ==-->      NO SIZE ERROR       <--==                         NC1064.2
+170400*                                                                         
+170500*                                                                         
 170600     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1064.2
 170700     MOVE   "SUB-TEST-F1-30" TO PAR-NAME.                         NC1064.2
 170800     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -1782,10 +1782,10 @@
 178400             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1064.2
 178500             PERFORM FAIL                                         NC1064.2
 178600             PERFORM PRINT-DETAIL.                                NC1064.2
-178700*                                                                 NC1064.2
+178700*                                                                         
 178800 SUB-INIT-F1-31.                                                  NC1064.2
-178900*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
-179000*    ==-->       SIZE ERROR         <--==                         NC1064.2
+178900*                                                                         
+179000*                                                                         
 179100     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1064.2
 179200     MOVE   "SUB-TEST-F1-31" TO PAR-NAME.                         NC1064.2
 179300     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -1867,10 +1867,10 @@
 186900             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1064.2
 187000             PERFORM FAIL                                         NC1064.2
 187100             PERFORM PRINT-DETAIL.                                NC1064.2
-187200*                                                                 NC1064.2
+187200*                                                                         
 187300 SUB-INIT-F1-32.                                                  NC1064.2
-187400*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
-187500*    ==-->      NO SIZE ERROR       <--==                         NC1064.2
+187400*                                                                         
+187500*                                                                         
 187600     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1064.2
 187700     MOVE   "SUB-TEST-F1-32" TO PAR-NAME.                         NC1064.2
 187800     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -1954,10 +1954,10 @@
 195600             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1064.2
 195700             PERFORM FAIL                                         NC1064.2
 195800             PERFORM PRINT-DETAIL.                                NC1064.2
-195900*                                                                 NC1064.2
+195900*                                                                         
 196000 SUB-INIT-F1-33.                                                  NC1064.2
-196100*    ==-->  MULTIPLE RESULT FIELDS  <--==                         NC1064.2
-196200*    ==-->       SIZE ERROR         <--==                         NC1064.2
+196100*                                                                         
+196200*                                                                         
 196300     MOVE   "VI-67 6.4.2" TO ANSI-REFERENCE.                      NC1064.2
 196400     MOVE   "SUB-TEST-F1-33" TO PAR-NAME.                         NC1064.2
 196500     MOVE    ZERO  TO REC-CT.                                     NC1064.2
@@ -2041,10 +2041,10 @@
 204300             MOVE    SIZE-ERR2 TO COMPUTED-X                      NC1064.2
 204400             PERFORM FAIL                                         NC1064.2
 204500             PERFORM PRINT-DETAIL.                                NC1064.2
-204600*                                                                 NC1064.2
+204600*                                                                         
 204700 SUB-INIT-F1-34.                                                  NC1064.2
-204800*    ==-->  EXPLICIT SCOPE TERMINATOR <--==                       NC1064.2
-204900*    ==-->          SIZE ERROR        <--==                       NC1064.2
+204800*                                                                         
+204900*                                                                         
 205000     MOVE   "IV-41 6.4.3"       TO ANSI-REFERENCE.                NC1064.2
 205100     MOVE     -11 TO WRK-DS-02V00.                                NC1064.2
 205200     MOVE    SPACE TO WRK-XN-00001.                               NC1064.2
@@ -2129,9 +2129,9 @@
 213100             MOVE    WRK-DS-02V00 TO COMPUTED-N                   NC1064.2
 213200             PERFORM FAIL                                         NC1064.2
 213300             PERFORM PRINT-DETAIL.                                NC1064.2
-213400*                                                                 NC1064.2
+213400*                                                                         
 213500 SUB-INIT-F1-35.                                                  NC1064.2
-213600*    ==--> EXPLICIT SCOPE TERMINATOR<--==                         NC1064.2
+213600*                                                                         
 213700     MOVE   "IV-41 6.4.3"     TO ANSI-REFERENCE.                  NC1064.2
 213800     MOVE   "SUB-TEST-F1-35"  TO PAR-NAME.                        NC1064.2
 213900     MOVE    SPACE TO WRK-XN-00001.                               NC1064.2
@@ -2221,9 +2221,9 @@
 222300             MOVE    WRK-DS-06V06  TO COMPUTED-N                  NC1064.2
 222400             PERFORM FAIL                                         NC1064.2
 222500             PERFORM PRINT-DETAIL.                                NC1064.2
-222600*                                                                 NC1064.2
+222600*                                                                         
 222700 SUB-INIT-F1-36.                                                  NC1064.2
-222800*    ==--> EXPLICIT SCOPE TERMINATOR<--==                         NC1064.2
+222800*                                                                         
 222900     MOVE   "IV-41 6.4.3"     TO ANSI-REFERENCE.                  NC1064.2
 223000     MOVE   "SUB-TEST-F1-36"  TO PAR-NAME.                        NC1064.2
 223100     MOVE   SPACE TO WRK-XN-00001.                                NC1064.2
@@ -2309,9 +2309,9 @@
 231100             MOVE    WRK-DS-02V00 TO COMPUTED-N                   NC1064.2
 231200             PERFORM FAIL                                         NC1064.2
 231300             PERFORM PRINT-DETAIL.                                NC1064.2
-231400*                                                                 NC1064.2
+231400*                                                                         
 231500 SUB-INIT-F1-37.                                                  NC1064.2
-231600*    ==--> EXPLICIT SCOPE TERMINATOR<--==                         NC1064.2
+231600*                                                                         
 231700     MOVE   "IV-41 6.4.3"     TO ANSI-REFERENCE.                  NC1064.2
 231800     MOVE   "SUB-TEST-F1-37"  TO PAR-NAME.                        NC1064.2
 231900     MOVE    SPACE TO WRK-XN-00001.                               NC1064.2
@@ -2401,9 +2401,9 @@
 240300             MOVE    WRK-DS-06V06  TO COMPUTED-N                  NC1064.2
 240400             PERFORM FAIL                                         NC1064.2
 240500             PERFORM PRINT-DETAIL.                                NC1064.2
-240600*                                                                 NC1064.2
+240600*                                                                         
 240700 SUB-INIT-F1-38.                                                  NC1064.2
-240800*    ==--> EXPLICIT SCOPE TERMINATOR<--==                         NC1064.2
+240800*                                                                         
 240900     MOVE   "IV-41 6.4.3"     TO ANSI-REFERENCE.                  NC1064.2
 241000     MOVE   "SUB-TEST-F1-38"  TO PAR-NAME.                        NC1064.2
 241100     MOVE   "0"   TO WRK-XN-00001.                                NC1064.2
@@ -2461,9 +2461,9 @@
 246300             MOVE    WRK-DS-02V00 TO COMPUTED-N                   NC1064.2
 246400             PERFORM FAIL                                         NC1064.2
 246500             PERFORM PRINT-DETAIL.                                NC1064.2
-246600*                                                                 NC1064.2
+246600*                                                                         
 246700 SUB-INIT-F1-39.                                                  NC1064.2
-246800*    ==--> EXPLICIT SCOPE TERMINATOR<--==                         NC1064.2
+246800*                                                                         
 246900     MOVE   "IV-41 6.4.3"     TO ANSI-REFERENCE.                  NC1064.2
 247000     MOVE   "SUB-TEST-F1-39"  TO PAR-NAME.                        NC1064.2
 247100     MOVE    SPACE TO WRK-XN-00001.                               NC1064.2
@@ -2525,7 +2525,7 @@
 252700             MOVE    WRK-DS-06V06  TO COMPUTED-N                  NC1064.2
 252800             PERFORM FAIL                                         NC1064.2
 252900             PERFORM PRINT-DETAIL.                                NC1064.2
-253000*                                                                 NC1064.2
+253000*                                                                         
 253100 CCVS-EXIT SECTION.                                               NC1064.2
 253200 CCVS-999999.                                                     NC1064.2
 253300     GO TO CLOSE-FILES.                                           NC1064.2

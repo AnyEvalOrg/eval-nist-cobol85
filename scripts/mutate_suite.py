@@ -18,13 +18,13 @@ import json
 from pathlib import Path
 import random
 import re
-import shutil
 import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.build_dataset import _build, build, read
+from scripts.cobol_fields import data_fields, resolve_field, replacement_options, paired_literal
 from scripts.mutation_private import mutation_salt, salt_sha256, private_manifest_path, check_salt, write_private
 
 LITERAL = r'''(?:"(?:[^"\n]|"")*"|'(?:[^'\n]|'')*'|[+-]?(?:\d+(?:\.\d+)?|\.\d+))'''
@@ -36,17 +36,6 @@ CORRECT = re.compile(r'\bMOVE\s+(?P<literal>' + LITERAL + r')\s+TO\s+CORRECT-(?P
 
 def value(literal):
     return literal[1:-1] if literal.startswith(('"', "'")) else Decimal(literal)
-
-
-def change(literal, rng):
-    # Same byte width: never push code past fixed-format column 72.
-    positions = [i for i, c in enumerate(literal) if c.isdigit()] if not literal.startswith(('"', "'")) else [i for i in range(1, len(literal)-1) if literal[i] not in "\"'"]
-    if not positions:
-        return None
-    i = rng.choice(positions)
-    alphabet = '0123456789' if not literal.startswith(('"', "'")) else 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-    c = rng.choice([c for c in alphabet if c != literal[i]])
-    return literal[:i] + c + literal[i+1:]
 
 
 def find_sites(source, extended=True):
@@ -62,6 +51,7 @@ def find_sites(source, extended=True):
         offset += len(line)
     code = ''.join(code)
     sites = []
+    fields = data_fields(source)
     for m in (EXTENDED_CONDITION if extended else CONDITION).finditer(code):
         start = m.end()
         print_detail = re.search(r'\bPERFORM\s+PRINT-DETAIL\b', code[start:], re.I)
@@ -108,7 +98,12 @@ def find_sites(source, extended=True):
         paragraph = re.findall(r'(?m)^([A-Z0-9][A-Z0-9-]*)\.', code[:m.start()])
         if not paragraph or (not re.search(r'TEST|CHECK', paragraph[-1]) and (inline or not extended)):
             continue
-        sites.append(dict(paragraph=paragraph[-1], operator=m['op'], kind=correct['kind'],
+        field = resolve_field(fields, m['item'])
+        correct_field = resolve_field(fields, 'CORRECT-' + correct['kind'])
+        options = replacement_options(m['literal'], correct['literal'], field, correct_field)
+        if not options:
+            continue
+        sites.append(dict(item=m['item'], field=field, correct_field=correct_field, options=options, paragraph=paragraph[-1], operator=m['op'], kind=correct['kind'],
                           spans=[(offsets[a], offsets[b-1]+1) for a, b in spans],
                           literals=[m['literal'], correct['literal']]))
     # Do not mutate a shared failure move twice.
@@ -118,67 +113,29 @@ def find_sites(source, extended=True):
     return [s for s in sites if counts[tuple(s['spans'][1])] == 1]
 
 
-def comment_edits(source, sites):
-    """Scrub comments in selected paragraphs, preserving all source coordinates.
+def comment_edits(source):
+    """Blank every fixed-format comment independently of sites, keys or values.
 
-    Literal replacements are safe, same-width edits. Other nonempty comments
-    in these scopes are conservatively blanked: prose can encode expectations
-    without containing the literal (including on continuation comment lines).
+    Apply even outside test paragraphs: prose and continuation comments may
+    encode expectations in words. Preserve indicators, widths and coordinates.
     """
-    lines = source.splitlines(keepends=True)
-    starts, offset = [], 0
-    for line in lines:
-        starts.append(offset)
+    edits, audit, offset = [], [], 0
+    for number, line in enumerate(source.splitlines(keepends=True), 1):
+        if len(line) > 6 and line[6] in '*/':
+            old = line[7:].rstrip('\r\n')
+            if old.strip():
+                changed = ' ' * len(old)
+                edits.append((offset + 7, offset + 7 + len(old), changed))
+                audit.append(dict(line=number, column=8, action='strip', original=old, mutated=changed))
         offset += len(line)
-    paragraphs = [i for i, line in enumerate(lines)
-                  if len(line) > 7 and line[6] == ' '
-                  and re.match(r'[A-Z0-9][A-Z0-9-]*\.(?:\s|$)', line[7:72])]
-    changes = {}
-    for site, literals in sites:
-        first = source.count('\n', 0, site['spans'][0][0])
-        last = source.count('\n', 0, site['spans'][1][0])
-        begin = max(i for i in paragraphs if i <= first)
-        end = next((i for i in paragraphs if i > last), len(lines))
-        if end < len(lines):
-            while end > last + 1 and (not lines[end-1].strip() or
-                                      (len(lines[end-1]) > 6 and lines[end-1][6] in '*/')):
-                end -= 1
-        while begin and (not lines[begin-1].strip() or
-                         (len(lines[begin-1]) > 6 and lines[begin-1][6] in '*/')):
-            begin -= 1
-        for i in range(begin, end):
-            line = lines[i]
-            if len(line) <= 6 or line[6] not in '*/' or not line[7:].strip():
-                continue
-            changes.setdefault(i, []).extend(literals)
-    edits, audit = [], []
-    for i, literals in sorted(changes.items()):
-        old = lines[i][7:].rstrip('\r\n')
-        # One pass avoids cascading changes when two selected sites share scope.
-        mapping = {}
-        ambiguous = False
-        for original, mutated in literals:
-            for before, after in ((original, mutated),
-                                  (original.strip('"\''), mutated.strip('"\''))):
-                if before in mapping and mapping[before] != after:
-                    ambiguous = True
-                mapping[before] = after
-        pattern = '|'.join(re.escape(v) for v in sorted(mapping, key=len, reverse=True) if v)
-        changed = re.sub(pattern, lambda m: mapping[m[0]], old) if pattern else old
-        action = 'rewrite'
-        # Only simple literal-labelled assertions can be retained safely. A
-        # mixed comment may repeat the expectation in words beside the number.
-        prose = re.sub(pattern, '', old) if pattern else old
-        words = set(re.findall(r'[A-Z]+', prose.upper()))
-        labels = {'EXPECTED', 'EXPECT', 'VALUE', 'RESULT', 'IS', 'ARE', 'THE',
-                  'SHOULD', 'BE', 'EQUAL', 'TO', 'CORRECT', 'CONSTANT', 'ASSERTION'}
-        safe = words <= labels and not re.search(r'[0-9]', prose)
-        if ambiguous or changed == old or not safe:
-            changed = ' ' * len(old)
-            action = 'strip'
-        edits.append((starts[i] + 7, starts[i] + 7 + len(old), changed))
-        audit.append(dict(line=i+1, column=8, action=action, original=old, mutated=changed))
     return edits, audit
+
+
+def scrub_comments(source):
+    edits, _ = comment_edits(source)
+    for a, b, replacement in reversed(edits):
+        source = source[:a] + replacement + source[b:]
+    return source
 
 
 def mutate(source, name):
@@ -188,26 +145,19 @@ def mutate(source, name):
     seed = hmac.new(salt, name.encode('utf-8'), hashlib.sha256).digest()
     rng = random.Random(int.from_bytes(seed, 'big'))
     selected = rng.sample(sites, max(3, (len(sites) + 5)//10)) if len(sites) >= 3 else []
-    edits, manifest, comment_sites = [], [], []
+    edits, manifest = [], []
     for site in sorted(selected, key=lambda s: s['spans'][0]):
         original = site['literals'][0]
-        mutated = change(original, rng)
-        if mutated is None:
-            raise ValueError(f'{name}: literal cannot be changed')
-        paired = mutated
-        if site['literals'][1].startswith('+') and not original.startswith('+'):
-            paired = '+' + mutated
-        elif original.startswith('+') and not site['literals'][1].startswith('+'):
-            paired = mutated[1:]
+        mutated = rng.choice(site['options'])
+        paired = paired_literal(mutated, original, site['literals'][1])
         replacements = []
         for (a, b), old, new in zip(site['spans'], site['literals'], (mutated, paired)):
             assert len(old) == len(new) and source[a:b] == old
             edits.append((a, b, new))
             replacements.append(dict(line=source.count('\n', 0, a)+1,
                                      column=a-source.rfind('\n', 0, a), original=old, mutated=new))
-        comment_sites.append((site, list(zip(site['literals'], (mutated, paired)))))
-        manifest.append(dict(paragraph=site['paragraph'], operator=site['operator'], kind=site['kind'], replacements=replacements))
-    comments, audit = comment_edits(source, comment_sites)
+        manifest.append(dict(item=site['item'], field=site['field'], correct_field=site['correct_field'], paragraph=site['paragraph'], operator=site['operator'], kind=site['kind'], replacements=replacements))
+    comments, audit = comment_edits(source)
     edits.extend(comments)
     for a, b, replacement in sorted(edits, reverse=True):
         source = source[:a] + replacement + source[b:]
@@ -230,7 +180,7 @@ def generate(reference, destination, data):
     for name, entry in sorted(json.loads((reference/'index.json').read_text())['programs'].items()):
         rel = f'{entry["module"]}/{name}.CBL'
         source = read(reference/rel)
-        changed, details = mutate(source, name) if decisions[name]['eligible'] else (source, dict(mutable_sites=0, mutations=[]))
+        changed, details = mutate(source, name) if decisions[name]['eligible'] else (scrub_comments(source), dict(mutable_sites=0, mutations=[], comment_changes=comment_edits(source)[1]))
         candidate = decisions[name]['eligible'] and len(details['mutations']) >= 3
         eligible = candidate
         reasons = [] if candidate else (['fewer_than_3_mutable_sites'] if decisions[name]['eligible'] else decisions[name]['reasons'])
@@ -263,10 +213,13 @@ def generate(reference, destination, data):
             dest.parent.mkdir(parents=True, exist_ok=True)
             if path.name in {'index.json', 'cobc-version.txt'} and dest.exists():
                 continue  # Preserve the installed operator execution receipts.
-            if not dest.exists() or dest.read_bytes() != path.read_bytes():
-                shutil.copyfile(path, dest)
+            content = path.read_bytes()
+            if path.suffix in {'.CBL', '.SUB'} or path.parent.name in {'copy', 'copyalt'}:
+                content = scrub_comments(content.decode('latin1')).encode('latin1')
+            if not dest.exists() or dest.read_bytes() != content:
+                dest.write_bytes(content)
     data.mkdir(parents=True, exist_ok=True)
-    payload = dict(schema_version=2, algorithm='hmac-sha256-program-v2', salt_sha256=fingerprint, programs=programs)
+    payload = dict(schema_version=2, algorithm='hmac-sha256-program-v3-pic-uniform-comments', salt_sha256=fingerprint, programs=programs)
     write_private(prior_path, payload)
     # Pending new candidates are excluded explicitly; keep shipping the already
     # validated population. The builder promotes them after fresh logs arrive.

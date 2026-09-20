@@ -21,14 +21,14 @@
   },
   "NC104A": {
    "module": "NC",
-   "report_line": "141  128   13       0       0",
-   "report_bytes": 35575,
+   "report_line": "141  129   12       0       0",
+   "report_bytes": 35091,
    "stdout_bytes": 61
   },
   "NC105A": {
    "module": "NC",
-   "report_line": "132  122    7       3       0",
-   "report_bytes": 29283,
+   "report_line": "132  125    4       3       0",
+   "report_bytes": 27831,
    "stdout_bytes": 61
   },
   "NC106A": {
@@ -81,8 +81,8 @@
   },
   "NC114M": {
    "module": "NC",
-   "report_line": "6    2    3       0       1",
-   "report_bytes": 9197,
+   "report_line": "6    5    0       0       1 OK",
+   "report_bytes": 7745,
    "stdout_bytes": 61
   },
   "NC115A": {
@@ -153,8 +153,8 @@
   },
   "NC126A": {
    "module": "NC",
-   "report_line": "145  136    9       0       0",
-   "report_bytes": 35091,
+   "report_line": "145  138    7       0       0",
+   "report_bytes": 32429,
    "stdout_bytes": 61
   },
   "NC127A": {
@@ -255,8 +255,8 @@
   },
   "NC174A": {
    "module": "NC",
-   "report_line": "77   74    3       0       0",
-   "report_bytes": 18514,
+   "report_line": "77   77    0       0       0 OK",
+   "report_bytes": 17062,
    "stdout_bytes": 61
   },
   "NC175A": {
@@ -285,8 +285,8 @@
   },
   "NC202A": {
    "module": "NC",
-   "report_line": "77   74    3       0       0",
-   "report_bytes": 15126,
+   "report_line": "77   77    0       0       0 OK",
+   "report_bytes": 13674,
    "stdout_bytes": 61
   },
   "NC203A": {
@@ -304,8 +304,8 @@
   },
   "NC205A": {
    "module": "NC",
-   "report_line": "10    7    3       0       0",
-   "report_bytes": 5930,
+   "report_line": "10   10    0       0       0 OK",
+   "report_bytes": 4478,
    "stdout_bytes": 61
   },
   "NC206A": {
@@ -322,8 +322,8 @@
   },
   "NC208A": {
    "module": "NC",
-   "report_line": "24   21    3       0       0",
-   "report_bytes": 9923,
+   "report_line": "24   24    0       0       0 OK",
+   "report_bytes": 8471,
    "stdout_bytes": 61
   },
   "NC209A": {
@@ -364,8 +364,8 @@
   },
   "NC217A": {
    "module": "NC",
-   "report_line": "82   76    6       0       0",
-   "report_bytes": 17183,
+   "report_line": "82   77    5       0       0",
+   "report_bytes": 16699,
    "stdout_bytes": 61
   },
   "NC218A": {
@@ -394,26 +394,26 @@
   },
   "NC222A": {
    "module": "NC",
-   "report_line": "8    5    3       0       0",
-   "report_bytes": 5567,
+   "report_line": "8    8    0       0       0 OK",
+   "report_bytes": 4115,
    "stdout_bytes": 61
   },
   "NC223A": {
    "module": "NC",
-   "report_line": "94   87    7       0       0",
-   "report_bytes": 19119,
+   "report_line": "94   94    0       0       0 OK",
+   "report_bytes": 15731,
    "stdout_bytes": 61
   },
   "NC224A": {
    "module": "NC",
-   "report_line": "14   11    3       0       0",
-   "report_bytes": 6898,
+   "report_line": "14   14    0       0       0 OK",
+   "report_bytes": 4841,
    "stdout_bytes": 61
   },
   "NC225A": {
    "module": "NC",
-   "report_line": "63   60    3       0       0",
-   "report_bytes": 12827,
+   "report_line": "63   63    0       0       0 OK",
+   "report_bytes": 11375,
    "stdout_bytes": 61
   },
   "NC231A": {
@@ -514,14 +514,14 @@
   },
   "NC247A": {
    "module": "NC",
-   "report_line": "21   17    3       1       0",
-   "report_bytes": 7745,
+   "report_line": "21   20    0       1       0 OK",
+   "report_bytes": 5688,
    "stdout_bytes": 61
   },
   "NC248A": {
    "module": "NC",
-   "report_line": "11    8    3       0       0",
-   "report_bytes": 5930,
+   "report_line": "11   11    0       0       0 OK",
+   "report_bytes": 4478,
    "stdout_bytes": 61
   },
   "NC250A": {
@@ -544,8 +544,8 @@
   },
   "NC253A": {
    "module": "NC",
-   "report_line": "61   58    3       0       0",
-   "report_bytes": 13795,
+   "report_line": "61   61    0       0       0 OK",
+   "report_bytes": 11738,
    "stdout_bytes": 61
   },
   "NC254A": {
@@ -583,8 +583,8 @@
   },
   "SM105A": {
    "module": "SM",
-   "report_line": "9    6    3       0       0",
-   "report_bytes": 5688,
+   "report_line": "9    9    0       0       0 OK",
+   "report_bytes": 4236,
    "stdout_bytes": 61
   },
   "SM106A": {
@@ -601,8 +601,8 @@
   },
   "SM201A": {
    "module": "SM",
-   "report_line": "11    8    3       0       0",
-   "report_bytes": 6898,
+   "report_line": "11   11    0       0       0 OK",
+   "report_bytes": 4841,
    "stdout_bytes": 61
   },
   "SM203A": {
@@ -613,8 +613,8 @@
   },
   "SM205A": {
    "module": "SM",
-   "report_line": "9    6    3       0       0",
-   "report_bytes": 5688,
+   "report_line": "9    9    0       0       0 OK",
+   "report_bytes": 4236,
    "stdout_bytes": 61
   },
   "SM206A": {
@@ -1107,8 +1107,8 @@
   },
   "SQ201M": {
    "module": "SQ",
-   "report_line": "23    9    3       0      11",
-   "report_bytes": 71164,
+   "report_line": "23   12    0       0      11 OK",
+   "report_bytes": 70389,
    "stdout_bytes": 61
   },
   "SQ202A": {
@@ -1420,8 +1420,8 @@
   },
   "RL211A": {
    "module": "RL",
-   "report_line": "501  480   21       0       0",
-   "report_bytes": 17788,
+   "report_line": "501  501    0       0       0 OK",
+   "report_bytes": 3873,
    "stdout_bytes": 61
   },
   "RL212A": {
@@ -1786,8 +1786,8 @@
   },
   "SG105A": {
    "module": "SG",
-   "report_line": "9    7    2       0       0",
-   "report_bytes": 5567,
+   "report_line": "9    6    3       0       0",
+   "report_bytes": 6051,
    "stdout_bytes": 61
   },
   "SG106A": {
@@ -2135,8 +2135,8 @@
   },
   "RW101A": {
    "module": "RW",
-   "report_line": "8    5    3       0       0",
-   "report_bytes": 5930,
+   "report_line": "8    8    0       0       0 OK",
+   "report_bytes": 4478,
    "stdout_bytes": 61,
    "rw_report_bytes": 1620
   },
@@ -2149,15 +2149,15 @@
   },
   "RW103A": {
    "module": "RW",
-   "report_line": "14   11    3       0       0",
-   "report_bytes": 7261,
+   "report_line": "14   14    0       0       0 OK",
+   "report_bytes": 5204,
    "stdout_bytes": 61,
    "rw_report_bytes": 4453
   },
   "RW104A": {
    "module": "RW",
-   "report_line": "14   11    3       0       0",
-   "report_bytes": 7261,
+   "report_line": "14   14    0       0       0 OK",
+   "report_bytes": 5204,
    "stdout_bytes": 61,
    "rw_report_bytes": 4681
   },

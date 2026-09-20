@@ -1,34 +1,34 @@
 000100 IDENTIFICATION DIVISION.                                         NC2074.2
 000200 PROGRAM-ID.                                                      NC2074.2
 000300     NC207A.                                                      NC2074.2
-000400****************************************************************  NC2074.2
-000500*                                                              *  NC2074.2
-000600*    VALIDATION FOR:-                                          *  NC2074.2
-000700*                                                              *  NC2074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2074.2
-000900*                                                              *  NC2074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2074.2
-001100*                                                              *  NC2074.2
-001200****************************************************************  NC2074.2
-001300*                                                              *  NC2074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2074.2
-001500*                                                              *  NC2074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2074.2
-001900*                                                              *  NC2074.2
-002000****************************************************************  NC2074.2
-002100*                                                              *  NC2074.2
-002200*    PROGRAM NC207A TESTS THE USE OF FORMAT 1 QUALIFICATION    *  NC2074.2
-002300*    USING FORMATS 1, 2 AND 3 OF THE "ADD" STATEMENT, FORMATS  *  NC2074.2
-002400*    2 AND 3 OF THE "SUBTRACT" STATEMENT, FORMAT 2 OF THE      *  NC2074.2
-002500*    "MULTIPLY" STATEMENT AND FORMAT 3 OF THE "DIVIDE"*           NC2074.2
-002600*    STATEMENT.                                                *  NC2074.2
-002700*    THE MAJORITY OF TESTST USE UP TO FIVE LEVELS OF           *  NC2074.2
-002800*    QUALIFICATION BUT THE MINIMUM REQUIREMENT OF 49 LEVELS IN *  NC2074.2
-002900*    THE NUCLEUS IS ALSO TESTED.                               *  NC2074.2
-003000*                                                              *  NC2074.2
-003100****************************************************************  NC2074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
 003200 ENVIRONMENT DIVISION.                                            NC2074.2
 003300 CONFIGURATION SECTION.                                           NC2074.2
 003400 SOURCE-COMPUTER.                                                 NC2074.2
@@ -500,7 +500,7 @@
 050200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2074.2
 050300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2074.2
 050400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2074.2
-050500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2074.2
+050500*                                                                         
 050600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2074.2
 050700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2074.2
 050800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2074.2
@@ -592,7 +592,7 @@
 059400     PERFORM FAIL.                                                NC2074.2
 059500 ADD-WRITE-F1-1.                                                  NC2074.2
 059600     PERFORM PRINT-DETAIL.                                        NC2074.2
-059700*                                                                 NC2074.2
+059700*                                                                         
 059800 ADD-INIT-F1-2.                                                   NC2074.2
 059900     MOVE "ADD-TEST-F1-2 " TO PAR-NAME.                           NC2074.2
 060000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -617,7 +617,7 @@
 061900     PERFORM FAIL.                                                NC2074.2
 062000 ADD-WRITE-F1-2.                                                  NC2074.2
 062100     PERFORM PRINT-DETAIL.                                        NC2074.2
-062200*                                                                 NC2074.2
+062200*                                                                         
 062300 ADD-INIT-F1-3.                                                   NC2074.2
 062400     MOVE "ADD-TEST-F1-3 " TO PAR-NAME.                           NC2074.2
 062500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -642,7 +642,7 @@
 064400     PERFORM FAIL.                                                NC2074.2
 064500 ADD-WRITE-F1-3.                                                  NC2074.2
 064600     PERFORM PRINT-DETAIL.                                        NC2074.2
-064700*                                                                 NC2074.2
+064700*                                                                         
 064800 ADD-INIT-F1-4.                                                   NC2074.2
 064900     MOVE "ADD-TEST-F1-4 " TO PAR-NAME.                           NC2074.2
 065000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -667,7 +667,7 @@
 066900     PERFORM FAIL.                                                NC2074.2
 067000 ADD-WRITE-F1-4.                                                  NC2074.2
 067100     PERFORM PRINT-DETAIL.                                        NC2074.2
-067200*                                                                 NC2074.2
+067200*                                                                         
 067300 ADD-INIT-F1-5.                                                   NC2074.2
 067400     MOVE "ADD-TEST-F1-5 " TO PAR-NAME.                           NC2074.2
 067500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -692,7 +692,7 @@
 069400     PERFORM FAIL.                                                NC2074.2
 069500 ADD-WRITE-F1-5.                                                  NC2074.2
 069600     PERFORM PRINT-DETAIL.                                        NC2074.2
-069700*                                                                 NC2074.2
+069700*                                                                         
 069800 ADD-INIT-F1-6.                                                   NC2074.2
 069900     MOVE "ADD-TEST-F1-6 " TO PAR-NAME.                           NC2074.2
 070000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -717,7 +717,7 @@
 071900     PERFORM FAIL.                                                NC2074.2
 072000 ADD-WRITE-F1-6.                                                  NC2074.2
 072100     PERFORM PRINT-DETAIL.                                        NC2074.2
-072200*                                                                 NC2074.2
+072200*                                                                         
 072300 ADD-INIT-F1-7.                                                   NC2074.2
 072400     MOVE "ADD-TEST-F1-7" TO PAR-NAME.                            NC2074.2
 072500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -742,7 +742,7 @@
 074400     PERFORM FAIL.                                                NC2074.2
 074500 ADD-WRITE-F1-7.                                                  NC2074.2
 074600     PERFORM PRINT-DETAIL.                                        NC2074.2
-074700*                                                                 NC2074.2
+074700*                                                                         
 074800 ADD-INIT-F1-8.                                                   NC2074.2
 074900     MOVE "ADD-TEST-F1-8 " TO PAR-NAME.                           NC2074.2
 075000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -767,7 +767,7 @@
 076900     PERFORM FAIL.                                                NC2074.2
 077000 ADD-WRITE-F1-8.                                                  NC2074.2
 077100     PERFORM PRINT-DETAIL.                                        NC2074.2
-077200*                                                                 NC2074.2
+077200*                                                                         
 077300 ADD-INIT-F2-9.                                                   NC2074.2
 077400     MOVE "ADD-TEST-F2-9 " TO PAR-NAME.                           NC2074.2
 077500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -792,7 +792,7 @@
 079400     PERFORM FAIL.                                                NC2074.2
 079500 ADD-WRITE-F2-9.                                                  NC2074.2
 079600     PERFORM PRINT-DETAIL.                                        NC2074.2
-079700*                                                                 NC2074.2
+079700*                                                                         
 079800 ADD-INIT-F2-10.                                                  NC2074.2
 079900     MOVE "ADD-TEST-F2-10 " TO PAR-NAME.                          NC2074.2
 080000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -817,7 +817,7 @@
 081900     PERFORM FAIL.                                                NC2074.2
 082000 ADD-WRITE-F2-10.                                                 NC2074.2
 082100     PERFORM PRINT-DETAIL.                                        NC2074.2
-082200*                                                                 NC2074.2
+082200*                                                                         
 082300 ADD-INIT-F2-11.                                                  NC2074.2
 082400     MOVE "ADD-TEST-F2-11 " TO PAR-NAME.                          NC2074.2
 082500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -842,7 +842,7 @@
 084400     PERFORM FAIL.                                                NC2074.2
 084500 ADD-WRITE-F2-11.                                                 NC2074.2
 084600     PERFORM PRINT-DETAIL.                                        NC2074.2
-084700*                                                                 NC2074.2
+084700*                                                                         
 084800 ADD-INIT-F2-12.                                                  NC2074.2
 084900     MOVE "ADD-TEST-F2-12 " TO PAR-NAME.                          NC2074.2
 085000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -867,7 +867,7 @@
 086900     PERFORM FAIL.                                                NC2074.2
 087000 ADD-WRITE-F2-12.                                                 NC2074.2
 087100     PERFORM PRINT-DETAIL.                                        NC2074.2
-087200*                                                                 NC2074.2
+087200*                                                                         
 087300 ADD-INIT-F2-13.                                                  NC2074.2
 087400     MOVE "ADD-TEST-F2-13 " TO PAR-NAME.                          NC2074.2
 087500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -892,7 +892,7 @@
 089400     PERFORM FAIL.                                                NC2074.2
 089500 ADD-WRITE-F2-13.                                                 NC2074.2
 089600     PERFORM PRINT-DETAIL.                                        NC2074.2
-089700*                                                                 NC2074.2
+089700*                                                                         
 089800 ADD-INIT-F2-14.                                                  NC2074.2
 089900     MOVE "ADD-TEST-F2-14 " TO PAR-NAME.                          NC2074.2
 090000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -904,7 +904,7 @@
 090600         TBL-ITEM-1 IN TABLE-LEVEL-1B IN TABLE-LEVEL-2A IN        NC2074.2
 090700         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 090800         GIVING ACCUMULATOR2.                                     NC2074.2
-090900     IF ACCUMULATOR2 EQUAL TO 68                                  NC2074.2
+090900     IF ACCUMULATOR2 EQUAL TO 78                                  NC2074.2
 091000         PERFORM PASS                                             NC2074.2
 091100         GO TO ADD-WRITE-F2-14.                                   NC2074.2
 091200     GO TO ADD-FAIL-F2-14.                                        NC2074.2
@@ -913,11 +913,11 @@
 091500     GO TO ADD-WRITE-F2-14.                                       NC2074.2
 091600 ADD-FAIL-F2-14.                                                  NC2074.2
 091700     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-091800     MOVE 68 TO CORRECT-N.                                        NC2074.2
+091800     MOVE 78 TO CORRECT-N.                                        NC2074.2
 091900     PERFORM FAIL.                                                NC2074.2
 092000 ADD-WRITE-F2-14.                                                 NC2074.2
 092100     PERFORM PRINT-DETAIL.                                        NC2074.2
-092200*                                                                 NC2074.2
+092200*                                                                         
 092300 ADD-INIT-F2-15.                                                  NC2074.2
 092400     MOVE "ADD-TEST-F2-15 " TO PAR-NAME.                          NC2074.2
 092500     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -942,7 +942,7 @@
 094400     PERFORM FAIL.                                                NC2074.2
 094500 ADD-WRITE-F2-15.                                                 NC2074.2
 094600     PERFORM PRINT-DETAIL.                                        NC2074.2
-094700*                                                                 NC2074.2
+094700*                                                                         
 094800 ADD-INIT-F2-16.                                                  NC2074.2
 094900     MOVE "ADD-TEST-F2-16 " TO PAR-NAME.                          NC2074.2
 095000     MOVE "QUALIFIED ADDITION" TO FEATURE.                        NC2074.2
@@ -967,7 +967,7 @@
 096900     PERFORM FAIL.                                                NC2074.2
 097000 ADD-WRITE-F2-16.                                                 NC2074.2
 097100     PERFORM PRINT-DETAIL.                                        NC2074.2
-097200*                                                                 NC2074.2
+097200*                                                                         
 097300 ADD-INIT-F3-17.                                                  NC2074.2
 097400     MOVE "ADD-TEST-F3-17" TO PAR-NAME.                           NC2074.2
 097500     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -991,7 +991,7 @@
 099300     PERFORM FAIL.                                                NC2074.2
 099400 ADD-WRITE-F3-17.                                                 NC2074.2
 099500     PERFORM PRINT-DETAIL.                                        NC2074.2
-099600*                                                                 NC2074.2
+099600*                                                                         
 099700 ADD-INIT-F3-18.                                                  NC2074.2
 099800     MOVE "ADD-TEST-F3-18" TO PAR-NAME.                           NC2074.2
 099900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1013,7 +1013,7 @@
 101500     PERFORM FAIL.                                                NC2074.2
 101600 ADD-WRITE-F3-18.                                                 NC2074.2
 101700     PERFORM PRINT-DETAIL.                                        NC2074.2
-101800*                                                                 NC2074.2
+101800*                                                                         
 101900 ADD-INIT-F3-19.                                                  NC2074.2
 102000     MOVE "ADD-TEST-F3-19" TO PAR-NAME.                           NC2074.2
 102100     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1036,7 +1036,7 @@
 103800     PERFORM FAIL.                                                NC2074.2
 103900 ADD-WRITE-F3-19.                                                 NC2074.2
 104000     PERFORM PRINT-DETAIL.                                        NC2074.2
-104100*                                                                 NC2074.2
+104100*                                                                         
 104200 ADD-INIT-F3-20.                                                  NC2074.2
 104300     MOVE "ADD-TEST-F3-20" TO PAR-NAME.                           NC2074.2
 104400     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1059,7 +1059,7 @@
 106100     PERFORM FAIL.                                                NC2074.2
 106200 ADD-WRITE-F3-20.                                                 NC2074.2
 106300     PERFORM PRINT-DETAIL.                                        NC2074.2
-106400*                                                                 NC2074.2
+106400*                                                                         
 106500 ADD-INIT-F3-21.                                                  NC2074.2
 106600     MOVE "ADD-TEST-F3-21" TO PAR-NAME.                           NC2074.2
 106700     MOVE "       CORRESPONDING" TO FEATURE.                      NC2074.2
@@ -1082,7 +1082,7 @@
 108400     PERFORM FAIL.                                                NC2074.2
 108500 ADD-WRITE-F3-21.                                                 NC2074.2
 108600     PERFORM PRINT-DETAIL.                                        NC2074.2
-108700*                                                                 NC2074.2
+108700*                                                                         
 108800 ADD-INIT-F3-22.                                                  NC2074.2
 108900     MOVE "ADD-TEST-F3-22" TO PAR-NAME.                           NC2074.2
 109000     MOVE "       CORRESPONDING" TO FEATURE.                      NC2074.2
@@ -1105,7 +1105,7 @@
 110700     PERFORM FAIL.                                                NC2074.2
 110800 ADD-WRITE-F3-22.                                                 NC2074.2
 110900     PERFORM PRINT-DETAIL.                                        NC2074.2
-111000*                                                                 NC2074.2
+111000*                                                                         
 111100 ADD-INIT-F3-23.                                                  NC2074.2
 111200     MOVE "ADD-TEST-F3-23" TO PAR-NAME.                           NC2074.2
 111300     MOVE "       CORRESPONDING" TO FEATURE.                      NC2074.2
@@ -1128,7 +1128,7 @@
 113000     PERFORM FAIL.                                                NC2074.2
 113100 ADD-WRITE-F3-23.                                                 NC2074.2
 113200     PERFORM PRINT-DETAIL.                                        NC2074.2
-113300*                                                                 NC2074.2
+113300*                                                                         
 113400 ADD-INIT-F3-24.                                                  NC2074.2
 113500     MOVE "ADD-TEST-F3-24" TO PAR-NAME.                           NC2074.2
 113600     MOVE "       CORRESPONDING" TO FEATURE.                      NC2074.2
@@ -1152,9 +1152,9 @@
 115400 ADD-WRITE-F3-24.                                                 NC2074.2
 115500     PERFORM PRINT-DETAIL.                                        NC2074.2
 115600     PERFORM END-ROUTINE.                                         NC2074.2
-115700*                                                                 NC2074.2
+115700*                                                                         
 115800 ADD-INIT-F1-25.                                                  NC2074.2
-115900*    ===-->  48 LEVELS OF QUALIFICATION  <--===                   NC2074.2
+115900*                                                                         
 116000     MOVE   "ADD-TEST-F1-25 " TO PAR-NAME.                        NC2074.2
 116100     MOVE   "VI-2 1.3.2" TO ANSI-REFERENCE.                       NC2074.2
 116200     MOVE    ZERO TO ACCUMULATOR2.                                NC2074.2
@@ -1199,7 +1199,7 @@
 120100     PERFORM FAIL.                                                NC2074.2
 120200 ADD-WRITE-F1-25.                                                 NC2074.2
 120300     PERFORM PRINT-DETAIL.                                        NC2074.2
-120400*                                                                 NC2074.2
+120400*                                                                         
 120500 SUB-INIT-F2-1.                                                   NC2074.2
 120600     MOVE "SUB-TEST-F2-1  " TO PAR-NAME.                          NC2074.2
 120700     MOVE "QUALIFIED SUBTRACT" TO FEATURE.                        NC2074.2
@@ -1225,7 +1225,7 @@
 122700     PERFORM FAIL.                                                NC2074.2
 122800 SUB-WRITE-F2-1.                                                  NC2074.2
 122900     PERFORM PRINT-DETAIL.                                        NC2074.2
-123000*                                                                 NC2074.2
+123000*                                                                         
 123100 SUB-INIT-F2-2.                                                   NC2074.2
 123200     MOVE "SUB-TEST-F2-2  " TO PAR-NAME.                          NC2074.2
 123300     MOVE "QUALIFIED SUBTRACT" TO FEATURE.                        NC2074.2
@@ -1250,7 +1250,7 @@
 125200     PERFORM FAIL.                                                NC2074.2
 125300 SUB-WRITE-F2-2.                                                  NC2074.2
 125400     PERFORM PRINT-DETAIL.                                        NC2074.2
-125500*                                                                 NC2074.2
+125500*                                                                         
 125600 SUB-INIT-F2-3.                                                   NC2074.2
 125700     MOVE "SUB-TEST-F2-3  " TO PAR-NAME.                          NC2074.2
 125800     MOVE "QUALIFIED SUBTRACT" TO FEATURE.                        NC2074.2
@@ -1275,7 +1275,7 @@
 127700     PERFORM FAIL.                                                NC2074.2
 127800 SUB-WRITE-F2-3.                                                  NC2074.2
 127900     PERFORM PRINT-DETAIL.                                        NC2074.2
-128000*                                                                 NC2074.2
+128000*                                                                         
 128100 SUB-INIT-F2-4.                                                   NC2074.2
 128200     MOVE "SUB-TEST-F2-4  " TO PAR-NAME.                          NC2074.2
 128300     MOVE "QUALIFIED SUBTRACT" TO FEATURE.                        NC2074.2
@@ -1300,7 +1300,7 @@
 130200     PERFORM FAIL.                                                NC2074.2
 130300 SUB-WRITE-F2-4.                                                  NC2074.2
 130400     PERFORM PRINT-DETAIL.                                        NC2074.2
-130500*                                                                 NC2074.2
+130500*                                                                         
 130600 SUB-INIT-F2-5.                                                   NC2074.2
 130700     MOVE "QUALIFIED SUBTRACT" TO FEATURE.                        NC2074.2
 130800     MOVE "SUB-TEST-F2-5  " TO PAR-NAME.                          NC2074.2
@@ -1325,7 +1325,7 @@
 132700     PERFORM FAIL.                                                NC2074.2
 132800 SUB-WRITE-F2-5.                                                  NC2074.2
 132900     PERFORM PRINT-DETAIL.                                        NC2074.2
-133000*                                                                 NC2074.2
+133000*                                                                         
 133100 SUB-INIT-F2-6.                                                   NC2074.2
 133200     MOVE "SUB-TEST-F2-6  " TO PAR-NAME.                          NC2074.2
 133300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1349,7 +1349,7 @@
 135100     PERFORM FAIL.                                                NC2074.2
 135200 SUB-WRITE-F2-6.                                                  NC2074.2
 135300     PERFORM PRINT-DETAIL.                                        NC2074.2
-135400*                                                                 NC2074.2
+135400*                                                                         
 135500 SUB-INIT-F2-7.                                                   NC2074.2
 135600     MOVE "SUB-TEST-F2-7  " TO PAR-NAME.                          NC2074.2
 135700     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1373,7 +1373,7 @@
 137500     PERFORM FAIL.                                                NC2074.2
 137600 SUB-WRITE-F2-7.                                                  NC2074.2
 137700     PERFORM PRINT-DETAIL.                                        NC2074.2
-137800*                                                                 NC2074.2
+137800*                                                                         
 137900 SUB-INIT-F2-8.                                                   NC2074.2
 138000     MOVE "SUB-TEST-F2-8  " TO PAR-NAME.                          NC2074.2
 138100     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1397,7 +1397,7 @@
 139900     PERFORM FAIL.                                                NC2074.2
 140000 SUB-WRITE-F2-8.                                                  NC2074.2
 140100     PERFORM PRINT-DETAIL.                                        NC2074.2
-140200*                                                                 NC2074.2
+140200*                                                                         
 140300 SUB-INIT-F2-9.                                                   NC2074.2
 140400     MOVE "SUB-TEST-F2-9  " TO PAR-NAME.                          NC2074.2
 140500     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1421,7 +1421,7 @@
 142300     PERFORM FAIL.                                                NC2074.2
 142400 SUB-WRITE-F2-9.                                                  NC2074.2
 142500     PERFORM PRINT-DETAIL.                                        NC2074.2
-142600*                                                                 NC2074.2
+142600*                                                                         
 142700 SUB-INIT-F2-10.                                                  NC2074.2
 142800     MOVE "SUB-TEST-F2-10 " TO PAR-NAME.                          NC2074.2
 142900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1445,7 +1445,7 @@
 144700     PERFORM FAIL.                                                NC2074.2
 144800 SUB-WRITE-F2-10.                                                 NC2074.2
 144900     PERFORM PRINT-DETAIL.                                        NC2074.2
-145000*                                                                 NC2074.2
+145000*                                                                         
 145100 SUB-INIT-F2-11.                                                  NC2074.2
 145200     MOVE "SUB-TEST-F2-11 " TO PAR-NAME.                          NC2074.2
 145300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1456,7 +1456,7 @@
 145800         FROM TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2B OF   NC2074.2
 145900         TABLE-LEVEL-3A IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 146000         GIVING ACCUMULATOR2.                                     NC2074.2
-146100     IF ACCUMULATOR2 EQUAL TO 0                                   NC2074.2
+146100     IF ACCUMULATOR2 EQUAL TO 6                                   NC2074.2
 146200         PERFORM PASS                                             NC2074.2
 146300         GO TO SUB-WRITE-F2-11.                                   NC2074.2
 146400     GO TO SUB-FAIL-F2-11.                                        NC2074.2
@@ -1464,12 +1464,12 @@
 146600     PERFORM DE-LETE.                                             NC2074.2
 146700     GO TO SUB-WRITE-F2-11.                                       NC2074.2
 146800 SUB-FAIL-F2-11.                                                  NC2074.2
-146900     MOVE 0 TO CORRECT-N.                                         NC2074.2
+146900     MOVE 6 TO CORRECT-N.                                         NC2074.2
 147000     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
 147100     PERFORM FAIL.                                                NC2074.2
 147200 SUB-WRITE-F2-11.                                                 NC2074.2
 147300     PERFORM PRINT-DETAIL.                                        NC2074.2
-147400*                                                                 NC2074.2
+147400*                                                                         
 147500 SUB-INIT-F2-12.                                                  NC2074.2
 147600     MOVE "SUB-TEST-F2-12 " TO PAR-NAME.                          NC2074.2
 147700     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1493,7 +1493,7 @@
 149500     PERFORM FAIL.                                                NC2074.2
 149600 SUB-WRITE-F2-12.                                                 NC2074.2
 149700     PERFORM PRINT-DETAIL.                                        NC2074.2
-149800*                                                                 NC2074.2
+149800*                                                                         
 149900 SUB-INIT-F2-13.                                                  NC2074.2
 150000     MOVE "SUB-TEST-F2-13 " TO PAR-NAME.                          NC2074.2
 150100     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1517,7 +1517,7 @@
 151900     PERFORM FAIL.                                                NC2074.2
 152000 SUB-WRITE-F2-13.                                                 NC2074.2
 152100     PERFORM PRINT-DETAIL.                                        NC2074.2
-152200*                                                                 NC2074.2
+152200*                                                                         
 152300 SUB-INIT-F2-14.                                                  NC2074.2
 152400     MOVE "SUB-TEST-F2-14 " TO PAR-NAME.                          NC2074.2
 152500     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1541,7 +1541,7 @@
 154300     PERFORM FAIL.                                                NC2074.2
 154400 SUB-WRITE-F2-14.                                                 NC2074.2
 154500     PERFORM PRINT-DETAIL.                                        NC2074.2
-154600*                                                                 NC2074.2
+154600*                                                                         
 154700 SUB-INIT-F2-15.                                                  NC2074.2
 154800     MOVE "SUB-TEST-F2-15 " TO PAR-NAME.                          NC2074.2
 154900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1565,7 +1565,7 @@
 156700     PERFORM FAIL.                                                NC2074.2
 156800 SUB-WRITE-F2-15.                                                 NC2074.2
 156900     PERFORM PRINT-DETAIL.                                        NC2074.2
-157000*                                                                 NC2074.2
+157000*                                                                         
 157100 SUB-INIT-F2-16.                                                  NC2074.2
 157200     MOVE "SUB-TEST-F2-16 " TO PAR-NAME.                          NC2074.2
 157300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1589,7 +1589,7 @@
 159100     PERFORM FAIL.                                                NC2074.2
 159200 SUB-WRITE-F2-16.                                                 NC2074.2
 159300     PERFORM PRINT-DETAIL.                                        NC2074.2
-159400*                                                                 NC2074.2
+159400*                                                                         
 159500 SUB-INIT-F3-17.                                                  NC2074.2
 159600     MOVE "SUB-TEST-F3-17" TO PAR-NAME.                           NC2074.2
 159700     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1613,7 +1613,7 @@
 161500     PERFORM FAIL.                                                NC2074.2
 161600 SUB-WRITE-F3-17.                                                 NC2074.2
 161700     PERFORM PRINT-DETAIL.                                        NC2074.2
-161800*                                                                 NC2074.2
+161800*                                                                         
 161900 SUB-INIT-F3-18.                                                  NC2074.2
 162000     MOVE "SUB-TEST-F3-18" TO PAR-NAME.                           NC2074.2
 162100     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1635,7 +1635,7 @@
 163700     PERFORM FAIL.                                                NC2074.2
 163800 SUB-WRITE-F3-18.                                                 NC2074.2
 163900     PERFORM PRINT-DETAIL.                                        NC2074.2
-164000*                                                                 NC2074.2
+164000*                                                                         
 164100 SUB-INIT-F3-19.                                                  NC2074.2
 164200     MOVE "SUB-TEST-F3-19" TO PAR-NAME.                           NC2074.2
 164300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1657,7 +1657,7 @@
 165900     PERFORM FAIL.                                                NC2074.2
 166000 SUB-WRITE-F3-19.                                                 NC2074.2
 166100     PERFORM PRINT-DETAIL.                                        NC2074.2
-166200*                                                                 NC2074.2
+166200*                                                                         
 166300 SUB-INIT-F3-20.                                                  NC2074.2
 166400     MOVE "SUB-TEST-F3-20" TO PAR-NAME.                           NC2074.2
 166500     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1679,7 +1679,7 @@
 168100     PERFORM FAIL.                                                NC2074.2
 168200 SUB-WRITE-F3-20.                                                 NC2074.2
 168300     PERFORM PRINT-DETAIL.                                        NC2074.2
-168400*                                                                 NC2074.2
+168400*                                                                         
 168500 SUB-INIT-F3-21.                                                  NC2074.2
 168600     MOVE "SUB-TEST-F3-21" TO PAR-NAME.                           NC2074.2
 168700     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1701,7 +1701,7 @@
 170300     PERFORM FAIL.                                                NC2074.2
 170400 SUB-WRITE-F3-21.                                                 NC2074.2
 170500     PERFORM PRINT-DETAIL.                                        NC2074.2
-170600*                                                                 NC2074.2
+170600*                                                                         
 170700 SUB-INIT-F3-22.                                                  NC2074.2
 170800     MOVE "SUB-TEST-F3-22" TO PAR-NAME.                           NC2074.2
 170900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1723,7 +1723,7 @@
 172500     PERFORM FAIL.                                                NC2074.2
 172600 SUB-WRITE-F3-22.                                                 NC2074.2
 172700     PERFORM PRINT-DETAIL.                                        NC2074.2
-172800*                                                                 NC2074.2
+172800*                                                                         
 172900 SUB-INIT-F3-23.                                                  NC2074.2
 173000     MOVE "SUB-TEST-F3-23" TO PAR-NAME.                           NC2074.2
 173100     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1745,7 +1745,7 @@
 174700     PERFORM FAIL.                                                NC2074.2
 174800 SUB-WRITE-F3-23.                                                 NC2074.2
 174900     PERFORM PRINT-DETAIL.                                        NC2074.2
-175000*                                                                 NC2074.2
+175000*                                                                         
 175100 SUB-INIT-F3-24.                                                  NC2074.2
 175200     MOVE "SUB-TEST-F3-24" TO PAR-NAME.                           NC2074.2
 175300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -1767,9 +1767,9 @@
 176900     PERFORM FAIL.                                                NC2074.2
 177000 SUB-WRITE-F3-24.                                                 NC2074.2
 177100     PERFORM PRINT-DETAIL.                                        NC2074.2
-177200*                                                                 NC2074.2
+177200*                                                                         
 177300 SUB-INIT-F2-25.                                                  NC2074.2
-177400*    ===-->  48 LEVELS OF QUALIFICATION  <--===                   NC2074.2
+177400*                                                                         
 177500     MOVE   "SUB-TEST-F2-25 " TO PAR-NAME.                        NC2074.2
 177600     MOVE   "VI-2 1.3.2" TO ANSI-REFERENCE.                       NC2074.2
 177700     MOVE    ZERO TO ACCUMULATOR1.                                NC2074.2
@@ -1816,7 +1816,7 @@
 181800 SUB-WRITE-F2-25.                                                 NC2074.2
 181900     PERFORM PRINT-DETAIL.                                        NC2074.2
 182000     PERFORM END-ROUTINE.                                         NC2074.2
-182100*                                                                 NC2074.2
+182100*                                                                         
 182200 MPY-INIT-F2-1.                                                   NC2074.2
 182300     MOVE "MPY-TEST-F2-1  " TO PAR-NAME.                          NC2074.2
 182400     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1841,7 +1841,7 @@
 184300     PERFORM FAIL.                                                NC2074.2
 184400 MPY-WRITE-F2-1.                                                  NC2074.2
 184500     PERFORM PRINT-DETAIL.                                        NC2074.2
-184600*                                                                 NC2074.2
+184600*                                                                         
 184700 MPY-INIT-F2-2.                                                   NC2074.2
 184800     MOVE "MPY-TEST-F2-2  " TO PAR-NAME.                          NC2074.2
 184900     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1866,7 +1866,7 @@
 186800     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
 186900 MPY-WRITE-F2-2.                                                  NC2074.2
 187000     PERFORM PRINT-DETAIL.                                        NC2074.2
-187100*                                                                 NC2074.2
+187100*                                                                         
 187200 MPY-INIT-F2-3.                                                   NC2074.2
 187300     MOVE "MPY-TEST-F2-3  " TO PAR-NAME.                          NC2074.2
 187400     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1889,7 +1889,7 @@
 189100     PERFORM FAIL.                                                NC2074.2
 189200 MPY-WRITE-F2-3.                                                  NC2074.2
 189300     PERFORM PRINT-DETAIL.                                        NC2074.2
-189400*                                                                 NC2074.2
+189400*                                                                         
 189500 MPY-INIT-F2-4.                                                   NC2074.2
 189600     MOVE "MPY-TEST-F2-4  " TO PAR-NAME.                          NC2074.2
 189700     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1912,7 +1912,7 @@
 191400     PERFORM FAIL.                                                NC2074.2
 191500 MPY-WRITE-F2-4.                                                  NC2074.2
 191600     PERFORM PRINT-DETAIL.                                        NC2074.2
-191700*                                                                 NC2074.2
+191700*                                                                         
 191800 MPY-INIT-F2-5.                                                   NC2074.2
 191900     MOVE "MPY-TEST-F2-5  " TO PAR-NAME.                          NC2074.2
 192000     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1924,7 +1924,7 @@
 192600         BY   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 192700         TABLE-LEVEL-3B IN TABLE-LEVEL-4A OF TABLE-LEVEL-5A       NC2074.2
 192800     GIVING ACCUMULATOR1.                                         NC2074.2
-192900     IF ACCUMULATOR1 EQUAL TO 75                                  NC2074.2
+192900     IF ACCUMULATOR1 EQUAL TO 28                                  NC2074.2
 193000         PERFORM PASS                                             NC2074.2
 193100         GO TO MPY-WRITE-F2-5.                                    NC2074.2
 193200     GO TO MPY-FAIL-F2-5.                                         NC2074.2
@@ -1933,11 +1933,11 @@
 193500     GO TO MPY-WRITE-F2-5.                                        NC2074.2
 193600 MPY-FAIL-F2-5.                                                   NC2074.2
 193700     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
-193800     MOVE 75 TO CORRECT-N.                                        NC2074.2
+193800     MOVE 28 TO CORRECT-N.                                        NC2074.2
 193900     PERFORM FAIL.                                                NC2074.2
 194000 MPY-WRITE-F2-5.                                                  NC2074.2
 194100     PERFORM PRINT-DETAIL.                                        NC2074.2
-194200*                                                                 NC2074.2
+194200*                                                                         
 194300 MPY-INIT-F2-6.                                                   NC2074.2
 194400     MOVE "MPY-TEST-F2-6  " TO PAR-NAME.                          NC2074.2
 194500     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1962,7 +1962,7 @@
 196400     PERFORM FAIL.                                                NC2074.2
 196500 MPY-WRITE-F2-6.                                                  NC2074.2
 196600     PERFORM PRINT-DETAIL.                                        NC2074.2
-196700*                                                                 NC2074.2
+196700*                                                                         
 196800 MPY-INIT-F2-7.                                                   NC2074.2
 196900     MOVE "MPY-TEST-F2-7  " TO PAR-NAME.                          NC2074.2
 197000     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -1985,7 +1985,7 @@
 198700     PERFORM FAIL.                                                NC2074.2
 198800 MPY-WRITE-F2-7.                                                  NC2074.2
 198900     PERFORM PRINT-DETAIL.                                        NC2074.2
-199000*                                                                 NC2074.2
+199000*                                                                         
 199100 MPY-INIT-F2-8.                                                   NC2074.2
 199200     MOVE "MPY-TEST-F2-8  " TO PAR-NAME.                          NC2074.2
 199300     MOVE "QUALIFIED MULTIPLY" TO FEATURE.                        NC2074.2
@@ -2008,7 +2008,7 @@
 201000     PERFORM FAIL.                                                NC2074.2
 201100 MPY-WRITE-F2-8.                                                  NC2074.2
 201200     PERFORM PRINT-DETAIL.                                        NC2074.2
-201300*                                                                 NC2074.2
+201300*                                                                         
 201400 MPY-INIT-F2-9.                                                   NC2074.2
 201500     MOVE "MPY-TEST-F2-9  " TO PAR-NAME.                          NC2074.2
 201600     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2031,7 +2031,7 @@
 203300     PERFORM FAIL.                                                NC2074.2
 203400 MPY-WRITE-F2-9.                                                  NC2074.2
 203500     PERFORM PRINT-DETAIL.                                        NC2074.2
-203600*                                                                 NC2074.2
+203600*                                                                         
 203700 MPY-INIT-F2-10.                                                  NC2074.2
 203800     MOVE "MPY-TEST-F2-10 " TO PAR-NAME.                          NC2074.2
 203900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2054,7 +2054,7 @@
 205600     PERFORM FAIL.                                                NC2074.2
 205700 MPY-WRITE-F2-10.                                                 NC2074.2
 205800     PERFORM PRINT-DETAIL.                                        NC2074.2
-205900*                                                                 NC2074.2
+205900*                                                                         
 206000 MPY-INIT-F2-11.                                                  NC2074.2
 206100     MOVE "MPY-TEST-F2-11 " TO PAR-NAME.                          NC2074.2
 206200     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2079,7 +2079,7 @@
 208100     PERFORM FAIL.                                                NC2074.2
 208200 MPY-WRITE-F2-11.                                                 NC2074.2
 208300     PERFORM PRINT-DETAIL.                                        NC2074.2
-208400*                                                                 NC2074.2
+208400*                                                                         
 208500 MPY-INIT-F2-12.                                                  NC2074.2
 208600     MOVE "MPY-TEST-F2-12 " TO PAR-NAME.                          NC2074.2
 208700     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2104,7 +2104,7 @@
 210600     PERFORM FAIL.                                                NC2074.2
 210700 MPY-WRITE-F2-12.                                                 NC2074.2
 210800     PERFORM PRINT-DETAIL.                                        NC2074.2
-210900*                                                                 NC2074.2
+210900*                                                                         
 211000 MPY-INIT-F2-13.                                                  NC2074.2
 211100     MOVE "MPY-TEST-F2-13 " TO PAR-NAME.                          NC2074.2
 211200     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2127,7 +2127,7 @@
 212900     PERFORM FAIL.                                                NC2074.2
 213000 MPY-WRITE-F2-13.                                                 NC2074.2
 213100     PERFORM PRINT-DETAIL.                                        NC2074.2
-213200*                                                                 NC2074.2
+213200*                                                                         
 213300 MPY-INIT-F2-14.                                                  NC2074.2
 213400     MOVE "MPY-TEST-F2-14 " TO PAR-NAME.                          NC2074.2
 213500     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2150,7 +2150,7 @@
 215200     PERFORM FAIL.                                                NC2074.2
 215300 MPY-WRITE-F2-14.                                                 NC2074.2
 215400     PERFORM PRINT-DETAIL.                                        NC2074.2
-215500*                                                                 NC2074.2
+215500*                                                                         
 215600 MPY-INIT-F2-15.                                                  NC2074.2
 215700     MOVE "MPY-TEST-F2-15 " TO PAR-NAME.                          NC2074.2
 215800     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2162,7 +2162,7 @@
 216400         BY   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2B OF   NC2074.2
 216500         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 216600     GIVING ACCUMULATOR2.                                         NC2074.2
-216700     IF ACCUMULATOR2 EQUAL TO 229                                 NC2074.2
+216700     IF ACCUMULATOR2 EQUAL TO 425                                 NC2074.2
 216800         PERFORM PASS                                             NC2074.2
 216900         GO TO MPY-WRITE-F2-15.                                   NC2074.2
 217000     GO TO MPY-FAIL-F2-15.                                        NC2074.2
@@ -2171,11 +2171,11 @@
 217300     GO TO MPY-WRITE-F2-15.                                       NC2074.2
 217400 MPY-FAIL-F2-15.                                                  NC2074.2
 217500     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-217600     MOVE 229 TO CORRECT-N.                                       NC2074.2
+217600     MOVE 425 TO CORRECT-N.                                       NC2074.2
 217700     PERFORM FAIL.                                                NC2074.2
 217800 MPY-WRITE-F2-15.                                                 NC2074.2
 217900     PERFORM PRINT-DETAIL.                                        NC2074.2
-218000*                                                                 NC2074.2
+218000*                                                                         
 218100 MPY-INIT-F2-16.                                                  NC2074.2
 218200     MOVE "MPY-TEST-F2-16 " TO PAR-NAME.                          NC2074.2
 218300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2074.2
@@ -2200,9 +2200,9 @@
 220200     PERFORM FAIL.                                                NC2074.2
 220300 MPY-WRITE-F2-16.                                                 NC2074.2
 220400     PERFORM PRINT-DETAIL.                                        NC2074.2
-220500*                                                                 NC2074.2
+220500*                                                                         
 220600 MPY-INIT-F2-17.                                                  NC2074.2
-220700*    ===-->  48 LEVELS OF QUALIFICATION  <--===                   NC2074.2
+220700*                                                                         
 220800     MOVE   "MPY-TEST-F2-17 " TO PAR-NAME.                        NC2074.2
 220900     MOVE   "VI-2 1.3.2" TO ANSI-REFERENCE.                       NC2074.2
 221000     MOVE    ZERO TO ACCUMULATOR1.                                NC2074.2
@@ -2250,7 +2250,7 @@
 225200 MPY-WRITE-F2-17.                                                 NC2074.2
 225300     PERFORM PRINT-DETAIL.                                        NC2074.2
 225400     PERFORM END-ROUTINE.                                         NC2074.2
-225500*                                                                 NC2074.2
+225500*                                                                         
 225600 DIV-INIT-F3-1.                                                   NC2074.2
 225700     MOVE "DIV-TEST-F3-1  " TO PAR-NAME                           NC2074.2
 225800     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2275,7 +2275,7 @@
 227700     PERFORM FAIL.                                                NC2074.2
 227800 DIV-WRITE-F3-1.                                                  NC2074.2
 227900     PERFORM PRINT-DETAIL.                                        NC2074.2
-228000*                                                                 NC2074.2
+228000*                                                                         
 228100 DIV-INIT-F3-2.                                                   NC2074.2
 228200     MOVE "DIV-TEST-F3-2  " TO PAR-NAME                           NC2074.2
 228300     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2300,7 +2300,7 @@
 230200     PERFORM FAIL.                                                NC2074.2
 230300 DIV-WRITE-F3-2.                                                  NC2074.2
 230400     PERFORM PRINT-DETAIL.                                        NC2074.2
-230500*                                                                 NC2074.2
+230500*                                                                         
 230600 DIV-INIT-F3-3.                                                   NC2074.2
 230700     MOVE "DIV-TEST-F3-3  " TO PAR-NAME                           NC2074.2
 230800     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2323,7 +2323,7 @@
 232500     PERFORM FAIL.                                                NC2074.2
 232600 DIV-WRITE-F3-3.                                                  NC2074.2
 232700     PERFORM PRINT-DETAIL.                                        NC2074.2
-232800*                                                                 NC2074.2
+232800*                                                                         
 232900 DIV-INIT-F3-4.                                                   NC2074.2
 233000     MOVE "DIV-TEST-F3-4  " TO PAR-NAME                           NC2074.2
 233100     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2346,7 +2346,7 @@
 234800     PERFORM FAIL.                                                NC2074.2
 234900 DIV-WRITE-F3-4.                                                  NC2074.2
 235000     PERFORM PRINT-DETAIL.                                        NC2074.2
-235100*                                                                 NC2074.2
+235100*                                                                         
 235200 DIV-INIT-F3-5.                                                   NC2074.2
 235300     MOVE "DIV-TEST-F3-5  " TO PAR-NAME                           NC2074.2
 235400     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2371,7 +2371,7 @@
 237300     PERFORM FAIL.                                                NC2074.2
 237400 DIV-WRITE-F3-5.                                                  NC2074.2
 237500     PERFORM PRINT-DETAIL.                                        NC2074.2
-237600*                                                                 NC2074.2
+237600*                                                                         
 237700 DIV-INIT-F3-6.                                                   NC2074.2
 237800     MOVE "DIV-TEST-F3-6  " TO PAR-NAME                           NC2074.2
 237900     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2396,7 +2396,7 @@
 239800     PERFORM FAIL.                                                NC2074.2
 239900 DIV-WRITE-F3-6.                                                  NC2074.2
 240000     PERFORM PRINT-DETAIL.                                        NC2074.2
-240100*                                                                 NC2074.2
+240100*                                                                         
 240200 DIV-INIT-F3-7.                                                   NC2074.2
 240300     MOVE "DIV-TEST-F3-7  " TO PAR-NAME                           NC2074.2
 240400     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2419,7 +2419,7 @@
 242100     PERFORM FAIL.                                                NC2074.2
 242200 DIV-WRITE-F3-7.                                                  NC2074.2
 242300     PERFORM PRINT-DETAIL.                                        NC2074.2
-242400*                                                                 NC2074.2
+242400*                                                                         
 242500 DIV-INIT-F3-8.                                                   NC2074.2
 242600     MOVE "DIV-TEST-F3-8  " TO PAR-NAME                           NC2074.2
 242700     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2442,7 +2442,7 @@
 244400     PERFORM FAIL.                                                NC2074.2
 244500 DIV-WRITE-F3-8.                                                  NC2074.2
 244600     PERFORM PRINT-DETAIL.                                        NC2074.2
-244700*                                                                 NC2074.2
+244700*                                                                         
 244800 DIV-INIT-F3-9.                                                   NC2074.2
 244900     MOVE "DIV-TEST-F3-9  " TO PAR-NAME                           NC2074.2
 245000     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2465,7 +2465,7 @@
 246700     PERFORM FAIL.                                                NC2074.2
 246800 DIV-WRITE-F3-9.                                                  NC2074.2
 246900     PERFORM PRINT-DETAIL.                                        NC2074.2
-247000*                                                                 NC2074.2
+247000*                                                                         
 247100 DIV-INIT-F3-10.                                                  NC2074.2
 247200     MOVE "DIV-TEST-F3-10 " TO PAR-NAME                           NC2074.2
 247300     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2488,7 +2488,7 @@
 249000     PERFORM FAIL.                                                NC2074.2
 249100 DIV-WRITE-F3-10.                                                 NC2074.2
 249200     PERFORM PRINT-DETAIL.                                        NC2074.2
-249300*                                                                 NC2074.2
+249300*                                                                         
 249400 DIV-INIT-F3-11.                                                  NC2074.2
 249500     MOVE "DIV-TEST-F3-11 " TO PAR-NAME                           NC2074.2
 249600     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2513,7 +2513,7 @@
 251500     PERFORM FAIL.                                                NC2074.2
 251600 DIV-WRITE-F3-11.                                                 NC2074.2
 251700     PERFORM PRINT-DETAIL.                                        NC2074.2
-251800*                                                                 NC2074.2
+251800*                                                                         
 251900 DIV-INIT-F3-12.                                                  NC2074.2
 252000     MOVE "DIV-TEST-F3-12 " TO PAR-NAME                           NC2074.2
 252100     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2538,7 +2538,7 @@
 254000     PERFORM FAIL.                                                NC2074.2
 254100 DIV-WRITE-F3-12.                                                 NC2074.2
 254200     PERFORM PRINT-DETAIL.                                        NC2074.2
-254300*                                                                 NC2074.2
+254300*                                                                         
 254400 DIV-INIT-F3-13.                                                  NC2074.2
 254500     MOVE "DIV-TEST-F3-13 " TO PAR-NAME                           NC2074.2
 254600     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2548,7 +2548,7 @@
 255000     DIVIDE   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 255100         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A BY 13 NC2074.2
 255200     GIVING ACCUMULATOR2.                                         NC2074.2
-255300     IF ACCUMULATOR2 EQUAL TO 3                                   NC2074.2
+255300     IF ACCUMULATOR2 EQUAL TO 9                                   NC2074.2
 255400         PERFORM PASS                                             NC2074.2
 255500         GO TO DIV-WRITE-F3-13.                                   NC2074.2
 255600     GO TO DIV-FAIL-F3-13.                                        NC2074.2
@@ -2556,12 +2556,12 @@
 255800     PERFORM DE-LETE.                                             NC2074.2
 255900     GO TO DIV-WRITE-F3-13.                                       NC2074.2
 256000 DIV-FAIL-F3-13.                                                  NC2074.2
-256100     MOVE 3 TO CORRECT-N.                                         NC2074.2
+256100     MOVE 9 TO CORRECT-N.                                         NC2074.2
 256200     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
 256300     PERFORM FAIL.                                                NC2074.2
 256400 DIV-WRITE-F3-13.                                                 NC2074.2
 256500     PERFORM PRINT-DETAIL.                                        NC2074.2
-256600*                                                                 NC2074.2
+256600*                                                                         
 256700 DIV-INIT-F3-14.                                                  NC2074.2
 256800     MOVE "DIV-TEST-F3-14 " TO PAR-NAME                           NC2074.2
 256900     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2584,7 +2584,7 @@
 258600     PERFORM FAIL.                                                NC2074.2
 258700 DIV-WRITE-F3-14.                                                 NC2074.2
 258800     PERFORM PRINT-DETAIL.                                        NC2074.2
-258900*                                                                 NC2074.2
+258900*                                                                         
 259000 DIV-INIT-F3-15.                                                  NC2074.2
 259100     MOVE "DIV-TEST-F3-15 " TO PAR-NAME                           NC2074.2
 259200     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2609,7 +2609,7 @@
 261100     PERFORM FAIL.                                                NC2074.2
 261200 DIV-WRITE-F3-15.                                                 NC2074.2
 261300     PERFORM PRINT-DETAIL.                                        NC2074.2
-261400*                                                                 NC2074.2
+261400*                                                                         
 261500 DIV-INIT-F3-16.                                                  NC2074.2
 261600     MOVE "DIV-TEST-F3-16 " TO PAR-NAME                           NC2074.2
 261700     MOVE "QUALIFIED DIVIDE " TO  FEATURE.                        NC2074.2
@@ -2634,9 +2634,9 @@
 263600     PERFORM FAIL.                                                NC2074.2
 263700 DIV-WRITE-F3-16.                                                 NC2074.2
 263800     PERFORM PRINT-DETAIL.                                        NC2074.2
-263900*                                                                 NC2074.2
+263900*                                                                         
 264000 DIV-INIT-F3-17.                                                  NC2074.2
-264100*    ===-->  48 LEVELS OF QUALIFICATION  <--===                   NC2074.2
+264100*                                                                         
 264200     MOVE   "DIV-TEST-F3-17 " TO PAR-NAME.                        NC2074.2
 264300     MOVE   "VI-2 1.3.2" TO ANSI-REFERENCE.                       NC2074.2
 264400     MOVE    ZERO TO ACCUMULATOR1.                                NC2074.2
@@ -2683,9 +2683,9 @@
 268500 DIV-WRITE-F3-17.                                                 NC2074.2
 268600     PERFORM PRINT-DETAIL.                                        NC2074.2
 268700     PERFORM END-ROUTINE.                                         NC2074.2
-268800*                                                                 NC2074.2
+268800*                                                                         
 268900 CND-INIT-GF-1.                                                   NC2074.2
-269000*    ===-->  48 LEVELS OF QUALIFICATION  <--===                   NC2074.2
+269000*                                                                         
 269100     MOVE   "CND-TEST-GF-1 " TO PAR-NAME.                         NC2074.2
 269200     MOVE   "VI-2 1.3.2" TO ANSI-REFERENCE.                       NC2074.2
 269300     MOVE   "CONDITION NAME " TO  FEATURE.                        NC2074.2

@@ -16,7 +16,7 @@ TEST RESULT OF IF113A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-OF-DAY       FAIL* F-INTOFDAY-01                                                                               
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000009.000000000  See ref. A-46 2.17                                 
+                                     CORRECT =  000000008.000000000  See ref. A-46 2.17                                 
                                                                                                                         
  INTEGER-OF-DAY       PASS  F-INTOFDAY-02                                                                               
  INTEGER-OF-DAY       PASS  F-INTOFDAY-03                                                                               
@@ -24,12 +24,12 @@ TEST RESULT OF IF113A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-OF-DAY       FAIL* F-INTOFDAY-05                                                                               
                                                                                                                         
                                      COMPUTED=  000000365.000000000                                                     
-                                     CORRECT =  000000325.000000000  See ref. A-46 2.17                                 
+                                     CORRECT =  000000395.000000000  See ref. A-46 2.17                                 
                                                                                                                         
  INTEGER-OF-DAY       FAIL* F-INTOFDAY-06                                                                               
                                                                                                                         
                                      COMPUTED=  000000410.000000000                                                     
-                                     CORRECT =  000000510.000000000  See ref. A-46 2.17                                 
+                                     CORRECT =  000000440.000000000  See ref. A-46 2.17                                 
                                                                                                                         
  INTEGER-OF-DAY       PASS  F-INTOFDAY-07                                                                               
  INTEGER-OF-DAY       PASS  F-INTOFDAY-08                                                                               

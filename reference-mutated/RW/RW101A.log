@@ -14,24 +14,12 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  RW101A
                                                                                                                         
  ***********************************************************************************************************************
  INITIATE REPORT      PASS  INIT-TEST-01                                                                                
- INITIATE REPORT      FAIL* INIT-TEST-02                  PAGE-COUNTER AFTER INITIATE                                   
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000000                                                      
-                                                                                                                        
- FIRST GENERATE       FAIL* GENER-TEST-1                  LINE-COUNTER AFTER FIRST GENER                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000003                                                      
-                                                                                                                        
+ INITIATE REPORT      PASS  INIT-TEST-02                                                                                
+ FIRST GENERATE       PASS  GENER-TEST-1                                                                                
  FIRST GENERATE       PASS  GENER-TEST-2                                                                                
  GENERATE 18 LINES    PASS  GENER-TEST-3                                                                                
  GENERATE 18 LINES    PASS  GENER-TEST-4                                                                                
- LAST GENERATE        FAIL* GENER-TEST-5                  LINE-COUNTER AFTER LAST GENER                                 
-                                                                                                                        
-                                     COMPUTED=  000000000000000020                                                      
-                                     CORRECT =  000000000000000025                                                      
-                                                                                                                        
+ LAST GENERATE        PASS  GENER-TEST-5                                                                                
  LAST GENERATE        PASS  GENER-TEST-6                                                                                
  TERMINATE REPORT           TERM-TEST-01                  CHECK RWCS OUTPUT REPORT                                      
         *** INFORMATION  ***                      1 PAGE REPORT            20 LINES PER PAGE                            
@@ -43,8 +31,8 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  RW101A
                                                                                                                         
                                                     END OF TEST-  RW101A    NTIS DISTRIBUTION COBOL 74                  
                                                                                                                         
-                                                    005 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    008 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

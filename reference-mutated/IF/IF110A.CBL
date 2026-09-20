@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1104.2
 000300     IF110A.                                                      IF1104.2
 000400                                                                  IF1104.2
-000500***********************************************************       IF1104.2
-000600*                                                         *       IF1104.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1104.2
-000800* It contains tests for the Intrinsic Function            *       IF1104.2
-000900* FACTORIAL.                                              *       IF1104.2
-001000*                                                         *       IF1104.2
-001100***********************************************************       IF1104.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1104.2
 001300 CONFIGURATION SECTION.                                           IF1104.2
 001400 SOURCE-COMPUTER.                                                 IF1104.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1104.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1104.2
 002700 WORKING-STORAGE SECTION.                                         IF1104.2
-002800***********************************************************       IF1104.2
-002900* Variables specific to the Intrinsic Function Test IF110A*       IF1104.2
-003000***********************************************************       IF1104.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 5.             IF1104.2
 003200 01  B                   PIC S9(10)          VALUE 7.             IF1104.2
 003300 01  ARG1                PIC S9(10)          VALUE 1.             IF1104.2
@@ -37,9 +37,9 @@
 003700 01  WS-NUM              PIC S9(5)V9(6).                          IF1104.2
 003800 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1104.2
 003900 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1104.2
-004000*                                                                 IF1104.2
-004100**********************************************************        IF1104.2
-004200*                                                                 IF1104.2
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
 004300 01  TEST-RESULTS.                                                IF1104.2
 004400     02 FILLER                   PIC X      VALUE SPACE.          IF1104.2
 004500     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1104.2
@@ -333,16 +333,16 @@
 033300 BAIL-OUT-EX. EXIT.                                               IF1104.2
 033400 CCVS1-EXIT.                                                      IF1104.2
 033500     EXIT.                                                        IF1104.2
-033600********************************************************          IF1104.2
-033700*                                                      *          IF1104.2
-033800*    Intrinsic Function Tests      IF110A - FACTORIAL  *          IF1104.2
-033900*                                                      *          IF1104.2
-034000********************************************************          IF1104.2
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
 034100 SECT-IF110A SECTION.                                             IF1104.2
 034200 F-FACTORIAL-INFO.                                                IF1104.2
 034300     MOVE     "See ref. A-43 2.14" TO ANSI-REFERENCE.             IF1104.2
 034400     MOVE     "FACTORIAL Function" TO FEATURE.                    IF1104.2
-034500*****************TEST (a) ******************************          IF1104.2
+034500*                                                                         
 034600 F-FACTORIAL-01.                                                  IF1104.2
 034700     MOVE ZERO TO WS-NUM.                                         IF1104.2
 034800 F-FACTORIAL-TEST-01.                                             IF1104.2
@@ -360,7 +360,7 @@
 036000 F-FACTORIAL-WRITE-01.                                            IF1104.2
 036100     MOVE "F-FACTORIAL-01" TO PAR-NAME.                           IF1104.2
 036200     PERFORM  PRINT-DETAIL.                                       IF1104.2
-036300*****************TEST (b) ******************************          IF1104.2
+036300*                                                                         
 036400 F-FACTORIAL-02.                                                  IF1104.2
 036500     EVALUATE FUNCTION FACTORIAL(3)                               IF1104.2
 036600     WHEN 6                                                       IF1104.2
@@ -374,7 +374,7 @@
 037400 F-FACTORIAL-WRITE-02.                                            IF1104.2
 037500     MOVE "F-FACTORIAL-02" TO PAR-NAME.                           IF1104.2
 037600     PERFORM  PRINT-DETAIL.                                       IF1104.2
-037700*****************TEST (c) ******************************          IF1104.2
+037700*                                                                         
 037800 F-FACTORIAL-03.                                                  IF1104.2
 037900     IF FUNCTION FACTORIAL(A) = 120 THEN                          IF1104.2
 038000                    PERFORM PASS                                  IF1104.2
@@ -387,16 +387,16 @@
 038700 F-FACTORIAL-WRITE-03.                                            IF1104.2
 038800     MOVE "F-FACTORIAL-03" TO PAR-NAME.                           IF1104.2
 038900     PERFORM  PRINT-DETAIL.                                       IF1104.2
-039000*****************TEST (d) ******************************          IF1104.2
+039000*                                                                         
 039100 F-FACTORIAL-04.                                                  IF1104.2
 039200     MOVE ZERO TO WS-NUM.                                         IF1104.2
 039300 F-FACTORIAL-TEST-04.                                             IF1104.2
 039400     COMPUTE WS-NUM = FUNCTION FACTORIAL(IND(4)).                 IF1104.2
-039500     IF WS-NUM = 4 THEN                                           IF1104.2
+039500     IF WS-NUM = 2 THEN                                           IF1104.2
 039600                    PERFORM PASS                                  IF1104.2
 039700     ELSE                                                         IF1104.2
 039800                    MOVE WS-NUM TO COMPUTED-N                     IF1104.2
-039900                    MOVE 4 TO CORRECT-N                           IF1104.2
+039900                    MOVE 2 TO CORRECT-N                           IF1104.2
 040000                    PERFORM FAIL.                                 IF1104.2
 040100     GO TO F-FACTORIAL-WRITE-04.                                  IF1104.2
 040200 F-FACTORIAL-DELETE-04.                                           IF1104.2
@@ -405,16 +405,16 @@
 040500 F-FACTORIAL-WRITE-04.                                            IF1104.2
 040600     MOVE "F-FACTORIAL-04" TO PAR-NAME.                           IF1104.2
 040700     PERFORM  PRINT-DETAIL.                                       IF1104.2
-040800*****************TEST (e) ******************************          IF1104.2
+040800*                                                                         
 040900 F-FACTORIAL-05.                                                  IF1104.2
 041000     MOVE ZERO TO WS-NUM.                                         IF1104.2
 041100 F-FACTORIAL-TEST-05.                                             IF1104.2
 041200     COMPUTE WS-NUM = FUNCTION FACTORIAL(IND(A)).                 IF1104.2
-041300     IF WS-NUM = 5140 THEN                                        IF1104.2
+041300     IF WS-NUM = 5940 THEN                                        IF1104.2
 041400                    PERFORM PASS                                  IF1104.2
 041500     ELSE                                                         IF1104.2
 041600                    MOVE WS-NUM TO COMPUTED-N                     IF1104.2
-041700                    MOVE 5140 TO CORRECT-N                        IF1104.2
+041700                    MOVE 5940 TO CORRECT-N                        IF1104.2
 041800                    PERFORM FAIL.                                 IF1104.2
 041900     GO TO F-FACTORIAL-WRITE-05.                                  IF1104.2
 042000 F-FACTORIAL-DELETE-05.                                           IF1104.2
@@ -423,17 +423,17 @@
 042300 F-FACTORIAL-WRITE-05.                                            IF1104.2
 042400     MOVE "F-FACTORIAL-05" TO PAR-NAME.                           IF1104.2
 042500     PERFORM  PRINT-DETAIL.                                       IF1104.2
-042600*****************TEST (f) ******************************          IF1104.2
+042600*                                                                         
 042700 F-FACTORIAL-06.                                                  IF1104.2
 042800     MOVE ZERO TO WS-NUM.                                         IF1104.2
 042900 F-FACTORIAL-TEST-06.                                             IF1104.2
 043000     COMPUTE WS-NUM = FUNCTION FACTORIAL(                         IF1104.2
 043100                      FUNCTION FACTORIAL(3)).                     IF1104.2
-043200     IF WS-NUM = 780 THEN                                         IF1104.2
+043200     IF WS-NUM = 820 THEN                                         IF1104.2
 043300                    PERFORM PASS                                  IF1104.2
 043400     ELSE                                                         IF1104.2
 043500                    MOVE WS-NUM TO COMPUTED-N                     IF1104.2
-043600                    MOVE 780 TO CORRECT-N                         IF1104.2
+043600                    MOVE 820 TO CORRECT-N                         IF1104.2
 043700                    PERFORM FAIL.                                 IF1104.2
 043800     GO TO F-FACTORIAL-WRITE-06.                                  IF1104.2
 043900 F-FACTORIAL-DELETE-06.                                           IF1104.2
@@ -442,7 +442,7 @@
 044200 F-FACTORIAL-WRITE-06.                                            IF1104.2
 044300     MOVE "F-FACTORIAL-06" TO PAR-NAME.                           IF1104.2
 044400     PERFORM  PRINT-DETAIL.                                       IF1104.2
-044500*****************TEST (g) ******************************          IF1104.2
+044500*                                                                         
 044600 F-FACTORIAL-07.                                                  IF1104.2
 044700     MOVE ZERO TO WS-NUM.                                         IF1104.2
 044800 F-FACTORIAL-TEST-07.                                             IF1104.2
@@ -460,7 +460,7 @@
 046000 F-FACTORIAL-WRITE-07.                                            IF1104.2
 046100     MOVE "F-FACTORIAL-07" TO PAR-NAME.                           IF1104.2
 046200     PERFORM  PRINT-DETAIL.                                       IF1104.2
-046300*****************TEST (h) ******************************          IF1104.2
+046300*                                                                         
 046400 F-FACTORIAL-08.                                                  IF1104.2
 046500     MOVE ZERO TO WS-NUM.                                         IF1104.2
 046600 F-FACTORIAL-TEST-08.                                             IF1104.2
@@ -479,7 +479,7 @@
 047900 F-FACTORIAL-WRITE-08.                                            IF1104.2
 048000     MOVE "F-FACTORIAL-08" TO PAR-NAME.                           IF1104.2
 048100     PERFORM  PRINT-DETAIL.                                       IF1104.2
-048200*****************SPECIAL PERFORM TEST**********************       IF1104.2
+048200*                                                                         
 048300 F-FACTORIAL-09.                                                  IF1104.2
 048400     MOVE ZERO TO WS-NUM.                                         IF1104.2
 048500     PERFORM F-FACTORIAL-TEST-09                                  IF1104.2
@@ -494,7 +494,7 @@
 049400 F-FACTORIAL-WRITE-09.                                            IF1104.2
 049500     MOVE "F-FACTORIAL-09" TO PAR-NAME.                           IF1104.2
 049600     PERFORM  PRINT-DETAIL.                                       IF1104.2
-049700********************END OF TESTS***************                   IF1104.2
+049700*                                                                         
 049800 CCVS-EXIT SECTION.                                               IF1104.2
 049900 CCVS-999999.                                                     IF1104.2
 050000     GO TO CLOSE-FILES.                                           IF1104.2

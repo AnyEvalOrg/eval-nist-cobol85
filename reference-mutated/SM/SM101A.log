@@ -18,24 +18,24 @@ TEST RESULT OF SM101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COPY ---                                                                                                               
    WKNG-STORAGE ENTRY PASS  COPY-TEST-1                                                                                 
    PROCEDURE          PASS  COPY-TEST-2                                                                                 
-   SECTION            PASS  COPY-TEST-3                                                                                 
+   SECTION            FAIL* COPY-TEST-3                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000095427.000000000                                                     
+                                     CORRECT =  000085427.000000000                                                     
+                                                                                                                        
    SECTION            FAIL* COPY-TEST-4                                                                                 
                                                                                                                         
                                      COMPUTED=  000023121.000000000                                                     
-                                     CORRECT =  000024121.000000000                                                     
+                                     CORRECT =  000026121.000000000                                                     
                                                                                                                         
-   SECTION            PASS  COPY-TEST-5                                                                                 
-   SECTION            FAIL* COPY-TEST-6                                                                                 
+   SECTION            FAIL* COPY-TEST-5                                                                                 
                                                                                                                         
-                                     COMPUTED= PYTST                                                                    
-                                     CORRECT = PYTS1                                                                    
+                                     COMPUTED= LIBCO                                                                    
+                                     CORRECT = LIBCL                                                                    
                                                                                                                         
+   SECTION            PASS  COPY-TEST-6                                                                                 
    FILE DESCRIPTION   PASS  COPY-TEST-7                   OUTPUT CHECKED IN SM102A                                      
-   FILE DESCRIPTION   FAIL* COPY-TEST-8                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000097523.000000000                                                     
-                                     CORRECT =  000097513.000000000                                                     
-                                                                                                                        
+   FILE DESCRIPTION   PASS  COPY-TEST-8                                                                                 
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

@@ -1,42 +1,42 @@
 000100 IDENTIFICATION DIVISION.                                         IC1124.2
 000200 PROGRAM-ID.                                                      IC1124.2
 000300     IC112A.                                                      IC1124.2
-000400****************************************************************  IC1124.2
-000500*                                                              *  IC1124.2
-000600*    VALIDATION FOR:-                                          *  IC1124.2
-000700*                                                              *  IC1124.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1124.2
-000900*                                                              *  IC1124.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1124.2
-001100*                                                              *  IC1124.2
-001200****************************************************************  IC1124.2
-001300*                                                              *  IC1124.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1124.2
-001500*                                                              *  IC1124.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1124.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1124.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1124.2
-001900*                                                              *  IC1124.2
-002000****************************************************************  IC1124.2
-002100****************************************************************  IC1124.2
-002200*                                                                 IC1124.2
-002300*         THE ROUTINE IC112 IS A MAIN PROGRAM WHICH HAS A FILE    IC1124.2
-002400*    DESCRIPTION FOR A SEQUENTIAL MASS STORAGE FILE WITH FIXED    IC1124.2
-002500*    LENGTH RECORDS.  THE FILE IS CREATED, CLOSED AND OPENED AS   IC1124.2
-002600*    AN INPUT FILE.  THE MAIN ROUTINE READS THE FILE AND VERIFIES IC1124.2
-002700*    THAT THE FILE IS CORRECT.  THE FILE IS CLOSED AND OPENED     IC1124.2
-002800*    AGAIN AS AN INPUT FILE.  A RECORD IS READ AND A CALL IS MADE IC1124.2
-002900*    TO THE SUBPROGRAM IC113 WITH THE FILE DESCRIPTION 01 RECORD  IC1124.2
-003000*    LISTED AS ONE OF THE OPERANDS OF THE USING PHRASE.  THE      IC1124.2
-003100*    SUBPROGRAM IC113 COMPARES THE FIELDS IN THE INPUT RECORD TO  IC1124.2
-003200*    THE VALUES WRITTEN WHEN THE FILE WAS CREATED.                IC1124.2
-003300*                                                                 IC1124.2
-003400*         THIS PROGRAM WAS ADAPTED FROM THE SEQUENTIAL I-O TEST   IC1124.2
-003500*    CONTAINED IN ROUTINE SQ104.  IF ANY ERRORS OCCUR IN RUNNING  IC1124.2
-003600*    THE ROUTINE SQ104, THE RESULTS OF THE TESTS IN THE ROUTINES  IC1124.2
-003700*    IC112 AND IC113 ARE INCONCLUSIVE.                            IC1124.2
-003800*                                                                 IC1124.2
-003900*******************************************                       IC1124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
 004000 ENVIRONMENT DIVISION.                                            IC1124.2
 004100 CONFIGURATION SECTION.                                           IC1124.2
 004200 SOURCE-COMPUTER.                                                 IC1124.2
@@ -306,7 +306,7 @@
 031300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1124.2
 031400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1124.2
 031500      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1124.2
-031600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1124.2
+031600*                                                                         
 031700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1124.2
 031800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1124.2
 031900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1124.2
@@ -402,12 +402,12 @@
 040900     MOVE XRECORD-NUMBER (1) TO CORRECT-18V0.                     IC1124.2
 041000     PERFORM PRINT-DETAIL.                                        IC1124.2
 041100     CLOSE SQ-FS3.                                                IC1124.2
-041200*        A MASS STORAGE SEQUENTIAL FILE WITH 120 CHARACTER        IC1124.2
-041300*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 649 RECORDS.    IC1124.2
+041200*                                                                         
+041300*                                                                         
 041400 SEQ-INIT-008.                                                    IC1124.2
 041500     MOVE ZERO TO WRK-CS-09V00.                                   IC1124.2
-041600*        THIS TEST READS AND CHECKS THE FILE CREATED IN           IC1124.2
-041700*    SEQ-TEST-007.                                                IC1124.2
+041600*                                                                         
+041700*                                                                         
 041800     OPEN INPUT SQ-FS3.                                           IC1124.2
 041900 SEQ-TEST-008.                                                    IC1124.2
 042000     READ SQ-FS3 RECORD                                           IC1124.2
@@ -448,12 +448,12 @@
 045500     MOVE ZERO TO WRK-CS-09V00.                                   IC1124.2
 045600     MOVE ZERO TO RECORDS-IN-ERROR.                               IC1124.2
 045700     OPEN INPUT SQ-FS3.                                           IC1124.2
-045800*                                                                 IC1124.2
-045900*         LINK-TEST-08 READS THE FILE SQ-FS3 AND CALLS THE SUB-   IC1124.2
-046000*    PROGRAM IC113 TO CHECK THE FIELDS IN THE RECORD.  THE FILE   IC1124.2
-046100*    DESCRIPTION RECORD IS ONE OF THE OPERANDS IN THE USING       IC1124.2
-046200*    PHRASE OF THE CALL STATEMENT.                                IC1124.2
-046300*                                                                 IC1124.2
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
 046400     MOVE ZERO TO ERROR-FLAG.                                     IC1124.2
 046500 LINK-TEST-08.                                                    IC1124.2
 046600     READ SQ-FS3 RECORD                                           IC1124.2
@@ -481,12 +481,12 @@
 048800     PERFORM PRINT-DETAIL.                                        IC1124.2
 048900 LINK-INIT-09.                                                    IC1124.2
 049000     MOVE ZERO TO RECORDS-IN-ERROR  ERROR-FLAG.                   IC1124.2
-049100*                                                                 IC1124.2
-049200*         LINK-TEST-09 READS THE FILE SQ-FS3.  THE AT END PHRASE  IC1124.2
-049300*    OF THE READ STATEMENT SHOULD BE EXECUTED.  A CALL TO THE     IC1124.2
-049400*    SUBPROGRAM IC113 IS CONTAINED IN THE AT END PHRASE WITH      IC1124.2
-049500*    THE FD 01 RECORD AS ONE OF THE USING OPERANDS.               IC1124.2
-049600*                                                                 IC1124.2
+049100*                                                                         
+049200*                                                                         
+049300*                                                                         
+049400*                                                                         
+049500*                                                                         
+049600*                                                                         
 049700 LINK-TEST-09-01.                                                 IC1124.2
 049800     IF EOF-FLAG EQUAL TO 1                                       IC1124.2
 049900           CALL "IC113A" USING RECORDS-IN-ERROR   SQ-FS3R1-F-G-120IC1124.2

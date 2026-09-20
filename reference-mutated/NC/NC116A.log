@@ -55,13 +55,13 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
  SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .01                                                                      
- SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .02                                                                      
- SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .03                                                                      
- SENDING ITEM DS-LS   FAIL* SIG-TEST-GF-9      .04        MOVE DS-LS-5 TO CS-005                                        
+ SENDING ITEM DS-LS   FAIL* SIG-TEST-GF-9      .02        MOVE DS-LS-5 TO DS-005                                        
                                                                                                                         
                                      COMPUTED=  000000000000091275                                                      
-                                     CORRECT =  000000000000091225   VI-42 5.12.4                                       
+                                     CORRECT =  000000000000091975   VI-42 5.12.4                                       
                                                                                                                         
+ SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .03                                                                      
+ SENDING ITEM DS-LS   PASS  SIG-TEST-GF-9      .04                                                                      
  SENDING ITEM DS-TS-4 PASS  SIG-TEST-GF-10     .01                                                                      
  SENDING ITEM DS-TS-4 PASS  SIG-TEST-GF-10     .02                                                                      
  SENDING ITEM DS-TS-4 PASS  SIG-TEST-GF-10     .03                                                                      
@@ -89,7 +89,7 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  RECEIVING ITEM DS-LS FAIL* SIG-TEST-GF-15     .05        MOVE 15759 TO WRK-DS-LS-5                                     
                                                                                                                         
                                      COMPUTED= +15759                                                                   
-                                     CORRECT = +15757                VI-42 5.12.4                                       
+                                     CORRECT = +12759                VI-42 5.12.4                                       
                                                                                                                         
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .06                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .01                                                                      
@@ -110,7 +110,7 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     CORRECT = 15Y59-                VI-42 5.12.4                                       
+                                     CORRECT = 15779-                VI-42 5.12.4                                       
                                                                                                                         
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .04                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .05                                                                      

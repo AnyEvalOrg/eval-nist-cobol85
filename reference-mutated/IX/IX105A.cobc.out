@@ -1,7 +1,7 @@
 IX105A.CBL: in section 'SECT-RC-02-001':
 IX105A.CBL: in paragraph 'WRITE-DELETE-GF-03':
 IX105A.CBL:750: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
-  748 | 075400*    NOTE IX-FR3 IS NOT CREATED  SO SKIP TO END-PARAGRAPH.        I..
+  748 | 075400*..
   749 | 075500     PERFORM PRINT-DETAIL.                                        I..
   750 > 075600     GO TO CCVS-EXIT.                                             I..
   751 | 075700 WRITE-TEST-GF-03-LONG-REC.                                       I..

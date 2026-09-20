@@ -1,40 +1,40 @@
 000100 IDENTIFICATION DIVISION.                                         IC1144.2
 000200 PROGRAM-ID.                                                      IC1144.2
 000300     IC114A.                                                      IC1144.2
-000400****************************************************************  IC1144.2
-000500*                                                              *  IC1144.2
-000600*    VALIDATION FOR:-                                          *  IC1144.2
-000700*                                                              *  IC1144.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1144.2
-000900*                                                              *  IC1144.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1144.2
-001100*                                                              *  IC1144.2
-001200****************************************************************  IC1144.2
-001300*                                                              *  IC1144.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1144.2
-001500*                                                              *  IC1144.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1144.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1144.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1144.2
-001900*                                                              *  IC1144.2
-002000****************************************************************  IC1144.2
-002100*                                                                 IC1144.2
-002200*         THE ROUTINE IC114 IS A MAIN PROGRAM WHICH CALLS THE     IC1144.2
-002300*    SUBPROGRAM IC115.  THE PURPOSE OF THESE PROGRAMS IS TO       IC1144.2
-002400*    VERIFY THAT A FILE SECTION, A WORKING-STORAGE SECTION, AND   IC1144.2
-002500*    A LINKAGE SECTION CAN APPEAR IN A SUBPROGRAM, AND A FILE     IC1144.2
-002600*    CAN BE WRITTEN AND READ WITHIN A SUBPROGRAM.                 IC1144.2
-002700*                                                                 IC1144.2
-002800*         THE PROGRAM IC114 CALLS IC115 TO CREATE AND VERIFY THE  IC1144.2
-002900*    FILE.  SUBSEQUENT CALLS TO THE SUBPROGRAM ARE MADE TO READ   IC1144.2
-003000*    THE FILE AND RETURN A RECORD TO THE MAIN PROGRAM WHICH CHECKSIC1144.2
-003100*    THE RECORD CONTENTS.                                         IC1144.2
-003200*                                                                 IC1144.2
-003300*         THE SUBPROGRAM IC115 IS ADAPTED FROM THE SEQUENTIAL I-O IC1144.2
-003400*    ROUTINE SQ104.  IF SQ104 DOES NOT EXECUTE CORRECTLY THEN     IC1144.2
-003500*    THE RESULTS OF THESE TESTS ARE INCONCLUSIVE.                 IC1144.2
-003600*                                                                 IC1144.2
-003700****************************************************************  IC1144.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
 003800 ENVIRONMENT DIVISION.                                            IC1144.2
 003900 CONFIGURATION SECTION.                                           IC1144.2
 004000 SOURCE-COMPUTER.                                                 IC1144.2
@@ -258,7 +258,7 @@
 026000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1144.2
 026100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1144.2
 026200      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1144.2
-026300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1144.2
+026300*                                                                         
 026400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1144.2
 026500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1144.2
 026600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1144.2
@@ -327,11 +327,11 @@
 032900     EXIT.                                                        IC1144.2
 033000 LINK-TEST-10.                                                    IC1144.2
 033100     MOVE 1 TO CALL-FLAG.                                         IC1144.2
-033200*                                                                 IC1144.2
-033300*         THIS TEST CALLS IC115 WHICH CREATES THE FILE SQ-FS3.    IC1144.2
-033400*    THIS FILE IS A MASS STORAGE SEQUENTIAL FILE WITH 120         IC1144.2
-033500*    CHARACTER RECORDS.  THERE ARE 649 RECORDS IN THE FILE.       IC1144.2
-033600*                                                                 IC1144.2
+033200*                                                                         
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
 033700     CALL "IC115A" USING GROUP-LINKAGE-VARIABLES                  IC1144.2
 033800                        FILE-REC-SQ-FS3.                          IC1144.2
 033900     IF COUNT-OF-RECORDS EQUAL TO 649                             IC1144.2
@@ -379,15 +379,15 @@
 038100                  ERROR-FLAG EOF-FLAG.                            IC1144.2
 038200     CALL "IC115A" USING GROUP-LINKAGE-VARIABLES                  IC1144.2
 038300                        FILE-REC-SQ-FS3.                          IC1144.2
-038400*         CALL IC115 TO OPEN FILE SQ-FS3.                         IC1144.2
+038400*                                                                         
 038500     MOVE 4 TO CALL-FLAG.                                         IC1144.2
 038600 LINK-TEST-12.                                                    IC1144.2
 038700     CALL "IC115A" USING GROUP-LINKAGE-VARIABLES                  IC1144.2
 038800                        FILE-REC-SQ-FS3.                          IC1144.2
-038900*                                                                 IC1144.2
-039000*        THIS TEST REPEATEDLY CALLS IC115 TO READ THE FILE SQ-FS3.IC1144.2
-039100*    THE CONTENTS OF EACH DATA RECORD IS CHECKED FOR VALID DATA.  IC1144.2
-039200*                                                                 IC1144.2
+038900*                                                                         
+039000*                                                                         
+039100*                                                                         
+039200*                                                                         
 039300     IF EOF-FLAG EQUAL TO 1                                       IC1144.2
 039400              GO TO LINK-TEST-12-01.                              IC1144.2
 039500     ADD 1 TO COUNT-OF-RECORDS.                                   IC1144.2

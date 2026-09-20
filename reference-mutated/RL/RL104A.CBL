@@ -1,46 +1,46 @@
 000100 IDENTIFICATION DIVISION.                                         RL1044.2
 000200 PROGRAM-ID.                                                      RL1044.2
 000300     RL104A.                                                      RL1044.2
-000400****************************************************************  RL1044.2
-000500*                                                              *  RL1044.2
-000600*    VALIDATION FOR:-                                          *  RL1044.2
-000700*                                                              *  RL1044.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1044.2
-000900*                                                              *  RL1044.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1044.2
-001100*                                                              *  RL1044.2
-001200****************************************************************  RL1044.2
-001300*                                                              *  RL1044.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1044.2
-001500*                                                              *  RL1044.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  RL1044.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  RL1044.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  RL1044.2
-001900*                                                              *  RL1044.2
-002000****************************************************************  RL1044.2
-002100*            THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND    RL1044.2
-002200*            SEMANTIC ACTIONS ASSOCIATED WITH THE FOLLOWING       RL1044.2
-002300*            ELEMENTS:                                            RL1044.2
-002400*                                                                 RL1044.2
-002500*            (1)  FILE STATUS                                     RL1044.2
-002600*            (2)  USE AFTER EXCEPTION PROCEDURE ON FILE-NAME      RL1044.2
-002700*            (3)  READ                                            RL1044.2
-002800*            (4)  WRITE                                           RL1044.2
-002900*            (5)  REWRITE                                         RL1044.2
-003000*            (6)  RELATIVE KEY                                    RL1044.2
-003100*            (7)  ACCESS MODE                                     RL1044.2
-003200*                                                                 RL1044.2
-003300*            THIS PROGRAM CREATES A RELATIVE I-O FILE SEQUENTIALLYRL1044.2
-003400*            (ACCESS MODE SEQUENTIAL) AND THEN UPDATES SELECTIVE  RL1044.2
-003500*            RECORDS OF THE FILE.  THE FILE STATUS CONTENTS ARE   RL1044.2
-003600*            CAPTURED AND TESTED FOR ACCURACY FOR EACH OPEN, CLOSERL1044.2
-003700*            READ AND REWRITE STATEMENT USED.  THE READ, WRITE ANDRL1044.2
-003800*            REWRITE STATEMENTS ARE USED WITHOUT THE APPROPRIATE  RL1044.2
-003900*            AT END ON INVALID KEY PHRASES.  THE OMISSION OF THESERL1044.2
-004000*            PHRASES ARE PERMITTED IF AN APPLICABLE USE PROCEDURE RL1044.2
-004100*            HAS BEEN SPECIFIED.                                  RL1044.2
-004200*                                                                 RL1044.2
-004300****************************************************************  RL1044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
 004400 ENVIRONMENT DIVISION.                                            RL1044.2
 004500 CONFIGURATION SECTION.                                           RL1044.2
 004600 SOURCE-COMPUTER.                                                 RL1044.2
@@ -294,8 +294,8 @@
 029900              DEPENDING ON  WRK-CS-09V00-012.                     RL1044.2
 030000     GO TO    RL-FS2-01-EXIT.                                     RL1044.2
 030100 RL-FS2-01-03.                                                    RL1044.2
-030200*ENTRY FROM SEGMENT REL-TEST-009.                                 RL1044.2
-030300*    SHOULD NOT ENTER HERE UNLESS SPACE ALLOCATION TOO SMALL.     RL1044.2
+030200*                                                                         
+030300*                                                                         
 030400     ADD     1   TO WRK-CS-09V00-014.                             RL1044.2
 030500 RL-FS2-01-05.                                                    RL1044.2
 030600     ADD      1 TO WRK-CS-09V00-017.                              RL1044.2
@@ -357,7 +357,7 @@
 036400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1044.2
 036500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1044.2
 036600      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1044.2
-036700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1044.2
+036700*                                                                         
 036800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1044.2
 036900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1044.2
 037000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1044.2
@@ -439,7 +439,7 @@
 044600     MOVE     "RL"            TO  XFILE-ORGANIZATION (2).         RL1044.2
 044700     MOVE     "S"             TO  XLABEL-TYPE        (2).         RL1044.2
 044800     MOVE     000001          TO  XRECORD-NUMBER     (2).         RL1044.2
-044900*INITIALIZE  RECORD WORK AREA NUMBER 2.                           RL1044.2
+044900*                                                                         
 045000     MOVE     1         TO  WRK-CS-09V00-012.                     RL1044.2
 045100     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     RL1044.2
 045200                            WRK-CS-09V00-015 WRK-CS-09V00-016     RL1044.2
@@ -449,7 +449,7 @@
 045600     MOVE     01 TO REC-CT.                                       RL1044.2
 045700     OPEN     OUTPUT    RL-FS2.                                   RL1044.2
 045800     MOVE     RL-FS2-STATUS TO WRK-XN-0002-001.                   RL1044.2
-045900*CAPTURE STATUS KEY AFTER  OPEN STATEMENT IS EXECUTED.            RL1044.2
+045900*                                                                         
 046000 REL-TEST-009-R.                                                  RL1044.2
 046100     MOVE    "99"  TO RL-FS2-STATUS.                              RL1044.2
 046200     MOVE     FILE-RECORD-INFO-P1-120 (2) TO RL-FS2-WRK-120.      RL1044.2
@@ -472,7 +472,7 @@
 047900              PERFORM   PASS.                                     RL1044.2
 048000     PERFORM  PRINT-DETAIL.                                       RL1044.2
 048100     ADD      01 TO REC-CT.                                       RL1044.2
-048200*    .01                                                          RL1044.2
+048200*                                                                         
 048300     IF       XRECORD-NUMBER (2) NOT EQUAL TO 500                 RL1044.2
 048400              MOVE "INCORRECT COUNT" TO RE-MARK                   RL1044.2
 048500              MOVE  500 TO CORRECT-18V0                           RL1044.2
@@ -482,7 +482,7 @@
 048900              PERFORM PASS.                                       RL1044.2
 049000     PERFORM  PRINT-DETAIL.                                       RL1044.2
 049100     ADD      01 TO REC-CT.                                       RL1044.2
-049200*    .02                                                          RL1044.2
+049200*                                                                         
 049300     IF       WRK-XN-0002-001 NOT EQUAL TO  "00"                  RL1044.2
 049400              MOVE "STATUS/OPEN" TO RE-MARK                       RL1044.2
 049500              MOVE WRK-XN-0002-001 TO COMPUTED-A                  RL1044.2
@@ -492,7 +492,7 @@
 049900              PERFORM  PASS.                                      RL1044.2
 050000     PERFORM  PRINT-DETAIL.                                       RL1044.2
 050100     ADD      01 TO REC-CT.                                       RL1044.2
-050200*    .03                                                          RL1044.2
+050200*                                                                         
 050300     IF        RL-FS2-STATUS NOT EQUAL TO "00"                    RL1044.2
 050400              MOVE "STATUS/WRITE" TO RE-MARK                      RL1044.2
 050500              MOVE RL-FS2-STATUS TO COMPUTED-A                    RL1044.2
@@ -502,7 +502,7 @@
 050900              PERFORM   PASS.                                     RL1044.2
 051000     PERFORM  PRINT-DETAIL.                                       RL1044.2
 051100     ADD      01 TO REC-CT.                                       RL1044.2
-051200*    .04                                                          RL1044.2
+051200*                                                                         
 051300     MOVE     SPACE  TO  RL-FS2-STATUS.                           RL1044.2
 051400     CLOSE    RL-FS2.                                             RL1044.2
 051500     IF        RL-FS2-STATUS NOT EQUAL TO "00"                    RL1044.2
@@ -514,7 +514,7 @@
 052100              PERFORM PASS.                                       RL1044.2
 052200     PERFORM  PRINT-DETAIL.                                       RL1044.2
 052300     ADD      01 TO REC-CT.                                       RL1044.2
-052400*    .05                                                          RL1044.2
+052400*                                                                         
 052500 REL-INIT-010.                                                    RL1044.2
 052600     MOVE    "REL-TEST-010" TO PAR-NAME.                          RL1044.2
 052700     MOVE     2     TO  WRK-CS-09V00-012.                         RL1044.2
@@ -531,7 +531,7 @@
 053800     MOVE     SPACE     TO  WRK-XN-0002-004                       RL1044.2
 053900     MOVE      RL-FS2-STATUS TO WRK-XN-0002-001                   RL1044.2
 054000     MOVE     SPACE TO RL-FS2-STATUS.                             RL1044.2
-054100*CAPTURE THE CONTENTS OF STATUS KEY AFTER OPEN IS EXECUTED.       RL1044.2
+054100*                                                                         
 054200     MOVE    "USE/FILE STATUE"  TO FEATURE.                       RL1044.2
 054300 REL-TEST-010-R.                                                  RL1044.2
 054400     ADD      1 TO WRK-CS-09V00-014.                              RL1044.2
@@ -564,7 +564,7 @@
 057100              PERFORM PASS.                                       RL1044.2
 057200     PERFORM  PRINT-DETAIL.                                       RL1044.2
 057300     ADD      01 TO REC-CT.                                       RL1044.2
-057400*    .01                                                          RL1044.2
+057400*                                                                         
 057500     IF       WRK-CS-09V00-014 NOT EQUAL TO 501                   RL1044.2
 057600              MOVE "INCORRECT COUNT" TO RE-MARK                   RL1044.2
 057700              MOVE WRK-CS-09V00-014 TO COMPUTED-18V0              RL1044.2
@@ -574,7 +574,7 @@
 058100             PERFORM PASS.                                        RL1044.2
 058200     PERFORM  PRINT-DETAIL.                                       RL1044.2
 058300     ADD      01 TO REC-CT.                                       RL1044.2
-058400*    .02                                                          RL1044.2
+058400*                                                                         
 058500     IF       WRK-XN-0002-001 NOT EQUAL TO "00"                   RL1044.2
 058600              MOVE "OPEN/STATUS"  TO  RE-MARK                     RL1044.2
 058700              MOVE WRK-XN-0002-001 TO COMPUTED-A                  RL1044.2
@@ -584,7 +584,7 @@
 059100              PERFORM PASS.                                       RL1044.2
 059200     PERFORM  PRINT-DETAIL.                                       RL1044.2
 059300     ADD      01 TO REC-CT.                                       RL1044.2
-059400*    .03                                                          RL1044.2
+059400*                                                                         
 059500     IF        RL-FS2-STATUS NOT EQUAL  TO "10"                   RL1044.2
 059600              MOVE "ATEND/STATUS" TO RE-MARK                      RL1044.2
 059700              MOVE  RL-FS2-STATUS TO COMPUTED-A                   RL1044.2
@@ -594,7 +594,7 @@
 060100              PERFORM PASS.                                       RL1044.2
 060200     PERFORM  PRINT-DETAIL.                                       RL1044.2
 060300     ADD      01 TO REC-CT.                                       RL1044.2
-060400*    .04                                                          RL1044.2
+060400*                                                                         
 060500     IF       WRK-XN-0002-002 NOT EQUAL TO "10"                   RL1044.2
 060600              MOVE  "EXCEPTIN/STATUS" TO RE-MARK                  RL1044.2
 060700              MOVE  WRK-XN-0002-002 TO COMPUTED-A                 RL1044.2
@@ -604,7 +604,7 @@
 061100              PERFORM PASS.                                       RL1044.2
 061200     PERFORM  PRINT-DETAIL.                                       RL1044.2
 061300     ADD      01 TO REC-CT.                                       RL1044.2
-061400*    .05                                                          RL1044.2
+061400*                                                                         
 061500     IF       WRK-XN-0002-003 NOT EQUAL TO "10"                   RL1044.2
 061600              MOVE "NO/EXCEPTION" TO  RE-MARK                     RL1044.2
 061700              MOVE WRK-XN-0002-003 TO COMPUTED-A                  RL1044.2
@@ -614,7 +614,7 @@
 062100              PERFORM PASS.                                       RL1044.2
 062200     PERFORM  PRINT-DETAIL                                        RL1044.2
 062300     ADD      01 TO REC-CT.                                       RL1044.2
-062400*    .06                                                          RL1044.2
+062400*                                                                         
 062500     MOVE     SPACE TO RL-FS2-STATUS.                             RL1044.2
 062600     CLOSE    RL-FS2                                              RL1044.2
 062700     IF        RL-FS2-STATUS NOT EQUAL TO "00"                    RL1044.2
@@ -626,7 +626,7 @@
 063300              PERFORM PASS.                                       RL1044.2
 063400     PERFORM  PRINT-DETAIL.                                       RL1044.2
 063500     ADD      01 TO REC-CT.                                       RL1044.2
-063600*    .07                                                          RL1044.2
+063600*                                                                         
 063700 CCVS-EXIT SECTION.                                               RL1044.2
 063800 CCVS-999999.                                                     RL1044.2
 063900     GO TO CLOSE-FILES.                                           RL1044.2

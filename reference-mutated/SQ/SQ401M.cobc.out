@@ -3,12 +3,12 @@ SQ401M.CBL:109: warning: OPEN REVERSED is not implemented [-Wpending]
   107 | 010700                                                                  S..
   108 | 010800 SQ401M-OPENREV.                                                  S..
   109 > 010900     OPEN INPUT TFIL REVERSED.                                    S..
-  110 | 011000*Message expected for above statement: NON-CONFORMING STANDARD    S..
+  110 | 011000*..
   111 | 011100                                                                  S..
 SQ401M.CBL: in paragraph 'SQ401M-OPENNOREW':
 SQ401M.CBL:114: warning: OPEN WITH NO REWIND is not implemented [-Wpending]
   112 | 011200 SQ401M-OPENNOREW.                                                S..
   113 | 011300     CLOSE TFIL.                                                  S..
   114 > 011400     OPEN INPUT TFIL WITH NO REWIND.                              S..
-  115 | 011500*Message expected for above statement: NON-CONFORMING STANDARD    S..
+  115 | 011500*..
   116 | 011600                                                                  S..

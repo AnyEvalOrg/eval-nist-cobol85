@@ -1,42 +1,42 @@
 000100 IDENTIFICATION DIVISION.                                         RL1114.2
 000200 PROGRAM-ID.                                                      RL1114.2
 000300     RL111A.                                                      RL1114.2
-000400****************************************************************  RL1114.2
-000500*                                                              *  RL1114.2
-000600*    VALIDATION FOR:-                                          *  RL1114.2
-000700*                                                              *  RL1114.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1114.2
-000900*                                                              *  RL1114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1114.2
-001100*                                                              *  RL1114.2
-001200****************************************************************  RL1114.2
-001300*                                                              *  RL1114.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1114.2
-001500*                                                              *  RL1114.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  RL1114.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  RL1114.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  RL1114.2
-001900*                                                              *  RL1114.2
-002000****************************************************************  RL1114.2
-002100*                                                              *  RL1114.2
-002200*     THIS PROGRAM WILL TEST THE SYNTACTICAL CONSTRUCTS AND    *  RL1114.2
-002300*     SEMANTIC ACTIONS ASSOCIATED WITH THE FOLLOWING CLAUSES:  *  RL1114.2
-002400*                                                              *  RL1114.2
-002500*            - ACCESS                                          *  RL1114.2
-002600*            - READ                                            *  RL1114.2
-002700*            - WRITE                                           *  RL1114.2
-002800*            - REWRITE                                         *  RL1114.2
-002900*                                                              *  RL1114.2
-003000*     1) THE PROGRAM WILL CREATE A RELATIVE I-O FILE           *  RL1114.2
-003100*     2) THEN IT WILL UPDATE SELECTIVE RECORDS OF THE FILE     *  RL1114.2
-003200*     3) THE FILE STATUS CONTENTS ARE CAPTURED AND TESTED FOR  *  RL1114.2
-003300*        ACCURACY FOR EACH "OPEN", "CLOSE", "READ" AND         *  RL1114.2
-003400*        "REWRITE" STATEMENT USED.                             *  RL1114.2
-003500*     4) THE "READ", "WRITE" AND "REWRITE" STATEMENT WILL BE   *  RL1114.2
-003600*        USED WITH THE APPROPRIATE "AT END", "NOT AT END"      *  RL1114.2
-003700*        "INVALID KEY" AND "NOT INVALID KEY" PHRASES.          *  RL1114.2
-003800*                                                              *  RL1114.2
-003900****************************************************************  RL1114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
 004000 ENVIRONMENT DIVISION.                                            RL1114.2
 004100 CONFIGURATION SECTION.                                           RL1114.2
 004200 SOURCE-COMPUTER.                                                 RL1114.2
@@ -309,8 +309,8 @@
 031900             DEPENDING ON  WRK-CS-09V00-012.                      RL1114.2
 032000     GO TO   RL-FS2-01-EXIT.                                      RL1114.2
 032100 RL-FS2-01-03.                                                    RL1114.2
-032200*ENTRY FROM SEGMENT REL-TEST-009.                                 RL1114.2
-032300*    SHOULD NOT ENTER HERE UNLESS SPACE ALLOCATION TOO SMALL.     RL1114.2
+032200*                                                                         
+032300*                                                                         
 032400     ADD    1   TO WRK-CS-09V00-014.                              RL1114.2
 032500 RL-FS2-01-05.                                                    RL1114.2
 032600     ADD     1 TO WRK-CS-09V00-017.                               RL1114.2
@@ -325,9 +325,9 @@
 033500     IF      PAR-NAME = "REL-TEST-060-1"                          RL1114.2
 033600             GO TO RL-FS2-02-STAT.                                RL1114.2
 033700     ADD     1 TO  WRK-CS-09V00-013.                              RL1114.2
-033800*    GO TO   RL-FS2-02-03                                         RL1114.2
-033900*            RL-FS2-02-05                                         RL1114.2
-034000*            DEPENDING ON  WRK-CS-09V00-012.                      RL1114.2
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
 034100     GO TO D-CLOSE-FILES.                                         RL1114.2
 034200 RL-FS2-02-STAT.                                                  RL1114.2
 034300     IF RL-FS3-STATUS = "48"                                      RL1114.2
@@ -434,8 +434,8 @@
 044600     MOVE   SPACES TO INF-ANSI-REFERENCE.                         RL1114.2
 044700 D-BAIL-OUT-EX. EXIT.                                             RL1114.2
 044800 RL-FS2-02-03.                                                    RL1114.2
-044900*ENTRY FROM SEGMENT REL-TEST-009.                                 RL1114.2
-045000*    SHOULD NOT ENTER HERE UNLESS SPACE ALLOCATION TOO SMALL.     RL1114.2
+044900*                                                                         
+045000*                                                                         
 045100     ADD    1   TO WRK-CS-09V00-014.                              RL1114.2
 045200 RL-FS2-02-05.                                                    RL1114.2
 045300     ADD     1 TO WRK-CS-09V00-017.                               RL1114.2
@@ -497,7 +497,7 @@
 051100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1114.2
 051200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1114.2
 051300      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1114.2
-051400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1114.2
+051400*                                                                         
 051500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1114.2
 051600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1114.2
 051700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1114.2
@@ -579,7 +579,7 @@
 059300     MOVE     "RL"            TO  XFILE-ORGANIZATION (2).         RL1114.2
 059400     MOVE     "S"             TO  XLABEL-TYPE        (2).         RL1114.2
 059500     MOVE     000001          TO  XRECORD-NUMBER     (2).         RL1114.2
-059600*INITIALIZE  RECORD WORK AREA NUMBER 2.                           RL1114.2
+059600*                                                                         
 059700     MOVE     1         TO  WRK-CS-09V00-012.                     RL1114.2
 059800     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     RL1114.2
 059900                            WRK-CS-09V00-015 WRK-CS-09V00-016     RL1114.2
@@ -588,7 +588,7 @@
 060200     MOVE     01 TO REC-CT.                                       RL1114.2
 060300     OPEN     OUTPUT    RL-FS2.                                   RL1114.2
 060400     MOVE     RL-FS2-STATUS TO WRK-XN-0002-001.                   RL1114.2
-060500*CAPTURE STATUS KEY AFTER  OPEN STATEMENT IS EXECUTED.            RL1114.2
+060500*                                                                         
 060600 REL-TEST-009-R.                                                  RL1114.2
 060700     MOVE    "99"  TO RL-FS2-STATUS.                              RL1114.2
 060800     MOVE     FILE-RECORD-INFO-P1-120 (2) TO RL-FS2-WRK-120.      RL1114.2
@@ -611,7 +611,7 @@
 062500              PERFORM   PASS.                                     RL1114.2
 062600     PERFORM  PRINT-DETAIL.                                       RL1114.2
 062700     ADD      01 TO REC-CT.                                       RL1114.2
-062800*    .01                                                          RL1114.2
+062800*                                                                         
 062900     IF       XRECORD-NUMBER (2) NOT EQUAL TO 500                 RL1114.2
 063000              MOVE "INCORRECT COUNT" TO RE-MARK                   RL1114.2
 063100              MOVE  500 TO CORRECT-18V0                           RL1114.2
@@ -621,7 +621,7 @@
 063500              PERFORM PASS.                                       RL1114.2
 063600     PERFORM  PRINT-DETAIL.                                       RL1114.2
 063700     ADD      01 TO REC-CT.                                       RL1114.2
-063800*    .02                                                          RL1114.2
+063800*                                                                         
 063900     IF       WRK-XN-0002-001 NOT EQUAL TO  "00"                  RL1114.2
 064000              MOVE "STATUS/OPEN" TO RE-MARK                       RL1114.2
 064100              MOVE WRK-XN-0002-001 TO COMPUTED-A                  RL1114.2
@@ -631,7 +631,7 @@
 064500              PERFORM  PASS.                                      RL1114.2
 064600     PERFORM  PRINT-DETAIL.                                       RL1114.2
 064700     ADD      01 TO REC-CT.                                       RL1114.2
-064800*    .03                                                          RL1114.2
+064800*                                                                         
 064900     IF        RL-FS2-STATUS NOT EQUAL TO "00"                    RL1114.2
 065000              MOVE "STATUS/WRITE" TO RE-MARK                      RL1114.2
 065100              MOVE RL-FS2-STATUS TO COMPUTED-A                    RL1114.2
@@ -641,7 +641,7 @@
 065500              PERFORM   PASS.                                     RL1114.2
 065600     PERFORM  PRINT-DETAIL.                                       RL1114.2
 065700     ADD      01 TO REC-CT.                                       RL1114.2
-065800*    .04                                                          RL1114.2
+065800*                                                                         
 065900     MOVE     SPACE  TO  RL-FS2-STATUS.                           RL1114.2
 066000     CLOSE    RL-FS2.                                             RL1114.2
 066100     IF        RL-FS2-STATUS NOT EQUAL TO "00"                    RL1114.2
@@ -653,7 +653,7 @@
 066700              PERFORM PASS.                                       RL1114.2
 066800     PERFORM  PRINT-DETAIL.                                       RL1114.2
 066900     ADD      01 TO REC-CT.                                       RL1114.2
-067000*    .05                                                          RL1114.2
+067000*                                                                         
 067100 REL-INIT-010.                                                    RL1114.2
 067200     MOVE    "REL-TEST-010" TO PAR-NAME.                          RL1114.2
 067300     MOVE     2     TO  WRK-CS-09V00-012.                         RL1114.2
@@ -670,7 +670,7 @@
 068400     MOVE     SPACE     TO  WRK-XN-0002-004                       RL1114.2
 068500     MOVE      RL-FS2-STATUS TO WRK-XN-0002-001                   RL1114.2
 068600     MOVE     SPACE TO RL-FS2-STATUS.                             RL1114.2
-068700*CAPTURE THE CONTENTS OF STATUS KEY AFTER OPEN IS EXECUTED.       RL1114.2
+068700*                                                                         
 068800     MOVE    "USE/FILE STATUS"  TO FEATURE.                       RL1114.2
 068900 REL-TEST-010-R.                                                  RL1114.2
 069000     MOVE    "REL-TEST-010-R" TO PAR-NAME.                        RL1114.2
@@ -705,7 +705,7 @@
 071900              PERFORM PASS.                                       RL1114.2
 072000     PERFORM  PRINT-DETAIL.                                       RL1114.2
 072100     ADD      01 TO REC-CT.                                       RL1114.2
-072200*    .01                                                          RL1114.2
+072200*                                                                         
 072300     IF       WRK-CS-09V00-014 NOT EQUAL TO 501                   RL1114.2
 072400              MOVE "INCORRECT COUNT" TO RE-MARK                   RL1114.2
 072500              MOVE WRK-CS-09V00-014 TO COMPUTED-18V0              RL1114.2
@@ -715,7 +715,7 @@
 072900             PERFORM PASS.                                        RL1114.2
 073000     PERFORM  PRINT-DETAIL.                                       RL1114.2
 073100     ADD      01 TO REC-CT.                                       RL1114.2
-073200*    .02                                                          RL1114.2
+073200*                                                                         
 073300     IF       WRK-XN-0002-001 NOT EQUAL TO "00"                   RL1114.2
 073400              MOVE "OPEN/STATUS"  TO  RE-MARK                     RL1114.2
 073500              MOVE WRK-XN-0002-001 TO COMPUTED-A                  RL1114.2
@@ -725,7 +725,7 @@
 073900              PERFORM PASS.                                       RL1114.2
 074000     PERFORM  PRINT-DETAIL.                                       RL1114.2
 074100     ADD      01 TO REC-CT.                                       RL1114.2
-074200*    .03                                                          RL1114.2
+074200*                                                                         
 074300     IF        RL-FS2-STATUS NOT EQUAL  TO "10"                   RL1114.2
 074400              MOVE "AT END/STATUS" TO RE-MARK                     RL1114.2
 074500              MOVE  RL-FS2-STATUS TO COMPUTED-A                   RL1114.2
@@ -735,7 +735,7 @@
 074900              PERFORM PASS.                                       RL1114.2
 075000     PERFORM  PRINT-DETAIL.                                       RL1114.2
 075100     ADD      01 TO REC-CT.                                       RL1114.2
-075200*    .04                                                          RL1114.2
+075200*                                                                         
 075300     IF       WRK-XN-0002-002 NOT EQUAL TO "10"                   RL1114.2
 075400              MOVE  "EXCEPTION/STATUS" TO RE-MARK                 RL1114.2
 075500              MOVE  WRK-XN-0002-002 TO COMPUTED-A                 RL1114.2
@@ -745,7 +745,7 @@
 075900              PERFORM PASS.                                       RL1114.2
 076000     PERFORM  PRINT-DETAIL.                                       RL1114.2
 076100     ADD      01 TO REC-CT.                                       RL1114.2
-076200*    .05                                                          RL1114.2
+076200*                                                                         
 076300     IF       WRK-XN-0002-003 NOT EQUAL TO "10"                   RL1114.2
 076400              MOVE "NO/EXCEPTION" TO  RE-MARK                     RL1114.2
 076500              MOVE WRK-XN-0002-003 TO COMPUTED-A                  RL1114.2
@@ -755,7 +755,7 @@
 076900              PERFORM PASS.                                       RL1114.2
 077000     PERFORM  PRINT-DETAIL                                        RL1114.2
 077100     ADD      01 TO REC-CT.                                       RL1114.2
-077200*    .06                                                          RL1114.2
+077200*                                                                         
 077300     MOVE     SPACE TO RL-FS2-STATUS.                             RL1114.2
 077400     CLOSE    RL-FS2                                              RL1114.2
 077500     IF        RL-FS2-STATUS NOT EQUAL TO "00"                    RL1114.2
@@ -767,18 +767,18 @@
 078100              PERFORM PASS.                                       RL1114.2
 078200     PERFORM  PRINT-DETAIL.                                       RL1114.2
 078300     ADD      01 TO REC-CT.                                       RL1114.2
-078400*    .07                                                          RL1114.2
-078500*                                                                 RL1114.2
-078600*                                                                 RL1114.2
+078400*                                                                         
+078500*                                                                         
+078600*                                                                         
 078700 SECT-RL111-003-COBOL8X SECTION.                                  RL1114.2
-078800*==============================                                   RL1114.2
-078900*                                                                 RL1114.2
-079000****************************************************************  RL1114.2
-079100*                                                              *  RL1114.2
-079200*    THIS SECTION CONTAINS THE ADDITIONAL CODING/TESTS FOR     *  RL1114.2
-079300*    THE NEW COBOL '85 FEATURES.                               *  RL1114.2
-079400*                                                              *  RL1114.2
-079500****************************************************************  RL1114.2
+078800*                                                                         
+078900*                                                                         
+079000*                                                                         
+079100*                                                                         
+079200*                                                                         
+079300*                                                                         
+079400*                                                                         
+079500*                                                                         
 079600 REL-INIT-020.                                                    RL1114.2
 079700     MOVE   "VIII-26 4.5.2"  TO ANSI-REFERENCE.                   RL1114.2
 079800     MOVE   "NEW COBOL85 TESTS" TO FEATURE.                       RL1114.2
@@ -833,7 +833,7 @@
 084700             MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
 084800             PERFORM FAIL                                         RL1114.2
 084900             PERFORM PRINT-DETAIL.                                RL1114.2
-085000*                                                                 RL1114.2
+085000*                                                                         
 085100 REL-INIT-030.                                                    RL1114.2
 085200     MOVE   "VIII-29 4.5.4"  TO ANSI-REFERENCE.                   RL1114.2
 085300     MOVE    0 TO REC-CT.                                         RL1114.2
@@ -876,7 +876,7 @@
 089000             MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
 089100             PERFORM FAIL                                         RL1114.2
 089200             PERFORM PRINT-DETAIL.                                RL1114.2
-089300*                                                                 RL1114.2
+089300*                                                                         
 089400 REL-INIT-040.                                                    RL1114.2
 089500     CLOSE   RL-FS2.                                              RL1114.2
 089600     OPEN    I-O RL-FS3.                                          RL1114.2
@@ -910,7 +910,7 @@
 092400             MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
 092500             PERFORM FAIL                                         RL1114.2
 092600             PERFORM PRINT-DETAIL.                                RL1114.2
-092700*                                                                 RL1114.2
+092700*                                                                         
 092800 REL-INIT-050.                                                    RL1114.2
 092900     MOVE   "VIII-38 4.9.4 GR9(A)"  TO ANSI-REFERENCE.            RL1114.2
 093000     MOVE    0 TO REC-CT.                                         RL1114.2
@@ -942,7 +942,7 @@
 095600             MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
 095700             PERFORM FAIL                                         RL1114.2
 095800             PERFORM PRINT-DETAIL.                                RL1114.2
-095900*                                                                 RL1114.2
+095900*                                                                         
 096000 REL-INIT-060.                                                    RL1114.2
 096100     MOVE   "VIII-38 4.5.4 GR9(B)"  TO ANSI-REFERENCE.            RL1114.2
 096200     CLOSE   RL-FS3.                                              RL1114.2
@@ -962,119 +962,119 @@
 097600          MOVE "SHOULD HAVE ACTIONED DECLARATIVES" TO RE-MARK.    RL1114.2
 097700     PERFORM FAIL                                                 RL1114.2
 097800     PERFORM PRINT-DETAIL.                                        RL1114.2
-097900* ENTRY TO THE DECLARATIVES CLOSES ALL FILES AND                  RL1114.2
-098000* TERMINATES THE PROGRAM.                                         RL1114.2
-098100* EXECUTION SHOULD REACH THIS POINT ONLY AS RESULT OF AN ERROR    RL1114.2
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
 098200     CLOSE RL-FS3.                                                RL1114.2
-098300*                                                                 RL1114.2
+098300*                                                                         
 098400 REL-INIT-070.                                                    RL1114.2
-098500*    MOVE   "VIII-30 4.6.2"  TO ANSI-REFERENCE.                   RL1114.2
-098600*    OPEN    I-O RL-FS3.                                          RL1114.2
-098700*    MOVE    0 TO REC-CT.                                         RL1114.2
-098800*    MOVE    SPACES TO WRK-XN-00001-1.                            RL1114.2
-098900*    MOVE    SPACES TO RL-FS3-STATUS.                             RL1114.2
-099000*    MOVE    SPACES TO FILE-RECORD-INFO-P1-120 (2).               RL1114.2
-099100*REL-TEST-070-1.                                                  RL1114.2
-099200*    MOVE   "REL-TEST-070-1" TO PAR-NAME.                         RL1114.2
-099300*    READ    RL-FS3                                               RL1114.2
-099400*            INVALID                                              RL1114.2
-099500*            MOVE   "INVALID KEY ON FIRST READ" TO RE-MARK        RL1114.2
-099600*            PERFORM FAIL                                         RL1114.2
-099700*            PERFORM PRINT-DETAIL                                 RL1114.2
-099800*            NOT INVALID KEY                                      RL1114.2
-099900*            PERFORM PASS                                         RL1114.2
-100000*            PERFORM PRINT-DETAIL                                 RL1114.2
-100100*    END-READ                                                     RL1114.2
-100200*    MOVE   "X" TO WRK-XN-00001-1.                                RL1114.2
-100300*REL-TEST-070-2.                                                  RL1114.2
-100400*    MOVE   "REL-TEST-070-2" TO PAR-NAME.                         RL1114.2
-100500*    IF      WRK-XN-00001-1 = "X"                                 RL1114.2
-100600*            PERFORM PASS                                         RL1114.2
-100700*            PERFORM PRINT-DETAIL                                 RL1114.2
-100800*    ELSE                                                         RL1114.2
-100900*            MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         RL1114.2
-101000*            MOVE   "X"             TO CORRECT-X                  RL1114.2
-101100*            MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
-101200*            PERFORM FAIL                                         RL1114.2
-101300*            PERFORM PRINT-DETAIL.                                RL1114.2
-101400*REL-TEST-070-3.                                                  RL1114.2
-101500*    MOVE   "REL-TEST-070-3" TO PAR-NAME.                         RL1114.2
-101600*                                                                 RL1114.2
-101700*    IF      WRK-XN-00001-2 = "@"                                 RL1114.2
-101800*            PERFORM PASS                                         RL1114.2
-101900*            PERFORM PRINT-DETAIL                                 RL1114.2
-102000*    ELSE                                                         RL1114.2
-102100*            MOVE   "'USE AFTER' PROCEDURE NOT ACTIONED"          RL1114.2
-102200*                 TO RE-MARK                                      RL1114.2
-102300*            MOVE   "@"             TO CORRECT-X                  RL1114.2
-102400*            MOVE    WRK-XN-00001-2 TO COMPUTED-X                 RL1114.2
-102500*            PERFORM FAIL                                         RL1114.2
-102600*            PERFORM PRINT-DETAIL.                                RL1114.2
-102700*                                                                 RL1114.2
-102800*                                                                 RL1114.2
-102900*REL-INIT-080.                                                    RL1114.2
-103000*    MOVE   "VIII-30 4.6.2"  TO ANSI-REFERENCE.                   RL1114.2
-103100*    CLOSE   RL-FS3.                                              RL1114.2
-103200*    OPEN    I-O RL-FS3.                                          RL1114.2
-103300*    MOVE    0 TO REC-CT.                                         RL1114.2
-103400*    MOVE    900000002 TO RL-FS3-KEY.                             RL1114.2
-103500*    MOVE    SPACES TO WRK-XN-00001-1.                            RL1114.2
-103600*    MOVE    SPACES TO RL-FS3-STATUS.                             RL1114.2
-103700*    MOVE    SPACES TO FILE-RECORD-INFO-P1-120 (2).               RL1114.2
-103800*REL-TEST-080-1.                                                  RL1114.2
-103900*    MOVE   "REL-TEST-080-1" TO PAR-NAME.                         RL1114.2
-104000*    READ    RL-FS3                                               RL1114.2
-104100*            INVALID                                              RL1114.2
-104200*            MOVE   "INVALID KEY ON FIRST READ" TO RE-MARK        RL1114.2
-104300*            PERFORM FAIL                                         RL1114.2
-104400*            PERFORM PRINT-DETAIL                                 RL1114.2
-104500*            NOT INVALID KEY                                      RL1114.2
-104600*            PERFORM PASS                                         RL1114.2
-104700*            PERFORM PRINT-DETAIL                                 RL1114.2
-104800*    END-READ                                                     RL1114.2
-104900*    MOVE   "X" TO WRK-XN-00001-1.                                RL1114.2
-105000*REL-TEST-080-2.                                                  RL1114.2
-105100*    MOVE   "REL-TEST-080-2" TO PAR-NAME.                         RL1114.2
-105200*    IF      WRK-XN-00001-1 = "X"                                 RL1114.2
-105300*            PERFORM PASS                                         RL1114.2
-105400*            PERFORM PRINT-DETAIL                                 RL1114.2
-105500*    ELSE                                                         RL1114.2
-105600*            MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         RL1114.2
-105700*            MOVE   "X"             TO CORRECT-X                  RL1114.2
-105800*            MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
-105900*            PERFORM FAIL                                         RL1114.2
-106000*            PERFORM PRINT-DETAIL.                                RL1114.2
-106100*                                                                 RL1114.2
-106200*                                                                 RL1114.2
-106300*REL-INIT-090.                                                    RL1114.2
-106400*    MOVE   "VIII-30 4.6.2"  TO ANSI-REFERENCE.                   RL1114.2
-106500*    MOVE    SPACES TO WRK-XN-00001-1.                            RL1114.2
-106600*    MOVE    SPACES TO RL-FS2-STATUS.                             RL1114.2
-106700*    MOVE    SPACES TO FILE-RECORD-INFO-P1-120 (2).               RL1114.2
-106800*REL-TEST-090-1.                                                  RL1114.2
-106900*    MOVE   "REL-TEST-090-1" TO PAR-NAME.                         RL1114.2
-107000*    REWRITE RL-FS2R1-F-G-240                                     RL1114.2
-107100*            INVALID KEY                                          RL1114.2
-107200*            MOVE   "INVALID KEY ON REWRITE" TO RE-MARK           RL1114.2
-107300*            PERFORM FAIL                                         RL1114.2
-107400*            PERFORM PRINT-DETAIL                                 RL1114.2
-107500*            NOT INVALID KEY                                      RL1114.2
-107600*            PERFORM PASS                                         RL1114.2
-107700*            PERFORM PRINT-DETAIL                                 RL1114.2
-107800*    END-REWRITE                                                  RL1114.2
-107900*    MOVE   "X" TO WRK-XN-00001-1.                                RL1114.2
-108000*REL-TEST-090-2.                                                  RL1114.2
-108100*    MOVE   "REL-TEST-090-2" TO PAR-NAME.                         RL1114.2
-108200*    IF      WRK-XN-00001-1 = "X"                                 RL1114.2
-108300*            PERFORM PASS                                         RL1114.2
-108400*            PERFORM PRINT-DETAIL                                 RL1114.2
-108500*    ELSE                                                         RL1114.2
-108600*            MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK         RL1114.2
-108700*            MOVE   "X"             TO CORRECT-X                  RL1114.2
-108800*            MOVE    WRK-XN-00001-1 TO COMPUTED-X                 RL1114.2
-108900*            PERFORM FAIL                                         RL1114.2
-109000*            PERFORM PRINT-DETAIL.                                RL1114.2
-109100*                                                                 RL1114.2
+098500*                                                                         
+098600*                                                                         
+098700*                                                                         
+098800*                                                                         
+098900*                                                                         
+099000*                                                                         
+099100*                                                                         
+099200*                                                                         
+099300*                                                                         
+099400*                                                                         
+099500*                                                                         
+099600*                                                                         
+099700*                                                                         
+099800*                                                                         
+099900*                                                                         
+100000*                                                                         
+100100*                                                                         
+100200*                                                                         
+100300*                                                                         
+100400*                                                                         
+100500*                                                                         
+100600*                                                                         
+100700*                                                                         
+100800*                                                                         
+100900*                                                                         
+101000*                                                                         
+101100*                                                                         
+101200*                                                                         
+101300*                                                                         
+101400*                                                                         
+101500*                                                                         
+101600*                                                                         
+101700*                                                                         
+101800*                                                                         
+101900*                                                                         
+102000*                                                                         
+102100*                                                                         
+102200*                                                                         
+102300*                                                                         
+102400*                                                                         
+102500*                                                                         
+102600*                                                                         
+102700*                                                                         
+102800*                                                                         
+102900*                                                                         
+103000*                                                                         
+103100*                                                                         
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
+103500*                                                                         
+103600*                                                                         
+103700*                                                                         
+103800*                                                                         
+103900*                                                                         
+104000*                                                                         
+104100*                                                                         
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
+104700*                                                                         
+104800*                                                                         
+104900*                                                                         
+105000*                                                                         
+105100*                                                                         
+105200*                                                                         
+105300*                                                                         
+105400*                                                                         
+105500*                                                                         
+105600*                                                                         
+105700*                                                                         
+105800*                                                                         
+105900*                                                                         
+106000*                                                                         
+106100*                                                                         
+106200*                                                                         
+106300*                                                                         
+106400*                                                                         
+106500*                                                                         
+106600*                                                                         
+106700*                                                                         
+106800*                                                                         
+106900*                                                                         
+107000*                                                                         
+107100*                                                                         
+107200*                                                                         
+107300*                                                                         
+107400*                                                                         
+107500*                                                                         
+107600*                                                                         
+107700*                                                                         
+107800*                                                                         
+107900*                                                                         
+108000*                                                                         
+108100*                                                                         
+108200*                                                                         
+108300*                                                                         
+108400*                                                                         
+108500*                                                                         
+108600*                                                                         
+108700*                                                                         
+108800*                                                                         
+108900*                                                                         
+109000*                                                                         
+109100*                                                                         
 109200 CCVS-EXIT SECTION.                                               RL1114.2
 109300 CCVS-999999.                                                     RL1114.2
 109400     GO TO CLOSE-FILES.                                           RL1114.2

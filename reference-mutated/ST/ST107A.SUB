@@ -1,23 +1,23 @@
 000100 IDENTIFICATION DIVISION.                                         ST1074.2
 000200 PROGRAM-ID.                                                      ST1074.2
 000300     ST107A.                                                      ST1074.2
-000400****************************************************************  ST1074.2
-000500*                                                              *  ST1074.2
-000600*    VALIDATION FOR:-                                          *  ST1074.2
-000700*                                                              *  ST1074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1074.2
-000900*                                                              *  ST1074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1074.2
-001100*                                                              *  ST1074.2
-001200****************************************************************  ST1074.2
-001300*                                                              *  ST1074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1074.2
-001500*                                                              *  ST1074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1074.2
-001900*                                                              *  ST1074.2
-002000****************************************************************  ST1074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100 ENVIRONMENT DIVISION.                                            ST1074.2
 002200 CONFIGURATION SECTION.                                           ST1074.2
 002300 SOURCE-COMPUTER.                                                 ST1074.2
@@ -241,7 +241,7 @@
 024800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1074.2
 024900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1074.2
 025000      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1074.2
-025100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1074.2
+025100*                                                                         
 025200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1074.2
 025300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1074.2
 025400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1074.2
@@ -346,7 +346,7 @@
 035300 SORT-INIT-B.                                                     ST1074.2
 035400     MOVE     ZERO TO UTILITY-3.                                  ST1074.2
 035500     PERFORM  READ-SORTIN 4 TIMES.                                ST1074.2
-035600*        NOTE SORT-TEST-2 CHECKS THE SIXTH RECORD IN THE FILE.    ST1074.2
+035600*                                                                         
 035700 SORT-TEST-2.                                                     ST1074.2
 035800     PERFORM  READ-SORTIN.                                        ST1074.2
 035900     MOVE     "SORT-TEST-2" TO PAR-NAME.                          ST1074.2
@@ -410,7 +410,7 @@
 041700 SORT-INIT-D.                                                     ST1074.2
 041800     PERFORM  READ-SORTIN 4 TIMES.                                ST1074.2
 041900     MOVE     SPACE TO UTILITY-3.                                 ST1074.2
-042000*        NOTE SORT-TEST-4 CHECKS THE SIXTH RECORD IN THE FILE.    ST1074.2
+042000*                                                                         
 042100 SORT-TEST-4.                                                     ST1074.2
 042200     PERFORM  READ-SORTIN.                                        ST1074.2
 042300     MOVE     "SORT-TEST-4" TO PAR-NAME.                          ST1074.2
@@ -435,7 +435,7 @@
 044200 SORT-INIT-E.                                                     ST1074.2
 044300     MOVE     +1.1111112 TO UTILITY-1.                            ST1074.2
 044400     MOVE     SPACE TO UTILITY-3.                                 ST1074.2
-044500*        NOTE SORT-TEST-5 CHECKS THE SEVENTH RECORD IN THE FILE.  ST1074.2
+044500*                                                                         
 044600 SORT-TEST-5.                                                     ST1074.2
 044700     PERFORM  READ-SORTIN.                                        ST1074.2
 044800     MOVE     "SORT-TEST-5" TO PAR-NAME.                          ST1074.2
@@ -459,7 +459,7 @@
 046600 SORT-INIT-F.                                                     ST1074.2
 046700     PERFORM  READ-SORTIN.                                        ST1074.2
 046800     MOVE     888888888888888888 TO UTILITY-2.                    ST1074.2
-046900*        NOTE SORT-TEST-6 CHECKS THE NINTH RECORD IN THE FILE.    ST1074.2
+046900*                                                                         
 047000 SORT-TEST-6.                                                     ST1074.2
 047100     PERFORM  READ-SORTIN.                                        ST1074.2
 047200     MOVE     "SORT-TEST-6" TO PAR-NAME.                          ST1074.2

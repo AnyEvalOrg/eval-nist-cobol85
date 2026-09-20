@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         IC1134.2
 000200 PROGRAM-ID.                                                      IC1134.2
 000300     IC113A.                                                      IC1134.2
-000400****************************************************************  IC1134.2
-000500*                                                              *  IC1134.2
-000600*    VALIDATION FOR:-                                          *  IC1134.2
-000700*                                                              *  IC1134.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1134.2
-000900*                                                              *  IC1134.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1134.2
-001100*                                                              *  IC1134.2
-001200****************************************************************  IC1134.2
-001300*                                                              *  IC1134.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1134.2
-001500*                                                              *  IC1134.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1134.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1134.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1134.2
-001900*                                                              *  IC1134.2
-002000****************************************************************  IC1134.2
-002100*                                                                 IC1134.2
-002200*         THE SUBPROGRAM IC113 IS CALLED BY THE MAIN PROGRAM IC112IC1134.2
-002300*    WHICH HAS A FILE DESCRIPTION RECORD IN THE USING PHRASE OF   IC1134.2
-002400*    THE CALL STATEMENT REFERENCING THIS SUBPROGRAM.  IC113 CHECKSIC1134.2
-002500*    THE VALUES IN THE FILE RECORD DESCRIBED IN THE LINKAGE       IC1134.2
-002600*    SECTION OF THE SUBPROGRAM.  IF ANY ERRORS ARE ENCOUNTERED    IC1134.2
-002700*    THE ERROR-FLAG IS SET TO 1 AND THE RECORDS-IN-ERROR COUNTER  IC1134.2
-002800*    IS INCREMENTED BY 1.                                         IC1134.2
-002900*                                                                 IC1134.2
-003000********************************************                      IC1134.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            IC1134.2
 003200 CONFIGURATION SECTION.                                           IC1134.2
 003300 SOURCE-COMPUTER.                                                 IC1134.2

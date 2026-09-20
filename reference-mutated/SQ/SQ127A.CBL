@@ -1,43 +1,43 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1274.2
 000200 PROGRAM-ID.                                                      SQ1274.2
 000300     SQ127A.                                                      SQ1274.2
-000400****************************************************************  SQ1274.2
-000500*                                                              *  SQ1274.2
-000600*    VALIDATION FOR:-                                          *  SQ1274.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1274.2
-000800*                                                              *  SQ1274.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1274.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1274.2
-001100*                                                              *  SQ1274.2
-001200****************************************************************  SQ1274.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1274.2
-001400*     THIS ROUTINE CHECKS THE SAME AS SQ104 IN COMBINATION        SQ1274.2
-001500*     WITH                                                        SQ1274.2
-001600*                                                                 SQ1274.2
-001700*         SELECT ... ASSIGN TO   "LITERAL-1"                      SQ1274.2
-001800*                                -----------                      SQ1274.2
-001900*             (X-CARD X-60 IS UESD FOR LITERAL-1)                 SQ1274.2
-002000*                                                                 SQ1274.2
-002100*                                                                 SQ1274.2
-002200*        THE ROUTINE SQ127A CREATES A SEQUENTIAL MASS STORAGE     SQ1274.2
-002300*    FILE WHICH HAS FIXED LENGTH RECORDS.  THE FILE IS THEN       SQ1274.2
-002400*    CLOSED AND OPENED AS AN INPUT FILE.  THE FILE IS READ AND    SQ1274.2
-002500*    FIELDS IN THE INPUT RECORDS ARE COMPARED TO THE VALUES       SQ1274.2
-002600*    WRITTEN TO ENSURE THAT THE RECORDS WERE PROCESSED CORRECTLY. SQ1274.2
-002700*    THE FILE IS CLOSED AND OPENED AGAIN AS AN INPUT FILE.  FOUR  SQ1274.2
-002800*    READ FORMAT OPTIONS ARE USED TO READ THE FILE AND FIELDS IN  SQ1274.2
-002900*    THE RECORDS ARE VERIFIED.  THE OPEN, CLOSE, READ, AND WRITE  SQ1274.2
-003000*    STATEMENTS ARE TESTED FOR LEVEL ONE FEATURES.                SQ1274.2
-003100*                                                                 SQ1274.2
-003200*    USED X-CARDS:                                                SQ1274.2
-003300*         XXXXX055                                                SQ1274.2
-003400*         XXXXX060        FOR "SQ-FS3"                            SQ1274.2
-003500*     P   XXXXX062                                                SQ1274.2
-003600*         XXXXX082                                                SQ1274.2
-003700*         XXXXX083                                                SQ1274.2
-003800*     C   XXXXX084                                                SQ1274.2
-003900*                                                                 SQ1274.2
-004000*                                                                 SQ1274.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 ENVIRONMENT DIVISION.                                            SQ1274.2
 004200 CONFIGURATION SECTION.                                           SQ1274.2
 004300 SOURCE-COMPUTER.                                                 SQ1274.2
@@ -293,7 +293,7 @@
 034300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1274.2
 034400      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1274.2
 034500      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1274.2
-034600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1274.2
+034600*                                                                         
 034700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1274.2
 034800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1274.2
 034900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1274.2
@@ -381,12 +381,12 @@
 043100     MOVE XRECORD-NUMBER (1) TO CORRECT-18V0.                     SQ1274.2
 043200     PERFORM PRINT-DETAIL.                                        SQ1274.2
 043300     CLOSE SQ-FS3.                                                SQ1274.2
-043400*        A MASS STORAGE SEQUENTIAL FILE WITH 120 CHARACTER        SQ1274.2
-043500*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 649 RECORDS.    SQ1274.2
+043400*                                                                         
+043500*                                                                         
 043600 READ-INIT-GF-01.                                                 SQ1274.2
 043700     MOVE ZERO TO WRK-CS-09V00.                                   SQ1274.2
-043800*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ1274.2
-043900*    SEQ-TEST-007.                                                SQ1274.2
+043800*                                                                         
+043900*                                                                         
 044000     OPEN INPUT SQ-FS3.                                           SQ1274.2
 044100 READ-TEST-GF-01.                                                 SQ1274.2
 044200     READ SQ-FS3 RECORD                                           SQ1274.2
@@ -428,8 +428,8 @@
 047800     MOVE ZERO TO WRK-CS-09V00.                                   SQ1274.2
 047900     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1274.2
 048000     OPEN INPUT SQ-FS3.                                           SQ1274.2
-048100*        FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED          SQ1274.2
-048200*    IN THIS SERIES OF TESTS.                                     SQ1274.2
+048100*                                                                         
+048200*                                                                         
 048300     MOVE "READ...RECORD AT END ..." TO FEATURE.                  SQ1274.2
 048400     MOVE "READ-TEST-GF-02" TO PAR-NAME.                          SQ1274.2
 048500     MOVE ZERO TO ERROR-FLAG.                                     SQ1274.2

@@ -2,30 +2,30 @@
 000200 PROGRAM-ID.                                                      NC2404.2
 000300     NC240A.                                                      NC2404.2
 000400                                                                  NC2404.2
-000500****************************************************************  NC2404.2
-000600*                                                              *  NC2404.2
-000700*    VALIDATION FOR:-                                          *  NC2404.2
-000800*                                                              *  NC2404.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2404.2
-001000*                                                              *  NC2404.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2404.2
-001200*                                                              *  NC2404.2
-001300****************************************************************  NC2404.2
-001400*                                                              *  NC2404.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2404.2
-001600*                                                              *  NC2404.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2404.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2404.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2404.2
-002000*                                                              *  NC2404.2
-002100****************************************************************  NC2404.2
-002200*                                                              *  NC2404.2
-002300*    PROGRAM NC240A TESTS THE CONSTRUCTION AND ACCESS OF A     *  NC2404.2
-002400*    THREE-DIMENSIONAL TABLE USING SUBSCRIPTS.  THE CONTENT OF *  NC2404.2
-002500*    TABLE ELEMENTS IS VERIFIED BY USE OF THE FORMAT 4         *  NC2404.2
-002600*    "PERFORM" STATEMENT.                                      *  NC2404.2
-002700*                                                              *  NC2404.2
-002800****************************************************************  NC2404.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900                                                                  NC2404.2
 003000 ENVIRONMENT DIVISION.                                            NC2404.2
 003100 CONFIGURATION SECTION.                                           NC2404.2
@@ -268,7 +268,7 @@
 027000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2404.2
 027100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2404.2
 027200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2404.2
-027300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2404.2
+027300*                                                                         
 027400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2404.2
 027500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2404.2
 027600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2404.2
@@ -379,7 +379,7 @@
 038100     MOVE "PERFORM VARYING DATA NAMES " TO RE-MARK.               NC2404.2
 038200     PERFORM FAIL.                                                NC2404.2
 038300     PERFORM PRINT-DETAIL.                                        NC2404.2
-038400*                                                                 NC2404.2
+038400*                                                                         
 038500 TH1-INIT-GF-2.                                                   NC2404.2
 038600     MOVE "GRP10" TO GRP-HOLD-AREA.                               NC2404.2
 038700     MOVE "TH1-TEST-GF-2      " TO PAR-NAME.                      NC2404.2
@@ -429,7 +429,7 @@
 043100     PERFORM FAIL.                                                NC2404.2
 043200 TH1-WRITE-GF-3.                                                  NC2404.2
 043300     PERFORM PRINT-DETAIL.                                        NC2404.2
-043400*                                                                 NC2404.2
+043400*                                                                         
 043500 TH1-INIT-GF-4.                                                   NC2404.2
 043600     MOVE "TH1-TEST-GF-4      " TO PAR-NAME.                      NC2404.2
 043700     MOVE "VI-109" TO ANSI-REFERENCE.                             NC2404.2
@@ -537,7 +537,7 @@
 053900     PERFORM FAIL.                                                NC2404.2
 054000 TH2-WRITE-GF-3.                                                  NC2404.2
 054100     PERFORM PRINT-DETAIL.                                        NC2404.2
-054200*                                                                 NC2404.2
+054200*                                                                         
 054300 TH2-INIT-GF-4.                                                   NC2404.2
 054400     MOVE "TH2-TEST-GF-4      " TO PAR-NAME.                      NC2404.2
 054500     MOVE "VI-109" TO ANSI-REFERENCE.                             NC2404.2
@@ -565,11 +565,11 @@
 056700 TH2-WRITE-GF-4.                                                  NC2404.2
 056800     PERFORM PRINT-DETAIL.                                        NC2404.2
 056900     GO TO TH3-INIT-GF-1.                                         NC2404.2
-057000*                                                                 NC2404.2
+057000*                                                                         
 057100 FIND-LEVEL-2-ENTRY.                                              NC2404.2
 057200     IF ENTRY-2 (CON-5, CON-6) = SEC-HOLD-AREA                    NC2404.2
 057300         MOVE "PASS" TO TEST-CHECK.                               NC2404.2
-057400*                                                                 NC2404.2
+057400*                                                                         
 057500 TH3-INIT-GF-1.                                                   NC2404.2
 057600     MOVE "PERFORM VARYING LEV3" TO FEATURE.                      NC2404.2
 057700     MOVE "VI-109" TO ANSI-REFERENCE.                             NC2404.2
@@ -651,7 +651,7 @@
 065300     PERFORM FAIL.                                                NC2404.2
 065400 TH3-WRITE-GF-3.                                                  NC2404.2
 065500     PERFORM PRINT-DETAIL.                                        NC2404.2
-065600*                                                                 NC2404.2
+065600*                                                                         
 065700 TH3-INIT-GF-4.                                                   NC2404.2
 065800     MOVE "TH3-TEST-GF-4      " TO PAR-NAME.                      NC2404.2
 065900     MOVE "VI-109" TO ANSI-REFERENCE.                             NC2404.2

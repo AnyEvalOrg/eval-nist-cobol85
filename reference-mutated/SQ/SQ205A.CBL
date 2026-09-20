@@ -1,19 +1,19 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2054.2
 000200 PROGRAM-ID.                                                      SQ2054.2
 000300     SQ205A.                                                      SQ2054.2
-000400****************************************************************  SQ2054.2
-000500*                                                              *  SQ2054.2
-000600*    VALIDATION FOR:-                                          *  SQ2054.2
-000700*    " HIGH       ".                                              SQ2054.2
-000800*                                                              *  SQ2054.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2054.2
-001000*    "4.2 ".                                                      SQ2054.2
-001100*                                                              *  SQ2054.2
-001200* THIS ROUTINE (OLD: SQ210)  TESTS THE USE STATEMENT WITH XFILE-NASQ2054.2
-001300*    SERIES.  A MASS STORAGE AND TAPE FILE ARE CREATED AND THEN   SQ2054.2
-001400*    READ.  AN AT END CONDITION IS USED TO CAUSE THE USE PROCEDURESQ2054.2
-001500*    TO BE EXECUTED.  BOTH FILES HAVE A FILE STATUS CLAUSE IN THE SQ2054.2
-001600*    SELECT CLAUSE IN THE FILE-CONTROL PARAGRAPH.                 SQ2054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
 001700 ENVIRONMENT DIVISION.                                            SQ2054.2
 001800 CONFIGURATION SECTION.                                           SQ2054.2
 001900 SOURCE-COMPUTER.                                                 SQ2054.2
@@ -55,10 +55,10 @@
 008100 01  COUNT-OF-RECS PIC 9999  VALUE 0.                             SQ2054.2
 008200 01  GRP-STATUS-KEY-1.                                            SQ2054.2
 008300     02 WRK-XN-00001-KEY-1   PIC XX.                              SQ2054.2
-008400*    02 FILLER               PIC X.                               SQ2054.2
+008400*                                                                         
 008500 01  GRP-STATUS-KEY-2.                                            SQ2054.2
 008600     02 WRK-XN-00001-KEY-2   PIC XX.                              SQ2054.2
-008700*    02 FILLER               PIC X.                               SQ2054.2
+008700*                                                                         
 008800 01  FILE-RECORD-INFORMATION-REC.                                 SQ2054.2
 008900     03 FILE-RECORD-INFO-SKELETON.                                SQ2054.2
 009000        05 FILLER                 PICTURE X(48)       VALUE       SQ2054.2
@@ -303,7 +303,7 @@
 035300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2054.2
 035400      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2054.2
 035500      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2054.2
-035600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2054.2
+035600*                                                                         
 035700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2054.2
 035800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2054.2
 035900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2054.2

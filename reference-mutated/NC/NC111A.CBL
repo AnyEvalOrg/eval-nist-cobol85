@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1114.2
 000200 PROGRAM-ID.                                                      NC1114.2
 000300     NC111A.                                                      NC1114.2
-000400****************************************************************  NC1114.2
-000500*                                                              *  NC1114.2
-000600*    VALIDATION FOR:-                                          *  NC1114.2
-000700*                                                              *  NC1114.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1114.2
-000900*                                                              *  NC1114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1114.2
-001100*                                                              *  NC1114.2
-001200****************************************************************  NC1114.2
-001300*                                                              *  NC1114.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1114.2
-001500*                                                              *  NC1114.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1114.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1114.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1114.2
-001900*                                                              *  NC1114.2
-002000****************************************************************  NC1114.2
-002100*                                                                 NC1114.2
-002200*   PROGRAM NC111A TESTS THE TRUNCATION OF RESULTANT IDENTIFIERS  NC1114.2
-002300*         USING ADD SUBTRACT AND MULTIPLY STATEMENTS.             NC1114.2
-002400*                                                                 NC1114.2
-002500*                                                                 NC1114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600                                                                  NC1114.2
 002700 ENVIRONMENT DIVISION.                                            NC1114.2
 002800 CONFIGURATION SECTION.                                           NC1114.2
@@ -238,7 +238,7 @@
 024000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1114.2
 024100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1114.2
 024200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1114.2
-024300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1114.2
+024300*                                                                         
 024400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1114.2
 024500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1114.2
 024600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1114.2
@@ -358,7 +358,7 @@
 036000 TRU-TEST-GF-2-0.                                                 NC1114.2
 036100     ADD      N-43 1.4       GIVING N-45.                         NC1114.2
 036200 TRU-TEST-GF-2-1.                                                 NC1114.2
-036300     IF       N-45 EQUAL TO +0                                    NC1114.2
+036300     IF       N-45 EQUAL TO +3                                    NC1114.2
 036400              PERFORM PASS GO TO TRU-WRITE-GF-2.                  NC1114.2
 036500     GO       TO TRU-FAIL-GF-2.                                   NC1114.2
 036600 TRU-DELETE-GF-2.                                                 NC1114.2
@@ -367,7 +367,7 @@
 036900 TRU-FAIL-GF-2.                                                   NC1114.2
 037000     PERFORM  FAIL.                                               NC1114.2
 037100     MOVE     N-45 TO COMPUTED-N.                                 NC1114.2
-037200     MOVE     0 TO CORRECT-N.                                     NC1114.2
+037200     MOVE     3 TO CORRECT-N.                                     NC1114.2
 037300 TRU-WRITE-GF-2.                                                  NC1114.2
 037400     MOVE     "TRU-TEST-GF-2 " TO PAR-NAME.                       NC1114.2
 037500     PERFORM  PRINT-DETAIL.                                       NC1114.2
@@ -378,7 +378,7 @@
 038000 TRU-TEST-GF-3-0.                                                 NC1114.2
 038100     ADD      N-44 -1.4      GIVING N-45.                         NC1114.2
 038200 TRU-TEST-GF-3-1.                                                 NC1114.2
-038300     IF       N-45 EQUAL TO -3                                    NC1114.2
+038300     IF       N-45 EQUAL TO -2                                    NC1114.2
 038400              PERFORM PASS GO TO TRU-WRITE-GF-3.                  NC1114.2
 038500     GO       TO TRU-FAIL-GF-3.                                   NC1114.2
 038600 TRU-DELETE-GF-3.                                                 NC1114.2
@@ -387,7 +387,7 @@
 038900 TRU-FAIL-GF-3.                                                   NC1114.2
 039000     PERFORM  FAIL.                                               NC1114.2
 039100     MOVE     N-45 TO COMPUTED-N.                                 NC1114.2
-039200     MOVE     -3 TO CORRECT-N.                                    NC1114.2
+039200     MOVE     -2 TO CORRECT-N.                                    NC1114.2
 039300 TRU-WRITE-GF-3.                                                  NC1114.2
 039400     MOVE     "TRU-TEST-GF-3 " TO PAR-NAME.                       NC1114.2
 039500     PERFORM  PRINT-DETAIL.                                       NC1114.2
@@ -398,7 +398,7 @@
 040000 TRU-TEST-GF-4-0.                                                 NC1114.2
 040100     MULTIPLY 5 BY N-43      GIVING N-45.                         NC1114.2
 040200 TRU-TEST-GF-4-1.                                                 NC1114.2
-040300     IF       N-45 EQUAL TO +3                                    NC1114.2
+040300     IF       N-45 EQUAL TO +8                                    NC1114.2
 040400              PERFORM PASS GO TO TRU-WRITE-GF-4.                  NC1114.2
 040500     GO       TO TRU-FAIL-GF-4.                                   NC1114.2
 040600 TRU-DELETE-GF-4.                                                 NC1114.2
@@ -407,7 +407,7 @@
 040900 TRU-FAIL-GF-4.                                                   NC1114.2
 041000     PERFORM  FAIL.                                               NC1114.2
 041100     MOVE     N-45 TO COMPUTED-N.                                 NC1114.2
-041200     MOVE     3 TO CORRECT-N.                                     NC1114.2
+041200     MOVE     8 TO CORRECT-N.                                     NC1114.2
 041300 TRU-WRITE-GF-4.                                                  NC1114.2
 041400     MOVE     "TRU-TEST-GF-4 " TO PAR-NAME.                       NC1114.2
 041500     PERFORM  PRINT-DETAIL.                                       NC1114.2
@@ -418,7 +418,7 @@
 042000 TRU-TEST-GF-5-0.                                                 NC1114.2
 042100     MULTIPLY 5 BY N-44      GIVING N-45.                         NC1114.2
 042200 TRU-TEST-GF-5-1.                                                 NC1114.2
-042300     IF       N-45 EQUAL TO -4                                    NC1114.2
+042300     IF       N-45 EQUAL TO -0                                    NC1114.2
 042400              PERFORM PASS GO TO TRU-WRITE-GF-5.                  NC1114.2
 042500     GO       TO TRU-FAIL-GF-5.                                   NC1114.2
 042600 TRU-DELETE-GF-5.                                                 NC1114.2
@@ -427,7 +427,7 @@
 042900 TRU-FAIL-GF-5.                                                   NC1114.2
 043000     PERFORM  FAIL.                                               NC1114.2
 043100     MOVE     N-45 TO COMPUTED-N.                                 NC1114.2
-043200     MOVE     -4 TO CORRECT-N.                                    NC1114.2
+043200     MOVE     -0 TO CORRECT-N.                                    NC1114.2
 043300 TRU-WRITE-GF-5.                                                  NC1114.2
 043400     MOVE     "TRU-TEST-GF-5 " TO PAR-NAME.                       NC1114.2
 043500     PERFORM  PRINT-DETAIL.                                       NC1114.2
@@ -438,7 +438,7 @@
 044000 TRU-TEST-GF-6-0.                                                 NC1114.2
 044100     SUBTRACT -1.4 FROM N-43 GIVING N-45.                         NC1114.2
 044200 TRU-TEST-GF-6-1.                                                 NC1114.2
-044300     IF       N-45 EQUAL TO +3                                    NC1114.2
+044300     IF       N-45 EQUAL TO +8                                    NC1114.2
 044400              PERFORM PASS GO TO TRU-WRITE-GF-6.                  NC1114.2
 044500     GO       TO TRU-FAIL-GF-6.                                   NC1114.2
 044600 TRU-DELETE-GF-6.                                                 NC1114.2
@@ -447,7 +447,7 @@
 044900 TRU-FAIL-GF-6.                                                   NC1114.2
 045000     PERFORM  FAIL.                                               NC1114.2
 045100     MOVE     N-45 TO COMPUTED-N.                                 NC1114.2
-045200     MOVE     3 TO CORRECT-N.                                     NC1114.2
+045200     MOVE     8 TO CORRECT-N.                                     NC1114.2
 045300 TRU-WRITE-GF-6.                                                  NC1114.2
 045400     MOVE     "TRU-TEST-GF-6 " TO PAR-NAME.                       NC1114.2
 045500     PERFORM  PRINT-DETAIL.                                       NC1114.2

@@ -1,34 +1,34 @@
 000100 IDENTIFICATION DIVISION.                                         RL1184.2
 000200 PROGRAM-ID.                                                      RL1184.2
 000300     RL118A.                                                      RL1184.2
-000400****************************************************************  RL1184.2
-000500*                                                              *  RL1184.2
-000600*    VALIDATION FOR:-                                          *  RL1184.2
-000700*                                                              *  RL1184.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1184.2
-000900*                                                              *  RL1184.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1184.2
-001100*                                                              *  RL1184.2
-001200****************************************************************  RL1184.2
-001300*                                                              *  RL1184.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1184.2
-001500*                                                              *  RL1184.2
-001600*            X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   *  RL1184.2
-001700*                    RELATIVE  I-O DATA FILE                   *  RL1184.2
-001800*            X-55   SYSTEM PRINTER                             *  RL1184.2
-001900*            X-69   ADDITIONAL VALUE OF CLAUSES                *  RL1184.2
-002000*            X-74   VALUE OF IMPLEMENTOR-NAME                  *  RL1184.2
-002100*            X-75   OBJECT OF VALUE OF CLAUSE                  *  RL1184.2
-002200*            X-82   SOURCE-COMPUTER                            *  RL1184.2
-002300*            X-83   OBJECT-COMPUTER.                           *  RL1184.2
-002400*                                                              *  RL1184.2
-002500****************************************************************  RL1184.2
-002600*    RL118A                                                    *  RL1184.2
-002700****************************************************************  RL1184.2
-002800*            THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND *  RL1184.2
-002900*            SEMANTIC ACTIONS ASSOCIATED WITH THE "STATUS"     *  RL1184.2
-003000*            CLAUSE FOR THE VALUES "22", "23" AND "24".        *  RL1184.2
-003100****************************************************************  RL1184.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
 003200 ENVIRONMENT DIVISION.                                            RL1184.2
 003300 CONFIGURATION SECTION.                                           RL1184.2
 003400 SOURCE-COMPUTER.                                                 RL1184.2
@@ -341,7 +341,7 @@
 035300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1184.2
 035400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1184.2
 035500      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1184.2
-035600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1184.2
+035600*                                                                         
 035700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1184.2
 035800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1184.2
 035900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1184.2
@@ -423,12 +423,12 @@
 043500     MOVE     "RL"          TO  XFILE-ORGANIZATION (2).           RL1184.2
 043600     MOVE     "S"           TO  XLABEL-TYPE        (2).           RL1184.2
 043700     MOVE     000001        TO  XRECORD-NUMBER     (2).           RL1184.2
-043800*INITIALIZE  RECORD WORK AREA NUMBER 2.                           RL1184.2
+043800*                                                                         
 043900     MOVE     1         TO  WRK-CS-09V00-012.                     RL1184.2
 044000     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     RL1184.2
 044100                            WRK-CS-09V00-015 WRK-CS-09V00-016     RL1184.2
 044200                            WRK-CS-09V00-017 WRK-CS-09V00-018.    RL1184.2
-044300*                                                                 RL1184.2
+044300*                                                                         
 044400 REL-INIT-1.                                                      RL1184.2
 044500     MOVE   "REL-TEST-1" TO PAR-NAME.                             RL1184.2
 044600     MOVE   "VII-3 1.3.4 3C" TO ANSI-REFERENCE.                   RL1184.2
@@ -459,7 +459,7 @@
 047100     ELSE                                                         RL1184.2
 047200             PERFORM PASS                                         RL1184.2
 047300             PERFORM PRINT-DETAIL.                                RL1184.2
-047400*                                                                 RL1184.2
+047400*                                                                         
 047500 REL-INIT-2.                                                      RL1184.2
 047600     MOVE   "REL-TEST-2" TO PAR-NAME.                             RL1184.2
 047700     MOVE   "VII-3 1.3.4 3A" TO ANSI-REFERENCE.                   RL1184.2
@@ -485,8 +485,8 @@
 049700     ELSE                                                         RL1184.2
 049800             PERFORM PASS                                         RL1184.2
 049900             PERFORM PRINT-DETAIL.                                RL1184.2
-050000*                                                                 RL1184.2
-050100*                                                                 RL1184.2
+050000*                                                                         
+050100*                                                                         
 050200 REL-INIT-3.                                                      RL1184.2
 050300     MOVE   "REL-TEST-3" TO PAR-NAME.                             RL1184.2
 050400     MOVE   "VII-3 1.3.4 3B" TO ANSI-REFERENCE.                   RL1184.2
@@ -509,16 +509,16 @@
 052100     ELSE                                                         RL1184.2
 052200             PERFORM PASS                                         RL1184.2
 052300             PERFORM PRINT-DETAIL.                                RL1184.2
-052400*                                                                 RL1184.2
+052400*                                                                         
 052500 REL-INIT-4.                                                      RL1184.2
 052600     MOVE   "REL-TEST-4" TO PAR-NAME.                             RL1184.2
 052700     MOVE   "VII-3 1.3.4 3C" TO ANSI-REFERENCE.                   RL1184.2
 052800     MOVE    SPACE TO RL-FD2-STATUS.                              RL1184.2
 052900     MOVE    100 TO RL-FD3-KEY.                                   RL1184.2
 053000     GO TO REL-DELETE-4.                                          RL1184.2
-053100*    WRITE   RL-FD3R1-F-G-240                                     RL1184.2
-053200*        INVALID GO TO REL-DELETE-4.                              RL1184.2
-053300*    GO TO   REL-TEST-4.                                          RL1184.2
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
 053400 REL-DELETE-4.                                                    RL1184.2
 053500     PERFORM DE-LETE.                                             RL1184.2
 053600     PERFORM PRINT-DETAIL.                                        RL1184.2
@@ -536,7 +536,7 @@
 054800             PERFORM PRINT-DETAIL.                                RL1184.2
 054900 REL-TEST-4-EXIT.                                                 RL1184.2
 055000     CLOSE RL-FD3.                                                RL1184.2
-055100*                                                                 RL1184.2
+055100*                                                                         
 055200 CCVS-EXIT SECTION.                                               RL1184.2
 055300 CCVS-999999.                                                     RL1184.2
 055400     GO TO CLOSE-FILES.                                           RL1184.2

@@ -1,64 +1,64 @@
 000100 IDENTIFICATION DIVISION.                                         IX2064.2
 000200 PROGRAM-ID.                                                      IX2064.2
 000300     IX206A.                                                      IX2064.2
-000400****************************************************************  IX2064.2
-000500*                                                              *  IX2064.2
-000600*    VALIDATION FOR:-                                          *  IX2064.2
-000700*                                                              *  IX2064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2064.2
-000900*                                                              *  IX2064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2064.2
-001100*                                                              *  IX2064.2
-001200*IX206A                                                           IX2064.2
-001300******************************************************************IX2064.2
-001400*    THE FUNCTION OF THIS PROGRAM IS TO TEST THE PERMISSIBLE      IX2064.2
-001500*    SYNTACTICAL CONSTRUCTS OF COBOL ELEMENTS ASSOCIATED WITH     IX2064.2
-001600*    LEVEL 2 OF INDEXED I-O.                                      IX2064.2
-001700*    THE ELEMENTS TESTED IN THIS PROGRAM ARE:                     IX2064.2
-001800*                                                                 IX2064.2
-001900*    (1) ACCESS MODE DYNAMIC                                      IX2064.2
-002000*    (2) ALTERNATE RECORD KEY WITHOUT THE DUPLICATES OPTION       IX2064.2
-002100*    (3) RESERVE CLAUSE                                           IX2064.2
-002200*    (4) SAME CLAUSE                                              IX2064.2
-002300*    (5) BLOCK CONTAINS INTEGER-1 TO INTEGER-2 CLAUSE             IX2064.2
-002400*    (6) VALUE OF IMPLEMENTOR-NAME SERIES.                        IX2064.2
-002500*                                                                 IX2064.2
-002600*    EACH ELEMENT TESTED WILL BE EXERCISED SEMANTICALLY BY THIS   IX2064.2
-002700*    ROUTINE.  ONE FILE IS CREATED AND ACCESSED IN THE DYNAMIC    IX2064.2
-002800*    ACCESS MODE AND THE 2ND FILE IS CREATED 2ND ACCESSED IN THE  IX2064.2
-002900*    SEQUENTIAL ACCESS MODE.                                      IX2064.2
-003000*                                                                 IX2064.2
-003100*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX2064.2
-003200*                                                                 IX2064.2
-003300*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2064.2
-003400*                    CLAUSE FOR DATA FILE IX-FS1                  IX2064.2
-003500*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX2064.2
-003600*                    CLAUSE FOR DATA FILE IX-FD2                  IX2064.2
-003700*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2064.2
-003800*                    CLAUSE FOR INDEX FILE IX-FS1                 IX2064.2
-003900*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX2064.2
-004000*                    CLAUSE FOR INDEX FILE IX-FD2                 IX2064.2
-004100*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX2064.2
-004200*             X-62   FOR RAW-DATA                                 IX2064.2
-004300*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX2064.2
-004400*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX2064.2
-004500*             X-84   LABEL RECORDS  FOR PRINT-FILE                IX2064.2
-004600*                                                                 IX2064.2
-004700*        NOTE:  X-CARDS 44, 45, 62 AND 84     ARE OPTIONAL        IX2064.2
-004800*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX2064.2
-004900*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX2064.2
-005000*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX2064.2
-005100*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX2064.2
-005200*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX2064.2
-005300*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX2064.2
-005400*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX2064.2
-005500*               THEY ARE AS FOLLOWS                               IX2064.2
-005600*                                                                 IX2064.2
-005700*                  P  SELECTS X-CARDS 62                          IX2064.2
-005800*                  J  SELECTS X-CARDS 44 & 45                     IX2064.2
-005900*                  C  SELECTS X-CARDS 84                          IX2064.2
-006000*                                                                 IX2064.2
-006100******************************************************            IX2064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
 006200 ENVIRONMENT DIVISION.                                            IX2064.2
 006300 CONFIGURATION SECTION.                                           IX2064.2
 006400 SOURCE-COMPUTER.                                                 IX2064.2
@@ -380,7 +380,7 @@
 043500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2064.2
 043600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2064.2
 043700      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2064.2
-043800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2064.2
+043800*                                                                         
 043900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2064.2
 044000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2064.2
 044100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2064.2
@@ -492,8 +492,8 @@
 054700            MOVE     "FILE CREATION PREMATURE" TO RE-MARK         IX2064.2
 054800            PERFORM  FAIL.                                        IX2064.2
 054900     PERFORM   PRINT-DETAIL.                                      IX2064.2
-055000*                                                                 IX2064.2
-055100*                                                                 IX2064.2
+055000*                                                                         
+055100*                                                                         
 055200     CLOSE  IX-FD1.                                               IX2064.2
 055300 READ-INIT-F1-01.                                                 IX2064.2
 055400     OPEN     INPUT  IX-FD1.                                      IX2064.2
@@ -506,17 +506,17 @@
 056100        NEXT RECORD                                               IX2064.2
 056200         AT END                                                   IX2064.2
 056300              ADD    1000  TO WRK-DU-10V00-002.                   IX2064.2
-056400*                                                                 IX2064.2
-056500*    COMPUTED RESULTS IN INCREMENTS OF 1000  INDICATE AT END PATH IX2064.2
-056600*         HAS BEEN TAKEN.                                         IX2064.2
-056700*                                                                 IX2064.2
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
 056800     MOVE     IX-FD1R1-F-G-240  TO FILE-RECORD-INFO (1).          IX2064.2
 056900     IF       XRECORD-NUMBER (1)  NOT EQUAL TO WRK-DU-10V00-001   IX2064.2
 057000              ADD     1  TO WRK-DU-10V00-002.                     IX2064.2
-057100*                                                                 IX2064.2
-057200*    COMPUTED RESULTS IN INCREMENTS OF 1  INDICATE THAT THE       IX2064.2
-057300*       RECORD RETRIEVED WAS NOT THE ONE EXPECTED.                IX2064.2
-057400*                                                                 IX2064.2
+057100*                                                                         
+057200*                                                                         
+057300*                                                                         
+057400*                                                                         
 057500     ADD     1  TO WRK-CS-09V00-001.                              IX2064.2
 057600     IF      WRK-CS-09V00-001  GREATER THAN 24                    IX2064.2
 057700           GO TO READ-TEST-F1-01.                                 IX2064.2
@@ -533,8 +533,8 @@
 058800        ELSE                                                      IX2064.2
 058900              PERFORM  PASS.                                      IX2064.2
 059000     PERFORM   PRINT-DETAIL.                                      IX2064.2
-059100*                                                                 IX2064.2
-059200*                                                                 IX2064.2
+059100*                                                                         
+059200*                                                                         
 059300 READ-INIT-F2-02.                                                 IX2064.2
 059400     MOVE     ZERO TO WRK-DU-10V00-001.                           IX2064.2
 059500     MOVE    ZERO TO WRK-CS-09V00-001.                            IX2064.2
@@ -545,17 +545,17 @@
 060000     READ     IX-FD1  RECORD                                      IX2064.2
 060100          INVALID KEY                                             IX2064.2
 060200              ADD   1000 TO WRK-DU-10V00-002.                     IX2064.2
-060300*                                                                 IX2064.2
-060400*    COMPUTED RESULTS IN INCREMENTS OF 1000 INDICATE INVALID KEY  IX2064.2
-060500*       PATH HAS BEEN TAKEN.                                      IX2064.2
-060600*                                                                 IX2064.2
+060300*                                                                         
+060400*                                                                         
+060500*                                                                         
+060600*                                                                         
 060700     MOVE     IX-FD1R1-F-G-240  TO FILE-RECORD-INFO (1).          IX2064.2
 060800     IF       XRECORD-NUMBER (1)  NOT EQUAL TO WRK-DU-10V00-001   IX2064.2
 060900              ADD    1    TO WRK-DU-10V00-002.                    IX2064.2
-061000*                                                                 IX2064.2
-061100*    COMPUTED RESULTS IN INCREMENTS OF 1  INDICAT THAT THE        IX2064.2
-061200*       RECORD RETRIEVED WAS NOT THE ONE EXPECTED.                IX2064.2
-061300*                                                                 IX2064.2
+061000*                                                                         
+061100*                                                                         
+061200*                                                                         
+061300*                                                                         
 061400     ADD     1  TO WRK-CS-09V00-001.                              IX2064.2
 061500     IF      WRK-CS-09V00-001  GREATER THAN   10                  IX2064.2
 061600              NEXT SENTENCE  ELSE                                 IX2064.2
@@ -572,8 +572,8 @@
 062700        ELSE                                                      IX2064.2
 062800              PERFORM  PASS.                                      IX2064.2
 062900     PERFORM   PRINT-DETAIL.                                      IX2064.2
-063000*                                                                 IX2064.2
-063100*                                                                 IX2064.2
+063000*                                                                         
+063100*                                                                         
 063200 READ-INIT-F2-03.                                                 IX2064.2
 063300     MOVE    0000000200  TO WRK-DU-10V00-001.                     IX2064.2
 063400     MOVE   WRK-REC-KEY-FD1 TO IX-FD1-REC-KEY.                    IX2064.2
@@ -586,26 +586,26 @@
 064100                     KEY IS EQUAL TO IX-FD1-ALTKEY1               IX2064.2
 064200          INVALID KEY                                             IX2064.2
 064300                          ADD 1000000  TO WRK-DU-10V00-002.       IX2064.2
-064400*                                                                 IX2064.2
-064500*    COMPUTED RESULTS VALUE IN INCREMENTS OF 1000000 INDICATE     IX2064.2
-064600*        INVALID KEY PATH HAS BEEN TAKEN ON START STATEMENT.      IX2064.2
-064700*                                                                 IX2064.2
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
+064700*                                                                         
 064800 READ-TEST-F2-03-7.                                               IX2064.2
 064900     READ    IX-FD1                                               IX2064.2
 065000        NEXT RECORD                                               IX2064.2
 065100         AT END                                                   IX2064.2
 065200              ADD   1000  TO WRK-DU-10V00-002.                    IX2064.2
-065300*                                                                 IX2064.2
-065400*    COMPUTED RESULTS IN INCREMENTS OF 1000 INDICATE AT END PATH  IX2064.2
-065500*       HAS BEEN TAKEN ON THE READ STATEMENT.                     IX2064.2
-065600*                                                                 IX2064.2
+065300*                                                                         
+065400*                                                                         
+065500*                                                                         
+065600*                                                                         
 065700     MOVE     IX-FD1R1-F-G-240  TO FILE-RECORD-INFO (1).          IX2064.2
 065800     IF       XRECORD-NUMBER (1)  NOT EQUAL TO WRK-DU-10V00-001   IX2064.2
 065900              ADD    1   TO WRK-DU-10V00-002.                     IX2064.2
-066000*                                                                 IX2064.2
-066100*     COMPUTED RESULTS IN INCREMENTS OF 1 INDICATE THAT           IX2064.2
-066200*       RECORD  RETRIEVED WAS NOT THE ONE EXPECTED.               IX2064.2
-066300*                                                                 IX2064.2
+066000*                                                                         
+066100*                                                                         
+066200*                                                                         
+066300*                                                                         
 066400     SUBTRACT  1  FROM WRK-DU-10V00-001.                          IX2064.2
 066500     ADD     1  TO WRK-CS-09V00-001.                              IX2064.2
 066600     IF      WRK-CS-09V00-001  GREATER THAN 25                    IX2064.2
@@ -665,8 +665,8 @@
 072000              MOVE     "FILE CREATION PREMATURE" TO RE-MARK       IX2064.2
 072100              PERFORM  FAIL.                                      IX2064.2
 072200     PERFORM   PRINT-DETAIL.                                      IX2064.2
-072300*                                                                 IX2064.2
-072400*                                                                 IX2064.2
+072300*                                                                         
+072400*                                                                         
 072500     CLOSE    IX-FS1.                                             IX2064.2
 072600 READ-INIT-F1-04.                                                 IX2064.2
 072700     OPEN     INPUT  IX-FS1.                                      IX2064.2
@@ -678,17 +678,17 @@
 073300     READ    IX-FS1                                               IX2064.2
 073400         AT END                                                   IX2064.2
 073500              ADD    1000  TO WRK-DU-10V00-004.                   IX2064.2
-073600*                                                                 IX2064.2
-073700*    COMPUTED RESULTS IN INCREMENTS OF 1000  INDICATE AT END PATH IX2064.2
-073800*         HAS BEEN TAKEN.                                         IX2064.2
-073900*                                                                 IX2064.2
+073600*                                                                         
+073700*                                                                         
+073800*                                                                         
+073900*                                                                         
 074000     MOVE     IX-FS1R1-F-G-240  TO FILE-RECORD-INFO (2).          IX2064.2
 074100     IF       XRECORD-NUMBER (2)  NOT EQUAL TO WRK-DU-10V00-003   IX2064.2
 074200              ADD     1  TO WRK-DU-10V00-004.                     IX2064.2
-074300*                                                                 IX2064.2
-074400*    COMPUTED RESULTS IN INCREMENTS OF 1  INDICATE THAT THE       IX2064.2
-074500*       RECORD RETRIEVED WAS NOT THE ONE EXPECTED.                IX2064.2
-074600*                                                                 IX2064.2
+074300*                                                                         
+074400*                                                                         
+074500*                                                                         
+074600*                                                                         
 074700     ADD     000000001  TO WRK-CS-09V00-001.                      IX2064.2
 074800     IF      WRK-CS-09V00-001  GREATER THAN  24                   IX2064.2
 074900              NEXT  SENTENCE  ELSE                                IX2064.2
@@ -705,8 +705,8 @@
 076000        ELSE                                                      IX2064.2
 076100              PERFORM  PASS.                                      IX2064.2
 076200     PERFORM   PRINT-DETAIL.                                      IX2064.2
-076300*                                                                 IX2064.2
-076400*                                                                 IX2064.2
+076300*                                                                         
+076400*                                                                         
 076500 READ-TEST-F2-05-4.                                               IX2064.2
 076600     MOVE     ZERO TO WRK-DU-10V00-003.                           IX2064.2
 076700     MOVE     ZERO TO WRK-DU-10V00-004.                           IX2064.2
@@ -722,25 +722,25 @@
 077700     START   IX-FS1                                               IX2064.2
 077800                   KEY IS EQUAL TO IX-FS1-ALTKEY1                 IX2064.2
 077900              INVALID KEY ADD 1000000  TO WRK-DU-10V00-004.       IX2064.2
-078000*                                                                 IX2064.2
-078100*    COMPUTED RESULTS VALUE IN INCREMENTS OF 1000000 INDICATE     IX2064.2
-078200*        INVALID KEY PATH HAS BEEN TAKEN ON START STATEMENT.      IX2064.2
-078300*                                                                 IX2064.2
+078000*                                                                         
+078100*                                                                         
+078200*                                                                         
+078300*                                                                         
 078400 READ-TEST-F2-05-6.                                               IX2064.2
 078500     READ    IX-FS1                                               IX2064.2
 078600         AT END                                                   IX2064.2
 078700              ADD   1000  TO WRK-DU-10V00-004.                    IX2064.2
-078800*                                                                 IX2064.2
-078900*    COMPUTED RESULTS IN INCREMENTS OF 1000 INDICATE AT END PATH  IX2064.2
-079000*       HAS BEEN TAKEN.                                           IX2064.2
-079100*                                                                 IX2064.2
+078800*                                                                         
+078900*                                                                         
+079000*                                                                         
+079100*                                                                         
 079200     MOVE     IX-FS1R1-F-G-240  TO FILE-RECORD-INFO (2).          IX2064.2
 079300     IF       XRECORD-NUMBER (2)  NOT EQUAL TO WRK-DU-10V00-003   IX2064.2
 079400              ADD    1   TO WRK-DU-10V00-004.                     IX2064.2
-079500*                                                                 IX2064.2
-079600*     COMPUTED RESULTS IN INCREMENTS OF 1 INDICATE THAT           IX2064.2
-079700*       RECORD  RETRIEVED WAS NOT THE ONE EXPECTED.               IX2064.2
-079800*                                                                 IX2064.2
+079500*                                                                         
+079600*                                                                         
+079700*                                                                         
+079800*                                                                         
 079900     SUBTRACT  1  FROM WRK-DU-10V00-003.                          IX2064.2
 080000     ADD     1  TO WRK-CS-09V00-001.                              IX2064.2
 080100     IF      WRK-CS-09V00-001  GREATER THAN 25                    IX2064.2
@@ -785,18 +785,18 @@
 084000              MOVE    XFILE-NAME (1)  TO COMPUTED-A               IX2064.2
 084100              MOVE     "IX-FD1"  TO CORRECT-A.                    IX2064.2
 084200     PERFORM  PRINT-DETAIL.                                       IX2064.2
-084300*                                                                 IX2064.2
-084400*                                                                 IX2064.2
+084300*                                                                         
+084400*                                                                         
 084500 READ-TEST-F1-07.                                                 IX2064.2
 084600     MOVE     "READ-TEST-F1-07 " TO PAR-NAME.                     IX2064.2
 084700     MOVE "SAME AREA          " TO FEATURE.                       IX2064.2
 084800     READ    IX-FS1                                               IX2064.2
 084900                       AT END                                     IX2064.2
 085000              ADD    1000 TO WRK-DU-10V00-004.                    IX2064.2
-085100*                                                                 IX2064.2
-085200*    COMPUTED RESULTS IN INCREMENTS OF 1000 INDICATE INVALID KEY  IX2064.2
-085300*       PATH HAS BEEN TAKEN.                                      IX2064.2
-085400*                                                                 IX2064.2
+085100*                                                                         
+085200*                                                                         
+085300*                                                                         
+085400*                                                                         
 085500     IF       WRK-DU-10V00-004    EQUAL TO ZERO                   IX2064.2
 085600              PERFORM PASS                                        IX2064.2
 085700            ELSE                                                  IX2064.2
@@ -806,19 +806,19 @@
 086100              MOVE      ZERO TO CORRECT-A                         IX2064.2
 086200              MOVE      "SEE PROGRAM"  TO RE-MARK.                IX2064.2
 086300     PERFORM PRINT-DETAIL.                                        IX2064.2
-086400*                                                                 IX2064.2
-086500*                                                                 IX2064.2
+086400*                                                                         
+086500*                                                                         
 086600 READ-TEST-F1-08.                                                 IX2064.2
 086700     MOVE "READ-TEST-F1-08    "  TO PAR-NAME.                     IX2064.2
 086800     MOVE "SAME AREA          " TO FEATURE.                       IX2064.2
 086900     MOVE    IX-FD1R1-F-G-240  TO FILE-RECORD-INFO  (9).          IX2064.2
-087000*                                                                 IX2064.2
-087100*    NOTE    IN TESTING THE SAME AREA CLAUSE THE RECORD AREA      IX2064.2
-087200*       SHOULD BE SHARED BY BOTH FILES IX-FD1 AND IX-FS1,         IX2064.2
-087300*       THEREFORE FILE IX-FS1 IS READ AND THE RECORD              IX2064.2
-087400*       IDENTIFIED FOR IX-FD1 IS ACCESSED AND TESTED FOR          IX2064.2
-087500*       EXPECTED PRESENCE OF IX-FS1 FILE RECORD CONTENTS.         IX2064.2
-087600*                                                                 IX2064.2
+087000*                                                                         
+087100*                                                                         
+087200*                                                                         
+087300*                                                                         
+087400*                                                                         
+087500*                                                                         
+087600*                                                                         
 087700     IF       XFILE-NAME (9)  EQUAL TO "IX-FS1"                   IX2064.2
 087800              PERFORM   PASS                                      IX2064.2
 087900              ELSE                                                IX2064.2

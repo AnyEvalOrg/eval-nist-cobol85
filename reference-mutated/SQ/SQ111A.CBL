@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1114.2
 000200 PROGRAM-ID.                                                      SQ1114.2
 000300     SQ111A.                                                      SQ1114.2
-000400****************************************************************  SQ1114.2
-000500*                                                              *  SQ1114.2
-000600*    VALIDATION FOR:-                                          *  SQ1114.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1114.2
-000800*                                                              *  SQ1114.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1114.2
-001100*                                                              *  SQ1114.2
-001200****************************************************************  SQ1114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1114.2
-001400*        THIS ROUTINE CREATES A SEQUENTIAL TAPE FILE CONTAINING   SQ1114.2
-001500*    595 RECORDS, EACH RECORD CONTAINING 155 CHARACTERS.  THE     SQ1114.2
-001600*    CODE-SET CLAUSE IS INCLUDED IN THE FILE DESCRIPTION ENTRY    SQ1114.2
-001700*    FOR THE FILE.  THE RECORD DESCRIPTION FOR THE FILE CONTAINS  SQ1114.2
-001800*    AN ITEM WITH THE SIGN IS SEPARATE CHARACTER CLAUSE.          SQ1114.2
-001900*        A SEQUENTIAL TAPE FILE WITH 595 RECORDS HAS BEEN         SQ1114.2
-002000*    CREATED.  THE FD FOR THE FILE CONTAINS A CODE-SET CLAUSE.    SQ1114.2
-002100*    THERE ARE 155 CHARACTERS PER RECORD INCLUDING A NUMERIC      SQ1114.2
-002200*    ITEM WITH THE SIGN IS SEPARATE CLAUSE.                       SQ1114.2
-002300*                                                                 SQ1114.2
-002400*    USED X-CARDS:                                                SQ1114.2
-002500*         XXXXX001                                                SQ1114.2
-002600*         XXXXX055                                                SQ1114.2
-002700*     P   XXXXX062                                                SQ1114.2
-002800*         XXXXX082                                                SQ1114.2
-002900*         XXXXX083                                                SQ1114.2
-003000*     C   XXXXX084                                                SQ1114.2
-003100*                                                                 SQ1114.2
-003200*                                                                 SQ1114.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            SQ1114.2
 003400 CONFIGURATION SECTION.                                           SQ1114.2
 003500 SOURCE-COMPUTER.                                                 SQ1114.2
@@ -296,7 +296,7 @@
 034500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1114.2
 034600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1114.2
 034700      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1114.2
-034800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1114.2
+034800*                                                                         
 034900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1114.2
 035000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1114.2
 035100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1114.2
@@ -390,8 +390,8 @@
 043900     CLOSE SQ-FS1.                                                SQ1114.2
 044000 READ-INIT-GF-01.                                                 SQ1114.2
 044100     MOVE ZERO TO COUNT-OF-RECS.                                  SQ1114.2
-044200*       THIS TEST READS AND CHECKS THE FILE CREATED IN            SQ1114.2
-044300*    READ-TEST-GF-01.                                             SQ1114.2
+044200*                                                                         
+044300*                                                                         
 044400     OPEN INPUT SQ-FS1.                                           SQ1114.2
 044500 READ-TEST-GF-01.                                                 SQ1114.2
 044600     READ SQ-FS1 RECORD                                           SQ1114.2

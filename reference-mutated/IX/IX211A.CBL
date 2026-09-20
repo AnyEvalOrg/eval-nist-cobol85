@@ -1,127 +1,127 @@
 000100 IDENTIFICATION DIVISION.                                         IX2114.2
 000200 PROGRAM-ID.                                                      IX2114.2
 000300     IX211A.                                                      IX2114.2
-000400****************************************************************  IX2114.2
-000500*                                                              *  IX2114.2
-000600*    VALIDATION FOR:-                                          *  IX2114.2
-000700*                                                              *  IX2114.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2114.2
-000900*                                                              *  IX2114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2114.2
-001100*                                                              *  IX2114.2
-001200****************************************************************  IX2114.2
-001300*                                                              *  IX2114.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IX2114.2
-001500*                                                              *  IX2114.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IX2114.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IX2114.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IX2114.2
-001900*                                                              *  IX2114.2
-002000****************************************************************  IX2114.2
-002100*         "IX211A"                                                IX2114.2
-002200******************************************************************IX2114.2
-002300*                                                                 IX2114.2
-002400*    THIS PROGRAM TESTS THE CAPABILITY TO CHANGE (UPDATE) INDEX   IX2114.2
-002500*    KEYS OF RECORDS IN AN INDEXED I-O FILE AND THEN RETRIEVE THE IX2114.2
-002600*    RECORDS FROM THE FILE IN THE PROPER SEQUENCE.  A RECORD      IX2114.2
-002700*    MODIFICATION FOR THE FILE WILL INVOLVE THE UPDATING          IX2114.2
-002800*    OF THE UPDATE-NUMBER FIELD, THE RECORD-KEY OR ALTERNATE-KEY, IX2114.2
-002900*    AND THE ODO-NUMBER FIELD OF THE RECORD.  EACH TIME A GIVEN   IX2114.2
-003000*    RECORD IS MODIFIED THE UPDATE-NUMBER FIELD WILL BE INCREMENT-IX2114.2
-003100*    ED BY ONE.  TO KEEP TRACK OF THOSE RECORDS MODIFIED,         IX2114.2
-003200*    THE ODO-NUMBER FIELD WILL ALWAYS CARRY THE SEQUENTIAL LOC-   IX2114.2
-003300*    ATION OF THE RECORD WITHIN THE FILE WHICH REFLECTS THE LAST  IX2114.2
-003400*    KEY VALUE POSITION BEFORE THE RECORD WAS MODIFIED.  THIS     IX2114.2
-003500*    LOCATION NUMBER WILL BE USED FOR VERIFYING THAT THE SEQUENTI-IX2114.2
-003600*    AL REORDING OF THE RECORD FOR THE FILE WAS PROPER.  ONLY ONE IX2114.2
-003700*    OF THE 3 KEYS OF THE RECORD WILLBE MODIFIED FOR ANY GIVEN    IX2114.2
-003800*    REWIRTE OF THE RECORD.                                       IX2114.2
-003900*    FURTHER A TEST IS MADE TO SEE IF THE POSITION INDICATOR      IX2114.2
-004000*    IS AFFECTED BY EXECUTION OF THE REWRITE STATEMENT.  IT SHOULDIX2114.2
-004100*    NOT (PARAGRAPH 4.6.4 (7), PAGE IX-34).                       IX2114.2
-004200*                                                                 IX2114.2
-004300*            REFERENCE   AMERICAN NATIONAL STANDARD               IX2114.2
-004400*                        PROGRAMMING LANGUAGE COBOL, X3.23-1985.  IX2114.2
-004500*                        SECTION IX, INDEXED I-O, THE REWRITE     IX2114.2
-004600*                        STATEMENT, PARAGRAPHS 4.6.4 (7),(14), ANDIX2114.2
-004700*                                             (15 B)              IX2114.2
-004800*                                                                 IX2114.2
-004900*                                                                 IX2114.2
-005000*    THIS PROGRAM FIRST CREATES AN  INDEXED SEQUENTIAL FILE       IX2114.2
-005100*    CONTAINING TWO ALTERNATE KEYS AND  THE ONE REQUIRED RECORD   IX2114.2
-005200*    KEY FOR THE FILE.  IMMEDIATELY FOLLOWING FILE CREATION THE   IX2114.2
-005300*    FILE IS READ AND THE RECORDS OF THE FILE VERIFIED FOR        IX2114.2
-005400*    ACCURACY.                                                    IX2114.2
-005500*    THE RECORDS IN THE FILE ARE CREATED IN SEQUENTIAL ORDER BY   IX2114.2
-005600*    RECORD KEY VALUE.  FOLLOWING  IS A SAMPLE OF THE DATA        IX2114.2
-005700*    CONTENTS FOR THE RECORD KEY AND TWO ALTERNATE RECORD KEYS IN IX2114.2
-005800*    THE FILE.                                                    IX2114.2
-005900*                                                                 IX2114.2
-006000*   REC-NO  RECORD-KEY      ALTERNATE-KEY-1     ALTERNATE-KEY-2   IX2114.2
-006100*   ------  ----------      ---------------     ---------------   IX2114.2
-006200*    001   BBBBBBBBBC002 EEEEEEEEEF000ALTKEY1 WWWWWWWWWV398ALTKEY2IX2114.2
-006300*    002   BBBBBBBBCC004 EEEEEEEEFF004ALTKEY1 WWWWWWWWVV396ALTKEY2IX2114.2
-006400*    003   BBBBBBBCCC006 EEEEEEEFFF006ALTKEY1 WWWWWWWVVV394ALTKEY2IX2114.2
-006500*     .          .                 .                    .         IX2114.2
-006600*     .          .                 .                    .         IX2114.2
-006700*     .          .                 .                    .         IX2114.2
-006800*    010   CCCCCCCCCC020 FFFFFFFFFF020ALTKEY1 VVVVVVVVVV380ALTKEY2IX2114.2
-006900*    011   CCCCCCCCCD022 FFFFFFFFFG022ALTKEY1 VVVVVVVVVV380ALTKEY2IX2114.2
-007000*    012   CCCCCCCCDD024 FFFFFFFFGG024ALTKEY1 VVVVVVVVUU376ALTKEY2IX2114.2
-007100*     .          .                 .                    .         IX2114.2
-007200*     .          .                 .                    .         IX2114.2
-007300*     .          .                 .                    .         IX2114.2
-007400*    200   UUUUUUUUUU400 YYYYYYYYYY400ALTKEY1 DDDDDDDDDD000ALTKEY2IX2114.2
-007500*                                                                 IX2114.2
-007600*     NOTE 1 - ALTERNATE KEY NUMBER 2 CONTAINS DUPLICATE KEYS     IX2114.2
-007700*              EVERY 10TH AND 11TH RECORDS.                       IX2114.2
-007800*                                                                 IX2114.2
-007900*    NOTE 2 - THE FIRST 50 RECORDS AND LAST 25 RECORDS OF THE     IX2114.2
-008000*    FILE FOLLOW THE ABOVE SEQUENTIAL KEY PATTERN.  FOR THE MIDDLEIX2114.2
-008100*    125 RECORDS ONLY THE NUMBER PART OF THE KEYS ARE VARIED      IX2114.2
-008200*    AND VARIED IN THE SEQUENCE SHOWN ABOVE.  THAT IS, RECORD-KEY IX2114.2
-008300*    AND ALTERNATE-KEY-1 ARE INCREMENTED BY 2 AND THE ALTERNATE-  IX2114.2
-008400*    KEY-2 IS DECREMENTED BY 2 EACH TIME A RECORD IS WRITTEN TO   IX2114.2
-008500*    THE FILE.  THE FILE IS DESIGNED TO BE LARGE ENOUGH SO THAT   IX2114.2
-008600*    AN I-O OPERATION IS REQUIRED FOR EACH RECORD ACCESSED FROM   IX2114.2
-008700*    THE FILE.                                                    IX2114.2
-008800*                                                                 IX2114.2
-008900*    FILE CHARACTERISTICS ARE: FILE SIZE            = 200 RECORDS IX2114.2
-009000*                              RECORD SIZE          = 240 CHARS.  IX2114.2
-009100*                              RECORD KEY SIZE      = 13  CHARS.  IX2114.2
-009200*                              ALTERNATE KEY 1 SIZE = 20  CHARS.  IX2114.2
-009300*                              ALTERNATE KEY 2 SIZE = 20  CHARS.  IX2114.2
-009400*                              ACCESS MODE          = DYNAMIC     IX2114.2
-009500*                                                                 IX2114.2
-009600*    A LIST OF COBOL ELEMENTS WITH THE PARAGRAPH NAME IN PARENTH- IX2114.2
-009700*    ESIS THAT TESTS THE ELEMENT AND A SHORT DESCRIPTION OF THE   IX2114.2
-009800*    TEST FOLLOWS.                                                IX2114.2
-009900*                                                                 IX2114.2
-010000*      WRITE --- INVALID KEY --. (INX-TEST-001) - THIS TEST       IX2114.2
-010100*            CREATES A FILE OF 200 RECORDS CONTAINING A RECORD KEYIX2114.2
-010200*            AND 2 ALTERNATE KEYS.                                IX2114.2
-010300*      READ --- AT END ---. (INX-TEST-002) - THIS TEST READS THE  IX2114.2
-010400*            FILE CREATED IN INX-TEST-001 AND VERIFIES THAT THE   IX2114.2
-010500*            FILE WAS CREATED CORRECTLY.                          IX2114.2
-010600*      START --- KEY IS EQUAL TO ALTERNAT-KEY1 ---.  AND          IX2114.2
-010700*      READ --- NEXT AT END ---. (INX-TEST-003.01) - THIS TEST    IX2114.2
-010800*            READS A RECORD AND ESTABLISHES THE ALTERNAT-KEY1 AS  IX2114.2
-010900*            THE KEY OF REFERENCE FOR THE FOLLOWING REWRITE TEST. IX2114.2
-011000*      REWRITE --- INVALID KEY ---. (INX-TEST-003-02) - THIS TEST IX2114.2
-011100*            MODIFIES THE ALTERNATE-KEY1 KEY OF THE RECORD AND    IX2114.2
-011200*            REWRITES THE RECORD                                  IX2114.2
-011300*      READ --- NEXT AT END ---. (INX-TEST-003.03) - ONE RECORD   IX2114.2
-011400*            IS READ SEQUENTIALLY FROM THE FILE.  THE REWRITE     IX2114.2
-011500*            IN PREVIOUS TEST SHOULD NOT HAVE AFFECTED THE RECORD IX2114.2
-011600*            POINTER FOR THE FILE, THUS THE RECORD MADE AVAILABLE IX2114.2
-011700*            SHOULD BE THE NEXT RECORD AS THOUGH THE ALTERNATE KEYIX2114.2
-011800*            HAD NOT BEEN MODIFIED.                               IX2114.2
-011900*      READ --- NEXT AT END ---. (INX-TEST-003.04) - THIS TEST    IX2114.2
-012000*            READS THE NEXT 4 RECORDS SEQUENTIALLY TO SEE IF      IX2114.2
-012100*            THE REWRITE OF THE RECORD CAUSED SEQUENTIAL          IX2114.2
-012200*            REORDING OF THE RECORDS.                             IX2114.2
-012300*                                                                 IX2114.2
-012400******************************************************************IX2114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
+008900*                                                                         
+009000*                                                                         
+009100*                                                                         
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
+010500*                                                                         
+010600*                                                                         
+010700*                                                                         
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
+011100*                                                                         
+011200*                                                                         
+011300*                                                                         
+011400*                                                                         
+011500*                                                                         
+011600*                                                                         
+011700*                                                                         
+011800*                                                                         
+011900*                                                                         
+012000*                                                                         
+012100*                                                                         
+012200*                                                                         
+012300*                                                                         
+012400*                                                                         
 012500 ENVIRONMENT DIVISION.                                            IX2114.2
 012600 CONFIGURATION SECTION.                                           IX2114.2
 012700 SOURCE-COMPUTER.                                                 IX2114.2
@@ -614,7 +614,7 @@
 066200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2114.2
 066300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2114.2
 066400      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2114.2
-066500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2114.2
+066500*                                                                         
 066600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2114.2
 066700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2114.2
 066800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2114.2
@@ -800,16 +800,16 @@
 084800     MOVE    WRK-FD1-ALTKEY1 TO IX-ALT-KEY1-AREA.                 IX2114.2
 084900     MOVE    WRK-FD1-ALTKEY2 TO IX-ALT-KEY2-AREA.                 IX2114.2
 085000 READ-TEST-F1-02.                                                 IX2114.2
-085100*                                                                 IX2114.2
-085200*  READ-TEST-F1-02 - THIS TEST READS A RECORD AND CHECKS THE      IX2114.2
-085300*                    RECORD MADE AVAILABLE.  THE PURPOSE IS TO    IX2114.2
-085400*                    ESTABLISH IX-FD1-ALTKEY1 AS THE KEY OF REF-  IX2114.2
-085500*                    ERENCE AND TO MAKE A RECORD AVAILABLE        IX2114.2
-085600*                    FOR TESTING THE REWRITE STATEMENT IN THE     IX2114.2
-085700*                    NEXT TEST.         RECORD 182 (ALTERNATE KEY IX2114.2
-085800*                    "WWWWWWWWXX364ALTKEY1") IS EXPECTED TO BE    IX2114.2
-085900*                    RETRIEVED.                                   IX2114.2
-086000*                                                                 IX2114.2
+085100*                                                                         
+085200*                                                                         
+085300*                                                                         
+085400*                                                                         
+085500*                                                                         
+085600*                                                                         
+085700*                                                                         
+085800*                                                                         
+085900*                                                                         
+086000*                                                                         
 086100     START   IX-FD1                                               IX2114.2
 086200                    KEY IS EQUAL TO IX-FD1-ALTKEY1                IX2114.2
 086300          INVALID KEY MOVE "INVALID KEY ON START" TO COMPUTED-A   IX2114.2
@@ -830,20 +830,20 @@
 087800 RWRT-TEST-GF-01.                                                 IX2114.2
 087900     MOVE "REWRITE             " TO FEATURE.                      IX2114.2
 088000     MOVE "RWRT-TEST-GF-01     " TO PAR-NAME.                     IX2114.2
-088100*                                                                 IX2114.2
-088200*  RWRT-TEST-GF-01 - THE TEST MODIFIES THE CONTENTS OF ALTERNATE- IX2114.2
-088300*                    KEY1 OF THE RECORD RETRIEVED BY THE TEST     IX2114.2
-088400*                    BEFORE AND REWRITES THE RECORD.THE NEW ALTER-IX2114.2
-088500*                    NATE KEY VALUE IS "WWWWWWXXXX369ALTKEY1"     IX2114.2
-088600*                    WHICH BECOMES SEQUENTIAL RECORD NUMBER  184. IX2114.2
-088700*                    THE NEW KEY FOR THE FILE HAS A KEY VALUE     IX2114.2
-088800*                    SEQUENTIALLY GREATER THAN THE RECORD VALUE   IX2114.2
-088900*                    RETRIEVED FROM RECORD. THE SEQUENTIAL RECORD IX2114.2
-089000*                    RETRIEVED BEFORE THE REWRITE WAS NUMBER      IX2114.2
-089100*                    182.  THE CURRENT RECORD POINTER FOR THE FILEIX2114.2
-089200*                    IS NOT EXPECTED TO BE MODIFIED BY            IX2114.2
-089300*                    EXECUTION OF THE REWRITE.                    IX2114.2
-089400*                                                                 IX2114.2
+088100*                                                                         
+088200*                                                                         
+088300*                                                                         
+088400*                                                                         
+088500*                                                                         
+088600*                                                                         
+088700*                                                                         
+088800*                                                                         
+088900*                                                                         
+089000*                                                                         
+089100*                                                                         
+089200*                                                                         
+089300*                                                                         
+089400*                                                                         
 089500     MOVE    182  TO ODO-NUMBER (1).                              IX2114.2
 089600     ADD     01  TO UPDATE-NUMBER (1).                            IX2114.2
 089700     MOVE    "WWWWWWXXXX369ALTKEY1"  TO FD1-ALTKEY1-1-20.         IX2114.2
@@ -863,16 +863,16 @@
 091100     MOVE "READ NEXT AT END    " TO FEATURE.                      IX2114.2
 091200     MOVE "READ-TEST-F1-03     " TO PAR-NAME.                     IX2114.2
 091300 READ-TEST-F1-03.                                                 IX2114.2
-091400*                                                                 IX2114.2
-091500*  READ-TEST-F1-03 - THIS TEST PERFORMS A SEQUENTIAL READ AND     IX2114.2
-091600*                    CHECKS THE RECORD MADE AVAILABLE.  THE KEY OFIX2114.2
-091700*                    REFERENCE IS EXPECTED TO BE THAT ESTABLISHED IX2114.2
-091800*                    BEFORE.              THE LOGICAL RECORD      IX2114.2
-091900*                    RETRIEVED IS EXPECTED TO BE THAT RECORD THAT IX2114.2
-092000*                    WOULD HAVE BEEN RETRIEVED HAD THE ALTERNATE  IX2114.2
-092100*                    KEY NOT BEEN CHANGE BY THE REWRITE IN        IX2114.2
-092200*                    RWRT-TEST-GF-01.                             IX2114.2
-092300*                                                                 IX2114.2
+091400*                                                                         
+091500*                                                                         
+091600*                                                                         
+091700*                                                                         
+091800*                                                                         
+091900*                                                                         
+092000*                                                                         
+092100*                                                                         
+092200*                                                                         
+092300*                                                                         
 092400     READ    IX-FD1  NEXT  AT END                                 IX2114.2
 092500                     MOVE   "AT END ON READ"  TO COMPUTED-A       IX2114.2
 092600             GO TO   READ-FAIL-F1-03.                             IX2114.2
@@ -895,20 +895,20 @@
 094300     MOVE    ZERO TO EXCUT-COUNTER-06V00.                         IX2114.2
 094400     MOVE    183  TO RECKEY-NUM.                                  IX2114.2
 094500 READ-TEST-F1-04.                                                 IX2114.2
-094600*                                                                 IX2114.2
-094700*  READ-TEST-F1-04 - THE TEST SEQUENTIALLY READS THE NEXT 4 REC-  IX2114.2
-094800*                    ORDS AND CHECKS THE RECORD NUMBER FIELD OF   IX2114.2
-094900*                    EACH RECORD RETRIEVED.  THE CONTENTS OF      IX2114.2
-095000*                    THE RECORD NUMBER FIELD IS EXPECTED TO BE    IX2114.2
-095100*                    184, 182, 185 AND 186 (ALTERNATE KEY VALUES  IX2114.2
-095200*                    WWWWWWXXXX368ALTKEY1 THROUGH WWWXXXXXXX372   IX2114.2
-095300*                    ALTKEY1 RESPECTIVELY).  THE RECORD IN WHICH  IX2114.2
-095400*                    THE ALTERNATE KEY VALUE WAS CHANGED TO       IX2114.2
-095500*                    WWWWWWXXXX369ALTKEY1 (SEQUENTIAL RECORD 184  IX2114.2
-095600*                    AFTER THE REORDING OCCURS I.E, AS A RESULT OFIX2114.2
-095700*                    CHANGING THE ALTERNATE KEY VALUE IN          IX2114.2
-095800*                    RWRT-TEST-GF-01) SHOULD BE MADE AVAILABLE.   IX2114.2
-095900*                                                                 IX2114.2
+094600*                                                                         
+094700*                                                                         
+094800*                                                                         
+094900*                                                                         
+095000*                                                                         
+095100*                                                                         
+095200*                                                                         
+095300*                                                                         
+095400*                                                                         
+095500*                                                                         
+095600*                                                                         
+095700*                                                                         
+095800*                                                                         
+095900*                                                                         
 096000     READ    IX-FD1  NEXT  AT END                                 IX2114.2
 096100                     MOVE  "AT END ON READ"  TO COMPUTED-A        IX2114.2
 096200                     MOVE   "SUCCESSFUL READ"  TO CORRECT-A       IX2114.2
@@ -958,19 +958,19 @@
 100600     ADD 1 TO REC-CT.                                             IX2114.2
 100700     MOVE "READ  UPDATED RECS  " TO FEATURE.                      IX2114.2
 100800     MOVE "READ-TEST-F1-       " TO PAR-NAME.                     IX2114.2
-100900*                                                                 IX2114.2
-101000*READ-TEST-F1-04 - THIS TEST READS THAT SEGMENT OF THE FILE       IX2114.2
-101100*                  UPDATED IN THE FIRST 4 TESTS AND CHECKS THE NEWIX2114.2
-101200*                  SEQUENTIAL ORDER OF THE RECORDS. THE SEQUENTIALIX2114.2
-101300*                  RETRIEVAL OF THE RECORDS FROM THE FILE IS      IX2114.2
-101400*                  EXPECTED TO REFLECT THE UPDATED KEY SEQUENCE.  IX2114.2
-101500*                                       THE START STATEMENT       IX2114.2
-101600*                  EXTABLISHES ALTERNATE KEY1  AS THE KEY OF REF- IX2114.2
-101700*                  ERENCE AND CURRENT RECORD POINTER TO POINT TO  IX2114.2
-101800*                  RELATIVE  RECORD NUMBER 180 (ALTERNATE-KEY1    IX2114.2
-101900*                  VALUE WWWWWWWWWW360ALTKEY1   BEFORE THE FILE   IX2114.2
-102000*                  READING BEGINS.                                IX2114.2
-102100*                                                                 IX2114.2
+100900*                                                                         
+101000*                                                                         
+101100*                                                                         
+101200*                                                                         
+101300*                                                                         
+101400*                                                                         
+101500*                                                                         
+101600*                                                                         
+101700*                                                                         
+101800*                                                                         
+101900*                                                                         
+102000*                                                                         
+102100*                                                                         
 102200     ADD     001  TO RECKEY-NUM.                                  IX2114.2
 102300     READ    IX-FD1 NEXT  AT END                                  IX2114.2
 102400             MOVE  "AT END ON READ"  TO COMPUTED-A                IX2114.2
@@ -979,23 +979,23 @@
 102700     IF      RECKEY-NUM EQUAL TO 182                              IX2114.2
 102800             MOVE  "YES"  TO ADJUSTED-NUM                         IX2114.2
 102900             ADD  001  TO RECKEY-NUM.                             IX2114.2
-103000*                                                                 IX2114.2
-103100*    THE ABOVE IF STATEMENT ADJUSTS THE RECKEY-NUM TO ACCOUNT     IX2114.2
-103200*    FOR THE VOID LEFT IN THE NUMBERING SEQUENCE WHEN THE RECORD  IX2114.2
-103300*    WAS REWRITTEN WITH A NEW ALTERNATE KEY.  THE RELATIVE        IX2114.2
-103400*    RETREIVAL POSITION OF THE RECORD IN THE FILE SHOULD HAVE     IX2114.2
-103500*    CHANGED FROM 182  TO 184.                                    IX2114.2
-103600*                                                                 IX2114.2
+103000*                                                                         
+103100*                                                                         
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
+103500*                                                                         
+103600*                                                                         
 103700     IF      RECKEY-NUM EQUAL TO 185                              IX2114.2
 103800             AND  ADJUSTED-NUM EQUAL TO "YES"                     IX2114.2
 103900             MOVE  "NO" TO ADJUSTED-NUM                           IX2114.2
 104000             SUBTRACT  001  FROM RECKEY-NUM                       IX2114.2
-104100*                                                                 IX2114.2
-104200*     THE SUBTRACT STATEMENT IS TO READJUST RECKEY-NUM  FOR       IX2114.2
-104300*    INSERTED     RECORD CAUSED BY UPDATE OF ALTERNATE KEY IN     IX2114.2
-104400*    THE RECORD.  THE SEQUENTIAL RETRIEVAL POSITION OF UPDATED    IX2114.2
-104500*    RECORD SHOULD BE POSITION NUMBER 184.                        IX2114.2
-104600*                                                                 IX2114.2
+104100*                                                                         
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
 104700             PERFORM  READ-TEST-004-1                             IX2114.2
 104800             ADD   001  TO EXCUT-COUNTER-06V00                    IX2114.2
 104900             GO TO READ-TEST-F1.                                  IX2114.2

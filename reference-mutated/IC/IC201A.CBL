@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         IC2014.2
 000200 PROGRAM-ID.                                                      IC2014.2
 000300     IC201A.                                                      IC2014.2
-000400****************************************************************  IC2014.2
-000500*                                                              *  IC2014.2
-000600*    VALIDATION FOR:-                                          *  IC2014.2
-000700*                                                              *  IC2014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2014.2
-000900*                                                              *  IC2014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2014.2
-001100*                                                              *  IC2014.2
-001200****************************************************************  IC2014.2
-001300*                                                              *  IC2014.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2014.2
-001500*                                                              *  IC2014.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2014.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2014.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2014.2
-001900*                                                              *  IC2014.2
-002000****************************************************************  IC2014.2
-002100*        THE PROGRAM IC201 TESTS THE CALL STATEMENT WITH AN       IC2014.2
-002200*    IDENTIFIER AS AN OPERAND, AND FOUR OPERANDS IN THE           IC2014.2
-002300*    USING PHRASE.  THE REPETITION OF A DATA-NAME IN THE          IC2014.2
-002400*    USING PHRASE IS TESTED, AND THE USE OF THE ON OVERFLOW       IC2014.2
-002500*    PHRASE IN A CALL STATEMENT IS SYNTACTICALLY CHECKED          IC2014.2
-002600*    IN THE PROGRAM.                                              IC2014.2
-002700****************************************************************  IC2014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            IC2014.2
 002900 CONFIGURATION SECTION.                                           IC2014.2
 003000 SOURCE-COMPUTER.                                                 IC2014.2
@@ -238,7 +238,7 @@
 024000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2014.2
 024100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2014.2
 024200      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2014.2
-024300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2014.2
+024300*                                                                         
 024400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2014.2
 024500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2014.2
 024600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2014.2
@@ -310,11 +310,11 @@
 031200     MOVE "CALL-TEST-01" TO PAR-NAME.                             IC2014.2
 031300     MOVE     "LEV 2 CALL STATEMENT" TO FEATURE.                  IC2014.2
 031400     MOVE 0 TO CALL-COUNT.                                        IC2014.2
-031500*        THIS TEST HAS CALL STATEMENTS WITH AN IDENTIFIER         IC2014.2
-031600*    CONTAINING THE NAME OF THE SUBPROGRAM TO BE CALLED.          IC2014.2
-031700*        CALL-TEST-01 CONTAINS THE BASIC LEVEL 2 CALL STATEMENT.  IC2014.2
-031800*    IF IT CANNOT BE COMPILED AND EXECUTED CORRECTLY, THERE IS    IC2014.2
-031900*    NO USE IN RUNNING THE LEVEL 2 IPC ROUTINES.                  IC2014.2
+031500*                                                                         
+031600*                                                                         
+031700*                                                                         
+031800*                                                                         
+031900*                                                                         
 032000 CALL-TEST-01-01.                                                 IC2014.2
 032100     MOVE 1 TO REC-CT.                                            IC2014.2
 032200     MOVE ZERO TO DN3, DN4.                                       IC2014.2
@@ -376,8 +376,8 @@
 037800 CALL-TEST-02.                                                    IC2014.2
 037900     MOVE "CALL-TEST-02" TO PAR-NAME.                             IC2014.2
 038000     MOVE "DATA-NAME USED TWICE" TO FEATURE.                      IC2014.2
-038100*        THIS TEST USES A DATA-NAME MORE THAN ONCE IN             IC2014.2
-038200*    A USING PHRASE OF A CALL STATEMENT.                          IC2014.2
+038100*                                                                         
+038200*                                                                         
 038300 CALL-TEST-02-01.                                                 IC2014.2
 038400     MOVE 1 TO REC-CT.                                            IC2014.2
 038500     MOVE 1 TO DN1.                                               IC2014.2
@@ -511,9 +511,9 @@
 051300 CALL-WRITE-02-03.                                                IC2014.2
 051400     PERFORM PRINT-DETAIL.                                        IC2014.2
 051500 CALL-TEST-03.                                                    IC2014.2
-051600*        THIS TEST USES THE ON OVERFLOW PHRASE IN THE CALL        IC2014.2
-051700*    STATEMENT.  THIS IS A SYNTACTICAL CHECK ONLY, THE ON         IC2014.2
-051800*    OVERFLOW CONDITION SHOULD NEVER OCCUR.                       IC2014.2
+051600*                                                                         
+051700*                                                                         
+051800*                                                                         
 051900     MOVE "CALL-TEST-03" TO PAR-NAME.                             IC2014.2
 052000     MOVE "ON OVERFLOW PHRASE" TO FEATURE.                        IC2014.2
 052100 CALL-TEST-03-01.                                                 IC2014.2
@@ -581,9 +581,9 @@
 058300     PERFORM PRINT-DETAIL.                                        IC2014.2
 058400     GO TO EXIT-IC201.                                            IC2014.2
 058500 CALL-DELETE-03.                                                  IC2014.2
-058600*        IF THE ON OVERFLOW PHRASE IS NOT RECOGNIZED, DELETE ALL  IC2014.2
-058700*    OF THE ABOVE CALL-TEST-03 PARAGRAPHS, STARTING WITH          IC2014.2
-058800*    CALL-TEST-03-01.                                             IC2014.2
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
 058900     PERFORM DE-LETE.                                             IC2014.2
 059000     PERFORM PRINT-DETAIL.                                        IC2014.2
 059100 EXIT-IC201.                                                      IC2014.2

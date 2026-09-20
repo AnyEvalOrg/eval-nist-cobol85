@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         SM1014.2
 000200 PROGRAM-ID.                                                      SM1014.2
 000300     SM101A.                                                      SM1014.2
-000400****************************************************************  SM1014.2
-000500*                                                              *  SM1014.2
-000600*    VALIDATION FOR:-                                          *  SM1014.2
-000700*                                                              *  SM1014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM1014.2
-000900*                                                              *  SM1014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM1014.2
-001100*                                                              *  SM1014.2
-001200*                                                              *  SM1014.2
-001300*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM1014.2
-001400*                                                              *  SM1014.2
-001500*        X-55  - SYSTEM PRINTER NAME.                          *  SM1014.2
-001600*        X-82  - SOURCE COMPUTER NAME.                         *  SM1014.2
-001700*        X-83  - OBJECT COMPUTER NAME.                         *  SM1014.2
-001800*                                                              *  SM1014.2
-001900****************************************************************  SM1014.2
-002000*                                                              *  SM1014.2
-002100*    PROGRAM SM101A TESTS THE USE OF THE "COPY" STATEMENT      *  SM1014.2
-002200*    IN A FILE DESCRIPTION WITH ITS RELATED 01 ENTRIES IN THE  *  SM1014.2
-002300*    WORKING-STORAGE SECTION AND IN THE PROCEDURE DIVISION.    *  SM1014.2
-002400*    IT CREATES A SEQUENTIAL FILE WHICH IS INPUT TO SM102A TO  *  SM1014.2
-002500*    CHECK THE PROPER EXECUTION OF THE "COPY" STATEMENT IN     *  SM1014.2
-002600*    SM101A.  IT ALSO TESTS THE EFFECT OF A "COPY" STATEMENT   *  SM1014.2
-002700*    APPEARING ON A DEBUGGING LINE.                            *  SM1014.2
-002800*                                                              *  SM1014.2
-002900****************************************************************  SM1014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            SM1014.2
 003100 CONFIGURATION SECTION.                                           SM1014.2
 003200 SOURCE-COMPUTER.                                                 SM1014.2
@@ -49,67 +49,67 @@
 004900                                                                  SM1014.2
 005000                                                                  SM1014.2
 005100                                                                  SM1014.2
-005200*                                                                 SM1014.2
-005300*********************** COPY STATEMENT USED **********************SM1014.2
-005400*                                                                 SM1014.2
-005500*FD  TEST-FILE                                        COPY K1FDA. SM1014.2
-005600*                                                                 SM1014.2
-005700******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
 005800 FD  TEST-FILE                                         COPY K1FDA.SM1014.2
-005900*********************** END OF COPIED TEXT ***********************SM1014.2
+005900*                                                                         
 006000                                                                  SM1014.2
 006100                                                                  SM1014.2
 006200                                                                  SM1014.2
 006300                                                                  SM1014.2
 006400                                                                  SM1014.2
-006500*                                                                 SM1014.2
-006600*********************** COPY STATEMENT USED **********************SM1014.2
-006700*                                                                 SM1014.2
-006800*01  TST-TEST                                         COPY K101A. SM1014.2
-006900*                                                                 SM1014.2
-007000******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
 007100 01  TST-TEST                                          COPY K101A.SM1014.2
-007200*********************** END OF COPIED TEXT ***********************SM1014.2
+007200*                                                                         
 007300 WORKING-STORAGE SECTION.                                         SM1014.2
-007400*                                                                 SM1014.2
-007500*********************** COPY STATEMENT USED **********************SM1014.2
-007600*                                                                 SM1014.2
-007700*77  RCD-1                                            COPY K1W01. SM1014.2
-007800*                                                                 SM1014.2
-007900******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
 008000 77  RCD-1                                             COPY K1W01.SM1014.2
-008100*********************** END OF COPIED TEXT ***********************SM1014.2
+008100*                                                                         
 008200 77  RCD-3 PICTURE 9(5) VALUE 10901.                              SM1014.2
-008300*                                                                 SM1014.2
-008400*********************** COPY STATEMENT USED **********************SM1014.2
-008500*                                                                 SM1014.2
-008600*77  COPY K1W02.                                                  SM1014.2
-008700*                                                                 SM1014.2
-008800******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
 008900 77  COPY K1W02.                                                  SM1014.2
-009000*********************** END OF COPIED TEXT ***********************SM1014.2
+009000*                                                                         
 009100                       14003.                                     SM1014.2
 009200 77  RCD-6 PICTURE 9(5) VALUE 19922.                              SM1014.2
-009300*                                                                 SM1014.2
-009400*********************** COPY STATEMENT USED **********************SM1014.2
-009500*                                                                 SM1014.2
-009600*77  COPY K1W03.   VALUE 3543.                                    SM1014.2
-009700*                                                                 SM1014.2
-009800******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
 009900 77  COPY K1W03.   VALUE 3543.                                    SM1014.2
-010000*********************** END OF COPIED TEXT ***********************SM1014.2
+010000*                                                                         
 010100 77  COPYSECT-1 PICTURE 9(5) VALUE 72459.                         SM1014.2
 010200 77  COPYSECT-2 PICTURE 9(5) VALUE 12132.                         SM1014.2
 010300 77  COPYSECT-3 PICTURE X(5) VALUE "TSTLI".                       SM1014.2
 010400 77  COPYSECT-4 PICTURE X(5) VALUE "BCOPY".                       SM1014.2
-010500*                                                                 SM1014.2
-010600*********************** COPY STATEMENT USED **********************SM1014.2
-010700*                                                                 SM1014.2
-010800*COPY  K1W04.                                                     SM1014.2
-010900*                                                                 SM1014.2
-011000******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+010500*                                                                         
+010600*                                                                         
+010700*                                                                         
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
 011100 COPY  K1W04.                                                     SM1014.2
-011200*********************** END OF COPIED TEXT ***********************SM1014.2
+011200*                                                                         
 011300 77  PROC-1 PICTURE 999 VALUE 123.                                SM1014.2
 011400 77  PROC-2 PICTURE 999 VALUE 456.                                SM1014.2
 011500 77  WSTR-1  PICTURE X(3) VALUE "ABC".                            SM1014.2
@@ -119,14 +119,14 @@
 011900                                                                  SM1014.2
 012000                                                                  SM1014.2
 012100 01  WSTR-2.                                                      SM1014.2
-012200*                                                                 SM1014.2
-012300*********************** COPY STATEMENT USED **********************SM1014.2
-012400*                                                                 SM1014.2
-012500*                                            COPY K1WKA.          SM1014.2
-012600*                                                                 SM1014.2
-012700******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+012200*                                                                         
+012300*                                                                         
+012400*                                                                         
+012500*                                                                         
+012600*                                                                         
+012700*                                                                         
 012800                                             COPY K1WKA.          SM1014.2
-012900*********************** END OF COPIED TEXT ***********************SM1014.2
+012900*                                                                         
 013000 01  TEST-RESULTS.                                                SM1014.2
 013100     02 FILLER                   PIC X      VALUE SPACE.          SM1014.2
 013200     02 FEATURE                  PIC X(20)  VALUE SPACE.          SM1014.2
@@ -314,7 +314,7 @@
 031600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM1014.2
 031700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM1014.2
 031800      ADD PASS-COUNTER TO ERROR-HOLD.                             SM1014.2
-031900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM1014.2
+031900*                                                                         
 032000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM1014.2
 032100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM1014.2
 032200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM1014.2
@@ -394,7 +394,7 @@
 039600 COPY-TEST-1.                                                     SM1014.2
 039700     IF       WSTR-1 EQUAL TO WSTR-2                              SM1014.2
 039800              PERFORM PASS GO TO COPY-WRITE-1.                    SM1014.2
-039900*        NOTE TESTS COPYING OF WORKING-STORAGE ENTRIES.           SM1014.2
+039900*                                                                         
 040000     GO       TO COPY-FAIL-1.                                     SM1014.2
 040100 COPY-DELETE-1.                                                   SM1014.2
 040200     PERFORM  DE-LETE.                                            SM1014.2
@@ -414,18 +414,18 @@
 041600                                                                  SM1014.2
 041700                                                                  SM1014.2
 041800                                                                  SM1014.2
-041900*                                                                 SM1014.2
-042000*********************** COPY STATEMENT USED **********************SM1014.2
-042100*                                                                 SM1014.2
-042200*                                                     COPY K1PRA. SM1014.2
-042300*                                                                 SM1014.2
-042400******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
 042500                                                       COPY K1PRA.SM1014.2
-042600*********************** END OF COPIED TEXT ***********************SM1014.2
+042600*                                                                         
 042700 COPY-TESTT-2.                                                    SM1014.2
 042800     IF       PROC-1 EQUAL TO PROC-2                              SM1014.2
 042900              PERFORM PASS GO TO COPY-WRITE-2.                    SM1014.2
-043000*        NOTE TESTS COPYING OF A PROCEDURE DIVISION STATEMENT.    SM1014.2
+043000*                                                                         
 043100     GO       TO COPY-FAIL-2.                                     SM1014.2
 043200 COPY-DELETE-2.                                                   SM1014.2
 043300     PERFORM  DE-LETE.                                            SM1014.2
@@ -444,35 +444,35 @@
 044600                                                                  SM1014.2
 044700                                                                  SM1014.2
 044800                                                                  SM1014.2
-044900*                                                                 SM1014.2
-045000*********************** COPY STATEMENT USED **********************SM1014.2
-045100*                                                                 SM1014.2
-045200*                                                     COPY K1SEA. SM1014.2
-045300*                                                                 SM1014.2
-045400******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
 045500                                                       COPY K1SEA.SM1014.2
 045600D                                                      COPY K1SEA.SM1014.2
-045700*********************** END OF COPIED TEXT ***********************SM1014.2
+045700*                                                                         
 045800 COPY-INIT-A.                                                     SM1014.2
 045900     MOVE     "  SECTION" TO FEATURE.                             SM1014.2
 046000 COPY-TEST-3.                                                     SM1014.2
-046100     IF       COPYSECT-1 EQUAL TO 95427                           SM1014.2
+046100     IF       COPYSECT-1 EQUAL TO 85427                           SM1014.2
 046200              PERFORM PASS GO TO COPY-WRITE-3.                    SM1014.2
-046300*        NOTE COPY-TEST-3, 4, 5, 6 TEST THE COPYING OF AN         SM1014.2
-046400*             ENTIRE SECTION.                                     SM1014.2
+046300*                                                                         
+046400*                                                                         
 046500     GO       TO COPY-FAIL-3.                                     SM1014.2
 046600 COPY-DELETE-3.                                                   SM1014.2
 046700     PERFORM  DE-LETE.                                            SM1014.2
 046800     GO       TO COPY-WRITE-3.                                    SM1014.2
 046900 COPY-FAIL-3.                                                     SM1014.2
 047000     MOVE     COPYSECT-1 TO COMPUTED-N.                           SM1014.2
-047100     MOVE     95427   TO CORRECT-N.                               SM1014.2
+047100     MOVE     85427   TO CORRECT-N.                               SM1014.2
 047200     PERFORM  FAIL.                                               SM1014.2
 047300 COPY-WRITE-3.                                                    SM1014.2
 047400     MOVE     "COPY-TEST-3 " TO PAR-NAME.                         SM1014.2
 047500     PERFORM  PRINT-DETAIL.                                       SM1014.2
 047600 COPY-TEST-4.                                                     SM1014.2
-047700     IF       COPYSECT-2 EQUAL TO 24121                           SM1014.2
+047700     IF       COPYSECT-2 EQUAL TO 26121                           SM1014.2
 047800              PERFORM PASS GO TO COPY-WRITE-4.                    SM1014.2
 047900     GO       TO COPY-FAIL-4.                                     SM1014.2
 048000 COPY-DELETE-4.                                                   SM1014.2
@@ -480,13 +480,13 @@
 048200     GO       TO COPY-WRITE-4.                                    SM1014.2
 048300 COPY-FAIL-4.                                                     SM1014.2
 048400     MOVE     COPYSECT-2 TO COMPUTED-N.                           SM1014.2
-048500     MOVE     24121   TO CORRECT-N.                               SM1014.2
+048500     MOVE     26121   TO CORRECT-N.                               SM1014.2
 048600     PERFORM  FAIL.                                               SM1014.2
 048700 COPY-WRITE-4.                                                    SM1014.2
 048800     MOVE     "COPY-TEST-4 " TO PAR-NAME.                         SM1014.2
 048900     PERFORM  PRINT-DETAIL.                                       SM1014.2
 049000 COPY-TEST-5.                                                     SM1014.2
-049100     IF       COPYSECT-3 EQUAL TO "LIBCO"                         SM1014.2
+049100     IF       COPYSECT-3 EQUAL TO "LIBCL"                         SM1014.2
 049200              PERFORM PASS GO TO COPY-WRITE-5.                    SM1014.2
 049300     GO       TO COPY-FAIL-5.                                     SM1014.2
 049400 COPY-DELETE-5.                                                   SM1014.2
@@ -494,13 +494,13 @@
 049600     GO       TO COPY-WRITE-5.                                    SM1014.2
 049700 COPY-FAIL-5.                                                     SM1014.2
 049800     MOVE     COPYSECT-3 TO COMPUTED-A.                           SM1014.2
-049900     MOVE     "LIBCO" TO CORRECT-A.                               SM1014.2
+049900     MOVE     "LIBCL" TO CORRECT-A.                               SM1014.2
 050000     PERFORM  FAIL.                                               SM1014.2
 050100 COPY-WRITE-5.                                                    SM1014.2
 050200     MOVE     "COPY-TEST-5 " TO PAR-NAME.                         SM1014.2
 050300     PERFORM  PRINT-DETAIL.                                       SM1014.2
 050400 COPY-TEST-6.                                                     SM1014.2
-050500     IF       COPYSECT-4 EQUAL TO "PYTS1"                         SM1014.2
+050500     IF       COPYSECT-4 EQUAL TO "PYTST"                         SM1014.2
 050600              PERFORM PASS GO TO COPY-WRITE-6.                    SM1014.2
 050700     GO       TO COPY-FAIL-6.                                     SM1014.2
 050800 COPY-DELETE-6.                                                   SM1014.2
@@ -508,7 +508,7 @@
 051000     GO       TO COPY-WRITE-6.                                    SM1014.2
 051100 COPY-FAIL-6.                                                     SM1014.2
 051200     MOVE     COPYSECT-4 TO COMPUTED-A.                           SM1014.2
-051300     MOVE     "PYTS1" TO CORRECT-A.                               SM1014.2
+051300     MOVE     "PYTST" TO CORRECT-A.                               SM1014.2
 051400     PERFORM  FAIL.                                               SM1014.2
 051500 COPY-WRITE-6.                                                    SM1014.2
 051600     MOVE     "COPY-TEST-6 " TO PAR-NAME.                         SM1014.2
@@ -547,7 +547,7 @@
 054900*                                                                         
 055000     ADD     COPY K1P01. TO WRK-DS-05V00.                         SM1014.2
 055100*                                                                         
-055200     IF       WRK-DS-05V00 EQUAL TO 97513                         SM1014.2
+055200     IF       WRK-DS-05V00 EQUAL TO 97523                         SM1014.2
 055300             PERFORM PASS                                         SM1014.2
 055400             GO TO COPY-WRITE-8.                                  SM1014.2
 055500     GO TO    COPY-FAIL-8.                                        SM1014.2
@@ -556,7 +556,7 @@
 055800     GO TO    COPY-WRITE-8.                                       SM1014.2
 055900 COPY-FAIL-8.                                                     SM1014.2
 056000     MOVE    WRK-DS-05V00 TO COMPUTED-N.                          SM1014.2
-056100     MOVE    97513        TO CORRECT-N.                           SM1014.2
+056100     MOVE    97523        TO CORRECT-N.                           SM1014.2
 056200     PERFORM FAIL.                                                SM1014.2
 056300 COPY-WRITE-8.                                                    SM1014.2
 056400     MOVE     "COPY-TEST-8" TO PAR-NAME.                          SM1014.2

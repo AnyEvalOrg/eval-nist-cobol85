@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC2094.2
 000200 PROGRAM-ID.                                                      NC2094.2
 000300     NC209A.                                                      NC2094.2
-000400*                                                              *  NC2094.2
-000500****************************************************************  NC2094.2
-000600*                                                              *  NC2094.2
-000700*    VALIDATION FOR:-                                          *  NC2094.2
-000800*                                                              *  NC2094.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2094.2
-001000*                                                              *  NC2094.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2094.2
-001200*                                                              *  NC2094.2
-001300****************************************************************  NC2094.2
-001400*                                                              *  NC2094.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2094.2
-001600*                                                              *  NC2094.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2094.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2094.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2094.2
-002000*                                                              *  NC2094.2
-002100****************************************************************  NC2094.2
-002200*    PROGRAM NC209A TESTS FORMAT 2 OF THE "MOVE" STATEMENT,    *  NC2094.2
-002300*    USING QUALIFIED AND SUBSCRIPTED IDENTIFIERS.              *  NC2094.2
-002400*                                                              *  NC2094.2
-002500****************************************************************  NC2094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC2094.2
 002700 CONFIGURATION SECTION.                                           NC2094.2
 002800 SOURCE-COMPUTER.                                                 NC2094.2
@@ -324,7 +324,7 @@
 032600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2094.2
 032700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2094.2
 032800      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2094.2
-032900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2094.2
+032900*                                                                         
 033000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2094.2
 033100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2094.2
 033200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2094.2
@@ -401,8 +401,8 @@
 040300     MOVE     "  DIFFERENT LEVELS  " TO FEATURE.                  NC2094.2
 040400     MOVE     CORRESPONDING B-LEVEL OF A-LEVEL TO B-GROUP.        NC2094.2
 040500     MOVE     1 TO REC-CT.                                        NC2094.2
-040600*    TOM DICK AND JOE SHOULD BE MOVED.                            NC2094.2
-040700*                                                                 NC2094.2
+040600*                                                                         
+040700*                                                                         
 040800 MOV-TEST-F2-1-1.                                                 NC2094.2
 040900     IF       TOM       OF A-GROUP          EQUAL TO "TOM"        NC2094.2
 041000              PERFORM PASS                                        NC2094.2
@@ -417,7 +417,7 @@
 041900     MOVE     "TOM"   TO CORRECT-A.                               NC2094.2
 042000 MOV-WRITE-F2-1-1.                                                NC2094.2
 042100     PERFORM  PRINT-DETAIL.                                       NC2094.2
-042200*                                                                 NC2094.2
+042200*                                                                         
 042300 MOV-TEST-F2-1-2.                                                 NC2094.2
 042400     ADD      1 TO REC-CT.                                        NC2094.2
 042500     IF       DICK      OF A-GROUP          EQUAL TO "DICK"       NC2094.2
@@ -433,7 +433,7 @@
 043500     MOVE     "DICK"  TO CORRECT-A.                               NC2094.2
 043600 MOV-WRITE-F2-1-2.                                                NC2094.2
 043700     PERFORM  PRINT-DETAIL.                                       NC2094.2
-043800*                                                                 NC2094.2
+043800*                                                                         
 043900 MOV-TEST-F2-1-3.                                                 NC2094.2
 044000     ADD      1 TO REC-CT.                                        NC2094.2
 044100     IF       HARRY     OF A-GROUP          EQUAL TO "ZZZZZ"      NC2094.2
@@ -449,7 +449,7 @@
 045100     MOVE     "ZZZZZ" TO CORRECT-A.                               NC2094.2
 045200 MOV-WRITE-F2-1-3.                                                NC2094.2
 045300     PERFORM  PRINT-DETAIL.                                       NC2094.2
-045400*                                                                 NC2094.2
+045400*                                                                         
 045500 MOV-TEST-F2-1-4.                                                 NC2094.2
 045600     ADD 1 TO REC-CT.                                             NC2094.2
 045700     IF       JOE       OF A-GROUP          EQUAL TO "JOE"        NC2094.2
@@ -465,13 +465,13 @@
 046700     MOVE     "JOE"   TO CORRECT-A.                               NC2094.2
 046800 MOV-WRITE-F2-1-4.                                                NC2094.2
 046900     PERFORM  PRINT-DETAIL.                                       NC2094.2
-047000*                                                                 NC2094.2
+047000*                                                                         
 047100 MOV-INIT-F2-2.                                                   NC2094.2
 047200     MOVE     "MOV-TEST-F2-2" TO PAR-NAME.                        NC2094.2
 047300     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
 047400     MOVE     CORRESPONDING A-LEVEL TO A-BUNCH.                   NC2094.2
 047500     MOVE     1 TO REC-CT.                                        NC2094.2
-047600*        NOTE AL SHOULD BE MOVED.                                 NC2094.2
+047600*                                                                         
 047700 MOV-TEST-F2-2-1.                                                 NC2094.2
 047800     IF       TOM       OF A-BUNCH          EQUAL TO "YYY"        NC2094.2
 047900              PERFORM PASS                                        NC2094.2
@@ -486,7 +486,7 @@
 048800     MOVE     "YYY"   TO CORRECT-A.                               NC2094.2
 048900 MOV-WRITE-F2-2-1.                                                NC2094.2
 049000     PERFORM  PRINT-DETAIL.                                       NC2094.2
-049100*                                                                 NC2094.2
+049100*                                                                         
 049200 MOV-TEST-F2-2-2.                                                 NC2094.2
 049300     ADD 1 TO REC-CT.                                             NC2094.2
 049400     IF       DICK      OF A-BUNCH          EQUAL TO "YYYY"       NC2094.2
@@ -502,7 +502,7 @@
 050400     MOVE     "YYYY"  TO CORRECT-A.                               NC2094.2
 050500 MOV-WRITE-F2-2-2.                                                NC2094.2
 050600     PERFORM  PRINT-DETAIL.                                       NC2094.2
-050700*                                                                 NC2094.2
+050700*                                                                         
 050800 MOV-TEST-F2-2-3.                                                 NC2094.2
 050900     ADD 1 TO REC-CT.                                             NC2094.2
 051000     IF       HARRY     OF A-BUNCH          EQUAL TO "YYYYY"      NC2094.2
@@ -518,7 +518,7 @@
 052000     MOVE     "YYYYY" TO CORRECT-A.                               NC2094.2
 052100 MOV-WRITE-F2-2-3.                                                NC2094.2
 052200     PERFORM  PRINT-DETAIL.                                       NC2094.2
-052300*                                                                 NC2094.2
+052300*                                                                         
 052400 MOV-TEST-F2-2-4.                                                 NC2094.2
 052500     ADD 1 TO REC-CT.                                             NC2094.2
 052600     IF       JOE       OF A-BUNCH          EQUAL TO "YYY"        NC2094.2
@@ -534,7 +534,7 @@
 053600     MOVE     "YYY"   TO CORRECT-A.                               NC2094.2
 053700 MOV-WRITE-F2-2-4.                                                NC2094.2
 053800     PERFORM  PRINT-DETAIL.                                       NC2094.2
-053900*                                                                 NC2094.2
+053900*                                                                         
 054000 MOV-TEST-F2-2-5.                                                 NC2094.2
 054100     ADD 1 TO REC-CT.                                             NC2094.2
 054200     IF       AL        OF A-BUNCH          EQUAL TO "AL"         NC2094.2
@@ -550,7 +550,7 @@
 055200     MOVE     "AL"    TO CORRECT-A.                               NC2094.2
 055300 MOV-WRITE-F2-2-5.                                                NC2094.2
 055400     PERFORM  PRINT-DETAIL.                                       NC2094.2
-055500*                                                                 NC2094.2
+055500*                                                                         
 055600 MOV-TEST-F2-2-6.                                                 NC2094.2
 055700     ADD 1 TO REC-CT.                                             NC2094.2
 055800     IF       BOB       OF A-BUNCH          EQUAL TO "YYY"        NC2094.2
@@ -566,15 +566,15 @@
 056800     MOVE     "YYY"   TO CORRECT-A.                               NC2094.2
 056900 MOV-WRITE-F2-2-6.                                                NC2094.2
 057000     PERFORM  PRINT-DETAIL.                                       NC2094.2
-057100*                                                                 NC2094.2
+057100*                                                                         
 057200 MOV-INIT-F2-3.                                                   NC2094.2
 057300     MOVE     "MOV-TEST-F2-3" TO PAR-NAME.                        NC2094.2
 057400     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
 057500     MOVE     CORR B-LEVEL OF A-LEVEL TO B-SET.                   NC2094.2
 057600     MOVE     1 TO REC-CT.                                        NC2094.2
-057700*        NOTE CORR IS A LEGAL ABBREVIATION.                       NC2094.2
-057800*        NOTE NO MOVES SHOULD TAKE PLACE.                         NC2094.2
-057900*                                                                 NC2094.2
+057700*                                                                         
+057800*                                                                         
+057900*                                                                         
 058000 MOV-TEST-F2-3-1.                                                 NC2094.2
 058100     ADD 1 TO REC-CT.                                             NC2094.2
 058200     IF       TOM       OF A-SET            EQUAL TO "WWW"        NC2094.2
@@ -590,7 +590,7 @@
 059200     MOVE     "WWW"   TO CORRECT-A.                               NC2094.2
 059300 MOV-WRITE-F2-3-1.                                                NC2094.2
 059400     PERFORM  PRINT-DETAIL.                                       NC2094.2
-059500*                                                                 NC2094.2
+059500*                                                                         
 059600 MOV-TEST-F2-3-2.                                                 NC2094.2
 059700     ADD 1 TO REC-CT.                                             NC2094.2
 059800     IF       DICK      OF A-SET            EQUAL TO "WWWW"       NC2094.2
@@ -606,7 +606,7 @@
 060800     MOVE     "WWWW"  TO CORRECT-A.                               NC2094.2
 060900 MOV-WRITE-F2-3-2.                                                NC2094.2
 061000     PERFORM  PRINT-DETAIL.                                       NC2094.2
-061100*                                                                 NC2094.2
+061100*                                                                         
 061200 MOV-TEST-F2-3-3.                                                 NC2094.2
 061300     ADD 1 TO REC-CT.                                             NC2094.2
 061400     IF       HARRY     OF A-SET            EQUAL TO "WWWWW"      NC2094.2
@@ -622,7 +622,7 @@
 062400     MOVE     "WWWWW" TO CORRECT-A.                               NC2094.2
 062500 MOV-WRITE-F2-3-3.                                                NC2094.2
 062600     PERFORM  PRINT-DETAIL.                                       NC2094.2
-062700*                                                                 NC2094.2
+062700*                                                                         
 062800 MOV-TEST-F2-3-4.                                                 NC2094.2
 062900     ADD 1 TO REC-CT.                                             NC2094.2
 063000     IF       BOB       OF A-SET            EQUAL TO "WWW"        NC2094.2
@@ -638,13 +638,13 @@
 064000     MOVE     "WWW"   TO CORRECT-A.                               NC2094.2
 064100 MOV-WRITE-F2-3-4.                                                NC2094.2
 064200     PERFORM  PRINT-DETAIL.                                       NC2094.2
-064300*                                                                 NC2094.2
+064300*                                                                         
 064400 MOV-INIT-F2-4.                                                   NC2094.2
 064500     MOVE     "MOV-TEST-F2-4" TO PAR-NAME.                        NC2094.2
 064600     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
 064700     MOVE     CORRESPONDING C-LEVEL OF A-LEVEL TO C-STACK.        NC2094.2
 064800     MOVE     1 TO REC-CT.                                        NC2094.2
-064900*        NOTE TOM AND HARRY SHOULD BE MOVED.                      NC2094.2
+064900*                                                                         
 065000 MOV-TEST-F2-4-1.                                                 NC2094.2
 065100     IF       TOM       OF C-STACK          EQUAL TO "TOM"        NC2094.2
 065200              PERFORM PASS                                        NC2094.2
@@ -659,7 +659,7 @@
 066100     MOVE     "TOM"   TO CORRECT-A.                               NC2094.2
 066200 MOV-WRITE-F2-4-1.                                                NC2094.2
 066300     PERFORM  PRINT-DETAIL.                                       NC2094.2
-066400*                                                                 NC2094.2
+066400*                                                                         
 066500 MOV-TEST-F2-4-2.                                                 NC2094.2
 066600     ADD 1 TO REC-CT.                                             NC2094.2
 066700     IF       DICK      OF C-STACK          EQUAL TO "VVVV"       NC2094.2
@@ -675,7 +675,7 @@
 067700     MOVE     "VVVV"  TO CORRECT-A.                               NC2094.2
 067800 MOV-WRITE-F2-4-2.                                                NC2094.2
 067900     PERFORM  PRINT-DETAIL.                                       NC2094.2
-068000*                                                                 NC2094.2
+068000*                                                                         
 068100 MOV-TEST-F2-4-3.                                                 NC2094.2
 068200     ADD 1 TO REC-CT.                                             NC2094.2
 068300     IF       HARRY     OF C-STACK          EQUAL TO "HARRY"      NC2094.2
@@ -691,15 +691,15 @@
 069300     MOVE     "HARRY" TO CORRECT-A.                               NC2094.2
 069400 MOV-WRITE-F2-4-3.                                                NC2094.2
 069500     PERFORM  PRINT-DETAIL.                                       NC2094.2
-069600*                                                                 NC2094.2
+069600*                                                                         
 069700 MOV-INIT-F2-5.                                                   NC2094.2
 069800     MOVE     "MOV-TEST-F2-5" TO PAR-NAME.                        NC2094.2
 069900     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
 070000     MOVE     "  WITH RENAMES      " TO FEATURE.                  NC2094.2
 070100     MOVE     CORRESPONDING A-LEVEL TO A-GLOB.                    NC2094.2
 070200     MOVE     1 TO REC-CT.                                        NC2094.2
-070300*        NOTE TOM, DICK, JOE, AND AL SHOULD BE MOVED.             NC2094.2
-070400*                                                                 NC2094.2
+070300*                                                                         
+070400*                                                                         
 070500 MOV-TEST-F2-5-1.                                                 NC2094.2
 070600     IF       TOM       OF A-GLOB           EQUAL TO "TOM"        NC2094.2
 070700              PERFORM PASS                                        NC2094.2
@@ -714,7 +714,7 @@
 071600     MOVE     "TOM"   TO CORRECT-A.                               NC2094.2
 071700 MOV-WRITE-F2-5-1.                                                NC2094.2
 071800     PERFORM  PRINT-DETAIL.                                       NC2094.2
-071900*                                                                 NC2094.2
+071900*                                                                         
 072000 MOV-TEST-F2-5-2.                                                 NC2094.2
 072100     ADD 1 TO REC-CT.                                             NC2094.2
 072200     IF       DICK      OF A-GLOB           EQUAL TO "DICK"       NC2094.2
@@ -730,7 +730,7 @@
 073200     MOVE     "DICK"  TO CORRECT-A.                               NC2094.2
 073300 MOV-WRITE-F2-5-2.                                                NC2094.2
 073400     PERFORM  PRINT-DETAIL.                                       NC2094.2
-073500*                                                                 NC2094.2
+073500*                                                                         
 073600 MOV-TEST-F2-5-3.                                                 NC2094.2
 073700     ADD 1 TO REC-CT.                                             NC2094.2
 073800     IF       HARRY     OF A-GLOB           EQUAL TO "UUUUU"      NC2094.2
@@ -746,7 +746,7 @@
 074800     MOVE     "UUUUU" TO CORRECT-A.                               NC2094.2
 074900 MOV-WRITE-F2-5-3.                                                NC2094.2
 075000     PERFORM  PRINT-DETAIL.                                       NC2094.2
-075100*                                                                 NC2094.2
+075100*                                                                         
 075200 MOV-TEST-F2-5-4.                                                 NC2094.2
 075300     ADD 1 TO REC-CT.                                             NC2094.2
 075400     IF       JOE       OF A-GLOB           EQUAL TO "JOE"        NC2094.2
@@ -762,7 +762,7 @@
 076400     MOVE     "JOE"   TO CORRECT-A.                               NC2094.2
 076500 MOV-WRITE-F2-5-4.                                                NC2094.2
 076600     PERFORM  PRINT-DETAIL.                                       NC2094.2
-076700*                                                                 NC2094.2
+076700*                                                                         
 076800 MOV-TEST-F2-5-5.                                                 NC2094.2
 076900     ADD 1 TO REC-CT.                                             NC2094.2
 077000     IF       AL        OF A-GLOB           EQUAL TO "AL"         NC2094.2
@@ -778,7 +778,7 @@
 078000     MOVE     "AL"    TO CORRECT-A.                               NC2094.2
 078100 MOV-WRITE-F2-5-5.                                                NC2094.2
 078200     PERFORM  PRINT-DETAIL.                                       NC2094.2
-078300*                                                                 NC2094.2
+078300*                                                                         
 078400 MOV-TEST-F2-5-6.                                                 NC2094.2
 078500     ADD 1 TO REC-CT.                                             NC2094.2
 078600     IF       BOB       OF A-GLOB           EQUAL TO "UUU"        NC2094.2
@@ -794,7 +794,7 @@
 079600     MOVE     "UUU"   TO CORRECT-A.                               NC2094.2
 079700 MOV-WRITE-F2-5-6.                                                NC2094.2
 079800     PERFORM  PRINT-DETAIL.                                       NC2094.2
-079900*                                                                 NC2094.2
+079900*                                                                         
 080000 MOV-INIT-F2-6.                                                   NC2094.2
 080100     MOVE     "MOV-TEST-F2-6" TO PAR-NAME.                        NC2094.2
 080200     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
@@ -803,8 +803,8 @@
 080500     MOVE     "TTTTTTTTTTTTTTT" TO C-COLLECTION                   NC2094.2
 080600     MOVE     1 TO REC-CT.                                        NC2094.2
 080700     MOVE     CORRESPONDING C-LEVEL IN A-LEVEL TO C-COLLECTION.   NC2094.2
-080800*        NOTE DICK AND JOE SHOULD BE MOVED.                       NC2094.2
-080900*                                                                 NC2094.2
+080800*                                                                         
+080900*                                                                         
 081000 MOV-TEST-F2-6-1.                                                 NC2094.2
 081100     MOVE     D-LEVEL IN C-COLLECTION TO WORK-AREA.               NC2094.2
 081200     IF       WORK-TOM EQUAL TO "TTT"                             NC2094.2
@@ -820,7 +820,7 @@
 082200     MOVE     "TTT"   TO CORRECT-A.                               NC2094.2
 082300 MOV-WRITE-F2-6-1.                                                NC2094.2
 082400     PERFORM  PRINT-DETAIL.                                       NC2094.2
-082500*                                                                 NC2094.2
+082500*                                                                         
 082600 MOV-TEST-F2-6-2.                                                 NC2094.2
 082700     ADD 1 TO REC-CT.                                             NC2094.2
 082800     IF       DICK OF A-COLLECTION EQUAL TO "DICK"                NC2094.2
@@ -836,7 +836,7 @@
 083800     MOVE     "DICK"  TO CORRECT-A.                               NC2094.2
 083900 MOV-WRITE-F2-6-2.                                                NC2094.2
 084000     PERFORM  PRINT-DETAIL.                                       NC2094.2
-084100*                                                                 NC2094.2
+084100*                                                                         
 084200 MOV-TEST-F2-6-3.                                                 NC2094.2
 084300     ADD 1 TO REC-CT.                                             NC2094.2
 084400     IF       HARRY OF A-COLLECTION EQUAL TO "TTTTT"              NC2094.2
@@ -852,7 +852,7 @@
 085400     MOVE     "TTTTT" TO CORRECT-A.                               NC2094.2
 085500 MOV-WRITE-F2-6-3.                                                NC2094.2
 085600     PERFORM  PRINT-DETAIL.                                       NC2094.2
-085700*                                                                 NC2094.2
+085700*                                                                         
 085800 MOV-TEST-F2-6-4.                                                 NC2094.2
 085900     ADD 1 TO REC-CT.                                             NC2094.2
 086000     IF       JOE       OF A-COLLECTION     EQUAL TO "JOE"        NC2094.2
@@ -868,13 +868,13 @@
 087000     MOVE     "JOE"   TO CORRECT-A.                               NC2094.2
 087100 MOV-WRITE-F2-6-4.                                                NC2094.2
 087200     PERFORM  PRINT-DETAIL.                                       NC2094.2
-087300*                                                                 NC2094.2
+087300*                                                                         
 087400 MOV-INIT-F2-7.                                                   NC2094.2
 087500     MOVE     "MOV-TEST-F2-7" TO PAR-NAME.                        NC2094.2
 087600     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
 087700     MOVE     CORRESPONDING C-LEVEL IN A-LEVEL TO C-FLOCK (4).    NC2094.2
 087800     MOVE     1 TO REC-CT.                                        NC2094.2
-087900*        NOTE TOM, DICK, HARRY, AND JOE SHOULD BE MOVED.          NC2094.2
+087900*                                                                         
 088000 MOV-TEST-F2-7-1.                                                 NC2094.2
 088100     IF       TOMMY     OF A-COVEY          EQUAL TO "TOM"        NC2094.2
 088200              PERFORM PASS                                        NC2094.2
@@ -889,7 +889,7 @@
 089100     MOVE     "TOM"   TO CORRECT-A.                               NC2094.2
 089200 MOV-WRITE-F2-7-1.                                                NC2094.2
 089300     PERFORM  PRINT-DETAIL.                                       NC2094.2
-089400*                                                                 NC2094.2
+089400*                                                                         
 089500 MOV-TEST-F2-7-2.                                                 NC2094.2
 089600     ADD 1 TO REC-CT.                                             NC2094.2
 089700     IF       DICKY     OF A-COVEY          EQUAL TO "DICK"       NC2094.2
@@ -905,7 +905,7 @@
 090700     MOVE     "DICK"  TO CORRECT-A.                               NC2094.2
 090800 MOV-WRITE-F2-7-2.                                                NC2094.2
 090900     PERFORM  PRINT-DETAIL.                                       NC2094.2
-091000*                                                                 NC2094.2
+091000*                                                                         
 091100 MOV-TEST-F2-7-3.                                                 NC2094.2
 091200     ADD 1 TO REC-CT.                                             NC2094.2
 091300     IF       JOEY      OF A-COVEY          EQUAL TO "JOE"        NC2094.2
@@ -921,7 +921,7 @@
 092300     MOVE     "JOE"   TO CORRECT-A.                               NC2094.2
 092400 MOV-WRITE-F2-7-3.                                                NC2094.2
 092500     PERFORM  PRINT-DETAIL.                                       NC2094.2
-092600*                                                                 NC2094.2
+092600*                                                                         
 092700 MOV-TEST-F2-7-4.                                                 NC2094.2
 092800     ADD 1 TO REC-CT.                                             NC2094.2
 092900     IF       HAROLD    OF A-COVEY          EQUAL TO "HARRY"      NC2094.2
@@ -937,13 +937,13 @@
 093900     MOVE     "HARRY" TO CORRECT-A.                               NC2094.2
 094000 MOV-WRITE-F2-7-4.                                                NC2094.2
 094100     PERFORM  PRINT-DETAIL.                                       NC2094.2
-094200*                                                                 NC2094.2
+094200*                                                                         
 094300 MOV-INIT-F2-8.                                                   NC2094.2
 094400     MOVE     "MOV-TEST-F2-8" TO PAR-NAME.                        NC2094.2
 094500     MOVE     CORRESPONDING BB-LEVEL TO BB-MOB (1).               NC2094.2
 094600     MOVE     "VI-102 6.18.4 GR1" TO ANSI-REFERENCE.              NC2094.2
 094700     MOVE     0 TO REC-CT.                                        NC2094.2
-094800*        NOTE BOB SHOULD BE MOVED.                                NC2094.2
+094800*                                                                         
 094900 MOV-TEST-F2-8.                                                   NC2094.2
 095000     IF       BOBBY     OF A-CROWD          EQUAL TO "BOB"        NC2094.2
 095100              PERFORM PASS                                        NC2094.2
@@ -958,7 +958,7 @@
 096000     MOVE     "BOB"   TO CORRECT-A.                               NC2094.2
 096100 MOV-WRITE-F2-8.                                                  NC2094.2
 096200     PERFORM  PRINT-DETAIL.                                       NC2094.2
-096300*                                                                 NC2094.2
+096300*                                                                         
 096400 CCVS-EXIT SECTION.                                               NC2094.2
 096500 CCVS-999999.                                                     NC2094.2
 096600     GO TO CLOSE-FILES.                                           NC2094.2

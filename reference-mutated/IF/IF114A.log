@@ -24,7 +24,7 @@ TEST RESULT OF IF114A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-PART Functio FAIL* F-INTPART-09                                                                                
                                                                                                                         
                                      COMPUTED=  000500000.000000000                                                     
-                                     CORRECT =  000530000.000000000  See ref. A-47 2.18                                 
+                                     CORRECT =  000900000.000000000  See ref. A-47 2.18                                 
                                                                                                                         
  INTEGER-PART Functio PASS  F-INTPART-10                                                                                
  INTEGER-PART Functio PASS  F-INTPART-11                                                                                
@@ -32,7 +32,7 @@ TEST RESULT OF IF114A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-PART Functio FAIL* F-INTPART-13                                                                                
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-47 2.18                                 
+                                     CORRECT =  000000002.000000000  See ref. A-47 2.18                                 
                                                                                                                         
  INTEGER-PART Functio PASS  F-INTPART-14                                                                                
  INTEGER-PART Functio PASS  F-INTPART-15                                                                                
@@ -58,7 +58,7 @@ TEST RESULT OF IF114A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-PART Functio FAIL* F-INTPART-22                                                                                
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-47 2.18                                 
+                                     CORRECT =  000000005.000000000  See ref. A-47 2.18                                 
                                                                                                                         
  INTEGER-PART Functio PASS  F-INTPART-23                                                                                
  ***********************************************************************************************************************

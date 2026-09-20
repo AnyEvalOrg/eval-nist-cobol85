@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2064.2
 000200 PROGRAM-ID.                                                      NC2064.2
-000300****************************************************************  NC2064.2
-000400*                                                              *  NC2064.2
-000500*    VALIDATION FOR:-                                          *  NC2064.2
-000600*                                                              *  NC2064.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2064.2
-000800*                                                              *  NC2064.2
-000900*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2064.2
-001000*                                                              *  NC2064.2
-001100****************************************************************  NC2064.2
-001200*                                                              *  NC2064.2
-001300*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2064.2
-001400*                                                              *  NC2064.2
-001500*        X-55  - SYSTEM PRINTER NAME.                          *  NC2064.2
-001600*        X-82  - SOURCE COMPUTER NAME.                         *  NC2064.2
-001700*        X-83  - OBJECT COMPUTER NAME.                         *  NC2064.2
-001800*                                                              *  NC2064.2
-001900****************************************************************  NC2064.2
+000300*                                                                         
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
 002000     NC206A.                                                      NC2064.2
-002100*                                                              *  NC2064.2
-002200*    PROGRAM NC206A TESTS THE ACCESSING OF ELEMENTARY ITEMS    *  NC2064.2
-002300*    USING FORMAT 1 QUALIFICATION WITH UP TO 5 LEVELS OF       *  NC2064.2
-002400*    QUALIFIERS.  SINGLE DIMENSION TABLES ARE ALSO ACCESSES    *  NC2064.2
-002500*    USING SUBSCRIPTS QUALIFIED TO ONE LEVEL.                  *  NC2064.2
-002600*                                                              *  NC2064.2
-002700****************************************************************  NC2064.2
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2064.2
 002900 CONFIGURATION SECTION.                                           NC2064.2
 003000 SOURCE-COMPUTER.                                                 NC2064.2
@@ -401,7 +401,7 @@
 040300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2064.2
 040400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2064.2
 040500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2064.2
-040600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2064.2
+040600*                                                                         
 040700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2064.2
 040800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2064.2
 040900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2064.2
@@ -470,9 +470,9 @@
 047200     EXIT.                                                        NC2064.2
 047300 SECT-NC206A-001 SECTION.                                         NC2064.2
 047400 NC-06-001.                                                       NC2064.2
-047500*    5 LEVELS OF QUALIFICATION ARE USED IN ORDER TO MAKE THE      NC2064.2
-047600*    IDENTIFIERS UNIQUE. SEE THE 01 WORKING-STORAGE ENTRIES       NC2064.2
-047700*    CALLED TABLE-LEVEL-5A AND TABLE-LEVEL-5B.                    NC2064.2
+047500*                                                                         
+047600*                                                                         
+047700*                                                                         
 047800 QAL-INIT-F1-1.                                                   NC2064.2
 047900     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 048000     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -495,7 +495,7 @@
 049700     PERFORM FAIL.                                                NC2064.2
 049800 QAL-WRITE-F1-1.                                                  NC2064.2
 049900     PERFORM PRINT-DETAIL.                                        NC2064.2
-050000*                                                                 NC2064.2
+050000*                                                                         
 050100 QAL-INIT-F1-2.                                                   NC2064.2
 050200     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 050300     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -518,7 +518,7 @@
 052000     PERFORM FAIL.                                                NC2064.2
 052100 QAL-WRITE-F1-2.                                                  NC2064.2
 052200     PERFORM PRINT-DETAIL.                                        NC2064.2
-052300*                                                                 NC2064.2
+052300*                                                                         
 052400 QAL-INIT-F1-3.                                                   NC2064.2
 052500     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 052600     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -541,7 +541,7 @@
 054300     PERFORM FAIL.                                                NC2064.2
 054400 QAL-WRITE-F1-3.                                                  NC2064.2
 054500     PERFORM PRINT-DETAIL.                                        NC2064.2
-054600*                                                                 NC2064.2
+054600*                                                                         
 054700 QAL-INIT-F1-4.                                                   NC2064.2
 054800     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 054900     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -564,7 +564,7 @@
 056600     PERFORM FAIL.                                                NC2064.2
 056700 QAL-WRITE-F1-4.                                                  NC2064.2
 056800     PERFORM PRINT-DETAIL.                                        NC2064.2
-056900*                                                                 NC2064.2
+056900*                                                                         
 057000 QAL-INIT-F1-5.                                                   NC2064.2
 057100     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 057200     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -587,7 +587,7 @@
 058900     PERFORM FAIL.                                                NC2064.2
 059000 QAL-WRITE-F1-5.                                                  NC2064.2
 059100     PERFORM PRINT-DETAIL.                                        NC2064.2
-059200*                                                                 NC2064.2
+059200*                                                                         
 059300 QAL-INIT-F1-6.                                                   NC2064.2
 059400     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 059500     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -610,7 +610,7 @@
 061200     PERFORM FAIL.                                                NC2064.2
 061300 QAL-WRITE-F1-6.                                                  NC2064.2
 061400     PERFORM PRINT-DETAIL.                                        NC2064.2
-061500*                                                                 NC2064.2
+061500*                                                                         
 061600 QAL-INIT-F1-7.                                                   NC2064.2
 061700     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 061800     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -633,7 +633,7 @@
 063500     PERFORM FAIL.                                                NC2064.2
 063600 QAL-WRITE-F1-7.                                                  NC2064.2
 063700     PERFORM PRINT-DETAIL.                                        NC2064.2
-063800*                                                                 NC2064.2
+063800*                                                                         
 063900 QAL-INIT-F1-8.                                                   NC2064.2
 064000     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 064100     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -656,7 +656,7 @@
 065800     PERFORM FAIL.                                                NC2064.2
 065900 QAL-WRITE-F1-8.                                                  NC2064.2
 066000     PERFORM PRINT-DETAIL.                                        NC2064.2
-066100*                                                                 NC2064.2
+066100*                                                                         
 066200 QAL-INIT-F1-9.                                                   NC2064.2
 066300     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 066400     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -679,7 +679,7 @@
 068100     PERFORM FAIL.                                                NC2064.2
 068200 QAL-WRITE-F1-9.                                                  NC2064.2
 068300     PERFORM PRINT-DETAIL.                                        NC2064.2
-068400*                                                                 NC2064.2
+068400*                                                                         
 068500 QAL-INIT-F1-10.                                                  NC2064.2
 068600     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 068700     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -702,7 +702,7 @@
 070400     PERFORM FAIL.                                                NC2064.2
 070500 QAL-WRITE-F1-10.                                                 NC2064.2
 070600     PERFORM PRINT-DETAIL.                                        NC2064.2
-070700*                                                                 NC2064.2
+070700*                                                                         
 070800 QAL-INIT-F1-11.                                                  NC2064.2
 070900     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 071000     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -725,7 +725,7 @@
 072700     PERFORM FAIL.                                                NC2064.2
 072800 QAL-WRITE-F1-11.                                                 NC2064.2
 072900     PERFORM PRINT-DETAIL.                                        NC2064.2
-073000*                                                                 NC2064.2
+073000*                                                                         
 073100 QAL-INIT-F1-12.                                                  NC2064.2
 073200     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 073300     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -748,7 +748,7 @@
 075000     PERFORM FAIL.                                                NC2064.2
 075100 QAL-WRITE-F1-12.                                                 NC2064.2
 075200     PERFORM PRINT-DETAIL.                                        NC2064.2
-075300*                                                                 NC2064.2
+075300*                                                                         
 075400 QAL-INIT-F1-13.                                                  NC2064.2
 075500     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 075600     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -771,7 +771,7 @@
 077300     PERFORM FAIL.                                                NC2064.2
 077400 QAL-WRITE-F1-13.                                                 NC2064.2
 077500     PERFORM PRINT-DETAIL.                                        NC2064.2
-077600*                                                                 NC2064.2
+077600*                                                                         
 077700 QAL-INIT-F1-14.                                                  NC2064.2
 077800     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 077900     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -794,7 +794,7 @@
 079600     PERFORM FAIL.                                                NC2064.2
 079700 QAL-WRITE-F1-14.                                                 NC2064.2
 079800     PERFORM PRINT-DETAIL.                                        NC2064.2
-079900*                                                                 NC2064.2
+079900*                                                                         
 080000 QAL-INIT-F1-15.                                                  NC2064.2
 080100     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 080200     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -817,7 +817,7 @@
 081900     PERFORM FAIL.                                                NC2064.2
 082000 QAL-WRITE-F1-15.                                                 NC2064.2
 082100     PERFORM PRINT-DETAIL.                                        NC2064.2
-082200*                                                                 NC2064.2
+082200*                                                                         
 082300 QAL-INIT-F1-16.                                                  NC2064.2
 082400     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 082500     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -840,7 +840,7 @@
 084200     PERFORM FAIL.                                                NC2064.2
 084300 QAL-WRITE-F1-16.                                                 NC2064.2
 084400     PERFORM PRINT-DETAIL.                                        NC2064.2
-084500*                                                                 NC2064.2
+084500*                                                                         
 084600 QAL-INIT-F1-17.                                                  NC2064.2
 084700     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 084800     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -863,7 +863,7 @@
 086500     PERFORM FAIL.                                                NC2064.2
 086600 QAL-WRITE-F1-17.                                                 NC2064.2
 086700     PERFORM PRINT-DETAIL.                                        NC2064.2
-086800*                                                                 NC2064.2
+086800*                                                                         
 086900 QAL-INIT-F1-18.                                                  NC2064.2
 087000     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 087100     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -886,7 +886,7 @@
 088800     PERFORM FAIL.                                                NC2064.2
 088900 QAL-WRITE-F1-18.                                                 NC2064.2
 089000     PERFORM PRINT-DETAIL.                                        NC2064.2
-089100*                                                                 NC2064.2
+089100*                                                                         
 089200 QAL-INIT-F1-19.                                                  NC2064.2
 089300     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 089400     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -909,7 +909,7 @@
 091100     PERFORM FAIL.                                                NC2064.2
 091200 QAL-WRITE-F1-19.                                                 NC2064.2
 091300     PERFORM PRINT-DETAIL.                                        NC2064.2
-091400*                                                                 NC2064.2
+091400*                                                                         
 091500 QAL-INIT-F1-20.                                                  NC2064.2
 091600     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 091700     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -932,7 +932,7 @@
 093400     PERFORM FAIL.                                                NC2064.2
 093500 QAL-WRITE-F1-20.                                                 NC2064.2
 093600     PERFORM PRINT-DETAIL.                                        NC2064.2
-093700*                                                                 NC2064.2
+093700*                                                                         
 093800 QAL-INIT-F1-21.                                                  NC2064.2
 093900     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 094000     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -955,7 +955,7 @@
 095700     PERFORM FAIL.                                                NC2064.2
 095800 QAL-WRITE-F1-21.                                                 NC2064.2
 095900     PERFORM PRINT-DETAIL.                                        NC2064.2
-096000*                                                                 NC2064.2
+096000*                                                                         
 096100 QAL-INIT-F1-22.                                                  NC2064.2
 096200     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 096300     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -978,7 +978,7 @@
 098000     PERFORM FAIL.                                                NC2064.2
 098100 QAL-WRITE-F1-22.                                                 NC2064.2
 098200     PERFORM PRINT-DETAIL.                                        NC2064.2
-098300*                                                                 NC2064.2
+098300*                                                                         
 098400 QAL-INIT-F1-23.                                                  NC2064.2
 098500     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 098600     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -999,7 +999,7 @@
 100100     PERFORM DE-LETE.                                             NC2064.2
 100200 QAL-WRITE-F1-23.                                                 NC2064.2
 100300     PERFORM PRINT-DETAIL.                                        NC2064.2
-100400*                                                                 NC2064.2
+100400*                                                                         
 100500 QAL-INIT-F1-24.                                                  NC2064.2
 100600     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 100700     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1022,7 +1022,7 @@
 102400     PERFORM FAIL.                                                NC2064.2
 102500 QAL-WRITE-F1-24.                                                 NC2064.2
 102600     PERFORM PRINT-DETAIL.                                        NC2064.2
-102700*                                                                 NC2064.2
+102700*                                                                         
 102800 QAL-INIT-F1-25.                                                  NC2064.2
 102900     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 103000     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1045,7 +1045,7 @@
 104700     PERFORM FAIL.                                                NC2064.2
 104800 QAL-WRITE-F1-25.                                                 NC2064.2
 104900     PERFORM PRINT-DETAIL.                                        NC2064.2
-105000*                                                                 NC2064.2
+105000*                                                                         
 105100 QAL-INIT-F1-26.                                                  NC2064.2
 105200     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 105300     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1068,7 +1068,7 @@
 107000     PERFORM FAIL.                                                NC2064.2
 107100 QAL-WRITE-F1-26.                                                 NC2064.2
 107200     PERFORM PRINT-DETAIL.                                        NC2064.2
-107300*                                                                 NC2064.2
+107300*                                                                         
 107400 QAL-INIT-F1-27.                                                  NC2064.2
 107500     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 107600     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1091,7 +1091,7 @@
 109300     PERFORM FAIL.                                                NC2064.2
 109400 QAL-WRITE-F1-27.                                                 NC2064.2
 109500     PERFORM PRINT-DETAIL.                                        NC2064.2
-109600*                                                                 NC2064.2
+109600*                                                                         
 109700 QAL-INIT-F1-28.                                                  NC2064.2
 109800     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 109900     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1114,7 +1114,7 @@
 111600     PERFORM FAIL.                                                NC2064.2
 111700 QAL-WRITE-F1-28.                                                 NC2064.2
 111800     PERFORM PRINT-DETAIL.                                        NC2064.2
-111900*                                                                 NC2064.2
+111900*                                                                         
 112000 QAL-INIT-F1-29.                                                  NC2064.2
 112100     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 112200     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1137,7 +1137,7 @@
 113900     PERFORM FAIL.                                                NC2064.2
 114000 QAL-WRITE-F1-29.                                                 NC2064.2
 114100     PERFORM PRINT-DETAIL.                                        NC2064.2
-114200*                                                                 NC2064.2
+114200*                                                                         
 114300 QAL-INIT-F1-30.                                                  NC2064.2
 114400     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 114500     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1160,7 +1160,7 @@
 116200     PERFORM FAIL.                                                NC2064.2
 116300 QAL-WRITE-F1-30.                                                 NC2064.2
 116400     PERFORM PRINT-DETAIL.                                        NC2064.2
-116500*                                                                 NC2064.2
+116500*                                                                         
 116600 QAL-INIT-F1-31.                                                  NC2064.2
 116700     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 116800     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1183,7 +1183,7 @@
 118500     PERFORM FAIL.                                                NC2064.2
 118600 QAL-WRITE-F1-31.                                                 NC2064.2
 118700     PERFORM PRINT-DETAIL.                                        NC2064.2
-118800*                                                                 NC2064.2
+118800*                                                                         
 118900 QAL-INIT-F1-32.                                                  NC2064.2
 119000     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 119100     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1206,7 +1206,7 @@
 120800     PERFORM FAIL.                                                NC2064.2
 120900 QAL-WRITE-F1-32.                                                 NC2064.2
 121000     PERFORM PRINT-DETAIL.                                        NC2064.2
-121100*                                                                 NC2064.2
+121100*                                                                         
 121200 QAL-INIT-F1-33.                                                  NC2064.2
 121300     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 121400     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1229,7 +1229,7 @@
 123100     PERFORM FAIL.                                                NC2064.2
 123200 QAL-WRITE-F1-33.                                                 NC2064.2
 123300     PERFORM PRINT-DETAIL.                                        NC2064.2
-123400*                                                                 NC2064.2
+123400*                                                                         
 123500 QAL-INIT-F1-34.                                                  NC2064.2
 123600     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 123700     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1252,7 +1252,7 @@
 125400     PERFORM FAIL.                                                NC2064.2
 125500 QAL-WRITE-F1-34.                                                 NC2064.2
 125600     PERFORM PRINT-DETAIL.                                        NC2064.2
-125700*                                                                 NC2064.2
+125700*                                                                         
 125800 QAL-INIT-F1-35.                                                  NC2064.2
 125900     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 126000     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1275,7 +1275,7 @@
 127700     PERFORM FAIL.                                                NC2064.2
 127800 QAL-WRITE-F1-35.                                                 NC2064.2
 127900     PERFORM PRINT-DETAIL.                                        NC2064.2
-128000*                                                                 NC2064.2
+128000*                                                                         
 128100 QAL-INIT-F1-36.                                                  NC2064.2
 128200     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 128300     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1298,7 +1298,7 @@
 130000     PERFORM FAIL.                                                NC2064.2
 130100 QAL-WRITE-F1-36.                                                 NC2064.2
 130200     PERFORM PRINT-DETAIL.                                        NC2064.2
-130300*                                                                 NC2064.2
+130300*                                                                         
 130400 QAL-INIT-F1-37.                                                  NC2064.2
 130500     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 130600     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1321,7 +1321,7 @@
 132300     PERFORM FAIL.                                                NC2064.2
 132400 QAL-WRITE-F1-37.                                                 NC2064.2
 132500     PERFORM PRINT-DETAIL.                                        NC2064.2
-132600*                                                                 NC2064.2
+132600*                                                                         
 132700 QAL-INIT-F1-38.                                                  NC2064.2
 132800     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 132900     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1344,7 +1344,7 @@
 134600     PERFORM FAIL.                                                NC2064.2
 134700 QAL-WRITE-F1-38.                                                 NC2064.2
 134800     PERFORM PRINT-DETAIL.                                        NC2064.2
-134900*                                                                 NC2064.2
+134900*                                                                         
 135000 QAL-INIT-F1-39.                                                  NC2064.2
 135100     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 135200     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1367,7 +1367,7 @@
 136900     PERFORM FAIL.                                                NC2064.2
 137000 QAL-WRITE-F1-39.                                                 NC2064.2
 137100     PERFORM PRINT-DETAIL.                                        NC2064.2
-137200*                                                                 NC2064.2
+137200*                                                                         
 137300 QAL-INIT-F1-40.                                                  NC2064.2
 137400     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 137500     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1390,7 +1390,7 @@
 139200     PERFORM FAIL.                                                NC2064.2
 139300 QAL-WRITE-F1-40.                                                 NC2064.2
 139400     PERFORM PRINT-DETAIL.                                        NC2064.2
-139500*                                                                 NC2064.2
+139500*                                                                         
 139600 QAL-INIT-F1-41.                                                  NC2064.2
 139700     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 139800     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1413,7 +1413,7 @@
 141500     PERFORM FAIL.                                                NC2064.2
 141600 QAL-WRITE-F1-41.                                                 NC2064.2
 141700     PERFORM PRINT-DETAIL.                                        NC2064.2
-141800*                                                                 NC2064.2
+141800*                                                                         
 141900 QAL-INIT-F1-42.                                                  NC2064.2
 142000     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 142100     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1436,7 +1436,7 @@
 143800     PERFORM FAIL.                                                NC2064.2
 143900 QAL-WRITE-F1-42.                                                 NC2064.2
 144000     PERFORM PRINT-DETAIL.                                        NC2064.2
-144100*                                                                 NC2064.2
+144100*                                                                         
 144200 QAL-INIT-F1-43.                                                  NC2064.2
 144300     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 144400     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1459,7 +1459,7 @@
 146100     PERFORM FAIL.                                                NC2064.2
 146200 QAL-WRITE-F1-43.                                                 NC2064.2
 146300     PERFORM PRINT-DETAIL.                                        NC2064.2
-146400*                                                                 NC2064.2
+146400*                                                                         
 146500 QAL-INIT-F1-44.                                                  NC2064.2
 146600     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 146700     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1482,7 +1482,7 @@
 148400     PERFORM FAIL.                                                NC2064.2
 148500 QAL-WRITE-F1-44.                                                 NC2064.2
 148600     PERFORM PRINT-DETAIL.                                        NC2064.2
-148700*                                                                 NC2064.2
+148700*                                                                         
 148800 QAL-INIT-F1-45.                                                  NC2064.2
 148900     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 149000     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1505,7 +1505,7 @@
 150700     PERFORM FAIL.                                                NC2064.2
 150800 QAL-WRITE-F1-45.                                                 NC2064.2
 150900     PERFORM PRINT-DETAIL.                                        NC2064.2
-151000*                                                                 NC2064.2
+151000*                                                                         
 151100 QAL-INIT-F1-46.                                                  NC2064.2
 151200     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 151300     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1528,7 +1528,7 @@
 153000     PERFORM FAIL.                                                NC2064.2
 153100 QAL-WRITE-F1-46.                                                 NC2064.2
 153200     PERFORM PRINT-DETAIL.                                        NC2064.2
-153300*                                                                 NC2064.2
+153300*                                                                         
 153400 QAL-INIT-F1-47.                                                  NC2064.2
 153500     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 153600     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1551,7 +1551,7 @@
 155300     PERFORM FAIL.                                                NC2064.2
 155400 QAL-WRITE-F1-47.                                                 NC2064.2
 155500     PERFORM PRINT-DETAIL.                                        NC2064.2
-155600*                                                                 NC2064.2
+155600*                                                                         
 155700 QAL-INIT-F1-48.                                                  NC2064.2
 155800     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 155900     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1574,7 +1574,7 @@
 157600     PERFORM FAIL.                                                NC2064.2
 157700 QAL-WRITE-F1-48.                                                 NC2064.2
 157800     PERFORM PRINT-DETAIL.                                        NC2064.2
-157900*                                                                 NC2064.2
+157900*                                                                         
 158000 QAL-INIT-F1-49.                                                  NC2064.2
 158100     MOVE "IV-19 4.3.8.1"  TO ANSI-REFERENCE.                     NC2064.2
 158200     MOVE "QUAL LIMITS "   TO FEATURE.                            NC2064.2
@@ -1590,21 +1590,21 @@
 159200 QAL-FAIL-F1-49.                                                  NC2064.2
 159300     MOVE "5A4A3A2A1A0D" TO CORRECT-A.                            NC2064.2
 159400     MOVE TBL-LEVEL-0D IN TABLE-LEVEL-5A TO COMPUTED-A.           NC2064.2
-159500*    NOTE  TBL-LEVEL-0D IS UNIQUE AND NEED NOT BE QUALIFIED       NC2064.2
-159600*         HOWEVER, REFERENCE IS MADE TO IT BOTH QUALIFIED AND     NC2064.2
-159700*         UNQUALIFIED TO INSURE THE ABILITY TO DO SO.             NC2064.2
+159500*                                                                         
+159600*                                                                         
+159700*                                                                         
 159800     PERFORM FAIL.                                                NC2064.2
 159900 QAL-WRITE-F1-49.                                                 NC2064.2
 160000     PERFORM PRINT-DETAIL.                                        NC2064.2
-160100*                                                                 NC2064.2
+160100*                                                                         
 160200     PERFORM END-ROUTINE.                                         NC2064.2
-160300*                                                                 NC2064.2
+160300*                                                                         
 160400 SUB-INIT-F1-0.                                                   NC2064.2
 160500     PERFORM END-ROUTINE.                                         NC2064.2
 160600     MOVE "AA1122DD33" TO AX.                                     NC2064.2
 160700     MOVE "IV-19 4.3.8.1"    TO ANSI-REFERENCE.                   NC2064.2
 160800     MOVE "QUALIFIED SUBSCRIPTS" TO FEATURE.                      NC2064.2
-160900*                                                                 NC2064.2
+160900*                                                                         
 161000 SUB-INIT-F1-1.                                                   NC2064.2
 161100     MOVE "SUB-TEST-F1-1" TO PAR-NAME.                            NC2064.2
 161200 SUB-TEST-F1-1.                                                   NC2064.2
@@ -1621,7 +1621,7 @@
 162300     PERFORM FAIL.                                                NC2064.2
 162400 SUB-WRITE-F1-1.                                                  NC2064.2
 162500     PERFORM PRINT-DETAIL.                                        NC2064.2
-162600*                                                                 NC2064.2
+162600*                                                                         
 162700 SUB-INIT-F1-2.                                                   NC2064.2
 162800     MOVE "SUB-TEST-F1-2" TO PAR-NAME.                            NC2064.2
 162900     MOVE "IV-19 4.3.8.1"    TO ANSI-REFERENCE.                   NC2064.2
@@ -1642,7 +1642,7 @@
 164400     PERFORM FAIL.                                                NC2064.2
 164500 SUB-WRITE-F1-2.                                                  NC2064.2
 164600     PERFORM PRINT-DETAIL.                                        NC2064.2
-164700*                                                                 NC2064.2
+164700*                                                                         
 164800 SUB-INIT-F1-3.                                                   NC2064.2
 164900     MOVE "SUB-TEST-F1-3" TO PAR-NAME.                            NC2064.2
 165000     MOVE "IV-19 4.3.8.1"    TO ANSI-REFERENCE.                   NC2064.2
@@ -1665,7 +1665,7 @@
 166700     MOVE "UNEQUAL COMPARISON" TO RE-MARK.                        NC2064.2
 166800 SUB-WRITE-F1-3.                                                  NC2064.2
 166900     PERFORM PRINT-DETAIL.                                        NC2064.2
-167000*                                                                 NC2064.2
+167000*                                                                         
 167100 SUB-INIT-F1-4.                                                   NC2064.2
 167200     MOVE "IV-19 4.3.8.1"    TO ANSI-REFERENCE.                   NC2064.2
 167300     MOVE "QUALIFIED SUBSCRIPTS" TO FEATURE.                      NC2064.2

@@ -1,8 +1,8 @@
 RL207A.SUB: in section 'SECT-RL207A-001':
 RL207A.SUB: in paragraph 'REL-TEST-011-1':
 RL207A.SUB:939: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
-  937 | 094400*                         PERFORM FAIL                            R..
-  938 | 094500*                         PERFORM PRINT-DETAIL                    R..
+  937 | 094400*..
+  938 | 094500*..
   939 > 094600                          GO TO   CCVS-EXIT.                      R..
   940 | 094700 REL-TEST-011-2.                                                  R..
   941 | 094800     MOVE   "REL-TEST-011-2" TO PAR-NAME.                         R..

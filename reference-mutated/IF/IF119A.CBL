@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1194.2
 000300     IF119A.                                                      IF1194.2
 000400                                                                  IF1194.2
-000500***********************************************************       IF1194.2
-000600*                                                         *       IF1194.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1194.2
-000800* It contains tests for the Intrinsic Function MAX.       *       IF1194.2
-000900*                                                         *       IF1194.2
-001000***********************************************************       IF1194.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1194.2
 001200 CONFIGURATION SECTION.                                           IF1194.2
 001300 SOURCE-COMPUTER.                                                 IF1194.2
@@ -28,9 +28,9 @@
 002800 01  PRINT-REC PICTURE X(120).                                    IF1194.2
 002900 01  DUMMY-RECORD PICTURE X(120).                                 IF1194.2
 003000 WORKING-STORAGE SECTION.                                         IF1194.2
-003100***********************************************************       IF1194.2
-003200* Variables specific to the Intrinsic Function Test IF119A*       IF1194.2
-003300***********************************************************       IF1194.2
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 01  A                   PIC S9(10)          VALUE 5.             IF1194.2
 003500 01  B                   PIC S9(10)          VALUE 7.             IF1194.2
 003600 01  C                   PIC S9(10)          VALUE -4.            IF1194.2
@@ -52,9 +52,9 @@
 005200 01  WS-ANUM             PIC X.                                   IF1194.2
 005300 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1194.2
 005400 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1194.2
-005500*                                                                 IF1194.2
-005600**********************************************************        IF1194.2
-005700*                                                                 IF1194.2
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
 005800 01  TEST-RESULTS.                                                IF1194.2
 005900     02 FILLER                   PIC X      VALUE SPACE.          IF1194.2
 006000     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1194.2
@@ -348,16 +348,16 @@
 034800 BAIL-OUT-EX. EXIT.                                               IF1194.2
 034900 CCVS1-EXIT.                                                      IF1194.2
 035000     EXIT.                                                        IF1194.2
-035100********************************************************          IF1194.2
-035200*                                                      *          IF1194.2
-035300*    Intrinsic Function Tests         IF119A - MAX     *          IF1194.2
-035400*                                                      *          IF1194.2
-035500********************************************************          IF1194.2
+035100*                                                                         
+035200*                                                                         
+035300*                                                                         
+035400*                                                                         
+035500*                                                                         
 035600 SECT-IF119A SECTION.                                             IF1194.2
 035700 F-MAX-INFO.                                                      IF1194.2
 035800     MOVE     "See ref. A-52 2.23" TO ANSI-REFERENCE.             IF1194.2
 035900     MOVE     "MAX Function" TO FEATURE.                          IF1194.2
-036000*****************TEST (a) - SIMPLE TEST*****************          IF1194.2
+036000*                                                                         
 036100 F-MAX-01.                                                        IF1194.2
 036200     MOVE ZERO TO WS-NUM.                                         IF1194.2
 036300 F-MAX-TEST-01.                                                   IF1194.2
@@ -375,7 +375,7 @@
 037500 F-MAX-WRITE-01.                                                  IF1194.2
 037600     MOVE "F-MAX-01" TO PAR-NAME.                                 IF1194.2
 037700     PERFORM  PRINT-DETAIL.                                       IF1194.2
-037800*****************TEST (b) - SIMPLE TEST*****************          IF1194.2
+037800*                                                                         
 037900 F-MAX-02.                                                        IF1194.2
 038000     EVALUATE FUNCTION MAX(-4, 7, 304, 3, -8)                     IF1194.2
 038100     WHEN 304                                                     IF1194.2
@@ -389,7 +389,7 @@
 038900 F-MAX-WRITE-02.                                                  IF1194.2
 039000     MOVE "F-MAX-02" TO PAR-NAME.                                 IF1194.2
 039100     PERFORM  PRINT-DETAIL.                                       IF1194.2
-039200*****************TEST (c) - SIMPLE TEST*****************          IF1194.2
+039200*                                                                         
 039300 F-MAX-03.                                                        IF1194.2
 039400     IF (FUNCTION MAX(4.3, 2.6, 7.3, 9.1) >= 9.09982) AND         IF1194.2
 039500        (FUNCTION MAX(4.3, 2.6, 7.3, 9.1) <= 9.10018)             IF1194.2
@@ -403,7 +403,7 @@
 040300 F-MAX-WRITE-03.                                                  IF1194.2
 040400     MOVE "F-MAX-03" TO PAR-NAME.                                 IF1194.2
 040500     PERFORM  PRINT-DETAIL.                                       IF1194.2
-040600*****************TEST (d) - SIMPLE TEST*****************          IF1194.2
+040600*                                                                         
 040700 F-MAX-04.                                                        IF1194.2
 040800     MOVE ZERO TO WS-NUM.                                         IF1194.2
 040900 F-MAX-TEST-04.                                                   IF1194.2
@@ -422,16 +422,16 @@
 042200 F-MAX-WRITE-04.                                                  IF1194.2
 042300     MOVE "F-MAX-04" TO PAR-NAME.                                 IF1194.2
 042400     PERFORM  PRINT-DETAIL.                                       IF1194.2
-042500*****************TEST (e) - SIMPLE TEST*****************          IF1194.2
+042500*                                                                         
 042600 F-MAX-05.                                                        IF1194.2
 042700     MOVE ZERO TO WS-NUM.                                         IF1194.2
 042800 F-MAX-TEST-05.                                                   IF1194.2
 042900     COMPUTE WS-NUM = FUNCTION MAX(A, B, D).                      IF1194.2
-043000     IF WS-NUM = 90 THEN                                          IF1194.2
+043000     IF WS-NUM = 40 THEN                                          IF1194.2
 043100                    PERFORM PASS                                  IF1194.2
 043200     ELSE                                                         IF1194.2
 043300                    MOVE WS-NUM TO COMPUTED-N                     IF1194.2
-043400                    MOVE 90 TO CORRECT-N                          IF1194.2
+043400                    MOVE 40 TO CORRECT-N                          IF1194.2
 043500                    PERFORM FAIL.                                 IF1194.2
 043600     GO TO F-MAX-WRITE-05.                                        IF1194.2
 043700 F-MAX-DELETE-05.                                                 IF1194.2
@@ -440,7 +440,7 @@
 044000 F-MAX-WRITE-05.                                                  IF1194.2
 044100     MOVE "F-MAX-05" TO PAR-NAME.                                 IF1194.2
 044200     PERFORM  PRINT-DETAIL.                                       IF1194.2
-044300*****************TEST (f) - SIMPLE TEST*****************          IF1194.2
+044300*                                                                         
 044400 F-MAX-06.                                                        IF1194.2
 044500     MOVE ZERO TO WS-NUM.                                         IF1194.2
 044600 F-MAX-TEST-06.                                                   IF1194.2
@@ -458,7 +458,7 @@
 045800 F-MAX-WRITE-06.                                                  IF1194.2
 045900     MOVE "F-MAX-06" TO PAR-NAME.                                 IF1194.2
 046000     PERFORM  PRINT-DETAIL.                                       IF1194.2
-046100*****************TEST (g) - SIMPLE TEST*****************          IF1194.2
+046100*                                                                         
 046200 F-MAX-07.                                                        IF1194.2
 046300     MOVE ZERO TO WS-NUM.                                         IF1194.2
 046400 F-MAX-TEST-07.                                                   IF1194.2
@@ -477,7 +477,7 @@
 047700 F-MAX-WRITE-07.                                                  IF1194.2
 047800     MOVE "F-MAX-07" TO PAR-NAME.                                 IF1194.2
 047900     PERFORM  PRINT-DETAIL.                                       IF1194.2
-048000*****************TEST (h) - SIMPLE TEST*****************          IF1194.2
+048000*                                                                         
 048100 F-MAX-08.                                                        IF1194.2
 048200     MOVE ZERO TO WS-NUM.                                         IF1194.2
 048300 F-MAX-TEST-08.                                                   IF1194.2
@@ -496,7 +496,7 @@
 049600 F-MAX-WRITE-08.                                                  IF1194.2
 049700     MOVE "F-MAX-08" TO PAR-NAME.                                 IF1194.2
 049800     PERFORM  PRINT-DETAIL.                                       IF1194.2
-049900*****************TEST (i) - SIMPLE TEST*****************          IF1194.2
+049900*                                                                         
 050000 F-MAX-09.                                                        IF1194.2
 050100     MOVE ZERO TO WS-NUM.                                         IF1194.2
 050200 F-MAX-TEST-09.                                                   IF1194.2
@@ -514,7 +514,7 @@
 051400 F-MAX-WRITE-09.                                                  IF1194.2
 051500     MOVE "F-MAX-09" TO PAR-NAME.                                 IF1194.2
 051600     PERFORM  PRINT-DETAIL.                                       IF1194.2
-051700*****************TEST (j) - SIMPLE TEST*****************          IF1194.2
+051700*                                                                         
 051800 F-MAX-10.                                                        IF1194.2
 051900     MOVE ZERO TO WS-NUM.                                         IF1194.2
 052000 F-MAX-TEST-10.                                                   IF1194.2
@@ -533,16 +533,16 @@
 053300 F-MAX-WRITE-10.                                                  IF1194.2
 053400     MOVE "F-MAX-10" TO PAR-NAME.                                 IF1194.2
 053500     PERFORM  PRINT-DETAIL.                                       IF1194.2
-053600*****************TEST (k) - SIMPLE TEST*****************          IF1194.2
+053600*                                                                         
 053700 F-MAX-11.                                                        IF1194.2
 053800     MOVE SPACES TO WS-ANUM.                                      IF1194.2
 053900 F-MAX-TEST-11.                                                   IF1194.2
 054000     MOVE FUNCTION MAX("R", I, "I", "a") TO WS-ANUM.              IF1194.2
-054100     IF WS-ANUM = "1" THEN                                        IF1194.2
+054100     IF WS-ANUM = "r" THEN                                        IF1194.2
 054200                    PERFORM PASS                                  IF1194.2
 054300     ELSE                                                         IF1194.2
 054400                    MOVE WS-ANUM TO COMPUTED-A                    IF1194.2
-054500                    MOVE "1" TO CORRECT-A                         IF1194.2
+054500                    MOVE "r" TO CORRECT-A                         IF1194.2
 054600                    PERFORM FAIL.                                 IF1194.2
 054700     GO TO F-MAX-WRITE-11.                                        IF1194.2
 054800 F-MAX-DELETE-11.                                                 IF1194.2
@@ -551,7 +551,7 @@
 055100 F-MAX-WRITE-11.                                                  IF1194.2
 055200     MOVE "F-MAX-11" TO PAR-NAME.                                 IF1194.2
 055300     PERFORM  PRINT-DETAIL.                                       IF1194.2
-055400*****************TEST (l) - SIMPLE TEST*****************          IF1194.2
+055400*                                                                         
 055500 F-MAX-12.                                                        IF1194.2
 055600     MOVE ZERO TO WS-NUM.                                         IF1194.2
 055700 F-MAX-TEST-12.                                                   IF1194.2
@@ -569,7 +569,7 @@
 056900 F-MAX-WRITE-12.                                                  IF1194.2
 057000     MOVE "F-MAX-12" TO PAR-NAME.                                 IF1194.2
 057100     PERFORM  PRINT-DETAIL.                                       IF1194.2
-057200*****************TEST (m) - SIMPLE TEST*****************          IF1194.2
+057200*                                                                         
 057300 F-MAX-13.                                                        IF1194.2
 057400     MOVE ZERO TO WS-NUM.                                         IF1194.2
 057500 F-MAX-TEST-13.                                                   IF1194.2
@@ -587,16 +587,16 @@
 058700 F-MAX-WRITE-13.                                                  IF1194.2
 058800     MOVE "F-MAX-13" TO PAR-NAME.                                 IF1194.2
 058900     PERFORM  PRINT-DETAIL.                                       IF1194.2
-059000*****************TEST (n) - SIMPLE TEST*****************          IF1194.2
+059000*                                                                         
 059100 F-MAX-14.                                                        IF1194.2
 059200     MOVE ZERO TO WS-NUM.                                         IF1194.2
 059300 F-MAX-TEST-14.                                                   IF1194.2
 059400     COMPUTE WS-NUM = FUNCTION MAX(IND(1), IND(2), IND(3)).       IF1194.2
-059500     IF WS-NUM = 4 THEN                                           IF1194.2
+059500     IF WS-NUM = 6 THEN                                           IF1194.2
 059600                    PERFORM PASS                                  IF1194.2
 059700     ELSE                                                         IF1194.2
 059800                    MOVE WS-NUM TO COMPUTED-N                     IF1194.2
-059900                    MOVE 4 TO CORRECT-N                           IF1194.2
+059900                    MOVE 6 TO CORRECT-N                           IF1194.2
 060000                    PERFORM FAIL.                                 IF1194.2
 060100     GO TO F-MAX-WRITE-14.                                        IF1194.2
 060200 F-MAX-DELETE-14.                                                 IF1194.2
@@ -605,7 +605,7 @@
 060500 F-MAX-WRITE-14.                                                  IF1194.2
 060600     MOVE "F-MAX-14" TO PAR-NAME.                                 IF1194.2
 060700     PERFORM  PRINT-DETAIL.                                       IF1194.2
-060800*****************TEST (o) - SIMPLE TEST*****************          IF1194.2
+060800*                                                                         
 060900 F-MAX-15.                                                        IF1194.2
 061000     MOVE ZERO TO WS-NUM.                                         IF1194.2
 061100 F-MAX-TEST-15.                                                   IF1194.2
@@ -623,7 +623,7 @@
 062300 F-MAX-WRITE-15.                                                  IF1194.2
 062400     MOVE "F-MAX-15" TO PAR-NAME.                                 IF1194.2
 062500     PERFORM  PRINT-DETAIL.                                       IF1194.2
-062600*****************TEST (q) - SIMPLE TEST*****************          IF1194.2
+062600*                                                                         
 062700 F-MAX-17.                                                        IF1194.2
 062800     MOVE ZERO TO WS-NUM.                                         IF1194.2
 062900 F-MAX-TEST-17.                                                   IF1194.2
@@ -642,7 +642,7 @@
 064200 F-MAX-WRITE-17.                                                  IF1194.2
 064300     MOVE "F-MAX-17" TO PAR-NAME.                                 IF1194.2
 064400     PERFORM  PRINT-DETAIL.                                       IF1194.2
-064500*****************TEST (a) - COMPLEX TEST****************          IF1194.2
+064500*                                                                         
 064600 F-MAX-18.                                                        IF1194.2
 064700     MOVE ZERO TO WS-NUM.                                         IF1194.2
 064800     MOVE  34.9993 TO MIN-RANGE.                                  IF1194.2
@@ -664,7 +664,7 @@
 066400 F-MAX-WRITE-18.                                                  IF1194.2
 066500     MOVE "F-MAX-18" TO PAR-NAME.                                 IF1194.2
 066600     PERFORM  PRINT-DETAIL.                                       IF1194.2
-066700*****************TEST (b) - COMPLEX TEST****************          IF1194.2
+066700*                                                                         
 066800 F-MAX-19.                                                        IF1194.2
 066900     MOVE ZERO TO WS-NUM.                                         IF1194.2
 067000     MOVE  38.2592 TO MIN-RANGE.                                  IF1194.2
@@ -686,7 +686,7 @@
 068600 F-MAX-WRITE-19.                                                  IF1194.2
 068700     MOVE "F-MAX-19" TO PAR-NAME.                                 IF1194.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1194.2
-068900*****************TEST (c) - COMPLEX TEST****************          IF1194.2
+068900*                                                                         
 069000 F-MAX-20.                                                        IF1194.2
 069100     MOVE ZERO TO WS-NUM.                                         IF1194.2
 069200     MOVE -7.00014 TO MIN-RANGE.                                  IF1194.2
@@ -708,7 +708,7 @@
 070800 F-MAX-WRITE-20.                                                  IF1194.2
 070900     MOVE "F-MAX-20" TO PAR-NAME.                                 IF1194.2
 071000     PERFORM  PRINT-DETAIL.                                       IF1194.2
-071100*****************TEST (d) - COMPLEX TEST****************          IF1194.2
+071100*                                                                         
 071200 F-MAX-21.                                                        IF1194.2
 071300     MOVE ZERO TO WS-NUM.                                         IF1194.2
 071400     MOVE 49.9990 TO MIN-RANGE.                                   IF1194.2
@@ -732,7 +732,7 @@
 073200 F-MAX-WRITE-21.                                                  IF1194.2
 073300     MOVE "F-MAX-21" TO PAR-NAME.                                 IF1194.2
 073400     PERFORM  PRINT-DETAIL.                                       IF1194.2
-073500*****************TEST (e) - COMPLEX TEST****************          IF1194.2
+073500*                                                                         
 073600 F-MAX-22.                                                        IF1194.2
 073700     MOVE ZERO TO WS-NUM.                                         IF1194.2
 073800     MOVE 36.2593 TO MIN-RANGE.                                   IF1194.2
@@ -754,7 +754,7 @@
 075400 F-MAX-WRITE-22.                                                  IF1194.2
 075500     MOVE "F-MAX-22" TO PAR-NAME.                                 IF1194.2
 075600     PERFORM  PRINT-DETAIL.                                       IF1194.2
-075700*****************TEST (f) - COMPLEX TEST****************          IF1194.2
+075700*                                                                         
 075800 F-MAX-23.                                                        IF1194.2
 075900     MOVE ZERO TO WS-NUM.                                         IF1194.2
 076000     MOVE 11.9998 TO MIN-RANGE.                                   IF1194.2
@@ -777,7 +777,7 @@
 077700 F-MAX-WRITE-23.                                                  IF1194.2
 077800     MOVE "F-MAX-23" TO PAR-NAME.                                 IF1194.2
 077900     PERFORM  PRINT-DETAIL.                                       IF1194.2
-078000*****************SPECIAL PERFORM TEST**********************       IF1194.2
+078000*                                                                         
 078100 F-MAX-24.                                                        IF1194.2
 078200     PERFORM F-MAX-TEST-24                                        IF1194.2
 078300       UNTIL FUNCTION MAX(ARG1, 1) > 5.                           IF1194.2
@@ -791,7 +791,7 @@
 079100 F-MAX-WRITE-24.                                                  IF1194.2
 079200     MOVE "F-MAX-24" TO PAR-NAME.                                 IF1194.2
 079300     PERFORM  PRINT-DETAIL.                                       IF1194.2
-079400********************END OF TESTS***************                   IF1194.2
+079400*                                                                         
 079500 CCVS-EXIT SECTION.                                               IF1194.2
 079600 CCVS-999999.                                                     IF1194.2
 079700     GO TO CLOSE-FILES.                                           IF1194.2

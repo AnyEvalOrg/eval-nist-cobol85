@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2314.2
 000200 PROGRAM-ID.                                                      NC2314.2
 000300     NC231A.                                                      NC2314.2
-000400****************************************************************  NC2314.2
-000500*                                                              *  NC2314.2
-000600*    VALIDATION FOR:-                                          *  NC2314.2
-000700*                                                              *  NC2314.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2314.2
-000900*                                                              *  NC2314.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2314.2
-001100*                                                              *  NC2314.2
-001200****************************************************************  NC2314.2
-001300*                                                              *  NC2314.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2314.2
-001500*                                                              *  NC2314.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2314.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2314.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2314.2
-001900*                                                              *  NC2314.2
-002000****************************************************************  NC2314.2
-002100*                                                              *  NC2314.2
-002200*    PROGRAM NC231A USES FORMAT 1 OF THE "SEARCH" STATEMENT TO *  NC2314.2
-002300*    ACCESS THREE AND SEVEN DIMENSIONAL TABLES.                *  NC2314.2
-002400*    THE OPTIONAL "VARYING" PHRASE IS USED WITH AN IDENTIFIER. *  NC2314.2
-002500*    THE SCOPE TERMINATOR "END-SEARCH" IS ALSO TESTED.         *  NC2314.2
-002600*                                                              *  NC2314.2
-002700****************************************************************  NC2314.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2314.2
 002900 CONFIGURATION SECTION.                                           NC2314.2
 003000 SOURCE-COMPUTER.                                                 NC2314.2
@@ -316,7 +316,7 @@
 031800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2314.2
 031900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2314.2
 032000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2314.2
-032100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2314.2
+032100*                                                                         
 032200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2314.2
 032300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2314.2
 032400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2314.2

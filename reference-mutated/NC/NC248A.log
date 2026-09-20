@@ -20,22 +20,10 @@ TEST RESULT OF NC248A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET ... UP BY        PASS  SET-TEST-F2-5                                                                               
  SET ... DOWN BY      PASS  SET-TEST-F2-6                                                                               
  SET ... DOWN BY      PASS  SET-TEST-F2-7                                                                               
- SET ... DOWN BY      FAIL* SET-TEST-F2-8                 CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE                
-                                                                                                                        
-                                     COMPUTED= J                                                                        
-                                     CORRECT = S                     VI-128 6.22.4 GR7                                  
-                                                                                                                        
- SET ... DOWN BY      FAIL* SET-TEST-F2-9      .01        CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE                
-                                                                                                                        
-                                     COMPUTED= 6                                                                        
-                                     CORRECT = 1                     VI-128 6.22.4 GR7                                  
-                                                                                                                        
+ SET ... DOWN BY      PASS  SET-TEST-F2-8                                                                               
+ SET ... DOWN BY      PASS  SET-TEST-F2-9      .01                                                                      
  SET ... DOWN BY      PASS  SET-TEST-F2-9      .02                                                                      
- SET ... DOWN BY      FAIL* SET-TEST-F2-9      .03        CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE                
-                                                                                                                        
-                                     COMPUTED= *                                                                        
-                                     CORRECT = M                     VI-128 6.22.4 GR7                                  
-                                                                                                                        
+ SET ... DOWN BY      PASS  SET-TEST-F2-9      .03                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -43,8 +31,8 @@ TEST RESULT OF NC248A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC248A                                                
                                                                                                                         
-                                                    008 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    011 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

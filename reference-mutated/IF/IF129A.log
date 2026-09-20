@@ -20,7 +20,7 @@ TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MIN Function     FAIL* F-ORD-MIN-05                                                                                
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000005.000000000  See ref. A-62 2.33                                 
+                                     CORRECT =  000000007.000000000  See ref. A-62 2.33                                 
                                                                                                                         
  ORD-MIN Function     PASS  F-ORD-MIN-06                                                                                
  ORD-MIN Function     PASS  F-ORD-MIN-07                                                                                
@@ -28,13 +28,13 @@ TEST RESULT OF IF129A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MIN Function     FAIL* F-ORD-MIN-09                                                                                
                                                                                                                         
                                      COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000001.000000000  See ref. A-62 2.33                                 
+                                     CORRECT =  000000005.000000000  See ref. A-62 2.33                                 
                                                                                                                         
  ORD-MIN Function     PASS  F-ORD-MIN-10                                                                                
  ORD-MIN Function     FAIL* F-ORD-MIN-11                                                                                
                                                                                                                         
                                      COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000006.000000000  See ref. A-62 2.33                                 
+                                     CORRECT =  000000003.000000000  See ref. A-62 2.33                                 
                                                                                                                         
  ORD-MIN Function     PASS  F-ORD-MIN-12                                                                                
  ORD-MIN Function     PASS  F-ORD-MIN-13                                                                                

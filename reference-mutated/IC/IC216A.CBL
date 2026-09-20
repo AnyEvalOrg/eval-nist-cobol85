@@ -1,25 +1,25 @@
 000100 IDENTIFICATION DIVISION.                                         IC2164.2
 000200 PROGRAM-ID.                                                      IC2164.2
 000300     IC216A.                                                      IC2164.2
-000400****************************************************************  IC2164.2
-000500*                                                              *  IC2164.2
-000600*    VALIDATION FOR:-                                          *  IC2164.2
-000700*                                                              *  IC2164.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2164.2
-000900*                                                              *  IC2164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2164.2
-001100*                                                              *  IC2164.2
-001200****************************************************************  IC2164.2
-001300*                                                              *  IC2164.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2164.2
-001500*                                                              *  IC2164.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2164.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2164.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2164.2
-001900*                                                              *  IC2164.2
-002000****************************************************************  IC2164.2
-002100*    THIS IS MAIN PROGRAM IC216.                                  IC2164.2
-002200****************************************************************  IC2164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
 002300 ENVIRONMENT DIVISION.                                            IC2164.2
 002400 CONFIGURATION SECTION.                                           IC2164.2
 002500 SOURCE-COMPUTER.                                                 IC2164.2
@@ -232,7 +232,7 @@
 023400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2164.2
 023500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2164.2
 023600      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2164.2
-023700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2164.2
+023700*                                                                         
 023800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2164.2
 023900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2164.2
 024000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2164.2

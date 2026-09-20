@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         IC2044.2
 000200 PROGRAM-ID.                                                      IC2044.2
 000300     IC204A.                                                      IC2044.2
-000400****************************************************************  IC2044.2
-000500*                                                              *  IC2044.2
-000600*    VALIDATION FOR:-                                          *  IC2044.2
-000700*                                                              *  IC2044.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2044.2
-000900*                                                              *  IC2044.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2044.2
-001100*                                                              *  IC2044.2
-001200****************************************************************  IC2044.2
-001300*                                                              *  IC2044.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2044.2
-001500*                                                              *  IC2044.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2044.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2044.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2044.2
-001900*                                                              *  IC2044.2
-002000****************************************************************  IC2044.2
-002100*        THE SUBPROGRAM IC204 HAS TWO VARIABLES IN WORKING-       IC2044.2
-002200*    STORAGE WHICH ARE INITIALIZED BY A VALUE STATEMENT.  THE     IC2044.2
-002300*    DATA CONTENTS OF THESE VARIABLES ARE MODIFIED DURING         IC2044.2
-002400*    EXECUTION OF THE SUBPROGRAM.  INDICATORS ARE SET FOR         IC2044.2
-002500*    VARIABLES IN THE LINKAGE SECTION WHICH RELATE HOW MANY       IC2044.2
-002600*    TIMES THE SUBPROGRAM HAS BEEN CALLED SINCE IT WAS            IC2044.2
-002700*    INITIALIZED, AND WHETHER OR NOT THE SUBPROGRAM IS IN         IC2044.2
-002800*    ITS INITIAL STATE.                                           IC2044.2
-002900****************************************************************  IC2044.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            IC2044.2
 003100 CONFIGURATION SECTION.                                           IC2044.2
 003200 SOURCE-COMPUTER.                                                 IC2044.2
@@ -67,7 +67,7 @@
 006700         MOVE "EQUAL" TO SUB-DN4.                                 IC2044.2
 006800 IC204-EXIT.                                                      IC2044.2
 006900     EXIT PROGRAM.                                                IC2044.2
-007000*        THE PARAMETER SUB-DN3 IS SET IN THE CALLING PROGRAM      IC2044.2
-007100*    EQUAL TO THE NUMBER OF TIMES THE SUBPROGRAM HAS BEEN         IC2044.2
-007200*    CALLED SINCE BEING INITIALIZED, EITHER BY THE FIRST CALL     IC2044.2
-007300*    OR THE FIRST CALL AFTER A CANCEL STATEMENT.                  IC2044.2
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         

@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2244.2
 000200 PROGRAM-ID.                                                      SQ2244.2
 000300     SQ224A.                                                      SQ2244.2
-000400****************************************************************  SQ2244.2
-000500*                                                              *  SQ2244.2
-000600*    VALIDATION FOR:-                                          *  SQ2244.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2244.2
-000800*                                                              *  SQ2244.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2244.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2244.2
-001100*                                                              *  SQ2244.2
-001200*        THIS ROUTINE CHECKS:                                     SQ2244.2
-001300*                                                                 SQ2244.2
-001400*           RECORD IS VARYING IN SIZE FROM 18 TO 2048 CHARACTERS  SQ2244.2
-001500*             DEPENDING ON DATA-NAME-1.                           SQ2244.2
-001600*                                                                 SQ2244.2
-001700*    THE WRITE STATEMENT IS USED WITH AND WITHOUT THE INTO CLAUSE.SQ2244.2
-001800*                                                                 SQ2244.2
-001900*    THE READ STATEMENT IS USED WITH AND WITHOUT THE INTO CLAUSE. SQ2244.2
-002000*                                                                 SQ2244.2
-002100*    THIS  ROUTINE  BUILDS  A  SEQUENTIAL MASS STORAGE FILE WHICH SQ2244.2
-002200*    CONTAINS  2031 RECORDS OF A LENGTH OF 18 TO 2048 CHARACTERS. SQ2244.2
-002300*    THE  MASS STORAGE FILE IS READ AND FIELDS IN THE RECORDS ARE SQ2244.2
-002400*    CHECKED AGAINST THE EXPECTED VALUES.                         SQ2244.2
-002500*                                                                 SQ2244.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            SQ2244.2
 002700 CONFIGURATION SECTION.                                           SQ2244.2
 002800 SOURCE-COMPUTER.                                                 SQ2244.2
@@ -293,7 +293,7 @@
 034100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2244.2
 034200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2244.2
 034300      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2244.2
-034400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2244.2
+034400*                                                                         
 034500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2244.2
 034600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2244.2
 034700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2244.2
@@ -369,28 +369,28 @@
 041700     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          SQ2244.2
 041800     MOVE "FILE HAS 18 THRU 2048 CHAR RECS" TO RE-MARK.           SQ2244.2
 041900     PERFORM PRINT-DETAIL.                                        SQ2244.2
-042000*        A SEQUENTIAL MASS STORAGE FILE CONTAINING 2031           SQ2244.2
-042100*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS RECORDS         SQ2244.2
-042200*    OF 18  THROUGH 2048 CHARACTERS BEGINNING WITH THE 18 CHAR RECSQ2244.2
-042300*    AND ENDING WITH THE 2048 CHAR REC.                           SQ2244.2
-042400*                                                                 SQ2244.2
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
 042500 WRITE-CLOSE-GF-01.                                               SQ2244.2
 042600     CLOSE SQ-VS7.                                                SQ2244.2
 042700     GO TO READ-INIT-F1-01.                                       SQ2244.2
 042800 WRITE-RECORDS-1.                                                 SQ2244.2
-042900******************************************************************SQ2244.2
-043000*   MOVE  ...  TO  OUTPUT-RECORD          1030 RECORDS           *SQ2244.2
-043100*   WRITE   OUTPUT-RECORD.                                       *SQ2244.2
-043200******************************************************************SQ2244.2
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
 043300     ADD 1 TO COUNT-OF-RECS.                                      SQ2244.2
 043400     ADD 1 TO RECORD-LENGTH.                                      SQ2244.2
 043500     MOVE COUNT-OF-RECS TO RECORD-NUMBER.                         SQ2244.2
 043600     MOVE VAR-RECORD-18-2048 TO SQ-VS7R1-FIRST.                   SQ2244.2
 043700     WRITE SQ-VSR7R1-M-G-2048.                                    SQ2244.2
 043800 WRITE-RECORDS-2.                                                 SQ2244.2
-043900******************************************************************SQ2244.2
-044000*WRITE ...  FROM  ....  .                 1001 RECORDS           *SQ2244.2
-044100******************************************************************SQ2244.2
+043900*                                                                         
+044000*                                                                         
+044100*                                                                         
 044200     ADD 1 TO COUNT-OF-RECS.                                      SQ2244.2
 044300     ADD 1 TO RECORD-LENGTH.                                      SQ2244.2
 044400     MOVE COUNT-OF-RECS TO RECORD-NUMBER.                         SQ2244.2
@@ -427,9 +427,9 @@
 047500     PERFORM PRINT-DETAIL.                                        SQ2244.2
 047600     GO TO READ-INIT-F1-02.                                       SQ2244.2
 047700 READ-REC-1.                                                      SQ2244.2
-047800******************************************************************SQ2244.2
-047900*   READ      <FILE>     AT END ...                              *SQ2244.2
-048000******************************************************************SQ2244.2
+047800*                                                                         
+047900*                                                                         
+048000*                                                                         
 048100     IF EOF-FLAG EQUAL TO 1                                       SQ2244.2
 048200         GO TO READ-REC-1-EXIT.                                   SQ2244.2
 048300     READ SQ-VS7 AT END                                           SQ2244.2
@@ -449,9 +449,9 @@
 049700 READ-REC-1-EXIT.                                                 SQ2244.2
 049800     EXIT.                                                        SQ2244.2
 049900 READ-REC-2.                                                      SQ2244.2
-050000******************************************************************SQ2244.2
-050100*   READ  <FILE> INTO ....  AT END                               *SQ2244.2
-050200******************************************************************SQ2244.2
+050000*                                                                         
+050100*                                                                         
+050200*                                                                         
 050300     READ SQ-VS7 INTO  VAR-RECORD-18-2048 AT END                  SQ2244.2
 050400         MOVE 1 TO EOF-FLAG                                       SQ2244.2
 050500         GO TO READ-REC-2-EXIT.                                   SQ2244.2

@@ -8,11 +8,7 @@
 
 
 
- LINAGE-CT AFTER OPEN FAIL* WRT-TEST-01                   FILE IS CLOSED, THEN OPENED
-
-                                     COMPUTED=  000000000000000001
-                                     CORRECT =  000000000000000008
-
+ LINAGE-CT AFTER OPEN PASS  WRT-TEST-01                   FILE IS CLOSED, THEN OPENED
 
 
 
@@ -74,13 +70,11 @@ THE LOGICAL PAGE SIZE IS EQUAL TO       66
 
 
 
- L-C AFTER WRITE PAGE FAIL* WRT-TEST-02                   VII-5 1.3.8; VII-28 C (1)
 
-                                     COMPUTED=  000000000000000001
-                                     CORRECT =  000000000000000005
 
 
 
+ L-C AFTER WRITE PAGE PASS  WRT-TEST-02
 
 
 
@@ -206,11 +200,13 @@ THE LOGICAL PAGE SIZE IS EQUAL TO       66
 
 
 
- L-C AFT PAGE OVERFLW FAIL* WRT-TEST-03                   VII-5 1.3.8; VII-29 C  4)
 
-                                     COMPUTED=  000000000000000001
-                                     CORRECT =  000000000000000006
 
+
+
+
+
+ L-C AFT PAGE OVERFLW PASS  WRT-TEST-03
 
  L-C AFT WRT W/O ADV  PASS  WRT-TEST-04
 
@@ -247,6 +243,10 @@ TO DETERMINE THE ACCURACY OF EACH TEST
 
 
  WRT AFT ADV PAGE           WRT-TEST-07
+
+
+
+
 
 
 
@@ -1348,54 +1348,8 @@ END OF SQ201M VALIDATION TESTS
 
                                                     END OF TEST-  SQ201M    NTIS DISTRIBUTION COBOL 85
 
-                                                    009 OF 023  TESTS WERE EXECUTED SUCCESSFULLY
-                                                    003 TEST(S) FAILED
+                                                    012 OF 023  TESTS WERE EXECUTED SUCCESSFULLY
+                                                    NO  TEST(S) FAILED
                                                     NO  TEST(S) DELETED
                                                     011 TEST(S) REQUIRE INSPECTION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS
- TESTED               FAIL
-
- ***********************************************************************************************************************
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

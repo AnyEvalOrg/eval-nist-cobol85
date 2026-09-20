@@ -1,34 +1,34 @@
 000100 IDENTIFICATION DIVISION.                                         IX2134.2
 000200 PROGRAM-ID.                                                      IX2134.2
 000300     IX213A.                                                      IX2134.2
-000400****************************************************************  IX2134.2
-000500*                                                              *  IX2134.2
-000600*    VALIDATION FOR:-                                          *  IX2134.2
-000700*                                                              *  IX2134.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2134.2
-000900*                                                              *  IX2134.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2134.2
-001100*                                                              *  IX2134.2
-001200****************************************************************  IX2134.2
-001300*                                                              *  IX2134.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IX2134.2
-001500*                                                              *  IX2134.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IX2134.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IX2134.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IX2134.2
-001900*                                                              *  IX2134.2
-002000****************************************************************  IX2134.2
-002100*    THIS PROGRAM CREATES A 100 RECORD FIXED LENGTH INDEXED FILE  IX2134.2
-002200*    WHOSE  ACCESS  MODES  IS DYNAMIC AND CONTAINS 100 DUPLICATE  IX2134.2
-002300*    ALTERNATE  KEYS.  THE  INDEXED  FILE  IS MANIPULATED BY THE  IX2134.2
-002400*    DUPLICATE ALTERNATE KEYS USING THE FOLLOWING VERBS:          IX2134.2
-002500*                                                                 IX2134.2
-002600*            . DELETE                                             IX2134.2
-002700*            . READ ... NEXT RECORD                               IX2134.2
-002800*            . READ ... RECORD KEY                                IX2134.2
-002900*            . REWRITE                                            IX2134.2
-003000*            . START                                              IX2134.2
-003100*                                                                 IX2134.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
 003200 ENVIRONMENT DIVISION.                                            IX2134.2
 003300 CONFIGURATION SECTION.                                           IX2134.2
 003400 SOURCE-COMPUTER.                                                 IX2134.2
@@ -297,7 +297,7 @@
 034500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2134.2
 034600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2134.2
 034700      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2134.2
-034800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2134.2
+034800*                                                                         
 034900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2134.2
 035000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2134.2
 035100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2134.2

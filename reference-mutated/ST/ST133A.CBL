@@ -1,58 +1,58 @@
 000100 IDENTIFICATION DIVISION.                                         ST1334.2
 000200 PROGRAM-ID.                                                      ST1334.2
 000300     ST133A.                                                      ST1334.2
-000400****************************************************************  ST1334.2
-000500*                                                              *  ST1334.2
-000600*    VALIDATION FOR:-                                          *  ST1334.2
-000700*                                                              *  ST1334.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1334.2
-000900*                                                              *  ST1334.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1334.2
-001100*                                                              *  ST1334.2
-001200****************************************************************  ST1334.2
-001300*                                                              *  ST1334.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1334.2
-001500*                                                              *  ST1334.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1334.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1334.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1334.2
-001900*                                                              *  ST1334.2
-002000****************************************************************  ST1334.2
-002100*                                                                 ST1334.2
-002200*    ST133 DOES TWO SORTS ON THE SAME SET OF 80-CHARACTER RECORDS.ST1334.2
-002300*    THESE RECORDS ARE SHOWN BELOW. THE FIRST SORT EMPLOYS THE    ST1334.2
-002400*    COMBINATION INPUT PROCEDURE, GIVING. THE SECOND SORT EMPLOYS ST1334.2
-002500*    USING, OUTPUT PROCEDURE. THE OUTPUT FILE FROM THE FIRST SORT ST1334.2
-002600*    BECOMES THE INPUT FILE FOR THE SECOND SORT.                  ST1334.2
-002700*                                                                 ST1334.2
-002800*    THE RESULTS OF BOTH SORTS ARE REFLECTED IN THE INPUT AND     ST1334.2
-002900*    OUTPUT FILES ASSOCIATED WITH THE SECOND SORT. BECAUSE OF     ST1334.2
-003000*    THIS, THE CONTENTS OF BOTH FILES ARE SPOT-CHECKED IN THE     ST1334.2
-003100*    OUTPUT PROCEDURE. TO DO THIS, IT IS NECESSARY TO REFER TO    ST1334.2
-003200*    BOTH FILES IN THE OUTPUT PROCEDURE. IN ADDITION, BOTH FILES  ST1334.2
-003300*    ARE REFERENCED IN THE MAINLINE BETWEEN THE SORTS.            ST1334.2
-003400*      BEFORE SORTS        AFTER FIRST SORT    AFTER SECOND SORT  ST1334.2
-003500*      NON-KEY KEY         NON-KEY KEY         NON-KEY KEY        ST1334.2
-003600*      X(72)   S9(8)       X(72)   S9(8)       X(72)   S9(8)      ST1334.2
-003700*                                                                 ST1334.2
-003800*      A        00000000   A       +00000099   A       -00000199  ST1334.2
-003900*      A       +00000001   A       +00000098   A       -00000198  ST1334.2
-004000*      A       +00000002   A       +00000097   A       -00000197  ST1334.2
-004100*        .         .         .         .         .         .      ST1334.2
-004200*        .         .         .         .         .         .      ST1334.2
-004300*        .         .         .         .         .         .      ST1334.2
-004400*      A       +00000098   A       +00000001   A       -00000101  ST1334.2
-004500*      A       +00000099   A        00000000   A       -00000100  ST1334.2
-004600*      A       -00000100   A       -00000100   A        00000000  ST1334.2
-004700*      A       -00000101   A       -00000101   A       +00000001  ST1334.2
-004800*        .         .         .         .         .         .      ST1334.2
-004900*        .         .         .         .         .         .      ST1334.2
-005000*        .         .         .         .         .         .      ST1334.2
-005100*      A       -00000199   A       -00000199   A       +00000099  ST1334.2
-005200*    THE NON-KEY ITEMS ARE ALL JUSTIFIED RIGHT.                   ST1334.2
-005300*                                                                 ST1334.2
-005400*    THE SAME SORT AREA CLAUSE IS EXERCISED IN THIS PROGRAM.      ST1334.2
-005500*                                                                 ST1334.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
 005600 ENVIRONMENT DIVISION.                                            ST1334.2
 005700 CONFIGURATION SECTION.                                           ST1334.2
 005800 SOURCE-COMPUTER.                                                 ST1334.2
@@ -349,7 +349,7 @@
 036100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1334.2
 036200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1334.2
 036300      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1334.2
-036400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1334.2
+036400*                                                                         
 036500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1334.2
 036600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1334.2
 036700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1334.2
@@ -442,9 +442,9 @@
 045400     CLOSE    SORTOUT-2C.                                         ST1334.2
 045500     MOVE    "TAPE COPY DONE" TO FEATURE.                         ST1334.2
 045600     PERFORM PRINT-DETAIL.                                        ST1334.2
-045700*        NOTE THIS TAPECOPY ROUTINE HAS NO EFFECT ON THE SORTS ---ST1334.2
-045800*             ITS ONLY FUNCTION IS TO EXERCISE THE OPEN, CLOSE,   ST1334.2
-045900*             READ, AND WRITE VERBS IN THE MAINLINE.              ST1334.2
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
 046000 SECOND-SORT-PARA.                                                ST1334.2
 046100     SORT     SECOND-SORTFILE ON ASCENDING KEY                    ST1334.2
 046200              SECOND-KEY                                          ST1334.2

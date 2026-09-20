@@ -14,23 +14,11 @@ TEST RESULT OF SM205A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
  COPY SD REPLACING    PASS  COPY-TEST-1                                                                                 
- COPY SD REPLACING    FAIL* COPY-TEST-2                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000009000000900008                                                      
-                                     CORRECT =  000009000600900008                                                      
-                                                                                                                        
+ COPY SD REPLACING    PASS  COPY-TEST-2                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-3                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-4                                                                                 
- COPY SD REPLACING    FAIL* COPY-TEST-5                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000201001000200002                                                      
-                                     CORRECT =  000201001000400002                                                      
-                                                                                                                        
- COPY SD REPLACING    FAIL* COPY-TEST-6                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000201002000100001                                                      
-                                     CORRECT =  000211002000100001                                                      
-                                                                                                                        
+ COPY SD REPLACING    PASS  COPY-TEST-5                                                                                 
+ COPY SD REPLACING    PASS  COPY-TEST-6                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-7                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-8                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-9                                                                                 
@@ -41,8 +29,8 @@ TEST RESULT OF SM205A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  SM205A                                                
                                                                                                                         
-                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    009 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

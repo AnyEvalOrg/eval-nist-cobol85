@@ -2,30 +2,30 @@
 000200 PROGRAM-ID.                                                      OBNC24.2
 000300     OBNC2M.                                                      OBNC24.2
 000400                                                                  OBNC24.2
-000500****************************************************************  OBNC24.2
-000600*                                                              *  OBNC24.2
-000700*    VALIDATION FOR:-                                          *  OBNC24.2
-000800*                                                              *  OBNC24.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".OBNC24.2
-001000*                                                              *  OBNC24.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".OBNC24.2
-001200*                                                              *  OBNC24.2
-001300****************************************************************  OBNC24.2
-001400*                                                              *  OBNC24.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  OBNC24.2
-001600*                                                              *  OBNC24.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  OBNC24.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  OBNC24.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  OBNC24.2
-002000*                                                              *  OBNC24.2
-002100****************************************************************  OBNC24.2
-002200*    PROGRAM OBNC2M CONTAINS CCVS74 TESTS OF LANGUAGE ELEMENTS *  OBNC24.2
-002300*    DEFINED AS OBSOLETE IN THE 198X STANDARDS.                *  OBNC24.2
-002400****************************************************************  OBNC24.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 DATE-COMPILED.                                                   OBNC24.2
-002600*    THIS COMMENT LINE SHOULD NOT BE REPLACED                     OBNC24.2
-002700*    THIS COMMENT ENTRY SHOULD APPEAR AS THE LAST LINE BEFORE     OBNC24.2
-002800*    THE ENVIRONMENT DIVISION.                                    OBNC24.2
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            OBNC24.2
 003000 CONFIGURATION SECTION.                                           OBNC24.2
 003100 SOURCE-COMPUTER.                                                 OBNC24.2
@@ -519,7 +519,7 @@
 052100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBNC24.2
 052200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               OBNC24.2
 052300      ADD PASS-COUNTER TO ERROR-HOLD.                             OBNC24.2
-052400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBNC24.2
+052400*                                                                         
 052500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBNC24.2
 052600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBNC24.2
 052700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBNC24.2
@@ -587,11 +587,11 @@
 058900 CCVS1-EXIT.                                                      OBNC24.2
 059000     EXIT.                                                        OBNC24.2
 059100 SECT-OBNC2M-001 SECTION.                                         OBNC24.2
-059200*                                                                 OBNC24.2
+059200*                                                                         
 059300 GO--TEST-1.                                                      OBNC24.2
 059400     ALTER GO--A TO PROCEED TO GO--C.                             OBNC24.2
-059500*    NOTE THE GO STATEMENT IN GO--A IS NOT LEGAL UNLESS IT IS     OBNC24.2
-059600*        ALTERED AS SHOWN ABOVE BEFORE CONTROL PASSES TO IT.      OBNC24.2
+059500*                                                                         
+059600*                                                                         
 059700     GO TO GO--A.                                                 OBNC24.2
 059800 GO--DELETE-1.                                                    OBNC24.2
 059900     PERFORM DE-LETE.                                             OBNC24.2
@@ -696,9 +696,9 @@
 069800     MOVE     "ALTER-TEST-2" TO PAR-NAME.                         OBNC24.2
 069900     PERFORM  PRINT-DETAIL.                                       OBNC24.2
 070000 ALTER-INIT-3.                                                    OBNC24.2
-070100*    NOTE  THE FOLLOWING TESTS UTILIZE THE ALTER STATEMENT WITH   OBNC24.2
-070200*          11 OPERANDS  A DELETE IN ALTER-TEST-3 WILL CAUSE THE   OBNC24.2
-070300*         REST OF THE ALTER TESTS TO BE BYPASSED.                 OBNC24.2
+070100*                                                                         
+070200*                                                                         
+070300*                                                                         
 070400 ALTER-TEST-3.                                                    OBNC24.2
 070500     ALTER TEST-3A TO PROCEED TO TEST-3C  TEST-4A TO TEST-4C      OBNC24.2
 070600         TEST-5A TO TEST-5B  TEST-6A TO TEST-6C  TEST-7A TO       OBNC24.2

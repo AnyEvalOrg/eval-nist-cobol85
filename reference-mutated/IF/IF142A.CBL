@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1424.2
 000300     IF142A.                                                      IF1424.2
 000400                                                                  IF1424.2
-000500***********************************************************       IF1424.2
-000600*                                                         *       IF1424.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1424.2
-000800* It contains tests for the Intrinsic Function            *       IF1424.2
-000900* WHEN-COMPILED.                                          *       IF1424.2
-001000*                                                         *       IF1424.2
-001100***********************************************************       IF1424.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1424.2
 001300 CONFIGURATION SECTION.                                           IF1424.2
 001400 SOURCE-COMPUTER.                                                 IF1424.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1424.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1424.2
 002700 WORKING-STORAGE SECTION.                                         IF1424.2
-002800***********************************************************       IF1424.2
-002900* Variables specific to the Intrinsic Function Test IF142A*       IF1424.2
-003000***********************************************************       IF1424.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  TEMP1                       PIC X(21).                       IF1424.2
 003200 01  WS-DATE.                                                     IF1424.2
 003300     02  WS-YEAR                 PIC 9999.                        IF1424.2
@@ -48,9 +48,9 @@
 004800              88 CON-GREENW      VALUE "-", "+", "0".             IF1424.2
 004900     02  WS-OFFSET               PIC 99.                          IF1424.2
 005000              88 CON-OFFSET      VALUE 00 THRU 13.                IF1424.2
-005100*                                                                 IF1424.2
-005200**********************************************************        IF1424.2
-005300*                                                                 IF1424.2
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400 01  TEST-RESULTS.                                                IF1424.2
 005500     02 FILLER                   PIC X      VALUE SPACE.          IF1424.2
 005600     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1424.2
@@ -311,16 +311,16 @@
 031100 BAIL-OUT-EX. EXIT.                                               IF1424.2
 031200 CCVS1-EXIT.                                                      IF1424.2
 031300     EXIT.                                                        IF1424.2
-031400********************************************************          IF1424.2
-031500*                                                      *          IF1424.2
-031600*    Intrinsic Function Tests   IF142A - WHEN-COMPILED *          IF1424.2
-031700*                                                      *          IF1424.2
-031800********************************************************          IF1424.2
+031400*                                                                         
+031500*                                                                         
+031600*                                                                         
+031700*                                                                         
+031800*                                                                         
 031900 SECT-IF142A SECTION.                                             IF1424.2
 032000 F-WHENCOMP-INFO.                                                 IF1424.2
 032100     MOVE     "See ref. A-75 2.46" TO ANSI-REFERENCE.             IF1424.2
 032200     MOVE     "WHEN-COMPILED"     TO FEATURE.                     IF1424.2
-032300*****************TEST (a) ******************************          IF1424.2
+032300*                                                                         
 032400 F-WHENCOMP-01.                                                   IF1424.2
 032500     MOVE SPACES TO TEMP1.                                        IF1424.2
 032600     MOVE SPACES TO WS-DATE.                                      IF1424.2
@@ -348,7 +348,7 @@
 034800 F-WHENCOMP-WRITE-01.                                             IF1424.2
 034900     MOVE "F-WHENCOMP-01" TO PAR-NAME.                            IF1424.2
 035000     PERFORM  PRINT-DETAIL.                                       IF1424.2
-035100*****************TEST (b) ******************************          IF1424.2
+035100*                                                                         
 035200 F-WHENCOMP-TEST-02.                                              IF1424.2
 035300     IF FUNCTION WHEN-COMPILED >= TEMP1 THEN                      IF1424.2
 035400                    PERFORM PASS                                  IF1424.2
@@ -361,7 +361,7 @@
 036100 F-WHENCOMP-WRITE-02.                                             IF1424.2
 036200     MOVE "F-WHENCOMP-02" TO PAR-NAME.                            IF1424.2
 036300     PERFORM  PRINT-DETAIL.                                       IF1424.2
-036400*******************END OF TESTS**************************         IF1424.2
+036400*                                                                         
 036500 CCVS-EXIT SECTION.                                               IF1424.2
 036600 CCVS-999999.                                                     IF1424.2
 036700     GO TO CLOSE-FILES.                                           IF1424.2

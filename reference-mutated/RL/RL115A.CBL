@@ -1,46 +1,46 @@
 000100 IDENTIFICATION DIVISION.                                         RL1154.2
 000200 PROGRAM-ID.                                                      RL1154.2
 000300     RL115A.                                                      RL1154.2
-000400****************************************************************  RL1154.2
-000500*                                                              *  RL1154.2
-000600*    VALIDATION FOR:-                                          *  RL1154.2
-000700*                                                              *  RL1154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1154.2
-000900*                                                              *  RL1154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1154.2
-001100*                                                              *  RL1154.2
-001200****************************************************************  RL1154.2
-001300*                                                              *  RL1154.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1154.2
-001500*                                                              *  RL1154.2
-001600*            X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR   *  RL1154.2
-001700*                    RELATIVE  I-O DATA FILE                   *  RL1154.2
-001800*            X-55   SYSTEM PRINTER                             *  RL1154.2
-001900*            X-69   ADDITIONAL VALUE OF CLAUSES                *  RL1154.2
-002000*            X-74   VALUE OF IMPLEMENTOR-NAME                  *  RL1154.2
-002100*            X-75   OBJECT OF VALUE OF CLAUSE                  *  RL1154.2
-002200*            X-82   SOURCE-COMPUTER                            *  RL1154.2
-002300*            X-83   OBJECT-COMPUTER.                           *  RL1154.2
-002400*                                                              *  RL1154.2
-002500****************************************************************  RL1154.2
-002600*    RL115A                                                    *  RL1154.2
-002700****************************************************************  RL1154.2
-002800*            THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND    RL1154.2
-002900*            SEMANTIC ACTIONS ASSOCIATED WITH THE "USE"           RL1154.2
-003000*            STATEMENT.                                           RL1154.2
-003100*                                                                 RL1154.2
-003200*                                                                 RL1154.2
-003300*            THIS PROGRAM CREATES A RELATIVE I-O FILE SEQUENTIALLYRL1154.2
-003400*            (ACCESS MODE SEQUENTIAL) AND THEN UPDATES SELECTIVE  RL1154.2
-003500*            RECORDS OF THE FILE.  THE FILE STATUS CONTENTS ARE   RL1154.2
-003600*            CAPTURED AND TESTED FOR ACCURACY FOR EACH OPEN, CLOSERL1154.2
-003700*            READ AND REWRITE STATEMENT USED.  THE READ, WRITE ANDRL1154.2
-003800*            REWRITE STATEMENTS ARE USED WITHOUT THE APPROPRIATE  RL1154.2
-003900*            AT END ON INVALID KEY PHRASES.  THE OMISSION OF THESERL1154.2
-004000*            PHRASES ARE PERMITTED IF AN APPLICABLE USE PROCEDURE RL1154.2
-004100*            HAS BEEN SPECIFIED.                                  RL1154.2
-004200*                                                                 RL1154.2
-004300***************************************************               RL1154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
 004400 ENVIRONMENT DIVISION.                                            RL1154.2
 004500 CONFIGURATION SECTION.                                           RL1154.2
 004600 SOURCE-COMPUTER.                                                 RL1154.2
@@ -290,7 +290,7 @@
 029500 RL-FD2-01-01.                                                    RL1154.2
 029600     MOVE   "PASS " TO P-OR-F.                                    RL1154.2
 029700     ADD     1 TO PASS-COUNTER.                                   RL1154.2
-029800*                                                                 RL1154.2
+029800*                                                                         
 029900     IF      REC-CT NOT EQUAL TO ZERO                             RL1154.2
 030000             MOVE "." TO PARDOT-X                                 RL1154.2
 030100             MOVE REC-CT TO DOTVALUE.                             RL1154.2
@@ -432,7 +432,7 @@
 043900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1154.2
 044000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1154.2
 044100      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1154.2
-044200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1154.2
+044200*                                                                         
 044300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1154.2
 044400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1154.2
 044500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1154.2
@@ -515,7 +515,7 @@
 052200     MOVE     "RL"            TO  XFILE-ORGANIZATION (2).         RL1154.2
 052300     MOVE     "S"             TO  XLABEL-TYPE        (2).         RL1154.2
 052400     MOVE     000001          TO  XRECORD-NUMBER     (2).         RL1154.2
-052500*INITIALIZE  RECORD WORK AREA NUMBER 2.                           RL1154.2
+052500*                                                                         
 052600     MOVE     1         TO  WRK-CS-09V00-012.                     RL1154.2
 052700     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     RL1154.2
 052800                            WRK-CS-09V00-015 WRK-CS-09V00-016     RL1154.2
@@ -525,7 +525,7 @@
 053200     MOVE     01 TO REC-CT.                                       RL1154.2
 053300     OPEN     OUTPUT    RL-FD2.                                   RL1154.2
 053400     MOVE     RL-FD2-STATUS TO WRK-XN-0002-001.                   RL1154.2
-053500*CAPTURE STATUS KEY AFTER  OPEN STATEMENT IS EXECUTED.            RL1154.2
+053500*                                                                         
 053600 REL-TEST-009-R.                                                  RL1154.2
 053700     MOVE XRECORD-NUMBER (2) TO RL-FD2-KEY.                       RL1154.2
 053800     MOVE    "99"  TO RL-FD2-STATUS.                              RL1154.2
@@ -550,7 +550,7 @@
 055700              PERFORM   PASS.                                     RL1154.2
 055800     PERFORM  PRINT-DETAIL.                                       RL1154.2
 055900     ADD      01 TO REC-CT.                                       RL1154.2
-056000*    .01                                                          RL1154.2
+056000*                                                                         
 056100     IF       XRECORD-NUMBER (2) NOT EQUAL TO 500                 RL1154.2
 056200              MOVE "INCORRECT COUNT" TO RE-MARK                   RL1154.2
 056300              MOVE  500 TO CORRECT-18V0                           RL1154.2
@@ -560,7 +560,7 @@
 056700              PERFORM PASS.                                       RL1154.2
 056800     PERFORM  PRINT-DETAIL.                                       RL1154.2
 056900     ADD      01 TO REC-CT.                                       RL1154.2
-057000*    .02                                                          RL1154.2
+057000*                                                                         
 057100     IF       WRK-XN-0002-001 NOT EQUAL TO  "00"                  RL1154.2
 057200              MOVE "STATUS/OPEN" TO RE-MARK                       RL1154.2
 057300              MOVE WRK-XN-0002-001 TO COMPUTED-A                  RL1154.2
@@ -570,7 +570,7 @@
 057700              PERFORM  PASS.                                      RL1154.2
 057800     PERFORM  PRINT-DETAIL.                                       RL1154.2
 057900     ADD      01 TO REC-CT.                                       RL1154.2
-058000*    .03                                                          RL1154.2
+058000*                                                                         
 058100     IF        RL-FD2-STATUS NOT EQUAL TO "00"                    RL1154.2
 058200              MOVE "STATUS/WRITE" TO RE-MARK                      RL1154.2
 058300              MOVE RL-FD2-STATUS TO COMPUTED-A                    RL1154.2
@@ -580,7 +580,7 @@
 058700              PERFORM   PASS.                                     RL1154.2
 058800     PERFORM  PRINT-DETAIL.                                       RL1154.2
 058900     ADD      01 TO REC-CT.                                       RL1154.2
-059000*    .04                                                          RL1154.2
+059000*                                                                         
 059100     MOVE     SPACE  TO  RL-FD2-STATUS.                           RL1154.2
 059200     CLOSE    RL-FD2.                                             RL1154.2
 059300     IF        RL-FD2-STATUS NOT EQUAL TO "00"                    RL1154.2
@@ -592,7 +592,7 @@
 059900              PERFORM PASS.                                       RL1154.2
 060000     PERFORM  PRINT-DETAIL.                                       RL1154.2
 060100     ADD      01 TO REC-CT.                                       RL1154.2
-060200*    .05                                                          RL1154.2
+060200*                                                                         
 060300 REL-INIT-010.                                                    RL1154.2
 060400     MOVE    "REL-TEST-010" TO PAR-NAME.                          RL1154.2
 060500     MOVE     2     TO  WRK-CS-09V00-012.                         RL1154.2
@@ -610,7 +610,7 @@
 061700     MOVE     SPACE     TO  WRK-XN-0002-004                       RL1154.2
 061800     MOVE      RL-FD2-STATUS TO WRK-XN-0002-001                   RL1154.2
 061900     MOVE     SPACE TO RL-FD2-STATUS.                             RL1154.2
-062000*CAPTURE THE CONTENTS OF STATUS KEY AFTER OPEN IS EXECUTED.       RL1154.2
+062000*                                                                         
 062100     MOVE    "USE/FILE STATUS"  TO FEATURE.                       RL1154.2
 062200 REL-TEST-010-R.                                                  RL1154.2
 062300     ADD      1 TO RL-FD2-KEY.                                    RL1154.2
@@ -644,7 +644,7 @@
 065100              PERFORM PASS.                                       RL1154.2
 065200     PERFORM  PRINT-DETAIL.                                       RL1154.2
 065300     ADD      01 TO REC-CT.                                       RL1154.2
-065400*    .01                                                          RL1154.2
+065400*                                                                         
 065500     IF       WRK-CS-09V00-014 NOT EQUAL TO 501                   RL1154.2
 065600              MOVE "INCORRECT COUNT" TO RE-MARK                   RL1154.2
 065700              MOVE WRK-CS-09V00-014 TO COMPUTED-18V0              RL1154.2
@@ -654,7 +654,7 @@
 066100             PERFORM PASS.                                        RL1154.2
 066200     PERFORM  PRINT-DETAIL.                                       RL1154.2
 066300     ADD      01 TO REC-CT.                                       RL1154.2
-066400*    .02                                                          RL1154.2
+066400*                                                                         
 066500     IF       WRK-XN-0002-001 NOT EQUAL TO "00"                   RL1154.2
 066600              MOVE "OPEN/STATUS"  TO  RE-MARK                     RL1154.2
 066700              MOVE WRK-XN-0002-001 TO COMPUTED-A                  RL1154.2
@@ -664,7 +664,7 @@
 067100              PERFORM PASS.                                       RL1154.2
 067200     PERFORM  PRINT-DETAIL.                                       RL1154.2
 067300     ADD      01 TO REC-CT.                                       RL1154.2
-067400*    .03                                                          RL1154.2
+067400*                                                                         
 067500     IF        RL-FD2-STATUS NOT EQUAL  TO "10"                   RL1154.2
 067600              MOVE "ATEND/STATUS" TO RE-MARK                      RL1154.2
 067700              MOVE  RL-FD2-STATUS TO COMPUTED-A                   RL1154.2
@@ -674,7 +674,7 @@
 068100              PERFORM PASS.                                       RL1154.2
 068200     PERFORM  PRINT-DETAIL.                                       RL1154.2
 068300     ADD      01 TO REC-CT.                                       RL1154.2
-068400*    .04                                                          RL1154.2
+068400*                                                                         
 068500     IF       WRK-XN-0002-002 NOT EQUAL TO "10"                   RL1154.2
 068600              MOVE  "EXCEPTIN/STATUS" TO RE-MARK                  RL1154.2
 068700              MOVE  WRK-XN-0002-002 TO COMPUTED-A                 RL1154.2
@@ -684,7 +684,7 @@
 069100              PERFORM PASS.                                       RL1154.2
 069200     PERFORM  PRINT-DETAIL.                                       RL1154.2
 069300     ADD      01 TO REC-CT.                                       RL1154.2
-069400*    .05                                                          RL1154.2
+069400*                                                                         
 069500     IF       WRK-XN-0002-003 NOT EQUAL TO "10"                   RL1154.2
 069600              MOVE "NO/EXCEPTION" TO  RE-MARK                     RL1154.2
 069700              MOVE WRK-XN-0002-003 TO COMPUTED-A                  RL1154.2
@@ -694,7 +694,7 @@
 070100              PERFORM PASS.                                       RL1154.2
 070200     PERFORM  PRINT-DETAIL                                        RL1154.2
 070300     ADD      01 TO REC-CT.                                       RL1154.2
-070400*    .06                                                          RL1154.2
+070400*                                                                         
 070500     MOVE     SPACE TO RL-FD2-STATUS.                             RL1154.2
 070600     CLOSE    RL-FD2                                              RL1154.2
 070700     IF        RL-FD2-STATUS NOT EQUAL TO "00"                    RL1154.2
@@ -706,7 +706,7 @@
 071300              PERFORM PASS.                                       RL1154.2
 071400     PERFORM  PRINT-DETAIL.                                       RL1154.2
 071500     ADD      01 TO REC-CT.                                       RL1154.2
-071600*    .07                                                          RL1154.2
+071600*                                                                         
 071700 CCVS-EXIT SECTION.                                               RL1154.2
 071800 CCVS-999999.                                                     RL1154.2
 071900     GO TO CLOSE-FILES.                                           RL1154.2

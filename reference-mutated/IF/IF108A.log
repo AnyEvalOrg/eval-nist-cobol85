@@ -21,18 +21,18 @@ TEST RESULT OF IF108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DATE-OF-INTEGER      FAIL* F-DATEOFINT-06                                                                              
                                                                                                                         
                                      COMPUTED=  016011027.000000000                                                     
-                                     CORRECT =  016011427.000000000  See ref. A-41 2.12                                 
+                                     CORRECT =  016011026.000000000  See ref. A-41 2.12                                 
                                                                                                                         
  DATE-OF-INTEGER      FAIL* F-DATEOFINT-07                                                                              
                                                                                                                         
                                      COMPUTED=  016011231.000000000                                                     
-                                     CORRECT =  016011241.000000000  See ref. A-41 2.12                                 
+                                     CORRECT =  016019231.000000000  See ref. A-41 2.12                                 
                                                                                                                         
  DATE-OF-INTEGER      PASS  F-DATEOFINT-08                                                                              
  DATE-OF-INTEGER      FAIL* F-DATEOFINT-09                                                                              
                                                                                                                         
                                      COMPUTED=  032020202.000000000                                                     
-                                     CORRECT =  032040202.000000000  See ref. A-41 2.12                                 
+                                     CORRECT =  032720202.000000000  See ref. A-41 2.12                                 
                                                                                                                         
  DATE-OF-INTEGER      PASS  F-DATEOFINT-10                                                                              
  ***********************************************************************************************************************

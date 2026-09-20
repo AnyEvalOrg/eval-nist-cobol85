@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1184.2
 000300     IF118A.                                                      IF1184.2
 000400                                                                  IF1184.2
-000500***********************************************************       IF1184.2
-000600*                                                         *       IF1184.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1184.2
-000800* It contains tests for the Intrinsic Function            *       IF1184.2
-000900* LOWER-CASE.                                             *       IF1184.2
-001000*                                                         *       IF1184.2
-001100***********************************************************       IF1184.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1184.2
 001300 CONFIGURATION SECTION.                                           IF1184.2
 001400 SOURCE-COMPUTER.                                                 IF1184.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1184.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1184.2
 002700 WORKING-STORAGE SECTION.                                         IF1184.2
-002800***********************************************************       IF1184.2
-002900* Variables specific to the Intrinsic Function Test IF118A*       IF1184.2
-003000***********************************************************       IF1184.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC A(10)           VALUE "tumble".      IF1184.2
 003200 01  B                   PIC A(10)           VALUE "WEED".        IF1184.2
 003300 01  C                   PIC X(10)           VALUE "Was".         IF1184.2
@@ -35,9 +35,9 @@
 003500 01  E                   PIC X(10)           VALUE "And4".        IF1184.2
 003600 01  TEMP                PIC S9(10).                              IF1184.2
 003700 01  WS-ANUM             PIC X(10).                               IF1184.2
-003800*                                                                 IF1184.2
-003900**********************************************************        IF1184.2
-004000*                                                                 IF1184.2
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 01  TEST-RESULTS.                                                IF1184.2
 004200     02 FILLER                   PIC X      VALUE SPACE.          IF1184.2
 004300     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1184.2
@@ -297,24 +297,24 @@
 029700 BAIL-OUT-EX. EXIT.                                               IF1184.2
 029800 CCVS1-EXIT.                                                      IF1184.2
 029900     EXIT.                                                        IF1184.2
-030000********************************************************          IF1184.2
-030100*                                                      *          IF1184.2
-030200*    Intrinsic Function Tests         IF118A - LOWCASE *          IF1184.2
-030300*                                                      *          IF1184.2
-030400********************************************************          IF1184.2
+030000*                                                                         
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
 030500 SECT-IF118A SECTION.                                             IF1184.2
 030600 F-LOWCASE-INFO.                                                  IF1184.2
 030700     MOVE     "See ref. A-51 2.22" TO ANSI-REFERENCE.             IF1184.2
 030800     MOVE     "LOWER-CASE Function"     TO FEATURE.               IF1184.2
-030900*****************TEST (a) ******************************          IF1184.2
+030900*                                                                         
 031000 F-LOWCASE-01.                                                    IF1184.2
 031100     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 031200 F-LOWCASE-TEST-01.                                               IF1184.2
 031300     MOVE FUNCTION LOWER-CASE("figure") TO WS-ANUM.               IF1184.2
-031400     IF WS-ANUM = "figuPe" THEN                                   IF1184.2
+031400     IF WS-ANUM = "finure" THEN                                   IF1184.2
 031500                    PERFORM PASS                                  IF1184.2
 031600     ELSE                                                         IF1184.2
-031700                    MOVE "figuPe"  TO CORRECT-A                   IF1184.2
+031700                    MOVE "finure"  TO CORRECT-A                   IF1184.2
 031800                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 031900                    PERFORM FAIL.                                 IF1184.2
 032000     GO TO F-LOWCASE-WRITE-01.                                    IF1184.2
@@ -324,7 +324,7 @@
 032400 F-LOWCASE-WRITE-01.                                              IF1184.2
 032500     MOVE "F-LOWCASE-01" TO PAR-NAME.                             IF1184.2
 032600     PERFORM  PRINT-DETAIL.                                       IF1184.2
-032700*****************TEST (b) ******************************          IF1184.2
+032700*                                                                         
 032800 F-LOWCASE-TEST-02.                                               IF1184.2
 032900     MOVE FUNCTION LOWER-CASE("CAPS") TO WS-ANUM.                 IF1184.2
 033000     IF WS-ANUM = "caps" THEN                                     IF1184.2
@@ -338,7 +338,7 @@
 033800 F-LOWCASE-WRITE-02.                                              IF1184.2
 033900     MOVE "F-LOWCASE-02" TO PAR-NAME.                             IF1184.2
 034000     PERFORM  PRINT-DETAIL.                                       IF1184.2
-034100*****************TEST (c) ******************************          IF1184.2
+034100*                                                                         
 034200 F-LOWCASE-03.                                                    IF1184.2
 034300     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 034400 F-LOWCASE-TEST-03.                                               IF1184.2
@@ -355,7 +355,7 @@
 035500 F-LOWCASE-WRITE-03.                                              IF1184.2
 035600     MOVE "F-LOWCASE-03" TO PAR-NAME.                             IF1184.2
 035700     PERFORM  PRINT-DETAIL.                                       IF1184.2
-035800*****************TEST (d) ******************************          IF1184.2
+035800*                                                                         
 035900 F-LOWCASE-04.                                                    IF1184.2
 036000     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 036100 F-LOWCASE-TEST-04.                                               IF1184.2
@@ -373,7 +373,7 @@
 037300 F-LOWCASE-WRITE-04.                                              IF1184.2
 037400     MOVE "F-LOWCASE-04" TO PAR-NAME.                             IF1184.2
 037500     PERFORM  PRINT-DETAIL.                                       IF1184.2
-037600*****************TEST (e) ******************************          IF1184.2
+037600*                                                                         
 037700 F-LOWCASE-05.                                                    IF1184.2
 037800     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 037900 F-LOWCASE-TEST-05.                                               IF1184.2
@@ -391,7 +391,7 @@
 039100 F-LOWCASE-WRITE-05.                                              IF1184.2
 039200     MOVE "F-LOWCASE-05" TO PAR-NAME.                             IF1184.2
 039300     PERFORM  PRINT-DETAIL.                                       IF1184.2
-039400*****************TEST (f) ******************************          IF1184.2
+039400*                                                                         
 039500 F-LOWCASE-06.                                                    IF1184.2
 039600     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 039700 F-LOWCASE-TEST-06.                                               IF1184.2
@@ -409,15 +409,15 @@
 040900 F-LOWCASE-WRITE-06.                                              IF1184.2
 041000     MOVE "F-LOWCASE-06" TO PAR-NAME.                             IF1184.2
 041100     PERFORM  PRINT-DETAIL.                                       IF1184.2
-041200*****************TEST (g) ******************************          IF1184.2
+041200*                                                                         
 041300 F-LOWCASE-07.                                                    IF1184.2
 041400     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 041500 F-LOWCASE-TEST-07.                                               IF1184.2
 041600     MOVE FUNCTION LOWER-CASE(B) TO WS-ANUM.                      IF1184.2
-041700     IF WS-ANUM = "weLd" THEN                                     IF1184.2
+041700     IF WS-ANUM = "weem" THEN                                     IF1184.2
 041800                    PERFORM PASS                                  IF1184.2
 041900     ELSE                                                         IF1184.2
-042000                    MOVE "weLd"  TO CORRECT-A                     IF1184.2
+042000                    MOVE "weem"  TO CORRECT-A                     IF1184.2
 042100                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 042200                    PERFORM FAIL.                                 IF1184.2
 042300     GO TO F-LOWCASE-WRITE-07.                                    IF1184.2
@@ -427,15 +427,15 @@
 042700 F-LOWCASE-WRITE-07.                                              IF1184.2
 042800     MOVE "F-LOWCASE-07" TO PAR-NAME.                             IF1184.2
 042900     PERFORM  PRINT-DETAIL.                                       IF1184.2
-043000*****************TEST (h) ******************************          IF1184.2
+043000*                                                                         
 043100 F-LOWCASE-08.                                                    IF1184.2
 043200     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 043300 F-LOWCASE-TEST-08.                                               IF1184.2
 043400     MOVE FUNCTION LOWER-CASE(C) TO WS-ANUM.                      IF1184.2
-043500     IF WS-ANUM = "waS" THEN                                      IF1184.2
+043500     IF WS-ANUM = "wns" THEN                                      IF1184.2
 043600                    PERFORM PASS                                  IF1184.2
 043700     ELSE                                                         IF1184.2
-043800                    MOVE "waS"  TO CORRECT-A                      IF1184.2
+043800                    MOVE "wns"  TO CORRECT-A                      IF1184.2
 043900                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 044000                    PERFORM FAIL.                                 IF1184.2
 044100     GO TO F-LOWCASE-WRITE-08.                                    IF1184.2
@@ -445,7 +445,7 @@
 044500 F-LOWCASE-WRITE-08.                                              IF1184.2
 044600     MOVE "F-LOWCASE-08" TO PAR-NAME.                             IF1184.2
 044700     PERFORM  PRINT-DETAIL.                                       IF1184.2
-044800*****************TEST (i) ******************************          IF1184.2
+044800*                                                                         
 044900 F-LOWCASE-09.                                                    IF1184.2
 045000     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 045100 F-LOWCASE-TEST-09.                                               IF1184.2
@@ -463,7 +463,7 @@
 046300 F-LOWCASE-WRITE-09.                                              IF1184.2
 046400     MOVE "F-LOWCASE-09" TO PAR-NAME.                             IF1184.2
 046500     PERFORM  PRINT-DETAIL.                                       IF1184.2
-046600*****************TEST (j) ******************************          IF1184.2
+046600*                                                                         
 046700 F-LOWCASE-10.                                                    IF1184.2
 046800     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 046900 F-LOWCASE-TEST-10.                                               IF1184.2
@@ -481,7 +481,7 @@
 048100 F-LOWCASE-WRITE-10.                                              IF1184.2
 048200     MOVE "F-LOWCASE-10" TO PAR-NAME.                             IF1184.2
 048300     PERFORM  PRINT-DETAIL.                                       IF1184.2
-048400*****************TEST (k) ******************************          IF1184.2
+048400*                                                                         
 048500 F-LOWCASE-11.                                                    IF1184.2
 048600     MOVE ZERO TO TEMP.                                           IF1184.2
 048700 F-LOWCASE-TEST-11.                                               IF1184.2
@@ -500,7 +500,7 @@
 050000 F-LOWCASE-WRITE-11.                                              IF1184.2
 050100     MOVE "F-LOWCASE-11" TO PAR-NAME.                             IF1184.2
 050200     PERFORM  PRINT-DETAIL.                                       IF1184.2
-050300*****************TEST (l) ******************************          IF1184.2
+050300*                                                                         
 050400 F-LOWCASE-12.                                                    IF1184.2
 050500     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 050600 F-LOWCASE-TEST-12.                                               IF1184.2
@@ -519,7 +519,7 @@
 051900 F-LOWCASE-WRITE-12.                                              IF1184.2
 052000     MOVE "F-LOWCASE-12" TO PAR-NAME.                             IF1184.2
 052100     PERFORM  PRINT-DETAIL.                                       IF1184.2
-052200*****************TEST (m) ******************************          IF1184.2
+052200*                                                                         
 052300 F-LOWCASE-13.                                                    IF1184.2
 052400     MOVE ZERO TO TEMP.                                           IF1184.2
 052500 F-LOWCASE-TEST-13.                                               IF1184.2
@@ -538,7 +538,7 @@
 053800 F-LOWCASE-WRITE-13.                                              IF1184.2
 053900     MOVE "F-LOWCASE-13" TO PAR-NAME.                             IF1184.2
 054000     PERFORM  PRINT-DETAIL.                                       IF1184.2
-054100*******************END OF TESTS**************************         IF1184.2
+054100*                                                                         
 054200 CCVS-EXIT SECTION.                                               IF1184.2
 054300 CCVS-999999.                                                     IF1184.2
 054400     GO TO CLOSE-FILES.                                           IF1184.2

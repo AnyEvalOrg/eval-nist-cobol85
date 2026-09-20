@@ -22,25 +22,25 @@ TEST RESULT OF NC170A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-5                                                                               
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-6                                                                               
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-7-1                                                                             
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-7-2                                                                             
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-8-1                                                                             
- MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-8-2               ON SIZE ERROR SHOULD NOT BE EXECUTED                          
+ MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-7-2               ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = H                     V1-107 6.19.4 GR2                                  
+                                     CORRECT = 8                     V1-107 6.19.4 GR2                                  
                                                                                                                         
- MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-9-1               WRONGLY AFFECTED BY SIZE ERROR                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000000                                                      
-                                     CORRECT =  000000000003000000   V1-107 6.19.4 GR2                                  
-                                                                                                                        
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-8-1                                                                             
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-8-2                                                                             
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-9-1                                                                             
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-9-2                                                                             
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-10-1                                                                            
- MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-10-2              ON SIZE ERROR SHOULD NOT BE EXECUTED                          
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-10-2                                                                            
+ MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-11                                                                              
                                                                                                                         
-                                     COMPUTED= 1                                                                        
-                                     CORRECT = L                     V1-107 6.19.4 GR2                                  
-                                                                                                                                                                                                                                                
+                                     COMPUTED=  000000000009900000                                                      
+                                     CORRECT =  000000000049900000   V1-107 6.19.4 GR2                                  
+                                                                                                                        
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-12                                                                              
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-13                                                                              
+ MULTIPLY BY GIVING   PASS  MPY-TEST-F2-14                                                                                                                                                                                                      
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,11 +54,11 @@ TEST RESULT OF NC170A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-11                                                                              
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-12                                                                              
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-13                                                                              
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-14                                                                              
- MULTIPLY BY GIVING   PASS  MPY-TEST-F2-15                                                                              
+ MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-15                                                                              
+                                                                                                                        
+                                     COMPUTED=  666666666666666666                                                      
+                                     CORRECT =  666666666666666662   V1-107 6.19.4 GR2                                  
+                                                                                                                        
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-16-2   .01                                                                      
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-16-3   .02                                                                      
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-17-2   .01                                                                      

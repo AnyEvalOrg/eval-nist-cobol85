@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1124.2
 000300     IF112A.                                                      IF1124.2
 000400                                                                  IF1124.2
-000500***********************************************************       IF1124.2
-000600*                                                         *       IF1124.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1124.2
-000800* It contains tests for the Intrinsic Function            *       IF1124.2
-000900* INTEGER-OF-DATE.                                        *       IF1124.2
-001000*                                                         *       IF1124.2
-001100***********************************************************       IF1124.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1124.2
 001300 CONFIGURATION SECTION.                                           IF1124.2
 001400 SOURCE-COMPUTER.                                                 IF1124.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1124.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1124.2
 002700 WORKING-STORAGE SECTION.                                         IF1124.2
-002800***********************************************************       IF1124.2
-002900* Variables specific to the Intrinsic Function Test IF112A*       IF1124.2
-003000***********************************************************       IF1124.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)     VALUE 16020204.           IF1124.2
 003200 01  D                   PIC S9(10)     VALUE 2.                  IF1124.2
 003300 01  ARG1                PIC S9(10)     VALUE 16010101.           IF1124.2
@@ -35,9 +35,9 @@
 003500     02 IND OCCURS 2 TIMES PIC 9(8).                              IF1124.2
 003600 01  TEMP                PIC S9(10).                              IF1124.2
 003700 01  WS-INT              PIC 9(8).                                IF1124.2
-003800*                                                                 IF1124.2
-003900**********************************************************        IF1124.2
-004000*                                                                 IF1124.2
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 01  TEST-RESULTS.                                                IF1124.2
 004200     02 FILLER                   PIC X      VALUE SPACE.          IF1124.2
 004300     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1124.2
@@ -297,16 +297,16 @@
 029700 BAIL-OUT-EX. EXIT.                                               IF1124.2
 029800 CCVS1-EXIT.                                                      IF1124.2
 029900     EXIT.                                                        IF1124.2
-030000********************************************************          IF1124.2
-030100*                                                      *          IF1124.2
-030200*    Intrinsic Function Test  IF112A - INTEGER-OF-DATE *          IF1124.2
-030300*                                                      *          IF1124.2
-030400********************************************************          IF1124.2
+030000*                                                                         
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
 030500 SECT-IF112A SECTION.                                             IF1124.2
 030600 F-DATEOFINT-INFO.                                                IF1124.2
 030700     MOVE     "See ref. A-45 2.16" TO ANSI-REFERENCE.             IF1124.2
 030800     MOVE     "INTEGER-OF-DATE"     TO FEATURE.                   IF1124.2
-030900*****************TEST (a) ******************************          IF1124.2
+030900*                                                                         
 031000 F-DATEOFINT-01.                                                  IF1124.2
 031100     MOVE ZERO TO WS-INT.                                         IF1124.2
 031200 F-DATEOFINT-TEST-01.                                             IF1124.2
@@ -324,7 +324,7 @@
 032400 F-DATEOFINT-WRITE-01.                                            IF1124.2
 032500     MOVE "F-DATEOFINT-01" TO PAR-NAME.                           IF1124.2
 032600     PERFORM  PRINT-DETAIL.                                       IF1124.2
-032700*****************TEST (b) ******************************          IF1124.2
+032700*                                                                         
 032800 F-DATEOFINT-TEST-02.                                             IF1124.2
 032900     EVALUATE FUNCTION INTEGER-OF-DATE(A)                         IF1124.2
 033000     WHEN     400                                                 IF1124.2
@@ -338,7 +338,7 @@
 033800 F-DATEOFINT-WRITE-02.                                            IF1124.2
 033900     MOVE "F-DATEOFINT-02" TO PAR-NAME.                           IF1124.2
 034000     PERFORM  PRINT-DETAIL.                                       IF1124.2
-034100*****************TEST (c) ******************************          IF1124.2
+034100*                                                                         
 034200 F-DATEOFINT-TEST-03.                                             IF1124.2
 034300     IF FUNCTION INTEGER-OF-DATE(IND(1)) = 1 THEN                 IF1124.2
 034400                        PERFORM PASS                              IF1124.2
@@ -351,15 +351,15 @@
 035100 F-DATEOFINT-WRITE-03.                                            IF1124.2
 035200     MOVE "F-DATEOFINT-03" TO PAR-NAME.                           IF1124.2
 035300     PERFORM  PRINT-DETAIL.                                       IF1124.2
-035400*****************TEST (d) ******************************          IF1124.2
+035400*                                                                         
 035500 F-DATEOFINT-04.                                                  IF1124.2
 035600     MOVE ZERO TO WS-INT.                                         IF1124.2
 035700 F-DATEOFINT-TEST-04.                                             IF1124.2
 035800     COMPUTE WS-INT = FUNCTION INTEGER-OF-DATE(IND(D)).           IF1124.2
-035900     IF WS-INT = 436    THEN                                      IF1124.2
+035900     IF WS-INT = 456    THEN                                      IF1124.2
 036000                        PERFORM PASS                              IF1124.2
 036100     ELSE                                                         IF1124.2
-036200                        MOVE  436    TO CORRECT-N                 IF1124.2
+036200                        MOVE  456    TO CORRECT-N                 IF1124.2
 036300                        MOVE WS-INT TO COMPUTED-N                 IF1124.2
 036400                        PERFORM FAIL.                             IF1124.2
 036500     GO TO F-DATEOFINT-WRITE-04.                                  IF1124.2
@@ -369,15 +369,15 @@
 036900 F-DATEOFINT-WRITE-04.                                            IF1124.2
 037000     MOVE "F-DATEOFINT-04" TO PAR-NAME.                           IF1124.2
 037100     PERFORM  PRINT-DETAIL.                                       IF1124.2
-037200*****************TEST (e) ******************************          IF1124.2
+037200*                                                                         
 037300 F-DATEOFINT-05.                                                  IF1124.2
 037400     MOVE ZERO TO WS-INT.                                         IF1124.2
 037500 F-DATEOFINT-TEST-05.                                             IF1124.2
 037600     COMPUTE WS-INT = FUNCTION INTEGER-OF-DATE(16011231).         IF1124.2
-037700     IF WS-INT = 395      THEN                                    IF1124.2
+037700     IF WS-INT = 665      THEN                                    IF1124.2
 037800                        PERFORM PASS                              IF1124.2
 037900     ELSE                                                         IF1124.2
-038000                        MOVE  395      TO CORRECT-N               IF1124.2
+038000                        MOVE  665      TO CORRECT-N               IF1124.2
 038100                        MOVE WS-INT TO COMPUTED-N                 IF1124.2
 038200                        PERFORM FAIL.                             IF1124.2
 038300     GO TO F-DATEOFINT-WRITE-05.                                  IF1124.2
@@ -387,7 +387,7 @@
 038700 F-DATEOFINT-WRITE-05.                                            IF1124.2
 038800     MOVE "F-DATEOFINT-05" TO PAR-NAME.                           IF1124.2
 038900     PERFORM  PRINT-DETAIL.                                       IF1124.2
-039000*****************TEST (f) ******************************          IF1124.2
+039000*                                                                         
 039100 F-DATEOFINT-06.                                                  IF1124.2
 039200     MOVE ZERO TO WS-INT.                                         IF1124.2
 039300 F-DATEOFINT-TEST-06.                                             IF1124.2
@@ -405,16 +405,16 @@
 040500 F-DATEOFINT-WRITE-06.                                            IF1124.2
 040600     MOVE "F-DATEOFINT-06" TO PAR-NAME.                           IF1124.2
 040700     PERFORM  PRINT-DETAIL.                                       IF1124.2
-040800*****************TEST (g) ******************************          IF1124.2
+040800*                                                                         
 040900 F-DATEOFINT-07.                                                  IF1124.2
 041000     MOVE ZERO TO WS-INT.                                         IF1124.2
 041100 F-DATEOFINT-TEST-07.                                             IF1124.2
 041200     COMPUTE WS-INT = FUNCTION INTEGER-OF-DATE(A) +               IF1124.2
 041300                    FUNCTION INTEGER-OF-DATE(A).                  IF1124.2
-041400     IF WS-INT = 820 THEN                                         IF1124.2
+041400     IF WS-INT = 870 THEN                                         IF1124.2
 041500                        PERFORM PASS                              IF1124.2
 041600     ELSE                                                         IF1124.2
-041700                        MOVE  820 TO CORRECT-N                    IF1124.2
+041700                        MOVE  870 TO CORRECT-N                    IF1124.2
 041800                        MOVE WS-INT TO COMPUTED-N                 IF1124.2
 041900                        PERFORM FAIL.                             IF1124.2
 042000     GO TO F-DATEOFINT-WRITE-07.                                  IF1124.2
@@ -425,7 +425,7 @@
 042500     MOVE "F-DATEOFINT-07" TO PAR-NAME.                           IF1124.2
 042600     PERFORM  PRINT-DETAIL.                                       IF1124.2
 042700                                                                  IF1124.2
-042800***************** SPECIAL TEST 1 ***********************          IF1124.2
+042800*                                                                         
 042900                                                                  IF1124.2
 043000 F-DATEOFINT-10.                                                  IF1124.2
 043100     MOVE 16010101 TO ARG1.                                       IF1124.2
@@ -436,17 +436,17 @@
 043600     ELSE                                                         IF1124.2
 043700                            PERFORM FAIL.                         IF1124.2
 043800     GO TO F-DATEOFINT-WRITE-10.                                  IF1124.2
-043900*                                                                 IF1124.2
+043900*                                                                         
 044000 F-DATEOFINT-TEST-10.                                             IF1124.2
 044100     COMPUTE ARG1 = ARG1 + 1.                                     IF1124.2
-044200*                                                                 IF1124.2
+044200*                                                                         
 044300 F-DATEOFINT-DELETE-10.                                           IF1124.2
 044400     PERFORM  DE-LETE.                                            IF1124.2
 044500     GO TO    F-DATEOFINT-WRITE-10.                               IF1124.2
 044600 F-DATEOFINT-WRITE-10.                                            IF1124.2
 044700     MOVE "F-DATEOFINT-10" TO PAR-NAME.                           IF1124.2
 044800     PERFORM  PRINT-DETAIL.                                       IF1124.2
-044900*******************END OF TESTS**************************         IF1124.2
+044900*                                                                         
 045000 CCVS-EXIT SECTION.                                               IF1124.2
 045100 CCVS-999999.                                                     IF1124.2
 045200     GO TO CLOSE-FILES.                                           IF1124.2

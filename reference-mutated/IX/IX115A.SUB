@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         IX1154.2
 000200 PROGRAM-ID.                                                      IX1154.2
 000300     IX115A.                                                      IX1154.2
-000400****************************************************************  IX1154.2
-000500*                                                              *  IX1154.2
-000600*    VALIDATION FOR:-                                          *  IX1154.2
-000700*                                                              *  IX1154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1154.2
-000900*                                                              *  IX1154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1154.2
-001100*                                                              *  IX1154.2
-001200****************************************************************  IX1154.2
-001300*                                                                 IX1154.2
-001400*    THIS ROUTINE USES THE MASS STORAGE FILE IX-FS3 CREATED IN    IX1154.2
-001500*    IX113A.                                                      IX1154.2
-001600*    THE FILE IS OPENED I-O AND THE STATUS CHECKED (00 EXPECTED)  IX1154.2
-001700*    THEN CLOSED AND THE STATUS CHECKED AGAIN (00 EXPECTED).  AN  IX1154.2
-001800*    ATTEMPT IS THEN MADE TO WRITE A RECORD TO THE CLOSED FILE    IX1154.2
-001900*    AT WHICH POINT THE USE AFTER STANDARD EXCEPTION PROCEDURE   *IX1154.2
-002000*    STATEMENTS IN THE DECLARATIVES SHOULD BE EXECUTED AND THE    IX1154.2
-002100*    FILE STATUS SHOULD BE 48 (IX-5, 1.3.4 (5) G.                 IX1154.2
-002200*                                                                 IX1154.2
-002300*    4. X-CARDS USED IN THIS PROGRAM:                             IX1154.2
-002400*                                                                 IX1154.2
-002500*                 XXXXX024                                        IX1154.2
-002600*                 XXXXX055.                                       IX1154.2
-002700*         P       XXXXX062.                                       IX1154.2
-002800*                 XXXXX082.                                       IX1154.2
-002900*                 XXXXX083.                                       IX1154.2
-003000*         C       XXXXX084                                        IX1154.2
-003100*                                                                 IX1154.2
-003200*                                                                 IX1154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            IX1154.2
 003400 CONFIGURATION SECTION.                                           IX1154.2
 003500 SOURCE-COMPUTER.                                                 IX1154.2
@@ -38,10 +38,10 @@
 003800     GNU-Linux.                                                   IX1154.2
 003900 INPUT-OUTPUT SECTION.                                            IX1154.2
 004000 FILE-CONTROL.                                                    IX1154.2
-004600*                                                                 IX1154.2
+004600*                                                                         
 004700     SELECT PRINT-FILE ASSIGN TO                                  IX1154.2
 004800     "REPORT".                                                    IX1154.2
-004900*                                                                 IX1154.2
+004900*                                                                         
 005000     SELECT IX-FS3 ASSIGN                                         IX1154.2
 005100     "XXXXX024"                                                   IX1154.2
 005200     ORGANIZATION IS INDEXED                                      IX1154.2
@@ -486,7 +486,7 @@
 054700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1154.2
 054800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1154.2
 054900      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1154.2
-055000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1154.2
+055000*                                                                         
 055100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1154.2
 055200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1154.2
 055300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1154.2
@@ -574,13 +574,13 @@
 063500     MOVE 000001 TO XRECORD-NUMBER (1).                           IX1154.2
 063600     MOVE 0 TO COUNT-OF-RECS.                                     IX1154.2
 063700                                                                  IX1154.2
-063800******************************************************************IX1154.2
-063900*   TEST  1                                                      *IX1154.2
-064000*         OPEN I-O                                                IX1154.2
-064100*         IX-3, 1.3.4 (1) A                                      *IX1154.2
-064200*    STATUS 00 CHECK ON OUTPUT FILE IX-FS3                       *IX1154.2
-064300*    THE OPEN   STATEMENT IS SUCCESSFULLY EXECUTED               *IX1154.2
-064400******************************************************************IX1154.2
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
+064100*                                                                         
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
 064500 OPN-INIT-GF-01-0.                                                IX1154.2
 064600     MOVE 1 TO STATUS-TEST-00.                                    IX1154.2
 064700     MOVE SPACES TO IX-FS3-STATUS.                                IX1154.2
@@ -600,11 +600,11 @@
 066100     PERFORM PASS.                                                IX1154.2
 066200 OPN-WRITE-GF-01-0.                                               IX1154.2
 066300     PERFORM PRINT-DETAIL.                                        IX1154.2
-066400******************************************************************IX1154.2
-066500*   TEST  4                                                      *IX1154.2
-066600*         CLOSE I-O                       00 EXPECTED            *IX1154.2
-066700*         IX-3, 1.3.4 (1) A                                      *IX1154.2
-066800******************************************************************IX1154.2
+066400*                                                                         
+066500*                                                                         
+066600*                                                                         
+066700*                                                                         
+066800*                                                                         
 066900 CLO-INIT-GF-01-0.                                                IX1154.2
 067000     MOVE SPACES TO IX-FS3-STATUS.                                IX1154.2
 067100     MOVE "CLOSE I-O   :00 EXP." TO FEATURE.                      IX1154.2
@@ -624,15 +624,15 @@
 068500 CLO-WRITE-GF-01-0.                                               IX1154.2
 068600     PERFORM PRINT-DETAIL.                                        IX1154.2
 068700                                                                  IX1154.2
-068800******************************************************************IX1154.2
-068900*    A INDEXED FILE WITH 50 RECORDS HAS BEEN CREATED.            *IX1154.2
-069000******************************************************************IX1154.2
+068800*                                                                         
+068900*                                                                         
+069000*                                                                         
 069100                                                                  IX1154.2
-069200******************************************************************IX1154.2
-069300*   TEST  5                                                      *IX1154.2
-069400*         WRITE...  A FILE NOT IN THE OPEN MODE                  *IX1154.2
-069500*         FILE STATUS 48 EXPECTED IX-5, 1.3.4 (5) G              *IX1154.2
-069600******************************************************************IX1154.2
+069200*                                                                         
+069300*                                                                         
+069400*                                                                         
+069500*                                                                         
+069600*                                                                         
 069700 WRI-TEST-GF-01-0.                                                IX1154.2
 069800     MOVE  5 TO TEST-NO.                                          IX1154.2
 069900     MOVE SPACES TO IX-FS3-STATUS.                                IX1154.2

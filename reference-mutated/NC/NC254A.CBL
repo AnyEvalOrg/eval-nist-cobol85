@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC2544.2
 000200 PROGRAM-ID.                                                      NC2544.2
 000300     NC254A.                                                      NC2544.2
-000400****************************************************************  NC2544.2
-000500*                                                              *  NC2544.2
-000600*    VALIDATION FOR:-                                          *  NC2544.2
-000700*                                                              *  NC2544.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2544.2
-000900*                                                              *  NC2544.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2544.2
-001100*                                                              *  NC2544.2
-001200****************************************************************  NC2544.2
-001300*                                                              *  NC2544.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2544.2
-001500*                                                              *  NC2544.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2544.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2544.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2544.2
-001900*                                                              *  NC2544.2
-002000****************************************************************  NC2544.2
-002100*                                                                 NC2544.2
-002200*    PROGRAM NC254A TESTS SWITCH SETTINGS USING LEVEL 2 FEATURES  NC2544.2
-002300*    LOGICAL OPERATORS AND, OR, NOT.                              NC2544.2
-002400*                                                                 NC2544.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC2544.2
 002600 CONFIGURATION SECTION.                                           NC2544.2
 002700 SOURCE-COMPUTER.                                                 NC2544.2
@@ -446,7 +446,7 @@
 044800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2544.2
 044900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2544.2
 045000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2544.2
-045100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2544.2
+045100*                                                                         
 045200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2544.2
 045300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2544.2
 045400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2544.2
@@ -519,10 +519,10 @@
 052100 CCVS1-EXIT.                                                      NC2544.2
 052200     EXIT.                                                        NC2544.2
 052300 SECT-NC254A-001 SECTION.                                         NC2544.2
-052400*                                                                 NC2544.2
-052500*                                                                 NC2544.2
+052400*                                                                         
+052500*                                                                         
 052600 NEXT-INIT-GF-1.                                                  NC2544.2
-052700*    ==-->     NEXT SENTENCE           <--==                      NC2544.2
+052700*                                                                         
 052800     MOVE   "V1-89 6.15.4 GR2 " TO ANSI-REFERENCE.                NC2544.2
 052900     MOVE    "A" TO A-2.                                          NC2544.2
 053000 NEXT-TEST-GF-1.                                                  NC2544.2
@@ -537,8 +537,8 @@
 053900 NEXT-WRITE-GF-1.                                                 NC2544.2
 054000     MOVE "NEXT-TEST-1" TO PAR-NAME.                              NC2544.2
 054100     PERFORM  PRINT-DETAIL.                                       NC2544.2
-054200*                                                                 NC2544.2
-054300*                                                                 NC2544.2
+054200*                                                                         
+054300*                                                                         
 054400 ANOTHER-REMARK.                                                  NC2544.2
 054500     MOVE     SPACE TO TEST-RESULTS.                              NC2544.2
 054600     MOVE "THE FOLLOWING TESTS        " TO RE-MARK.               NC2544.2
@@ -654,8 +654,8 @@
 066400 SWH-WRITE-8.                                                     NC2544.2
 066500     MOVE  "SWH-TEST-8" TO PAR-NAME.                              NC2544.2
 066600     PERFORM PRINT-DETAIL.                                        NC2544.2
-066700*                                                                 NC2544.2
-066800*                                                                 NC2544.2
+066700*                                                                         
+066800*                                                                         
 066900 CCVS-EXIT SECTION.                                               NC2544.2
 067000 CCVS-999999.                                                     NC2544.2
 067100     GO TO CLOSE-FILES.                                           NC2544.2

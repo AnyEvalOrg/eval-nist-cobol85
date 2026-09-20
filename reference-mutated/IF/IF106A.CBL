@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1064.2
 000300     IF106A.                                                      IF1064.2
 000400                                                                  IF1064.2
-000500***********************************************************       IF1064.2
-000600*                                                         *       IF1064.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1064.2
-000800* It contains tests for the Intrinsic Function COS.       *       IF1064.2
-000900*                                                         *       IF1064.2
-001000***********************************************************       IF1064.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1064.2
 001200 CONFIGURATION SECTION.                                           IF1064.2
 001300 SOURCE-COMPUTER.                                                 IF1064.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1064.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1064.2
 002600 WORKING-STORAGE SECTION.                                         IF1064.2
-002700***********************************************************       IF1064.2
-002800* Variables specific to the Intrinsic Function Test IF106A*       IF1064.2
-002900***********************************************************       IF1064.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(5)V9(5)      VALUE -0.00004.      IF1064.2
 003100 01  B                   PIC S9(5)V9(5)      VALUE 14000.105.     IF1064.2
 003200 01  C                   PIC S9(10)          VALUE 100000.        IF1064.2
@@ -41,9 +41,9 @@
 004100 01  WS-NUM              PIC S9(5)V9(6).                          IF1064.2
 004200 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1064.2
 004300 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1064.2
-004400*                                                                 IF1064.2
-004500**********************************************************        IF1064.2
-004600*                                                                 IF1064.2
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 01  TEST-RESULTS.                                                IF1064.2
 004800     02 FILLER                   PIC X      VALUE SPACE.          IF1064.2
 004900     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1064.2
@@ -337,16 +337,16 @@
 033700 BAIL-OUT-EX. EXIT.                                               IF1064.2
 033800 CCVS1-EXIT.                                                      IF1064.2
 033900     EXIT.                                                        IF1064.2
-034000********************************************************          IF1064.2
-034100*                                                      *          IF1064.2
-034200*    Intrinsic Function Tests         IF106A - COS     *          IF1064.2
-034300*                                                      *          IF1064.2
-034400********************************************************          IF1064.2
+034000*                                                                         
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
 034500 SECT-IF106A SECTION.                                             IF1064.2
 034600 F-COS-INFO.                                                      IF1064.2
 034700     MOVE     "See ref. A-38 2.8" TO ANSI-REFERENCE.              IF1064.2
 034800     MOVE     "COS Function" TO FEATURE.                          IF1064.2
-034900*****************TEST (a) - SIMPLE TEST*****************          IF1064.2
+034900*                                                                         
 035000 F-COS-01.                                                        IF1064.2
 035100     MOVE ZERO TO WS-NUM.                                         IF1064.2
 035200     MOVE  0.999980 TO MIN-RANGE.                                 IF1064.2
@@ -368,7 +368,7 @@
 036800 F-COS-WRITE-01.                                                  IF1064.2
 036900     MOVE "F-COS-01" TO PAR-NAME.                                 IF1064.2
 037000     PERFORM  PRINT-DETAIL.                                       IF1064.2
-037100*****************TEST (b) - SIMPLE TEST*****************          IF1064.2
+037100*                                                                         
 037200 F-COS-02.                                                        IF1064.2
 037300     MOVE ZERO TO WS-NUM.                                         IF1064.2
 037400     MOVE -1.00000   TO MIN-RANGE.                                IF1064.2
@@ -390,7 +390,7 @@
 039000 F-COS-WRITE-02.                                                  IF1064.2
 039100     MOVE "F-COS-02" TO PAR-NAME.                                 IF1064.2
 039200     PERFORM  PRINT-DETAIL.                                       IF1064.2
-039300*****************TEST (c) - SIMPLE TEST*****************          IF1064.2
+039300*                                                                         
 039400 F-COS-03.                                                        IF1064.2
 039500     MOVE ZERO TO WS-NUM.                                         IF1064.2
 039600     MOVE -1.00000 TO MIN-RANGE.                                  IF1064.2
@@ -412,7 +412,7 @@
 041200 F-COS-WRITE-03.                                                  IF1064.2
 041300     MOVE "F-COS-03" TO PAR-NAME.                                 IF1064.2
 041400     PERFORM  PRINT-DETAIL.                                       IF1064.2
-041500*****************TEST (d) - SIMPLE TEST*****************          IF1064.2
+041500*                                                                         
 041600 F-COS-04.                                                        IF1064.2
 041700     MOVE ZERO TO WS-NUM.                                         IF1064.2
 041800     MOVE  0.999980 TO MIN-RANGE.                                 IF1064.2
@@ -434,7 +434,7 @@
 043400 F-COS-WRITE-04.                                                  IF1064.2
 043500     MOVE "F-COS-04" TO PAR-NAME.                                 IF1064.2
 043600     PERFORM  PRINT-DETAIL.                                       IF1064.2
-043700*****************TEST (e) - SIMPLE TEST*****************          IF1064.2
+043700*                                                                         
 043800 F-COS-05.                                                        IF1064.2
 043900     MOVE ZERO TO WS-NUM.                                         IF1064.2
 044000     MOVE  0.999980 TO MIN-RANGE.                                 IF1064.2
@@ -456,7 +456,7 @@
 045600 F-COS-WRITE-05.                                                  IF1064.2
 045700     MOVE "F-COS-05" TO PAR-NAME.                                 IF1064.2
 045800     PERFORM  PRINT-DETAIL.                                       IF1064.2
-045900*****************TEST (f) - SIMPLE TEST*****************          IF1064.2
+045900*                                                                         
 046000 F-COS-06.                                                        IF1064.2
 046100     MOVE ZERO TO WS-NUM.                                         IF1064.2
 046200     MOVE  0.99998  TO MIN-RANGE.                                 IF1064.2
@@ -478,7 +478,7 @@
 047800 F-COS-WRITE-06.                                                  IF1064.2
 047900     MOVE "F-COS-06" TO PAR-NAME.                                 IF1064.2
 048000     PERFORM  PRINT-DETAIL.                                       IF1064.2
-048100*****************TEST (g) - SIMPLE TEST*****************          IF1064.2
+048100*                                                                         
 048200 F-COS-07.                                                        IF1064.2
 048300     MOVE ZERO TO WS-NUM.                                         IF1064.2
 048400     MOVE  0.283656 TO MIN-RANGE.                                 IF1064.2
@@ -500,7 +500,7 @@
 050000 F-COS-WRITE-07.                                                  IF1064.2
 050100     MOVE "F-COS-07" TO PAR-NAME.                                 IF1064.2
 050200     PERFORM  PRINT-DETAIL.                                       IF1064.2
-050300*****************TEST (h) - SIMPLE TEST*****************          IF1064.2
+050300*                                                                         
 050400 F-COS-08.                                                        IF1064.2
 050500     MOVE ZERO TO WS-NUM.                                         IF1064.2
 050600     MOVE  0.753887 TO MIN-RANGE.                                 IF1064.2
@@ -522,7 +522,7 @@
 052200 F-COS-WRITE-08.                                                  IF1064.2
 052300     MOVE "F-COS-08" TO PAR-NAME.                                 IF1064.2
 052400     PERFORM  PRINT-DETAIL.                                       IF1064.2
-052500*****************TEST (a) - COMPLEX TEST****************          IF1064.2
+052500*                                                                         
 052600 F-COS-09.                                                        IF1064.2
 052700     MOVE ZERO TO WS-NUM.                                         IF1064.2
 052800     MOVE  0.499980 TO MIN-RANGE.                                 IF1064.2
@@ -544,7 +544,7 @@
 054400 F-COS-WRITE-09.                                                  IF1064.2
 054500     MOVE "F-COS-09" TO PAR-NAME.                                 IF1064.2
 054600     PERFORM  PRINT-DETAIL.                                       IF1064.2
-054700*****************TEST (b) - COMPLEX TEST****************          IF1064.2
+054700*                                                                         
 054800 F-COS-10.                                                        IF1064.2
 054900     MOVE ZERO TO WS-NUM.                                         IF1064.2
 055000     MOVE -0.000040 TO MIN-RANGE.                                 IF1064.2
@@ -566,7 +566,7 @@
 056600 F-COS-WRITE-10.                                                  IF1064.2
 056700     MOVE "F-COS-10" TO PAR-NAME.                                 IF1064.2
 056800     PERFORM  PRINT-DETAIL.                                       IF1064.2
-056900*****************TEST (c) - COMPLEX TEST****************          IF1064.2
+056900*                                                                         
 057000 F-COS-11.                                                        IF1064.2
 057100     MOVE ZERO TO WS-NUM.                                         IF1064.2
 057200     MOVE -0.000040 TO MIN-RANGE.                                 IF1064.2
@@ -588,7 +588,7 @@
 058800 F-COS-WRITE-11.                                                  IF1064.2
 058900     MOVE "F-COS-11" TO PAR-NAME.                                 IF1064.2
 059000     PERFORM  PRINT-DETAIL.                                       IF1064.2
-059100*****************TEST (d) - COMPLEX TEST****************          IF1064.2
+059100*                                                                         
 059200 F-COS-12.                                                        IF1064.2
 059300     MOVE ZERO TO WS-NUM.                                         IF1064.2
 059400     MOVE  0.499980 TO MIN-RANGE.                                 IF1064.2
@@ -610,7 +610,7 @@
 061000 F-COS-WRITE-12.                                                  IF1064.2
 061100     MOVE "F-COS-12" TO PAR-NAME.                                 IF1064.2
 061200     PERFORM  PRINT-DETAIL.                                       IF1064.2
-061300*****************TEST (e) - COMPLEX TEST****************          IF1064.2
+061300*                                                                         
 061400 F-COS-13.                                                        IF1064.2
 061500     MOVE ZERO TO WS-NUM.                                         IF1064.2
 061600     MOVE -0.000040 TO MIN-RANGE.                                 IF1064.2
@@ -632,7 +632,7 @@
 063200 F-COS-WRITE-13.                                                  IF1064.2
 063300     MOVE "F-COS-13" TO PAR-NAME.                                 IF1064.2
 063400     PERFORM  PRINT-DETAIL.                                       IF1064.2
-063500*****************TEST (f) - COMPLEX TEST****************          IF1064.2
+063500*                                                                         
 063600 F-COS-14.                                                        IF1064.2
 063700     MOVE ZERO TO WS-NUM.                                         IF1064.2
 063800     MOVE -0.000040 TO MIN-RANGE.                                 IF1064.2
@@ -654,7 +654,7 @@
 065400 F-COS-WRITE-14.                                                  IF1064.2
 065500     MOVE "F-COS-14" TO PAR-NAME.                                 IF1064.2
 065600     PERFORM  PRINT-DETAIL.                                       IF1064.2
-065700*****************TEST (h) - COMPLEX TEST****************          IF1064.2
+065700*                                                                         
 065800 F-COS-16.                                                        IF1064.2
 065900     MOVE ZERO TO WS-NUM.                                         IF1064.2
 066000     MOVE  0.499113 TO MIN-RANGE.                                 IF1064.2
@@ -676,7 +676,7 @@
 067600 F-COS-WRITE-16.                                                  IF1064.2
 067700     MOVE "F-COS-16" TO PAR-NAME.                                 IF1064.2
 067800     PERFORM  PRINT-DETAIL.                                       IF1064.2
-067900*****************TEST (j) - COMPLEX TEST****************          IF1064.2
+067900*                                                                         
 068000 F-COS-18.                                                        IF1064.2
 068100     MOVE ZERO TO WS-NUM.                                         IF1064.2
 068200     MOVE  0.999350 TO MIN-RANGE.                                 IF1064.2
@@ -698,7 +698,7 @@
 069800 F-COS-WRITE-18.                                                  IF1064.2
 069900     MOVE "F-COS-18" TO PAR-NAME.                                 IF1064.2
 070000     PERFORM  PRINT-DETAIL.                                       IF1064.2
-070100*****************TEST (k) - COMPLEX TEST****************          IF1064.2
+070100*                                                                         
 070200 F-COS-19.                                                        IF1064.2
 070300     MOVE ZERO TO WS-NUM.                                         IF1064.2
 070400     MOVE  0.017451 TO MIN-RANGE.                                 IF1064.2
@@ -720,7 +720,7 @@
 072000 F-COS-WRITE-19.                                                  IF1064.2
 072100     MOVE "F-COS-19" TO PAR-NAME.                                 IF1064.2
 072200     PERFORM  PRINT-DETAIL.                                       IF1064.2
-072300*****************TEST (l) - COMPLEX TEST****************          IF1064.2
+072300*                                                                         
 072400 F-COS-20.                                                        IF1064.2
 072500     MOVE ZERO TO WS-NUM.                                         IF1064.2
 072600     MOVE  0.515017  TO MIN-RANGE.                                IF1064.2
@@ -742,7 +742,7 @@
 074200 F-COS-WRITE-20.                                                  IF1064.2
 074300     MOVE "F-COS-20" TO PAR-NAME.                                 IF1064.2
 074400     PERFORM  PRINT-DETAIL.                                       IF1064.2
-074500*****************TEST (m) - COMPLEX TEST****************          IF1064.2
+074500*                                                                         
 074600 F-COS-21.                                                        IF1064.2
 074700     MOVE ZERO TO WS-NUM.                                         IF1064.2
 074800     MOVE -0.999887 TO MIN-RANGE.                                 IF1064.2
@@ -764,7 +764,7 @@
 076400 F-COS-WRITE-21.                                                  IF1064.2
 076500     MOVE "F-COS-21" TO PAR-NAME.                                 IF1064.2
 076600     PERFORM  PRINT-DETAIL.                                       IF1064.2
-076700*****************TEST (n) - COMPLEX TEST****************          IF1064.2
+076700*                                                                         
 076800 F-COS-22.                                                        IF1064.2
 076900     MOVE ZERO TO WS-NUM.                                         IF1064.2
 077000     MOVE  0.034898 TO MIN-RANGE.                                 IF1064.2
@@ -786,7 +786,7 @@
 078600 F-COS-WRITE-22.                                                  IF1064.2
 078700     MOVE "F-COS-22" TO PAR-NAME.                                 IF1064.2
 078800     PERFORM  PRINT-DETAIL.                                       IF1064.2
-078900*****************TEST (o) - COMPLEX TEST****************          IF1064.2
+078900*                                                                         
 079000 F-COS-23.                                                        IF1064.2
 079100     MOVE ZERO TO WS-NUM.                                         IF1064.2
 079200     MOVE -0.416163  TO MIN-RANGE.                                IF1064.2
@@ -808,7 +808,7 @@
 080800 F-COS-WRITE-23.                                                  IF1064.2
 080900     MOVE "F-COS-23" TO PAR-NAME.                                 IF1064.2
 081000     PERFORM  PRINT-DETAIL.                                       IF1064.2
-081100*****************TEST (p) - COMPLEX TEST****************          IF1064.2
+081100*                                                                         
 081200 F-COS-24.                                                        IF1064.2
 081300     MOVE ZERO TO WS-NUM.                                         IF1064.2
 081400     MOVE  0.070734 TO MIN-RANGE.                                 IF1064.2
@@ -830,7 +830,7 @@
 083000 F-COS-WRITE-24.                                                  IF1064.2
 083100     MOVE "F-COS-24" TO PAR-NAME.                                 IF1064.2
 083200     PERFORM  PRINT-DETAIL.                                       IF1064.2
-083300*****************TEST (q) - COMPLEX TEST****************          IF1064.2
+083300*                                                                         
 083400 F-COS-25.                                                        IF1064.2
 083500     MOVE ZERO TO WS-NUM.                                         IF1064.2
 083600     MOVE -1.000000 TO MIN-RANGE.                                 IF1064.2
@@ -852,7 +852,7 @@
 085200 F-COS-WRITE-25.                                                  IF1064.2
 085300     MOVE "F-COS-25" TO PAR-NAME.                                 IF1064.2
 085400     PERFORM  PRINT-DETAIL.                                       IF1064.2
-085500*****************TEST (r) - COMPLEX TEST****************          IF1064.2
+085500*                                                                         
 085600 F-COS-26.                                                        IF1064.2
 085700     MOVE ZERO TO WS-NUM.                                         IF1064.2
 085800     MOVE -0.839105 TO MIN-RANGE.                                 IF1064.2
@@ -874,7 +874,7 @@
 087400 F-COS-WRITE-26.                                                  IF1064.2
 087500     MOVE "F-COS-26" TO PAR-NAME.                                 IF1064.2
 087600     PERFORM  PRINT-DETAIL.                                       IF1064.2
-087700*****************TEST (s) - COMPLEX TEST****************          IF1064.2
+087700*                                                                         
 087800 F-COS-27.                                                        IF1064.2
 087900     MOVE ZERO TO WS-NUM.                                         IF1064.2
 088000     MOVE  0.999807  TO MIN-RANGE.                                IF1064.2
@@ -896,7 +896,7 @@
 089600 F-COS-WRITE-27.                                                  IF1064.2
 089700     MOVE "F-COS-27" TO PAR-NAME.                                 IF1064.2
 089800     PERFORM  PRINT-DETAIL.                                       IF1064.2
-089900*****************TEST (t) - COMPLEX TEST****************          IF1064.2
+089900*                                                                         
 090000 F-COS-28.                                                        IF1064.2
 090100     MOVE ZERO TO WS-NUM.                                         IF1064.2
 090200     MOVE -1.000000 TO MIN-RANGE.                                 IF1064.2
@@ -918,7 +918,7 @@
 091800 F-COS-WRITE-28.                                                  IF1064.2
 091900     MOVE "F-COS-28" TO PAR-NAME.                                 IF1064.2
 092000     PERFORM  PRINT-DETAIL.                                       IF1064.2
-092100*****************TEST (u) - COMPLEX TEST****************          IF1064.2
+092100*                                                                         
 092200 F-COS-29.                                                        IF1064.2
 092300     MOVE ZERO TO WS-NUM.                                         IF1064.2
 092400     MOVE -0.000040 TO MIN-RANGE.                                 IF1064.2
@@ -940,7 +940,7 @@
 094000 F-COS-WRITE-29.                                                  IF1064.2
 094100     MOVE "F-COS-29" TO PAR-NAME.                                 IF1064.2
 094200     PERFORM  PRINT-DETAIL.                                       IF1064.2
-094300*****************TEST (v) - COMPLEX TEST****************          IF1064.2
+094300*                                                                         
 094400 F-COS-30.                                                        IF1064.2
 094500     MOVE ZERO TO WS-NUM.                                         IF1064.2
 094600     MOVE 0.914616 TO MIN-RANGE.                                  IF1064.2
@@ -962,7 +962,7 @@
 096200 F-COS-WRITE-30.                                                  IF1064.2
 096300     MOVE "F-COS-30" TO PAR-NAME.                                 IF1064.2
 096400     PERFORM  PRINT-DETAIL.                                       IF1064.2
-096500*****************TEST (w) - COMPLEX TEST****************          IF1064.2
+096500*                                                                         
 096600 F-COS-31.                                                        IF1064.2
 096700     MOVE ZERO TO WS-NUM.                                         IF1064.2
 096800     MOVE -2.00008 TO MIN-RANGE.                                  IF1064.2
@@ -985,7 +985,7 @@
 098500 F-COS-WRITE-31.                                                  IF1064.2
 098600     MOVE "F-COS-31" TO PAR-NAME.                                 IF1064.2
 098700     PERFORM  PRINT-DETAIL.                                       IF1064.2
-098800*****************SPECIAL PERFORM TEST**********************       IF1064.2
+098800*                                                                         
 098900 F-COS-32.                                                        IF1064.2
 099000     PERFORM F-COS-TEST-32                                        IF1064.2
 099100       UNTIL FUNCTION COS(ARG1) < 0.                              IF1064.2
@@ -999,7 +999,7 @@
 099900 F-COS-WRITE-32.                                                  IF1064.2
 100000     MOVE "F-COS-32" TO PAR-NAME.                                 IF1064.2
 100100     PERFORM  PRINT-DETAIL.                                       IF1064.2
-100200********************END OF TESTS***************                   IF1064.2
+100200*                                                                         
 100300 CCVS-EXIT SECTION.                                               IF1064.2
 100400 CCVS-999999.                                                     IF1064.2
 100500     GO TO CLOSE-FILES.                                           IF1064.2

@@ -19,7 +19,7 @@ TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  UPPER-CASE Function  FAIL* F-UPCASE-04                                                                                 
                                                                                                                         
                                      COMPUTED= 95                                                                       
-                                     CORRECT = 9F                    See ref. A-73 2.44                                 
+                                     CORRECT = 90                    See ref. A-73 2.44                                 
                                                                                                                         
  UPPER-CASE Function  PASS  F-UPCASE-05                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-06                                                                                 
@@ -27,7 +27,7 @@ TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  UPPER-CASE Function  FAIL* F-UPCASE-08                                                                                 
                                                                                                                         
                                      COMPUTED= WAS                                                                      
-                                     CORRECT = YAS                   See ref. A-73 2.44                                 
+                                     CORRECT = KAS                   See ref. A-73 2.44                                 
                                                                                                                         
  UPPER-CASE Function  PASS  F-UPCASE-09                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-10                                                                                 
@@ -35,7 +35,7 @@ TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  UPPER-CASE Function  FAIL* F-UPCASE-12                                                                                 
                                                                                                                         
                                      COMPUTED= GIZZARD                                                                  
-                                     CORRECT = GIZTARD               See ref. A-73 2.44                                 
+                                     CORRECT = GTZZARD               See ref. A-73 2.44                                 
                                                                                                                         
  UPPER-CASE Function  PASS  F-UPCASE-13                                                                                 
  ***********************************************************************************************************************

@@ -19,7 +19,7 @@
 001900     "4.2 ".                                                      DB2054.2
 002000 SECURITY.                                                        DB2054.2
 002100     NONE.                                                        DB2054.2
-002200*                                                                 DB2054.2
+002200*                                                                         
 002300 ENVIRONMENT DIVISION.                                            DB2054.2
 002400 CONFIGURATION SECTION.                                           DB2054.2
 002500 SOURCE-COMPUTER.                                                 DB2054.2
@@ -238,7 +238,7 @@
 024000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB2054.2
 024100      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB2054.2
 024200      ADD PASS-COUNTER TO ERROR-HOLD.                             DB2054.2
-024300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB2054.2
+024300*                                                                         
 024400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB2054.2
 024500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB2054.2
 024600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB2054.2
@@ -455,12 +455,12 @@
 045700     MOVE "SEND CD-NAME" TO FEATURE.                              DB2054.2
 045800 SEND-TEST-1.                                                     DB2054.2
 045900     MOVE "ENTER ONE MESSAGE NOW." TO WORK-AREA.                  DB2054.2
-046000******************************************************************DB2054.2
-046100*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB2054.2
-046200*    OUTPUT REPORT AS "SEND-TEST-1A" SHOULD POINT TO THE         *DB2054.2
-046300*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB2054.2
-046400*    WHICH READS, "SEND CM-OUTQUE FROM WORK-AREA WITH EGI.".     *DB2054.2
-046500******************************************************************DB2054.2
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
 046600     SEND CM-OUTQUE FROM WORK-AREA WITH EGI.                      DB2054.2
 046700     IF KEY-1 IS EQUAL TO 1                                       DB2054.2
 046800         PERFORM PASS                                             DB2054.2
@@ -523,12 +523,12 @@
 052500     MOVE 0 TO KEY-1.                                             DB2054.2
 052600     MOVE "RECEIVE-TEST-2" TO PAR-NAME.                           DB2054.2
 052700     MOVE "RECEIVE W/O NO DATA" TO FEATURE.                       DB2054.2
-052800******************************************************************DB2054.2
-052900*    THE DEBUG-LINE (INSPT) SUBTEST FOR THE TEST NAMED IN THE    *DB2054.2
-053000*    OUTPUT REPORT AS "RECEIVE-TEST-2A" SHOULD POINT TO THE      *DB2054.2
-053100*    EXECUTABLE STATEMENT WHICH FOLLOWS THIS COMMENT SET AND     *DB2054.2
-053200*    WHICH READS, "RECEIVE CM-INQUE MESSAGE INTO WORK-AREA.".    *DB2054.2
-053300******************************************************************DB2054.2
+052800*                                                                         
+052900*                                                                         
+053000*                                                                         
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
 053400 RECEIVE-TEST-2.                                                  DB2054.2
 053500     RECEIVE CM-INQUE MESSAGE INTO WORK-AREA.                     DB2054.2
 053600     IF KEY-1 IS EQUAL TO 1                                       DB2054.2

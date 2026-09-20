@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2454.2
 000200 PROGRAM-ID.                                                      NC2454.2
 000300     NC245A.                                                      NC2454.2
-000400****************************************************************  NC2454.2
-000500*                                                              *  NC2454.2
-000600*    VALIDATION FOR:-                                          *  NC2454.2
-000700*                                                              *  NC2454.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2454.2
-000900*                                                              *  NC2454.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2454.2
-001100*                                                              *  NC2454.2
-001200****************************************************************  NC2454.2
-001300*                                                              *  NC2454.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2454.2
-001500*                                                              *  NC2454.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2454.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2454.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2454.2
-001900*                                                              *  NC2454.2
-002000****************************************************************  NC2454.2
-002100*                                                              *  NC2454.2
-002200*    PROGRAM NC245A TESTS THE USE OF THE COMMA, SEMI-COLON AND *  NC2454.2
-002300*    SPACE SEPARATORS WHEN SPECIFYING SUBSCRIPTS AND INDICES   *  NC2454.2
-002400*    TO ACCESS TWO AND THREE-DIMENSIONAL TABLES                *  NC2454.2
-002500*    RELATIVE INDEXING IS ALSO USED.                           *  NC2454.2
-002600*                                                              *  NC2454.2
-002700****************************************************************  NC2454.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2454.2
 002900 CONFIGURATION SECTION.                                           NC2454.2
 003000 SOURCE-COMPUTER.                                                 NC2454.2
@@ -44,14 +44,14 @@
 004400 77  WRK1 PIC S999; COMPUTATIONAL, VALUE ZERO.                    NC2454.2
 004500 77  EXPECTED-VALUE,   PIC    S999999.                            NC2454.2
 004600 77  TEMP; PIC S999999.                                           NC2454.2
-004700*    TWO DIMENSIONAL TABLE; 15 X 10.                              NC2454.2
+004700*                                                                         
 004800 01  GRP-TAB2.                                                    NC2454.2
 004900     02  GRP-LEV2-0015F; OCCURS 15 TIMES;                         NC2454.2
 005000         INDEXED BY IN1,  INDEX1,                                 NC2454.2
 005100         USAGE IS COMPUTATIONAL.                                  NC2454.2
 005200         03  ELEM2 PIC S999999; OCCURS 10 TIMES;                  NC2454.2
 005300                INDEXED BY IN2; INDEX2.                           NC2454.2
-005400*    THREE DIMENSIONAL TABLE; 10 X 5 X 3.                         NC2454.2
+005400*                                                                         
 005500 01  GRP-TAB3.                                                    NC2454.2
 005600     02  GRP-LEV2-0003F; OCCURS 3 TIMES;                          NC2454.2
 005700         INDEXED BY INAME1, IN-NAME-1,                            NC2454.2
@@ -60,7 +60,7 @@
 006000             INDEXED BY INAME2; IN-NAME-2.                        NC2454.2
 006100             04  ELEM3 PIC S999999; OCCURS 10 TIMES;              NC2454.2
 006200                 INDEXED BY INAME3; IN-NAME-3.                    NC2454.2
-006300*    SUBSCRIPTS FOR REFERENCING TABLE ITEMS                       NC2454.2
+006300*                                                                         
 006400 01  SUBSCRIPT-TABLE; USAGE COMPUTATIONAL.                        NC2454.2
 006500     02  S21  PIC S999; VALUE IS 1.                               NC2454.2
 006600     02  S22  PIC S999; VALUE IS 1.                               NC2454.2
@@ -254,7 +254,7 @@
 025600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2454.2
 025700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2454.2
 025800      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2454.2
-025900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2454.2
+025900*                                                                         
 026000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2454.2
 026100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2454.2
 026200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2454.2
@@ -321,26 +321,26 @@
 032300 BAIL-OUT-EX. EXIT.                                               NC2454.2
 032400 CCVS1-EXIT.                                                      NC2454.2
 032500     EXIT.                                                        NC2454.2
-032600*        SECTION 2.1.6 ON PAGE IV-3 OF AMERICAN NATIONAL          NC2454.2
-032700*    STANDARD COBOL, X3.23 - 1985 STATES THAT COMMA AND           NC2454.2
-032800*    SEMICOLON ARE OPTIONAL WHERE SHOWN IN THE FORMATS AND        NC2454.2
-032900*    ARE INTERCHANGEABLE.  EITHER ONE MAY BE USED ANYWHERE        NC2454.2
-033000*    ONE OF THEM IS SHOWN IN THE LANGUAGE FORMATS.                NC2454.2
-033100*                                                                 NC2454.2
-033200*        THIS ROUTINE TESTS THE USE OF SEMICOLON IN PLACE OF      NC2454.2
-033300*    COMMA AS SEPARATORS FOR SUBSCRIPTS AND INDEXES IN            NC2454.2
-033400*    REFERENCING TABLE ITEMS.                                     NC2454.2
-033500****************************************                          NC2454.2
-033600*STATEMENT DELETION INSTRUCTIONS                                  NC2454.2
-033700*        IF THE COMPILER REJECTS ANY TABLE REFERENCE IN THESE     NC2454.2
-033800*    TESTS, DELETE THAT LINE OF CODE BY PLACING AN * IN COLUMN 7. NC2454.2
-033900*    LEAVE THE PERFORM ... THRU STATEMENT.  THE TEST DELETED      NC2454.2
-034000*    APPEARS AS A FAILURE ON THE OUTPUT REPORT.                   NC2454.2
-034100****************************************                          NC2454.2
+032600*                                                                         
+032700*                                                                         
+032800*                                                                         
+032900*                                                                         
+033000*                                                                         
+033100*                                                                         
+033200*                                                                         
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
+034100*                                                                         
 034200 SECT-NC245A-001 SECTION.                                         NC2454.2
-034300*        THIS SECTION STORES THE VALUES 1 THRU 150 IN THE         NC2454.2
-034400*    TWO TABLES USED IN THE TESTS OF SEMICOLON AS SUBSCRIPT       NC2454.2
-034500*    AND INDEX SEPARATOR.                                         NC2454.2
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
 034600 BUILD-TABLE.                                                     NC2454.2
 034700     ADD 1 TO WRK1.                                               NC2454.2
 034800     MOVE WRK1 TO ELEM2 (S21, S22)                                NC2454.2
@@ -356,8 +356,8 @@
 035800     ADD 1 TO S31.                                                NC2454.2
 035900     GO TO BUILD-TABLE.                                           NC2454.2
 036000 SECT-TH219-0002 SECTION.                                         NC2454.2
-036100*        THIS SECTION CONTAINS THE TESTS ON THE USE OF SEMICOLON  NC2454.2
-036200*    AS A SEPARATOR IN REFERENCING TABLE ITEMS.                   NC2454.2
+036100*                                                                         
+036200*                                                                         
 036300 SEP-INIT-008.                                                    NC2454.2
 036400     MOVE "SEP-TEST-008" TO PAR-NAME.                             NC2454.2
 036500     MOVE "SEMICLN AS SEPARATOR" TO FEATURE.                      NC2454.2
@@ -366,8 +366,8 @@
 036800     MOVE 6 TO EXPECTED-VALUE.                                    NC2454.2
 036900     MOVE 1 TO S21.                                               NC2454.2
 037000     MOVE 6 TO S22.                                               NC2454.2
-037100*        THIS TEST USES SPACES AND SEMICOLONS IN REFERENCING      NC2454.2
-037200*    TWO DIMENSIONAL TABLE ELEMENTS WITH SUBSCRIPTS.              NC2454.2
+037100*                                                                         
+037200*                                                                         
 037300 SEP-TEST-008-01.                                                 NC2454.2
 037400     MOVE ELEM2 (S21; S22) TO TEMP.                               NC2454.2
 037500     PERFORM TEST-CHECK THRU TEST-WRITE.                          NC2454.2
@@ -395,8 +395,8 @@
 039700     MOVE 3 TO S31.                                               NC2454.2
 039800     MOVE 5 TO S32.                                               NC2454.2
 039900     MOVE 10 TO S33.                                              NC2454.2
-040000*        THIS TEST USES SEMICOLONS, COMMAS, AND SPACES IN         NC2454.2
-040100*    REFERENCING THREE DIMENSIONAL TABLE ELEMENTS WITH SUBSCRIPTS.NC2454.2
+040000*                                                                         
+040100*                                                                         
 040200 SEP-TEST-009-01.                                                 NC2454.2
 040300     MOVE ELEM3 (S31; S32; S33) TO TEMP.                          NC2454.2
 040400     PERFORM TEST-CHECK THRU TEST-WRITE.                          NC2454.2
@@ -420,14 +420,14 @@
 042200 SEP-DELETE-009.                                                  NC2454.2
 042300     PERFORM DE-LETE.                                             NC2454.2
 042400     PERFORM TEST-WRITE.                                          NC2454.2
-042500*                                                                 NC2454.2
+042500*                                                                         
 042600 SEP-INIT-010.                                                    NC2454.2
 042700     MOVE "SEP-TEST-010" TO PAR-NAME.                             NC2454.2
 042800     MOVE 0 TO REC-CT.                                            NC2454.2
 042900     MOVE 0 TO TEMP.                                              NC2454.2
 043000     MOVE 150 TO EXPECTED-VALUE.                                  NC2454.2
-043100*        THIS TEST USES SEMICOLONS, SPACES AND COMMAS IN          NC2454.2
-043200*    REFERENCING TABLE ELEMENTS WITH LITERAL SUBSCRIPTS.          NC2454.2
+043100*                                                                         
+043200*                                                                         
 043300 SEP-TEST-010-01.                                                 NC2454.2
 043400     MOVE ELEM2 (15; 10) TO TEMP.                                 NC2454.2
 043500     PERFORM TEST-CHECK THRU TEST-WRITE.                          NC2454.2
@@ -453,13 +453,13 @@
 045500 SEP-DELETE-010.                                                  NC2454.2
 045600     PERFORM DE-LETE.                                             NC2454.2
 045700     PERFORM TEST-WRITE.                                          NC2454.2
-045800*                                                                 NC2454.2
+045800*                                                                         
 045900 SEP-INIT-011.                                                    NC2454.2
 046000     MOVE "SEP-TEST-011" TO PAR-NAME.                             NC2454.2
 046100     MOVE 0 TO TEMP; REC-CT.                                      NC2454.2
 046200     MOVE 135 TO EXPECTED-VALUE.                                  NC2454.2
-046300*        THIS TEST USES SEMICOLON, COMMA AND SPACE IN             NC2454.2
-046400*    REFERENCING 2 AND 3-DIM. TABLES WITH INDEXING.               NC2454.2
+046300*                                                                         
+046400*                                                                         
 046500 SEP-TEST-011-01.                                                 NC2454.2
 046600     SET IN1 TO 14.                                               NC2454.2
 046700     SET IN2 TO  5.                                               NC2454.2
@@ -487,14 +487,14 @@
 048900 SEP-DELETE-011.                                                  NC2454.2
 049000     PERFORM DE-LETE.                                             NC2454.2
 049100     PERFORM TEST-WRITE.                                          NC2454.2
-049200*                                                                 NC2454.2
+049200*                                                                         
 049300 SEP-INIT-012.                                                    NC2454.2
 049400     MOVE "SEP-TEST-012" TO PAR-NAME.                             NC2454.2
 049500     MOVE ZERO TO TEMP; REC-CT.                                   NC2454.2
 049600     MOVE 123 TO EXPECTED-VALUE.                                  NC2454.2
-049700*        THIS TEST USES SEMICOLON, COMMA AND SPACE AS             NC2454.2
-049800*    SEPARATORS IN REFERENCING 3-DIMENSIONAL TABLE                NC2454.2
-049900*    ITEMS WITH RELATIVE INDEXING.                                NC2454.2
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
 050000 SEP-TEST-012-01.                                                 NC2454.2
 050100     SET INAME1; INAME2; INAME3 TO 3.                             NC2454.2
 050200     SET IN-NAME-1; IN-NAME-2; IN-NAME-3 TO 1.                    NC2454.2
@@ -515,9 +515,9 @@
 051700 SEP-DELETE-012.                                                  NC2454.2
 051800     PERFORM DE-LETE.                                             NC2454.2
 051900     PERFORM TEST-WRITE.                                          NC2454.2
-052000*                                                                 NC2454.2
+052000*                                                                         
 052100 SECT-TH219-0003 SECTION.                                         NC2454.2
-052200*                                                                 NC2454.2
+052200*                                                                         
 052300 TEST-CHECK.                                                      NC2454.2
 052400     ADD 1 TO REC-CT.                                             NC2454.2
 052500     IF TEMP IS EQUAL TO EXPECTED-VALUE                           NC2454.2

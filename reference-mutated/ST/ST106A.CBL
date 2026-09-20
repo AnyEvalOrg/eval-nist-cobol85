@@ -1,53 +1,53 @@
 000100 IDENTIFICATION DIVISION.                                         ST1064.2
 000200 PROGRAM-ID.                                                      ST1064.2
 000300     ST106A.                                                      ST1064.2
-000400****************************************************************  ST1064.2
-000500*                                                              *  ST1064.2
-000600*    VALIDATION FOR:-                                          *  ST1064.2
-000700*                                                              *  ST1064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1064.2
-000900*                                                              *  ST1064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1064.2
-001100*                                                              *  ST1064.2
-001200****************************************************************  ST1064.2
-001300*                                                              *  ST1064.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1064.2
-001500*                                                              *  ST1064.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1064.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1064.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1064.2
-001900*                                                              *  ST1064.2
-002000****************************************************************  ST1064.2
-002100*        ) IS RIGHT PARENTHESIS                                   ST1064.2
-002200*        ( IS LEFT PARENTHESIS                                    ST1064.2
-002300*        " IS QUOTE                                               ST1064.2
-002400*        + IS PLUS                                                ST1064.2
-002500*                                                                 ST1064.2
-002600*    THIS PROGRAM BUILDS A FILE OF NINE RECORDS. EACH RECORD HAS  ST1064.2
-002700*    THREE KEYS, AND THE VALUES OF THE RECORDS ARE SHOWN BELOW-   ST1064.2
-002800*             S                                                   ST1064.2
-002900*             O                                                   ST1064.2
-003000*             R               SORT                                ST1064.2
-003100*             T  SORT         KEY                                 ST1064.2
-003200*             K  KEY           -2                                 ST1064.2
-003300*             E   -1           ..                                 ST1064.2
-003400*             Y   ..         .    .                               ST1064.2
-003500*             -  .  .      .        .                             ST1064.2
-003600*             3 .    .   .            .                           ST1064.2
-003700*             ..      ..                .                         ST1064.2
-003800*              11111112888888888888888888                         ST1064.2
-003900*              11111112999999999999999999                         ST1064.2
-004000*              11111112999999999999999999                         ST1064.2
-004100*              00000001999999999999999999                         ST1064.2
-004200*             000000001999999999999999999                         ST1064.2
-004300*             000000001999999999999999999                         ST1064.2
-004400*             000000001999999999999999999                         ST1064.2
-004500*             000000001999999999999999999                         ST1064.2
-004600*             000000001999999999999999999                         ST1064.2
-004700*    THERE IS AN ASSUMED DECIMAL POINT BETWEEN THE FIRST AND      ST1064.2
-004800*    SECOND COLUMNS OF SORTKEY-1.                                 ST1064.2
-004900*    THIS FILE IS BUILT AND SORTED BY THIS PROGRAM AND THE OUTPUT ST1064.2
-005000*    IS PASSED ON TO ST107 FOR CHECKING.                          ST1064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
 005100                                                                  ST1064.2
 005200 ENVIRONMENT DIVISION.                                            ST1064.2
 005300 CONFIGURATION SECTION.                                           ST1064.2
@@ -282,7 +282,7 @@
 028900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1064.2
 029000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1064.2
 029100      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1064.2
-029200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1064.2
+029200*                                                                         
 029300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1064.2
 029400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1064.2
 029500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1064.2

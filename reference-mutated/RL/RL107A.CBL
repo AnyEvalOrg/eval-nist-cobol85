@@ -1,49 +1,49 @@
 000100 IDENTIFICATION DIVISION.                                         RL1074.2
 000200 PROGRAM-ID.                                                      RL1074.2
 000300     RL107A.                                                      RL1074.2
-000400****************************************************************  RL1074.2
-000500*                                                              *  RL1074.2
-000600*    VALIDATION FOR:-                                          *  RL1074.2
-000700*                                                              *  RL1074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1074.2
-000900*                                                              *  RL1074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1074.2
-001100*                                                              *  RL1074.2
-001200****************************************************************  RL1074.2
-001300*                                                              *  RL1074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1074.2
-001500*                                                              *  RL1074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  RL1074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  RL1074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  RL1074.2
-001900*                                                              *  RL1074.2
-002000****************************************************************  RL1074.2
-002100*GENERAL:    THIS PROGRAM PROCESSES TWO RELATIVE I-O FILES.  THE  RL1074.2
-002200*            THE FUNCTION OF THIS PROGRAM IS TO CREATE TWO        RL1074.2
-002300*            RELATIVES FILES RANDOMLY (ACCESS MODE RANDOM) AND    RL1074.2
-002400*            VERIFY THAT THEY WERE CREATED CORRECTLY.  THE FILES  RL1074.2
-002500*            ARE IDENTIFIED AS "RL-FR7" AND "RL-FR8".  THE FILES  RL1074.2
-002600*            ARE CREATED PARTIALLY (NOT ALL VALUES FOR RELATIVE   RL1074.2
-002700*            KEY ARE USED) IN THE OUTPUT MODE AND SUBSEQUENTLY    RL1074.2
-002800*            COMPLETED IN THE I-O MODE.  THE END RESULT IS THAT   RL1074.2
-002900*            THERE ARE NO NULL RECORDS IN ANY OF THE FILES.       RL1074.2
-003000*                                                                 RL1074.2
-003100*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL1074.2
-003200*            PROGRAM ARE:                                         RL1074.2
-003300*                                                                 RL1074.2
-003400*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1074.2
-003500*                         RELATIVE  I-O DATA FILE-1               RL1074.2
-003600*                 X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL1074.2
-003700*                         RELATIVE  I-O DATA FILE-2               RL1074.2
-003800*                 X-55   SYSTEM PRINTER                           RL1074.2
-003900*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL1074.2
-004000*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL1074.2
-004100*                 X-75   OBJECT OF VALUE OF CLAUSE FOR FILE-1     RL1074.2
-004200*                 X-76   OBJECT OF VALUE OF CLAUSE FOR FILE-2     RL1074.2
-004300*                 X-82   SOURCE-COMPUTER                          RL1074.2
-004400*                 X-83   OBJECT-COMPUTER.                         RL1074.2
-004500*                                                                 RL1074.2
-004600****************************************************************  RL1074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 ENVIRONMENT DIVISION.                                            RL1074.2
 004800 CONFIGURATION SECTION.                                           RL1074.2
 004900 SOURCE-COMPUTER.                                                 RL1074.2
@@ -343,7 +343,7 @@
 035500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1074.2
 035600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1074.2
 035700      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1074.2
-035800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1074.2
+035800*                                                                         
 035900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1074.2
 036000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1074.2
 036100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1074.2

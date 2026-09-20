@@ -1,63 +1,63 @@
 000100 IDENTIFICATION DIVISION.                                         IX2184.2
 000200 PROGRAM-ID.                                                      IX2184.2
 000300     IX218A.                                                      IX2184.2
-000400****************************************************************  IX2184.2
-000500*                                                              *  IX2184.2
-000600*    VALIDATION FOR:-                                          *  IX2184.2
-000700*                                                              *  IX2184.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2184.2
-000900*                                                              *  IX2184.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2184.2
-001100*                                                              *  IX2184.2
-001200****************************************************************  IX2184.2
-001300*                                                                 IX2184.2
-001400*  1.  THE  FUNCTION  OF THIS PROGRAM IS TO CHECK THE SEQUENTIAL  IX2184.2
-001500*      READ  STATEMENT FOR A NOT EXISTING OPTIONAL INDEXED FILE.  IX2184.2
-001600*      THE  READ  STATEMENT WITHOUT AN OPEN STATEMENT FOR SUCH A  IX2184.2
-001700*      FILE  MUST CAUSE THE AT END CONDITION AND THE FILE STATUS  IX2184.2
-001800*      CODE  10. THIS CODE IS CHECKED HERE. THE NAME OF THE FILE  IX2184.2
-001900*      IS  IX-FS1.  THE  AT  END PHRASE IS SPECIFIED. THAT MEANS  IX2184.2
-002000*      THAT  ANY USE AFTER STANDARD EXCEPTION PROCEDURE MUST NOT  IX2184.2
-002100*      BE EXECUTED.                                               IX2184.2
-002200*                                                                 IX2184.2
-002300*  2.  ANOTHER  FUNCTION  OF  THIS PROGRAM IS TO CHECK THE START  IX2184.2
-002400*      AND  THE  RANDOM  READ  STATEMENTS  FOR  A  NOT  EXISTING  IX2184.2
-002500*      OPTIONAL  INDEXED  FILE.  BOTH  ATTEMPTS SHOULD CAUSE THE  IX2184.2
-002600*      FILE  STATUS CODE 23. THE INVALID KEY PHRASE IS SPECIFIED  IX2184.2
-002700*      AND  THE  USE AFTER STANDARD EXCEPTION PROCEDURE MUST NOT  IX2184.2
-002800*      BE EXECUTED. THE NAME OF THE FILE IS IX-FS2.               IX2184.2
-002900*                                                                 IX2184.2
-003000*                                                                 IX2184.2
-003100*                                                                 IX2184.2
-003200*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX2184.2
-003300*                                                                 IX2184.2
-003400*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2184.2
-003500*                    CLAUSE FOR DATA FILE IX-FS1                  IX2184.2
-003600*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2184.2
-003700*                    CLAUSE FOR DATA FILE IX-FS1                  IX2184.2
-003800*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX2184.2
-003900*             X-62   IMPLEMENTOR-NAME FOR RAW-DATA (OPTIONAL)     IX2184.2
-004000*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX2184.2
-004100*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX2184.2
-004200*             X-84   IMPLEMENTOR-NAME FOR PRINT-FILE              IX2184.2
-004300*                                                                 IX2184.2
-004400*         NOTE:  X-CARDS 44, 45 AND 62          ARE OPTIONAL      IX2184.2
-004500*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX2184.2
-004600*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX2184.2
-004700*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX2184.2
-004800*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX2184.2
-004900*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX2184.2
-005000*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX2184.2
-005100*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX2184.2
-005200*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX2184.2
-005300*               THEY ARE AS FOLLOWS                               IX2184.2
-005400*                                                                 IX2184.2
-005500*                  J  SELECTS X-CARD 44                           IX2184.2
-005600*                  J  SELECTS X-CARD 45                           IX2184.2
-005700*                  P  SELECTS X-CARD 62                           IX2184.2
-005800*                  C  SELECTS X-CARD 84                           IX2184.2
-005900*                                                                 IX2184.2
-006000******************************************************            IX2184.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
 006100 ENVIRONMENT DIVISION.                                            IX2184.2
 006200 CONFIGURATION SECTION.                                           IX2184.2
 006300 SOURCE-COMPUTER.                                                 IX2184.2
@@ -70,7 +70,7 @@
 007500     "REPORT".                                                    IX2184.2
 007600                                                                  IX2184.2
 007700     SELECT OPTIONAL   IX-FS1 ASSIGN TO                           IX2184.2
-007800*    SELECT            IX-FS1 ASSIGN TO                           IX2184.2
+007800*                                                                         
 007900     "XXXXX024"                                                   IX2184.2
 008100     ORGANIZATION IS INDEXED                                      IX2184.2
 008200     RECORD KEY IS IX-FS1-KEY                                     IX2184.2
@@ -78,7 +78,7 @@
 008400     FILE STATUS IS IX-FS1-STATUS.                                IX2184.2
 008500                                                                  IX2184.2
 008600     SELECT OPTIONAL   IX-FS2 ASSIGN TO                           IX2184.2
-008700*    SELECT            IX-FS2 ASSIGN TO                           IX2184.2
+008700*                                                                         
 008800     "XXXXX025"                                                   IX2184.2
 009000     ORGANIZATION IS INDEXED                                      IX2184.2
 009100     RECORD KEY IS IX-FS2-KEY                                     IX2184.2
@@ -323,7 +323,7 @@
 037400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2184.2
 037500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2184.2
 037600      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2184.2
-037700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2184.2
+037700*                                                                         
 037800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2184.2
 037900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2184.2
 038000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2184.2
@@ -396,15 +396,15 @@
 044700 CCVS1-EXIT.                                                      IX2184.2
 044800     EXIT.                                                        IX2184.2
 044900                                                                  IX2184.2
-045000******************************************************************IX2184.2
-045100*   TEST  1                                                      *IX2184.2
-045200*         READ   (ACCESS IS SEQUENTIAL) OPTIONAL NOT EXISTING FILEIX2184.2
-045300*                                       10  EXPECTED             *IX2184.2
-045400*         IX-4, 1.3.4 (2) A 2);                                  *IX2184.2
-045500*         IX-29, 4.5.4 GR (4) B;                                 *IX2184.2
-045600*         IX-30, 4.5.4 GR (10) A;                                *IX2184.2
-045700*         IX-30, 4.5.4 GR (10) B;                                *IX2184.2
-045800******************************************************************IX2184.2
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
 045900 SECT-IX-01-001 SECTION.                                          IX2184.2
 046000 REA-INIT-F1-01.                                                  IX2184.2
 046100     MOVE ZERO TO EOF-FLAG.                                       IX2184.2
@@ -429,12 +429,12 @@
 048000 REA-WRITE-F1-01.                                                 IX2184.2
 048100     PERFORM PRINT-DETAIL.                                        IX2184.2
 048200                                                                  IX2184.2
-048300******************************************************************IX2184.2
-048400*   TEST  2                                                      *IX2184.2
-048500*         READ I-O  (ACCESS IS DYNAMIC) OPTIONAL NOT EXISTING FILEIX2184.2
-048600*                                                                *IX2184.2
-048700*         IX-30, GR (10) B                                       *IX2184.2
-048800******************************************************************IX2184.2
+048300*                                                                         
+048400*                                                                         
+048500*                                                                         
+048600*                                                                         
+048700*                                                                         
+048800*                                                                         
 048900 REA-INIT-GF-02.                                                  IX2184.2
 049000     MOVE "REA-TEST-GF-02  " TO PAR-NAME.                         IX2184.2
 049100     MOVE "NO USE MUST BE EXEC." TO FEATURE.                      IX2184.2
@@ -453,11 +453,11 @@
 050400 REA-WRITE-GF-02.                                                 IX2184.2
 050500     PERFORM PRINT-DETAIL.                                        IX2184.2
 050600                                                                  IX2184.2
-050700******************************************************************IX2184.2
-050800*   TEST  3                                                      *IX2184.2
-050900*         START   (FOR AN OPTIONAL FILE WHICH IS NOT PRESENT)    *IX2184.2
-051000*         IX-4, 1.3.4 (3) C 2)          23  EXPECTED             *IX2184.2
-051100******************************************************************IX2184.2
+050700*                                                                         
+050800*                                                                         
+050900*                                                                         
+051000*                                                                         
+051100*                                                                         
 051200 STA-INIT-GF-01.                                                  IX2184.2
 051300     MOVE ZERO TO EOF-FLAG.                                       IX2184.2
 051400     MOVE SPACES TO IX-FS2-STATUS.                                IX2184.2
@@ -480,12 +480,12 @@
 053100 STA-WRITE-GF-01.                                                 IX2184.2
 053200     PERFORM PRINT-DETAIL.                                        IX2184.2
 053300                                                                  IX2184.2
-053400******************************************************************IX2184.2
-053500*   TEST  4                                                      *IX2184.2
-053600*         START   (NO USE PROCEDURE MUST BE EXECUTED BECAUSE     *IX2184.2
-053700*                  THE INVALID KEY PHRASE IS SPECIFIED)          *IX2184.2
-053800*         IX-37, 4.7.4, (5), (6) AND (7)                         *IX2184.2
-053900******************************************************************IX2184.2
+053400*                                                                         
+053500*                                                                         
+053600*                                                                         
+053700*                                                                         
+053800*                                                                         
+053900*                                                                         
 054000 STA-INIT-GF-02.                                                  IX2184.2
 054100     MOVE "STA-TEST-GF-02  " TO PAR-NAME.                         IX2184.2
 054200     MOVE "START NO USE    EXP." TO FEATURE.                      IX2184.2
@@ -504,11 +504,11 @@
 055500 STA-WRITE-GF-02.                                                 IX2184.2
 055600     PERFORM PRINT-DETAIL.                                        IX2184.2
 055700                                                                  IX2184.2
-055800******************************************************************IX2184.2
-055900*   TEST  5                                                      *IX2184.2
-056000*      READ (RANDOM) (FOR AN OPTIONAL FILE WHICH IS NOT PRESENT) *IX2184.2
-056100*         IX-4, 1.3.4 (3) C 2)                                   *IX2184.2
-056200******************************************************************IX2184.2
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
 056300 REA-INIT-GF-03.                                                  IX2184.2
 056400     MOVE ZERO TO EOF-FLAG.                                       IX2184.2
 056500     MOVE SPACES TO IX-FS2-STATUS.                                IX2184.2
@@ -531,12 +531,12 @@
 058200 REA-WRITE-GF-03.                                                 IX2184.2
 058300     PERFORM PRINT-DETAIL.                                        IX2184.2
 058400                                                                  IX2184.2
-058500******************************************************************IX2184.2
-058600*   TEST  6                                                      *IX2184.2
-058700*         READ (RANDOM) NO USE PROCEDURE MUST BE EXECUTED BECAUSE*IX2184.2
-058800*                  THE INVALID KEY PHRASE IS SPECIFIED)          *IX2184.2
-058900*         IX-29, 4.5.4, GR (4) B, (17)                           *IX2184.2
-059000******************************************************************IX2184.2
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
+059000*                                                                         
 059100 REA-INIT-GF-04.                                                  IX2184.2
 059200     MOVE "REA-TEST-GF-04  " TO PAR-NAME.                         IX2184.2
 059300     MOVE "RANDOM READ (NO USE)" TO FEATURE.                      IX2184.2

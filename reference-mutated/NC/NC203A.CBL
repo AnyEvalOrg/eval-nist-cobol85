@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC2034.2
 000200 PROGRAM-ID.                                                      NC2034.2
 000300     NC203A.                                                      NC2034.2
-000400*                                                                 NC2034.2
-000500****************************************************************  NC2034.2
-000600*                                                              *  NC2034.2
-000700*    VALIDATION FOR:-                                          *  NC2034.2
-000800*                                                              *  NC2034.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2034.2
-001000*                                                              *  NC2034.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2034.2
-001200*                                                              *  NC2034.2
-001300****************************************************************  NC2034.2
-001400*                                                              *  NC2034.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2034.2
-001600*                                                              *  NC2034.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2034.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2034.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2034.2
-002000*                                                              *  NC2034.2
-002100****************************************************************  NC2034.2
-002200*    THIS PROGRAM TESTS FORMAT 4 OF THE DIVIDE STATEMENT.      *  NC2034.2
-002300*                                                                 NC2034.2
-002400****************************************************************  NC2034.2
-002500*    THIS COMMENT ENTRY SHOULD APPEAR AS THE LAST LINE BEFORE     NC2034.2
-002600*    THE ENVIRONMENT DIVISION.                                    NC2034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC2034.2
 002800 CONFIGURATION SECTION.                                           NC2034.2
 002900 SOURCE-COMPUTER.                                                 NC2034.2
@@ -337,7 +337,7 @@
 033900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2034.2
 034000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2034.2
 034100      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2034.2
-034200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2034.2
+034200*                                                                         
 034300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2034.2
 034400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2034.2
 034500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2034.2
@@ -414,7 +414,7 @@
 041600     DIVIDE  22 INTO WRK-DS-06V06 GIVING WRK-DS-05V00             NC2034.2
 041700             REMAINDER WRK-DS-02V00.                              NC2034.2
 041800     ADD     WRK-DS-02V00 TO WRK-DS-05V00.                        NC2034.2
-041900     IF      WRK-DS-05V00 EQUAL TO 3061                           NC2034.2
+041900     IF      WRK-DS-05V00 EQUAL TO 2061                           NC2034.2
 042000              PERFORM PASS                                        NC2034.2
 042100              GO TO DIV-WRITE-F4-1.                               NC2034.2
 042200     GO TO DIV-FAIL-F4-1.                                         NC2034.2
@@ -423,11 +423,11 @@
 042500     GO TO DIV-WRITE-F4-1.                                        NC2034.2
 042600 DIV-FAIL-F4-1.                                                   NC2034.2
 042700     MOVE     WRK-DS-05V00 TO COMPUTED-N.                         NC2034.2
-042800     MOVE     3061 TO CORRECT-N.                                  NC2034.2
+042800     MOVE     2061 TO CORRECT-N.                                  NC2034.2
 042900     PERFORM  FAIL.                                               NC2034.2
 043000 DIV-WRITE-F4-1.                                                  NC2034.2
 043100     PERFORM  PRINT-DETAIL.                                       NC2034.2
-043200*                                                                 NC2034.2
+043200*                                                                         
 043300 DIV-INIT-F4-2.                                                   NC2034.2
 043400     MOVE "DIV-TEST-F4-2" TO PAR-NAME.                            NC2034.2
 043500     MOVE 105  TO DIV11.                                          NC2034.2
@@ -447,7 +447,7 @@
 044900     MOVE "+55" TO CORRECT-A.                                     NC2034.2
 045000 DIV-WRITE-F4-2.                                                  NC2034.2
 045100     PERFORM PRINT-DETAIL.                                        NC2034.2
-045200*                                                                 NC2034.2
+045200*                                                                         
 045300 DIV-INIT-F4-3.                                                   NC2034.2
 045400     MOVE "DIV-TEST-F4-3" TO PAR-NAME.                            NC2034.2
 045500     MOVE   14 TO DIV19.                                          NC2034.2
@@ -468,7 +468,7 @@
 047000     MOVE "+05" TO CORRECT-A.                                     NC2034.2
 047100 DIV-WRITE-F4-3.                                                  NC2034.2
 047200     PERFORM PRINT-DETAIL.                                        NC2034.2
-047300*                                                                 NC2034.2
+047300*                                                                         
 047400 DIV-INIT-F4-4.                                                   NC2034.2
 047500     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 047600     MOVE    ZERO TO 25COUNT.                                     NC2034.2
@@ -488,7 +488,7 @@
 049000     PERFORM FAIL.                                                NC2034.2
 049100 DIV-WRITE-F4-4-0.                                                NC2034.2
 049200     PERFORM PRINT-DETAIL.                                        NC2034.2
-049300*                                                                 NC2034.2
+049300*                                                                         
 049400 DIV-INIT-F4-4-1.                                                 NC2034.2
 049500     MOVE   "DIV-TEST-F4-4-1" TO PAR-NAME.                        NC2034.2
 049600     ADD     1 TO REC-CT.                                         NC2034.2
@@ -507,7 +507,7 @@
 050900     PERFORM FAIL.                                                NC2034.2
 051000 DIV-WRITE-F4-4-1.                                                NC2034.2
 051100     PERFORM PRINT-DETAIL.                                        NC2034.2
-051200*                                                                 NC2034.2
+051200*                                                                         
 051300 DIV-INIT-F4-4-2.                                                 NC2034.2
 051400     MOVE   "DIV-TEST-F4-4-2" TO PAR-NAME.                        NC2034.2
 051500     ADD     1 TO REC-CT.                                         NC2034.2
@@ -526,7 +526,7 @@
 052800     PERFORM FAIL.                                                NC2034.2
 052900 DIV-WRITE-F4-4-2.                                                NC2034.2
 053000     PERFORM PRINT-DETAIL.                                        NC2034.2
-053100*                                                                 NC2034.2
+053100*                                                                         
 053200 DIV-INIT-F4-5.                                                   NC2034.2
 053300     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 053400     MOVE ZERO TO 25ANS.                                          NC2034.2
@@ -550,7 +550,7 @@
 055200     PERFORM FAIL.                                                NC2034.2
 055300 DIV-WRITE-F4-5-0.                                                NC2034.2
 055400     PERFORM PRINT-DETAIL.                                        NC2034.2
-055500*                                                                 NC2034.2
+055500*                                                                         
 055600 DIV-INIT-F4-5-1.                                                 NC2034.2
 055700     MOVE   "DIV-TEST-F4-5-1" TO PAR-NAME.                        NC2034.2
 055800     ADD     1 TO REC-CT.                                         NC2034.2
@@ -569,7 +569,7 @@
 057100     PERFORM FAIL.                                                NC2034.2
 057200 DIV-WRITE-F4-5-1.                                                NC2034.2
 057300     PERFORM PRINT-DETAIL.                                        NC2034.2
-057400*                                                                 NC2034.2
+057400*                                                                         
 057500 DIV-INIT-F4-5-2.                                                 NC2034.2
 057600     MOVE   "DIV-TEST-F4-5-2" TO PAR-NAME.                        NC2034.2
 057700     ADD     1 TO REC-CT.                                         NC2034.2
@@ -588,7 +588,7 @@
 059000     PERFORM FAIL.                                                NC2034.2
 059100 DIV-WRITE-F4-5-2.                                                NC2034.2
 059200     PERFORM PRINT-DETAIL.                                        NC2034.2
-059300*                                                                 NC2034.2
+059300*                                                                         
 059400 DIV-INIT-F4-6.                                                   NC2034.2
 059500     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 059600     MOVE    40   TO 25COUNT.                                     NC2034.2
@@ -612,7 +612,7 @@
 061400     PERFORM FAIL.                                                NC2034.2
 061500 DIV-WRITE-F4-6-0.                                                NC2034.2
 061600     PERFORM PRINT-DETAIL.                                        NC2034.2
-061700*                                                                 NC2034.2
+061700*                                                                         
 061800 DIV-INIT-F4-6-1.                                                 NC2034.2
 061900     MOVE   "DIV-TEST-F4-6-1" TO PAR-NAME.                        NC2034.2
 062000     ADD     1 TO REC-CT.                                         NC2034.2
@@ -631,7 +631,7 @@
 063300     PERFORM FAIL.                                                NC2034.2
 063400 DIV-WRITE-F4-6-1.                                                NC2034.2
 063500     PERFORM PRINT-DETAIL.                                        NC2034.2
-063600*                                                                 NC2034.2
+063600*                                                                         
 063700 DIV-INIT-F4-6-2.                                                 NC2034.2
 063800     MOVE   "DIV-TEST-F4-6-2" TO PAR-NAME.                        NC2034.2
 063900 DIV-TEST-F4-6-2.                                                 NC2034.2
@@ -650,7 +650,7 @@
 065200     PERFORM FAIL.                                                NC2034.2
 065300 DIV-WRITE-F4-6-2.                                                NC2034.2
 065400     PERFORM PRINT-DETAIL.                                        NC2034.2
-065500*                                                                 NC2034.2
+065500*                                                                         
 065600 DIV-INIT-F4-7.                                                   NC2034.2
 065700     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 065800     MOVE   "DIV-TEST-F4-7-0"  TO PAR-NAME.                       NC2034.2
@@ -662,28 +662,28 @@
 066400 DIV-TEST-F4-7-0.                                                 NC2034.2
 066500     DIVIDE   DS-02V00-0001  INTO  DS-03V00-0002                  NC2034.2
 066600              GIVING  WRK-DS-04V01-0005  REMAINDER  NE-0009.      NC2034.2
-066700*                                                                 NC2034.2
-066800*    REMAINDER RECEIVING FIELD DESCRIBED AS NUMERIC EDITED.       NC2034.2
-066900*                 I1 = 16                                         NC2034.2
-067000*                 I2 = 174                                        NC2034.2
-067100*                                                                 NC2034.2
+066700*                                                                         
+066800*                                                                         
+066900*                                                                         
+067000*                                                                         
+067100*                                                                         
 067200 DIV-INIT-F4-7-1.                                                 NC2034.2
 067300     MOVE     "DIV-TEST-F4-7-1" TO  PAR-NAME.                     NC2034.2
 067400 DIV-TEST-F4-7-1.                                                 NC2034.2
-067500     IF      NE-0009  EQUAL TO "***02"                            NC2034.2
+067500     IF      NE-0009  EQUAL TO "***71"                            NC2034.2
 067600             PERFORM   PASS                                       NC2034.2
 067700             GO TO DIV-WRITE-F4-7-1.                              NC2034.2
 067800     GO TO DIV-FAIL-F4-7-1.                                       NC2034.2
 067900 DIV-FAIL-F4-7-1.                                                 NC2034.2
 068000     PERFORM  FAIL.                                               NC2034.2
-068100     MOVE    "***02"  TO CORRECT-A.                               NC2034.2
+068100     MOVE    "***71"  TO CORRECT-A.                               NC2034.2
 068200     MOVE     NE-0009 TO COMPUTED-A.                              NC2034.2
 068300 DIV-DELETE-F4-7-1.                                               NC2034.2
 068400     PERFORM   DE-LETE.                                           NC2034.2
 068500     GO TO    DIV-WRITE-F4-7-1.                                   NC2034.2
 068600 DIV-WRITE-F4-7-1.                                                NC2034.2
 068700     PERFORM  PRINT-DETAIL.                                       NC2034.2
-068800*                                                                 NC2034.2
+068800*                                                                         
 068900 DIV-INIT-F4-7-2.                                                 NC2034.2
 069000     MOVE   "DIV-TEST-F4-7-2" TO PAR-NAME.                        NC2034.2
 069100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -702,7 +702,7 @@
 070400     PERFORM FAIL.                                                NC2034.2
 070500 DIV-WRITE-F4-7-2.                                                NC2034.2
 070600     PERFORM PRINT-DETAIL.                                        NC2034.2
-070700*                                                                 NC2034.2
+070700*                                                                         
 070800 DIV-INIT-F4-8.                                                   NC2034.2
 070900     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 071000     MOVE    16   TO DS-02V00-0001.                               NC2034.2
@@ -712,17 +712,17 @@
 071400     MOVE    1    TO REC-CT.                                      NC2034.2
 071500     MOVE   "DIV-TEST-F4-8-0"  TO PAR-NAME.                       NC2034.2
 071600     MOVE   "DIVIDE"  TO FEATURE.                                 NC2034.2
-071700*                                                                 NC2034.2
+071700*                                                                         
 071800 DIV-TEST-F4-8-0.                                                 NC2034.2
 071900     DIVIDE  DS-02V00-0001  INTO  DS-03V00-0002                   NC2034.2
 072000             GIVING NE-04V01-0006    REMAINDER WRK-DS-05V00-0002. NC2034.2
-072100*                                                                 NC2034.2
-072200*    GIVING    RECEIVING FIELD DESCRIBED AS NUMERIC EDITED.       NC2034.2
-072300*    INTERMEDIATE STORAGE SHOULD BE USED TO CALCULATE THE         NC2034.2
-072400*    REMAINDER                                                    NC2034.2
-072500*                 I1 = 16                                         NC2034.2
-072600*                 I2 = 174                                        NC2034.2
-072700*                                                                 NC2034.2
+072100*                                                                         
+072200*                                                                         
+072300*                                                                         
+072400*                                                                         
+072500*                                                                         
+072600*                                                                         
+072700*                                                                         
 072800 DIV-INIT-F4-8-1.                                                 NC2034.2
 072900     MOVE     "DIV-TEST-F4-8-1" TO  PAR-NAME.                     NC2034.2
 073000 DIV-TEST-F4-8-1.                                                 NC2034.2
@@ -739,7 +739,7 @@
 074100     MOVE   WRK-DS-05V00-0002  TO COMPUTED-A.                     NC2034.2
 074200 DIV-WRITE-F4-8-1.                                                NC2034.2
 074300     PERFORM  PRINT-DETAIL.                                       NC2034.2
-074400*                                                                 NC2034.2
+074400*                                                                         
 074500 DIV-INIT-F4-8-2.                                                 NC2034.2
 074600     MOVE   "DIV-TEST-F4-8-2" TO PAR-NAME.                        NC2034.2
 074700     ADD     1 TO REC-CT.                                         NC2034.2
@@ -758,7 +758,7 @@
 076000     PERFORM FAIL.                                                NC2034.2
 076100 DIV-WRITE-F4-8-2.                                                NC2034.2
 076200     PERFORM PRINT-DETAIL.                                        NC2034.2
-076300*                                                                 NC2034.2
+076300*                                                                         
 076400 DIV-INIT-F4-9.                                                   NC2034.2
 076500     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 076600     MOVE    ZERO TO 25COUNT.                                     NC2034.2
@@ -782,7 +782,7 @@
 078400     PERFORM FAIL.                                                NC2034.2
 078500 DIV-WRITE-F4-9-0.                                                NC2034.2
 078600     PERFORM PRINT-DETAIL.                                        NC2034.2
-078700*                                                                 NC2034.2
+078700*                                                                         
 078800 DIV-INIT-F4-9-1.                                                 NC2034.2
 078900     MOVE   "DIV-TEST-F4-9-1" TO PAR-NAME.                        NC2034.2
 079000     ADD     1 TO REC-CT.                                         NC2034.2
@@ -801,7 +801,7 @@
 080300     PERFORM FAIL.                                                NC2034.2
 080400 DIV-WRITE-F4-9-1.                                                NC2034.2
 080500     PERFORM PRINT-DETAIL.                                        NC2034.2
-080600*                                                                 NC2034.2
+080600*                                                                         
 080700 DIV-INIT-F4-9-2.                                                 NC2034.2
 080800     MOVE   "DIV-TEST-F4-9-2" TO PAR-NAME.                        NC2034.2
 080900     ADD     1 TO REC-CT.                                         NC2034.2
@@ -820,7 +820,7 @@
 082200     PERFORM FAIL.                                                NC2034.2
 082300 DIV-WRITE-F4-9-2.                                                NC2034.2
 082400     PERFORM PRINT-DETAIL.                                        NC2034.2
-082500*                                                                 NC2034.2
+082500*                                                                         
 082600 DIV-INIT-F4-10.                                                  NC2034.2
 082700     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 082800     MOVE ZERO TO 25ANS.                                          NC2034.2
@@ -843,7 +843,7 @@
 084500     PERFORM FAIL.                                                NC2034.2
 084600 DIV-WRITE-F4-10-0.                                               NC2034.2
 084700     PERFORM PRINT-DETAIL.                                        NC2034.2
-084800*                                                                 NC2034.2
+084800*                                                                         
 084900 DIV-INIT-F4-10-1.                                                NC2034.2
 085000     MOVE   "DIV-TEST-F4-10-1" TO PAR-NAME.                       NC2034.2
 085100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -862,7 +862,7 @@
 086400     PERFORM FAIL.                                                NC2034.2
 086500 DIV-WRITE-F4-10-1.                                               NC2034.2
 086600     PERFORM PRINT-DETAIL.                                        NC2034.2
-086700*                                                                 NC2034.2
+086700*                                                                         
 086800 DIV-INIT-F4-10-2.                                                NC2034.2
 086900     MOVE   "DIV-TEST-F4-10-2" TO PAR-NAME.                       NC2034.2
 087000     ADD     1 TO REC-CT.                                         NC2034.2
@@ -881,7 +881,7 @@
 088300     PERFORM FAIL.                                                NC2034.2
 088400 DIV-WRITE-F4-10-2.                                               NC2034.2
 088500     PERFORM PRINT-DETAIL.                                        NC2034.2
-088600*                                                                 NC2034.2
+088600*                                                                         
 088700 DIV-INIT-F4-11.                                                  NC2034.2
 088800     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 088900     MOVE    ZERO TO 25COUNT.                                     NC2034.2
@@ -906,7 +906,7 @@
 090800     PERFORM FAIL.                                                NC2034.2
 090900 DIV-WRITE-F4-11-0.                                               NC2034.2
 091000     PERFORM PRINT-DETAIL.                                        NC2034.2
-091100*                                                                 NC2034.2
+091100*                                                                         
 091200 DIV-INIT-F4-11-1.                                                NC2034.2
 091300     MOVE   "DIV-TEST-F4-11-1" TO PAR-NAME.                       NC2034.2
 091400     ADD     1 TO REC-CT.                                         NC2034.2
@@ -925,7 +925,7 @@
 092700     PERFORM FAIL.                                                NC2034.2
 092800 DIV-WRITE-F4-11-1.                                               NC2034.2
 092900     PERFORM PRINT-DETAIL.                                        NC2034.2
-093000*                                                                 NC2034.2
+093000*                                                                         
 093100 DIV-INIT-F4-11-2.                                                NC2034.2
 093200     MOVE   "DIV-TEST-F4-11-2" TO PAR-NAME.                       NC2034.2
 093300     ADD     1 TO REC-CT.                                         NC2034.2
@@ -944,7 +944,7 @@
 094600     PERFORM FAIL.                                                NC2034.2
 094700 DIV-WRITE-F4-11-2.                                               NC2034.2
 094800     PERFORM PRINT-DETAIL.                                        NC2034.2
-094900*                                                                 NC2034.2
+094900*                                                                         
 095000 DIV-INIT-F4-12.                                                  NC2034.2
 095100     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 095200     MOVE ZERO TO 25ANS.                                          NC2034.2
@@ -969,7 +969,7 @@
 097100     PERFORM FAIL.                                                NC2034.2
 097200 DIV-WRITE-F4-12-0.                                               NC2034.2
 097300     PERFORM PRINT-DETAIL.                                        NC2034.2
-097400*                                                                 NC2034.2
+097400*                                                                         
 097500 DIV-INIT-F4-12-1.                                                NC2034.2
 097600     MOVE   "DIV-TEST-F4-12-1" TO PAR-NAME.                       NC2034.2
 097700     ADD     1 TO REC-CT.                                         NC2034.2
@@ -988,7 +988,7 @@
 099000     PERFORM FAIL.                                                NC2034.2
 099100 DIV-WRITE-F4-12-1.                                               NC2034.2
 099200     PERFORM PRINT-DETAIL.                                        NC2034.2
-099300*                                                                 NC2034.2
+099300*                                                                         
 099400 DIV-INIT-F4-12-2.                                                NC2034.2
 099500     MOVE   "DIV-TEST-F4-12-2" TO PAR-NAME.                       NC2034.2
 099600     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1007,7 +1007,7 @@
 100900     PERFORM FAIL.                                                NC2034.2
 101000 DIV-WRITE-F4-12-2.                                               NC2034.2
 101100     PERFORM PRINT-DETAIL.                                        NC2034.2
-101200*                                                                 NC2034.2
+101200*                                                                         
 101300 DIV-INIT-F4-13.                                                  NC2034.2
 101400     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 101500     MOVE    ZERO TO 25COUNT.                                     NC2034.2
@@ -1021,7 +1021,7 @@
 102300             MOVE    "A" TO WRK-XN-00001-1                        NC2034.2
 102400     END-DIVIDE                                                   NC2034.2
 102500     MOVE   "B" TO WRK-XN-00001-2.                                NC2034.2
-102600*                                                                 NC2034.2
+102600*                                                                         
 102700 DIV-INIT-F4-13-1.                                                NC2034.2
 102800     MOVE   "DIV-TEST-F4-13-1" TO PAR-NAME.                       NC2034.2
 102900 DIV-TEST-F4-13-1.                                                NC2034.2
@@ -1039,7 +1039,7 @@
 104100     PERFORM FAIL.                                                NC2034.2
 104200 DIV-WRITE-F4-13-1.                                               NC2034.2
 104300     PERFORM PRINT-DETAIL.                                        NC2034.2
-104400*                                                                 NC2034.2
+104400*                                                                         
 104500 DIV-INIT-F4-13-2.                                                NC2034.2
 104600     MOVE   "DIV-TEST-F4-13-2" TO PAR-NAME.                       NC2034.2
 104700     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1058,7 +1058,7 @@
 106000     PERFORM FAIL.                                                NC2034.2
 106100 DIV-WRITE-F4-13-2.                                               NC2034.2
 106200     PERFORM PRINT-DETAIL.                                        NC2034.2
-106300*                                                                 NC2034.2
+106300*                                                                         
 106400 DIV-INIT-F4-13-3.                                                NC2034.2
 106500     MOVE   "DIV-TEST-F4-13-3" TO PAR-NAME.                       NC2034.2
 106600     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1078,7 +1078,7 @@
 108000     PERFORM FAIL.                                                NC2034.2
 108100 DIV-WRITE-F4-13-3.                                               NC2034.2
 108200     PERFORM PRINT-DETAIL.                                        NC2034.2
-108300*                                                                 NC2034.2
+108300*                                                                         
 108400 DIV-INIT-F4-13-4.                                                NC2034.2
 108500     MOVE   "DIV-TEST-F4-13-4" TO PAR-NAME.                       NC2034.2
 108600     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1097,7 +1097,7 @@
 109900     PERFORM FAIL.                                                NC2034.2
 110000 DIV-WRITE-F4-13-4.                                               NC2034.2
 110100     PERFORM PRINT-DETAIL.                                        NC2034.2
-110200*                                                                 NC2034.2
+110200*                                                                         
 110300 DIV-INIT-F4-14.                                                  NC2034.2
 110400     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 110500     MOVE   "DIV-TEST-F4-14-0"  TO PAR-NAME.                      NC2034.2
@@ -1113,7 +1113,7 @@
 111500             MOVE    "A" TO WRK-XN-00001-1                        NC2034.2
 111600     END-DIVIDE                                                   NC2034.2
 111700     MOVE   "B" TO WRK-XN-00001-2.                                NC2034.2
-111800*                                                                 NC2034.2
+111800*                                                                         
 111900 DIV-INIT-F4-14-1.                                                NC2034.2
 112000     MOVE   "DIV-TEST-F4-14-1" TO PAR-NAME.                       NC2034.2
 112100 DIV-TEST-F4-14-1.                                                NC2034.2
@@ -1131,7 +1131,7 @@
 113300     PERFORM FAIL.                                                NC2034.2
 113400 DIV-WRITE-F4-14-1.                                               NC2034.2
 113500     PERFORM PRINT-DETAIL.                                        NC2034.2
-113600*                                                                 NC2034.2
+113600*                                                                         
 113700 DIV-INIT-F4-14-2.                                                NC2034.2
 113800     MOVE   "DIV-TEST-F4-14-2" TO PAR-NAME.                       NC2034.2
 113900     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1150,7 +1150,7 @@
 115200     PERFORM FAIL.                                                NC2034.2
 115300 DIV-WRITE-F4-14-2.                                               NC2034.2
 115400     PERFORM PRINT-DETAIL.                                        NC2034.2
-115500*                                                                 NC2034.2
+115500*                                                                         
 115600 DIV-INIT-F4-14-3.                                                NC2034.2
 115700     MOVE   "DIV-TEST-F4-14-3" TO PAR-NAME.                       NC2034.2
 115800     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1170,7 +1170,7 @@
 117200     PERFORM FAIL.                                                NC2034.2
 117300 DIV-WRITE-F4-14-3.                                               NC2034.2
 117400     PERFORM PRINT-DETAIL.                                        NC2034.2
-117500*                                                                 NC2034.2
+117500*                                                                         
 117600 DIV-INIT-F4-14-4.                                                NC2034.2
 117700     MOVE   "DIV-TEST-F4-14-4" TO PAR-NAME.                       NC2034.2
 117800     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1189,7 +1189,7 @@
 119100     PERFORM FAIL.                                                NC2034.2
 119200 DIV-WRITE-F4-14-4.                                               NC2034.2
 119300     PERFORM PRINT-DETAIL.                                        NC2034.2
-119400*                                                                 NC2034.2
+119400*                                                                         
 119500 DIV-INIT-F4-15.                                                  NC2034.2
 119600     MOVE   "VI-82 6.11.4 GR9" TO ANSI-REFERENCE.                 NC2034.2
 119700     MOVE    ZERO  TO 25COUNT.                                    NC2034.2
@@ -1205,7 +1205,7 @@
 120700             MOVE    "A" TO WRK-XN-00001-1                        NC2034.2
 120800     END-DIVIDE                                                   NC2034.2
 120900     MOVE   "B" TO WRK-XN-00001-2.                                NC2034.2
-121000*                                                                 NC2034.2
+121000*                                                                         
 121100 DIV-INIT-F4-15-1.                                                NC2034.2
 121200     MOVE   "DIV-TEST-F4-15-1" TO PAR-NAME.                       NC2034.2
 121300     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1224,7 +1224,7 @@
 122600     PERFORM FAIL.                                                NC2034.2
 122700 DIV-WRITE-F4-15-1.                                               NC2034.2
 122800     PERFORM PRINT-DETAIL.                                        NC2034.2
-122900*                                                                 NC2034.2
+122900*                                                                         
 123000 DIV-INIT-F4-15-2.                                                NC2034.2
 123100     MOVE   "DIV-TEST-F4-15-2" TO PAR-NAME.                       NC2034.2
 123200     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1243,7 +1243,7 @@
 124500     PERFORM FAIL.                                                NC2034.2
 124600 DIV-WRITE-F4-15-2.                                               NC2034.2
 124700     PERFORM PRINT-DETAIL.                                        NC2034.2
-124800*                                                                 NC2034.2
+124800*                                                                         
 124900 DIV-INIT-F4-15-3.                                                NC2034.2
 125000     MOVE   "DIV-TEST-F4-15-3" TO PAR-NAME.                       NC2034.2
 125100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1263,7 +1263,7 @@
 126500     PERFORM FAIL.                                                NC2034.2
 126600 DIV-WRITE-F4-15-3.                                               NC2034.2
 126700     PERFORM PRINT-DETAIL.                                        NC2034.2
-126800*                                                                 NC2034.2
+126800*                                                                         
 126900 DIV-INIT-F4-15-4.                                                NC2034.2
 127000     MOVE   "DIV-TEST-F4-15-4" TO PAR-NAME.                       NC2034.2
 127100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1282,7 +1282,7 @@
 128400     PERFORM FAIL.                                                NC2034.2
 128500 DIV-WRITE-F4-15-4.                                               NC2034.2
 128600     PERFORM PRINT-DETAIL.                                        NC2034.2
-128700*                                                                 NC2034.2
+128700*                                                                         
 128800 DIV-INIT-F4-16.                                                  NC2034.2
 128900     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 129000     MOVE ZERO TO 25ANS.                                          NC2034.2
@@ -1296,7 +1296,7 @@
 129800             MOVE    "A" TO WRK-XN-00001-1                        NC2034.2
 129900     END-DIVIDE                                                   NC2034.2
 130000     MOVE   "B" TO WRK-XN-00001-2.                                NC2034.2
-130100*                                                                 NC2034.2
+130100*                                                                         
 130200 DIV-INIT-F4-16-1.                                                NC2034.2
 130300     MOVE   "DIV-TEST-F4-16-1" TO PAR-NAME.                       NC2034.2
 130400 DIV-TEST-F4-16-1.                                                NC2034.2
@@ -1314,7 +1314,7 @@
 131600     PERFORM FAIL.                                                NC2034.2
 131700 DIV-WRITE-F4-16-1.                                               NC2034.2
 131800     PERFORM PRINT-DETAIL.                                        NC2034.2
-131900*                                                                 NC2034.2
+131900*                                                                         
 132000 DIV-INIT-F4-16-2.                                                NC2034.2
 132100     MOVE   "DIV-TEST-F4-16-2" TO PAR-NAME.                       NC2034.2
 132200     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1333,7 +1333,7 @@
 133500     PERFORM FAIL.                                                NC2034.2
 133600 DIV-WRITE-F4-16-2.                                               NC2034.2
 133700     PERFORM PRINT-DETAIL.                                        NC2034.2
-133800*                                                                 NC2034.2
+133800*                                                                         
 133900 DIV-INIT-F4-16-3.                                                NC2034.2
 134000     MOVE   "DIV-TEST-F4-16-3" TO PAR-NAME.                       NC2034.2
 134100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1353,7 +1353,7 @@
 135500     PERFORM FAIL.                                                NC2034.2
 135600 DIV-WRITE-F4-16-3.                                               NC2034.2
 135700     PERFORM PRINT-DETAIL.                                        NC2034.2
-135800*                                                                 NC2034.2
+135800*                                                                         
 135900 DIV-INIT-F4-16-4.                                                NC2034.2
 136000     MOVE   "DIV-TEST-F4-16-4" TO PAR-NAME.                       NC2034.2
 136100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1372,7 +1372,7 @@
 137400     PERFORM FAIL.                                                NC2034.2
 137500 DIV-WRITE-F4-16-4.                                               NC2034.2
 137600     PERFORM PRINT-DETAIL.                                        NC2034.2
-137700*                                                                 NC2034.2
+137700*                                                                         
 137800 DIV-INIT-F4-17.                                                  NC2034.2
 137900     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 138000     MOVE    ZERO TO 25COUNT.                                     NC2034.2
@@ -1390,7 +1390,7 @@
 139200             MOVE   "B" TO WRK-XN-00001-1                         NC2034.2
 139300     END-DIVIDE                                                   NC2034.2
 139400     MOVE   "C" TO WRK-XN-00001-2.                                NC2034.2
-139500*                                                                 NC2034.2
+139500*                                                                         
 139600 DIV-INIT-F4-17-1.                                                NC2034.2
 139700     MOVE   "DIV-TEST-F4-17-1" TO PAR-NAME.                       NC2034.2
 139800     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1409,7 +1409,7 @@
 141100     PERFORM FAIL.                                                NC2034.2
 141200 DIV-WRITE-F4-17-1.                                               NC2034.2
 141300     PERFORM PRINT-DETAIL.                                        NC2034.2
-141400*                                                                 NC2034.2
+141400*                                                                         
 141500 DIV-INIT-F4-17-2.                                                NC2034.2
 141600     MOVE   "DIV-TEST-F4-17-2" TO PAR-NAME.                       NC2034.2
 141700     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1428,7 +1428,7 @@
 143000     PERFORM FAIL.                                                NC2034.2
 143100 DIV-WRITE-F4-17-2.                                               NC2034.2
 143200     PERFORM PRINT-DETAIL.                                        NC2034.2
-143300*                                                                 NC2034.2
+143300*                                                                         
 143400 DIV-INIT-F4-17-3.                                                NC2034.2
 143500     MOVE   "DIV-TEST-F4-17-3" TO PAR-NAME.                       NC2034.2
 143600     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1448,7 +1448,7 @@
 145000     PERFORM FAIL.                                                NC2034.2
 145100 DIV-WRITE-F4-17-3.                                               NC2034.2
 145200     PERFORM PRINT-DETAIL.                                        NC2034.2
-145300*                                                                 NC2034.2
+145300*                                                                         
 145400 DIV-INIT-F4-17-4.                                                NC2034.2
 145500     MOVE   "DIV-TEST-F4-17-4" TO PAR-NAME.                       NC2034.2
 145600     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1467,7 +1467,7 @@
 146900     PERFORM FAIL.                                                NC2034.2
 147000 DIV-WRITE-F4-17-4.                                               NC2034.2
 147100     PERFORM PRINT-DETAIL.                                        NC2034.2
-147200*                                                                 NC2034.2
+147200*                                                                         
 147300 DIV-INIT-F4-18.                                                  NC2034.2
 147400     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2034.2
 147500     MOVE    SPACE TO WRK-XN-00001-1.                             NC2034.2
@@ -1485,7 +1485,7 @@
 148700             MOVE   "B" TO WRK-XN-00001-1                         NC2034.2
 148800     END-DIVIDE                                                   NC2034.2
 148900     MOVE   "B" TO WRK-XN-00001-2.                                NC2034.2
-149000*                                                                 NC2034.2
+149000*                                                                         
 149100 DIV-INIT-F4-18-1.                                                NC2034.2
 149200     MOVE   "DIV-TEST-F4-18-1" TO PAR-NAME.                       NC2034.2
 149300 DIV-TEST-F4-18-1.                                                NC2034.2
@@ -1503,7 +1503,7 @@
 150500     PERFORM FAIL.                                                NC2034.2
 150600 DIV-WRITE-F4-18-1.                                               NC2034.2
 150700     PERFORM PRINT-DETAIL.                                        NC2034.2
-150800*                                                                 NC2034.2
+150800*                                                                         
 150900 DIV-INIT-F4-18-2.                                                NC2034.2
 151000     MOVE   "DIV-TEST-F4-18-2" TO PAR-NAME.                       NC2034.2
 151100     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1522,7 +1522,7 @@
 152400     PERFORM FAIL.                                                NC2034.2
 152500 DIV-WRITE-F4-18-2.                                               NC2034.2
 152600     PERFORM PRINT-DETAIL.                                        NC2034.2
-152700*                                                                 NC2034.2
+152700*                                                                         
 152800 DIV-INIT-F4-18-3.                                                NC2034.2
 152900     MOVE   "DIV-TEST-F4-18-3" TO PAR-NAME.                       NC2034.2
 153000     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1542,7 +1542,7 @@
 154400     PERFORM FAIL.                                                NC2034.2
 154500 DIV-WRITE-F4-18-3.                                               NC2034.2
 154600     PERFORM PRINT-DETAIL.                                        NC2034.2
-154700*                                                                 NC2034.2
+154700*                                                                         
 154800 DIV-INIT-F4-18-4.                                                NC2034.2
 154900     MOVE   "DIV-TEST-F4-18-4" TO PAR-NAME.                       NC2034.2
 155000     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1561,7 +1561,7 @@
 156300     PERFORM FAIL.                                                NC2034.2
 156400 DIV-WRITE-F4-18-4.                                               NC2034.2
 156500     PERFORM PRINT-DETAIL.                                        NC2034.2
-156600*                                                                 NC2034.2
+156600*                                                                         
 156700 DIV-INIT-F4-19.                                                  NC2034.2
 156800     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2034.2
 156900     MOVE ZERO TO 25ANS.                                          NC2034.2
@@ -1586,7 +1586,7 @@
 158800     PERFORM FAIL.                                                NC2034.2
 158900 DIV-WRITE-F4-19-0.                                               NC2034.2
 159000     PERFORM PRINT-DETAIL.                                        NC2034.2
-159100*                                                                 NC2034.2
+159100*                                                                         
 159200 DIV-INIT-F4-19-1.                                                NC2034.2
 159300     MOVE   "DIV-TEST-F4-19-1" TO PAR-NAME.                       NC2034.2
 159400     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1605,7 +1605,7 @@
 160700     PERFORM FAIL.                                                NC2034.2
 160800 DIV-WRITE-F4-19-1.                                               NC2034.2
 160900     PERFORM PRINT-DETAIL.                                        NC2034.2
-161000*                                                                 NC2034.2
+161000*                                                                         
 161100 DIV-INIT-F4-19-2.                                                NC2034.2
 161200     MOVE   "DIV-TEST-F4-19-2" TO PAR-NAME.                       NC2034.2
 161300     ADD     1 TO REC-CT.                                         NC2034.2
@@ -1630,7 +1630,7 @@
 163200     PERFORM FAIL.                                                NC2034.2
 163300 DIV-WRITE-F4-19-2.                                               NC2034.2
 163400     PERFORM PRINT-DETAIL.                                        NC2034.2
-163500*                                                                 NC2034.2
+163500*                                                                         
 163600 DIV-INIT-F4-20.                                                  NC2034.2
 163700     MOVE "DIV-TEST-F4-20" TO PAR-NAME.                           NC2034.2
 163800     MOVE 10.0 TO WRK-DU-2V1-1.                                   NC2034.2
@@ -1653,7 +1653,7 @@
 165500 DIV-TEST-F4-20-1.                                                NC2034.2
 165600     MOVE   "DIV-TEST-F4-20-1" TO PAR-NAME.                       NC2034.2
 165700     MOVE 1 TO REC-CT.                                            NC2034.2
-165800     IF WRK-DU-1V5-1 = 0.31418                                    NC2034.2
+165800     IF WRK-DU-1V5-1 = 0.31446                                    NC2034.2
 165900          PERFORM PASS                                            NC2034.2
 166000          GO TO DIV-WRITE-F4-20-1                                 NC2034.2
 166100     ELSE                                                         NC2034.2
@@ -1664,10 +1664,10 @@
 166600 DIV-FAIL-F4-20-1.                                                NC2034.2
 166700     PERFORM FAIL                                                 NC2034.2
 166800     MOVE WRK-DU-1V5-1 TO COMPUTED-N                              NC2034.2
-166900     MOVE 0.31418 TO CORRECT-N.                                   NC2034.2
+166900     MOVE 0.31446 TO CORRECT-N.                                   NC2034.2
 167000 DIV-WRITE-F4-20-1.                                               NC2034.2
 167100     PERFORM PRINT-DETAIL.                                        NC2034.2
-167200*                                                                 NC2034.2
+167200*                                                                         
 167300 DIV-TEST-F4-20-2.                                                NC2034.2
 167400     ADD 1 TO REC-CT.                                             NC2034.2
 167500     MOVE   "DIV-TEST-F4-20-2" TO PAR-NAME.                       NC2034.2
@@ -1685,7 +1685,7 @@
 168700     MOVE ".0000/92653,58979,32"  TO CORRECT-A.                   NC2034.2
 168800 DIV-WRITE-F4-20-2.                                               NC2034.2
 168900     PERFORM PRINT-DETAIL.                                        NC2034.2
-169000*                                                                 NC2034.2
+169000*                                                                         
 169100 CCVS-EXIT SECTION.                                               NC2034.2
 169200 CCVS-999999.                                                     NC2034.2
 169300     GO TO CLOSE-FILES.                                           NC2034.2

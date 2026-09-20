@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2084.2
 000200 PROGRAM-ID.                                                      SQ2084.2
 000300     SQ208M.                                                      SQ2084.2
-000400****************************************************************  SQ2084.2
-000500*                                                              *  SQ2084.2
-000600*    VALIDATION FOR:-                                          *  SQ2084.2
-000700*    " HIGH       ".                                              SQ2084.2
-000800*                                                              *  SQ2084.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2084.2
-001000*    "4.2 ".                                                      SQ2084.2
-001100*                                                              *  SQ2084.2
-001200*        THE ROUTINE SQ208M TESTS THE USE OF THE LEVEL 2 WRITE    SQ2084.2
-001300*    STATEMENT AND THE LINAGE CLAUSE FOR A FILE DESIGNATED AS     SQ2084.2
-001400*    PRINTER OUTPUT.  THESE STATEMENTS CONTROL THE VERTICAL       SQ2084.2
-001500*    POSITIONING OF EACH LINE ON A PRINTED PAGE.  THE LINAGE      SQ2084.2
-001600*    CLAUSE SPECIFICALLY CONTROLS THE VERTICAL FORMAT OF A LOGICALSQ2084.2
-001700*    PRINT PAGE. SQ208M TESTS THE USE OF DATA-NAMES IN THE LINAGE,SQ2084.2
-001800*    FOOTING, TOP, AND BOTTOM PHRASES.  VALUES OF DATA-NAMES ARE  SQ2084.2
-001900*    CHANGED IN ORDER TO CHECK REDEFINITION OF LOGICAL PAGE       SQ2084.2
-002000*    FORMATS AFTER OVERFLOW OR WRITE ADVANCING PAGE OPERATIONS.   SQ2084.2
-002100*    IT IS ASSUMED THAT ALL LEVEL 2 NUCLEUS OPTIONS ARE AVAILABLE SQ2084.2
-002200*    IN TESTING SQ208M.                                           SQ2084.2
-002300*        BECAUSE OF THE NATURE OF THESE TESTS A "PASS" OR "FAIL"  SQ2084.2
-002400*    CANNOT BE DETERMINED WITHIN THE PROGRAM.  THE USER MUST      SQ2084.2
-002500*    VISUALLY CHECK THE POSITION OF EACH LINE TO DETERMINE THE    SQ2084.2
-002600*    ACCURACY OF THE VARIOUS WRITE AND LINAGE OPTIONS.            SQ2084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            SQ2084.2
 002800 CONFIGURATION SECTION.                                           SQ2084.2
 002900 SOURCE-COMPUTER.                                                 SQ2084.2
@@ -315,7 +315,7 @@
 036300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2084.2
 036400      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2084.2
 036500      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2084.2
-036600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2084.2
+036600*                                                                         
 036700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2084.2
 036800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2084.2
 036900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2084.2
@@ -385,9 +385,9 @@
 043300     MOVE SPACE TO DUMMY-RECORD.                                  SQ2084.2
 043400     PERFORM BLANK-LINE-PRINT.                                    SQ2084.2
 043500 WRITE-TEST-GF-01.                                                SQ2084.2
-043600*             THIS TEST CHECKS THE RESULTS OF CHANGING THE VALUES SQ2084.2
-043700*             OF THE DATA-NAMES IN THE LINAGE CLAUSE AFTER AN     SQ2084.2
-043800*             OPEN OUTPUT PRINT-FILE.                             SQ2084.2
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
 043900     MOVE SPACE TO DUMMY-RECORD.                                  SQ2084.2
 044000     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 044100     MOVE "LINAGE AFTER OPEN" TO FEATURE.                         SQ2084.2
@@ -410,9 +410,9 @@
 045800     MOVE 123 TO DL1-TOTAL-LINES.                                 SQ2084.2
 045900     PERFORM PRINT-DETAIL-1 123 TIMES.                            SQ2084.2
 046000 WRITE-TEST-GF-02.                                                SQ2084.2
-046100*             THIS TEST CHECKS THE RESULTS OF CHANGING THE VALUES SQ2084.2
-046200*             OF THE DATA-NAMES IN THE LINAGE CLAUSE PRIOR TO A   SQ2084.2
-046300*             PAGE OVERFLOW.                                      SQ2084.2
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
 046400     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 046500     MOVE "LINAGE AFT OVERFLOW" TO FEATURE.                       SQ2084.2
 046600     MOVE "WRITE-TEST-GF-02" TO PAR-NAME.                         SQ2084.2
@@ -437,9 +437,9 @@
 048500     MOVE 136 TO DL1-TOTAL-LINES.                                 SQ2084.2
 048600     PERFORM PRINT-DETAIL-1 136 TIMES.                            SQ2084.2
 048700 WRITE-TEST-GF-03.                                                SQ2084.2
-048800*             THIS TEST CHECKS THE RESULTS OF CHANGING THE VALUES SQ2084.2
-048900*             OF THE DATA-NAMES IN THE LINAGE-CLAUSE PRIOR TO A   SQ2084.2
-049000*             WRITE ADVANCING PAGE OPERATION.                     SQ2084.2
+048800*                                                                         
+048900*                                                                         
+049000*                                                                         
 049100     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 049200     MOVE "LINAGE AFT WRT PAGE" TO FEATURE.                       SQ2084.2
 049300     MOVE "WRITE-TEST-GF-03" TO PAR-NAME.                         SQ2084.2
@@ -466,8 +466,8 @@
 051400     MOVE 16 TO DL1-LINE-NO.                                      SQ2084.2
 051500     PERFORM PRINT-DETAIL-2 120 TIMES.                            SQ2084.2
 051600 WRITE-TEST-GF-04.                                                SQ2084.2
-051700*             THIS TEST CHECKS THE MINIMUM LINAGE VALUE OF 1      SQ2084.2
-051800*             AND THE MINIMUM TOP VALUE OF ZERO.                  SQ2084.2
+051700*                                                                         
+051800*                                                                         
 051900     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 052000     MOVE "MIN LINAGE / 0 TOP" TO FEATURE.                        SQ2084.2
 052100     MOVE "WRITE-TEST-GF-04" TO PAR-NAME.                         SQ2084.2
@@ -484,8 +484,8 @@
 053200     MOVE 1 TO DL2-LINE-NO.                                       SQ2084.2
 053300     PERFORM PRINT-DETAIL-3 10 TIMES.                             SQ2084.2
 053400 WRITE-TEST-GF-05.                                                SQ2084.2
-053500*             THIS TEST CHECKS THE MINIMUM FOOTING VALUE OF 1     SQ2084.2
-053600*             AND THE MINIMUM BOTTOM VALUE OF ZERO.               SQ2084.2
+053500*                                                                         
+053600*                                                                         
 053700     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 053800     MOVE "MIN FOOTING / 0 BOTM" TO FEATURE.                      SQ2084.2
 053900     MOVE "WRITE-TEST-GF-05" TO PAR-NAME.                         SQ2084.2
@@ -502,9 +502,9 @@
 055000     MOVE 1 TO DL2-LINE-NO.                                       SQ2084.2
 055100     PERFORM PRINT-DETAIL-4 10 TIMES.                             SQ2084.2
 055200 WRITE-TEST-GF-06.                                                SQ2084.2
-055300*             THIS TEST SHOWS THE RESULTS OF A WRITE BEFORE       SQ2084.2
-055400*             OPERATION WITH AN EOP PHRASE.  LINAGE AND FOOTING   SQ2084.2
-055500*             VALUES ARE SPECIFIED AND EQUAL.                     SQ2084.2
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
 055600     MOVE SPACE TO DUMMY-RECORD.                                  SQ2084.2
 055700     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 055800     MOVE "WRITE BEFORE" TO FEATURE.                              SQ2084.2
@@ -530,9 +530,9 @@
 057800     MOVE 1 TO DL3-LINE-NO.                                       SQ2084.2
 057900     PERFORM WRITE-BEFORE 60 TIMES.                               SQ2084.2
 058000 WRITE-TEST-GF-07.                                                SQ2084.2
-058100*             THIS TEST SHOWS THE RESULTS OF A WRITE AFTER        SQ2084.2
-058200*             OPERATION WITH AN EOP PHRASE.  LINAGE AND FOOTING   SQ2084.2
-058300*             VALUES ARE SPECIFIED AND EQUAL.                     SQ2084.2
+058100*                                                                         
+058200*                                                                         
+058300*                                                                         
 058400     MOVE SPACE TO DUMMY-RECORD.                                  SQ2084.2
 058500     PERFORM INITIALIZE-PAGE.                                     SQ2084.2
 058600     MOVE "WRITE AFTER" TO FEATURE.                               SQ2084.2

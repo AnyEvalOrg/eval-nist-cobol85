@@ -13,26 +13,14 @@ TEST RESULT OF SM105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- COPY SORT DESCR      FAIL* COPY-TEST-1                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000009000000900009                                                      
-                                     CORRECT =  000009070000900009                                                      
-                                                                                                                        
+ COPY SORT DESCR      PASS  COPY-TEST-1                                                                                 
  COPY SORT DESCR      PASS  COPY-TEST-2                                                                                 
  COPY SORT DESCR      PASS  COPY-TEST-3                                                                                 
- COPY SORT DESCR      FAIL* COPY-TEST-4                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000206001000200002                                                      
-                                     CORRECT =  000206001006200002                                                      
-                                                                                                                        
+ COPY SORT DESCR      PASS  COPY-TEST-4                                                                                 
  COPY SORT DESCR      PASS  COPY-TEST-5                                                                                 
  COPY SORT DESCR      PASS  COPY-TEST-6                                                                                 
  COPY SORT DESCR      PASS  COPY-TEST-7                                                                                 
- COPY SORT DESCR      FAIL* COPY-TEST-8                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000900009000000000                                                      
-                                     CORRECT =  000100009000000000                                                      
-                                                                                                                        
+ COPY SORT DESCR      PASS  COPY-TEST-8                                                                                 
  COPY SORT DESCR      PASS  COPY-TEST-9                                                                                 
  ***********************************************************************************************************************
                                                                                                                         
@@ -41,8 +29,8 @@ TEST RESULT OF SM105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  SM105A    NTIS DISTRIBUTION COBOL 85                  
                                                                                                                         
-                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    009 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

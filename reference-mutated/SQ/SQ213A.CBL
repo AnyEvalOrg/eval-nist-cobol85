@@ -1,25 +1,25 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2134.2
 000200 PROGRAM-ID.                                                      SQ2134.2
 000300     SQ213A.                                                      SQ2134.2
-000400****************************************************************  SQ2134.2
-000500*                                                              *  SQ2134.2
-000600*    VALIDATION FOR:-                                          *  SQ2134.2
-000700*    " HIGH       ".                                              SQ2134.2
-000800*                                                              *  SQ2134.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2134.2
-001000*    "4.2 ".                                                      SQ2134.2
-001100*                                                              *  SQ2134.2
-001200*         THE ROUTINE SQ213A TESTS THE USE OF THE USE AFTER ERROR SQ2134.2
-001300*    PROCEDURE FOR EXTEND AND FILE-NAME SERIES.  SQ213A IS        SQ2134.2
-001400*    BASICALLY A REWRITE OF SQ205 WITH THE ADDITION OF THE USE    SQ2134.2
-001500*    PROCEDURES.  MAGNETIC TAPE FILE SQ-FS1 IS FIRST CREATED WITH SQ2134.2
-001600*    750 RECORDS.  THEN IT IS REOPENED WITH EXTEND AND AN         SQ2134.2
-001700*    ADDITIONAL 250 RECORDS ARE WRITTEN.  FINALLY IT IS READ AND  SQ2134.2
-001800*    VALIDATED FOR CORRECTNESS.  MASS-STORAGE FILE SQ-FS2 IS      SQ2134.2
-001900*    CREATED AS A SINGLE OUTPUT FILE WITH 1000 RECORDS, AFTERWHICHSQ2134.2
-002000*    IT IS READ AND VALIDATED FOR CORRECTNESS.  THE TEST FOR THE  SQ2134.2
-002100*    USE PROCEDURE MERELY INDICATES WHETHER OR NOT THE USE        SQ2134.2
-002200*    PROCEDURES WERE REFERENCED.                                  SQ2134.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
 002300 ENVIRONMENT DIVISION.                                            SQ2134.2
 002400 CONFIGURATION SECTION.                                           SQ2134.2
 002500 SOURCE-COMPUTER.                                                 SQ2134.2
@@ -297,7 +297,7 @@
 034700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2134.2
 034800      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2134.2
 034900      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2134.2
-035000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2134.2
+035000*                                                                         
 035100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2134.2
 035200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2134.2
 035300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2134.2
@@ -360,10 +360,10 @@
 041000     EXIT.                                                        SQ2134.2
 041100 SECT-SQ213A-0003 SECTION.                                        SQ2134.2
 041200 OPEN-INIT-GF-01.                                                 SQ2134.2
-041300*             THIS IS A TEST FOR OPEN EXTEND FOR MAGNETIC TAPE.   SQ2134.2
-041400*             A FILE OF 750 RECORDS IS CREATED THEN RE-OPENED     SQ2134.2
-041500*             WITH EXTEND.  250 RECORDS ARE ADDED TO THE FILE.    SQ2134.2
-041600*             THE FILE IS THEN READ AND VALIDATED.                SQ2134.2
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
 041700     MOVE "SQ-FS1" TO XFILE-NAME (1).                             SQ2134.2
 041800     MOVE "R1-F-G" TO XRECORD-NAME (1).                           SQ2134.2
 041900     MOVE "SQ213"  TO XPROGRAM-NAME (1).                          SQ2134.2
@@ -470,8 +470,8 @@
 052000 READ-CLOSE-F1-01.                                                SQ2134.2
 052100     CLOSE SQ-FS1.                                                SQ2134.2
 052200 WRITE-INIT-002.                                                  SQ2134.2
-052300*         THIS TEST CREATES A MASS-STORAGE FILE OF 1000 RECORDS.  SQ2134.2
-052400*         THEN IT IS READ AND VALIDATED FOR CORRECTNESS.          SQ2134.2
+052300*                                                                         
+052400*                                                                         
 052500     MOVE "SQ-FS2" TO XFILE-NAME (2).                             SQ2134.2
 052600     MOVE "R1-F-G" TO XRECORD-NAME (2).                           SQ2134.2
 052700     MOVE "SQ213"  TO XPROGRAM-NAME (2).                          SQ2134.2

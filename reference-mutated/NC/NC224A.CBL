@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC2244.2
 000200 PROGRAM-ID.                                                      NC2244.2
 000300     NC224A.                                                      NC2244.2
-000400****************************************************************  NC2244.2
-000500*                                                              *  NC2244.2
-000600*    VALIDATION FOR:-                                          *  NC2244.2
-000700*                                                              *  NC2244.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2244.2
-000900*                                                              *  NC2244.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2244.2
-001100*                                                              *  NC2244.2
-001200****************************************************************  NC2244.2
-001300*                                                              *  NC2244.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2244.2
-001500*                                                              *  NC2244.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2244.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2244.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2244.2
-001900*                                                              *  NC2244.2
-002000****************************************************************  NC2244.2
-002100*    PROGRAM NC224A TESTS THE USE OF REFERENCE MODIFICATION    *  NC2244.2
-002200*    ON A VARIETY OF DATA ITEMS USING LITERALS, DATA NAMES     *  NC2244.2
-002300*    AND ARITHMETIC EXPRESSIONS AS PARAMETERS.                 *  NC2244.2
-002400*    SUBSCRIPTED AND QUALIFIED DATA ITEMS ARE ALSO USED.       *  NC2244.2
-002500*                                                              *  NC2244.2
-002600****************************************************************  NC2244.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC2244.2
 002800 CONFIGURATION SECTION.                                           NC2244.2
 002900 SOURCE-COMPUTER.                                                 NC2244.2
@@ -57,7 +57,7 @@
 005700     05      TABLE-1             PIC 9(8)                         NC2244.2
 005800                                 OCCURS 2.                        NC2244.2
 005900   03         TEST-3-DATA        PIC X(6).                        NC2244.2
-006000*                                                                 NC2244.2
+006000*                                                                         
 006100 01  TEST-RESULTS.                                                NC2244.2
 006200     02 FILLER                   PIC X      VALUE SPACE.          NC2244.2
 006300     02 FEATURE                  PIC X(20)  VALUE SPACE.          NC2244.2
@@ -245,7 +245,7 @@
 024700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2244.2
 024800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2244.2
 024900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2244.2
-025000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2244.2
+025000*                                                                         
 025100                                                                  NC2244.2
 025200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2244.2
 025300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2244.2
@@ -315,7 +315,7 @@
 031700 CCVS1-EXIT.                                                      NC2244.2
 031800     EXIT.                                                        NC2244.2
 031900 SECT-NC224A-001 SECTION.                                         NC2244.2
-032000*                                                                 NC2244.2
+032000*                                                                         
 032100 REF-INIT-GF-1.                                                   NC2244.2
 032200     MOVE   "REFERENCE MODIFICATION" TO FEATURE.                  NC2244.2
 032300     MOVE   "IV-22 4.3.8.3" TO ANSI-REFERENCE.                    NC2244.2
@@ -343,7 +343,7 @@
 034500     PERFORM FAIL.                                                NC2244.2
 034600 REF-WRITE-GF-1-1.                                                NC2244.2
 034700     PERFORM PRINT-DETAIL.                                        NC2244.2
-034800*                                                                 NC2244.2
+034800*                                                                         
 034900 REF-TEST-GF-1-2.                                                 NC2244.2
 035000     ADD     1       TO REC-CT.                                   NC2244.2
 035100     MOVE   "REF-TEST-GF-1-2" TO PAR-NAME.                        NC2244.2
@@ -362,7 +362,7 @@
 036400     PERFORM FAIL.                                                NC2244.2
 036500 REF-WRITE-GF-1-2.                                                NC2244.2
 036600     PERFORM PRINT-DETAIL.                                        NC2244.2
-036700*                                                                 NC2244.2
+036700*                                                                         
 036800 REF-TEST-GF-1-3.                                                 NC2244.2
 036900     ADD     1       TO REC-CT.                                   NC2244.2
 037000     MOVE   "REF-TEST-GF-1-3" TO PAR-NAME.                        NC2244.2
@@ -382,7 +382,7 @@
 038400     PERFORM FAIL.                                                NC2244.2
 038500 REF-WRITE-GF-1-3.                                                NC2244.2
 038600     PERFORM PRINT-DETAIL.                                        NC2244.2
-038700*                                                                 NC2244.2
+038700*                                                                         
 038800 REF-INIT-GF-2.                                                   NC2244.2
 038900     MOVE   "IV-22 4.3.8.3" TO ANSI-REFERENCE.                    NC2244.2
 039000     MOVE    1234    TO TEST-2-DATA.                              NC2244.2
@@ -409,7 +409,7 @@
 041100     PERFORM FAIL.                                                NC2244.2
 041200 REF-WRITE-GF-2-1.                                                NC2244.2
 041300     PERFORM PRINT-DETAIL.                                        NC2244.2
-041400*                                                                 NC2244.2
+041400*                                                                         
 041500 REF-TEST-GF-2-2.                                                 NC2244.2
 041600     ADD     1       TO REC-CT.                                   NC2244.2
 041700     MOVE   "REF-TEST-GF-2-2" TO PAR-NAME.                        NC2244.2
@@ -432,7 +432,7 @@
 043400 REF-TEST-GF-2-3.                                                 NC2244.2
 043500     ADD     1       TO REC-CT.                                   NC2244.2
 043600     MOVE   "REF-TEST-GF-2-3" TO PAR-NAME.                        NC2244.2
-043700     IF      TEST-2-DATA (10 - 7: 6 + 2 - 5) = "12O"              NC2244.2
+043700     IF      TEST-2-DATA (10 - 7: 6 + 2 - 5) = "123"              NC2244.2
 043800             PERFORM PASS                                         NC2244.2
 043900             GO TO REF-WRITE-GF-2-3                               NC2244.2
 044000     ELSE                                                         NC2244.2
@@ -441,14 +441,14 @@
 044300     PERFORM DE-LETE.                                             NC2244.2
 044400     GO TO REF-WRITE-GF-2-3.                                      NC2244.2
 044500 REF-FAIL-GF-2-3.                                                 NC2244.2
-044600     MOVE   "12O" TO CORRECT-X                                    NC2244.2
+044600     MOVE   "123" TO CORRECT-X                                    NC2244.2
 044700     MOVE    TEST-2-DATA (10 - 7: 6 + 2 - 5)                      NC2244.2
 044800          TO COMPUTED-X                                           NC2244.2
 044900     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
 045000     PERFORM FAIL.                                                NC2244.2
 045100 REF-WRITE-GF-2-3.                                                NC2244.2
 045200     PERFORM PRINT-DETAIL.                                        NC2244.2
-045300*                                                                 NC2244.2
+045300*                                                                         
 045400 REF-INIT-GF-3.                                                   NC2244.2
 045500     MOVE   "IV-22 4.3.8.3" TO ANSI-REFERENCE.                    NC2244.2
 045600     MOVE   "ABCDEF" TO TEST-3-DATA IN TEST-3-DATA-GRP.           NC2244.2
@@ -475,7 +475,7 @@
 047700     PERFORM FAIL.                                                NC2244.2
 047800 REF-WRITE-GF-3-1.                                                NC2244.2
 047900     PERFORM PRINT-DETAIL.                                        NC2244.2
-048000*                                                                 NC2244.2
+048000*                                                                         
 048100 REF-TEST-GF-3-2.                                                 NC2244.2
 048200     ADD     1       TO REC-CT.                                   NC2244.2
 048300     MOVE   "REF-TEST-GF-3-2" TO PAR-NAME.                        NC2244.2
@@ -495,7 +495,7 @@
 049700     PERFORM FAIL.                                                NC2244.2
 049800 REF-WRITE-GF-3-2.                                                NC2244.2
 049900     PERFORM PRINT-DETAIL.                                        NC2244.2
-050000*                                                                 NC2244.2
+050000*                                                                         
 050100 REF-TEST-GF-3-3.                                                 NC2244.2
 050200     ADD     1       TO REC-CT.                                   NC2244.2
 050300     MOVE   "REF-TEST-GF-3-3" TO PAR-NAME.                        NC2244.2
@@ -516,7 +516,7 @@
 051800     PERFORM FAIL.                                                NC2244.2
 051900 REF-WRITE-GF-3-3.                                                NC2244.2
 052000     PERFORM PRINT-DETAIL.                                        NC2244.2
-052100*                                                                 NC2244.2
+052100*                                                                         
 052200 REF-INIT-GF-4.                                                   NC2244.2
 052300     MOVE   "IV-22 4.3.8.3" TO ANSI-REFERENCE.                    NC2244.2
 052400     MOVE   "ABCDEF" TO TEST-4-DATA.                              NC2244.2
@@ -528,7 +528,7 @@
 053000     GO TO   REF-INIT-GF-5.                                       NC2244.2
 053100 REF-TEST-GF-4-1.                                                 NC2244.2
 053200     MOVE   "REF-TEST-GF-4-1" TO PAR-NAME.                        NC2244.2
-053300     IF      TEST-4-DATA (3:) = " CD LF"                          NC2244.2
+053300     IF      TEST-4-DATA (3:) = " CD EF"                          NC2244.2
 053400             PERFORM PASS                                         NC2244.2
 053500             GO TO REF-WRITE-GF-4-1                               NC2244.2
 053600     ELSE                                                         NC2244.2
@@ -537,7 +537,7 @@
 053900     PERFORM DE-LETE.                                             NC2244.2
 054000     GO TO REF-WRITE-GF-4-1.                                      NC2244.2
 054100 REF-FAIL-GF-4-1.                                                 NC2244.2
-054200     MOVE   " CD LF" TO CORRECT-X                                 NC2244.2
+054200     MOVE   " CD EF" TO CORRECT-X                                 NC2244.2
 054300     MOVE    TEST-4-DATA (3:) TO COMPUTED-X                       NC2244.2
 054400     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
 054500     PERFORM FAIL.                                                NC2244.2
@@ -547,7 +547,7 @@
 054900 REF-TEST-GF-4-2.                                                 NC2244.2
 055000     ADD     1       TO REC-CT.                                   NC2244.2
 055100     MOVE   "REF-TEST-GF-4-2" TO PAR-NAME.                        NC2244.2
-055200     IF      TEST-4-DATA (WS-2: WS-3) = "B4C"                     NC2244.2
+055200     IF      TEST-4-DATA (WS-2: WS-3) = "B C"                     NC2244.2
 055300             PERFORM PASS                                         NC2244.2
 055400             GO TO REF-WRITE-GF-4-2                               NC2244.2
 055500     ELSE                                                         NC2244.2
@@ -556,13 +556,13 @@
 055800     PERFORM DE-LETE.                                             NC2244.2
 055900     GO TO REF-WRITE-GF-4-2.                                      NC2244.2
 056000 REF-FAIL-GF-4-2.                                                 NC2244.2
-056100     MOVE   "B4C" TO CORRECT-X                                    NC2244.2
+056100     MOVE   "B C" TO CORRECT-X                                    NC2244.2
 056200     MOVE    TEST-4-DATA (WS-2: WS-3) TO COMPUTED-X               NC2244.2
 056300     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
 056400     PERFORM FAIL.                                                NC2244.2
 056500 REF-WRITE-GF-4-2.                                                NC2244.2
 056600     PERFORM PRINT-DETAIL.                                        NC2244.2
-056700*                                                                 NC2244.2
+056700*                                                                         
 056800 REF-TEST-GF-4-3.                                                 NC2244.2
 056900     ADD     1       TO REC-CT.                                   NC2244.2
 057000     MOVE   "REF-TEST-GF-4-3" TO PAR-NAME.                        NC2244.2
@@ -582,9 +582,9 @@
 058400     PERFORM FAIL.                                                NC2244.2
 058500 REF-WRITE-GF-4-3.                                                NC2244.2
 058600     PERFORM PRINT-DETAIL.                                        NC2244.2
-058700*                                                                 NC2244.2
+058700*                                                                         
 058800 REF-INIT-GF-5.                                                   NC2244.2
-058900*    ===-->  SUBSCRIPTED DATA-NAME  <--===                        NC2244.2
+058900*                                                                         
 059000     MOVE   "IV-22 4.3.8.3.3 SR4" TO ANSI-REFERENCE.              NC2244.2
 059100     MOVE    12345678 TO TABLE-1 (3 2).                           NC2244.2
 059200     MOVE    1       TO REC-CT.                                   NC2244.2
@@ -610,9 +610,9 @@
 061200     PERFORM FAIL.                                                NC2244.2
 061300 REF-WRITE-GF-5-1.                                                NC2244.2
 061400     PERFORM PRINT-DETAIL.                                        NC2244.2
-061500*                                                                 NC2244.2
+061500*                                                                         
 061600 REF-INIT-GF-6.                                                   NC2244.2
-061700*    ===-->  QUALIFIED DATA-NAME  <--===                          NC2244.2
+061700*                                                                         
 061800     MOVE   "IV-22 4.3.8.3.3 SR4" TO ANSI-REFERENCE.              NC2244.2
 061900     MOVE   "OPQRST" TO TEST-3-DATA OF TEST-5-TABLE.              NC2244.2
 062000     MOVE    1       TO REC-CT.                                   NC2244.2
@@ -639,7 +639,7 @@
 064100     PERFORM FAIL.                                                NC2244.2
 064200 REF-WRITE-GF-6-1.                                                NC2244.2
 064300     PERFORM PRINT-DETAIL.                                        NC2244.2
-064400*                                                                 NC2244.2
+064400*                                                                         
 064500 CCVS-EXIT SECTION.                                               NC2244.2
 064600 CCVS-999999.                                                     NC2244.2
 064700     GO TO CLOSE-FILES.                                           NC2244.2

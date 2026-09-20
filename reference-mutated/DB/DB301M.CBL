@@ -1,8 +1,8 @@
 000100 IDENTIFICATION DIVISION.                                         DB3014.2
 000200 PROGRAM-ID.                                                      DB3014.2
 000300     DB301M.                                                      DB3014.2
-000400*THE FOLLOWING PROGRAM TESTS THE FLAGGING OF LEVEL 1              DB3014.2
-000500*FEATURES OF THE DEBUGGING MODULE.                                DB3014.2
+000400*                                                                         
+000500*                                                                         
 000600 ENVIRONMENT DIVISION.                                            DB3014.2
 000700 CONFIGURATION SECTION.                                           DB3014.2
 000800 SOURCE-COMPUTER.                                                 DB3014.2
@@ -31,7 +31,7 @@
 003100                                                                  DB3014.2
 003200                                                                  DB3014.2
 003300     USE FOR DEBUGGING ON ALL PROCEDURES.                         DB3014.2
-003400*Message expected for above statement: NON-CONFORMING STANDARD    DB3014.2
+003400*                                                                         
 003500                                                                  DB3014.2
 003600                                                                  DB3014.2
 003700 END DECLARATIVES.                                                DB3014.2
@@ -42,4 +42,4 @@
 004200     STOP RUN.                                                    DB3014.2
 004300                                                                  DB3014.2
 004400                                                                  DB3014.2
-004500*TOTAL NUMBER OF FLAGS EXPECTED = 1.                              DB3014.2
+004500*                                                                         

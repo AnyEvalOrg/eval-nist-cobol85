@@ -1,37 +1,37 @@
 000100 IDENTIFICATION DIVISION.                                         SM2074.2
 000200 PROGRAM-ID.                                                      SM2074.2
 000300     SM207A.                                                      SM2074.2
-000400****************************************************************  SM2074.2
-000500*                                                              *  SM2074.2
-000600*    VALIDATION FOR:-                                          *  SM2074.2
-000700*                                                              *  SM2074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2074.2
-000900*                                                              *  SM2074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2074.2
-001100*                                                              *  SM2074.2
-001200****************************************************************  SM2074.2
-001300*                                                              *  SM2074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2074.2
-001500*                                                              *  SM2074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2074.2
-001900*                                                              *  SM2074.2
-002000****************************************************************  SM2074.2
-002100*                                                              *  SM2074.2
-002200*    PROGRAM SM207A TESTS THE "COPY" STATEMENT USING TWO       *  SM2074.2
-002300*    DIFFERENT LIBRARY NAMES TO QUALIFY THE SAME TEXT NAME.    *  SM2074.2
-002400*                                                              *  SM2074.2
-002500****************************************************************  SM2074.2
-002600*            VP-ROUTINE CONTROL OF LIBRARY CREATION               SM2074.2
-002700*            --------------------------------------               SM2074.2
-002800*    WHEN THE LIBRARIES ARE PREPARED (CREATED) IN PREPARATION FOR SM2074.2
-002900*    RUNNING OF SM207, THE TEXT WHICH WILL BE PLACED IN THE       SM2074.2
-003000*    LIBRARY EQUATED TO X-47 SHOULD BE SELECTED FROM THE          SM2074.2
-003100*    POPULATION FILE USING THE PLUS-CARD "+ALTLB".  THE TEXT      SM2074.2
-003200*    WHICH WILL BE PLACED IN THE LIBRARY EQUATED TO X-48 SHOULD   SM2074.2
-003300*    BE SELECTED FROM THE POPULATION FILE USING THE PLUS-CARD     SM2074.2
-003400*    "+ALTL1,,,ALTLB".                                            SM2074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500                                                                  SM2074.2
 003600                                                                  SM2074.2
 003700 ENVIRONMENT DIVISION.                                            SM2074.2
@@ -237,7 +237,7 @@
 023900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2074.2
 024000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2074.2
 024100      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2074.2
-024200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2074.2
+024200*                                                                         
 024300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2074.2
 024400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2074.2
 024500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2074.2
@@ -308,16 +308,16 @@
 031000 QUAL-TEST-01.                                                    SM2074.2
 031100     MOVE "NOTHING COPIED" TO RE-MARK.                            SM2074.2
 031200     PERFORM FAIL.                                                SM2074.2
-031300*                                                                 SM2074.2
-031400*********************** COPY STATEMENT USED **********************SM2074.2
-031500*                                                                 SM2074.2
-031600*    COPY ALTLB OF                                                SM2074.2
-031700*    ".".                                                         SM2074.2
-031800*                                                                 SM2074.2
-031900******************** COPIED TEXT BEGINS BELOW ********************SM2074.2
+031300*                                                                         
+031400*                                                                         
+031500*                                                                         
+031600*                                                                         
+031700*                                                                         
+031800*                                                                         
+031900*                                                                         
 032000     COPY ALTLB OF                                                SM2074.2
 032100     ".".                                                         SM2074.2
-032200*********************** END OF COPIED TEXT ***********************SM2074.2
+032200*                                                                         
 032300     GO TO QUAL-WRITE-01.                                         SM2074.2
 032400 QUAL-DELETE-01.                                                  SM2074.2
 032500     PERFORM DE-LETE.                                             SM2074.2
@@ -327,16 +327,16 @@
 032900     PERFORM PRINT-DETAIL.                                        SM2074.2
 033000 QUAL-TEST-02.                                                    SM2074.2
 033100     ADD 1 TO ERROR-COUNTER.                                      SM2074.2
-033200*                                                                 SM2074.2
-033300*********************** COPY STATEMENT USED **********************SM2074.2
-033400*                                                                 SM2074.2
-033500*    COPY ALTLB IN                                                SM2074.2
-033600*    "../copyalt".                                                SM2074.2
-033700*                                                                 SM2074.2
-033800******************** COPIED TEXT BEGINS BELOW ********************SM2074.2
+033200*                                                                         
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
 033900     COPY ALTLB IN                                                SM2074.2
 034000     "../copyalt".                                                SM2074.2
-034100*********************** END OF COPIED TEXT ***********************SM2074.2
+034100*                                                                         
 034200     IF P-OR-F IS EQUAL TO "PASS "                                SM2074.2
 034300         PERFORM FAIL                                             SM2074.2
 034400         MOVE "TEXT COPIED FROM WRONG LIBRARY" TO RE-MARK         SM2074.2

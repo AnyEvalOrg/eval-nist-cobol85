@@ -13,19 +13,11 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- ADD CORRESPONDING    FAIL* ADD-TEST-F3-1                                                                               
-                                                                                                                        
-                                     COMPUTED= 11223344506677889900                                                     
-                                     CORRECT = 31223344506677889900  VI-74 6.6.4 GR3                                    
-                                                                                                                        
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-1                                                                               
  ADD CORRESPONDING    PASS  ADD-TEST-F3-2                                                                               
  ADD CORRESPONDING    PASS  ADD-TEST-F3-3-1                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-3-2                                                                             
- ADD CORRESPONDING    FAIL* ADD-TEST-F3-4                                                                               
-                                                                                                                        
-                                     COMPUTED= 00223344000000000000                                                     
-                                     CORRECT = 0022334400000N000000  VI-74 6.6.4 GR3                                    
-                                                                                                                        
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-4                                                                               
  ADD CORRESPONDING    PASS  ADD-TEST-F3-5-1                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-5-2                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-5-3                                                                             
@@ -37,22 +29,14 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD CORRESPONDING    PASS  ADD-TEST-F3-7-4                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-7-5                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-8-1                                                                             
- ADD CORRESPONDING    FAIL* ADD-TEST-F3-8-2               WRONGLY AFFECTED BY SIZE ERROR                                
-                                                                                                                        
-                                     COMPUTED= 999999999999                                                             
-                                     CORRECT = 9W9999999999          VI-74 6.6.4 GR3                                    
-                                                                                                                        
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-8-2                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-9-1                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-9-2                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-9-3                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-10-1                                                                            
  ADD CORRESPONDING    PASS  ADD-TEST-F3-10-2                                                                            
  ADD CORRESPONDING    PASS  ADD-TEST-F3-10-3                                                                            
- ADD CORRESPONDING    PASS  ADD-TEST-F3-11-1                                                                                                                                                                                                    
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-11-1                                                                            
  ADD CORRESPONDING    PASS  ADD-TEST-F3-11-2                                                                            
  ADD CORRESPONDING    PASS  ADD-TEST-F3-12                                                                              
  ADD CORRESPONDING    PASS  ADD-TEST-F3-13                                                                              
@@ -64,7 +48,11 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD CORRESPONDING    PASS  ADD-TEST-F3-15-2   .02                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-15-3   .03                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-15-4   .04                                                                      
- ADD CORRESPONDING    PASS  ADD-TEST-F3-16-1   .01                                                                      
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-16-1   .01                                                                                                                                                                                              
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
  ADD CORRESPONDING    PASS  ADD-TEST-F3-16-2   .02                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-16-3   .03                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-16-4   .04                                                                      
@@ -103,11 +91,7 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD CORRESPONDING    PASS  ADD-TEST-F3-23-5   .04                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-24-1   .01                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-24-2   .02                                                                      
- ADD CORRESPONDING    PASS  ADD-TEST-F3-24-3   .03                                                                                                                                                                                              
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-24-3   .03                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-24-4   .04                                                                      
  ADD CORRESPONDING    PASS  ADD-TEST-F3-24-5   .05                                                                      
  ***********************************************************************************************************************
@@ -117,8 +101,12 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC202A                                                
                                                                                                                         
-                                                    074 OF 077  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                 
+                                                    077 OF 077  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                                                                                                                                         
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

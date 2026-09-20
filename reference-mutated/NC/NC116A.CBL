@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1164.2
 000200 PROGRAM-ID.                                                      NC1164.2
 000300     NC116A.                                                      NC1164.2
-000400****************************************************************  NC1164.2
-000500*                                                              *  NC1164.2
-000600*    VALIDATION FOR:-                                          *  NC1164.2
-000700*                                                              *  NC1164.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1164.2
-000900*                                                              *  NC1164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1164.2
-001100*                                                              *  NC1164.2
-001200****************************************************************  NC1164.2
-001300*                                                              *  NC1164.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1164.2
-001500*                                                              *  NC1164.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1164.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1164.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1164.2
-001900*                                                              *  NC1164.2
-002000****************************************************************  NC1164.2
-002100*                                                                 NC1164.2
-002200*    PROGRAM NC116A TESTS THE USE OF THE SIGN CLAUSE              NC1164.2
-002300*    USING THE "IF" AND "MOVE" STATEMENTS.  ALL COMBINATIONS      NC1164.2
-002400*    OF THE SIGN CLAUSE PHRASES ARE TESTED USING DATA ITEMS OF    NC1164.2
-002500*    VARIOUS LENGTHS.                                             NC1164.2
-002600*                                                                 NC1164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1164.2
 002800 CONFIGURATION SECTION.                                           NC1164.2
 002900 SOURCE-COMPUTER.                                                 NC1164.2
@@ -40,7 +40,7 @@
 004000 01  PRINT-REC PICTURE X(120).                                    NC1164.2
 004100 01  DUMMY-RECORD PICTURE X(120).                                 NC1164.2
 004200 WORKING-STORAGE SECTION.                                         NC1164.2
-004300*=======================                                          NC1164.2
+004300*                                                                         
 004400 01  TEST-17-DATA  SIGN TRAILING.                                 NC1164.2
 004500   03  TEST-17-A          PIC S9(4).                              NC1164.2
 004600   03  TEST-17-B          PIC S9(4).                              NC1164.2
@@ -337,7 +337,7 @@
 033900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1164.2
 034000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1164.2
 034100      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1164.2
-034200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1164.2
+034200*                                                                         
 034300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1164.2
 034400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1164.2
 034500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1164.2
@@ -417,8 +417,8 @@
 041900     MOVE "SIGN LEADING SEPARATE" TO FEATURE.                     NC1164.2
 042000     MOVE "LEADING SIGN EQUAL PLUS" TO RE-MARK.                   NC1164.2
 042100 SIG-TEST-GF-1-1.                                                 NC1164.2
-042200*        THIS TEST CHECKS THE SIGN AND THE NUMERIC CHARACTERS     NC1164.2
-042300*    OF AN ITEM DEFINED AS SIGN IS LEADING SEPARATE CHARACTER.    NC1164.2
+042200*                                                                         
+042300*                                                                         
 042400     IF TEST1-AN-1 EQUAL TO "+"                                   NC1164.2
 042500         PERFORM PASS                                             NC1164.2
 042600         GO TO SIG-WRTE-GF-1-1.                                   NC1164.2
@@ -477,8 +477,8 @@
 047900     MOVE 1 TO REC-CT.                                            NC1164.2
 048000     MOVE "SIGN TRLNG SEPARATE" TO FEATURE.                       NC1164.2
 048100     MOVE "TRAILING SIGN EQUAL PLUS" TO RE-MARK.                  NC1164.2
-048200*        THIS TEST CHECKS THE SIGN AND THE NUMERIC CHARACTERS     NC1164.2
-048300*    OF AN ITEM DEFINED AS SIGN IS TRAILING SEPARATE CHARACTER.   NC1164.2
+048200*                                                                         
+048300*                                                                         
 048400 SIG-TEST-GF-2-1.                                                 NC1164.2
 048500     IF TEST2-AN-1 EQUAL TO "+"                                   NC1164.2
 048600         PERFORM PASS                                             NC1164.2
@@ -539,8 +539,8 @@
 054100     MOVE "SIGN LEADING" TO FEATURE.                              NC1164.2
 054200     MOVE 1 TO REC-CT.                                            NC1164.2
 054300     MOVE "POSITIVE NUMERIC ITEM" TO RE-MARK.                     NC1164.2
-054400*        THIS TEST CHECKS ALL BUT THE LEADING CHARACTER OF AN     NC1164.2
-054500*    ITEM DEFINED AS SIGN IS LEADING. (NOT SEPARATE CHAR.)        NC1164.2
+054400*                                                                         
+054500*                                                                         
 054600 SIG-TEST-GF-3-1.                                                 NC1164.2
 054700     IF TEST3-AN-4 EQUAL TO "1275"                                NC1164.2
 054800         PERFORM PASS                                             NC1164.2
@@ -577,8 +577,8 @@
 057900     MOVE "SIGN TRAILING" TO FEATURE.                             NC1164.2
 058000     MOVE 1 TO REC-CT.                                            NC1164.2
 058100     MOVE "POSITIVE NUMERIC ITEM" TO RE-MARK.                     NC1164.2
-058200*        THIS TEST CHECKS ALL BUT THE TRAILING CHARACTER OF AN    NC1164.2
-058300*    ITEM DEFINED AS SIGN IS TRAILING. (NOT SEPARATE CHAR.)       NC1164.2
+058200*                                                                         
+058300*                                                                         
 058400 SIG-TEST-GF-4-1.                                                 NC1164.2
 058500     IF TEST4-AN-4 EQUAL TO "8362"                                NC1164.2
 058600         PERFORM PASS                                             NC1164.2
@@ -615,9 +615,9 @@
 061700     MOVE "COMPARE SIGNED ITEMS" TO FEATURE.                      NC1164.2
 061800     MOVE "LEADING SIGN" TO RE-MARK.                              NC1164.2
 061900     MOVE 1 TO REC-CT.                                            NC1164.2
-062000*        THIS SERIES OF TESTS COMPARE A SIGNED DISPLAY ITEM WITH  NC1164.2
-062100*    LEADING SIGN TO FOUR SIGNED AND UNSIGNED COMPUTATIONAL AND   NC1164.2
-062200*    DISPLAY ITEMS.                                               NC1164.2
+062000*                                                                         
+062100*                                                                         
+062200*                                                                         
 062300 SIG-TEST-GF-5-1.                                                 NC1164.2
 062400     IF DS-L-00008 EQUAL TO CS-00007-1                            NC1164.2
 062500              PERFORM PASS                                        NC1164.2
@@ -671,9 +671,9 @@
 067300     MOVE "SIG-TEST-GF-6" TO PAR-NAME.                            NC1164.2
 067400     MOVE "COMPARE SIGNED ITEMS" TO FEATURE.                      NC1164.2
 067500     MOVE "TRAILING SIGN" TO RE-MARK.                             NC1164.2
-067600*        THIS SERIES OF TESTS COMPARE A SIGNED DISPLAY ITEM WITH  NC1164.2
-067700*    TRAILING SIGN TO FOUR SIGNED AND UNSIGNED COMPUTATIONAL AND  NC1164.2
-067800*    DISPLAY ITEMS.                                               NC1164.2
+067600*                                                                         
+067700*                                                                         
+067800*                                                                         
 067900 SIG-TEST-GF-6-1.                                                 NC1164.2
 068000     MOVE 1 TO REC-CT.                                            NC1164.2
 068100     IF DS-T-00008 EQUAL TO CS-00007-2                            NC1164.2
@@ -728,9 +728,9 @@
 073000     MOVE "SIG-TEST-GF-7" TO PAR-NAME.                            NC1164.2
 073100     MOVE "COMPARE SIGNED ITEMS" TO FEATURE.                      NC1164.2
 073200     MOVE "LEADING SIGN SEPARATE CHARACTER" TO RE-MARK.           NC1164.2
-073300*        THIS SERIES OF TESTS COMPARE A SIGNED DISPLAY ITEM WITH  NC1164.2
-073400*    LEADING SIGN AND SEPARATE CHARACTER TO FOUR SIGNED AND       NC1164.2
-073500*    UNSIGNED COMPUTATIONAL AND DISPLAY ITEMS.                    NC1164.2
+073300*                                                                         
+073400*                                                                         
+073500*                                                                         
 073600 SIG-TEST-GF-7-1.                                                 NC1164.2
 073700     MOVE 1 TO REC-CT.                                            NC1164.2
 073800     IF DS-LS-00008 EQUAL TO CS-00007-3                           NC1164.2
@@ -785,9 +785,9 @@
 078700     MOVE "SIG-TEST-GF-8" TO PAR-NAME.                            NC1164.2
 078800     MOVE "COMPARE SIGN ITEMS" TO FEATURE.                        NC1164.2
 078900     MOVE "TRAILING SIGN SEPARATE CHARACTR" TO RE-MARK.           NC1164.2
-079000*        THIS SERIES OF TESTS COMPARE A SIGNED DISPLAY ITEM WITH  NC1164.2
-079100*    TRAILING SIGN AND SEPARATE CHARACTER TO FOUR SIGNED AND      NC1164.2
-079200*    UNSIGNED COMPUTATIONAL AND DISPLAY ITEMS.                    NC1164.2
+079000*                                                                         
+079100*                                                                         
+079200*                                                                         
 079300 SIG-TEST-GF-8-1.                                                 NC1164.2
 079400     MOVE 1 TO REC-CT.                                            NC1164.2
 079500     IF DS-TS-00008 EQUAL TO CS-00007-4                           NC1164.2
@@ -842,9 +842,9 @@
 084400     MOVE "SIG-TEST-GF-9" TO PAR-NAME.                            NC1164.2
 084500     MOVE "SENDING ITEM DS-LS" TO FEATURE.                        NC1164.2
 084600     MOVE 1 TO REC-CT.                                            NC1164.2
-084700*        THIS TEST MOVES A NUMERIC ITEM WITH SIGN IS LEADING      NC1164.2
-084800*    SEPARATE CHARACTER TO UNSIGNED DISPLAY, SIGNED DISPLAY,      NC1164.2
-084900*    UNSIGNED COMPUTATIONAL AND SIGNED COMPUTATIONAL ITEMS.       NC1164.2
+084700*                                                                         
+084800*                                                                         
+084900*                                                                         
 085000 SIG-TEST-GF-9-1.                                                 NC1164.2
 085100     MOVE DS-LS-5 TO DU-005.                                      NC1164.2
 085200     IF DU-005 EQUAL TO 91275                                     NC1164.2
@@ -864,13 +864,13 @@
 086600     PERFORM PRINT-DETAIL.                                        NC1164.2
 086700 SIG-TEST-GF-9-2.                                                 NC1164.2
 086800     MOVE DS-LS-5 TO DS-005.                                      NC1164.2
-086900     IF DS-005 EQUAL TO +91275                                    NC1164.2
+086900     IF DS-005 EQUAL TO +91975                                    NC1164.2
 087000         PERFORM PASS                                             NC1164.2
 087100         GO TO SIG-WRTE-GF-9-2.                                   NC1164.2
 087200 SIG-FAIL-GF-9-2.                                                 NC1164.2
 087300     PERFORM FAIL.                                                NC1164.2
 087400     MOVE DS-005 TO COMPUTED-18V0.                                NC1164.2
-087500     MOVE +91275 TO CORRECT-18V0.                                 NC1164.2
+087500     MOVE +91975 TO CORRECT-18V0.                                 NC1164.2
 087600     MOVE "MOVE DS-LS-5 TO DS-005" TO RE-MARK.                    NC1164.2
 087700 SIG-WRTE-GF-9-2.                                                 NC1164.2
 087800     MOVE 2 TO REC-CT.                                            NC1164.2
@@ -890,13 +890,13 @@
 089200     PERFORM PRINT-DETAIL.                                        NC1164.2
 089300 SIG-TEST-GF-9-4.                                                 NC1164.2
 089400     MOVE DS-LS-5 TO CS-005.                                      NC1164.2
-089500     IF CS-005 EQUAL TO +91225                                    NC1164.2
+089500     IF CS-005 EQUAL TO +91275                                    NC1164.2
 089600         PERFORM PASS                                             NC1164.2
 089700         GO TO SIG-WRTE-GF-9-4.                                   NC1164.2
 089800 SIG-FAIL-GF-9-4.                                                 NC1164.2
 089900     PERFORM FAIL.                                                NC1164.2
 090000     MOVE CS-005 TO COMPUTED-18V0.                                NC1164.2
-090100     MOVE +91225 TO CORRECT-18V0.                                 NC1164.2
+090100     MOVE +91275 TO CORRECT-18V0.                                 NC1164.2
 090200     MOVE "MOVE DS-LS-5 TO CS-005" TO RE-MARK.                    NC1164.2
 090300 SIG-WRTE-GF-9-4.                                                 NC1164.2
 090400     MOVE 4 TO REC-CT.                                            NC1164.2
@@ -905,9 +905,9 @@
 090700     MOVE "VI-42 5.12.4"  TO ANSI-REFERENCE.                      NC1164.2
 090800     MOVE "SIG-TEST-GF-10" TO PAR-NAME.                           NC1164.2
 090900     MOVE "SENDING ITEM DS-TS-4" TO FEATURE.                      NC1164.2
-091000*        THIS TEST MOVES A NUMERIC ITEM WITH SIGN IS TRAILING     NC1164.2
-091100*    SEPARATE CHARACTER TO UNSIGNED DISPLAY, SIGNED DISPLAY,      NC1164.2
-091200*    UNSIGNED COMPUTATIONAL AND SIGNED COMPUTATIONAL ITEMS.       NC1164.2
+091000*                                                                         
+091100*                                                                         
+091200*                                                                         
 091300 SIG-TEST-GF-10-1.                                                NC1164.2
 091400     MOVE DS-TS-4 TO DU-005.                                      NC1164.2
 091500     IF DU-005 NOT EQUAL TO 08036                                 NC1164.2
@@ -972,8 +972,8 @@
 097400     MOVE "VI-42 5.12.4"  TO ANSI-REFERENCE.                      NC1164.2
 097500     MOVE "SIG-TEST-GF-11" TO PAR-NAME.                           NC1164.2
 097600     MOVE "SIGN SEPARATE ITEMS" TO FEATURE.                       NC1164.2
-097700*        THIS TEST CONTAINS MOVE STATEMENTS WHERE BOTH THE        NC1164.2
-097800*    SENDING AND RECEIVING ITEM HAVE SEPARATE SIGN CHARACTERS.    NC1164.2
+097700*                                                                         
+097800*                                                                         
 097900 SIG-TEST-GF-11-1.                                                NC1164.2
 098000     MOVE DS-LS-4 TO WRK-DS-LS-5.                                 NC1164.2
 098100     IF GRP-09 EQUAL TO "-09127"                                  NC1164.2
@@ -1037,9 +1037,9 @@
 103900     MOVE "VI-42 5.12.4"  TO ANSI-REFERENCE.                      NC1164.2
 104000     MOVE "SIG-TEST-GF-12" TO PAR-NAME.                           NC1164.2
 104100     MOVE "SIGN CLAUSE ITEMS" TO FEATURE.                         NC1164.2
-104200*        THIS TEST CONTAINS MOVE STATEMENTS WITH A SIGN IS        NC1164.2
-104300*    SEPARATE SENDING ITEM AND SIGN CLAUSE RECEIVING ITEMS,       NC1164.2
-104400*    BUT RECEIVING ITEMS SIGNS ARE NOT SEPARATE.                  NC1164.2
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
 104500 SIG-TEST-GF-12-1.                                                NC1164.2
 104600     MOVE DS-LS-5 TO WRK-DS-L-5.                                  NC1164.2
 104700     IF WRK-DS-L-5 NOT EQUAL TO +91275                            NC1164.2
@@ -1103,9 +1103,9 @@
 110500 SIG-INIT-GF-13.                                                  NC1164.2
 110600     MOVE "VI-42 5.12.4"  TO ANSI-REFERENCE.                      NC1164.2
 110700     MOVE "SIG-TEST-GF-13" TO PAR-NAME.                           NC1164.2
-110800*        THIS TEST CONTAINS MOVE STATEMENTS WITH A SIGN IS        NC1164.2
-110900*    SEPARATE RECEIVING ITEM AND SENDING ITEMS WITH A SIGN        NC1164.2
-111000*    CLAUSE BUT THE SIGN IS NOT SEPARATE.                         NC1164.2
+110800*                                                                         
+110900*                                                                         
+111000*                                                                         
 111100     MOVE ZERO TO WRK-DS-LS-5.                                    NC1164.2
 111200     MOVE ZERO TO WRK-DS-TS-5.                                    NC1164.2
 111300 SIG-TEST-GF-13-1.                                                NC1164.2
@@ -1169,10 +1169,10 @@
 117100     MOVE "VI-42 5.12.4"  TO ANSI-REFERENCE.                      NC1164.2
 117200     MOVE "SIG-TEST-GF-14" TO PAR-NAME.                           NC1164.2
 117300     MOVE "SIGNED NUM. TO ALPHA" TO FEATURE.                      NC1164.2
-117400*        THIS TEST CONTAINS MOVE STATEMENTS WITH A SIGNED         NC1164.2
-117500*    NUMERIC SENDING ITEM AND ALPHANUMERIC RECEIVING ITEM.        NC1164.2
-117600*    THE OPERATIONAL SIGN SHOULD NOT BE MOVED AND SPACE           NC1164.2
-117700*    FILLING ON THE RIGHT SHOULD OCCUR.                           NC1164.2
+117400*                                                                         
+117500*                                                                         
+117600*                                                                         
+117700*                                                                         
 117800 SIG-TEST-GF-14-1.                                                NC1164.2
 117900     MOVE DS-LS-5 TO AN-006.                                      NC1164.2
 118000     IF AN-006 EQUAL TO "91275 "                                  NC1164.2
@@ -1240,10 +1240,10 @@
 124200     MOVE "SIG-TEST-GF-15" TO PAR-NAME.                           NC1164.2
 124300     MOVE 15759 TO DU-005 CU-005.                                 NC1164.2
 124400     MOVE -15759 TO DS-005 CS-005.                                NC1164.2
-124500*        THIS TEST MOVES SIGNED AND UNSIGNED DISPLAY ITEMS,       NC1164.2
-124600*    SIGNED AND UNSIGNED COMPUTATIONAL ITEMS, AND SIGNED AND      NC1164.2
-124700*    UNSIGNED NUMERIC LITERALS TO A NUMERIC ITEM WITH SIGN        NC1164.2
-124800*    LEADING SEPARATE.                                            NC1164.2
+124500*                                                                         
+124600*                                                                         
+124700*                                                                         
+124800*                                                                         
 124900     MOVE "RECEIVING ITEM DS-LS" TO FEATURE.                      NC1164.2
 125000 SIG-TEST-GF-15-1.                                                NC1164.2
 125100     MOVE SPACE TO GRP-09.                                        NC1164.2
@@ -1311,12 +1311,12 @@
 131300 SIG-TEST-GF-15-5.                                                NC1164.2
 131400     MOVE SPACE TO GRP-09.                                        NC1164.2
 131500     MOVE 15759 TO WRK-DS-LS-5.                                   NC1164.2
-131600     IF GRP-09 EQUAL TO "+15757"                                  NC1164.2
+131600     IF GRP-09 EQUAL TO "+12759"                                  NC1164.2
 131700         PERFORM PASS                                             NC1164.2
 131800         GO TO SIG-WRITE-GF-15-5.                                 NC1164.2
 131900 SIG-FAIL-GF-15-5.                                                NC1164.2
 132000     PERFORM FAIL.                                                NC1164.2
-132100     MOVE "+15757" TO CORRECT-A.                                  NC1164.2
+132100     MOVE "+12759" TO CORRECT-A.                                  NC1164.2
 132200     MOVE GRP-09 TO COMPUTED-A.                                   NC1164.2
 132300     MOVE "MOVE 15759 TO WRK-DS-LS-5" TO RE-MARK.                 NC1164.2
 132400 SIG-WRITE-GF-15-5.                                               NC1164.2
@@ -1341,10 +1341,10 @@
 134300     MOVE "VI-42 5.12.4"  TO ANSI-REFERENCE.                      NC1164.2
 134400     MOVE "SIG-TEST-GF-16" TO PAR-NAME.                           NC1164.2
 134500     MOVE "RECEIVING ITEM DS-TS" TO FEATURE.                      NC1164.2
-134600*        THIS TEST MOVES SIGNED AND UNSIGNED DISPLAY ITEMS,       NC1164.2
-134700*    SIGNED AND UNSIGNED COMPUTATIONAL ITEMS, AND SIGNED AND      NC1164.2
-134800*    UNSIGNED NUMERIC LITERALS TO A NUMERIC ITEM WITH SIGN        NC1164.2
-134900*    TRAILING SEPARATE CLAUSE.                                    NC1164.2
+134600*                                                                         
+134700*                                                                         
+134800*                                                                         
+134900*                                                                         
 135000     MOVE SPACE TO GRP-10.                                        NC1164.2
 135100     MOVE DU-005 TO WRK-DS-TS-5.                                  NC1164.2
 135200 SIG-TEST-GF-16-1.                                                NC1164.2
@@ -1382,13 +1382,13 @@
 138400 SIG-TEST-GF-16-3.                                                NC1164.2
 138500     MOVE SPACE TO GRP-10.                                        NC1164.2
 138600     MOVE DS-005 TO WRK-DS-TS-5.                                  NC1164.2
-138700     IF GRP-10 EQUAL TO "15Y59-"                                  NC1164.2
+138700     IF GRP-10 EQUAL TO "15779-"                                  NC1164.2
 138800         PERFORM PASS                                             NC1164.2
 138900         GO TO SIG-WRITE-GF-16-3.                                 NC1164.2
 139000 SIG-FAIL-GF-16-3.                                                NC1164.2
 139100     PERFORM FAIL.                                                NC1164.2
 139200     MOVE GRP-10 TO COMPUTED-A.                                   NC1164.2
-139300     MOVE "15Y59-" TO CORRECT-A.                                  NC1164.2
+139300     MOVE "15779-" TO CORRECT-A.                                  NC1164.2
 139400     MOVE "MOVE DS-005 TO WRK-DS-TS-5" TO RE-MARK.                NC1164.2
 139500 SIG-WRITE-GF-16-3.                                               NC1164.2
 139600     MOVE 3 TO REC-CT.                                            NC1164.2
@@ -1437,7 +1437,7 @@
 143900 SIG-WRITE-GF-16-6.                                               NC1164.2
 144000     MOVE 6 TO REC-CT.                                            NC1164.2
 144100     PERFORM PRINT-DETAIL.                                        NC1164.2
-144200*                                                                 NC1164.2
+144200*                                                                         
 144300 SIG-INIT-GF-17.                                                  NC1164.2
 144400     MOVE   "VI-42 5.12.4 GR2"  TO ANSI-REFERENCE.                NC1164.2
 144500     MOVE   "SIG-TEST-GF-17" TO PAR-NAME.                         NC1164.2
@@ -1460,7 +1460,7 @@
 146200     MOVE    TEST-17-C-SIGN TO COMPUTED-X.                        NC1164.2
 146300 SIG-WRITE-GF-17.                                                 NC1164.2
 146400     PERFORM PRINT-DETAIL.                                        NC1164.2
-146500*                                                                 NC1164.2
+146500*                                                                         
 146600 SIG-INIT-GF-18.                                                  NC1164.2
 146700     MOVE   "VI-42 5.12.4 GR3"  TO ANSI-REFERENCE.                NC1164.2
 146800     MOVE   "SIG-TEST-GF-18" TO PAR-NAME.                         NC1164.2
@@ -1483,7 +1483,7 @@
 148500     MOVE    TEST-18-B-SIGN TO COMPUTED-X.                        NC1164.2
 148600 SIG-WRITE-GF-18.                                                 NC1164.2
 148700     PERFORM PRINT-DETAIL.                                        NC1164.2
-148800*                                                                 NC1164.2
+148800*                                                                         
 148900 TERMINATE-ROUTINE.                                               NC1164.2
 149000     EXIT.                                                        NC1164.2
 149100 CCVS-EXIT SECTION.                                               NC1164.2

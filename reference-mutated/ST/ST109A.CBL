@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         ST1094.2
 000200 PROGRAM-ID.                                                      ST1094.2
 000300     ST109A.                                                      ST1094.2
-000400****************************************************************  ST1094.2
-000500*                                                              *  ST1094.2
-000600*    VALIDATION FOR:-                                          *  ST1094.2
-000700*                                                              *  ST1094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1094.2
-000900*                                                              *  ST1094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1094.2
-001100*                                                              *  ST1094.2
-001200****************************************************************  ST1094.2
-001300*                                                              *  ST1094.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1094.2
-001500*                                                              *  ST1094.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1094.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1094.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1094.2
-001900*                                                              *  ST1094.2
-002000****************************************************************  ST1094.2
-002100*    ST109 BUILDS A FILE WHICH IS SORTED IN ST110 AND CHECKED IN  ST1094.2
-002200*    ST111. THE CREATED FILE CONSISTS OF 40 RECORDS OF VARYING    ST1094.2
-002300*    LENGTH (50, 75, 100 CHARACTERS). THE THREE RECORDS SHOWN     ST1094.2
-002400*    BELOW REOCCUR UNTIL 40 IS REACHED.                           ST1094.2
-002500*      NON-KEY KEY-1        KEY-2               FILLER            ST1094.2
-002600*      X(2)     X(10)       X(38)                                 ST1094.2
-002700*                                                                 ST1094.2
-002800*      "BB"    "LOWEST TWO" "MIDDLE TWO-FIRST"  X(25) VALUE ZERO  ST1094.2
-002900*      "CC"    "LOWEST TWO" "MIDDLE TWO-SECOND" X(50) VALUE QUOTE ST1094.2
-003000*      "AA"    "LOWEST ONE" "MIDDLE ONE-ONLY"   (NONE)            ST1094.2
-003100*                                                                 ST1094.2
-003200*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * *.ST1094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300                                                                  ST1094.2
 003400 ENVIRONMENT DIVISION.                                            ST1094.2
 003500 CONFIGURATION SECTION.                                           ST1094.2
@@ -263,7 +263,7 @@
 027000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1094.2
 027100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1094.2
 027200      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1094.2
-027300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1094.2
+027300*                                                                         
 027400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1094.2
 027500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1094.2
 027600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1094.2

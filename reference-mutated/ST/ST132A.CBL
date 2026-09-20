@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         ST1324.2
 000200 PROGRAM-ID.                                                      ST1324.2
 000300     ST132A.                                                      ST1324.2
-000400****************************************************************  ST1324.2
-000500*                                                              *  ST1324.2
-000600*    VALIDATION FOR:-                                          *  ST1324.2
-000700*                                                              *  ST1324.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1324.2
-000900*                                                              *  ST1324.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1324.2
-001100*                                                              *  ST1324.2
-001200****************************************************************  ST1324.2
-001300*                                                              *  ST1324.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1324.2
-001500*                                                              *  ST1324.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1324.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1324.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1324.2
-001900*                                                              *  ST1324.2
-002000****************************************************************  ST1324.2
-002100*                                                                 ST1324.2
-002200*    THIS PROGRAM EXERCISES THE FOLLOWING                         ST1324.2
-002300*        SAME SORT AREA CLAUSE                                    ST1324.2
-002400*        USING-OUTPUT PROCEDURE COMBINATION                       ST1324.2
-002500*        MULTI REEL SORT                                          ST1324.2
-002600*        RELEASE FROM                                             ST1324.2
-002700*        RETURN INTO.                                             ST1324.2
-002800*    THERE ARE 3 SORTS. THE FIRST GENERATES THE INPUT DATA IN THE ST1324.2
-002900*        INPUT PROCEDURE. THE SORT RESULTS ARE TESTED IN THE      ST1324.2
-003000*        OUTPUT PROCEDURE WHICH ALSO CREATES A 2-REEL FILE (VIA   ST1324.2
-003100*        CLOSE REEL) FOR INPUT TO THE SECOND SORT.                ST1324.2
-003200*    THE SECOND SORT (USING-OUTPUT PROCEDURE) IS TESTED IN THE    ST1324.2
-003300*        OUTPUT PROCEDURE.                                        ST1324.2
-003400*    THE THIRD SORT EXERCISES A SORT-FILE FOR THE SECOND TIME.    ST1324.2
-003500*        SUCCESSFUL EXECUTION IS THE SOLE TEST OF THIS SORT.      ST1324.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600                                                                  ST1324.2
 003700 ENVIRONMENT DIVISION.                                            ST1324.2
 003800 CONFIGURATION SECTION.                                           ST1324.2
@@ -344,7 +344,7 @@
 035100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1324.2
 035200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1324.2
 035300      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1324.2
-035400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1324.2
+035400*                                                                         
 035500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1324.2
 035600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1324.2
 035700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1324.2
@@ -455,7 +455,7 @@
 046200     MOVE     "SORT, OUTPUT PROC" TO FEATURE.                     ST1324.2
 046300 SORT-TEST-16.                                                    ST1324.2
 046400     PERFORM  RETURN-SORT4.                                       ST1324.2
-046500     IF       S4-KEYS EQUAL TO "PQRBABCDEZ7912385679"             ST1324.2
+046500     IF       S4-KEYS EQUAL TO "PQRBABCDEZ5912345679"             ST1324.2
 046600              PERFORM PASS-1 GO TO SORT-WRITE-16.                 ST1324.2
 046700     GO       TO SORT-FAIL-16.                                    ST1324.2
 046800 SORT-DELETE-16.                                                  ST1324.2
@@ -463,7 +463,7 @@
 047000     GO       TO SORT-WRITE-16.                                   ST1324.2
 047100 SORT-FAIL-16.                                                    ST1324.2
 047200     MOVE     S4-KEYS TO COMPUTED-A.                              ST1324.2
-047300     MOVE     "PQRBABCDEZ7912385679" TO CORRECT-A.                ST1324.2
+047300     MOVE     "PQRBABCDEZ5912345679" TO CORRECT-A.                ST1324.2
 047400     PERFORM  FAIL-1.                                             ST1324.2
 047500 SORT-WRITE-16.                                                   ST1324.2
 047600     MOVE     "SORT-TEST-16" TO PAR-NAME.                         ST1324.2
@@ -488,7 +488,7 @@
 049500                                                                  ST1324.2
 049700*                                                                         
 049800     PERFORM  RETURN-SORT4 40 TIMES.                              ST1324.2
-049900     IF       S4-KEYS EQUAL TO "PQRAABCDEA7012345660"             ST1324.2
+049900     IF       S4-KEYS EQUAL TO "PQRAABCDEA7022345670"             ST1324.2
 050000              PERFORM PASS-1 GO TO SORT-WRITE-18.                 ST1324.2
 050100     GO       TO SORT-FAIL-18.                                    ST1324.2
 050200 SORT-DELETE-18.                                                  ST1324.2
@@ -496,7 +496,7 @@
 050400     GO       TO SORT-WRITE-18.                                   ST1324.2
 050500 SORT-FAIL-18.                                                    ST1324.2
 050600     MOVE     S4-KEYS TO COMPUTED-A.                              ST1324.2
-050700     MOVE     "PQRAABCDEA7012345660" TO CORRECT-A.                ST1324.2
+050700     MOVE     "PQRAABCDEA7022345670" TO CORRECT-A.                ST1324.2
 050800     PERFORM  FAIL-1.                                             ST1324.2
 050900 SORT-WRITE-18.                                                   ST1324.2
 051000     MOVE     "SORT-TEST-18" TO PAR-NAME.                         ST1324.2
@@ -506,7 +506,7 @@
 051400     GO       TO EXIT-1.                                          ST1324.2
 051500 RETURN-SORT4.                                                    ST1324.2
 051600     RETURN   SORT4 RECORD INTO R4 AT END GO TO TERMINAL-1.       ST1324.2
-051700*    NOTE     RETURN WITH ALL OPTIONAL WORDS.                     ST1324.2
+051700*                                                                         
 051800     WRITE    R4.                                                 ST1324.2
 051900 TERMINAL-1.                                                      ST1324.2
 052000     PERFORM  FAIL-1.                                             ST1324.2
@@ -585,7 +585,7 @@
 059300     MOVE     "SORT, OUTPUT PROC" TO FEATURE.                     ST1324.2
 059400 SORT-TEST-19.                                                    ST1324.2
 059500     PERFORM  RETURN-SORT5.                                       ST1324.2
-059600     IF       S5-KEYS EQUAL TO "PQWAABCDEA7012345670"             ST1324.2
+059600     IF       S5-KEYS EQUAL TO "PQRAABCDEA7012305670"             ST1324.2
 059700              PERFORM PASS-2 GO TO SORT-WRITE-19.                 ST1324.2
 059800     GO       TO SORT-FAIL-19.                                    ST1324.2
 059900 SORT-DELETE-19.                                                  ST1324.2
@@ -593,7 +593,7 @@
 060100     GO       TO SORT-WRITE-19.                                   ST1324.2
 060200 SORT-FAIL-19.                                                    ST1324.2
 060300     MOVE     S5-KEYS TO COMPUTED-A.                              ST1324.2
-060400     MOVE     "PQWAABCDEA7012345670" TO CORRECT-A.                ST1324.2
+060400     MOVE     "PQRAABCDEA7012305670" TO CORRECT-A.                ST1324.2
 060500     PERFORM  FAIL-2.                                             ST1324.2
 060600 SORT-WRITE-19.                                                   ST1324.2
 060700     MOVE     "SORT-TEST-19" TO PAR-NAME.                         ST1324.2
@@ -618,7 +618,7 @@
 062600     GO       TO EXIT-2.                                          ST1324.2
 062700 RETURN-SORT5.                                                    ST1324.2
 062800     RETURN   SORT5 INTO R4 END GO TO TERMINAL-2.                 ST1324.2
-062900*    NOTE     RETURN WITHOUT OPTIONAL WORDS.                      ST1324.2
+062900*                                                                         
 063000     WRITE    R4.                                                 ST1324.2
 063100 TERMINAL-2.                                                      ST1324.2
 063200     PERFORM  FAIL-2.                                             ST1324.2
@@ -698,13 +698,13 @@
 070600     MOVE     "2 SORTS ON ONE FILE" TO FEATURE.                   ST1324.2
 070700     MOVE     "SORT-TEST-21" TO PAR-NAME.                         ST1324.2
 070800     PERFORM  PRINT-DETAIL-3.                                     ST1324.2
-070900*    NOTE     THIS TESTS THE ABILITY TO SORT A FILE A SECOND TIME.ST1324.2
+070900*                                                                         
 071000     GO       TO EXIT-3.                                          ST1324.2
 071100 RETURN-FOR-THE-HELLUVIT.                                         ST1324.2
 071200     RETURN   SORT4 AT END GO TO PASS-3.                          ST1324.2
-071300*        NOTE THE STANDARD REQUIRES THAT EVERY OUTPUT PROCEDURE   ST1324.2
-071400*             HAVE AT LEAST ONE RETURN STATEMENT --- THE ABOVE    ST1324.2
-071500*             STATEMENT IS COMPILED BUT NEVER EXECUTED.           ST1324.2
+071300*                                                                         
+071400*                                                                         
+071500*                                                                         
 071600 PASS-3.                                                          ST1324.2
 071700     MOVE "PASS" TO P-OR-F.  ADD 1 TO PASS-COUNTER.               ST1324.2
 071800 FAIL-3.                                                          ST1324.2

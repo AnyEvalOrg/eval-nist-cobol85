@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1394.2
 000300     IF139A.                                                      IF1394.2
 000400                                                                  IF1394.2
-000500***********************************************************       IF1394.2
-000600*                                                         *       IF1394.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1394.2
-000800* It contains tests for the Intrinsic Function TAN.       *       IF1394.2
-000900*                                                         *       IF1394.2
-001000***********************************************************       IF1394.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1394.2
 001200 CONFIGURATION SECTION.                                           IF1394.2
 001300 SOURCE-COMPUTER.                                                 IF1394.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1394.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1394.2
 002600 WORKING-STORAGE SECTION.                                         IF1394.2
-002700***********************************************************       IF1394.2
-002800* Variables specific to the Intrinsic Function Test IF139A*       IF1394.2
-002900***********************************************************       IF1394.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(5)V9(5)      VALUE -0.00004.      IF1394.2
 003100 01  B                   PIC S9(5)V9(5)      VALUE 14000.105.     IF1394.2
 003200 01  C                   PIC S9(10)          VALUE 100000.        IF1394.2
@@ -41,9 +41,9 @@
 004100 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1394.2
 004200 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1394.2
 004300 01  ARG1                PIC S9(5)V9(2)     VALUE 1.              IF1394.2
-004400*                                                                 IF1394.2
-004500**********************************************************        IF1394.2
-004600*                                                                 IF1394.2
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 01  TEST-RESULTS.                                                IF1394.2
 004800     02 FILLER                   PIC X      VALUE SPACE.          IF1394.2
 004900     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1394.2
@@ -337,16 +337,16 @@
 033700 BAIL-OUT-EX. EXIT.                                               IF1394.2
 033800 CCVS1-EXIT.                                                      IF1394.2
 033900     EXIT.                                                        IF1394.2
-034000********************************************************          IF1394.2
-034100*                                                      *          IF1394.2
-034200*    Intrinsic Function Tests         IF139A - TAN     *          IF1394.2
-034300*                                                      *          IF1394.2
-034400********************************************************          IF1394.2
+034000*                                                                         
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
 034500 SECT-IF139A SECTION.                                             IF1394.2
 034600 F-TAN-INFO.                                                      IF1394.2
 034700     MOVE     "See ref. A-71 2.43" TO ANSI-REFERENCE.             IF1394.2
 034800     MOVE     "TAN Function" TO FEATURE.                          IF1394.2
-034900*****************TEST (a) - SIMPLE TEST*****************          IF1394.2
+034900*                                                                         
 035000 F-TAN-01.                                                        IF1394.2
 035100     MOVE ZERO TO WS-NUM.                                         IF1394.2
 035200     MOVE -0.000020 TO MIN-RANGE.                                 IF1394.2
@@ -368,7 +368,7 @@
 036800 F-TAN-WRITE-01.                                                  IF1394.2
 036900     MOVE "F-TAN-01" TO PAR-NAME.                                 IF1394.2
 037000     PERFORM  PRINT-DETAIL.                                       IF1394.2
-037100*****************TEST (b) - SIMPLE TEST*****************          IF1394.2
+037100*                                                                         
 037200 F-TAN-02.                                                        IF1394.2
 037300     EVALUATE FUNCTION TAN(PI)                                    IF1394.2
 037400     WHEN -0.000020 THRU 0.000020                                 IF1394.2
@@ -382,7 +382,7 @@
 038200 F-TAN-WRITE-02.                                                  IF1394.2
 038300     MOVE "F-TAN-02" TO PAR-NAME.                                 IF1394.2
 038400     PERFORM  PRINT-DETAIL.                                       IF1394.2
-038500*****************TEST (c) - SIMPLE TEST*****************          IF1394.2
+038500*                                                                         
 038600 F-TAN-03.                                                        IF1394.2
 038700     MOVE -0.000020 TO MIN-RANGE.                                 IF1394.2
 038800     MOVE  0.000020 TO MAX-RANGE.                                 IF1394.2
@@ -399,7 +399,7 @@
 039900 F-TAN-WRITE-03.                                                  IF1394.2
 040000     MOVE "F-TAN-03" TO PAR-NAME.                                 IF1394.2
 040100     PERFORM  PRINT-DETAIL.                                       IF1394.2
-040200*****************TEST (d) - SIMPLE TEST*****************          IF1394.2
+040200*                                                                         
 040300 F-TAN-04.                                                        IF1394.2
 040400     MOVE ZERO TO WS-NUM.                                         IF1394.2
 040500     MOVE  0.000999 TO MIN-RANGE.                                 IF1394.2
@@ -421,7 +421,7 @@
 042100 F-TAN-WRITE-04.                                                  IF1394.2
 042200     MOVE "F-TAN-04" TO PAR-NAME.                                 IF1394.2
 042300     PERFORM  PRINT-DETAIL.                                       IF1394.2
-042400*****************TEST (e) - SIMPLE TEST*****************          IF1394.2
+042400*                                                                         
 042500 F-TAN-05.                                                        IF1394.2
 042600     MOVE ZERO TO WS-NUM.                                         IF1394.2
 042700     MOVE  0.000089 TO MIN-RANGE.                                 IF1394.2
@@ -443,7 +443,7 @@
 044300 F-TAN-WRITE-05.                                                  IF1394.2
 044400     MOVE "F-TAN-05" TO PAR-NAME.                                 IF1394.2
 044500     PERFORM  PRINT-DETAIL.                                       IF1394.2
-044600*****************TEST (f) - SIMPLE TEST*****************          IF1394.2
+044600*                                                                         
 044700 F-TAN-06.                                                        IF1394.2
 044800     MOVE ZERO TO WS-NUM.                                         IF1394.2
 044900     MOVE -0.000040 TO MIN-RANGE.                                 IF1394.2
@@ -465,7 +465,7 @@
 046500 F-TAN-WRITE-06.                                                  IF1394.2
 046600     MOVE "F-TAN-06" TO PAR-NAME.                                 IF1394.2
 046700     PERFORM  PRINT-DETAIL.                                       IF1394.2
-046800*****************TEST (g) - SIMPLE TEST*****************          IF1394.2
+046800*                                                                         
 046900 F-TAN-07.                                                        IF1394.2
 047000     MOVE ZERO TO WS-NUM.                                         IF1394.2
 047100     MOVE  1.15780 TO MIN-RANGE.                                  IF1394.2
@@ -487,7 +487,7 @@
 048700 F-TAN-WRITE-07.                                                  IF1394.2
 048800     MOVE "F-TAN-07" TO PAR-NAME.                                 IF1394.2
 048900     PERFORM  PRINT-DETAIL.                                       IF1394.2
-049000*****************TEST (h) - SIMPLE TEST*****************          IF1394.2
+049000*                                                                         
 049100 F-TAN-08.                                                        IF1394.2
 049200     MOVE ZERO TO WS-NUM.                                         IF1394.2
 049300     MOVE  0.871430 TO MIN-RANGE.                                 IF1394.2
@@ -509,7 +509,7 @@
 050900 F-TAN-WRITE-08.                                                  IF1394.2
 051000     MOVE "F-TAN-08" TO PAR-NAME.                                 IF1394.2
 051100     PERFORM  PRINT-DETAIL.                                       IF1394.2
-051200*****************TEST (a) - COMPLEX TEST****************          IF1394.2
+051200*                                                                         
 051300 F-TAN-09.                                                        IF1394.2
 051400     MOVE ZERO TO WS-NUM.                                         IF1394.2
 051500     MOVE  0.999960 TO MIN-RANGE.                                 IF1394.2
@@ -531,7 +531,7 @@
 053100 F-TAN-WRITE-09.                                                  IF1394.2
 053200     MOVE "F-TAN-09" TO PAR-NAME.                                 IF1394.2
 053300     PERFORM  PRINT-DETAIL.                                       IF1394.2
-053400*****************TEST (b) - COMPLEX TEST****************          IF1394.2
+053400*                                                                         
 053500 F-TAN-10.                                                        IF1394.2
 053600     MOVE ZERO TO WS-NUM.                                         IF1394.2
 053700     MOVE -1.00004 TO MIN-RANGE.                                  IF1394.2
@@ -553,7 +553,7 @@
 055300 F-TAN-WRITE-10.                                                  IF1394.2
 055400     MOVE "F-TAN-10" TO PAR-NAME.                                 IF1394.2
 055500     PERFORM  PRINT-DETAIL.                                       IF1394.2
-055600*****************TEST (c) - COMPLEX TEST****************          IF1394.2
+055600*                                                                         
 055700 F-TAN-11.                                                        IF1394.2
 055800     MOVE ZERO TO WS-NUM.                                         IF1394.2
 055900     MOVE  0.999960 TO MIN-RANGE.                                 IF1394.2
@@ -575,7 +575,7 @@
 057500 F-TAN-WRITE-11.                                                  IF1394.2
 057600     MOVE "F-TAN-11" TO PAR-NAME.                                 IF1394.2
 057700     PERFORM  PRINT-DETAIL.                                       IF1394.2
-057800*****************TEST (d) - COMPLEX TEST****************          IF1394.2
+057800*                                                                         
 057900 F-TAN-12.                                                        IF1394.2
 058000     MOVE ZERO TO WS-NUM.                                         IF1394.2
 058100     MOVE -1.00004 TO MIN-RANGE.                                  IF1394.2
@@ -597,7 +597,7 @@
 059700 F-TAN-WRITE-12.                                                  IF1394.2
 059800     MOVE "F-TAN-12" TO PAR-NAME.                                 IF1394.2
 059900     PERFORM  PRINT-DETAIL.                                       IF1394.2
-060000*****************TEST (e) - COMPLEX TEST****************          IF1394.2
+060000*                                                                         
 060100 F-TAN-13.                                                        IF1394.2
 060200     MOVE ZERO TO WS-NUM.                                         IF1394.2
 060300     MOVE -1.00004 TO MIN-RANGE.                                  IF1394.2
@@ -619,7 +619,7 @@
 061900 F-TAN-WRITE-13.                                                  IF1394.2
 062000     MOVE "F-TAN-13" TO PAR-NAME.                                 IF1394.2
 062100     PERFORM  PRINT-DETAIL.                                       IF1394.2
-062200*****************TEST (f) - COMPLEX TEST****************          IF1394.2
+062200*                                                                         
 062300 F-TAN-14.                                                        IF1394.2
 062400     MOVE ZERO TO WS-NUM.                                         IF1394.2
 062500     MOVE  0.999960 TO MIN-RANGE.                                 IF1394.2
@@ -641,7 +641,7 @@
 064100 F-TAN-WRITE-14.                                                  IF1394.2
 064200     MOVE "F-TAN-14" TO PAR-NAME.                                 IF1394.2
 064300     PERFORM  PRINT-DETAIL.                                       IF1394.2
-064400*****************TEST (g) - COMPLEX TEST****************          IF1394.2
+064400*                                                                         
 064500 F-TAN-15.                                                        IF1394.2
 064600     MOVE ZERO TO WS-NUM.                                         IF1394.2
 064700     MOVE -1.00004 TO MIN-RANGE.                                  IF1394.2
@@ -663,7 +663,7 @@
 066300 F-TAN-WRITE-15.                                                  IF1394.2
 066400     MOVE "F-TAN-15" TO PAR-NAME.                                 IF1394.2
 066500     PERFORM  PRINT-DETAIL.                                       IF1394.2
-066600*****************TEST (h) - COMPLEX TEST****************          IF1394.2
+066600*                                                                         
 066700 F-TAN-16.                                                        IF1394.2
 066800     MOVE ZERO TO WS-NUM.                                         IF1394.2
 066900     MOVE  0.999960 TO MIN-RANGE.                                 IF1394.2
@@ -685,7 +685,7 @@
 068500 F-TAN-WRITE-16.                                                  IF1394.2
 068600     MOVE "F-TAN-16" TO PAR-NAME.                                 IF1394.2
 068700     PERFORM  PRINT-DETAIL.                                       IF1394.2
-068800*****************TEST (i) - COMPLEX TEST****************          IF1394.2
+068800*                                                                         
 068900 F-TAN-17.                                                        IF1394.2
 069000     MOVE ZERO TO WS-NUM.                                         IF1394.2
 069100     MOVE  0.997961 TO MIN-RANGE.                                 IF1394.2
@@ -707,7 +707,7 @@
 070700 F-TAN-WRITE-17.                                                  IF1394.2
 070800     MOVE "F-TAN-17" TO PAR-NAME.                                 IF1394.2
 070900     PERFORM  PRINT-DETAIL.                                       IF1394.2
-071000*****************TEST (k) - COMPLEX TEST****************          IF1394.2
+071000*                                                                         
 071100 F-TAN-19.                                                        IF1394.2
 071200     MOVE ZERO TO WS-NUM.                                         IF1394.2
 071300     MOVE  0.0055554 TO MIN-RANGE.                                IF1394.2
@@ -729,7 +729,7 @@
 072900 F-TAN-WRITE-19.                                                  IF1394.2
 073000     MOVE "F-TAN-19" TO PAR-NAME.                                 IF1394.2
 073100     PERFORM  PRINT-DETAIL.                                       IF1394.2
-073200*****************TEST (l) - COMPLEX TEST****************          IF1394.2
+073200*                                                                         
 073300 F-TAN-20.                                                        IF1394.2
 073400     MOVE ZERO TO WS-NUM.                                         IF1394.2
 073500     MOVE  0.965649 TO MIN-RANGE.                                 IF1394.2
@@ -751,7 +751,7 @@
 075100 F-TAN-WRITE-20.                                                  IF1394.2
 075200     MOVE "F-TAN-20" TO PAR-NAME.                                 IF1394.2
 075300     PERFORM  PRINT-DETAIL.                                       IF1394.2
-075400*****************TEST (m) - COMPLEX TEST****************          IF1394.2
+075400*                                                                         
 075500 F-TAN-21.                                                        IF1394.2
 075600     MOVE ZERO TO WS-NUM.                                         IF1394.2
 075700     MOVE  0.034919 TO MIN-RANGE.                                 IF1394.2
@@ -773,7 +773,7 @@
 077300 F-TAN-WRITE-21.                                                  IF1394.2
 077400     MOVE "F-TAN-21" TO PAR-NAME.                                 IF1394.2
 077500     PERFORM  PRINT-DETAIL.                                       IF1394.2
-077600*****************TEST (n) - COMPLEX TEST****************          IF1394.2
+077600*                                                                         
 077700 F-TAN-22.                                                        IF1394.2
 077800     MOVE ZERO TO WS-NUM.                                         IF1394.2
 077900     MOVE -0.988990 TO MIN-RANGE.                                 IF1394.2
@@ -795,7 +795,7 @@
 079500 F-TAN-WRITE-22.                                                  IF1394.2
 079600     MOVE "F-TAN-22" TO PAR-NAME.                                 IF1394.2
 079700     PERFORM  PRINT-DETAIL.                                       IF1394.2
-079800*****************TEST (o) - COMPLEX TEST****************          IF1394.2
+079800*                                                                         
 079900 F-TAN-23.                                                        IF1394.2
 080000     MOVE ZERO TO WS-NUM.                                         IF1394.2
 080100     MOVE  0.977982 TO MIN-RANGE.                                 IF1394.2
@@ -817,7 +817,7 @@
 081700 F-TAN-WRITE-23.                                                  IF1394.2
 081800     MOVE "F-TAN-23" TO PAR-NAME.                                 IF1394.2
 081900     PERFORM  PRINT-DETAIL.                                       IF1394.2
-082000*****************TEST (p) - COMPLEX TEST****************          IF1394.2
+082000*                                                                         
 082100 F-TAN-24.                                                        IF1394.2
 082200     MOVE ZERO TO WS-NUM.                                         IF1394.2
 082300     MOVE -2.18512 TO MIN-RANGE.                                  IF1394.2
@@ -839,7 +839,7 @@
 083900 F-TAN-WRITE-24.                                                  IF1394.2
 084000     MOVE "F-TAN-24" TO PAR-NAME.                                 IF1394.2
 084100     PERFORM  PRINT-DETAIL.                                       IF1394.2
-084200*****************TEST (q) - COMPLEX TEST****************          IF1394.2
+084200*                                                                         
 084300 F-TAN-25.                                                        IF1394.2
 084400     MOVE ZERO TO WS-NUM.                                         IF1394.2
 084500     MOVE  14.1008   TO MIN-RANGE.                                IF1394.2
@@ -861,7 +861,7 @@
 086100 F-TAN-WRITE-25.                                                  IF1394.2
 086200     MOVE "F-TAN-25" TO PAR-NAME.                                 IF1394.2
 086300     PERFORM  PRINT-DETAIL.                                       IF1394.2
-086400*****************TEST (s) - COMPLEX TEST****************          IF1394.2
+086400*                                                                         
 086500 F-TAN-27.                                                        IF1394.2
 086600     MOVE ZERO TO WS-NUM.                                         IF1394.2
 086700     MOVE  0.648334 TO MIN-RANGE.                                 IF1394.2
@@ -883,7 +883,7 @@
 088300 F-TAN-WRITE-27.                                                  IF1394.2
 088400     MOVE "F-TAN-27" TO PAR-NAME.                                 IF1394.2
 088500     PERFORM  PRINT-DETAIL.                                       IF1394.2
-088600*****************TEST (t) - COMPLEX TEST****************          IF1394.2
+088600*                                                                         
 088700 F-TAN-28.                                                        IF1394.2
 088800     MOVE ZERO TO WS-NUM.                                         IF1394.2
 088900     MOVE  0.017454  TO MIN-RANGE.                                IF1394.2
@@ -905,7 +905,7 @@
 090500 F-TAN-WRITE-28.                                                  IF1394.2
 090600     MOVE "F-TAN-28" TO PAR-NAME.                                 IF1394.2
 090700     PERFORM  PRINT-DETAIL.                                       IF1394.2
-090800*****************TEST (u) - COMPLEX TEST****************          IF1394.2
+090800*                                                                         
 090900 F-TAN-29.                                                        IF1394.2
 091000     MOVE ZERO TO WS-NUM.                                         IF1394.2
 091100     MOVE 0.999960 TO MIN-RANGE.                                  IF1394.2
@@ -927,7 +927,7 @@
 092700 F-TAN-WRITE-29.                                                  IF1394.2
 092800     MOVE "F-TAN-29" TO PAR-NAME.                                 IF1394.2
 092900     PERFORM  PRINT-DETAIL.                                       IF1394.2
-093000*****************TEST (v) - COMPLEX TEST****************          IF1394.2
+093000*                                                                         
 093100 F-TAN-30.                                                        IF1394.2
 093200     MOVE ZERO TO WS-NUM.                                         IF1394.2
 093300     MOVE 1.41786 TO MIN-RANGE.                                   IF1394.2
@@ -949,7 +949,7 @@
 094900 F-TAN-WRITE-30.                                                  IF1394.2
 095000     MOVE "F-TAN-30" TO PAR-NAME.                                 IF1394.2
 095100     PERFORM  PRINT-DETAIL.                                       IF1394.2
-095200*****************TEST (w) - COMPLEX TEST****************          IF1394.2
+095200*                                                                         
 095300 F-TAN-31.                                                        IF1394.2
 095400     MOVE ZERO TO WS-NUM.                                         IF1394.2
 095500     MOVE -0.000040 TO MIN-RANGE.                                 IF1394.2
@@ -972,7 +972,7 @@
 097200 F-TAN-WRITE-31.                                                  IF1394.2
 097300     MOVE "F-TAN-31" TO PAR-NAME.                                 IF1394.2
 097400     PERFORM  PRINT-DETAIL.                                       IF1394.2
-097500*****************SPECIAL PERFORM TEST**********************       IF1394.2
+097500*                                                                         
 097600 F-TAN-32.                                                        IF1394.2
 097700     PERFORM F-TAN-TEST-32                                        IF1394.2
 097800       UNTIL FUNCTION TAN(ARG1) < 0.                              IF1394.2
@@ -986,7 +986,7 @@
 098600 F-TAN-WRITE-32.                                                  IF1394.2
 098700     MOVE "F-TAN-32" TO PAR-NAME.                                 IF1394.2
 098800     PERFORM  PRINT-DETAIL.                                       IF1394.2
-098900********************END OF TESTS***************                   IF1394.2
+098900*                                                                         
 099000 CCVS-EXIT SECTION.                                               IF1394.2
 099100 CCVS-999999.                                                     IF1394.2
 099200     GO TO CLOSE-FILES.                                           IF1394.2

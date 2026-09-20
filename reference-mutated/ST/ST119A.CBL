@@ -1,23 +1,23 @@
 000100 IDENTIFICATION DIVISION.                                         ST1194.2
 000200 PROGRAM-ID.                                                      ST1194.2
 000300     ST119A.                                                      ST1194.2
-000400****************************************************************  ST1194.2
-000500*                                                              *  ST1194.2
-000600*    VALIDATION FOR:-                                          *  ST1194.2
-000700*                                                              *  ST1194.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1194.2
-000900*                                                              *  ST1194.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1194.2
-001100*                                                              *  ST1194.2
-001200****************************************************************  ST1194.2
-001300*                                                              *  ST1194.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1194.2
-001500*                                                              *  ST1194.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1194.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1194.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1194.2
-001900*                                                              *  ST1194.2
-002000****************************************************************  ST1194.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100 ENVIRONMENT DIVISION.                                            ST1194.2
 002200 CONFIGURATION SECTION.                                           ST1194.2
 002300 SOURCE-COMPUTER.                                                 ST1194.2
@@ -259,7 +259,7 @@
 026600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1194.2
 026700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1194.2
 026800      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1194.2
-026900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1194.2
+026900*                                                                         
 027000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1194.2
 027100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1194.2
 027200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1194.2
@@ -343,9 +343,9 @@
 035000     OUTPUT PROCEDURE IS OUT-PROC-1 THRU SORT-END.                ST1194.2
 035100                                                                  ST1194.2
 035200 INTERNAL-OUTPUT-PROC-CODE SECTION.                               ST1194.2
-035300*=================================                                ST1194.2
+035300*                                                                         
 035400 INT-INIT-1.                                                      ST1194.2
-035500*    ===--> ACCESSING OF CODE WITHIN THE OUTPUT PROCEDURE <--===  ST1194.2
+035500*                                                                         
 035600     MOVE   "XI-19 4.4.4 GR(10)" TO ANSI-REFERENCE.               ST1194.2
 035700     MOVE   "INT-TEST-1"       TO PAR-NAME.                       ST1194.2
 035800     MOVE   "INTNL CODE PERFORMED" TO FEATURE.                    ST1194.2
@@ -369,7 +369,7 @@
 037600             PERFORM PRINT-DETAIL.                                ST1194.2
 037700                                                                  ST1194.2
 037800 INT-INIT-2.                                                      ST1194.2
-037900*    ===--> ACCESSING OF CODE WITHIN THE OUTPUT PROCEDURE <--===  ST1194.2
+037900*                                                                         
 038000     MOVE   "XI-19 4.4.4 GR(10)"  TO ANSI-REFERENCE.              ST1194.2
 038100     MOVE   "INT-TEST-2-1"      TO PAR-NAME.                      ST1194.2
 038200     MOVE   "GO TO INTERNAL CODE" TO FEATURE.                     ST1194.2
@@ -410,9 +410,9 @@
 041700             PERFORM PRINT-DETAIL.                                ST1194.2
 041800                                                                  ST1194.2
 041900 INTERNAL-INPUT-PROC-CODE SECTION.                                ST1194.2
-042000*================================                                 ST1194.2
+042000*                                                                         
 042100 INT-INIT-3.                                                      ST1194.2
-042200*    ===--> ACCESSING OF CODE WITHIN THE INPUT PROCEDURE <--===   ST1194.2
+042200*                                                                         
 042300     MOVE   "XI-19 4.4.4 GR(7)" TO ANSI-REFERENCE.                ST1194.2
 042400     MOVE   "INT-TEST-3"       TO PAR-NAME.                       ST1194.2
 042500     MOVE   "INTNL CODE PERFORMED" TO FEATURE.                    ST1194.2
@@ -436,7 +436,7 @@
 044300             PERFORM PRINT-DETAIL.                                ST1194.2
 044400                                                                  ST1194.2
 044500 INT-INIT-4.                                                      ST1194.2
-044600*    ===--> ACCESSING OF CODE WITHIN THE OUTPUT PROCEDURE <--===  ST1194.2
+044600*                                                                         
 044700     MOVE   "XI-19 4.4.4 GR(7)"  TO ANSI-REFERENCE.               ST1194.2
 044800     MOVE   "INT-TEST-4-1"      TO PAR-NAME.                      ST1194.2
 044900     MOVE   "GO TO INTERNAL CODE" TO FEATURE.                     ST1194.2
@@ -481,7 +481,7 @@
 048800                                                                  ST1194.2
 048900 IN-1.                                                            ST1194.2
 049000 INPT-INIT-1.                                                     ST1194.2
-049100*    ===--> ACCESSING OF CODE OUTSIDE THE INPUT PROCEDURE <--===  ST1194.2
+049100*                                                                         
 049200     MOVE   "XI-19 4.4.4 GR(7)" TO ANSI-REFERENCE.                ST1194.2
 049300     MOVE   "INPT-TEST-1"       TO PAR-NAME.                      ST1194.2
 049400     MOVE   "PERFORM EXTNL CODE" TO FEATURE.                      ST1194.2
@@ -544,25 +544,25 @@
 055100             PERFORM FAIL                                         ST1194.2
 055200             PERFORM PRINT-DETAIL.                                ST1194.2
 055300     GO TO   IN-2.                                                ST1194.2
-055400*                                                                 ST1194.2
-055500*    THE FOLLOWING CODE IS ACCESSED FROM OUTSIDE THE INPUT        ST1194.2
-055600*    PROCEEDURE:                                                  ST1194.2
-055700*                                                                 ST1194.2
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
+055700*                                                                         
 055800 INTERNAL-CODE-3.                                                 ST1194.2
 055900     MOVE   "L" TO WRK-XN-00001-1.                                ST1194.2
 056000 INTERNAL-CODE-4.                                                 ST1194.2
 056100     MOVE   "M" TO WRK-XN-00001-1.                                ST1194.2
 056200     GO TO   INT-TEST-4-1.                                        ST1194.2
-056300*                                                                 ST1194.2
-056400*    NOTE.                                                        ST1194.2
-056500*       KEYS 1 AND 3 THRU 5 WILL VARY IN VALUE BETWEEN 1 AND 2.   ST1194.2
-056600*       KEY 2 VARIES FROM 1 THRU 6. THUS 96 RECORDS ARE CREATED   ST1194.2
-056700*       IN REVERSE SEQUENCE OF SORTING ORDER. TWO RECORDS ARE     ST1194.2
-056800*       ADDED TO EACH END OF THE SORTED STRING FOR HI-LOW CONTROL.ST1194.2
-056900*       THE SORT STATEMENT TESTS THE SERIES AND THRU OPTIONS WITH ST1194.2
-057000*       INCLUSION AND OMISSION OF OPTIONAL WORDS. THE SORT        ST1194.2
-057100*       STATEMENT REPRESENTS BASIC SORTING PERMITTED BY LEVEL 1 OFST1194.2
-057200*       THE SORT MODULE.                                          ST1194.2
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
+057200*                                                                         
 057300 IN-2.                                                            ST1194.2
 057400     MOVE 900009000000000 TO RDF-KEYS.                            ST1194.2
 057500     RELEASE S-RECORD.                                            ST1194.2
@@ -572,7 +572,7 @@
 057900     RELEASE S-RECORD.                                            ST1194.2
 058000     MOVE 009000000900008 TO RDF-KEYS.                            ST1194.2
 058100     RELEASE S-RECORD.                                            ST1194.2
-058200*    NOTE HI-LOW CONTROL RECORDS DONE.                            ST1194.2
+058200*                                                                         
 058300     MOVE 300003000000000 TO WKEYS-RDF.                           ST1194.2
 058400 IN-3.                                                            ST1194.2
 058500     PERFORM IN-4 2 TIMES.                                        ST1194.2
@@ -619,7 +619,7 @@
 062600     OPEN    OUTPUT SORTOUT-1A.                                   ST1194.2
 062700 SORT-TEST-1.                                                     ST1194.2
 062800     PERFORM  RET-1.                                              ST1194.2
-062900     IF       RDF-KEYS EQUAL TO 009000000900007                   ST1194.2
+062900     IF       RDF-KEYS EQUAL TO 009000000900509                   ST1194.2
 063000              PERFORM PASS GO TO SORT-WRITE-1.                    ST1194.2
 063100     GO       TO SORT-FAIL-1.                                     ST1194.2
 063200 SORT-DELETE-1.                                                   ST1194.2
@@ -627,7 +627,7 @@
 063400     GO       TO SORT-WRITE-1.                                    ST1194.2
 063500 SORT-FAIL-1.                                                     ST1194.2
 063600     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1194.2
-063700     MOVE     009000000900007 TO CORRECT-18V0.                    ST1194.2
+063700     MOVE     009000000900509 TO CORRECT-18V0.                    ST1194.2
 063800     PERFORM  FAIL.                                               ST1194.2
 063900 SORT-WRITE-1.                                                    ST1194.2
 064000     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         ST1194.2
@@ -665,7 +665,7 @@
 067200                                                                  ST1194.2
 067300 SORT-TEST-4.                                                     ST1194.2
 067400     PERFORM  RET-2 48 TIMES.                                     ST1194.2
-067500     IF       RDF-KEYS EQUAL TO 207001000200002                   ST1194.2
+067500     IF       RDF-KEYS EQUAL TO 206061000200002                   ST1194.2
 067600              PERFORM PASS GO TO SORT-WRITE-4.                    ST1194.2
 067700     GO       TO SORT-FAIL-4.                                     ST1194.2
 067800 SORT-DELETE-4.                                                   ST1194.2
@@ -673,7 +673,7 @@
 068000     GO       TO SORT-WRITE-4.                                    ST1194.2
 068100 SORT-FAIL-4.                                                     ST1194.2
 068200     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1194.2
-068300     MOVE    207001000200002 TO CORRECT-18V0.                     ST1194.2
+068300     MOVE    206061000200002 TO CORRECT-18V0.                     ST1194.2
 068400     PERFORM  FAIL.                                               ST1194.2
 068500 SORT-WRITE-4.                                                    ST1194.2
 068600     MOVE     "SORT-TEST-4 " TO PAR-NAME.                         ST1194.2
@@ -701,7 +701,7 @@
 070800     PERFORM  RET-6 THRU RET-6-EXIT.                              ST1194.2
 070900     PERFORM  RET-7 THRU RET-7-EXIT.                              ST1194.2
 071000     PERFORM  RET-8 THRU RET-8-EXIT.                              ST1194.2
-071100     IF       RDF-KEYS EQUAL TO 201002000100401                   ST1194.2
+071100     IF       RDF-KEYS EQUAL TO 201002000103001                   ST1194.2
 071200              PERFORM PASS GO TO SORT-WRITE-6.                    ST1194.2
 071300     GO       TO SORT-FAIL-6.                                     ST1194.2
 071400 SORT-DELETE-6.                                                   ST1194.2
@@ -709,7 +709,7 @@
 071600     GO       TO SORT-WRITE-6.                                    ST1194.2
 071700 SORT-FAIL-6.                                                     ST1194.2
 071800     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1194.2
-071900     MOVE     201002000100401 TO CORRECT-18V0.                    ST1194.2
+071900     MOVE     201002000103001 TO CORRECT-18V0.                    ST1194.2
 072000     PERFORM  FAIL.                                               ST1194.2
 072100 SORT-WRITE-6.                                                    ST1194.2
 072200     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1194.2
@@ -821,10 +821,10 @@
 082800             PERFORM FAIL                                         ST1194.2
 082900             PERFORM PRINT-DETAIL.                                ST1194.2
 083000     GO TO   SORT-END.                                            ST1194.2
-083100*                                                                 ST1194.2
-083200*    THE FOLLOWING CODE IS ACCESSED FROM OUTSIDE THE OUTPUT       ST1194.2
-083300*    PROCEEDURE:                                                  ST1194.2
-083400*                                                                 ST1194.2
+083100*                                                                         
+083200*                                                                         
+083300*                                                                         
+083400*                                                                         
 083500 INTERNAL-CODE-1.                                                 ST1194.2
 083600     MOVE  "C" TO WRK-XN-00001-1.                                 ST1194.2
 083700 INTERNAL-CODE-2.                                                 ST1194.2
@@ -849,12 +849,12 @@
 085600     RETURN  SORTFILE-1A RECORD AT END GO TO BAD-FILE.            ST1194.2
 085700     MOVE     S-RECORD TO SORTED.                                 ST1194.2
 085800     WRITE    SORTED.                                             ST1194.2
-085900*    NOTE     THE RETURN VERB WITH ALL OPTIONAL WORDS.            ST1194.2
+085900*                                                                         
 086000 RET-2.                                                           ST1194.2
 086100     RETURN  SORTFILE-1A           END GO TO BAD-FILE.            ST1194.2
 086200     MOVE    S-RECORD TO SORTED.                                  ST1194.2
 086300     WRITE   SORTED.                                              ST1194.2
-086400*    NOTE    THE RETURN VERB WITHOUT OPTIONAL WORDS.              ST1194.2
+086400*                                                                         
 086500 RET-3.                                                           ST1194.2
 086600     MOVE   "XI-14 4.3.4 GR(2) & (4)" TO ANSI-REFERENCE.          ST1194.2
 086700     MOVE   "RET-3" TO PAR-NAME.                                  ST1194.2

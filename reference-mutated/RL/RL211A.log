@@ -16,119 +16,6 @@ TEST RESULT OF RL211A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE CREATE RL-VS1         REL-TEST-001                                                                                
 *** INFORMATION ***        FILE CREATED, LFILE       000000000000000500                                                 
                                                                                                                         
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                                                                                                                                                
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-1                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = A                 Y   VII-31 3.8.4 GR 5 & 5A                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                                                                                                                                                     
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-3                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOPQRSTU                                                    
-                                     CORRECT = LBCDEFGHIJKLMNOPQRSTU VII-31 3.8.4 GR 5 & 5B                             
-                                                                                                                        
- FILE CREATE RL-VS1   FAIL* REL-TEST-5                    WRONG LENGTH RECORD                                           
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHIJKLMNOP                                                         
-                                     CORRECT = ABCMEFGHIJKLMNOP      VII-31 3.8.4 GR 5                                  
-                                                                                                                        
  FILE CREATE RL-VS1   PASS  REL-TEST-002                                                                                
 *** INFORMATION ***        FILE VERIFIED, LFILE      000000000000000500 VII-31 3.8.4 GR 5 & 5B                          
                                                                                                                         
@@ -139,8 +26,8 @@ TEST RESULT OF RL211A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  RL211A                                                
                                                                                                                         
-                                                    480 OF 501  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    021 TEST(S) FAILED                                                  
+                                                    501 OF 501  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

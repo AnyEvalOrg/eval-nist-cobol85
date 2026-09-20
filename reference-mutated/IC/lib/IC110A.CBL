@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         IC1104.2
 000200 PROGRAM-ID.                                                      IC1104.2
 000300     IC110A.                                                      IC1104.2
-000400****************************************************************  IC1104.2
-000500*                                                              *  IC1104.2
-000600*    VALIDATION FOR:-                                          *  IC1104.2
-000700*                                                              *  IC1104.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1104.2
-000900*                                                              *  IC1104.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1104.2
-001100*                                                              *  IC1104.2
-001200****************************************************************  IC1104.2
-001300*                                                              *  IC1104.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1104.2
-001500*                                                              *  IC1104.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1104.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1104.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1104.2
-001900*                                                              *  IC1104.2
-002000****************************************************************  IC1104.2
-002100*        THE SUBPROGRAM IC110 IS THE SECOND SUBPROGRAM IN A       IC1104.2
-002200*    SEQUENCE OF CALLS WHICH START IN THE MAIN PROGRAM IC108.     IC1104.2
-002300*    THIS SUBPROGRAM CALLS IC111 WITH OPERANDS IN THE LINKAGE     IC1104.2
-002400*    SECTION AND IN THE WORKING-STORAGE SECTION.  THE SUBPROGRAM  IC1104.2
-002500*    IC110 IS CALLED BY IC109.                                    IC1104.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            IC1104.2
 002700 CONFIGURATION SECTION.                                           IC1104.2
 002800 SOURCE-COMPUTER.                                                 IC1104.2

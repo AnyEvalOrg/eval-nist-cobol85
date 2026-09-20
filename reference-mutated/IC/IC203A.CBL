@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         IC2034.2
 000200 PROGRAM-ID.                                                      IC2034.2
 000300     IC203A.                                                      IC2034.2
-000400****************************************************************  IC2034.2
-000500*                                                              *  IC2034.2
-000600*    VALIDATION FOR:-                                          *  IC2034.2
-000700*                                                              *  IC2034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2034.2
-000900*                                                              *  IC2034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2034.2
-001100*                                                              *  IC2034.2
-001200****************************************************************  IC2034.2
-001300*                                                              *  IC2034.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2034.2
-001500*                                                              *  IC2034.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2034.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2034.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2034.2
-001900*                                                              *  IC2034.2
-002000****************************************************************  IC2034.2
-002100*        THE PROGRAM IC203 TESTS THE USE OF THE CANCEL         *  IC2034.2
-002200*    STATEMENT.  THIS PROGRAM VERIFIES THAT THE INITIAL        *  IC2034.2
-002300*    CALL TO A SUBPROGRAM AND THE FIRST CALL AFTER A CANCEL    *  IC2034.2
-002400*    RESULTS IN A SUBPROGRAM BEING INITIATED IN ITS INITIAL    *  IC2034.2
-002500*    STATE.  THE PROGRAM ALSO CANCELS A PROGRAM WHICH HAS      *  IC2034.2
-002600*    NOT BEEN CALLED, IN WHICH CASE CONTROL SHOULD PASS        *  IC2034.2
-002700*    TO THE NEXT SENTENCE.                                     *  IC2034.2
-002800****************************************************************  IC2034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            IC2034.2
 003000 CONFIGURATION SECTION.                                           IC2034.2
 003100 SOURCE-COMPUTER.                                                 IC2034.2
@@ -240,7 +240,7 @@
 024200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2034.2
 024300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2034.2
 024400      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2034.2
-024500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2034.2
+024500*                                                                         
 024600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2034.2
 024700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2034.2
 024800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2034.2
@@ -309,8 +309,8 @@
 031100     EXIT.                                                        IC2034.2
 031200 SECT-IC203-0001 SECTION.                                         IC2034.2
 031300 CALL-TEST-04.                                                    IC2034.2
-031400*        CALL-TEST-04 VERIFIES THAT A PROGRAM IS IN ITS           IC2034.2
-031500*    INITIAL STATE THE FIRST TIME IT IS CALLED.                   IC2034.2
+031400*                                                                         
+031500*                                                                         
 031600     MOVE "CALL-TEST-04" TO PAR-NAME.                             IC2034.2
 031700     MOVE "INITIAL STATE" TO FEATURE.                             IC2034.2
 031800     MOVE 1 TO DN3.                                               IC2034.2
@@ -336,13 +336,13 @@
 033800     PERFORM PRINT-DETAIL.                                        IC2034.2
 033900 CALL-TEST-04-02.                                                 IC2034.2
 034000     ADD 1 TO REC-CT.                                             IC2034.2
-034100     IF DN2 IS EQUAL TO "YER"                                     IC2034.2
+034100     IF DN2 IS EQUAL TO "YEP"                                     IC2034.2
 034200         PERFORM PASS                                             IC2034.2
 034300         GO TO CALL-WRITE-04-02.                                  IC2034.2
 034400 CALL-FAIL-04-02.                                                 IC2034.2
 034500     PERFORM FAIL.                                                IC2034.2
 034600     MOVE DN2 TO COMPUTED-A.                                      IC2034.2
-034700     MOVE "YER" TO CORRECT-A.                                     IC2034.2
+034700     MOVE "YEP" TO CORRECT-A.                                     IC2034.2
 034800     MOVE "DN2 INCORRECT" TO RE-MARK.                             IC2034.2
 034900 CALL-WRITE-04-02.                                                IC2034.2
 035000     PERFORM PRINT-DETAIL.                                        IC2034.2
@@ -361,8 +361,8 @@
 036300 CALL-TEST-05.                                                    IC2034.2
 036400     MOVE "CALL-TEST-05" TO PAR-NAME.                             IC2034.2
 036500     MOVE "STATE UNCHANGED" TO FEATURE.                           IC2034.2
-036600*        CALL-TEST-05 TESTS THAT THE STATE OF THE SUBPROGRAM      IC2034.2
-036700*    IS UNCHANGED FROM ITS STATE WHEN LAST EXITED.                IC2034.2
+036600*                                                                         
+036700*                                                                         
 036800     MOVE 2 TO DN3.                                               IC2034.2
 036900     MOVE SPACE TO DN2, DN4.                                      IC2034.2
 037000     MOVE ZERO TO DN5.                                            IC2034.2
@@ -374,13 +374,13 @@
 037600     GO TO CNCL-TEST-01.                                          IC2034.2
 037700 CALL-TEST-05-01.                                                 IC2034.2
 037800     MOVE 1 TO REC-CT.                                            IC2034.2
-037900     IF DN5 EQUAL TO 0                                            IC2034.2
+037900     IF DN5 EQUAL TO 5                                            IC2034.2
 038000         PERFORM PASS                                             IC2034.2
 038100         GO TO CALL-WRITE-05-01.                                  IC2034.2
 038200 CALL-FAIL-05-01.                                                 IC2034.2
 038300     PERFORM FAIL.                                                IC2034.2
 038400     MOVE DN5 TO COMPUTED-18V0.                                   IC2034.2
-038500     MOVE 0 TO CORRECT-18V0.                                      IC2034.2
+038500     MOVE 5 TO CORRECT-18V0.                                      IC2034.2
 038600     MOVE "DN5 INCORRECT" TO RE-MARK.                             IC2034.2
 038700 CALL-WRITE-05-01.                                                IC2034.2
 038800     PERFORM PRINT-DETAIL.                                        IC2034.2
@@ -409,9 +409,9 @@
 041100 CALL-WRITE-05-03.                                                IC2034.2
 041200     PERFORM PRINT-DETAIL.                                        IC2034.2
 041300 CNCL-TEST-01.                                                    IC2034.2
-041400*        THIS TEST VERIFIES THAT A SUBPROGRAM IS IN ITS           IC2034.2
-041500*    INITIAL STATE THE FIRST TIME IT IS CALLED FOLLOWING          IC2034.2
-041600*    A CANCEL STATEMENT.                                          IC2034.2
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
 041700     MOVE "CNCL-TEST-01" TO PAR-NAME.                             IC2034.2
 041800     MOVE "SET TO INITIAL STATE" TO FEATURE.                      IC2034.2
 041900     CALL "IC204A" USING TABLE-1, DN1.                            IC2034.2
@@ -462,9 +462,9 @@
 046400 CNCL-WRITE-01-03.                                                IC2034.2
 046500     PERFORM PRINT-DETAIL.                                        IC2034.2
 046600 CNCL-TEST-02.                                                    IC2034.2
-046700*        THIS TEST USES AN IDENTIFIER IN THE CANCEL STATEMENT.    IC2034.2
-046800*    THE SUBPROGRAM SHOULD BE IN ITS INITIAL STATE ON THE FIRST   IC2034.2
-046900*    CALL FOLLOWING A CANCEL OF THE SUBPROGRAM.                   IC2034.2
+046700*                                                                         
+046800*                                                                         
+046900*                                                                         
 047000     MOVE "CNCL-TEST-02" TO PAR-NAME.                             IC2034.2
 047100     MOVE "SET TO INITIAL STATE" TO FEATURE.                      IC2034.2
 047200     CALL "IC204A" USING TABLE-1, DN1.                            IC2034.2
@@ -515,10 +515,10 @@
 051700 CNCL-WRITE-02-03.                                                IC2034.2
 051800     PERFORM PRINT-DETAIL.                                        IC2034.2
 051900 CNCL-TEST-03.                                                    IC2034.2
-052000*        THIS TEST CANCELS A SUBPROGRAM WHICH HAS ALREADY         IC2034.2
-052100*    BEEN CANCELED.  THE SUBPROGRAM IS THEN CALLED AND A CHECK    IC2034.2
-052200*    IS MADE TO ENSURE THAT THE SUBPROGRAM WAS IN ITS INITIAL     IC2034.2
-052300*    STATE.                                                       IC2034.2
+052000*                                                                         
+052100*                                                                         
+052200*                                                                         
+052300*                                                                         
 052400     MOVE "CNCL-TEST-03" TO PAR-NAME.                             IC2034.2
 052500     MOVE "PREVIOUSLY CANCELED" TO FEATURE.                       IC2034.2
 052600 CNCL-INIT-03.                                                    IC2034.2
@@ -575,9 +575,9 @@
 057700     MOVE "CANCEL UNCALLED PROG" TO FEATURE.                      IC2034.2
 057800     MOVE ZERO TO REC-CT.                                         IC2034.2
 057900 CNCL-TEST-04.                                                    IC2034.2
-058000*        THIS TEST CANCELS A SUBPROGRAM WHICH HAS NEVER           IC2034.2
-058100*    BEEN CALLED.  THE NEXT SENTENCE SHOULD BE EXECUTED           IC2034.2
-058200*    IN THIS CASE.                                                IC2034.2
+058000*                                                                         
+058100*                                                                         
+058200*                                                                         
 058300     CANCEL "IC205A".                                             IC2034.2
 058400     GO TO CNCL-PASS-04.                                          IC2034.2
 058500 CNCL-DELETE-04.                                                  IC2034.2
@@ -590,8 +590,8 @@
 059200 CNCL-INIT-05.                                                    IC2034.2
 059300     MOVE "CNCL-TEST-05" TO PAR-NAME.                             IC2034.2
 059400     MOVE "CANCEL IN SUBPROGRAM" TO FEATURE.                      IC2034.2
-059500*        THIS TEST CALLS SUBPROGRAM IC205 WHICH CALLS AND         IC2034.2
-059600*    CANCELS A THIRD SUBPROGRAM IC206.                            IC2034.2
+059500*                                                                         
+059600*                                                                         
 059700 CNCL-TEST-05.                                                    IC2034.2
 059800     MOVE SPACE TO DN2, DN4, TABLE-2.                             IC2034.2
 059900     MOVE ZERO TO DN1.                                            IC2034.2
@@ -613,10 +613,10 @@
 061500 CNCL-INIT-06.                                                    IC2034.2
 061600     MOVE "CNCL-TEST-06" TO PAR-NAME.                             IC2034.2
 061700     MOVE "CALL CANCELED PROG" TO FEATURE.                        IC2034.2
-061800*        THIS TEST CHECKS THAT THE CANCEL OF IC204 WHICH          IC2034.2
-061900*    WAS MADE IN THE SUBPROGRAM IC205 WAS EXECUTED PROPERLY.      IC2034.2
-062000*    THE SUBPROGRAM IC204 IS CALLED AND THE DATA VALUES           IC2034.2
-062100*    ARE CHECKED TO SEE IF IC204 WAS IN ITS INITIAL STATE.        IC2034.2
+061800*                                                                         
+061900*                                                                         
+062000*                                                                         
+062100*                                                                         
 062200 CNCL-TEST-06.                                                    IC2034.2
 062300     MOVE 1 TO DN3.                                               IC2034.2
 062400     MOVE SPACE TO DN2, DN4.                                      IC2034.2
@@ -652,19 +652,19 @@
 065400     PERFORM PRINT-DETAIL.                                        IC2034.2
 065500 CNCL-TEST-06-03.                                                 IC2034.2
 065600     ADD 1 TO REC-CT.                                             IC2034.2
-065700     IF DN4 EQUAL TO "EQUWL"                                      IC2034.2
+065700     IF DN4 EQUAL TO "EQOAL"                                      IC2034.2
 065800         PERFORM PASS                                             IC2034.2
 065900         GO TO CNCL-WRITE-06-03.                                  IC2034.2
 066000 CNCL-FAIL-06-03.                                                 IC2034.2
 066100     PERFORM FAIL.                                                IC2034.2
 066200     MOVE DN4 TO COMPUTED-A.                                      IC2034.2
-066300     MOVE "EQUWL" TO CORRECT-A.                                   IC2034.2
+066300     MOVE "EQOAL" TO CORRECT-A.                                   IC2034.2
 066400     MOVE "DN4 INCORRECT" TO RE-MARK.                             IC2034.2
 066500 CNCL-WRITE-06-03.                                                IC2034.2
 066600     PERFORM PRINT-DETAIL.                                        IC2034.2
 066700 CNCL-INIT-07.                                                    IC2034.2
-066800*        THIS TEST CANCELS THE THREE SUBPROGRAMS                  IC2034.2
-066900*    CALLED BY THIS ROUTINE.                                      IC2034.2
+066800*                                                                         
+066900*                                                                         
 067000     MOVE "CNCL-TEST-07" TO PAR-NAME.                             IC2034.2
 067100     MOVE "CANCEL 3 PROGS" TO FEATURE.                            IC2034.2
 067200     MOVE ZERO TO REC-CT.                                         IC2034.2

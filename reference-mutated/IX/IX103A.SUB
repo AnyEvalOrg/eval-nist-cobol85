@@ -1,56 +1,56 @@
 000100 IDENTIFICATION DIVISION.                                         IX1034.2
 000200 PROGRAM-ID.                                                      IX1034.2
 000300     IX103A.                                                      IX1034.2
-000400****************************************************************  IX1034.2
-000500*                                                              *  IX1034.2
-000600*    VALIDATION FOR:-                                          *  IX1034.2
-000700*                                                              *  IX1034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1034.2
-000900*                                                              *  IX1034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1034.2
-001100*                                                              *  IX1034.2
-001200****************************************************************  IX1034.2
-001300*                                                                 IX1034.2
-001400*         NEW TEST:                                               IX1034.2
-001500*              SELECT ...      INDEXED  ...                       IX1034.2
-001600*              (WITHOUT THE OPTIONAL WORD <ORGANIZATION>)         IX1034.2
-001700*                                                                 IX1034.2
-001800*    THIS PROGRAM IS THE THIRD OF A SERIES.  ITS FUNCTION         IX1034.2
-001900*    IS TO PROCESS THE FILE SEQUENTIALLY (ACCESS MODE IS          IX1034.2
-002000*    SEQUENTIAL).  THE FILE USED IS THAT RESULTING FROM IX102.    IX1034.2
-002100*                                                                 IX1034.2
-002200*    FIRST, THE FILE IS VERIFIED FOR ACCURACY OF ITS 500 RECORDS. IX1034.2
-002300*    SECONDLY, RECORDS OF THE FILE ARE SELECTIVELY DELETED AND    IX1034.2
-002400*    THIRDLY THE ACCURACY OF EACH RECORD IN THE FILE IS AGAIN     IX1034.2
-002500*    VERIFIED.                                                    IX1034.2
-002600*                                                                 IX1034.2
-002700*                                                                 IX1034.2
-002800*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX1034.2
-002900*                                                                 IX1034.2
-003000*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX1034.2
-003100*                    CLAUSE FOR DATA FILE IX-FS1                  IX1034.2
-003200*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX1034.2
-003300*                    CLAUSE FOR INDEX FILE IX-FS1                 IX1034.2
-003400*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX1034.2
-003500*             X-62   IMPLEMENTOR-NAME FOR RAW-DATA                IX1034.2
-003600*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX1034.2
-003700*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX1034.2
-003800*                                                                 IX1034.2
-003900*         NOTE:  X-CARDS 44 AND 62          ARE OPTIONAL          IX1034.2
-004000*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX1034.2
-004100*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX1034.2
-004200*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX1034.2
-004300*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX1034.2
-004400*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX1034.2
-004500*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX1034.2
-004600*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX1034.2
-004700*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX1034.2
-004800*               THEY ARE AS FOLLOWS                               IX1034.2
-004900*                                                                 IX1034.2
-005000*                  J  SELECTS X-CARD 44                           IX1034.2
-005100*                  P  SELECTS X-CARD 62                           IX1034.2
-005200*                                                                 IX1034.2
-005300******************************************************            IX1034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400 ENVIRONMENT DIVISION.                                            IX1034.2
 005500 CONFIGURATION SECTION.                                           IX1034.2
 005600 SOURCE-COMPUTER.                                                 IX1034.2
@@ -65,8 +65,8 @@
 007000     "XXXXX024"                                                   IX1034.2
 007200                     INDEXED                                      IX1034.2
 007300     RECORD    IX-FS1-KEY.                                        IX1034.2
-007400*    THE ABSENCE OF THE ACCESS CLAUSE IS TREATED AS THOUGH        IX1034.2
-007500*        SEQUENTIAL HAD BEEN SPECIFIED.                           IX1034.2
+007400*                                                                         
+007500*                                                                         
 007600 DATA DIVISION.                                                   IX1034.2
 007700 FILE SECTION.                                                    IX1034.2
 009400 FD  PRINT-FILE.                                                  IX1034.2
@@ -352,7 +352,7 @@
 040000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1034.2
 040100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1034.2
 040200      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1034.2
-040300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1034.2
+040300*                                                                         
 040400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1034.2
 040500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1034.2
 040600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1034.2
@@ -426,9 +426,9 @@
 047400     EXIT.                                                        IX1034.2
 047500 SECT-IX-03-001 SECTION.                                          IX1034.2
 047600 INX-INIT-006.                                                    IX1034.2
-047700*    THIS FILE "IX-FS1" IS ACCESSED SEQUENTIALLY AND HAS          IX1034.2
-047800*    ASSOCIATED WITH IT A RECORD KEY WHICH AT ALL TIMES SHOULD    IX1034.2
-047900*    CONTAIN THE INDEX OF THE RECORD PREVIOUSLY READ.             IX1034.2
+047700*                                                                         
+047800*                                                                         
+047900*                                                                         
 048000     OPEN INPUT IX-FS1.                                           IX1034.2
 048100     MOVE     "INX-TEST-006" TO   PAR-NAME.                       IX1034.2
 048200     MOVE     ZERO TO             WRK-CS-09V00-006.               IX1034.2
@@ -469,9 +469,9 @@
 051700 READ-TEST-F1-01.                                                 IX1034.2
 051800     MOVE    "READ-TEST-F1-01"  TO PAR-NAME.                      IX1034.2
 051900     MOVE    "READ SEQUENTIAL  "  TO FEATURE.                     IX1034.2
-052000*                                                                 IX1034.2
-052100*  TEST   1                                                       IX1034.2
-052200*                                                                 IX1034.2
+052000*                                                                         
+052100*                                                                         
+052200*                                                                         
 052300     IF       WRK-CS-09V00-006 NOT EQUAL TO 501                   IX1034.2
 052400              MOVE "INCORRECT RECORD COUNT"  TO RE-MARK           IX1034.2
 052500              MOVE  WRK-CS-09V00-006 TO COMPUTED-18V0             IX1034.2
@@ -484,9 +484,9 @@
 053200 READ-TEST-F1-02.                                                 IX1034.2
 053300     MOVE    "READ-TEST-F1-02"  TO PAR-NAME.                      IX1034.2
 053400     MOVE    "READ SEQUENTIAL  "  TO FEATURE.                     IX1034.2
-053500*                                                                 IX1034.2
-053600*  TEST   2                                                       IX1034.2
-053700*                                                                 IX1034.2
+053500*                                                                         
+053600*                                                                         
+053700*                                                                         
 053800     IF       WRK-CS-09V00-007 EQUAL TO 400                       IX1034.2
 053900              PERFORM PASS                                        IX1034.2
 054000              ELSE                                                IX1034.2
@@ -498,9 +498,9 @@
 054600 READ-TEST-F1-03.                                                 IX1034.2
 054700     MOVE    "READ-TEST-F1-03"  TO PAR-NAME.                      IX1034.2
 054800     MOVE    "READ SEQUENTIAL  "  TO FEATURE.                     IX1034.2
-054900*                                                                 IX1034.2
-055000*  TEST   3                                                       IX1034.2
-055100*                                                                 IX1034.2
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
 055200     IF      WRK-CS-09V00-008 EQUAL TO 100                        IX1034.2
 055300              PERFORM PASS                                        IX1034.2
 055400              ELSE                                                IX1034.2
@@ -512,9 +512,9 @@
 056000 READ-TEST-F1-04.                                                 IX1034.2
 056100     MOVE    "READ-TEST-F1-04"  TO PAR-NAME.                      IX1034.2
 056200     MOVE    "READ SEQUENTIAL  "  TO FEATURE.                     IX1034.2
-056300*                                                                 IX1034.2
-056400*  TEST   4                                                       IX1034.2
-056500*                                                                 IX1034.2
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
 056600     IF      WRK-CS-09V00-009 EQUAL TO ZERO                       IX1034.2
 056700             PERFORM PASS                                         IX1034.2
 056800             ELSE                                                 IX1034.2
@@ -526,9 +526,9 @@
 057400 READ-TEST-F1-05.                                                 IX1034.2
 057500     MOVE    "READ-TEST-F1-05"  TO PAR-NAME.                      IX1034.2
 057600     MOVE    "READ SEQUENTIAL  "  TO FEATURE.                     IX1034.2
-057700*                                                                 IX1034.2
-057800*  TEST   5                                                       IX1034.2
-057900*                                                                 IX1034.2
+057700*                                                                         
+057800*                                                                         
+057900*                                                                         
 058000     IF      WRK-CS-09V00-010 EQUAL TO ZERO                       IX1034.2
 058100             PERFORM PASS                                         IX1034.2
 058200             ELSE                                                 IX1034.2
@@ -539,9 +539,9 @@
 058700     PERFORM PRINT-DETAIL.                                        IX1034.2
 058800     CLOSE    IX-FS1.                                             IX1034.2
 058900 DELETE-INIT-GF-01.                                               IX1034.2
-059000*                                                                 IX1034.2
-059100*  TEST   1                                                       IX1034.2
-059200*                                                                 IX1034.2
+059000*                                                                         
+059100*                                                                         
+059200*                                                                         
 059300     MOVE     "DELETE-TEST-GF-01" TO PAR-NAME                     IX1034.2
 059400     OPEN     I-O IX-FS1.                                         IX1034.2
 059500     MOVE     ZERO TO WRK-CS-09V00-006                            IX1034.2
@@ -586,9 +586,9 @@
 063400 DELETE-TEST-GF-02.                                               IX1034.2
 063500     MOVE     "DELETE-TEST-GF-02" TO PAR-NAME                     IX1034.2
 063600     MOVE    "DELETE   "   TO FEATURE.                            IX1034.2
-063700*                                                                 IX1034.2
-063800*  TEST   2                                                       IX1034.2
-063900*                                                                 IX1034.2
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
 064000     IF       WRK-CS-09V00-008 NOT EQUAL TO 125                   IX1034.2
 064100              MOVE WRK-CS-09V00-008 TO COMPUTED-18V0              IX1034.2
 064200              MOVE 125              TO CORRECT-18V0               IX1034.2
@@ -600,9 +600,9 @@
 064800 DELETE-TEST-GF-03.                                               IX1034.2
 064900     MOVE     "DELETE-TEST-GF-03" TO PAR-NAME                     IX1034.2
 065000     MOVE    "DELETE   "   TO FEATURE.                            IX1034.2
-065100*                                                                 IX1034.2
-065200*  TEST   3                                                       IX1034.2
-065300*                                                                 IX1034.2
+065100*                                                                         
+065200*                                                                         
+065300*                                                                         
 065400       IF WRK-CS-09V00-009 EQUAL TO ZERO                          IX1034.2
 065500         PERFORM PASS                                             IX1034.2
 065600         ELSE                                                     IX1034.2
@@ -615,9 +615,9 @@
 066300 DELETE-INIT-GF-04.                                               IX1034.2
 066400     MOVE     "DELETE-TEST-GF-04" TO PAR-NAME                     IX1034.2
 066500     MOVE    "DELETE   "   TO FEATURE.                            IX1034.2
-066600*                                                                 IX1034.2
-066700*  TEST   4                                                       IX1034.2
-066800*                                                                 IX1034.2
+066600*                                                                         
+066700*                                                                         
+066800*                                                                         
 066900     MOVE     "DELETE-TEST-GF-04" TO PAR-NAME.                    IX1034.2
 067000     MOVE     ZERO TO   WRK-CS-09V00-006                          IX1034.2
 067100     MOVE     ZERO TO   WRK-CS-09V00-007                          IX1034.2
@@ -661,9 +661,9 @@
 070900 DELETE-TEST-GF-05.                                               IX1034.2
 071000     MOVE     "DELETE-TEST-GF-05" TO PAR-NAME                     IX1034.2
 071100     MOVE    "DELETE   "   TO FEATURE.                            IX1034.2
-071200*                                                                 IX1034.2
-071300*  TEST   5                                                       IX1034.2
-071400*                                                                 IX1034.2
+071200*                                                                         
+071300*                                                                         
+071400*                                                                         
 071500     IF       WRK-CS-09V00-009 NOT EQUAL TO ZERO                  IX1034.2
 071600             MOVE    ZERO TO CORRECT-18V0                         IX1034.2
 071700              MOVE WRK-CS-09V00-009 TO COMPUTED-18V0              IX1034.2
@@ -676,9 +676,9 @@
 072400 DELETE-TEST-GF-06.                                               IX1034.2
 072500     MOVE     "DELETE-TEST-GF-06" TO PAR-NAME                     IX1034.2
 072600     MOVE    "DELETE   "   TO FEATURE.                            IX1034.2
-072700*                                                                 IX1034.2
-072800*  TEST   6                                                       IX1034.2
-072900*                                                                 IX1034.2
+072700*                                                                         
+072800*                                                                         
+072900*                                                                         
 073000     IF       WRK-CS-09V00-010 NOT EQUAL TO 375                   IX1034.2
 073100             MOVE    375  TO CORRECT-18V0                         IX1034.2
 073200              MOVE "KEY MISMATCH" TO RE-MARK                      IX1034.2
@@ -691,9 +691,9 @@
 073900 DELETE-TEST-GF-07.                                               IX1034.2
 074000     MOVE     "DELETE-TEST-GF-07" TO PAR-NAME                     IX1034.2
 074100     MOVE    "DELETE   "   TO FEATURE.                            IX1034.2
-074200*                                                                 IX1034.2
-074300*  TEST   7                                                       IX1034.2
-074400*                                                                 IX1034.2
+074200*                                                                         
+074300*                                                                         
+074400*                                                                         
 074500     IF      WRK-CS-09V00-011  NOT EQUAL TO  375                  IX1034.2
 074600             MOVE   375  TO CORRECT-18V0                          IX1034.2
 074700             MOVE   "INCORRECT RECORD FOUND"  TO RE-MARK          IX1034.2

@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         NC1214.2
 000200 PROGRAM-ID.                                                      NC1214.2
 000300     NC121M.                                                      NC1214.2
-000400****************************************************************  NC1214.2
-000500*                                                              *  NC1214.2
-000600*    VALIDATION FOR:-                                          *  NC1214.2
-000700*                                                              *  NC1214.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1214.2
-000900*                                                              *  NC1214.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1214.2
-001100*                                                              *  NC1214.2
-001200****************************************************************  NC1214.2
-001300*                                                              *  NC1214.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1214.2
-001500*                                                              *  NC1214.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1214.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1214.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1214.2
-001900*                                                              *  NC1214.2
-002000****************************************************************  NC1214.2
-002100*                                                                 NC1214.2
-002200*    PROGRAM NC121M TESTS THE USE OF INDEXED IDENTIFIERS WITH     NC1214.2
-002300*    FORMATS 1 AND 2 OF THE "MULTIPLY" STATEMENT,  FORMATS        NC1214.2
-002400*    1, 2 AND 3 OF THE "DIVIDE" STATEMENT,  FORMATS 1 AND 2 OF    NC1214.2
-002500*    THE "PERFORM" STATEMENT AND THE "DISPLAY" STATEMENT          NC1214.2
-002600*    GENERAL FORMAT.                                              NC1214.2
-002700*    ONE AND TWO LEVELS OF INDEXING ARE USED AS WELL AS           NC1214.2
-002800*    RELATIVE INDEXING.                                           NC1214.2
-002900*                                                                 NC1214.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            NC1214.2
 003100 CONFIGURATION SECTION.                                           NC1214.2
 003200 SOURCE-COMPUTER.                                                 NC1214.2
@@ -257,7 +257,7 @@
 025900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1214.2
 026000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1214.2
 026100      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1214.2
-026200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1214.2
+026200*                                                                         
 026300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1214.2
 026400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1214.2
 026500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1214.2

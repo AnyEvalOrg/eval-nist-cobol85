@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1344.2
 000300     IF134A.                                                      IF1344.2
 000400                                                                  IF1344.2
-000500***********************************************************       IF1344.2
-000600*                                                         *       IF1344.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1344.2
-000800* It contains tests for the Intrinsic Function REVERSE.   *       IF1344.2
-000900*                                                         *       IF1344.2
-001000***********************************************************       IF1344.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1344.2
 001200 CONFIGURATION SECTION.                                           IF1344.2
 001300 SOURCE-COMPUTER.                                                 IF1344.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1344.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1344.2
 002600 WORKING-STORAGE SECTION.                                         IF1344.2
-002700***********************************************************       IF1344.2
-002800* Variables specific to the Intrinsic Function Test IF134A*       IF1344.2
-002900***********************************************************       IF1344.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC A(10)           VALUE "tumble".      IF1344.2
 003100 01  B                   PIC A(10)           VALUE "WEED".        IF1344.2
 003200 01  C                   PIC X(10)           VALUE "Was".         IF1344.2
@@ -35,9 +35,9 @@
 003500 01  TEMP1               PIC X(7)            VALUE "giZZard".     IF1344.2
 003600 01  TEMP                PIC S9(10).                              IF1344.2
 003700 01  WS-ANUM          PIC X(10).                                  IF1344.2
-003800*                                                                 IF1344.2
-003900**********************************************************        IF1344.2
-004000*                                                                 IF1344.2
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 01  TEST-RESULTS.                                                IF1344.2
 004200     02 FILLER                   PIC X      VALUE SPACE.          IF1344.2
 004300     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1344.2
@@ -297,16 +297,16 @@
 029700 BAIL-OUT-EX. EXIT.                                               IF1344.2
 029800 CCVS1-EXIT.                                                      IF1344.2
 029900     EXIT.                                                        IF1344.2
-030000********************************************************          IF1344.2
-030100*                                                      *          IF1344.2
-030200*    Intrinsic Function Tests         IF134A - REVERSE *          IF1344.2
-030300*                                                      *          IF1344.2
-030400********************************************************          IF1344.2
+030000*                                                                         
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
 030500 SECT-IF134A SECTION.                                             IF1344.2
 030600 F-REVERSE-INFO.                                                  IF1344.2
 030700     MOVE     "See ref. A-67 2.38" TO ANSI-REFERENCE.             IF1344.2
 030800     MOVE     "REVERSE Function"     TO FEATURE.                  IF1344.2
-030900*****************TEST (a) ******************************          IF1344.2
+030900*                                                                         
 031000 F-REVERSE-01.                                                    IF1344.2
 031100     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 031200 F-REVERSE-TEST-01.                                               IF1344.2
@@ -324,7 +324,7 @@
 032400 F-REVERSE-WRITE-01.                                              IF1344.2
 032500     MOVE "F-REVERSE-01" TO PAR-NAME.                             IF1344.2
 032600     PERFORM  PRINT-DETAIL.                                       IF1344.2
-032700*****************TEST (b) ******************************          IF1344.2
+032700*                                                                         
 032800 F-REVERSE-02.                                                    IF1344.2
 032900     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 033000 F-REVERSE-TEST-02.                                               IF1344.2
@@ -340,15 +340,15 @@
 034000 F-REVERSE-WRITE-02.                                              IF1344.2
 034100     MOVE "F-REVERSE-02" TO PAR-NAME.                             IF1344.2
 034200     PERFORM  PRINT-DETAIL.                                       IF1344.2
-034300*****************TEST (c) ******************************          IF1344.2
+034300*                                                                         
 034400 F-REVERSE-03.                                                    IF1344.2
 034500     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 034600 F-REVERSE-TEST-03.                                               IF1344.2
 034700     MOVE FUNCTION REVERSE("highnLOW") TO WS-ANUM.                IF1344.2
-034800     IF WS-ANUM = "WOLnhTih" THEN                                 IF1344.2
+034800     IF WS-ANUM = "WOLnhuih" THEN                                 IF1344.2
 034900                    PERFORM PASS                                  IF1344.2
 035000     ELSE                                                         IF1344.2
-035100                    MOVE "WOLnhTih"  TO CORRECT-A                 IF1344.2
+035100                    MOVE "WOLnhuih"  TO CORRECT-A                 IF1344.2
 035200                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 035300                    PERFORM FAIL.                                 IF1344.2
 035400     GO TO F-REVERSE-WRITE-03.                                    IF1344.2
@@ -358,7 +358,7 @@
 035800 F-REVERSE-WRITE-03.                                              IF1344.2
 035900     MOVE "F-REVERSE-03" TO PAR-NAME.                             IF1344.2
 036000     PERFORM  PRINT-DETAIL.                                       IF1344.2
-036100*****************TEST (d) ******************************          IF1344.2
+036100*                                                                         
 036200 F-REVERSE-04.                                                    IF1344.2
 036300     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 036400 F-REVERSE-TEST-04.                                               IF1344.2
@@ -376,7 +376,7 @@
 037600 F-REVERSE-WRITE-04.                                              IF1344.2
 037700     MOVE "F-REVERSE-04" TO PAR-NAME.                             IF1344.2
 037800     PERFORM  PRINT-DETAIL.                                       IF1344.2
-037900*****************TEST (e) ******************************          IF1344.2
+037900*                                                                         
 038000 F-REVERSE-05.                                                    IF1344.2
 038100     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 038200 F-REVERSE-TEST-05.                                               IF1344.2
@@ -394,7 +394,7 @@
 039400 F-REVERSE-WRITE-05.                                              IF1344.2
 039500     MOVE "F-REVERSE-05" TO PAR-NAME.                             IF1344.2
 039600     PERFORM  PRINT-DETAIL.                                       IF1344.2
-039700*****************TEST (f) ******************************          IF1344.2
+039700*                                                                         
 039800 F-REVERSE-06.                                                    IF1344.2
 039900     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 040000 F-REVERSE-TEST-06.                                               IF1344.2
@@ -412,7 +412,7 @@
 041200 F-REVERSE-WRITE-06.                                              IF1344.2
 041300     MOVE "F-REVERSE-06" TO PAR-NAME.                             IF1344.2
 041400     PERFORM  PRINT-DETAIL.                                       IF1344.2
-041500*****************TEST (g) ******************************          IF1344.2
+041500*                                                                         
 041600 F-REVERSE-07.                                                    IF1344.2
 041700     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 041800 F-REVERSE-TEST-07.                                               IF1344.2
@@ -430,15 +430,15 @@
 043000 F-REVERSE-WRITE-07.                                              IF1344.2
 043100     MOVE "F-REVERSE-07" TO PAR-NAME.                             IF1344.2
 043200     PERFORM  PRINT-DETAIL.                                       IF1344.2
-043300*****************TEST (h) ******************************          IF1344.2
+043300*                                                                         
 043400 F-REVERSE-08.                                                    IF1344.2
 043500     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 043600 F-REVERSE-TEST-08.                                               IF1344.2
 043700     MOVE FUNCTION REVERSE(C) TO WS-ANUM.                         IF1344.2
-043800     IF WS-ANUM = "       XaW" THEN                               IF1344.2
+043800     IF WS-ANUM = "       suW" THEN                               IF1344.2
 043900                    PERFORM PASS                                  IF1344.2
 044000     ELSE                                                         IF1344.2
-044100                    MOVE "       XaW"  TO CORRECT-A               IF1344.2
+044100                    MOVE "       suW"  TO CORRECT-A               IF1344.2
 044200                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 044300                    PERFORM FAIL.                                 IF1344.2
 044400     GO TO F-REVERSE-WRITE-08.                                    IF1344.2
@@ -448,7 +448,7 @@
 044800 F-REVERSE-WRITE-08.                                              IF1344.2
 044900     MOVE "F-REVERSE-08" TO PAR-NAME.                             IF1344.2
 045000     PERFORM  PRINT-DETAIL.                                       IF1344.2
-045100*****************TEST (i) ******************************          IF1344.2
+045100*                                                                         
 045200 F-REVERSE-09.                                                    IF1344.2
 045300     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 045400 F-REVERSE-TEST-09.                                               IF1344.2
@@ -466,7 +466,7 @@
 046600 F-REVERSE-WRITE-09.                                              IF1344.2
 046700     MOVE "F-REVERSE-09" TO PAR-NAME.                             IF1344.2
 046800     PERFORM  PRINT-DETAIL.                                       IF1344.2
-046900*****************TEST (j) ******************************          IF1344.2
+046900*                                                                         
 047000 F-REVERSE-10.                                                    IF1344.2
 047100     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 047200 F-REVERSE-TEST-10.                                               IF1344.2
@@ -484,7 +484,7 @@
 048400 F-REVERSE-WRITE-10.                                              IF1344.2
 048500     MOVE "F-REVERSE-10" TO PAR-NAME.                             IF1344.2
 048600     PERFORM  PRINT-DETAIL.                                       IF1344.2
-048700*****************TEST (k) ******************************          IF1344.2
+048700*                                                                         
 048800 F-REVERSE-11.                                                    IF1344.2
 048900     MOVE ZERO TO TEMP.                                           IF1344.2
 049000 F-REVERSE-TEST-11.                                               IF1344.2
@@ -502,16 +502,16 @@
 050200 F-REVERSE-WRITE-11.                                              IF1344.2
 050300     MOVE "F-REVERSE-11" TO PAR-NAME.                             IF1344.2
 050400     PERFORM  PRINT-DETAIL.                                       IF1344.2
-050500*****************TEST (l) ******************************          IF1344.2
+050500*                                                                         
 050600 F-REVERSE-12.                                                    IF1344.2
 050700     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 050800 F-REVERSE-TEST-12.                                               IF1344.2
 050900     MOVE FUNCTION REVERSE(FUNCTION REVERSE("giZZard"))           IF1344.2
 051000       TO WS-ANUM.                                                IF1344.2
-051100     IF WS-ANUM = "giZZarI" THEN                                  IF1344.2
+051100     IF WS-ANUM = "giZCard" THEN                                  IF1344.2
 051200                    PERFORM PASS                                  IF1344.2
 051300     ELSE                                                         IF1344.2
-051400                    MOVE "giZZarI"  TO CORRECT-A                  IF1344.2
+051400                    MOVE "giZCard"  TO CORRECT-A                  IF1344.2
 051500                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 051600                    PERFORM FAIL.                                 IF1344.2
 051700     GO TO F-REVERSE-WRITE-12.                                    IF1344.2
@@ -521,7 +521,7 @@
 052100 F-REVERSE-WRITE-12.                                              IF1344.2
 052200     MOVE "F-REVERSE-12" TO PAR-NAME.                             IF1344.2
 052300     PERFORM  PRINT-DETAIL.                                       IF1344.2
-052400*****************TEST (m) ******************************          IF1344.2
+052400*                                                                         
 052500 F-REVERSE-13.                                                    IF1344.2
 052600     MOVE ZERO TO TEMP.                                           IF1344.2
 052700 F-REVERSE-TEST-13.                                               IF1344.2
@@ -540,7 +540,7 @@
 054000 F-REVERSE-WRITE-13.                                              IF1344.2
 054100     MOVE "F-REVERSE-13" TO PAR-NAME.                             IF1344.2
 054200     PERFORM  PRINT-DETAIL.                                       IF1344.2
-054300*******************END OF TESTS**************************         IF1344.2
+054300*                                                                         
 054400 CCVS-EXIT SECTION.                                               IF1344.2
 054500 CCVS-999999.                                                     IF1344.2
 054600     GO TO CLOSE-FILES.                                           IF1344.2

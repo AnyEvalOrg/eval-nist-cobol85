@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         RL2094.2
 000200 PROGRAM-ID.                                                      RL2094.2
 000300     RL209A.                                                      RL2094.2
-000400****************************************************************  RL2094.2
-000500*                                                              *  RL2094.2
-000600*    VALIDATION FOR:-                                          *  RL2094.2
-000700*                                                              *  RL2094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2094.2
-000900*                                                              *  RL2094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2094.2
-001100*                                                              *  RL2094.2
-001200****************************************************************  RL2094.2
-001300*                                                              *  RL2094.2
-001400*    THE FUNCTION OF THIS PROGRAM IS TO CREATE A RELATIVE FILE *  RL2094.2
-001500*    SEQUENTIALLY WITH VARIABLE LENGTH RECORDS AND VERIFY THAT *  RL2094.2
-001600*    IT WAS CREATED CORRECTLY.                                 *  RL2094.2
-001700*    THE FILE WILL BE IDENTIFIED AS: "RL-VS1".                 *  RL2094.2
-001800*    THE PROGRAM WILL CREATE A RELATIVE FILE OF 500 VARIABLE   *  RL2094.2
-001900*    LENGTH RECORDS.                                           *  RL2094.2
-002000*    THE RECORD SIZE WILL BE 120 TO 140 CHARACTERS.            *  RL2094.2
-002100*                                                              *  RL2094.2
-002200****************************************************************  RL2094.2
-002300*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL2094.2
-002400*            PROGRAM ARE:                                         RL2094.2
-002500*                                                                 RL2094.2
-002600*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL2094.2
-002700*                         RELATIVE  I-O DATA FILE                 RL2094.2
-002800*                 X-55   SYSTEM PRINTER                           RL2094.2
-002900*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL2094.2
-003000*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL2094.2
-003100*                 X-75   OBJECT OF VALUE OF CLAUSE                RL2094.2
-003200*                 X-82   SOURCE-COMPUTER                          RL2094.2
-003300*                 X-83   OBJECT-COMPUTER.                         RL2094.2
-003400*                                                                 RL2094.2
-003500****************************************************************  RL2094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            RL2094.2
 003700 CONFIGURATION SECTION.                                           RL2094.2
 003800 SOURCE-COMPUTER.                                                 RL2094.2
@@ -46,8 +46,8 @@
 004600     SELECT   RL-FS1 ASSIGN TO                                    RL2094.2
 004700     "XXXXX021"                                                   RL2094.2
 004800             ORGANIZATION IS RELATIVE.                            RL2094.2
-004900*    ABSENCE OF THE ACCESS CLAUSE IS TREATED AS THOUGH            RL2094.2
-005000*     SEQUENTIAL HAD BEEN SPECIFIED.                              RL2094.2
+004900*                                                                         
+005000*                                                                         
 005100 DATA DIVISION.                                                   RL2094.2
 005200 FILE SECTION.                                                    RL2094.2
 005300 FD  PRINT-FILE.                                                  RL2094.2
@@ -308,7 +308,7 @@
 031500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2094.2
 031600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2094.2
 031700      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2094.2
-031800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2094.2
+031800*                                                                         
 031900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2094.2
 032000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2094.2
 032100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2094.2

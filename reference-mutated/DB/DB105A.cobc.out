@@ -13,7 +13,7 @@ DB105A.CBL:715: warning: GO TO SECTION 'PROC-021-GO--PASS-4' [-Wgoto-section]
   714 | 071400     MOVE 0 TO INCREMENT.                                         D..
   715 > 071500     GO TO    PROC-021-GO--PASS-4                                 D..
   716 | 071600              PROC-000-GO--NUC-FAIL-4 DEPENDING ON GO-TO-DEEP.    D..
-  717 | 071700*    NOTE THAT PROC-021-GO--PASS-4 IS A SECTION-NAME.             D..
+  717 | 071700*..
 DB105A.CBL: in section 'PROC-000-PFM-J-15':
 DB105A.CBL: in paragraph 'PROC-227-PFM-WRITE-LAST':
 DB105A.CBL:1219: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
@@ -25,7 +25,7 @@ DB105A.CBL:1219: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
 DB105A.CBL: in paragraph 'STACK-EMPTY':
 DB105A.CBL:1242: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
  1240 | 124000     PERFORM WRITE-LINE 2 TIMES.                                  D..
- 1241 | 124100*                                                                 D..
+ 1241 | 124100*..
  1242 > 124200     GO TO    CCVS-EXIT.                                          D..
  1243 | 124300 NAME-LISTER SECTION.                                             D..
  1244 | 124400 NAME-LISTER-1.                                                   D..

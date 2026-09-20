@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1284.2
 000300     IF128A.                                                      IF1284.2
 000400                                                                  IF1284.2
-000500***********************************************************       IF1284.2
-000600*                                                         *       IF1284.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1284.2
-000800* It contains tests for the Intrinsic Function ORD-MAX.   *       IF1284.2
-000900*                                                         *       IF1284.2
-001000*                                                         *       IF1284.2
-001100***********************************************************       IF1284.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1284.2
 001300 CONFIGURATION SECTION.                                           IF1284.2
 001400 SOURCE-COMPUTER.                                                 IF1284.2
@@ -29,9 +29,9 @@
 002900 01  PRINT-REC PICTURE X(120).                                    IF1284.2
 003000 01  DUMMY-RECORD PICTURE X(120).                                 IF1284.2
 003100 WORKING-STORAGE SECTION.                                         IF1284.2
-003200***********************************************************       IF1284.2
-003300* Variables specific to the Intrinsic Function Test IF128A*       IF1284.2
-003400***********************************************************       IF1284.2
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 01  A                   PIC S9(10)     VALUE 5.                  IF1284.2
 003600 01  B                   PIC S9(10)     VALUE 7.                  IF1284.2
 003700 01  C                   PIC S9(10)     VALUE 4.                  IF1284.2
@@ -46,9 +46,9 @@
 004600     02 IND OCCURS 5 TIMES   PIC 9.                               IF1284.2
 004700 01  TEMP                PIC S9(10).                              IF1284.2
 004800 01  WS-INT              PIC S9(10).                              IF1284.2
-004900*                                                                 IF1284.2
-005000**********************************************************        IF1284.2
-005100*                                                                 IF1284.2
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
 005200 01  TEST-RESULTS.                                                IF1284.2
 005300     02 FILLER                   PIC X      VALUE SPACE.          IF1284.2
 005400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1284.2
@@ -342,16 +342,16 @@
 034200 BAIL-OUT-EX. EXIT.                                               IF1284.2
 034300 CCVS1-EXIT.                                                      IF1284.2
 034400     EXIT.                                                        IF1284.2
-034500********************************************************          IF1284.2
-034600*                                                      *          IF1284.2
-034700*    Intrinsic Function Tests         IF128A - ORD-MAX *          IF1284.2
-034800*                                                      *          IF1284.2
-034900********************************************************          IF1284.2
+034500*                                                                         
+034600*                                                                         
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
 035000 SECT-IF128A SECTION.                                             IF1284.2
 035100 F-ORD-MAX-INFO.                                                  IF1284.2
 035200     MOVE     "See ref. A-61 2.32" TO ANSI-REFERENCE.             IF1284.2
 035300     MOVE     "ORD-MAX Function"     TO FEATURE.                  IF1284.2
-035400*****************TEST (a) ******************************          IF1284.2
+035400*                                                                         
 035500 F-ORD-MAX-01.                                                    IF1284.2
 035600     MOVE ZERO TO WS-INT.                                         IF1284.2
 035700 F-ORD-MAX-TEST-01.                                               IF1284.2
@@ -369,7 +369,7 @@
 036900 F-ORD-MAX-WRITE-01.                                              IF1284.2
 037000     MOVE "F-ORD-MAX-01" TO PAR-NAME.                             IF1284.2
 037100     PERFORM  PRINT-DETAIL.                                       IF1284.2
-037200*****************TEST (b) ******************************          IF1284.2
+037200*                                                                         
 037300 F-ORD-MAX-TEST-02.                                               IF1284.2
 037400     EVALUATE FUNCTION ORD-MAX(3, 2, 7, 1, 5)                     IF1284.2
 037500     WHEN 3                                                       IF1284.2
@@ -383,7 +383,7 @@
 038300 F-ORD-MAX-WRITE-02.                                              IF1284.2
 038400     MOVE "F-ORD-MAX-02" TO PAR-NAME.                             IF1284.2
 038500     PERFORM  PRINT-DETAIL.                                       IF1284.2
-038600*****************TEST (c) ******************************          IF1284.2
+038600*                                                                         
 038700 F-ORD-MAX-03.                                                    IF1284.2
 038800     MOVE ZERO TO WS-INT.                                         IF1284.2
 038900 F-ORD-MAX-TEST-03.                                               IF1284.2
@@ -398,7 +398,7 @@
 039800 F-ORD-MAX-WRITE-03.                                              IF1284.2
 039900     MOVE "F-ORD-MAX-03" TO PAR-NAME.                             IF1284.2
 040000     PERFORM  PRINT-DETAIL.                                       IF1284.2
-040100*****************TEST (d) ******************************          IF1284.2
+040100*                                                                         
 040200 F-ORD-MAX-04.                                                    IF1284.2
 040300     MOVE ZERO TO WS-INT.                                         IF1284.2
 040400 F-ORD-MAX-TEST-04.                                               IF1284.2
@@ -416,7 +416,7 @@
 041600 F-ORD-MAX-WRITE-04.                                              IF1284.2
 041700     MOVE "F-ORD-MAX-04" TO PAR-NAME.                             IF1284.2
 041800     PERFORM  PRINT-DETAIL.                                       IF1284.2
-041900*****************TEST (e) ******************************          IF1284.2
+041900*                                                                         
 042000 F-ORD-MAX-05.                                                    IF1284.2
 042100     MOVE ZERO TO WS-INT.                                         IF1284.2
 042200 F-ORD-MAX-TEST-05.                                               IF1284.2
@@ -434,7 +434,7 @@
 043400 F-ORD-MAX-WRITE-05.                                              IF1284.2
 043500     MOVE "F-ORD-MAX-05" TO PAR-NAME.                             IF1284.2
 043600     PERFORM  PRINT-DETAIL.                                       IF1284.2
-043700*****************TEST (f) ******************************          IF1284.2
+043700*                                                                         
 043800 F-ORD-MAX-06.                                                    IF1284.2
 043900     MOVE ZERO TO WS-INT.                                         IF1284.2
 044000 F-ORD-MAX-TEST-06.                                               IF1284.2
@@ -452,7 +452,7 @@
 045200 F-ORD-MAX-WRITE-06.                                              IF1284.2
 045300     MOVE "F-ORD-MAX-06" TO PAR-NAME.                             IF1284.2
 045400     PERFORM  PRINT-DETAIL.                                       IF1284.2
-045500*****************TEST (g) ******************************          IF1284.2
+045500*                                                                         
 045600 F-ORD-MAX-07.                                                    IF1284.2
 045700     MOVE ZERO TO WS-INT.                                         IF1284.2
 045800 F-ORD-MAX-TEST-07.                                               IF1284.2
@@ -470,7 +470,7 @@
 047000 F-ORD-MAX-WRITE-07.                                              IF1284.2
 047100     MOVE "F-ORD-MAX-07" TO PAR-NAME.                             IF1284.2
 047200     PERFORM  PRINT-DETAIL.                                       IF1284.2
-047300*****************TEST (h) ******************************          IF1284.2
+047300*                                                                         
 047400 F-ORD-MAX-08.                                                    IF1284.2
 047500     MOVE ZERO TO WS-INT.                                         IF1284.2
 047600 F-ORD-MAX-TEST-08.                                               IF1284.2
@@ -488,7 +488,7 @@
 048800 F-ORD-MAX-WRITE-08.                                              IF1284.2
 048900     MOVE "F-ORD-MAX-08" TO PAR-NAME.                             IF1284.2
 049000     PERFORM  PRINT-DETAIL.                                       IF1284.2
-049100*****************TEST (i) ******************************          IF1284.2
+049100*                                                                         
 049200 F-ORD-MAX-09.                                                    IF1284.2
 049300     MOVE ZERO TO WS-INT.                                         IF1284.2
 049400 F-ORD-MAX-TEST-09.                                               IF1284.2
@@ -506,7 +506,7 @@
 050600 F-ORD-MAX-WRITE-09.                                              IF1284.2
 050700     MOVE "F-ORD-MAX-09" TO PAR-NAME.                             IF1284.2
 050800     PERFORM  PRINT-DETAIL.                                       IF1284.2
-050900*****************TEST (j) ******************************          IF1284.2
+050900*                                                                         
 051000 F-ORD-MAX-10.                                                    IF1284.2
 051100     MOVE ZERO TO WS-INT.                                         IF1284.2
 051200 F-ORD-MAX-TEST-10.                                               IF1284.2
@@ -524,7 +524,7 @@
 052400 F-ORD-MAX-WRITE-10.                                              IF1284.2
 052500     MOVE "F-ORD-MAX-10" TO PAR-NAME.                             IF1284.2
 052600     PERFORM  PRINT-DETAIL.                                       IF1284.2
-052700*****************TEST (k) ******************************          IF1284.2
+052700*                                                                         
 052800 F-ORD-MAX-11.                                                    IF1284.2
 052900     MOVE ZERO TO WS-INT.                                         IF1284.2
 053000 F-ORD-MAX-TEST-11.                                               IF1284.2
@@ -542,7 +542,7 @@
 054200 F-ORD-MAX-WRITE-11.                                              IF1284.2
 054300     MOVE "F-ORD-MAX-11" TO PAR-NAME.                             IF1284.2
 054400     PERFORM  PRINT-DETAIL.                                       IF1284.2
-054500*****************TEST (l) ******************************          IF1284.2
+054500*                                                                         
 054600 F-ORD-MAX-12.                                                    IF1284.2
 054700     MOVE ZERO TO WS-INT.                                         IF1284.2
 054800 F-ORD-MAX-TEST-12.                                               IF1284.2
@@ -560,16 +560,16 @@
 056000 F-ORD-MAX-WRITE-12.                                              IF1284.2
 056100     MOVE "F-ORD-MAX-12" TO PAR-NAME.                             IF1284.2
 056200     PERFORM  PRINT-DETAIL.                                       IF1284.2
-056300*****************TEST (m) ******************************          IF1284.2
+056300*                                                                         
 056400 F-ORD-MAX-13.                                                    IF1284.2
 056500     MOVE ZERO TO WS-INT.                                         IF1284.2
 056600 F-ORD-MAX-TEST-13.                                               IF1284.2
 056700     COMPUTE WS-INT = FUNCTION ORD-MAX(                           IF1284.2
 056800                           FUNCTION ORD-MAX(1, 4), 3, 1).         IF1284.2
-056900     IF WS-INT = 3 THEN                                           IF1284.2
+056900     IF WS-INT = 1 THEN                                           IF1284.2
 057000                        PERFORM PASS                              IF1284.2
 057100     ELSE                                                         IF1284.2
-057200                        MOVE 3    TO CORRECT-N                    IF1284.2
+057200                        MOVE 1    TO CORRECT-N                    IF1284.2
 057300                        MOVE WS-INT TO COMPUTED-N                 IF1284.2
 057400                        PERFORM FAIL.                             IF1284.2
 057500     GO TO F-ORD-MAX-WRITE-13.                                    IF1284.2
@@ -579,7 +579,7 @@
 057900 F-ORD-MAX-WRITE-13.                                              IF1284.2
 058000     MOVE "F-ORD-MAX-13" TO PAR-NAME.                             IF1284.2
 058100     PERFORM  PRINT-DETAIL.                                       IF1284.2
-058200*****************TEST (n) ******************************          IF1284.2
+058200*                                                                         
 058300 F-ORD-MAX-14.                                                    IF1284.2
 058400     MOVE ZERO TO WS-INT.                                         IF1284.2
 058500 F-ORD-MAX-TEST-14.                                               IF1284.2
@@ -597,16 +597,16 @@
 059700 F-ORD-MAX-WRITE-14.                                              IF1284.2
 059800     MOVE "F-ORD-MAX-14" TO PAR-NAME.                             IF1284.2
 059900     PERFORM  PRINT-DETAIL.                                       IF1284.2
-060000*****************TEST (o) ******************************          IF1284.2
+060000*                                                                         
 060100 F-ORD-MAX-15.                                                    IF1284.2
 060200     MOVE ZERO TO WS-INT.                                         IF1284.2
 060300 F-ORD-MAX-TEST-15.                                               IF1284.2
 060400     COMPUTE WS-INT = FUNCTION ORD-MAX(2, 3, A) +                 IF1284.2
 060500                      FUNCTION ORD-MAX(1, 1).                     IF1284.2
-060600     IF WS-INT = 3 THEN                                           IF1284.2
+060600     IF WS-INT = 8 THEN                                           IF1284.2
 060700                        PERFORM PASS                              IF1284.2
 060800     ELSE                                                         IF1284.2
-060900                        MOVE 3   TO CORRECT-N                     IF1284.2
+060900                        MOVE 8   TO CORRECT-N                     IF1284.2
 061000                        MOVE WS-INT TO COMPUTED-N                 IF1284.2
 061100                        PERFORM FAIL.                             IF1284.2
 061200     GO TO F-ORD-MAX-WRITE-15.                                    IF1284.2
@@ -616,14 +616,14 @@
 061600 F-ORD-MAX-WRITE-15.                                              IF1284.2
 061700     MOVE "F-ORD-MAX-15" TO PAR-NAME.                             IF1284.2
 061800     PERFORM  PRINT-DETAIL.                                       IF1284.2
-061900*****************SPECIAL TEST 1******************************     IF1284.2
+061900*                                                                         
 062000 F-ORD-MAX-16.                                                    IF1284.2
 062100     MOVE 1 TO ARG1                                               IF1284.2
 062200     PERFORM F-ORD-MAX-TEST-16                                    IF1284.2
 062300         UNTIL FUNCTION ORD-MAX (5, ARG1) = 2.                    IF1284.2
-062400*                                                                 IF1284.2
-062500**    when ARG1 = 6 , ORD-MAX(5,ARG1) = 2                         IF1284.2
-062600*                                                                 IF1284.2
+062400*                                                                         
+062500*                                                                         
+062600*                                                                         
 062700     IF ARG1 = 6 THEN                                             IF1284.2
 062800                        PERFORM PASS                              IF1284.2
 062900     ELSE                                                         IF1284.2
@@ -631,17 +631,17 @@
 063100                        MOVE WS-INT TO COMPUTED-N                 IF1284.2
 063200                        PERFORM FAIL.                             IF1284.2
 063300     GO TO F-ORD-MAX-WRITE-16.                                    IF1284.2
-063400*                                                                 IF1284.2
+063400*                                                                         
 063500 F-ORD-MAX-TEST-16.                                               IF1284.2
 063600     COMPUTE ARG1 = ARG1 + 1.                                     IF1284.2
-063700*                                                                 IF1284.2
+063700*                                                                         
 063800 F-ORD-MAX-DELETE-16.                                             IF1284.2
 063900     PERFORM  DE-LETE.                                            IF1284.2
 064000     GO TO    F-ORD-MAX-WRITE-16.                                 IF1284.2
 064100 F-ORD-MAX-WRITE-16.                                              IF1284.2
 064200     MOVE "F-ORD-MAX-16" TO PAR-NAME.                             IF1284.2
 064300     PERFORM  PRINT-DETAIL.                                       IF1284.2
-064400*******************END OF TESTS**************************         IF1284.2
+064400*                                                                         
 064500 CCVS-EXIT SECTION.                                               IF1284.2
 064600 CCVS-999999.                                                     IF1284.2
 064700     GO TO CLOSE-FILES.                                           IF1284.2

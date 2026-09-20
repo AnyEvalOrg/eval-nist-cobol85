@@ -2,32 +2,32 @@
 000200 PROGRAM-ID.                                                      NC2424.2
 000300     NC242A.                                                      NC2424.2
 000400                                                                  NC2424.2
-000500****************************************************************  NC2424.2
-000600*                                                              *  NC2424.2
-000700*    VALIDATION FOR:-                                          *  NC2424.2
-000800*                                                              *  NC2424.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2424.2
-001000*                                                              *  NC2424.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2424.2
-001200*                                                              *  NC2424.2
-001300****************************************************************  NC2424.2
-001400*                                                              *  NC2424.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2424.2
-001600*                                                              *  NC2424.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2424.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2424.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2424.2
-002000*                                                              *  NC2424.2
-002100****************************************************************  NC2424.2
-002200*                                                              *  NC2424.2
-002300*    PROGRAM NC242A TESTS THE CONSTRUCTION AND ACCESS OF       *  NC2424.2
-002400*    THREE AND SEVEN-DIMENSIONAL TABLES.                       *  NC2424.2
-002500*    THE CONSTRUCTION IS BY MEANS OF A FORMAT 4 "PERFORM"      *  NC2424.2
-002600*    STATEMENT UTILIZING SUBSCRIPTS WHICH ARE CONVERTED TO     *  NC2424.2
-002700*    INDICES BY "SET".   ACCESS IS VIA "IF" STATEMENTS USING   *  NC2424.2
-002800*    SUBSCRIPTS OF NUMERIC LITERALS AND CONSTANTS.             *  NC2424.2
-002900*                                                              *  NC2424.2
-003000****************************************************************  NC2424.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            NC2424.2
 003200 CONFIGURATION SECTION.                                           NC2424.2
 003300 SOURCE-COMPUTER.                                                 NC2424.2
@@ -299,7 +299,7 @@
 030100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2424.2
 030200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2424.2
 030300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2424.2
-030400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2424.2
+030400*                                                                         
 030500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2424.2
 030600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2424.2
 030700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2424.2
@@ -502,7 +502,7 @@
 050400                                                                  NC2424.2
 050500 END-3LEVEL-SUBSCRPT-TEST.                                        NC2424.2
 050600     PERFORM PRINT-DETAIL.                                        NC2424.2
-050700*                                                                 NC2424.2
+050700*                                                                         
 050800 TH7-INIT.                                                        NC2424.2
 050900     MOVE   "TH7-TEST"   TO PAR-NAME.                             NC2424.2
 051000     MOVE   "VI-2 1.3.4" TO ANSI-REFERENCE.                       NC2424.2
@@ -567,7 +567,7 @@
 056900             PERFORM FAIL                                         NC2424.2
 057000             PERFORM PRINT-DETAIL.                                NC2424.2
 057100                                                                  NC2424.2
-057200*                                                                 NC2424.2
+057200*                                                                         
 057300 CCVS-EXIT SECTION.                                               NC2424.2
 057400 CCVS-999999.                                                     NC2424.2
 057500     GO TO CLOSE-FILES.                                           NC2424.2

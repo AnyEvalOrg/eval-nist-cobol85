@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1334.2
 000300     IF133A.                                                      IF1334.2
 000400                                                                  IF1334.2
-000500***********************************************************       IF1334.2
-000600*                                                         *       IF1334.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1334.2
-000800* It contains tests for the Intrinsic Function            *       IF1334.2
-000900* REM.                                                    *       IF1334.2
-001000*                                                         *       IF1334.2
-001100***********************************************************       IF1334.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1334.2
 001300 CONFIGURATION SECTION.                                           IF1334.2
 001400 SOURCE-COMPUTER.                                                 IF1334.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1334.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1334.2
 002700 WORKING-STORAGE SECTION.                                         IF1334.2
-002800***********************************************************       IF1334.2
-002900* Variables specific to the Intrinsic Function Test IF133A*       IF1334.2
-003000***********************************************************       IF1334.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 5.             IF1334.2
 003200 01  B                   PIC S9(5)V9(5)      VALUE 7.36.          IF1334.2
 003300 01  C                   PIC S9(10)          VALUE -4.            IF1334.2
@@ -37,9 +37,9 @@
 003700 01  WS-NUM              PIC S9(5)V9(6).                          IF1334.2
 003800 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1334.2
 003900 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1334.2
-004000*                                                                 IF1334.2
-004100**********************************************************        IF1334.2
-004200*                                                                 IF1334.2
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
 004300 01  TEST-RESULTS.                                                IF1334.2
 004400     02 FILLER                   PIC X      VALUE SPACE.          IF1334.2
 004500     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1334.2
@@ -333,25 +333,25 @@
 033300 BAIL-OUT-EX. EXIT.                                               IF1334.2
 033400 CCVS1-EXIT.                                                      IF1334.2
 033500     EXIT.                                                        IF1334.2
-033600********************************************************          IF1334.2
-033700*                                                      *          IF1334.2
-033800*    Intrinsic Function Tests         IF133A - REM     *          IF1334.2
-033900*                                                      *          IF1334.2
-034000********************************************************          IF1334.2
+033600*                                                                         
+033700*                                                                         
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
 034100 SECT-IF133A SECTION.                                             IF1334.2
 034200 F-REM-INFO.                                                      IF1334.2
 034300     MOVE     "See ref. A-66 2.37" TO ANSI-REFERENCE.             IF1334.2
 034400     MOVE     "REM Function" TO FEATURE.                          IF1334.2
-034500*****************TEST (a) - SIMPLE TEST*****************          IF1334.2
+034500*                                                                         
 034600 F-REM-01.                                                        IF1334.2
 034700     MOVE ZERO TO WS-NUM.                                         IF1334.2
 034800 F-REM-TEST-01.                                                   IF1334.2
 034900     COMPUTE WS-NUM = FUNCTION REM(0, 20).                        IF1334.2
-035000     IF WS-NUM = 1 THEN                                           IF1334.2
+035000     IF WS-NUM = 8 THEN                                           IF1334.2
 035100                    PERFORM PASS                                  IF1334.2
 035200     ELSE                                                         IF1334.2
 035300                    MOVE WS-NUM TO COMPUTED-N                     IF1334.2
-035400                    MOVE 1 TO CORRECT-N                           IF1334.2
+035400                    MOVE 8 TO CORRECT-N                           IF1334.2
 035500                    PERFORM FAIL.                                 IF1334.2
 035600     GO TO F-REM-WRITE-01.                                        IF1334.2
 035700 F-REM-DELETE-01.                                                 IF1334.2
@@ -360,7 +360,7 @@
 036000 F-REM-WRITE-01.                                                  IF1334.2
 036100     MOVE "F-REM-01" TO PAR-NAME.                                 IF1334.2
 036200     PERFORM  PRINT-DETAIL.                                       IF1334.2
-036300*****************TEST (b) - SIMPLE TEST*****************          IF1334.2
+036300*                                                                         
 036400 F-REM-02.                                                        IF1334.2
 036500     EVALUATE FUNCTION REM(10.674, 10.674)                        IF1334.2
 036600     WHEN -0.000020 THRU 0.000020                                 IF1334.2
@@ -374,7 +374,7 @@
 037400 F-REM-WRITE-02.                                                  IF1334.2
 037500     MOVE "F-REM-02" TO PAR-NAME.                                 IF1334.2
 037600     PERFORM  PRINT-DETAIL.                                       IF1334.2
-037700*****************TEST (c) - SIMPLE TEST*****************          IF1334.2
+037700*                                                                         
 037800 F-REM-03.                                                        IF1334.2
 037900     IF (FUNCTION REM(2.5, A) >= 2.49995) AND                     IF1334.2
 038000        (FUNCTION REM(2.5, A) <= 2.50005)                         IF1334.2
@@ -388,7 +388,7 @@
 038800 F-REM-WRITE-03.                                                  IF1334.2
 038900     MOVE "F-REM-03" TO PAR-NAME.                                 IF1334.2
 039000     PERFORM  PRINT-DETAIL.                                       IF1334.2
-039100*****************TEST (d) - SIMPLE TEST*****************          IF1334.2
+039100*                                                                         
 039200 F-REM-04.                                                        IF1334.2
 039300     MOVE ZERO TO WS-NUM.                                         IF1334.2
 039400 F-REM-TEST-04.                                                   IF1334.2
@@ -406,7 +406,7 @@
 040600 F-REM-WRITE-04.                                                  IF1334.2
 040700     MOVE "F-REM-04" TO PAR-NAME.                                 IF1334.2
 040800     PERFORM  PRINT-DETAIL.                                       IF1334.2
-040900*****************TEST (e) - SIMPLE TEST*****************          IF1334.2
+040900*                                                                         
 041000 F-REM-05.                                                        IF1334.2
 041100     MOVE ZERO TO WS-NUM.                                         IF1334.2
 041200 F-REM-TEST-05.                                                   IF1334.2
@@ -425,7 +425,7 @@
 042500 F-REM-WRITE-05.                                                  IF1334.2
 042600     MOVE "F-REM-05" TO PAR-NAME.                                 IF1334.2
 042700     PERFORM  PRINT-DETAIL.                                       IF1334.2
-042800*****************TEST (f) - SIMPLE TEST*****************          IF1334.2
+042800*                                                                         
 042900 F-REM-06.                                                        IF1334.2
 043000     MOVE ZERO TO WS-NUM.                                         IF1334.2
 043100 F-REM-TEST-06.                                                   IF1334.2
@@ -443,16 +443,16 @@
 044300 F-REM-WRITE-06.                                                  IF1334.2
 044400     MOVE "F-REM-06" TO PAR-NAME.                                 IF1334.2
 044500     PERFORM  PRINT-DETAIL.                                       IF1334.2
-044600*****************TEST (g) - SIMPLE TEST*****************          IF1334.2
+044600*                                                                         
 044700 F-REM-07.                                                        IF1334.2
 044800     MOVE ZERO TO WS-NUM.                                         IF1334.2
 044900 F-REM-TEST-07.                                                   IF1334.2
 045000     COMPUTE WS-NUM = FUNCTION REM(11, -5).                       IF1334.2
-045100     IF WS-NUM = 8 THEN                                           IF1334.2
+045100     IF WS-NUM = 7 THEN                                           IF1334.2
 045200                    PERFORM PASS                                  IF1334.2
 045300     ELSE                                                         IF1334.2
 045400                    MOVE WS-NUM TO COMPUTED-N                     IF1334.2
-045500                    MOVE 8 TO CORRECT-N                           IF1334.2
+045500                    MOVE 7 TO CORRECT-N                           IF1334.2
 045600                    PERFORM FAIL.                                 IF1334.2
 045700     GO TO F-REM-WRITE-07.                                        IF1334.2
 045800 F-REM-DELETE-07.                                                 IF1334.2
@@ -461,7 +461,7 @@
 046100 F-REM-WRITE-07.                                                  IF1334.2
 046200     MOVE "F-REM-07" TO PAR-NAME.                                 IF1334.2
 046300     PERFORM  PRINT-DETAIL.                                       IF1334.2
-046400*****************TEST (h) - SIMPLE TEST*****************          IF1334.2
+046400*                                                                         
 046500 F-REM-08.                                                        IF1334.2
 046600     MOVE ZERO TO WS-NUM.                                         IF1334.2
 046700 F-REM-TEST-08.                                                   IF1334.2
@@ -479,7 +479,7 @@
 047900 F-REM-WRITE-08.                                                  IF1334.2
 048000     MOVE "F-REM-08" TO PAR-NAME.                                 IF1334.2
 048100     PERFORM  PRINT-DETAIL.                                       IF1334.2
-048200*****************TEST (a) - COMPLEX TEST****************          IF1334.2
+048200*                                                                         
 048300 F-REM-09.                                                        IF1334.2
 048400     MOVE ZERO TO WS-NUM.                                         IF1334.2
 048500     MOVE  0.889982 TO MIN-RANGE.                                 IF1334.2
@@ -501,7 +501,7 @@
 050100 F-REM-WRITE-09.                                                  IF1334.2
 050200     MOVE "F-REM-09" TO PAR-NAME.                                 IF1334.2
 050300     PERFORM  PRINT-DETAIL.                                       IF1334.2
-050400*****************TEST (b) - COMPLEX TEST****************          IF1334.2
+050400*                                                                         
 050500 F-REM-10.                                                        IF1334.2
 050600     MOVE ZERO TO WS-NUM.                                         IF1334.2
 050700     MOVE  0.159997 TO MIN-RANGE.                                 IF1334.2
@@ -523,7 +523,7 @@
 052300 F-REM-WRITE-10.                                                  IF1334.2
 052400     MOVE "F-REM-10" TO PAR-NAME.                                 IF1334.2
 052500     PERFORM  PRINT-DETAIL.                                       IF1334.2
-052600*****************TEST (c) - COMPLEX TEST****************          IF1334.2
+052600*                                                                         
 052700 F-REM-11.                                                        IF1334.2
 052800     MOVE ZERO TO WS-NUM.                                         IF1334.2
 052900     MOVE -0.000020 TO MIN-RANGE.                                 IF1334.2
@@ -545,7 +545,7 @@
 054500 F-REM-WRITE-11.                                                  IF1334.2
 054600     MOVE "F-REM-11" TO PAR-NAME.                                 IF1334.2
 054700     PERFORM  PRINT-DETAIL.                                       IF1334.2
-054800*****************TEST (d) - COMPLEX TEST****************          IF1334.2
+054800*                                                                         
 054900 F-REM-12.                                                        IF1334.2
 055000     MOVE ZERO TO WS-NUM.                                         IF1334.2
 055100     MOVE  6.63987 TO MIN-RANGE.                                  IF1334.2
@@ -567,7 +567,7 @@
 056700 F-REM-WRITE-12.                                                  IF1334.2
 056800     MOVE "F-REM-12" TO PAR-NAME.                                 IF1334.2
 056900     PERFORM  PRINT-DETAIL.                                       IF1334.2
-057000*****************TEST (e) - COMPLEX TEST****************          IF1334.2
+057000*                                                                         
 057100 F-REM-13.                                                        IF1334.2
 057200     MOVE ZERO TO WS-NUM.                                         IF1334.2
 057300     MOVE -1.00002 TO MIN-RANGE.                                  IF1334.2
@@ -589,7 +589,7 @@
 058900 F-REM-WRITE-13.                                                  IF1334.2
 059000     MOVE "F-REM-13" TO PAR-NAME.                                 IF1334.2
 059100     PERFORM  PRINT-DETAIL.                                       IF1334.2
-059200*****************TEST (f) - COMPLEX TEST****************          IF1334.2
+059200*                                                                         
 059300 F-REM-14.                                                        IF1334.2
 059400     MOVE ZERO TO WS-NUM.                                         IF1334.2
 059500     MOVE  1.99996 TO MIN-RANGE.                                  IF1334.2
@@ -612,7 +612,7 @@
 061200 F-REM-WRITE-14.                                                  IF1334.2
 061300     MOVE "F-REM-14" TO PAR-NAME.                                 IF1334.2
 061400     PERFORM  PRINT-DETAIL.                                       IF1334.2
-061500*****************TEST (g) - COMPLEX TEST****************          IF1334.2
+061500*                                                                         
 061600 F-REM-15.                                                        IF1334.2
 061700     MOVE ZERO TO WS-NUM.                                         IF1334.2
 061800     MOVE -0.000020 TO MIN-RANGE.                                 IF1334.2
@@ -635,7 +635,7 @@
 063500 F-REM-WRITE-15.                                                  IF1334.2
 063600     MOVE "F-REM-15" TO PAR-NAME.                                 IF1334.2
 063700     PERFORM  PRINT-DETAIL.                                       IF1334.2
-063800*****************TEST (h) - COMPLEX TEST****************          IF1334.2
+063800*                                                                         
 063900 F-REM-16.                                                        IF1334.2
 064000     MOVE ZERO TO WS-NUM.                                         IF1334.2
 064100     MOVE  0.999980 TO MIN-RANGE.                                 IF1334.2
@@ -658,7 +658,7 @@
 065800 F-REM-WRITE-16.                                                  IF1334.2
 065900     MOVE "F-REM-16" TO PAR-NAME.                                 IF1334.2
 066000     PERFORM  PRINT-DETAIL.                                       IF1334.2
-066100*****************SPECIAL PERFORM TEST**********************       IF1334.2
+066100*                                                                         
 066200 F-REM-17.                                                        IF1334.2
 066300     PERFORM F-REM-TEST-17                                        IF1334.2
 066400       UNTIL FUNCTION REM(5, ARG2) >= 2.                          IF1334.2
@@ -672,7 +672,7 @@
 067200 F-REM-WRITE-17.                                                  IF1334.2
 067300     MOVE "F-REM-17" TO PAR-NAME.                                 IF1334.2
 067400     PERFORM  PRINT-DETAIL.                                       IF1334.2
-067500********************END OF TESTS***************                   IF1334.2
+067500*                                                                         
 067600 CCVS-EXIT SECTION.                                               IF1334.2
 067700 CCVS-999999.                                                     IF1334.2
 067800     GO TO CLOSE-FILES.                                           IF1334.2

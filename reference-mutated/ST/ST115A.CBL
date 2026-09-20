@@ -1,65 +1,65 @@
 000100 IDENTIFICATION DIVISION.                                         ST1154.2
 000200 PROGRAM-ID.                                                      ST1154.2
 000300     ST115A.                                                      ST1154.2
-000400****************************************************************  ST1154.2
-000500*                                                              *  ST1154.2
-000600*    VALIDATION FOR:-                                          *  ST1154.2
-000700*                                                              *  ST1154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1154.2
-000900*                                                              *  ST1154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1154.2
-001100*                                                              *  ST1154.2
-001200****************************************************************  ST1154.2
-001300*                                                              *  ST1154.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1154.2
-001500*                                                              *  ST1154.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1154.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1154.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1154.2
-001900*        X-XXXP01     SQ-FS1                                   *  ST1154.2
-002000*        X-XXX065     4 DIGIT INTEGER FOR THE NUMBER           *  ST1154.2
-002100*                        RECORDS IN THE FILE SQ-FS1.           *  ST1154.2
-002200*                                                              *  ST1154.2
-002300*                                                              *  ST1154.2
-002400****************************************************************  ST1154.2
-002500*                                                                 ST1154.2
-002600*                                                                 ST1154.2
-002700*    OBJECTIVE -                                                  ST1154.2
-002800*        ROUTINE ST115 BUILDS A SEQUENTIAL FILE SQ-FS1 WHICH      ST1154.2
-002900*    IS THEN PASSED TO ST116 TO BE SORTED.                        ST1154.2
-003000*                                                                 ST1154.2
-003100*                                                                 ST1154.2
-003200*    FEATURES TESTED -                                            ST1154.2
-003300*    *   FIXED LENGTH RECORDS                                     ST1154.2
-003400*    *   OCCURS CLAUSES                                           ST1154.2
-003500*                                                                 ST1154.2
-003600*                                                                 ST1154.2
-003700*                                                                 ST1154.2
-003800*    FILES USED -                                                 ST1154.2
-003900*    *   FILE SQ-FS1 CAN BE ON MAGNETIC TAPE OR MASS-STORAGE.     ST1154.2
-004000*                                                                 ST1154.2
-004100*        SQ-FS1 -                                                 ST1154.2
-004200*    THE NUMBER OF RECORDS ON SQ-FS1 IS A VARIABLE (X-65).  THIS  ST1154.2
-004300*        NUMBER SHOULD BE LARGE ENOUGH TO FORCE THE SORT ROUTINE  ST1154.2
-004400*        IN ST116 TO BE NON-CORE RESIDENT.  THAT IS FORCE         ST1154.2
-004500*        THE SYSTEM TO USE SOME MEANS OF AUX. STORAGE FOR THE SORTST1154.2
-004600*        SUB-STRINGS.                                             ST1154.2
-004700*    FIXED LENGTH RECORDS ( 507 CHARACTERS PER RECORD )           ST1154.2
-004800*    BLOCKED 1                                                    ST1154.2
-004900*    RESERVE 2 AREAS                                              ST1154.2
-005000*                                                                 ST1154.2
-005100*                                                                 ST1154.2
-005200*                                                                 ST1154.2
-005300*    OPTIONS RECOMMENDED -                                        ST1154.2
-005400*    *   *OPT8  X  TO BE USED IF NECESSARY TO DUMP THE            ST1154.2
-005500*                 FILE SQ-FS1 ONCE IT HAS BEEN CREATED.           ST1154.2
-005600*                                                                 ST1154.2
-005700*                                                                 ST1154.2
-005800*    TEST DESCRIPTIONS -                                          ST1154.2
-005900*        NOT APPLICABLE.                                          ST1154.2
-006000*                                                                 ST1154.2
-006100*                                                                 ST1154.2
-006200*    ************************************************************ ST1154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
 006300 ENVIRONMENT DIVISION.                                            ST1154.2
 006400 CONFIGURATION SECTION.                                           ST1154.2
 006500 SOURCE-COMPUTER.                                                 ST1154.2
@@ -355,7 +355,7 @@
 036300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1154.2
 036400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1154.2
 036500      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1154.2
-036600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1154.2
+036600*                                                                         
 036700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1154.2
 036800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1154.2
 036900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1154.2

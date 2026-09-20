@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC1124.2
 000200 PROGRAM-ID.                                                      NC1124.2
 000300     NC112A.                                                      NC1124.2
-000400****************************************************************  NC1124.2
-000500*                                                              *  NC1124.2
-000600*    VALIDATION FOR:-                                          *  NC1124.2
-000700*                                                              *  NC1124.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1124.2
-000900*                                                              *  NC1124.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1124.2
-001100*                                                              *  NC1124.2
-001200****************************************************************  NC1124.2
-001300*                                                              *  NC1124.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1124.2
-001500*                                                              *  NC1124.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1124.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1124.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1124.2
-001900*                                                              *  NC1124.2
-002000****************************************************************  NC1124.2
-002100*                                                                 NC1124.2
-002200*    PROGRAM NC112A TESTS THE USE OF MULTIPLE OPERANDS WITH       NC1124.2
-002300*           THE ADD, SUBTRACT AND MOVE STATEMENTS.                NC1124.2
-002400*                                                                 NC1124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC1124.2
 002600 CONFIGURATION SECTION.                                           NC1124.2
 002700 SOURCE-COMPUTER.                                                 NC1124.2
@@ -240,7 +240,7 @@
 024200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1124.2
 024300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1124.2
 024400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1124.2
-024500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1124.2
+024500*                                                                         
 024600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1124.2
 024700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1124.2
 024800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1124.2
@@ -687,11 +687,11 @@
 068900                    .5                                            NC1124.2
 069000                    .5 FROM ACCUM-1 ROUNDED.                      NC1124.2
 069100 SUB-TEST-F1-2-1.                                                 NC1124.2
-069200     IF ACCUM-1 EQUAL TO 0                                        NC1124.2
+069200     IF ACCUM-1 EQUAL TO 5                                        NC1124.2
 069300         PERFORM PASS                                             NC1124.2
 069400         GO TO SUB-WRITE-F1-2.                                    NC1124.2
 069500     MOVE ACCUM-1 TO COMPUTED-A.                                  NC1124.2
-069600     MOVE 0 TO CORRECT-A.                                         NC1124.2
+069600     MOVE 5 TO CORRECT-A.                                         NC1124.2
 069700     PERFORM FAIL.                                                NC1124.2
 069800     GO TO SUB-WRITE-F1-2.                                        NC1124.2
 069900 SUB-DELETE-F1-2.                                                 NC1124.2
@@ -760,10 +760,10 @@
 076200     MOVE "MOVE-TEST-F1-1-1" TO PAR-NAME.                         NC1124.2
 076300     PERFORM PRINT-DETAIL.                                        NC1124.2
 076400 MOVE-TEST-F1-1-2.                                                NC1124.2
-076500     IF DNAME-2 EQUAL TO 1                                        NC1124.2
+076500     IF DNAME-2 EQUAL TO 0                                        NC1124.2
 076600         PERFORM PASS                                             NC1124.2
 076700         GO TO MOVE-WRITE-F1-1-2.                                 NC1124.2
-076800     MOVE 1 TO CORRECT-N.                                         NC1124.2
+076800     MOVE 0 TO CORRECT-N.                                         NC1124.2
 076900     MOVE DNAME-2 TO COMPUTED-N.                                  NC1124.2
 077000     PERFORM FAIL.                                                NC1124.2
 077100     GO TO MOVE-WRITE-F1-1-2.                                     NC1124.2
@@ -773,10 +773,10 @@
 077500     MOVE "MOVE-TEST-F1-1-2" TO PAR-NAME.                         NC1124.2
 077600     PERFORM PRINT-DETAIL.                                        NC1124.2
 077700 MOVE-TEST-F1-1-3.                                                NC1124.2
-077800     IF DNAME-3 EQUAL TO 7                                        NC1124.2
+077800     IF DNAME-3 EQUAL TO 1                                        NC1124.2
 077900         PERFORM PASS                                             NC1124.2
 078000         GO TO MOVE-WRITE-F1-1-3.                                 NC1124.2
-078100     MOVE 7 TO CORRECT-N.                                         NC1124.2
+078100     MOVE 1 TO CORRECT-N.                                         NC1124.2
 078200     MOVE DNAME-3 TO COMPUTED-N.                                  NC1124.2
 078300     PERFORM FAIL.                                                NC1124.2
 078400     GO TO MOVE-WRITE-F1-1-3.                                     NC1124.2
@@ -825,10 +825,10 @@
 082700     MOVE "MOVE-TEST-F1-1-6 " TO PAR-NAME.                        NC1124.2
 082800     PERFORM PRINT-DETAIL.                                        NC1124.2
 082900 MOVE-TEST-F1-1-7.                                                NC1124.2
-083000     IF DNAME-7  EQUAL TO 1                                       NC1124.2
+083000     IF DNAME-7  EQUAL TO 3                                       NC1124.2
 083100         PERFORM PASS                                             NC1124.2
 083200         GO TO MOVE-WRITE-F1-1-7.                                 NC1124.2
-083300     MOVE 1 TO CORRECT-N.                                         NC1124.2
+083300     MOVE 3 TO CORRECT-N.                                         NC1124.2
 083400     MOVE DNAME-7  TO COMPUTED-N.                                 NC1124.2
 083500     PERFORM FAIL.                                                NC1124.2
 083600     GO TO MOVE-WRITE-F1-1-7.                                     NC1124.2
@@ -891,10 +891,10 @@
 089300                  DNAME-9                                         NC1124.2
 089400                  DNAME-10.                                       NC1124.2
 089500 MOVE-TEST-F1-2-1.                                                NC1124.2
-089600     IF DNAME-1  EQUAL TO 0                                       NC1124.2
+089600     IF DNAME-1  EQUAL TO 7                                       NC1124.2
 089700         PERFORM PASS                                             NC1124.2
 089800         GO TO MOVE-WRITE-F1-2-1.                                 NC1124.2
-089900     MOVE 0 TO CORRECT-N.                                         NC1124.2
+089900     MOVE 7 TO CORRECT-N.                                         NC1124.2
 090000     MOVE DNAME-1  TO COMPUTED-N.                                 NC1124.2
 090100     PERFORM FAIL.                                                NC1124.2
 090200     GO TO MOVE-WRITE-F1-2-1.                                     NC1124.2
@@ -956,10 +956,10 @@
 095800     MOVE "MOVE-TEST-F1-2-5" TO PAR-NAME.                         NC1124.2
 095900     PERFORM PRINT-DETAIL.                                        NC1124.2
 096000 MOVE-TEST-F1-2-6.                                                NC1124.2
-096100     IF DNAME-6  EQUAL TO 2                                       NC1124.2
+096100     IF DNAME-6  EQUAL TO 0                                       NC1124.2
 096200         PERFORM PASS                                             NC1124.2
 096300         GO TO MOVE-WRITE-F1-2-6.                                 NC1124.2
-096400     MOVE 2 TO CORRECT-N.                                         NC1124.2
+096400     MOVE 0 TO CORRECT-N.                                         NC1124.2
 096500     MOVE DNAME-6  TO COMPUTED-N.                                 NC1124.2
 096600     PERFORM FAIL.                                                NC1124.2
 096700     GO TO MOVE-WRITE-F1-2-6.                                     NC1124.2

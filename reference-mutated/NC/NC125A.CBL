@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1254.2
 000200 PROGRAM-ID.                                                      NC1254.2
 000300     NC125A.                                                      NC1254.2
-000400****************************************************************  NC1254.2
-000500*                                                              *  NC1254.2
-000600*    VALIDATION FOR:-                                          *  NC1254.2
-000700*                                                              *  NC1254.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1254.2
-000900*                                                              *  NC1254.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1254.2
-001100*                                                              *  NC1254.2
-001200****************************************************************  NC1254.2
-001300*                                                              *  NC1254.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1254.2
-001500*                                                              *  NC1254.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1254.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1254.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1254.2
-001900*                                                              *  NC1254.2
-002000****************************************************************  NC1254.2
-002100*                                                                 NC1254.2
-002200*    PROGRAM NC125A TESTS THE USE OF PICTURE CHARACTERS           NC1254.2
-002300*    $ + * . , WITH FORMAT 1 OF THE "MOVE" STATEMENT AND          NC1254.2
-002400*    FORMAT 2 OF THE "ADD" AND "SUBTRACT" STATEMENTS.             NC1254.2
-002500*                                                                 NC1254.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1254.2
 002700 CONFIGURATION SECTION.                                           NC1254.2
 002800 SOURCE-COMPUTER.                                                 NC1254.2
@@ -313,7 +313,7 @@
 031500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1254.2
 031600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1254.2
 031700      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1254.2
-031800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1254.2
+031800*                                                                         
 031900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1254.2
 032000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1254.2
 032100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1254.2
@@ -696,7 +696,7 @@
 069800     PERFORM PRINT-DETAIL.                                        NC1254.2
 069900 EDI-TEST-GF12-EXIT.                                              NC1254.2
 070000     EXIT.                                                        NC1254.2
-070100*                                                                 NC1254.2
+070100*                                                                         
 070200 EDI-INIT-GF-13.                                                  NC1254.2
 070300     MOVE   "VI-33 5.9.5 (4), (5)" TO ANSI-REFERENCE.             NC1254.2
 070400     MOVE   "EDI-TEST-GF-13"       TO PAR-NAME.                   NC1254.2
@@ -719,7 +719,7 @@
 072100     PERFORM FAIL.                                                NC1254.2
 072200 EDI-WRITE-GF-13.                                                 NC1254.2
 072300     PERFORM PRINT-DETAIL.                                        NC1254.2
-072400*                                                                 NC1254.2
+072400*                                                                         
 072500 EDI-INIT-GF-14.                                                  NC1254.2
 072600     MOVE   "VI-34 5.9.5 (4), (5)" TO ANSI-REFERENCE.             NC1254.2
 072700     MOVE   "EDI-TEST-GF-14"       TO PAR-NAME.                   NC1254.2
@@ -742,7 +742,7 @@
 074400     PERFORM FAIL.                                                NC1254.2
 074500 EDI-WRITE-GF-14.                                                 NC1254.2
 074600     PERFORM PRINT-DETAIL.                                        NC1254.2
-074700*                                                                 NC1254.2
+074700*                                                                         
 074800 CCVS-EXIT SECTION.                                               NC1254.2
 074900 CCVS-999999.                                                     NC1254.2
 075000     GO TO CLOSE-FILES.                                           NC1254.2

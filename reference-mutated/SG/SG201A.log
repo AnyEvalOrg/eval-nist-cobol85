@@ -19,7 +19,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        FAIL* SEG-TEST-4                                                                                  
                                                                                                                         
                                      COMPUTED= GOOD                                                                     
-                                     CORRECT = EOOD                                                                     
+                                     CORRECT = COOD                                                                     
                                                                                                                         
  SEGMENT-LIMIT        PASS  SEG-TEST-5                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-6                                                                                  
@@ -32,7 +32,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        FAIL* SEG-TEST-13                                                                                 
                                                                                                                         
                                      COMPUTED= GOOD                                                                     
-                                     CORRECT = GOWD                                                                     
+                                     CORRECT = JOOD                                                                     
                                                                                                                         
  SEGMENT-LIMIT        PASS  SEG-TEST-14                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-15                                                                                 
@@ -42,7 +42,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        FAIL* SEG-TEST-19                                                                                 
                                                                                                                         
                                      COMPUTED= GOOD                                                                     
-                                     CORRECT = GIOD                                                                     
+                                     CORRECT = GPOD                                                                     
                                                                                                                         
  SEGMENT-LIMIT        PASS  SEG-TEST-20                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-21                                                                                 

@@ -1,54 +1,54 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1064.2
 000200 PROGRAM-ID.                                                      SQ1064.2
 000300     SQ106A.                                                      SQ1064.2
-000400****************************************************************  SQ1064.2
-000500*                                                              *  SQ1064.2
-000600*    VALIDATION FOR:-                                          *  SQ1064.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1064.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ1064.2
-000900*                             REVISED 1986, AUGUST             *  SQ1064.2
-001000*                                                              *  SQ1064.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ1064.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1064.2
-001300*                                                              *  SQ1064.2
-001400****************************************************************  SQ1064.2
-001500*                                                              *  SQ1064.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1064.2
-001700*                                                              *  SQ1064.2
-001800*            X-01   SEQUENTIAL MAGNETIC TAPE FILE              *  SQ1064.2
-001900*            X-55   SYSTEM PRINTER                             *  SQ1064.2
-002000*            X-82   SOURCE-COMPUTER                            *  SQ1064.2
-002100*            X-83   OBJECT-COMPUTER.                           *  SQ1064.2
-002200*                                                              *  SQ1064.2
-002300****************************************************************  SQ1064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
 002400                                                                  SQ1064.2
-002500*    THIS PROGRAM BUILDS A SEQUENTIAL TAPE FILE WHICH CONTAINS *  SQ1064.2
-002600*    BOTH 120 CHARACTER AND 151 CHARACTER RECORDS.             *  SQ1064.2
-002700*                                                              *  SQ1064.2
-002800*    THE SEQUENCE OF RECORD TYPES IS SLSSLSLLLSS, WHERE S      *  SQ1064.2
-002900*    INDICATES 120 CHARACTERS AND L INDICATES 151 CHARACTERS,  *  SQ1064.2
-003000*    FOR A TOTAL OF 11 RECORDS IN THE FILE.  SIX OF THE        *  SQ1064.2
-003100*    RECORDS ARE WRITEN USING WRITE FROM, THE OTHERS USING A   *  SQ1064.2
-003200*    WRITE STATEMENT WITHOUT THE FROM PHRASE.  THE FILE IS     *  SQ1064.2
-003300*    THEN CLOSED AND REOPENED FOR INPUT.  IT IS READ USING     *  SQ1064.2
-003400*    TWELVE DIFFERENT FORMATS OF THE READ STATEMENT.  THE      *  SQ1064.2
-003500*    VARIANTS ARE PRODUCED BY INCLUDING OR OMITTING THE NOT AT *  SQ1064.2
-003600*    END AND END-READ PHRASES, AND INCLUDING OR EXCLUDING THE  *  SQ1064.2
-003700*    OPTIONAL WORD "AT" IN THE END AND NOT END PHRASES.        *  SQ1064.2
-003800*    FIELDS IN EACH RECORD ARE CHECKED AGAINST THE EXPECTED    *  SQ1064.2
-003900*    VALUES.                                                   *  SQ1064.2
-004000*                                                              *  SQ1064.2
-004100*    WHERE A SHORT RECORD IS EXPECTED, A CHECK IS MADE THAT    *  SQ1064.2
-004200*    THE RECORD AREA DOES NOT CONTAIN THE VALUES THAT WERE     *  SQ1064.2
-004300*    PRESENT IN THAT PART OF THE RECORD AREA BEYOND THE RECORD *  SQ1064.2
-004400*    WHEN IT WAS WRITTEN.  THIS ASSUMPTION IS NOT FULLY        *  SQ1064.2
-004500*    JUSTIFIED, AS THE CONTENT OF THE RECORD AREA BEYOND THE   *  SQ1064.2
-004600*    END OF THE RECORD WHEN A SHORT RECORD IS READ IS          *  SQ1064.2
-004700*    UNDEFINED, BUT IT IS UNLIKELY THAT THE VALUES TESTED FOR  *  SQ1064.2
-004800*    WOULD OCCUR BY CHANCE.                                    *  SQ1064.2
-004900*                                                              *  SQ1064.2
-005000****************************************************************  SQ1064.2
-005100*                                                                 SQ1064.2
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
 005200 ENVIRONMENT DIVISION.                                            SQ1064.2
 005300 CONFIGURATION SECTION.                                           SQ1064.2
 005400 SOURCE-COMPUTER.                                                 SQ1064.2
@@ -57,31 +57,31 @@
 005700     GNU-Linux.                                                   SQ1064.2
 005800 INPUT-OUTPUT SECTION.                                            SQ1064.2
 005900 FILE-CONTROL.                                                    SQ1064.2
-006500*                                                                 SQ1064.2
+006500*                                                                         
 006600     SELECT PRINT-FILE ASSIGN TO                                  SQ1064.2
 006700     "REPORT".                                                    SQ1064.2
-006800*                                                                 SQ1064.2
+006800*                                                                         
 006900     SELECT SQ-VS6 ASSIGN                                         SQ1064.2
 007000     "XXXXX001"                                                   SQ1064.2
 007100     STATUS SQ-STATUS                                             SQ1064.2
 007200     ORGANIZATION IS SEQUENTIAL.                                  SQ1064.2
-007300*                                                                 SQ1064.2
-007400*                                                                 SQ1064.2
+007300*                                                                         
+007400*                                                                         
 007500 DATA DIVISION.                                                   SQ1064.2
 007600 FILE SECTION.                                                    SQ1064.2
-009300*                                                                 SQ1064.2
+009300*                                                                         
 009400 FD  PRINT-FILE                                                   SQ1064.2
 009800               .                                                  SQ1064.2
 009900 01  PRINT-REC PICTURE X(120).                                    SQ1064.2
 010000 01  DUMMY-RECORD PICTURE X(120).                                 SQ1064.2
-010100*                                                                 SQ1064.2
-010200*                                                                 SQ1064.2
+010100*                                                                         
+010200*                                                                         
 010300 FD  SQ-VS6                                                       SQ1064.2
 010600     RECORD CONTAINS 120 TO 151 CHARACTERS.                       SQ1064.2
-010700*                                                                 SQ1064.2
+010700*                                                                         
 010800 01  SQ-VS6R1-M-G-120.                                            SQ1064.2
 010900     02  SQ-VS6R1-FIRST PIC X(120).                               SQ1064.2
-011000*                                                                 SQ1064.2
+011000*                                                                         
 011100 01  SQ-VS6R2-M-G-151.                                            SQ1064.2
 011200     02  SQ-VS6R2-FIRST  PIC X(120).                              SQ1064.2
 011300     02  SQ-VS6R2-SECOND.                                         SQ1064.2
@@ -90,20 +90,20 @@
 011600             07  SQ-VS6-RECNO    PIC X(5).                        SQ1064.2
 011700         05  SQ-VS6R2-SECOND-R.                                   SQ1064.2
 011800             07  SQ-VS6-FILLER   PIC X(21).                       SQ1064.2
-011900*                                                                 SQ1064.2
-012000*                                                                 SQ1064.2
+011900*                                                                         
+012000*                                                                         
 012100 WORKING-STORAGE SECTION.                                         SQ1064.2
-012200*                                                                 SQ1064.2
-012300***************************************************************   SQ1064.2
-012400*                                                             *   SQ1064.2
-012500*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1064.2
-012600*                                                             *   SQ1064.2
-012700***************************************************************   SQ1064.2
-012800*                                                                 SQ1064.2
+012200*                                                                         
+012300*                                                                         
+012400*                                                                         
+012500*                                                                         
+012600*                                                                         
+012700*                                                                         
+012800*                                                                         
 012900 01  SQ-STATUS.                                                   SQ1064.2
 013000   03  SQ-STATUS-1 PIC X.                                         SQ1064.2
 013100   03  SQ-STATUS-2 PIC X.                                         SQ1064.2
-013200*                                                                 SQ1064.2
+013200*                                                                         
 013300 01  BUFFER-COPY.                                                 SQ1064.2
 013400   03  BUFFER-COPY-120    PIC X(120).                             SQ1064.2
 013500   03  BUFFER-COPY-SECOND.                                        SQ1064.2
@@ -112,26 +112,26 @@
 013800           07  BUFFER-COPY-RECNO  PIC 9(5).                       SQ1064.2
 013900       05  BUFFER-COPY-SECOND-R.                                  SQ1064.2
 014000           07  BUFFER-COPY-END    PIC X(21).                      SQ1064.2
-014100*                                                                 SQ1064.2
+014100*                                                                         
 014200 01  EOF-FLAG      PIC X(12).                                     SQ1064.2
 014300 01  NOT-EOF-FLAG  PIC X(12).                                     SQ1064.2
 014400 01  END-READ-FLAG PIC X(12).                                     SQ1064.2
-014500*                                                                 SQ1064.2
+014500*                                                                         
 014600 01  DELETE-SW.                                                   SQ1064.2
 014700   03  DELETE-SW-1 PIC X.                                         SQ1064.2
 014800   03  DELETE-SW-1-GROUP.                                         SQ1064.2
 014900     05  DELETE-SW-2 PIC X.                                       SQ1064.2
 015000     05  DELETE-SW-2-GROUP.                                       SQ1064.2
 015100         07  DELETE-SW-3 PIC X.                                   SQ1064.2
-015200*                                                                 SQ1064.2
-015300***************************************************************   SQ1064.2
-015400*                                                             *   SQ1064.2
-015500*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1064.2
-015600*                                                             *   SQ1064.2
-015700***************************************************************   SQ1064.2
-015800*                                                                 SQ1064.2
+015200*                                                                         
+015300*                                                                         
+015400*                                                                         
+015500*                                                                         
+015600*                                                                         
+015700*                                                                         
+015800*                                                                         
 015900 01  REC-SKEL-SUB   PIC 99.                                       SQ1064.2
-016000*                                                                 SQ1064.2
+016000*                                                                         
 016100 01  FILE-RECORD-INFORMATION-REC.                                 SQ1064.2
 016200     03 FILE-RECORD-INFO-SKELETON.                                SQ1064.2
 016300        05 FILLER                 PICTURE X(48)       VALUE       SQ1064.2
@@ -183,7 +183,7 @@
 020900           07 FILLER              PIC X(9).                       SQ1064.2
 021000           07 ALTERNATE-KEY2      PIC X(29).                      SQ1064.2
 021100           07 FILLER              PIC X(7).                       SQ1064.2
-021200*                                                                 SQ1064.2
+021200*                                                                         
 021300 01  TEST-RESULTS.                                                SQ1064.2
 021400     02 FILLER              PIC X      VALUE SPACE.               SQ1064.2
 021500     02  PAR-NAME.                                                SQ1064.2
@@ -223,7 +223,7 @@
 024900         04 FILLER                           PIC X.               SQ1064.2
 025000     03 FILLER PIC X(2) VALUE SPACE.                              SQ1064.2
 025100     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ1064.2
-025200*                                                                 SQ1064.2
+025200*                                                                         
 025300 01  CCVS-C-1.                                                    SQ1064.2
 025400     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ1064.2
 025500     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ1064.2
@@ -239,7 +239,7 @@
 026500     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ1064.2
 026600     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ1064.2
 026700     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ1064.2
-026800*                                                                 SQ1064.2
+026800*                                                                         
 026900 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ1064.2
 027000 01  REC-CT            PIC 99       VALUE ZERO.                   SQ1064.2
 027100 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ1064.2
@@ -264,7 +264,7 @@
 029000   02  FILLER            PIC X(28)  VALUE                         SQ1064.2
 029100            " COPY - NOT FOR DISTRIBUTION".                       SQ1064.2
 029200   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1064.2
-029300*                                                                 SQ1064.2
+029300*                                                                         
 029400 01  CCVS-H-2B.                                                   SQ1064.2
 029500   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1064.2
 029600   02  TEST-ID           PIC X(9).                                SQ1064.2
@@ -326,8 +326,8 @@
 035200-    "******************************".                            SQ1064.2
 035300 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1064.2
 035400     "SQ106A".                                                    SQ1064.2
-035500*                                                                 SQ1064.2
-035600*                                                                 SQ1064.2
+035500*                                                                         
+035600*                                                                         
 035700 PROCEDURE DIVISION.                                              SQ1064.2
 035800 CCVS1 SECTION.                                                   SQ1064.2
 035900 OPEN-FILES.                                                      SQ1064.2
@@ -339,39 +339,39 @@
 037500     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1064.2
 037600     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1064.2
 037700     GO TO CCVS1-EXIT.                                            SQ1064.2
-037800*                                                                 SQ1064.2
+037800*                                                                         
 037900 CCVS-INIT-FILE.                                                  SQ1064.2
 038000     ADD     1 TO REC-SKL-SUB.                                    SQ1064.2
 038100     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1064.2
 038200                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1064.2
-038300*                                                                 SQ1064.2
+038300*                                                                         
 038400 CLOSE-FILES.                                                     SQ1064.2
 038500     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1064.2
 038600     CLOSE   PRINT-FILE.                                          SQ1064.2
 039900 TERMINATE-CCVS.                                                  SQ1064.2
 040100     STOP    RUN.                                                 SQ1064.2
-040200*                                                                 SQ1064.2
+040200*                                                                         
 040300 INSPT.                                                           SQ1064.2
 040400     MOVE   "INSPT" TO P-OR-F.                                    SQ1064.2
 040500     ADD     1 TO INSPECT-COUNTER.                                SQ1064.2
 040600     PERFORM PRINT-DETAIL.                                        SQ1064.2
-040700*                                                                 SQ1064.2
+040700*                                                                         
 040800 PASS.                                                            SQ1064.2
 040900     MOVE   "PASS " TO P-OR-F.                                    SQ1064.2
 041000     ADD     1 TO PASS-COUNTER.                                   SQ1064.2
 041100     PERFORM PRINT-DETAIL.                                        SQ1064.2
-041200*                                                                 SQ1064.2
+041200*                                                                         
 041300 FAIL.                                                            SQ1064.2
 041400     MOVE   "FAIL*" TO P-OR-F.                                    SQ1064.2
 041500     ADD     1 TO ERROR-COUNTER.                                  SQ1064.2
 041600     PERFORM PRINT-DETAIL.                                        SQ1064.2
-041700*                                                                 SQ1064.2
+041700*                                                                         
 041800 DE-LETE.                                                         SQ1064.2
 041900     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1064.2
 042000     MOVE   "*****" TO P-OR-F.                                    SQ1064.2
 042100     ADD     1 TO DELETE-COUNTER.                                 SQ1064.2
 042200     PERFORM PRINT-DETAIL.                                        SQ1064.2
-042300*                                                                 SQ1064.2
+042300*                                                                         
 042400 PRINT-DETAIL.                                                    SQ1064.2
 042500     IF REC-CT NOT EQUAL TO ZERO                                  SQ1064.2
 042600         MOVE   "." TO PARDOT-X                                   SQ1064.2
@@ -388,7 +388,7 @@
 043700     MOVE    SPACE TO CORRECT-X.                                  SQ1064.2
 043800     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1064.2
 043900     MOVE    SPACE TO RE-MARK.                                    SQ1064.2
-044000*                                                                 SQ1064.2
+044000*                                                                         
 044100 HEAD-ROUTINE.                                                    SQ1064.2
 044200     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1064.2
 044300     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1064.2
@@ -404,7 +404,7 @@
 045300 END-RTN-EXIT.                                                    SQ1064.2
 045400     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1064.2
 045500     PERFORM WRITE-LINE 2 TIMES.                                  SQ1064.2
-045600*                                                                 SQ1064.2
+045600*                                                                         
 045700 END-ROUTINE-1.                                                   SQ1064.2
 045800     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1064.2
 045900     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1064.2
@@ -437,7 +437,7 @@
 048600     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1064.2
 048700     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1064.2
 048800     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1064.2
-048900*                                                                 SQ1064.2
+048900*                                                                         
 049000 WRITE-LINE.                                                      SQ1064.2
 049100     ADD     1 TO RECORD-COUNT.                                   SQ1064.2
 049200     IF RECORD-COUNT GREATER 50                                   SQ1064.2
@@ -450,7 +450,7 @@
 049900         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1064.2
 050000         MOVE  ZERO TO RECORD-COUNT.                              SQ1064.2
 050100     PERFORM WRT-LN.                                              SQ1064.2
-050200*                                                                 SQ1064.2
+050200*                                                                         
 050300 WRT-LN.                                                          SQ1064.2
 050400     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1064.2
 050500     MOVE    SPACE TO DUMMY-RECORD.                               SQ1064.2
@@ -488,18 +488,18 @@
 053700     EXIT.                                                        SQ1064.2
 053800 CCVS1-EXIT.                                                      SQ1064.2
 053900     EXIT.                                                        SQ1064.2
-054000*                                                                 SQ1064.2
-054100****************************************************************  SQ1064.2
-054200*                                                              *  SQ1064.2
-054300*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1064.2
-054400*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1064.2
-054500*                                                              *  SQ1064.2
-054600****************************************************************  SQ1064.2
-054700*                                                                 SQ1064.2
+054000*                                                                         
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
 054800 SECT-SQ106-0001 SECTION.                                         SQ1064.2
 054900 SEQ-INIT-01.                                                     SQ1064.2
 055000     MOVE    SPACE TO DELETE-SW.                                  SQ1064.2
-055100*                                                                 SQ1064.2
+055100*                                                                         
 055200     MOVE   "SQ-VS6" TO XFILE-NAME (1).                           SQ1064.2
 055300     MOVE    CCVS-PGM-ID TO XPROGRAM-NAME (1).                    SQ1064.2
 055400     MOVE   "RC"  TO CHARS-OR-RECORDS (1).                        SQ1064.2
@@ -510,12 +510,12 @@
 055900     MOVE    0    TO XRECORD-NUMBER (1).                          SQ1064.2
 056000     MOVE    ZERO TO BUFFER-COPY-RECNO.                           SQ1064.2
 056100     MOVE   "MULTIPLE REC LENGTHS" TO BUFFER-COPY-END.            SQ1064.2
-056200*                                                                 SQ1064.2
-056300*    THE FIRST ACTION IS TO OPEN THE FILE FOR OUTPUT, AND SO      SQ1064.2
-056400*    CREATE IT.  IF THE OPEN IS DELETED, ALL SUCCEDING TESTS      SQ1064.2
-056500*    ARE AUTOMATICALLY DELETED WITH IT.  A SUBORDINATE TEST       SQ1064.2
-056600*    CHECKS THE I-O STATUS RETURNED FROM THE OPEN OPERATION.      SQ1064.2
-056700*                                                                 SQ1064.2
+056200*                                                                         
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
 056800     MOVE   "**"  TO SQ-STATUS.                                   SQ1064.2
 056900     MOVE   "OPEN FILE FOR OUTPUT" TO FEATURE.                    SQ1064.2
 057000     MOVE   "SEQ-TEST-GF-01" TO PAR-NAME.                         SQ1064.2
@@ -540,15 +540,15 @@
 058900         PERFORM FAIL                                             SQ1064.2
 059000         MOVE   "*" TO DELETE-SW-1.                               SQ1064.2
 059100 SEQ-TEST-01-01-END.                                              SQ1064.2
-059200*                                                                 SQ1064.2
-059300*                                                                 SQ1064.2
-059400*    UNLESS AN ERROR OCCURRED DURING EXECUTION OF THE OPEN        SQ1064.2
-059500*    STATEMENT, THE FILE IS NOW OPEN, AND READY FOR RECORDS TO    SQ1064.2
-059600*    BE WRITTEN TO IT.  IF AN ERROR I-O STATUS VALUE WAS          SQ1064.2
-059700*    RETURNED, ALL THE REMAINING TESTS ARE DELETED.               SQ1064.2
-059800*                                                                 SQ1064.2
-059900*    CREATE A SHORT RECORD USING THE BASIC WRITE STATEMENT        SQ1064.2
-060000*                                                                 SQ1064.2
+059200*                                                                         
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
+060000*                                                                         
 060100 SEQ-INIT-02.                                                     SQ1064.2
 060200     MOVE    1 TO REC-CT.                                         SQ1064.2
 060300     MOVE   "WRITE SHORT RECORD" TO FEATURE.                      SQ1064.2
@@ -582,9 +582,9 @@
 063100         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 063200         PERFORM FAIL.                                            SQ1064.2
 063300 SEQ-TEST-02-01-END.                                              SQ1064.2
-063400*                                                                 SQ1064.2
-063500*    CREATE A LONG RECORD USING THE BASIC WRITE STATEMENT         SQ1064.2
-063600*                                                                 SQ1064.2
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
 063700 SEQ-INIT-03.                                                     SQ1064.2
 063800     MOVE    1 TO REC-CT.                                         SQ1064.2
 063900     MOVE   "WRITE LONG RECORD" TO FEATURE.                       SQ1064.2
@@ -618,11 +618,11 @@
 066700         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 066800         PERFORM FAIL.                                            SQ1064.2
 066900 SEQ-TEST-03-01-END.                                              SQ1064.2
-067000*                                                                 SQ1064.2
-067100*                                                                 SQ1064.2
-067200*    CREATE A SHORT RECORD USING WRITE FROM, WITH A 151           SQ1064.2
-067300*    CHARACTER AREA AS THE SOURCE.                                SQ1064.2
-067400*                                                                 SQ1064.2
+067000*                                                                         
+067100*                                                                         
+067200*                                                                         
+067300*                                                                         
+067400*                                                                         
 067500 SEQ-INIT-04.                                                     SQ1064.2
 067600     MOVE    1 TO REC-CT.                                         SQ1064.2
 067700     MOVE   "WRITE SHORT RECORD FROM" TO FEATURE.                 SQ1064.2
@@ -655,11 +655,11 @@
 070400         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 070500         PERFORM FAIL.                                            SQ1064.2
 070600 SEQ-TEST-04-01-END.                                              SQ1064.2
-070700*                                                                 SQ1064.2
-070800*                                                                 SQ1064.2
-070900*    CREATE A SHORT RECORD USING WRITE FROM, WITH A 151           SQ1064.2
-071000*    CHARACTER SOURCE FIELD.                                      SQ1064.2
-071100*                                                                 SQ1064.2
+070700*                                                                         
+070800*                                                                         
+070900*                                                                         
+071000*                                                                         
+071100*                                                                         
 071200 SEQ-INIT-05.                                                     SQ1064.2
 071300     MOVE    1 TO REC-CT.                                         SQ1064.2
 071400     MOVE   "WRITE SHORT RECORD FROM" TO FEATURE.                 SQ1064.2
@@ -692,10 +692,10 @@
 074100         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 074200         PERFORM FAIL.                                            SQ1064.2
 074300 SEQ-TEST-05-01-END.                                              SQ1064.2
-074400*                                                                 SQ1064.2
-074500*                                                                 SQ1064.2
-074600*    CREATE A LONG RECORD USING WRITE FROM.                       SQ1064.2
-074700*                                                                 SQ1064.2
+074400*                                                                         
+074500*                                                                         
+074600*                                                                         
+074700*                                                                         
 074800 SEQ-INIT-06.                                                     SQ1064.2
 074900     MOVE    1 TO REC-CT.                                         SQ1064.2
 075000     MOVE   "WRITE LONG RECORD FROM" TO FEATURE.                  SQ1064.2
@@ -728,11 +728,11 @@
 077700         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 077800         PERFORM FAIL.                                            SQ1064.2
 077900 SEQ-TEST-06-01-END.                                              SQ1064.2
-078000*                                                                 SQ1064.2
-078100*                                                                 SQ1064.2
-078200*    CREATE A SHORT RECORD USING WRITE FROM, WITH A 151           SQ1064.2
-078300*    CHARACTER AREA AS THE SOURCE.                                SQ1064.2
-078400*                                                                 SQ1064.2
+078000*                                                                         
+078100*                                                                         
+078200*                                                                         
+078300*                                                                         
+078400*                                                                         
 078500 SEQ-INIT-07.                                                     SQ1064.2
 078600     MOVE    1 TO REC-CT.                                         SQ1064.2
 078700     MOVE   "WRITE SHORT RECORD FROM" TO FEATURE.                 SQ1064.2
@@ -765,11 +765,11 @@
 081400         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 081500         PERFORM FAIL.                                            SQ1064.2
 081600 SEQ-TEST-07-01-END.                                              SQ1064.2
-081700*                                                                 SQ1064.2
-081800*                                                                 SQ1064.2
-081900*    CREATE A LONG RECORD USING WRITE FROM, USING A 151           SQ1064.2
-082000*    CHARACTER SOURCE AREA.                                       SQ1064.2
-082100*                                                                 SQ1064.2
+081700*                                                                         
+081800*                                                                         
+081900*                                                                         
+082000*                                                                         
+082100*                                                                         
 082200 SEQ-INIT-08.                                                     SQ1064.2
 082300     MOVE    1 TO REC-CT.                                         SQ1064.2
 082400     MOVE   "WRITE LONG RECORD FROM" TO FEATURE.                  SQ1064.2
@@ -802,11 +802,11 @@
 085100         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 085200         PERFORM FAIL.                                            SQ1064.2
 085300 SEQ-TEST-08-01-END.                                              SQ1064.2
-085400*                                                                 SQ1064.2
-085500*                                                                 SQ1064.2
-085600*    CREATE A LONG RECORD USING WRITE FROM, USING A 151           SQ1064.2
-085700*    CHARACTER SOURCE AREA.                                       SQ1064.2
-085800*                                                                 SQ1064.2
+085400*                                                                         
+085500*                                                                         
+085600*                                                                         
+085700*                                                                         
+085800*                                                                         
 085900 SEQ-INIT-09.                                                     SQ1064.2
 086000     MOVE    1 TO REC-CT.                                         SQ1064.2
 086100     MOVE   "WRITE LONG RECORD FROM" TO FEATURE.                  SQ1064.2
@@ -839,10 +839,10 @@
 088800         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 088900         PERFORM FAIL.                                            SQ1064.2
 089000 SEQ-TEST-09-01-END.                                              SQ1064.2
-089100*                                                                 SQ1064.2
-089200*                                                                 SQ1064.2
-089300*    CREATE A LONG RECORD USING THE BASIC WRITE STATEMENT         SQ1064.2
-089400*                                                                 SQ1064.2
+089100*                                                                         
+089200*                                                                         
+089300*                                                                         
+089400*                                                                         
 089500 SEQ-INIT-10.                                                     SQ1064.2
 089600     MOVE    1 TO REC-CT.                                         SQ1064.2
 089700     MOVE   "WRITE LONG RECORD" TO FEATURE.                       SQ1064.2
@@ -876,10 +876,10 @@
 092500         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 092600         PERFORM FAIL.                                            SQ1064.2
 092700 SEQ-TEST-10-01-END.                                              SQ1064.2
-092800*                                                                 SQ1064.2
-092900*                                                                 SQ1064.2
-093000*    CREATE A SHORT RECORD USING THE BASIC WRITE STATEMENT        SQ1064.2
-093100*                                                                 SQ1064.2
+092800*                                                                         
+092900*                                                                         
+093000*                                                                         
+093100*                                                                         
 093200 SEQ-INIT-11.                                                     SQ1064.2
 093300     MOVE    1 TO REC-CT.                                         SQ1064.2
 093400     MOVE   "WRITE SHORT RECORD" TO FEATURE.                      SQ1064.2
@@ -913,9 +913,9 @@
 096200         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 096300         PERFORM FAIL.                                            SQ1064.2
 096400 SEQ-TEST-11-01-END.                                              SQ1064.2
-096500*                                                                 SQ1064.2
-096600*    CREATE A SHORT RECORD USING THE BASIC WRITE STATEMENT        SQ1064.2
-096700*                                                                 SQ1064.2
+096500*                                                                         
+096600*                                                                         
+096700*                                                                         
 096800 SEQ-INIT-12.                                                     SQ1064.2
 096900     MOVE    1 TO REC-CT.                                         SQ1064.2
 097000     MOVE   "WRITE SHORT RECORD" TO FEATURE.                      SQ1064.2
@@ -949,11 +949,11 @@
 099800         MOVE   "VII-3, VII-53,4.7.4(6)" TO ANSI-REFERENCE        SQ1064.2
 099900         PERFORM FAIL.                                            SQ1064.2
 100000 SEQ-TEST-12-01-END.                                              SQ1064.2
-100100*                                                                 SQ1064.2
-100200*                                                                 SQ1064.2
-100300*    ALL REQUIRED RECORDS HAVE BEEN WRITTEN, SO THE FILE          SQ1064.2
-100400*    CAN BE CLOSED.                                               SQ1064.2
-100500*                                                                 SQ1064.2
+100100*                                                                         
+100200*                                                                         
+100300*                                                                         
+100400*                                                                         
+100500*                                                                         
 100600 SEQ-INIT-13.                                                     SQ1064.2
 100700     MOVE    1 TO REC-CT.                                         SQ1064.2
 100800     MOVE   "CLOSE NEW FILE" TO FEATURE.                          SQ1064.2
@@ -980,17 +980,17 @@
 102900         MOVE   "VII-3, VII-38,4.2.4(4)" TO ANSI-REFERENCE        SQ1064.2
 103000         PERFORM FAIL.                                            SQ1064.2
 103100 SEQ-TEST-13-01-END.                                              SQ1064.2
-103200*                                                                 SQ1064.2
-103300*                                                                 SQ1064.2
-103400*    A SEQUENTIAL TAPE FILE CONTAINING 11 RECORDS HAS BEEN        SQ1064.2
-103500*    CREATED.  THE FILE CONTAINS RECORDS OF 120 CHARACTERS AND    SQ1064.2
-103600*    RECORDS OF 151 CHARACTERS.  THE SEQUENCE IN WHICH THE        SQ1064.2
-103700*    RECORDS WERE WRITTEN IS SLSSLSLLLSS.  THE NEXT GROUP OF      SQ1064.2
-103800*    OPENS THE FILE FOR INPUT AND READS IT, USING TWELVE          SQ1064.2
-103900*    DIFFERENT FORMATS OF THE READ STATEMENT.  DELETION OF THIS   SQ1064.2
-104000*    TEST CAUSES DELETION OF ALL SUBSEQUENT TESTS.                SQ1064.2
-104100*                                                                 SQ1064.2
-104200*                                                                 SQ1064.2
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
+103500*                                                                         
+103600*                                                                         
+103700*                                                                         
+103800*                                                                         
+103900*                                                                         
+104000*                                                                         
+104100*                                                                         
+104200*                                                                         
 104300 SEQ-INIT-14.                                                     SQ1064.2
 104400     MOVE   "**"  TO SQ-STATUS.                                   SQ1064.2
 104500     MOVE   "OPEN FILE FOR INPUT" TO FEATURE.                     SQ1064.2
@@ -1018,15 +1018,15 @@
 106700         PERFORM FAIL                                             SQ1064.2
 106800         MOVE   "*" TO DELETE-SW-1.                               SQ1064.2
 106900 SEQ-TEST-14-01-END.                                              SQ1064.2
-107000*                                                                 SQ1064.2
-107100*                                                                 SQ1064.2
-107200*    UNLESS AN ERROR OCCURRED DURING EXECUTION OF THE OPEN        SQ1064.2
-107300*    STATEMENT, THE FILE IS NOW OPEN, AND READY FOR RECORDS TO    SQ1064.2
-107400*    BE WRITTEN TO IT.  IF AN ERROR I-O STATUS VALUE WAS          SQ1064.2
-107500*    RETURNED, ALL THE REMAINING TESTS ARE DELETED.               SQ1064.2
-107600*                                                                 SQ1064.2
-107700*    READ A SHORT RECORD, USING READ ... AT END                   SQ1064.2
-107800*                                                                 SQ1064.2
+107000*                                                                         
+107100*                                                                         
+107200*                                                                         
+107300*                                                                         
+107400*                                                                         
+107500*                                                                         
+107600*                                                                         
+107700*                                                                         
+107800*                                                                         
 107900 SEQ-INIT-15.                                                     SQ1064.2
 108000     MOVE    1 TO REC-CT.                                         SQ1064.2
 108100     MOVE    1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1043,17 +1043,17 @@
 109200 SEQ-DELETE-15.                                                   SQ1064.2
 109300     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 109400     GO TO   SEQ-DELETE-15-01.                                    SQ1064.2
-109500*                                                                 SQ1064.2
-109600*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-109700*                                                                 SQ1064.2
+109500*                                                                         
+109600*                                                                         
+109700*                                                                         
 109800 SEQ-TEST-RD-15.                                                  SQ1064.2
 109900     READ    SQ-VS6 AT END                                        SQ1064.2
 110000                MOVE    "EXECUTED" TO EOF-FLAG.                   SQ1064.2
 110100     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 110200     GO TO   SEQ-TEST-RD-15-01.                                   SQ1064.2
-110300*                                                                 SQ1064.2
-110400*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-110500*                                                                 SQ1064.2
+110300*                                                                         
+110400*                                                                         
+110500*                                                                         
 110600 SEQ-DELETE-15-01.                                                SQ1064.2
 110700     PERFORM DE-LETE.                                             SQ1064.2
 110800     GO TO   SEQ-TEST-15-01-END.                                  SQ1064.2
@@ -1067,9 +1067,9 @@
 111600         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 111700         PERFORM FAIL.                                            SQ1064.2
 111800 SEQ-TEST-15-01-END.                                              SQ1064.2
-111900*                                                                 SQ1064.2
-112000*    CHECK THE RECORD NUMBER OF THE RECORD READ                   SQ1064.2
-112100*                                                                 SQ1064.2
+111900*                                                                         
+112000*                                                                         
+112100*                                                                         
 112200     ADD     1 TO REC-CT.                                         SQ1064.2
 112300     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 112400         GO TO   SEQ-DELETE-15-02.                                SQ1064.2
@@ -1086,12 +1086,12 @@
 113500         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 113600         PERFORM FAIL.                                            SQ1064.2
 113700 SEQ-TEST-15-02-END.                                              SQ1064.2
-113800*                                                                 SQ1064.2
-113900*    CHECK THE EXTENDED PART OF THE RECORD                        SQ1064.2
-114000*                                                                 SQ1064.2
+113800*                                                                         
+113900*                                                                         
+114000*                                                                         
 114100     ADD     1 TO REC-CT.                                         SQ1064.2
-114200*    IF DELETE-SW NOT = TO SPACE                                  SQ1064.2
-114300*        GO TO SEQ-DELETE-15-03.                                  SQ1064.2
+114200*                                                                         
+114300*                                                                         
 114400     GO TO   SEQ-TEST-RD-15-03.
 114500 SEQ-DELETE-15-03.                                                SQ1064.2
 114600     PERFORM DE-LETE.                                             SQ1064.2
@@ -1105,9 +1105,9 @@
 115400         MOVE   "BUFFER CONTENTS FOR LONG RECORD" TO RE-MARK      SQ1064.2
 115500         PERFORM FAIL.                                            SQ1064.2
 115600 SEQ-TEST-15-03-END.                                              SQ1064.2
-115700*                                                                 SQ1064.2
-115800*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-115900*                                                                 SQ1064.2
+115700*                                                                         
+115800*                                                                         
+115900*                                                                         
 116000     ADD     1 TO REC-CT.                                         SQ1064.2
 116100     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 116200         GO TO   SEQ-DELETE-15-04.                                SQ1064.2
@@ -1127,10 +1127,10 @@
 117600         PERFORM FAIL.                                            SQ1064.2
 117700 SEQ-TEST-15-04-END.                                              SQ1064.2
 117800     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-117900*                                                                 SQ1064.2
-118000*                                                                 SQ1064.2
-118100*    READ A LONG RECORD, USING READ ... END                       SQ1064.2
-118200*                                                                 SQ1064.2
+117900*                                                                         
+118000*                                                                         
+118100*                                                                         
+118200*                                                                         
 118300 SEQ-INIT-16.                                                     SQ1064.2
 118400     MOVE    1 TO REC-CT.                                         SQ1064.2
 118500     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1147,9 +1147,9 @@
 119600  SEQ-DELETE-16.                                                  SQ1064.2
 119700     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 119800     GO TO   SEQ-DELETE-16-01.                                    SQ1064.2
-119900*                                                                 SQ1064.2
-120000*   EXECUTE THE READ STATEMENT                                    SQ1064.2
-120100*                                                                 SQ1064.2
+119900*                                                                         
+120000*                                                                         
+120100*                                                                         
 120200 SEQ-TEST-RD-16.                                                  SQ1064.2
 120300     READ    SQ-VS6 END                                           SQ1064.2
 120400                MOVE   "EXECUTED" TO EOF-FLAG.                    SQ1064.2
@@ -1158,9 +1158,9 @@
 120700 SEQ-DELETE-16-01.                                                SQ1064.2
 120800     PERFORM DE-LETE.                                             SQ1064.2
 120900     GO TO   SEQ-TEST-16-01-END.                                  SQ1064.2
-121000*                                                                 SQ1064.2
-121100*   CHECK THE FILE STATUS RETURNED                                SQ1064.2
-121200*                                                                 SQ1064.2
+121000*                                                                         
+121100*                                                                         
+121200*                                                                         
 121300 SEQ-TEST-RD-16-01.                                               SQ1064.2
 121400     IF SQ-STATUS = "00"                                          SQ1064.2
 121500         PERFORM PASS                                             SQ1064.2
@@ -1171,9 +1171,9 @@
 122000         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 122100         PERFORM FAIL.                                            SQ1064.2
 122200 SEQ-TEST-16-01-END.                                              SQ1064.2
-122300*                                                                 SQ1064.2
-122400*    CHECK THE IDENTITY OF THE RECORD RETURNED                    SQ1064.2
-122500*                                                                 SQ1064.2
+122300*                                                                         
+122400*                                                                         
+122500*                                                                         
 122600     ADD     1 TO REC-CT.                                         SQ1064.2
 122700     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 122800         GO TO   SEQ-DELETE-16-02.                                SQ1064.2
@@ -1190,9 +1190,9 @@
 123900         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 124000         PERFORM FAIL.                                            SQ1064.2
 124100 SEQ-TEST-16-02-END.                                              SQ1064.2
-124200*                                                                 SQ1064.2
-124300*    CHECK THE RECORD EXTENSION AREA                              SQ1064.2
-124400*                                                                 SQ1064.2
+124200*                                                                         
+124300*                                                                         
+124400*                                                                         
 124500     ADD     1 TO REC-CT.                                         SQ1064.2
 124600     IF DELETE-SW NOT EQUAL TO SPACE                              SQ1064.2
 124700         GO TO SEQ-DELETE-16-03.                                  SQ1064.2
@@ -1209,9 +1209,9 @@
 125800         MOVE   "INCORRECT VALUE IN BUFFER EXTENSION" TO RE-MARK  SQ1064.2
 125900         PERFORM FAIL.                                            SQ1064.2
 126000 SEQ-TEST-16-03-END.                                              SQ1064.2
-126100*                                                                 SQ1064.2
-126200*    CHECK EXECUTION OF THE END PHRASE                            SQ1064.2
-126300*                                                                 SQ1064.2
+126100*                                                                         
+126200*                                                                         
+126300*                                                                         
 126400     ADD     1 TO REC-CT.                                         SQ1064.2
 126500     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 126600         GO TO   SEQ-DELETE-16-04.                                SQ1064.2
@@ -1231,10 +1231,10 @@
 128000         PERFORM FAIL.                                            SQ1064.2
 128100 SEQ-TEST-16-04-END.                                              SQ1064.2
 128200     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-128300*                                                                 SQ1064.2
-128400*                                                                 SQ1064.2
-128500*    READ A SHORT RECORD, USING READ ... AT END ... NOT AT END    SQ1064.2
-128600*                                                                 SQ1064.2
+128300*                                                                         
+128400*                                                                         
+128500*                                                                         
+128600*                                                                         
 128700 SEQ-INIT-17.                                                     SQ1064.2
 128800     MOVE    1 TO REC-CT.                                         SQ1064.2
 128900     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1252,9 +1252,9 @@
 130100 SEQ-DELETE-17.                                                   SQ1064.2
 130200     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 130300     GO TO   SEQ-DELETE-17-01.                                    SQ1064.2
-130400*                                                                 SQ1064.2
-130500*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-130600*                                                                 SQ1064.2
+130400*                                                                         
+130500*                                                                         
+130600*                                                                         
 130700 SEQ-TEST-RD-17.                                                  SQ1064.2
 130800     READ    SQ-VS6                                               SQ1064.2
 130900        AT END                                                    SQ1064.2
@@ -1263,9 +1263,9 @@
 131200                MOVE   "EXECUTED" TO NOT-EOF-FLAG.                SQ1064.2
 131300     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 131400     GO TO   SEQ-TEST-RD-17-01.                                   SQ1064.2
-131500*                                                                 SQ1064.2
-131600*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-131700*                                                                 SQ1064.2
+131500*                                                                         
+131600*                                                                         
+131700*                                                                         
 131800 SEQ-DELETE-17-01.                                                SQ1064.2
 131900     PERFORM DE-LETE.                                             SQ1064.2
 132000     GO TO   SEQ-TEST-17-01-END.                                  SQ1064.2
@@ -1279,9 +1279,9 @@
 132800         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 132900         PERFORM FAIL.                                            SQ1064.2
 133000 SEQ-TEST-17-01-END.                                              SQ1064.2
-133100*                                                                 SQ1064.2
-133200*    CHECK THE RECORD NUMBER OF THE RECORD READ                   SQ1064.2
-133300*                                                                 SQ1064.2
+133100*                                                                         
+133200*                                                                         
+133300*                                                                         
 133400     ADD     1 TO REC-CT.                                         SQ1064.2
 133500     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 133600         GO TO   SEQ-DELETE-17-02.                                SQ1064.2
@@ -1298,12 +1298,12 @@
 134700         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 134800         PERFORM FAIL.                                            SQ1064.2
 134900 SEQ-TEST-17-02-END.                                              SQ1064.2
-135000*                                                                 SQ1064.2
-135100*    CHECK THE EXTENDED PART OF THE RECORD                        SQ1064.2
-135200*                                                                 SQ1064.2
+135000*                                                                         
+135100*                                                                         
+135200*                                                                         
 135300     ADD     1 TO REC-CT.                                         SQ1064.2
-135400*    IF DELETE-SW NOT = TO SPACE                                  SQ1064.2
-135500*        GO TO SEQ-DELETE-17-03.                                  SQ1064.2
+135400*                                                                         
+135500*                                                                         
 135600     GO TO   SEQ-TEST-RD-17-03.
 135700 SEQ-DELETE-17-03.                                                SQ1064.2
 135800     PERFORM DE-LETE.                                             SQ1064.2
@@ -1317,9 +1317,9 @@
 136600         MOVE   "BUFFER CONTENTS FOR LONG RECORD" TO RE-MARK      SQ1064.2
 136700         PERFORM FAIL.                                            SQ1064.2
 136800 SEQ-TEST-17-03-END.                                              SQ1064.2
-136900*                                                                 SQ1064.2
-137000*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-137100*                                                                 SQ1064.2
+136900*                                                                         
+137000*                                                                         
+137100*                                                                         
 137200     ADD     1 TO REC-CT.                                         SQ1064.2
 137300     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 137400         GO TO   SEQ-DELETE-17-04.                                SQ1064.2
@@ -1337,9 +1337,9 @@
 138600         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 138700         PERFORM FAIL.                                            SQ1064.2
 138800 SEQ-TEST-17-04-END.                                              SQ1064.2
-138900*                                                                 SQ1064.2
-139000*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-139100*                                                                 SQ1064.2
+138900*                                                                         
+139000*                                                                         
+139100*                                                                         
 139200     ADD     1 TO REC-CT.                                         SQ1064.2
 139300     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 139400         GO TO   SEQ-DELETE-17-05.                                SQ1064.2
@@ -1359,10 +1359,10 @@
 140800         PERFORM FAIL.                                            SQ1064.2
 140900 SEQ-TEST-17-05-END.                                              SQ1064.2
 141000     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-141100*                                                                 SQ1064.2
-141200*                                                                 SQ1064.2
-141300*    READ A SHORT RECORD, USING READ ... END ... NOT AT END       SQ1064.2
-141400*                                                                 SQ1064.2
+141100*                                                                         
+141200*                                                                         
+141300*                                                                         
+141400*                                                                         
 141500 SEQ-INIT-18.                                                     SQ1064.2
 141600     MOVE    1 TO REC-CT.                                         SQ1064.2
 141700     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1380,9 +1380,9 @@
 142900 SEQ-DELETE-18.                                                   SQ1064.2
 143000     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 143100     GO TO   SEQ-DELETE-18-01.                                    SQ1064.2
-143200*                                                                 SQ1064.2
-143300*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-143400*                                                                 SQ1064.2
+143200*                                                                         
+143300*                                                                         
+143400*                                                                         
 143500 SEQ-TEST-RD-18.                                                  SQ1064.2
 143600     READ    SQ-VS6                                               SQ1064.2
 143700        END                                                       SQ1064.2
@@ -1391,9 +1391,9 @@
 144000                MOVE   "EXECUTED" TO NOT-EOF-FLAG.                SQ1064.2
 144100     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 144200     GO TO   SEQ-TEST-RD-18-01.                                   SQ1064.2
-144300*                                                                 SQ1064.2
-144400*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-144500*                                                                 SQ1064.2
+144300*                                                                         
+144400*                                                                         
+144500*                                                                         
 144600 SEQ-DELETE-18-01.                                                SQ1064.2
 144700     PERFORM DE-LETE.                                             SQ1064.2
 144800     GO TO   SEQ-TEST-18-01-END.                                  SQ1064.2
@@ -1407,9 +1407,9 @@
 145600         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 145700         PERFORM FAIL.                                            SQ1064.2
 145800 SEQ-TEST-18-01-END.                                              SQ1064.2
-145900*                                                                 SQ1064.2
-146000*    CHECK THE RECORD NUMBER OF THE RECORD READ                   SQ1064.2
-146100*                                                                 SQ1064.2
+145900*                                                                         
+146000*                                                                         
+146100*                                                                         
 146200     ADD     1 TO REC-CT.                                         SQ1064.2
 146300     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 146400         GO TO   SEQ-DELETE-18-02.                                SQ1064.2
@@ -1426,12 +1426,12 @@
 147500         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 147600         PERFORM FAIL.                                            SQ1064.2
 147700 SEQ-TEST-18-02-END.                                              SQ1064.2
-147800*                                                                 SQ1064.2
-147900*    CHECK THE EXTENDED PART OF THE RECORD                        SQ1064.2
-148000*                                                                 SQ1064.2
+147800*                                                                         
+147900*                                                                         
+148000*                                                                         
 148100     ADD     1 TO REC-CT.                                         SQ1064.2
-148200*    IF DELETE-SW NOT = TO SPACE                                  SQ1064.2
-148300*        GO TO SEQ-DELETE-18-03.                                  SQ1064.2
+148200*                                                                         
+148300*                                                                         
 148400     GO TO   SEQ-TEST-RD-18-03.
 148500 SEQ-DELETE-18-03.                                                SQ1064.2
 148600     PERFORM DE-LETE.                                             SQ1064.2
@@ -1445,9 +1445,9 @@
 149400         MOVE   "BUFFER CONTENTS FOR LONG RECORD" TO RE-MARK      SQ1064.2
 149500         PERFORM FAIL.                                            SQ1064.2
 149600 SEQ-TEST-18-03-END.                                              SQ1064.2
-149700*                                                                 SQ1064.2
-149800*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-149900*                                                                 SQ1064.2
+149700*                                                                         
+149800*                                                                         
+149900*                                                                         
 150000     ADD     1 TO REC-CT.                                         SQ1064.2
 150100     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 150200         GO TO   SEQ-DELETE-18-04.                                SQ1064.2
@@ -1465,9 +1465,9 @@
 151400         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 151500         PERFORM FAIL.                                            SQ1064.2
 151600 SEQ-TEST-18-04-END.                                              SQ1064.2
-151700*                                                                 SQ1064.2
-151800*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-151900*                                                                 SQ1064.2
+151700*                                                                         
+151800*                                                                         
+151900*                                                                         
 152000     ADD     1 TO REC-CT.                                         SQ1064.2
 152100     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 152200         GO TO   SEQ-DELETE-18-05.                                SQ1064.2
@@ -1487,10 +1487,10 @@
 153600         PERFORM FAIL.                                            SQ1064.2
 153700 SEQ-TEST-18-05-END.                                              SQ1064.2
 153800     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-153900*                                                                 SQ1064.2
-154000*                                                                 SQ1064.2
-154100*    READ A LONG RECORD, USING READ ... AT END ... NOT END ...    SQ1064.2
-154200*                                                                 SQ1064.2
+153900*                                                                         
+154000*                                                                         
+154100*                                                                         
+154200*                                                                         
 154300 SEQ-INIT-19.                                                     SQ1064.2
 154400     MOVE    1 TO REC-CT.                                         SQ1064.2
 154500     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1508,9 +1508,9 @@
 155700 SEQ-DELETE-19.                                                   SQ1064.2
 155800     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 155900     GO TO   SEQ-DELETE-19-01.                                    SQ1064.2
-156000*                                                                 SQ1064.2
-156100*   EXECUTE THE READ STATEMENT                                    SQ1064.2
-156200*                                                                 SQ1064.2
+156000*                                                                         
+156100*                                                                         
+156200*                                                                         
 156300 SEQ-TEST-RD-19.                                                  SQ1064.2
 156400     READ    SQ-VS6                                               SQ1064.2
 156500        AT END                                                    SQ1064.2
@@ -1522,9 +1522,9 @@
 157100 SEQ-DELETE-19-01.                                                SQ1064.2
 157200     PERFORM DE-LETE.                                             SQ1064.2
 157300     GO TO   SEQ-TEST-19-01-END.                                  SQ1064.2
-157400*                                                                 SQ1064.2
-157500*   CHECK THE FILE STATUS RETURNED                                SQ1064.2
-157600*                                                                 SQ1064.2
+157400*                                                                         
+157500*                                                                         
+157600*                                                                         
 157700 SEQ-TEST-RD-19-01.                                               SQ1064.2
 157800     IF SQ-STATUS = "00"                                          SQ1064.2
 157900         PERFORM PASS                                             SQ1064.2
@@ -1535,9 +1535,9 @@
 158400         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 158500         PERFORM FAIL.                                            SQ1064.2
 158600 SEQ-TEST-19-01-END.                                              SQ1064.2
-158700*                                                                 SQ1064.2
-158800*    CHECK THE IDENTITY OF THE RECORD RETURNED                    SQ1064.2
-158900*                                                                 SQ1064.2
+158700*                                                                         
+158800*                                                                         
+158900*                                                                         
 159000     ADD     1 TO REC-CT.                                         SQ1064.2
 159100     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 159200         GO TO   SEQ-DELETE-19-02.                                SQ1064.2
@@ -1554,9 +1554,9 @@
 160300         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 160400         PERFORM FAIL.                                            SQ1064.2
 160500 SEQ-TEST-19-02-END.                                              SQ1064.2
-160600*                                                                 SQ1064.2
-160700*    CHECK THE RECORD EXTENSION AREA                              SQ1064.2
-160800*                                                                 SQ1064.2
+160600*                                                                         
+160700*                                                                         
+160800*                                                                         
 160900     ADD     1 TO REC-CT.                                         SQ1064.2
 161000     IF DELETE-SW NOT EQUAL TO SPACE                              SQ1064.2
 161100         GO TO SEQ-DELETE-19-03.                                  SQ1064.2
@@ -1573,9 +1573,9 @@
 162200         MOVE   "INCORRECT VALUE IN BUFFER EXTENSION" TO RE-MARK  SQ1064.2
 162300         PERFORM FAIL.                                            SQ1064.2
 162400 SEQ-TEST-19-03-END.                                              SQ1064.2
-162500*                                                                 SQ1064.2
-162600*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-162700*                                                                 SQ1064.2
+162500*                                                                         
+162600*                                                                         
+162700*                                                                         
 162800     ADD     1 TO REC-CT.                                         SQ1064.2
 162900     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 163000         GO TO   SEQ-DELETE-19-04.                                SQ1064.2
@@ -1593,9 +1593,9 @@
 164200         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 164300         PERFORM FAIL.                                            SQ1064.2
 164400 SEQ-TEST-19-04-END.                                              SQ1064.2
-164500*                                                                 SQ1064.2
-164600*    CHECK EXECUTION OF THE END PHRASE                            SQ1064.2
-164700*                                                                 SQ1064.2
+164500*                                                                         
+164600*                                                                         
+164700*                                                                         
 164800     ADD     1 TO REC-CT.                                         SQ1064.2
 164900     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 165000         GO TO   SEQ-DELETE-19-05.                                SQ1064.2
@@ -1615,10 +1615,10 @@
 166400         PERFORM FAIL.                                            SQ1064.2
 166500 SEQ-TEST-19-05-END.                                              SQ1064.2
 166600     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-166700*                                                                 SQ1064.2
-166800*                                                                 SQ1064.2
-166900*    READ A SHORT RECORD, USING READ ... END ... NOT END          SQ1064.2
-167000*                                                                 SQ1064.2
+166700*                                                                         
+166800*                                                                         
+166900*                                                                         
+167000*                                                                         
 167100 SEQ-INIT-20.                                                     SQ1064.2
 167200     MOVE    1 TO REC-CT.                                         SQ1064.2
 167300     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1636,9 +1636,9 @@
 168500 SEQ-DELETE-20.                                                   SQ1064.2
 168600     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 168700     GO TO   SEQ-DELETE-20-01.                                    SQ1064.2
-168800*                                                                 SQ1064.2
-168900*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-169000*                                                                 SQ1064.2
+168800*                                                                         
+168900*                                                                         
+169000*                                                                         
 169100 SEQ-TEST-RD-20.                                                  SQ1064.2
 169200     READ    SQ-VS6                                               SQ1064.2
 169300        END                                                       SQ1064.2
@@ -1647,9 +1647,9 @@
 169600                MOVE   "EXECUTED" TO NOT-EOF-FLAG.                SQ1064.2
 169700     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 169800     GO TO   SEQ-TEST-RD-20-01.                                   SQ1064.2
-169900*                                                                 SQ1064.2
-170000*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-170100*                                                                 SQ1064.2
+169900*                                                                         
+170000*                                                                         
+170100*                                                                         
 170200 SEQ-DELETE-20-01.                                                SQ1064.2
 170300     PERFORM DE-LETE.                                             SQ1064.2
 170400     GO TO   SEQ-TEST-20-01-END.                                  SQ1064.2
@@ -1663,9 +1663,9 @@
 171200         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 171300         PERFORM FAIL.                                            SQ1064.2
 171400 SEQ-TEST-20-01-END.                                              SQ1064.2
-171500*                                                                 SQ1064.2
-171600*    CHECK THE RECORD NUMBER OF THE RECORD READ                   SQ1064.2
-171700*                                                                 SQ1064.2
+171500*                                                                         
+171600*                                                                         
+171700*                                                                         
 171800     ADD     1 TO REC-CT.                                         SQ1064.2
 171900     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 172000         GO TO   SEQ-DELETE-20-02.                                SQ1064.2
@@ -1682,12 +1682,12 @@
 173100         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 173200         PERFORM FAIL.                                            SQ1064.2
 173300 SEQ-TEST-20-02-END.                                              SQ1064.2
-173400*                                                                 SQ1064.2
-173500*    CHECK THE EXTENDED PART OF THE RECORD                        SQ1064.2
-173600*                                                                 SQ1064.2
+173400*                                                                         
+173500*                                                                         
+173600*                                                                         
 173700     ADD     1 TO REC-CT.                                         SQ1064.2
-173800*    IF DELETE-SW NOT = TO SPACE                                  SQ1064.2
-173900*        GO TO SEQ-DELETE-20-03.                                  SQ1064.2
+173800*                                                                         
+173900*                                                                         
 174000     GO TO   SEQ-TEST-RD-20-03.
 174100 SEQ-DELETE-20-03.                                                SQ1064.2
 174200     PERFORM DE-LETE.                                             SQ1064.2
@@ -1701,9 +1701,9 @@
 175000         MOVE   "BUFFER CONTENTS FOR LONG RECORD" TO RE-MARK      SQ1064.2
 175100         PERFORM FAIL.                                            SQ1064.2
 175200 SEQ-TEST-20-03-END.                                              SQ1064.2
-175300*                                                                 SQ1064.2
-175400*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-175500*                                                                 SQ1064.2
+175300*                                                                         
+175400*                                                                         
+175500*                                                                         
 175600     ADD     1 TO REC-CT.                                         SQ1064.2
 175700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 175800         GO TO   SEQ-DELETE-20-04.                                SQ1064.2
@@ -1721,9 +1721,9 @@
 177000         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 177100         PERFORM FAIL.                                            SQ1064.2
 177200 SEQ-TEST-20-04-END.                                              SQ1064.2
-177300*                                                                 SQ1064.2
-177400*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-177500*                                                                 SQ1064.2
+177300*                                                                         
+177400*                                                                         
+177500*                                                                         
 177600     ADD     1 TO REC-CT.                                         SQ1064.2
 177700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 177800         GO TO   SEQ-DELETE-20-05.                                SQ1064.2
@@ -1743,11 +1743,11 @@
 179200         PERFORM FAIL.                                            SQ1064.2
 179300 SEQ-TEST-20-05-END.                                              SQ1064.2
 179400     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-179500*                                                                 SQ1064.2
-179600*                                                                 SQ1064.2
-179700*    READ A LONG RECORD,                                          SQ1064.2
-179800*    USING READ ... AT END ... END-READ                           SQ1064.2
-179900*                                                                 SQ1064.2
+179500*                                                                         
+179600*                                                                         
+179700*                                                                         
+179800*                                                                         
+179900*                                                                         
 180000 SEQ-INIT-21.                                                     SQ1064.2
 180100     MOVE    1 TO REC-CT.                                         SQ1064.2
 180200     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1766,9 +1766,9 @@
 181500 SEQ-DELETE-21.                                                   SQ1064.2
 181600     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 181700     GO TO   SEQ-DELETE-21-01.                                    SQ1064.2
-181800*                                                                 SQ1064.2
-181900*   EXECUTE THE READ STATEMENT                                    SQ1064.2
-182000*                                                                 SQ1064.2
+181800*                                                                         
+181900*                                                                         
+182000*                                                                         
 182100 SEQ-TEST-RD-21.                                                  SQ1064.2
 182200     READ    SQ-VS6                                               SQ1064.2
 182300        AT END                                                    SQ1064.2
@@ -1780,9 +1780,9 @@
 182900 SEQ-DELETE-21-01.                                                SQ1064.2
 183000     PERFORM DE-LETE.                                             SQ1064.2
 183100     GO TO   SEQ-TEST-21-01-END.                                  SQ1064.2
-183200*                                                                 SQ1064.2
-183300*   CHECK THE FILE STATUS RETURNED                                SQ1064.2
-183400*                                                                 SQ1064.2
+183200*                                                                         
+183300*                                                                         
+183400*                                                                         
 183500 SEQ-TEST-RD-21-01.                                               SQ1064.2
 183600     IF SQ-STATUS = "00"                                          SQ1064.2
 183700         PERFORM PASS                                             SQ1064.2
@@ -1793,9 +1793,9 @@
 184200         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 184300         PERFORM FAIL.                                            SQ1064.2
 184400 SEQ-TEST-21-01-END.                                              SQ1064.2
-184500*                                                                 SQ1064.2
-184600*    CHECK THE IDENTITY OF THE RECORD RETURNED                    SQ1064.2
-184700*                                                                 SQ1064.2
+184500*                                                                         
+184600*                                                                         
+184700*                                                                         
 184800     ADD     1 TO REC-CT.                                         SQ1064.2
 184900     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 185000         GO TO   SEQ-DELETE-21-02.                                SQ1064.2
@@ -1812,9 +1812,9 @@
 186100         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 186200         PERFORM FAIL.                                            SQ1064.2
 186300 SEQ-TEST-21-02-END.                                              SQ1064.2
-186400*                                                                 SQ1064.2
-186500*    CHECK THE RECORD EXTENSION AREA                              SQ1064.2
-186600*                                                                 SQ1064.2
+186400*                                                                         
+186500*                                                                         
+186600*                                                                         
 186700     ADD     1 TO REC-CT.                                         SQ1064.2
 186800     IF DELETE-SW NOT EQUAL TO SPACE                              SQ1064.2
 186900         GO TO SEQ-DELETE-21-03.                                  SQ1064.2
@@ -1831,9 +1831,9 @@
 188000         MOVE   "INCORRECT VALUE IN BUFFER EXTENSION" TO RE-MARK  SQ1064.2
 188100         PERFORM FAIL.                                            SQ1064.2
 188200 SEQ-TEST-21-03-END.                                              SQ1064.2
-188300*                                                                 SQ1064.2
-188400*    CHECK EXECUTION OF THE STATEMENT AFTER END-READ              SQ1064.2
-188500*                                                                 SQ1064.2
+188300*                                                                         
+188400*                                                                         
+188500*                                                                         
 188600     ADD     1 TO REC-CT.                                         SQ1064.2
 188700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 188800         GO TO   SEQ-DELETE-21-04.                                SQ1064.2
@@ -1851,9 +1851,9 @@
 190000         MOVE   "IV-40, VII-47,4.4.4(14)" TO ANSI-REFERENCE       SQ1064.2
 190100         PERFORM FAIL.                                            SQ1064.2
 190200 SEQ-TEST-21-04-END.                                              SQ1064.2
-190300*                                                                 SQ1064.2
-190400*    CHECK EXECUTION OF THE END PHRASE                            SQ1064.2
-190500*                                                                 SQ1064.2
+190300*                                                                         
+190400*                                                                         
+190500*                                                                         
 190600     ADD     1 TO REC-CT.                                         SQ1064.2
 190700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 190800         GO TO   SEQ-DELETE-21-05.                                SQ1064.2
@@ -1873,11 +1873,11 @@
 192200         PERFORM FAIL.                                            SQ1064.2
 192300 SEQ-TEST-21-05-END.                                              SQ1064.2
 192400     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-192500*                                                                 SQ1064.2
-192600*                                                                 SQ1064.2
-192700*    READ A LONG RECORD,                                          SQ1064.2
-192800*    USING READ ... END ... END-READ                              SQ1064.2
-192900*                                                                 SQ1064.2
+192500*                                                                         
+192600*                                                                         
+192700*                                                                         
+192800*                                                                         
+192900*                                                                         
 193000 SEQ-INIT-22.                                                     SQ1064.2
 193100     MOVE    1 TO REC-CT.                                         SQ1064.2
 193200     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -1896,9 +1896,9 @@
 194500 SEQ-DELETE-22.                                                   SQ1064.2
 194600     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 194700     GO TO   SEQ-DELETE-22-01.                                    SQ1064.2
-194800*                                                                 SQ1064.2
-194900*   EXECUTE THE READ STATEMENT                                    SQ1064.2
-195000*                                                                 SQ1064.2
+194800*                                                                         
+194900*                                                                         
+195000*                                                                         
 195100 SEQ-TEST-RD-22.                                                  SQ1064.2
 195200     READ    SQ-VS6                                               SQ1064.2
 195300        END                                                       SQ1064.2
@@ -1910,9 +1910,9 @@
 195900 SEQ-DELETE-22-01.                                                SQ1064.2
 196000     PERFORM DE-LETE.                                             SQ1064.2
 196100     GO TO   SEQ-TEST-22-01-END.                                  SQ1064.2
-196200*                                                                 SQ1064.2
-196300*   CHECK THE FILE STATUS RETURNED                                SQ1064.2
-196400*                                                                 SQ1064.2
+196200*                                                                         
+196300*                                                                         
+196400*                                                                         
 196500 SEQ-TEST-RD-22-01.                                               SQ1064.2
 196600     IF SQ-STATUS = "00"                                          SQ1064.2
 196700         PERFORM PASS                                             SQ1064.2
@@ -1923,9 +1923,9 @@
 197200         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 197300         PERFORM FAIL.                                            SQ1064.2
 197400 SEQ-TEST-22-01-END.                                              SQ1064.2
-197500*                                                                 SQ1064.2
-197600*    CHECK THE IDENTITY OF THE RECORD RETURNED                    SQ1064.2
-197700*                                                                 SQ1064.2
+197500*                                                                         
+197600*                                                                         
+197700*                                                                         
 197800     ADD     1 TO REC-CT.                                         SQ1064.2
 197900     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 198000         GO TO   SEQ-DELETE-22-02.                                SQ1064.2
@@ -1942,9 +1942,9 @@
 199100         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 199200         PERFORM FAIL.                                            SQ1064.2
 199300 SEQ-TEST-22-02-END.                                              SQ1064.2
-199400*                                                                 SQ1064.2
-199500*    CHECK THE RECORD EXTENSION AREA                              SQ1064.2
-199600*                                                                 SQ1064.2
+199400*                                                                         
+199500*                                                                         
+199600*                                                                         
 199700     ADD     1 TO REC-CT.                                         SQ1064.2
 199800     IF DELETE-SW NOT EQUAL TO SPACE                              SQ1064.2
 199900         GO TO SEQ-DELETE-22-03.                                  SQ1064.2
@@ -1961,9 +1961,9 @@
 201000         MOVE   "INCORRECT VALUE IN BUFFER EXTENSION" TO RE-MARK  SQ1064.2
 201100         PERFORM FAIL.                                            SQ1064.2
 201200 SEQ-TEST-22-03-END.                                              SQ1064.2
-201300*                                                                 SQ1064.2
-201400*    CHECK EXECUTION OF THE STATEMENT AFTER END-READ              SQ1064.2
-201500*                                                                 SQ1064.2
+201300*                                                                         
+201400*                                                                         
+201500*                                                                         
 201600     ADD     1 TO REC-CT.                                         SQ1064.2
 201700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 201800         GO TO   SEQ-DELETE-22-04.                                SQ1064.2
@@ -1981,9 +1981,9 @@
 203000         MOVE   "IV-40, VII-47,4.4.4(14)" TO ANSI-REFERENCE       SQ1064.2
 203100         PERFORM FAIL.                                            SQ1064.2
 203200 SEQ-TEST-22-04-END.                                              SQ1064.2
-203300*                                                                 SQ1064.2
-203400*    CHECK EXECUTION OF THE END PHRASE                            SQ1064.2
-203500*                                                                 SQ1064.2
+203300*                                                                         
+203400*                                                                         
+203500*                                                                         
 203600     ADD     1 TO REC-CT.                                         SQ1064.2
 203700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 203800         GO TO   SEQ-DELETE-22-05.                                SQ1064.2
@@ -2003,11 +2003,11 @@
 205200         PERFORM FAIL.                                            SQ1064.2
 205300 SEQ-TEST-22-05-END.                                              SQ1064.2
 205400     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-205500*                                                                 SQ1064.2
-205600*                                                                 SQ1064.2
-205700*    READ A LONG RECORD,                                          SQ1064.2
-205800*    USING READ ... AT END ... NOT AT END ... END-READ            SQ1064.2
-205900*                                                                 SQ1064.2
+205500*                                                                         
+205600*                                                                         
+205700*                                                                         
+205800*                                                                         
+205900*                                                                         
 206000 SEQ-INIT-23.                                                     SQ1064.2
 206100     MOVE    1 TO REC-CT.                                         SQ1064.2
 206200     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -2026,9 +2026,9 @@
 207500 SEQ-DELETE-23.                                                   SQ1064.2
 207600     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 207700     GO TO   SEQ-DELETE-23-01.                                    SQ1064.2
-207800*                                                                 SQ1064.2
-207900*   EXECUTE THE READ STATEMENT                                    SQ1064.2
-208000*                                                                 SQ1064.2
+207800*                                                                         
+207900*                                                                         
+208000*                                                                         
 208100 SEQ-TEST-RD-23.                                                  SQ1064.2
 208200     READ    SQ-VS6                                               SQ1064.2
 208300        AT END                                                    SQ1064.2
@@ -2042,9 +2042,9 @@
 209100 SEQ-DELETE-23-01.                                                SQ1064.2
 209200     PERFORM DE-LETE.                                             SQ1064.2
 209300     GO TO   SEQ-TEST-23-01-END.                                  SQ1064.2
-209400*                                                                 SQ1064.2
-209500*   CHECK THE FILE STATUS RETURNED                                SQ1064.2
-209600*                                                                 SQ1064.2
+209400*                                                                         
+209500*                                                                         
+209600*                                                                         
 209700 SEQ-TEST-RD-23-01.                                               SQ1064.2
 209800     IF SQ-STATUS = "00"                                          SQ1064.2
 209900         PERFORM PASS                                             SQ1064.2
@@ -2055,9 +2055,9 @@
 210400         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 210500         PERFORM FAIL.                                            SQ1064.2
 210600 SEQ-TEST-23-01-END.                                              SQ1064.2
-210700*                                                                 SQ1064.2
-210800*    CHECK THE IDENTITY OF THE RECORD RETURNED                    SQ1064.2
-210900*                                                                 SQ1064.2
+210700*                                                                         
+210800*                                                                         
+210900*                                                                         
 211000     ADD     1 TO REC-CT.                                         SQ1064.2
 211100     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 211200         GO TO   SEQ-DELETE-23-02.                                SQ1064.2
@@ -2074,9 +2074,9 @@
 212300         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 212400         PERFORM FAIL.                                            SQ1064.2
 212500 SEQ-TEST-23-02-END.                                              SQ1064.2
-212600*                                                                 SQ1064.2
-212700*    CHECK THE RECORD EXTENSION AREA                              SQ1064.2
-212800*                                                                 SQ1064.2
+212600*                                                                         
+212700*                                                                         
+212800*                                                                         
 212900     ADD     1 TO REC-CT.                                         SQ1064.2
 213000     IF DELETE-SW NOT EQUAL TO SPACE                              SQ1064.2
 213100         GO TO SEQ-DELETE-23-03.                                  SQ1064.2
@@ -2093,9 +2093,9 @@
 214200         MOVE   "INCORRECT VALUE IN BUFFER EXTENSION" TO RE-MARK  SQ1064.2
 214300         PERFORM FAIL.                                            SQ1064.2
 214400 SEQ-TEST-23-03-END.                                              SQ1064.2
-214500*                                                                 SQ1064.2
-214600*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-214700*                                                                 SQ1064.2
+214500*                                                                         
+214600*                                                                         
+214700*                                                                         
 214800     ADD     1 TO REC-CT.                                         SQ1064.2
 214900     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 215000         GO TO   SEQ-DELETE-23-04.                                SQ1064.2
@@ -2113,9 +2113,9 @@
 216200         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 216300         PERFORM FAIL.                                            SQ1064.2
 216400 SEQ-TEST-23-04-END.                                              SQ1064.2
-216500*                                                                 SQ1064.2
-216600*    CHECK EXECUTION OF THE STATEMENT AFTER END-READ              SQ1064.2
-216700*                                                                 SQ1064.2
+216500*                                                                         
+216600*                                                                         
+216700*                                                                         
 216800     ADD     1 TO REC-CT.                                         SQ1064.2
 216900     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 217000         GO TO   SEQ-DELETE-23-05.                                SQ1064.2
@@ -2133,9 +2133,9 @@
 218200         MOVE   "IV-40, VII-47,4.4.4(14)" TO ANSI-REFERENCE       SQ1064.2
 218300         PERFORM FAIL.                                            SQ1064.2
 218400 SEQ-TEST-23-05-END.                                              SQ1064.2
-218500*                                                                 SQ1064.2
-218600*    CHECK EXECUTION OF THE END PHRASE                            SQ1064.2
-218700*                                                                 SQ1064.2
+218500*                                                                         
+218600*                                                                         
+218700*                                                                         
 218800     ADD     1 TO REC-CT.                                         SQ1064.2
 218900     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 219000         GO TO   SEQ-DELETE-23-06.                                SQ1064.2
@@ -2155,11 +2155,11 @@
 220400         PERFORM FAIL.                                            SQ1064.2
 220500 SEQ-TEST-23-06-END.                                              SQ1064.2
 220600     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-220700*                                                                 SQ1064.2
-220800*                                                                 SQ1064.2
-220900*    READ A SHORT RECORD,                                         SQ1064.2
-221000*    USING READ ... END ... NOT AT END ... END-READ               SQ1064.2
-221100*                                                                 SQ1064.2
+220700*                                                                         
+220800*                                                                         
+220900*                                                                         
+221000*                                                                         
+221100*                                                                         
 221200 SEQ-INIT-24.                                                     SQ1064.2
 221300     MOVE    1 TO REC-CT.                                         SQ1064.2
 221400     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -2178,9 +2178,9 @@
 222700 SEQ-DELETE-24.                                                   SQ1064.2
 222800     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 222900     GO TO   SEQ-DELETE-24-01.                                    SQ1064.2
-223000*                                                                 SQ1064.2
-223100*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-223200*                                                                 SQ1064.2
+223000*                                                                         
+223100*                                                                         
+223200*                                                                         
 223300 SEQ-TEST-RD-24.                                                  SQ1064.2
 223400     READ    SQ-VS6                                               SQ1064.2
 223500        END                                                       SQ1064.2
@@ -2191,9 +2191,9 @@
 224000     MOVE   "EXECUTED" TO END-READ-FLAG.                          SQ1064.2
 224100     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 224200     GO TO   SEQ-TEST-RD-24-01.                                   SQ1064.2
-224300*                                                                 SQ1064.2
-224400*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-224500*                                                                 SQ1064.2
+224300*                                                                         
+224400*                                                                         
+224500*                                                                         
 224600 SEQ-DELETE-24-01.                                                SQ1064.2
 224700     PERFORM DE-LETE.                                             SQ1064.2
 224800     GO TO   SEQ-TEST-24-01-END.                                  SQ1064.2
@@ -2207,9 +2207,9 @@
 225600         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 225700         PERFORM FAIL.                                            SQ1064.2
 225800 SEQ-TEST-24-01-END.                                              SQ1064.2
-225900*                                                                 SQ1064.2
-226000*    CHECK THE RECORD NUMBER OF THE RECORD READ                   SQ1064.2
-226100*                                                                 SQ1064.2
+225900*                                                                         
+226000*                                                                         
+226100*                                                                         
 226200     ADD     1 TO REC-CT.                                         SQ1064.2
 226300     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 226400         GO TO   SEQ-DELETE-24-02.                                SQ1064.2
@@ -2226,12 +2226,12 @@
 227500         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 227600         PERFORM FAIL.                                            SQ1064.2
 227700 SEQ-TEST-24-02-END.                                              SQ1064.2
-227800*                                                                 SQ1064.2
-227900*    CHECK THE EXTENDED PART OF THE RECORD                        SQ1064.2
-228000*                                                                 SQ1064.2
+227800*                                                                         
+227900*                                                                         
+228000*                                                                         
 228100     ADD     1 TO REC-CT.                                         SQ1064.2
-228200*    IF DELETE-SW NOT = TO SPACE                                  SQ1064.2
-228300*        GO TO SEQ-DELETE-24-03.                                  SQ1064.2
+228200*                                                                         
+228300*                                                                         
 228400     GO TO   SEQ-TEST-RD-24-03.
 228500 SEQ-DELETE-24-03.                                                SQ1064.2
 228600     PERFORM DE-LETE.                                             SQ1064.2
@@ -2245,9 +2245,9 @@
 229400         MOVE   "BUFFER CONTENTS FOR LONG RECORD" TO RE-MARK      SQ1064.2
 229500         PERFORM FAIL.                                            SQ1064.2
 229600 SEQ-TEST-24-03-END.                                              SQ1064.2
-229700*                                                                 SQ1064.2
-229800*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-229900*                                                                 SQ1064.2
+229700*                                                                         
+229800*                                                                         
+229900*                                                                         
 230000     ADD     1 TO REC-CT.                                         SQ1064.2
 230100     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 230200         GO TO   SEQ-DELETE-24-04.                                SQ1064.2
@@ -2265,10 +2265,10 @@
 231400         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 231500         PERFORM FAIL.                                            SQ1064.2
 231600 SEQ-TEST-24-04-END.                                              SQ1064.2
-231700*                                                                 SQ1064.2
-231800*                                                                 SQ1064.2
-231900*    CHECK EXECUTION OF THE STATEMENT AFTER END-READ              SQ1064.2
-232000*                                                                 SQ1064.2
+231700*                                                                         
+231800*                                                                         
+231900*                                                                         
+232000*                                                                         
 232100     ADD     1 TO REC-CT.                                         SQ1064.2
 232200     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 232300         GO TO   SEQ-DELETE-24-05.                                SQ1064.2
@@ -2286,9 +2286,9 @@
 233500         MOVE   "IV-40, VII-47,4.4.4(14)" TO ANSI-REFERENCE       SQ1064.2
 233600         PERFORM FAIL.                                            SQ1064.2
 233700 SEQ-TEST-24-05-END.                                              SQ1064.2
-233800*                                                                 SQ1064.2
-233900*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-234000*                                                                 SQ1064.2
+233800*                                                                         
+233900*                                                                         
+234000*                                                                         
 234100     ADD     1 TO REC-CT.                                         SQ1064.2
 234200     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 234300         GO TO   SEQ-DELETE-24-06.                                SQ1064.2
@@ -2308,11 +2308,11 @@
 235700         PERFORM FAIL.                                            SQ1064.2
 235800 SEQ-TEST-24-06-END.                                              SQ1064.2
 235900     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-236000*                                                                 SQ1064.2
-236100*                                                                 SQ1064.2
-236200*    READ A SHORT RECORD,                                         SQ1064.2
-236300*    USING READ ... AT END ... NOT END ... END-READ               SQ1064.2
-236400*                                                                 SQ1064.2
+236000*                                                                         
+236100*                                                                         
+236200*                                                                         
+236300*                                                                         
+236400*                                                                         
 236500 SEQ-INIT-25.                                                     SQ1064.2
 236600     MOVE    1 TO REC-CT.                                         SQ1064.2
 236700     ADD     1 TO XRECORD-NUMBER (1).                             SQ1064.2
@@ -2331,9 +2331,9 @@
 238000 SEQ-DELETE-25.                                                   SQ1064.2
 238100     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 238200     GO TO   SEQ-DELETE-25-01.                                    SQ1064.2
-238300*                                                                 SQ1064.2
-238400*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-238500*                                                                 SQ1064.2
+238300*                                                                         
+238400*                                                                         
+238500*                                                                         
 238600 SEQ-TEST-RD-25.                                                  SQ1064.2
 238700     READ    SQ-VS6                                               SQ1064.2
 238800        AT END                                                    SQ1064.2
@@ -2344,9 +2344,9 @@
 239300     MOVE   "EXECUTED" TO END-READ-FLAG.                          SQ1064.2
 239400     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 239500     GO TO   SEQ-TEST-RD-25-01.                                   SQ1064.2
-239600*                                                                 SQ1064.2
-239700*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-239800*                                                                 SQ1064.2
+239600*                                                                         
+239700*                                                                         
+239800*                                                                         
 239900 SEQ-DELETE-25-01.                                                SQ1064.2
 240000     PERFORM DE-LETE.                                             SQ1064.2
 240100     GO TO   SEQ-TEST-25-01-END.                                  SQ1064.2
@@ -2360,9 +2360,9 @@
 240900         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 241000         PERFORM FAIL.                                            SQ1064.2
 241100 SEQ-TEST-25-01-END.                                              SQ1064.2
-241200*                                                                 SQ1064.2
-241300*    CHECK THE RECORD NUMBER OF THE RECORD READ                   SQ1064.2
-241400*                                                                 SQ1064.2
+241200*                                                                         
+241300*                                                                         
+241400*                                                                         
 241500     ADD     1 TO REC-CT.                                         SQ1064.2
 241600     IF DELETE-SW NOT EQUAL SPACE                                 SQ1064.2
 241700         GO TO   SEQ-DELETE-25-02.                                SQ1064.2
@@ -2379,12 +2379,12 @@
 242800         MOVE   "UNEXPECTED RECORD RETURNED" TO RE-MARK           SQ1064.2
 242900         PERFORM FAIL.                                            SQ1064.2
 243000 SEQ-TEST-25-02-END.                                              SQ1064.2
-243100*                                                                 SQ1064.2
-243200*    CHECK THE EXTENDED PART OF THE RECORD                        SQ1064.2
-243300*                                                                 SQ1064.2
+243100*                                                                         
+243200*                                                                         
+243300*                                                                         
 243400     ADD     1 TO REC-CT.                                         SQ1064.2
-243500*    IF DELETE-SW NOT = TO SPACE                                  SQ1064.2
-243600*        GO TO SEQ-DELETE-25-03.                                  SQ1064.2
+243500*                                                                         
+243600*                                                                         
 243700     GO TO   SEQ-TEST-RD-25-03.
 243800 SEQ-DELETE-25-03.                                                SQ1064.2
 243900     PERFORM DE-LETE.                                             SQ1064.2
@@ -2398,9 +2398,9 @@
 244700         MOVE   "BUFFER CONTENTS FOR LONG RECORD" TO RE-MARK      SQ1064.2
 244800         PERFORM FAIL.                                            SQ1064.2
 244900 SEQ-TEST-25-03-END.                                              SQ1064.2
-245000*                                                                 SQ1064.2
-245100*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-245200*                                                                 SQ1064.2
+245000*                                                                         
+245100*                                                                         
+245200*                                                                         
 245300     ADD     1 TO REC-CT.                                         SQ1064.2
 245400     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 245500         GO TO   SEQ-DELETE-25-04.                                SQ1064.2
@@ -2418,10 +2418,10 @@
 246700         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 246800         PERFORM FAIL.                                            SQ1064.2
 246900 SEQ-TEST-25-04-END.                                              SQ1064.2
-247000*                                                                 SQ1064.2
-247100*                                                                 SQ1064.2
-247200*    CHECK EXECUTION OF THE STATEMENT AFTER END-READ              SQ1064.2
-247300*                                                                 SQ1064.2
+247000*                                                                         
+247100*                                                                         
+247200*                                                                         
+247300*                                                                         
 247400     ADD     1 TO REC-CT.                                         SQ1064.2
 247500     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 247600         GO TO   SEQ-DELETE-25-05.                                SQ1064.2
@@ -2439,9 +2439,9 @@
 248800         MOVE   "IV-40, VII-47,4.4.4(14)" TO ANSI-REFERENCE       SQ1064.2
 248900         PERFORM FAIL.                                            SQ1064.2
 249000 SEQ-TEST-25-05-END.                                              SQ1064.2
-249100*                                                                 SQ1064.2
-249200*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-249300*                                                                 SQ1064.2
+249100*                                                                         
+249200*                                                                         
+249300*                                                                         
 249400     ADD     1 TO REC-CT.                                         SQ1064.2
 249500     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 249600         GO TO   SEQ-DELETE-25-06.                                SQ1064.2
@@ -2461,11 +2461,11 @@
 251000         PERFORM FAIL.                                            SQ1064.2
 251100 SEQ-TEST-25-06-END.                                              SQ1064.2
 251200     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-251300*                                                                 SQ1064.2
-251400*                                                                 SQ1064.2
-251500*    READ AT END OF FILE, RAISING EOF CONDITION                   SQ1064.2
-251600*    USING READ ... END ... NOT END ... END-READ                  SQ1064.2
-251700*                                                                 SQ1064.2
+251300*                                                                         
+251400*                                                                         
+251500*                                                                         
+251600*                                                                         
+251700*                                                                         
 251800 SEQ-INIT-26.                                                     SQ1064.2
 251900     MOVE    1 TO REC-CT.                                         SQ1064.2
 252000     MOVE   "**" TO SQ-STATUS.                                    SQ1064.2
@@ -2480,9 +2480,9 @@
 252900 SEQ-DELETE-26.                                                   SQ1064.2
 253000     MOVE   "*" TO DELETE-SW-3.                                   SQ1064.2
 253100     GO TO   SEQ-DELETE-26-01.                                    SQ1064.2
-253200*                                                                 SQ1064.2
-253300*    EXECUTE THE READ STATEMENT                                   SQ1064.2
-253400*                                                                 SQ1064.2
+253200*                                                                         
+253300*                                                                         
+253400*                                                                         
 253500 SEQ-TEST-RD-26.                                                  SQ1064.2
 253600     READ    SQ-VS6                                               SQ1064.2
 253700        END                                                       SQ1064.2
@@ -2493,9 +2493,9 @@
 254200     MOVE   "EXECUTED" TO END-READ-FLAG.                          SQ1064.2
 254300     MOVE    SQ-VS6R1-M-G-120 TO FILE-RECORD-INFO-P1-120 (2).     SQ1064.2
 254400     GO TO   SEQ-TEST-RD-26-01.                                   SQ1064.2
-254500*                                                                 SQ1064.2
-254600*    CHECK THE FILE STATUS VALUE                                  SQ1064.2
-254700*                                                                 SQ1064.2
+254500*                                                                         
+254600*                                                                         
+254700*                                                                         
 254800 SEQ-DELETE-26-01.                                                SQ1064.2
 254900     PERFORM DE-LETE.                                             SQ1064.2
 255000     GO TO   SEQ-TEST-26-01-END.                                  SQ1064.2
@@ -2509,10 +2509,10 @@
 255800         MOVE   "VII-3, VII-44,4.4.4(3)" TO ANSI-REFERENCE        SQ1064.2
 255900         PERFORM FAIL.                                            SQ1064.2
 256000 SEQ-TEST-26-01-END.                                              SQ1064.2
-256100*                                                                 SQ1064.2
-256200*                                                                 SQ1064.2
-256300*    CHECK EXECUTION OF THE NOT END PATH                          SQ1064.2
-256400*                                                                 SQ1064.2
+256100*                                                                         
+256200*                                                                         
+256300*                                                                         
+256400*                                                                         
 256500     ADD     1 TO REC-CT.                                         SQ1064.2
 256600     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 256700         GO TO   SEQ-DELETE-26-02.                                SQ1064.2
@@ -2530,10 +2530,10 @@
 257900         MOVE   "VII-46,4.4.4(11)" TO ANSI-REFERENCE              SQ1064.2
 258000         PERFORM FAIL.                                            SQ1064.2
 258100 SEQ-TEST-26-02-END.                                              SQ1064.2
-258200*                                                                 SQ1064.2
-258300*                                                                 SQ1064.2
-258400*    CHECK EXECUTION OF THE STATEMENT AFTER END-READ              SQ1064.2
-258500*                                                                 SQ1064.2
+258200*                                                                         
+258300*                                                                         
+258400*                                                                         
+258500*                                                                         
 258600     ADD     1 TO REC-CT.                                         SQ1064.2
 258700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 258800         GO TO   SEQ-DELETE-26-03.                                SQ1064.2
@@ -2551,9 +2551,9 @@
 260000         MOVE   "IV-40, VII-47,4.4.4(14)" TO ANSI-REFERENCE       SQ1064.2
 260100         PERFORM FAIL.                                            SQ1064.2
 260200 SEQ-TEST-26-03-END.                                              SQ1064.2
-260300*                                                                 SQ1064.2
-260400*    CHECK EXECUTION OF THE END PATH                              SQ1064.2
-260500*                                                                 SQ1064.2
+260300*                                                                         
+260400*                                                                         
+260500*                                                                         
 260600     ADD     1 TO REC-CT.                                         SQ1064.2
 260700     IF DELETE-SW NOT = SPACE                                     SQ1064.2
 260800         GO TO   SEQ-DELETE-26-04.                                SQ1064.2
@@ -2572,10 +2572,10 @@
 262100         PERFORM FAIL.                                            SQ1064.2
 262200 SEQ-TEST-26-04-END.                                              SQ1064.2
 262300     MOVE    SPACE TO DELETE-SW-3.                                SQ1064.2
-262400*                                                                 SQ1064.2
-262500*                                                                 SQ1064.2
-262600*    THE END OF THE FILE HAS BEEN REACHED, SO IT CAN BE CLOSED    SQ1064.2
-262700*                                                                 SQ1064.2
+262400*                                                                         
+262500*                                                                         
+262600*                                                                         
+262700*                                                                         
 262800 SEQ-INIT-27.                                                     SQ1064.2
 262900     MOVE    1 TO REC-CT.                                         SQ1064.2
 263000     MOVE   "CLOSE FILE AFTER READING" TO FEATURE.                SQ1064.2
@@ -2602,8 +2602,8 @@
 265100         MOVE   "VII-3, VII-38,4.2.4(4)" TO ANSI-REFERENCE        SQ1064.2
 265200         PERFORM FAIL.                                            SQ1064.2
 265300 SEQ-TEST-27-01-END.                                              SQ1064.2
-265400*                                                                 SQ1064.2
-265500*                                                                 SQ1064.2
+265400*                                                                         
+265500*                                                                         
 265600 TERMINATE-ROUTINE.                                               SQ1064.2
 265700     EXIT.                                                        SQ1064.2
 265800 CCVS-EXIT SECTION.                                               SQ1064.2

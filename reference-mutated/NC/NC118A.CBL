@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1184.2
 000200 PROGRAM-ID.                                                      NC1184.2
 000300     NC118A.                                                      NC1184.2
-000400****************************************************************  NC1184.2
-000500*                                                              *  NC1184.2
-000600*    VALIDATION FOR:-                                          *  NC1184.2
-000700*                                                              *  NC1184.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1184.2
-000900*                                                              *  NC1184.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1184.2
-001100*                                                              *  NC1184.2
-001200****************************************************************  NC1184.2
-001300*                                                              *  NC1184.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1184.2
-001500*                                                              *  NC1184.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1184.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1184.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1184.2
-001900*                                                              *  NC1184.2
-002000****************************************************************  NC1184.2
-002100*                                                                 NC1184.2
-002200*    PROGRAM NC118A TESTS THE USE OF THE "SIGN" CLAUSE USING      NC1184.2
-002300*    FORMATS 1 AND 2 OF THE ADD STATEMENT.  ALL COMBINATIONS      NC1184.2
-002400*    OF THE SIGN CLAUSE PHRASES ARE TESTED USING DATA ITEMS       NC1184.2
-002500*    OF VARIOUS LENGTHS.                                          NC1184.2
-002600*                                                                 NC1184.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700                                                                  NC1184.2
 002800 ENVIRONMENT DIVISION.                                            NC1184.2
 002900 CONFIGURATION SECTION.                                           NC1184.2
@@ -389,7 +389,7 @@
 039100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1184.2
 039200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1184.2
 039300      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1184.2
-039400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1184.2
+039400*                                                                         
 039500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1184.2
 039600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1184.2
 039700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1184.2
@@ -650,7 +650,7 @@
 065200 SIG-TEST-GF-13-2.                                                NC1184.2
 065300     IF       WRK-DS-10V00 EQUAL TO ZERO                          NC1184.2
 065400              PERFORM PASS GO TO SIG-WRITE-GF-13-2.               NC1184.2
-065500*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SIG-TEST-GF-13-1  NC1184.2
+065500*                                                                         
 065600     GO       TO SIG-FAIL-GF-13-2.                                NC1184.2
 065700 SIG-DELETE-GF-13-2.                                              NC1184.2
 065800     PERFORM  DE-LETE.                                            NC1184.2
@@ -686,7 +686,7 @@
 068800 SIG-TEST-GF-6-2.                                                 NC1184.2
 068900     IF       WRK-DS-T-05V00 EQUAL TO ZERO                        NC1184.2
 069000              PERFORM PASS GO TO SIG-WRITE-GF-6-2.                NC1184.2
-069100*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SIG-TEST-GF-6-1   NC1184.2
+069100*                                                                         
 069200     GO       TO SIG-FAIL-GF-6-2.                                 NC1184.2
 069300 SIG-DELETE-GF-6-2.                                               NC1184.2
 069400     PERFORM  DE-LETE.                                            NC1184.2
@@ -720,7 +720,7 @@
 072200     MOVE     "SIG-TEST-GF-7-1" TO PAR-NAME.                      NC1184.2
 072300     PERFORM  PRINT-DETAIL.                                       NC1184.2
 072400 SIG-TEST-GF-7-2.                                                 NC1184.2
-072500     IF       WRK-DS-TS-06V06 EQUAL TO 666999.666933              NC1184.2
+072500     IF       WRK-DS-TS-06V06 EQUAL TO 666999.667333              NC1184.2
 072600              PERFORM PASS GO TO SIG-WRITE-GF-7-2.                NC1184.2
 072700*                                                                         
 072800     GO       TO SIG-FAIL-GF-7-2.                                 NC1184.2
@@ -729,7 +729,7 @@
 073100     GO       TO SIG-WRITE-GF-7-2.                                NC1184.2
 073200 SIG-FAIL-GF-7-2.                                                 NC1184.2
 073300     MOVE     WRK-DS-TS-06V06 TO COMPUTED-N.                      NC1184.2
-073400     MOVE     666999.666933 TO CORRECT-N.                         NC1184.2
+073400     MOVE     666999.667333 TO CORRECT-N.                         NC1184.2
 073500     PERFORM  FAIL.                                               NC1184.2
 073600 SIG-WRITE-GF-7-2.                                                NC1184.2
 073700     MOVE     "SIG-TEST-GF-7-2" TO PAR-NAME.                      NC1184.2
@@ -757,7 +757,7 @@
 075900     IF       WRK-DS-T-05V00 EQUAL TO ZERO                        NC1184.2
 076000              PERFORM PASS GO TO SIG-WRITE-GF-14-2.               NC1184.2
 076100     GO       TO SIG-FAIL-GF-14-2.                                NC1184.2
-076200*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SIG-TEST-GF-14-1  NC1184.2
+076200*                                                                         
 076300 SIG-DELETE-GF-14-2.                                              NC1184.2
 076400     PERFORM  DE-LETE.                                            NC1184.2
 076500     GO       TO SIG-WRITE-GF-14-2.                               NC1184.2
@@ -792,7 +792,7 @@
 079400 SIG-TEST-GF-15-2.                                                NC1184.2
 079500     IF       WRK-DS-TS-06V06 EQUAL TO 666999.666333              NC1184.2
 079600              PERFORM PASS GO TO SIG-WRITE-GF-15-2.               NC1184.2
-079700*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SIG-TEST-GF-15-1  NC1184.2
+079700*                                                                         
 079800     GO       TO SIG-FAIL-GF-15-2.                                NC1184.2
 079900 SIG-DELETE-GF-15-2.                                              NC1184.2
 080000     PERFORM  DE-LETE.                                            NC1184.2
@@ -817,7 +817,7 @@
 081900              +.11111111                                          NC1184.2
 082000              A01ONES-DS-LS-P0801 GIVING WRK-DS-03V10.            NC1184.2
 082100 SIG-TEST-GF-16-1.                                                NC1184.2
-082200     IF       WRK-DS-03V10 EQUAL TO 542.4332220110                NC1184.2
+082200     IF       WRK-DS-03V10 EQUAL TO 242.4332240110                NC1184.2
 082300              PERFORM PASS GO TO SIG-WRITE-GF-16.                 NC1184.2
 082400     GO       TO SIG-FAIL-GF-16.                                  NC1184.2
 082500 SIG-DELETE-GF-16.                                                NC1184.2
@@ -825,7 +825,7 @@
 082700     GO       TO SIG-WRITE-GF-16.                                 NC1184.2
 082800 SIG-FAIL-GF-16.                                                  NC1184.2
 082900     MOVE     WRK-DS-03V10 TO COMPUTED-4V14.                      NC1184.2
-083000     MOVE     542.4332220110 TO CORRECT-4V14.                     NC1184.2
+083000     MOVE     242.4332240110 TO CORRECT-4V14.                     NC1184.2
 083100     PERFORM  FAIL.                                               NC1184.2
 083200 SIG-WRITE-GF-16.                                                 NC1184.2
 083300     MOVE     "SIG-TEST-GF-16" TO PAR-NAME.                       NC1184.2
@@ -927,11 +927,11 @@
 092900         PLUS-NAME2  EVEN-NAME1  35  GIVING WHOLE-FIELD           NC1184.2
 093000         ON SIZE ERROR  MOVE "1" TO SIZE-ERR.                     NC1184.2
 093100 SIG-TEST-GF-19-1.                                                NC1184.2
-093200     IF WHOLE-FIELD EQUAL TO +6                                   NC1184.2
+093200     IF WHOLE-FIELD EQUAL TO +9                                   NC1184.2
 093300         PERFORM PASS                                             NC1184.2
 093400         GO TO SIG-WRITE-GF-19-1.                                 NC1184.2
 093500     MOVE WHOLE-FIELD TO COMPUTED-18V0.                           NC1184.2
-093600     MOVE +6 TO CORRECT-18V0.                                     NC1184.2
+093600     MOVE +9 TO CORRECT-18V0.                                     NC1184.2
 093700     PERFORM FAIL.                                                NC1184.2
 093800     GO TO SIG-WRITE-GF-19-1.                                     NC1184.2
 093900 SIG-DELETE-GF-19-1.                                              NC1184.2

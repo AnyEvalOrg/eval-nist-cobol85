@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1154.2
 000200 PROGRAM-ID.                                                      SQ1154.2
 000300     SQ115A.                                                      SQ1154.2
-000400****************************************************************  SQ1154.2
-000500*                                                              *  SQ1154.2
-000600*    VALIDATION FOR:-                                          *  SQ1154.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1154.2
-000800*                                                              *  SQ1154.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1154.2
-001100*                                                              *  SQ1154.2
-001200****************************************************************  SQ1154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1154.2
-001400*        THIS ROUTINE CREATES A MASS STORAGE FILE CONTAINING      SQ1154.2
-001500*    550 RECORDS.  EACH RECORD CONTAINS 126 CHARACTERS. THE       SQ1154.2
-001600*    FILE IS CLOSED AND OPENED AS AN INPUT-OUTPUT FILE. EVERY     SQ1154.2
-001700*    TENTH RECORD IS REWRITTEN.  THE FILE IS CLOSED AND OPENED    SQ1154.2
-001800*    AGAIN AS AN INPUT FILE.  FIELDS IN EACH RECORD ARE CHECKED   SQ1154.2
-001900*    TO ENSURE THAT THE RECORDS REWRITTEN ARE CORRECT AND THAT    SQ1154.2
-002000*    THE RECORDS WHICH WERE NOT UPDATED WERE NOT CHANGED.         SQ1154.2
-002100*                                                                 SQ1154.2
-002200*    USED X-CARDS:                                                SQ1154.2
-002300*         XXXXX014                                                SQ1154.2
-002400*         XXXXX055                                                SQ1154.2
-002500*     P   XXXXX062                                                SQ1154.2
-002600*         XXXXX082                                                SQ1154.2
-002700*         XXXXX083                                                SQ1154.2
-002800*     C   XXXXX084                                                SQ1154.2
-002900*                                                                 SQ1154.2
-003000*                                                                 SQ1154.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            SQ1154.2
 003200 CONFIGURATION SECTION.                                           SQ1154.2
 003300 SOURCE-COMPUTER.                                                 SQ1154.2
@@ -284,7 +284,7 @@
 033300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1154.2
 033400      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1154.2
 033500      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1154.2
-033600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1154.2
+033600*                                                                         
 033700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1154.2
 033800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1154.2
 033900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1154.2
@@ -375,12 +375,12 @@
 042400     MOVE COUNT-OF-RECORDS TO CORRECT-18V0.                       SQ1154.2
 042500     PERFORM PRINT-DETAIL.                                        SQ1154.2
 042600     CLOSE SQ-FS5.                                                SQ1154.2
-042700*         A SEQUENTIAL MASS STORAGE FILE WITH 126 CHARACTER       SQ1154.2
-042800*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 550 RECORDS.    SQ1154.2
+042700*                                                                         
+042800*                                                                         
 042900 SEQ-INIT-014.                                                    SQ1154.2
 043000     MOVE ZERO TO COUNT-OF-RECORDS.                               SQ1154.2
-043100*        THIS TEST READS AND CHECKS THE FILE CREATED              SQ1154.2
-043200*    IN SEQ-TEST-013.                                             SQ1154.2
+043100*                                                                         
+043200*                                                                         
 043300     OPEN INPUT SQ-FS5.                                           SQ1154.2
 043400 SEQ-TEST-014.                                                    SQ1154.2
 043500     READ SQ-FS5 AT END                                           SQ1154.2
@@ -427,8 +427,8 @@
 047600     OPEN I-O SQ-FS5.                                             SQ1154.2
 047700     MOVE ZERO TO COUNT-OF-RECORDS.                               SQ1154.2
 047800     MOVE ZERO TO EOF-FLAG.                                       SQ1154.2
-047900*        THIS TEST REWRITES EVERY TENTH RECORD                    SQ1154.2
-048000*    OF THE FILE SQ-FS5.                                          SQ1154.2
+047900*                                                                         
+048000*                                                                         
 048100 REWRITE-TEST-GF-01.                                              SQ1154.2
 048200     PERFORM READ-SQ-FS5 THRU READ-SQ-FS5-EXIT 10 TIMES.          SQ1154.2
 048300     IF EOF-FLAG EQUAL TO 1                                       SQ1154.2
@@ -470,8 +470,8 @@
 051900     MOVE ZERO TO COUNT-OF-RECORDS.                               SQ1154.2
 052000     MOVE ZERO TO EOF-FLAG.                                       SQ1154.2
 052100     OPEN INPUT SQ-FS5.                                           SQ1154.2
-052200*        THIS TEST READS AND CHECKS THE FILE WHICH WAS            SQ1154.2
-052300*    REWRITTEN IN REWRITE-TEST-01.                                SQ1154.2
+052200*                                                                         
+052300*                                                                         
 052400     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1154.2
 052500     MOVE ZERO TO LOOP-COUNT.                                     SQ1154.2
 052600 REWRITE-TEST-GF-02.                                              SQ1154.2

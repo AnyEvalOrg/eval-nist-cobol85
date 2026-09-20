@@ -26,7 +26,7 @@ TEST RESULT OF NC218A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PIC X JUST           FAIL* UST-TEST-GF-2      .05                                                                      
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000002.000000000  VI-135                                             
+                                     CORRECT =  000000009.000000000  VI-135                                             
                                                                                                                         
  PIC X JUST           FAIL* UST-TEST-GF-2      .06                                                                      
                                                                                                                         
@@ -39,12 +39,12 @@ TEST RESULT OF NC218A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PIC XXX              PASS  UST-TEST-GF-3      .04                                                                      
  PIC XXX              PASS  UST-TEST-GF-3      .05                                                                      
  PIC XXX JUST         PASS  UST-TEST-GF-4      .01                                                                      
- PIC XXX JUST         FAIL* UST-TEST-GF-4      .02                                                                      
+ PIC XXX JUST         PASS  UST-TEST-GF-4      .02                                                                      
+ PIC XXX JUST         FAIL* UST-TEST-GF-4      .03                                                                      
                                                                                                                         
-                                     COMPUTED= 0                                                                        
-                                     CORRECT = 0  9                  VI-135                                             
+                                     COMPUTED=  000000002.000000000                                                     
+                                     CORRECT =  000000003.000000000  VI-135                                             
                                                                                                                         
- PIC XXX JUST         PASS  UST-TEST-GF-4      .03                                                                      
  PIC XXX JUST         PASS  UST-TEST-GF-4      .04                                                                      
  PIC XXX JUST         PASS  UST-TEST-GF-4      .05                                                                      
  PIC 9                PASS  UST-TEST-GF-5      .01                                                                      
@@ -88,30 +88,30 @@ TEST RESULT OF NC218A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  OVERFLOW EXPECTED    PASS  UST-TEST-GF-13     .02                                                                      
  INSTANT OVERFLOW     PASS  UST-TEST-GF-14     .01                                                                      
  INSTANT OVERFLOW     PASS  UST-TEST-GF-14     .02                                                                      
- INSTANT OVERFLOW     FAIL* UST-TEST-GF-14     .03                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000007.000000000                                                     
-                                     CORRECT =  000000006.000000000  VI-135                                             
-                                                                                                                        
+ INSTANT OVERFLOW     PASS  UST-TEST-GF-14     .03                                                                      
  POINTER NOT = 1      PASS  UST-TEST-GF-15     .01                                                                      
  POINTER NOT = 1      FAIL* UST-TEST-GF-15     .02                                                                      
                                                                                                                         
                                      COMPUTED= CDEF                                                                     
-                                     CORRECT = CDEF C                VI-135                                             
+                                     CORRECT = HDEF                  VI-135                                             
                                                                                                                         
- POINTER NOT = 1      PASS  UST-TEST-GF-15     .03                                                                      
+ POINTER NOT = 1      FAIL* UST-TEST-GF-15     .03                                                                      
+                                                                                                                        
+                                     COMPUTED=  000000007.000000000                                                     
+                                     CORRECT =  000000005.000000000  VI-135                                             
+                                                                                                                        
  TALLY 3 FIELDS TEST  PASS  UST-TEST-GF-16     .01                                                                      
- TALLY 3 FIELDS TEST  FAIL* UST-TEST-GF-16     .02                                                                      
-                                                                                                                        
-                                     COMPUTED= ****                                                                                                                                                                                             
+ TALLY 3 FIELDS TEST  PASS  UST-TEST-GF-16     .02                                                                      
+ TALLY 3 FIELDS TEST  PASS  UST-TEST-GF-16     .03                                                                      
+ QUAL DEL BY POINT    FAIL* UST-TEST-GF-17     .01                                                                                                                                                                                              
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
-                                     CORRECT = *M**                  VI-135                                             
                                                                                                                         
- TALLY 3 FIELDS TEST  PASS  UST-TEST-GF-16     .03                                                                      
- QUAL DEL BY POINT    PASS  UST-TEST-GF-17     .01                                                                      
+                                     COMPUTED= B                                                                        
+                                     CORRECT = O                     VI-135                                             
+                                                                                                                        
  QUAL DEL BY POINT    PASS  UST-TEST-GF-17     .02                                                                      
  QUAL DEL BY POINT    PASS  UST-TEST-GF-17     .03                                                                      
  QUAL DEL BY POINT    PASS  UST-TEST-GF-17     .04                                                                      
@@ -124,21 +124,21 @@ TEST RESULT OF NC218A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED ID1        PASS  UST-TEST-GF-19     .01                                                                      
  QUALIFIED ID1        PASS  UST-TEST-GF-19     .02                                                                      
  QUALIFIED ID1        PASS  UST-TEST-GF-19     .03                                                                      
- MULT RECEIVE AREAS   FAIL* UST-TEST-GF-20     .01                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDEF                                                                   
-                                     CORRECT = ABCDEU                VI-135                                             
-                                                                                                                        
+ MULT RECEIVE AREAS   PASS  UST-TEST-GF-20     .01                                                                      
  MULT RECEIVE AREAS   PASS  UST-TEST-GF-20     .02                                                                      
- MULT RECEIVE AREAS   FAIL* UST-TEST-GF-20     .03                                                                      
-                                                                                                                        
-                                     COMPUTED= *                                                                        
-                                     CORRECT = B                     VI-135                                             
-                                                                                                                        
+ MULT RECEIVE AREAS   PASS  UST-TEST-GF-20     .03                                                                      
  MULT RECEIVE AREAS   PASS  UST-TEST-GF-20     .04                                                                      
- TRUNCATION CHECKS    PASS  UST-TEST-GF-21     .01                                                                      
+ TRUNCATION CHECKS    FAIL* UST-TEST-GF-21     .01                                                                      
+                                                                                                                        
+                                     COMPUTED= ABC                                                                      
+                                     CORRECT = ABV                   VI-135                                             
+                                                                                                                        
  TRUNCATION CHECKS    PASS  UST-TEST-GF-21     .02                                                                      
- TRUNCATION CHECKS    PASS  UST-TEST-GF-21     .03                                                                      
+ TRUNCATION CHECKS    FAIL* UST-TEST-GF-21     .03                                                                      
+                                                                                                                        
+                                     COMPUTED= I                                                                        
+                                     CORRECT = D                     VI-135                                             
+                                                                                                                        
  TRUNCATION CHECKS    PASS  UST-TEST-GF-21     .04                                                                      
  PIC X                PASS  UST-TEST-GF-22     .01                                                                      
  PIC X                PASS  UST-TEST-GF-22     .02                                                                      
@@ -151,41 +151,41 @@ TEST RESULT OF NC218A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PIC X                PASS  UST-TEST-GF-24     .01                                                                      
  PIC X                PASS  UST-TEST-GF-24     .02                                                                      
  PIC X                PASS  UST-TEST-GF-24     .03                                                                      
- PIC X                FAIL* UST-TEST-GF-24     .04                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000005.000000000  VI-138 6.26.4 GR17                                 
-                                                                                                                        
+ PIC X                PASS  UST-TEST-GF-24     .04                                                                      
  PIC X                PASS  UST-TEST-GF-24     .05                                                                      
  PIC X                PASS  UST-TEST-GF-24     .06                                                                      
- OVERFLOW TEST        PASS  UST-TEST-GF-25     .01                                                                                                                                                                                              
+ OVERFLOW TEST        PASS  UST-TEST-GF-25     .01                                                                      
+ OVERFLOW TEST        PASS  UST-TEST-GF-25     .02                                                                      
+ OVERFLOW TEST        FAIL* UST-TEST-GF-25     .01                                                                      
+                                                                                                                        
+                                     COMPUTED= ABCDEF                                                                                                                                                                                           
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- OVERFLOW TEST        PASS  UST-TEST-GF-25     .02                                                                      
- OVERFLOW TEST        FAIL* UST-TEST-GF-25     .01                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDEF                                                                   
-                                     CORRECT = ABCD9F                VI-138 6.26.4 GR19                                 
+                                     CORRECT = ABCDIF                VI-138 6.26.4 GR19                                 
                                                                                                                         
  OVERFLOW TEST        PASS  UST-TEST-GF-25     .02                                                                      
  OVERFLOW TEST        PASS  UST-TEST-GF-25     .03                                                                      
  OVERFLOW TEST        PASS  UST-TEST-GF-25     .04                                                                      
- PIC X                PASS  UST-TEST-GF-27     .01                                                                      
+ PIC X                FAIL* UST-TEST-GF-27     .01                                                                      
+                                                                                                                        
+                                     COMPUTED= 1                                                                        
+                                     CORRECT = 0                     VI-138 6.26.4 GR17                                 
+                                                                                                                        
  PIC X                PASS  UST-TEST-GF-27     .02                                                                      
  PIC X                PASS  UST-TEST-GF-27     .03                                                                      
  PIC X                PASS  UST-TEST-GF-27     .04                                                                      
  OVERFLOW TEST        PASS  UST-TEST-GF-28     .01                                                                      
- PIC X                FAIL* UST-TEST-GF-29-1   .01                                                                      
-                                                                                                                        
-                                     COMPUTED= 1                                                                        
-                                     CORRECT = S                     VI-138 6.26.4 GR17                                 
-                                                                                                                        
+ PIC X                PASS  UST-TEST-GF-29-1   .01                                                                      
  PIC X                PASS  UST-TEST-GF-29-1   .02                                                                      
  PIC X                PASS  UST-TEST-GF-29-1   .03                                                                      
  PIC X                PASS  UST-TEST-GF-29-1   .04                                                                      
- PIC X                PASS  UST-TEST-GF-29-1   .05                                                                      
+ PIC X                FAIL* UST-TEST-GF-29-1   .05                                                                      
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000009.000000000  VI-138 6.26.4 GR17                                 
+                                                                                                                        
  PIC X                PASS  UST-TEST-GF-29-1   .06                                                                      
  PIC X                PASS  UST-TEST-GF-29-1   .07                                                                      
  PIC X                PASS  UST-TEST-GF-29-1   .08                                                                      

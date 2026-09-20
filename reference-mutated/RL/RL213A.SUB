@@ -1,36 +1,36 @@
 000100 IDENTIFICATION DIVISION.                                         RL2134.2
 000200 PROGRAM-ID.                                                      RL2134.2
 000300     RL213A.                                                      RL2134.2
-000400****************************************************************  RL2134.2
-000500*                                                              *  RL2134.2
-000600*    VALIDATION FOR:-                                          *  RL2134.2
-000700*                                                              *  RL2134.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2134.2
-000900*                                                              *  RL2134.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2134.2
-001100*                                                              *  RL2134.2
-001200****************************************************************  RL2134.2
-001300*    THE FUNCTION OF THIS PROGRAM IS TO PROCESS A RELATIVE I-O *  RL2134.2
-001400*    FILE SEQUENTIALLY (ACCESS MODE SEQUENTIAL).  THE FILE     *  RL2134.2
-001500*    USED AS INPUT IS THE FILE "RL-FS1" CREATED BY RL212A AND  *  RL2134.2
-001600*    THE OTHER FILE "RL-FS2" WILL NOT BE PRESENT AT THE        *  RL2134.2
-001700*    EXECUTION OF THE PROGRAM.                                 *  RL2134.2
-001800*                                                              *  RL2134.2
-001900*        X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS     *  RL2134.2
-002000*        PROGRAM ARE:                                          *  RL2134.2
-002100*                                                              *  RL2134.2
-002200*             X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR  *  RL2134.2
-002300*                     RELATIVE  I-O DATA FILE (RL-FS1)         *  RL2134.2
-002400*             X-22   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR  *  RL2134.2
-002500*                     RELATIVE  I-O DATA FILE (RL-FS2)         *  RL2134.2
-002600*             X-55   SYSTEM PRINTER                            *  RL2134.2
-002700*             X-69   ADDITIONAL VALUE OF CLAUSES               *  RL2134.2
-002800*             X-74   VALUE OF IMPLEMENTOR-NAME                 *  RL2134.2
-002900*             X-75   OBJECT OF VALUE OF CLAUSE                 *  RL2134.2
-003000*             X-82   SOURCE-COMPUTER                           *  RL2134.2
-003100*             X-83   OBJECT-COMPUTER.                          *  RL2134.2
-003200*                                                              *  RL2134.2
-003300****************************************************************  RL2134.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 ENVIRONMENT DIVISION.                                            RL2134.2
 003500 CONFIGURATION SECTION.                                           RL2134.2
 003600 SOURCE-COMPUTER.                                                 RL2134.2
@@ -313,7 +313,7 @@
 032500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2134.2
 032600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2134.2
 032700      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2134.2
-032800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2134.2
+032800*                                                                         
 032900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2134.2
 033000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2134.2
 033100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2134.2
@@ -417,7 +417,7 @@
 042900     MOVE    XRECORD-NUMBER (1) TO CORRECT-18V0.                  RL2134.2
 043000     PERFORM PRINT-DETAIL.                                        RL2134.2
 043100     CLOSE   RL-FS1.                                              RL2134.2
-043200*                                                                 RL2134.2
+043200*                                                                         
 043300 REL-INIT-002.                                                    RL2134.2
 043400     OPEN    INPUT     RL-FS1.                                    RL2134.2
 043500     MOVE    ZERO      TO WRK-CS-09V00.                           RL2134.2
@@ -444,7 +444,7 @@
 045600             PERFORM PRINT-DETAIL                                 RL2134.2
 045700     ELSE                                                         RL2134.2
 045800             PERFORM PASS.                                        RL2134.2
-045900*            PERFORM PRINT-DETAIL.                                RL2134.2
+045900*                                                                         
 046000     GO      TO REL-TEST-002.                                     RL2134.2
 046100 REL-TEST-002-2.                                                  RL2134.2
 046200     MOVE   "REL-TEST-002-2" TO PAR-NAME.                         RL2134.2

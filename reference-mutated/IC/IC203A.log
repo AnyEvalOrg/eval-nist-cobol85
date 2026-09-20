@@ -17,13 +17,13 @@ TEST RESULT OF IC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INITIAL STATE        FAIL* CALL-TEST-04       .02        DN2 INCORRECT                                                 
                                                                                                                         
                                      COMPUTED= YES                                                                      
-                                     CORRECT = YER                                                                      
+                                     CORRECT = YEP                                                                      
                                                                                                                         
  INITIAL STATE        PASS  CALL-TEST-04       .03                                                                      
  STATE UNCHANGED      FAIL* CALL-TEST-05       .01        DN5 INCORRECT                                                 
                                                                                                                         
                                      COMPUTED=  000000000000000002                                                      
-                                     CORRECT =  000000000000000000                                                      
+                                     CORRECT =  000000000000000005                                                      
                                                                                                                         
  STATE UNCHANGED      PASS  CALL-TEST-05       .02                                                                      
  STATE UNCHANGED      PASS  CALL-TEST-05       .03                                                                      
@@ -43,7 +43,7 @@ TEST RESULT OF IC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL CANCELED PROG   FAIL* CNCL-TEST-06       .03        DN4 INCORRECT                                                 
                                                                                                                         
                                      COMPUTED= EQUAL                                                                    
-                                     CORRECT = EQUWL                                                                    
+                                     CORRECT = EQOAL                                                                    
                                                                                                                         
  CANCEL 3 PROGS       PASS  CNCL-TEST-07                                                                                
  ***********************************************************************************************************************

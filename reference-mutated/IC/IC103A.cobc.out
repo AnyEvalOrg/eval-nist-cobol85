@@ -5,15 +5,15 @@ IC103A.CBL:382: warning: GO TO SECTION 'SECT-IC103-0002' [-Wgoto-section]
   381 | 038300     PERFORM PRINT-DETAIL.                                        I..
   382 > 038400     GO TO SECT-IC103-0002.                                       I..
   383 | 038500 EXIT-DELETES.                                                    I..
-  384 | 038600*        IF THE SUBPROGRAM WITH MULTIPLE EXIT PROGRAM             I..
+  384 | 038600*..
 IC103A.CBL: in section 'SECT-IC103-0002':
 IC103A.CBL: in paragraph 'CALL-DELETE-06':
 IC103A.CBL:416: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   414 | 041600     PERFORM DE-LETE.                                             I..
   415 | 041700     PERFORM PRINT-DETAIL.                                        I..
   416 > 041800     GO TO CCVS-EXIT.                                             I..
-  417 | 041900*       IF IC104 CANNOT BE INCLUDED IN THE RUN UNIT               I..
-  418 | 042000*    DELETE THE PARAGRAPH CALL-TEST-06.                           I..
+  417 | 041900*..
+  418 | 042000*..
 IC103A.CBL: in paragraph 'CALL-WRITE-06-06':
 IC103A.CBL:492: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
   490 | 049200     ADD 1 TO REC-CT.                                             I..

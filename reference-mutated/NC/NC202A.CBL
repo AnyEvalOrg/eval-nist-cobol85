@@ -2,26 +2,26 @@
 000200 PROGRAM-ID.                                                      NC2024.2
 000300     NC202A.                                                      NC2024.2
 000400                                                                  NC2024.2
-000500****************************************************************  NC2024.2
-000600*                                                              *  NC2024.2
-000700*    VALIDATION FOR:-                                          *  NC2024.2
-000800*                                                              *  NC2024.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2024.2
-001000*                                                              *  NC2024.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2024.2
-001200*                                                              *  NC2024.2
-001300****************************************************************  NC2024.2
-001400*                                                              *  NC2024.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2024.2
-001600*                                                              *  NC2024.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2024.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2024.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2024.2
-002000*                                                              *  NC2024.2
-002100****************************************************************  NC2024.2
-002200*                                                                 NC2024.2
-002300*    PROGRAM NC202A TESTS FORMAT3 OF THE ADD STATEMENT.           NC2024.2
-002400*                                                                 NC2024.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC2024.2
 002600 CONFIGURATION SECTION.                                           NC2024.2
 002700 SOURCE-COMPUTER.                                                 NC2024.2
@@ -456,7 +456,7 @@
 045800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2024.2
 045900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2024.2
 046000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2024.2
-046100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2024.2
+046100*                                                                         
 046200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2024.2
 046300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2024.2
 046400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2024.2
@@ -540,7 +540,7 @@
 054200     MOVE   99  TO  ADD-CORR-9 OF GRP-FOR-ADD-CORR-1.             NC2024.2
 054300 ADD-TEST-F3-1.                                                   NC2024.2
 054400     ADD CORRESPONDING GRP-FOR-ADD-CORR-1 TO GRP-FOR-ADD-CORR-R.  NC2024.2
-054500     IF GRP-FOR-ADD-CORR-R EQUAL TO "31223344506677889900"        NC2024.2
+054500     IF GRP-FOR-ADD-CORR-R EQUAL TO "11223344506677889900"        NC2024.2
 054600         PERFORM PASS                                             NC2024.2
 054700         GO TO ADD-WRITE-F3-1.                                    NC2024.2
 054800     GO TO ADD-FAIL-F3-1.                                         NC2024.2
@@ -549,11 +549,11 @@
 055100     GO TO ADD-WRITE-F3-1.                                        NC2024.2
 055200 ADD-FAIL-F3-1.                                                   NC2024.2
 055300     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2024.2
-055400     MOVE "31223344506677889900" TO CORRECT-A.                    NC2024.2
+055400     MOVE "11223344506677889900" TO CORRECT-A.                    NC2024.2
 055500     PERFORM FAIL.                                                NC2024.2
 055600 ADD-WRITE-F3-1.                                                  NC2024.2
 055700     PERFORM PRINT-DETAIL.                                        NC2024.2
-055800*                                                                 NC2024.2
+055800*                                                                         
 055900 ADD-INIT-F3-2.                                                   NC2024.2
 056000     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 056100     MOVE "ADD-TEST-F3-2" TO PAR-NAME.                            NC2024.2
@@ -583,7 +583,7 @@
 058500     PERFORM FAIL.                                                NC2024.2
 058600 ADD-WRITE-F3-2.                                                  NC2024.2
 058700     PERFORM PRINT-DETAIL.                                        NC2024.2
-058800*                                                                 NC2024.2
+058800*                                                                         
 058900 ADD-INIT-F3-3.                                                   NC2024.2
 059000     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 059100     MOVE ZERO TO GRP-FOR-ADD-CORR-R,  WRK-XN-00001.              NC2024.2
@@ -609,7 +609,7 @@
 061100     PERFORM FAIL.                                                NC2024.2
 061200 ADD-WRITE-F3-3-1.                                                NC2024.2
 061300     PERFORM PRINT-DETAIL.                                        NC2024.2
-061400*                                                                 NC2024.2
+061400*                                                                         
 061500 ADD-INIT-F3-3-2.                                                 NC2024.2
 061600     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 061700     MOVE "ADD-TEST-F3-3-2" TO PAR-NAME.                          NC2024.2
@@ -627,7 +627,7 @@
 062900     PERFORM FAIL.                                                NC2024.2
 063000 ADD-WRITE-F3-3-2.                                                NC2024.2
 063100     PERFORM PRINT-DETAIL.                                        NC2024.2
-063200*                                                                 NC2024.2
+063200*                                                                         
 063300 ADD-INIT-F3-4.                                                   NC2024.2
 063400     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 063500     MOVE "ADD-TEST-F3-4" TO PAR-NAME.                            NC2024.2
@@ -636,7 +636,7 @@
 063800 ADD-TEST-F3-4.                                                   NC2024.2
 063900     ADD CORRESPONDING GRP-SUBTRACT-CORR-1 OF GRP-SUBTRACT-CORR-3 NC2024.2
 064000             TO GRP-SUBTRACT-CORR-1 OF GRP-FOR-ADD-CORR-R.        NC2024.2
-064100     IF GRP-FOR-ADD-CORR-R EQUAL TO "0022334400000N000000"        NC2024.2
+064100     IF GRP-FOR-ADD-CORR-R EQUAL TO "00223344000000000000"        NC2024.2
 064200                  PERFORM PASS                                    NC2024.2
 064300                  GO TO ADD-WRITE-F3-4.                           NC2024.2
 064400     GO TO ADD-FAIL-F3-4.                                         NC2024.2
@@ -644,12 +644,12 @@
 064600     PERFORM DE-LETE.                                             NC2024.2
 064700     GO TO ADD-WRITE-F3-4.                                        NC2024.2
 064800 ADD-FAIL-F3-4.                                                   NC2024.2
-064900     MOVE "0022334400000N000000" TO CORRECT-A.                    NC2024.2
+064900     MOVE "00223344000000000000" TO CORRECT-A.                    NC2024.2
 065000     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2024.2
 065100     PERFORM FAIL.                                                NC2024.2
 065200 ADD-WRITE-F3-4.                                                  NC2024.2
 065300     PERFORM PRINT-DETAIL.                                        NC2024.2
-065400*                                                                 NC2024.2
+065400*                                                                         
 065500 ADD-INIT-F3-5-1.                                                 NC2024.2
 065600     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 065700     MOVE "ADD-TEST-F3-5-1" TO PAR-NAME.                          NC2024.2
@@ -672,7 +672,7 @@
 067400     MOVE "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.                NC2024.2
 067500 ADD-WRITE-F3-5-1.                                                NC2024.2
 067600     PERFORM PRINT-DETAIL.                                        NC2024.2
-067700*                                                                 NC2024.2
+067700*                                                                         
 067800 ADD-INIT-F3-5-2.                                                 NC2024.2
 067900     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 068000     MOVE "ADD-TEST-F3-5-2" TO PAR-NAME.                          NC2024.2
@@ -690,7 +690,7 @@
 069200     PERFORM FAIL.                                                NC2024.2
 069300 ADD-WRITE-F3-5-2.                                                NC2024.2
 069400     PERFORM PRINT-DETAIL.                                        NC2024.2
-069500*                                                                 NC2024.2
+069500*                                                                         
 069600 ADD-INIT-F3-5-3.                                                 NC2024.2
 069700     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 069800     MOVE "ADD-TEST-F3-5-3" TO PAR-NAME.                          NC2024.2
@@ -708,7 +708,7 @@
 071000     MOVE "+777.77" TO CORRECT-A.                                 NC2024.2
 071100 ADD-WRITE-F3-5-3.                                                NC2024.2
 071200     PERFORM PRINT-DETAIL.                                        NC2024.2
-071300*                                                                 NC2024.2
+071300*                                                                         
 071400 ADD-INIT-F3-5-4.                                                 NC2024.2
 071500     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 071600     MOVE "ADD-TEST-F3-5-4" TO PAR-NAME.                          NC2024.2
@@ -726,7 +726,7 @@
 072800     MOVE 555.5 TO CORRECT-N.                                     NC2024.2
 072900 ADD-WRITE-F3-5-4.                                                NC2024.2
 073000     PERFORM PRINT-DETAIL.                                        NC2024.2
-073100*                                                                 NC2024.2
+073100*                                                                         
 073200 ADD-INIT-F3-6.                                                   NC2024.2
 073300     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 073400     MOVE "ADD-TEST-F3-6" TO PAR-NAME.                            NC2024.2
@@ -753,7 +753,7 @@
 075500     MOVE 00 TO CORRECT-A.                                        NC2024.2
 075600 ADD-WRITE-F3-6.                                                  NC2024.2
 075700     PERFORM PRINT-DETAIL.                                        NC2024.2
-075800*                                                                 NC2024.2
+075800*                                                                         
 075900 ADD-INIT-F3-7.                                                   NC2024.2
 076000     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 076100     MOVE 03   TO XYZ-1 OF CORR-DATA-1.                           NC2024.2
@@ -780,7 +780,7 @@
 078200     MOVE "09" TO CORRECT-A.                                      NC2024.2
 078300 ADD-WRITE-F3-7-1.                                                NC2024.2
 078400     PERFORM PRINT-DETAIL.                                        NC2024.2
-078500*                                                                 NC2024.2
+078500*                                                                         
 078600 ADD-INIT-F3-7-2.                                                 NC2024.2
 078700     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 078800     MOVE "ADD-TEST-F3-7-2" TO PAR-NAME.                          NC2024.2
@@ -798,7 +798,7 @@
 080000     MOVE "12" TO CORRECT-A.                                      NC2024.2
 080100 ADD-WRITE-F3-7-2.                                                NC2024.2
 080200     PERFORM PRINT-DETAIL.                                        NC2024.2
-080300*                                                                 NC2024.2
+080300*                                                                         
 080400 ADD-INIT-F3-7-3.                                                 NC2024.2
 080500     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 080600     MOVE "ADD-TEST-F3-7-3" TO PAR-NAME.                          NC2024.2
@@ -816,7 +816,7 @@
 081800     MOVE "30" TO CORRECT-A.                                      NC2024.2
 081900 ADD-WRITE-F3-7-3.                                                NC2024.2
 082000     PERFORM PRINT-DETAIL.                                        NC2024.2
-082100*                                                                 NC2024.2
+082100*                                                                         
 082200 ADD-INIT-F3-7-4.                                                 NC2024.2
 082300     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 082400     MOVE "ADD-TEST-F3-7-4" TO PAR-NAME.                          NC2024.2
@@ -834,7 +834,7 @@
 083600     MOVE "00" TO CORRECT-A.                                      NC2024.2
 083700 ADD-WRITE-F3-7-4.                                                NC2024.2
 083800     PERFORM PRINT-DETAIL.                                        NC2024.2
-083900*                                                                 NC2024.2
+083900*                                                                         
 084000 ADD-INIT-F3-7-5.                                                 NC2024.2
 084100     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 084200     MOVE "ADD-TEST-F3-7-5" TO PAR-NAME.                          NC2024.2
@@ -852,7 +852,7 @@
 085400     PERFORM FAIL.                                                NC2024.2
 085500 ADD-WRITE-F3-7-5.                                                NC2024.2
 085600     PERFORM PRINT-DETAIL.                                        NC2024.2
-085700*                                                                 NC2024.2
+085700*                                                                         
 085800 ADD-INIT-F3-8.                                                   NC2024.2
 085900     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 086000     MOVE ZERO TO WRK-AN-00001.                                   NC2024.2
@@ -881,12 +881,12 @@
 088300     MOVE "ON SIZE ERROR SHOULD BE EXECUTED" TO RE-MARK.          NC2024.2
 088400 ADD-WRITE-F3-8-1.                                                NC2024.2
 088500     PERFORM PRINT-DETAIL.                                        NC2024.2
-088600*                                                                 NC2024.2
+088600*                                                                         
 088700 ADD-INIT-F3-8-2.                                                 NC2024.2
 088800     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 088900     MOVE "ADD-TEST-F3-8-2" TO PAR-NAME.                          NC2024.2
 089000 ADD-TEST-F3-8-2.                                                 NC2024.2
-089100     IF CORR-DATA-2 EQUAL TO "9W9999999999"                       NC2024.2
+089100     IF CORR-DATA-2 EQUAL TO "999999999999"                       NC2024.2
 089200                 PERFORM PASS                                     NC2024.2
 089300                 GO TO ADD-WRITE-F3-8-2.                          NC2024.2
 089400     GO TO ADD-FAIL-F3-8-2.                                       NC2024.2
@@ -896,11 +896,11 @@
 089800 ADD-FAIL-F3-8-2.                                                 NC2024.2
 089900     PERFORM FAIL.                                                NC2024.2
 090000     MOVE CORR-DATA-2 TO COMPUTED-A.                              NC2024.2
-090100     MOVE "9W9999999999" TO CORRECT-A.                            NC2024.2
+090100     MOVE "999999999999" TO CORRECT-A.                            NC2024.2
 090200     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC2024.2
 090300 ADD-WRITE-F3-8-2.                                                NC2024.2
 090400     PERFORM PRINT-DETAIL.                                        NC2024.2
-090500*                                                                 NC2024.2
+090500*                                                                         
 090600 ADD-INIT-F3-9-1.                                                 NC2024.2
 090700     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 090800     MOVE "ADD-TEST-F3-9-1" TO PAR-NAME.                          NC2024.2
@@ -921,7 +921,7 @@
 092300     PERFORM FAIL.                                                NC2024.2
 092400 ADD-WRITE-F3-9-1.                                                NC2024.2
 092500     PERFORM PRINT-DETAIL.                                        NC2024.2
-092600*                                                                 NC2024.2
+092600*                                                                         
 092700 ADD-INIT-F3-9-2.                                                 NC2024.2
 092800     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 092900     MOVE "ADD-TEST-F3-9-2" TO PAR-NAME.                          NC2024.2
@@ -939,7 +939,7 @@
 094100     PERFORM FAIL.                                                NC2024.2
 094200 ADD-WRITE-F3-9-2.                                                NC2024.2
 094300     PERFORM PRINT-DETAIL.                                        NC2024.2
-094400*                                                                 NC2024.2
+094400*                                                                         
 094500 ADD-INIT-F3-9-3.                                                 NC2024.2
 094600     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 094700     MOVE "ADD-TEST-F3-9-3" TO PAR-NAME.                          NC2024.2
@@ -957,7 +957,7 @@
 095900     PERFORM FAIL.                                                NC2024.2
 096000 ADD-WRITE-F3-9-3.                                                NC2024.2
 096100     PERFORM PRINT-DETAIL.                                        NC2024.2
-096200*                                                                 NC2024.2
+096200*                                                                         
 096300 ADD-INIT-F3-10.                                                  NC2024.2
 096400     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 096500     MOVE ZERO  TO           CORR-DATA-5.                         NC2024.2
@@ -984,7 +984,7 @@
 098600     MOVE "+20.0000" TO CORRECT-A.                                NC2024.2
 098700 ADD-WRITE-F3-10-1.                                               NC2024.2
 098800     PERFORM PRINT-DETAIL.                                        NC2024.2
-098900*                                                                 NC2024.2
+098900*                                                                         
 099000 ADD-INIT-F3-10-2.                                                NC2024.2
 099100     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 099200     MOVE "ADD-TEST-F3-10-2" TO PAR-NAME.                         NC2024.2
@@ -1002,7 +1002,7 @@
 100400     MOVE "98.0000" TO CORRECT-A.                                 NC2024.2
 100500 ADD-WRITE-F3-10-2.                                               NC2024.2
 100600     PERFORM PRINT-DETAIL.                                        NC2024.2
-100700*                                                                 NC2024.2
+100700*                                                                         
 100800 ADD-INIT-F3-10-3.                                                NC2024.2
 100900     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 101000     MOVE "ADD-TEST-F3-10-3" TO PAR-NAME.                         NC2024.2
@@ -1020,7 +1020,7 @@
 102200     MOVE "+01.0000" TO CORRECT-A.                                NC2024.2
 102300 ADD-WRITE-F3-10-3.                                               NC2024.2
 102400     PERFORM PRINT-DETAIL.                                        NC2024.2
-102500*                                                                 NC2024.2
+102500*                                                                         
 102600 ADD-INIT-F3-11.                                                  NC2024.2
 102700     MOVE ZERO  TO           CORR-DATA-5.                         NC2024.2
 102800     MOVE 10    TO XYZ-1  OF CORR-DATA-5.                         NC2024.2
@@ -1046,7 +1046,7 @@
 104800     MOVE 20.0000 TO CORRECT-N.                                   NC2024.2
 104900 ADD-WRITE-F3-11-1.                                               NC2024.2
 105000     PERFORM PRINT-DETAIL.                                        NC2024.2
-105100*                                                                 NC2024.2
+105100*                                                                         
 105200 ADD-INIT-F3-11-2.                                                NC2024.2
 105300     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 105400     MOVE "ADD-TEST-F3-11-2" TO PAR-NAME.                         NC2024.2
@@ -1064,7 +1064,7 @@
 106600     PERFORM FAIL.                                                NC2024.2
 106700 ADD-WRITE-F3-11-2.                                               NC2024.2
 106800     PERFORM PRINT-DETAIL.                                        NC2024.2
-106900*                                                                 NC2024.2
+106900*                                                                         
 107000 ADD-INIT-F3-12.                                                  NC2024.2
 107100     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 107200     MOVE "ADD-TEST-F3-12" TO PAR-NAME.                           NC2024.2
@@ -1091,7 +1091,7 @@
 109300     MOVE "ON SIZE ERROR SHOULD BE EXECUTED" TO RE-MARK.          NC2024.2
 109400 ADD-WRITE-F3-12.                                                 NC2024.2
 109500     PERFORM PRINT-DETAIL.                                        NC2024.2
-109600*                                                                 NC2024.2
+109600*                                                                         
 109700 ADD-INIT-F3-13.                                                  NC2024.2
 109800     MOVE "ADD-TEST-F3-13" TO PAR-NAME.                           NC2024.2
 109900     MOVE   "VI-74 6.6.4" TO ANSI-REFERENCE.                      NC2024.2
@@ -1124,10 +1124,10 @@
 112600     MOVE "14030416" TO CORRECT-A.                                NC2024.2
 112700 ADD-WRITE-F3-13.                                                 NC2024.2
 112800     PERFORM PRINT-DETAIL.                                        NC2024.2
-112900*                                                                 NC2024.2
+112900*                                                                         
 113000 ADD-INIT-F3-14.                                                  NC2024.2
 113100     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
-113200*    ===-->  NO SIZE ERROR  <--===                                NC2024.2
+113200*                                                                         
 113300     MOVE    1 TO REC-CT.                                         NC2024.2
 113400     MOVE    1      TO FIELD1 OF ADD-15.                          NC2024.2
 113500     MOVE    32.1   TO FIELD2 OF ADD-15.                          NC2024.2
@@ -1151,7 +1151,7 @@
 115300     PERFORM FAIL.                                                NC2024.2
 115400 ADD-WRITE-F3-14-1.                                               NC2024.2
 115500     PERFORM PRINT-DETAIL.                                        NC2024.2
-115600*                                                                 NC2024.2
+115600*                                                                         
 115700 ADD-INIT-F3-14-2.                                                NC2024.2
 115800     MOVE   "ADD-TEST-F3-14-2" TO PAR-NAME.                       NC2024.2
 115900     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1169,7 +1169,7 @@
 117100     PERFORM FAIL.                                                NC2024.2
 117200 ADD-WRITE-F3-14-2.                                               NC2024.2
 117300     PERFORM PRINT-DETAIL.                                        NC2024.2
-117400*                                                                 NC2024.2
+117400*                                                                         
 117500 ADD-INIT-F3-14-3.                                                NC2024.2
 117600     MOVE   "ADD-TEST-F3-14-3" TO PAR-NAME.                       NC2024.2
 117700     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1187,7 +1187,7 @@
 118900     PERFORM FAIL.                                                NC2024.2
 119000 ADD-WRITE-F3-14-3.                                               NC2024.2
 119100     PERFORM PRINT-DETAIL.                                        NC2024.2
-119200*                                                                 NC2024.2
+119200*                                                                         
 119300 ADD-INIT-F3-14-4.                                                NC2024.2
 119400     MOVE   "ADD-TEST-F3-14-4" TO PAR-NAME.                       NC2024.2
 119500     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1205,10 +1205,10 @@
 120700     PERFORM FAIL.                                                NC2024.2
 120800 ADD-WRITE-F3-14-4.                                               NC2024.2
 120900     PERFORM PRINT-DETAIL.                                        NC2024.2
-121000*                                                                 NC2024.2
+121000*                                                                         
 121100 ADD-INIT-F3-15.                                                  NC2024.2
-121200*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2024.2
-121300*    ===-->      SIZE ERROR        <--===                         NC2024.2
+121200*                                                                         
+121300*                                                                         
 121400     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 121500     MOVE    0 TO REC-CT.                                         NC2024.2
 121600     MOVE    1      TO FIELD1 OF ADD-15.                          NC2024.2
@@ -1217,7 +1217,7 @@
 121900     MOVE    99999  TO FIELD1 OF ADD-16.                          NC2024.2
 122000     MOVE    745.67 TO FIELD2 OF ADD-16.                          NC2024.2
 122100     MOVE    432.1  TO FIELD3 OF ADD-16.                          NC2024.2
-122200*                                                                 NC2024.2
+122200*                                                                         
 122300 ADD-INIT-F3-15-1.                                                NC2024.2
 122400     MOVE   "ADD-TEST-F3-15-1" TO PAR-NAME.                       NC2024.2
 122500     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1236,7 +1236,7 @@
 123800     PERFORM FAIL.                                                NC2024.2
 123900 ADD-WRITE-F3-15-1.                                               NC2024.2
 124000     PERFORM PRINT-DETAIL.                                        NC2024.2
-124100*                                                                 NC2024.2
+124100*                                                                         
 124200 ADD-INIT-F3-15-2.                                                NC2024.2
 124300     MOVE   "ADD-TEST-F3-15-2" TO PAR-NAME.                       NC2024.2
 124400     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1254,7 +1254,7 @@
 125600     PERFORM FAIL.                                                NC2024.2
 125700 ADD-WRITE-F3-15-2.                                               NC2024.2
 125800     PERFORM PRINT-DETAIL.                                        NC2024.2
-125900*                                                                 NC2024.2
+125900*                                                                         
 126000 ADD-INIT-F3-15-3.                                                NC2024.2
 126100     MOVE   "ADD-TEST-F3-15-3" TO PAR-NAME.                       NC2024.2
 126200     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1272,7 +1272,7 @@
 127400     PERFORM FAIL.                                                NC2024.2
 127500 ADD-WRITE-F3-15-3.                                               NC2024.2
 127600     PERFORM PRINT-DETAIL.                                        NC2024.2
-127700*                                                                 NC2024.2
+127700*                                                                         
 127800 ADD-INIT-F3-15-4.                                                NC2024.2
 127900     MOVE   "ADD-TEST-F3-15-4" TO PAR-NAME.                       NC2024.2
 128000     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1290,10 +1290,10 @@
 129200     PERFORM FAIL.                                                NC2024.2
 129300 ADD-WRITE-F3-15-4.                                               NC2024.2
 129400             PERFORM PRINT-DETAIL.                                NC2024.2
-129500*                                                                 NC2024.2
+129500*                                                                         
 129600 ADD-INIT-F3-16.                                                  NC2024.2
-129700*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2024.2
-129800*    ===-->   NO SIZE ERROR        <--===                         NC2024.2
+129700*                                                                         
+129800*                                                                         
 129900     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 130000     MOVE    1 TO REC-CT.                                         NC2024.2
 130100     MOVE    1      TO FIELD1 OF ADD-15.                          NC2024.2
@@ -1318,7 +1318,7 @@
 132000     PERFORM FAIL.                                                NC2024.2
 132100 ADD-WRITE-F3-16-1.                                               NC2024.2
 132200     PERFORM PRINT-DETAIL.                                        NC2024.2
-132300*                                                                 NC2024.2
+132300*                                                                         
 132400 ADD-INIT-F3-16-2.                                                NC2024.2
 132500     MOVE   "ADD-TEST-F3-16-2" TO PAR-NAME.                       NC2024.2
 132600     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1336,7 +1336,7 @@
 133800     PERFORM FAIL.                                                NC2024.2
 133900 ADD-WRITE-F3-16-2.                                               NC2024.2
 134000             PERFORM PRINT-DETAIL.                                NC2024.2
-134100*                                                                 NC2024.2
+134100*                                                                         
 134200 ADD-INIT-F3-16-3.                                                NC2024.2
 134300     MOVE   "ADD-TEST-F3-16-3" TO PAR-NAME.                       NC2024.2
 134400     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1354,7 +1354,7 @@
 135600     PERFORM FAIL.                                                NC2024.2
 135700 ADD-WRITE-F3-16-3.                                               NC2024.2
 135800             PERFORM PRINT-DETAIL.                                NC2024.2
-135900*                                                                 NC2024.2
+135900*                                                                         
 136000 ADD-INIT-F3-16-4.                                                NC2024.2
 136100     MOVE   "ADD-TEST-F3-16-4" TO PAR-NAME.                       NC2024.2
 136200     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1372,10 +1372,10 @@
 137400     PERFORM FAIL.                                                NC2024.2
 137500 ADD-WRITE-F3-16-4.                                               NC2024.2
 137600     PERFORM PRINT-DETAIL.                                        NC2024.2
-137700*                                                                 NC2024.2
+137700*                                                                         
 137800 ADD-INIT-F3-17.                                                  NC2024.2
-137900*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2024.2
-138000*    ===-->      SIZE ERROR        <--===                         NC2024.2
+137900*                                                                         
+138000*                                                                         
 138100     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 138200     MOVE    1 TO REC-CT.                                         NC2024.2
 138300     MOVE    1      TO FIELD1 OF ADD-15.                          NC2024.2
@@ -1402,7 +1402,7 @@
 140400     PERFORM FAIL.                                                NC2024.2
 140500 ADD-WRITE-F3-17-1.                                               NC2024.2
 140600     PERFORM PRINT-DETAIL.                                        NC2024.2
-140700*                                                                 NC2024.2
+140700*                                                                         
 140800 ADD-INIT-F3-17-2.                                                NC2024.2
 140900     MOVE   "ADD-TEST-F3-17-2" TO PAR-NAME.                       NC2024.2
 141000     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1420,7 +1420,7 @@
 142200     PERFORM FAIL.                                                NC2024.2
 142300 ADD-WRITE-F3-17-2.                                               NC2024.2
 142400     PERFORM PRINT-DETAIL.                                        NC2024.2
-142500*                                                                 NC2024.2
+142500*                                                                         
 142600 ADD-INIT-F3-17-3.                                                NC2024.2
 142700     MOVE   "ADD-TEST-F3-17-3" TO PAR-NAME.                       NC2024.2
 142800     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1438,7 +1438,7 @@
 144000     PERFORM FAIL.                                                NC2024.2
 144100 ADD-WRITE-F3-17-3.                                               NC2024.2
 144200     PERFORM PRINT-DETAIL.                                        NC2024.2
-144300*                                                                 NC2024.2
+144300*                                                                         
 144400 ADD-INIT-F3-17-4.                                                NC2024.2
 144500     MOVE   "ADD-TEST-F3-17-4" TO PAR-NAME.                       NC2024.2
 144600     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1456,10 +1456,10 @@
 145800     PERFORM FAIL.                                                NC2024.2
 145900 ADD-WRITE-F3-17-4.                                               NC2024.2
 146000     PERFORM PRINT-DETAIL.                                        NC2024.2
-146100*                                                                 NC2024.2
+146100*                                                                         
 146200 ADD-INIT-F3-18.                                                  NC2024.2
-146300*    ===-->  NEW SIZE ERROR TESTS  <--===                         NC2024.2
-146400*    ===-->   NO SIZE ERROR        <--===                         NC2024.2
+146300*                                                                         
+146400*                                                                         
 146500     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 146600     MOVE    1 TO REC-CT.                                         NC2024.2
 146700     MOVE    1      TO FIELD1 OF ADD-15.                          NC2024.2
@@ -1486,7 +1486,7 @@
 148800     PERFORM FAIL.                                                NC2024.2
 148900 ADD-WRITE-F3-18-1.                                               NC2024.2
 149000             PERFORM PRINT-DETAIL.                                NC2024.2
-149100*                                                                 NC2024.2
+149100*                                                                         
 149200 ADD-INIT-F3-18-2.                                                NC2024.2
 149300     MOVE   "ADD-TEST-F3-18-2" TO PAR-NAME.                       NC2024.2
 149400     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1504,7 +1504,7 @@
 150600     PERFORM FAIL.                                                NC2024.2
 150700 ADD-WRITE-F3-18-2.                                               NC2024.2
 150800     PERFORM PRINT-DETAIL.                                        NC2024.2
-150900*                                                                 NC2024.2
+150900*                                                                         
 151000 ADD-INIT-F3-18-3.                                                NC2024.2
 151100     MOVE   "ADD-TEST-F3-18-3" TO PAR-NAME.                       NC2024.2
 151200     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1522,7 +1522,7 @@
 152400     PERFORM FAIL.                                                NC2024.2
 152500 ADD-WRITE-F3-18-3.                                               NC2024.2
 152600     PERFORM PRINT-DETAIL.                                        NC2024.2
-152700*                                                                 NC2024.2
+152700*                                                                         
 152800 ADD-INIT-F3-18-4.                                                NC2024.2
 152900     MOVE   "ADD-TEST-F3-18-4" TO PAR-NAME.                       NC2024.2
 153000     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1540,10 +1540,10 @@
 154200     PERFORM FAIL.                                                NC2024.2
 154300 ADD-WRITE-F3-18-4.                                               NC2024.2
 154400     PERFORM PRINT-DETAIL.                                        NC2024.2
-154500*                                                                 NC2024.2
+154500*                                                                         
 154600 ADD-INIT-F3-19.                                                  NC2024.2
-154700*    ===-->  EXPLICIT SCOPE TERMINATOR<--===                      NC2024.2
-154800*    ===-->        SIZE ERROR         <--===                      NC2024.2
+154700*                                                                         
+154800*                                                                         
 154900     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 155000     MOVE    SPACE  TO WRK-XN-00001.                              NC2024.2
 155100     MOVE    SPACE  TO WRK-AN-00001.                              NC2024.2
@@ -1561,7 +1561,7 @@
 156300             MOVE   "A" TO WRK-AN-00001                           NC2024.2
 156400     END-ADD                                                      NC2024.2
 156500     MOVE   "B" TO WRK-XN-00001.                                  NC2024.2
-156600*                                                                 NC2024.2
+156600*                                                                         
 156700 ADD-INIT-F3-19-1.                                                NC2024.2
 156800     MOVE   "ADD-TEST-F3-19-1" TO PAR-NAME.                       NC2024.2
 156900     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1579,7 +1579,7 @@
 158100     PERFORM FAIL.                                                NC2024.2
 158200 ADD-WRITE-F3-19-1.                                               NC2024.2
 158300     PERFORM PRINT-DETAIL.                                        NC2024.2
-158400*                                                                 NC2024.2
+158400*                                                                         
 158500 ADD-INIT-F3-19-2.                                                NC2024.2
 158600     MOVE   "ADD-TEST-F3-19-2" TO PAR-NAME.                       NC2024.2
 158700     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1597,7 +1597,7 @@
 159900     PERFORM FAIL.                                                NC2024.2
 160000 ADD-WRITE-F3-19-2.                                               NC2024.2
 160100     PERFORM PRINT-DETAIL.                                        NC2024.2
-160200*                                                                 NC2024.2
+160200*                                                                         
 160300 ADD-INIT-F3-19-3.                                                NC2024.2
 160400     MOVE   "ADD-TEST-F3-19-3" TO PAR-NAME.                       NC2024.2
 160500     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1615,7 +1615,7 @@
 161700     PERFORM FAIL.                                                NC2024.2
 161800 ADD-WRITE-F3-19-3.                                               NC2024.2
 161900     PERFORM PRINT-DETAIL.                                        NC2024.2
-162000*                                                                 NC2024.2
+162000*                                                                         
 162100 ADD-INIT-F3-19-4.                                                NC2024.2
 162200     MOVE   "ADD-TEST-F3-19-4" TO PAR-NAME.                       NC2024.2
 162300     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1635,7 +1635,7 @@
 163700     PERFORM FAIL.                                                NC2024.2
 163800 ADD-WRITE-F3-19-4.                                               NC2024.2
 163900     PERFORM PRINT-DETAIL.                                        NC2024.2
-164000*                                                                 NC2024.2
+164000*                                                                         
 164100 ADD-INIT-F3-19-5.                                                NC2024.2
 164200     MOVE   "ADD-TEST-F3-19-5" TO PAR-NAME.                       NC2024.2
 164300     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1654,10 +1654,10 @@
 165600     PERFORM FAIL.                                                NC2024.2
 165700 ADD-WRITE-F3-19-5.                                               NC2024.2
 165800     PERFORM PRINT-DETAIL.                                        NC2024.2
-165900*                                                                 NC2024.2
+165900*                                                                         
 166000 ADD-INIT-F3-20.                                                  NC2024.2
-166100*    ===-->  EXPLICIT SCOPE TERMINATOR<--===                      NC2024.2
-166200*    ===-->     NO SIZE ERROR         <--===                      NC2024.2
+166100*                                                                         
+166200*                                                                         
 166300     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 166400     MOVE   "ADD-TEST-F3-20-0" TO PAR-NAME.                       NC2024.2
 166500     MOVE    SPACE  TO WRK-XN-00001.                              NC2024.2
@@ -1675,7 +1675,7 @@
 167700             MOVE   "A" TO WRK-AN-00001                           NC2024.2
 167800     END-ADD                                                      NC2024.2
 167900     MOVE   "B" TO WRK-XN-00001.                                  NC2024.2
-168000*                                                                 NC2024.2
+168000*                                                                         
 168100 ADD-INIT-F3-20-1.                                                NC2024.2
 168200     MOVE   "ADD-TEST-F3-20-1" TO PAR-NAME.                       NC2024.2
 168300     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1693,7 +1693,7 @@
 169500     PERFORM FAIL.                                                NC2024.2
 169600 ADD-WRITE-F3-20-1.                                               NC2024.2
 169700     PERFORM PRINT-DETAIL.                                        NC2024.2
-169800*                                                                 NC2024.2
+169800*                                                                         
 169900 ADD-INIT-F3-20-2.                                                NC2024.2
 170000     MOVE   "ADD-TEST-F3-20-2" TO PAR-NAME.                       NC2024.2
 170100     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1711,7 +1711,7 @@
 171300     PERFORM FAIL.                                                NC2024.2
 171400 ADD-WRITE-F3-20-2.                                               NC2024.2
 171500     PERFORM PRINT-DETAIL.                                        NC2024.2
-171600*                                                                 NC2024.2
+171600*                                                                         
 171700 ADD-INIT-F3-20-3.                                                NC2024.2
 171800     MOVE   "ADD-TEST-F3-20-3" TO PAR-NAME.                       NC2024.2
 171900     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1729,7 +1729,7 @@
 173100     PERFORM FAIL.                                                NC2024.2
 173200 ADD-WRITE-F3-20-3.                                               NC2024.2
 173300     PERFORM PRINT-DETAIL.                                        NC2024.2
-173400*                                                                 NC2024.2
+173400*                                                                         
 173500 ADD-INIT-F3-20-4.                                                NC2024.2
 173600     MOVE   "ADD-TEST-F3-20-4" TO PAR-NAME.                       NC2024.2
 173700     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1749,7 +1749,7 @@
 175100     PERFORM FAIL.                                                NC2024.2
 175200 ADD-WRITE-F3-20-4.                                               NC2024.2
 175300     PERFORM PRINT-DETAIL.                                        NC2024.2
-175400*                                                                 NC2024.2
+175400*                                                                         
 175500 ADD-INIT-F3-20-5.                                                NC2024.2
 175600     MOVE   "ADD-TEST-F3-20-5" TO PAR-NAME.                       NC2024.2
 175700     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1768,10 +1768,10 @@
 177000     PERFORM FAIL.                                                NC2024.2
 177100 ADD-WRITE-F3-20-5.                                               NC2024.2
 177200     PERFORM PRINT-DETAIL.                                        NC2024.2
-177300*                                                                 NC2024.2
+177300*                                                                         
 177400 ADD-INIT-F3-21.                                                  NC2024.2
-177500*    ===-->  EXPLICIT SCOPE TERMINATOR<--===                      NC2024.2
-177600*    ===-->        SIZE ERROR         <--===                      NC2024.2
+177500*                                                                         
+177600*                                                                         
 177700     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 177800     MOVE   "ADD-TEST-F3-21-0" TO PAR-NAME.                       NC2024.2
 177900     MOVE    SPACE  TO WRK-XN-00001.                              NC2024.2
@@ -1789,7 +1789,7 @@
 179100             MOVE   "A" TO WRK-AN-00001                           NC2024.2
 179200     END-ADD                                                      NC2024.2
 179300     MOVE   "B" TO WRK-XN-00001.                                  NC2024.2
-179400*                                                                 NC2024.2
+179400*                                                                         
 179500 ADD-INIT-F3-21-1.                                                NC2024.2
 179600     MOVE   "ADD-TEST-F3-21-1" TO PAR-NAME.                       NC2024.2
 179700     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1807,7 +1807,7 @@
 180900     PERFORM FAIL.                                                NC2024.2
 181000 ADD-WRITE-F3-21-1.                                               NC2024.2
 181100     PERFORM PRINT-DETAIL.                                        NC2024.2
-181200*                                                                 NC2024.2
+181200*                                                                         
 181300 ADD-INIT-F3-21-2.                                                NC2024.2
 181400     MOVE   "ADD-TEST-F3-21-2" TO PAR-NAME.                       NC2024.2
 181500     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1825,7 +1825,7 @@
 182700     PERFORM FAIL.                                                NC2024.2
 182800 ADD-WRITE-F3-21-2.                                               NC2024.2
 182900     PERFORM PRINT-DETAIL.                                        NC2024.2
-183000*                                                                 NC2024.2
+183000*                                                                         
 183100 ADD-INIT-F3-21-3.                                                NC2024.2
 183200     MOVE   "ADD-TEST-F3-21-3" TO PAR-NAME.                       NC2024.2
 183300     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1843,7 +1843,7 @@
 184500             PERFORM FAIL.                                        NC2024.2
 184600 ADD-WRITE-F3-21-3.                                               NC2024.2
 184700             PERFORM PRINT-DETAIL.                                NC2024.2
-184800*                                                                 NC2024.2
+184800*                                                                         
 184900 ADD-INIT-F3-21-4.                                                NC2024.2
 185000     MOVE   "ADD-TEST-F3-21-4" TO PAR-NAME.                       NC2024.2
 185100     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1863,7 +1863,7 @@
 186500     PERFORM FAIL.                                                NC2024.2
 186600 ADD-WRITE-F3-21-4.                                               NC2024.2
 186700     PERFORM PRINT-DETAIL.                                        NC2024.2
-186800*                                                                 NC2024.2
+186800*                                                                         
 186900 ADD-INIT-F3-21-5.                                                NC2024.2
 187000     MOVE   "ADD-TEST-F3-21-5" TO PAR-NAME.                       NC2024.2
 187100     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1882,10 +1882,10 @@
 188400     PERFORM FAIL.                                                NC2024.2
 188500 ADD-WRITE-F3-21-5.                                               NC2024.2
 188600     PERFORM PRINT-DETAIL.                                        NC2024.2
-188700*                                                                 NC2024.2
+188700*                                                                         
 188800 ADD-INIT-F3-22.                                                  NC2024.2
-188900*    ===-->  EXPLICIT SCOPE TERMINATOR<--===                      NC2024.2
-189000*    ===-->     NO SIZE ERROR         <--===                      NC2024.2
+188900*                                                                         
+189000*                                                                         
 189100     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 189200     MOVE   "ADD-TEST-F3-22-0" TO PAR-NAME.                       NC2024.2
 189300     MOVE    SPACE  TO WRK-XN-00001.                              NC2024.2
@@ -1905,7 +1905,7 @@
 190700             PERFORM PRINT-DETAIL                                 NC2024.2
 190800     END-ADD                                                      NC2024.2
 190900     MOVE   "B" TO WRK-XN-00001.                                  NC2024.2
-191000*                                                                 NC2024.2
+191000*                                                                         
 191100 ADD-INIT-F3-22-1.                                                NC2024.2
 191200     MOVE   "ADD-TEST-F3-22-1" TO PAR-NAME.                       NC2024.2
 191300     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1923,7 +1923,7 @@
 192500     PERFORM FAIL.                                                NC2024.2
 192600 ADD-WRITE-F3-22-1.                                               NC2024.2
 192700     PERFORM PRINT-DETAIL.                                        NC2024.2
-192800*                                                                 NC2024.2
+192800*                                                                         
 192900 ADD-INIT-F3-22-2.                                                NC2024.2
 193000     MOVE   "ADD-TEST-F3-22-2" TO PAR-NAME.                       NC2024.2
 193100     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1941,7 +1941,7 @@
 194300     PERFORM FAIL.                                                NC2024.2
 194400 ADD-WRITE-F3-22-2.                                               NC2024.2
 194500     PERFORM PRINT-DETAIL.                                        NC2024.2
-194600*                                                                 NC2024.2
+194600*                                                                         
 194700 ADD-INIT-F3-22-3.                                                NC2024.2
 194800     MOVE   "ADD-TEST-F3-22-3" TO PAR-NAME.                       NC2024.2
 194900     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1959,7 +1959,7 @@
 196100     PERFORM FAIL.                                                NC2024.2
 196200 ADD-WRITE-F3-22-3.                                               NC2024.2
 196300     PERFORM PRINT-DETAIL.                                        NC2024.2
-196400*                                                                 NC2024.2
+196400*                                                                         
 196500 ADD-INIT-F3-22-4.                                                NC2024.2
 196600     MOVE   "ADD-TEST-F3-22-4" TO PAR-NAME.                       NC2024.2
 196700     ADD     1 TO REC-CT.                                         NC2024.2
@@ -1978,10 +1978,10 @@
 198000     PERFORM FAIL.                                                NC2024.2
 198100 ADD-WRITE-F3-22-4.                                               NC2024.2
 198200     PERFORM PRINT-DETAIL.                                        NC2024.2
-198300*                                                                 NC2024.2
+198300*                                                                         
 198400 ADD-INIT-F3-23.                                                  NC2024.2
-198500*    ===-->  EXPLICIT SCOPE TERMINATOR<--===                      NC2024.2
-198600*    ===-->        SIZE ERROR         <--===                      NC2024.2
+198500*                                                                         
+198600*                                                                         
 198700     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 198800     MOVE   "ADD-TEST-F3-23-0" TO PAR-NAME.                       NC2024.2
 198900     MOVE    SPACE  TO WRK-XN-00001.                              NC2024.2
@@ -2002,7 +2002,7 @@
 200400     END-ADD                                                      NC2024.2
 200500     MOVE   "B" TO WRK-XN-00001.                                  NC2024.2
 200600     GO TO   ADD-TEST-F3-23-1.                                    NC2024.2
-200700*                                                                 NC2024.2
+200700*                                                                         
 200800 ADD-INIT-F3-23-1.                                                NC2024.2
 200900     MOVE   "ADD-TEST-F3-23-1" TO PAR-NAME.                       NC2024.2
 201000     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2020,7 +2020,7 @@
 202200     PERFORM FAIL.                                                NC2024.2
 202300 ADD-WRITE-F3-23-1.                                               NC2024.2
 202400     PERFORM PRINT-DETAIL.                                        NC2024.2
-202500*                                                                 NC2024.2
+202500*                                                                         
 202600 ADD-INIT-F3-23-2.                                                NC2024.2
 202700     MOVE   "ADD-TEST-F3-23-2" TO PAR-NAME.                       NC2024.2
 202800     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2038,7 +2038,7 @@
 204000     PERFORM FAIL.                                                NC2024.2
 204100 ADD-WRITE-F3-23-2.                                               NC2024.2
 204200     PERFORM PRINT-DETAIL.                                        NC2024.2
-204300*                                                                 NC2024.2
+204300*                                                                         
 204400 ADD-INIT-F3-23-3.                                                NC2024.2
 204500     MOVE   "ADD-TEST-F3-23-3" TO PAR-NAME.                       NC2024.2
 204600     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2056,7 +2056,7 @@
 205800     PERFORM FAIL.                                                NC2024.2
 205900 ADD-WRITE-F3-23-3.                                               NC2024.2
 206000     PERFORM PRINT-DETAIL.                                        NC2024.2
-206100*                                                                 NC2024.2
+206100*                                                                         
 206200 ADD-INIT-F3-23-4.                                                NC2024.2
 206300     MOVE   "ADD-TEST-F3-23-4" TO PAR-NAME.                       NC2024.2
 206400     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2076,7 +2076,7 @@
 207800     PERFORM FAIL.                                                NC2024.2
 207900 ADD-WRITE-F3-23-4.                                               NC2024.2
 208000     PERFORM PRINT-DETAIL.                                        NC2024.2
-208100*                                                                 NC2024.2
+208100*                                                                         
 208200 ADD-INIT-F3-23-5.                                                NC2024.2
 208300     MOVE   "ADD-TEST-F3-23-5" TO PAR-NAME.                       NC2024.2
 208400     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2095,10 +2095,10 @@
 209700     PERFORM FAIL.                                                NC2024.2
 209800 ADD-WRITE-F3-23-5.                                               NC2024.2
 209900     PERFORM PRINT-DETAIL.                                        NC2024.2
-210000*                                                                 NC2024.2
+210000*                                                                         
 210100 ADD-INIT-F3-24.                                                  NC2024.2
-210200*    ===-->  EXPLICIT SCOPE TERMINATOR<--===                      NC2024.2
-210300*    ===-->     NO SIZE ERROR         <--===                      NC2024.2
+210200*                                                                         
+210300*                                                                         
 210400     MOVE   "VI-73 6.6" TO ANSI-REFERENCE.                        NC2024.2
 210500     MOVE   "ADD-TEST-F3-24-0" TO PAR-NAME.                       NC2024.2
 210600     MOVE    SPACE  TO WRK-XN-00001.                              NC2024.2
@@ -2118,7 +2118,7 @@
 212000             MOVE   "B" TO WRK-AN-00001                           NC2024.2
 212100     END-ADD                                                      NC2024.2
 212200     MOVE   "B" TO WRK-XN-00001.                                  NC2024.2
-212300*                                                                 NC2024.2
+212300*                                                                         
 212400 ADD-INIT-F3-24-1.                                                NC2024.2
 212500     MOVE   "ADD-TEST-F3-24-1" TO PAR-NAME.                       NC2024.2
 212600     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2136,7 +2136,7 @@
 213800     PERFORM FAIL.                                                NC2024.2
 213900 ADD-WRITE-F3-24-1.                                               NC2024.2
 214000     PERFORM PRINT-DETAIL.                                        NC2024.2
-214100*                                                                 NC2024.2
+214100*                                                                         
 214200 ADD-INIT-F3-24-2.                                                NC2024.2
 214300     MOVE   "ADD-TEST-F3-24-2" TO PAR-NAME.                       NC2024.2
 214400     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2154,7 +2154,7 @@
 215600     PERFORM FAIL.                                                NC2024.2
 215700 ADD-WRITE-F3-24-2.                                               NC2024.2
 215800     PERFORM PRINT-DETAIL.                                        NC2024.2
-215900*                                                                 NC2024.2
+215900*                                                                         
 216000 ADD-INIT-F3-24-3.                                                NC2024.2
 216100     MOVE   "ADD-TEST-F3-24-3" TO PAR-NAME.                       NC2024.2
 216200     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2172,7 +2172,7 @@
 217400     PERFORM FAIL.                                                NC2024.2
 217500 ADD-WRITE-F3-24-3.                                               NC2024.2
 217600     PERFORM PRINT-DETAIL.                                        NC2024.2
-217700*                                                                 NC2024.2
+217700*                                                                         
 217800 ADD-INIT-F3-24-4.                                                NC2024.2
 217900     MOVE   "ADD-TEST-F3-24-4" TO PAR-NAME.                       NC2024.2
 218000     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2192,7 +2192,7 @@
 219400     PERFORM FAIL.                                                NC2024.2
 219500 ADD-WRITE-F3-24-4.                                               NC2024.2
 219600     PERFORM PRINT-DETAIL.                                        NC2024.2
-219700*                                                                 NC2024.2
+219700*                                                                         
 219800 ADD-INIT-F3-24-5.                                                NC2024.2
 219900     MOVE   "ADD-TEST-F3-24-5" TO PAR-NAME.                       NC2024.2
 220000     ADD     1 TO REC-CT.                                         NC2024.2
@@ -2211,7 +2211,7 @@
 221300     PERFORM FAIL.                                                NC2024.2
 221400 ADD-WRITE-F3-24-5.                                               NC2024.2
 221500     PERFORM PRINT-DETAIL.                                        NC2024.2
-221600*                                                                 NC2024.2
+221600*                                                                         
 221700 CCVS-EXIT SECTION.                                               NC2024.2
 221800 CCVS-999999.                                                     NC2024.2
 221900     GO TO CLOSE-FILES.                                           NC2024.2

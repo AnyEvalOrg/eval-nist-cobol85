@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1164.2
 000200 PROGRAM-ID.                                                      SQ1164.2
 000300     SQ116A.                                                      SQ1164.2
-000400****************************************************************  SQ1164.2
-000500*                                                              *  SQ1164.2
-000600*    VALIDATION FOR:-                                          *  SQ1164.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1164.2
-000800*                                                              *  SQ1164.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1164.2
-001100*                                                              *  SQ1164.2
-001200****************************************************************  SQ1164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1164.2
-001400*        THIS PROGRAM CREATES A SEQUENTIAL MASS STORAGE FILE      SQ1164.2
-001500*    OF 550 RECORDS.  THE FILE IS THEN OPENED IN THE I-O MODE AND SQ1164.2
-001600*    RECORDS ARE UPDATED USING REWRITE...FROM STATEMENTS.  THE    SQ1164.2
-001700*    FILE IS THEN READ AGAIN CHECKING EACH RECORD TO ENSURE       SQ1164.2
-001800*    THE REWRITES WERE EXECUTED CORRECTLY.                        SQ1164.2
-001900*                                                                 SQ1164.2
-002000*    USED X-CARDS:                                                SQ1164.2
-002100*         XXXXX014                                                SQ1164.2
-002200*         XXXXX055                                                SQ1164.2
-002300*     P   XXXXX062                                                SQ1164.2
-002400*         XXXXX082                                                SQ1164.2
-002500*         XXXXX083                                                SQ1164.2
-002600*     C   XXXXX084                                                SQ1164.2
-002700*                                                                 SQ1164.2
-002800*                                                                 SQ1164.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SQ1164.2
 003000 CONFIGURATION SECTION.                                           SQ1164.2
 003100 SOURCE-COMPUTER.                                                 SQ1164.2
@@ -298,7 +298,7 @@
 034700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1164.2
 034800      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1164.2
 034900      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1164.2
-035000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1164.2
+035000*                                                                         
 035100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1164.2
 035200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1164.2
 035300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1164.2
@@ -390,11 +390,11 @@
 043900     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          SQ1164.2
 044000     PERFORM PRINT-DETAIL.                                        SQ1164.2
 044100     CLOSE SQ-FS6.                                                SQ1164.2
-044200*        A SEQUENTIAL MASS STORAGE FILE WITH 130 CHARACTER        SQ1164.2
-044300*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 550 RECORDS.    SQ1164.2
+044200*                                                                         
+044300*                                                                         
 044400 SEQ-INIT-024.                                                    SQ1164.2
 044500     MOVE ZERO TO COUNT-OF-RECS.                                  SQ1164.2
-044600*        THIS TEST VERIFIES THE FILE CREATED IN SEQ-TEST-023.     SQ1164.2
+044600*                                                                         
 044700     OPEN INPUT SQ-FS6.                                           SQ1164.2
 044800 SEQ-TEST-024.                                                    SQ1164.2
 044900     READ SQ-FS6 AT END GO TO SEQ-TEST-024-1.                     SQ1164.2
@@ -444,7 +444,7 @@
 049300     MOVE 0 TO COUNT-OF-RECS.                                     SQ1164.2
 049400     MOVE 0 TO EOF-FLAG.                                          SQ1164.2
 049500     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
-049600*       SKIP THE FIRST 30 RECORDS.                                SQ1164.2
+049600*                                                                         
 049700     PERFORM READ-SQ-FS6 THRU READ-SQ-FS6-EXIT 30 TIMES.          SQ1164.2
 049800     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 049900         GO TO CANT-TEST.                                         SQ1164.2
@@ -458,10 +458,10 @@
 050700 READ-SQ-FS6-EXIT.                                                SQ1164.2
 050800     EXIT.                                                        SQ1164.2
 050900 REWRITE-TEST-GF-01.                                              SQ1164.2
-051000*        THIS TEST REWRITES RECORDS FROM A WORKING-STORAGE AREA   SQ1164.2
-051100*    THE SAME SIZE AS THE FD 01 RECORD AREA.  A CHECK IS MADE TO  SQ1164.2
-051200*    ENSURE THAT THE FROM AREA WAS NOT DESTROYED BY THE REWRITE...SQ1164.2
-051300*    FROM STATEMENT.                                              SQ1164.2
+051000*                                                                         
+051100*                                                                         
+051200*                                                                         
+051300*                                                                         
 051400     IF COUNT-OF-RECS EQUAL TO 80                                 SQ1164.2
 051500         GO TO REWRITE-TEST-GF-01-1.                              SQ1164.2
 051600     READ SQ-FS6 RECORD                                           SQ1164.2
@@ -497,9 +497,9 @@
 054600     MOVE "REWRITE...FROM 01 L" TO FEATURE.                       SQ1164.2
 054700     PERFORM PRINT-DETAIL.                                        SQ1164.2
 054800 REWRITE-INIT-GF-02-A.                                            SQ1164.2
-054900*        THIS TEST REWRITES A RECORD FROM A WORKING-STORAGE AREA  SQ1164.2
-055000*    LARGER THAN THE FD 01 RECORD AREA.  TRUNCATION SHOULD        SQ1164.2
-055100*    OCCUR ON THE RIGHTMOST CHARACTERS.                           SQ1164.2
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
 055200     READ SQ-FS6 RECORD                                           SQ1164.2
 055300         AT END GO TO CANT-TEST.                                  SQ1164.2
 055400     ADD 1 TO COUNT-OF-RECS.                                      SQ1164.2
@@ -514,9 +514,9 @@
 056300         GO TO REWRITE-INIT-GF-03-A.                              SQ1164.2
 056400     GO TO REWRITE-INIT-GF-02-A.                                  SQ1164.2
 056500 REWRITE-INIT-GF-03-A.                                            SQ1164.2
-056600*        THIS TEST REWRITES A RECORD FROM AN 87 CHARACTER         SQ1164.2
-056700*    WORKING-STORAGE ITEM.  THE REST OF THE 130 CHARACTERS        SQ1164.2
-056800*    SHOULD BE SPACE FILLED DURING THE REWRITE STATEMENT.         SQ1164.2
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
 056900     READ SQ-FS6 RECORD                                           SQ1164.2
 057000         AT END GO TO CANT-TEST.                                  SQ1164.2
 057100     ADD 1 TO COUNT-OF-RECS.                                      SQ1164.2
@@ -529,7 +529,7 @@
 057800         GO TO REWRITE-INIT-GF-04-A.                              SQ1164.2
 057900     GO TO REWRITE-INIT-GF-03-A.                                  SQ1164.2
 058000 REWRITE-INIT-GF-04-A.                                            SQ1164.2
-058100*        THIS TEST REWRITES A RECORD FROM AN 02 LEVEL DATA ITEM.  SQ1164.2
+058100*                                                                         
 058200     READ SQ-FS6 RECORD                                           SQ1164.2
 058300          AT END GO TO CANT-TEST.                                 SQ1164.2
 058400     ADD 1 TO COUNT-OF-RECS.                                      SQ1164.2
@@ -544,8 +544,8 @@
 059300         GO TO REWRITE-INIT-GF-05-A.                              SQ1164.2
 059400     GO TO REWRITE-INIT-GF-04-A.                                  SQ1164.2
 059500 REWRITE-INIT-GF-05-A.                                            SQ1164.2
-059600*        THIS TEST REWRITES A RECORD FROM A SUBSCRIPTED DATA      SQ1164.2
-059700*    ITEM OF 120 CHARACTERS.  THE DATA ITEM IS LEVEL 05.          SQ1164.2
+059600*                                                                         
+059700*                                                                         
 059800     READ SQ-FS6 RECORD                                           SQ1164.2
 059900         AT END GO TO CANT-TEST.                                  SQ1164.2
 060000     ADD 1 TO COUNT-OF-RECS.                                      SQ1164.2
@@ -560,9 +560,9 @@
 060900     CLOSE SQ-FS6.                                                SQ1164.2
 061000     GO TO REWRITE-READ-INIT-GF-02.                               SQ1164.2
 061100 CANT-TEST.                                                       SQ1164.2
-061200*        THIS PARAGRAPH IS EXECUTED ONLY WHEN AN AT END           SQ1164.2
-061300*    CONDITION OCCURRED WHEN TRYING TO READ AND REWRITE           SQ1164.2
-061400*    THE FILE SQ-FS6.                                             SQ1164.2
+061200*                                                                         
+061300*                                                                         
+061400*                                                                         
 061500     MOVE "UNEXPECTED EOF" TO COMPUTED-A.                         SQ1164.2
 061600     MOVE "UNABLE TO UPDATE FILE" TO RE-MARK.                     SQ1164.2
 061700     PERFORM PRINT-DETAIL.                                        SQ1164.2
@@ -577,8 +577,8 @@
 062600     MOVE 0 TO RECORDS-IN-ERROR.                                  SQ1164.2
 062700     OPEN INPUT SQ-FS6.                                           SQ1164.2
 062800 REWRITE-TEST-GF-02.                                              SQ1164.2
-062900*        CHECK THE FIRST 30 RECORDS OF THE FILE.                  SQ1164.2
-063000*    THESE RECORDS WERE NOT REWRITTEN.                            SQ1164.2
+062900*                                                                         
+063000*                                                                         
 063100     IF COUNT-OF-RECS EQUAL TO 30                                 SQ1164.2
 063200         GO TO REWRITE-TEST-GF-02-1.                              SQ1164.2
 063300     READ SQ-FS6 RECORD                                           SQ1164.2
@@ -631,7 +631,7 @@
 068000     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
 068100     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 068200         GO TO SEQ-EOF-025.                                       SQ1164.2
-068300*    THIS TEST CHECKS RECORDS 31 THRU 80 WHICH WERE REWRITTEN.    SQ1164.2
+068300*                                                                         
 068400 REWRITE-TEST-GF-03.                                              SQ1164.2
 068500     IF COUNT-OF-RECS EQUAL TO 80                                 SQ1164.2
 068600         GO TO REWRITE-TEST-GF-03-1.                              SQ1164.2
@@ -668,8 +668,8 @@
 071700     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
 071800     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 071900         GO TO SEQ-EOF-025.                                       SQ1164.2
-072000*    THIS TEST CHECKS THE RECORDS WHICH WERE REWRITTEN            SQ1164.2
-072100*    FROM AN 139 CHARACTER RECORD.                                SQ1164.2
+072000*                                                                         
+072100*                                                                         
 072200 REWRITE-TEST-GF-04.                                              SQ1164.2
 072300     IF COUNT-OF-RECS EQUAL TO 120                                SQ1164.2
 072400         GO TO REWRITE-TEST-GF-04-1.                              SQ1164.2
@@ -711,8 +711,8 @@
 076000     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 076100         GO TO SEQ-EOF-025.                                       SQ1164.2
 076200     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
-076300*        THIS TEST CHECKS THE 87 CHARACTER RECORDS WHICH          SQ1164.2
-076400*    WERE REWRITTEN.  CHARACTERS 88 THRU 130 SHOULD BE SPACES.    SQ1164.2
+076300*                                                                         
+076400*                                                                         
 076500 REWRITE-TEST-GF-05.                                              SQ1164.2
 076600     IF COUNT-OF-RECS EQUAL TO 160                                SQ1164.2
 076700         GO TO REWRITE-TEST-GF-05-1.                              SQ1164.2
@@ -756,8 +756,8 @@
 080500     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 080600         GO TO SEQ-EOF-025.                                       SQ1164.2
 080700     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
-080800*        THIS TEST CHECKS THE RECORDS REWRITTEN FROM AN 02        SQ1164.2
-080900*    LEVEL ITEM OF 130 CHARACTERS.                                SQ1164.2
+080800*                                                                         
+080900*                                                                         
 081000 REWRITE-TEST-GF-06.                                              SQ1164.2
 081100     IF COUNT-OF-RECS EQUAL TO 200                                SQ1164.2
 081200         GO TO REWRITE-TEST-GF-06-1.                              SQ1164.2
@@ -793,8 +793,8 @@
 084200     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 084300         GO TO SEQ-EOF-025.                                       SQ1164.2
 084400     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
-084500*    THIS TEST CHECKS THE RECORDS REWRITTEN FROM AN 05 LEVEL      SQ1164.2
-084600*    SUBSCRIPTED ITEM.                                            SQ1164.2
+084500*                                                                         
+084600*                                                                         
 084700 REWRITE-TEST-GF-07.                                              SQ1164.2
 084800     IF COUNT-OF-RECS EQUAL TO 240                                SQ1164.2
 084900         GO TO REWRITE-TEST-GF-07-1.                              SQ1164.2
@@ -837,8 +837,8 @@
 088600     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 088700         GO TO SEQ-EOF-025.                                       SQ1164.2
 088800     MOVE 0 TO ERROR-FLAG.                                        SQ1164.2
-088900*    THIS TEST CHECKS RECORDS 241 THRU 550 WHICH WERE NOT         SQ1164.2
-089000*    REWRITTEN.                                                   SQ1164.2
+088900*                                                                         
+089000*                                                                         
 089100 REWRITE-TEST-GF-08.                                              SQ1164.2
 089200     IF COUNT-OF-RECS EQUAL TO 550                                SQ1164.2
 089300         GO TO REWRITE-TEST-GF-08-1.                              SQ1164.2
@@ -871,9 +871,9 @@
 092000     MOVE "RECORD NOT REWRITTEN" TO FEATURE.                      SQ1164.2
 092100     PERFORM PRINT-DETAIL.                                        SQ1164.2
 092200 SEQ-INIT-025.                                                    SQ1164.2
-092300*        THIS TEST CHECKS IF THERE WERE ANY ERRORS IN THE         SQ1164.2
-092400*    UPDATED FILE AND READS THE FILE ONCE MORE EXPECTING          SQ1164.2
-092500*    THE AT END CONDITION TO OCCUR.                               SQ1164.2
+092300*                                                                         
+092400*                                                                         
+092500*                                                                         
 092600     IF EOF-FLAG EQUAL TO 1                                       SQ1164.2
 092700         GO TO SEQ-EOF-025.                                       SQ1164.2
 092800 SEQ-TEST-025.                                                    SQ1164.2

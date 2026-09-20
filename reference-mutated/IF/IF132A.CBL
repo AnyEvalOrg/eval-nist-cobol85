@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1324.2
 000300     IF132A.                                                      IF1324.2
 000400                                                                  IF1324.2
-000500***********************************************************       IF1324.2
-000600*                                                         *       IF1324.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1324.2
-000800* It contains tests for the Intrinsic Function RANGE.     *       IF1324.2
-000900*                                                         *       IF1324.2
-001000***********************************************************       IF1324.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1324.2
 001200 CONFIGURATION SECTION.                                           IF1324.2
 001300 SOURCE-COMPUTER.                                                 IF1324.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1324.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1324.2
 002600 WORKING-STORAGE SECTION.                                         IF1324.2
-002700***********************************************************       IF1324.2
-002800* Variables specific to the Intrinsic Function Test IF132A*       IF1324.2
-002900***********************************************************       IF1324.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 5.             IF1324.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1324.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1324.2
@@ -48,9 +48,9 @@
 004800 01  WS-NUM              PIC S9(7)V9(7).                          IF1324.2
 004900 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1324.2
 005000 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1324.2
-005100*                                                                 IF1324.2
-005200**********************************************************        IF1324.2
-005300*                                                                 IF1324.2
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400 01  TEST-RESULTS.                                                IF1324.2
 005500     02 FILLER                   PIC X      VALUE SPACE.          IF1324.2
 005600     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1324.2
@@ -344,25 +344,25 @@
 034400 BAIL-OUT-EX. EXIT.                                               IF1324.2
 034500 CCVS1-EXIT.                                                      IF1324.2
 034600     EXIT.                                                        IF1324.2
-034700********************************************************          IF1324.2
-034800*                                                      *          IF1324.2
-034900*    Intrinsic Function Tests         IF132A - RANGE   *          IF1324.2
-035000*                                                      *          IF1324.2
-035100********************************************************          IF1324.2
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
 035200 SECT-IF132A SECTION.                                             IF1324.2
 035300 F-RANGE-INFO.                                                    IF1324.2
 035400     MOVE     "See ref. A-65 2.65" TO ANSI-REFERENCE.             IF1324.2
 035500     MOVE     "RANGE Function" TO FEATURE.                        IF1324.2
-035600*****************TEST (a) - SIMPLE TEST*****************          IF1324.2
+035600*                                                                         
 035700 F-RANGE-01.                                                      IF1324.2
 035800     MOVE ZERO TO WS-NUM.                                         IF1324.2
 035900 F-RANGE-TEST-01.                                                 IF1324.2
 036000     COMPUTE WS-NUM = FUNCTION RANGE(5, -2, -14, 0).              IF1324.2
-036100     IF WS-NUM = 11 THEN                                          IF1324.2
+036100     IF WS-NUM = 16 THEN                                          IF1324.2
 036200                    PERFORM PASS                                  IF1324.2
 036300     ELSE                                                         IF1324.2
 036400                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-036500                    MOVE 11 TO CORRECT-N                          IF1324.2
+036500                    MOVE 16 TO CORRECT-N                          IF1324.2
 036600                    PERFORM FAIL.                                 IF1324.2
 036700     GO TO F-RANGE-WRITE-01.                                      IF1324.2
 036800 F-RANGE-DELETE-01.                                               IF1324.2
@@ -371,7 +371,7 @@
 037100 F-RANGE-WRITE-01.                                                IF1324.2
 037200     MOVE "F-RANGE-01" TO PAR-NAME.                               IF1324.2
 037300     PERFORM  PRINT-DETAIL.                                       IF1324.2
-037400*****************TEST (b) - SIMPLE TEST*****************          IF1324.2
+037400*                                                                         
 037500 F-RANGE-02.                                                      IF1324.2
 037600     EVALUATE FUNCTION RANGE(3.9, -0.3, 8.7, 100.2)               IF1324.2
 037700     WHEN 100.498 THRU 100.502                                    IF1324.2
@@ -385,7 +385,7 @@
 038500 F-RANGE-WRITE-02.                                                IF1324.2
 038600     MOVE "F-RANGE-02" TO PAR-NAME.                               IF1324.2
 038700     PERFORM  PRINT-DETAIL.                                       IF1324.2
-038800*****************TEST (c) - SIMPLE TEST*****************          IF1324.2
+038800*                                                                         
 038900 F-RANGE-03.                                                      IF1324.2
 039000     IF FUNCTION RANGE(A, B, C, D) = 14 THEN                      IF1324.2
 039100                    PERFORM PASS                                  IF1324.2
@@ -398,7 +398,7 @@
 039800 F-RANGE-WRITE-03.                                                IF1324.2
 039900     MOVE "F-RANGE-03" TO PAR-NAME.                               IF1324.2
 040000     PERFORM  PRINT-DETAIL.                                       IF1324.2
-040100*****************TEST (d) - SIMPLE TEST*****************          IF1324.2
+040100*                                                                         
 040200 F-RANGE-04.                                                      IF1324.2
 040300     MOVE ZERO TO WS-NUM.                                         IF1324.2
 040400 F-RANGE-TEST-04.                                                 IF1324.2
@@ -417,7 +417,7 @@
 041700 F-RANGE-WRITE-04.                                                IF1324.2
 041800     MOVE "F-RANGE-04" TO PAR-NAME.                               IF1324.2
 041900     PERFORM  PRINT-DETAIL.                                       IF1324.2
-042000*****************TEST (e) - SIMPLE TEST*****************          IF1324.2
+042000*                                                                         
 042100 F-RANGE-05.                                                      IF1324.2
 042200     MOVE ZERO TO WS-NUM.                                         IF1324.2
 042300 F-RANGE-TEST-05.                                                 IF1324.2
@@ -436,7 +436,7 @@
 043600 F-RANGE-WRITE-05.                                                IF1324.2
 043700     MOVE "F-RANGE-05" TO PAR-NAME.                               IF1324.2
 043800     PERFORM  PRINT-DETAIL.                                       IF1324.2
-043900*****************TEST (f) - SIMPLE TEST*****************          IF1324.2
+043900*                                                                         
 044000 F-RANGE-06.                                                      IF1324.2
 044100     MOVE ZERO TO WS-NUM.                                         IF1324.2
 044200 F-RANGE-TEST-06.                                                 IF1324.2
@@ -455,16 +455,16 @@
 045500 F-RANGE-WRITE-06.                                                IF1324.2
 045600     MOVE "F-RANGE-06" TO PAR-NAME.                               IF1324.2
 045700     PERFORM  PRINT-DETAIL.                                       IF1324.2
-045800*****************TEST (g) - SIMPLE TEST*****************          IF1324.2
+045800*                                                                         
 045900 F-RANGE-07.                                                      IF1324.2
 046000     MOVE ZERO TO WS-NUM.                                         IF1324.2
 046100 F-RANGE-TEST-07.                                                 IF1324.2
 046200     COMPUTE WS-NUM = FUNCTION RANGE(IND(1), IND(2), IND(3)).     IF1324.2
-046300     IF WS-NUM = 0 THEN                                           IF1324.2
+046300     IF WS-NUM = 1 THEN                                           IF1324.2
 046400                    PERFORM PASS                                  IF1324.2
 046500     ELSE                                                         IF1324.2
 046600                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-046700                    MOVE 0 TO CORRECT-N                           IF1324.2
+046700                    MOVE 1 TO CORRECT-N                           IF1324.2
 046800                    PERFORM FAIL.                                 IF1324.2
 046900     GO TO F-RANGE-WRITE-07.                                      IF1324.2
 047000 F-RANGE-DELETE-07.                                               IF1324.2
@@ -473,7 +473,7 @@
 047300 F-RANGE-WRITE-07.                                                IF1324.2
 047400     MOVE "F-RANGE-07" TO PAR-NAME.                               IF1324.2
 047500     PERFORM  PRINT-DETAIL.                                       IF1324.2
-047600*****************TEST (h) - SIMPLE TEST*****************          IF1324.2
+047600*                                                                         
 047700 F-RANGE-08.                                                      IF1324.2
 047800     MOVE ZERO TO WS-NUM.                                         IF1324.2
 047900 F-RANGE-TEST-08.                                                 IF1324.2
@@ -491,7 +491,7 @@
 049100 F-RANGE-WRITE-08.                                                IF1324.2
 049200     MOVE "F-RANGE-08" TO PAR-NAME.                               IF1324.2
 049300     PERFORM  PRINT-DETAIL.                                       IF1324.2
-049400*****************TEST (i) - SIMPLE TEST*****************          IF1324.2
+049400*                                                                         
 049500 F-RANGE-09.                                                      IF1324.2
 049600     MOVE ZERO TO WS-NUM.                                         IF1324.2
 049700 F-RANGE-TEST-09.                                                 IF1324.2
@@ -509,16 +509,16 @@
 050900 F-RANGE-WRITE-09.                                                IF1324.2
 051000     MOVE "F-RANGE-09" TO PAR-NAME.                               IF1324.2
 051100     PERFORM  PRINT-DETAIL.                                       IF1324.2
-051200*****************TEST (k) - SIMPLE TEST*****************          IF1324.2
+051200*                                                                         
 051300 F-RANGE-11.                                                      IF1324.2
 051400     MOVE ZERO TO WS-NUM.                                         IF1324.2
 051500 F-RANGE-TEST-11.                                                 IF1324.2
 051600     COMPUTE WS-NUM = FUNCTION RANGE(M, N, O).                    IF1324.2
-051700     IF WS-NUM = 1000000 THEN                                     IF1324.2
+051700     IF WS-NUM = 1080030 THEN                                     IF1324.2
 051800                    PERFORM PASS                                  IF1324.2
 051900     ELSE                                                         IF1324.2
 052000                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-052100                    MOVE 1000000 TO CORRECT-N                     IF1324.2
+052100                    MOVE 1080030 TO CORRECT-N                     IF1324.2
 052200                    PERFORM FAIL.                                 IF1324.2
 052300     GO TO F-RANGE-WRITE-11.                                      IF1324.2
 052400 F-RANGE-DELETE-11.                                               IF1324.2
@@ -527,7 +527,7 @@
 052700 F-RANGE-WRITE-11.                                                IF1324.2
 052800     MOVE "F-RANGE-11" TO PAR-NAME.                               IF1324.2
 052900     PERFORM  PRINT-DETAIL.                                       IF1324.2
-053000*****************TEST (l) - SIMPLE TEST*****************          IF1324.2
+053000*                                                                         
 053100 F-RANGE-12.                                                      IF1324.2
 053200     MOVE ZERO TO WS-NUM.                                         IF1324.2
 053300 F-RANGE-TEST-12.                                                 IF1324.2
@@ -545,7 +545,7 @@
 054500 F-RANGE-WRITE-12.                                                IF1324.2
 054600     MOVE "F-RANGE-12" TO PAR-NAME.                               IF1324.2
 054700     PERFORM  PRINT-DETAIL.                                       IF1324.2
-054800*****************TEST (a) - COMPLEX TEST****************          IF1324.2
+054800*                                                                         
 054900 F-RANGE-13.                                                      IF1324.2
 055000     MOVE ZERO TO WS-NUM.                                         IF1324.2
 055100     MOVE 79.9984 TO MIN-RANGE.                                   IF1324.2
@@ -567,7 +567,7 @@
 056700 F-RANGE-WRITE-13.                                                IF1324.2
 056800     MOVE "F-RANGE-13" TO PAR-NAME.                               IF1324.2
 056900     PERFORM  PRINT-DETAIL.                                       IF1324.2
-057000*****************TEST (b) - COMPLEX TEST****************          IF1324.2
+057000*                                                                         
 057100 F-RANGE-14.                                                      IF1324.2
 057200     MOVE ZERO TO WS-NUM.                                         IF1324.2
 057300     MOVE 7.39985 TO MIN-RANGE.                                   IF1324.2
@@ -590,7 +590,7 @@
 059000 F-RANGE-WRITE-14.                                                IF1324.2
 059100     MOVE "F-RANGE-14" TO PAR-NAME.                               IF1324.2
 059200     PERFORM  PRINT-DETAIL.                                       IF1324.2
-059300*****************TEST (c) - COMPLEX TEST****************          IF1324.2
+059300*                                                                         
 059400 F-RANGE-15.                                                      IF1324.2
 059500     MOVE ZERO TO WS-NUM.                                         IF1324.2
 059600     MOVE 9.59981 TO MIN-RANGE.                                   IF1324.2
@@ -613,7 +613,7 @@
 061300 F-RANGE-WRITE-15.                                                IF1324.2
 061400     MOVE "F-RANGE-15" TO PAR-NAME.                               IF1324.2
 061500     PERFORM  PRINT-DETAIL.                                       IF1324.2
-061600*****************SPECIAL PERFORM TEST**********************       IF1324.2
+061600*                                                                         
 061700 F-RANGE-16.                                                      IF1324.2
 061800     PERFORM F-RANGE-TEST-16                                      IF1324.2
 061900       UNTIL FUNCTION RANGE(ARG1, 1) > 10.                        IF1324.2
@@ -627,7 +627,7 @@
 062700 F-RANGE-WRITE-16.                                                IF1324.2
 062800     MOVE "F-RANGE-16" TO PAR-NAME.                               IF1324.2
 062900     PERFORM  PRINT-DETAIL.                                       IF1324.2
-063000********************END OF TESTS***************                   IF1324.2
+063000*                                                                         
 063100 CCVS-EXIT SECTION.                                               IF1324.2
 063200 CCVS-999999.                                                     IF1324.2
 063300     GO TO CLOSE-FILES.                                           IF1324.2

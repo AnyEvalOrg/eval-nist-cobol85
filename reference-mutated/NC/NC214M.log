@@ -20,7 +20,7 @@ TEST RESULT OF NC214M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
 *** INFORMATION ***         000026263.000000000     DAY YYDDD FORMAT    VI-72 6.5.4 GR8                                 
                                                                                                                         
  ACCEPT TIME                ACC-TEST-F2-3                 CHECK VISUALLY                                                
-*** INFORMATION ***         018452304.000000000     HHMMSSFF FORMAT     VI-72 6.5.4 GR9                                 
+*** INFORMATION ***         019572216.000000000     HHMMSSFF FORMAT     VI-72 6.5.4 GR9                                 
                                                                                                                         
  ACCEPT DAY-OF-WEEK         ACC-TEST-F2-4                 CHECK VISUALLY                                                
 *** INFORMATION ***         000000007.000000000     SINGLE DIGIT INTEGERVI-72 6.5.4 GR10                                

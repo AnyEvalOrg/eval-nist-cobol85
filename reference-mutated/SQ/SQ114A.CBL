@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1144.2
 000200 PROGRAM-ID.                                                      SQ1144.2
 000300     SQ114A.                                                      SQ1144.2
-000400****************************************************************  SQ1144.2
-000500*                                                              *  SQ1144.2
-000600*    VALIDATION FOR:-                                          *  SQ1144.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1144.2
-000800*                                                              *  SQ1144.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1144.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1144.2
-001100*                                                              *  SQ1144.2
-001200****************************************************************  SQ1144.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1144.2
-001400*                                                                 SQ1144.2
-001500*                                                                 SQ1144.2
-001600*         NEW TEST:                                               SQ1144.2
-001700*                         OPEN OUTPUT  FILE-1, FILE-2.            SQ1144.2
-001800*                         OPEN  INPUT  FILE-1, FILE-2.            SQ1144.2
-001900*                         CLOSE FILE-1, FILE-2.                   SQ1144.2
-002000*                                                                 SQ1144.2
-002100*        THE ROUTINE SQ114A TESTS THE USE OF THE SAME AREA        SQ1144.2
-002200*    CLAUSE FOR TWO FILES, ONE A TAPE FILE AND THE OTHER A        SQ1144.2
-002300*    MASS STORAGE FILE.  THIS ROUTINE IS A COMBINATION OF THE     SQ1144.2
-002400*    ROUTINES SQ102 AND SQ104.                                    SQ1144.2
-002500*                                                                 SQ1144.2
-002600*    USED X-CARDS:                                                SQ1144.2
-002700*         XXXXX001                                                SQ1144.2
-002800*         XXXXX014                                                SQ1144.2
-002900*         XXXXX055                                                SQ1144.2
-003000*     P   XXXXX062                                                SQ1144.2
-003100*         XXXXX082                                                SQ1144.2
-003200*         XXXXX083                                                SQ1144.2
-003300*     C   XXXXX084                                                SQ1144.2
-003400*                                                                 SQ1144.2
-003500*                                                                 SQ1144.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            SQ1144.2
 003700 CONFIGURATION SECTION.                                           SQ1144.2
 003800 SOURCE-COMPUTER.                                                 SQ1144.2
@@ -313,7 +313,7 @@
 036600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1144.2
 036700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1144.2
 036800      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1144.2
-036900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1144.2
+036900*                                                                         
 037000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1144.2
 037100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1144.2
 037200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1144.2
@@ -387,10 +387,10 @@
 044000     MOVE "S" TO XLABEL-TYPE (1).                                 SQ1144.2
 044100     MOVE 000001 TO XRECORD-NUMBER (1).                           SQ1144.2
 044200 OPEN-TEST-GF-01.                                                 SQ1144.2
-044300**************************************************************    SQ1144.2
-044400*  OPEN OUTPUT FILE-1, FILE-2.   WILL BE TESTED IN THIS TEST.*    SQ1144.2
-044500*  VII; 4.3.2 (PAGE VII-39)                                  *    SQ1144.2
-044600**************************************************************    SQ1144.2
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
+044600*                                                                         
 044700                                                                  SQ1144.2
 044800     MOVE SPACE TO FILE-STATUS-SQ-FS1.                            SQ1144.2
 044900     MOVE SPACE TO FILE-STATUS-SQ-FS2.                            SQ1144.2
@@ -431,12 +431,12 @@
 048400     MOVE  XRECORD-NUMBER (1) TO CORRECT-18V0.                    SQ1144.2
 048500     PERFORM PRINT-DETAIL.                                        SQ1144.2
 048600     CLOSE SQ-FS1.                                                SQ1144.2
-048700*        A SEQUENTIAL TAPE FILE WITH 120 CHARACTER RECORDS        SQ1144.2
-048800*    HAS BEEN CREATED. THE FILE CONTAINS 750 RECORDS.             SQ1144.2
+048700*                                                                         
+048800*                                                                         
 048900 SEQ-INIT-002.                                                    SQ1144.2
 049000     MOVE ZERO TO WRK-CS-09V00.                                   SQ1144.2
-049100*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ1144.2
-049200*    SEQ-TEST-001.                                                SQ1144.2
+049100*                                                                         
+049200*                                                                         
 049300     OPEN INPUT SQ-FS1.                                           SQ1144.2
 049400 SEQ-TEST-002.                                                    SQ1144.2
 049500     READ SQ-FS1                                                  SQ1144.2
@@ -478,8 +478,8 @@
 053100     MOVE ZERO TO WRK-CS-09V00.                                   SQ1144.2
 053200     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1144.2
 053300     OPEN INPUT   SQ-FS1.                                         SQ1144.2
-053400*            FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED      SQ1144.2
-053500*    IN THIS SERIES OF TESTS.                                     SQ1144.2
+053400*                                                                         
+053500*                                                                         
 053600     MOVE "READ...RECORD AT END ..." TO FEATURE.                  SQ1144.2
 053700     MOVE "READ-TEST-GF-01" TO PAR-NAME.                          SQ1144.2
 053800     MOVE ZERO TO ERROR-FLAG.                                     SQ1144.2
@@ -656,13 +656,13 @@
 070900     MOVE XRECORD-NUMBER (2) TO CORRECT-18V0.                     SQ1144.2
 071000     PERFORM PRINT-DETAIL.                                        SQ1144.2
 071100     CLOSE SQ-FS3.                                                SQ1144.2
-071200*        A MASS STORAGE SEQUENTIAL FILE WITH 120 CHARACTER        SQ1144.2
-071300*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS 649 RECORDS.    SQ1144.2
+071200*                                                                         
+071300*                                                                         
 071400 READ-INIT-GF-06.                                                 SQ1144.2
 071500     MOVE ZERO TO WRK-CS-09V00.                                   SQ1144.2
 071600     MOVE    ZERO TO RECORDS-IN-ERROR.                            SQ1144.2
-071700*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ1144.2
-071800*    READ-TEST-007.                                               SQ1144.2
+071700*                                                                         
+071800*                                                                         
 071900     OPEN INPUT SQ-FS3.                                           SQ1144.2
 072000 READ-TEST-GF-06.                                                 SQ1144.2
 072100     READ SQ-FS3 RECORD                                           SQ1144.2
@@ -703,8 +703,8 @@
 075600     MOVE ZERO TO WRK-CS-09V00.                                   SQ1144.2
 075700     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1144.2
 075800     OPEN INPUT SQ-FS3.                                           SQ1144.2
-075900*        FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED          SQ1144.2
-076000*    IN THIS SERIES OF TESTS.                                     SQ1144.2
+075900*                                                                         
+076000*                                                                         
 076100     MOVE "LEV 1 READ STATEMENT" TO FEATURE.                      SQ1144.2
 076200     MOVE     ZERO TO EOF-FLAG.                                   SQ1144.2
 076300     MOVE "READ...RECORD AT END ..." TO FEATURE.                  SQ1144.2
@@ -840,10 +840,10 @@
 089300 READ-CLOSE-GF-11.                                                SQ1144.2
 089400     CLOSE SQ-FS3.                                                SQ1144.2
 089500 OPEN-TEST-GF-03.                                                 SQ1144.2
-089600**************************************************************    SQ1144.2
-089700*  OPEN OUTPUT FILE-1, FILE-2.   WILL BE TESTED IN THIS TEST.*    SQ1144.2
-089800*  VII; 4.3.2 (PAGE VII-39)                                  *    SQ1144.2
-089900**************************************************************    SQ1144.2
+089600*                                                                         
+089700*                                                                         
+089800*                                                                         
+089900*                                                                         
 090000                                                                  SQ1144.2
 090100     MOVE SPACE TO FILE-STATUS-SQ-FS1.                            SQ1144.2
 090200     MOVE SPACE TO FILE-STATUS-SQ-FS2.                            SQ1144.2
@@ -871,37 +871,37 @@
 092400     MOVE "OPEN INPUT FILE1, FILE2" TO FEATURE.                   SQ1144.2
 092500     PERFORM PRINT-DETAIL.                                        SQ1144.2
 092600                                                                  SQ1144.2
-092700*CLOSE-TEST-GF-01.                                                SQ1144.2
-092800******************************************************************SQ1144.2
-092900*  CLOSE FILE-1, FILE-2 WITH LOCK.  WILL BE TESTED IN THIS TEST. *SQ1144.2
-093000*  VII; 4.2 (PAGE VII-35)                                        *SQ1144.2
-093100******************************************************************SQ1144.2
+092700*                                                                         
+092800*                                                                         
+092900*                                                                         
+093000*                                                                         
+093100*                                                                         
 093200                                                                  SQ1144.2
-093300*    MOVE SPACE TO FILE-STATUS-SQ-FS1.                            SQ1144.2
-093400*    MOVE SPACE TO FILE-STATUS-SQ-FS2.                            SQ1144.2
-093500*    CLOSE SQ-FS1 WITH LOCK, SQ-FS2 WITH LOCK.                    SQ1144.2
-093600*    IF FILE-STATUS-SQ-FS1 NOT = "00"                             SQ1144.2
-093700*        OR FILE-STATUS-SQ-FS2 NOT = "00"                         SQ1144.2
-093800*            GO TO CLOSE-FAIL-GF-01.                              SQ1144.2
-093900*CLOSE-PASS-GF-01.                                                SQ1144.2
-094000*    PERFORM PASS                                                 SQ1144.2
-094100*    GO TO CLOSE-WRITE-GF-01.                                     SQ1144.2
-094200*CLOSE-FAIL-GF-01.                                                SQ1144.2
-094300*    IF FILE-STATUS-SQ-FS1 NOT = "00"                             SQ1144.2
-094400*        MOVE "STATUS 1: 00" TO CORRECT-A                         SQ1144.2
-094500*        MOVE FILE-STATUS-SQ-FS1 TO COMPUTED-A                    SQ1144.2
-094600*        MOVE "VII-35; 4.2.2      " TO  RE-MARK                   SQ1144.2
-094700*        PERFORM FAIL                                             SQ1144.2
-094800*        PERFORM CLOSE-WRITE-GF-01.                               SQ1144.2
-094900*    IF FILE-STATUS-SQ-FS2 NOT = "00"                             SQ1144.2
-095000*        MOVE "STATUS 2: 00" TO CORRECT-A                         SQ1144.2
-095100*        MOVE FILE-STATUS-SQ-FS2 TO COMPUTED-A                    SQ1144.2
-095200*        MOVE "VII-35; 4.2.2      " TO  RE-MARK                   SQ1144.2
-095300*        PERFORM FAIL.                                            SQ1144.2
-095400*CLOSE-WRITE-GF-01.                                               SQ1144.2
-095500*    MOVE "CLOSE-TEST-GF-01" TO PAR-NAME.                         SQ1144.2
-095600*    MOVE "CLOSE FILE1, FILE2" TO FEATURE.                        SQ1144.2
-095700*    PERFORM PRINT-DETAIL.                                        SQ1144.2
+093300*                                                                         
+093400*                                                                         
+093500*                                                                         
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
+094600*                                                                         
+094700*                                                                         
+094800*                                                                         
+094900*                                                                         
+095000*                                                                         
+095100*                                                                         
+095200*                                                                         
+095300*                                                                         
+095400*                                                                         
+095500*                                                                         
+095600*                                                                         
+095700*                                                                         
 095800 TERMINATE-ROUTINE.                                               SQ1144.2
 095900     EXIT.                                                        SQ1144.2
 096000 CCVS-EXIT SECTION.                                               SQ1144.2

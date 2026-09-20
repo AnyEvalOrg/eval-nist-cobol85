@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2014.2
 000200 PROGRAM-ID.                                                      SQ2014.2
 000300     SQ201M.                                                      SQ2014.2
-000400****************************************************************  SQ2014.2
-000500*                                                              *  SQ2014.2
-000600*    VALIDATION FOR:-                                          *  SQ2014.2
-000700*    " HIGH       ".                                              SQ2014.2
-000800*                                                              *  SQ2014.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2014.2
-001000*    "4.2 ".                                                      SQ2014.2
-001100*                                                              *  SQ2014.2
-001200*    THIS ROUTINE TESTS THE WRITE ... ADVANCIN  STATEMENT IN      SQ2014.2
-001300*    COMBINATION WITH THE                                         SQ2014.2
-001400*                NOT AT END-OF-PAGE                               SQ2014.2
-001500*    AND THE                                                      SQ2014.2
-001600*                END-WRITE        CLAUSES.                        SQ2014.2
-001700*                                                                 SQ2014.2
-001800*        THE ROUTINE SQ201M TESTS THE USE OF THE LEVEL 2 WRITE    SQ2014.2
-001900*    STATEMENT AND THE LINAGE CLAUSE FOR A FILE DESIGNATED AS     SQ2014.2
-002000*    PRINTER OUTPUT.  THESE STATEMENTS CONTROL THE VERTICAL       SQ2014.2
-002100*    POSITIONING OF EACH LINE ON A PRINTED PAGE.  THE LINAGE      SQ2014.2
-002200*    CLAUSE SPECIFICALLY CONTROLS THE VERTICAL FORMAT OF A        SQ2014.2
-002300*    LOGICAL PRINT PAGE.  SQ201M TESTS (1) THE ACCURACY OF THE    SQ2014.2
-002400*    LINAGE-COUNTER, (2) THE WRITE ADVANCING PAGE, AND (3) THE    SQ2014.2
-002500*    FOUR COMBINATIONS OF THE END-OF-PAGE PHRASE.  IT IS ASSUMED  SQ2014.2
-002600*    THAT ALL LEVEL 2 NUCLEUS OPTIONS ARE AVAILABLE IN TESTING    SQ2014.2
-002700*    SQ201M. A LINAGE CLAUSE WITH COMPLETE FOOTING, TOP, AND      SQ2014.2
-002800*    BOTTOM SECTIONS AND UTILIZING INTEGER ITEMS IS USED WITH     SQ2014.2
-002900*    THIS TEST.                                                   SQ2014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            SQ2014.2
 003100 CONFIGURATION SECTION.                                           SQ2014.2
 003200 SOURCE-COMPUTER.                                                 SQ2014.2
@@ -247,7 +247,7 @@
 029600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2014.2
 029700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2014.2
 029800      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2014.2
-029900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2014.2
+029900*                                                                         
 030000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2014.2
 030100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2014.2
 030200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2014.2
@@ -314,7 +314,7 @@
 036300*                                                                         
 036400     CLOSE PRINT-FILE.                                            SQ2014.2
 036500     OPEN OUTPUT PRINT-FILE.                                      SQ2014.2
-036600     IF LINAGE-COUNTER EQUAL TO 8                                 SQ2014.2
+036600     IF LINAGE-COUNTER EQUAL TO 1                                 SQ2014.2
 036700              PERFORM PASS                                        SQ2014.2
 036800              GO TO WRT-WRITE-001.                                SQ2014.2
 036900     GO TO WRT-FAIL-001.                                          SQ2014.2
@@ -325,7 +325,7 @@
 037400     MOVE "VII-5 1.3.8; VII-29 D." TO RE-MARK.                    SQ2014.2
 037500     PERFORM FAIL.                                                SQ2014.2
 037600     MOVE LINAGE-COUNTER TO COMPUTED-18V0.                        SQ2014.2
-037700     MOVE 8 TO CORRECT-18V0.                                      SQ2014.2
+037700     MOVE 1 TO CORRECT-18V0.                                      SQ2014.2
 037800 WRT-WRITE-001.                                                   SQ2014.2
 037900     MOVE "LINAGE-CT AFTER OPEN" TO FEATURE.                      SQ2014.2
 038000     MOVE "WRT-TEST-01" TO PAR-NAME.                              SQ2014.2
@@ -354,7 +354,7 @@
 040300*                                                                         
 040400     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 040500     WRITE DUMMY-RECORD AFTER ADVANCING PAGE.                     SQ2014.2
-040600     IF LINAGE-COUNTER EQUAL TO 5                                 SQ2014.2
+040600     IF LINAGE-COUNTER EQUAL TO 1                                 SQ2014.2
 040700              PERFORM PASS                                        SQ2014.2
 040800              GO TO WRT-WRITE-002.                                SQ2014.2
 040900     GO TO WRT-FAIL-002.                                          SQ2014.2
@@ -365,7 +365,7 @@
 041400     MOVE "VII-5 1.3.8; VII-28 C (1)" TO RE-MARK.                 SQ2014.2
 041500     PERFORM FAIL.                                                SQ2014.2
 041600     MOVE LINAGE-COUNTER TO COMPUTED-18V0.                        SQ2014.2
-041700     MOVE 5 TO CORRECT-18V0.                                      SQ2014.2
+041700     MOVE 1 TO CORRECT-18V0.                                      SQ2014.2
 041800 WRT-WRITE-002.                                                   SQ2014.2
 041900     MOVE "L-C AFTER WRITE PAGE" TO FEATURE.                      SQ2014.2
 042000     MOVE "WRT-TEST-02" TO PAR-NAME.                              SQ2014.2
@@ -377,7 +377,7 @@
 042600     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 042700     WRITE DUMMY-RECORD AFTER ADVANCING PAGE.                     SQ2014.2
 042800     PERFORM BLANK-LINE-PRINT 50 TIMES.                           SQ2014.2
-042900     IF LINAGE-COUNTER EQUAL TO 6                                 SQ2014.2
+042900     IF LINAGE-COUNTER EQUAL TO 1                                 SQ2014.2
 043000              PERFORM PASS                                        SQ2014.2
 043100              GO TO WRT-WRITE-003.                                SQ2014.2
 043200     GO TO WRT-FAIL-003.                                          SQ2014.2
@@ -388,15 +388,15 @@
 043700     MOVE "VII-5 1.3.8; VII-29 C  4)" TO RE-MARK.                 SQ2014.2
 043800     PERFORM FAIL.                                                SQ2014.2
 043900     MOVE LINAGE-COUNTER TO COMPUTED-18V0.                        SQ2014.2
-044000     MOVE 6 TO CORRECT-18V0.                                      SQ2014.2
+044000     MOVE 1 TO CORRECT-18V0.                                      SQ2014.2
 044100 WRT-WRITE-003.                                                   SQ2014.2
 044200     MOVE "L-C AFT PAGE OVERFLW" TO FEATURE.                      SQ2014.2
 044300     MOVE "WRT-TEST-03" TO PAR-NAME.                              SQ2014.2
 044400     PERFORM PRINT-DETAIL.                                        SQ2014.2
 044500 WRT-TEST-004.                                                    SQ2014.2
-044600*             THIS TEST CHECKS THE LINAGE-COUNTER UPON COMPLETION SQ2014.2
-044700*             OF A WRITE OPERATION WITHOUT AN ADVANCING PHRASE.   SQ2014.2
-044800*             IT SHOULD BE INCREMENTED BY 1.                      SQ2014.2
+044600*                                                                         
+044700*                                                                         
+044800*                                                                         
 044900     MOVE LINAGE-COUNTER TO LC-HOLD.                              SQ2014.2
 045000     ADD 1 TO LC-HOLD.                                            SQ2014.2
 045100     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
@@ -418,8 +418,8 @@
 046700     MOVE "WRT-TEST-04" TO PAR-NAME.                              SQ2014.2
 046800     PERFORM PRINT-DETAIL.                                        SQ2014.2
 046900 WRT-TEST-005.                                                    SQ2014.2
-047000*             THIS TEST CHECKS THE LINAGE-COUNTER UPON COMPLETION SQ2014.2
-047100*             OF A WRITE ADVANCING INTEGER LINE OPERATION.        SQ2014.2
+047000*                                                                         
+047100*                                                                         
 047200     MOVE LINAGE-COUNTER TO LC-HOLD.                              SQ2014.2
 047300     ADD 5 TO LC-HOLD.                                            SQ2014.2
 047400     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
@@ -441,8 +441,8 @@
 049000     MOVE "WRT-TEST-05" TO PAR-NAME.                              SQ2014.2
 049100     PERFORM PRINT-DETAIL.                                        SQ2014.2
 049200 WRT-TEST-006.                                                    SQ2014.2
-049300*             THIS TEST CHECKS THE LINAGE-COUNTER UPON COMPLETION SQ2014.2
-049400*             OF A WRITE IDENTIFIER-2 LINES OPERATION.            SQ2014.2
+049300*                                                                         
+049400*                                                                         
 049500     MOVE 4 TO IDENTIFIER-2.                                      SQ2014.2
 049600     MOVE LINAGE-COUNTER TO LC-HOLD.                              SQ2014.2
 049700     ADD 4 TO LC-HOLD.                                            SQ2014.2
@@ -475,9 +475,9 @@
 052400     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 052500     PERFORM BLANK-LINE-PRINT 10 TIMES.                           SQ2014.2
 052600 WRT-TEST-007.                                                    SQ2014.2
-052700*             THIS IS A TEST FOR WRITE AFTER ADVANCING PAGE.      SQ2014.2
-052800*             THE RECORD SHOULD PRINT ON THE FIRST LINE OF THE    SQ2014.2
-052900*             NEXT LOGICAL PAGE.                                  SQ2014.2
+052700*                                                                         
+052800*                                                                         
+052900*                                                                         
 053000     MOVE "WRT AFT ADV PAGE" TO FEATURE.                          SQ2014.2
 053100     MOVE "WRT-TEST-07" TO PAR-NAME.                              SQ2014.2
 053200     PERFORM PRINT-DETAIL.                                        SQ2014.2
@@ -485,11 +485,11 @@
 053400     WRITE PRINT-REC AFTER ADVANCING PAGE.                        SQ2014.2
 053500     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 053600 WRT-TEST-008.                                                    SQ2014.2
-053700******************************************************************SQ2014.2
-053800*                                                                *SQ2014.2
-053900*             THIS IS A TEST FOR WRITE ... NOT AT END-OF-PAGE... *SQ2014.2
-054000*                                          ---                   *SQ2014.2
-054100******************************************************************SQ2014.2
+053700*                                                                         
+053800*                                                                         
+053900*                                                                         
+054000*                                                                         
+054100*                                                                         
 054200     MOVE 0 TO WRITE-SWITCH.                                      SQ2014.2
 054300     PERFORM WRITE-EOP-MESSAGE.                                   SQ2014.2
 054400     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
@@ -513,12 +513,12 @@
 056200     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 056300     PERFORM BLANK-LINE-PRINT 5 TIMES.                            SQ2014.2
 056400 WRT-TEST-009.                                                    SQ2014.2
-056500*             THIS IS A TEST FOR WRITE ...; AT EOP ...            SQ2014.2
-056600******************************************************************SQ2014.2
-056700*                                                                *SQ2014.2
-056800*             THIS IS A TEST FOR WRITE ... NOT AT EOP        ... *SQ2014.2
-056900*                                          ---                   *SQ2014.2
-057000******************************************************************SQ2014.2
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
 057100     MOVE 0 TO WRITE-SWITCH.                                      SQ2014.2
 057200     PERFORM WRITE-EOP-MESSAGE.                                   SQ2014.2
 057300     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
@@ -542,13 +542,13 @@
 059100     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 059200     PERFORM BLANK-LINE-PRINT 5 TIMES.                            SQ2014.2
 059300 WRT-TEST-010.                                                    SQ2014.2
-059400*             THIS IS A TEST FOR WRITE... ; END-OF-PAGE ...       SQ2014.2
-059500******************************************************************SQ2014.2
-059600*                                                                *SQ2014.2
-059700*             THIS IS A TEST FOR WRITE ... NOT END-OF-PAGE   ... *SQ2014.2
-059800*                                          ---                   *SQ2014.2
-059900*         AND    END-WRITE                                       *SQ2014.2
-060000******************************************************************SQ2014.2
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
+060000*                                                                         
 060100     MOVE 0 TO WRITE-SWITCH.                                      SQ2014.2
 060200     MOVE 0 TO END-WRITE-SWITCH.                                  SQ2014.2
 060300     PERFORM WRITE-EOP-MESSAGE.                                   SQ2014.2
@@ -589,17 +589,17 @@
 063800     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 063900     PERFORM BLANK-LINE-PRINT 5 TIMES.                            SQ2014.2
 064000 WRT-TEST-011.                                                    SQ2014.2
-064100*             THIS IS A TEST FOR WRITE ...EOP...                  SQ2014.2
-064200******************************************************************SQ2014.2
-064300*                                                                *SQ2014.2
-064400*             THIS IS A TEST FOR WRITE ... NOT EOP           ... *SQ2014.2
-064500*                                          ---                   *SQ2014.2
-064600******************************************************************SQ2014.2
+064100*                                                                         
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
 064700     MOVE 0 TO WRITE-SWITCH.                                      SQ2014.2
 064800     MOVE 0 TO END-WRITE-SWITCH.                                  SQ2014.2
-064900*    MOVE "EOP" TO FEATURE.                                       SQ2014.2
-065000*    MOVE "WRT-TEST-11" TO PAR-NAME.                              SQ2014.2
-065100*    PERFORM PRINT-DETAIL.                                        SQ2014.2
+064900*                                                                         
+065000*                                                                         
+065100*                                                                         
 065200     PERFORM WRITE-EOP-MESSAGE.                                   SQ2014.2
 065300     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 065400     PERFORM BLANK-LINE-PRINT UNTIL LINAGE-COUNTER EQUAL 1.       SQ2014.2
@@ -649,11 +649,11 @@
 069800              MOVE 1 TO FOOT-COUNT                                SQ2014.2
 069900              MOVE 45 TO FOOT-LINE-NO                             SQ2014.2
 070000              PERFORM PRINT-FOOTING 6 TIMES                       SQ2014.2
-070100******************************************************************SQ2014.2
-070200*                                                                *SQ2014.2
-070300*         NEW: NOT AT END-OF-PAGE                                *SQ2014.2
-070400*              ---                                               *SQ2014.2
-070500******************************************************************SQ2014.2
+070100*                                                                         
+070200*                                                                         
+070300*                                                                         
+070400*                                                                         
+070500*                                                                         
 070600        NOT AT END-OF-PAGE                                        SQ2014.2
 070700             MOVE 1 TO WRITE-SWITCH.                              SQ2014.2
 070800     ADD 1 TO DETAIL-LINE-NO.                                     SQ2014.2
@@ -664,11 +664,11 @@
 071300              MOVE 1 TO FOOT-COUNT                                SQ2014.2
 071400              MOVE 45 TO FOOT-LINE-NO                             SQ2014.2
 071500              PERFORM PRINT-FOOTING 6 TIMES                       SQ2014.2
-071600******************************************************************SQ2014.2
-071700*                                                                *SQ2014.2
-071800*         NEW: NOT AT EOP                                        *SQ2014.2
-071900*                                                                *SQ2014.2
-072000******************************************************************SQ2014.2
+071600*                                                                         
+071700*                                                                         
+071800*                                                                         
+071900*                                                                         
+072000*                                                                         
 072100        NOT AT EOP                                                SQ2014.2
 072200             MOVE 1 TO WRITE-SWITCH.                              SQ2014.2
 072300     ADD 1 TO DETAIL-LINE-NO.                                     SQ2014.2
@@ -680,11 +680,11 @@
 072900              MOVE 1 TO FOOT-COUNT                                SQ2014.2
 073000              MOVE 45 TO FOOT-LINE-NO                             SQ2014.2
 073100              PERFORM PRINT-FOOTING 6 TIMES                       SQ2014.2
-073200******************************************************************SQ2014.2
-073300*                                                                *SQ2014.2
-073400*         NEW: NOT END-OF-PAGE                                   *SQ2014.2
-073500*              ---                                               *SQ2014.2
-073600******************************************************************SQ2014.2
+073200*                                                                         
+073300*                                                                         
+073400*                                                                         
+073500*                                                                         
+073600*                                                                         
 073700           NOT END-OF-PAGE                                        SQ2014.2
 073800             MOVE 1 TO WRITE-SWITCH                               SQ2014.2
 073900          END-WRITE                                               SQ2014.2
@@ -698,11 +698,11 @@
 074700              MOVE 1 TO FOOT-COUNT                                SQ2014.2
 074800              MOVE 45 TO FOOT-LINE-NO                             SQ2014.2
 074900              PERFORM PRINT-FOOTING 6 TIMES                       SQ2014.2
-075000******************************************************************SQ2014.2
-075100*                                                                *SQ2014.2
-075200*         NEW: NOT EOP                                           *SQ2014.2
-075300*              ---                                               *SQ2014.2
-075400******************************************************************SQ2014.2
+075000*                                                                         
+075100*                                                                         
+075200*                                                                         
+075300*                                                                         
+075400*                                                                         
 075500            NOT EOP                                               SQ2014.2
 075600             MOVE 1 TO WRITE-SWITCH                               SQ2014.2
 075700          END-WRITE                                               SQ2014.2

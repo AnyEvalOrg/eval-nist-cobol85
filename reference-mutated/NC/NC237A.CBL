@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2374.2
 000200 PROGRAM-ID.                                                      NC2374.2
 000300     NC237A.                                                      NC2374.2
-000400****************************************************************  NC2374.2
-000500*                                                              *  NC2374.2
-000600*    VALIDATION FOR:-                                          *  NC2374.2
-000700*                                                              *  NC2374.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2374.2
-000900*                                                              *  NC2374.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2374.2
-001100*                                                              *  NC2374.2
-001200****************************************************************  NC2374.2
-001300*                                                              *  NC2374.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2374.2
-001500*                                                              *  NC2374.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2374.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2374.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2374.2
-001900*                                                              *  NC2374.2
-002000****************************************************************  NC2374.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100                                                                  NC2374.2
-002200*                                                                 NC2374.2
-002300*    PROGRAM NC237A TESTS FORMAT 2 OF THE "SEARCH" STATEMENT   *  NC2374.2
-002400*    WITH A THREE-DIMENSIONAL TABLE CONTAINING ASCENDING AND   *  NC2374.2
-002500*    DESCENDING KEYS.                                          *  NC2374.2
-002600*                                                              *  NC2374.2
-002700****************************************************************  NC2374.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2374.2
 002900 CONFIGURATION SECTION.                                           NC2374.2
 003000 SOURCE-COMPUTER.                                                 NC2374.2
@@ -262,7 +262,7 @@
 026400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2374.2
 026500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2374.2
 026600      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2374.2
-026700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2374.2
+026700*                                                                         
 026800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2374.2
 026900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2374.2
 027000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2374.2
@@ -331,7 +331,7 @@
 033300     EXIT.                                                        NC2374.2
 033400 SECT-NC237A-001 SECTION.                                         NC2374.2
 033500 TH-10-001.                                                       NC2374.2
-033600*                                                                 NC2374.2
+033600*                                                                         
 033700 BUILD-3DEM-TABLE.                                                NC2374.2
 033800     MOVE "PERFORM VARYING" TO FEATURE.                           NC2374.2
 033900     SET IDX-1, IDX-2, IDX-3 TO 1.                                NC2374.2
@@ -340,7 +340,7 @@
 034200         UNTIL TWO-99 EQUAL TO 0 AFTER THREE-99 FROM 1 BY 1       NC2374.2
 034300         UNTIL THREE-99 EQUAL TO 10.                              NC2374.2
 034400     GO TO IDX-INIT-GF-1.                                         NC2374.2
-034500*                                                                 NC2374.2
+034500*                                                                         
 034600 BUILD-TABLE.                                                     NC2374.2
 034700     MOVE ONE-99 TO GRP (IDX-1), GRP-1 (IDX-1, IDX-2),            NC2374.2
 034800         GRP-2 (IDX-1, IDX-2, IDX-3).                             NC2374.2
@@ -358,7 +358,7 @@
 036000     SET IDX-3 TO S3.                                             NC2374.2
 036100 BUILD-EXIT.                                                      NC2374.2
 036200     EXIT.                                                        NC2374.2
-036300*                                                                 NC2374.2
+036300*                                                                         
 036400 IDX-INIT-GF-1.                                                   NC2374.2
 036500     MOVE "IDX-TEST-GF-1" TO PAR-NAME.                            NC2374.2
 036600     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -377,7 +377,7 @@
 037900     PERFORM FAIL.                                                NC2374.2
 038000 IDX-WRITE-GF-1.                                                  NC2374.2
 038100     PERFORM PRINT-DETAIL.                                        NC2374.2
-038200*                                                                 NC2374.2
+038200*                                                                         
 038300 IDX-INIT-GF-2.                                                   NC2374.2
 038400     MOVE "IDX-TEST-GF-2 " TO PAR-NAME.                           NC2374.2
 038500     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -399,7 +399,7 @@
 040100     PERFORM FAIL.                                                NC2374.2
 040200 IDX-WRITE-GF-2.                                                  NC2374.2
 040300     PERFORM PRINT-DETAIL.                                        NC2374.2
-040400*                                                                 NC2374.2
+040400*                                                                         
 040500 IDX-INIT-GF-3.                                                   NC2374.2
 040600     MOVE "IDX-TEST-GF-3" TO PAR-NAME.                            NC2374.2
 040700     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -421,7 +421,7 @@
 042300     PERFORM FAIL.                                                NC2374.2
 042400 IDX-WRITE-GF-3.                                                  NC2374.2
 042500     PERFORM PRINT-DETAIL.                                        NC2374.2
-042600*                                                                 NC2374.2
+042600*                                                                         
 042700 IDX-INIT-GF-4.                                                   NC2374.2
 042800     MOVE "IDX-TEST-GF-4" TO PAR-NAME.                            NC2374.2
 042900     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -444,7 +444,7 @@
 044600     PERFORM FAIL.                                                NC2374.2
 044700 IDX-WRITE-GF-4.                                                  NC2374.2
 044800     PERFORM PRINT-DETAIL.                                        NC2374.2
-044900*                                                                 NC2374.2
+044900*                                                                         
 045000 IDX-INIT-GF-5.                                                   NC2374.2
 045100     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
 045200     MOVE "SET AND SEARCH-ALL" TO FEATURE.                        NC2374.2
@@ -466,7 +466,7 @@
 046800     PERFORM FAIL.                                                NC2374.2
 046900 IDX-WRITE-GF-5.                                                  NC2374.2
 047000     PERFORM PRINT-DETAIL.                                        NC2374.2
-047100*                                                                 NC2374.2
+047100*                                                                         
 047200 IDX-INIT-GF-6.                                                   NC2374.2
 047300     MOVE "IDX-TEST-GF-6" TO PAR-NAME.                            NC2374.2
 047400     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -477,7 +477,7 @@
 047900     MOVE 4 TO IDENT-1.                                           NC2374.2
 048000     SET IDX-1  IDX-2  IDX-3 UP BY IDENT-1.                       NC2374.2
 048100 IDX-TEST-GF-6.                                                   NC2374.2
-048200     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "07P307"           NC2374.2
+048200     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "071307"           NC2374.2
 048300         PERFORM PASS                                             NC2374.2
 048400         GO TO IDX-WRITE-GF-6.                                    NC2374.2
 048500     GO TO IDX-FAIL-GF-6.                                         NC2374.2
@@ -486,11 +486,11 @@
 048800     GO TO IDX-WRITE-GF-6.                                        NC2374.2
 048900 IDX-FAIL-GF-6.                                                   NC2374.2
 049000     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A.            NC2374.2
-049100     MOVE "07P307" TO CORRECT-A.                                  NC2374.2
+049100     MOVE "071307" TO CORRECT-A.                                  NC2374.2
 049200     PERFORM FAIL.                                                NC2374.2
 049300 IDX-WRITE-GF-6.                                                  NC2374.2
 049400     PERFORM PRINT-DETAIL.                                        NC2374.2
-049500*                                                                 NC2374.2
+049500*                                                                         
 049600 IDX-INIT-GF-7.                                                   NC2374.2
 049700     MOVE "IDX-TEST-GF-7" TO PAR-NAME.                            NC2374.2
 049800     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -501,7 +501,7 @@
 050300     SET IDX-3 TO IDENT-4.                                        NC2374.2
 050400     SET IDX-1  IDX-2  IDX-3 UP BY IDENT-7.                       NC2374.2
 050500 IDX-TEST-GF-7.                                                   NC2374.2
-050600     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "240604"           NC2374.2
+050600     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "040607"           NC2374.2
 050700         PERFORM PASS                                             NC2374.2
 050800         GO TO IDX-WRITE-GF-7.                                    NC2374.2
 050900     GO TO IDX-FAIL-GF-7.                                         NC2374.2
@@ -509,12 +509,12 @@
 051100     PERFORM DE-LETE.                                             NC2374.2
 051200     GO TO IDX-WRITE-GF-7.                                        NC2374.2
 051300 IDX-FAIL-GF-7.                                                   NC2374.2
-051400     MOVE "240604" TO CORRECT-A.                                  NC2374.2
+051400     MOVE "040607" TO CORRECT-A.                                  NC2374.2
 051500     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A.            NC2374.2
 051600     PERFORM FAIL.                                                NC2374.2
 051700 IDX-WRITE-GF-7.                                                  NC2374.2
 051800     PERFORM PRINT-DETAIL.                                        NC2374.2
-051900*                                                                 NC2374.2
+051900*                                                                         
 052000 IDX-INIT-GF-8.                                                   NC2374.2
 052100     MOVE "IDX-TEST-GF-8" TO PAR-NAME.                            NC2374.2
 052200     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -523,7 +523,7 @@
 052500     SET IDX-1, IDX-2, IDX-3 TO IDENT-1.                          NC2374.2
 052600     SET IDX-1, IDX-2, IDX-3 DOWN BY 5.                           NC2374.2
 052700 IDX-TEST-GF-8.                                                   NC2374.2
-052800     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "140604"           NC2374.2
+052800     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) EQUAL TO "070604"           NC2374.2
 052900         PERFORM PASS                                             NC2374.2
 053000         GO TO IDX-WRITE-GF-8.                                    NC2374.2
 053100     GO TO IDX-FAIL-GF-8.                                         NC2374.2
@@ -531,12 +531,12 @@
 053300     PERFORM DE-LETE.                                             NC2374.2
 053400     GO TO IDX-WRITE-GF-8.                                        NC2374.2
 053500 IDX-FAIL-GF-8.                                                   NC2374.2
-053600     MOVE "140604" TO CORRECT-A.                                  NC2374.2
+053600     MOVE "070604" TO CORRECT-A.                                  NC2374.2
 053700     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A.            NC2374.2
 053800     PERFORM FAIL.                                                NC2374.2
 053900 IDX-WRITE-GF-8.                                                  NC2374.2
 054000     PERFORM PRINT-DETAIL.                                        NC2374.2
-054100*                                                                 NC2374.2
+054100*                                                                         
 054200 IDX-INIT-F2-9.                                                   NC2374.2
 054300     MOVE "IDX-TEST-F2-9" TO PAR-NAME.                            NC2374.2
 054400     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -559,7 +559,7 @@
 056100     PERFORM FAIL.                                                NC2374.2
 056200 IDX-WRITE-F2-9.                                                  NC2374.2
 056300     PERFORM PRINT-DETAIL.                                        NC2374.2
-056400*                                                                 NC2374.2
+056400*                                                                         
 056500 IDX-INIT-F2-10.                                                  NC2374.2
 056600     MOVE "IDX-TEST-F2-10" TO PAR-NAME.                           NC2374.2
 056700     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -582,7 +582,7 @@
 058400     PERFORM FAIL.                                                NC2374.2
 058500 IDX-WRITE-F2-10.                                                 NC2374.2
 058600     PERFORM PRINT-DETAIL.                                        NC2374.2
-058700*                                                                 NC2374.2
+058700*                                                                         
 058800 IDX-INIT-F2-11.                                                  NC2374.2
 058900     MOVE "IDX-TEST-F2-11" TO PAR-NAME.                           NC2374.2
 059000     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -604,7 +604,7 @@
 060600     MOVE "SUBSCRIPT USED FOR COMPUTED" TO RE-MARK.               NC2374.2
 060700 IDX-WRITE-F2-11.                                                 NC2374.2
 060800     PERFORM PRINT-DETAIL.                                        NC2374.2
-060900*                                                                 NC2374.2
+060900*                                                                         
 061000 IDX-INIT-F2-12.                                                  NC2374.2
 061100     MOVE "IDX-TEST-F2-12" TO PAR-NAME.                           NC2374.2
 061200     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -630,7 +630,7 @@
 063200     PERFORM FAIL.                                                NC2374.2
 063300 IDX-WRITE-F2-12.                                                 NC2374.2
 063400     PERFORM PRINT-DETAIL.                                        NC2374.2
-063500*                                                                 NC2374.2
+063500*                                                                         
 063600 IDX-INIT-F2-13.                                                  NC2374.2
 063700     MOVE "IDX-TEST-F2-13" TO PAR-NAME.                           NC2374.2
 063800     MOVE "VI-121 6.21.2" TO ANSI-REFERENCE.                      NC2374.2
@@ -653,7 +653,7 @@
 065500     PERFORM FAIL.                                                NC2374.2
 065600 IDX-WRITE-F2-13.                                                 NC2374.2
 065700     PERFORM PRINT-DETAIL.                                        NC2374.2
-065800*                                                                 NC2374.2
+065800*                                                                         
 065900 CCVS-EXIT SECTION.                                               NC2374.2
 066000 CCVS-999999.                                                     NC2374.2
 066100     GO TO CLOSE-FILES.                                           NC2374.2

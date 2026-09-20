@@ -227,7 +227,7 @@
 022900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG1034.2
 023000      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG1034.2
 023100      ADD PASS-COUNTER TO ERROR-HOLD.                             SG1034.2
-023200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG1034.2
+023200*                                                                         
 023300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG1034.2
 023400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG1034.2
 023500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG1034.2
@@ -296,10 +296,10 @@
 029800 SEC20 SECTION 20.                                                SG1034.2
 029900 TEST-1.                                                          SG1034.2
 030000     PERFORM SEC80.                                               SG1034.2
-030100*    NOTE THAT AN INDEPENDENT SEGMENT SHOULD BE MADE AVAILABLE TO SG1034.2
-030200*         THE PROGRAM IN ITS INITIAL STATE EACH TIME IT IS        SG1034.2
-030300*         REFERENCED, AN ALTER STATEMENT WILL BE USED TO TEST THISSG1034.2
-030400*         FEATURE.                                                SG1034.2
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
 030500     PERFORM SEC80.                                               SG1034.2
 030600     IF INITIAL-STATE-A EQUAL TO 2 PERFORM PASS                   SG1034.2
 030700         ELSE MOVE INITIAL-STATE-A TO COMPUTED-A                  SG1034.2
@@ -314,7 +314,7 @@
 031600     PERFORM PRINT-DETAIL.                                        SG1034.2
 031700 TEST-2.                                                          SG1034.2
 031800     MOVE SPACE TO CORRECT-A.                                     SG1034.2
-031900*    NOTE THAT A "GO TO"   A NON-RESIDENT ROUTINE WILL BE TESTED. SG1034.2
+031900*                                                                         
 032000     GO TO P6001.                                                 SG1034.2
 032100 GO-TO-RETURN.                                                    SG1034.2
 032200     IF GO-TO-IND EQUAL TO "G" PERFORM PASS                       SG1034.2
@@ -330,8 +330,8 @@
 033200     PERFORM PRINT-DETAIL.                                        SG1034.2
 033300 TEST-3.                                                          SG1034.2
 033400     MOVE SPACE TO CORRECT-A.                                     SG1034.2
-033500*    NOTE THAT THIS TEST PERFORMS A ROUTINE LOCATED IN AN         SG1034.2
-033600*             INDEPENDENT SEGMENT.                                SG1034.2
+033500*                                                                         
+033600*                                                                         
 033700     PERFORM P9301 THRU P9303.                                    SG1034.2
 033800     IF PERFORM-RSLT EQUAL TO "ABCD" PERFORM PASS                 SG1034.2
 033900         ELSE MOVE PERFORM-RSLT TO COMPUTED-A                     SG1034.2
@@ -346,9 +346,9 @@
 034800     PERFORM PRINT-DETAIL.                                        SG1034.2
 034900 TEST-4.                                                          SG1034.2
 035000     MOVE SPACE TO CORRECT-A.                                     SG1034.2
-035100*    NOTE THAT THIS TEST CAUSES AN INDEPENDENT SEGMENT TO ALTER   SG1034.2
-035200*             A STATEMENT IN THE FIXED PORTION AND THEN CHECKS TO SG1034.2
-035300*             SEE THAT THE ALTER IS IN EFFECT.                    SG1034.2
+035100*                                                                         
+035200*                                                                         
+035300*                                                                         
 035400     PERFORM SEC95.                                               SG1034.2
 035500 ALTER-RES.                                                       SG1034.2
 035600     GO TO ALTER-RES1.                                            SG1034.2
@@ -372,9 +372,9 @@
 037400 TEST-5.                                                          SG1034.2
 037500     IF PAR-NAME EQUAL TO "TEST-6         "  GO TO P2006.         SG1034.2
 037600     MOVE "TEST-5" TO PAR-NAME.                                   SG1034.2
-037700*    NOTE THAT THIS TEST REQUIRES THE LOGICAL PATH OF THE PROGRAM SG1034.2
-037800*             TO PROCEED FROM THE FIXED PORTION THROUGH AN        SG1034.2
-037900*             INDEPENDENT SEGMENT.                                SG1034.2
+037700*                                                                         
+037800*                                                                         
+037900*                                                                         
 038000 P2005.                                                           SG1034.2
 038100     MOVE "A" TO FALL-RSLT-1.                                     SG1034.2
 038200 P2006.  EXIT.                                                    SG1034.2

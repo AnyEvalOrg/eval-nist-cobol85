@@ -1,49 +1,49 @@
 000100 IDENTIFICATION DIVISION.                                         IX1094.2
 000200 PROGRAM-ID.                                                      IX1094.2
 000300     IX109A.                                                      IX1094.2
-000400****************************************************************  IX1094.2
-000500*                                                              *  IX1094.2
-000600*    VALIDATION FOR:-                                          *  IX1094.2
-000700*                                                              *  IX1094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1094.2
-000900*                                                              *  IX1094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1094.2
-001100*                                                              *  IX1094.2
-001200****************************************************************  IX1094.2
-001300*                                                                 IX1094.2
-001400*    1.  THE  ROUTINE  CREATES  THE  MASS  STORAGE  FILE  IX-FS3  IX1094.2
-001500*        CONTAINING  50  RECORDS. EACH BLOCK CONTAINS 2 RECORDS,  IX1094.2
-001600*        EACH  RECORD  CONTAINS  240 CHARACTERS, ORGANIZATION IS  IX1094.2
-001700*        INDEXED,  ACCESS  IS SEQUENTIAL. THIS ROUTINE CHECKS AS  IX1094.2
-001800*        MANY  FILE STATUS CODES AS POSSIBLE. HOWEVER, IT IS NOT  IX1094.2
-001900*        POSSIBLE TO CHECK ALL CODES NEITHER IN THAT PROGRAM NOR  IX1094.2
-002000*        IN THE FOLLOWING ONE.                                    IX1094.2
-002100*                                                                 IX1094.2
-002200*    2. THE ROUTINE READS THE CREATED FILE,VERIFIES IT AND       *IX1094.2
-002300*       CHECKS THE FILE STATUS CODES:                             IX1094.2
-002400*           00  -  AFTER OPEN OUTPUT                              IX1094.2
-002500*           00  -  AFTER WRITE                                    IX1094.2
-002600*           21  -  AFTER WRITE  (VIOLATE ASCENDING SEQUENCE)      IX1094.2
-002700*           00  -  AFTER CLOSE OUTPUT                             IX1094.2
-002800*           00  -  AFTER OPEN INPUT                               IX1094.2
-002900*           00  -  AFTER READ    (WITHOUT AT END)                 IX1094.2
-003000*           10  -  AFTER READ    (SEE  IX-4, 1.3.4, (2) A)        IX1094.2
-003100*           00  -  AFTER CLOSE INPUT                              IX1094.2
-003200*           00  -  AFTER OPEN INPUT                               IX1094.2
-003300*           00  -  AFTER READ ... END  ...                        IX1094.2
-003400*           10  -  AFTER READ ... END  ...                        IX1094.2
-003500*           46  -  AFTER READ ... END  ...                        IX1094.2
-003600*                                                                 IX1094.2
-003700*    4. X-CARDS USED IN THIS PROGRAM:                             IX1094.2
-003800*                                                                 IX1094.2
-003900*                 XXXXX024                                        IX1094.2
-004000*                 XXXXX055.                                       IX1094.2
-004100*         P       XXXXX062.                                       IX1094.2
-004200*                 XXXXX082.                                       IX1094.2
-004300*                 XXXXX083.                                       IX1094.2
-004400*         C       XXXXX084                                        IX1094.2
-004500*                                                                 IX1094.2
-004600*                                                                 IX1094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 ENVIRONMENT DIVISION.                                            IX1094.2
 004800 CONFIGURATION SECTION.                                           IX1094.2
 004900 SOURCE-COMPUTER.                                                 IX1094.2
@@ -52,10 +52,10 @@
 005200     GNU-Linux.                                                   IX1094.2
 005300 INPUT-OUTPUT SECTION.                                            IX1094.2
 005400 FILE-CONTROL.                                                    IX1094.2
-006000*                                                                 IX1094.2
+006000*                                                                         
 006100     SELECT PRINT-FILE ASSIGN TO                                  IX1094.2
 006200     "REPORT".                                                    IX1094.2
-006300*                                                                 IX1094.2
+006300*                                                                         
 006400     SELECT IX-FS3 ASSIGN                                         IX1094.2
 006500     "XXXXX024"                                                   IX1094.2
 006600     ORGANIZATION IS INDEXED                                      IX1094.2
@@ -503,7 +503,7 @@
 056400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1094.2
 056500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1094.2
 056600      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1094.2
-056700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1094.2
+056700*                                                                         
 056800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1094.2
 056900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1094.2
 057000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1094.2
@@ -591,13 +591,13 @@
 065200     MOVE 000001 TO XRECORD-NUMBER (1).                           IX1094.2
 065300     MOVE 0 TO COUNT-OF-RECS.                                     IX1094.2
 065400                                                                  IX1094.2
-065500******************************************************************IX1094.2
-065600*   TEST  1                                                      *IX1094.2
-065700*         OPEN OUTPUT ...                 00 EXPECTED            *IX1094.2
-065800*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-065900*    STATUS 00 CHECK ON OUTPUT FILE IX-FS3                       *IX1094.2
-066000*    THE OUTPUT STATEMENT IS SUCCESSFULLY EXECUTED               *IX1094.2
-066100******************************************************************IX1094.2
+065500*                                                                         
+065600*                                                                         
+065700*                                                                         
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
 066200 OPN-INIT-GF-01-0.                                                IX1094.2
 066300     MOVE 1 TO STATUS-TEST-00.                                    IX1094.2
 066400     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
@@ -617,13 +617,13 @@
 067800     PERFORM PASS.                                                IX1094.2
 067900 OPN-WRITE-GF-01-0.                                               IX1094.2
 068000     PERFORM PRINT-DETAIL.                                        IX1094.2
-068100******************************************************************IX1094.2
-068200*   TEST  2                                                      *IX1094.2
-068300*         WRITE                           00 EXPECTED            *IX1094.2
-068400*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-068500*    CREATING A INDEXED FILE WITH 50 RECORDS                     *IX1094.2
-068600*    KEY:  FROM  000000001 TO 000000050                          *IX1094.2
-068700******************************************************************IX1094.2
+068100*                                                                         
+068200*                                                                         
+068300*                                                                         
+068400*                                                                         
+068500*                                                                         
+068600*                                                                         
+068700*                                                                         
 068800 WRI-INIT-GF-01-0.                                                IX1094.2
 068900     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
 069000     MOVE 0 TO STATUS-TEST-00.                                    IX1094.2
@@ -633,7 +633,7 @@
 069400     MOVE XRECORD-NUMBER (1) TO GRP-0101-KEY.                     IX1094.2
 069500     MOVE GRP-0101 TO XRECORD-KEY (1).                            IX1094.2
 069600     MOVE GRP-0102 TO ALTERNATE-KEY1 (1).                         IX1094.2
-069700*    THE VALUE OF THE ALTERNATE KEY IS 50 TIMES UNCHANGED        *IX1094.2
+069700*                                                                         
 069800     MOVE FILE-RECORD-INFO (1) TO IX-FS3R1-F-G-240.               IX1094.2
 069900     WRITE IX-FS3R1-F-G-240.                                      IX1094.2
 070000     IF IX-FS3-STATUS  NOT = "00"                                 IX1094.2
@@ -663,12 +663,12 @@
 072400     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          IX1094.2
 072500     PERFORM PRINT-DETAIL.                                        IX1094.2
 072600                                                                  IX1094.2
-072700******************************************************************IX1094.2
-072800*   TEST  3                                                      *IX1094.2
-072900*         WRITE  (WRONG SEQUENCE)         21 EXPECTED            *IX1094.2
-073000*         IX-4, 1.3.4 (3) A                                      *IX1094.2
-073100*    KEY:        000000049                                       *IX1094.2
-073200******************************************************************IX1094.2
+072700*                                                                         
+072800*                                                                         
+072900*                                                                         
+073000*                                                                         
+073100*                                                                         
+073200*                                                                         
 073300 WRI-INIT-GF-02-0.                                                IX1094.2
 073400     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
 073500     MOVE 0 TO STATUS-TEST-00.                                    IX1094.2
@@ -695,11 +695,11 @@
 075600 WRI-WRITE-GF-02-0.                                               IX1094.2
 075700     PERFORM PRINT-DETAIL.                                        IX1094.2
 075800                                                                  IX1094.2
-075900******************************************************************IX1094.2
-076000*   TEST  4                                                      *IX1094.2
-076100*         CLOSE OUTPUT                    00 EXPECTED            *IX1094.2
-076200*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-076300******************************************************************IX1094.2
+075900*                                                                         
+076000*                                                                         
+076100*                                                                         
+076200*                                                                         
+076300*                                                                         
 076400 CLO-INIT-GF-01-0.                                                IX1094.2
 076500     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
 076600     MOVE "CLOSE OUTPUT:00 EXP." TO FEATURE.                      IX1094.2
@@ -719,15 +719,15 @@
 078000 CLO-WRITE-GF-01-0.                                               IX1094.2
 078100     PERFORM PRINT-DETAIL.                                        IX1094.2
 078200                                                                  IX1094.2
-078300******************************************************************IX1094.2
-078400*    A INDEXED FILE WITH 50 RECORDS HAS BEEN CREATED.            *IX1094.2
-078500******************************************************************IX1094.2
+078300*                                                                         
+078400*                                                                         
+078500*                                                                         
 078600                                                                  IX1094.2
-078700******************************************************************IX1094.2
-078800*   TEST  5                                                      *IX1094.2
-078900*         OPEN INPUT                      00 EXPECTED            *IX1094.2
-079000*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-079100******************************************************************IX1094.2
+078700*                                                                         
+078800*                                                                         
+078900*                                                                         
+079000*                                                                         
+079100*                                                                         
 079200 OPN-INIT-GF-02-0.                                                IX1094.2
 079300     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
 079400     MOVE "OPEN INPUT:  00 EXP." TO FEATURE.                      IX1094.2
@@ -747,12 +747,12 @@
 080800     PERFORM PASS.                                                IX1094.2
 080900 OPN-WRITE-GF-02-0.                                               IX1094.2
 081000     PERFORM PRINT-DETAIL.                                        IX1094.2
-081100******************************************************************IX1094.2
-081200*    STATUS 10 CHECK ON INPUT FILE IX-FS3.                       *IX1094.2
-081300*    THIS TEST READS AND VERIFIES THE RECORDS WRITTEN IN         *IX1094.2
-081400*    INX-TEST-004. THE USE ON INPUT PROCESSES THE AT END         *IX1094.2
-081500*    CONDITION. THERE IS NO AT END PHRASE IN THE READ STATEMENT. *IX1094.2
-081600******************************************************************IX1094.2
+081100*                                                                         
+081200*                                                                         
+081300*                                                                         
+081400*                                                                         
+081500*                                                                         
+081600*                                                                         
 081700 REA-INIT-F1-01-0.                                                IX1094.2
 081800     MOVE 1 TO STATUS-TEST-10.                                    IX1094.2
 081900     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
@@ -786,11 +786,11 @@
 084700         ADD 1 TO RECORDS-IN-ERROR.                               IX1094.2
 084800     GO TO REA-TEST-F1-01-0.                                      IX1094.2
 084900 REA-TEST-F1-01-1.                                                IX1094.2
-085000******************************************************************IX1094.2
-085100*   TEST  6                                                      *IX1094.2
-085200*         READ ... .   (WITHOUT   AT END) 00 EXPECTED            *IX1094.2
-085300*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-085400******************************************************************IX1094.2
+085000*                                                                         
+085100*                                                                         
+085200*                                                                         
+085300*                                                                         
+085400*                                                                         
 085500     MOVE "REA-TEST-F1-01-0" TO PAR-NAME.                         IX1094.2
 085600     MOVE "READ (USE):  00 EXP."     TO FEATURE.                  IX1094.2
 085700     IF STATUS-TEST-READ = 0                                      IX1094.2
@@ -805,12 +805,12 @@
 086600     PERFORM PASS.                                                IX1094.2
 086700 REA-WRITE-F1-01-0.                                               IX1094.2
 086800     PERFORM PRINT-DETAIL.                                        IX1094.2
-086900*                                                                 IX1094.2
+086900*                                                                         
 087000 REA-INIT-GF-02-0.                                                IX1094.2
-087100******************************************************************IX1094.2
-087200*   TEST  7                                                      *IX1094.2
-087300*         VERIFY FILE                                            *IX1094.2
-087400******************************************************************IX1094.2
+087100*                                                                         
+087200*                                                                         
+087300*                                                                         
+087400*                                                                         
 087500     IF RECORDS-IN-ERROR EQUAL TO ZERO                            IX1094.2
 087600         GO TO REA-TEST-F1-02-0.                                  IX1094.2
 087700     MOVE "ERRORS IN READING IX-FS3" TO RE-MARK.                  IX1094.2
@@ -835,11 +835,11 @@
 089600     MOVE "REA-TEST-F1-02-0" TO PAR-NAME.                         IX1094.2
 089700     MOVE "VERIFY FILE IX-FS3" TO FEATURE.                        IX1094.2
 089800     PERFORM PRINT-DETAIL.                                        IX1094.2
-089900******************************************************************IX1094.2
-090000*   TEST  8                                                      *IX1094.2
-090100*         READ.   (WITHOUT   AT END)      10 EXPECTED            *IX1094.2
-090200*         IX-4, 1.3.4 (2) A                                      *IX1094.2
-090300******************************************************************IX1094.2
+089900*                                                                         
+090000*                                                                         
+090100*                                                                         
+090200*                                                                         
+090300*                                                                         
 090400 REA-INIT-F1-03-0.                                                IX1094.2
 090500     IF IX-FS3-STATUS EQUAL TO "10"                               IX1094.2
 090600         GO TO REA-PASS-F1-03-0.                                  IX1094.2
@@ -855,11 +855,11 @@
 091600     MOVE "READ :       10 EXP." TO FEATURE.                      IX1094.2
 091700     MOVE "REA-TEST-F1-03-0" TO PAR-NAME.                         IX1094.2
 091800     PERFORM PRINT-DETAIL.                                        IX1094.2
-091900******************************************************************IX1094.2
-092000*   TEST  9                                                      *IX1094.2
-092100*         CLOSE INPUT                     00 EXPECTED            *IX1094.2
-092200*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-092300******************************************************************IX1094.2
+091900*                                                                         
+092000*                                                                         
+092100*                                                                         
+092200*                                                                         
+092300*                                                                         
 092400 CLO-TEST-GF-02-0.                                                IX1094.2
 092500     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
 092600     MOVE "CLOSE INPUT: 00 EXP."  TO FEATURE.                     IX1094.2
@@ -878,11 +878,11 @@
 093900 CLO-WRITE-GF-02-0.                                               IX1094.2
 094000     PERFORM PRINT-DETAIL.                                        IX1094.2
 094100                                                                  IX1094.2
-094200******************************************************************IX1094.2
-094300*   TEST  10                                                     *IX1094.2
-094400*         OPEN INPUT   (FOR READ ...  AT END) 00 EXPECTED        *IX1094.2
-094500*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-094600******************************************************************IX1094.2
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
+094600*                                                                         
 094700 OPN-INIT-GF-03-0.                                                IX1094.2
 094800     MOVE SPACES TO IX-FS3-STATUS.                                IX1094.2
 094900     MOVE "OPEN  INPUT: 00 EXP." TO FEATURE.                      IX1094.2
@@ -902,12 +902,12 @@
 096300     PERFORM PASS.                                                IX1094.2
 096400 OPN-WRITE-GF-03-0.                                               IX1094.2
 096500     PERFORM PRINT-DETAIL.                                        IX1094.2
-096600******************************************************************IX1094.2
-096700*    STATUS IO CHECK ON INPUT FILE IX-FS3.                       *IX1094.2
-096800*    THIS TEST READS AND VERIFIES THE RECORDS WRITTEN IN         *IX1094.2
-096900*    TEST 2.       THE USE ON INPUT PROCESSES THE AT END         *IX1094.2
-097000*    CONDITION.                                                   IX1094.2
-097100******************************************************************IX1094.2
+096600*                                                                         
+096700*                                                                         
+096800*                                                                         
+096900*                                                                         
+097000*                                                                         
+097100*                                                                         
 097200 REA-INIT-F1-04-0.                                                IX1094.2
 097300     MOVE 1 TO STATUS-TEST-10.                                    IX1094.2
 097400     MOVE ZERO TO STATUS-TEST-READ.                               IX1094.2
@@ -938,11 +938,11 @@
 099900         ADD 1 TO RECORDS-IN-ERROR.                               IX1094.2
 100000     GO TO REA-TEST-F1-04-0.                                      IX1094.2
 100100 REA-TEST-F1-04-1.                                                IX1094.2
-100200******************************************************************IX1094.2
-100300*   TEST  11                                                     *IX1094.2
-100400*         READ ...  AT END                00 EXPECTED            *IX1094.2
-100500*         IX-3, 1.3.4 (1) A                                      *IX1094.2
-100600******************************************************************IX1094.2
+100200*                                                                         
+100300*                                                                         
+100400*                                                                         
+100500*                                                                         
+100600*                                                                         
 100700     MOVE "REA-TEST-F1-04-0" TO PAR-NAME.                         IX1094.2
 100800     MOVE "READ...END:  00 EXP."     TO FEATURE.                  IX1094.2
 100900     IF STATUS-TEST-READ = 0                                      IX1094.2
@@ -957,13 +957,13 @@
 101800     PERFORM PASS.                                                IX1094.2
 101900 REA-WRITE-F1-04-0.                                               IX1094.2
 102000     PERFORM PRINT-DETAIL.                                        IX1094.2
-102100*                                                                 IX1094.2
+102100*                                                                         
 102200 REA-TEST-F1-05-0.                                                IX1094.2
-102300******************************************************************IX1094.2
-102400*   TEST  12                                                     *IX1094.2
-102500*         READ ... AT END    10 EXPECTED                         *IX1094.2
-102600*         IX-4, 1.3.4 (2) A 1)                                   *IX1094.2
-102700******************************************************************IX1094.2
+102300*                                                                         
+102400*                                                                         
+102500*                                                                         
+102600*                                                                         
+102700*                                                                         
 102800     IF IX-FS3-STATUS EQUAL TO "10"                               IX1094.2
 102900         GO TO REA-PASS-F1-05-0.                                  IX1094.2
 103000 REA-FAIL-F1-05-0.                                                IX1094.2
@@ -978,11 +978,11 @@
 103900     MOVE "READ...END:  10 EXP." TO FEATURE.                      IX1094.2
 104000     MOVE "REA-TEST-F1-05-0" TO PAR-NAME.                         IX1094.2
 104100     PERFORM PRINT-DETAIL.                                        IX1094.2
-104200******************************************************************IX1094.2
-104300*   TEST  13                                                     *IX1094.2
-104400*         READ ... (AFTER AT END)      46 EXPECTED               *IX1094.2
-104500*         IX-5, 1.3.4 (5) E 3)                                   *IX1094.2
-104600******************************************************************IX1094.2
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
 104700 REA-TEST-F1-06-0.                                                IX1094.2
 104800     MOVE 13 TO TEST-NO.                                          IX1094.2
 104900     READ IX-FS3 AT END GO TO REA-TEST-F1-06-1.                   IX1094.2

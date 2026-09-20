@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         IX2124.2
 000200 PROGRAM-ID.                                                      IX2124.2
 000300     IX212A.                                                      IX2124.2
-000400****************************************************************  IX2124.2
-000500*                                                              *  IX2124.2
-000600*    VALIDATION FOR:-                                          *  IX2124.2
-000700*                                                              *  IX2124.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2124.2
-000900*                                                              *  IX2124.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2124.2
-001100*                                                              *  IX2124.2
-001200****************************************************************  IX2124.2
-001300*                                                              *  IX2124.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IX2124.2
-001500*                                                              *  IX2124.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IX2124.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IX2124.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IX2124.2
-001900*                                                              *  IX2124.2
-002000****************************************************************  IX2124.2
-002100*                                                              *  IX2124.2
-002200*    THIS IS IX212A.                                              IX2124.2
-002300*    THIS  PROGRAM  CREATES  A  100  RECORD FIXED LENGTH INDEXED  IX2124.2
-002400*    FILE  WHOSE  ACCESS  IS  DYNAMIC  AND CONTAINS 10 ALTERNATE  IX2124.2
-002500*    KEYS. THE INDEXED FILE IS MANIPULATED BY THE ALTERNATE KEYS  IX2124.2
-002600*    USING THE FOLLOWING VERBS:                                   IX2124.2
-002700*         . DELETE                                                IX2124.2
-002800*         . READ ... NEXT RECORD                                  IX2124.2
-002900*         . READ ... RECORD KEY                                   IX2124.2
-003000*         . REWRITE                                               IX2124.2
-003100*         . START                                                 IX2124.2
-003200*                                                                 IX2124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            IX2124.2
 003400 CONFIGURATION SECTION.                                           IX2124.2
 003500 SOURCE-COMPUTER.                                                 IX2124.2
@@ -298,7 +298,7 @@
 034600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2124.2
 034700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2124.2
 034800      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2124.2
-034900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2124.2
+034900*                                                                         
 035000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2124.2
 035100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2124.2
 035200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2124.2

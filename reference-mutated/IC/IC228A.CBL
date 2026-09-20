@@ -1,44 +1,44 @@
 000100 IDENTIFICATION DIVISION.                                         IC2284.2
 000200 PROGRAM-ID.                                                      IC2284.2
 000300     IC228A.                                                      IC2284.2
-000400****************************************************************  IC2284.2
-000500*                                                              *  IC2284.2
-000600*    VALIDATION FOR:-                                          *  IC2284.2
-000700*                                                              *  IC2284.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2284.2
-000900*                                                              *  IC2284.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2284.2
-001100*                                                              *  IC2284.2
-001200****************************************************************  IC2284.2
-001300*                                                              *  IC2284.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2284.2
-001500*                                                              *  IC2284.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2284.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2284.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2284.2
-001900*                                                              *  IC2284.2
-002000****************************************************************  IC2284.2
-002100*                                                              *  IC2284.2
-002200*    PROGRAM IC228A AND IC228A-1 WILL TEST THE NEW LANGUAGE    *  IC2284.2
-002300*    ELEMENTS FOR THE LEVEL 2 INTER-PROGRAM COMMUNICATION      *  IC2284.2
-002400*    MODULE.                                                   *  IC2284.2
-002500*    THE NEW LANGUAGE ELEMENT  TO BE TESTED WILL BE:           *  IC2284.2
-002600*          THE "GLOBAL"       PHRASE IN WORKING-STORAGE.       *  IC2284.2
-002700*    THE TWO PROGRAMS WILL BE COMPILED IN THE SAME FLOW        *  IC2284.2
-002800*    (TO TEST THE "END PROGRAM" STATEMENT) AS SHOWN BELOW:     *  IC2284.2
-002900*    IDENTIFICATION DIVISION.                                  *  IC2284.2
-003000*    PROGRAM-ID. IC228A.                                       *  IC2284.2
-003100*              .                                               *  IC2284.2
-003200*              .                                               *  IC2284.2
-003300*              .                                               *  IC2284.2
-003400*    IDENTIFICATION DIVISION.                                  *  IC2284.2
-003500*    PROGRAM-ID. IC228A-1.                                     *  IC2284.2
-003600*              .                                               *  IC2284.2
-003700*              .                                               *  IC2284.2
-003800*              .                                               *  IC2284.2
-003900*    END PROGRAM IC228A-1.                                     *  IC2284.2
-004000*    END PROGRAM IC228A.                                       *  IC2284.2
-004100****************************************************************  IC2284.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 ENVIRONMENT DIVISION.                                            IC2284.2
 004300 CONFIGURATION SECTION.                                           IC2284.2
 004400 SOURCE-COMPUTER.                                                 IC2284.2
@@ -62,7 +62,7 @@
 006200   03        GLO-DATA-3          PIC 9(8).                        IC2284.2
 006300   03        GLO-DATA-4          PIC 9(4).                        IC2284.2
 006400 01  SUB                         PIC 9(4)  VALUE ZERO.            IC2284.2
-006500*                                                                 IC2284.2
+006500*                                                                         
 006600 01  TEST-RESULTS.                                                IC2284.2
 006700     02 FILLER                   PIC X      VALUE SPACE.          IC2284.2
 006800     02 FEATURE                  PIC X(20)  VALUE SPACE.          IC2284.2
@@ -250,7 +250,7 @@
 025200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2284.2
 025300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2284.2
 025400      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2284.2
-025500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2284.2
+025500*                                                                         
 025600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2284.2
 025700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2284.2
 025800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2284.2
@@ -380,55 +380,55 @@
 038200             MOVE   "INCORRECT VALUE RETURNED" TO RE-MARK         IC2284.2
 038300             PERFORM FAIL                                         IC2284.2
 038400             PERFORM PRINT-DETAIL.                                IC2284.2
-038500*                                                                 IC2284.2
+038500*                                                                         
 038600 CCVS-EXIT SECTION.                                               IC2284.2
 038700 CCVS-999999.                                                     IC2284.2
 038800     GO TO CLOSE-FILES.                                           IC2284.2
 038900 IDENTIFICATION DIVISION.                                         IC2284.2
 039000 PROGRAM-ID.                                                      IC2284.2
 039100     IC228A-1.                                                    IC2284.2
-039200****************************************************************  IC2284.2
-039300*                                                              *  IC2284.2
-039400*    VALIDATION FOR:-                                          *  IC2284.2
-039500*                                                              *  IC2284.2
-039600*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2284.2
-039700*                                                              *  IC2284.2
-039800*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2284.2
-039900*                                                              *  IC2284.2
-040000****************************************************************  IC2284.2
-040100*                                                              *  IC2284.2
-040200*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2284.2
-040300*                                                              *  IC2284.2
-040400*        X-55  - SYSTEM PRINTER NAME.                          *  IC2284.2
-040500*        X-82  - SOURCE COMPUTER NAME.                         *  IC2284.2
-040600*        X-83  - OBJECT COMPUTER NAME.                         *  IC2284.2
-040700*                                                              *  IC2284.2
-040800****************************************************************  IC2284.2
-040900*                                                              *  IC2284.2
-041000*    PROGRAM IC228A AND IC228A-1 WILL TEST THE NEW LANGUAGE    *  IC2284.2
-041100*    ELEMENTS FOR THE LEVEL 2 INTER-PROGRAM COMMUNICATION      *  IC2284.2
-041200*    MODULE.                                                   *  IC2284.2
-041300*    THE NEW LANGUAGE ELEMENTS TO BE TESTED WILL BE:           *  IC2284.2
-041400*           THE "GLOBAL" CLAUSE IN WORKING-STORAGE.          *    IC2284.2
-041500*    THE TWO PROGRAMS WILL BE COMPILED IN THE SAME FLOW        *  IC2284.2
-041600*    (TO TEST THE "END PROGRAM" STATEMENT) AS SHOWN BELOW:     *  IC2284.2
-041700*    IDENTIFICATION DIVISION.                                  *  IC2284.2
-041800*    PROGRAM-ID. IC228A.                                       *  IC2284.2
-041900*              .                                               *  IC2284.2
-042000*              .                                               *  IC2284.2
-042100*              .                                               *  IC2284.2
-042200*    IDENTIFICATION DIVISION.                                  *  IC2284.2
-042300*    PROGRAM-ID. IC228A-1.                                     *  IC2284.2
-042400*              .                                               *  IC2284.2
-042500*              .                                               *  IC2284.2
-042600*              .                                               *  IC2284.2
-042700*    END PROGRAM IC228A-1.                                     *  IC2284.2
-042800*    END PROGRAM IC228A.                                       *  IC2284.2
-042900****************************************************************  IC2284.2
+039200*                                                                         
+039300*                                                                         
+039400*                                                                         
+039500*                                                                         
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
+039900*                                                                         
+040000*                                                                         
+040100*                                                                         
+040200*                                                                         
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
+040900*                                                                         
+041000*                                                                         
+041100*                                                                         
+041200*                                                                         
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
+042600*                                                                         
+042700*                                                                         
+042800*                                                                         
+042900*                                                                         
 043000 ENVIRONMENT DIVISION.                                            IC2284.2
-043100*INPUT-OUTPUT SECTION.                                            IC2284.2
+043100*                                                                         
 043200 DATA DIVISION.                                                   IC2284.2
-043300*FILE SECTION.                                                    IC2284.2
+043300*                                                                         
 043400 WORKING-STORAGE SECTION.                                         IC2284.2
 043500 PROCEDURE DIVISION.                                              IC2284.2
 043600 SECT-IC228A-1-001 SECTION.                                       IC2284.2

@@ -1,78 +1,78 @@
 000100 IDENTIFICATION DIVISION.                                         IX2084.2
 000200 PROGRAM-ID.                                                      IX2084.2
 000300     IX208A.                                                      IX2084.2
-000400****************************************************************  IX2084.2
-000500*                                                              *  IX2084.2
-000600*    VALIDATION FOR:-                                          *  IX2084.2
-000700*                                                              *  IX2084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2084.2
-000900*                                                              *  IX2084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2084.2
-001100*                                                              *  IX2084.2
-001200****************************************************************  IX2084.2
-001300*    THE FUNCTION OF THIS PROGRAM IS TO TEST THE PERMISSIBLE SYN- IX2084.2
-001400*    TACTICAL CONSTRUCTS OF COBOL ELEMENTS ASSOCIATED WITH LEVEL 2IX2084.2
-001500*    OF THE INDEXED I-O MODULE.  THE ELEMENTS TESTED IN THIS      IX2084.2
-001600*    ROUTINE ARE:                                                 IX2084.2
-001700*                                                                 IX2084.2
-001800*    (1) READ STATEMENT;                                          IX2084.2
-001900*    (2) START STATEMENT;                                         IX2084.2
-002000*    (3) USE STATEMENT.                                           IX2084.2
-002100*                                                                 IX2084.2
-002200*    EACH ELEMENT TESTED WILL BE EXERCISED SEMANTICALLY BY THIS   IX2084.2
-002300*    ROUTINE.                                                     IX2084.2
-002400*                                                                 IX2084.2
-002500*                                                                 IX2084.2
-002600*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX2084.2
-002700*                                                                 IX2084.2
-002800*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2084.2
-002900*                    CLAUSE FOR DATA FILE IX-FS1                  IX2084.2
-003000*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX2084.2
-003100*                    CLAUSE FOR DATA FILE IX-FD2                  IX2084.2
-003200*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSGN TO    IX2084.2
-003300*                    CLAUSE FOR INDEX FILE IX-FS1                 IX2084.2
-003400*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX2084.2
-003500*                    CLAUSE FOR INDEX FILE IX-FD2                 IX2084.2
-003600*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX2084.2
-003700*             X-69   ADDITIONAL VALUE OF PHRASES                  IX2084.2
-003800*             X-74   VALUE OF IMPLEMENTOR-NAME                    IX2084.2
-003900*             X-75   OBJECT OF VALUE OF CLAUSE FOR FILE IX-FS1    IX2084.2
-004000*             X-76   OBJECT OF VALUE OF CLAUSE FOR FILE IX-FD2    IX2084.2
-004100*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX2084.2
-004200*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX2084.2
-004300*                                                                 IX2084.2
-004400*        NOTE:  X-CARDS 44,45,69,74,75 AND 76 ARE OPTIONAL        IX2084.2
-004500*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX2084.2
-004600*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX2084.2
-004700*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX2084.2
-004800*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX2084.2
-004900*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX2084.2
-005000*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX2084.2
-005100*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX2084.2
-005200*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX2084.2
-005300*               THEY ARE AS FOLLOWS                               IX2084.2
-005400*                                                                 IX2084.2
-005500*                  C  SELECTS X-CARDS 74,75 AND 76                IX2084.2
-005600*                  G  SELECTS X-CARDS 69                          IX2084.2
-005700*                  J  SELECTS X-CARDS 44 AND 45                   IX2084.2
-005800*                                                                 IX2084.2
-005900*        NOTE:  THERE IS OPTIONAL SOURCE CODE IN THIS PROGRAM     IX2084.2
-006000*               FOR THE CONVENIENCE OF THE USER.  THIS OPTIONAL   IX2084.2
-006100*               CODE IS IDENTIFIED BY THE LETTER T,U OR X IN      IX2084.2
-006200*               POSITION 7  OF THE SOURCE LINE.  USE OF           IX2084.2
-006300*               SOURCE CODE WITH LETTER X WILL PRINT THE CONTENTS IX2084.2
-006400*               OF THE FILES AFTER THE TEST REPORT.  FOR CODE     IX2084.2
-006500*               WITH LETTERS T OR U ONLY ONE SHOULD BE SELECTED.  IX2084.2
-006600*               EITHER THE T"S OR THE U"S SHOULD BE USED EXCLU-   IX2084.2
-006700*               SIVELY, NOT BOTH.  THE T"S PROVIDE A 29 CHARACTER IX2084.2
-006800*               INDEXED KEY SIZE FOR THE FILE AND THE U"S PROVIDE IX2084.2
-006900*               AN INDEXED KEY NO GREATER THAN 8 CHARACTERS.      IX2084.2
-007000*               IF THE VP-ROUTINE IS USED THE APPROPRIATE         IX2084.2
-007100*               SOURCE CODE MAY BE SELECTED BY SPECIFYING THE     IX2084.2
-007200*               RESPECTIVE LETTER IN THE "*OPT" VP-ROUTINE CONTROLIX2084.2
-007300*               CARD.                                             IX2084.2
-007400*                                                                 IX2084.2
-007500******************************************************            IX2084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
 007600 ENVIRONMENT DIVISION.                                            IX2084.2
 007700 CONFIGURATION SECTION.                                           IX2084.2
 007800 SOURCE-COMPUTER.                                                 IX2084.2
@@ -409,7 +409,7 @@
 046400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2084.2
 046500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2084.2
 046600      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2084.2
-046700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2084.2
+046700*                                                                         
 046800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2084.2
 046900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2084.2
 047000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2084.2
@@ -544,9 +544,9 @@
 059900       MOVE "INVALID KEY ON WRITE; IX-41" TO RE-MARK              IX2084.2
 060000              PERFORM   PRINT-DETAIL                              IX2084.2
 060100              GO TO    WRITE-INIT-GF-02.                          IX2084.2
-060200*                                                                 IX2084.2
-060300*    01                                                           IX2084.2
-060400*                                                                 IX2084.2
+060200*                                                                         
+060300*                                                                         
+060400*                                                                         
 060500     PERFORM  PASS.                                               IX2084.2
 060600     PERFORM  PRINT-DETAIL.                                       IX2084.2
 060700 WRITE-INIT-GF-02.                                                IX2084.2
@@ -576,9 +576,9 @@
 063100       MOVE      "INCORRECT NUMBER OF WRITES; IX-41" TO RE-MARK   IX2084.2
 063200              PERFORM   PRINT-DETAIL                              IX2084.2
 063300              GO  TO    READ-INIT-F1-01.                          IX2084.2
-063400*                                                                 IX2084.2
-063500*    02                                                           IX2084.2
-063600*                                                                 IX2084.2
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
 063700     IF       INV-KEY-COUNTER  NOT EQUAL TO ZERO                  IX2084.2
 063800              PERFORM   FAIL                                      IX2084.2
 063900              MOVE      INV-KEY-COUNTER  TO COMPUTED-N            IX2084.2
@@ -609,9 +609,9 @@
 066400 READ-TEST-F1-01.                                                 IX2084.2
 066500     PERFORM  INX-TEST-002.                                       IX2084.2
 066600     GO TO  READ-INIT-F1-02.                                      IX2084.2
-066700*                                                                 IX2084.2
-066800*    01                                                           IX2084.2
-066900*                                                                 IX2084.2
+066700*                                                                         
+066800*                                                                         
+066900*                                                                         
 067000 READ-DELETE-F1-01.                                               IX2084.2
 067100     PERFORM  DE-LETE.                                            IX2084.2
 067200     PERFORM  PRINT-DETAIL.                                       IX2084.2
@@ -633,9 +633,9 @@
 068800     MOVE "READ-TEST-F1-02" TO PAR-NAME.                          IX2084.2
 068900     MOVE "READ . NEXT INTO" TO FEATURE.                          IX2084.2
 069000     PERFORM  INX-TEST-002.                                       IX2084.2
-069100*                                                                 IX2084.2
-069200*    02                                                           IX2084.2
-069300*                                                                 IX2084.2
+069100*                                                                         
+069200*                                                                         
+069300*                                                                         
 069400     GO TO  READ-INIT-F1-03.                                      IX2084.2
 069500 READ-DELETE-F1-02.                                               IX2084.2
 069600     MOVE "READ-TEST-F1-02     " TO PAR-NAME.                     IX2084.2
@@ -661,9 +661,9 @@
 071600     MOVE "READ-TEST-F1-03" TO PAR-NAME.                          IX2084.2
 071700     MOVE "READ . NEXT INTO" TO FEATURE.                          IX2084.2
 071800     PERFORM  INX-TEST-002.                                       IX2084.2
-071900*                                                                 IX2084.2
-072000*    03                                                           IX2084.2
-072100*                                                                 IX2084.2
+071900*                                                                         
+072000*                                                                         
+072100*                                                                         
 072200     GO TO  READ-INIT-F1-04.                                      IX2084.2
 072300 READ-DELETE-TEST-F1-03.                                          IX2084.2
 072400     MOVE "READ-TEST-F1-03     " TO PAR-NAME.                     IX2084.2
@@ -688,18 +688,18 @@
 074300              NEXT SENTENCE                                       IX2084.2
 074400              ELSE                                                IX2084.2
 074500              GO TO   READ-TEST-F1-04.                            IX2084.2
-074600*                                                                 IX2084.2
-074700*    TEST READ-TEST-F1-04 TESTS THE COBOL CONSTRUCT  "READ FILE-  IX2084.2
-074800*    NAME NEXT INTO IDENTIFIER AT END".  THE TEST READS THE FILE  IX2084.2
-074900*    SEQUENTIALY VIA THE RECORD KEY  (RECORD KEY IS THE KEY OF    IX2084.2
-075000*    REFERENCE) UNTIL AN END-OF-FILE CONDITION OCCURS.  A CHECK   IX2084.2
-075100*    IS MADE TO VERIFY THAT THE PROPER RECORDS WERE RETRIVED AND  IX2084.2
-075200*    THE AT END PATH WAS TAKEN ON THE 301 ST READ.                IX2084.2
-075300*                                                                 IX2084.2
+074600*                                                                         
+074700*                                                                         
+074800*                                                                         
+074900*                                                                         
+075000*                                                                         
+075100*                                                                         
+075200*                                                                         
+075300*                                                                         
 075400 READ-TEST-F1-04-1.                                               IX2084.2
 075500     CLOSE   IX-FD1.                                              IX2084.2
 075600     PERFORM  INX-TEST-002.                                       IX2084.2
-075700*   .04                                                           IX2084.2
+075700*                                                                         
 075800     GO TO  READ-INIT-F2-01.                                      IX2084.2
 075900 READ-DELETE-F1-04.                                               IX2084.2
 076000     MOVE "READ-TEST-F1-04     " TO PAR-NAME.                     IX2084.2
@@ -724,7 +724,7 @@
 077900              GO TO   READ-TEST-F2-01.                            IX2084.2
 078000     CLOSE    IX-FD1.                                             IX2084.2
 078100     PERFORM  INX-TEST-002.                                       IX2084.2
-078200*   .05                                                           IX2084.2
+078200*                                                                         
 078300     GO TO  READ-INIT-F2-02.                                      IX2084.2
 078400 READ-DELETE-F2-01.                                               IX2084.2
 078500     MOVE "READ-TEST-F2-01     " TO PAR-NAME.                     IX2084.2
@@ -752,7 +752,7 @@
 080700              GO TO   READ-TEST-F2-02.                            IX2084.2
 080800     CLOSE    IX-FD1.                                             IX2084.2
 080900     PERFORM  INX-TEST-002.                                       IX2084.2
-081000*   .06                                                           IX2084.2
+081000*                                                                         
 081100     GO TO  READ-INIT-F2-03.                                      IX2084.2
 081200 READ-DELETE-F2-02.                                               IX2084.2
 081300     MOVE "READ-TEST-F2-02     " TO PAR-NAME.                     IX2084.2
@@ -778,7 +778,7 @@
 083300              GO TO   READ-TEST-F2-03.                            IX2084.2
 083400     CLOSE    IX-FD1.                                             IX2084.2
 083500     PERFORM  INX-TEST-002.                                       IX2084.2
-083600*   .07                                                           IX2084.2
+083600*                                                                         
 083700     GO TO  READ-INIT-F2-04.                                      IX2084.2
 083800 READ-DELETE-F2-03.                                               IX2084.2
 083900     MOVE "READ-TEST-F2-03     " TO PAR-NAME.                     IX2084.2
@@ -802,7 +802,7 @@
 085700              GO TO   READ-TEST-F2-04.                            IX2084.2
 085800     CLOSE    IX-FD1.                                             IX2084.2
 085900     PERFORM  INX-TEST-002.                                       IX2084.2
-086000*   .08                                                           IX2084.2
+086000*                                                                         
 086100     GO TO  READ-INIT-F2-05.                                      IX2084.2
 086200 READ-DELETE-F2-04.                                               IX2084.2
 086300     MOVE "READ-TEST-F2-04     " TO PAR-NAME.                     IX2084.2
@@ -829,7 +829,7 @@
 088400              GO TO   READ-TEST-F2-05.                            IX2084.2
 088500     CLOSE    IX-FD1.                                             IX2084.2
 088600     PERFORM  INX-TEST-002.                                       IX2084.2
-088700*   .09                                                           IX2084.2
+088700*                                                                         
 088800     GO TO START-INIT-GF-01.                                      IX2084.2
 088900 READ-DELETE-F2-05.                                               IX2084.2
 089000     MOVE "READ-TEST-F2-05     " TO PAR-NAME.                     IX2084.2
@@ -854,47 +854,47 @@
 090900              MOVE      ERROR-COUNTER-06V00 TO COMPUTED-N         IX2084.2
 091000              MOVE "SEE PROGRAM (READ-TEST- ; IX-28)" TO RE-MARK. IX2084.2
 091100     PERFORM  PRINT-DETAIL.                                       IX2084.2
-091200*                                                                 IX2084.2
-091300*       EACH TEST IS EXECUTED 10 TIMES EXCEPT FOR  INX-TEST-002-04IX2084.2
-091400*    WHICH IS EXECUTED 300 TIMES.  FOLLOWING THE LAST             IX2084.2
-091500*    EXECUTION A TEST IS MADE ON ERROR-COUNTER-06V00 WHICH IS     IX2084.2
-091600*    EXPECTED TO BE ZERO.  IF ERROR-COUNTER-06V00 IS NOT ZERO     IX2084.2
-091700*    THE VALUE IN THE COUNTER INDICATES HOW THE EXECUTION FAILED  IX2084.2
-091800*    AND THE NUMBER OF TIMES THE UNEXPECTED ACTION OCCURRED       IX2084.2
-091900*    DURING THE TEST.  BEFORE THE TEST BEGINS ERROR-COUNTER-06V00 IX2084.2
-092000*    IS INITIALIZED WITH A VALUE.  EACH TIME THE CORRECT RECORD   IX2084.2
-092100*    WAS MADE AVAILABLE FOLLOWING THE READ, OR AN INVALID KEY     IX2084.2
-092200*    CONDITION OCCURRED THAT WAS EXPECTED FOLLOWING A READ OR     IX2084.2
-092300*    START, ERROR-COUNTER-06V00 IS DECREMENTED BY 1.              IX2084.2
-092400*    FOR EACH EXECUTION THAT DID NOT PRODUCE THE EXPECTED         IX2084.2
-092500*    RESULTS  THE ERROR-COUNTER-06V00 IS INCREMENTED BY THE VALUE IX2084.2
-092600*    FOR THE ACTION LISTED BELOW, E.G., VALUE 20003 WOULD INDICATEIX2084.2
-092700*    THAT OF THE 10 EXECUTIONS DURING THE TEST (READING LEFT TO   IX2084.2
-092800*    RIGHT)  2 INVALID KEY CONDITIONS AND 3 RECORDS RETRIEVED     IX2084.2
-092900*    AS A RESULT OF THE READ OR START WAS NOT-AS EXPECTED.        IX2084.2
-093000*                                                                 IX2084.2
-093100*                                                                 IX2084.2
-093200*                                                                 IX2084.2
-093300*    COMPUTED RESULT                 INDICATED                    IX2084.2
-093400*       INCREMENTS                     ACTION                     IX2084.2
-093500*                                                                 IX2084.2
-093600*       000100          THE  RECORD  FOUND IN THE IDENTIFIER      IX2084.2
-093700*                       SPECIFIED IN THE INTO PHRASE OF THE       IX2084.2
-093800*                       READ STATEMENT WAS NOT THE RECORD         IX2084.2
-093900*                       EXPECTED FOLLOWING EXECUTION OF THE       IX2084.2
-094000*                       READ.                                     IX2084.2
-094100*                                                                 IX2084.2
-094200*       000001          THE RECORD RETREIVED FROM THE FILE        IX2084.2
-094300*                       FOLLOWING THE READ WAS NOT THE ONE        IX2084.2
-094400*                       EXPECTED.                                 IX2084.2
-094500*                                                                 IX2084.2
-094600*       010000          AN UNEXPECTED INVALID KEY OR AT END       IX2084.2
-094700*                       CONDITION OCCURRED.  NOTE - ASSUMPTION    IX2084.2
-094800*                       IS THAT THE "USE" STATEMENT IS ONLY       IX2084.2
-094900*                       EXECUTED WHEN AN INVALID KEY OR AT END    IX2084.2
-095000*                       CONDITION OCCURS AND THE INVALID KEY OR   IX2084.2
-095100*                       AT END PHRASE HAS NOT BEEN SPECIFIED.     IX2084.2
-095200*                                                                 IX2084.2
+091200*                                                                         
+091300*                                                                         
+091400*                                                                         
+091500*                                                                         
+091600*                                                                         
+091700*                                                                         
+091800*                                                                         
+091900*                                                                         
+092000*                                                                         
+092100*                                                                         
+092200*                                                                         
+092300*                                                                         
+092400*                                                                         
+092500*                                                                         
+092600*                                                                         
+092700*                                                                         
+092800*                                                                         
+092900*                                                                         
+093000*                                                                         
+093100*                                                                         
+093200*                                                                         
+093300*                                                                         
+093400*                                                                         
+093500*                                                                         
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
+094600*                                                                         
+094700*                                                                         
+094800*                                                                         
+094900*                                                                         
+095000*                                                                         
+095100*                                                                         
+095200*                                                                         
 095300 START-INIT-GF-01.                                                IX2084.2
 095400     OPEN     INPUT  IX-FD1.                                      IX2084.2
 095500     OPEN     INPUT  IX-FS2.                                      IX2084.2
@@ -919,7 +919,7 @@
 097400              GO TO   START-TEST-GF-01.                           IX2084.2
 097500 START-TEST-GF-01-1.                                              IX2084.2
 097600     PERFORM  INX-TEST-003.                                       IX2084.2
-097700*   .01                                                           IX2084.2
+097700*                                                                         
 097800     GO TO  START-INIT-GF-02.                                     IX2084.2
 097900 INX-DELETE-003-01.                                               IX2084.2
 098000     MOVE "START-TEST-GF-01    " TO PAR-NAME.                     IX2084.2
@@ -943,7 +943,7 @@
 099800     MOVE "START-TEST-GF-02    " TO PAR-NAME.                     IX2084.2
 099900     MOVE "START KEY EQUAL TO  " TO FEATURE.                      IX2084.2
 100000     PERFORM  INX-TEST-003.                                       IX2084.2
-100100*   .02                                                           IX2084.2
+100100*                                                                         
 100200     GO TO   START-INIT-GF-03.                                    IX2084.2
 100300 START-DELETE-GF-02.                                              IX2084.2
 100400     MOVE "START-TEST-GF-02    " TO PAR-NAME.                     IX2084.2
@@ -967,7 +967,7 @@
 102200     MOVE "START-TEST-GF-03    " TO PAR-NAME.                     IX2084.2
 102300     MOVE "START KEY IS EQUAL  " TO FEATURE.                      IX2084.2
 102400     PERFORM  INX-TEST-003.                                       IX2084.2
-102500*   .03                                                           IX2084.2
+102500*                                                                         
 102600     GO TO  START-INIT-GF-04.                                     IX2084.2
 102700 START-DELETE-GF-03.                                              IX2084.2
 102800     MOVE "START-TEST-GF-03    " TO PAR-NAME.                     IX2084.2
@@ -992,7 +992,7 @@
 104700     MOVE "START-TEST-GF-04    " TO PAR-NAME.                     IX2084.2
 104800     MOVE "START KEY IS EQUAL  " TO FEATURE.                      IX2084.2
 104900     PERFORM  INX-TEST-003.                                       IX2084.2
-105000*   .04                                                           IX2084.2
+105000*                                                                         
 105100     GO TO START-INIT-GF-05.                                      IX2084.2
 105200 INX-DELETE-003-04.                                               IX2084.2
 105300     MOVE "START-TEST-GF-04    " TO PAR-NAME.                     IX2084.2
@@ -1016,7 +1016,7 @@
 107100     MOVE "START-TEST-GF-05    " TO PAR-NAME.                     IX2084.2
 107200     MOVE "START KEY IS = ...  " TO FEATURE.                      IX2084.2
 107300     PERFORM  INX-TEST-003.                                       IX2084.2
-107400*   .05                                                           IX2084.2
+107400*                                                                         
 107500     GO TO  START-INIT-GF-06.                                     IX2084.2
 107600 START-DELETE-GF-05.                                              IX2084.2
 107700     MOVE "START-TEST-GF-05    " TO PAR-NAME.                     IX2084.2
@@ -1041,7 +1041,7 @@
 109600     MOVE "START-TEST-GF-06    " TO PAR-NAME.                     IX2084.2
 109700     MOVE     "START  GREATER THAN"  TO FEATURE.                  IX2084.2
 109800     PERFORM  INX-TEST-003.                                       IX2084.2
-109900*   .06                                                           IX2084.2
+109900*                                                                         
 110000     GO TO START-INIT-GF-07.                                      IX2084.2
 110100 START-DELETE-GF-06.                                              IX2084.2
 110200     MOVE "START-TEST-GF-06    " TO PAR-NAME.                     IX2084.2
@@ -1065,7 +1065,7 @@
 112000 START-TEST-GF-07-1.                                              IX2084.2
 112100     MOVE "START-TEST-GF-07    " TO PAR-NAME.                     IX2084.2
 112200     MOVE "START KEY GREATER THAN" TO FEATURE.                    IX2084.2
-112300*   .07                                                           IX2084.2
+112300*                                                                         
 112400     GO TO  START-INIT-GF-08.                                     IX2084.2
 112500 START-DELETE-GF-07.                                              IX2084.2
 112600     MOVE "START-TEST-GF-07    " TO PAR-NAME.                     IX2084.2
@@ -1092,7 +1092,7 @@
 114700     MOVE "START-TEST-GF-08    " TO PAR-NAME.                     IX2084.2
 114800     MOVE "START KEY IS GREATER" TO FEATURE.                      IX2084.2
 114900     PERFORM  INX-TEST-003.                                       IX2084.2
-115000*   .08                                                           IX2084.2
+115000*                                                                         
 115100     GO TO   START-INIT-GF-09.                                    IX2084.2
 115200 START-DELETE-GF-08.                                              IX2084.2
 115300     MOVE "START-TEST-GF-08    " TO PAR-NAME.                     IX2084.2
@@ -1119,7 +1119,7 @@
 117400     MOVE "START-TEST-GF-09    " TO PAR-NAME.                     IX2084.2
 117500     MOVE "START KEY IS > ...  " TO FEATURE.                      IX2084.2
 117600     PERFORM  INX-TEST-003.                                       IX2084.2
-117700*   .09                                                           IX2084.2
+117700*                                                                         
 117800     GO TO START-INIT-GF-10.                                      IX2084.2
 117900 START-DELETE-GF-09.                                              IX2084.2
 118000     MOVE "START-TEST-GF-09    " TO PAR-NAME.                     IX2084.2
@@ -1146,7 +1146,7 @@
 120100     MOVE "START-TEST-GF-10    " TO PAR-NAME.                     IX2084.2
 120200     MOVE "START ... KEY > ... " TO FEATURE.                      IX2084.2
 120300     PERFORM  INX-TEST-003.                                       IX2084.2
-120400*   .10                                                           IX2084.2
+120400*                                                                         
 120500     GO TO  START-INIT-GF-11.                                     IX2084.2
 120600 START-DELETE-GF-10.                                              IX2084.2
 120700     MOVE "START-TEST-GF-10    " TO PAR-NAME.                     IX2084.2
@@ -1175,7 +1175,7 @@
 123000     MOVE "START-TEST-GF-11    " TO PAR-NAME.                     IX2084.2
 123100     MOVE "START KEY IS NOT LESS THAN" TO FEATURE.                IX2084.2
 123200     PERFORM  INX-TEST-003.                                       IX2084.2
-123300*   .11                                                           IX2084.2
+123300*                                                                         
 123400     GO TO START-INIT-GF-12.                                      IX2084.2
 123500 START-DELETE-GF-22.                                              IX2084.2
 123600     MOVE "START-TEST-GF-11    " TO PAR-NAME.                     IX2084.2
@@ -1203,7 +1203,7 @@
 125800     MOVE "START-TEST-GF-12    " TO PAR-NAME.                     IX2084.2
 125900     MOVE "START KEY IS NOT LESS" TO FEATURE.                     IX2084.2
 126000     PERFORM  INX-TEST-003.                                       IX2084.2
-126100*   .12                                                           IX2084.2
+126100*                                                                         
 126200     GO TO START-INIT-GF-13.                                      IX2084.2
 126300 START-DELETE-GF-12.                                              IX2084.2
 126400     MOVE "START-TEST-GF-12    " TO PAR-NAME.                     IX2084.2
@@ -1231,7 +1231,7 @@
 128600     MOVE "START-TEST-GF-13    " TO PAR-NAME.                     IX2084.2
 128700     MOVE "START KEY NOT LESS THAN " TO FEATURE.                  IX2084.2
 128800     PERFORM  INX-TEST-003.                                       IX2084.2
-128900*   .13                                                           IX2084.2
+128900*                                                                         
 129000     GO TO START-INIT-GF-14.                                      IX2084.2
 129100 START-DELETE-GF-13.                                              IX2084.2
 129200     MOVE "START-TEST-GF-13    " TO PAR-NAME.                     IX2084.2
@@ -1259,7 +1259,7 @@
 131400     MOVE "START-TEST-GF-14    " TO PAR-NAME.                     IX2084.2
 131500     MOVE "START KEY IS NOT <  " TO FEATURE.                      IX2084.2
 131600     PERFORM  INX-TEST-003.                                       IX2084.2
-131700*   .14                                                           IX2084.2
+131700*                                                                         
 131800     GO TO  START-INIT-GF-15.                                     IX2084.2
 131900 START-DELETE-GF-14.                                              IX2084.2
 132000     MOVE "START-TEST-GF-14    " TO PAR-NAME.                     IX2084.2
@@ -1294,7 +1294,7 @@
 134900     MOVE "START-TEST-GF-15    " TO PAR-NAME.                     IX2084.2
 135000     MOVE "START KEY IS EQUAL TO" TO FEATURE.                     IX2084.2
 135100     PERFORM  INX-TEST-003.                                       IX2084.2
-135200*   .15                                                           IX2084.2
+135200*                                                                         
 135300     GO TO START-INIT-GF-16.                                      IX2084.2
 135400 START-DELETE-GF-15.                                              IX2084.2
 135500     MOVE "START-TEST-GF-15    " TO PAR-NAME.                     IX2084.2
@@ -1318,7 +1318,7 @@
 137300              GO TO    START-TEST-GF-16.                          IX2084.2
 137400     MOVE "START-TEST-GF-16    " TO PAR-NAME.                     IX2084.2
 137500     PERFORM  INX-TEST-003.                                       IX2084.2
-137600*   .16                                                           IX2084.2
+137600*                                                                         
 137700     GO TO    START-INIT-GF-17.                                   IX2084.2
 137800 START-DELETE-GF-16.                                              IX2084.2
 137900     MOVE "START-TEST-GF-16    " TO PAR-NAME.                     IX2084.2
@@ -1340,7 +1340,7 @@
 139500              GO TO    START-TEST-GF-17.                          IX2084.2
 139600     MOVE "START-TEST-GF-17    " TO PAR-NAME.                     IX2084.2
 139700     PERFORM  INX-TEST-003.                                       IX2084.2
-139800*   .17                                                           IX2084.2
+139800*                                                                         
 139900     GO TO   START-INIT-GF-18.                                    IX2084.2
 140000 START-DELETE-GF-17.                                              IX2084.2
 140100     MOVE "START-TEST-GF-17    " TO PAR-NAME.                     IX2084.2
@@ -1362,7 +1362,7 @@
 141700              GO TO    START-TEST-GF-18.                          IX2084.2
 141800     MOVE "START-TEST-GF-18    " TO PAR-NAME.                     IX2084.2
 141900     PERFORM  INX-TEST-003.                                       IX2084.2
-142000*   .18                                                           IX2084.2
+142000*                                                                         
 142100     GO TO START-INIT-GF-19.                                      IX2084.2
 142200 START-DELETE-GF-18.                                              IX2084.2
 142300     MOVE "START-TEST-GF-18    " TO PAR-NAME.                     IX2084.2
@@ -1384,7 +1384,7 @@
 143900              GO TO   START-TEST-GF-19.                           IX2084.2
 144000     MOVE "START-TEST-GF-19    " TO PAR-NAME.                     IX2084.2
 144100     PERFORM  INX-TEST-003.                                       IX2084.2
-144200*   .19                                                           IX2084.2
+144200*                                                                         
 144300     GO TO START-END.                                             IX2084.2
 144400 START-DELETE-GF-19.                                              IX2084.2
 144500     MOVE "START-TEST-GF-19    " TO PAR-NAME.                     IX2084.2
@@ -1425,41 +1425,41 @@
 148000              MOVE     ERROR-COUNTER-06V00  TO COMPUTED-N         IX2084.2
 148100              MOVE "SEE PROGRAM (START-TEST- ); IX-36" TO RE-MARK.IX2084.2
 148200     PERFORM  PRINT-DETAIL.                                       IX2084.2
-148300*                                                                 IX2084.2
-148400*       EACH TEST IS EXECUTED 10 TIMES.  FOLLOWING THE 10TH       IX2084.2
-148500*    EXECUTION A TEST IS MADE ON ERROR-COUNTER-06V00 WHICH IS     IX2084.2
-148600*    EXPECTED TO BE ZERO.  IF ERROR-COUNTER-06V00 IS NOT ZERO     IX2084.2
-148700*    THE VALUE IN THE COUNTER INDICATES HOW THE EXECUTION FAILED  IX2084.2
-148800*    AND THE NUMBER OF TIMES THE UNEXPECTED ACTION OCCURRED       IX2084.2
-148900*    DURING THE TEST.  BEFORE THE TEST BEGINS ERROR-COUNTER-06V00 IX2084.2
-149000*    IS LOADED WITH THE VALUE 10.  EACH TIME THE CORRECT RECORD   IX2084.2
-149100*    WAS MADE AVAILABLE FOLLOWING THE READ, OR AN INVALID KEY     IX2084.2
-149200*    CONDITION OCCURRED THAT WAS EXPECTED FOLLOWING A READ OR     IX2084.2
-149300*    START, ERROR-COUNTER-06V00 IS DECREMENTED BY 1.              IX2084.2
-149400*    FOR EACH ACTION THAT DID NOT OCCUR AS                        IX2084.2
-149500*    EXPECTED THE ERROR-COUNTER-06V00 IS INCREMENTED BY THE VALUE IX2084.2
-149600*    FOR THE ACTION LISTED BELOW, E.G., VALUE 20003 WOULD INDICATEIX2084.2
-149700*    THAT OF THE 10 EXECUTIONS DURING THE TEST (READING LEFT TO   IX2084.2
-149800*    RIGHT)  2 INVALID KEY CONDITIONS AND 3 RECORDS RETRIEVED     IX2084.2
-149900*    AS A RESULT OF THE READ OR START WAS NOT AS EXPECTED.        IX2084.2
-150000*                                                                 IX2084.2
-150100*    COMPUTED RESULT                 INDICATED                    IX2084.2
-150200*       INCREMENTS                     ACTION                     IX2084.2
-150300*                                                                 IX2084.2
-150400*       000001          THE RECORD RETREIVED FROM THE FILE        IX2084.2
-150500*                       FOLLOWING THE READ WAS NOT THE ONE        IX2084.2
-150600*                       EXPECTED.                                 IX2084.2
-150700*                                                                 IX2084.2
-150800*       000100          INDICATES,BY 10"S THE NUMBER OF TIMES THE IX2084.2
-150900*                       TEST WAS EXECUTED.                        IX2084.2
-151000*                                                                 IX2084.2
-151100*       010000          AN UNEXPECTED INVALID KEY OR AT END       IX2084.2
-151200*                       CONDITION OCCURRED.  NOTE - ASSUMPTION    IX2084.2
-151300*                       IS THAT THE "USE" STATEMENT IS ONLY       IX2084.2
-151400*                       EXECUTED WHEN AN INVALID KEY OR AT END    IX2084.2
-151500*                       CONDITION OCCURS AND THE INVALID KEY OR   IX2084.2
-151600*                       AT END PHRASE HAS NOT BEEN SPECIFIED.     IX2084.2
-151700*                                                                 IX2084.2
+148300*                                                                         
+148400*                                                                         
+148500*                                                                         
+148600*                                                                         
+148700*                                                                         
+148800*                                                                         
+148900*                                                                         
+149000*                                                                         
+149100*                                                                         
+149200*                                                                         
+149300*                                                                         
+149400*                                                                         
+149500*                                                                         
+149600*                                                                         
+149700*                                                                         
+149800*                                                                         
+149900*                                                                         
+150000*                                                                         
+150100*                                                                         
+150200*                                                                         
+150300*                                                                         
+150400*                                                                         
+150500*                                                                         
+150600*                                                                         
+150700*                                                                         
+150800*                                                                         
+150900*                                                                         
+151000*                                                                         
+151100*                                                                         
+151200*                                                                         
+151300*                                                                         
+151400*                                                                         
+151500*                                                                         
+151600*                                                                         
+151700*                                                                         
 151800 START-END.                                                       IX2084.2
 151900     CLOSE    IX-FD1.                                             IX2084.2
 152000      CLOSE   IX-FS2.                                             IX2084.2

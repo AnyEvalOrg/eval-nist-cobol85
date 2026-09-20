@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2194.2
 000200 PROGRAM-ID.                                                      SQ2194.2
 000300     SQ219A.                                                      SQ2194.2
-000400****************************************************************  SQ2194.2
-000500*                                                              *  SQ2194.2
-000600*    VALIDATION FOR:-                                          *  SQ2194.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2194.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ2194.2
-000900*                                                              *  SQ2194.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  SQ2194.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2194.2
-001200*                                                              *  SQ2194.2
-001300*       THIS ROUTINE CHECKS  THE                                  SQ2194.2
-001400*               RECORD DELIMITER IS IMPLEMENTOR-NAME  LAUSE.      SQ2194.2
-001500*                                                                 SQ2194.2
-001600*            SEE  VII-13.                                         SQ2194.2
-001700*                                                                 SQ2194.2
-001800*                                                                 SQ2194.2
-001900*       THIS ROUTINE BUILDS A SEQUENTIAL TAPE FILE WHICH CONTAINS SQ2194.2
-002000*    BOTH 120 CHARACTER AND 151 CHARACTER RECORDS.  THE TAPE      SQ2194.2
-002100*    CONSISTS OF 1 SHORT, 1 LONG, 10 SHORT, 100 LONG, AND 338     SQ2194.2
-002200*    SHORT RECORDS FOR A TOTAL OF 450 RECORDS IN THE FILE.        SQ2194.2
-002300*    THE TAPE IS READ AND FIELDS IN THE RECORDS ARE CHECKED       SQ2194.2
-002400*    AGAINST THE EXPECTED VALUES.                                 SQ2194.2
-002500*                                                                 SQ2194.2
-002600*       AN INFORMATION SECTION AT THE END OF THE ROUTINE CHECKS   SQ2194.2
-002700*    THE FIELD WHICH CONTAINS THE XRECORD-NUMBER.  THIS FIELD IS  SQ2194.2
-002800*    PART OF A LONG RECORD ONLY.  IF THE XRECORD-NUMBER IS THERE  SQ2194.2
-002900*    FOR A SHORT RECORD, IT MEANS THE MAXIMUM SIZE RECORD IS      SQ2194.2
-003000*    ALWAYS WRITTEN.                                              SQ2194.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            SQ2194.2
 003200 CONFIGURATION SECTION.                                           SQ2194.2
 003300 SOURCE-COMPUTER.                                                 SQ2194.2
@@ -295,7 +295,7 @@
 034500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2194.2
 034600      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2194.2
 034700      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2194.2
-034800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2194.2
+034800*                                                                         
 034900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2194.2
 035000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2194.2
 035100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2194.2
@@ -382,10 +382,10 @@
 043200     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          SQ2194.2
 043300     MOVE "FILE HAS 120 AND 151 CHAR RECS" TO RE-MARK.            SQ2194.2
 043400     PERFORM PRINT-DETAIL.                                        SQ2194.2
-043500*         A SEQUENTIAL TAPE FILE CONTAINING 450 RECORDS HAS       SQ2194.2
-043600*    BEEN CREATED.  THE FILE CONTAINS RECORDS OF 120 CHARACTERS   SQ2194.2
-043700*    AND RECORDS OF 151 CHARACTERS.  THE SEQUENCE IN WHICH THE    SQ2194.2
-043800*    RECORDS WERE WRITTEN IS S-L-10S-100L-338S.                   SQ2194.2
+043500*                                                                         
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
 043900 WRITE-CLOSE-GF-01.                                               SQ2194.2
 044000     CLOSE SQ-VS6.                                                SQ2194.2
 044100     GO TO READ-INIT-F1-01.                                       SQ2194.2
@@ -578,10 +578,10 @@
 062800 READ-CLOSE-F1-06.                                                SQ2194.2
 062900     CLOSE SQ-VS6.                                                SQ2194.2
 063000 SECT-SQ219A-0002 SECTION.                                        SQ2194.2
-063100*        THIS SECTION CHECKS IF THE ENTIRE RECORD AREA IS WRITTEN SQ2194.2
-063200*    ON THE OUTPUT DEVICE WHEN A SHORT RECORD IS WRITTEN.  THE    SQ2194.2
-063300*    RECORD NUMBER IN CHARACTERS 126 THROUGH 130 IS UNIQUE        SQ2194.2
-063400*    FOR EACH RECORD.                                             SQ2194.2
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
 063500 INFO-INIT-001.                                                   SQ2194.2
 063600     OPEN INPUT SQ-VS6.                                           SQ2194.2
 063700     MOVE ZERO TO COUNT-OF-RECS.                                  SQ2194.2

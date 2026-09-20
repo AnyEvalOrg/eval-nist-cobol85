@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC2164.2
 000200 PROGRAM-ID.                                                      NC2164.2
 000300     NC216A.                                                      NC2164.2
-000400****************************************************************  NC2164.2
-000500*                                                              *  NC2164.2
-000600*    VALIDATION FOR:-                                          *  NC2164.2
-000700*                                                              *  NC2164.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2164.2
-000900*                                                              *  NC2164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2164.2
-001100*                                                              *  NC2164.2
-001200****************************************************************  NC2164.2
-001300*                                                              *  NC2164.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2164.2
-001500*                                                              *  NC2164.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2164.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2164.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2164.2
-001900*                                                              *  NC2164.2
-002000****************************************************************  NC2164.2
-002100*                                                              *  NC2164.2
-002200*    PROGRAM NC216A TESTS ALL FOUR FORMATS OF THE "INSPECT"    *  NC2164.2
-002300*    STATEMENT USING VARIOUS COMBINATIONS OF THE OPTIONAL      *  NC2164.2
-002400*    PHRASES: CHARACTERS, ALL, LEADING, FIRST, BEFORE, AFTER.  *  NC2164.2
-002500*                                                              *  NC2164.2
-002600****************************************************************  NC2164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC2164.2
 002800 CONFIGURATION SECTION.                                           NC2164.2
 002900 SOURCE-COMPUTER.                                                 NC2164.2
@@ -361,7 +361,7 @@
 036300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2164.2
 036400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2164.2
 036500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2164.2
-036600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2164.2
+036600*                                                                         
 036700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2164.2
 036800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2164.2
 036900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2164.2
@@ -429,7 +429,7 @@
 043100 CCVS1-EXIT.                                                      NC2164.2
 043200     EXIT.                                                        NC2164.2
 043300 SECT-NC216A-001 SECTION.                                         NC2164.2
-043400*                                                                 NC2164.2
+043400*                                                                         
 043500 INS-INIT-F1-1.                                                   NC2164.2
 043600     MOVE "INS-TEST-F1-1" TO PAR-NAME.                            NC2164.2
 043700     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -454,7 +454,7 @@
 045600     MOVE 83 TO CORRECT-N.                                        NC2164.2
 045700 INS-WRITE-F1-1.                                                  NC2164.2
 045800     PERFORM PRINT-DETAIL.                                        NC2164.2
-045900*                                                                 NC2164.2
+045900*                                                                         
 046000 INS-INIT-F1-2.                                                   NC2164.2
 046100     MOVE "INS-TEST-F1-2" TO PAR-NAME.                            NC2164.2
 046200     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -479,7 +479,7 @@
 048100     MOVE 8 TO CORRECT-N.                                         NC2164.2
 048200 INS-WRITE-F1-2.                                                  NC2164.2
 048300     PERFORM PRINT-DETAIL.                                        NC2164.2
-048400*                                                                 NC2164.2
+048400*                                                                         
 048500 INS-INIT-F1-3.                                                   NC2164.2
 048600     MOVE "INS-TEST-F1-3" TO PAR-NAME.                            NC2164.2
 048700     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -504,7 +504,7 @@
 050600     MOVE 17 TO CORRECT-N.                                        NC2164.2
 050700 INS-WRITE-F1-3.                                                  NC2164.2
 050800     PERFORM PRINT-DETAIL.                                        NC2164.2
-050900*                                                                 NC2164.2
+050900*                                                                         
 051000 INS-INIT-F1-4.                                                   NC2164.2
 051100     MOVE "INS-TEST-F1-4" TO PAR-NAME.                            NC2164.2
 051200     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -529,7 +529,7 @@
 053100     MOVE 1 TO CORRECT-N.                                         NC2164.2
 053200 INS-WRITE-F1-4.                                                  NC2164.2
 053300     PERFORM PRINT-DETAIL.                                        NC2164.2
-053400*                                                                 NC2164.2
+053400*                                                                         
 053500 INS-INIT-F1-5.                                                   NC2164.2
 053600     MOVE "INS-TEST-F1-5" TO PAR-NAME.                            NC2164.2
 053700     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -555,7 +555,7 @@
 055700     MOVE 68 TO CORRECT-N.                                        NC2164.2
 055800 INS-WRITE-F1-5.                                                  NC2164.2
 055900     PERFORM PRINT-DETAIL.                                        NC2164.2
-056000*                                                                 NC2164.2
+056000*                                                                         
 056100 INS-INIT-F1-6.                                                   NC2164.2
 056200     MOVE "INS-TEST-F1-6" TO PAR-NAME.                            NC2164.2
 056300     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -568,7 +568,7 @@
 057000 INS-TEST-F1-6.                                                   NC2164.2
 057100     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL " "           NC2164.2
 057200         BEFORE INITIAL "W.C.".                                   NC2164.2
-057300     IF      WRK-DU-999-1 EQUAL TO 2                              NC2164.2
+057300     IF      WRK-DU-999-1 EQUAL TO 6                              NC2164.2
 057400     PERFORM PASS                                                 NC2164.2
 057500     GO      TO INS-WRITE-F1-6.                                   NC2164.2
 057600     GO TO INS-FAIL-F1-6.                                         NC2164.2
@@ -578,10 +578,10 @@
 058000 INS-FAIL-F1-6.                                                   NC2164.2
 058100     PERFORM FAIL.                                                NC2164.2
 058200     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC2164.2
-058300     MOVE 2 TO CORRECT-N.                                         NC2164.2
+058300     MOVE 6 TO CORRECT-N.                                         NC2164.2
 058400 INS-WRITE-F1-6.                                                  NC2164.2
 058500     PERFORM PRINT-DETAIL.                                        NC2164.2
-058600*                                                                 NC2164.2
+058600*                                                                         
 058700 INS-INIT-F1-7.                                                   NC2164.2
 058800     MOVE "INS-TEST-F1-7" TO PAR-NAME.                            NC2164.2
 058900     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -607,7 +607,7 @@
 060900     MOVE 1 TO CORRECT-N.                                         NC2164.2
 061000 INS-WRITE-F1-7.                                                  NC2164.2
 061100     PERFORM PRINT-DETAIL.                                        NC2164.2
-061200*                                                                 NC2164.2
+061200*                                                                         
 061300 INS-INIT-F2-8.                                                   NC2164.2
 061400     MOVE "INS-TEST-F2-8" TO PAR-NAME.                            NC2164.2
 061500     MOVE   "VI-94 6.17.3" TO ANSI-REFERENCE.                     NC2164.2
@@ -654,7 +654,7 @@
 065600     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 065700 INS-WRITE-F2-8.                                                  NC2164.2
 065800     PERFORM PRINT-DETAIL.                                        NC2164.2
-065900*                                                                 NC2164.2
+065900*                                                                         
 066000 INS-INIT-F2-9.                                                   NC2164.2
 066100     MOVE "INS-TEST-F2-9" TO PAR-NAME.                            NC2164.2
 066200     MOVE   "VI-94 6.17.3" TO ANSI-REFERENCE.                     NC2164.2
@@ -685,7 +685,7 @@
 068700     PERFORM DE-LETE.                                             NC2164.2
 068800     PERFORM PRINT-DETAIL.                                        NC2164.2
 068900     GO      TO INS-TEST-F2-10.                                   NC2164.2
-069000*                                                                 NC2164.2
+069000*                                                                         
 069100 INS-TEST-F2-9-1.                                                 NC2164.2
 069200     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-1                     NC2164.2
 069300             PERFORM PASS                                         NC2164.2
@@ -701,7 +701,7 @@
 070300     MOVE    ANS-XN-83-1 TO CORRECT-A.                            NC2164.2
 070400 INS-WRITE-F2-9-1.                                                NC2164.2
 070500     PERFORM PRINT-DETAIL.                                        NC2164.2
-070600*                                                                 NC2164.2
+070600*                                                                         
 070700 INS-TEST-F2-9-2.                                                 NC2164.2
 070800     ADD     1 TO REC-CT.                                         NC2164.2
 070900     IF      WRK-XN-83-2 EQUAL TO ANS-XN-83-9                     NC2164.2
@@ -729,7 +729,7 @@
 073100     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 073200 INS-WRITE-F2-9-2.                                                NC2164.2
 073300     PERFORM PRINT-DETAIL.                                        NC2164.2
-073400*                                                                 NC2164.2
+073400*                                                                         
 073500 INS-INIT-F2-10.                                                  NC2164.2
 073600     MOVE "INS-TEST-F2-10" TO PAR-NAME.                           NC2164.2
 073700     MOVE   "VI-94 6.17.3" TO ANSI-REFERENCE.                     NC2164.2
@@ -770,7 +770,7 @@
 077200     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 077300 INS-WRITE-F2-10.                                                 NC2164.2
 077400     PERFORM PRINT-DETAIL.                                        NC2164.2
-077500*                                                                 NC2164.2
+077500*                                                                         
 077600 INS-INIT-F2-11.                                                  NC2164.2
 077700     MOVE "INS-TEST-F2-11" TO PAR-NAME.                           NC2164.2
 077800     MOVE   "VI-94 6.17.3" TO ANSI-REFERENCE.                     NC2164.2
@@ -811,7 +811,7 @@
 081300     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 081400 INS-WRITE-F2-11.                                                 NC2164.2
 081500     PERFORM PRINT-DETAIL.                                        NC2164.2
-081600*                                                                 NC2164.2
+081600*                                                                         
 081700 INS-INIT-F2-12.                                                  NC2164.2
 081800     MOVE "INS-TEST-F2-12" TO PAR-NAME.                           NC2164.2
 081900     MOVE   "VI-94 6.17.3" TO ANSI-REFERENCE.                     NC2164.2
@@ -851,7 +851,7 @@
 085300     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 085400 INS-WRITE-F2-12.                                                 NC2164.2
 085500     PERFORM PRINT-DETAIL.                                        NC2164.2
-085600*                                                                 NC2164.2
+085600*                                                                         
 085700 INS-INIT-F3-13.                                                  NC2164.2
 085800     MOVE "INS-TEST-F3-13" TO PAR-NAME.                           NC2164.2
 085900     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -871,7 +871,7 @@
 087300     PERFORM DE-LETE.                                             NC2164.2
 087400     PERFORM PRINT-DETAIL.                                        NC2164.2
 087500     GO TO INS-INIT-F3-14.                                        NC2164.2
-087600*                                                                 NC2164.2
+087600*                                                                         
 087700 INS-TEST-F3-13-1.                                                NC2164.2
 087800     IF      WRK-DU-999-1 EQUAL TO 83                             NC2164.2
 087900             PERFORM PASS                                         NC2164.2
@@ -887,7 +887,7 @@
 088900     MOVE    83 TO CORRECT-N.                                     NC2164.2
 089000 INS-WRITE-F3-13-1.                                               NC2164.2
 089100     PERFORM PRINT-DETAIL.                                        NC2164.2
-089200*                                                                 NC2164.2
+089200*                                                                         
 089300 TEST-13-2.                                                       NC2164.2
 089400     ADD     1 TO REC-CT.                                         NC2164.2
 089500     IF      WRK-XN-83-1 EQUAL TO SPACES                          NC2164.2
@@ -904,7 +904,7 @@
 090600     MOVE    "83 SPACES" TO CORRECT-A.                            NC2164.2
 090700 INS-WRITE-F3-13-2.                                               NC2164.2
 090800     PERFORM PRINT-DETAIL.                                        NC2164.2
-090900*                                                                 NC2164.2
+090900*                                                                         
 091000 INS-INIT-F3-14.                                                  NC2164.2
 091100     MOVE "INS-TEST-F3-14" TO PAR-NAME.                           NC2164.2
 091200     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -925,7 +925,7 @@
 092700     PERFORM DE-LETE.                                             NC2164.2
 092800     PERFORM PRINT-DETAIL.                                        NC2164.2
 092900     GO TO INS-INIT-F3-15.                                        NC2164.2
-093000*                                                                 NC2164.2
+093000*                                                                         
 093100 INS-TEST-F3-14-1.                                                NC2164.2
 093200     IF      WRK-DU-999-1 EQUAL TO 6                              NC2164.2
 093300     PERFORM PASS                                                 NC2164.2
@@ -941,7 +941,7 @@
 094300     MOVE    6 TO CORRECT-N.                                      NC2164.2
 094400 INS-WRITE-F3-14-1.                                               NC2164.2
 094500     PERFORM PRINT-DETAIL.                                        NC2164.2
-094600*                                                                 NC2164.2
+094600*                                                                         
 094700 INS-TEST-F3-14-2.                                                NC2164.2
 094800     ADD     1 TO REC-CT.                                         NC2164.2
 094900     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-4                     NC2164.2
@@ -972,7 +972,7 @@
 097400     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 097500 INS-WRITE-F3-14-2.                                               NC2164.2
 097600     PERFORM PRINT-DETAIL.                                        NC2164.2
-097700*                                                                 NC2164.2
+097700*                                                                         
 097800 INS-INIT-F3-15.                                                  NC2164.2
 097900     MOVE "INS-TEST-F3-15" TO PAR-NAME.                           NC2164.2
 098000     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -997,7 +997,7 @@
 099900     PERFORM DE-LETE.                                             NC2164.2
 100000     PERFORM PRINT-DETAIL.                                        NC2164.2
 100100     GO TO INS-INIT-F3-16.                                        NC2164.2
-100200*                                                                 NC2164.2
+100200*                                                                         
 100300 INS-TEST-F3-15-1.                                                NC2164.2
 100400     IF      WRK-DU-999-1 EQUAL TO 7                              NC2164.2
 100500             PERFORM PASS                                         NC2164.2
@@ -1013,7 +1013,7 @@
 101500     MOVE    7 TO CORRECT-N.                                      NC2164.2
 101600 INS-WRITE-F3-15-1.                                               NC2164.2
 101700     PERFORM PRINT-DETAIL.                                        NC2164.2
-101800*                                                                 NC2164.2
+101800*                                                                         
 101900 INS-TEST-F3-15-2.                                                NC2164.2
 102000     ADD     1 TO REC-CT.                                         NC2164.2
 102100     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-5                     NC2164.2
@@ -1030,7 +1030,7 @@
 103200     MOVE    ANS-XN-83-5 TO CORRECT-A.                            NC2164.2
 103300 INS-WRITE-F3-15-2.                                               NC2164.2
 103400     PERFORM PRINT-DETAIL.                                        NC2164.2
-103500*                                                                 NC2164.2
+103500*                                                                         
 103600 INS-INIT-F3-16.                                                  NC2164.2
 103700     MOVE "INS-TEST-F3-16" TO PAR-NAME.                           NC2164.2
 103800     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -1054,7 +1054,7 @@
 105600     PERFORM DE-LETE.                                             NC2164.2
 105700     PERFORM PRINT-DETAIL.                                        NC2164.2
 105800     GO TO INS-INIT-F3-17.                                        NC2164.2
-105900*                                                                 NC2164.2
+105900*                                                                         
 106000 INS-TEST-F3-16-1.                                                NC2164.2
 106100     IF      WRK-DU-999-1 EQUAL TO 1                              NC2164.2
 106200             PERFORM PASS                                         NC2164.2
@@ -1070,7 +1070,7 @@
 107200     MOVE    1 TO CORRECT-N.                                      NC2164.2
 107300 INS-WRITE-F3-16-1.                                               NC2164.2
 107400     PERFORM PRINT-DETAIL.                                        NC2164.2
-107500*                                                                 NC2164.2
+107500*                                                                         
 107600 INS-TEST-F3-16-2.                                                NC2164.2
 107700     ADD     1 TO REC-CT.                                         NC2164.2
 107800     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-1                     NC2164.2
@@ -1101,7 +1101,7 @@
 110300     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 110400 INS-WRITE-F3-16-2.                                               NC2164.2
 110500     PERFORM PRINT-DETAIL.                                        NC2164.2
-110600*                                                                 NC2164.2
+110600*                                                                         
 110700 INS-INIT-F3-17.                                                  NC2164.2
 110800     MOVE "INS-TEST-F3-17" TO PAR-NAME.                           NC2164.2
 110900     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -1125,7 +1125,7 @@
 112700     PERFORM DE-LETE.                                             NC2164.2
 112800     PERFORM PRINT-DETAIL.                                        NC2164.2
 112900     GO TO INS-INIT-F3-18.                                        NC2164.2
-113000*                                                                 NC2164.2
+113000*                                                                         
 113100 INS-TEST-F3-17-1.                                                NC2164.2
 113200     IF      WRK-DU-999-1 EQUAL TO 8                              NC2164.2
 113300             PERFORM PASS                                         NC2164.2
@@ -1141,7 +1141,7 @@
 114300     MOVE    8 TO CORRECT-N.                                      NC2164.2
 114400 INS-WRITE-F3-17-1.                                               NC2164.2
 114500     PERFORM PRINT-DETAIL.                                        NC2164.2
-114600*                                                                 NC2164.2
+114600*                                                                         
 114700 INS-TEST-F3-17-2.                                                NC2164.2
 114800     ADD     1 TO REC-CT.                                         NC2164.2
 114900     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-5                     NC2164.2
@@ -1172,7 +1172,7 @@
 117400     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 117500 INS-WRITE-F3-17-2.                                               NC2164.2
 117600     PERFORM PRINT-DETAIL.                                        NC2164.2
-117700*                                                                 NC2164.2
+117700*                                                                         
 117800 INS-INIT-F3-18.                                                  NC2164.2
 117900     MOVE "INS-TEST-F3-18" TO PAR-NAME.                           NC2164.2
 118000     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -1192,7 +1192,7 @@
 119400     PERFORM DE-LETE.                                             NC2164.2
 119500     PERFORM PRINT-DETAIL.                                        NC2164.2
 119600     GO      TO INS-INIT-F3-19.                                   NC2164.2
-119700*                                                                 NC2164.2
+119700*                                                                         
 119800 INS-TEST-F3-18-1.                                                NC2164.2
 119900     IF      WRK-DU-999-1 EQUAL TO 81                             NC2164.2
 120000             PERFORM PASS                                         NC2164.2
@@ -1208,7 +1208,7 @@
 121000     MOVE    81 TO CORRECT-N.                                     NC2164.2
 121100 INS-WRITE-F3-18-1.                                               NC2164.2
 121200     PERFORM PRINT-DETAIL.                                        NC2164.2
-121300*                                                                 NC2164.2
+121300*                                                                         
 121400 INS-TEST-F3-18-2.                                                NC2164.2
 121500     ADD     1 TO REC-CT.                                         NC2164.2
 121600     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-1                     NC2164.2
@@ -1239,7 +1239,7 @@
 124100     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 124200 INS-WRITE-F3-18-2.                                               NC2164.2
 124300     PERFORM PRINT-DETAIL.                                        NC2164.2
-124400*                                                                 NC2164.2
+124400*                                                                         
 124500 INS-INIT-F3-19.                                                  NC2164.2
 124600     MOVE "INS-TEST-F3-19" TO PAR-NAME.                           NC2164.2
 124700     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -1268,7 +1268,7 @@
 127000     PERFORM DE-LETE.                                             NC2164.2
 127100     PERFORM PRINT-DETAIL.                                        NC2164.2
 127200     GO TO INS-INIT-F3-20.                                        NC2164.2
-127300*                                                                 NC2164.2
+127300*                                                                         
 127400 INS-TEST-F3-19-1.                                                NC2164.2
 127500     IF WRK-DU-999-1 = 8                                          NC2164.2
 127600             PERFORM PASS                                         NC2164.2
@@ -1284,7 +1284,7 @@
 128600     MOVE 8 TO CORRECT-N.                                         NC2164.2
 128700 INS-WRITE-F3-19-1.                                               NC2164.2
 128800     PERFORM PRINT-DETAIL.                                        NC2164.2
-128900*                                                                 NC2164.2
+128900*                                                                         
 129000 INS-TEST-F3-19-2.                                                NC2164.2
 129100     ADD 1 TO REC-CT.                                             NC2164.2
 129200     IF WRK-DU-999-2 = 0                                          NC2164.2
@@ -1301,7 +1301,7 @@
 130300     MOVE 0 TO CORRECT-N.                                         NC2164.2
 130400 INS-WRITE-F3-19-2.                                               NC2164.2
 130500     PERFORM PRINT-DETAIL.                                        NC2164.2
-130600*                                                                 NC2164.2
+130600*                                                                         
 130700 INS-TEST-F3-19-3.                                                NC2164.2
 130800     ADD 1 TO REC-CT.                                             NC2164.2
 130900     IF WRK-DU-999-3 = 13                                         NC2164.2
@@ -1318,7 +1318,7 @@
 132000     MOVE 13 TO CORRECT-N.                                        NC2164.2
 132100 INS-WRITE-F3-19-3.                                               NC2164.2
 132200     PERFORM PRINT-DETAIL.                                        NC2164.2
-132300*                                                                 NC2164.2
+132300*                                                                         
 132400 INS-TEST-F3-19-4.                                                NC2164.2
 132500     ADD 1 TO REC-CT.                                             NC2164.2
 132600     IF WRK-DU-999-4 = 5                                          NC2164.2
@@ -1335,7 +1335,7 @@
 133700     MOVE 5 TO CORRECT-N.                                         NC2164.2
 133800 INS-WRITE-F3-19-4.                                               NC2164.2
 133900     PERFORM PRINT-DETAIL.                                        NC2164.2
-134000*                                                                 NC2164.2
+134000*                                                                         
 134100 INS-TEST-F3-19-5.                                                NC2164.2
 134200     ADD 1 TO REC-CT.                                             NC2164.2
 134300     IF WRK-XN-83-1 = ANS-XN-83-6                                 NC2164.2
@@ -1366,7 +1366,7 @@
 136800     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 136900 INS-WRITE-F3-19-5.                                               NC2164.2
 137000     PERFORM PRINT-DETAIL.                                        NC2164.2
-137100*                                                                 NC2164.2
+137100*                                                                         
 137200 INS-INIT-F3-20.                                                  NC2164.2
 137300     MOVE "INS-TEST-F3-20" TO PAR-NAME.                           NC2164.2
 137400     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -1394,7 +1394,7 @@
 139600     GO      TO CCVS-999999.                                      NC2164.2
 139700*                                                                         
 139800 INS-TEST-F3-20-1.                                                NC2164.2
-139900     IF      WRK-DU-999-1 EQUAL TO 45                             NC2164.2
+139900     IF      WRK-DU-999-1 EQUAL TO 55                             NC2164.2
 140000             PERFORM PASS                                         NC2164.2
 140100             GO TO INS-WRITE-F3-20-1                              NC2164.2
 140200     ELSE                                                         NC2164.2
@@ -1405,10 +1405,10 @@
 140700 INS-FAIL-F3-20-1.                                                NC2164.2
 140800     PERFORM FAIL                                                 NC2164.2
 140900     MOVE    WRK-DU-999-1 TO COMPUTED-N                           NC2164.2
-141000     MOVE    45 TO CORRECT-N.                                     NC2164.2
+141000     MOVE    55 TO CORRECT-N.                                     NC2164.2
 141100 INS-WRITE-F3-20-1.                                               NC2164.2
 141200     PERFORM PRINT-DETAIL.                                        NC2164.2
-141300*                                                                 NC2164.2
+141300*                                                                         
 141400 INS-TEST-F3-20-2.                                                NC2164.2
 141500     ADD     1 TO REC-CT.                                         NC2164.2
 141600     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-7                     NC2164.2
@@ -1439,7 +1439,7 @@
 144100     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 144200 INS-WRITE-F3-20-2.                                               NC2164.2
 144300     PERFORM PRINT-DETAIL.                                        NC2164.2
-144400*                                                                 NC2164.2
+144400*                                                                         
 144500 INS-INIT-F2-21.                                                  NC2164.2
 144600     MOVE    ZERO TO REC-CT.                                      NC2164.2
 144700     MOVE    SPACES TO PAR-NAME.                                  NC2164.2
@@ -1482,7 +1482,7 @@
 148400     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 148500 INS-WRITE-F2-21-1.                                               NC2164.2
 148600     PERFORM PRINT-DETAIL.                                        NC2164.2
-148700*                                                                 NC2164.2
+148700*                                                                         
 148800 INS-INIT-F2-22.                                                  NC2164.2
 148900     MOVE "INS-TEST-F2-22" TO PAR-NAME.                           NC2164.2
 149000     MOVE "VI-94 6.17.3"   TO ANSI-REFERENCE.                     NC2164.2
@@ -1523,7 +1523,7 @@
 152500     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 152600 INS-WRITE-F2-22.                                                 NC2164.2
 152700     PERFORM PRINT-DETAIL.                                        NC2164.2
-152800*                                                                 NC2164.2
+152800*                                                                         
 152900 INS-INIT-F1-23.                                                  NC2164.2
 153000     MOVE "INS-TEST-F1-23" TO PAR-NAME.                           NC2164.2
 153100     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -1541,7 +1541,7 @@
 154300     PERFORM DE-LETE.                                             NC2164.2
 154400     PERFORM PRINT-DETAIL.                                        NC2164.2
 154500     GO TO INS-INIT-F1-24.                                        NC2164.2
-154600*                                                                 NC2164.2
+154600*                                                                         
 154700 INS-TEST-F1-23-1.                                                NC2164.2
 154800     IF      WRK-DU-999-1 EQUAL 0                                 NC2164.2
 154900             PERFORM PASS                                         NC2164.2
@@ -1557,7 +1557,7 @@
 155900     MOVE    ZERO TO CORRECT-N.                                   NC2164.2
 156000 INS-WRITE-F1-23-1.                                               NC2164.2
 156100     PERFORM PRINT-DETAIL.                                        NC2164.2
-156200*                                                                 NC2164.2
+156200*                                                                         
 156300 INS-TEST-F1-23-2.                                                NC2164.2
 156400     ADD     1 TO REC-CT.                                         NC2164.2
 156500     IF      WRK-DU-999-2 EQUAL TO 1                              NC2164.2
@@ -1574,7 +1574,7 @@
 157600     MOVE    1 TO CORRECT-N.                                      NC2164.2
 157700 INS-WRITE-F1-23-2.                                               NC2164.2
 157800     PERFORM PRINT-DETAIL.                                        NC2164.2
-157900*                                                                 NC2164.2
+157900*                                                                         
 158000 INS-INIT-F1-24.                                                  NC2164.2
 158100     MOVE "INS-TEST-F1-24" TO PAR-NAME.                           NC2164.2
 158200     MOVE "NUMERIC EDITED FIELD" TO FEATURE.                      NC2164.2
@@ -1598,7 +1598,7 @@
 160000     MOVE    1 TO CORRECT-N.                                      NC2164.2
 160100 INS-WRITE-F1-24.                                                 NC2164.2
 160200     PERFORM PRINT-DETAIL.                                        NC2164.2
-160300*                                                                 NC2164.2
+160300*                                                                         
 160400 INS-INIT-F1-25.                                                  NC2164.2
 160500     MOVE "INS-TEST-F1-25" TO PAR-NAME.                           NC2164.2
 160600     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -1621,7 +1621,7 @@
 162300     MOVE    ZERO TO CORRECT-N.                                   NC2164.2
 162400 INS-WRITE-F1-25.                                                 NC2164.2
 162500     PERFORM PRINT-DETAIL.                                        NC2164.2
-162600*                                                                 NC2164.2
+162600*                                                                         
 162700 INS-INIT-F1-26.                                                  NC2164.2
 162800     MOVE    "INS-TEST-F1-26" TO PAR-NAME.                        NC2164.2
 162900     MOVE    "VI-94" TO ANSI-REFERENCE.                           NC2164.2
@@ -1644,7 +1644,7 @@
 164600     MOVE 1 TO CORRECT-N.                                         NC2164.2
 164700 INS-WRITE-F1-26.                                                 NC2164.2
 164800     PERFORM PRINT-DETAIL.                                        NC2164.2
-164900*                                                                 NC2164.2
+164900*                                                                         
 165000 INS-INIT-F1-27.                                                  NC2164.2
 165100     MOVE   "INS-TEST-F1-27" TO PAR-NAME.                         NC2164.2
 165200     MOVE   "VI-94" TO ANSI-REFERENCE.                            NC2164.2
@@ -1672,9 +1672,9 @@
 167400     MOVE "BOTH SHOULD BE 1" TO RE-MARK.                          NC2164.2
 167500 INS-WRITE-F1-27.                                                 NC2164.2
 167600     PERFORM PRINT-DETAIL.                                        NC2164.2
-167700*                                                                 NC2164.2
+167700*                                                                         
 167800 INS-INIT-F1-28.                                                  NC2164.2
-167900*    ===-->  BEFORE AND AFTER PHRASES  <--===                     NC2164.2
+167900*                                                                         
 168000     MOVE   "INS-TEST-F1-28" TO PAR-NAME.                         NC2164.2
 168100     MOVE   "VI-94 6.17.3 SR4" TO ANSI-REFERENCE.                 NC2164.2
 168200     MOVE   "TALLY FOR ALL SPACES" TO FEATURE.                    NC2164.2
@@ -1700,9 +1700,9 @@
 170200     MOVE    6 TO CORRECT-N.                                      NC2164.2
 170300 INS-WRITE-F1-28.                                                 NC2164.2
 170400     PERFORM PRINT-DETAIL.                                        NC2164.2
-170500*                                                                 NC2164.2
+170500*                                                                         
 170600 INS-INIT-F1-29.                                                  NC2164.2
-170700*    ===-->  BEFORE AND AFTER PHRASES  <--===                     NC2164.2
+170700*                                                                         
 170800     MOVE "INS-TEST-F1-29" TO PAR-NAME.                           NC2164.2
 170900     MOVE "VI-94 6.17.3 SR4" TO ANSI-REFERENCE.                   NC2164.2
 171000     MOVE "FOR CHARS AFTER LIT" TO FEATURE.                       NC2164.2
@@ -1715,7 +1715,7 @@
 171700     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR CHARACTERS        NC2164.2
 171800             BEFORE "KI"                                          NC2164.2
 171900             AFTER  " W".                                         NC2164.2
-172000     IF      WRK-DU-999-1 EQUAL TO 48                             NC2164.2
+172000     IF      WRK-DU-999-1 EQUAL TO 14                             NC2164.2
 172100             PERFORM PASS                                         NC2164.2
 172200             GO TO   INS-WRITE-F1-29.                             NC2164.2
 172300     GO TO   INS-FAIL-F1-29.                                      NC2164.2
@@ -1725,12 +1725,12 @@
 172700 INS-FAIL-F1-29.                                                  NC2164.2
 172800     PERFORM FAIL.                                                NC2164.2
 172900     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC2164.2
-173000     MOVE 48 TO CORRECT-N.                                        NC2164.2
+173000     MOVE 14 TO CORRECT-N.                                        NC2164.2
 173100 INS-WRITE-F1-29.                                                 NC2164.2
 173200     PERFORM PRINT-DETAIL.                                        NC2164.2
-173300*                                                                 NC2164.2
+173300*                                                                         
 173400 INS-INIT-F1-30.                                                  NC2164.2
-173500*    ===-->  EVALUATION OF SUBSCRIPTED IDENTIFIERS  <--===        NC2164.2
+173500*                                                                         
 173600     MOVE   "INS-TEST-F1-30" TO PAR-NAME.                         NC2164.2
 173700     MOVE   "VI-95 6.17.4 GR4 & VI-97 6.17.4 GR8"                 NC2164.2
 173800          TO ANSI-REFERENCE.                                      NC2164.2
@@ -1759,7 +1759,7 @@
 176100     MOVE    4 TO CORRECT-N.                                      NC2164.2
 176200 INS-WRITE-F1-30-1.                                               NC2164.2
 176300     PERFORM PRINT-DETAIL.                                        NC2164.2
-176400*                                                                 NC2164.2
+176400*                                                                         
 176500 INS-INIT-F1-31.                                                  NC2164.2
 176600     MOVE   "INS-TEST-F1-31" TO PAR-NAME.                         NC2164.2
 176700     MOVE   "VI-93" TO ANSI-REFERENCE.                            NC2164.2
@@ -1786,7 +1786,7 @@
 178800     MOVE    10 TO CORRECT-N.                                     NC2164.2
 178900 INS-WRITE-F1-31-1.                                               NC2164.2
 179000     PERFORM PRINT-DETAIL.                                        NC2164.2
-179100*                                                                 NC2164.2
+179100*                                                                         
 179200 INS-INIT-F1-32.                                                  NC2164.2
 179300     MOVE   "INS-TEST-F1-32" TO PAR-NAME.                         NC2164.2
 179400     MOVE   "VI-93" TO ANSI-REFERENCE.                            NC2164.2
@@ -1814,9 +1814,9 @@
 181600     MOVE    0 TO CORRECT-N.                                      NC2164.2
 181700 INS-WRITE-F1-32-1.                                               NC2164.2
 181800     PERFORM PRINT-DETAIL.                                        NC2164.2
-181900*                                                                 NC2164.2
+181900*                                                                         
 182000 INS-INIT-F2-33.                                                  NC2164.2
-182100*    ===--> "BEFORE" AND "AFTER" PHRASES  <--===                  NC2164.2
+182100*                                                                         
 182200     MOVE "INS-TEST-F2-33" TO PAR-NAME.                           NC2164.2
 182300     MOVE "VI-94 6.17.3 SR4" TO ANSI-REFERENCE.                   NC2164.2
 182400     MOVE "REP CHARS BY SPACES" TO FEATURE.                       NC2164.2
@@ -1862,10 +1862,10 @@
 186400     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 186500 INS-WRITE-F2-33-1.                                               NC2164.2
 186600     PERFORM PRINT-DETAIL.                                        NC2164.2
-186700*                                                                 NC2164.2
+186700*                                                                         
 186800 INS-INIT-F2-34.                                                  NC2164.2
-186900*    ===-->  MULTIPLE "CHARACTERS" PHRASES WITH  <--===           NC2164.2
-187000*    ===-->         "BEFORE" AND "AFTER"         <--===           NC2164.2
+186900*                                                                         
+187000*                                                                         
 187100     MOVE   "INS-TEST-F2-34" TO PAR-NAME.                         NC2164.2
 187200     MOVE   "VI-93 6.17.2" TO ANSI-REFERENCE.                     NC2164.2
 187300     MOVE   "AAFSSQ  ET U V W H S" TO TEST-34-DATA.               NC2164.2
@@ -1889,10 +1889,10 @@
 189100     MOVE    TEST-34-ANSWER TO CORRECT-A.                         NC2164.2
 189200 INS-WRITE-F2-34-1.                                               NC2164.2
 189300     PERFORM PRINT-DETAIL.                                        NC2164.2
-189400*                                                                 NC2164.2
+189400*                                                                         
 189500 INS-INIT-F3-35.                                                  NC2164.2
-189600*    ===-->  MULTIPLE "CHARACTERS" PHRASES WITH  <--===           NC2164.2
-189700*    ===-->         "BEFORE" AND "AFTER"         <--===           NC2164.2
+189600*                                                                         
+189700*                                                                         
 189800     MOVE   "INS-TEST-F3-35-1" TO PAR-NAME.                       NC2164.2
 189900     MOVE   "VI-93 6.17.2" TO ANSI-REFERENCE.                     NC2164.2
 190000     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -1918,9 +1918,9 @@
 192000     MOVE    TEST-35-ANSWER TO CORRECT-A.                         NC2164.2
 192100 INS-WRITE-F3-35-1.                                               NC2164.2
 192200     PERFORM PRINT-DETAIL.                                        NC2164.2
-192300*                                                                 NC2164.2
+192300*                                                                         
 192400 INS-INIT-F3-36.                                                  NC2164.2
-192500*    ===-->    "BEFORE" AND "AFTER" PHRASES     <--===            NC2164.2
+192500*                                                                         
 192600     MOVE   "INS-TEST-F3-36" TO PAR-NAME.                         NC2164.2
 192700     MOVE   "TALLY-REPLACE CHARS" TO FEATURE.                     NC2164.2
 192800     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -1960,7 +1960,7 @@
 196200     MOVE    70 TO CORRECT-N.                                     NC2164.2
 196300 INS-WRITE-F3-36-1.                                               NC2164.2
 196400     PERFORM PRINT-DETAIL.                                        NC2164.2
-196500*                                                                 NC2164.2
+196500*                                                                         
 196600 INS-TEST-F3-36-2.                                                NC2164.2
 196700     ADD     1 TO REC-CT.                                         NC2164.2
 196800     IF      WRK-XN-83-1 = ANS-XN-83-11                           NC2164.2
@@ -1993,9 +1993,9 @@
 199500     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 199600 INS-WRITE-F3-36-2.                                               NC2164.2
 199700     PERFORM PRINT-DETAIL.                                        NC2164.2
-199800*                                                                 NC2164.2
+199800*                                                                         
 199900 INS-INIT-F3-37.                                                  NC2164.2
-200000*    ===-->    "BEFORE" AND "AFTER" PHRASES     <--===            NC2164.2
+200000*                                                                         
 200100     MOVE   "INS-TEST-F3-37" TO PAR-NAME.                         NC2164.2
 200200     MOVE   "REPL FIRST AFTER" TO FEATURE.                        NC2164.2
 200300     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -2037,7 +2037,7 @@
 203900     MOVE    6 TO CORRECT-N.                                      NC2164.2
 204000 INS-WRITE-F3-37-1.                                               NC2164.2
 204100     PERFORM PRINT-DETAIL.                                        NC2164.2
-204200*                                                                 NC2164.2
+204200*                                                                         
 204300 INS-TEST-F3-37-2.                                                NC2164.2
 204400     ADD     1 TO REC-CT.                                         NC2164.2
 204500     IF      WRK-XN-83-1 EQUAL TO ANS-XN-83-5                     NC2164.2
@@ -2068,9 +2068,9 @@
 207000     MOVE    WS-WRONG-81-83  TO COMPUTED-A.                       NC2164.2
 207100 INS-WRITE-F3-37-2.                                               NC2164.2
 207200     PERFORM PRINT-DETAIL.                                        NC2164.2
-207300*                                                                 NC2164.2
+207300*                                                                         
 207400 INS-INIT-F3-38.                                                  NC2164.2
-207500*    ===-->  MULTIPLE OPERANDS FOR "ALL"         <--===           NC2164.2
+207500*                                                                         
 207600     MOVE   "INS-TEST-F3-38" TO PAR-NAME.                         NC2164.2
 207700     MOVE   "VI-93 6.17.2" TO ANSI-REFERENCE.                     NC2164.2
 207800     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -2098,9 +2098,9 @@
 210000     MOVE    7 TO CORRECT-N.                                      NC2164.2
 210100 INS-WRITE-F3-38.                                                 NC2164.2
 210200     PERFORM PRINT-DETAIL.                                        NC2164.2
-210300*                                                                 NC2164.2
+210300*                                                                         
 210400 INS-INIT-F3-39.                                                  NC2164.2
-210500*    ===-->  MULTIPLE OPERANDS FOR "LEADING"     <--===           NC2164.2
+210500*                                                                         
 210600     MOVE   "INS-TEST-F3-39" TO PAR-NAME.                         NC2164.2
 210700     MOVE   "VI-93 6.17.2" TO ANSI-REFERENCE.                     NC2164.2
 210800     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -2128,9 +2128,9 @@
 213000     MOVE    0            TO CORRECT-N.                           NC2164.2
 213100 INS-WRITE-F3-39-1.                                               NC2164.2
 213200     PERFORM PRINT-DETAIL.                                        NC2164.2
-213300*                                                                 NC2164.2
+213300*                                                                         
 213400 INS-INIT-F4-40.                                                  NC2164.2
-213500*    ===-->        INSPECT CONVERTING            <--===           NC2164.2
+213500*                                                                         
 213600     MOVE   "INS-TEST-F4-40" TO PAR-NAME.                         NC2164.2
 213700     MOVE   "VI-943" TO ANSI-REFERENCE.                           NC2164.2
 213800     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -2159,7 +2159,7 @@
 216100 INS-WRITE-F4-40-1.                                               NC2164.2
 216200     PERFORM PRINT-DETAIL.                                        NC2164.2
 216300 INS-INIT-F4-41.                                                  NC2164.2
-216400*    ===-->        INSPECT CONVERTING            <--===           NC2164.2
+216400*                                                                         
 216500     MOVE   "INS-TEST-F4-41" TO PAR-NAME.                         NC2164.2
 216600     MOVE   "VI-943" TO ANSI-REFERENCE.                           NC2164.2
 216700     MOVE   "GADQ23ZT2BAGA"  TO TEST-40-DATA.                     NC2164.2
@@ -2188,9 +2188,9 @@
 219000     PERFORM FAIL.                                                NC2164.2
 219100 INS-WRITE-F4-41-1.                                               NC2164.2
 219200     PERFORM PRINT-DETAIL.                                        NC2164.2
-219300*                                                                 NC2164.2
+219300*                                                                         
 219400 INS-INIT-F4-42.                                                  NC2164.2
-219500*    ===-->        INSPECT CONVERTING            <--===           NC2164.2
+219500*                                                                         
 219600     MOVE   "INS-TEST-F4-42" TO PAR-NAME.                         NC2164.2
 219700     MOVE   "VI-943" TO ANSI-REFERENCE.                           NC2164.2
 219800     MOVE    ZERO TO WRK-DU-999-1.                                NC2164.2
@@ -2219,7 +2219,7 @@
 222100     PERFORM FAIL.                                                NC2164.2
 222200 INS-WRITE-F4-42-1.                                               NC2164.2
 222300     PERFORM PRINT-DETAIL.                                        NC2164.2
-222400*                                                                 NC2164.2
+222400*                                                                         
 222500 CCVS-EXIT SECTION.                                               NC2164.2
 222600 CCVS-999999.                                                     NC2164.2
 222700     GO TO CLOSE-FILES.                                           NC2164.2

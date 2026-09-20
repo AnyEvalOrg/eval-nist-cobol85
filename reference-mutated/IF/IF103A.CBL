@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1034.2
 000300     IF103A.                                                      IF1034.2
 000400                                                                  IF1034.2
-000500***********************************************************       IF1034.2
-000600*                                                         *       IF1034.2
-000700*   This program is intended to form part of the CCVS85   *       IF1034.2
-000800*   COBOL Test Suite. It contains tests for the           *       IF1034.2
-000900*   Intrinsic Function ASIN.                              *       IF1034.2
-001000*                                                         *       IF1034.2
-001100***********************************************************       IF1034.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1034.2
 001300 CONFIGURATION SECTION.                                           IF1034.2
 001400 SOURCE-COMPUTER.                                                 IF1034.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1034.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1034.2
 002700 WORKING-STORAGE SECTION.                                         IF1034.2
-002800***********************************************************       IF1034.2
-002900* Variables specific to the Intrinsic Function Test IF103A*       IF1034.2
-003000***********************************************************       IF1034.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(5)V9(5)      VALUE -0.00004.      IF1034.2
 003200 01  B                   PIC S9(10)          VALUE 2.             IF1034.2
 003300 01  C                   PIC S9(10)          VALUE 100000.        IF1034.2
@@ -42,9 +42,9 @@
 004200 01  WS-NUM              PIC S9(5)V9(6).                          IF1034.2
 004300 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1034.2
 004400 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1034.2
-004500*                                                                 IF1034.2
-004600**********************************************************        IF1034.2
-004700*                                                                 IF1034.2
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
 004800 01  TEST-RESULTS.                                                IF1034.2
 004900     02 FILLER                   PIC X      VALUE SPACE.          IF1034.2
 005000     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1034.2
@@ -338,16 +338,16 @@
 033800 BAIL-OUT-EX. EXIT.                                               IF1034.2
 033900 CCVS1-EXIT.                                                      IF1034.2
 034000     EXIT.                                                        IF1034.2
-034100********************************************************          IF1034.2
-034200*                                                      *          IF1034.2
-034300*    Intrinsic Function Tests         IF103A - ASIN    *          IF1034.2
-034400*                                                      *          IF1034.2
-034500********************************************************          IF1034.2
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
 034600 SECT-IF103A SECTION.                                             IF1034.2
 034700 F-ASIN-INFO.                                                     IF1034.2
 034800     MOVE     "See ref. A-35 2.7" TO ANSI-REFERENCE.              IF1034.2
 034900     MOVE     "ASIN Function" TO FEATURE.                         IF1034.2
-035000*****************TEST (a) - SIMPLE TEST*****************          IF1034.2
+035000*                                                                         
 035100 F-ASIN-01.                                                       IF1034.2
 035200     MOVE ZERO TO WS-NUM.                                         IF1034.2
 035300     MOVE  1.57076 TO MIN-RANGE.                                  IF1034.2
@@ -369,7 +369,7 @@
 036900 F-ASIN-WRITE-01.                                                 IF1034.2
 037000     MOVE "F-ASIN-01" TO PAR-NAME.                                IF1034.2
 037100     PERFORM  PRINT-DETAIL.                                       IF1034.2
-037200*****************TEST (b) - SIMPLE TEST*****************          IF1034.2
+037200*                                                                         
 037300 F-ASIN-02.                                                       IF1034.2
 037400     EVALUATE FUNCTION ASIN(0.5)                                  IF1034.2
 037500     WHEN  0.523588 THRU 0.523609                                 IF1034.2
@@ -383,7 +383,7 @@
 038300 F-ASIN-WRITE-02.                                                 IF1034.2
 038400     MOVE "F-ASIN-02" TO PAR-NAME.                                IF1034.2
 038500     PERFORM  PRINT-DETAIL.                                       IF1034.2
-038600*****************TEST (c) - SIMPLE TEST*****************          IF1034.2
+038600*                                                                         
 038700 F-ASIN-03.                                                       IF1034.2
 038800     MOVE -0.000020 TO MIN-RANGE.                                 IF1034.2
 038900     MOVE  0.000020 TO MAX-RANGE.                                 IF1034.2
@@ -400,7 +400,7 @@
 040000 F-ASIN-WRITE-03.                                                 IF1034.2
 040100     MOVE "F-ASIN-03" TO PAR-NAME.                                IF1034.2
 040200     PERFORM  PRINT-DETAIL.                                       IF1034.2
-040300*****************TEST (d) - SIMPLE TEST*****************          IF1034.2
+040300*                                                                         
 040400 F-ASIN-04.                                                       IF1034.2
 040500     MOVE ZERO TO WS-NUM.                                         IF1034.2
 040600     MOVE -1.57080 TO MIN-RANGE.                                  IF1034.2
@@ -422,7 +422,7 @@
 042200 F-ASIN-WRITE-04.                                                 IF1034.2
 042300     MOVE "F-ASIN-04" TO PAR-NAME.                                IF1034.2
 042400     PERFORM  PRINT-DETAIL.                                       IF1034.2
-042500*****************TEST (e) - SIMPLE TEST*****************          IF1034.2
+042500*                                                                         
 042600 F-ASIN-05.                                                       IF1034.2
 042700     MOVE ZERO TO WS-NUM.                                         IF1034.2
 042800     MOVE  1.52604 TO MIN-RANGE.                                  IF1034.2
@@ -444,7 +444,7 @@
 044400 F-ASIN-WRITE-05.                                                 IF1034.2
 044500     MOVE "F-ASIN-05" TO PAR-NAME.                                IF1034.2
 044600     PERFORM  PRINT-DETAIL.                                       IF1034.2
-044700*****************TEST (f) - SIMPLE TEST*****************          IF1034.2
+044700*                                                                         
 044800 F-ASIN-06.                                                       IF1034.2
 044900     MOVE ZERO TO WS-NUM.                                         IF1034.2
 045000     MOVE  0.512079 TO MIN-RANGE.                                 IF1034.2
@@ -466,7 +466,7 @@
 046600 F-ASIN-WRITE-06.                                                 IF1034.2
 046700     MOVE "F-ASIN-06" TO PAR-NAME.                                IF1034.2
 046800     PERFORM  PRINT-DETAIL.                                       IF1034.2
-046900*****************TEST (h) - SIMPLE TEST*****************          IF1034.2
+046900*                                                                         
 047000 F-ASIN-08.                                                       IF1034.2
 047100     MOVE ZERO TO WS-NUM.                                         IF1034.2
 047200     MOVE -1.52610 TO MIN-RANGE.                                  IF1034.2
@@ -488,7 +488,7 @@
 048800 F-ASIN-WRITE-08.                                                 IF1034.2
 048900     MOVE "F-ASIN-08" TO PAR-NAME.                                IF1034.2
 049000     PERFORM  PRINT-DETAIL.                                       IF1034.2
-049100*****************TEST (k) - SIMPLE TEST*****************          IF1034.2
+049100*                                                                         
 049200 F-ASIN-11.                                                       IF1034.2
 049300     MOVE ZERO TO WS-NUM.                                         IF1034.2
 049400     MOVE -0.000020 TO MIN-RANGE.                                 IF1034.2
@@ -510,7 +510,7 @@
 051000 F-ASIN-WRITE-11.                                                 IF1034.2
 051100     MOVE "F-ASIN-11" TO PAR-NAME.                                IF1034.2
 051200     PERFORM  PRINT-DETAIL.                                       IF1034.2
-051300*****************TEST (a) - COMPLEX TEST****************          IF1034.2
+051300*                                                                         
 051400 F-ASIN-12.                                                       IF1034.2
 051500     MOVE ZERO TO WS-NUM.                                         IF1034.2
 051600     MOVE  0.785367 TO MIN-RANGE.                                 IF1034.2
@@ -532,7 +532,7 @@
 053200 F-ASIN-WRITE-12.                                                 IF1034.2
 053300     MOVE "F-ASIN-12" TO PAR-NAME.                                IF1034.2
 053400     PERFORM  PRINT-DETAIL.                                       IF1034.2
-053500*****************TEST (b) COMPLEX-TEST******************          IF1034.2
+053500*                                                                         
 053600 F-ASIN-13.                                                       IF1034.2
 053700     MOVE ZERO TO WS-NUM.                                         IF1034.2
 053800     MOVE  1.04715 TO MIN-RANGE.                                  IF1034.2
@@ -554,7 +554,7 @@
 055400 F-ASIN-WRITE-13.                                                 IF1034.2
 055500     MOVE "F-ASIN-13" TO PAR-NAME.                                IF1034.2
 055600     PERFORM  PRINT-DETAIL.                                       IF1034.2
-055700*****************TEST (d) - COMPLEX TEST****************          IF1034.2
+055700*                                                                         
 055800 F-ASIN-15.                                                       IF1034.2
 055900     MOVE ZERO TO WS-NUM.                                         IF1034.2
 056000     MOVE  1.42919 TO MIN-RANGE.                                  IF1034.2
@@ -576,7 +576,7 @@
 057600 F-ASIN-WRITE-15.                                                 IF1034.2
 057700     MOVE "F-ASIN-15" TO PAR-NAME.                                IF1034.2
 057800     PERFORM  PRINT-DETAIL.                                       IF1034.2
-057900*****************TEST (e) - COMPLEX TEST****************          IF1034.2
+057900*                                                                         
 058000 F-ASIN-16.                                                       IF1034.2
 058100     MOVE ZERO TO WS-NUM.                                         IF1034.2
 058200     MOVE  0.512069  TO MIN-RANGE.                                IF1034.2
@@ -598,7 +598,7 @@
 059800 F-ASIN-WRITE-16.                                                 IF1034.2
 059900     MOVE "F-ASIN-16" TO PAR-NAME.                                IF1034.2
 060000     PERFORM  PRINT-DETAIL.                                       IF1034.2
-060100*****************TEST (f) - COMPLEX TEST****************          IF1034.2
+060100*                                                                         
 060200 F-ASIN-17.                                                       IF1034.2
 060300     MOVE ZERO TO WS-NUM.                                         IF1034.2
 060400     MOVE -1.42931 TO MIN-RANGE.                                  IF1034.2
@@ -620,7 +620,7 @@
 062000 F-ASIN-WRITE-17.                                                 IF1034.2
 062100     MOVE "F-ASIN-17" TO PAR-NAME.                                IF1034.2
 062200     PERFORM  PRINT-DETAIL.                                       IF1034.2
-062300*****************TEST (g) - COMPLEX TEST****************          IF1034.2
+062300*                                                                         
 062400 F-ASIN-18.                                                       IF1034.2
 062500     MOVE ZERO TO WS-NUM.                                         IF1034.2
 062600     MOVE  0.675104  TO MIN-RANGE.                                IF1034.2
@@ -642,7 +642,7 @@
 064200 F-ASIN-WRITE-18.                                                 IF1034.2
 064300     MOVE "F-ASIN-18" TO PAR-NAME.                                IF1034.2
 064400     PERFORM  PRINT-DETAIL.                                       IF1034.2
-064500*****************TEST (h) - COMPLEX TEST****************          IF1034.2
+064500*                                                                         
 064600 F-ASIN-19.                                                       IF1034.2
 064700     MOVE ZERO TO WS-NUM.                                         IF1034.2
 064800     MOVE  1.57073 TO MIN-RANGE.                                  IF1034.2
@@ -664,7 +664,7 @@
 066400 F-ASIN-WRITE-19.                                                 IF1034.2
 066500     MOVE "F-ASIN-19" TO PAR-NAME.                                IF1034.2
 066600     PERFORM  PRINT-DETAIL.                                       IF1034.2
-066700*****************TEST (i) - COMPLEX TEST****************          IF1034.2
+066700*                                                                         
 066800 F-ASIN-20.                                                       IF1034.2
 066900     MOVE ZERO TO WS-NUM.                                         IF1034.2
 067000     MOVE -0.000040 TO MIN-RANGE.                                 IF1034.2
@@ -686,7 +686,7 @@
 068600 F-ASIN-WRITE-20.                                                 IF1034.2
 068700     MOVE "F-ASIN-20" TO PAR-NAME.                                IF1034.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1034.2
-068900*****************TEST (j) - COMPLEX TEST****************          IF1034.2
+068900*                                                                         
 069000 F-ASIN-21.                                                       IF1034.2
 069100     MOVE ZERO TO WS-NUM.                                         IF1034.2
 069200     MOVE  0.252670 TO MIN-RANGE.                                 IF1034.2
@@ -708,7 +708,7 @@
 070800 F-ASIN-WRITE-21.                                                 IF1034.2
 070900     MOVE "F-ASIN-21" TO PAR-NAME.                                IF1034.2
 071000     PERFORM  PRINT-DETAIL.                                       IF1034.2
-071100*****************TEST (k) - COMPLEX TEST****************          IF1034.2
+071100*                                                                         
 071200 F-ASIN-22.                                                       IF1034.2
 071300     MOVE ZERO TO WS-NUM.                                         IF1034.2
 071400     MOVE  0.323933 TO MIN-RANGE.                                 IF1034.2
@@ -730,7 +730,7 @@
 073000 F-ASIN-WRITE-22.                                                 IF1034.2
 073100     MOVE "F-ASIN-22" TO PAR-NAME.                                IF1034.2
 073200     PERFORM  PRINT-DETAIL.                                       IF1034.2
-073300*****************TEST (l) - COMPLEX TEST****************          IF1034.2
+073300*                                                                         
 073400 F-ASIN-23.                                                       IF1034.2
 073500     MOVE ZERO TO WS-NUM.                                         IF1034.2
 073600     MOVE -0.000040 TO MIN-RANGE.                                 IF1034.2
@@ -752,7 +752,7 @@
 075200 F-ASIN-WRITE-23.                                                 IF1034.2
 075300     MOVE "F-ASIN-23" TO PAR-NAME.                                IF1034.2
 075400     PERFORM  PRINT-DETAIL.                                       IF1034.2
-075500*****************TEST (m) - COMPLEX TEST****************          IF1034.2
+075500*                                                                         
 075600 F-ASIN-24.                                                       IF1034.2
 075700     MOVE ZERO TO WS-NUM.                                         IF1034.2
 075800     MOVE -1.03219 TO MIN-RANGE.                                  IF1034.2
@@ -774,7 +774,7 @@
 077400 F-ASIN-WRITE-24.                                                 IF1034.2
 077500     MOVE "F-ASIN-24" TO PAR-NAME.                                IF1034.2
 077600     PERFORM  PRINT-DETAIL.                                       IF1034.2
-077700*****************TEST (n) - COMPLEX TEST****************          IF1034.2
+077700*                                                                         
 077800 F-ASIN-25.                                                       IF1034.2
 077900     MOVE ZERO TO WS-NUM.                                         IF1034.2
 078000     MOVE 0.142546 TO MIN-RANGE.                                  IF1034.2
@@ -796,7 +796,7 @@
 079600 F-ASIN-WRITE-25.                                                 IF1034.2
 079700     MOVE "F-ASIN-25" TO PAR-NAME.                                IF1034.2
 079800     PERFORM  PRINT-DETAIL.                                       IF1034.2
-079900*****************TEST (o) - COMPLEX TEST****************          IF1034.2
+079900*                                                                         
 080000 F-ASIN-26.                                                       IF1034.2
 080100     MOVE ZERO TO WS-NUM.                                         IF1034.2
 080200     MOVE 1.28695 TO MIN-RANGE.                                   IF1034.2
@@ -819,7 +819,7 @@
 081900 F-ASIN-WRITE-26.                                                 IF1034.2
 082000     MOVE "F-ASIN-26" TO PAR-NAME.                                IF1034.2
 082100     PERFORM  PRINT-DETAIL.                                       IF1034.2
-082200*****************SPECIAL PERFORM TEST**********************       IF1034.2
+082200*                                                                         
 082300 F-ASIN-27.                                                       IF1034.2
 082400     MOVE ZERO TO WS-NUM.                                         IF1034.2
 082500     PERFORM F-ASIN-TEST-27                                       IF1034.2
@@ -834,7 +834,7 @@
 083400 F-ASIN-WRITE-27.                                                 IF1034.2
 083500     MOVE "F-ASIN-27" TO PAR-NAME.                                IF1034.2
 083600     PERFORM  PRINT-DETAIL.                                       IF1034.2
-083700********************END OF TESTS***************                   IF1034.2
+083700*                                                                         
 083800 CCVS-EXIT SECTION.                                               IF1034.2
 083900 CCVS-999999.                                                     IF1034.2
 084000     GO TO CLOSE-FILES.                                           IF1034.2

@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC2224.2
 000200 PROGRAM-ID.                                                      NC2224.2
 000300     NC222A.                                                      NC2224.2
-000400*                                                              *  NC2224.2
-000500****************************************************************  NC2224.2
-000600*                                                              *  NC2224.2
-000700*    VALIDATION FOR:-                                          *  NC2224.2
-000800*                                                              *  NC2224.2
-000900*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2224.2
-001000*                                                              *  NC2224.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2224.2
-001200*                                                              *  NC2224.2
-001300****************************************************************  NC2224.2
-001400*                                                              *  NC2224.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2224.2
-001600*                                                              *  NC2224.2
-001700*        X-55  - SYSTEM PRINTER NAME.                          *  NC2224.2
-001800*        X-82  - SOURCE COMPUTER NAME.                         *  NC2224.2
-001900*        X-83  - OBJECT COMPUTER NAME.                         *  NC2224.2
-002000*                                                              *  NC2224.2
-002100****************************************************************  NC2224.2
-002200*    PROGRAM NC222A TESTS THE USE OF INDEXED IDENTIFIERS WITH  *  NC2224.2
-002300*    FORMAT 2 OF THE "ADD", "SUBTRACT" AND "MOVE" STATEMENTS.  *  NC2224.2
-002400*    DE-EDITING BY USE OF THE "MOVE" STATEMENT IS ALSO TESTED. *  NC2224.2
-002500*                                                              *  NC2224.2
-002600****************************************************************  NC2224.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC2224.2
 002800 CONFIGURATION SECTION.                                           NC2224.2
 002900 SOURCE-COMPUTER.                                                 NC2224.2
@@ -255,7 +255,7 @@
 025700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2224.2
 025800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2224.2
 025900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2224.2
-026000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2224.2
+026000*                                                                         
 026100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2224.2
 026200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2224.2
 026300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2224.2
@@ -332,7 +332,7 @@
 033400     MOVE 03 TO RECORD2 OF TABLE2 (1).                            NC2224.2
 033500     MOVE 04 TO RECORD2 OF TABLE2 (2).                            NC2224.2
 033600     MOVE 09 TO RECORD3 OF TABLE2.                                NC2224.2
-033700*                                                                 NC2224.2
+033700*                                                                         
 033800 ADD-INIT-F2-1.                                                   NC2224.2
 033900     MOVE   "ADD-TEST-F2-1" TO PAR-NAME.                          NC2224.2
 034000     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2224.2
@@ -390,7 +390,7 @@
 039200     MOVE "08020409" TO CORRECT-A.                                NC2224.2
 039300 SUBTRACT-WRITE-F2-1.                                             NC2224.2
 039400     PERFORM PRINT-DETAIL.                                        NC2224.2
-039500*                                                                 NC2224.2
+039500*                                                                         
 039600 MOV-INIT-F2-1.                                                   NC2224.2
 039700     MOVE "MOV-TEST-F2-1" TO PAR-NAME.                            NC2224.2
 039800     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2224.2
@@ -415,14 +415,14 @@
 041700     MOVE "06030407" TO CORRECT-A.                                NC2224.2
 041800 MOV-WRITE-F2-1.                                                  NC2224.2
 041900     PERFORM PRINT-DETAIL.                                        NC2224.2
-042000*                                                                 NC2224.2
+042000*                                                                         
 042100 INITIALISE-TABLE3.                                               NC2224.2
 042200     MOVE "BB" TO RECORD2 OF TABLE3 (1).                          NC2224.2
 042300     MOVE "CC" TO RECORD2 OF TABLE3 (2).                          NC2224.2
 042400 INITIALISE-TABLE4.                                               NC2224.2
 042500     MOVE "FF" TO RECORD2 OF TABLE4 (1).                          NC2224.2
 042600     MOVE "GG" TO RECORD2 OF TABLE4 (2).                          NC2224.2
-042700*                                                                 NC2224.2
+042700*                                                                         
 042800 MOV-INIT-F2-2.                                                   NC2224.2
 042900     MOVE "MOV-TEST-F2-2" TO PAR-NAME.                            NC2224.2
 043000     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2224.2
@@ -445,9 +445,9 @@
 044700     MOVE "AAFFGGDD" TO CORRECT-A.                                NC2224.2
 044800 MOV-WRITE-F2-2.                                                  NC2224.2
 044900     PERFORM PRINT-DETAIL.                                        NC2224.2
-045000*                                                                 NC2224.2
+045000*                                                                         
 045100 MOV-INIT-F2-3.                                                   NC2224.2
-045200*    ===-->  DE-EDITING  <--===                                   NC2224.2
+045200*                                                                         
 045300     MOVE   "VI-104 6.18.4 GR4(b)" TO ANSI-REFERENCE.             NC2224.2
 045400     MOVE   -123.45 TO MOVE-TEST-3-A.                             NC2224.2
 045500     MOVE    1 TO REC-CT.                                         NC2224.2
@@ -460,7 +460,7 @@
 046200     GO TO MOV-INIT-F2-4.                                         NC2224.2
 046300 MOV-TEST-F2-3-1.                                                 NC2224.2
 046400     MOVE   "MOV-TEST-F2-3-1" TO PAR-NAME.                        NC2224.2
-046500     IF      MOVE-TEST-3-B = -120.45                              NC2224.2
+046500     IF      MOVE-TEST-3-B = -123.45                              NC2224.2
 046600             PERFORM PASS                                         NC2224.2
 046700             GO TO MOV-WRITE-F2-3-1                               NC2224.2
 046800     ELSE                                                         NC2224.2
@@ -469,13 +469,13 @@
 047100     PERFORM DE-LETE.                                             NC2224.2
 047200     GO TO MOV-WRITE-F2-3-1.                                      NC2224.2
 047300 MOV-FAIL-F2-3-1.                                                 NC2224.2
-047400     MOVE   -120.45 TO CORRECT-N                                  NC2224.2
+047400     MOVE   -123.45 TO CORRECT-N                                  NC2224.2
 047500     MOVE    MOVE-TEST-3-B TO COMPUTED-N                          NC2224.2
 047600     MOVE   "DE-EDITING MOVE ERROR" TO RE-MARK                    NC2224.2
 047700     PERFORM FAIL.                                                NC2224.2
 047800 MOV-WRITE-F2-3-1.                                                NC2224.2
 047900     PERFORM PRINT-DETAIL.                                        NC2224.2
-048000*                                                                 NC2224.2
+048000*                                                                         
 048100 MOV-INIT-F2-3-2.                                                 NC2224.2
 048200     ADD     1 TO REC-CT.                                         NC2224.2
 048300     MOVE   "MOV-TEST-F2-3-2" TO PAR-NAME.                        NC2224.2
@@ -495,9 +495,9 @@
 049700     PERFORM FAIL.                                                NC2224.2
 049800 MOV-WRITE-F2-3-2.                                                NC2224.2
 049900     PERFORM PRINT-DETAIL.                                        NC2224.2
-050000*                                                                 NC2224.2
+050000*                                                                         
 050100 MOV-INIT-F2-4.                                                   NC2224.2
-050200*    ===-->  DE-EDITING  <--===                                   NC2224.2
+050200*                                                                         
 050300     MOVE   "VI-104 6.18.4 GR4(b)" TO ANSI-REFERENCE.             NC2224.2
 050400     MOVE   -42.9876 TO MOVE-TEST-4-A.                            NC2224.2
 050500     MOVE    1 TO REC-CT.                                         NC2224.2
@@ -510,7 +510,7 @@
 051200     GO TO CCVS-999999.                                           NC2224.2
 051300 MOV-TEST-F2-4-1.                                                 NC2224.2
 051400     MOVE   "MOV-TEST-F2-4-1" TO PAR-NAME.                        NC2224.2
-051500     IF      MOVE-TEST-4-B = -02.987600                           NC2224.2
+051500     IF      MOVE-TEST-4-B = -42.987600                           NC2224.2
 051600             PERFORM PASS                                         NC2224.2
 051700             GO TO MOV-WRITE-F2-4-1                               NC2224.2
 051800     ELSE                                                         NC2224.2
@@ -519,7 +519,7 @@
 052100     PERFORM DE-LETE.                                             NC2224.2
 052200     GO TO MOV-WRITE-F2-4-1.                                      NC2224.2
 052300 MOV-FAIL-F2-4-1.                                                 NC2224.2
-052400     MOVE   -02.987600 TO CORRECT-N                               NC2224.2
+052400     MOVE   -42.987600 TO CORRECT-N                               NC2224.2
 052500     MOVE    MOVE-TEST-4-B TO COMPUTED-N                          NC2224.2
 052600     MOVE   "DE-EDITING MOVE ERROR" TO RE-MARK                    NC2224.2
 052700     PERFORM FAIL.                                                NC2224.2
@@ -529,7 +529,7 @@
 053100 MOV-TEST-F2-4-2.                                                 NC2224.2
 053200     ADD     1 TO REC-CT.                                         NC2224.2
 053300     MOVE   "MOV-TEST-F2-4-2" TO PAR-NAME.                        NC2224.2
-053400     IF      MOVE-TEST-4-A = "742 .98 76/00"                      NC2224.2
+053400     IF      MOVE-TEST-4-A = "-42 .98 76/00"                      NC2224.2
 053500             PERFORM PASS                                         NC2224.2
 053600             GO TO MOV-WRITE-F2-4-2                               NC2224.2
 053700     ELSE                                                         NC2224.2
@@ -538,13 +538,13 @@
 054000     PERFORM DE-LETE.                                             NC2224.2
 054100     GO TO MOV-WRITE-F2-4-2.                                      NC2224.2
 054200 MOV-FAIL-F2-4-2.                                                 NC2224.2
-054300     MOVE   "742 .98 76/00" TO CORRECT-X                          NC2224.2
+054300     MOVE   "-42 .98 76/00" TO CORRECT-X                          NC2224.2
 054400     MOVE    MOVE-TEST-4-A TO COMPUTED-X                          NC2224.2
 054500     MOVE   "EDITED DATA MOVE ERROR" TO RE-MARK                   NC2224.2
 054600     PERFORM FAIL.                                                NC2224.2
 054700 MOV-WRITE-F2-4-2.                                                NC2224.2
 054800     PERFORM PRINT-DETAIL.                                        NC2224.2
-054900*                                                                 NC2224.2
+054900*                                                                         
 055000 CCVS-EXIT SECTION.                                               NC2224.2
 055100 CCVS-999999.                                                     NC2224.2
 055200     GO TO CLOSE-FILES.                                           NC2224.2

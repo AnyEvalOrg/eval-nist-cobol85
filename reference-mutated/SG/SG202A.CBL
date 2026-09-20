@@ -25,7 +25,7 @@
 002500         CALLED FOR EXECUTION, FALL THRU TO INDEPENDENT           SG2024.2
 002600         SEGMENTS, AND PERFORM FIXED OVERLAYABLE SEGMENTS.        SG2024.2
 002700                                                                  SG2024.2
-002800*                                                                 SG2024.2
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SG2024.2
 003000 CONFIGURATION SECTION.                                           SG2024.2
 003100 SOURCE-COMPUTER.                                                 SG2024.2
@@ -229,7 +229,7 @@
 023100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG2024.2
 023200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG2024.2
 023300      ADD PASS-COUNTER TO ERROR-HOLD.                             SG2024.2
-023400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG2024.2
+023400*                                                                         
 023500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG2024.2
 023600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG2024.2
 023700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG2024.2
@@ -308,9 +308,9 @@
 031000     PERFORM SEC39.                                               SG2024.2
 031100     PERFORM P3901 THRU P3904.                                    SG2024.2
 031200     PERFORM SEC39.                                               SG2024.2
-031300     IF LAST-STATE-A EQUAL TO "M3" PERFORM PASS                   SG2024.2
+031300     IF LAST-STATE-A EQUAL TO "53" PERFORM PASS                   SG2024.2
 031400         ELSE MOVE LAST-STATE-A TO COMPUTED-A                     SG2024.2
-031500         MOVE "M3" TO CORRECT-A                                   SG2024.2
+031500         MOVE "53" TO CORRECT-A                                   SG2024.2
 031600              PERFORM FAIL.                                       SG2024.2
 031700     GO TO TEST-1-WRITE.                                          SG2024.2
 031800 TEST-1-DELETE.                                                   SG2024.2
@@ -328,9 +328,9 @@
 033000*                                                                         
 033100     ALTER P4001 TO PROCEED TO P4003.                             SG2024.2
 033200     PERFORM SEC40.                                               SG2024.2
-033300     IF ALTER-NOT-CALL EQUAL TO "E" PERFORM PASS                  SG2024.2
+033300     IF ALTER-NOT-CALL EQUAL TO "T" PERFORM PASS                  SG2024.2
 033400         ELSE MOVE ALTER-NOT-CALL TO COMPUTED-A                   SG2024.2
-033500         MOVE "E" TO CORRECT-A                                    SG2024.2
+033500         MOVE "T" TO CORRECT-A                                    SG2024.2
 033600              PERFORM FAIL.                                       SG2024.2
 033700     GO TO TEST-2-WRITE.                                          SG2024.2
 033800 TEST-2-DELETE.                                                   SG2024.2
@@ -341,9 +341,9 @@
 034300     PERFORM PRINT-DETAIL.                                        SG2024.2
 034400 TEST-3.                                                          SG2024.2
 034500     MOVE SPACE TO CORRECT-A.                                     SG2024.2
-034600*    NOTE      THIS TEST WILL ENSURE THAT A PERFORM STATEMENT     SG2024.2
-034700*             REFERENCING A OVERLAYABLE FOLLOWED BY A  PERMANENT  SG2024.2
-034800*             SEGMENT  OF THE FIXED PORTION WILL BE EXECUTED OK.  SG2024.2
+034600*                                                                         
+034700*                                                                         
+034800*                                                                         
 034900     PERFORM P4501 THRU P0003.                                    SG2024.2
 035000     IF PERF-OVER-RES IS EQUAL TO "AB" PERFORM PASS               SG2024.2
 035100         ELSE MOVE PERF-OVER-RES TO COMPUTED-A                    SG2024.2
@@ -363,9 +363,9 @@
 036500*                                                                         
 036600*                                                                         
 036700     PERFORM P0004 THRU P4802.                                    SG2024.2
-036800     IF PERF-RES-OVER EQUAL TO "X7" PERFORM PASS                  SG2024.2
+036800     IF PERF-RES-OVER EQUAL TO "XU" PERFORM PASS                  SG2024.2
 036900         ELSE MOVE PERF-RES-OVER TO COMPUTED-A                    SG2024.2
-037000         MOVE "X7" TO CORRECT-A                                   SG2024.2
+037000         MOVE "XU" TO CORRECT-A                                   SG2024.2
 037100              PERFORM FAIL.                                       SG2024.2
 037200     GO TO TEST-4-WRITE.                                          SG2024.2
 037300 TEST-4-DELETE.                                                   SG2024.2
@@ -376,9 +376,9 @@
 037800     PERFORM PRINT-DETAIL.                                        SG2024.2
 037900 TEST-5.                                                          SG2024.2
 038000     MOVE SPACE TO CORRECT-A.                                     SG2024.2
-038100*    NOTE     THIS TEST WILL ENSURE THAT THE LOGICAL PATH OF A    SG2024.2
-038200*             PROGRAM CAN PROCEED FROM THE PERMANENT SEGMENT OF   SG2024.2
-038300*             OF THE FIXED PORTION (IE  IMPLIED FALL-THRU).       SG2024.2
+038100*                                                                         
+038200*                                                                         
+038300*                                                                         
 038400     MOVE "A" TO FALL-RSLT-1.                                     SG2024.2
 038500 SEC28 SECTION 28.                                                SG2024.2
 038600 P2801.                                                           SG2024.2

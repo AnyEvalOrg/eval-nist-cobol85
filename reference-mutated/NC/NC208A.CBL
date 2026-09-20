@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2084.2
 000200 PROGRAM-ID.                                                      NC2084.2
 000300     NC208A.                                                      NC2084.2
-000400****************************************************************  NC2084.2
-000500*                                                              *  NC2084.2
-000600*    VALIDATION FOR:-                                          *  NC2084.2
-000700*                                                              *  NC2084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2084.2
-000900*                                                              *  NC2084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2084.2
-001100*                                                              *  NC2084.2
-001200****************************************************************  NC2084.2
-001300*                                                              *  NC2084.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2084.2
-001500*                                                              *  NC2084.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2084.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2084.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2084.2
-001900*                                                              *  NC2084.2
-002000****************************************************************  NC2084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100                                                                  NC2084.2
-002200*                                                              *  NC2084.2
-002300*    PROGRAM NC208A TESTS FORMATS 1 AND 2 OF QUALIFICATION*       NC2084.2
-002400*    USING FORMATS 1 AND 2 OF THE "MOVE" STATEMENT, FORMAT 1 OF*  NC2084.2
-002500*    THE "ADD" STATEMENT AND THE FORMAT 2 "MULTIPLY" STATEMENT.*  NC2084.2
-002600*                                                              *  NC2084.2
-002700****************************************************************  NC2084.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2084.2
 002900 CONFIGURATION SECTION.                                           NC2084.2
 003000 SOURCE-COMPUTER.                                                 NC2084.2
@@ -482,7 +482,7 @@
 048400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2084.2
 048500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2084.2
 048600      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2084.2
-048700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2084.2
+048700*                                                                         
 048800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2084.2
 048900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2084.2
 049000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2084.2
@@ -564,17 +564,17 @@
 056600     GO TO PAR-WRITE-F2-1.                                        NC2084.2
 056700 PAR-FAIL-F2-1.                                                   NC2084.2
 056800     PERFORM FAIL.                                                NC2084.2
-056900*    NOTE                                                         NC2084.2
-057000*    PERFORM PARAGRAPH IN SAME SECTION.                           NC2084.2
+056900*                                                                         
+057000*                                                                         
 057100 PAR-WRITE-F2-1.                                                  NC2084.2
 057200     PERFORM PRINT-DETAIL.                                        NC2084.2
 057300     GO TO PAR-1-EXIT.                                            NC2084.2
-057400*                                                                 NC2084.2
+057400*                                                                         
 057500 PAR-1A.                                                          NC2084.2
 057600     MOVE "PASS" TO QT1.                                          NC2084.2
 057700 PAR-1-EXIT.                                                      NC2084.2
 057800     EXIT.                                                        NC2084.2
-057900*                                                                 NC2084.2
+057900*                                                                         
 058000 PAR-INIT-F2-2.                                                   NC2084.2
 058100     MOVE "PAR-TEST-F2-2" TO PAR-NAME.                            NC2084.2
 058200     MOVE "IV-20 4.3.8.1 RULE 6" TO ANSI-REFERENCE.               NC2084.2
@@ -589,8 +589,8 @@
 059100     GO TO PAR-WRITE-F2-2.                                        NC2084.2
 059200 PAR-FAIL-F2-2.                                                   NC2084.2
 059300     PERFORM FAIL.                                                NC2084.2
-059400*    NOTE                                                         NC2084.2
-059500*    PERFORM PARAGRAPH IN A DIFFERENT SECTION.                    NC2084.2
+059400*                                                                         
+059500*                                                                         
 059600 PAR-WRITE-F2-2.                                                  NC2084.2
 059700     PERFORM PRINT-DETAIL.                                        NC2084.2
 059800     GO TO PAR-2-EXIT.                                            NC2084.2
@@ -598,14 +598,14 @@
 060000     MOVE "FAIL" TO QT2.                                          NC2084.2
 060100 PAR-2-EXIT.                                                      NC2084.2
 060200     EXIT.                                                        NC2084.2
-060300*                                                                 NC2084.2
+060300*                                                                         
 060400 PAR-INIT-F2-3.                                                   NC2084.2
 060500     MOVE "PAR-TEST-F2-3" TO PAR-NAME.                            NC2084.2
 060600     MOVE "IV-20 4.3.8.1 RULE 6" TO ANSI-REFERENCE.               NC2084.2
 060700 PAR-TEST-F2-3.                                                   NC2084.2
 060800     GO TO PAR-3B IN QUAL-SECTION-1.                              NC2084.2
-060900*    NOTE                                                         NC2084.2
-061000*    GO TO IN SAME SECTION.                                       NC2084.2
+060900*                                                                         
+061000*                                                                         
 061100 PAR-3A.                                                          NC2084.2
 061200     MOVE "FAIL" TO QT3.                                          NC2084.2
 061300     GO TO PAR-3C.                                                NC2084.2
@@ -625,14 +625,14 @@
 062700     PERFORM PRINT-DETAIL.                                        NC2084.2
 062800 PAR-3-EXIT.                                                      NC2084.2
 062900     EXIT.                                                        NC2084.2
-063000*                                                                 NC2084.2
+063000*                                                                         
 063100 PAR-INIT-F2-4.                                                   NC2084.2
 063200     MOVE "PAR-TEST-F2-4" TO PAR-NAME.                            NC2084.2
 063300     MOVE "IV-20 4.3.8.1 RULE 6" TO ANSI-REFERENCE.               NC2084.2
 063400 PAR-TEST-F2-4.                                                   NC2084.2
 063500     GO TO PAR-4B IN QUAL-SECTION-2.                              NC2084.2
-063600*    NOTE                                                         NC2084.2
-063700*    GO TO IN DIFFERENT SECTION.                                  NC2084.2
+063600*                                                                         
+063700*                                                                         
 063800 PAR-4A.                                                          NC2084.2
 063900     MOVE "FAIL" TO QT4.                                          NC2084.2
 064000     GO TO PAR-4C.                                                NC2084.2
@@ -663,13 +663,13 @@
 066500     GO TO PAR-3C OF QUAL-SECTION-1.                              NC2084.2
 066600 PAR-3C.                                                          NC2084.2
 066700     PERFORM FAIL.                                                NC2084.2
-066800*    NOTE  THIS PARAGRAPH SHOULD NEVER BE ENTERED.                NC2084.2
+066800*                                                                         
 066900     GO TO PAR-INIT-F2-4 IN QUAL-SECTION-1.                       NC2084.2
 067000 PAR-4.                                                           NC2084.2
 067100     GO TO QUAL-EXIT.                                             NC2084.2
-067200*    NOTE                                                         NC2084.2
-067300*                  IF                                             NC2084.2
-067400*    GO TO DIFFERENT SECTION FAILS END QUALIFICATION TEST.        NC2084.2
+067200*                                                                         
+067300*                                                                         
+067400*                                                                         
 067500 PAR-4B.                                                          NC2084.2
 067600     MOVE "PASS" TO QT4.                                          NC2084.2
 067700     GO TO PAR-4C IN QUAL-SECTION-1.                              NC2084.2
@@ -711,7 +711,7 @@
 071300     MOVE "2ND 20 POSITIONS OF ANSWERS" TO RE-MARK.               NC2084.2
 071400 QAL-WRITE-F1-1.                                                  NC2084.2
 071500     PERFORM PRINT-DETAIL.                                        NC2084.2
-071600*                                                                 NC2084.2
+071600*                                                                         
 071700 QAL-INIT-F1-2.                                                   NC2084.2
 071800     MOVE "QAL-TEST-F1-2      " TO PAR-NAME.                      NC2084.2
 071900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -733,7 +733,7 @@
 073500     PERFORM FAIL.                                                NC2084.2
 073600 QAL-WRITE-F1-2.                                                  NC2084.2
 073700     PERFORM PRINT-DETAIL.                                        NC2084.2
-073800*                                                                 NC2084.2
+073800*                                                                         
 073900 QAL-INIT-F1-3.                                                   NC2084.2
 074000     MOVE "QAL-TEST-F1-3      " TO PAR-NAME.                      NC2084.2
 074100     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -754,7 +754,7 @@
 075600     PERFORM FAIL.                                                NC2084.2
 075700 QAL-WRITE-F1-3.                                                  NC2084.2
 075800     PERFORM PRINT-DETAIL.                                        NC2084.2
-075900*                                                                 NC2084.2
+075900*                                                                         
 076000 QAL-INIT-F1-4.                                                   NC2084.2
 076100     MOVE "QAL-TEST-F1-4      " TO PAR-NAME.                      NC2084.2
 076200     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -775,7 +775,7 @@
 077700     PERFORM FAIL.                                                NC2084.2
 077800 QAL-WRITE-F1-4.                                                  NC2084.2
 077900     PERFORM PRINT-DETAIL.                                        NC2084.2
-078000*                                                                 NC2084.2
+078000*                                                                         
 078100 QAL-INIT-F1-5.                                                   NC2084.2
 078200     MOVE "QAL-TEST-F1-5      " TO PAR-NAME.                      NC2084.2
 078300     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -806,7 +806,7 @@
 080800     WRITE PRINT-REC.                                             NC2084.2
 080900 QAL-WRITE-F1-5.                                                  NC2084.2
 081000     PERFORM PRINT-DETAIL.                                        NC2084.2
-081100*                                                                 NC2084.2
+081100*                                                                         
 081200 QAL-INIT-F1-6.                                                   NC2084.2
 081300     MOVE "QAL-TEST-F1-6      " TO PAR-NAME.                      NC2084.2
 081400     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -828,7 +828,7 @@
 083000     PERFORM FAIL.                                                NC2084.2
 083100 QAL-WRITE-F1-6.                                                  NC2084.2
 083200     PERFORM PRINT-DETAIL.                                        NC2084.2
-083300*                                                                 NC2084.2
+083300*                                                                         
 083400 QAL-INIT-F1-7.                                                   NC2084.2
 083500     MOVE "QAL-TEST-F1-7      " TO PAR-NAME.                      NC2084.2
 083600     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -849,7 +849,7 @@
 085100     PERFORM FAIL.                                                NC2084.2
 085200 QAL-WRITE-F1-7.                                                  NC2084.2
 085300     PERFORM PRINT-DETAIL.                                        NC2084.2
-085400*                                                                 NC2084.2
+085400*                                                                         
 085500 QAL-INIT-F1-8.                                                   NC2084.2
 085600     MOVE "QAL-TEST-F1-8      " TO PAR-NAME.                      NC2084.2
 085700     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -871,7 +871,7 @@
 087300 QAL-WRITE-F1-8.                                                  NC2084.2
 087400     PERFORM PRINT-DETAIL.                                        NC2084.2
 087500     PERFORM END-ROUTINE.                                         NC2084.2
-087600*                                                                 NC2084.2
+087600*                                                                         
 087700 MOVE-CORR-ROUTINE SECTION.                                       NC2084.2
 087800 MOV-INIT-F1-1.                                                   NC2084.2
 087900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -899,7 +899,7 @@
 090100     MOVE 04 TO CORRECT-A.                                        NC2084.2
 090200 MOV-WRITE-F1-1-1.                                                NC2084.2
 090300     PERFORM PRINT-DETAIL.                                        NC2084.2
-090400*                                                                 NC2084.2
+090400*                                                                         
 090500 MOV-INIT-F1-1-2.                                                 NC2084.2
 090600     MOVE "MOV-TEST-F1-1-2" TO PAR-NAME.                          NC2084.2
 090700 MOV-TEST-F1-1-2.                                                 NC2084.2
@@ -916,7 +916,7 @@
 091800     MOVE THREE TO CORRECT-A.                                     NC2084.2
 091900 MOV-WRITE-F1-1-2.                                                NC2084.2
 092000     PERFORM PRINT-DETAIL.                                        NC2084.2
-092100*                                                                 NC2084.2
+092100*                                                                         
 092200 MOV-INIT-F1-1-3.                                                 NC2084.2
 092300     MOVE "MOV-TEST-F1-1-3" TO PAR-NAME.                          NC2084.2
 092400 MOV-TEST-F1-1-3.                                                 NC2084.2
@@ -933,7 +933,7 @@
 093500     PERFORM FAIL.                                                NC2084.2
 093600 MOV-WRITE-F1-1-3.                                                NC2084.2
 093700     PERFORM PRINT-DETAIL.                                        NC2084.2
-093800*                                                                 NC2084.2
+093800*                                                                         
 093900 MOV-INIT-F1-1-4.                                                 NC2084.2
 094000     MOVE "MOV-TEST-F1-1-4" TO PAR-NAME.                          NC2084.2
 094100 MOV-TEST-F1-1-4.                                                 NC2084.2
@@ -951,7 +951,7 @@
 095300     MOVE XYZ-4 OF CORR-DATA-1 TO CORRECT-A.                      NC2084.2
 095400 MOV-WRITE-F1-1-4.                                                NC2084.2
 095500     PERFORM PRINT-DETAIL.                                        NC2084.2
-095600*                                                                 NC2084.2
+095600*                                                                         
 095700 MOV-INIT-F1-1-5.                                                 NC2084.2
 095800     MOVE "MOV-TEST-F1-1-5" TO PAR-NAME.                          NC2084.2
 095900 MOV-TEST-F1-1-5.                                                 NC2084.2
@@ -968,7 +968,7 @@
 097000     PERFORM FAIL.                                                NC2084.2
 097100 MOV-WRITE-F1-1-5.                                                NC2084.2
 097200     PERFORM PRINT-DETAIL.                                        NC2084.2
-097300*                                                                 NC2084.2
+097300*                                                                         
 097400 MOV-INIT-F1-2.                                                   NC2084.2
 097500     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
 097600     MOVE "MOVE CORRESPONDING" TO FEATURE.                        NC2084.2
@@ -995,7 +995,7 @@
 099700     MOVE "03" TO CORRECT-A.                                      NC2084.2
 099800 MOV-WRITE-F1-2-1.                                                NC2084.2
 099900     PERFORM PRINT-DETAIL.                                        NC2084.2
-100000*                                                                 NC2084.2
+100000*                                                                         
 100100 MOV-INIT-F1-2-2.                                                 NC2084.2
 100200     MOVE "MOV-TEST-F1-2-2" TO PAR-NAME.                          NC2084.2
 100300 MOV-TEST-F1-2-2.                                                 NC2084.2
@@ -1012,7 +1012,7 @@
 101400     MOVE "10" TO CORRECT-A.                                      NC2084.2
 101500 MOV-WRITE-F1-2-2.                                                NC2084.2
 101600     PERFORM PRINT-DETAIL.                                        NC2084.2
-101700*                                                                 NC2084.2
+101700*                                                                         
 101800 MOV-INIT-F1-3.                                                   NC2084.2
 101900     MOVE "MOV-TEST-F1-3" TO PAR-NAME.                            NC2084.2
 102000     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -1040,7 +1040,7 @@
 104200     PERFORM FAIL.                                                NC2084.2
 104300 MOV-WRITE-F1-3.                                                  NC2084.2
 104400     PERFORM PRINT-DETAIL.                                        NC2084.2
-104500*                                                                 NC2084.2
+104500*                                                                         
 104600 MOV-INIT-F1-4.                                                   NC2084.2
 104700     MOVE     "MOV-TEST-F1-4 " TO PAR-NAME.                       NC2084.2
 104800     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -1060,7 +1060,7 @@
 106200     PERFORM  FAIL.                                               NC2084.2
 106300 MOV-WRITE-F1-4.                                                  NC2084.2
 106400     PERFORM  PRINT-DETAIL.                                       NC2084.2
-106500*                                                                 NC2084.2
+106500*                                                                         
 106600 MOV-INIT-F1-5.                                                   NC2084.2
 106700     MOVE     "MOV-TEST-F1-5" TO PAR-NAME.                        NC2084.2
 106800     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
@@ -1069,7 +1069,7 @@
 107100     MOVE     CORRESPONDING GRP-TO-MOVE-CORR-1 TO                 NC2084.2
 107200              GRP-TO-MOVE-CORR-TO.                                NC2084.2
 107300 MOV-TEST-F1-5.                                                   NC2084.2
-107400     IF       GRP-TO-MOVE-CORR-TO EQUAL TO "111         123AB245" NC2084.2
+107400     IF       GRP-TO-MOVE-CORR-TO EQUAL TO "111         123ABC45" NC2084.2
 107500              PERFORM PASS GO TO MOV-WRITE-F1-5.                  NC2084.2
 107600     GO       TO MOVE-FAIL-F1-5.                                  NC2084.2
 107700 MOV-DELETE-F1-5.                                                 NC2084.2
@@ -1077,18 +1077,18 @@
 107900     GO       TO MOV-WRITE-F1-5.                                  NC2084.2
 108000 MOVE-FAIL-F1-5.                                                  NC2084.2
 108100     MOVE     GRP-TO-MOVE-CORR-TO TO COMPUTED-A.                  NC2084.2
-108200     MOVE     "111         123AB245" TO CORRECT-A.                NC2084.2
+108200     MOVE     "111         123ABC45" TO CORRECT-A.                NC2084.2
 108300     PERFORM  FAIL.                                               NC2084.2
 108400 MOV-WRITE-F1-5.                                                  NC2084.2
 108500     PERFORM  PRINT-DETAIL.                                       NC2084.2
-108600*                                                                 NC2084.2
+108600*                                                                         
 108700 MOV-INIT-F1-6.                                                   NC2084.2
 108800     MOVE "MOV-TEST-F1-6" TO PAR-NAME.                            NC2084.2
 108900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
 109000     MOVE "MOVE CORRESPONDING" TO FEATURE.                        NC2084.2
 109100     MOVE CORRESPONDING MOVE54 TO MOVE60.                         NC2084.2
 109200 MOV-TEST-F1-6.                                                   NC2084.2
-109300     IF MOVE60 EQUAL TO "XY5"                                     NC2084.2
+109300     IF MOVE60 EQUAL TO "XYA"                                     NC2084.2
 109400            PERFORM PASS                                          NC2084.2
 109500            GO TO MOV-WRITE-F1-6.                                 NC2084.2
 109600     GO TO MOV-FAIL-F1-6.                                         NC2084.2
@@ -1097,18 +1097,18 @@
 109900     GO TO  MOV-WRITE-F1-6.                                       NC2084.2
 110000 MOV-FAIL-F1-6.                                                   NC2084.2
 110100     MOVE MOVE60 TO COMPUTED-A                                    NC2084.2
-110200     MOVE "XY5" TO CORRECT-A                                      NC2084.2
+110200     MOVE "XYA" TO CORRECT-A                                      NC2084.2
 110300     PERFORM FAIL.                                                NC2084.2
 110400 MOV-WRITE-F1-6.                                                  NC2084.2
 110500     PERFORM PRINT-DETAIL.                                        NC2084.2
-110600*                                                                 NC2084.2
+110600*                                                                         
 110700 MOV-INIT-F1-7.                                                   NC2084.2
 110800     MOVE "MOV-TEST-F1-7" TO PAR-NAME.                            NC2084.2
 110900     MOVE "IV-18 4.3.8.1" TO ANSI-REFERENCE.                      NC2084.2
 111000     MOVE "MOVE CORRESPONDING" TO FEATURE.                        NC2084.2
 111100     MOVE "*" TO MOVE56 OF MOVE60 MOVE58 OF MOVE60 MOVE65.        NC2084.2
 111200 MOV-TEST-F1-7.                                                   NC2084.2
-111300     IF MOVE60 EQUAL TO "**Y"                                     NC2084.2
+111300     IF MOVE60 EQUAL TO "***"                                     NC2084.2
 111400            PERFORM PASS                                          NC2084.2
 111500            GO TO MOV-WRITE-F1-7.                                 NC2084.2
 111600     GO TO MOV-FAIL-F1-7.                                         NC2084.2
@@ -1117,7 +1117,7 @@
 111900     GO TO MOV-WRITE-F1-7.                                        NC2084.2
 112000 MOV-FAIL-F1-7.                                                   NC2084.2
 112100     MOVE MOVE60 TO COMPUTED-A                                    NC2084.2
-112200     MOVE "**Y" TO CORRECT-A                                      NC2084.2
+112200     MOVE "***" TO CORRECT-A                                      NC2084.2
 112300     PERFORM FAIL.                                                NC2084.2
 112400 MOV-WRITE-F1-7.                                                  NC2084.2
 112500     PERFORM PRINT-DETAIL.                                        NC2084.2

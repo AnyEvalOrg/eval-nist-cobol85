@@ -1,86 +1,86 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2114.2
 000200 PROGRAM-ID.                                                      SQ2114.2
 000300     SQ211A.                                                      SQ2114.2
-000400****************************************************************  SQ2114.2
-000500*                                                              *  SQ2114.2
-000600*    VALIDATION FOR:-                                          *  SQ2114.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2114.2
-000800*    USING CCVS85 VERSION 3.0.                                 *  SQ2114.2
-000900*                                                              *  SQ2114.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  SQ2114.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2114.2
-001200*                                                              *  SQ2114.2
-001300****************************************************************  SQ2114.2
-001400*                                                              *  SQ2114.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ2114.2
-001600*                                                              *  SQ2114.2
-001700*            X-01   SEQUENTIAL TAPE                            *  SQ2114.2
-001800*            X-55   SYSTEM PRINTER                             *  SQ2114.2
-001900*            X-82   SOURCE-COMPUTER                            *  SQ2114.2
-002000*            X-83   OBJECT-COMPUTER.                           *  SQ2114.2
-002100*            X-84   LABEL RECORDS OPTION                       *  SQ2114.2
-002200*                                                              *  SQ2114.2
-002300****************************************************************  SQ2114.2
-002400*                                                              *  SQ2114.2
-002500*    SQ211A TESTS THE CLOSE STATEMENT WITH THE WITH LOCK PHRASE*  SQ2114.2
-002600*    A MAGNETIC TAPE FILE WITH ONE RECORD IS CREATED AND IS    *  SQ2114.2
-002700*    CLOSED WITH LOCK.  THE FILE IS THEN RE-OPENED AFTER IT HAS*  SQ2114.2
-002800*    BEEN CLOSED WITH LOCK. THERE ARE NO DECLARATIVE           *  SQ2114.2
-002900*    PROCEDURES. THE TEST FOR CORRECT I-O STATUS CODE IS IN    *  SQ2114.2
-003000*    THE MAIN LINE CODE, THEREFORE AN ABNORMAL TERMINATION IS  *  SQ2114.2
-003100*    POSSIBLE BEFORE THE TEST OF THE I-O STATUS CODE IS        *  SQ2114.2
-003200*    ACCOMPLISHED.                                             *  SQ2114.2
-003300*                                                              *  SQ2114.2
-003400****************************************************************  SQ2114.2
-003500*                                                                 SQ2114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            SQ2114.2
 003700 CONFIGURATION SECTION.                                           SQ2114.2
 003800 SOURCE-COMPUTER.                                                 SQ2114.2
 003900     GNU-Linux.                                                   SQ2114.2
 004000 OBJECT-COMPUTER.                                                 SQ2114.2
 004100     GNU-Linux.                                                   SQ2114.2
-004200*                                                                 SQ2114.2
+004200*                                                                         
 004300 INPUT-OUTPUT SECTION.                                            SQ2114.2
 004400 FILE-CONTROL.                                                    SQ2114.2
 004500     SELECT PRINT-FILE ASSIGN TO                                  SQ2114.2
 004600     "REPORT".                                                    SQ2114.2
-004700*                                                                 SQ2114.2
+004700*                                                                         
 004800     SELECT SQ-FS1 ASSIGN TO                                      SQ2114.2
 004900     "XXXXX001"                                                   SQ2114.2
 005000            FILE STATUS IS SQ-FS1-STATUS.                         SQ2114.2
-005100*                                                                 SQ2114.2
-005200*                                                                 SQ2114.2
+005100*                                                                         
+005200*                                                                         
 005300 DATA DIVISION.                                                   SQ2114.2
 005400 FILE SECTION.                                                    SQ2114.2
 005500 FD  PRINT-FILE                                                   SQ2114.2
 005900               .                                                  SQ2114.2
 006000 01  PRINT-REC    PICTURE X(120).                                 SQ2114.2
 006100 01  DUMMY-RECORD PICTURE X(120).                                 SQ2114.2
-006200*                                                                 SQ2114.2
+006200*                                                                         
 006300 FD  SQ-FS1                                                       SQ2114.2
 006500                .                                                 SQ2114.2
 006600 01  SQ-FS1R1-F-G-120 PIC X(120).                                 SQ2114.2
-006700*                                                                 SQ2114.2
+006700*                                                                         
 006800 WORKING-STORAGE SECTION.                                         SQ2114.2
-006900*                                                                 SQ2114.2
-007000***************************************************************   SQ2114.2
-007100*                                                             *   SQ2114.2
-007200*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ2114.2
-007300*                                                             *   SQ2114.2
-007400***************************************************************   SQ2114.2
-007500*                                                                 SQ2114.2
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
 007600 01  SQ-FS1-STATUS.                                               SQ2114.2
 007700   03  SQ-FS1-KEY-1   PIC X.                                      SQ2114.2
 007800   03  SQ-FS1-KEY-2   PIC X.                                      SQ2114.2
-007900*                                                                 SQ2114.2
-008000***************************************************************   SQ2114.2
-008100*                                                             *   SQ2114.2
-008200*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ2114.2
-008300*                                                             *   SQ2114.2
-008400***************************************************************   SQ2114.2
-008500*                                                                 SQ2114.2
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
 008600 01  REC-SKEL-SUB   PIC 99.                                       SQ2114.2
-008700*                                                                 SQ2114.2
+008700*                                                                         
 008800 01  FILE-RECORD-INFORMATION-REC.                                 SQ2114.2
 008900     03 FILE-RECORD-INFO-SKELETON.                                SQ2114.2
 009000        05 FILLER                 PICTURE X(48)       VALUE       SQ2114.2
@@ -132,7 +132,7 @@
 013600           07 FILLER              PIC X(9).                       SQ2114.2
 013700           07 ALTERNATE-KEY2      PIC X(29).                      SQ2114.2
 013800           07 FILLER              PIC X(7).                       SQ2114.2
-013900*                                                                 SQ2114.2
+013900*                                                                         
 014000 01  TEST-RESULTS.                                                SQ2114.2
 014100     02 FILLER              PIC X      VALUE SPACE.               SQ2114.2
 014200     02 FEATURE             PIC X(24)  VALUE SPACE.               SQ2114.2
@@ -208,7 +208,7 @@
 021200   02  FILLER            PIC X(28)  VALUE                         SQ2114.2
 021300            " COPY - NOT FOR DISTRIBUTION".                       SQ2114.2
 021400   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ2114.2
-021500*                                                                 SQ2114.2
+021500*                                                                         
 021600 01  CCVS-H-2B.                                                   SQ2114.2
 021700   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ2114.2
 021800   02  TEST-ID           PIC X(9).                                SQ2114.2
@@ -270,7 +270,7 @@
 027400-    "******************************".                            SQ2114.2
 027500 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ2114.2
 027600     "SQ211A".                                                    SQ2114.2
-027700*                                                                 SQ2114.2
+027700*                                                                         
 027800 PROCEDURE DIVISION.                                              SQ2114.2
 027900 CCVS1 SECTION.                                                   SQ2114.2
 028000 OPEN-FILES.                                                      SQ2114.2
@@ -282,18 +282,18 @@
 028600     MOVE    ZERO TO REC-SKEL-SUB.                                SQ2114.2
 028700     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ2114.2
 028800     GO TO CCVS1-EXIT.                                            SQ2114.2
-028900*                                                                 SQ2114.2
+028900*                                                                         
 029000 CCVS-INIT-FILE.                                                  SQ2114.2
 029100     ADD     1 TO REC-SKL-SUB.                                    SQ2114.2
 029200     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ2114.2
 029300                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ2114.2
-029400*                                                                 SQ2114.2
+029400*                                                                         
 029500 CLOSE-FILES.                                                     SQ2114.2
 029600     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ2114.2
 029700     CLOSE   PRINT-FILE.                                          SQ2114.2
 029800 TERMINATE-CCVS.                                                  SQ2114.2
 029900     STOP    RUN.                                                 SQ2114.2
-030000*                                                                 SQ2114.2
+030000*                                                                         
 030100 INSPT.                                                           SQ2114.2
 030200     MOVE   "INSPT" TO P-OR-F.                                    SQ2114.2
 030300     ADD     1 TO INSPECT-COUNTER.                                SQ2114.2
@@ -303,18 +303,18 @@
 030700     MOVE   "PASS " TO P-OR-F.                                    SQ2114.2
 030800     ADD     1 TO PASS-COUNTER.                                   SQ2114.2
 030900     PERFORM PRINT-DETAIL.                                        SQ2114.2
-031000*                                                                 SQ2114.2
+031000*                                                                         
 031100 FAIL.                                                            SQ2114.2
 031200     MOVE   "FAIL*" TO P-OR-F.                                    SQ2114.2
 031300     ADD     1 TO ERROR-COUNTER.                                  SQ2114.2
 031400     PERFORM PRINT-DETAIL.                                        SQ2114.2
-031500*                                                                 SQ2114.2
+031500*                                                                         
 031600 DE-LETE.                                                         SQ2114.2
 031700     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ2114.2
 031800     MOVE   "*****" TO P-OR-F.                                    SQ2114.2
 031900     ADD     1 TO DELETE-COUNTER.                                 SQ2114.2
 032000     PERFORM PRINT-DETAIL.                                        SQ2114.2
-032100*                                                                 SQ2114.2
+032100*                                                                         
 032200 PRINT-DETAIL.                                                    SQ2114.2
 032300     IF REC-CT NOT EQUAL TO ZERO                                  SQ2114.2
 032400         MOVE   "." TO PARDOT-X                                   SQ2114.2
@@ -331,7 +331,7 @@
 033500     MOVE    SPACE TO CORRECT-X.                                  SQ2114.2
 033600     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ2114.2
 033700     MOVE    SPACE TO RE-MARK.                                    SQ2114.2
-033800*                                                                 SQ2114.2
+033800*                                                                         
 033900 HEAD-ROUTINE.                                                    SQ2114.2
 034000     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ2114.2
 034100     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ2114.2
@@ -347,7 +347,7 @@
 035100 END-RTN-EXIT.                                                    SQ2114.2
 035200     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ2114.2
 035300     PERFORM WRITE-LINE 2 TIMES.                                  SQ2114.2
-035400*                                                                 SQ2114.2
+035400*                                                                         
 035500 END-ROUTINE-1.                                                   SQ2114.2
 035600     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ2114.2
 035700     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ2114.2
@@ -380,7 +380,7 @@
 038400     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ2114.2
 038500     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ2114.2
 038600     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ2114.2
-038700*                                                                 SQ2114.2
+038700*                                                                         
 038800 WRITE-LINE.                                                      SQ2114.2
 038900     ADD     1 TO RECORD-COUNT.                                   SQ2114.2
 039000     IF RECORD-COUNT GREATER 50                                   SQ2114.2
@@ -393,7 +393,7 @@
 039700         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ2114.2
 039800         MOVE  ZERO TO RECORD-COUNT.                              SQ2114.2
 039900     PERFORM WRT-LN.                                              SQ2114.2
-040000*                                                                 SQ2114.2
+040000*                                                                         
 040100 WRT-LN.                                                          SQ2114.2
 040200     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ2114.2
 040300     MOVE    SPACE TO DUMMY-RECORD.                               SQ2114.2
@@ -431,20 +431,20 @@
 043500     EXIT.                                                        SQ2114.2
 043600 CCVS1-EXIT.                                                      SQ2114.2
 043700     EXIT.                                                        SQ2114.2
-043800*                                                                 SQ2114.2
-043900****************************************************************  SQ2114.2
-044000*                                                              *  SQ2114.2
-044100*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ2114.2
-044200*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ2114.2
-044300*                                                              *  SQ2114.2
-044400****************************************************************  SQ2114.2
-044500*                                                                 SQ2114.2
+043800*                                                                         
+043900*                                                                         
+044000*                                                                         
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
 044600 SECT-SQ211A-0001 SECTION.                                        SQ2114.2
 044700 WRITE-INIT-GF-01.                                                SQ2114.2
-044800*                                                                 SQ2114.2
-044900*        THIS TEST CREATES FILE SQ-FS1 AND CLOSES IT WITH LOCK.   SQ2114.2
-045000*        FIRST IT SETS UP A SKELETON RECORD IN WORKING STORAGE.   SQ2114.2
-045100*                                                                 SQ2114.2
+044800*                                                                         
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
 045200     MOVE "SQ-FS1"     TO XFILE-NAME (1).                         SQ2114.2
 045300     MOVE "R1-F-G"     TO XRECORD-NAME (1).                       SQ2114.2
 045400     MOVE  CCVS-PGM-ID TO XPROGRAM-NAME (1).                      SQ2114.2
@@ -455,7 +455,7 @@
 045900     MOVE "SQ"         TO XFILE-ORGANIZATION (1).                 SQ2114.2
 046000     MOVE "S"          TO XLABEL-TYPE (1).                        SQ2114.2
 046100     MOVE 1            TO XRECORD-NUMBER (1).                     SQ2114.2
-046200*                                                                 SQ2114.2
+046200*                                                                         
 046300 WRITE-OPEN-01.                                                   SQ2114.2
 046400     MOVE    1 TO REC-CT.                                         SQ2114.2
 046500     MOVE   "WRITE-OPEN-01" TO PAR-NAME.                          SQ2114.2
@@ -473,9 +473,9 @@
 047700         PERFORM FAIL                                             SQ2114.2
 047800         GO TO   CCVS-EXIT                                        SQ2114.2
 047900     END-IF.                                                      SQ2114.2
-048000*                                                                 SQ2114.2
-048100*        WRITE A SINGLE RECORD TO THE FILE                        SQ2114.2
-048200*                                                                 SQ2114.2
+048000*                                                                         
+048100*                                                                         
+048200*                                                                         
 048300 WRITE-INIT-01.                                                   SQ2114.2
 048400     MOVE    1 TO REC-CT.                                         SQ2114.2
 048500     MOVE   "WRITE-TEST-01" TO PAR-NAME                           SQ2114.2
@@ -494,9 +494,9 @@
 049800         PERFORM FAIL                                             SQ2114.2
 049900         GO TO   CCVS-EXIT                                        SQ2114.2
 050000     END-IF.                                                      SQ2114.2
-050100*                                                                 SQ2114.2
-050200*        CLOSE THE FILE WITH LOCK, SO IT SHOULD NOT REOPEN        SQ2114.2
-050300*                                                                 SQ2114.2
+050100*                                                                         
+050200*                                                                         
+050300*                                                                         
 050400 CLOSE-INIT-01.                                                   SQ2114.2
 050500     MOVE    1 TO REC-CT.                                         SQ2114.2
 050600     MOVE   "CLOSE-TEST-01"   TO PAR-NAME.                        SQ2114.2
@@ -515,17 +515,17 @@
 051900         PERFORM FAIL                                             SQ2114.2
 052000         GO TO   CCVS-EXIT                                        SQ2114.2
 052100     END-IF.                                                      SQ2114.2
-052200*                                                                 SQ2114.2
-052300*        HAVING LOCKED THE FILE, WE NOW TRY TO REOPEN IT.         SQ2114.2
-052400*        THE TEST PASSES IF THE FILE CANNOT BE OPENED AND         SQ2114.2
-052500*        THE APPROPRIATE I-O STATUS VALUE IS RETURNED.            SQ2114.2
-052600*        AN IMPLEMENTATION MAY TERMINATE EXECUTION OF THE         SQ2114.2
-052700*        PROGRAM ON EXIT FROM THE DECLARATIVE ASSOCIATED          SQ2114.2
-052800*        WITH THE FILE, OR MAY RETURN CONTROL TO THE              SQ2114.2
-052900*        STATEMENT FOLLOWING THE OPEN STATEMENT.                  SQ2114.2
-053000*                                                                 SQ2114.2
+052200*                                                                         
+052300*                                                                         
+052400*                                                                         
+052500*                                                                         
+052600*                                                                         
+052700*                                                                         
+052800*                                                                         
+052900*                                                                         
+053000*                                                                         
 053100 OPEN-INIT-01.                                                    SQ2114.2
-053200*                                                                 SQ2114.2
+053200*                                                                         
 053300     MOVE   "OPEN AFTER LOCK" TO FEATURE.                         SQ2114.2
 053400     MOVE   "**" TO SQ-FS1-STATUS.                                SQ2114.2
 053500 OPEN-TEST-01.                                                    SQ2114.2
@@ -544,7 +544,7 @@
 054800                 TO RE-MARK                                       SQ2114.2
 054900         PERFORM FAIL                                             SQ2114.2
 055000     END-IF.                                                      SQ2114.2
-055100*                                                                 SQ2114.2
+055100*                                                                         
 055200 CCVS-EXIT SECTION.                                               SQ2114.2
 055300 CCVS-999999.                                                     SQ2114.2
 055400     GO TO CLOSE-FILES.                                           SQ2114.2

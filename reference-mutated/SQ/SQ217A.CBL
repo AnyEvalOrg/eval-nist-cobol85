@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2174.2
 000200 PROGRAM-ID.                                                      SQ2174.2
 000300     SQ217A.                                                      SQ2174.2
-000400****************************************************************  SQ2174.2
-000500*                                                              *  SQ2174.2
-000600*    VALIDATION FOR:-                                          *  SQ2174.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2174.2
-000800*                                                              *  SQ2174.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2174.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2174.2
-001100*                                                              *  SQ2174.2
-001200*        THIS ROUTINE TESTS THE CLAUSE:                           SQ2174.2
-001300*             PADDING CHARACTER IS  DATA-NAME-1   (VALUE "Z").    SQ2174.2
-001400*                                                                 SQ2174.2
-001500*        THE ROUTINE SQ217A CREATES A TAPE FILE WHICH HAS 750 FIXESQ2174.2
-001600*    LENGTH RECORDS.  THE FILE IS THEN CLOSED AND OPENED AS AN    SQ2174.2
-001700*    INPUT FILE.  THE FILE IS READ AND FIELDS IN THE INPUT RECORDSSQ2174.2
-001800*    ARE COMPARED TO THE VALUES WRITTEN TO ENSURE THAT THE RECORDSSQ2174.2
-001900*    WERE PROCESSED CORRECTLY.  THE FILE IS CLOSED AND OPENED     SQ2174.2
-002000*    AGAIN AS AN INPUT FILE.  FOUR READ FORMAT OPTIONS ARE USED   SQ2174.2
-002100*    TO READ THE FILE AND FIELDS IN THE RECORDS ARE VERIFIED.     SQ2174.2
-002200*    THE OPEN, CLOSE, READ, AND WRITE STATEMENTS ARE TESTED FOR   SQ2174.2
-002300*    LEVEL TWO            PADDING CHARCTER IS "Z".                SQ2174.2
-002400*                                                                 SQ2174.2
-002500*    THE LAST 9 RECORDS MUST BE FILLED WITH THE PADDING CHARACTER SQ2174.2
-002600*        PADDING-CHARACTER PIC X VALUE "Z".                       SQ2174.2
-002700*                                                                 SQ2174.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            SQ2174.2
 002900 CONFIGURATION SECTION.                                           SQ2174.2
 003000 SOURCE-COMPUTER.                                                 SQ2174.2
@@ -282,7 +282,7 @@
 033100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2174.2
 033200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2174.2
 033300      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2174.2
-033400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2174.2
+033400*                                                                         
 033500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2174.2
 033600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2174.2
 033700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2174.2
@@ -371,12 +371,12 @@
 042000     PERFORM PASS.                                                SQ2174.2
 042100     PERFORM PRINT-DETAIL.                                        SQ2174.2
 042200     CLOSE SQ-FS1.                                                SQ2174.2
-042300*        A SEQUENTIAL TAPE FILE WITH 120 CHARACTER RECORDS        SQ2174.2
-042400*    HAS BEEN CREATED. THE FILE CONTAINS 750 RECORDS.             SQ2174.2
+042300*                                                                         
+042400*                                                                         
 042500 READ-INIT-F1-01.                                                 SQ2174.2
 042600     MOVE ZERO TO WRK-CS-09V00.                                   SQ2174.2
-042700*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ2174.2
-042800*    WRITE-TEST-GF-01.                                            SQ2174.2
+042700*                                                                         
+042800*                                                                         
 042900     OPEN INPUT SQ-FS1.                                           SQ2174.2
 043000 READ-TEST-F1-01.                                                 SQ2174.2
 043100     READ SQ-FS1                                                  SQ2174.2
@@ -419,8 +419,8 @@
 046800     MOVE ZERO TO WRK-CS-09V00.                                   SQ2174.2
 046900     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ2174.2
 047000     OPEN INPUT   SQ-FS1.                                         SQ2174.2
-047100*            FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED      SQ2174.2
-047200*    IN THIS SERIES OF TESTS.                                     SQ2174.2
+047100*                                                                         
+047200*                                                                         
 047300     MOVE "LEV 2 PADDING CHARS " TO FEATURE.                      SQ2174.2
 047400     MOVE "READ...RECORD AT END ..." TO RE-MARK.                  SQ2174.2
 047500     MOVE "READ-TEST-F1-02" TO PAR-NAME.                          SQ2174.2

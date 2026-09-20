@@ -1,34 +1,34 @@
 000100 IDENTIFICATION DIVISION.                                         SM1034.2
 000200 PROGRAM-ID.                                                      SM1034.2
 000300     SM103A.                                                      SM1034.2
-000400****************************************************************  SM1034.2
-000500*                                                              *  SM1034.2
-000600*    VALIDATION FOR:-                                          *  SM1034.2
-000700*                                                              *  SM1034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM1034.2
-000900*                                                              *  SM1034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM1034.2
-001100*                                                              *  SM1034.2
-001200****************************************************************  SM1034.2
-001300*                                                              *  SM1034.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM1034.2
-001500*                                                              *  SM1034.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM1034.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM1034.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM1034.2
-001900*                                                              *  SM1034.2
-002000****************************************************************  SM1034.2
-002100*                                                              *  SM1034.2
-002200*    PROGRAM SM103A TESTS THE USE OF THE "COPY" STATEMENT IN   *  SM1034.2
-002300*    THE IDENTIFICATION DIVISION AND ENVIRONMENT DIVISION      *  SM1034.2
-002400*    (SOURCE-COMPUTER, OBJECT-COMPUTER, SPECIAL-NAMES,         *  SM1034.2
-002500*    FILE-CONTROL AND I-O-CONTROL ENTRIES).                    *  SM1034.2
-002600*    A SEQUENTIAL FILE IS PRODUCED WHICH IS READ AND CHECKED   *  SM1034.2
-002700*    BY SM104A.                                                *  SM1034.2
-002800*    THE MAXIMUM AND MINIMUM LENGTHS OF A LIBRARY TEXT WORD    *  SM1034.2
-002900*    ARE ALSO TESTED.                                          *  SM1034.2
-003000*                                                              *  SM1034.2
-003100****************************************************************  SM1034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
 003200 SECURITY.                                                        SM1034.2
 003300     COPY K3SNA.                                                  SM1034.2
 003400 ENVIRONMENT DIVISION.                                            SM1034.2
@@ -38,67 +38,67 @@
 003800                                                                  SM1034.2
 003900                                                                  SM1034.2
 004000                                                                  SM1034.2
-004100*                                                                 SM1034.2
-004200*********************** COPY STATEMENT USED **********************SM1034.2
-004300*                                                                 SM1034.2
-004400*SOURCE-COMPUTER.                                     COPY K3SCA  SM1034.2
-004500*                                                                 SM1034.2
-004600******************** COPIED TEXT BEGINS BELOW ********************SM1034.2
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 SOURCE-COMPUTER.                                      COPY K3SCA.SM1034.2
-004800*********************** END OF COPIED TEXT ***********************SM1034.2
+004800*                                                                         
 004900                                                                  SM1034.2
 005000                                                                  SM1034.2
 005100                                                                  SM1034.2
 005200                                                                  SM1034.2
 005300                                                                  SM1034.2
-005400*                                                                 SM1034.2
-005500*********************** COPY STATEMENT USED **********************SM1034.2
-005600*                                                                 SM1034.2
-005700*OBJECT-COMPUTER.                                     COPY K3OCA  SM1034.2
-005800*                                                                 SM1034.2
-005900******************** COPIED TEXT BEGINS BELOW ********************SM1034.2
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
 006000 OBJECT-COMPUTER.                                      COPY K3OCA.SM1034.2
-006100*********************** END OF COPIED TEXT ***********************SM1034.2
+006100*                                                                         
 006200                                                                  SM1034.2
 006300                                                                  SM1034.2
 006400                                                                  SM1034.2
 006500                                                                  SM1034.2
 006600                                                                  SM1034.2
-006700*                                                                 SM1034.2
-006800*********************** COPY STATEMENT USED **********************SM1034.2
-006900*                                                                 SM1034.2
-007000*SPECIAL-NAMES.                                       COPY K3SNA. SM1034.2
-007100*                                                                 SM1034.2
-007200******************** COPIED TEXT BEGINS BELOW ********************SM1034.2
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
 007300 SPECIAL-NAMES.                                        COPY K3SNA.SM1034.2
-007400*********************** END OF COPIED TEXT ***********************SM1034.2
+007400*                                                                         
 007500 INPUT-OUTPUT SECTION.                                            SM1034.2
 007600                                                                  SM1034.2
 007700                                                                  SM1034.2
 007800                                                                  SM1034.2
 007900                                                                  SM1034.2
 008000                                                                  SM1034.2
-008100*                                                                 SM1034.2
-008200*********************** COPY STATEMENT USED **********************SM1034.2
-008300*                                                                 SM1034.2
-008400*FILE-CONTROL.                                        COPY K3FCA. SM1034.2
-008500*                                                                 SM1034.2
-008600******************** COPIED TEXT BEGINS BELOW ********************SM1034.2
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
 008700 FILE-CONTROL.                                         COPY K3FCA.SM1034.2
-008800*********************** END OF COPIED TEXT ***********************SM1034.2
+008800*                                                                         
 008900                                                                  SM1034.2
 009000                                                                  SM1034.2
 009100                                                                  SM1034.2
 009200                                                                  SM1034.2
 009300                                                                  SM1034.2
-009400*                                                                 SM1034.2
-009500*********************** COPY STATEMENT USED **********************SM1034.2
-009600*                                                                 SM1034.2
-009700*I-O-CONTROL                                          COPY K3IOA  SM1034.2
-009800*                                                                 SM1034.2
-009900******************** COPIED TEXT BEGINS BELOW ********************SM1034.2
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
 010000 I-O-CONTROL.                                          COPY K3IOA.SM1034.2
-010100*********************** END OF COPIED TEXT ***********************SM1034.2
+010100*                                                                         
 010200 DATA DIVISION.                                                   SM1034.2
 010300 FILE SECTION.                                                    SM1034.2
 010400 FD  PRINT-FILE.                                                  SM1034.2
@@ -327,7 +327,7 @@
 033900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM1034.2
 034000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM1034.2
 034100      ADD PASS-COUNTER TO ERROR-HOLD.                             SM1034.2
-034200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM1034.2
+034200*                                                                         
 034300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM1034.2
 034400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM1034.2
 034500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM1034.2
@@ -405,9 +405,9 @@
 041700 SPECIAL-NAMES-TEST SECTION.                                      SM1034.2
 041800 COPY-TEST-1.                                                     SM1034.2
 041900     MOVE     S-N-1 TO S-N-2.                                     SM1034.2
-042000*    NOTE     THIS ROUTINE USES A COPIED DECIMAL-POINT IS COMMA   SM1034.2
-042100*             CLAUSE IN SPECIAL-NAMES --- THE EDITING IN S-N-2    SM1034.2
-042200*             WOULD NOT BE VALID WITHOUT THIS CLAUSE.             SM1034.2
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
 042300     PERFORM  PASS.                                               SM1034.2
 042400     GO       TO COPY-WRITE-1.                                    SM1034.2
 042500 COPY-DELETE-1.                                                   SM1034.2
@@ -448,9 +448,9 @@
 046000     MOVE   "  ENVIR DIV ENTRIES" TO FEATURE.                     SM1034.2
 046100     MOVE   "COPY-TEST-2 " TO PAR-NAME.                           SM1034.2
 046200     PERFORM PRINT-DETAIL.                                        SM1034.2
-046300*                                                                 SM1034.2
+046300*                                                                         
 046400 COPY-TEST-3.                                                     SM1034.2
-046500*    ===-->  MINIMUM LENGTH TEXT WORD  <--===                     SM1034.2
+046500*                                                                         
 046600     MOVE   "XII-2 2.3 SR8" TO ANSI-REFERENCE.                    SM1034.2
 046700     MOVE   "COPY-TEST-3"   TO PAR-NAME.                          SM1034.2
 046800     MOVE    8  TO WRK-DU-00001.                                  SM1034.2
@@ -460,9 +460,9 @@
 047200     PERFORM PRINT-DETAIL.                                        SM1034.2
 047300     GO TO   COPY-INIT-4.                                         SM1034.2
 047400 COPY-TEST-3-0.                                                   SM1034.2
-047500********************* COPY TEXT USED ***************************  SM1034.2
-047600*                            8                                 *  SM1034.2
-047700*********************END OF COPY TEXT***************************  SM1034.2
+047500*                                                                         
+047600*                                                                         
+047700*                                                                         
 047800     IF      WRK-DU-00001 =                                       SM1034.2
 047900     COPY    K3SML.                                               SM1034.2
 048000             PERFORM PASS                                         SM1034.2
@@ -474,9 +474,9 @@
 048600             MOVE    WRK-DU-00001 TO COMPUTED-N                   SM1034.2
 048700             PERFORM FAIL                                         SM1034.2
 048800             PERFORM PRINT-DETAIL.                                SM1034.2
-048900*                                                                 SM1034.2
+048900*                                                                         
 049000 COPY-INIT-4.                                                     SM1034.2
-049100*    ===-->  MAXIMUM LENGTH TEXT WORD  <--===                     SM1034.2
+049100*                                                                         
 049200     MOVE   "XII-2 2.3 (SR8) AND XII-5 2.4(GR11)"                 SM1034.2
 049300          TO ANSI-REFERENCE.                                      SM1034.2
 049400     MOVE   "COPY-TEST-4" TO PAR-NAME.                            SM1034.2
@@ -488,17 +488,17 @@
 050000     PERFORM PRINT-DETAIL.                                        SM1034.2
 050100     GO TO   CCVS-EXIT.                                           SM1034.2
 050200 COPY-TEST-4-0.                                                   SM1034.2
-050300********************* COPY TEXT USED ***************************  SM1034.2
-050400*    MOVE 1 TO WRK-DU-9, ADD 1 TO WRK-DU-9, ADD 1 TO WRK-DU-9, ADDSM1034.2
-050500*     1 TO WRK-DU-99, ADD 1 TO WRK-DU-9, ADD 1 TO WRK-DU-99, ADD 1SM1034.2
-050600*     TO WRK-DU-99, ADD 1 TO WRK-DU-99, ADD 1 TO WRK-DU-99, ADD 1 SM1034.2
-050700*    TO WRK-DU-9, ADD 1 TO WRK-DU-9, ADD 1 TO WRK-DU-99, ADD 1 TO SM1034.2
-050800*    WRK-DU-99, ADD 1 TO WRK-DU-99, ADD 1 TO WRK-DU-99, ADD 10 TO SM1034.2
-050900*    WRK-DU-99-LONGER.                                            SM1034.2
-051000*********************END OF COPY TEXT***************************  SM1034.2
-051100*                                                                 SM1034.2
+050300*                                                                         
+050400*                                                                         
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
+050800*                                                                         
+050900*                                                                         
+051000*                                                                         
+051100*                                                                         
 051200     COPY    K3LGE.                                               SM1034.2
-051300*                                                                 SM1034.2
+051300*                                                                         
 051400 COPY-TEST-4-1.                                                   SM1034.2
 051500     MOVE   "COPY-TEST-4-1" TO PAR-NAME.                          SM1034.2
 051600     IF      WRK-DU-9 = 6                                         SM1034.2
@@ -537,7 +537,7 @@
 054900             MOVE    WRK-DU-99-LONGER TO COMPUTED-N               SM1034.2
 055000             PERFORM FAIL                                         SM1034.2
 055100             PERFORM PRINT-DETAIL.                                SM1034.2
-055200*                                                                 SM1034.2
+055200*                                                                         
 055300 CCVS-EXIT SECTION.                                               SM1034.2
 055400 CCVS-999999.                                                     SM1034.2
 055500     GO TO CLOSE-FILES.                                           SM1034.2

@@ -19,24 +19,24 @@
 001900     "4.2 ".                                                      DB2044.2
 002000 SECURITY.                                                        DB2044.2
 002100     NONE.                                                        DB2044.2
-002200*                                                                 DB2044.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB2044.2
-002400*                                                                 DB2044.2
-002500*                       PROGRAM ABSTRACT                          DB2044.2
-002600*                                                                 DB2044.2
-002700*    DB204A TESTS THE CAPABILITY OF THE DEBUG MODULE TO HANDLE A  DB2044.2
-002800*    DEBUGGING PROCEDURE WHICH IS MONITORING A "MERGE OUTPUT"     DB2044.2
-002900*    PROCEDURE.  THIS PROGRAM IS TO BE COMPILED AND EXECUTED      DB2044.2
-003000*    WITH BOTH COMPILE AND OBJECT TIME DEBUGGING SWITCHES ON.     DB2044.2
-003100*    THE DEBUGGING PROCEDURE SHOULD BE INCLUDED IN COMPILATION    DB2044.2
-003200*    AND GENERATE CODE.  DURING EXECUTION, TWO SEQUENTIAL FILES   DB2044.2
-003300*    ARE CREATED WITH EACH CONTAINING 80-CHARACTER RECORDS IN     DB2044.2
-003400*    SORTED ORDER.  THE TWO FILES ARE THEN MERGED.  EXECUTION     DB2044.2
-003500*    OF THE MERGE OPERATION SHOULD TRIGGER THE DEBUGGING PRO-     DB2044.2
-003600*    CEDURE LINKED TO THE MERGE OUTPUT PROCEDURE-NAME.            DB2044.2
-003700*                                                                 DB2044.2
-003800*                                                                 DB2044.2
-003900*                                                                 DB2044.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
 004000 ENVIRONMENT DIVISION.                                            DB2044.2
 004100 CONFIGURATION SECTION.                                           DB2044.2
 004200 SOURCE-COMPUTER.                                                 DB2044.2
@@ -65,21 +65,21 @@
 006500 01  PRINT-REC PICTURE X(120).                                    DB2044.2
 006600 01  DUMMY-RECORD PICTURE X(120).                                 DB2044.2
 006700 FD  SQ-FS1                                                       DB2044.2
-007000*      XXXXX074  REPLACE WITH IMPLEMENTOR NAME (*OPT C ONLY)      DB2044.2
-007300*      XXXXX075  REPLACE WITH VALUE CLAUSE OBJECT (*OPT C ONLY)   DB2044.2
-007500*      XXXXX069  REPLACE WITH ADDITIONAL INFO (*OPT G ONLY)       DB2044.2
+007000*                                                                         
+007300*                                                                         
+007500*                                                                         
 007600     LABEL RECORDS ARE STANDARD.                                  DB2044.2
 007700 01  REC-1 PIC X(120).                                            DB2044.2
 007800 FD  SQ-FS2                                                       DB2044.2
-008100*      XXXXX074  REPLACE WITH IMPLEMENTOR NAME (*OPT C ONLY)      DB2044.2
-008400*      XXXXX076  REPLACE WITH VALUE CLAUSE OBJECT (*OPT C ONLY)   DB2044.2
-008600*      XXXXX069  REPLACE WITH ADDITIONAL INFO (*OPT G ONLY)       DB2044.2
+008100*                                                                         
+008400*                                                                         
+008600*                                                                         
 008700     LABEL RECORDS ARE STANDARD.                                  DB2044.2
 008800 01  REC-2 PIC X(120).                                            DB2044.2
 008900 FD  SQ-FS3                                                       DB2044.2
-009200*      XXXXX074  REPLACE WITH IMPLEMENTOR NAME (*OPT C ONLY)      DB2044.2
-009500*      XXXXX077  REPLACE WITH VALUE CLAUSE OBJECT (*OPT C ONLY)   DB2044.2
-009700*      XXXXX069  REPLACE WITH ADDITIONAL INFO (*OPT G ONLY)       DB2044.2
+009200*                                                                         
+009500*                                                                         
+009700*                                                                         
 009800     LABEL RECORDS ARE STANDARD.                                  DB2044.2
 009900 01  REC-3 PIC X(120).                                            DB2044.2
 010000 SD  ST-FS4.                                                      DB2044.2
@@ -323,7 +323,7 @@
 034000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB2044.2
 034100      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB2044.2
 034200      ADD PASS-COUNTER TO ERROR-HOLD.                             DB2044.2
-034300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB2044.2
+034300*                                                                         
 034400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB2044.2
 034500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB2044.2
 034600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB2044.2
@@ -426,13 +426,13 @@
 044300     MOVE "MERGE OUTPUT PROC" TO FEATURE.                         DB2044.2
 044400     MOVE SPACES TO ITEM-1.                                       DB2044.2
 044500     MOVE 0 TO KEY-1.                                             DB2044.2
-044600******************************************************************DB2044.2
-044700*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2044.2
-044800*    "MERGE-TEST-A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2044.2
-044900*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "MERGE      *DB2044.2
-045000*    ST-FS4  ON ASCENDING KEY SORT-KEY  USING SQ-FS1 SQ-FS2      *DB2044.2
-045100*    OUTPUT PROCEDURE IS MERGE-OUTPUT-PROC.".                    *DB2044.2
-045200******************************************************************DB2044.2
+044600*                                                                         
+044700*                                                                         
+044800*                                                                         
+044900*                                                                         
+045000*                                                                         
+045100*                                                                         
+045200*                                                                         
 045300 MERGE-TEST.                                                      DB2044.2
 045400     MERGE ST-FS4  ON ASCENDING KEY SORT-KEY                      DB2044.2
 045500         USING  SQ-FS1  SQ-FS2                                    DB2044.2

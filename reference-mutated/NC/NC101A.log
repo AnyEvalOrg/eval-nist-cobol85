@@ -14,33 +14,33 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
  MULTIPLY BY          PASS  MPY-TEST-F1-1                                                                               
- MULTIPLY BY          PASS  MPY-TEST-F1-2                                                                               
+ MULTIPLY BY          FAIL* MPY-TEST-F1-2                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000073.000000000                                                     
+                                     CORRECT =  000000077.000000000  VI-106 6.19.4 GR1                                  
+                                                                                                                        
  MULTIPLY BY          PASS  MPY-TEST-F1-3-1                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-3-2                                                                             
- MULTIPLY BY          FAIL* MPY-TEST-F1-4-1               ON SIZE ERROR NOT EXECUTED                                    
+ MULTIPLY BY          PASS  MPY-TEST-F1-4-1                                                                             
+ MULTIPLY BY          FAIL* MPY-TEST-F1-4-2               WRONGLY AFFECTED BY SIZE ERROR                                
                                                                                                                         
-                                     COMPUTED= L                                                                        
-                                     CORRECT = X                     VI-106 6.19.4 GR1                                  
+                                     COMPUTED=  000000020.000000000                                                     
+                                     CORRECT =  000000023.000000000  VI-106 6.19.4 GR1                                  
                                                                                                                         
- MULTIPLY BY          PASS  MPY-TEST-F1-4-2                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-5                                                                               
  MULTIPLY BY          PASS  MPY-TEST-F1-6                                                                               
- MULTIPLY BY          FAIL* MPY-TEST-F1-7-1               WRONGLY AFFECTED BY SIZE ERROR                                
+ MULTIPLY BY          PASS  MPY-TEST-F1-7-1                                                                             
+ MULTIPLY BY          FAIL* MPY-TEST-F1-7-2               ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
-                                     COMPUTED=  000000001111111111                                                      
-                                     CORRECT =  000000001111111117   VI-106 6.19.4 GR1                                  
+                                     COMPUTED= 1                                                                        
+                                     CORRECT = 7                     VI-106 6.19.4 GR1                                  
                                                                                                                         
- MULTIPLY BY          PASS  MPY-TEST-F1-7-2                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-8-1                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-8-2                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-9-1                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-9-2                                                                             
  MULTIPLY BY          PASS  MPY-TEST-F1-10-1                                                                            
- MULTIPLY BY          PASS  MPY-TEST-F1-10-2                                                                            
- MULTIPLY BY          PASS  MPY-TEST-F1-11                                                                              
- MULTIPLY BY          FAIL* MPY-TEST-F1-12                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000000111111111                                                                                                                                                                              
+ MULTIPLY BY          PASS  MPY-TEST-F1-10-2                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,8 +54,8 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     CORRECT =  000001000111111111   VI-106 6.19.4 GR1                                  
-                                                                                                                        
+ MULTIPLY BY          PASS  MPY-TEST-F1-11                                                                              
+ MULTIPLY BY          PASS  MPY-TEST-F1-12                                                                              
  MULTIPLY BY          PASS  MPY-TEST-F1-13-1   .01                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-13-2   .02                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-14-1   .01                                                                      

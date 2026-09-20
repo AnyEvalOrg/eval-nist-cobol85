@@ -19,7 +19,7 @@ TEST RESULT OF NC123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD ON SIZE ERROR    FAIL* IND-TEST-GF-3-2               WRONGLY AFFECTED BY SIZE ERROR                                
                                                                                                                         
                                      COMPUTED=  00000000000005.0000                                                     
-                                     CORRECT =  00000000000004.0000  IV-21 4.3.8.2.3/4                                  
+                                     CORRECT =  00000000000007.0000  IV-21 4.3.8.2.3/4                                  
                                                                                                                         
  ADD TO               PASS  IND-TEST-GF-4                                                                               
  ADD ROUNDED          PASS  IND-TEST-GF-5                                                                               
@@ -27,7 +27,7 @@ TEST RESULT OF NC123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD ON SIZE ERROR    FAIL* IND-TEST-GF-6-2               ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
                                      COMPUTED=  00000000000009.0000                                                     
-                                     CORRECT =  00000000000003.0000  IV-21 4.3.8.2.3/4                                  
+                                     CORRECT =  00000000000009.1000  IV-21 4.3.8.2.3/4                                  
                                                                                                                         
  ADD GIVING           PASS  IND-TEST-GF-10                                                                              
  ADD GIVING           PASS  IND-TEST-GF-11                                                                              
@@ -61,7 +61,7 @@ TEST RESULT OF NC123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT GIVING      FAIL* IND-TEST-GF-24                                                                              
                                                                                                                         
                                      COMPUTED=  00000000000007.0000                                                     
-                                     CORRECT =  00000000000006.0000  IV-21 4.3.8.2.3/4                                  
+                                     CORRECT =  00000000000003.0000  IV-21 4.3.8.2.3/4                                  
                                                                                                                         
  SUBTRACT GIVING      PASS  IND-TEST-GF-25                                                                              
  SUBTRACT GIVING      PASS  IND-TEST-GF-26                                                                              

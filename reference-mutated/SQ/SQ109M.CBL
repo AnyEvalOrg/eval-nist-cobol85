@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1094.2
 000200 PROGRAM-ID.                                                      SQ1094.2
 000300     SQ109M.                                                      SQ1094.2
-000400****************************************************************  SQ1094.2
-000500*                                                              *  SQ1094.2
-000600*    VALIDATION FOR:-                                          *  SQ1094.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1094.2
-000800*                                                              *  SQ1094.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1094.2
-001100*                                                              *  SQ1094.2
-001200****************************************************************  SQ1094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1094.2
-001400*         THIS ROUTINE CREATES A 2 REEL TAPE FILE OF FIXED        SQ1094.2
-001500*    LENGTH RECORDS.  THE FILE IS THEN CLOSED AND OPENED AS AN    SQ1094.2
-001600*    INPUT FILE.  THE FILE IS READ AND FIELDS IN THE INPUT RECORDSSQ1094.2
-001700*    ARE COMPARED TO THE VALUES WRITTEN TO ENSURE THAT THE RECORDSSQ1094.2
-001800*    WERE PROCESSED CORRECTLY.  THE FILE IS CLOSED AND OPENED     SQ1094.2
-001900*    AGAIN AS AN INPUT FILE.  FOUR READ FORMAT OPTIONS ARE USED   SQ1094.2
-002000*    TO READ THE FILE AND FIELDS IN THE RECORDS ARE VERIFIED.     SQ1094.2
-002100*    THE OPEN, CLOSE, READ, AND WRITE STATEMENTS ARE TESTED FOR   SQ1094.2
-002200*    LEVEL ONE FEATURES.                                          SQ1094.2
-002300*                                                                 SQ1094.2
-002400*    USED X-CARDS:                                                SQ1094.2
-002500*         XXXXX006                                                SQ1094.2
-002600*         XXXXX055                                                SQ1094.2
-002700*     P   XXXXX062                                                SQ1094.2
-002800*         XXXXX082                                                SQ1094.2
-002900*         XXXXX083                                                SQ1094.2
-003000*     C   XXXXX084                                                SQ1094.2
-003100*                                                                 SQ1094.2
-003200*                                                                 SQ1094.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            SQ1094.2
 003400 CONFIGURATION SECTION.                                           SQ1094.2
 003500 SOURCE-COMPUTER.                                                 SQ1094.2
@@ -284,7 +284,7 @@
 033300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1094.2
 033400      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1094.2
 033500      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1094.2
-033600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1094.2
+033600*                                                                         
 033700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1094.2
 033800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1094.2
 033900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1094.2
@@ -375,12 +375,12 @@
 042500     MOVE  XRECORD-NUMBER (1) TO CORRECT-18V0.                    SQ1094.2
 042600     PERFORM PRINT-DETAIL.                                        SQ1094.2
 042700     CLOSE SQ-FS1.                                                SQ1094.2
-042800*        A SEQUENTIAL TAPE FILE WITH 120 CHARACTER RECORDS        SQ1094.2
-042900*    HAS BEEN CREATED. THE FILE CONTAINS 750 RECORDS.             SQ1094.2
+042800*                                                                         
+042900*                                                                         
 043000 SEQ-INIT-002.                                                    SQ1094.2
 043100     MOVE ZERO TO WRK-CS-09V00.                                   SQ1094.2
-043200*        THIS TEST READS AND CHECKS THE FILE CREATED IN           SQ1094.2
-043300*    SEQ-TEST-001.                                                SQ1094.2
+043200*                                                                         
+043300*                                                                         
 043400     OPEN INPUT SQ-FS1.                                           SQ1094.2
 043500 SEQ-TEST-002.                                                    SQ1094.2
 043600     READ SQ-FS1                                                  SQ1094.2
@@ -425,8 +425,8 @@
 047500     MOVE ZERO TO WRK-CS-09V00.                                   SQ1094.2
 047600     MOVE ZERO TO RECORDS-IN-ERROR.                               SQ1094.2
 047700     OPEN INPUT   SQ-FS1.                                         SQ1094.2
-047800*            FOUR OPTIONS FOR THE READ STATEMENT ARE CHECKED      SQ1094.2
-047900*    IN THIS SERIES OF TESTS.                                     SQ1094.2
+047800*                                                                         
+047900*                                                                         
 048000     MOVE "READ...RECORD AT END ..." TO FEATURE.                  SQ1094.2
 048100     MOVE "READ-TEST-GF-01" TO PAR-NAME.                          SQ1094.2
 048200     MOVE ZERO TO ERROR-FLAG.                                     SQ1094.2

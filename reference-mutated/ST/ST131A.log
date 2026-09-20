@@ -17,14 +17,14 @@ TEST RESULT OF ST131A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SORT, INPUT PROC     FAIL* SORT-TEST-2                                                                                 
                                                                                                                         
                                      COMPUTED= 567AI                                                                    
-                                     CORRECT = 567KI                                                                    
+                                     CORRECT = 567AH                                                                    
                                                                                                                         
  SORT, INPUT PROC     PASS  SORT-TEST-3                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-4                                                                                 
  SORT, INPUT PROC     FAIL* SORT-TEST-5                                                                                 
                                                                                                                         
                                      COMPUTED= 567AZAZ                                                                  
-                                     CORRECT = 167AZAZ                                                                  
+                                     CORRECT = 567AZZZ                                                                  
                                                                                                                         
  SORT, INPUT PROC     PASS  SORT-TEST-6                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-7                                                                                 

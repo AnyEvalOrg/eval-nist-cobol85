@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         IC2074.2
 000200 PROGRAM-ID.                                                      IC2074.2
 000300     IC207A.                                                      IC2074.2
-000400****************************************************************  IC2074.2
-000500*                                                              *  IC2074.2
-000600*    VALIDATION FOR:-                                          *  IC2074.2
-000700*                                                              *  IC2074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2074.2
-000900*                                                              *  IC2074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2074.2
-001100*                                                              *  IC2074.2
-001200****************************************************************  IC2074.2
-001300*                                                              *  IC2074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2074.2
-001500*                                                              *  IC2074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2074.2
-001900*                                                              *  IC2074.2
-002000****************************************************************  IC2074.2
-002100*        THE PROGRAM IC207 DEFINES A VARIABLE LENGTH TABLE.       IC2074.2
-002200*    THE TABLE AND THE VARIABLE CONTAINING THE TABLE LENGTH       IC2074.2
-002300*    ARE OPERANDS IN A CALL STATEMENT USING PHRASE.  ALSO AN      IC2074.2
-002400*    INDEX IS DEFINED FOR THE TABLE AND AN INDEX DATA ITEM        IC2074.2
-002500*    IS USED TO PASS AN INDEX VALUE FOR A TABLE REFERENCE         IC2074.2
-002600*    TO AND FROM THE SUBPROGRAM IC208.                            IC2074.2
-002700****************************************************************  IC2074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            IC2074.2
 002900 CONFIGURATION SECTION.                                           IC2074.2
 003000 SOURCE-COMPUTER.                                                 IC2074.2
@@ -240,7 +240,7 @@
 024200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2074.2
 024300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2074.2
 024400      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2074.2
-024500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2074.2
+024500*                                                                         
 024600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2074.2
 024700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2074.2
 024800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2074.2
@@ -316,8 +316,8 @@
 031800     MOVE SPACE TO TABLE-02.                                      IC2074.2
 031900     CALL ID1 USING TABLE-01, TABLE-02, INDEX-1, DN3.             IC2074.2
 032000 LINK-TEST-01.                                                    IC2074.2
-032100*            THIS TEST CHECKS THAT AN INDEX DATA ITEM WAS         IC2074.2
-032200*        CORRECTLY PASSED TO A SUBPROGRAM.                        IC2074.2
+032100*                                                                         
+032200*                                                                         
 032300     MOVE "LINK-TEST-01" TO PAR-NAME.                             IC2074.2
 032400     MOVE "INDEX DATA ITEM" TO FEATURE.                           IC2074.2
 032500     IF DN2 (1) IS EQUAL TO "C"                                   IC2074.2
@@ -331,19 +331,19 @@
 033300 LINK-WRITE-01.                                                   IC2074.2
 033400     PERFORM PRINT-DETAIL.                                        IC2074.2
 033500 LINK-TEST-02.                                                    IC2074.2
-033600*        THIS TEST VERIFIES THAT THE VARIABLE LENGTH TABLE        IC2074.2
-033700*    AND ITS LENGTH WERE PROCESSED CORRECTLY IN THE SUBPROGRAM.   IC2074.2
+033600*                                                                         
+033700*                                                                         
 033800     MOVE 1 TO REC-CT.                                            IC2074.2
 033900     MOVE "LINK-TEST-02" TO PAR-NAME.                             IC2074.2
 034000     MOVE "VAR. LENGTH TABLE" TO FEATURE.                         IC2074.2
 034100 LINK-TEST-02-01.                                                 IC2074.2
-034200     IF DN2 (2) EQUAL TO "Y"                                      IC2074.2
+034200     IF DN2 (2) EQUAL TO "T"                                      IC2074.2
 034300         PERFORM PASS                                             IC2074.2
 034400         GO TO LINK-WRITE-02-01.                                  IC2074.2
 034500 LINK-FAIL-02-01.                                                 IC2074.2
 034600     PERFORM FAIL.                                                IC2074.2
 034700     MOVE DN2 (2) TO COMPUTED-A.                                  IC2074.2
-034800     MOVE "Y" TO CORRECT-A.                                       IC2074.2
+034800     MOVE "T" TO CORRECT-A.                                       IC2074.2
 034900     MOVE "VALUE OF DN2(2)" TO RE-MARK.                           IC2074.2
 035000 LINK-WRITE-02-01.                                                IC2074.2
 035100     PERFORM PRINT-DETAIL.                                        IC2074.2
@@ -384,9 +384,9 @@
 038600 LINK-WRITE-02-04.                                                IC2074.2
 038700     PERFORM PRINT-DETAIL.                                        IC2074.2
 038800 LINK-TEST-03.                                                    IC2074.2
-038900*        THIS TEST VERIFIES THAT THE CONDITION NAMES DEFINED      IC2074.2
-039000*    IN THE LINKAGE SECTION OF THE SUBPROGRAM WERE PROCESSED      IC2074.2
-039100*    CORRECTLY.                                                   IC2074.2
+038900*                                                                         
+039000*                                                                         
+039100*                                                                         
 039200     MOVE "LINK-TEST-03" TO PAR-NAME.                             IC2074.2
 039300     MOVE 1 TO REC-CT.                                            IC2074.2
 039400     MOVE "CONDITION NAME" TO FEATURE.                            IC2074.2
@@ -415,13 +415,13 @@
 041700     PERFORM PRINT-DETAIL.                                        IC2074.2
 041800 LINK-TEST-03-03.                                                 IC2074.2
 041900     ADD 1 TO REC-CT.                                             IC2074.2
-042000     IF DN2 (8) EQUAL TO "M"                                      IC2074.2
+042000     IF DN2 (8) EQUAL TO "A"                                      IC2074.2
 042100         PERFORM PASS                                             IC2074.2
 042200         GO TO LINK-WRITE-03-03.                                  IC2074.2
 042300 LINK-FAIL-03-03.                                                 IC2074.2
 042400     PERFORM FAIL.                                                IC2074.2
 042500     MOVE DN2 (8) TO COMPUTED-A.                                  IC2074.2
-042600     MOVE "M" TO CORRECT-A.                                       IC2074.2
+042600     MOVE "A" TO CORRECT-A.                                       IC2074.2
 042700     MOVE "VALUE OF DN2(8)" TO RE-MARK.                           IC2074.2
 042800 LINK-WRITE-03-03.                                                IC2074.2
 042900     PERFORM PRINT-DETAIL.                                        IC2074.2
@@ -429,9 +429,9 @@
 043100     MOVE "LINK-TEST-04" TO PAR-NAME.                             IC2074.2
 043200     MOVE "CALL PARAMETERS" TO FEATURE.                           IC2074.2
 043300     MOVE 1 TO REC-CT.                                            IC2074.2
-043400*        CHECK THE INDEX DATA ITEM AND TABLE LENGTH WHICH         IC2074.2
-043500*    WERE SET IN THE SUBPROGRAM AND RETURNED CORRECTLY            IC2074.2
-043600*    TO THE CALLING PROGRAM.                                      IC2074.2
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
 043700 LINK-TEST-04-01.                                                 IC2074.2
 043800     SET IN1 TO INDEX-1.                                          IC2074.2
 043900     MOVE DN1 (IN1) TO DN4.                                       IC2074.2
@@ -460,13 +460,13 @@
 046200 LINK-TEST-04-03.                                                 IC2074.2
 046300     ADD 1 TO REC-CT.                                             IC2074.2
 046400     MOVE TABLE-01 TO DN5.                                        IC2074.2
-046500     IF DN5 EQUAL TO "OBCDEFGHI      "                            IC2074.2
+046500     IF DN5 EQUAL TO "ABCWEFGHI      "                            IC2074.2
 046600         PERFORM PASS                                             IC2074.2
 046700         GO TO LINK-WRITE-04-03.                                  IC2074.2
 046800 LINK-FAIL-04-03.                                                 IC2074.2
 046900     PERFORM FAIL.                                                IC2074.2
 047000     MOVE DN5 TO COMPUTED-A.                                      IC2074.2
-047100     MOVE "OBCDEFGHI      " TO CORRECT-A.                         IC2074.2
+047100     MOVE "ABCWEFGHI      " TO CORRECT-A.                         IC2074.2
 047200     MOVE "CONTENTS OF TABLE-01" TO RE-MARK.                      IC2074.2
 047300 LINK-WRITE-04-03.                                                IC2074.2
 047400     PERFORM PRINT-DETAIL.                                        IC2074.2

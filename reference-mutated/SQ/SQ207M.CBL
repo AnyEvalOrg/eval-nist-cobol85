@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2074.2
 000200 PROGRAM-ID.                                                      SQ2074.2
 000300     SQ207M.                                                      SQ2074.2
-000400****************************************************************  SQ2074.2
-000500*                                                              *  SQ2074.2
-000600*    VALIDATION FOR:-                                          *  SQ2074.2
-000700*    " HIGH       ".                                              SQ2074.2
-000800*                                                              *  SQ2074.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2074.2
-001000*    "4.2 ".                                                      SQ2074.2
-001100*                                                              *  SQ2074.2
-001200*        THE ROUTINE SQ207M TESTS THE USE OF THE LEVEL 2 WRITE    SQ2074.2
-001300*    STATEMENT FOR A FILE DESIGNATED AS PRINTER OUTPUT.  THESE    SQ2074.2
-001400*    WRITE STATEMENTS CONTROL THE VERTICAL POSITIONING OF EACH    SQ2074.2
-001500*    LINE ON A PRINTED PAGE.  SQ207M TESTS ALL POSSIBLE LEVEL 2   SQ2074.2
-001600*    COMBINATIONS OF THE FROM AND ADVANCING PHRASES USING MNEMONICSQ2074.2
-001700*    NAME.  IT IS ASSUMED THAT ALL LEVEL 2 NUCLEUS OPTIONS ARE    SQ2074.2
-001800*    AVAILABLE IN TESTING SQ207M. THE VARIABLES IN THE TESTS ARE  SQ2074.2
-001900*    IDENTIFIER-1 AND MNEMONIC-NAME.  HOWEVER, BECAUSE ONLY ONE   SQ2074.2
-002000*    MNEMONIC-NAME IS DEFINED IN THE SPECIAL-NAMES PARAGRAPH,     SQ2074.2
-002100*    SEPARATE RUNS MUST BE MADE FOR EACH MNEMONIC-NAME TESTED.    SQ2074.2
-002200*    IDENTIFIER-1 IS A 77, 01, OR SUBGROUP IDENTIFIER IN THE      SQ2074.2
-002300*    WORKING-STORAGE SECTION.  THIS TEST MAY BE DELETED IF NO     SQ2074.2
-002400*    MNEMONIC-NAMES EXIST FOR THE SYSTEM BEING VALIDATED.         SQ2074.2
-002500*        BECAUSE OF THE NATURE OF THESE TESTS A "PASS" OR "FAIL"  SQ2074.2
-002600*    CANNOT BE DETERMINED WITHIN THE PROGRAM.  THE USER MUST      SQ2074.2
-002700*    VISUALLY CHECK THE POSITION OF EACH LINE TO DETERMINE THE    SQ2074.2
-002800*    ACCURACY OF THE VARIOUS WRITE OPTIONS.                       SQ2074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SQ2074.2
 003000 CONFIGURATION SECTION.                                           SQ2074.2
 003100 SOURCE-COMPUTER.                                                 SQ2074.2
@@ -248,7 +248,7 @@
 029600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2074.2
 029700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2074.2
 029800      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2074.2
-029900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2074.2
+029900*                                                                         
 030000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2074.2
 030100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2074.2
 030200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2074.2

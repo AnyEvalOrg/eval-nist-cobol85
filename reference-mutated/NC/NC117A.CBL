@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC1174.2
 000200 PROGRAM-ID.                                                      NC1174.2
 000300     NC117A.                                                      NC1174.2
-000400****************************************************************  NC1174.2
-000500*                                                              *  NC1174.2
-000600*    VALIDATION FOR:-                                          *  NC1174.2
-000700*                                                              *  NC1174.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1174.2
-000900*                                                              *  NC1174.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1174.2
-001100*                                                              *  NC1174.2
-001200****************************************************************  NC1174.2
-001300*                                                              *  NC1174.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1174.2
-001500*                                                              *  NC1174.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1174.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1174.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1174.2
-001900*                                                              *  NC1174.2
-002000****************************************************************  NC1174.2
-002100*                                                                 NC1174.2
-002200*      PROGRAM NC117A TESTS THE USE OF THE "SIGN" CLAUSE USING    NC1174.2
-002300*      THE "DIVIDE" STATEMENT.  ALL COMBINATIONS OF THE "SIGN"    NC1174.2
-002400*      CLAUSE PHRASES ARE TESTED USING DATA ITEMS OF              NC1174.2
-002500*      LENGTHS.                                                   NC1174.2
-002600*                                                                 NC1174.2
-002700*                                                                 NC1174.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800                                                                  NC1174.2
 002900                                                                  NC1174.2
 003000 ENVIRONMENT DIVISION.                                            NC1174.2
@@ -325,7 +325,7 @@
 032700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1174.2
 032800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1174.2
 032900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1174.2
-033000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1174.2
+033000*                                                                         
 033100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1174.2
 033200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1174.2
 033300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1174.2
@@ -857,7 +857,7 @@
 085900     DIVIDE AZERO-DS-LS-05V05 INTO WRK-DS-LS-01V00 ROUNDED        NC1174.2
 086000         ON SIZE ERROR  MOVE "1" TO WRK-XN-00001.                 NC1174.2
 086100 SIG-TEST-GF-10-1.                                                NC1174.2
-086200     IF WRK-DS-LS-01V00 EQUAL TO 2                                NC1174.2
+086200     IF WRK-DS-LS-01V00 EQUAL TO 0                                NC1174.2
 086300         PERFORM PASS                                             NC1174.2
 086400         GO TO SIG-WRITE-GF-10-1.                                 NC1174.2
 086500     GO TO SIG-FAIL-GF-10-1.                                      NC1174.2
@@ -865,7 +865,7 @@
 086700     PERFORM DE-LETE.                                             NC1174.2
 086800     GO TO SIG-WRITE-GF-10-1.                                     NC1174.2
 086900 SIG-FAIL-GF-10-1.                                                NC1174.2
-087000     MOVE  2                  TO CORRECT-N.                       NC1174.2
+087000     MOVE  0                  TO CORRECT-N.                       NC1174.2
 087100     MOVE  WRK-DS-LS-01V00       TO COMPUTED-N.                   NC1174.2
 087200     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1174.2
 087300     PERFORM FAIL.                                                NC1174.2
@@ -873,11 +873,11 @@
 087500     MOVE "SIG-TEST-GF-10-1         " TO PAR-NAME.                NC1174.2
 087600     PERFORM PRINT-DETAIL.                                        NC1174.2
 087700 SIG-TEST-GF-10-2.                                                NC1174.2
-087800     IF WRK-XN-00001 EQUAL TO "1"                                 NC1174.2
+087800     IF WRK-XN-00001 EQUAL TO "2"                                 NC1174.2
 087900         PERFORM PASS                                             NC1174.2
 088000         GO TO SIG-WRITE-GF-10-2.                                 NC1174.2
 088100     MOVE "ON SIZE ERROR SHOULD BE EXECUTED" TO RE-MARK.          NC1174.2
-088200     MOVE "1" TO CORRECT-A.                                       NC1174.2
+088200     MOVE "2" TO CORRECT-A.                                       NC1174.2
 088300     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1174.2
 088400     PERFORM FAIL.                                                NC1174.2
 088500     GO TO SIG-WRITE-GF-10-2.                                     NC1174.2
@@ -980,7 +980,7 @@
 098200         MOVE "1" TO WRK-XN-00001.                                NC1174.2
 098300 SIG-TEST-GF-17-1.                                                NC1174.2
 098400     MOVE WRK-DS-LS-0201P TO WRK-DS-05V00.                        NC1174.2
-098500     IF WRK-DS-05V00 EQUAL TO  -05020                             NC1174.2
+098500     IF WRK-DS-05V00 EQUAL TO  -00020                             NC1174.2
 098600         PERFORM PASS                                             NC1174.2
 098700         GO TO SIG-WRITE-GF-17-1.                                 NC1174.2
 098800     GO TO SIG-FAIL-GF-17-1.                                      NC1174.2
@@ -988,17 +988,17 @@
 099000     PERFORM DE-LETE.                                             NC1174.2
 099100     GO TO SIG-WRITE-GF-17-1.                                     NC1174.2
 099200 SIG-FAIL-GF-17-1.                                                NC1174.2
-099300     MOVE -05020 TO CORRECT-N.                                    NC1174.2
+099300     MOVE -00020 TO CORRECT-N.                                    NC1174.2
 099400     MOVE WRK-DS-05V00 TO COMPUTED-N.                             NC1174.2
 099500     PERFORM FAIL.                                                NC1174.2
 099600 SIG-WRITE-GF-17-1.                                               NC1174.2
 099700     MOVE "SIG-TEST-GF-17-1         " TO PAR-NAME.                NC1174.2
 099800     PERFORM PRINT-DETAIL.                                        NC1174.2
 099900 SIG-TEST-GF-17-2.                                                NC1174.2
-100000     IF WRK-XN-00001 EQUAL TO "0"                                 NC1174.2
+100000     IF WRK-XN-00001 EQUAL TO "2"                                 NC1174.2
 100100         PERFORM PASS                                             NC1174.2
 100200         GO TO SIG-WRITE-GF-17-2.                                 NC1174.2
-100300     MOVE "0" TO CORRECT-A.                                       NC1174.2
+100300     MOVE "2" TO CORRECT-A.                                       NC1174.2
 100400     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1174.2
 100500     MOVE "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.      NC1174.2
 100600     PERFORM FAIL.                                                NC1174.2
@@ -1138,10 +1138,10 @@
 114000         MOVE "1" TO WRK-XN-00001.                                NC1174.2
 114100 SIG-TEST-GF-25-1.                                                NC1174.2
 114200     MOVE WRK-DS-LS-0201P TO WRK-DS-05V00.                        NC1174.2
-114300     IF  WRK-DS-05V00 EQUAL TO -00820                             NC1174.2
+114300     IF  WRK-DS-05V00 EQUAL TO -00020                             NC1174.2
 114400         PERFORM PASS                                             NC1174.2
 114500         GO TO SIG-WRITE-GF-25-1.                                 NC1174.2
-114600     MOVE  -00820             TO CORRECT-N.                       NC1174.2
+114600     MOVE  -00020             TO CORRECT-N.                       NC1174.2
 114700     MOVE  WRK-DS-05V00       TO COMPUTED-N.                      NC1174.2
 114800     PERFORM FAIL.                                                NC1174.2
 114900     GO TO SIG-WRITE-GF-25-1.                                     NC1174.2
@@ -1151,10 +1151,10 @@
 115300     MOVE "SIG-TEST-GF-25-1         " TO PAR-NAME.                NC1174.2
 115400     PERFORM PRINT-DETAIL.                                        NC1174.2
 115500 SIG-TEST-GF-25-2.                                                NC1174.2
-115600     IF WRK-XN-00001 EQUAL TO "0"                                 NC1174.2
+115600     IF WRK-XN-00001 EQUAL TO "3"                                 NC1174.2
 115700         PERFORM PASS                                             NC1174.2
 115800         GO TO SIG-WRITE-GF-25-2.                                 NC1174.2
-115900     MOVE "0" TO CORRECT-A.                                       NC1174.2
+115900     MOVE "3" TO CORRECT-A.                                       NC1174.2
 116000     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1174.2
 116100     MOVE "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.      NC1174.2
 116200     PERFORM FAIL.                                                NC1174.2
@@ -1200,7 +1200,7 @@
 120200 SIG-WRITE-GF-26-2.                                               NC1174.2
 120300     MOVE "SIG-TEST-GF-26-2         " TO PAR-NAME.                NC1174.2
 120400     PERFORM PRINT-DETAIL.                                        NC1174.2
-120500*                                                                 NC1174.2
+120500*                                                                         
 120600 CCVS-EXIT SECTION.                                               NC1174.2
 120700 CCVS-999999.                                                     NC1174.2
 120800     GO TO CLOSE-FILES.                                           NC1174.2

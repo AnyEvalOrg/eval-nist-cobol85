@@ -1,23 +1,23 @@
 000100 IDENTIFICATION DIVISION.                                         ST1014.2
 000200 PROGRAM-ID.                                                      ST1014.2
 000300     ST101A.                                                      ST1014.2
-000400****************************************************************  ST1014.2
-000500*                                                              *  ST1014.2
-000600*    VALIDATION FOR:-                                          *  ST1014.2
-000700*                                                              *  ST1014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1014.2
-000900*                                                              *  ST1014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1014.2
-001100*                                                              *  ST1014.2
-001200****************************************************************  ST1014.2
-001300*                                                              *  ST1014.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1014.2
-001500*                                                              *  ST1014.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  ST1014.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  ST1014.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  ST1014.2
-001900*                                                              *  ST1014.2
-002000****************************************************************  ST1014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100 ENVIRONMENT DIVISION.                                            ST1014.2
 002200 CONFIGURATION SECTION.                                           ST1014.2
 002300 SOURCE-COMPUTER.                                                 ST1014.2
@@ -224,15 +224,15 @@
 022900     STOP RUN.                                                    ST1014.2
 023000 INSORT SECTION.                                                  ST1014.2
 023100 IN-1.                                                            ST1014.2
-023200*    NOTE.                                                        ST1014.2
-023300*       KEYS 1 AND 3 THRU 5 WILL VARY IN VALUE BETWEEN 1 AND 2.   ST1014.2
-023400*       KEY 2 VARIES FROM 1 THRU 6. THUS 96 RECORDS ARE CREATED   ST1014.2
-023500*       IN REVERSE SEQUENCE OF SORTING ORDER. TWO RECORDS ARE     ST1014.2
-023600*       ADDED TO EACH END OF THE SORTED STRING FOR HI-LOW CONTROL.ST1014.2
-023700*       THE SORT STATEMENT TESTS THE SERIES AND THRU OPTIONS WITH ST1014.2
-023800*       INCLUSION AND OMISSION OF OPTIONAL WORDS. THE SORT        ST1014.2
-023900*       STATEMENT REPRESENTS BASIC SORTING PERMITTED BY LEVEL 1 OFST1014.2
-024000*       THE SORT MODULE.                                          ST1014.2
+023200*                                                                         
+023300*                                                                         
+023400*                                                                         
+023500*                                                                         
+023600*                                                                         
+023700*                                                                         
+023800*                                                                         
+023900*                                                                         
+024000*                                                                         
 024100 IN-2.                                                            ST1014.2
 024200     MOVE 900009000000000 TO RDF-KEYS.                            ST1014.2
 024300     RELEASE S-RECORD.                                            ST1014.2
@@ -242,7 +242,7 @@
 024700     RELEASE S-RECORD.                                            ST1014.2
 024800     MOVE 009000000900008 TO RDF-KEYS.                            ST1014.2
 024900     RELEASE S-RECORD.                                            ST1014.2
-025000*    NOTE HI-LOW CONTROL RECORDS DONE.                            ST1014.2
+025000*                                                                         
 025100     MOVE 300003000000000 TO WKEYS-RDF.                           ST1014.2
 025200 IN-3.                                                            ST1014.2
 025300     PERFORM IN-4 2 TIMES.                                        ST1014.2
@@ -324,7 +324,7 @@
 033100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1014.2
 033200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1014.2
 033300      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1014.2
-033400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1014.2
+033400*                                                                         
 033500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1014.2
 033600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1014.2
 033700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1014.2
@@ -436,7 +436,7 @@
 044300     PERFORM  PRINT-DETAIL.                                       ST1014.2
 044400 SORT-TEST-3.                                                     ST1014.2
 044500     PERFORM  RET-1.                                              ST1014.2
-044600     IF       RDF-KEYS EQUAL TO 106021000200002                   ST1014.2
+044600     IF       RDF-KEYS EQUAL TO 106001030200002                   ST1014.2
 044700              PERFORM PASS GO TO SORT-WRITE-3.                    ST1014.2
 044800     GO       TO SORT-FAIL-3.                                     ST1014.2
 044900 SORT-DELETE-3.                                                   ST1014.2
@@ -444,7 +444,7 @@
 045100     GO       TO SORT-WRITE-3.                                    ST1014.2
 045200 SORT-FAIL-3.                                                     ST1014.2
 045300     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-045400     MOVE     106021000200002  TO CORRECT-18V0.                   ST1014.2
+045400     MOVE     106001030200002  TO CORRECT-18V0.                   ST1014.2
 045500     PERFORM  FAIL.                                               ST1014.2
 045600 SORT-WRITE-3.                                                    ST1014.2
 045700     MOVE     "SORT-TEST-3 " TO PAR-NAME.                         ST1014.2
@@ -467,7 +467,7 @@
 047400     PERFORM  PRINT-DETAIL.                                       ST1014.2
 047500 SORT-TEST-5.                                                     ST1014.2
 047600     PERFORM  RET-2 40 TIMES.                                     ST1014.2
-047700     IF       RDF-KEYS EQUAL TO 201021000200002                   ST1014.2
+047700     IF       RDF-KEYS EQUAL TO 206001000200002                   ST1014.2
 047800              PERFORM PASS GO TO SORT-WRITE-5.                    ST1014.2
 047900     GO       TO SORT-FAIL-5.                                     ST1014.2
 048000 SORT-DELETE-5.                                                   ST1014.2
@@ -475,14 +475,14 @@
 048200     GO       TO SORT-WRITE-5.                                    ST1014.2
 048300 SORT-FAIL-5.                                                     ST1014.2
 048400     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-048500     MOVE     201021000200002 TO CORRECT-18V0.                    ST1014.2
+048500     MOVE     206001000200002 TO CORRECT-18V0.                    ST1014.2
 048600     PERFORM  FAIL.                                               ST1014.2
 048700 SORT-WRITE-5.                                                    ST1014.2
 048800     MOVE     "SORT-TEST-5 " TO PAR-NAME.                         ST1014.2
 048900     PERFORM  PRINT-DETAIL.                                       ST1014.2
 049000 SORT-TEST-6.                                                     ST1014.2
 049100     PERFORM  RET-2 7 TIMES.                                      ST1014.2
-049200     IF       RDF-KEYS EQUAL TO 501002000100001                   ST1014.2
+049200     IF       RDF-KEYS EQUAL TO 201002005100001                   ST1014.2
 049300              PERFORM PASS GO TO SORT-WRITE-6.                    ST1014.2
 049400     GO       TO SORT-FAIL-6.                                     ST1014.2
 049500 SORT-DELETE-6.                                                   ST1014.2
@@ -490,7 +490,7 @@
 049700     GO       TO SORT-WRITE-6.                                    ST1014.2
 049800 SORT-FAIL-6.                                                     ST1014.2
 049900     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-050000     MOVE     501002000100001 TO CORRECT-18V0.                    ST1014.2
+050000     MOVE     201002005100001 TO CORRECT-18V0.                    ST1014.2
 050100     PERFORM  FAIL.                                               ST1014.2
 050200 SORT-WRITE-6.                                                    ST1014.2
 050300     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1014.2
@@ -558,11 +558,11 @@
 056500     RETURN   SORTFILE-1A RECORD AT END GO TO BAD-FILE.           ST1014.2
 056600     MOVE     S-RECORD TO SORTED.                                 ST1014.2
 056700     WRITE    SORTED.                                             ST1014.2
-056800*    NOTE     THE RETURN VERB WITH ALL OPTIONAL WORDS.            ST1014.2
+056800*                                                                         
 056900 RET-2.                                                           ST1014.2
 057000     RETURN   SORTFILE-1A           END GO TO BAD-FILE.           ST1014.2
 057100     MOVE     S-RECORD TO SORTED.                                 ST1014.2
 057200     WRITE    SORTED.                                             ST1014.2
-057300*    NOTE     THE RETURN VERB WITHOUT OPTIONAL WORDS.             ST1014.2
+057300*                                                                         
 057400 OUTP3-EXIT.                                                      ST1014.2
 057500     PERFORM  CLOSE-FILES.                                        ST1014.2

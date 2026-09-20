@@ -21,19 +21,19 @@ TEST RESULT OF IC103A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL USING DN SERIES FAIL* CALL-TEST-06       .02        NUMERIC DISPLAY PARAMETER                                     
                                                                                                                         
                                      COMPUTED=  000000000000000025                                                      
-                                     CORRECT =  000000000000000021                                                      
+                                     CORRECT =  000000000000000095                                                      
                                                                                                                         
  CALL USING DN SERIES PASS  CALL-TEST-06       .03                                                                      
  CALL USING DN SERIES FAIL* CALL-TEST-06       .04        COMPUTATIONAL PARAMETER                                       
                                                                                                                         
                                      COMPUTED=  0000.76540000000000                                                     
-                                     CORRECT =  0000.76520000000000                                                     
+                                     CORRECT =  0000.46540000000000                                                     
                                                                                                                         
  CALL USING DN SERIES PASS  CALL-TEST-06       .05                                                                      
  CALL USING DN SERIES FAIL* CALL-TEST-06       .06        ALPHANUMERIC EDITED                                           
                                                                                                                         
                                      COMPUTED= AB C0D                                                                   
-                                     CORRECT = AB M0D                                                                   
+                                     CORRECT = AB C5D                                                                   
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

@@ -1,87 +1,87 @@
 000100 IDENTIFICATION DIVISION.                                         IC2224.2
 000200 PROGRAM-ID.                                                      IC2224.2
 000300     IC222A.                                                      IC2224.2
-000400****************************************************************  IC2224.2
-000500*                                                              *  IC2224.2
-000600*    VALIDATION FOR:-                                          *  IC2224.2
-000700*                                                              *  IC2224.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2224.2
-000900*                                                              *  IC2224.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2224.2
-001100*                                                              *  IC2224.2
-001200****************************************************************  IC2224.2
-001300*                                                              *  IC2224.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2224.2
-001500*                                                              *  IC2224.2
-001600*            X-55   SYSTEM PRINTER                             *  IC2224.2
-001700*            X-82   SOURCE-COMPUTER                            *  IC2224.2
-001800*            X-83   OBJECT-COMPUTER.                           *  IC2224.2
-001900*                                                              *  IC2224.2
-002000****************************************************************  IC2224.2
-002100*                                                              *  IC2224.2
-002200*    THE SOURCE FILE CONTAINS TWO PROGRAMS, IC222A AND         *  IC2224.2
-002300*    IC222A-1, WHICH TEST LANGUAGE ELEMENTS FROM  LEVEL 2 OF   *  IC2224.2
-002400*    THE INTER-PROGRAM COMMUNICATION MODULE.  THE LANGUAGE     *  IC2224.2
-002500*    ELEMENTS TESTED ARE:                                      *  IC2224.2
-002600*          "ON EXCEPTION"     PHRASE                           *  IC2224.2
-002700*          "NOT ON EXCEPTION" PHRASE                           *  IC2224.2
-002800*          "END-CALL"         PHRASE                           *  IC2224.2
-002900*          "ON OVERFLOW"      PHRASE                           *  IC2224.2
-003000*                                                              *  IC2224.2
-003100*    THE TWO PROGRAMS SHOULD BE COMPILED IN THE SAME           *  IC2224.2
-003200*    INVOCATION OF THE COMPILER TO TEST THE BATCH COMPILATION  *  IC2224.2
-003300*    FEATURE AND RECOGNITION OF THE END PROGRAM HEADER.  THE   *  IC2224.2
-003400*    ARRANGEMENT OF THE PROGRAMS IN THE SOURCE FILE IS:        *  IC2224.2
-003500*                                                              *  IC2224.2
-003600*    IDENTIFICATION DIVISION.                                  *  IC2224.2
-003700*    PROGRAM-ID. IC222A.                                       *  IC2224.2
-003800*          .                                                   *  IC2224.2
-003900*          .                                                   *  IC2224.2
-004000*          .                                                   *  IC2224.2
-004100*    END PROGRAM IC222A.                                          IC2224.2
-004200*    IDENTIFICATION DIVISION.                                     IC2224.2
-004300*    PROGRAM-ID. IC222A-1.                                        IC2224.2
-004400*          .                                                   *  IC2224.2
-004500*          .                                                   *  IC2224.2
-004600*          .                                                   *  IC2224.2
-004700*                                                              *  IC2224.2
-004800*    IC222A, THE FIRST PROGRAM IN THE FILE, CONTAINS THE       *  IC2224.2
-004900*    SUBSTANTIVE TESTS.  THE ONLY FUNCTION OF THE OTHER        *  IC2224.2
-005000*    PROGRAM IS TO ENSURE THAT A PROGRAM WITH KNOWN PARAMETER  *  IC2224.2
-005100*    REQUIREMENTS IS AVAILABLE TO BE CALLED.  IC222A TESTS     *  IC2224.2
-005200*    CONTROL FLOW THROUGH VARIANTS OF THE CALL STATEMENT WITH  *  IC2224.2
-005300*    THE "ON EXCEPTION" PHRASE PRESENT OR ABSENT; THE "NOT ON  *  IC2224.2
-005400*    EXCEPTION" PHRASE PRESENT OR ABSENT; AND AVAILABLE OR     *  IC2224.2
-005500*    NON-AVAIABLE TARGET PROGRAMS.  EACH CALL STATEMENT HAS AN *  IC2224.2
-005600*    END-CALL PHRASE, AND THERE ARE SECONDARY TESTS WHICH      *  IC2224.2
-005700*    CHECK THAT STATEMENTS FOLLOWING END-CALL ARE PROPERLY     *  IC2224.2
-005800*    EXECUTED.                                                 *  IC2224.2
-005900*                                                                 IC2224.2
-006000*    THIS TEST SET DOES NOT EXAMINE THE RESULTS RETURNED BY    *  IC2224.2
-006100*    THE CALLED PROGRAM, BUT IS WHOLLY CONCERNED WITH THE FLOW *  IC2224.2
-006200*    OF CONTROL IN THE CALLING PROGRAM DURING EXECUTION OF A   *  IC2224.2
-006300*    CALL STATEMENT.                                           *  IC2224.2
-006400*                                                              *  IC2224.2
-006500*    THERE ARE EIGHT POSIBLE COMBINATIONS OF CALL STATEMENT    *  IC2224.2
-006600*    FORMAT AND CALLED PROGRAM AVAILABILITY THAT COULD BE      *  IC2224.2
-006700*    TESTED.  TWO OF THESE COMBINATIONS, THOSE WHERE A PROGRAM *  IC2224.2
-006800*    WHICH IS NOT AVAILABLE IS CALLED THROUGH  A STATEMENT     *  IC2224.2
-006900*    WHICH DOES NOT CONTAIN AN "ON EXCEPTION" PHRASE, PRODUCE  *  IC2224.2
-007000*    EFFECTS WHICH THE STANDARD LEAVES UNDEFINED.  THUS THERE  *  IC2224.2
-007100*    ARE SIX CASES WHICH CAN BE TESTED.  THIS TEST SUITE TESTS *  IC2224.2
-007200*    ALL SIX.  IN ADDITION, IT TESTS THE TWO CASES WHERE       *  IC2224.2
-007300*    "ON OVERFLOW" CAN BE USED IN PLACE OF "ON EXCEPTION".     *  IC2224.2
-007400*    EACH OF THE EIGHT MAJOR TESTS IS FOLLOWED BY A            *  IC2224.2
-007500*    SUBORDINATE TEST WHICH IS INTENDED TO CHECK THE WAY       *  IC2224.2
-007600*    THAT CONTROL HAS FLOWED THROUGH THE PHRASES OF THE CALL   *  IC2224.2
-007700*    STATEMENT.  EVERY CALL STATEMENT IN IC222A HAS AN         *  IC2224.2
-007800*    "END-CALL" SCOPE DELIMITER.  THIS SCOPE DELIMITER IS      *  IC2224.2
-007900*    FOLLOWED BY ONE MORE STATEMENT IN THE SENTENCE, AND THE   *  IC2224.2
-008000*    SUBORDINATE TESTS CHECK THAT THIS ADDITIONAL STATEMENT    *  IC2224.2
-008100*    HAS BEEN EXECUTED.                                        *  IC2224.2
-008200*                                                              *  IC2224.2
-008300****************************************************************  IC2224.2
-008400*                                                                 IC2224.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
 008500 ENVIRONMENT DIVISION.                                            IC2224.2
 008600 CONFIGURATION SECTION.                                           IC2224.2
 008700 SOURCE-COMPUTER.                                                 IC2224.2
@@ -92,13 +92,13 @@
 009200 FILE-CONTROL.                                                    IC2224.2
 009300     SELECT PRINT-FILE ASSIGN TO                                  IC2224.2
 009400     "REPORT".                                                    IC2224.2
-009500*                                                                 IC2224.2
+009500*                                                                         
 009600 DATA DIVISION.                                                   IC2224.2
 009700 FILE SECTION.                                                    IC2224.2
 009800 FD  PRINT-FILE.                                                  IC2224.2
 009900 01  PRINT-REC PICTURE X(120).                                    IC2224.2
 010000 01  DUMMY-RECORD PICTURE X(120).                                 IC2224.2
-010100*                                                                 IC2224.2
+010100*                                                                         
 010200 WORKING-STORAGE SECTION.                                         IC2224.2
 010300 77  DN1 PICTURE S99  VALUE ZERO.                                 IC2224.2
 010400 77  DN3 PICTURE S99.                                             IC2224.2
@@ -110,7 +110,7 @@
 011000         USAGE IS COMPUTATIONAL.                                  IC2224.2
 011100 77  CALL-FLAG PIC 9.                                             IC2224.2
 011200 01  EXCEPTION-PATH-FLAG PICTURE X.                               IC2224.2
-011300*                                                                 IC2224.2
+011300*                                                                         
 011400 01  TEST-RESULTS.                                                IC2224.2
 011500     02 FILLER                   PIC X      VALUE SPACE.          IC2224.2
 011600     02 FEATURE                  PIC X(20)  VALUE SPACE.          IC2224.2
@@ -252,7 +252,7 @@
 025200-    "******************************".                            IC2224.2
 025300 01  CCVS-PGM-ID                     PIC X(9)   VALUE             IC2224.2
 025400     "IC222A".                                                    IC2224.2
-025500*                                                                 IC2224.2
+025500*                                                                         
 025600 PROCEDURE DIVISION.                                              IC2224.2
 025700 CCVS1 SECTION.                                                   IC2224.2
 025800 OPEN-FILES.                                                      IC2224.2
@@ -299,7 +299,7 @@
 030100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC2224.2
 030200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC2224.2
 030300      ADD PASS-COUNTER TO ERROR-HOLD.                             IC2224.2
-030400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC2224.2
+030400*                                                                         
 030500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC2224.2
 030600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC2224.2
 030700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC2224.2
@@ -366,19 +366,19 @@
 036800 BAIL-OUT-EX. EXIT.                                               IC2224.2
 036900 CCVS1-EXIT.                                                      IC2224.2
 037000     EXIT.                                                        IC2224.2
-037100*                                                                 IC2224.2
+037100*                                                                         
 037200 SECT-IC222A-001 SECTION.                                         IC2224.2
 037300 CALL-INIT-1.                                                     IC2224.2
-037400****************************************************************  IC2224.2
-037500*                                                              *  IC2224.2
-037600*    CALL A PROGRAM WHICH EXISTS AND FOR WHICH PARAMETERS      *  IC2224.2
-037700*    MATCH IN NUMBER AND TYPE.  EXECUTION SHOULD BE SUCCESSFUL *  IC2224.2
-037800*    AND THE STATEMENTS IN THE "ON EXCEPTION" PATH IGNORED.    *  IC2224.2
-037900*    THE STATEMENT FOLLOWING THE SCOPE TERMINATOR SHOULD BE    *  IC2224.2
-038000*    EXECUTED.                                                 *  IC2224.2
-038100*                                                              *  IC2224.2
-038200****************************************************************  IC2224.2
-038300*                                                                 IC2224.2
+037400*                                                                         
+037500*                                                                         
+037600*                                                                         
+037700*                                                                         
+037800*                                                                         
+037900*                                                                         
+038000*                                                                         
+038100*                                                                         
+038200*                                                                         
+038300*                                                                         
 038400     MOVE    1 TO REC-CT.                                         IC2224.2
 038500     MOVE   "CALL-TEST-1" TO PAR-NAME.                            IC2224.2
 038600     MOVE   "AVAILABLE ON " TO FEATURE.                           IC2224.2
@@ -391,10 +391,10 @@
 039300     PERFORM DE-LETE.                                             IC2224.2
 039400     PERFORM PRINT-DETAIL.                                        IC2224.2
 039500     ADD     1 TO REC-CT.                                         IC2224.2
-039600*                                                                 IC2224.2
-039700*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE IS           *  IC2224.2
-039800*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-039900*                                                                 IC2224.2
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
+039900*                                                                         
 040000     GO TO   CALL-DELETE-1-2.                                     IC2224.2
 040100 CALL-TEST-1-1.                                                   IC2224.2
 040200     CALL   "IC222A-1" USING DN1, DN2, DN3, DN4                   IC2224.2
@@ -413,7 +413,7 @@
 041500 CALL-WRITE-1-1.                                                  IC2224.2
 041600     PERFORM PRINT-DETAIL.                                        IC2224.2
 041700     ADD 1 TO REC-CT.                                             IC2224.2
-041800*                                                                 IC2224.2
+041800*                                                                         
 041900 CALL-INIT-1-2.                                                   IC2224.2
 042000     GO TO    CALL-TEST-1-2.                                      IC2224.2
 042100 CALL-DELETE-1-2.                                                 IC2224.2
@@ -422,19 +422,19 @@
 042400     PERFORM PRINT-DETAIL.                                        IC2224.2
 042500     ADD     1 TO REC-CT.                                         IC2224.2
 042600     GO TO   CALL-EXIT-1.                                         IC2224.2
-042700*                                                                 IC2224.2
+042700*                                                                         
 042800 CALL-TEST-1-2.                                                   IC2224.2
-042900****************************************************************  IC2224.2
-043000*                                                              *  IC2224.2
-043100*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-043200*    WAS EXECUTED.  IF THE PREVIOUS TEST PASSED, A PASS HERE   *  IC2224.2
-043300*    INDICATES THAT THE SCOPE TERMINATOR HAS BEEN INTERPRETED  *  IC2224.2
-043400*    CORRECTLY.  IF THE PREVIOUS TEST FAILED, A PASS HERE      *  IC2224.2
-043500*    INDICATES THAT THE SCOPE TERMINATOR WAS NOT INTERPRETED   *  IC2224.2
-043600*    AS "NOT ON EXCEPTION" OR "GO TO NEXT-SENTENCE".           *  IC2224.2
-043700*                                                              *  IC2224.2
-043800****************************************************************  IC2224.2
-043900*                                                                 IC2224.2
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
+043700*                                                                         
+043800*                                                                         
+043900*                                                                         
 044000     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
 044100     IF      CALL-FLAG = 1                                        IC2224.2
 044200             PERFORM PASS                                         IC2224.2
@@ -444,20 +444,20 @@
 044600             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 044700             PERFORM FAIL.                                        IC2224.2
 044800     PERFORM PRINT-DETAIL.                                        IC2224.2
-044900*                                                                 IC2224.2
+044900*                                                                         
 045000 CALL-EXIT-1.                                                     IC2224.2
-045100*                                                                 IC2224.2
-045200*                                                                 IC2224.2
+045100*                                                                         
+045200*                                                                         
 045300 CALL-INIT-2.                                                     IC2224.2
-045400****************************************************************  IC2224.2
-045500*                                                              *  IC2224.2
-045600*    CALL A PROGRAM WHICH DOES NOT EXIST.  PAGE X-28, 5.2.4,   *  IC2224.2
-045700*    RULE (3)A STATES THAT IF A PROGRAM CANNOT BE MADE         *  IC2224.2
-045800*    AVAILABLE THEN THE STATEMENTS IN THE "ON EXCEPTION"       *  IC2224.2
-045900*    PHRASE MUST BE EXECUTED.                                  *  IC2224.2
-046000*                                                              *  IC2224.2
-046100****************************************************************  IC2224.2
-046200*                                                                 IC2224.2
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
 046300     MOVE    1 TO REC-CT.                                         IC2224.2
 046400     MOVE   "CALL-TEST-2" TO PAR-NAME.                            IC2224.2
 046500     MOVE   "NO PROGRAM ON " TO FEATURE.                          IC2224.2
@@ -470,13 +470,13 @@
 047200     PERFORM DE-LETE.                                             IC2224.2
 047300     PERFORM PRINT-DETAIL.                                        IC2224.2
 047400     ADD     1 TO REC-CT.                                         IC2224.2
-047500*                                                                 IC2224.2
-047600*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-047700*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-047800*                                                                 IC2224.2
+047500*                                                                         
+047600*                                                                         
+047700*                                                                         
+047800*                                                                         
 047900     GO TO   CALL-DELETE-2-2.                                     IC2224.2
 048000 CALL-TEST-2-1.                                                   IC2224.2
-048100*    CALL "NON-EXISTING-PROGRAM"                                  IC2224.2
+048100*                                                                         
 048200     CALL   "XXXXXXXX" USING DN1, DN2, DN3, DN4                   IC2224.2
 048300             ON EXCEPTION                                         IC2224.2
 048400                  MOVE "P" TO EXCEPTION-PATH-FLAG                 IC2224.2
@@ -492,7 +492,7 @@
 049400 CALL-WRITE-2-1.                                                  IC2224.2
 049500     PERFORM PRINT-DETAIL.                                        IC2224.2
 049600     ADD 1 TO REC-CT.                                             IC2224.2
-049700*                                                                 IC2224.2
+049700*                                                                         
 049800 CALL-INIT-2-2.                                                   IC2224.2
 049900     GO TO    CALL-TEST-2-2.                                      IC2224.2
 050000 CALL-DELETE-2-2.                                                 IC2224.2
@@ -501,19 +501,19 @@
 050300     PERFORM PRINT-DETAIL.                                        IC2224.2
 050400     ADD     1 TO REC-CT.                                         IC2224.2
 050500     GO TO   CALL-EXIT-2.                                         IC2224.2
-050600*                                                                 IC2224.2
+050600*                                                                         
 050700 CALL-TEST-2-2.                                                   IC2224.2
-050800****************************************************************  IC2224.2
-050900*                                                              *  IC2224.2
-051000*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-051100*    WAS EXECUTED.  IF THE PREVIOUS TEST FAILED, A PASS HERE   *  IC2224.2
-051200*    INDICATES THAT THE SCOPE TERMINATOR HAS BEEN INTERPRETED  *  IC2224.2
-051300*    CORRECTLY.  IF THE PREVIOUS TEST PASSED, A PASS HERE      *  IC2224.2
-051400*    INDICATES THAT THE SCOPE TERMINATOR WAS NOT INTERPRETED   *  IC2224.2
-051500*    AS "NOT ON EXCEPTION" OR "GO TO NEXT-SENTENCE".           *  IC2224.2
-051600*                                                              *  IC2224.2
-051700****************************************************************  IC2224.2
-051800*                                                                 IC2224.2
+050800*                                                                         
+050900*                                                                         
+051000*                                                                         
+051100*                                                                         
+051200*                                                                         
+051300*                                                                         
+051400*                                                                         
+051500*                                                                         
+051600*                                                                         
+051700*                                                                         
+051800*                                                                         
 051900     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
 052000     IF      CALL-FLAG = 1                                        IC2224.2
 052100             PERFORM PASS                                         IC2224.2
@@ -523,22 +523,22 @@
 052500             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 052600             PERFORM FAIL.                                        IC2224.2
 052700     PERFORM PRINT-DETAIL.                                        IC2224.2
-052800*                                                                 IC2224.2
+052800*                                                                         
 052900 CALL-EXIT-2.                                                     IC2224.2
-053000*                                                                 IC2224.2
-053100*                                                                 IC2224.2
+053000*                                                                         
+053100*                                                                         
 053200 CALL-INIT-3.                                                     IC2224.2
-053300****************************************************************  IC2224.2
-053400*                                                              *  IC2224.2
-053500*    CALL A PROGRAM WHICH EXISTS, USING A CALL STATEMENT WITH  *  IC2224.2
-053600*    BOTH AN "ON EXCEPTION" PHRASE AND A "NOT ON EXCEPTION"    *  IC2224.2
-053700*    PHRASE.  EXECUTION SHOULD BE SUCCESSFUL, THE              *  IC2224.2
-053800*    "ON EXCEPTION" PHRASE IGNORED, AND THE STATEMENTS IN THE  *  IC2224.2
-053900*    "NOT ON EXCEPTION" PHRASE EXECUTED.  THE STATEMENT        *  IC2224.2
-054000*    FOLLOWING THE SCOPE TERMINATOR SHOULD BE EXECUTED.        *  IC2224.2
-054100*                                                              *  IC2224.2
-054200****************************************************************  IC2224.2
-054300*                                                                 IC2224.2
+053300*                                                                         
+053400*                                                                         
+053500*                                                                         
+053600*                                                                         
+053700*                                                                         
+053800*                                                                         
+053900*                                                                         
+054000*                                                                         
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
 054400     MOVE    1 TO REC-CT.                                         IC2224.2
 054500     MOVE   "CALL-TEST-3" TO PAR-NAME.                            IC2224.2
 054600     MOVE   "AVAILABLE  ON NOT ON" TO FEATURE.                    IC2224.2
@@ -551,10 +551,10 @@
 055300     PERFORM DE-LETE.                                             IC2224.2
 055400     PERFORM PRINT-DETAIL.                                        IC2224.2
 055500     ADD     1 TO REC-CT.                                         IC2224.2
-055600*                                                                 IC2224.2
-055700*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-055800*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-055900*                                                                 IC2224.2
+055600*                                                                         
+055700*                                                                         
+055800*                                                                         
+055900*                                                                         
 056000     GO TO   CALL-DELETE-3-2.                                     IC2224.2
 056100 CALL-TEST-3-1.                                                   IC2224.2
 056200     CALL   "IC222A-1" USING DN1, DN2, DN3, DN4                   IC2224.2
@@ -577,7 +577,7 @@
 057900 CALL-WRITE-3-1.                                                  IC2224.2
 058000     PERFORM PRINT-DETAIL.                                        IC2224.2
 058100     ADD 1 TO REC-CT.                                             IC2224.2
-058200*                                                                 IC2224.2
+058200*                                                                         
 058300 CALL-INIT-3-2.                                                   IC2224.2
 058400     GO TO    CALL-TEST-3-2.                                      IC2224.2
 058500 CALL-DELETE-3-2.                                                 IC2224.2
@@ -586,19 +586,19 @@
 058800     PERFORM PRINT-DETAIL.                                        IC2224.2
 058900     ADD     1 TO REC-CT.                                         IC2224.2
 059000     GO TO   CALL-EXIT-3.                                         IC2224.2
-059100*                                                                 IC2224.2
+059100*                                                                         
 059200 CALL-TEST-3-2.                                                   IC2224.2
-059300****************************************************************  IC2224.2
-059400*                                                              *  IC2224.2
-059500*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-059600*    WAS EXECUTED.  IF THE PREVIOUS TEST FAILED, A PASS HERE   *  IC2224.2
-059700*    INDICATES THAT THE SCOPE TERMINATOR HAS BEEN INTERPRETED  *  IC2224.2
-059800*    CORRECTLY.  IF THE PREVIOUS TEST PASSED, A PASS HERE      *  IC2224.2
-059900*    INDICATES THAT THE SCOPE TERMINATOR WAS NOT INTERPRETED   *  IC2224.2
-060000*    AS "NOT ON EXCEPTION" OR "GO TO NEXT-SENTENCE".           *  IC2224.2
-060100*                                                              *  IC2224.2
-060200****************************************************************  IC2224.2
-060300*                                                                 IC2224.2
+059300*                                                                         
+059400*                                                                         
+059500*                                                                         
+059600*                                                                         
+059700*                                                                         
+059800*                                                                         
+059900*                                                                         
+060000*                                                                         
+060100*                                                                         
+060200*                                                                         
+060300*                                                                         
 060400     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
 060500     IF      CALL-FLAG = 3                                        IC2224.2
 060600             PERFORM PASS                                         IC2224.2
@@ -608,23 +608,23 @@
 061000             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 061100             PERFORM FAIL.                                        IC2224.2
 061200     PERFORM PRINT-DETAIL.                                        IC2224.2
-061300*                                                                 IC2224.2
+061300*                                                                         
 061400 CALL-EXIT-3.                                                     IC2224.2
-061500*                                                                 IC2224.2
-061600*                                                                 IC2224.2
+061500*                                                                         
+061600*                                                                         
 061700 CALL-INIT-4.                                                     IC2224.2
-061800****************************************************************  IC2224.2
-061900*                                                              *  IC2224.2
-062000*    CALL A PROGRAM WHICH IS NOT AVAILABLE FOR EXECUTION,      *  IC2224.2
-062100*    USING A CALL STATEMENT WITH BOTH AN "ON EXCEPTION" PHRASE *  IC2224.2
-062200*    AND A "NOT ON EXCEPTION" PHRASE.  EXECUTION SHOULD BE     *  IC2224.2
-062300*    UNSUCCESSFUL, THE STATEMENTS IN THE "ON EXCEPTION" PHRASE *  IC2224.2
-062400*    EXECUTED, AND THE STATEMENTS IN THE "NOT ON EXCEPTION"    *  IC2224.2
-062500*    PHRASE IGNORED.  THE STATEMENT FOLLOWING THE SCOPE        *  IC2224.2
-062600*    TERMINATOR SHOULD BE EXECUTED IN EITHER CASE.             *  IC2224.2
-062700*                                                              *  IC2224.2
-062800****************************************************************  IC2224.2
-062900*                                                                 IC2224.2
+061800*                                                                         
+061900*                                                                         
+062000*                                                                         
+062100*                                                                         
+062200*                                                                         
+062300*                                                                         
+062400*                                                                         
+062500*                                                                         
+062600*                                                                         
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
 063000     MOVE    1 TO REC-CT.                                         IC2224.2
 063100     MOVE   "CALL-TEST-4" TO PAR-NAME.                            IC2224.2
 063200     MOVE   "CALL ON EXCEPTION" TO FEATURE.                       IC2224.2
@@ -637,13 +637,13 @@
 063900     PERFORM DE-LETE.                                             IC2224.2
 064000     PERFORM PRINT-DETAIL.                                        IC2224.2
 064100     ADD     1 TO REC-CT.                                         IC2224.2
-064200*                                                                 IC2224.2
-064300*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-064400*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-064500*                                                                 IC2224.2
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
 064600     GO TO   CALL-DELETE-4-2.                                     IC2224.2
 064700 CALL-TEST-4-1.                                                   IC2224.2
-064800*    CALL   "NON-EXISTENT PROGRAM"                                IC2224.2
+064800*                                                                         
 064900     CALL   "XXXXXXXX" USING DN1, DN2, DN3, DN4                   IC2224.2
 065000             ON EXCEPTION                                         IC2224.2
 065100                  MOVE "P" TO EXCEPTION-PATH-FLAG                 IC2224.2
@@ -664,7 +664,7 @@
 066600 CALL-WRITE-4-1.                                                  IC2224.2
 066700     PERFORM PRINT-DETAIL.                                        IC2224.2
 066800     ADD 1 TO REC-CT.                                             IC2224.2
-066900*                                                                 IC2224.2
+066900*                                                                         
 067000 CALL-INIT-4-2.                                                   IC2224.2
 067100     GO TO    CALL-TEST-4-2.                                      IC2224.2
 067200 CALL-DELETE-4-2.                                                 IC2224.2
@@ -673,17 +673,17 @@
 067500     PERFORM PRINT-DETAIL.                                        IC2224.2
 067600     ADD     1 TO REC-CT.                                         IC2224.2
 067700     GO TO   CALL-EXIT-4.                                         IC2224.2
-067800*                                                                 IC2224.2
+067800*                                                                         
 067900 CALL-TEST-4-2.                                                   IC2224.2
-068000****************************************************************  IC2224.2
-068100*                                                              *  IC2224.2
-068200*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-068300*    WAS EXECUTED.  A PASS HERE ALSO INDICATES THAT ONE AND    *  IC2224.2
-068400*    ONLY ONE OF THE "ON EXCEPTION" AND "NOT ON EXCEPTION"     *  IC2224.2
-068500*    PHRASES OF THE PRECEDING CALL STATEMENT WAS EXECUTED.     *  IC2224.2
-068600*                                                              *  IC2224.2
-068700****************************************************************  IC2224.2
-068800*                                                                 IC2224.2
+068000*                                                                         
+068100*                                                                         
+068200*                                                                         
+068300*                                                                         
+068400*                                                                         
+068500*                                                                         
+068600*                                                                         
+068700*                                                                         
+068800*                                                                         
 068900     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
 069000     IF      CALL-FLAG = 3                                        IC2224.2
 069100             PERFORM PASS                                         IC2224.2
@@ -693,22 +693,22 @@
 069500             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 069600             PERFORM FAIL.                                        IC2224.2
 069700     PERFORM PRINT-DETAIL.                                        IC2224.2
-069800*                                                                 IC2224.2
+069800*                                                                         
 069900 CALL-EXIT-4.                                                     IC2224.2
-070000*                                                                 IC2224.2
-070100*                                                                 IC2224.2
+070000*                                                                         
+070100*                                                                         
 070200 CALL-INIT-5.                                                     IC2224.2
-070300****************************************************************  IC2224.2
-070400*                                                              *  IC2224.2
-070500*    CALL A PROGRAM WHICH IS AVAILABLE FOR EXECUTION, USING A  *  IC2224.2
-070600*    CALL STATEMENT WITH A "NOT ON EXCEPTION" PHRASE BUT NO    *  IC2224.2
-070700*    "ON EXCEPTION" PHRASE.  EXECUTION SHOULD BE SUCCESSFUL,   *  IC2224.2
-070800*    AND THE STATEMENTS IN THE "NOT ON EXCEPTION" PHRASE       *  IC2224.2
-070900*    EXECUTED.  THE STATEMENT FOLLOWING THE SCOPE TERMINATOR   *  IC2224.2
-071000*    SHOULD ALSO BE EXECUTED.                                  *  IC2224.2
-071100*                                                              *  IC2224.2
-071200****************************************************************  IC2224.2
-071300*                                                                 IC2224.2
+070300*                                                                         
+070400*                                                                         
+070500*                                                                         
+070600*                                                                         
+070700*                                                                         
+070800*                                                                         
+070900*                                                                         
+071000*                                                                         
+071100*                                                                         
+071200*                                                                         
+071300*                                                                         
 071400     MOVE    1 TO REC-CT.                                         IC2224.2
 071500     MOVE   "CALL-TEST-5" TO PAR-NAME.                            IC2224.2
 071600     MOVE   "AVAILABLE  -- NOT ON" TO FEATURE.                    IC2224.2
@@ -721,10 +721,10 @@
 072300     PERFORM DE-LETE.                                             IC2224.2
 072400     PERFORM PRINT-DETAIL.                                        IC2224.2
 072500     ADD     1 TO REC-CT.                                         IC2224.2
-072600*                                                                 IC2224.2
-072700*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-072800*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-072900*                                                                 IC2224.2
+072600*                                                                         
+072700*                                                                         
+072800*                                                                         
+072900*                                                                         
 073000     GO TO   CALL-DELETE-5-2.                                     IC2224.2
 073100 CALL-TEST-5-1.                                                   IC2224.2
 073200     CALL   "IC222A-1" USING DN1, DN2, DN3, DN4                   IC2224.2
@@ -744,7 +744,7 @@
 074600 CALL-WRITE-5-1.                                                  IC2224.2
 074700     PERFORM PRINT-DETAIL.                                        IC2224.2
 074800     ADD 1 TO REC-CT.                                             IC2224.2
-074900*                                                                 IC2224.2
+074900*                                                                         
 075000 CALL-INIT-5-2.                                                   IC2224.2
 075100     GO TO    CALL-TEST-5-2.                                      IC2224.2
 075200 CALL-DELETE-5-2.                                                 IC2224.2
@@ -773,21 +773,21 @@
 077500             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 077600             PERFORM FAIL.                                        IC2224.2
 077700     PERFORM PRINT-DETAIL.                                        IC2224.2
-077800*                                                                 IC2224.2
+077800*                                                                         
 077900 CALL-EXIT-5.                                                     IC2224.2
-078000*                                                                 IC2224.2
-078100*                                                                 IC2224.2
+078000*                                                                         
+078100*                                                                         
 078200 CALL-INIT-6.                                                     IC2224.2
-078300****************************************************************  IC2224.2
-078400*                                                              *  IC2224.2
-078500*    CALL A PROGRAM WHICH IS AVAILABLE FOR EXECUTION, USING A  *  IC2224.2
-078600*    CALL STATEMENT WITH NEITHER AN "ON EXCEPTION" PHRASE NOR  *  IC2224.2
-078700*    A "NOT ON EXCEPTION" PHRASE.  EXECUTION SHOULD BE         *  IC2224.2
-078800*    SUCCESSFUL. THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-078900*    SHOULD BE EXECUTED.                                       *  IC2224.2
-079000*                                                              *  IC2224.2
-079100****************************************************************  IC2224.2
-079200*                                                                 IC2224.2
+078300*                                                                         
+078400*                                                                         
+078500*                                                                         
+078600*                                                                         
+078700*                                                                         
+078800*                                                                         
+078900*                                                                         
+079000*                                                                         
+079100*                                                                         
+079200*                                                                         
 079300     MOVE    1 TO REC-CT.                                         IC2224.2
 079400     MOVE   "CALL-TEST-6" TO PAR-NAME.                            IC2224.2
 079500     MOVE   "AVAILABLE  -- ---" TO FEATURE.                       IC2224.2
@@ -800,10 +800,10 @@
 080200     PERFORM DE-LETE.                                             IC2224.2
 080300     PERFORM PRINT-DETAIL.                                        IC2224.2
 080400     ADD     1 TO REC-CT.                                         IC2224.2
-080500*                                                                 IC2224.2
-080600*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-080700*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-080800*                                                                 IC2224.2
+080500*                                                                         
+080600*                                                                         
+080700*                                                                         
+080800*                                                                         
 080900     GO TO   CALL-DELETE-6-2.                                     IC2224.2
 081000 CALL-TEST-6-1.                                                   IC2224.2
 081100     CALL   "IC222A-1" USING DN1, DN2, DN3, DN4                   IC2224.2
@@ -819,7 +819,7 @@
 082100 CALL-WRITE-6-1.                                                  IC2224.2
 082200     PERFORM PRINT-DETAIL.                                        IC2224.2
 082300     ADD 1 TO REC-CT.                                             IC2224.2
-082400*                                                                 IC2224.2
+082400*                                                                         
 082500 CALL-INIT-6-2.                                                   IC2224.2
 082600     GO TO    CALL-TEST-6-2.                                      IC2224.2
 082700 CALL-DELETE-6-2.                                                 IC2224.2
@@ -828,15 +828,15 @@
 083000     PERFORM PRINT-DETAIL.                                        IC2224.2
 083100     ADD     1 TO REC-CT.                                         IC2224.2
 083200     GO TO   CALL-EXIT-6.                                         IC2224.2
-083300*                                                                 IC2224.2
+083300*                                                                         
 083400 CALL-TEST-6-2.                                                   IC2224.2
-083500****************************************************************  IC2224.2
-083600*                                                              *  IC2224.2
-083700*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-083800*    WAS EXECUTED.                                             *  IC2224.2
-083900*                                                              *  IC2224.2
-084000****************************************************************  IC2224.2
-084100*                                                                 IC2224.2
+083500*                                                                         
+083600*                                                                         
+083700*                                                                         
+083800*                                                                         
+083900*                                                                         
+084000*                                                                         
+084100*                                                                         
 084200     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
 084300     IF      CALL-FLAG = 1                                        IC2224.2
 084400             PERFORM PASS                                         IC2224.2
@@ -846,20 +846,20 @@
 084800             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 084900             PERFORM FAIL.                                        IC2224.2
 085000     PERFORM PRINT-DETAIL.                                        IC2224.2
-085100*                                                                 IC2224.2
+085100*                                                                         
 085200 CALL-EXIT-6.                                                     IC2224.2
-085300*                                                                 IC2224.2
-085400*                                                                 IC2224.2
+085300*                                                                         
+085400*                                                                         
 085500 CALL-INIT-7.                                                     IC2224.2
-085600****************************************************************  IC2224.2
-085700*                                                              *  IC2224.2
-085800*    CALL A PROGRAM WHICH EXISTS AND FOR WHICH PARAMETERS      *  IC2224.2
-085900*    MATCH IN NUMBER AND TYPE.  THIS TEST IS A DUPLICATION OF  *  IC2224.2
-086000*    CALL-TEST-1, WITH "ON OVERFLOW" SUBSTITUTED FOR           *  IC2224.2
-086100*    "ON EXCEPTION" IN THE CALL STATEMENT.                     *  IC2224.2
-086200*                                                              *  IC2224.2
-086300****************************************************************  IC2224.2
-086400*                                                                 IC2224.2
+085600*                                                                         
+085700*                                                                         
+085800*                                                                         
+085900*                                                                         
+086000*                                                                         
+086100*                                                                         
+086200*                                                                         
+086300*                                                                         
+086400*                                                                         
 086500     MOVE    1 TO REC-CT.                                         IC2224.2
 086600     MOVE   "CALL-TEST-7" TO PAR-NAME.                            IC2224.2
 086700     MOVE   "AVAILABLE  OV ---" TO FEATURE.                       IC2224.2
@@ -872,10 +872,10 @@
 087400     PERFORM DE-LETE.                                             IC2224.2
 087500     PERFORM PRINT-DETAIL.                                        IC2224.2
 087600     ADD     1 TO REC-CT.                                         IC2224.2
-087700*                                                                 IC2224.2
-087800*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-087900*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-088000*                                                                 IC2224.2
+087700*                                                                         
+087800*                                                                         
+087900*                                                                         
+088000*                                                                         
 088100     GO TO   CALL-DELETE-7-2.                                     IC2224.2
 088200 CALL-TEST-7-1.                                                   IC2224.2
 088300     CALL   "IC222A-1" USING DN1, DN2, DN3, DN4                   IC2224.2
@@ -894,7 +894,7 @@
 089600 CALL-WRITE-7-1.                                                  IC2224.2
 089700     PERFORM PRINT-DETAIL.                                        IC2224.2
 089800     ADD 1 TO REC-CT.                                             IC2224.2
-089900*                                                                 IC2224.2
+089900*                                                                         
 090000 CALL-INIT-7-2.                                                   IC2224.2
 090100     GO TO    CALL-TEST-7-2.                                      IC2224.2
 090200 CALL-DELETE-7-2.                                                 IC2224.2
@@ -917,30 +917,30 @@
 091900*                                                                         
 092000*                                                                         
 092100     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-092200     IF      CALL-FLAG = 5                                        IC2224.2
+092200     IF      CALL-FLAG = 8                                        IC2224.2
 092300             PERFORM PASS                                         IC2224.2
 092400     ELSE                                                         IC2224.2
 092500             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-092600             MOVE    5 TO CORRECT-N                               IC2224.2
+092600             MOVE    8 TO CORRECT-N                               IC2224.2
 092700             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 092800             PERFORM FAIL.                                        IC2224.2
 092900     PERFORM PRINT-DETAIL.                                        IC2224.2
-093000*                                                                 IC2224.2
+093000*                                                                         
 093100 CALL-EXIT-7.                                                     IC2224.2
-093200*                                                                 IC2224.2
-093300*                                                                 IC2224.2
+093200*                                                                         
+093300*                                                                         
 093400 CALL-INIT-8.                                                     IC2224.2
-093500****************************************************************  IC2224.2
-093600*                                                              *  IC2224.2
-093700*    CALL A PROGRAM WHICH DOES NOT EXIST.  PAGE X-28, 5.2.4    *  IC2224.2
-093800*    RULE (3)A STATES THAT IF A PROGRAM CANNOT BE MADE        *   IC2224.2
-093900*    AVAILABLE THEN THE STATEMENTS IN THE "ON EXCEPTION" OR    *  IC2224.2
-094000*    "ON OVERFLOW" PHRASE MUST BE EXECUTED.  THIS TEST IS A    *  IC2224.2
-094100*    DUPLICATION OF CALL-TEST-2 WITH "ON OVERFLOW" SUBSTITUTED *  IC2224.2
-094200*    FOR "ON EXCEPTION" IN THE CALL STATEMENT.                 *  IC2224.2
-094300*                                                              *  IC2224.2
-094400****************************************************************  IC2224.2
-094500*                                                                 IC2224.2
+093500*                                                                         
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
+094000*                                                                         
+094100*                                                                         
+094200*                                                                         
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
 094600     MOVE    1 TO REC-CT.                                         IC2224.2
 094700     MOVE   "CALL-TEST-8" TO PAR-NAME.                            IC2224.2
 094800     MOVE   "NO PROGRAM OV ---" TO FEATURE.                       IC2224.2
@@ -953,13 +953,13 @@
 095500     PERFORM DE-LETE.                                             IC2224.2
 095600     PERFORM PRINT-DETAIL.                                        IC2224.2
 095700     ADD     1 TO REC-CT.                                         IC2224.2
-095800*                                                                 IC2224.2
-095900*    IF THIS TEST IS DELETED THEN ITS SUBORDINATE TEST IS      *  IC2224.2
-096000*    AUTOMATICALLY DELETED.                                    *  IC2224.2
-096100*                                                                 IC2224.2
+095800*                                                                         
+095900*                                                                         
+096000*                                                                         
+096100*                                                                         
 096200     GO TO   CALL-DELETE-8-2.                                     IC2224.2
 096300 CALL-TEST-8-1.                                                   IC2224.2
-096400*    CALL "NON-EXISTING-PROGRAM"                                  IC2224.2
+096400*                                                                         
 096500     CALL   "XXXXXXXX" USING DN1, DN2, DN3, DN4                   IC2224.2
 096600             ON OVERFLOW                                          IC2224.2
 096700                  MOVE "P" TO EXCEPTION-PATH-FLAG                 IC2224.2
@@ -975,7 +975,7 @@
 097700 CALL-WRITE-8-1.                                                  IC2224.2
 097800     PERFORM PRINT-DETAIL.                                        IC2224.2
 097900     ADD 1 TO REC-CT.                                             IC2224.2
-098000*                                                                 IC2224.2
+098000*                                                                         
 098100 CALL-INIT-8-2.                                                   IC2224.2
 098200     GO TO    CALL-TEST-8-2.                                      IC2224.2
 098300 CALL-DELETE-8-2.                                                 IC2224.2
@@ -998,18 +998,18 @@
 100000*                                                                         
 100100*                                                                         
 100200     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-100300     IF      CALL-FLAG = 7                                        IC2224.2
+100300     IF      CALL-FLAG = 5                                        IC2224.2
 100400             PERFORM PASS                                         IC2224.2
 100500     ELSE                                                         IC2224.2
 100600             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-100700             MOVE    7 TO CORRECT-N                               IC2224.2
+100700             MOVE    5 TO CORRECT-N                               IC2224.2
 100800             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 100900             PERFORM FAIL.                                        IC2224.2
 101000     PERFORM PRINT-DETAIL.                                        IC2224.2
-101100*                                                                 IC2224.2
+101100*                                                                         
 101200 CALL-EXIT-8.                                                     IC2224.2
-101300*                                                                 IC2224.2
-101400*                                                                 IC2224.2
+101300*                                                                         
+101400*                                                                         
 101500 CCVS-EXIT SECTION.                                               IC2224.2
 101600 CCVS-999999.                                                     IC2224.2
 101700     GO TO CLOSE-FILES.                                           IC2224.2
@@ -1017,111 +1017,111 @@
 101900 IDENTIFICATION DIVISION.                                         IC2224.2
 102000 PROGRAM-ID.                                                      IC2224.2
 102100     IC222A-1.                                                    IC2224.2
-102200****************************************************************  IC2224.2
-102300*                                                              *  IC2224.2
-102400*    THIS PROGRAM FORMS PART OF THE COBOL COMPILER VALIDATION  *  IC2224.2
-102500*    SYSTEM (CCVS) USED TO TEST COBOL COMPILERS FOR            *  IC2224.2
-102600*    CONFORMANCE WITH THE AMERICAN NATIONAL STANDARD           *  IC2224.2
-102700*    (ANSI DOCUMENT REFERENCE: X3.23-1985) AND THE STANDARD OF *  IC2224.2
-102800*    THE INTERNATIONAL ORGANIZATION FOR STANDARDISATION        *  IC2224.2
-102900*    (ISO DOCUMENT REFERENCE: ISO-1989-1985).                  *  IC2224.2
-103000*                                                              *  IC2224.2
-103100*    THIS CCVS INCORPORATES ENHANCEMENTS TO THE CCVS FOR THE   *  IC2224.2
-103200*    1974 STANDARD (ANSI DOCUMENT REFERENCE: X3.23-1974; ISO   *  IC2224.2
-103300*    DOCUMENT REFERENCE: ISO-1989-1978).                       *  IC2224.2
-103400*                                                              *  IC2224.2
-103500*    THESE ENHANCEMENTS WERE SPECIFIED BY A PROJECT TEAM WHICH *  IC2224.2
-103600*    WAS FUNDED BY THE COMMISSION FOR EUROPEAN COMMUNITIES AND *  IC2224.2
-103700*    WHICH WAS RESPONSIBLE FOR TECHNICAL ISSUES TO:            *  IC2224.2
-103800*                                                              *  IC2224.2
-103900*          THE FEDERAL SOFTWARE TESTING CENTER                 *  IC2224.2
-104000*          OFFICE OF SOFTWARE DEVELOPMENT                      *  IC2224.2
-104100*                & INFORMATION TECHNOLOGY                      *  IC2224.2
-104200*          TWO SKYLINE PLACE                                   *  IC2224.2
-104300*          SUITE 1100                                          *  IC2224.2
-104400*          5203 LEESBURG PIKE                                  *  IC2224.2
-104500*          FALLS CHURCH                                        *  IC2224.2
-104600*          VA 22041                                            *  IC2224.2
-104700*          U.S.A.                                              *  IC2224.2
-104800*                                                              *  IC2224.2
-104900*    THE PROJECT TEAM MEMBERS WERE:                            *  IC2224.2
-105000*                                                              *  IC2224.2
-105100*          BIADI (BUREAU INTER ADMINISTRATION                  *  IC2224.2
-105200*                 DE DOCUMENTATION INFORMATIQUE)               *  IC2224.2
-105300*          21 RUE BARA                                         *  IC2224.2
-105400*          F-92132 ISSY                                        *  IC2224.2
-105500*          FRANCE                                              *  IC2224.2
-105600*                                                              *  IC2224.2
-105700*                                                              *  IC2224.2
-105800*          GMD (GESELLSCHAFT FUR MATHEMATIK                    *  IC2224.2
-105900*               UND DATENVERARBEITUNG MBH)                     *  IC2224.2
-106000*          SCHLOSS BIRLINGHOVEN                                *  IC2224.2
-106100*          POSTFACH 12 40                                      *  IC2224.2
-106200*          D-5205 ST. AUGUSTIN 1                               *  IC2224.2
-106300*          GERMANY FR                                          *  IC2224.2
-106400*                                                              *  IC2224.2
-106500*                                                              *  IC2224.2
-106600*          NCC (THE NATIONAL COMPUTING CENTRE LTD)             *  IC2224.2
-106700*          OXFORD ROAD                                         *  IC2224.2
-106800*          MANCHESTER                                          *  IC2224.2
-106900*          M1 7ED                                              *  IC2224.2
-107000*          UNITED KINGDOM                                      *  IC2224.2
-107100*                                                              *  IC2224.2
-107200*                                                              *  IC2224.2
-107300*    THIS TEST SUITE WAS PRODUCED BY THE NATIONAL COMPUTING    *  IC2224.2
-107400*    CENTRE IN ENGLAND AND IS THE OFFICIAL CCVS TEST SUITE     *  IC2224.2
-107500*    USED THROUGHOUT EUROPE AND THE UNITED STATES OF AMERICA.  *  IC2224.2
-107600*                                                              *  IC2224.2
-107700*    REVISED 1986 AUGUST                                       *  IC2224.2
-107800*                                                              *  IC2224.2
-107900****************************************************************  IC2224.2
-108000*                                                              *  IC2224.2
-108100*    VALIDATION FOR:-                                          *  IC2224.2
-108200*                                                              *  IC2224.2
-108300*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2224.2
-108400*                                                              *  IC2224.2
-108500*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2224.2
-108600*                                                              *  IC2224.2
-108700****************************************************************  IC2224.2
-108800*                                                              *  IC2224.2
-108900*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2224.2
-109000*                                                              *  IC2224.2
-109100*            X-82   SOURCE-COMPUTER                            *  IC2224.2
-109200*            X-83   OBJECT-COMPUTER.                           *  IC2224.2
-109300*                                                              *  IC2224.2
-109400****************************************************************  IC2224.2
-109500*                                                              *  IC2224.2
-109600*    THE SOURCE FILE CONTAINS TWO PROGRAMS, IC222A AND         *  IC2224.2
-109700*    IC222A-1, WHICH TEST LANGUAGE ELEMENTS FROM  LEVEL 2 OF   *  IC2224.2
-109800*    THE INTER-PROGRAM COMMUNICATION MODULE.  THE LANGUAGE     *  IC2224.2
-109900*    ELEMENTS TESTED ARE:                                      *  IC2224.2
-110000*          "ON EXCEPTION"     PHRASE                           *  IC2224.2
-110100*          "NOT ON EXCEPTION" PHRASE                           *  IC2224.2
-110200*          "END-CALL"         PHRASE                           *  IC2224.2
-110300*          "ON OVERFLOW"      PHRASE                           *  IC2224.2
-110400*                                                                 IC2224.2
-110500*    THE TWO PROGRAMS SHOULD BE COMPILED IN THE SAME           *  IC2224.2
-110600*    INVOCATION OF THE COMPILER TO TEST THE BATCH COMPILATION  *  IC2224.2
-110700*    FEATURE AND RECOGNITION OF THE END PROGRAM HEADER.  THE   *  IC2224.2
-110800*    ARRANGEMENT OF THE PROGRAMS IN THE SOURCE FILE IS:           IC2224.2
-110900*                                                                 IC2224.2
-111000*    IDENTIFICATION DIVISION.                                     IC2224.2
-111100*    PROGRAM-ID. IC222A.                                          IC2224.2
-111200*          .                                                      IC2224.2
-111300*          .                                                      IC2224.2
-111400*          .                                                      IC2224.2
-111500*    END PROGRAM IC222A.                                          IC2224.2
-111600*    IDENTIFICATION DIVISION.                                     IC2224.2
-111700*    PROGRAM-ID. IC222A-1.                                        IC2224.2
-111800*          .                                                      IC2224.2
-111900*          .                                                      IC2224.2
-112000*          .                                                      IC2224.2
-112100*                                                                 IC2224.2
-112200*    A FULL DESCRIPTION OF THE TWO PROGRAMS IS INCLUDED AS     *  IC2224.2
-112300*    COMMENTS IN PROGRAM IC222A.                               *  IC2224.2
-112400*                                                              *  IC2224.2
-112500****************************************************************  IC2224.2
-112600*                                                                 IC2224.2
+102200*                                                                         
+102300*                                                                         
+102400*                                                                         
+102500*                                                                         
+102600*                                                                         
+102700*                                                                         
+102800*                                                                         
+102900*                                                                         
+103000*                                                                         
+103100*                                                                         
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
+103500*                                                                         
+103600*                                                                         
+103700*                                                                         
+103800*                                                                         
+103900*                                                                         
+104000*                                                                         
+104100*                                                                         
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
+104700*                                                                         
+104800*                                                                         
+104900*                                                                         
+105000*                                                                         
+105100*                                                                         
+105200*                                                                         
+105300*                                                                         
+105400*                                                                         
+105500*                                                                         
+105600*                                                                         
+105700*                                                                         
+105800*                                                                         
+105900*                                                                         
+106000*                                                                         
+106100*                                                                         
+106200*                                                                         
+106300*                                                                         
+106400*                                                                         
+106500*                                                                         
+106600*                                                                         
+106700*                                                                         
+106800*                                                                         
+106900*                                                                         
+107000*                                                                         
+107100*                                                                         
+107200*                                                                         
+107300*                                                                         
+107400*                                                                         
+107500*                                                                         
+107600*                                                                         
+107700*                                                                         
+107800*                                                                         
+107900*                                                                         
+108000*                                                                         
+108100*                                                                         
+108200*                                                                         
+108300*                                                                         
+108400*                                                                         
+108500*                                                                         
+108600*                                                                         
+108700*                                                                         
+108800*                                                                         
+108900*                                                                         
+109000*                                                                         
+109100*                                                                         
+109200*                                                                         
+109300*                                                                         
+109400*                                                                         
+109500*                                                                         
+109600*                                                                         
+109700*                                                                         
+109800*                                                                         
+109900*                                                                         
+110000*                                                                         
+110100*                                                                         
+110200*                                                                         
+110300*                                                                         
+110400*                                                                         
+110500*                                                                         
+110600*                                                                         
+110700*                                                                         
+110800*                                                                         
+110900*                                                                         
+111000*                                                                         
+111100*                                                                         
+111200*                                                                         
+111300*                                                                         
+111400*                                                                         
+111500*                                                                         
+111600*                                                                         
+111700*                                                                         
+111800*                                                                         
+111900*                                                                         
+112000*                                                                         
+112100*                                                                         
+112200*                                                                         
+112300*                                                                         
+112400*                                                                         
+112500*                                                                         
+112600*                                                                         
 112700 ENVIRONMENT DIVISION.                                            IC2224.2
 112800 CONFIGURATION SECTION.                                           IC2224.2
 112900 SOURCE-COMPUTER.                                                 IC2224.2
@@ -1132,7 +1132,7 @@
 113400 FILE-CONTROL.                                                    IC2224.2
 113500     SELECT PRINT-FILE ASSIGN TO                                  IC2224.2
 113600     "REPORT".                                                    IC2224.2
-113700*                                                                 IC2224.2
+113700*                                                                         
 113800 DATA DIVISION.                                                   IC2224.2
 113900 FILE SECTION.                                                    IC2224.2
 114000 FD  PRINT-FILE.                                                  IC2224.2
@@ -1147,7 +1147,7 @@
 114900 77  DN2 PICTURE S99 USAGE COMPUTATIONAL.                         IC2224.2
 115000 77  DN3 PICTURE S99.                                             IC2224.2
 115100 77  DN4 PICTURE S99 USAGE COMPUTATIONAL.                         IC2224.2
-115200*                                                                 IC2224.2
+115200*                                                                         
 115300 PROCEDURE DIVISION USING DN1, DN2, DN3, DN4.                     IC2224.2
 115400 SECT-IC222A-1-001 SECTION.                                       IC2224.2
 115500 CALL-TEST-001.                                                   IC2224.2

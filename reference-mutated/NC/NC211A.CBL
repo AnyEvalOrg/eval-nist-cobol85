@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         NC2114.2
 000200 PROGRAM-ID.                                                      NC2114.2
 000300     NC211A.                                                      NC2114.2
-000400****************************************************************  NC2114.2
-000500*                                                              *  NC2114.2
-000600*    VALIDATION FOR:-                                          *  NC2114.2
-000700*                                                              *  NC2114.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2114.2
-000900*                                                              *  NC2114.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2114.2
-001100*                                                              *  NC2114.2
-001200****************************************************************  NC2114.2
-001300*                                                              *  NC2114.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2114.2
-001500*                                                              *  NC2114.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2114.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2114.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2114.2
-001900*                                                              *  NC2114.2
-002000****************************************************************  NC2114.2
-002100*                                                                 NC2114.2
-002200*                                                              *  NC2114.2
-002300*    PROGRAM NC211A TESTS THE GENERAL FORMAT OF THE "IF"       *  NC2114.2
-002400*    STATEMENT USING COMPOUND CONDITIONAL STATEMENTS WITH      *  NC2114.2
-002500*    ABREVIATED CONDITIONS, CONDITION NAMES AND QUALIFIED      *  NC2114.2
-002600*    DATA-NAMES.                                               *  NC2114.2
-002700*                                                              *  NC2114.2
-002800****************************************************************  NC2114.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            NC2114.2
 003000 CONFIGURATION SECTION.                                           NC2114.2
 003100 SOURCE-COMPUTER.                                                 NC2114.2
@@ -509,7 +509,7 @@
 051700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2114.2
 051800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2114.2
 051900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2114.2
-052000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2114.2
+052000*                                                                         
 052100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2114.2
 052200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2114.2
 052300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2114.2
@@ -599,7 +599,7 @@
 060700     PERFORM FAIL.                                                NC2114.2
 060800 CC--WRITE-GF-1.                                                  NC2114.2
 060900     PERFORM PRINT-DETAIL.                                        NC2114.2
-061000*                                                                 NC2114.2
+061000*                                                                         
 061100 CC--INIT-GF-2.                                                   NC2114.2
 061200     MOVE "CC--TEST-GF-2 " TO PAR-NAME.                           NC2114.2
 061300     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -618,7 +618,7 @@
 062600     PERFORM FAIL.                                                NC2114.2
 062700 CC--WRITE-GF-2.                                                  NC2114.2
 062800     PERFORM PRINT-DETAIL.                                        NC2114.2
-062900*                                                                 NC2114.2
+062900*                                                                         
 063000 CC--INIT-GF-3.                                                   NC2114.2
 063100     MOVE "CC--TEST-GF-3 " TO PAR-NAME.                           NC2114.2
 063200     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -637,7 +637,7 @@
 064500     PERFORM FAIL.                                                NC2114.2
 064600 CC--WRITE-GF-3.                                                  NC2114.2
 064700     PERFORM PRINT-DETAIL.                                        NC2114.2
-064800*                                                                 NC2114.2
+064800*                                                                         
 064900 CC--INIT-GF-4.                                                   NC2114.2
 065000     MOVE "CC--TEST-GF-4 " TO PAR-NAME.                           NC2114.2
 065100     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -655,7 +655,7 @@
 066300     PERFORM FAIL.                                                NC2114.2
 066400 CC--WRITE-GF-4.                                                  NC2114.2
 066500     PERFORM PRINT-DETAIL.                                        NC2114.2
-066600*                                                                 NC2114.2
+066600*                                                                         
 066700 CC--INIT-GF-5.                                                   NC2114.2
 066800     MOVE "CC--TEST-GF-5 " TO PAR-NAME.                           NC2114.2
 066900     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -674,7 +674,7 @@
 068200     PERFORM FAIL.                                                NC2114.2
 068300 CC--WRITE-GF-5.                                                  NC2114.2
 068400     PERFORM PRINT-DETAIL.                                        NC2114.2
-068500*                                                                 NC2114.2
+068500*                                                                         
 068600 CC--INIT-GF-6.                                                   NC2114.2
 068700     MOVE "CC--TEST-GF-6 " TO PAR-NAME.                           NC2114.2
 068800     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -694,7 +694,7 @@
 070200     PERFORM FAIL.                                                NC2114.2
 070300 CC--WRITE-GF-6.                                                  NC2114.2
 070400     PERFORM PRINT-DETAIL.                                        NC2114.2
-070500*                                                                 NC2114.2
+070500*                                                                         
 070600 CC--INIT-GF-7.                                                   NC2114.2
 070700     MOVE "CC--TEST-GF-7 " TO PAR-NAME.                           NC2114.2
 070800     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -714,7 +714,7 @@
 072200     PERFORM FAIL.                                                NC2114.2
 072300 CC--WRITE-GF-7.                                                  NC2114.2
 072400     PERFORM PRINT-DETAIL.                                        NC2114.2
-072500*                                                                 NC2114.2
+072500*                                                                         
 072600 CC--INIT-GF-8.                                                   NC2114.2
 072700     MOVE "CC--TEST-GF-8 " TO PAR-NAME.                           NC2114.2
 072800     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -731,7 +731,7 @@
 073900     PERFORM FAIL.                                                NC2114.2
 074000 CC--WRITE-GF-8.                                                  NC2114.2
 074100     PERFORM PRINT-DETAIL.                                        NC2114.2
-074200*                                                                 NC2114.2
+074200*                                                                         
 074300 CC--INIT-GF-9.                                                   NC2114.2
 074400     MOVE "CC--TEST-GF-9 " TO PAR-NAME.                           NC2114.2
 074500     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -750,7 +750,7 @@
 075800     PERFORM FAIL.                                                NC2114.2
 075900 CC--WRITE-GF-9.                                                  NC2114.2
 076000     PERFORM PRINT-DETAIL.                                        NC2114.2
-076100*                                                                 NC2114.2
+076100*                                                                         
 076200 CC--INIT-GF-10.                                                  NC2114.2
 076300     MOVE "CC--TEST-GF-10" TO PAR-NAME.                           NC2114.2
 076400     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -768,7 +768,7 @@
 077600     PERFORM FAIL.                                                NC2114.2
 077700 CC--WRITE-GF-10.                                                 NC2114.2
 077800     PERFORM PRINT-DETAIL.                                        NC2114.2
-077900*                                                                 NC2114.2
+077900*                                                                         
 078000 CC--INIT-GF-11.                                                  NC2114.2
 078100     MOVE "CC--TEST-GF-11" TO PAR-NAME.                           NC2114.2
 078200     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -786,7 +786,7 @@
 079400     PERFORM FAIL.                                                NC2114.2
 079500 CC--WRITE-GF-11.                                                 NC2114.2
 079600     PERFORM PRINT-DETAIL.                                        NC2114.2
-079700*                                                                 NC2114.2
+079700*                                                                         
 079800 CC--INIT-GF-12.                                                  NC2114.2
 079900     MOVE "CC--TEST-GF-12" TO PAR-NAME.                           NC2114.2
 080000     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -802,7 +802,7 @@
 081000     PERFORM FAIL.                                                NC2114.2
 081100 CC--WRITE-GF-12.                                                 NC2114.2
 081200     PERFORM PRINT-DETAIL.                                        NC2114.2
-081300*                                                                 NC2114.2
+081300*                                                                         
 081400 CC--INIT-GF-13.                                                  NC2114.2
 081500     MOVE "CC--TEST-GF-13" TO PAR-NAME.                           NC2114.2
 081600     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -819,7 +819,7 @@
 082700     PERFORM FAIL.                                                NC2114.2
 082800 CC--WRITE-GF-13.                                                 NC2114.2
 082900     PERFORM PRINT-DETAIL.                                        NC2114.2
-083000*                                                                 NC2114.2
+083000*                                                                         
 083100 CC--INIT-GF-14.                                                  NC2114.2
 083200     MOVE "CC--TEST-GF-14" TO PAR-NAME.                           NC2114.2
 083300     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -838,7 +838,7 @@
 084600     PERFORM FAIL.                                                NC2114.2
 084700 CC--WRITE-GF-14.                                                 NC2114.2
 084800     PERFORM PRINT-DETAIL.                                        NC2114.2
-084900*                                                                 NC2114.2
+084900*                                                                         
 085000 CC--INIT-GF-15.                                                  NC2114.2
 085100     MOVE "CC--TEST-GF-15" TO PAR-NAME.                           NC2114.2
 085200     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -860,7 +860,7 @@
 086800     PERFORM FAIL.                                                NC2114.2
 086900 CC--WRITE-GF-15.                                                 NC2114.2
 087000     PERFORM PRINT-DETAIL.                                        NC2114.2
-087100*                                                                 NC2114.2
+087100*                                                                         
 087200 CC--INIT-GF-16.                                                  NC2114.2
 087300     MOVE "CC--TEST-GF-16" TO PAR-NAME.                           NC2114.2
 087400     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -882,7 +882,7 @@
 089000     PERFORM PASS.                                                NC2114.2
 089100 CC--WRITE-GF-16.                                                 NC2114.2
 089200     PERFORM PRINT-DETAIL.                                        NC2114.2
-089300*                                                                 NC2114.2
+089300*                                                                         
 089400 CC--INIT-GF-17.                                                  NC2114.2
 089500     MOVE "CC--TEST-GF-17" TO PAR-NAME.                           NC2114.2
 089600     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -902,7 +902,7 @@
 091000     PERFORM FAIL.                                                NC2114.2
 091100 CC--WRITE-GF-17.                                                 NC2114.2
 091200     PERFORM PRINT-DETAIL.                                        NC2114.2
-091300*                                                                 NC2114.2
+091300*                                                                         
 091400 CC--INIT-GF-18.                                                  NC2114.2
 091500     MOVE "CC--TEST-GF-18" TO PAR-NAME.                           NC2114.2
 091600     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -914,10 +914,10 @@
 092200         CCON-1      PERFORM PASS                                 NC2114.2
 092300                     GO TO CC--WRITE-GF-18.                       NC2114.2
 092400     GO TO CC--FAIL-GF-18.                                        NC2114.2
-092500*    NOTE THE STANDARD SAYS THAT THE ABOVE IS EQUIVALENT TO ---   NC2114.2
-092600*        IF CCON-2 GREATER THAN CCON-1 AND CCON-2 NOT GREATER THANNC2114.2
-092700*        CCON-3 OR CCON-2 NOT GREATER THAN CCON-1 PERFORM PASS    NC2114.2
-092800*        ELSE PERFORM FAIL.                                       NC2114.2
+092500*                                                                         
+092600*                                                                         
+092700*                                                                         
+092800*                                                                         
 092900 CC--DELETE-GF-18.                                                NC2114.2
 093000     PERFORM DE-LETE.                                             NC2114.2
 093100     GO TO CC--WRITE-GF-18.                                       NC2114.2
@@ -925,7 +925,7 @@
 093300     PERFORM FAIL.                                                NC2114.2
 093400 CC--WRITE-GF-18.                                                 NC2114.2
 093500     PERFORM PRINT-DETAIL.                                        NC2114.2
-093600*                                                                 NC2114.2
+093600*                                                                         
 093700 CC--INIT-GF-19.                                                  NC2114.2
 093800     MOVE "CC--TEST-GF-19" TO PAR-NAME.                           NC2114.2
 093900     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -946,7 +946,7 @@
 095400     PERFORM FAIL.                                                NC2114.2
 095500 CC--WRITE-GF-19.                                                 NC2114.2
 095600     PERFORM PRINT-DETAIL.                                        NC2114.2
-095700*                                                                 NC2114.2
+095700*                                                                         
 095800 CC--INIT-GF-20.                                                  NC2114.2
 095900     MOVE "CC--TEST-GF-20" TO PAR-NAME.                           NC2114.2
 096000     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -974,7 +974,7 @@
 098200     PERFORM FAIL.                                                NC2114.2
 098300 CC--WRITE-GF-20.                                                 NC2114.2
 098400     PERFORM PRINT-DETAIL.                                        NC2114.2
-098500*                                                                 NC2114.2
+098500*                                                                         
 098600 CC--INIT-GF-21.                                                  NC2114.2
 098700     MOVE "CC--TEST-GF-21" TO PAR-NAME.                           NC2114.2
 098800     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -1003,7 +1003,7 @@
 101100     PERFORM FAIL.                                                NC2114.2
 101200 CC--WRITE-GF-21.                                                 NC2114.2
 101300     PERFORM PRINT-DETAIL.                                        NC2114.2
-101400*                                                                 NC2114.2
+101400*                                                                         
 101500 CC--INIT-GF-22.                                                  NC2114.2
 101600     MOVE "CC--TEST-GF-22" TO PAR-NAME.                           NC2114.2
 101700     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -1022,7 +1022,7 @@
 103000             GO TO CC--WRITE-GF-22                                NC2114.2
 103100         ELSE                                                     NC2114.2
 103200             GO TO CC--FAIL-GF-22.                                NC2114.2
-103300*                                                                 NC2114.2
+103300*                                                                         
 103400     GO TO CC--FAIL-GF-22.                                        NC2114.2
 103500 CC--DELETE-GF-22.                                                NC2114.2
 103600     PERFORM DE-LETE.                                             NC2114.2
@@ -1031,7 +1031,7 @@
 103900     PERFORM FAIL.                                                NC2114.2
 104000 CC--WRITE-GF-22.                                                 NC2114.2
 104100     PERFORM PRINT-DETAIL.                                        NC2114.2
-104200*                                                                 NC2114.2
+104200*                                                                         
 104300 CC--INIT-GF-23.                                                  NC2114.2
 104400     MOVE     "CC--TEST-GF-23" TO PAR-NAME.                       NC2114.2
 104500     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -1071,7 +1071,7 @@
 107900     PERFORM FAIL.                                                NC2114.2
 108000 CC--WRITE-GF-23.                                                 NC2114.2
 108100     PERFORM  PRINT-DETAIL.                                       NC2114.2
-108200*                                                                 NC2114.2
+108200*                                                                         
 108300 CC--INIT-GF-24.                                                  NC2114.2
 108400     MOVE "CC--TEST-GF-24" TO PAR-NAME.                           NC2114.2
 108500     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
@@ -1085,7 +1085,7 @@
 109300          PERFORM PASS                                            NC2114.2
 109400     ELSE                                                         NC2114.2
 109500          GO TO CC--FAIL-GF-24.                                   NC2114.2
-109600*    NOTE     BOTH CONDITIONS ARE TRUE.                           NC2114.2
+109600*                                                                         
 109700     GO TO CC--WRITE-GF-24.                                       NC2114.2
 109800 CC--DELETE-GF-24.                                                NC2114.2
 109900     PERFORM  DE-LETE.                                            NC2114.2
@@ -1094,7 +1094,7 @@
 110200     PERFORM FAIL.                                                NC2114.2
 110300 CC--WRITE-GF-24.                                                 NC2114.2
 110400     PERFORM PRINT-DETAIL.                                        NC2114.2
-110500*                                                                 NC2114.2
+110500*                                                                         
 110600 CC--INIT-GF-25.                                                  NC2114.2
 110700     MOVE   "VI-89 6.15.3/4" TO ANSI-REFERENCE.                   NC2114.2
 110800     MOVE     "CC--TEST-GF-25" TO PAR-NAME.                       NC2114.2
@@ -1107,7 +1107,7 @@
 111500          PERFORM PASS                                            NC2114.2
 111600     ELSE                                                         NC2114.2
 111700          GO TO CC--FAIL-GF-25.                                   NC2114.2
-111800*    NOTE     BOTH CONDITIONS ARE TRUE.                           NC2114.2
+111800*                                                                         
 111900     GO TO CC--WRITE-GF-25.                                       NC2114.2
 112000 CC--DELETE-GF-25.                                                NC2114.2
 112100     PERFORM  DE-LETE.                                            NC2114.2
@@ -1116,7 +1116,7 @@
 112400     PERFORM FAIL.                                                NC2114.2
 112500 CC--WRITE-GF-25.                                                 NC2114.2
 112600     PERFORM  PRINT-DETAIL.                                       NC2114.2
-112700*                                                                 NC2114.2
+112700*                                                                         
 112800 CC--INIT-GF-26.                                                  NC2114.2
 112900     MOVE     "CC--TEST-GF-26" TO PAR-NAME.                       NC2114.2
 113000     MOVE     "VI-89 6.15.3/4" TO ANSI-REFERENCE.                 NC2114.2
@@ -1135,8 +1135,8 @@
 114300          MOVE "1" TO IF-ELEM (1)                                 NC2114.2
 114400     ELSE                                                         NC2114.2
 114500          MOVE "1" TO IF-ELEM (3).                                NC2114.2
-114600*    NOTE     ALL CONDITIONS ARE TRUE THE FIRST TIME, THEN THE    NC2114.2
-114700*             FIRST TWO ARE TRUE THE SECOND TIME.                 NC2114.2
+114600*                                                                         
+114700*                                                                         
 114800 CC--TEST-GF-26-1.                                                NC2114.2
 114900     IF       IF-TABLE EQUAL TO "1 1 X"                           NC2114.2
 115000              PERFORM PASS GO TO CC--WRITE-GF-26.                 NC2114.2
@@ -1150,7 +1150,7 @@
 115800     PERFORM FAIL.                                                NC2114.2
 115900 CC--WRITE-GF-26.                                                 NC2114.2
 116000     PERFORM  PRINT-DETAIL.                                       NC2114.2
-116100*                                                                 NC2114.2
+116100*                                                                         
 116200 CC--INIT-GF-27.                                                  NC2114.2
 116300     MOVE     "CC--TEST-GF-27" TO PAR-NAME.                       NC2114.2
 116400     MOVE     "VI-89 6.15.3/4" TO ANSI-REFERENCE.                 NC2114.2
@@ -1169,8 +1169,8 @@
 117700          MOVE "1" TO IF-ELEM (1)                                 NC2114.2
 117800     ELSE                                                         NC2114.2
 117900          MOVE "1" TO IF-ELEM (3).                                NC2114.2
-118000*    NOTE     THE FIRST PART IS ALWAYS FALSE, AND THE PORTION     NC2114.2
-118100*             AFTER THE "OR" IS FIRST TRUE, THEN FALSE.           NC2114.2
+118000*                                                                         
+118100*                                                                         
 118200 CC--TEST-GF-27-1.                                                NC2114.2
 118300     IF   IF-TABLE EQUAL TO "1 1 X"                               NC2114.2
 118400          PERFORM PASS GO TO CC--WRITE-GF-27.                     NC2114.2
@@ -1184,7 +1184,7 @@
 119200     PERFORM FAIL.                                                NC2114.2
 119300 CC--WRITE-GF-27.                                                 NC2114.2
 119400     PERFORM  PRINT-DETAIL.                                       NC2114.2
-119500*                                                                 NC2114.2
+119500*                                                                         
 119600 CC--INIT-GF-28.                                                  NC2114.2
 119700     MOVE     "CC--TEST-GF-28" TO PAR-NAME.                       NC2114.2
 119800     MOVE     "VI-89 6.15.3/4" TO ANSI-REFERENCE.                 NC2114.2
@@ -1215,7 +1215,7 @@
 122300     PERFORM  FAIL.                                               NC2114.2
 122400 CC--WRITE-GF-28.                                                 NC2114.2
 122500     PERFORM  PRINT-DETAIL.                                       NC2114.2
-122600*                                                                 NC2114.2
+122600*                                                                         
 122700 CC--INIT-GF-29.                                                  NC2114.2
 122800     MOVE     "CC--TEST-GF-29" TO PAR-NAME.                       NC2114.2
 122900     MOVE     "VI-89 6.15.3/4" TO ANSI-REFERENCE.                 NC2114.2
@@ -1244,7 +1244,7 @@
 125200     PERFORM  FAIL.                                               NC2114.2
 125300 CC--WRITE-GF-29.                                                 NC2114.2
 125400     PERFORM  PRINT-DETAIL.                                       NC2114.2
-125500*                                                                 NC2114.2
+125500*                                                                         
 125600 CC--INIT-GF-30.                                                  NC2114.2
 125700     MOVE "CC--TEST-GF-30"  TO PAR-NAME.                          NC2114.2
 125800     MOVE "VI-89 6.15.3/4"  TO ANSI-REFERENCE.                    NC2114.2
@@ -1259,9 +1259,9 @@
 126700          PERFORM PASS                                            NC2114.2
 126800     ELSE                                                         NC2114.2
 126900          GO TO CC--FAIL-GF-30.                                   NC2114.2
-127000*        NOTE CC--TEST-GF-30 TESTS LOGICAL "NOT" PLUS "AND" ---   NC2114.2
-127100*             FIRST LINE TRUE,                                    NC2114.2
-127200*             SECOND LINE TRUE.                                   NC2114.2
+127000*                                                                         
+127100*                                                                         
+127200*                                                                         
 127300     GO TO CC--WRITE-GF-30.                                       NC2114.2
 127400 CC--DELETE-GF-30.                                                NC2114.2
 127500     PERFORM  DE-LETE.                                            NC2114.2
@@ -1270,7 +1270,7 @@
 127800     PERFORM FAIL.                                                NC2114.2
 127900 CC--WRITE-GF-30.                                                 NC2114.2
 128000     PERFORM  PRINT-DETAIL.                                       NC2114.2
-128100*                                                                 NC2114.2
+128100*                                                                         
 128200 CC--INIT-GF-31.                                                  NC2114.2
 128300     MOVE     "CC--TEST-GF-31" TO PAR-NAME.                       NC2114.2
 128400     MOVE "VI-89 6.15.3/4"  TO ANSI-REFERENCE.                    NC2114.2
@@ -1283,9 +1283,9 @@
 129100          GO TO CC--FAIL-GF-31                                    NC2114.2
 129200     ELSE                                                         NC2114.2
 129300          PERFORM PASS.                                           NC2114.2
-129400*        NOTE CC--TEST-GF-31 TESTS LOGICAL "NOT" PLUS "OR" ---    NC2114.2
-129500*             FIRST LINE FALSE,                                   NC2114.2
-129600*             SECOND LINE FALSE.                                  NC2114.2
+129400*                                                                         
+129500*                                                                         
+129600*                                                                         
 129700     GO TO CC--WRITE-GF-31.                                       NC2114.2
 129800 CC--DELETE-GF-31.                                                NC2114.2
 129900     PERFORM  DE-LETE.                                            NC2114.2
@@ -1294,7 +1294,7 @@
 130200     PERFORM FAIL.                                                NC2114.2
 130300 CC--WRITE-GF-31.                                                 NC2114.2
 130400     PERFORM  PRINT-DETAIL.                                       NC2114.2
-130500*                                                                 NC2114.2
+130500*                                                                         
 130600 CC--INIT-GF-32.                                                  NC2114.2
 130700     MOVE  "CC--TEST-GF-32" TO PAR-NAME.                          NC2114.2
 130800     MOVE "VI-89 6.15.3/4"  TO ANSI-REFERENCE.                    NC2114.2
@@ -1310,13 +1310,13 @@
 131800          PERFORM PASS                                            NC2114.2
 131900     ELSE                                                         NC2114.2
 132000          GO TO CC--FAIL-GF-32.                                   NC2114.2
-132100*        NOTE CC--TEST-GF-32 TESTS LOGICAL "NOT" OF PARENTHESIZED NC2114.2
-132200*             CONDITION PLUS "AND" ---                            NC2114.2
-132300*             FIRST LINE (WITHIN PARENTHESES) FALSE               NC2114.2
-132400*             SECOND LINE (WITHIN PARENTHESES) FALSE              NC2114.2
-132500*             FIRST PLUS SECOND LINE (WITHIN PARENS) FALSE        NC2114.2
-132600*             FIRST PLUS SECOND LINE TRUE                         NC2114.2
-132700*             THIRD LINE TRUE.                                    NC2114.2
+132100*                                                                         
+132200*                                                                         
+132300*                                                                         
+132400*                                                                         
+132500*                                                                         
+132600*                                                                         
+132700*                                                                         
 132800     GO TO CC--WRITE-GF-32.                                       NC2114.2
 132900 CC--DELETE-GF-32.                                                NC2114.2
 133000     PERFORM  DE-LETE.                                            NC2114.2
@@ -1325,7 +1325,7 @@
 133300     PERFORM FAIL.                                                NC2114.2
 133400 CC--WRITE-GF-32.                                                 NC2114.2
 133500     PERFORM  PRINT-DETAIL.                                       NC2114.2
-133600*                                                                 NC2114.2
+133600*                                                                         
 133700 CC--INIT-GF-33.                                                  NC2114.2
 133800     MOVE "CC--TEST-GF-33"     TO PAR-NAME.                       NC2114.2
 133900     MOVE "VI-89 6.15.3/4"     TO ANSI-REFERENCE.                 NC2114.2
@@ -1338,9 +1338,9 @@
 134600              GO TO CC--FAIL-GF-33                                NC2114.2
 134700     ELSE                                                         NC2114.2
 134800              PERFORM PASS.                                       NC2114.2
-134900*       NOTE CC--TEST-GF-33 TESTS LOGICAL "NOT" FOLLOWING AN "AND"NC2114.2
-135000*             FIRST LINE FALSE,                                   NC2114.2
-135100*             SECOND LINE TRUE.                                   NC2114.2
+134900*                                                                         
+135000*                                                                         
+135100*                                                                         
 135200     GO       TO CC--WRITE-GF-33.                                 NC2114.2
 135300 CC--DELETE-GF-33.                                                NC2114.2
 135400     PERFORM DE-LETE.                                             NC2114.2
@@ -1349,7 +1349,7 @@
 135700     PERFORM FAIL.                                                NC2114.2
 135800 CC--WRITE-GF-33.                                                 NC2114.2
 135900     PERFORM  PRINT-DETAIL.                                       NC2114.2
-136000*                                                                 NC2114.2
+136000*                                                                         
 136100 CC--INIT-GF-34.                                                  NC2114.2
 136200     MOVE "CC--TEST-GF-34" TO PAR-NAME.                           NC2114.2
 136300     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1363,14 +1363,14 @@
 137100           PERFORM PASS                                           NC2114.2
 137200     ELSE                                                         NC2114.2
 137300           GO TO CC--FAIL-GF-34.                                  NC2114.2
-137400*                                                                 NC2114.2
-137500*    NOTE     THE ABOVE STATEMENT TESTS THE USE OF A COMPLEX      NC2114.2
-137600*             CONDITION  WITH  COMBINATIONS  OF LOGICAL OPERATORS NC2114.2
-137700*             ABREVIATED RELATIONAL OPERATORS AND  OMITTED        NC2114.2
-137800*             CONDITION SUBJECTS.                                 NC2114.2
-137900*             THE EXPANDED EQUIVALENT OF THIS STATEMENT IS -      NC2114.2
-138000*               "NOT  (((CCON-4 NOT > CCON-2) AND (CCON-4 NOT >   NC2114.2
-138100*                    CCON-3)) AND (NOT (CCON-4 NOT > CCON-1)))"   NC2114.2
+137400*                                                                         
+137500*                                                                         
+137600*                                                                         
+137700*                                                                         
+137800*                                                                         
+137900*                                                                         
+138000*                                                                         
+138100*                                                                         
 138200     GO TO CC--WRITE-GF-34.                                       NC2114.2
 138300 CC--DELETE-GF-34.                                                NC2114.2
 138400     PERFORM  DE-LETE.                                            NC2114.2
@@ -1379,7 +1379,7 @@
 138700     PERFORM FAIL.                                                NC2114.2
 138800 CC--WRITE-GF-34.                                                 NC2114.2
 138900     PERFORM  PRINT-DETAIL.                                       NC2114.2
-139000*                                                                 NC2114.2
+139000*                                                                         
 139100 CC--INIT-GF-35.                                                  NC2114.2
 139200     MOVE "CC--TEST-GF-35" TO PAR-NAME.                           NC2114.2
 139300     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1398,11 +1398,11 @@
 140600          GO TO CC--FAIL-GF-35                                    NC2114.2
 140700     ELSE                                                         NC2114.2
 140800          PERFORM PASS.                                           NC2114.2
-140900*        NOTE CC--TEST-GF-35 TESTS LOGICAL "NOT" WHICH FOLLOWS AN NC2114.2
-141000*             "OR" AND PRECEDES AN "AND" ---                      NC2114.2
-141100*             FIRST LINE FALSE                                    NC2114.2
-141200*             SECOND LINE TRUE                                    NC2114.2
-141300*             THIRD LINE FALSE.                                   NC2114.2
+140900*                                                                         
+141000*                                                                         
+141100*                                                                         
+141200*                                                                         
+141300*                                                                         
 141400     GO TO CC--WRITE-GF-35.                                       NC2114.2
 141500 CC--DELETE-GF-35.                                                NC2114.2
 141600     PERFORM  DE-LETE.                                            NC2114.2
@@ -1411,7 +1411,7 @@
 141900     PERFORM FAIL.                                                NC2114.2
 142000 CC--WRITE-GF-35.                                                 NC2114.2
 142100     PERFORM  PRINT-DETAIL.                                       NC2114.2
-142200*                                                                 NC2114.2
+142200*                                                                         
 142300 CC--INIT-GF-36.                                                  NC2114.2
 142400     MOVE "CC--TEST-GF-36" TO PAR-NAME.                           NC2114.2
 142500     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1425,13 +1425,13 @@
 143300          PERFORM PASS                                            NC2114.2
 143400     ELSE                                                         NC2114.2
 143500          GO TO CC--FAIL-GF-36.                                   NC2114.2
-143600*        NOTE CC--TEST-GF-36 TESTS LOGICAL "NOT" WHICH FOLLOWS AN NC2114.2
-143700*             "OR" AND PRECEDES A PARENTHESIZED CONDITION ---     NC2114.2
-143800*             FIRST LINE FALSE,                                   NC2114.2
-143900*             SECOND LINE (WITHIN PARENS) FALSE                   NC2114.2
-144000*             THIRD LINE (WITHIN PARENS) TRUE                     NC2114.2
-144100*             SECOND PLUS THIRD LINE (WITHIN PARENS) FALSE        NC2114.2
-144200*             SECOND PLUS THIRD LINE TRUE.                        NC2114.2
+143600*                                                                         
+143700*                                                                         
+143800*                                                                         
+143900*                                                                         
+144000*                                                                         
+144100*                                                                         
+144200*                                                                         
 144300     GO TO CC--WRITE-GF-36.                                       NC2114.2
 144400 CC--DELETE-GF-36.                                                NC2114.2
 144500     PERFORM  DE-LETE.                                            NC2114.2
@@ -1440,7 +1440,7 @@
 144800     PERFORM FAIL.                                                NC2114.2
 144900 CC--WRITE-GF-36.                                                 NC2114.2
 145000     PERFORM  PRINT-DETAIL.                                       NC2114.2
-145100*                                                                 NC2114.2
+145100*                                                                         
 145200 CC--INIT-GF-37.                                                  NC2114.2
 145300     MOVE "CC--TEST-GF-37" TO PAR-NAME.                           NC2114.2
 145400     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1456,15 +1456,15 @@
 146400         GO TO CC--FAIL-GF-37                                     NC2114.2
 146500     ELSE                                                         NC2114.2
 146600         PERFORM PASS.                                            NC2114.2
-146700*        NOTE CC--TEST-GF-37 TESTS LOGICAL "NOT" THAT IS CONTAINEDNC2114.2
-146800*             PARENTHESES AND WHICH PRECEDES A PARENTHESIZED      NC2114.2
-146900*             CONDITION ---                                       NC2114.2
-147000*             FIRST LINE (IN INNER PARENS) FALSE                  NC2114.2
-147100*             SECOND LINE (IN INNER PARENS) TRUE                  NC2114.2
-147200*             THIRD LINE (IN INNER PARENS) FALSE                  NC2114.2
-147300*             SECOND PLUS THIRD LINE (IN MIDDLE PARENS) TRUE      NC2114.2
-147400*             SECOND PLUS THIRD LINE (IN OUTER PARENS) FALSE      NC2114.2
-147500*             PARENS AROUND ENTIRE CONDITION ARE REDUNDANT.       NC2114.2
+146700*                                                                         
+146800*                                                                         
+146900*                                                                         
+147000*                                                                         
+147100*                                                                         
+147200*                                                                         
+147300*                                                                         
+147400*                                                                         
+147500*                                                                         
 147600     GO TO CC--WRITE-GF-37.                                       NC2114.2
 147700 CC--DELETE-GF-37.                                                NC2114.2
 147800     PERFORM  DE-LETE.                                            NC2114.2
@@ -1473,7 +1473,7 @@
 148100     PERFORM  FAIL.                                               NC2114.2
 148200 CC--WRITE-GF-37.                                                 NC2114.2
 148300     PERFORM  PRINT-DETAIL.                                       NC2114.2
-148400*                                                                 NC2114.2
+148400*                                                                         
 148500 CC--INIT-GF-38.                                                  NC2114.2
 148600     MOVE "CC--TEST-GF-38" TO PAR-NAME.                           NC2114.2
 148700     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1489,14 +1489,14 @@
 149700         PERFORM PASS                                             NC2114.2
 149800     ELSE                                                         NC2114.2
 149900         GO TO CC--FAIL-GF-38.                                    NC2114.2
-150000*        NOTE CC--TEST-GF-38 TESTS LOGICAL "NOT" FOLLOWING "AND" ANC2114.2
-150100*             IN COMBINATION WITH AN ABBREVIATION ---             NC2114.2
-150200*             EITHER FIRST LINE OR SECOND LINE MUST BE FALSE,     NC2114.2
-150300*             THEREFORE,                                          NC2114.2
-150400*             FIRST PLUS SECOND LINES FALSE                       NC2114.2
-150500*             ABBREVIATED THIRD LINE TRUE                         NC2114.2
-150600*             FOURTH LINE TRUE                                    NC2114.2
-150700*             THIRD PLUS FOURTH LINES TRUE.                       NC2114.2
+150000*                                                                         
+150100*                                                                         
+150200*                                                                         
+150300*                                                                         
+150400*                                                                         
+150500*                                                                         
+150600*                                                                         
+150700*                                                                         
 150800     GO TO CC--WRITE-GF-38.                                       NC2114.2
 150900 CC--DELETE-GF-38.                                                NC2114.2
 151000     PERFORM  DE-LETE.                                            NC2114.2
@@ -1505,7 +1505,7 @@
 151300     PERFORM  FAIL.                                               NC2114.2
 151400 CC--WRITE-GF-38.                                                 NC2114.2
 151500     PERFORM  PRINT-DETAIL.                                       NC2114.2
-151600*                                                                 NC2114.2
+151600*                                                                         
 151700 CC--INIT-GF-39.                                                  NC2114.2
 151800     MOVE "CC--TEST-GF-39" TO PAR-NAME.                           NC2114.2
 151900     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1520,13 +1520,13 @@
 152800         PERFORM PASS                                             NC2114.2
 152900     ELSE                                                         NC2114.2
 153000         GO TO CC--FAIL-GF-39.                                    NC2114.2
-153100*        NOTE CC--TEST-GF-39 TESTS SIGN CONDITIONS WITH SEVERAL TYNC2114.2
-153200*             OF LOGICAL CONNECTORS INCLUDING PARENTHESES ---     NC2114.2
-153300*             FIRST LINE FALSE                                    NC2114.2
-153400*             SECOND LINE FALSE                                   NC2114.2
-153500*             FIRST PLUS SECOND LINES (WITHIN PARENS) FALSE       NC2114.2
-153600*             FIRST PLUS SECOND LINES TRUE                        NC2114.2
-153700*             THIRD LINE TRUE.                                    NC2114.2
+153100*                                                                         
+153200*                                                                         
+153300*                                                                         
+153400*                                                                         
+153500*                                                                         
+153600*                                                                         
+153700*                                                                         
 153800     GO TO CC--WRITE-GF-39.                                       NC2114.2
 153900 CC--DELETE-GF-39.                                                NC2114.2
 154000     PERFORM  DE-LETE.                                            NC2114.2
@@ -1535,7 +1535,7 @@
 154300     PERFORM  FAIL.                                               NC2114.2
 154400 CC--WRITE-GF-39.                                                 NC2114.2
 154500     PERFORM  PRINT-DETAIL.                                       NC2114.2
-154600*                                                                 NC2114.2
+154600*                                                                         
 154700 CC--INIT-GF-40.                                                  NC2114.2
 154800     MOVE "CC--TEST-GF-40" TO PAR-NAME.                           NC2114.2
 154900     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1550,11 +1550,11 @@
 155800         GO TO CC--FAIL-GF-40                                     NC2114.2
 155900     ELSE                                                         NC2114.2
 156000         PERFORM PASS.                                            NC2114.2
-156100*        NOTE CC--TEST-GF-40 TESTS SIGN CONDITIONS WITH SEVERAL TYNC2114.2
-156200*             OF LOGICAL CONNECTORS BUT NO PARENTHESES ---        NC2114.2
-156300*             FIRST LINE FALSE                                    NC2114.2
-156400*             SECOND LINE FALSE                                   NC2114.2
-156500*             THIRD LINE TRUE.                                    NC2114.2
+156100*                                                                         
+156200*                                                                         
+156300*                                                                         
+156400*                                                                         
+156500*                                                                         
 156600     GO TO CC--WRITE-GF-40.                                       NC2114.2
 156700 CC--DELETE-GF-40.                                                NC2114.2
 156800     PERFORM  DE-LETE.                                            NC2114.2
@@ -1563,7 +1563,7 @@
 157100     PERFORM  FAIL.                                               NC2114.2
 157200 CC--WRITE-GF-40.                                                 NC2114.2
 157300     PERFORM  PRINT-DETAIL.                                       NC2114.2
-157400*                                                                 NC2114.2
+157400*                                                                         
 157500 CC--INIT-GF-41.                                                  NC2114.2
 157600     MOVE "CC--TEST-GF-41" TO PAR-NAME.                           NC2114.2
 157700     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1578,13 +1578,13 @@
 158600         GO TO CC--FAIL-GF-41                                     NC2114.2
 158700     ELSE                                                         NC2114.2
 158800         PERFORM PASS.                                            NC2114.2
-158900*        NOTE CC--TEST-GF-41 TESTS CLASS CONDITIONS WITH SEVERAL  NC2114.2
-159000*             TYPES OF LOGICAL CONNECTORS INCLUDING PARENTHESES --NC2114.2
-159100*             FIRST LINE FALSE                                    NC2114.2
-159200*             SECOND LINE FALSE                                   NC2114.2
-159300*             FIRST PLUS SECOND LINES (WITHIN PARENS) FALSE       NC2114.2
-159400*             FIRST PLUS SECOND LINES TRUE                        NC2114.2
-159500*             THIRD LINE FALSE.                                   NC2114.2
+158900*                                                                         
+159000*                                                                         
+159100*                                                                         
+159200*                                                                         
+159300*                                                                         
+159400*                                                                         
+159500*                                                                         
 159600     GO TO CC--WRITE-GF-41.                                       NC2114.2
 159700 CC--DELETE-GF-41.                                                NC2114.2
 159800     PERFORM  DE-LETE.                                            NC2114.2
@@ -1593,7 +1593,7 @@
 160100     PERFORM  FAIL.                                               NC2114.2
 160200 CC--WRITE-GF-41.                                                 NC2114.2
 160300     PERFORM  PRINT-DETAIL.                                       NC2114.2
-160400*                                                                 NC2114.2
+160400*                                                                         
 160500 CC--INIT-GF-42.                                                  NC2114.2
 160600     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
 160700     MOVE "  CLASS CONDITIONS" TO FEATURE.                        NC2114.2
@@ -1608,11 +1608,11 @@
 161600         PERFORM PASS                                             NC2114.2
 161700     ELSE                                                         NC2114.2
 161800         GO TO CC--FAIL-GF-42.                                    NC2114.2
-161900*        NOTE CC--TEST-GF-42 TESTS CLASS CONDITIONS WITH SEVERAL  NC2114.2
-162000*             TYPES OF LOGICAL CONNECTORS BUT NO PARENTHESES ---  NC2114.2
-162100*             FIRST LINE TRUE                                     NC2114.2
-162200*             SECOND LINE TRUE                                    NC2114.2
-162300*             THIRD LINE TRUE.                                    NC2114.2
+161900*                                                                         
+162000*                                                                         
+162100*                                                                         
+162200*                                                                         
+162300*                                                                         
 162400     GO TO CC--WRITE-GF-42.                                       NC2114.2
 162500 CC--DELETE-GF-42.                                                NC2114.2
 162600     PERFORM  DE-LETE.                                            NC2114.2
@@ -1621,7 +1621,7 @@
 162900     PERFORM  FAIL.                                               NC2114.2
 163000 CC--WRITE-GF-42.                                                 NC2114.2
 163100     PERFORM  PRINT-DETAIL.                                       NC2114.2
-163200*                                                                 NC2114.2
+163200*                                                                         
 163300 CC--INIT-GF-43.                                                  NC2114.2
 163400     MOVE "CC--TEST-GF-43" TO PAR-NAME.                           NC2114.2
 163500     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1633,17 +1633,17 @@
 164100         GO TO CC--FAIL-GF-43                                     NC2114.2
 164200     ELSE                                                         NC2114.2
 164300         PERFORM PASS.                                            NC2114.2
-164400*    NOTE ***     ***   *** IF SWITCHES ARE NOT IMPLEMENTED       NC2114.2
-164500*        THE CONDITION-NAMES WILL AUTOMATICALLY BE ASSIGNED TO AN NC2114.2
-164600*        01 IN WORKING-STORAGE THEREBY SATISFYING THE TEST.       NC2114.2
-164700*        NOTE CC--TEST-GF-43 TESTS SWITCH-STATUS CONDITIONS WITH  NC2114.2
-164800*             SEVERAL TYPES OF LOGICAL CONNECTORS INCLUDING       NC2114.2
-164900*             PARENTHESES ---                                     NC2114.2
-165000*             FIRST LINE TRUE                                     NC2114.2
-165100*             SECOND LINE TRUE                                    NC2114.2
-165200*             FIRST PLUS SECOND LINES (WITHIN PARENS) TRUE        NC2114.2
-165300*             FIRST PLUS SECOND LINES FALSE                       NC2114.2
-165400*             THIRD LINE TRUE.                                    NC2114.2
+164400*                                                                         
+164500*                                                                         
+164600*                                                                         
+164700*                                                                         
+164800*                                                                         
+164900*                                                                         
+165000*                                                                         
+165100*                                                                         
+165200*                                                                         
+165300*                                                                         
+165400*                                                                         
 165500     GO TO CC--WRITE-GF-43.                                       NC2114.2
 165600 CC--DELETE-GF-43.                                                NC2114.2
 165700     PERFORM  DE-LETE.                                            NC2114.2
@@ -1652,7 +1652,7 @@
 166000     PERFORM  FAIL.                                               NC2114.2
 166100 CC--WRITE-GF-43.                                                 NC2114.2
 166200     PERFORM  PRINT-DETAIL.                                       NC2114.2
-166300*                                                                 NC2114.2
+166300*                                                                         
 166400 CC--INIT-GF-44.                                                  NC2114.2
 166500     MOVE "CC--TEST-GF-44" TO PAR-NAME.                           NC2114.2
 166600     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1664,12 +1664,12 @@
 167200         PERFORM PASS                                             NC2114.2
 167300     ELSE                                                         NC2114.2
 167400         GO TO CC--FAIL-GF-44.                                    NC2114.2
-167500*        NOTE CC--TEST-GF-44 TESTS SWITCH-STATUS CONDITIONS WITH  NC2114.2
-167600*             SEVERAL TYPES OF LOGICAL CONNECTORS BUT WITHOUT     NC2114.2
-167700*             PARENTHESES ---                                     NC2114.2
-167800*             FIRST LINE TRUE                                     NC2114.2
-167900*             SECOND LINE FALSE                                   NC2114.2
-168000*             THIRD LINE FALSE.                                   NC2114.2
+167500*                                                                         
+167600*                                                                         
+167700*                                                                         
+167800*                                                                         
+167900*                                                                         
+168000*                                                                         
 168100     GO TO CC--WRITE-GF-44.                                       NC2114.2
 168200 CC--DELETE-GF-44.                                                NC2114.2
 168300     PERFORM  DE-LETE.                                            NC2114.2
@@ -1678,7 +1678,7 @@
 168600     PERFORM  FAIL.                                               NC2114.2
 168700 CC--WRITE-GF-44.                                                 NC2114.2
 168800     PERFORM  PRINT-DETAIL.                                       NC2114.2
-168900*                                                                 NC2114.2
+168900*                                                                         
 169000 CC--INIT-GF-45.                                                  NC2114.2
 169100     MOVE "CC--TEST-GF-45" TO PAR-NAME.                           NC2114.2
 169200     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1693,14 +1693,14 @@
 170100         GO TO CC--FAIL-GF-45                                     NC2114.2
 170200     ELSE                                                         NC2114.2
 170300         PERFORM PASS.                                            NC2114.2
-170400*        NOTE CC--TEST-GF-45 TESTS CONDITION-NAME CONDITIONS WITH NC2114.2
-170500*             SEVERAL TYPES OF LOGICAL CONNECTORS INCLUDING       NC2114.2
-170600*             PARENTHESES ---                                     NC2114.2
-170700*             FIRST LINE TRUE                                     NC2114.2
-170800*             SECOND LINE FALSE                                   NC2114.2
-170900*             FIRST PLUS SECOND LINE (WITHIN PARENS) TRUE         NC2114.2
-171000*             FIRST PLUS SECOND LINE FALSE                        NC2114.2
-171100*             THIRD LINE TRUE.                                    NC2114.2
+170400*                                                                         
+170500*                                                                         
+170600*                                                                         
+170700*                                                                         
+170800*                                                                         
+170900*                                                                         
+171000*                                                                         
+171100*                                                                         
 171200     GO TO CC--WRITE-GF-45.                                       NC2114.2
 171300 CC--DELETE-GF-45.                                                NC2114.2
 171400     PERFORM  DE-LETE.                                            NC2114.2
@@ -1709,7 +1709,7 @@
 171700     PERFORM  FAIL.                                               NC2114.2
 171800 CC--WRITE-GF-45.                                                 NC2114.2
 171900     PERFORM  PRINT-DETAIL.                                       NC2114.2
-172000*                                                                 NC2114.2
+172000*                                                                         
 172100 CC--INIT-GF-46.                                                  NC2114.2
 172200     MOVE "CC--TEST-GF-46" TO PAR-NAME.                           NC2114.2
 172300     MOVE "VI-89 6.15.3/4" TO ANSI-REFERENCE.                     NC2114.2
@@ -1724,12 +1724,12 @@
 173200         PERFORM PASS                                             NC2114.2
 173300     ELSE                                                         NC2114.2
 173400         GO TO CC--FAIL-GF-46.                                    NC2114.2
-173500*        NOTE CC--TEST-GF-46 TESTS CONDITION-NAME CONDITIONS WITH NC2114.2
-173600*             SEVERAL TYPES OF LOGICAL CONNECTORS BUT NO          NC2114.2
-173700*             PARENTHESES ---                                     NC2114.2
-173800*             FIRST LINE FALSE                                    NC2114.2
-173900*             SECOND LINE TRUE                                    NC2114.2
-174000*             THIRD LINE TRUE.                                    NC2114.2
+173500*                                                                         
+173600*                                                                         
+173700*                                                                         
+173800*                                                                         
+173900*                                                                         
+174000*                                                                         
 174100     GO TO CC--WRITE-GF-46.                                       NC2114.2
 174200 CC--DELETE-GF-46.                                                NC2114.2
 174300     PERFORM  DE-LETE.                                            NC2114.2
@@ -1738,16 +1738,16 @@
 174600     PERFORM  FAIL.                                               NC2114.2
 174700 CC--WRITE-GF-46.                                                 NC2114.2
 174800     PERFORM  PRINT-DETAIL.                                       NC2114.2
-174900*  PAUL WOZ UPTO HERE.                                            NC2114.2
+174900*                                                                         
 175000 CC--INIT-GF-47.                                                  NC2114.2
 175100     MOVE     "  MIXED CONDITIONS" TO FEATURE.                    NC2114.2
 175200     MOVE     -1 TO IF-D32.                                       NC2114.2
 175300     MOVE     "ABCD4" TO CLASS-1.                                 NC2114.2
 175400     MOVE     -1 TO SIGN-1.                                       NC2114.2
 175500 CC--TEST-GF-47.                                                  NC2114.2
-175600*    NOTE IF SWITCHES ARE NOT IMPLEMENTED SWITCH-1 WILL           NC2114.2
-175700*        BE AUTOMATICALLY TURNED ON TO FULFILL THE REQUIREMENTS   NC2114.2
-175800*        OF THIS TEST.                                            NC2114.2
+175600*                                                                         
+175700*                                                                         
+175800*                                                                         
 175900     IF       NOT TWO > THREE                                     NC2114.2
 176000          AND NOT (ON-WRK-SWITCH-1              AND               NC2114.2
 176100                   F                        OR                    NC2114.2
@@ -1755,19 +1755,19 @@
 176300           OR     TWO = THREE                                     NC2114.2
 176400          AND     SIGN-1 ZERO                                     NC2114.2
 176500              PERFORM PASS ELSE PERFORM FAIL.                     NC2114.2
-176600*        NOTE CC--TEST-GF-47 TESTS A COMPOUND CONDITION WHICH     NC2114.2
-176700*             CONTAINS ALL OF THE TYPES OF SIMPLE CONDITIONS AND  NC2114.2
-176800*             SEVERAL TYPES OF LOGICAL CONNECTORS ---             NC2114.2
-176900*             FIRST LINE TRUE                                     NC2114.2
-177000*             SECOND LINE TRUE                                    NC2114.2
-177100*             THIRD LINE FALSE                                    NC2114.2
-177200*             FOURTH LINE FALSE                                   NC2114.2
-177300*             SECOND THRU FOURTH LINES (WITHIN PARENS) FALSE      NC2114.2
-177400*             SECOND THRU FOURTH LINES TRUE                       NC2114.2
-177500*             FIRST THRU FOURTH LINES TRUE                        NC2114.2
-177600*             FIFTH LINE FALSE                                    NC2114.2
-177700*             SIXTH LINE FALSE                                    NC2114.2
-177800*             FIFTH THRU SIXTH LINES FALSE.                       NC2114.2
+176600*                                                                         
+176700*                                                                         
+176800*                                                                         
+176900*                                                                         
+177000*                                                                         
+177100*                                                                         
+177200*                                                                         
+177300*                                                                         
+177400*                                                                         
+177500*                                                                         
+177600*                                                                         
+177700*                                                                         
+177800*                                                                         
 177900     GO       TO CC--WRITE-GF-47.                                 NC2114.2
 178000 CC--DELETE-GF-47.                                                NC2114.2
 178100     PERFORM  DE-LETE.                                            NC2114.2
@@ -1779,9 +1779,9 @@
 178700     MOVE     -5 TO SIGN-2.                                       NC2114.2
 178800     MOVE     "+1234" TO CLASS-1.                                 NC2114.2
 178900     MOVE     1235 TO IF-D32.                                     NC2114.2
-179000*    NOTE IF SWITCHES ARE NOT IMPLEMENTED SWITCH-1 WILL BE        NC2114.2
-179100*        AUTOMATICALLY TURNED ON TO FULFILL THE REQUIREMENTS      NC2114.2
-179200*        OF THIS TEST.                                            NC2114.2
+179000*                                                                         
+179100*                                                                         
+179200*                                                                         
 179300     IF      FOUR GREATER THAN 2.5                                NC2114.2
 179400          AND          EQUAL TO QUATROS                           NC2114.2
 179500          AND     (FOUR     = TEN      OR                         NC2114.2
@@ -1794,24 +1794,24 @@
 180200          AND     F                                               NC2114.2
 180300           OR NOT G                                               NC2114.2
 180400              PERFORM PASS ELSE PERFORM FAIL.                     NC2114.2
-180500*        NOTE CC--TEST-GF-48 TESTS A COMPOUND CONDITION WHICH     NC2114.2
-180600*             CONTAINS ALL OF THE TYPES OF SIMPLE CONDITIONS AND  NC2114.2
-180700*             SEVERAL TYPES OF LOGICAL CONNECTORS ---             NC2114.2
-180800*         *   FIRST LINE TRUE                                     NC2114.2
-180900*         *   SECOND ABBREVIATED LINE TRUE                        NC2114.2
-181000*             THIRD LINE FALSE                                    NC2114.2
-181100*             FOURTH LINE FALSE                                   NC2114.2
-181200*             FIFTH LINE TRUE                                     NC2114.2
-181300*             SIXTH LINE FALSE                                    NC2114.2
-181400*             SEVENTH LINE TRUE                                   NC2114.2
-181500*             SIXTH PLUS SEVENTH LINES TRUE                       NC2114.2
-181600*         *   THIRD THRU SEVENTH LINES TRUE                       NC2114.2
-181700*         *   EIGHTH LINE TRUE                                    NC2114.2
-181800*        **   FIRST THRU EIGHTH LINES TRUE                        NC2114.2
-181900*             NINTH LINE FALSE                                    NC2114.2
-182000*             TENTH LINE TRUE                                     NC2114.2
-182100*        **   NINTH PLUS TENTH LINES FALSE                        NC2114.2
-182200*        **   ELEVENTH LINE FALSE.                                NC2114.2
+180500*                                                                         
+180600*                                                                         
+180700*                                                                         
+180800*                                                                         
+180900*                                                                         
+181000*                                                                         
+181100*                                                                         
+181200*                                                                         
+181300*                                                                         
+181400*                                                                         
+181500*                                                                         
+181600*                                                                         
+181700*                                                                         
+181800*                                                                         
+181900*                                                                         
+182000*                                                                         
+182100*                                                                         
+182200*                                                                         
 182300     GO       TO CC--WRITE-GF-48.                                 NC2114.2
 182400 CC--DELETE-GF-48.                                                NC2114.2
 182500     PERFORM  DE-LETE.                                            NC2114.2
@@ -1839,7 +1839,7 @@
 184700 FIG-TEST-2.                                                      NC2114.2
 184800     IF       SUB-SUB-BB EQUAL TO "ZZZ   000000"                  NC2114.2
 184900              PERFORM PASS GO TO FIG-WRITE-2.                     NC2114.2
-185000*    NOTE     THIS TEST DEPENDS UPON THE RESULT OF FIG-TEST-1.    NC2114.2
+185000*                                                                         
 185100     GO       TO FIG-FAIL-2.                                      NC2114.2
 185200 FIG-DELETE-2.                                                    NC2114.2
 185300     PERFORM  DE-LETE.                                            NC2114.2

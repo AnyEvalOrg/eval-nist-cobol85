@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         SM2034.2
 000200 PROGRAM-ID.                                                      SM2034.2
 000300     SM203A.                                                      SM2034.2
-000400****************************************************************  SM2034.2
-000500*                                                              *  SM2034.2
-000600*    VALIDATION FOR:-                                          *  SM2034.2
-000700*                                                              *  SM2034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2034.2
-000900*                                                              *  SM2034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2034.2
-001100*                                                              *  SM2034.2
-001200****************************************************************  SM2034.2
-001300*                                                              *  SM2034.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2034.2
-001500*                                                              *  SM2034.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2034.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2034.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2034.2
-001900*                                                              *  SM2034.2
-002000****************************************************************  SM2034.2
-002100*                                                              *  SM2034.2
-002200*    PROGRAM SM203A TESTS THE USE OF THE "COPY" STATEMENT      *  SM2034.2
-002300*    "REPLACING" PHRASE IN THE ENVIRONMENT DIVISION.           *  SM2034.2
-002400*    A SEQUENTIAL FILE IS PRODUCED USING "COPY"ED TEXT AND     *  SM2034.2
-002500*    THIS IS CHECKED IN PROGRAM SM204A.                        *  SM2034.2
-002600*                                                              *  SM2034.2
-002700****************************************************************  SM2034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            SM2034.2
 002900 CONFIGURATION SECTION.                                           SM2034.2
 003000 SOURCE-COMPUTER.                                                 SM2034.2
@@ -41,31 +41,31 @@
 004100                                                                  SM2034.2
 004200                                                                  SM2034.2
 004300                                                                  SM2034.2
-004400*                                                                 SM2034.2
-004500*********************** COPY STATEMENT USED **********************SM2034.2
-004600*                                                                 SM2034.2
-004700*FILE-CONTROL.                                         COPY K3FCB SM2034.2
-004800*             REPLACING DUMMY-TEST-FILE BY TEST-FILE.             SM2034.2
-004900*                                                                 SM2034.2
-005000******************** COPIED TEXT BEGINS BELOW ********************SM2034.2
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
 005100 FILE-CONTROL.                                         COPY K3FCB SM2034.2
 005200              REPLACING DUMMY-TEST-FILE BY TEST-FILE.             SM2034.2
-005300*********************** END OF COPIED TEXT ***********************SM2034.2
+005300*                                                                         
 005400                                                                  SM2034.2
 005500                                                                  SM2034.2
 005600                                                                  SM2034.2
 005700                                                                  SM2034.2
 005800                                                                  SM2034.2
-005900*                                                                 SM2034.2
-006000*********************** COPY STATEMENT USED **********************SM2034.2
-006100*                                                                 SM2034.2
-006200*I-O-CONTROL.                                          COPY K3IOB SM2034.2
-006300*             REPLACING DUMMY-PRINT-FILE BY PRINT-FILE.           SM2034.2
-006400*                                                                 SM2034.2
-006500******************** COPIED TEXT BEGINS BELOW ********************SM2034.2
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
 006600 I-O-CONTROL.                                          COPY K3IOB SM2034.2
 006700              REPLACING DUMMY-PRINT-FILE BY PRINT-FILE.           SM2034.2
-006800*********************** END OF COPIED TEXT ***********************SM2034.2
+006800*                                                                         
 006900 DATA DIVISION.                                                   SM2034.2
 007000 FILE SECTION.                                                    SM2034.2
 007100 FD  PRINT-FILE.                                                  SM2034.2
@@ -272,7 +272,7 @@
 027900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2034.2
 028000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2034.2
 028100      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2034.2
-028200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2034.2
+028200*                                                                         
 028300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2034.2
 028400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2034.2
 028500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2034.2

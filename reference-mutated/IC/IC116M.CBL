@@ -1,37 +1,37 @@
 000100 IDENTIFICATION DIVISION.                                         IC1164.2
 000200 PROGRAM-ID.                                                      IC1164.2
 000300     IC116M.                                                      IC1164.2
-000400****************************************************************  IC1164.2
-000500*                                                              *  IC1164.2
-000600*    VALIDATION FOR:-                                          *  IC1164.2
-000700*                                                              *  IC1164.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1164.2
-000900*                                                              *  IC1164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1164.2
-001100*                                                              *  IC1164.2
-001200****************************************************************  IC1164.2
-001300*                                                              *  IC1164.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1164.2
-001500*                                                              *  IC1164.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1164.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1164.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1164.2
-001900*                                                              *  IC1164.2
-002000****************************************************************  IC1164.2
-002100*                                                                 IC1164.2
-002200*        THE PROGRAM IC116 AND THE SUBPROGRAMS IC117 AND IC118    IC1164.2
-002300*    TEST THE CALL STATEMENT WITHOUT THE OPTIONAL USING PHRASE    IC1164.2
-002400*    AND THE PROCEDURE DIVISION HEADER WITHOUT THE OPTIONAL       IC1164.2
-002500*    USING PHRASE IN THE SUBPROGRAMS.  THE MAIN PROGRAM IC116     IC1164.2
-002600*    CALLS THE SUBPROGRAM IC117 WHICH IN TURN CALLS THE SUBPRO-   IC1164.2
-002700*    GRAM IC118.  THE SUBPROGRAMS CONTAIN DISPLAY STATEMENTS WHICHIC1164.2
-002800*    SHOW THE EXECUTION SEQUENCE FOR THE PROGRAMS.                IC1164.2
-002900*                                                                 IC1164.2
-003000*    REFERENCE - AMERICAN NATIONAL STANDARD PROGRAMMING LANGUAGE  IC1164.2
-003100*                    COBOL, X3.23-1974                            IC1164.2
-003200*                SECTION XII, INTER-PROGRAM COMMUNICATION MODULE. IC1164.2
-003300*                                                                 IC1164.2
-003400******************************************************************IC1164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 ENVIRONMENT DIVISION.                                            IC1164.2
 003600 CONFIGURATION SECTION.                                           IC1164.2
 003700 SOURCE-COMPUTER.                                                 IC1164.2
@@ -247,7 +247,7 @@
 024900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1164.2
 025000      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1164.2
 025100      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1164.2
-025200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1164.2
+025200*                                                                         
 025300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1164.2
 025400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1164.2
 025500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1164.2
@@ -317,10 +317,10 @@
 031900 SECT-IC116-0001 SECTION.                                         IC1164.2
 032000 USNG-TEST-01.                                                    IC1164.2
 032100     CALL "IC117M".                                               IC1164.2
-032200*                                                                 IC1164.2
-032300*    THIS TEST CONTAINS A CALL STATEMENT WITHOUT THE OPTIONAL     IC1164.2
-032400*    USING PHRASE.                                                IC1164.2
-032500*                                                                 IC1164.2
+032200*                                                                         
+032300*                                                                         
+032400*                                                                         
+032500*                                                                         
 032600 USNG-WRITE-01.                                                   IC1164.2
 032700     PERFORM BLANK-LINE-PRINT.                                    IC1164.2
 032800     MOVE "CALL WITHOUT USING" TO FEATURE.                        IC1164.2

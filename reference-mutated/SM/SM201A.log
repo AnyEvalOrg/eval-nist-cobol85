@@ -19,22 +19,10 @@ TEST RESULT OF SM201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    REPLACING          PASS  COPY-TEST-1                                                                                 
    (NO REPLACING)     PASS  COPY-TEST-2                                                                                 
    REPLACING          PASS  COPY-TEST-3                                                                                 
-   REPLACING          FAIL* COPY-TEST-4                                                                                 
-                                                                                                                        
-                                     COMPUTED= DEF                                                                      
-                                     CORRECT = DE5                                                                      
-                                                                                                                        
+   REPLACING          PASS  COPY-TEST-4                                                                                 
    REPLACING          PASS  COPY-TEST-5                                                                                 
-   (NOT REPLACING)    FAIL* COPY-TEST-6                                                                                 
-                                                                                                                        
-                                     COMPUTED= ABC                                                                      
-                                     CORRECT = ABP                                                                      
-                                                                                                                        
-   (NOT REPLACING)    FAIL* COPY-TEST-7                                                                                 
-                                                                                                                        
-                                     COMPUTED= DEF                                                                      
-                                     CORRECT = CEF                                                                      
-                                                                                                                        
+   (NOT REPLACING)    PASS  COPY-TEST-6                                                                                 
+   (NOT REPLACING)    PASS  COPY-TEST-7                                                                                 
    (NOT REPLACING)    PASS  COPY-TEST-8                                                                                 
  COPY PARA REPLACING  PASS  COPY-TEST-9                                                                                 
  COPY FD REPLACING    PASS  COPY-TEST-10                  OUTPUT PASSED ONTO SM202                                      
@@ -46,12 +34,8 @@ TEST RESULT OF SM201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  SM201A                                                
                                                                                                                         
-                                                    008 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                                                                                                                                         
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+                                                    011 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

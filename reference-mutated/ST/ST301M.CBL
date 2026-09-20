@@ -1,8 +1,8 @@
 000100 IDENTIFICATION DIVISION.                                         ST3014.2
 000200 PROGRAM-ID.                                                      ST3014.2
 000300      ST301M.                                                     ST3014.2
-000400*The following program tests the flagging of intermediate         ST3014.2
-000500*subset  features that are used in sort-merge functions           ST3014.2
+000400*                                                                         
+000500*                                                                         
 000600 ENVIRONMENT DIVISION.                                            ST3014.2
 000700 CONFIGURATION SECTION.                                           ST3014.2
 000800 SOURCE-COMPUTER.                                                 ST3014.2
@@ -28,11 +28,11 @@
 002800                                                                  ST3014.2
 002900 I-O-CONTROL.                                                     ST3014.2
 003000     SAME SORT-MERGE AREA FOR TFIL-5, TFIL.                       ST3014.2
-003100*Message expected for above statement: NON-CONFORMING STANDARD    ST3014.2
+003100*                                                                         
 003200 DATA DIVISION.                                                   ST3014.2
 003300 FILE SECTION.                                                    ST3014.2
 003400 SD  TFIL.                                                        ST3014.2
-003500*Message expected for above statement: NON-CONFORMING STANDARD    ST3014.2
+003500*                                                                         
 003600 01  FREC.                                                        ST3014.2
 003700     03 DATA-1  PIC X(80).                                        ST3014.2
 003800                                                                  ST3014.2
@@ -63,22 +63,22 @@
 006300     USING TFIL-2 TFIL-3                                          ST3014.2
 006400     OUTPUT PROCEDURE IS ST301M-RETURN.                           ST3014.2
 006500                                                                  ST3014.2
-006600*Message expected for above statement: NON-CONFORMING STANDARD    ST3014.2
+006600*                                                                         
 006700                                                                  ST3014.2
 006800 ST301M-RELEASE.                                                  ST3014.2
 006900     RELEASE FREC.                                                ST3014.2
-007000*Message expected for above statement: NON-CONFORMING STANDARD    ST3014.2
+007000*                                                                         
 007100                                                                  ST3014.2
 007200 ST301M-RETURN.                                                   ST3014.2
 007300     RETURN TFIL RECORD                                           ST3014.2
 007400         AT END DISPLAY "AT END".                                 ST3014.2
-007500*Message expected for above statement: NON-CONFORMING STANDARD    ST3014.2
+007500*                                                                         
 007600                                                                  ST3014.2
 007700 ST301M-SORT.                                                     ST3014.2
 007800     SORT TFIL ON ASCENDING KEY DATA-1                            ST3014.2
 007900     INPUT PROCEDURE IS ST301M-RELEASE                            ST3014.2
 008000     GIVING TFIL-4.                                               ST3014.2
-008100*Message expected for above statement: NON-CONFORMING STANDARD    ST3014.2
+008100*                                                                         
 008200                                                                  ST3014.2
 008300                                                                  ST3014.2
-008400*TOTAL NUMBER OF FLAGS EXPECTED = 6.                              ST3014.2
+008400*                                                                         

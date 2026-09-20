@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2324.2
 000200 PROGRAM-ID.                                                      NC2324.2
 000300     NC232A.                                                      NC2324.2
-000400****************************************************************  NC2324.2
-000500*                                                              *  NC2324.2
-000600*    VALIDATION FOR:-                                          *  NC2324.2
-000700*                                                              *  NC2324.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2324.2
-000900*                                                              *  NC2324.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2324.2
-001100*                                                              *  NC2324.2
-001200****************************************************************  NC2324.2
-001300*                                                              *  NC2324.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2324.2
-001500*                                                              *  NC2324.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2324.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2324.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2324.2
-001900*                                                              *  NC2324.2
-002000****************************************************************  NC2324.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100                                                                  NC2324.2
-002200*                                                                 NC2324.2
-002300*    PROGRAM NC232A USES FORMAT 1 OF THE "SEARCH" STATEMENT TO *  NC2324.2
-002400*    ACCESS A THREE DIMENSIONAL TABLE.  THE OPTIONAL "VARYING" *  NC2324.2
-002500*    PHRASE IS USED WITH AN INDEX-NAME.                        *  NC2324.2
-002600*                                                              *  NC2324.2
-002700****************************************************************  NC2324.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2324.2
 002900 CONFIGURATION SECTION.                                           NC2324.2
 003000 SOURCE-COMPUTER.                                                 NC2324.2
@@ -282,7 +282,7 @@
 028400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2324.2
 028500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2324.2
 028600      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2324.2
-028700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2324.2
+028700*                                                                         
 028800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2324.2
 028900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2324.2
 029000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2324.2
@@ -351,7 +351,7 @@
 035300     EXIT.                                                        NC2324.2
 035400 SECT-NC232A-001 SECTION.                                         NC2324.2
 035500 TH-03-001.                                                       NC2324.2
-035600*                                                                 NC2324.2
+035600*                                                                         
 035700 BUILD-LEVEL-1.                                                   NC2324.2
 035800     ADD 1 TO SUB-1.                                              NC2324.2
 035900     IF SUB-1 = 11 GO TO CHECK-ENTRIES.                           NC2324.2
@@ -406,7 +406,7 @@
 040800                                                                  NC2324.2
 040900     PERFORM FAIL                                                 NC2324.2
 041000     PERFORM PRINT-DETAIL.                                        NC2324.2
-041100*                                                                 NC2324.2
+041100*                                                                         
 041200 TH1-INIT-F1-2.                                                   NC2324.2
 041300     MOVE "TH1-TEST-F1-2      " TO PAR-NAME.                      NC2324.2
 041400     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -427,7 +427,7 @@
 042900     PERFORM FAIL.                                                NC2324.2
 043000 TH1-WRITE-F1-2.                                                  NC2324.2
 043100     PERFORM PRINT-DETAIL.                                        NC2324.2
-043200*                                                                 NC2324.2
+043200*                                                                         
 043300 TH1-INIT-F1-3.                                                   NC2324.2
 043400     MOVE "TH1-TEST-F1-3      " TO PAR-NAME.                      NC2324.2
 043500     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -448,7 +448,7 @@
 045000     PERFORM FAIL.                                                NC2324.2
 045100 TH1-WRITE-F1-3.                                                  NC2324.2
 045200     PERFORM PRINT-DETAIL.                                        NC2324.2
-045300*                                                                 NC2324.2
+045300*                                                                         
 045400 TH1-INIT-F1-4.                                                   NC2324.2
 045500     MOVE "TH1-TEST-F1-4      " TO PAR-NAME.                      NC2324.2
 045600     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -471,7 +471,7 @@
 047300     PERFORM GRP-FAIL-PARGRAPH.                                   NC2324.2
 047400 TH1-WRITE-F1-4.                                                  NC2324.2
 047500     PERFORM PRINT-DETAIL.                                        NC2324.2
-047600*                                                                 NC2324.2
+047600*                                                                         
 047700 TH2-INIT-F1-1.                                                   NC2324.2
 047800     MOVE "TH2-TEST-F1-1      " TO PAR-NAME.                      NC2324.2
 047900     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -519,7 +519,7 @@
 052100     PERFORM SEC-FAIL-PARGRAF.                                    NC2324.2
 052200 TH2-WRITE-F1-2.                                                  NC2324.2
 052300     PERFORM PRINT-DETAIL.                                        NC2324.2
-052400*                                                                 NC2324.2
+052400*                                                                         
 052500 TH2-INIT-F1-3.                                                   NC2324.2
 052600     MOVE "TH2-TEST-F1-3      " TO PAR-NAME.                      NC2324.2
 052700     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -543,7 +543,7 @@
 054500     PERFORM SEC-FAIL-PARGRAF.                                    NC2324.2
 054600 TH2-WRITE-F1-3.                                                  NC2324.2
 054700     PERFORM PRINT-DETAIL.                                        NC2324.2
-054800*                                                                 NC2324.2
+054800*                                                                         
 054900 TH2-INIT-F1-4.                                                   NC2324.2
 055000     MOVE "TH2-TEST-F1-4      " TO PAR-NAME.                      NC2324.2
 055100     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -567,7 +567,7 @@
 056900 TH2-WRITE-F1-4.                                                  NC2324.2
 057000     PERFORM PRINT-DETAIL.                                        NC2324.2
 057100     GO TO TH3-INIT-F1-1.                                         NC2324.2
-057200*                                                                 NC2324.2
+057200*                                                                         
 057300 SEC-FAIL-PARGRAF.                                                NC2324.2
 057400     MOVE SEC-HOLD-AREA TO CORRECT-A.                             NC2324.2
 057500     IF ENTRY-2 (SUB-1, SUB-2) EQUAL TO SEC-HOLD-AREA             NC2324.2
@@ -603,7 +603,7 @@
 060500     PERFORM ELEM-FAIL-PARA.                                      NC2324.2
 060600 TH3-WRITE-F1-1.                                                  NC2324.2
 060700     PERFORM PRINT-DETAIL.                                        NC2324.2
-060800*                                                                 NC2324.2
+060800*                                                                         
 060900 TH3-INIT-F1-2.                                                   NC2324.2
 061000     MOVE "TH3-TEST-F1-2      " TO PAR-NAME.                      NC2324.2
 061100     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -630,7 +630,7 @@
 063200     PERFORM ELEM-FAIL-PARA.                                      NC2324.2
 063300 TH3-WRITE-F1-2.                                                  NC2324.2
 063400     PERFORM PRINT-DETAIL.                                        NC2324.2
-063500*                                                                 NC2324.2
+063500*                                                                         
 063600 TH3-INIT-F1-3.                                                   NC2324.2
 063700     MOVE "TH3-TEST-F1-3      " TO PAR-NAME.                      NC2324.2
 063800     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -654,7 +654,7 @@
 065600     PERFORM ELEM-FAIL-PARA.                                      NC2324.2
 065700 TH3-WRITE-F1-3.                                                  NC2324.2
 065800     PERFORM PRINT-DETAIL.                                        NC2324.2
-065900*                                                                 NC2324.2
+065900*                                                                         
 066000 TH3-INIT-F1-4.                                                   NC2324.2
 066100     MOVE "TH3-TEST-F1-4      " TO PAR-NAME.                      NC2324.2
 066200     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -682,7 +682,7 @@
 068400 TH3-WRITE-F1-4.                                                  NC2324.2
 068500     PERFORM PRINT-DETAIL.                                        NC2324.2
 068600     GO TO SCH-INIT-F1-1.                                         NC2324.2
-068700*                                                                 NC2324.2
+068700*                                                                         
 068800 ELEM-FAIL-PARA.                                                  NC2324.2
 068900     MOVE ELEM-HOLD-AREA TO CORRECT-A.                            NC2324.2
 069000     IF ENTRY-3 (SUB-1, SUB-2, SUB-3) EQUAL TO ELEM-HOLD-AREA     NC2324.2
@@ -693,7 +693,7 @@
 069500     MOVE ENTRY-3 (SUB-1, SUB-2, SUB-3) TO COMPUTED-A             NC2324.2
 069600     MOVE "SEE NOTE 2 FOR DIAGNOSTIC  " TO RE-MARK.               NC2324.2
 069700     PERFORM FAIL.                                                NC2324.2
-069800*                                                                 NC2324.2
+069800*                                                                         
 069900 SCH-INIT-F1-1.                                                   NC2324.2
 070000     MOVE "SCH-TEST-F1-1  " TO PAR-NAME.                          NC2324.2
 070100     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -737,7 +737,7 @@
 073900     PERFORM FAIL.                                                NC2324.2
 074000 SCH-WRITE-F1-1.                                                  NC2324.2
 074100     PERFORM PRINT-DETAIL.                                        NC2324.2
-074200*                                                                 NC2324.2
+074200*                                                                         
 074300 SCH-INIT-F1-2.                                                   NC2324.2
 074400     MOVE "SCH-TEST-F1-2  " TO PAR-NAME.                          NC2324.2
 074500     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -752,13 +752,13 @@
 075400              GO TO SCH-FAIL-F1-2-A                               NC2324.2
 075500         WHEN ENTRY-1 (IDX-1) = GRP-HOLD-AREA                     NC2324.2
 075600              NEXT SENTENCE.                                      NC2324.2
-075700*                                                                 NC2324.2
+075700*                                                                         
 075800     SEARCH GRP2-ENTRY VARYING IDX-2                              NC2324.2
 075900         AT END                                                   NC2324.2
 076000              GO TO SCH-FAIL-F1-2-B                               NC2324.2
 076100         WHEN ENTRY-2 (IDX-1, IDX-2) = SEC-HOLD-AREA              NC2324.2
 076200              NEXT SENTENCE.                                      NC2324.2
-076300*                                                                 NC2324.2
+076300*                                                                         
 076400     SEARCH GRP3-ENTRY VARYING IDX-3                              NC2324.2
 076500         AT END                                                   NC2324.2
 076600              GO TO SCH-FAIL-F1-2-C                               NC2324.2
@@ -804,7 +804,7 @@
 080600     PERFORM FAIL.                                                NC2324.2
 080700 SCH-WRITE-F1-2.                                                  NC2324.2
 080800     PERFORM PRINT-DETAIL.                                        NC2324.2
-080900*                                                                 NC2324.2
+080900*                                                                         
 081000 SPC-INIT-F1-1.                                                   NC2324.2
 081100     MOVE "SPC-TEST-F1-1      " TO PAR-NAME.                      NC2324.2
 081200     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -827,7 +827,7 @@
 082900     PERFORM FAIL.                                                NC2324.2
 083000 SPC-WRITE-F1-1.                                                  NC2324.2
 083100     PERFORM PRINT-DETAIL.                                        NC2324.2
-083200*                                                                 NC2324.2
+083200*                                                                         
 083300 SPC-INIT-F1-2.                                                   NC2324.2
 083400     MOVE "SPC-TEST-F1-2" TO PAR-NAME.                            NC2324.2
 083500     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2
@@ -863,7 +863,7 @@
 086500     PERFORM FAIL.                                                NC2324.2
 086600 SPC-WRITE-F1-2.                                                  NC2324.2
 086700     PERFORM PRINT-DETAIL.                                        NC2324.2
-086800*                                                                 NC2324.2
+086800*                                                                         
 086900 SPC-INIT-F1-3.                                                   NC2324.2
 087000     MOVE "SPC-TEST-F1-3" TO PAR-NAME.                            NC2324.2
 087100     MOVE "VI-122 6.21"   TO ANSI-REFERENCE.                      NC2324.2

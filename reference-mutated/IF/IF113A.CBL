@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1134.2
 000300     IF113A.                                                      IF1134.2
 000400                                                                  IF1134.2
-000500***********************************************************       IF1134.2
-000600*                                                         *       IF1134.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1134.2
-000800* It contains tests for the Intrinsic Function            *       IF1134.2
-000900* INTEGER-OF-DAY.                                         *       IF1134.2
-001000*                                                         *       IF1134.2
-001100***********************************************************       IF1134.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1134.2
 001300 CONFIGURATION SECTION.                                           IF1134.2
 001400 SOURCE-COMPUTER.                                                 IF1134.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1134.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1134.2
 002700 WORKING-STORAGE SECTION.                                         IF1134.2
-002800***********************************************************       IF1134.2
-002900* Variables specific to the Intrinsic Function Test IF113A*       IF1134.2
-003000***********************************************************       IF1134.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)     VALUE 1602035.            IF1134.2
 003200 01  C                   PIC S9(10)     VALUE 2.                  IF1134.2
 003300 01  D                   PIC S9(10)     VALUE 2.                  IF1134.2
@@ -36,9 +36,9 @@
 003600     02 IND OCCURS 2 TIMES PIC 9(7).                              IF1134.2
 003700 01  TEMP                PIC S9(10).                              IF1134.2
 003800 01  WS-INT              PIC 9(10).                               IF1134.2
-003900*                                                                 IF1134.2
-004000**********************************************************        IF1134.2
-004100*                                                                 IF1134.2
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 01  TEST-RESULTS.                                                IF1134.2
 004300     02 FILLER                   PIC X      VALUE SPACE.          IF1134.2
 004400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1134.2
@@ -298,24 +298,24 @@
 029800 BAIL-OUT-EX. EXIT.                                               IF1134.2
 029900 CCVS1-EXIT.                                                      IF1134.2
 030000     EXIT.                                                        IF1134.2
-030100********************************************************          IF1134.2
-030200*                                                      *          IF1134.2
-030300*    Intrinsic Function Test  IF113A - INTEGER-OF-DAY  *          IF1134.2
-030400*                                                      *          IF1134.2
-030500********************************************************          IF1134.2
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
+030500*                                                                         
 030600 SECT-IF113A SECTION.                                             IF1134.2
 030700 F-INTOFDAY-INFO.                                                 IF1134.2
 030800     MOVE     "See ref. A-46 2.17" TO ANSI-REFERENCE.             IF1134.2
 030900     MOVE     "INTEGER-OF-DAY"     TO FEATURE.                    IF1134.2
-031000*****************TEST (a) ******************************          IF1134.2
+031000*                                                                         
 031100 F-INTOFDAY-01.                                                   IF1134.2
 031200     MOVE ZERO TO WS-INT.                                         IF1134.2
 031300 F-INTOFDAY-TEST-01.                                              IF1134.2
 031400     COMPUTE WS-INT = FUNCTION INTEGER-OF-DAY(1601001).           IF1134.2
-031500     IF WS-INT = 9 THEN                                           IF1134.2
+031500     IF WS-INT = 8 THEN                                           IF1134.2
 031600                        PERFORM PASS                              IF1134.2
 031700     ELSE                                                         IF1134.2
-031800                        MOVE  9 TO CORRECT-N                      IF1134.2
+031800                        MOVE  8 TO CORRECT-N                      IF1134.2
 031900                        MOVE WS-INT TO COMPUTED-N                 IF1134.2
 032000                        PERFORM FAIL.                             IF1134.2
 032100     GO TO F-INTOFDAY-WRITE-01.                                   IF1134.2
@@ -325,7 +325,7 @@
 032500 F-INTOFDAY-WRITE-01.                                             IF1134.2
 032600     MOVE "F-INTOFDAY-01" TO PAR-NAME.                            IF1134.2
 032700     PERFORM  PRINT-DETAIL.                                       IF1134.2
-032800*****************TEST (b) ******************************          IF1134.2
+032800*                                                                         
 032900 F-INTOFDAY-TEST-02.                                              IF1134.2
 033000     EVALUATE FUNCTION INTEGER-OF-DAY(A)                          IF1134.2
 033100     WHEN     400                                                 IF1134.2
@@ -339,7 +339,7 @@
 033900 F-INTOFDAY-WRITE-02.                                             IF1134.2
 034000     MOVE "F-INTOFDAY-02" TO PAR-NAME.                            IF1134.2
 034100     PERFORM  PRINT-DETAIL.                                       IF1134.2
-034200*****************TEST (c) ******************************          IF1134.2
+034200*                                                                         
 034300 F-INTOFDAY-TEST-03.                                              IF1134.2
 034400     IF FUNCTION INTEGER-OF-DAY(IND(1)) = 1 THEN                  IF1134.2
 034500                        PERFORM PASS                              IF1134.2
@@ -352,7 +352,7 @@
 035200 F-INTOFDAY-WRITE-03.                                             IF1134.2
 035300     MOVE "F-INTOFDAY-03" TO PAR-NAME.                            IF1134.2
 035400     PERFORM  PRINT-DETAIL.                                       IF1134.2
-035500*****************TEST (d) ******************************          IF1134.2
+035500*                                                                         
 035600 F-INTOFDAY-04.                                                   IF1134.2
 035700     MOVE ZERO TO WS-INT.                                         IF1134.2
 035800 F-INTOFDAY-TEST-04.                                              IF1134.2
@@ -370,15 +370,15 @@
 037000 F-INTOFDAY-WRITE-04.                                             IF1134.2
 037100     MOVE "F-INTOFDAY-04" TO PAR-NAME.                            IF1134.2
 037200     PERFORM  PRINT-DETAIL.                                       IF1134.2
-037300*****************TEST (e) ******************************          IF1134.2
+037300*                                                                         
 037400 F-INTOFDAY-05.                                                   IF1134.2
 037500     MOVE ZERO TO WS-INT.                                         IF1134.2
 037600 F-INTOFDAY-TEST-05.                                              IF1134.2
 037700     COMPUTE WS-INT = FUNCTION INTEGER-OF-DAY(1601365).           IF1134.2
-037800     IF WS-INT = 325 THEN                                         IF1134.2
+037800     IF WS-INT = 395 THEN                                         IF1134.2
 037900                        PERFORM PASS                              IF1134.2
 038000     ELSE                                                         IF1134.2
-038100                        MOVE  325 TO CORRECT-N                    IF1134.2
+038100                        MOVE  395 TO CORRECT-N                    IF1134.2
 038200                        MOVE WS-INT TO COMPUTED-N                 IF1134.2
 038300                        PERFORM FAIL.                             IF1134.2
 038400     GO TO F-INTOFDAY-WRITE-05.                                   IF1134.2
@@ -388,15 +388,15 @@
 038800 F-INTOFDAY-WRITE-05.                                             IF1134.2
 038900     MOVE "F-INTOFDAY-05" TO PAR-NAME.                            IF1134.2
 039000     PERFORM  PRINT-DETAIL.                                       IF1134.2
-039100*****************TEST (f) ******************************          IF1134.2
+039100*                                                                         
 039200 F-INTOFDAY-06.                                                   IF1134.2
 039300     MOVE ZERO TO WS-INT.                                         IF1134.2
 039400 F-INTOFDAY-TEST-06.                                              IF1134.2
 039500     COMPUTE WS-INT = FUNCTION INTEGER-OF-DAY(A) + 10.            IF1134.2
-039600     IF WS-INT = 510 THEN                                         IF1134.2
+039600     IF WS-INT = 440 THEN                                         IF1134.2
 039700                        PERFORM PASS                              IF1134.2
 039800     ELSE                                                         IF1134.2
-039900                        MOVE  510 TO CORRECT-N                    IF1134.2
+039900                        MOVE  440 TO CORRECT-N                    IF1134.2
 040000                        MOVE WS-INT TO COMPUTED-N                 IF1134.2
 040100                        PERFORM FAIL.                             IF1134.2
 040200     GO TO F-INTOFDAY-WRITE-06.                                   IF1134.2
@@ -406,7 +406,7 @@
 040600 F-INTOFDAY-WRITE-06.                                             IF1134.2
 040700     MOVE "F-INTOFDAY-06" TO PAR-NAME.                            IF1134.2
 040800     PERFORM  PRINT-DETAIL.                                       IF1134.2
-040900*****************TEST (g) ******************************          IF1134.2
+040900*                                                                         
 041000 F-INTOFDAY-07.                                                   IF1134.2
 041100     MOVE ZERO TO WS-INT.                                         IF1134.2
 041200 F-INTOFDAY-TEST-07.                                              IF1134.2
@@ -425,7 +425,7 @@
 042500 F-INTOFDAY-WRITE-07.                                             IF1134.2
 042600     MOVE "F-INTOFDAY-07" TO PAR-NAME.                            IF1134.2
 042700     PERFORM  PRINT-DETAIL.                                       IF1134.2
-042800***************** SPECIAL TEST 1 ***********************          IF1134.2
+042800*                                                                         
 042900 F-INTOFDAY-08.                                                   IF1134.2
 043000     MOVE 1601001 TO ARG1.                                        IF1134.2
 043100     PERFORM F-INTOFDAY-TEST-08                                   IF1134.2
@@ -435,17 +435,17 @@
 043500     ELSE                                                         IF1134.2
 043600                            PERFORM FAIL.                         IF1134.2
 043700     GO TO F-INTOFDAY-WRITE-08.                                   IF1134.2
-043800*                                                                 IF1134.2
+043800*                                                                         
 043900 F-INTOFDAY-TEST-08.                                              IF1134.2
 044000     COMPUTE ARG1 = ARG1 + 1.                                     IF1134.2
-044100*                                                                 IF1134.2
+044100*                                                                         
 044200 F-INTOFDAY-DELETE-08.                                            IF1134.2
 044300     PERFORM  DE-LETE.                                            IF1134.2
 044400     GO TO    F-INTOFDAY-WRITE-08.                                IF1134.2
 044500 F-INTOFDAY-WRITE-08.                                             IF1134.2
 044600     MOVE "F-INTOFDAY-08" TO PAR-NAME.                            IF1134.2
 044700     PERFORM  PRINT-DETAIL.                                       IF1134.2
-044800*******************END OF TESTS**************************         IF1134.2
+044800*                                                                         
 044900 CCVS-EXIT SECTION.                                               IF1134.2
 045000 CCVS-999999.                                                     IF1134.2
 045100     GO TO CLOSE-FILES.                                           IF1134.2

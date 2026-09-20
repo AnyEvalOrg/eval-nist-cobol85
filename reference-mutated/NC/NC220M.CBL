@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         NC2204.2
 000200 PROGRAM-ID.                                                      NC2204.2
 000300     NC220M.                                                      NC2204.2
-000400****************************************************************  NC2204.2
-000500*                                                              *  NC2204.2
-000600*    VALIDATION FOR:-                                          *  NC2204.2
-000700*                                                              *  NC2204.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2204.2
-000900*                                                              *  NC2204.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2204.2
-001100*                                                              *  NC2204.2
-001200****************************************************************  NC2204.2
-001300*                                                              *  NC2204.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2204.2
-001500*                                                              *  NC2204.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2204.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2204.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2204.2
-001900*                                                              *  NC2204.2
-002000****************************************************************  NC2204.2
-002100*                                                              *  NC2204.2
-002200*    PROGRAM NC220M TESTS THE USE OF INDEXED IDENTIFIERS AND   *  NC2204.2
-002300*    QUALIFIED DATANAMES WITH FORMAT 1 OF THE "MULTIPLY"       *  NC2204.2
-002400*    STATEMENT, FORMATS 3 & 4 OF THE "PERFORM" STATEMENT AND   *  NC2204.2
-002500*    THE GENERAL FORMAT OF THE "DISPLAY" STATEMENT.            *  NC2204.2
-002600*                                                              *  NC2204.2
-002700*                                                              *  NC2204.2
-002800****************************************************************  NC2204.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            NC2204.2
 003000 CONFIGURATION SECTION.                                           NC2204.2
 003100 SOURCE-COMPUTER.                                                 NC2204.2
@@ -272,7 +272,7 @@
 027400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2204.2
 027500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2204.2
 027600      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2204.2
-027700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2204.2
+027700*                                                                         
 027800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2204.2
 027900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2204.2
 028000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2204.2
@@ -377,7 +377,7 @@
 037900     MOVE 4 TO TABLE8-NUM (1).                                    NC2204.2
 038000     MOVE 7 TO TABLE8-NUM (2).                                    NC2204.2
 038100     MOVE 2 TO TABLE8-NUM (3).                                    NC2204.2
-038200*                                                                 NC2204.2
+038200*                                                                         
 038300 DIS-INIT-GF-1.                                                   NC2204.2
 038400     MOVE "DIS-TEST-GF-1" TO PAR-NAME.                            NC2204.2
 038500     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -395,7 +395,7 @@
 039700     PERFORM DE-LETE.                                             NC2204.2
 039800 DIS-WRITE-GF-1.                                                  NC2204.2
 039900     PERFORM PRINT-DETAIL.                                        NC2204.2
-040000*                                                                 NC2204.2
+040000*                                                                         
 040100 DIS-INIT-GF-2.                                                   NC2204.2
 040200     MOVE "DIS-TEST-GF-2" TO PAR-NAME.                            NC2204.2
 040300     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -413,7 +413,7 @@
 041500     PERFORM DE-LETE.                                             NC2204.2
 041600 DIS-WRITE-GF-2.                                                  NC2204.2
 041700     PERFORM PRINT-DETAIL.                                        NC2204.2
-041800*                                                                 NC2204.2
+041800*                                                                         
 041900 MLT-INIT-F1-1.                                                   NC2204.2
 042000     MOVE "MLT-TEST-F1-1" TO PAR-NAME.                            NC2204.2
 042100     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -438,7 +438,7 @@
 044000     MOVE 44 TO CORRECT-18V0.                                     NC2204.2
 044100 MLT-WRITE-F1-1.                                                  NC2204.2
 044200     PERFORM PRINT-DETAIL.                                        NC2204.2
-044300*                                                                 NC2204.2
+044300*                                                                         
 044400 MLT-INIT-F1-2.                                                   NC2204.2
 044500     MOVE "MLT-TEST-F1-2" TO PAR-NAME.                            NC2204.2
 044600     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -464,7 +464,7 @@
 046600     MOVE 92 TO CORRECT-18V0.                                     NC2204.2
 046700 MLT-WRITE-F1-2.                                                  NC2204.2
 046800     PERFORM PRINT-DETAIL.                                        NC2204.2
-046900*                                                                 NC2204.2
+046900*                                                                         
 047000 MLT-INIT-F1-3.                                                   NC2204.2
 047100     MOVE "MLT-TEST-F1-3" TO PAR-NAME.                            NC2204.2
 047200     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -488,7 +488,7 @@
 049000     MOVE 60 TO CORRECT-18V0.                                     NC2204.2
 049100 MLT-WRITE-F1-3.                                                  NC2204.2
 049200     PERFORM PRINT-DETAIL.                                        NC2204.2
-049300*                                                                 NC2204.2
+049300*                                                                         
 049400 DIV-INIT-F5-1.                                                   NC2204.2
 049500     MOVE "DIV-TEST-F5-1" TO PAR-NAME.                            NC2204.2
 049600     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -507,7 +507,7 @@
 050900     PERFORM DE-LETE.                                             NC2204.2
 051000     PERFORM PRINT-DETAIL.                                        NC2204.2
 051100     GO TO DIV-TEST-F5-2.                                         NC2204.2
-051200*                                                                 NC2204.2
+051200*                                                                         
 051300 DIV-TEST-F5-1-1.                                                 NC2204.2
 051400     MOVE "QUOTIENT" TO RE-MARK.                                  NC2204.2
 051500     IF TABLE6-NUM (INDEX6) = 2                                   NC2204.2
@@ -524,7 +524,7 @@
 052600     MOVE 2 TO CORRECT-18V0.                                      NC2204.2
 052700 DIV-WRITE-F5-1-1.                                                NC2204.2
 052800     PERFORM PRINT-DETAIL.                                        NC2204.2
-052900*                                                                 NC2204.2
+052900*                                                                         
 053000 DIV-TEST-F5-1-2.                                                 NC2204.2
 053100     ADD 1 TO REC-CT.                                             NC2204.2
 053200     MOVE "REMAINDER" TO RE-MARK.                                 NC2204.2
@@ -542,7 +542,7 @@
 054400     MOVE 1 TO CORRECT-18V0.                                      NC2204.2
 054500 DIV-WRITE-F5-1-2.                                                NC2204.2
 054600     PERFORM PRINT-DETAIL.                                        NC2204.2
-054700*                                                                 NC2204.2
+054700*                                                                         
 054800 DIV-INIT-F5-2.                                                   NC2204.2
 054900     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
 055000     MOVE "DIV-TEST-F5-2" TO PAR-NAME.                            NC2204.2
@@ -560,7 +560,7 @@
 056200     PERFORM DE-LETE.                                             NC2204.2
 056300     PERFORM PRINT-DETAIL.                                        NC2204.2
 056400     GO TO DIV-TEST-F5-3.                                         NC2204.2
-056500*                                                                 NC2204.2
+056500*                                                                         
 056600 DIV-TEST-F5-2-1.                                                 NC2204.2
 056700     MOVE "QUOTIENT" TO RE-MARK.                                  NC2204.2
 056800     IF NUM-999 = 16                                              NC2204.2
@@ -577,7 +577,7 @@
 057900     MOVE 16 TO CORRECT-18V0.                                     NC2204.2
 058000 DIV-WRITE-F5-2-1.                                                NC2204.2
 058100     PERFORM PRINT-DETAIL.                                        NC2204.2
-058200*                                                                 NC2204.2
+058200*                                                                         
 058300 DIV-TEST-F5-2-2.                                                 NC2204.2
 058400     ADD 1 TO REC-CT.                                             NC2204.2
 058500     MOVE "REMAINDER" TO RE-MARK.                                 NC2204.2
@@ -595,7 +595,7 @@
 059700     MOVE 21 TO CORRECT-18V0.                                     NC2204.2
 059800 DIV-WRITE-F5-2-2.                                                NC2204.2
 059900     PERFORM PRINT-DETAIL.                                        NC2204.2
-060000*                                                                 NC2204.2
+060000*                                                                         
 060100 DIV-INIT-F5-3.                                                   NC2204.2
 060200     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
 060300     MOVE "DIV-TEST-F5-3" TO PAR-NAME.                            NC2204.2
@@ -613,7 +613,7 @@
 061500     PERFORM DE-LETE.                                             NC2204.2
 061600     PERFORM PRINT-DETAIL.                                        NC2204.2
 061700     GO TO DIV-TEST-F4-4.                                         NC2204.2
-061800*                                                                 NC2204.2
+061800*                                                                         
 061900 DIV-TEST-F5-3-1.                                                 NC2204.2
 062000     MOVE "QUOTIENT" TO RE-MARK.                                  NC2204.2
 062100     IF TABLE6-NUM (INDEX6) = 0                                   NC2204.2
@@ -630,7 +630,7 @@
 063200     MOVE 0 TO CORRECT-18V0.                                      NC2204.2
 063300 DIV-WRITE-F5-3-1.                                                NC2204.2
 063400     PERFORM PRINT-DETAIL.                                        NC2204.2
-063500*                                                                 NC2204.2
+063500*                                                                         
 063600 DIV-TEST-F5-3-2.                                                 NC2204.2
 063700     ADD 1 TO REC-CT.                                             NC2204.2
 063800     MOVE "REMAINDER" TO RE-MARK.                                 NC2204.2
@@ -648,7 +648,7 @@
 065000     MOVE 82 TO CORRECT-18V0.                                     NC2204.2
 065100 DIV-WRITE-F5-3-2.                                                NC2204.2
 065200     PERFORM PRINT-DETAIL.                                        NC2204.2
-065300*                                                                 NC2204.2
+065300*                                                                         
 065400 DIV-INIT-F4-4.                                                   NC2204.2
 065500     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
 065600     MOVE "DIV-TEST-F4-4" TO PAR-NAME.                            NC2204.2
@@ -666,7 +666,7 @@
 066800     PERFORM DE-LETE.                                             NC2204.2
 066900     PERFORM PRINT-DETAIL.                                        NC2204.2
 067000     GO TO DIV-TEST-F4-5.                                         NC2204.2
-067100*                                                                 NC2204.2
+067100*                                                                         
 067200 DIV-TEST-F4-4-1.                                                 NC2204.2
 067300     MOVE "QUOTIENT" TO RE-MARK.                                  NC2204.2
 067400     IF TABLE6-NUM (INDEX6) = 2                                   NC2204.2
@@ -684,7 +684,7 @@
 068600 DIV-WRITE-F4-4-1.                                                NC2204.2
 068700     PERFORM PRINT-DETAIL.                                        NC2204.2
 068800     ADD 1 TO REC-CT.                                             NC2204.2
-068900*                                                                 NC2204.2
+068900*                                                                         
 069000 DIV-TEST-F4-4-2.                                                 NC2204.2
 069100     MOVE "REMAINDER" TO RE-MARK.                                 NC2204.2
 069200     IF NUM-999 = 1                                               NC2204.2
@@ -701,7 +701,7 @@
 070300     MOVE 1 TO CORRECT-18V0.                                      NC2204.2
 070400 DIV-WRITE-F4-4-2.                                                NC2204.2
 070500     PERFORM PRINT-DETAIL.                                        NC2204.2
-070600*                                                                 NC2204.2
+070600*                                                                         
 070700 DIV-INIT-F4-5.                                                   NC2204.2
 070800     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
 070900     MOVE "DIV-TEST-F4-5" TO PAR-NAME.                            NC2204.2
@@ -719,7 +719,7 @@
 072100     PERFORM DE-LETE.                                             NC2204.2
 072200     PERFORM PRINT-DETAIL.                                        NC2204.2
 072300     GO TO DIV-TEST-F4-6.                                         NC2204.2
-072400*                                                                 NC2204.2
+072400*                                                                         
 072500 DIV-TEST-F4-5-1.                                                 NC2204.2
 072600     MOVE "QUOTIENT" TO RE-MARK.                                  NC2204.2
 072700     IF NUM-999 = 16                                              NC2204.2
@@ -737,7 +737,7 @@
 073900 DIV-WRITE-F4-5-1.                                                NC2204.2
 074000     PERFORM PRINT-DETAIL.                                        NC2204.2
 074100     ADD 1 TO REC-CT.                                             NC2204.2
-074200*                                                                 NC2204.2
+074200*                                                                         
 074300 DIV-TEST-F4-5-2.                                                 NC2204.2
 074400     MOVE "REMAINDER" TO RE-MARK.                                 NC2204.2
 074500     IF TABLE6-NUM (INDEX6) = 21                                  NC2204.2
@@ -754,7 +754,7 @@
 075600     MOVE 21 TO CORRECT-18V0.                                     NC2204.2
 075700 DIV-WRITE-F4-5-2.                                                NC2204.2
 075800     PERFORM PRINT-DETAIL.                                        NC2204.2
-075900*                                                                 NC2204.2
+075900*                                                                         
 076000 DIV-INIT-F4-6.                                                   NC2204.2
 076100     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
 076200     MOVE "DIV-TEST-F4-6" TO PAR-NAME.                            NC2204.2
@@ -773,7 +773,7 @@
 077500     PERFORM DE-LETE.                                             NC2204.2
 077600     PERFORM PRINT-DETAIL.                                        NC2204.2
 077700     GO TO DIV-TEST-F1-7.                                         NC2204.2
-077800*                                                                 NC2204.2
+077800*                                                                         
 077900 DIV-TEST-F4-6-1.                                                 NC2204.2
 078000     MOVE "QUOTIENT" TO RE-MARK.                                  NC2204.2
 078100     IF TABLE6-NUM (INDEX6) = 0                                   NC2204.2
@@ -791,7 +791,7 @@
 079300 DIV-WRITE-F4-6-1.                                                NC2204.2
 079400     PERFORM PRINT-DETAIL.                                        NC2204.2
 079500     ADD 1 TO REC-CT.                                             NC2204.2
-079600*                                                                 NC2204.2
+079600*                                                                         
 079700 DIV-TEST-F4-6-2.                                                 NC2204.2
 079800     MOVE "REMAINDER" TO RE-MARK.                                 NC2204.2
 079900     IF TABLE6-NUM (INDEX6 + 1) = 82                              NC2204.2
@@ -808,7 +808,7 @@
 081000     MOVE 82 TO CORRECT-18V0.                                     NC2204.2
 081100 DIV-WRITE-F4-6-2.                                                NC2204.2
 081200     PERFORM PRINT-DETAIL.                                        NC2204.2
-081300*                                                                 NC2204.2
+081300*                                                                         
 081400 DIV-INIT-F1-7.                                                   NC2204.2
 081500     MOVE "DIV-TEST-F1-7" TO PAR-NAME.                            NC2204.2
 081600     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -834,7 +834,7 @@
 083600     MOVE 2 TO CORRECT-18V0.                                      NC2204.2
 083700 DIV-WRITE-F1-7.                                                  NC2204.2
 083800     PERFORM PRINT-DETAIL.                                        NC2204.2
-083900*                                                                 NC2204.2
+083900*                                                                         
 084000 DIV-INIT-F1-8.                                                   NC2204.2
 084100     MOVE "DIV-TEST-F1-8" TO PAR-NAME.                            NC2204.2
 084200     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -860,7 +860,7 @@
 086200     MOVE 4 TO CORRECT-18V0.                                      NC2204.2
 086300 DIV-WRITE-F1-8.                                                  NC2204.2
 086400     PERFORM PRINT-DETAIL.                                        NC2204.2
-086500*                                                                 NC2204.2
+086500*                                                                         
 086600 DIV-INIT-F5-9.                                                   NC2204.2
 086700     MOVE "DIV-TEST-F5-9" TO PAR-NAME.                            NC2204.2
 086800     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -887,7 +887,7 @@
 088900     MOVE 1 TO CORRECT-18V0.                                      NC2204.2
 089000 DIV-WRITE-F5-9.                                                  NC2204.2
 089100     PERFORM PRINT-DETAIL.                                        NC2204.2
-089200*                                                                 NC2204.2
+089200*                                                                         
 089300 DIV-INIT-F5-10.                                                  NC2204.2
 089400     MOVE "DIV-TEST-F5-10" TO PAR-NAME.                           NC2204.2
 089500     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -914,7 +914,7 @@
 091600     MOVE 4 TO CORRECT-18V0.                                      NC2204.2
 091700 DIV-WRITE-F5-10.                                                 NC2204.2
 091800     PERFORM PRINT-DETAIL.                                        NC2204.2
-091900*                                                                 NC2204.2
+091900*                                                                         
 092000 PFM-INIT-F3-1.                                                   NC2204.2
 092100     MOVE "PFM-TEST-F3-1" TO PAR-NAME.                            NC2204.2
 092200     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -940,7 +940,7 @@
 094200     MOVE 4 TO CORRECT-18V0.                                      NC2204.2
 094300 PFM-WRITE-F3-1.                                                  NC2204.2
 094400     PERFORM PRINT-DETAIL.                                        NC2204.2
-094500*                                                                 NC2204.2
+094500*                                                                         
 094600 PFM-INIT-F3-2.                                                   NC2204.2
 094700     MOVE "PFM-TEST-F3-2" TO PAR-NAME.                            NC2204.2
 094800     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -966,7 +966,7 @@
 096800     MOVE 5 TO CORRECT-18V0.                                      NC2204.2
 096900 PFM-WRITE-F3-2.                                                  NC2204.2
 097000     PERFORM PRINT-DETAIL.                                        NC2204.2
-097100*                                                                 NC2204.2
+097100*                                                                         
 097200 PFM-INIT-F4-3.                                                   NC2204.2
 097300     MOVE "PFM-TEST-F4-3" TO PAR-NAME.                            NC2204.2
 097400     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -994,7 +994,7 @@
 099600     MOVE 8 TO CORRECT-18V0.                                      NC2204.2
 099700 PFM-WRITE-F4-3.                                                  NC2204.2
 099800     PERFORM PRINT-DETAIL.                                        NC2204.2
-099900*                                                                 NC2204.2
+099900*                                                                         
 100000 PFM-INIT-F4-4.                                                   NC2204.2
 100100     MOVE "PFM-TEST-F4-4" TO PAR-NAME.                            NC2204.2
 100200     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC2204.2
@@ -1023,13 +1023,13 @@
 102500 PFM-WRITE-F4-4.                                                  NC2204.2
 102600     PERFORM PRINT-DETAIL.                                        NC2204.2
 102700     GO TO CCVS-999999.                                           NC2204.2
-102800*                                                                 NC2204.2
+102800*                                                                         
 102900 PARAGRAPH-A.                                                     NC2204.2
 103000     ADD 1 TO TABLE7-NUM (INDEX7).                                NC2204.2
-103100*                                                                 NC2204.2
+103100*                                                                         
 103200 PARAGRAPH-B.                                                     NC2204.2
 103300     MOVE NUM-9 TO TABLE7-NUM (INDEX7).                           NC2204.2
-103400*                                                                 NC2204.2
+103400*                                                                         
 103500 CCVS-EXIT SECTION.                                               NC2204.2
 103600 CCVS-999999.                                                     NC2204.2
 103700     GO TO CLOSE-FILES.                                           NC2204.2

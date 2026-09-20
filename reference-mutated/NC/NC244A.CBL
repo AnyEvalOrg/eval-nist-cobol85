@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2444.2
 000200 PROGRAM-ID.                                                      NC2444.2
 000300     NC244A.                                                      NC2444.2
-000400****************************************************************  NC2444.2
-000500*                                                              *  NC2444.2
-000600*    VALIDATION FOR:-                                          *  NC2444.2
-000700*                                                              *  NC2444.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2444.2
-000900*                                                              *  NC2444.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2444.2
-001100*                                                              *  NC2444.2
-001200****************************************************************  NC2444.2
-001300*                                                              *  NC2444.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2444.2
-001500*                                                              *  NC2444.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2444.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2444.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2444.2
-001900*                                                              *  NC2444.2
-002000****************************************************************  NC2444.2
-002100*                                                              *  NC2444.2
-002200*    PROGRAM NCC244A TESTS THE CONSTRUCTION  AND ACCESS OF A   *  NC2444.2
-002300*    TWO-DIMENSIONAL TABLE WHICH HAS MULTIPLE INDICES.         *  NC2444.2
-002400*    RELATIVE INDEXING AND FORMATS 1 AND 2 OF THE "SET"        *  NC2444.2
-002500*    STATEMENT ARE USED.                                       *  NC2444.2
-002600*                                                              *  NC2444.2
-002700****************************************************************  NC2444.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2444.2
 002900 CONFIGURATION SECTION.                                           NC2444.2
 003000 SOURCE-COMPUTER.                                                 NC2444.2
@@ -251,7 +251,7 @@
 025300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2444.2
 025400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2444.2
 025500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2444.2
-025600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2444.2
+025600*                                                                         
 025700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2444.2
 025800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2444.2
 025900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2444.2
@@ -348,14 +348,14 @@
 035000 BUILD-EXIT.                                                      NC2444.2
 035100     EXIT.                                                        NC2444.2
 035200 TABLE-CHECKING SECTION.                                          NC2444.2
-035300*                                                                 NC2444.2
+035300*                                                                         
 035400 IDX-INIT-F1-1.                                                   NC2444.2
 035500     MOVE "IDX-TEST-F1-1" TO PAR-NAME.                            NC2444.2
 035600     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2444.2
 035700     MOVE "RELATIVE INDEXING   " TO FEATURE.                      NC2444.2
 035800 IDX-TEST-F1-1.                                                   NC2444.2
 035900     SET IDX-4  IDX-14 TO SUB-COMP2.                              NC2444.2
-036000     IF ENTRY-2 (IDX-4 + 49, IDX-14 + 9) EQUAL TO "JP"            NC2444.2
+036000     IF ENTRY-2 (IDX-4 + 49, IDX-14 + 9) EQUAL TO "YJ"            NC2444.2
 036100         PERFORM PASS                                             NC2444.2
 036200         GO TO IDX-WRITE-F1-1                                     NC2444.2
 036300     ELSE                                                         NC2444.2
@@ -365,11 +365,11 @@
 036700     GO TO IDX-WRITE-F1-1.                                        NC2444.2
 036800 IDX-FAIL-F1-1.                                                   NC2444.2
 036900     MOVE ENTRY-2 (IDX-4 + 49, IDX-14 + 9) TO COMPUTED-A.         NC2444.2
-037000     MOVE "JP" TO CORRECT-A.                                      NC2444.2
+037000     MOVE "YJ" TO CORRECT-A.                                      NC2444.2
 037100     PERFORM FAIL.                                                NC2444.2
 037200 IDX-WRITE-F1-1.                                                  NC2444.2
 037300     PERFORM PRINT-DETAIL.                                        NC2444.2
-037400*                                                                 NC2444.2
+037400*                                                                         
 037500 IDX-INIT-F2-2.                                                   NC2444.2
 037600     MOVE "IDX-TEST-F2-2" TO PAR-NAME.                            NC2444.2
 037700     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2444.2
@@ -377,7 +377,7 @@
 037900 IDX-TEST-F2-2.                                                   NC2444.2
 038000     SET IDX-3 TO SUB-COMP3.                                      NC2444.2
 038100     SET IDX-3 DOWN BY SUB-7.                                     NC2444.2
-038200     IF ENTRY-1 (IDX-3) EQUAL TO 79                               NC2444.2
+038200     IF ENTRY-1 (IDX-3) EQUAL TO 89                               NC2444.2
 038300         PERFORM PASS                                             NC2444.2
 038400         GO TO IDX-WRITE-F2-2                                     NC2444.2
 038500     ELSE                                                         NC2444.2
@@ -387,11 +387,11 @@
 038900     GO TO IDX-WRITE-F2-2.                                        NC2444.2
 039000 IDX-FAIL-F2-2.                                                   NC2444.2
 039100     MOVE ENTRY-1 (IDX-3) TO COMPUTED-N.                          NC2444.2
-039200     MOVE 79 TO CORRECT-N.                                        NC2444.2
+039200     MOVE 89 TO CORRECT-N.                                        NC2444.2
 039300     PERFORM FAIL.                                                NC2444.2
 039400 IDX-WRITE-F2-2.                                                  NC2444.2
 039500     PERFORM PRINT-DETAIL.                                        NC2444.2
-039600*                                                                 NC2444.2
+039600*                                                                         
 039700 IDX-INIT-F2-3.                                                   NC2444.2
 039800     MOVE "IDX-TEST-F2-3" TO PAR-NAME.                            NC2444.2
 039900     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2444.2
@@ -399,7 +399,7 @@
 040100 IDX-TEST-F2-3.                                                   NC2444.2
 040200     SET IDX-2 TO SUB-COMP6.                                      NC2444.2
 040300     SET IDX-2 UP BY SUB-COMP1.                                   NC2444.2
-040400     IF ENTRY-1 (IDX-2) EQUAL TO 62                               NC2444.2
+040400     IF ENTRY-1 (IDX-2) EQUAL TO 32                               NC2444.2
 040500         PERFORM PASS                                             NC2444.2
 040600         GO TO IDX-WRITE-F2-3                                     NC2444.2
 040700     ELSE                                                         NC2444.2
@@ -409,11 +409,11 @@
 041100     GO TO IDX-WRITE-F2-3.                                        NC2444.2
 041200 IDX-FAIL-F2-3.                                                   NC2444.2
 041300     MOVE ENTRY-1 (IDX-2) TO COMPUTED-N.                          NC2444.2
-041400     MOVE 62 TO CORRECT-N.                                        NC2444.2
+041400     MOVE 32 TO CORRECT-N.                                        NC2444.2
 041500     PERFORM FAIL.                                                NC2444.2
 041600 IDX-WRITE-F2-3.                                                  NC2444.2
 041700     PERFORM PRINT-DETAIL.                                        NC2444.2
-041800*                                                                 NC2444.2
+041800*                                                                         
 041900 IDX-INIT-F2-4.                                                   NC2444.2
 042000     MOVE "IDX-TEST-F2-4" TO PAR-NAME.                            NC2444.2
 042100     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2444.2
@@ -442,7 +442,7 @@
 044400     MOVE "II" TO CORRECT-A.                                      NC2444.2
 044500 IDX-WRITE-F2-4.                                                  NC2444.2
 044600     PERFORM PRINT-DETAIL.                                        NC2444.2
-044700*                                                                 NC2444.2
+044700*                                                                         
 044800 IDX-INIT-F2-5.                                                   NC2444.2
 044900     MOVE "IDX-TEST-F2-5" TO PAR-NAME.                            NC2444.2
 045000     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2444.2
@@ -471,7 +471,7 @@
 047300     MOVE "IDX-TEST-F2-5" TO PAR-NAME.                            NC2444.2
 047400     MOVE  "PFM VARYING COMP ITEM" TO FEATURE.                    NC2444.2
 047500     PERFORM PRINT-DETAIL.                                        NC2444.2
-047600*    NOTE IF THIS TEST IS DELETED TEST-6 WILL ALSO BE DELETED.    NC2444.2
+047600*                                                                         
 047700     PERFORM DE-LETE.                                             NC2444.2
 047800     MOVE "IDX-TEST-F2-6" TO PAR-NAME.                            NC2444.2
 047900     PERFORM PRINT-DETAIL.                                        NC2444.2
@@ -482,7 +482,7 @@
 048400     PERFORM FAIL.                                                NC2444.2
 048500 IDX-WRITE-F2-5.                                                  NC2444.2
 048600     PERFORM PRINT-DETAIL.                                        NC2444.2
-048700*                                                                 NC2444.2
+048700*                                                                         
 048800 IDX-INIT-F2-6.                                                   NC2444.2
 048900     MOVE "IDX-TEST-F2-6" TO PAR-NAME.                            NC2444.2
 049000     MOVE "VI-126 6.22.2" TO ANSI-REFERENCE.                      NC2444.2

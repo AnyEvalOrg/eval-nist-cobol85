@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1094.2
 000300     IF109A.                                                      IF1094.2
 000400                                                                  IF1094.2
-000500***********************************************************       IF1094.2
-000600*                                                         *       IF1094.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1094.2
-000800* It contains tests for the Intrinsic Function            *       IF1094.2
-000900* DAY-OF-INTEGER.                                         *       IF1094.2
-001000*                                                         *       IF1094.2
-001100***********************************************************       IF1094.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1094.2
 001300 CONFIGURATION SECTION.                                           IF1094.2
 001400 SOURCE-COMPUTER.                                                 IF1094.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1094.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1094.2
 002700 WORKING-STORAGE SECTION.                                         IF1094.2
-002800***********************************************************       IF1094.2
-002900* Variables specific to the Intrinsic Function Test IF109A*       IF1094.2
-003000***********************************************************       IF1094.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)     VALUE 400.                IF1094.2
 003200 01  C                   PIC S9(10)     VALUE 365.                IF1094.2
 003300 01  D                   PIC S9(10)     VALUE 1.                  IF1094.2
@@ -36,9 +36,9 @@
 003600     02 IND OCCURS 5 TIMES PIC 9.                                 IF1094.2
 003700 01  TEMP                PIC S9(5)V9(5).                          IF1094.2
 003800 01  WS-DATE             PIC 9(7).                                IF1094.2
-003900*                                                                 IF1094.2
-004000**********************************************************        IF1094.2
-004100*                                                                 IF1094.2
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
 004200 01  TEST-RESULTS.                                                IF1094.2
 004300     02 FILLER                   PIC X      VALUE SPACE.          IF1094.2
 004400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1094.2
@@ -298,24 +298,24 @@
 029800 BAIL-OUT-EX. EXIT.                                               IF1094.2
 029900 CCVS1-EXIT.                                                      IF1094.2
 030000     EXIT.                                                        IF1094.2
-030100********************************************************          IF1094.2
-030200*                                                      *          IF1094.2
-030300*    Intrinsic Function Test  IF109A - DAY-OF-INTEGER  *          IF1094.2
-030400*                                                      *          IF1094.2
-030500********************************************************          IF1094.2
+030100*                                                                         
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
+030500*                                                                         
 030600 SECT-IF109A SECTION.                                             IF1094.2
 030700 F-DAYOFINT-INFO.                                                 IF1094.2
 030800     MOVE     "See ref. A-42 2.13" TO ANSI-REFERENCE.             IF1094.2
 030900     MOVE     "DAY-OF-INTEGER"     TO FEATURE.                    IF1094.2
-031000*****************TEST (a) ******************************          IF1094.2
+031000*                                                                         
 031100 F-DAYOFINT-01.                                                   IF1094.2
 031200     MOVE ZERO TO WS-DATE.                                        IF1094.2
 031300 F-DAYOFINT-TEST-01.                                              IF1094.2
 031400     COMPUTE WS-DATE = FUNCTION DAY-OF-INTEGER(1).                IF1094.2
-031500     IF WS-DATE = 1601021 THEN                                    IF1094.2
+031500     IF WS-DATE = 1601901 THEN                                    IF1094.2
 031600                        PERFORM PASS                              IF1094.2
 031700     ELSE                                                         IF1094.2
-031800                        MOVE  1601021  TO CORRECT-N               IF1094.2
+031800                        MOVE  1601901  TO CORRECT-N               IF1094.2
 031900                        MOVE WS-DATE TO COMPUTED-N                IF1094.2
 032000                        PERFORM FAIL.                             IF1094.2
 032100     GO TO F-DAYOFINT-WRITE-01.                                   IF1094.2
@@ -325,7 +325,7 @@
 032500 F-DAYOFINT-WRITE-01.                                             IF1094.2
 032600     MOVE "F-DAYOFINT-01" TO PAR-NAME.                            IF1094.2
 032700     PERFORM  PRINT-DETAIL.                                       IF1094.2
-032800*****************TEST (b) ******************************          IF1094.2
+032800*                                                                         
 032900 F-DAYOFINT-TEST-02.                                              IF1094.2
 033000     EVALUATE FUNCTION DAY-OF-INTEGER(A)                          IF1094.2
 033100     WHEN     1602035                                             IF1094.2
@@ -339,7 +339,7 @@
 033900 F-DAYOFINT-WRITE-02.                                             IF1094.2
 034000     MOVE "F-DAYOFINT-02" TO PAR-NAME.                            IF1094.2
 034100     PERFORM  PRINT-DETAIL.                                       IF1094.2
-034200*****************TEST (c) ******************************          IF1094.2
+034200*                                                                         
 034300 F-DAYOFINT-TEST-03.                                              IF1094.2
 034400     IF FUNCTION DAY-OF-INTEGER(IND(1)) = 1601004 THEN            IF1094.2
 034500                        PERFORM PASS                              IF1094.2
@@ -352,7 +352,7 @@
 035200 F-DAYOFINT-WRITE-03.                                             IF1094.2
 035300     MOVE "F-DAYOFINT-03" TO PAR-NAME.                            IF1094.2
 035400     PERFORM  PRINT-DETAIL.                                       IF1094.2
-035500*****************TEST (d) ******************************          IF1094.2
+035500*                                                                         
 035600 F-DAYOFINT-04.                                                   IF1094.2
 035700     MOVE ZERO TO WS-DATE.                                        IF1094.2
 035800 F-DAYOFINT-TEST-04.                                              IF1094.2
@@ -370,7 +370,7 @@
 037000 F-DAYOFINT-WRITE-04.                                             IF1094.2
 037100     MOVE "F-DAYOFINT-04" TO PAR-NAME.                            IF1094.2
 037200     PERFORM  PRINT-DETAIL.                                       IF1094.2
-037300*****************TEST (e) ******************************          IF1094.2
+037300*                                                                         
 037400 F-DAYOFINT-05.                                                   IF1094.2
 037500     MOVE ZERO TO WS-DATE.                                        IF1094.2
 037600 F-DAYOFINT-TEST-05.                                              IF1094.2
@@ -388,15 +388,15 @@
 038800 F-DAYOFINT-WRITE-05.                                             IF1094.2
 038900     MOVE "F-DAYOFINT-05" TO PAR-NAME.                            IF1094.2
 039000     PERFORM  PRINT-DETAIL.                                       IF1094.2
-039100*****************TEST (f) ******************************          IF1094.2
+039100*                                                                         
 039200 F-DAYOFINT-06.                                                   IF1094.2
 039300     MOVE ZERO TO WS-DATE.                                        IF1094.2
 039400 F-DAYOFINT-TEST-06.                                              IF1094.2
 039500     COMPUTE WS-DATE = FUNCTION DAY-OF-INTEGER(D) + 10.           IF1094.2
-039600     IF WS-DATE = 1606011 THEN                                    IF1094.2
+039600     IF WS-DATE = 5601011 THEN                                    IF1094.2
 039700                        PERFORM PASS                              IF1094.2
 039800     ELSE                                                         IF1094.2
-039900                        MOVE  1606011  TO CORRECT-N               IF1094.2
+039900                        MOVE  5601011  TO CORRECT-N               IF1094.2
 040000                        MOVE WS-DATE TO COMPUTED-N                IF1094.2
 040100                        PERFORM FAIL.                             IF1094.2
 040200     GO TO F-DAYOFINT-WRITE-06.                                   IF1094.2
@@ -406,16 +406,16 @@
 040600 F-DAYOFINT-WRITE-06.                                             IF1094.2
 040700     MOVE "F-DAYOFINT-06" TO PAR-NAME.                            IF1094.2
 040800     PERFORM  PRINT-DETAIL.                                       IF1094.2
-040900*****************TEST (g) ******************************          IF1094.2
+040900*                                                                         
 041000 F-DAYOFINT-07.                                                   IF1094.2
 041100     MOVE ZERO TO WS-DATE.                                        IF1094.2
 041200 F-DAYOFINT-TEST-07.                                              IF1094.2
 041300     COMPUTE WS-DATE = FUNCTION DAY-OF-INTEGER(D) +               IF1094.2
 041400                       FUNCTION DAY-OF-INTEGER(D).                IF1094.2
-041500     IF WS-DATE = 9202002 THEN                                    IF1094.2
+041500     IF WS-DATE = 3203002 THEN                                    IF1094.2
 041600                        PERFORM PASS                              IF1094.2
 041700     ELSE                                                         IF1094.2
-041800                        MOVE  9202002  TO CORRECT-N               IF1094.2
+041800                        MOVE  3203002  TO CORRECT-N               IF1094.2
 041900                        MOVE WS-DATE TO COMPUTED-N                IF1094.2
 042000                        PERFORM FAIL.                             IF1094.2
 042100     GO TO F-DAYOFINT-WRITE-07.                                   IF1094.2
@@ -425,7 +425,7 @@
 042500 F-DAYOFINT-WRITE-07.                                             IF1094.2
 042600     MOVE "F-DAYOFINT-07" TO PAR-NAME.                            IF1094.2
 042700     PERFORM  PRINT-DETAIL.                                       IF1094.2
-042800***************** SPECIAL TEST 1 ***********************          IF1094.2
+042800*                                                                         
 042900 F-DAYOFINT-08.                                                   IF1094.2
 043000     MOVE 1 TO ARG1.                                              IF1094.2
 043100     PERFORM F-DAYOFINT-TEST-08                                   IF1094.2
@@ -435,17 +435,17 @@
 043500     ELSE                                                         IF1094.2
 043600                            PERFORM FAIL.                         IF1094.2
 043700     GO TO F-DAYOFINT-WRITE-08.                                   IF1094.2
-043800*                                                                 IF1094.2
+043800*                                                                         
 043900 F-DAYOFINT-TEST-08.                                              IF1094.2
 044000     COMPUTE ARG1 = ARG1 + 1.                                     IF1094.2
-044100*                                                                 IF1094.2
+044100*                                                                         
 044200 F-DAYOFINT-DELETE-08.                                            IF1094.2
 044300     PERFORM  DE-LETE.                                            IF1094.2
 044400     GO TO    F-DAYOFINT-WRITE-08.                                IF1094.2
 044500 F-DAYOFINT-WRITE-08.                                             IF1094.2
 044600     MOVE "F-DAYOFINT-08" TO PAR-NAME.                            IF1094.2
 044700     PERFORM  PRINT-DETAIL.                                       IF1094.2
-044800*******************END OF TESTS**************************         IF1094.2
+044800*                                                                         
 044900 CCVS-EXIT SECTION.                                               IF1094.2
 045000 CCVS-999999.                                                     IF1094.2
 045100     GO TO CLOSE-FILES.                                           IF1094.2

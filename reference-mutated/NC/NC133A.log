@@ -17,7 +17,7 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INDEXING             FAIL* IDX-TEST-1                                                                                  
                                                                                                                         
                                      COMPUTED= 333                                                                      
-                                     CORRECT = 33L                                                                      
+                                     CORRECT = 335                                                                      
                                                                                                                         
  INDEXING             PASS  IDX-TEST-2                                                                                  
  INDEXING             PASS  IDX-TEST-3                                                                                  
@@ -31,16 +31,16 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET STATEMENT        PASS  IDX-TEST-11                                                                                 
  SET STATEMENT        PASS  IDX-TEST-12                                                                                 
  SET STATEMENT        PASS  IDX-TEST-13                                                                                 
- SET STATEMENT        FAIL* IDX-TEST-14                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-14                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-15                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-16                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-17                                                                                 
+ SET STATEMENT        FAIL* IDX-TEST-18                                                                                 
                                                                                                                         
-                                     COMPUTED= 4                                                                        
-                                     CORRECT = 3                                                                        
+                                     COMPUTED= 48                                                                       
+                                     CORRECT = 68                                                                       
                                                                                                                         
- SET STATEMENT        FAIL* IDX-TEST-15                                                                                 
-                                                                                                                        
-                                     COMPUTED= 2                                                                        
-                                     CORRECT = 9                                                                        
-                                                                                                                                                                                                                                                
+ SET STATEMENT        PASS  IDX-TEST-19                                                                                                                                                                                                         
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,13 +54,13 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- SET STATEMENT        PASS  IDX-TEST-16                                                                                 
- SET STATEMENT        PASS  IDX-TEST-17                                                                                 
- SET STATEMENT        PASS  IDX-TEST-18                                                                                 
- SET STATEMENT        PASS  IDX-TEST-19                                                                                 
  SET STATEMENT        PASS  IDX-TEST-20                                                                                 
  SET STATEMENT        PASS  IDX-TEST-21                                                                                 
- SET STATEMENT        PASS  IDX-TEST-22                                                                                 
+ SET STATEMENT        FAIL* IDX-TEST-22                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000000002.000000000                                                     
+                                     CORRECT =  000000005.000000000                                                     
+                                                                                                                        
  SET STATEMENT        PASS  IDX-TEST-23                                                                                 
  SET STATEMENT        PASS  IDX-TEST-24                                                                                 
  ***********************************************************************************************************************

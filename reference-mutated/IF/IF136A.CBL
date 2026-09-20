@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1364.2
 000300     IF136A.                                                      IF1364.2
 000400                                                                  IF1364.2
-000500***********************************************************       IF1364.2
-000600*                                                         *       IF1364.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1364.2
-000800* It contains tests for the Intrinsic Function SQRT.      *       IF1364.2
-000900*                                                         *       IF1364.2
-001000***********************************************************       IF1364.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1364.2
 001200 CONFIGURATION SECTION.                                           IF1364.2
 001300 SOURCE-COMPUTER.                                                 IF1364.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1364.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1364.2
 002600 WORKING-STORAGE SECTION.                                         IF1364.2
-002700***********************************************************       IF1364.2
-002800* Variables specific to the Intrinsic Function Test IF136A*       IF1364.2
-002900***********************************************************       IF1364.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(5)V9(5)      VALUE 0.00004.       IF1364.2
 003100 01  B                   PIC S9(5)V9(5)      VALUE 14000.105.     IF1364.2
 003200 01  C                   PIC S9(10)          VALUE 100000.        IF1364.2
@@ -41,9 +41,9 @@
 004100 01  WS-NUM              PIC S9(5)V9(7).                          IF1364.2
 004200 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1364.2
 004300 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1364.2
-004400*                                                                 IF1364.2
-004500**********************************************************        IF1364.2
-004600*                                                                 IF1364.2
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 01  TEST-RESULTS.                                                IF1364.2
 004800     02 FILLER                   PIC X      VALUE SPACE.          IF1364.2
 004900     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1364.2
@@ -337,16 +337,16 @@
 033700 BAIL-OUT-EX. EXIT.                                               IF1364.2
 033800 CCVS1-EXIT.                                                      IF1364.2
 033900     EXIT.                                                        IF1364.2
-034000********************************************************          IF1364.2
-034100*                                                      *          IF1364.2
-034200*    Intrinsic Function Tests         IF136A - SQRT    *          IF1364.2
-034300*                                                      *          IF1364.2
-034400********************************************************          IF1364.2
+034000*                                                                         
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
 034500 SECT-IF136A SECTION.                                             IF1364.2
 034600 F-SQRT-INFO.                                                     IF1364.2
 034700     MOVE     "See ref. A-69 2.40" TO ANSI-REFERENCE.             IF1364.2
 034800     MOVE     "SQRT Function" TO FEATURE.                         IF1364.2
-034900*****************TEST (a) - SIMPLE TEST*****************          IF1364.2
+034900*                                                                         
 035000 F-SQRT-01.                                                       IF1364.2
 035100     MOVE ZERO TO WS-NUM.                                         IF1364.2
 035200     MOVE  0.000000 TO MIN-RANGE.                                 IF1364.2
@@ -368,7 +368,7 @@
 036800 F-SQRT-WRITE-01.                                                 IF1364.2
 036900     MOVE "F-SQRT-01" TO PAR-NAME.                                IF1364.2
 037000     PERFORM  PRINT-DETAIL.                                       IF1364.2
-037100*****************TEST (b) - SIMPLE TEST*****************          IF1364.2
+037100*                                                                         
 037200 F-SQRT-02.                                                       IF1364.2
 037300     EVALUATE FUNCTION SQRT(1)                                    IF1364.2
 037400     WHEN 0.999980 THRU 1.00002                                   IF1364.2
@@ -382,7 +382,7 @@
 038200 F-SQRT-WRITE-02.                                                 IF1364.2
 038300     MOVE "F-SQRT-02" TO PAR-NAME.                                IF1364.2
 038400     PERFORM  PRINT-DETAIL.                                       IF1364.2
-038500*****************TEST (c) - SIMPLE TEST*****************          IF1364.2
+038500*                                                                         
 038600 F-SQRT-03.                                                       IF1364.2
 038700     MOVE  1.99996 TO MIN-RANGE.                                  IF1364.2
 038800     MOVE  2.00004 TO MAX-RANGE.                                  IF1364.2
@@ -399,7 +399,7 @@
 039900 F-SQRT-WRITE-03.                                                 IF1364.2
 040000     MOVE "F-SQRT-03" TO PAR-NAME.                                IF1364.2
 040100     PERFORM  PRINT-DETAIL.                                       IF1364.2
-040200*****************TEST (d) - SIMPLE TEST*****************          IF1364.2
+040200*                                                                         
 040300 F-SQRT-04.                                                       IF1364.2
 040400     MOVE ZERO TO WS-NUM.                                         IF1364.2
 040500     MOVE  0.031621 TO MIN-RANGE.                                 IF1364.2
@@ -421,7 +421,7 @@
 042100 F-SQRT-WRITE-04.                                                 IF1364.2
 042200     MOVE "F-SQRT-04" TO PAR-NAME.                                IF1364.2
 042300     PERFORM  PRINT-DETAIL.                                       IF1364.2
-042400*****************TEST (e) - SIMPLE TEST*****************          IF1364.2
+042400*                                                                         
 042500 F-SQRT-05.                                                       IF1364.2
 042600     MOVE ZERO TO WS-NUM.                                         IF1364.2
 042700     MOVE  0.999479 TO MIN-RANGE.                                 IF1364.2
@@ -443,7 +443,7 @@
 044300 F-SQRT-WRITE-05.                                                 IF1364.2
 044400     MOVE "F-SQRT-05" TO PAR-NAME.                                IF1364.2
 044500     PERFORM  PRINT-DETAIL.                                       IF1364.2
-044600*****************TEST (f) - SIMPLE TEST*****************          IF1364.2
+044600*                                                                         
 044700 F-SQRT-06.                                                       IF1364.2
 044800     MOVE ZERO TO WS-NUM.                                         IF1364.2
 044900     MOVE  2.00246 TO MIN-RANGE.                                  IF1364.2
@@ -465,7 +465,7 @@
 046500 F-SQRT-WRITE-06.                                                 IF1364.2
 046600     MOVE "F-SQRT-06" TO PAR-NAME.                                IF1364.2
 046700     PERFORM  PRINT-DETAIL.                                       IF1364.2
-046800*****************TEST (g) - SIMPLE TEST*****************          IF1364.2
+046800*                                                                         
 046900 F-SQRT-07.                                                       IF1364.2
 047000     MOVE ZERO TO WS-NUM.                                         IF1364.2
 047100     MOVE  177.224 TO MIN-RANGE.                                  IF1364.2
@@ -487,7 +487,7 @@
 048700 F-SQRT-WRITE-07.                                                 IF1364.2
 048800     MOVE "F-SQRT-07" TO PAR-NAME.                                IF1364.2
 048900     PERFORM  PRINT-DETAIL.                                       IF1364.2
-049000*****************TEST (h) - SIMPLE TEST*****************          IF1364.2
+049000*                                                                         
 049100 F-SQRT-08.                                                       IF1364.2
 049200     MOVE ZERO TO WS-NUM.                                         IF1364.2
 049300     MOVE  927.342 TO MIN-RANGE.                                  IF1364.2
@@ -509,7 +509,7 @@
 050900 F-SQRT-WRITE-08.                                                 IF1364.2
 051000     MOVE "F-SQRT-08" TO PAR-NAME.                                IF1364.2
 051100     PERFORM  PRINT-DETAIL.                                       IF1364.2
-051200*****************TEST (i) - SIMPLE TEST*****************          IF1364.2
+051200*                                                                         
 051300 F-SQRT-09.                                                       IF1364.2
 051400     MOVE ZERO TO WS-NUM.                                         IF1364.2
 051500     MOVE  0.0094866 TO MIN-RANGE.                                IF1364.2
@@ -531,7 +531,7 @@
 053100 F-SQRT-WRITE-09.                                                 IF1364.2
 053200     MOVE "F-SQRT-09" TO PAR-NAME.                                IF1364.2
 053300     PERFORM  PRINT-DETAIL.                                       IF1364.2
-053400*****************TEST (j) - SIMPLE TEST*****************          IF1364.2
+053400*                                                                         
 053500 F-SQRT-10.                                                       IF1364.2
 053600     MOVE ZERO TO WS-NUM.                                         IF1364.2
 053700     MOVE  118.320 TO MIN-RANGE.                                  IF1364.2
@@ -553,7 +553,7 @@
 055300 F-SQRT-WRITE-10.                                                 IF1364.2
 055400     MOVE "F-SQRT-10" TO PAR-NAME.                                IF1364.2
 055500     PERFORM  PRINT-DETAIL.                                       IF1364.2
-055600*****************TEST (k) - SIMPLE TEST*****************          IF1364.2
+055600*                                                                         
 055700 F-SQRT-11.                                                       IF1364.2
 055800     MOVE ZERO TO WS-NUM.                                         IF1364.2
 055900     MOVE  316.222 TO MIN-RANGE.                                  IF1364.2
@@ -575,7 +575,7 @@
 057500 F-SQRT-WRITE-11.                                                 IF1364.2
 057600     MOVE "F-SQRT-11" TO PAR-NAME.                                IF1364.2
 057700     PERFORM  PRINT-DETAIL.                                       IF1364.2
-057800*****************TEST (l) - SIMPLE TEST*****************          IF1364.2
+057800*                                                                         
 057900 F-SQRT-12.                                                       IF1364.2
 058000     MOVE ZERO TO WS-NUM.                                         IF1364.2
 058100     MOVE  0.0063244 TO MIN-RANGE.                                IF1364.2
@@ -597,7 +597,7 @@
 059700 F-SQRT-WRITE-12.                                                 IF1364.2
 059800     MOVE "F-SQRT-12" TO PAR-NAME.                                IF1364.2
 059900     PERFORM  PRINT-DETAIL.                                       IF1364.2
-060000*****************TEST (m) - SIMPLE TEST*****************          IF1364.2
+060000*                                                                         
 060100 F-SQRT-13.                                                       IF1364.2
 060200     MOVE ZERO TO WS-NUM.                                         IF1364.2
 060300     MOVE  1.99996 TO MIN-RANGE.                                  IF1364.2
@@ -619,7 +619,7 @@
 061900 F-SQRT-WRITE-13.                                                 IF1364.2
 062000     MOVE "F-SQRT-13" TO PAR-NAME.                                IF1364.2
 062100     PERFORM  PRINT-DETAIL.                                       IF1364.2
-062200*****************TEST (n) - SIMPLE TEST*****************          IF1364.2
+062200*                                                                         
 062300 F-SQRT-14.                                                       IF1364.2
 062400     MOVE ZERO TO WS-NUM.                                         IF1364.2
 062500     MOVE  2.23601 TO MIN-RANGE.                                  IF1364.2
@@ -641,7 +641,7 @@
 064100 F-SQRT-WRITE-14.                                                 IF1364.2
 064200     MOVE "F-SQRT-14" TO PAR-NAME.                                IF1364.2
 064300     PERFORM  PRINT-DETAIL.                                       IF1364.2
-064400*****************TEST (a) - COMPLEX TEST****************          IF1364.2
+064400*                                                                         
 064500 F-SQRT-15.                                                       IF1364.2
 064600     MOVE ZERO TO WS-NUM.                                         IF1364.2
 064700     MOVE  0.316214  TO MIN-RANGE.                                IF1364.2
@@ -663,7 +663,7 @@
 066300 F-SQRT-WRITE-15.                                                 IF1364.2
 066400     MOVE "F-SQRT-15" TO PAR-NAME.                                IF1364.2
 066500     PERFORM  PRINT-DETAIL.                                       IF1364.2
-066600*****************TEST (b) - COMPLEX TEST****************          IF1364.2
+066600*                                                                         
 066700 F-SQRT-16.                                                       IF1364.2
 066800     MOVE ZERO TO WS-NUM.                                         IF1364.2
 066900     MOVE  1.95172  TO MIN-RANGE.                                 IF1364.2
@@ -685,7 +685,7 @@
 068500 F-SQRT-WRITE-16.                                                 IF1364.2
 068600     MOVE "F-SQRT-16" TO PAR-NAME.                                IF1364.2
 068700     PERFORM  PRINT-DETAIL.                                       IF1364.2
-068800*****************TEST (c) - COMPLEX TEST****************          IF1364.2
+068800*                                                                         
 068900 F-SQRT-17.                                                       IF1364.2
 069000     MOVE ZERO TO WS-NUM.                                         IF1364.2
 069100     MOVE  17.7475 TO MIN-RANGE.                                  IF1364.2
@@ -707,7 +707,7 @@
 070700 F-SQRT-WRITE-17.                                                 IF1364.2
 070800     MOVE "F-SQRT-17" TO PAR-NAME.                                IF1364.2
 070900     PERFORM  PRINT-DETAIL.                                       IF1364.2
-071000*****************TEST (d) - COMPLEX TEST****************          IF1364.2
+071000*                                                                         
 071100 F-SQRT-18.                                                       IF1364.2
 071200     MOVE ZERO TO WS-NUM.                                         IF1364.2
 071300     MOVE  1.13384 TO MIN-RANGE.                                  IF1364.2
@@ -729,7 +729,7 @@
 072900 F-SQRT-WRITE-18.                                                 IF1364.2
 073000     MOVE "F-SQRT-18" TO PAR-NAME.                                IF1364.2
 073100     PERFORM  PRINT-DETAIL.                                       IF1364.2
-073200*****************TEST (e) - COMPLEX TEST****************          IF1364.2
+073200*                                                                         
 073300 F-SQRT-19.                                                       IF1364.2
 073400     MOVE ZERO TO WS-NUM.                                         IF1364.2
 073500     MOVE  3.60541   TO MIN-RANGE.                                IF1364.2
@@ -751,7 +751,7 @@
 075100 F-SQRT-WRITE-19.                                                 IF1364.2
 075200     MOVE "F-SQRT-19" TO PAR-NAME.                                IF1364.2
 075300     PERFORM  PRINT-DETAIL.                                       IF1364.2
-075400*****************TEST (f) - COMPLEX TEST****************          IF1364.2
+075400*                                                                         
 075500 F-SQRT-20.                                                       IF1364.2
 075600     MOVE ZERO TO WS-NUM.                                         IF1364.2
 075700     MOVE  11.9517 TO MIN-RANGE.                                  IF1364.2
@@ -773,7 +773,7 @@
 077300 F-SQRT-WRITE-20.                                                 IF1364.2
 077400     MOVE "F-SQRT-20" TO PAR-NAME.                                IF1364.2
 077500     PERFORM  PRINT-DETAIL.                                       IF1364.2
-077600*****************TEST (g) - COMPLEX TEST****************          IF1364.2
+077600*                                                                         
 077700 F-SQRT-21.                                                       IF1364.2
 077800     MOVE ZERO TO WS-NUM.                                         IF1364.2
 077900     MOVE  1.73198 TO MIN-RANGE.                                  IF1364.2
@@ -795,7 +795,7 @@
 079500 F-SQRT-WRITE-21.                                                 IF1364.2
 079600     MOVE "F-SQRT-21" TO PAR-NAME.                                IF1364.2
 079700     PERFORM  PRINT-DETAIL.                                       IF1364.2
-079800*****************TEST (h) - COMPLEX TEST****************          IF1364.2
+079800*                                                                         
 079900 F-SQRT-22.                                                       IF1364.2
 080000     MOVE ZERO TO WS-NUM.                                         IF1364.2
 080100     MOVE  4.01232 TO MIN-RANGE.                                  IF1364.2
@@ -817,7 +817,7 @@
 081700 F-SQRT-WRITE-22.                                                 IF1364.2
 081800     MOVE "F-SQRT-22" TO PAR-NAME.                                IF1364.2
 081900     PERFORM  PRINT-DETAIL.                                       IF1364.2
-082000*****************TEST (i) - COMPLEX TEST****************          IF1364.2
+082000*                                                                         
 082100 F-SQRT-23.                                                       IF1364.2
 082200     MOVE ZERO TO WS-NUM.                                         IF1364.2
 082300     MOVE 1.56502 TO MIN-RANGE.                                   IF1364.2
@@ -839,7 +839,7 @@
 083900 F-SQRT-WRITE-23.                                                 IF1364.2
 084000     MOVE "F-SQRT-23" TO PAR-NAME.                                IF1364.2
 084100     PERFORM  PRINT-DETAIL.                                       IF1364.2
-084200*****************TEST (j) - COMPLEX TEST****************          IF1364.2
+084200*                                                                         
 084300 F-SQRT-24.                                                       IF1364.2
 084400     MOVE ZERO TO WS-NUM.                                         IF1364.2
 084500     MOVE 4.87309 TO MIN-RANGE.                                   IF1364.2
@@ -862,7 +862,7 @@
 086200 F-SQRT-WRITE-24.                                                 IF1364.2
 086300     MOVE "F-SQRT-24" TO PAR-NAME.                                IF1364.2
 086400     PERFORM  PRINT-DETAIL.                                       IF1364.2
-086500*****************TEST (k) - COMPLEX TEST****************          IF1364.2
+086500*                                                                         
 086600 F-SQRT-25.                                                       IF1364.2
 086700     MOVE ZERO TO WS-NUM.                                         IF1364.2
 086800     MOVE 9.99960 TO MIN-RANGE.                                   IF1364.2
@@ -884,7 +884,7 @@
 088400 F-SQRT-WRITE-25.                                                 IF1364.2
 088500     MOVE "F-SQRT-25" TO PAR-NAME.                                IF1364.2
 088600     PERFORM  PRINT-DETAIL.                                       IF1364.2
-088700*****************SPECIAL PERFORM TEST**********************       IF1364.2
+088700*                                                                         
 088800 F-SQRT-26.                                                       IF1364.2
 088900     PERFORM F-SQRT-TEST-26                                       IF1364.2
 089000       UNTIL FUNCTION SQRT(ARG1) < 2.0.                           IF1364.2
@@ -898,7 +898,7 @@
 089800 F-SQRT-WRITE-26.                                                 IF1364.2
 089900     MOVE "F-SQRT-26" TO PAR-NAME.                                IF1364.2
 090000     PERFORM  PRINT-DETAIL.                                       IF1364.2
-090100********************END OF TESTS***************                   IF1364.2
+090100*                                                                         
 090200 CCVS-EXIT SECTION.                                               IF1364.2
 090300 CCVS-999999.                                                     IF1364.2
 090400     GO TO CLOSE-FILES.                                           IF1364.2

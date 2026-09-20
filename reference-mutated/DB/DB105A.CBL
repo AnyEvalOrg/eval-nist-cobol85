@@ -19,62 +19,62 @@
 001900     "4.2 ".                                                      DB1054.2
 002000 SECURITY.                                                        DB1054.2
 002100     NONE.                                                        DB1054.2
-002200*                                                                 DB1054.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB1054.2
-002400*                                                                 DB1054.2
-002500*                       PROGRAM ABSTRACT                          DB1054.2
-002600*                                                                 DB1054.2
-002700*    DB105A TESTS THE CAPABILITY OF THE DEBUG MODULE TO MONITOR   DB1054.2
-002800*    ALL PROCEDURES WITH A SINGLE DEBUGGING DECLARATIVE.  THIS    DB1054.2
-002900*    PROGRAM IS TO BE COMPILED AND EXECUTED WITH BOTH COMPILE     DB1054.2
-003000*    AND OBJECT TIME DEBUGGING SWITCHES ON.  THE DEBUGGING        DB1054.2
-003100*    PROCEDURE SHOULD BE INCLUDED IN THE COMPILATION AND          DB1054.2
-003200*    GENERATE CODE.  DURING EXECUTION, EACH PROCEDURE SHOULD      DB1054.2
-003300*    TRIGGER THE DEBUGGING PROCEDURE WHICH SHOULD STACK THE       DB1054.2
-003400*    NAME OF THE PROCEDURE CALLING IT.  PRIOR TO BEING STACKED,   DB1054.2
-003500*    EACH NAME IS POTENTIALLY ADJUSTED BY MODIFYING A FIXED-      DB1054.2
-003600*    LOCATION NUMERIC SUBFIELD IN THE NAME.  THE CONSEQUENCE IS   DB1054.2
-003700*    THAT IF THE PROGRAM EXECUTES PROPERLY, THE NAMES THAT ARE    DB1054.2
-003800*    STACKED WILL BE UNIQUE AND IN AN INCREMENTING SEQUENCE IN    DB1054.2
-003900*    THE NUMERIC SUBFIELD.  NEAR THE END OF THE PROGRAM, THE      DB1054.2
-004000*    STACKING FUNCTION IS DISABLED AND THE NAME STACK IS COMPARED DB1054.2
-004100*    TO A STATIC TABLE CONTAINING PROCEDURE-NAMES IN THE ORDER    DB1054.2
-004200*    IN WHICH THE PROCEDURES SHOULD HAVE STACKED.                 DB1054.2
-004300*                                                                 DB1054.2
-004400*   DB105A"S REPORT DIFFERS SLIGHTLY FROM THE NOMINAL CCVS FORMAT.DB1054.2
-004500*    IF EXECUTION IS PERFECT, THE REPORT WILL CONSIST OF 227      DB1054.2
-004600*    LINES SHOWING                                                DB1054.2
-004700*                                                                 DB1054.2
-004800*        (A)  PROGRAM PROCEDURE NAME, AS IT APPEARS IN THE        DB1054.2
-004900*             PROGRAM.                                            DB1054.2
-005000*        (B)  ADJUSTED PROCEDURE NAME, AFTER ITS NUMERIC SUBFIELD DB1054.2
-005100*             HAS BEEN ADJUSTED.                                  DB1054.2
-005200*        (C)  ADJUSTED DEBUG-NAME, THAT WAS STACKED BY THE        DB1054.2
-005300*             DEBUGGING PROCEDURE.                                DB1054.2
-005400*                                                                 DB1054.2
-005500*    NOMINALLY, THE NUMERIC SUBFIELDS OF THE PROCEDURE NAMES      DB1054.2
-005600*    SHOULD APPEAR IN ASCENDING SEQUENCE.  ANY DEVIATIONS IN THE  DB1054.2
-005700*    STACKING SEQUENCE FROM THE EXPECTED SEQUENCE WILL CAUSE      DB1054.2
-005800*    ADDITIONAL REPORT LINES TO BE GENERATED WITH ONE OR MORE     DB1054.2
-005900*    COLUMNS BLANK.  IF NOTHING EVER APPEARS IN THE "ADJUSTED     DB1054.2
-006000*    DEBUG-NAME" COLUMN, IT MAY BE ASSUMED THAT THE DEBUGGING     DB1054.2
-006100*    PROCEDURE WAS NEVER EXECUTED.                                DB1054.2
-006200*                                                                 DB1054.2
-006300*    IT IS A FUNDAMENTAL ASSUMPTION OF DB105A THAT WHEN A SECTION DB1054.2
-006400*    IS ENTERED, THE DEBUGGING SECTION WILL BE CALLED TWICE, ONCE DB1054.2
-006500*    FOR THE SECTION NAME AND ONCE FOR THE PARAGRAPH NAME THAT    DB1054.2
-006600*    IMMEDIATELY FOLLOWS THE SECTION NAME.  ADDITIONALLY, DB105A  DB1054.2
-006700*    TRAPS ANY FAILURES IN PROGRAM FLOW CAUSED BY A FAILURE OF    DB1054.2
-006800*    VERBS FROM THE NUCLEUS MODULE.  THESE FAILURES ARE SUMMED    DB1054.2
-006900*    AND REPORTED AT THE BOTTOM OF DB105A"S REPORT.  IF ANY       DB1054.2
-007000*    PROCEDURE NAMES BEGINNING WITH "PROC-000" APPEAR IN THE      DB1054.2
-007100*    "ADJUSTED DEBUG-NAME" COLUMN OF THE REPORT, THESE RESULT     DB1054.2
-007200*    FROM EXECUTION OF PROCEDURES WHICH SHOULD NOT HAVE BEEN      DB1054.2
-007300*    EXECUTED IF THE PROGRAM HAD FOLLOWED THE PROPER CONTROL FLOW DB1054.2
-007400*    SEQUENCE.                                                    DB1054.2
-007500*                                                                 DB1054.2
-007600*                                                                 DB1054.2
-007700*                                                                 DB1054.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
 007800 ENVIRONMENT DIVISION.                                            DB1054.2
 007900 CONFIGURATION SECTION.                                           DB1054.2
 008000 SOURCE-COMPUTER.                                                 DB1054.2
@@ -570,7 +570,7 @@
 057000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB1054.2
 057100      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB1054.2
 057200      ADD PASS-COUNTER TO ERROR-HOLD.                             DB1054.2
-057300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB1054.2
+057300*                                                                         
 057400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB1054.2
 057500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB1054.2
 057600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB1054.2
@@ -611,7 +611,7 @@
 061100 WRT-LN.                                                          DB1054.2
 061200     WRITE    DUMMY-RECORD AFTER ADVANCING 1 LINES.               DB1054.2
 061300     MOVE SPACE TO DUMMY-RECORD.                                  DB1054.2
-061400*                                                                 DB1054.2
+061400*                                                                         
 061500 CCVS1-EXIT.                                                      DB1054.2
 061600     EXIT.                                                        DB1054.2
 061700 INITIALIZE-PROC-NAME-STACK.                                      DB1054.2
@@ -714,7 +714,7 @@
 071400     MOVE 0 TO INCREMENT.                                         DB1054.2
 071500     GO TO    PROC-021-GO--PASS-4                                 DB1054.2
 071600              PROC-000-GO--NUC-FAIL-4 DEPENDING ON GO-TO-DEEP.    DB1054.2
-071700*    NOTE THAT PROC-021-GO--PASS-4 IS A SECTION-NAME.             DB1054.2
+071700*                                                                         
 071800     GO TO    PROC-000-GO--NUC-FAIL-4.                            DB1054.2
 071900 PROC-000-GO--DELETE-4.                                           DB1054.2
 072000     MOVE 0 TO INCREMENT.                                         DB1054.2
@@ -1238,7 +1238,7 @@
 123800     PERFORM WRITE-LINE.                                          DB1054.2
 123900     MOVE FLOW-FAILURE-2 TO DUMMY-RECORD.                         DB1054.2
 124000     PERFORM WRITE-LINE 2 TIMES.                                  DB1054.2
-124100*                                                                 DB1054.2
+124100*                                                                         
 124200     GO TO    CCVS-EXIT.                                          DB1054.2
 124300 NAME-LISTER SECTION.                                             DB1054.2
 124400 NAME-LISTER-1.                                                   DB1054.2
@@ -1372,8 +1372,8 @@
 137200     MOVE 0 TO INCREMENT.                                         DB1054.2
 137300     PERFORM  PROC-000-NUCLEUS-FAILURE.                           DB1054.2
 137400     GO TO    PROC-055-PFM-TEST-4.                                DB1054.2
-137500*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               DB1054.2
-137600*    FROM THE PREVIOUS ONE.                                       DB1054.2
+137500*                                                                         
+137600*                                                                         
 137700 PROC-056-PFM-E.                                                  DB1054.2
 137800     MOVE 0 TO INCREMENT.                                         DB1054.2
 137900     MOVE "CSW" TO PERFORM1.                                      DB1054.2
@@ -1392,8 +1392,8 @@
 139200     MOVE 0 TO INCREMENT.                                         DB1054.2
 139300     PERFORM  PROC-000-NUCLEUS-FAILURE.                           DB1054.2
 139400     GO TO    PROC-060-PFM-WRITE-4.                               DB1054.2
-139500*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               DB1054.2
-139600*    FROM THE PREVIOUS ONE.                                       DB1054.2
+139500*                                                                         
+139600*                                                                         
 139700 PROC-062-PFM-J.                                                  DB1054.2
 139800     MOVE 0 TO INCREMENT.                                         DB1054.2
 139900     MOVE "YES" TO PERFORM1.                                      DB1054.2
@@ -1403,8 +1403,8 @@
 140300     MOVE 0 TO INCREMENT.                                         DB1054.2
 140400     PERFORM  PROC-000-NUCLEUS-FAILURE.                           DB1054.2
 140500     GO TO    PROC-064-PFM-WRITE-5.                               DB1054.2
-140600*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               DB1054.2
-140700*    FROM THE PREVIOUS ONE.                                       DB1054.2
+140600*                                                                         
+140700*                                                                         
 140800 PROC-063-PFM-L.                                                  DB1054.2
 140900     MOVE 0 TO INCREMENT.                                         DB1054.2
 141000     MOVE     4 TO PERFORM2.                                      DB1054.2
@@ -1413,8 +1413,8 @@
 141300     MOVE 0 TO INCREMENT.                                         DB1054.2
 141400     PERFORM  PROC-000-NUCLEUS-FAILURE.                           DB1054.2
 141500     GO TO    PROC-064-PFM-WRITE-5.                               DB1054.2
-141600*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH               DB1054.2
-141700*    FROM THE PREVIOUS ONE.                                       DB1054.2
+141600*                                                                         
+141700*                                                                         
 141800 PROC-066-PFM-N        SECTION.                                   DB1054.2
 141900 PROC-067-PFM-O.                                                  DB1054.2
 142000     MOVE 0 TO INCREMENT.                                         DB1054.2
@@ -1427,8 +1427,8 @@
 142700     MOVE 0 TO INCREMENT.                                         DB1054.2
 142800     PERFORM  PROC-000-NUCLEUS-FAILURE.                           DB1054.2
 142900     GO TO    PROC-069-PFM-WRITE-6.                               DB1054.2
-143000*    NOTE CONTROL SHOULD NOT PASS TO THIS PARAGRAPH FROM THE      DB1054.2
-143100*        PREVIOUS ONE.                                            DB1054.2
+143000*                                                                         
+143100*                                                                         
 143200 PROC-000-PFM-S.                                                  DB1054.2
 143300     MOVE 0 TO INCREMENT.                                         DB1054.2
 143400     ADD      1 TO PERFORM5.                                      DB1054.2

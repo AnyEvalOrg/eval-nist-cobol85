@@ -1,47 +1,47 @@
 000100 IDENTIFICATION DIVISION.                                         NC2464.2
 000200 PROGRAM-ID.                                                      NC2464.2
 000300     NC246A.                                                      NC2464.2
-000400****************************************************************  NC2464.2
-000500*                                                              *  NC2464.2
-000600*    VALIDATION FOR:-                                          *  NC2464.2
-000700*                                                              *  NC2464.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2464.2
-000900*                                                              *  NC2464.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2464.2
-001100*                                                              *  NC2464.2
-001200****************************************************************  NC2464.2
-001300*                                                              *  NC2464.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2464.2
-001500*                                                              *  NC2464.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2464.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2464.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2464.2
-001900*                                                              *  NC2464.2
-002000****************************************************************  NC2464.2
-002100*                                                              *  NC2464.2
-002200*    PROGRAM NC246A TESTS THE USE OF QUALIFIED DATA NAMES AND  *  NC2464.2
-002300*    SUBSCRIPTS WHEN ACCESSING A SEVEN-DIMENSIONAL TABLE.      *  NC2464.2
-002400*    QUALIFIED CONDITION-NAMES AND RELATIVE INDEXING ARE ALSO  *  NC2464.2
-002500*    USED IN ACCESSING THREE-DIMENSIONAL TABLES.               *  NC2464.2
-002600*                                                              *  NC2464.2
-002700****************************************************************  NC2464.2
-002800*                                                              *  NC2464.2
-002900*    DATA-NAMES MAY BE QUALIFIED AND THE NUMBER OF QUALIFIERS*    NC2464.2
-003000*    PERMITTED MUST BE AT LEAST FIVE.  WHEN A SUBSCRIPT IS     *  NC2464.2
-003100*    REPRESENTED BY A DATA-NAME, THE DATA-NAME MAY BE QUALIFIED*  NC2464.2
-003200*    BUT NOT SUBSCRIPTED.                                      *  NC2464.2
-003300*                                                              *  NC2464.2
-003400****************************************************************  NC2464.2
-003500*                                                              *  NC2464.2
-003600*    STATEMENT DELETION INSTRUCTIONS                           *  NC2464.2
-003700*                                                              *  NC2464.2
-003800*    IF THE COMPILER REJECTS ANY OF THE TABLE REFERENCES IN  *    NC2464.2
-003900*    THIS ROUTINE, DELETE THAT LINE OF CODE BY PLACING AN * IN *  NC2464.2
-004000*    COLUMN 7.  LEAVE THE PERFORM STATEMENT.  THE TEST ELEMENT *  NC2464.2
-004100*    DELETED APPEARS AS A FAILURE ON THE OUTPUT REPORT AND THE *  NC2464.2
-004200*    COMPUTED RESULTS ARE SPACES.                              *  NC2464.2
-004300*                                                              *  NC2464.2
-004400****************************************************************  NC2464.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
 004500 ENVIRONMENT DIVISION.                                            NC2464.2
 004600 CONFIGURATION SECTION.                                           NC2464.2
 004700 SOURCE-COMPUTER.                                                 NC2464.2
@@ -484,7 +484,7 @@
 048600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2464.2
 048700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2464.2
 048800      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2464.2
-048900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2464.2
+048900*                                                                         
 049000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2464.2
 049100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2464.2
 049200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2464.2
@@ -552,27 +552,27 @@
 055400 CCVS1-EXIT.                                                      NC2464.2
 055500     EXIT.                                                        NC2464.2
 055600 SECT-NC246A-001 SECTION.                                         NC2464.2
-055700*                                                                 NC2464.2
+055700*                                                                         
 055800 TABLE-INIT.                                                      NC2464.2
 055900     MOVE "INIT-TABLE" TO PAR-NAME.                               NC2464.2
 056000     MOVE "STORE TABLE VALUES" TO FEATURE.                        NC2464.2
-056100*                                                                 NC2464.2
-056200*         THIS SECTION STORES THE LETTERS OF THE ALPHABET IN THE  NC2464.2
-056300*    THREE TABLES WHOSE ITEMS ARE REFERENCED IN THE QUALIFICATION NC2464.2
-056400*    TESTS IN THIS ROUTINE.  THE TABLE CONTENTS ARE AS FOLLOWS    NC2464.2
-056500*            GROUP-1-TABLE     A,B,...,O.                         NC2464.2
-056600*            GROUP-2-TABLE     L,K,J,...,B,A.                     NC2464.2
-056700*            GROUP-3-TABLE     A,B,...,O,P.                       NC2464.2
-056800*            GROUP-4-TABLE     A,B,...,O.                         NC2464.2
-056900*            GROUP-5-TABLE     P,O,N,...,B,A.                     NC2464.2
-057000*    THE TABLES ARE ALSO PRINTED ON THE OUTPUT REPORT.            NC2464.2
-057100*                                                                 NC2464.2
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
+056600*                                                                         
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
+057000*                                                                         
+057100*                                                                         
 057200     MOVE " ABCDEFGHIJKLMNO" TO GROUP-1-ENTRY.                    NC2464.2
 057300     MOVE " LKJIHGFEDCBA" TO GROUP-2-ENTRY.                       NC2464.2
 057400     MOVE "ABCDEFGHIJKLMNOP" TO GROUP-3-ENTRY.                    NC2464.2
 057500     MOVE "ABCDEFGHIJKLMNO" TO UNQUAL-TABLE-5.                    NC2464.2
 057600     MOVE "PONMLKJIHGFEDCBA" TO TABLE5-LEVEL-3.                   NC2464.2
-057700*                                                                 NC2464.2
+057700*                                                                         
 057800 TABLE-PRINT.                                                     NC2464.2
 057900     MOVE GROUP-1-TABLE TO RE-MARK.                               NC2464.2
 058000     MOVE "SEE REMARKS" TO COMPUTED-A.                            NC2464.2
@@ -599,7 +599,7 @@
 060100     MOVE "SEE REMARKS" TO COMPUTED-A.                            NC2464.2
 060200     MOVE 5 TO REC-CT.                                            NC2464.2
 060300     PERFORM PRINT-DETAIL.                                        NC2464.2
-060400*                                                                 NC2464.2
+060400*                                                                         
 060500 QUAL-TEST-01.                                                    NC2464.2
 060600     MOVE ZERO TO REC-CT.                                         NC2464.2
 060700     MOVE SPACE TO TEMP-VALUE.                                    NC2464.2
@@ -607,38 +607,38 @@
 060900     MOVE "QUALIFIED TABLE ITEM" TO FEATURE.                      NC2464.2
 061000     MOVE "ONE DIMENSIONAL TABLE" TO RE-MARK.                     NC2464.2
 061100     MOVE "A" TO EXPECTED-VALUE.                                  NC2464.2
-061200*                                                                 NC2464.2
-061300*         THIS TEST CONTAINS QUALIFIED DATA NAMES IN MOVE         NC2464.2
-061400*    STATEMENTS.  THE DATA NAMES REFER TO SINGLE DIMENSIONAL      NC2464.2
-061500*    TABLE ITEMS.  THE SUBSCRIPTS IN THIS TEST ARE CONSTANTS,     NC2464.2
-061600*    UNQUALIFIED DATA NAMES AND INDEXES.  BOTH DIRECT AND RELATIVENC2464.2
-061700*    INDEXING ARE USED.                                           NC2464.2
-061800*                                                                 NC2464.2
+061200*                                                                         
+061300*                                                                         
+061400*                                                                         
+061500*                                                                         
+061600*                                                                         
+061700*                                                                         
+061800*                                                                         
 061900 QUAL-TEST-01-01.                                                 NC2464.2
 062000     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF TABLE-LEVEL-4            NC2464.2
 062100          OF TABLE-LEVEL-3 OF TABLE-LEVEL-2                       NC2464.2
 062200          OF GROUP-1-TABLE (1) TO TEMP-VALUE.                     NC2464.2
 062300     PERFORM SECT-TH220-0003.                                     NC2464.2
-062400*                                                                 NC2464.2
+062400*                                                                         
 062500 QUAL-TEST-01-02.                                                 NC2464.2
 062600     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF TABLE-LEVEL-4            NC2464.2
 062700          OF TABLE-LEVEL-3 OF TABLE-LEVEL-2                       NC2464.2
 062800          OF GROUP-1-TABLE (FIRST-SUB) TO TEMP-VALUE.             NC2464.2
 062900     PERFORM SECT-TH220-0003.                                     NC2464.2
-063000*                                                                 NC2464.2
+063000*                                                                         
 063100 QUAL-TEST-01-03.                                                 NC2464.2
 063200     SET IN1 TO 1.                                                NC2464.2
 063300     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF TABLE-LEVEL-4            NC2464.2
 063400          OF TABLE-LEVEL-3 OF TABLE-LEVEL-2                       NC2464.2
 063500          OF GROUP-1-TABLE (IN1) TO TEMP-VALUE.                   NC2464.2
 063600     PERFORM SECT-TH220-0003.                                     NC2464.2
-063700*                                                                 NC2464.2
+063700*                                                                         
 063800 QUAL-TEST-01-04.                                                 NC2464.2
 063900     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF TABLE-LEVEL-4            NC2464.2
 064000          OF TABLE-LEVEL-3 OF TABLE-LEVEL-2                       NC2464.2
 064100          OF GROUP-2-TABLE (12) TO TEMP-VALUE.                    NC2464.2
 064200     PERFORM SECT-TH220-0003.                                     NC2464.2
-064300*                                                                 NC2464.2
+064300*                                                                         
 064400 QUAL-TEST-01-05.                                                 NC2464.2
 064500     SET IN1 TO 1.                                                NC2464.2
 064600     MOVE "D" TO EXPECTED-VALUE.                                  NC2464.2
@@ -646,14 +646,14 @@
 064800          OF TABLE-LEVEL-3 OF TABLE-LEVEL-2                       NC2464.2
 064900          OF GROUP-1-TABLE (IN1 + 3) TO TEMP-VALUE.               NC2464.2
 065000     PERFORM SECT-TH220-0003.                                     NC2464.2
-065100*                                                                 NC2464.2
+065100*                                                                         
 065200 QUAL-TEST-01-06.                                                 NC2464.2
 065300     SET IN1 TO 6.                                                NC2464.2
 065400     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF TABLE-LEVEL-4            NC2464.2
 065500          OF TABLE-LEVEL-3 OF TABLE-LEVEL-2                       NC2464.2
 065600          OF GROUP-1-TABLE (IN1 - 2) TO TEMP-VALUE.               NC2464.2
 065700     PERFORM SECT-TH220-0003.                                     NC2464.2
-065800*                                                                 NC2464.2
+065800*                                                                         
 065900 QUAL-TEST-01-07.                                                 NC2464.2
 066000     MOVE 9 TO UNQUAL-SUB.                                        NC2464.2
 066100     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF TABLE-LEVEL-4            NC2464.2
@@ -661,22 +661,22 @@
 066300          OF GROUP-2-TABLE (UNQUAL-SUB) TO TEMP-VALUE.            NC2464.2
 066400     PERFORM SECT-TH220-0003.                                     NC2464.2
 066500     GO TO QUAL-TEST-02.                                          NC2464.2
-066600*                                                                 NC2464.2
+066600*                                                                         
 066700 QUAL-DELETE-001.                                                 NC2464.2
 066800     PERFORM DE-LETE.                                             NC2464.2
 066900     PERFORM PRINT-DETAIL.                                        NC2464.2
-067000*                                                                 NC2464.2
+067000*                                                                         
 067100 QUAL-TEST-02.                                                    NC2464.2
 067200     MOVE ZERO TO REC-CT.                                         NC2464.2
 067300     MOVE "QUAL-TEST-02" TO PAR-NAME.                             NC2464.2
 067400     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
-067500*                                                                 NC2464.2
-067600*         THIS TEST CONTAINS TWO QUALIFIED DATA NAMES IN IF       NC2464.2
-067700*    STATEMENTS.  THE DATA NAMES REFER TO SINGLE DIMENSIONAL      NC2464.2
-067800*    TABLE ITEMS.  THE SUBSCRIPTS IN THIS TEST ARE CONSTANTS,     NC2464.2
-067900*    UNQUALIFIED DATA NAMES AND INDEXES.  BOTH DIRECT AND RELATIVENC2464.2
-068000*    INDEXING ARE USED.                                           NC2464.2
-068100*                                                                 NC2464.2
+067500*                                                                         
+067600*                                                                         
+067700*                                                                         
+067800*                                                                         
+067900*                                                                         
+068000*                                                                         
+068100*                                                                         
 068200 QUAL-TEST-02-01.                                                 NC2464.2
 068300     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 068400     IF TABLE-ITEM IN TABLE-LEVEL-5 IN TABLE-LEVEL-4              NC2464.2
@@ -687,7 +687,7 @@
 068900        IN GROUP-2-TABLE (12)                                     NC2464.2
 069000              MOVE "TRUE" TO TEMP-VALUE.                          NC2464.2
 069100     PERFORM SECT-TH220-0003.                                     NC2464.2
-069200*                                                                 NC2464.2
+069200*                                                                         
 069300 QUAL-TEST-02-02.                                                 NC2464.2
 069400     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 069500     IF TABLE-ITEM IN TABLE-LEVEL-5 IN TABLE-LEVEL-4              NC2464.2
@@ -698,7 +698,7 @@
 070000        IN GROUP-2-TABLE (FIRST-SUB)                              NC2464.2
 070100              MOVE "TRUE" TO TEMP-VALUE.                          NC2464.2
 070200     PERFORM SECT-TH220-0003.                                     NC2464.2
-070300*                                                                 NC2464.2
+070300*                                                                         
 070400 QUAL-TEST-02-03.                                                 NC2464.2
 070500     SET IN1 TO 4.                                                NC2464.2
 070600     SET IN2 TO 9.                                                NC2464.2
@@ -711,7 +711,7 @@
 071300        IN GROUP-2-TABLE (IN2)                                    NC2464.2
 071400              MOVE "TRUE" TO TEMP-VALUE.                          NC2464.2
 071500     PERFORM SECT-TH220-0003.                                     NC2464.2
-071600*                                                                 NC2464.2
+071600*                                                                         
 071700 QUAL-TEST-02-04.                                                 NC2464.2
 071800     SET IN1 IN2 TO 5.                                            NC2464.2
 071900     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
@@ -723,7 +723,7 @@
 072500        IN GROUP-2-TABLE (IN2 + 4)                                NC2464.2
 072600              MOVE "TRUE" TO TEMP-VALUE.                          NC2464.2
 072700     PERFORM SECT-TH220-0003.                                     NC2464.2
-072800*                                                                 NC2464.2
+072800*                                                                         
 072900 QUAL-TEST-02-05.                                                 NC2464.2
 073000     SET IN1 TO 5.                                                NC2464.2
 073100     MOVE 8 TO UNQUAL-SUB.                                        NC2464.2
@@ -737,45 +737,45 @@
 073900              MOVE "TRUE" TO TEMP-VALUE.                          NC2464.2
 074000     PERFORM SECT-TH220-0003.                                     NC2464.2
 074100     GO TO QUAL-INIT-03.                                          NC2464.2
-074200*                                                                 NC2464.2
+074200*                                                                         
 074300 QUAL-DELETE-002.                                                 NC2464.2
 074400     PERFORM DE-LETE.                                             NC2464.2
 074500     PERFORM PRINT-DETAIL.                                        NC2464.2
-074600*                                                                 NC2464.2
+074600*                                                                         
 074700 QUAL-INIT-03.                                                    NC2464.2
 074800     MOVE ZERO TO REC-CT.                                         NC2464.2
 074900     MOVE "QUAL-TEST-03" TO PAR-NAME.                             NC2464.2
 075000     MOVE "THREE DIMENSIONAL TABLE" TO RE-MARK.                   NC2464.2
 075100     MOVE SPACE TO TEMP-VALUE.                                    NC2464.2
 075200     MOVE "D" TO EXPECTED-VALUE.                                  NC2464.2
-075300*                                                                 NC2464.2
-075400*         THIS TEST CONTAINS QUALIFIED DATA NAMES IN MOVE         NC2464.2
-075500*     STATEMENTS.  THE DATA NAMES REFER TO THREE DIMENSIONAL      NC2464.2
-075600*    TABLE ITEMS.  THE SUBSCRIPTS IN THIS TEST ARE CONSTANTS,     NC2464.2
-075700*    UNQUALIFIED DATA NAMES AND INDEXES.  BOTH DIRECT AND RELATIVENC2464.2
-075800*    INDEXING ARE USED.                                           NC2464.2
-075900*                                                                 NC2464.2
-076000*                                                                 NC2464.2
+075300*                                                                         
+075400*                                                                         
+075500*                                                                         
+075600*                                                                         
+075700*                                                                         
+075800*                                                                         
+075900*                                                                         
+076000*                                                                         
 076100 QUAL-TEST-03-01.                                                 NC2464.2
 076200     MOVE TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4            NC2464.2
 076300          OF TABLE-LEVEL-3 IN TABLE-LEVEL-2                       NC2464.2
 076400          OF GROUP-3-TABLE (1, 1, 4) TO TEMP-VALUE.               NC2464.2
 076500     PERFORM SECT-TH220-0003.                                     NC2464.2
-076600*                                                                 NC2464.2
+076600*                                                                         
 076700 QUAL-TEST-03-02.                                                 NC2464.2
 076800     MOVE TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4            NC2464.2
 076900          OF TABLE-LEVEL-3 IN TABLE-LEVEL-2                       NC2464.2
 077000          OF GROUP-3-TABLE (FIRST-SUB, FIRST-SUB, FOURTH-SUB)     NC2464.2
 077100              TO TEMP-VALUE.                                      NC2464.2
 077200     PERFORM SECT-TH220-0003.                                     NC2464.2
-077300*                                                                 NC2464.2
+077300*                                                                         
 077400 QUAL-TEST-03-03.                                                 NC2464.2
 077500     SET IN5 TO 4.                                                NC2464.2
 077600     MOVE TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4            NC2464.2
 077700          OF TABLE-LEVEL-3 IN TABLE-LEVEL-2                       NC2464.2
 077800          OF GROUP-3-TABLE (1, 1, IN5) TO TEMP-VALUE.             NC2464.2
 077900     PERFORM SECT-TH220-0003.                                     NC2464.2
-078000*                                                                 NC2464.2
+078000*                                                                         
 078100 QUAL-TEST-03-04.                                                 NC2464.2
 078200     SET IN3, IN4 TO 1.                                           NC2464.2
 078300     SET IN5 TO 4.                                                NC2464.2
@@ -783,7 +783,7 @@
 078500          OF TABLE-LEVEL-3 IN TABLE-LEVEL-2                       NC2464.2
 078600          OF GROUP-3-TABLE (IN3, IN4, IN5) TO TEMP-VALUE.         NC2464.2
 078700     PERFORM SECT-TH220-0003.                                     NC2464.2
-078800*                                                                 NC2464.2
+078800*                                                                         
 078900 QUAL-TEST-03-05.                                                 NC2464.2
 079000     SET IN3, IN4 TO 2.                                           NC2464.2
 079100     SET IN5 TO 1.                                                NC2464.2
@@ -793,48 +793,48 @@
 079500              TO TEMP-VALUE.                                      NC2464.2
 079600     PERFORM SECT-TH220-0003.                                     NC2464.2
 079700     GO TO QUAL-INIT-04.                                          NC2464.2
-079800*                                                                 NC2464.2
+079800*                                                                         
 079900 QUAL-DELETE-003.                                                 NC2464.2
 080000     PERFORM DE-LETE.                                             NC2464.2
 080100     PERFORM PRINT-DETAIL.                                        NC2464.2
-080200*                                                                 NC2464.2
+080200*                                                                         
 080300 QUAL-INIT-04.                                                    NC2464.2
 080400     MOVE "QUAL-TEST-04" TO PAR-NAME.                             NC2464.2
 080500     MOVE ZERO TO REC-CT.                                         NC2464.2
 080600     MOVE "QUALIFIED SUBSCRIPT" TO FEATURE.                       NC2464.2
 080700     MOVE  "ONE DIMENSIONAL TABLE" TO RE-MARK.                    NC2464.2
 080800     MOVE SPACE TO TEMP-VALUE.                                    NC2464.2
-080900*                                                                 NC2464.2
-081000*         THIS TEST CONTAINS UNQUALIFIED DATA NAMES WITH          NC2464.2
-081100*    QUALIFIED SUBSCRIPTS IN MOVE STATEMENTS.  THE DATA NAMES     NC2464.2
-081200*    REFER TO SINGLE DIMENSIONAL TABLE ITEMS.                     NC2464.2
-081300*                                                                 NC2464.2
+080900*                                                                         
+081000*                                                                         
+081100*                                                                         
+081200*                                                                         
+081300*                                                                         
 081400     MOVE "E" TO EXPECTED-VALUE.                                  NC2464.2
-081500*                                                                 NC2464.2
+081500*                                                                         
 081600 QUAL-TEST-04-01.                                                 NC2464.2
 081700     MOVE UNQUAL-ITEM (SUB1 OF SUBSCRIPTS OF SUBSCRIPTS-PART1)    NC2464.2
 081800                   TO TEMP-VALUE.                                 NC2464.2
 081900     PERFORM SECT-TH220-0003.                                     NC2464.2
-082000*                                                                 NC2464.2
+082000*                                                                         
 082100 QUAL-TEST-04-02.                                                 NC2464.2
 082200     MOVE UNQUAL-ITEM (SUB1 OF SUBSCRIPTS OF SUB-PART2-LEVEL4)    NC2464.2
 082300                   TO TEMP-VALUE.                                 NC2464.2
 082400     PERFORM SECT-TH220-0003.                                     NC2464.2
-082500*                                                                 NC2464.2
+082500*                                                                         
 082600 QUAL-TEST-04-03.                                                 NC2464.2
 082700     MOVE UNQUAL-ITEM (SUB1 OF SUBSCRIPTS OF SUB-PART2-LEVEL4     NC2464.2
 082800             OF SUB-PART2-LEVEL3 IN SUB-PART2-LEVEL2              NC2464.2
 082900             IN SUBSCRIPTS-PART2)                                 NC2464.2
 083000                   TO TEMP-VALUE.                                 NC2464.2
 083100     PERFORM SECT-TH220-0003.                                     NC2464.2
-083200*                                                                 NC2464.2
+083200*                                                                         
 083300 QUAL-TEST-04-04.                                                 NC2464.2
 083400     MOVE "C" TO EXPECTED-VALUE.                                  NC2464.2
 083500     MOVE UNQUAL-ITEM (SUB1 OF SOME-MORE-SUBSCRIPTS OF            NC2464.2
 083600             SUBSCRIPTS-PART1)                                    NC2464.2
 083700                   TO TEMP-VALUE.                                 NC2464.2
 083800     PERFORM SECT-TH220-0003.                                     NC2464.2
-083900*                                                                 NC2464.2
+083900*                                                                         
 084000 QUAL-TEST-04-05.                                                 NC2464.2
 084100     MOVE "G" TO EXPECTED-VALUE.                                  NC2464.2
 084200     MOVE UNQUAL-ITEM (SUB2 OF SOME-MORE-SUBSCRIPTS OF            NC2464.2
@@ -842,30 +842,30 @@
 084400                   TO TEMP-VALUE.                                 NC2464.2
 084500     PERFORM SECT-TH220-0003.                                     NC2464.2
 084600     GO TO QUAL-INIT-05.                                          NC2464.2
-084700*                                                                 NC2464.2
+084700*                                                                         
 084800 QUAL-DELETE-004.                                                 NC2464.2
 084900     PERFORM DE-LETE.                                             NC2464.2
 085000     PERFORM PRINT-DETAIL.                                        NC2464.2
-085100*                                                                 NC2464.2
+085100*                                                                         
 085200 QUAL-INIT-05.                                                    NC2464.2
 085300     MOVE "QUAL-TEST-05" TO PAR-NAME.                             NC2464.2
 085400     MOVE ZERO TO REC-CT.                                         NC2464.2
 085500     MOVE "THREE DIMENSIONAL TABLE" TO RE-MARK.                   NC2464.2
-085600*                                                                 NC2464.2
-085700*         THIS TEST CONTAINS UNQUALIFIED DATA NAMES WITH          NC2464.2
-085800*    QUALIFIED SUBSCRIPTS IN MOVE STATEMENTS.  THE DATA NAMES     NC2464.2
-085900*    REFER TO THREE DIMENSIONAL TABLE ITEMS.                      NC2464.2
-086000*                                                                 NC2464.2
+085600*                                                                         
+085700*                                                                         
+085800*                                                                         
+085900*                                                                         
+086000*                                                                         
 086100     MOVE SPACE TO TEMP-VALUE.                                    NC2464.2
 086200     MOVE "N" TO EXPECTED-VALUE.                                  NC2464.2
-086300*                                                                 NC2464.2
+086300*                                                                         
 086400 QUAL-TEST-05-01.                                                 NC2464.2
 086500     MOVE TABLE5-ITEM-UNQUAL (FIRST-SUB FIRST-SUB                 NC2464.2
 086600             SUB1 OF SOME-MORE-SUBSCRIPTS OF SUB-PART2-LEVEL2     NC2464.2
 086700             IN SUBSCRIPTS-PART2)                                 NC2464.2
 086800                  TO TEMP-VALUE.                                  NC2464.2
 086900     PERFORM SECT-TH220-0003.                                     NC2464.2
-087000*                                                                 NC2464.2
+087000*                                                                         
 087100 QUAL-TEST-05-02.                                                 NC2464.2
 087200     MOVE TABLE5-ITEM-UNQUAL (SUB3 OF SUBSCRIPTS OF               NC2464.2
 087300             SUBSCRIPTS-PART1 SUB3 OF SUBSCRIPTS OF               NC2464.2
@@ -876,22 +876,22 @@
 087800                  TO TEMP-VALUE.                                  NC2464.2
 087900     PERFORM SECT-TH220-0003.                                     NC2464.2
 088000     GO TO QUAL-INIT-06.                                          NC2464.2
-088100*                                                                 NC2464.2
+088100*                                                                         
 088200 QUAL-DELETE-005.                                                 NC2464.2
 088300     PERFORM DE-LETE.                                             NC2464.2
 088400     PERFORM PRINT-DETAIL.                                        NC2464.2
-088500*                                                                 NC2464.2
+088500*                                                                         
 088600 QUAL-INIT-06.                                                    NC2464.2
 088700     MOVE "QUAL-TEST-06" TO PAR-NAME.                             NC2464.2
 088800     MOVE "ONE DIMENSIONAL TABLE" TO RE-MARK.                     NC2464.2
 088900     MOVE ZERO TO REC-CT.                                         NC2464.2
-089000*                                                                 NC2464.2
-089100*         THIS TEST CONTAINS QUALIFIED DATA NAMES WITH            NC2464.2
-089200*    QUALIFIED SUBSCRIPTS IN IF STATEMENTS.  THE DATA NAMES       NC2464.2
-089300*    REFER TO SINGLE DIMENSIONAL TABLE ITEMS.                     NC2464.2
-089400*                                                                 NC2464.2
+089000*                                                                         
+089100*                                                                         
+089200*                                                                         
+089300*                                                                         
+089400*                                                                         
 089500     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
-089600*                                                                 NC2464.2
+089600*                                                                         
 089700 QUAL-TEST-06-01.                                                 NC2464.2
 089800     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 089900     IF TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4              NC2464.2
@@ -901,7 +901,7 @@
 090300         IS EQUAL TO "O"                                          NC2464.2
 090400                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 090500     PERFORM SECT-TH220-0003.                                     NC2464.2
-090600*                                                                 NC2464.2
+090600*                                                                         
 090700 QUAL-TEST-06-02.                                                 NC2464.2
 090800     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 090900     IF TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4              NC2464.2
@@ -916,22 +916,22 @@
 091800                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 091900     PERFORM SECT-TH220-0003.                                     NC2464.2
 092000     GO TO QUAL-INIT-07.                                          NC2464.2
-092100*                                                                 NC2464.2
+092100*                                                                         
 092200 QUAL-DELETE-006.                                                 NC2464.2
 092300     PERFORM DE-LETE.                                             NC2464.2
 092400     PERFORM PRINT-DETAIL.                                        NC2464.2
-092500*                                                                 NC2464.2
+092500*                                                                         
 092600 QUAL-INIT-07.                                                    NC2464.2
 092700     MOVE "QUAL-TEST-07" TO PAR-NAME.                             NC2464.2
 092800     MOVE "THREE DIMENSIONAL TABLE" TO RE-MARK.                   NC2464.2
 092900     MOVE ZERO TO REC-CT.                                         NC2464.2
-093000*                                                                 NC2464.2
-093100*         THIS TEST CONTAINS QUALIFIED DATA NAMES WITH            NC2464.2
-093200*    QUALIFIED SUBSCRIPTS IN IF STATEMENTS.  THE DATA NAMES       NC2464.2
-093300*    REFER TO THREE DIMENSIONAL TABLE ITEMS.                      NC2464.2
-093400*                                                                 NC2464.2
+093000*                                                                         
+093100*                                                                         
+093200*                                                                         
+093300*                                                                         
+093400*                                                                         
 093500     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
-093600*                                                                 NC2464.2
+093600*                                                                         
 093700 QUAL-TEST-07-01.                                                 NC2464.2
 093800     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 093900     IF TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4              NC2464.2
@@ -942,7 +942,7 @@
 094400              SUBSCRIPTS-PART1) IS EQUAL TO "C"                   NC2464.2
 094500                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 094600     PERFORM SECT-TH220-0003.                                     NC2464.2
-094700*                                                                 NC2464.2
+094700*                                                                         
 094800 QUAL-TEST-07-02.                                                 NC2464.2
 094900     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 095000     IF TABLE-ITEM OF TABLE-LEVEL-5 IN TABLE-LEVEL-4              NC2464.2
@@ -964,25 +964,25 @@
 096600                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 096700     PERFORM SECT-TH220-0003.                                     NC2464.2
 096800     GO TO QUAL-INIT-08.                                          NC2464.2
-096900*                                                                 NC2464.2
+096900*                                                                         
 097000 QUAL-DELETE-007.                                                 NC2464.2
 097100     PERFORM DE-LETE.                                             NC2464.2
 097200     PERFORM PRINT-DETAIL.                                        NC2464.2
-097300*                                                                 NC2464.2
+097300*                                                                         
 097400 QUAL-INIT-08.                                                    NC2464.2
 097500     MOVE "QUAL-TEST-08" TO PAR-NAME.                             NC2464.2
 097600     MOVE "QUAL. CONDITION NAME" TO FEATURE.                      NC2464.2
 097700     MOVE ZERO TO REC-CT.                                         NC2464.2
 097800     MOVE "ONE DIMENSIONAL TABLE" TO RE-MARK.                     NC2464.2
-097900*                                                                 NC2464.2
-098000*         THIS TEST CONTAINS QUALIFIED CONDITION NAMES IN IF      NC2464.2
-098100*    STATEMENTS.  THE CONDITION NAMES REFER TO SINGLE DIMENSIONAL NC2464.2
-098200*    CONDITIONAL VARIABLES.  THE SUBSCRIPTS IN THIS TEST ARE      NC2464.2
-098300*    CONSTANTS, UNQUALIFIED DATA NAMES AND INDEXES.  BOTH DIRECT  NC2464.2
-098400*    AND RELATIVE INDEXING ARE USED.                              NC2464.2
-098500*                                                                 NC2464.2
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
+098200*                                                                         
+098300*                                                                         
+098400*                                                                         
+098500*                                                                         
 098600     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
-098700*                                                                 NC2464.2
+098700*                                                                         
 098800 QUAL-TEST-08-01.                                                 NC2464.2
 098900     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 099000     IF EQUALS-M OF TABLE-LEVEL-5 OF TABLE-LEVEL-4                NC2464.2
@@ -990,7 +990,7 @@
 099200              OF GROUP-1-TABLE (13)                               NC2464.2
 099300                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 099400     PERFORM SECT-TH220-0003.                                     NC2464.2
-099500*                                                                 NC2464.2
+099500*                                                                         
 099600 QUAL-TEST-08-02.                                                 NC2464.2
 099700     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 099800     IF EQUALS-A OF TABLE-LEVEL-5 OF TABLE-LEVEL-4                NC2464.2
@@ -998,7 +998,7 @@
 100000              OF GROUP-1-TABLE (FIRST-SUB)                        NC2464.2
 100100                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 100200     PERFORM SECT-TH220-0003.                                     NC2464.2
-100300*                                                                 NC2464.2
+100300*                                                                         
 100400 QUAL-TEST-08-03.                                                 NC2464.2
 100500     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 100600     SET IN1 TO 3.                                                NC2464.2
@@ -1007,7 +1007,7 @@
 100900              OF GROUP-1-TABLE (IN1)                              NC2464.2
 101000                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 101100     PERFORM SECT-TH220-0003.                                     NC2464.2
-101200*                                                                 NC2464.2
+101200*                                                                         
 101300 QUAL-TEST-08-04.                                                 NC2464.2
 101400     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 101500     SET IN1 TO 6.                                                NC2464.2
@@ -1016,7 +1016,7 @@
 101800              OF GROUP-1-TABLE (IN1 - 5)                          NC2464.2
 101900                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 102000     PERFORM SECT-TH220-0003.                                     NC2464.2
-102100*                                                                 NC2464.2
+102100*                                                                         
 102200 QUAL-TEST-08-05.                                                 NC2464.2
 102300     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 102400     SET IN1 TO 1.                                                NC2464.2
@@ -1026,24 +1026,24 @@
 102800                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 102900     PERFORM SECT-TH220-0003.                                     NC2464.2
 103000     GO TO QUAL-INIT-09.                                          NC2464.2
-103100*                                                                 NC2464.2
+103100*                                                                         
 103200 QUAL-DELETE-008.                                                 NC2464.2
 103300     PERFORM DE-LETE.                                             NC2464.2
 103400     PERFORM PRINT-DETAIL.                                        NC2464.2
-103500*                                                                 NC2464.2
+103500*                                                                         
 103600 QUAL-INIT-09.                                                    NC2464.2
 103700     MOVE "QUAL-TEST-09" TO PAR-NAME.                             NC2464.2
 103800     MOVE ZERO TO REC-CT.                                         NC2464.2
 103900     MOVE "THREE DIMENSIONAL TABLE" TO RE-MARK.                   NC2464.2
-104000*                                                                 NC2464.2
-104100*         THIS TEST CONTAINS QUALIFIED CONDITION NAMES IN IF      NC2464.2
-104200*    STATEMENTS.  THE CONDITION NAMES REFER TO THREE DIMENSIONAL  NC2464.2
-104300*    CONDITIONAL VARIABLES.  THE SUBSCRIPTS IN THIS TEST ARE      NC2464.2
-104400*    CONSTANTS, UNQUALIFIED DATA NAMES AND INDEXES.  BOTH DIRECT  NC2464.2
-104500*    AND RELATIVE INDEXING ARE USED.                              NC2464.2
-104600*                                                                 NC2464.2
+104000*                                                                         
+104100*                                                                         
+104200*                                                                         
+104300*                                                                         
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
 104700     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
-104800*                                                                 NC2464.2
+104800*                                                                         
 104900 QUAL-TEST-09-01.                                                 NC2464.2
 105000     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 105100     IF EQUALS-M OF TABLE-LEVEL-5 IN TABLE-LEVEL-4                NC2464.2
@@ -1051,7 +1051,7 @@
 105300              OF GROUP-3-TABLE (2, 2, 1)                          NC2464.2
 105400                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 105500     PERFORM SECT-TH220-0003.                                     NC2464.2
-105600*                                                                 NC2464.2
+105600*                                                                         
 105700 QUAL-TEST-09-02.                                                 NC2464.2
 105800     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 105900     IF EQUALS-A OF TABLE-LEVEL-5 IN TABLE-LEVEL-4                NC2464.2
@@ -1059,7 +1059,7 @@
 106100              OF GROUP-3-TABLE (FIRST-SUB, FIRST-SUB, FIRST-SUB)  NC2464.2
 106200                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 106300     PERFORM SECT-TH220-0003.                                     NC2464.2
-106400*                                                                 NC2464.2
+106400*                                                                         
 106500 QUAL-TEST-09-03.                                                 NC2464.2
 106600     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 106700     SET IN5 TO 3.                                                NC2464.2
@@ -1068,7 +1068,7 @@
 107000              OF GROUP-3-TABLE (1, 1, IN5)                        NC2464.2
 107100                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 107200     PERFORM SECT-TH220-0003.                                     NC2464.2
-107300*                                                                 NC2464.2
+107300*                                                                         
 107400 QUAL-TEST-09-04.                                                 NC2464.2
 107500     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 107600     SET IN3, IN4 TO 1.                                           NC2464.2
@@ -1078,7 +1078,7 @@
 108000              OF GROUP-3-TABLE (IN3, IN4, IN5)                    NC2464.2
 108100                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 108200     PERFORM SECT-TH220-0003.                                     NC2464.2
-108300*                                                                 NC2464.2
+108300*                                                                         
 108400 QUAL-TEST-09-05.                                                 NC2464.2
 108500     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 108600     SET IN5 TO 1.                                                NC2464.2
@@ -1089,21 +1089,21 @@
 109100                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 109200     PERFORM SECT-TH220-0003.                                     NC2464.2
 109300     GO TO QUAL-INIT-10.                                          NC2464.2
-109400*                                                                 NC2464.2
+109400*                                                                         
 109500 QUAL-DELETE-009.                                                 NC2464.2
 109600     PERFORM DE-LETE.                                             NC2464.2
 109700     PERFORM PRINT-DETAIL.                                        NC2464.2
-109800*                                                                 NC2464.2
+109800*                                                                         
 109900 QUAL-INIT-10.                                                    NC2464.2
 110000     MOVE "QUAL-TEST-10" TO PAR-NAME.                             NC2464.2
 110100     MOVE "QUALIFIED SUBSCRIPTS" TO RE-MARK.                      NC2464.2
 110200     MOVE ZERO TO REC-CT.                                         NC2464.2
-110300*                                                                 NC2464.2
-110400*         THIS TEST CONTAINS QUALIFIED CONDITION NAMES WITH       NC2464.2
-110500*    QUALIFIED SUBSCRIPTS.                                        NC2464.2
-110600*                                                                 NC2464.2
+110300*                                                                         
+110400*                                                                         
+110500*                                                                         
+110600*                                                                         
 110700     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
-110800*                                                                 NC2464.2
+110800*                                                                         
 110900 QUAL-TEST-10-01.                                                 NC2464.2
 111000     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 111100     IF EQUALS-C OF TABLE-LEVEL-5 IN TABLE-LEVEL-4                NC2464.2
@@ -1112,7 +1112,7 @@
 111400              IN SUBSCRIPTS-PART1)                                NC2464.2
 111500                    MOVE "TRUE" TO TEMP-VALUE.                    NC2464.2
 111600     PERFORM SECT-TH220-0003.                                     NC2464.2
-111700*                                                                 NC2464.2
+111700*                                                                         
 111800 QUAL-TEST-10-02.                                                 NC2464.2
 111900     IF NOT EQUALS-M OF TABLE-LEVEL-5 IN TABLE-LEVEL-4            NC2464.2
 112000              IN TABLE-LEVEL-3 OF TABLE-LEVEL-2                   NC2464.2
@@ -1121,7 +1121,7 @@
 112300              OF SUB-PART2-LEVEL2 OF SUBSCRIPTS-PART2)            NC2464.2
 112400                    MOVE "TRUE" TO TEMP-VALUE.                    NC2464.2
 112500     PERFORM SECT-TH220-0003.                                     NC2464.2
-112600*                                                                 NC2464.2
+112600*                                                                         
 112700 QUAL-TEST-10-03.                                                 NC2464.2
 112800     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 112900     IF EQUALS-C OF TABLE-LEVEL-5 IN TABLE-LEVEL-4                NC2464.2
@@ -1134,7 +1134,7 @@
 113600              IN SUBSCRIPTS-PART2)                                NC2464.2
 113700                    MOVE "TRUE" TO TEMP-VALUE.                    NC2464.2
 113800     PERFORM SECT-TH220-0003.                                     NC2464.2
-113900*                                                                 NC2464.2
+113900*                                                                         
 114000 QUAL-TEST-10-04.                                                 NC2464.2
 114100     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 114200     IF NOT EQUALS-A OF TABLE-LEVEL-5 IN TABLE-LEVEL-4            NC2464.2
@@ -1149,47 +1149,47 @@
 115100                    MOVE "TRUE" TO TEMP-VALUE.                    NC2464.2
 115200     PERFORM SECT-TH220-0003.                                     NC2464.2
 115300     GO TO QUAL-INIT-11.                                          NC2464.2
-115400*                                                                 NC2464.2
+115400*                                                                         
 115500 QUAL-DELETE-010.                                                 NC2464.2
 115600     PERFORM DE-LETE.                                             NC2464.2
 115700     PERFORM PRINT-DETAIL.                                        NC2464.2
-115800*                                                                 NC2464.2
+115800*                                                                         
 115900 QUAL-INIT-11.                                                    NC2464.2
 116000     MOVE "QUAL-TEST-11" TO PAR-NAME.                             NC2464.2
 116100     MOVE "QUALIFICATION" TO FEATURE.                             NC2464.2
 116200     MOVE "INTERMEDIATE LEVELS SKIPPED" TO RE-MARK.               NC2464.2
 116300     MOVE SPACE TO TEMP-VALUE.                                    NC2464.2
 116400     MOVE ZERO TO REC-CT.                                         NC2464.2
-116500*                                                                 NC2464.2
-116600*         THIS TEST USES QUALIFIED DATA NAMES WITHOUT ALL OF THE  NC2464.2
-116700*    INTERMEDIATE LEVELS SPECIFIED.  THERE ARE QUALIFIED TABLE    NC2464.2
-116800*    ITEMS AND QUALIFIED SUBSCRIPTS INCLUDED IN THE TEST          NC2464.2
-116900*    STATEMENTS.                                                  NC2464.2
-117000*                                                                 NC2464.2
+116500*                                                                         
+116600*                                                                         
+116700*                                                                         
+116800*                                                                         
+116900*                                                                         
+117000*                                                                         
 117100     MOVE "G" TO EXPECTED-VALUE.                                  NC2464.2
-117200*                                                                 NC2464.2
+117200*                                                                         
 117300 QUAL-TEST-11-01.                                                 NC2464.2
 117400     MOVE TABLE-ITEM OF TABLE-LEVEL-5 OF GROUP-1-TABLE (7)        NC2464.2
 117500              TO TEMP-VALUE.                                      NC2464.2
 117600     PERFORM SECT-TH220-0003.                                     NC2464.2
-117700*                                                                 NC2464.2
+117700*                                                                         
 117800 QUAL-TEST-11-02.                                                 NC2464.2
 117900     MOVE UNQUAL-ITEM (SUB2 OF SOME-MORE-SUBSCRIPTS OF            NC2464.2
 118000              SUBSCRIPTS-PART2) TO TEMP-VALUE.                    NC2464.2
 118100     PERFORM SECT-TH220-0003.                                     NC2464.2
-118200*                                                                 NC2464.2
+118200*                                                                         
 118300 QUAL-TEST-11-03.                                                 NC2464.2
 118400     MOVE   TABLE-ITEM OF GROUP-1-TABLE (SUB2 OF                  NC2464.2
 118500         SOME-MORE-SUBSCRIPTS OF SUB-PART2-LEVEL2) TO TEMP-VALUE. NC2464.2
 118600     PERFORM SECT-TH220-0003.                                     NC2464.2
-118700*                                                                 NC2464.2
+118700*                                                                         
 118800 QUAL-TEST-11-04.                                                 NC2464.2
 118900     MOVE "A" TO EXPECTED-VALUE.                                  NC2464.2
 119000     MOVE TABLE-ITEM OF GROUP-3-TABLE (FIRST-SUB, SUB3 OF         NC2464.2
 119100              SUBSCRIPTS OF SUBSCRIPTS-PART1,  SUB3 OF            NC2464.2
 119200              SUB-PART2-LEVEL4) TO TEMP-VALUE.                    NC2464.2
 119300     PERFORM SECT-TH220-0003.                                     NC2464.2
-119400*                                                                 NC2464.2
+119400*                                                                         
 119500 QUAL-TEST-11-05.                                                 NC2464.2
 119600     MOVE "TRUE" TO EXPECTED-VALUE.                               NC2464.2
 119700     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
@@ -1197,7 +1197,7 @@
 119900     IF EQUALS-C OF TABLE-ITEM OF GROUP-1-TABLE (IN1)             NC2464.2
 120000                   MOVE "TRUE" TO TEMP-VALUE.                     NC2464.2
 120100     PERFORM SECT-TH220-0003.                                     NC2464.2
-120200*                                                                 NC2464.2
+120200*                                                                         
 120300 QUAL-TEST-11-06.                                                 NC2464.2
 120400     MOVE "FALSE" TO TEMP-VALUE.                                  NC2464.2
 120500     IF EQUALS-C OF TABLE-ITEM OF GROUP-3-TABLE                   NC2464.2
@@ -1209,7 +1209,7 @@
 121100 QUAL-DELETE-011.                                                 NC2464.2
 121200     PERFORM DE-LETE.                                             NC2464.2
 121300     PERFORM PRINT-DETAIL.                                        NC2464.2
-121400*                                                                 NC2464.2
+121400*                                                                         
 121500 QUAL-INIT-12.                                                    NC2464.2
 121600     MOVE   "IV-21 4.3.8.2.3 SR5 AND VI-2 1.3.2/4"                NC2464.2
 121700          TO ANSI-REFERENCE.                                      NC2464.2
@@ -1297,9 +1297,9 @@
 129900             MOVE  "QUALIFICATION FAILED" TO RE-MARK              NC2464.2
 130000             PERFORM FAIL                                         NC2464.2
 130100             PERFORM PRINT-DETAIL.                                NC2464.2
-130200*                                                                 NC2464.2
+130200*                                                                         
 130300     GO TO CCVS-EXIT.                                             NC2464.2
-130400*                                                                 NC2464.2
+130400*                                                                         
 130500 SECT-TH220-0003 SECTION.                                         NC2464.2
 130600 SYNTAX-CHECK.                                                    NC2464.2
 130700     ADD 1 TO REC-CT.                                             NC2464.2

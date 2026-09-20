@@ -16,7 +16,7 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MIN Function         FAIL* F-MIN-01                                                                                    
                                                                                                                         
                                      COMPUTED=  000000003.000000000                                                     
-                                     CORRECT =  000000005.000000000  See ref. A-56 2.27                                 
+                                     CORRECT =  000000009.000000000  See ref. A-56 2.27                                 
                                                                                                                         
  MIN Function         PASS  F-MIN-02                                                                                    
  MIN Function         PASS  F-MIN-03                                                                                    
@@ -24,7 +24,7 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MIN Function         FAIL* F-MIN-05                                                                                    
                                                                                                                         
                                      COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-56 2.27                                 
+                                     CORRECT =  000000006.000000000  See ref. A-56 2.27                                 
                                                                                                                         
  MIN Function         PASS  F-MIN-06                                                                                    
  MIN Function         PASS  F-MIN-07                                                                                    
@@ -32,7 +32,7 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MIN Function         FAIL* F-MIN-09                                                                                    
                                                                                                                         
                                      COMPUTED= -000000010.000000000                                                     
-                                     CORRECT = -000000080.000000000  See ref. A-56 2.27                                 
+                                     CORRECT = -000000011.000000000  See ref. A-56 2.27                                 
                                                                                                                         
  MIN Function         PASS  F-MIN-10                                                                                    
  MIN Function         PASS  F-MIN-11                                                                                    

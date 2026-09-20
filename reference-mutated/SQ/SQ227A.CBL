@@ -1,52 +1,52 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2274.2
 000200 PROGRAM-ID.                                                      SQ2274.2
 000300     SQ227A.                                                      SQ2274.2
-000400****************************************************************  SQ2274.2
-000500*                                                              *  SQ2274.2
-000600*    VALIDATION FOR:-                                          *  SQ2274.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2274.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ2274.2
-000900*                             REVISED 1986, AUGUST             *  SQ2274.2
-001000*                                                              *  SQ2274.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ2274.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2274.2
-001300*                                                              *  SQ2274.2
-001400****************************************************************  SQ2274.2
-001500*                                                              *  SQ2274.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ2274.2
-001700*                                                              *  SQ2274.2
-001800*            X-14   SEQUENTIAL MASS STORAGE FILE               *  SQ2274.2
-001900*            X-55   SYSTEM PRINTER                             *  SQ2274.2
-002000*            X-82   SOURCE-COMPUTER                            *  SQ2274.2
-002100*            X-83   OBJECT-COMPUTER.                           *  SQ2274.2
-002200*                                                              *  SQ2274.2
-002300****************************************************************  SQ2274.2
-002400*                                                              *  SQ2274.2
-002500*    THIS PROGRAM OPENS FOR OUTPUT A FILE WHICH IS ASSIGNED    *  SQ2274.2
-002600*    TO A MASS STORAGE MEDIUM. ONE RECORD IS THEN WRITTEN TO   *  SQ2274.2
-002700*    THIS FILE WHICH IS THEN CLOSED.  THE FILE IS THEN OPENED  *  SQ2274.2
-002800*    FOR I-O, AND A READ STATEMENT ON THE FILE IS CARRIED OUT. *  SQ2274.2
-002900*    A REWRITE ON A RECORD THAT IS TOO LONG FOR THE FILE IS    *  SQ2274.2
-003000*    ATTEMPTED WHICH SHOULD CAUSE AN EXCEPTION CONDITION WITH  *  SQ2274.2
-003100*    I-O STATUS "44".  THIS LOGIC ERROR SHOULD CAUSE ENTRY TO  *  SQ2274.2
-003200*    THE APPLICABLE ERROR DECLARATIVE.                         *  SQ2274.2
-003300*                                                              *  SQ2274.2
-003400*    THIS PROGRAM HAS BEEN SPLIT FROM V2.0 ONWARDS.            *  SQ2274.2
-003500*    THE NEW PROGRAM IS SQ228A.                                *  SQ2274.2
-003600****************************************************************  SQ2274.2
-003700*                                                                 SQ2274.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
 003800 ENVIRONMENT DIVISION.                                            SQ2274.2
 003900 CONFIGURATION SECTION.                                           SQ2274.2
 004000 SOURCE-COMPUTER.                                                 SQ2274.2
 004100     GNU-Linux.                                                   SQ2274.2
 004200 OBJECT-COMPUTER.                                                 SQ2274.2
 004300     GNU-Linux.                                                   SQ2274.2
-004400*                                                                 SQ2274.2
+004400*                                                                         
 004500 INPUT-OUTPUT SECTION.                                            SQ2274.2
 004600 FILE-CONTROL.                                                    SQ2274.2
 004700     SELECT PRINT-FILE ASSIGN TO                                  SQ2274.2
 004800     "REPORT".                                                    SQ2274.2
-004900*                                                                 SQ2274.2
+004900*                                                                         
 005600     SELECT SQ-FS4                                                SQ2274.2
 005700            ASSIGN                                                SQ2274.2
 005800     "XXXXX014"                                                   SQ2274.2
@@ -54,15 +54,15 @@
 006000            ACCESS MODE IS SEQUENTIAL                             SQ2274.2
 006100            ORGANIZATION IS SEQUENTIAL                            SQ2274.2
 006200            .                                                     SQ2274.2
-006300*                                                                 SQ2274.2
-006400*                                                                 SQ2274.2
+006300*                                                                         
+006400*                                                                         
 006500 DATA DIVISION.                                                   SQ2274.2
 006600 FILE SECTION.                                                    SQ2274.2
 006700 FD  PRINT-FILE                                                   SQ2274.2
 007100               .                                                  SQ2274.2
 007200 01  PRINT-REC    PICTURE X(120).                                 SQ2274.2
 007300 01  DUMMY-RECORD PICTURE X(120).                                 SQ2274.2
-008900*                                                                 SQ2274.2
+008900*                                                                         
 009000 FD  SQ-FS4                                                       SQ2274.2
 009200     BLOCK CONTAINS 138 CHARACTERS                                SQ2274.2
 009300     RECORD VARYING SIZE FROM 50 TO 138 CHARACTERS                SQ2274.2
@@ -96,43 +96,43 @@
 012100           07 FFILE-ORGANIZATION  PIC X(2).                       SQ2274.2
 012200           07 FILLER              PIC X(6).                       SQ2274.2
 012300           07 FLABEL-TYPE         PIC X(1).                       SQ2274.2
-012400*                                                                 SQ2274.2
+012400*                                                                         
 012500 01  SQ-FS4R2-F-G-138.                                            SQ2274.2
 012600     03  FILLER PIC X(120).                                       SQ2274.2
 012700     03  EXT-18 PIC X(18).                                        SQ2274.2
-012800*                                                                 SQ2274.2
+012800*                                                                         
 012900 WORKING-STORAGE SECTION.                                         SQ2274.2
-013000*                                                                 SQ2274.2
-013100***************************************************************   SQ2274.2
-013200*                                                             *   SQ2274.2
-013300*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ2274.2
-013400*                                                             *   SQ2274.2
-013500***************************************************************   SQ2274.2
-013600*                                                                 SQ2274.2
+013000*                                                                         
+013100*                                                                         
+013200*                                                                         
+013300*                                                                         
+013400*                                                                         
+013500*                                                                         
+013600*                                                                         
 013700 01  STATUS-GROUP.                                                SQ2274.2
 013800     04  SQ-FS4-STATUS.                                           SQ2274.2
 013900         07  SQ-FS4-KEY-1   PIC X.                                SQ2274.2
 014000         07  SQ-FS4-KEY-2   PIC X.                                SQ2274.2
-014100*                                                                 SQ2274.2
+014100*                                                                         
 014200 01  DELETE-SW.                                                   SQ2274.2
 014300     03  DELETE-SW-1 PIC X.                                       SQ2274.2
 014400     03  DELETE-SW-1-GROUP.                                       SQ2274.2
 014500         05  DELETE-SW-2 PIC X.                                   SQ2274.2
-014600*                                                                 SQ2274.2
+014600*                                                                         
 014700 01  DECL-EXEC-I-O PIC X(12).                                     SQ2274.2
-014800*                                                                 SQ2274.2
+014800*                                                                         
 014900 01  DECL-EXEC-SW PIC X.                                          SQ2274.2
-015000*                                                                 SQ2274.2
+015000*                                                                         
 015100 01  SQ-FS4-RECSIZE PIC 999.                                      SQ2274.2
-015200*                                                                 SQ2274.2
-015300***************************************************************   SQ2274.2
-015400*                                                             *   SQ2274.2
-015500*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ2274.2
-015600*                                                             *   SQ2274.2
-015700***************************************************************   SQ2274.2
-015800*                                                                 SQ2274.2
+015200*                                                                         
+015300*                                                                         
+015400*                                                                         
+015500*                                                                         
+015600*                                                                         
+015700*                                                                         
+015800*                                                                         
 015900 01  REC-SKEL-SUB   PIC 99.                                       SQ2274.2
-016000*                                                                 SQ2274.2
+016000*                                                                         
 016100 01  FILE-RECORD-INFORMATION-REC.                                 SQ2274.2
 016200     03 FILE-RECORD-INFO-SKELETON.                                SQ2274.2
 016300        05 FILLER                 PICTURE X(48)       VALUE       SQ2274.2
@@ -184,7 +184,7 @@
 020900           07 FILLER              PIC X(9).                       SQ2274.2
 021000           07 ALTERNATE-KEY2      PIC X(29).                      SQ2274.2
 021100           07 FILLER              PIC X(7).                       SQ2274.2
-021200*                                                                 SQ2274.2
+021200*                                                                         
 021300 01  TEST-RESULTS.                                                SQ2274.2
 021400     02 FILLER              PIC X      VALUE SPACE.               SQ2274.2
 021500     02  PAR-NAME.                                                SQ2274.2
@@ -224,7 +224,7 @@
 024900         04 FILLER                           PIC X.               SQ2274.2
 025000     03 FILLER PIC X(2) VALUE SPACE.                              SQ2274.2
 025100     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ2274.2
-025200*                                                                 SQ2274.2
+025200*                                                                         
 025300 01  CCVS-C-1.                                                    SQ2274.2
 025400     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ2274.2
 025500     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ2274.2
@@ -240,7 +240,7 @@
 026500     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ2274.2
 026600     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ2274.2
 026700     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ2274.2
-026800*                                                                 SQ2274.2
+026800*                                                                         
 026900 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ2274.2
 027000 01  REC-CT            PIC 99       VALUE ZERO.                   SQ2274.2
 027100 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ2274.2
@@ -265,7 +265,7 @@
 029000   02  FILLER            PIC X(28)  VALUE                         SQ2274.2
 029100            " COPY - NOT FOR DISTRIBUTION".                       SQ2274.2
 029200   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ2274.2
-029300*                                                                 SQ2274.2
+029300*                                                                         
 029400 01  CCVS-H-2B.                                                   SQ2274.2
 029500   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ2274.2
 029600   02  TEST-ID           PIC X(9).                                SQ2274.2
@@ -327,18 +327,18 @@
 035200-    "******************************".                            SQ2274.2
 035300 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ2274.2
 035400     "SQ227A".                                                    SQ2274.2
-035500*                                                                 SQ2274.2
-035600*                                                                 SQ2274.2
+035500*                                                                         
+035600*                                                                         
 035700 PROCEDURE DIVISION.                                              SQ2274.2
 035800 DECLARATIVES.                                                    SQ2274.2
-035900*                                                                 SQ2274.2
+035900*                                                                         
 036000 SECT-SQ227A-0001 SECTION.                                        SQ2274.2
 036100     USE AFTER EXCEPTION PROCEDURE I-O.                           SQ2274.2
 036200 I-O-ERROR-PROCESS.                                               SQ2274.2
 036300     MOVE   "EXECUTED" TO DECL-EXEC-I-O.                          SQ2274.2
 036400     IF DECL-EXEC-SW NOT = SPACE                                  SQ2274.2
 036500         GO TO   END-DECLS.                                       SQ2274.2
-036600*                                                                 SQ2274.2
+036600*                                                                         
 036700     MOVE    1 TO REC-CT.                                         SQ2274.2
 036800     MOVE   "DCL-REWRITE-01" TO PAR-NAME.                         SQ2274.2
 036900     GO TO   DCL-REWRITE-01-01.                                   SQ2274.2
@@ -356,7 +356,7 @@
 038100         MOVE   "VII-4, VII-48,4.5.4(2)" TO ANSI-REFERENCE        SQ2274.2
 038200         PERFORM DECL-FAIL.                                       SQ2274.2
 038300 DECL-TEST-01-01-END.                                             SQ2274.2
-038400*                                                                 SQ2274.2
+038400*                                                                         
 038500     ADD     1 TO REC-CT.                                         SQ2274.2
 038600     GO TO   DCL-REWRITE-01-02.                                   SQ2274.2
 038700 DECL-DELETE-01-02.                                               SQ2274.2
@@ -371,7 +371,7 @@
 039600         MOVE   "VII-4, VII-49,4.5.4(9)" TO ANSI-REFERENCE        SQ2274.2
 039700         PERFORM DECL-FAIL.                                       SQ2274.2
 039800 DECL-TEST-01-02-END.                                             SQ2274.2
-039900*                                                                 SQ2274.2
+039900*                                                                         
 040000     ADD     1 TO REC-CT.                                         SQ2274.2
 040100     GO TO   DCL-REWRITE-01-03.                                   SQ2274.2
 040200 DECL-DELETE-01-03.                                               SQ2274.2
@@ -388,30 +388,30 @@
 041300         MOVE   "VII-4, VII-49,4.5.4(9)" TO ANSI-REFERENCE        SQ2274.2
 041400         PERFORM DECL-FAIL.                                       SQ2274.2
 041500 DECL-TEST-01-03-END.                                             SQ2274.2
-041600*                                                                 SQ2274.2
+041600*                                                                         
 041700     PERFORM DECL-WRITE-LINE.                                     SQ2274.2
 041800     MOVE   "ABNORMAL TERMINATION AT THIS POINT IS ACCEPTABLE"    SQ2274.2
 041900               TO DUMMY-RECORD.                                   SQ2274.2
 042000     PERFORM DECL-WRITE-LINE 3 TIMES.                             SQ2274.2
 042100     GO TO   END-DECLS.                                           SQ2274.2
-042200*                                                                 SQ2274.2
-042300*                                                                 SQ2274.2
+042200*                                                                         
+042300*                                                                         
 042400 DECL-PASS.                                                       SQ2274.2
 042500     MOVE   "PASS " TO P-OR-F.                                    SQ2274.2
 042600     ADD     1 TO PASS-COUNTER.                                   SQ2274.2
 042700     PERFORM DECL-PRINT-DETAIL.                                   SQ2274.2
-042800*                                                                 SQ2274.2
+042800*                                                                         
 042900 DECL-FAIL.                                                       SQ2274.2
 043000     MOVE   "FAIL*" TO P-OR-F.                                    SQ2274.2
 043100     ADD     1 TO ERROR-COUNTER.                                  SQ2274.2
 043200     PERFORM DECL-PRINT-DETAIL.                                   SQ2274.2
-043300*                                                                 SQ2274.2
+043300*                                                                         
 043400 DECL-DE-LETE.                                                    SQ2274.2
 043500     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ2274.2
 043600     MOVE   "*****" TO P-OR-F.                                    SQ2274.2
 043700     ADD     1 TO DELETE-COUNTER.                                 SQ2274.2
 043800     PERFORM DECL-PRINT-DETAIL.                                   SQ2274.2
-043900*                                                                 SQ2274.2
+043900*                                                                         
 044000 DECL-PRINT-DETAIL.                                               SQ2274.2
 044100     IF REC-CT NOT EQUAL TO ZERO                                  SQ2274.2
 044200             MOVE "." TO PARDOT-X                                 SQ2274.2
@@ -429,7 +429,7 @@
 045400     IF REC-CT EQUAL TO ZERO                                      SQ2274.2
 045500         MOVE    SPACE TO PAR-NAME.                               SQ2274.2
 045600     MOVE    SPACE TO RE-MARK.                                    SQ2274.2
-045700*                                                                 SQ2274.2
+045700*                                                                         
 045800 DECL-WRITE-LINE.                                                 SQ2274.2
 045900     ADD     1 TO RECORD-COUNT.                                   SQ2274.2
 046000     IF RECORD-COUNT GREATER 50                                   SQ2274.2
@@ -444,11 +444,11 @@
 046900         MOVE    DUMMY-HOLD TO DUMMY-RECORD                       SQ2274.2
 047000         MOVE    ZERO TO RECORD-COUNT.                            SQ2274.2
 047100     PERFORM DECL-WRT-LN.                                         SQ2274.2
-047200*                                                                 SQ2274.2
+047200*                                                                         
 047300 DECL-WRT-LN.                                                     SQ2274.2
 047400     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ2274.2
 047500     MOVE    SPACE TO DUMMY-RECORD.                               SQ2274.2
-047600*                                                                 SQ2274.2
+047600*                                                                         
 047700 DECL-FAIL-ROUTINE.                                               SQ2274.2
 047800     IF COMPUTED-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.      SQ2274.2
 047900     IF CORRECT-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.       SQ2274.2
@@ -467,7 +467,7 @@
 049200     MOVE    SPACES TO COR-ANSI-REFERENCE.                        SQ2274.2
 049300 DECL-FAIL-EX.                                                    SQ2274.2
 049400     EXIT.                                                        SQ2274.2
-049500*                                                                 SQ2274.2
+049500*                                                                         
 049600 DECL-BAIL.                                                       SQ2274.2
 049700     IF COMPUTED-A NOT EQUAL TO SPACE GO TO DECL-BAIL-WRITE.      SQ2274.2
 049800     IF CORRECT-A EQUAL TO SPACE GO TO DECL-BAIL-EX.              SQ2274.2
@@ -478,11 +478,11 @@
 050300     PERFORM DECL-WRITE-LINE 2 TIMES.                             SQ2274.2
 050400 DECL-BAIL-EX.                                                    SQ2274.2
 050500     EXIT.                                                        SQ2274.2
-050600*                                                                 SQ2274.2
+050600*                                                                         
 050700 END-DECLS.                                                       SQ2274.2
 050800 END DECLARATIVES.                                                SQ2274.2
-050900*                                                                 SQ2274.2
-051000*                                                                 SQ2274.2
+050900*                                                                         
+051000*                                                                         
 051100 CCVS1 SECTION.                                                   SQ2274.2
 051200 OPEN-FILES.                                                      SQ2274.2
 052300     OPEN    OUTPUT PRINT-FILE.                                   SQ2274.2
@@ -493,39 +493,39 @@
 052800     MOVE    ZERO TO REC-SKEL-SUB.                                SQ2274.2
 052900     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ2274.2
 053000     GO TO CCVS1-EXIT.                                            SQ2274.2
-053100*                                                                 SQ2274.2
+053100*                                                                         
 053200 CCVS-INIT-FILE.                                                  SQ2274.2
 053300     ADD     1 TO REC-SKL-SUB.                                    SQ2274.2
 053400     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ2274.2
 053500                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ2274.2
-053600*                                                                 SQ2274.2
+053600*                                                                         
 053700 CLOSE-FILES.                                                     SQ2274.2
 053800     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ2274.2
 053900     CLOSE   PRINT-FILE.                                          SQ2274.2
 055200 TERMINATE-CCVS.                                                  SQ2274.2
 055400     STOP    RUN.                                                 SQ2274.2
-055500*                                                                 SQ2274.2
+055500*                                                                         
 055600 INSPT.                                                           SQ2274.2
 055700     MOVE   "INSPT" TO P-OR-F.                                    SQ2274.2
 055800     ADD     1 TO INSPECT-COUNTER.                                SQ2274.2
 055900     PERFORM PRINT-DETAIL.                                        SQ2274.2
-056000*                                                                 SQ2274.2
+056000*                                                                         
 056100 PASS.                                                            SQ2274.2
 056200     MOVE   "PASS " TO P-OR-F.                                    SQ2274.2
 056300     ADD     1 TO PASS-COUNTER.                                   SQ2274.2
 056400     PERFORM PRINT-DETAIL.                                        SQ2274.2
-056500*                                                                 SQ2274.2
+056500*                                                                         
 056600 FAIL.                                                            SQ2274.2
 056700     MOVE   "FAIL*" TO P-OR-F.                                    SQ2274.2
 056800     ADD     1 TO ERROR-COUNTER.                                  SQ2274.2
 056900     PERFORM PRINT-DETAIL.                                        SQ2274.2
-057000*                                                                 SQ2274.2
+057000*                                                                         
 057100 DE-LETE.                                                         SQ2274.2
 057200     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ2274.2
 057300     MOVE   "*****" TO P-OR-F.                                    SQ2274.2
 057400     ADD     1 TO DELETE-COUNTER.                                 SQ2274.2
 057500     PERFORM PRINT-DETAIL.                                        SQ2274.2
-057600*                                                                 SQ2274.2
+057600*                                                                         
 057700 PRINT-DETAIL.                                                    SQ2274.2
 057800     IF REC-CT NOT EQUAL TO ZERO                                  SQ2274.2
 057900         MOVE   "." TO PARDOT-X                                   SQ2274.2
@@ -542,7 +542,7 @@
 059000     MOVE    SPACE TO CORRECT-X.                                  SQ2274.2
 059100     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ2274.2
 059200     MOVE    SPACE TO RE-MARK.                                    SQ2274.2
-059300*                                                                 SQ2274.2
+059300*                                                                         
 059400 HEAD-ROUTINE.                                                    SQ2274.2
 059500     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ2274.2
 059600     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ2274.2
@@ -558,7 +558,7 @@
 060600 END-RTN-EXIT.                                                    SQ2274.2
 060700     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ2274.2
 060800     PERFORM WRITE-LINE 2 TIMES.                                  SQ2274.2
-060900*                                                                 SQ2274.2
+060900*                                                                         
 061000 END-ROUTINE-1.                                                   SQ2274.2
 061100     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ2274.2
 061200     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ2274.2
@@ -591,7 +591,7 @@
 063900     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ2274.2
 064000     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ2274.2
 064100     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ2274.2
-064200*                                                                 SQ2274.2
+064200*                                                                         
 064300 WRITE-LINE.                                                      SQ2274.2
 064400     ADD     1 TO RECORD-COUNT.                                   SQ2274.2
 064500     IF RECORD-COUNT GREATER 50                                   SQ2274.2
@@ -604,7 +604,7 @@
 065200         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ2274.2
 065300         MOVE  ZERO TO RECORD-COUNT.                              SQ2274.2
 065400     PERFORM WRT-LN.                                              SQ2274.2
-065500*                                                                 SQ2274.2
+065500*                                                                         
 065600 WRT-LN.                                                          SQ2274.2
 065700     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ2274.2
 065800     MOVE    SPACE TO DUMMY-RECORD.                               SQ2274.2
@@ -642,18 +642,18 @@
 069000     EXIT.                                                        SQ2274.2
 069100 CCVS1-EXIT.                                                      SQ2274.2
 069200     EXIT.                                                        SQ2274.2
-069300*                                                                 SQ2274.2
-069400****************************************************************  SQ2274.2
-069500*                                                              *  SQ2274.2
-069600*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ2274.2
-069700*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ2274.2
-069800*                                                              *  SQ2274.2
-069900****************************************************************  SQ2274.2
-070000*                                                                 SQ2274.2
+069300*                                                                         
+069400*                                                                         
+069500*                                                                         
+069600*                                                                         
+069700*                                                                         
+069800*                                                                         
+069900*                                                                         
+070000*                                                                         
 070100 SECT-SQ227A-0002 SECTION.                                        SQ2274.2
 070200 STA-INIT.                                                        SQ2274.2
 070300     MOVE    SPACE TO DELETE-SW.                                  SQ2274.2
-070400*                                                                 SQ2274.2
+070400*                                                                         
 070500     MOVE   "SQ-FS4" TO XFILE-NAME (1).                           SQ2274.2
 070600     MOVE   "R1-F-G" TO XRECORD-NAME (1).                         SQ2274.2
 070700     MOVE    CCVS-PGM-ID TO XPROGRAM-NAME (1).                    SQ2274.2
@@ -663,9 +663,9 @@
 071100     MOVE    1   TO RECORDS-IN-FILE (1).                          SQ2274.2
 071200     MOVE   "SQ" TO XFILE-ORGANIZATION (1).                       SQ2274.2
 071300     MOVE   "S"  TO XLABEL-TYPE (1).                              SQ2274.2
-071400*                                                                 SQ2274.2
-071500*    OPEN THE FILE IN THE OUTPUT MODE                             SQ2274.2
-071600*                                                                 SQ2274.2
+071400*                                                                         
+071500*                                                                         
+071600*                                                                         
 071700 SEQ-INIT-01.                                                     SQ2274.2
 071800     MOVE    0 TO REC-CT.                                         SQ2274.2
 071900     MOVE   "*" TO DECL-EXEC-SW.                                  SQ2274.2
@@ -680,9 +680,9 @@
 072800     GO TO   SEQ-DELETE-01-01.                                    SQ2274.2
 072900 SEQ-TEST-OP-01.                                                  SQ2274.2
 073000     OPEN    OUTPUT SQ-FS4.                                       SQ2274.2
-073100*                                                                 SQ2274.2
-073200*    CHECK I-O STATUS RETURNED FROM OPEN OUTPUT                   SQ2274.2
-073300*                                                                 SQ2274.2
+073100*                                                                         
+073200*                                                                         
+073300*                                                                         
 073400     ADD    1 TO REC-CT.                                          SQ2274.2
 073500     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 073600         GO TO   SEQ-DELETE-01-01.                                SQ2274.2
@@ -701,9 +701,9 @@
 074900         MOVE   "VII-3, VII-43" TO ANSI-REFERENCE                 SQ2274.2
 075000         PERFORM FAIL.                                            SQ2274.2
 075100 SEQ-TEST-01-01-END.                                              SQ2274.2
-075200*                                                                 SQ2274.2
-075300*    CHECK EXECUTION OF I-O DECLARATIVE                           SQ2274.2
-075400*                                                                 SQ2274.2
+075200*                                                                         
+075300*                                                                         
+075400*                                                                         
 075500     ADD     1 TO REC-CT.                                         SQ2274.2
 075600     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 075700         GO TO   SEQ-DELETE-01-02.                                SQ2274.2
@@ -722,10 +722,10 @@
 077000         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ2274.2
 077100         PERFORM FAIL.                                            SQ2274.2
 077200 SEQ-TEST-01-02-END.                                              SQ2274.2
-077300*                                                                 SQ2274.2
-077400*                                                                 SQ2274.2
-077500*    A NEW FILE IS OPEN.  WE NOW WRITE ONE RECORD OF 120 CHARS.   SQ2274.2
-077600*                                                                 SQ2274.2
+077300*                                                                         
+077400*                                                                         
+077500*                                                                         
+077600*                                                                         
 077700 SEQ-INIT-02.                                                     SQ2274.2
 077800     MOVE    0 TO REC-CT.                                         SQ2274.2
 077900     MOVE   "*" TO DECL-EXEC-SW.                                  SQ2274.2
@@ -745,9 +745,9 @@
 079300     GO TO   SEQ-DELETE-02-01.                                    SQ2274.2
 079400 SEQ-TEST-WR-02.                                                  SQ2274.2
 079500     WRITE   SQ-FS4R2-F-G-138.                                    SQ2274.2
-079600*                                                                 SQ2274.2
-079700*    CHECK I-O STATUS RETURNED FROM WRITE                         SQ2274.2
-079800*                                                                 SQ2274.2
+079600*                                                                         
+079700*                                                                         
+079800*                                                                         
 079900     ADD    1 TO REC-CT.                                          SQ2274.2
 080000     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 080100         GO TO   SEQ-DELETE-02-01.                                SQ2274.2
@@ -766,9 +766,9 @@
 081400         MOVE   "VII-3, VII-53" TO ANSI-REFERENCE                 SQ2274.2
 081500         PERFORM FAIL.                                            SQ2274.2
 081600 SEQ-TEST-02-01-END.                                              SQ2274.2
-081700*                                                                 SQ2274.2
-081800*    CHECK EXECUTION OF I-O DECLARATIVE                           SQ2274.2
-081900*                                                                 SQ2274.2
+081700*                                                                         
+081800*                                                                         
+081900*                                                                         
 082000     ADD     1 TO REC-CT.                                         SQ2274.2
 082100     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 082200         GO TO   SEQ-DELETE-02-02.                                SQ2274.2
@@ -787,10 +787,10 @@
 083500         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ2274.2
 083600         PERFORM FAIL.                                            SQ2274.2
 083700 SEQ-TEST-02-02-END.                                              SQ2274.2
-083800*                                                                 SQ2274.2
-083900*                                                                 SQ2274.2
-084000*    NOW CLOSE THE FILE.                                          SQ2274.2
-084100*                                                                 SQ2274.2
+083800*                                                                         
+083900*                                                                         
+084000*                                                                         
+084100*                                                                         
 084200 SEQ-INIT-03.                                                     SQ2274.2
 084300     MOVE    0 TO REC-CT.                                         SQ2274.2
 084400     MOVE   "*" TO DECL-EXEC-SW.                                  SQ2274.2
@@ -806,9 +806,9 @@
 085400     GO TO   SEQ-DELETE-03-01.                                    SQ2274.2
 085500 SEQ-TEST-CL-03.                                                  SQ2274.2
 085600     CLOSE   SQ-FS4.                                              SQ2274.2
-085700*                                                                 SQ2274.2
-085800*    CHECK I-O STATUS RETURNED FROM CLOSE                         SQ2274.2
-085900*                                                                 SQ2274.2
+085700*                                                                         
+085800*                                                                         
+085900*                                                                         
 086000     ADD    1 TO REC-CT.                                          SQ2274.2
 086100     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 086200         GO TO   SEQ-DELETE-03-01.                                SQ2274.2
@@ -827,9 +827,9 @@
 087500         MOVE   "VII-3, VII-38,4.2.4(4)" TO ANSI-REFERENCE        SQ2274.2
 087600         PERFORM FAIL.                                            SQ2274.2
 087700 SEQ-TEST-03-01-END.                                              SQ2274.2
-087800*                                                                 SQ2274.2
-087900*    CHECK EXECUTION OF I-O DECLARATIVE                           SQ2274.2
-088000*                                                                 SQ2274.2
+087800*                                                                         
+087900*                                                                         
+088000*                                                                         
 088100     ADD     1 TO REC-CT.                                         SQ2274.2
 088200     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 088300         GO TO   SEQ-DELETE-03-02.                                SQ2274.2
@@ -849,10 +849,10 @@
 089700         PERFORM FAIL.                                            SQ2274.2
 089800 SEQ-TEST-03-02-END.                                              SQ2274.2
 089900     MOVE    SPACE TO DELETE-SW-2.                                SQ2274.2
-090000*                                                                 SQ2274.2
-090100*                                                                 SQ2274.2
-090200*    OPEN THE FILE IN THE I-O MODE                                SQ2274.2
-090300*                                                                 SQ2274.2
+090000*                                                                         
+090100*                                                                         
+090200*                                                                         
+090300*                                                                         
 090400 SEQ-INIT-04.                                                     SQ2274.2
 090500     MOVE    0 TO REC-CT.                                         SQ2274.2
 090600     MOVE   "*" TO DECL-EXEC-SW.                                  SQ2274.2
@@ -869,9 +869,9 @@
 091700     GO TO   SEQ-DELETE-04-01.                                    SQ2274.2
 091800 SEQ-TEST-OP-04.                                                  SQ2274.2
 091900     OPEN    I-O SQ-FS4.                                          SQ2274.2
-092000*                                                                 SQ2274.2
-092100*    CHECK I-O STATUS RETURNED FROM OPEN I-O                      SQ2274.2
-092200*                                                                 SQ2274.2
+092000*                                                                         
+092100*                                                                         
+092200*                                                                         
 092300     ADD    1 TO REC-CT.                                          SQ2274.2
 092400     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 092500         GO TO   SEQ-DELETE-04-01.                                SQ2274.2
@@ -890,7 +890,7 @@
 093800         MOVE   "VII-3, VII-40" TO ANSI-REFERENCE                 SQ2274.2
 093900         PERFORM FAIL.                                            SQ2274.2
 094000 SEQ-TEST-04-01-END.                                              SQ2274.2
-094100*                                                                 SQ2274.2
+094100*                                                                         
 094200     ADD     1 TO REC-CT.                                         SQ2274.2
 094300     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 094400         GO TO   SEQ-DELETE-04-02.                                SQ2274.2
@@ -909,10 +909,10 @@
 095700         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ2274.2
 095800         PERFORM FAIL.                                            SQ2274.2
 095900 SEQ-TEST-04-02-END.                                              SQ2274.2
-096000*                                                                 SQ2274.2
-096100*                                                                 SQ2274.2
-096200*    THE FILE IS OPEN FOR I-O.  WE READ THE ONLY RECORD.          SQ2274.2
-096300*                                                                 SQ2274.2
+096000*                                                                         
+096100*                                                                         
+096200*                                                                         
+096300*                                                                         
 096400 SEQ-INIT-05.                                                     SQ2274.2
 096500     MOVE    0 TO REC-CT.                                         SQ2274.2
 096600     MOVE   "*" TO DECL-EXEC-SW.                                  SQ2274.2
@@ -931,9 +931,9 @@
 097900     GO TO   SEQ-DELETE-05-01.                                    SQ2274.2
 098000 SEQ-TEST-RD-05.                                                  SQ2274.2
 098100     READ    SQ-FS4.                                              SQ2274.2
-098200*                                                                 SQ2274.2
-098300*    CHECK I-O STATUS RETURNED FROM READ                          SQ2274.2
-098400*                                                                 SQ2274.2
+098200*                                                                         
+098300*                                                                         
+098400*                                                                         
 098500     ADD    1 TO REC-CT.                                          SQ2274.2
 098600     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 098700         GO TO   SEQ-DELETE-05-01.                                SQ2274.2
@@ -952,9 +952,9 @@
 100000         MOVE   "VII-3, VII-44" TO ANSI-REFERENCE                 SQ2274.2
 100100         PERFORM FAIL.                                            SQ2274.2
 100200 SEQ-TEST-05-01-END.                                              SQ2274.2
-100300*                                                                 SQ2274.2
-100400*    CHECK EXECUTION OF I-O DECLARATIVE                           SQ2274.2
-100500*                                                                 SQ2274.2
+100300*                                                                         
+100400*                                                                         
+100500*                                                                         
 100600     ADD     1 TO REC-CT.                                         SQ2274.2
 100700     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 100800         GO TO   SEQ-DELETE-05-02.                                SQ2274.2
@@ -973,10 +973,10 @@
 102100         MOVE   "VII-2,1.3.5, VII-51,4.6.4(5)" TO ANSI-REFERENCE  SQ2274.2
 102200         PERFORM FAIL.                                            SQ2274.2
 102300 SEQ-TEST-05-02-END.                                              SQ2274.2
-102400*                                                                 SQ2274.2
-102500*    CHECK THAT THE CORRECT RECORD HAS BEEN RETURNED, BY          SQ2274.2
-102600*    CHECKING THE RECORD-NUMBER FIELD.                            SQ2274.2
-102700*                                                                 SQ2274.2
+102400*                                                                         
+102500*                                                                         
+102600*                                                                         
+102700*                                                                         
 102800     ADD     1 TO REC-CT.                                         SQ2274.2
 102900     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 103000         GO TO   SEQ-DELETE-05-03.                                SQ2274.2
@@ -993,9 +993,9 @@
 104100         MOVE   "INCORRECT RECORD NUMBER FOUND" TO RE-MARK        SQ2274.2
 104200         PERFORM FAIL.                                            SQ2274.2
 104300 SEQ-TEST-05-03-END.                                              SQ2274.2
-104400*                                                                 SQ2274.2
-104500*    CHECK THE LENGTH OF THE RECORD RETURNED                      SQ2274.2
-104600*                                                                 SQ2274.2
+104400*                                                                         
+104500*                                                                         
+104600*                                                                         
 104700     ADD     1 TO REC-CT.                                         SQ2274.2
 104800     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 104900         GO TO   SEQ-DELETE-05-04.                                SQ2274.2
@@ -1014,10 +1014,10 @@
 106200         PERFORM FAIL.                                            SQ2274.2
 106300 SEQ-TEST-05-04-END.                                              SQ2274.2
 106400     MOVE    SPACE TO DELETE-SW-2.                                SQ2274.2
-106500*                                                                 SQ2274.2
-106600*                                                                 SQ2274.2
-106700*    TRY TO WRITE A RECORD OF A DIFFERENT SIZE THAN READ          SQ2274.2
-106800*                                                                 SQ2274.2
+106500*                                                                         
+106600*                                                                         
+106700*                                                                         
+106800*                                                                         
 106900 SEQ-INIT-06.                                                     SQ2274.2
 107000     MOVE    0 TO REC-CT.                                         SQ2274.2
 107100     MOVE    SPACE TO DECL-EXEC-SW.                               SQ2274.2
@@ -1037,9 +1037,9 @@
 108500 SEQ-TEST-RW-06.                                                  SQ2274.2
 108600     REWRITE SQ-FS4R1-F-G-120.                                    SQ2274.2
 108700     MOVE    0 TO REC-CT.                                         SQ2274.2
-108800*                                                                 SQ2274.2
-108900*    CHECK I-O STATUS RETURNED FROM REWRITE                       SQ2274.2
-109000*                                                                 SQ2274.2
+108800*                                                                         
+108900*                                                                         
+109000*                                                                         
 109100     ADD    1 TO REC-CT.                                          SQ2274.2
 109200     IF DELETE-SW NOT = SPACE                                     SQ2274.2
 109300         GO TO   SEQ-DELETE-06-01.                                SQ2274.2

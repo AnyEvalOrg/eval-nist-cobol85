@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1224.2
 000200 PROGRAM-ID.                                                      NC1224.2
 000300     NC122A.                                                      NC1224.2
-000400****************************************************************  NC1224.2
-000500*                                                              *  NC1224.2
-000600*    VALIDATION FOR:-                                          *  NC1224.2
-000700*                                                              *  NC1224.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1224.2
-000900*                                                              *  NC1224.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1224.2
-001100*                                                              *  NC1224.2
-001200****************************************************************  NC1224.2
-001300*                                                              *  NC1224.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1224.2
-001500*                                                              *  NC1224.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1224.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1224.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1224.2
-001900*                                                              *  NC1224.2
-002000****************************************************************  NC1224.2
-002100*                                                                 NC1224.2
-002200*   PROGRAM NC122A TESTS THE USE OF INDEXED IDENTIFIERS USING     NC1224.2
-002300*   FORMATS 1, 2 AND 3 OF THE "INSPECT" STATEMENT.                NC1224.2
-002400*   SINGLE LEVEL AND RELATIVE INDEXING ARE USED.                  NC1224.2
-002500*                                                                 NC1224.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1224.2
 002700 CONFIGURATION SECTION.                                           NC1224.2
 002800 SOURCE-COMPUTER.                                                 NC1224.2
@@ -272,7 +272,7 @@
 027400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1224.2
 027500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1224.2
 027600      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1224.2
-027700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1224.2
+027700*                                                                         
 027800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1224.2
 027900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1224.2
 028000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1224.2
@@ -372,7 +372,7 @@
 037400     INSPECT TABLE1-REC (INDEX1) TALLYING WRK-DU-999 (INDEX2)     NC1224.2
 037500        FOR CHARACTERS.                                           NC1224.2
 037600 IND-TEST-GF-1-1.                                                 NC1224.2
-037700     IF WRK-DU-999 (INDEX2) EQUAL TO 43                           NC1224.2
+037700     IF WRK-DU-999 (INDEX2) EQUAL TO 63                           NC1224.2
 037800        PERFORM PASS                                              NC1224.2
 037900        GO TO IND-WRITE-GF-1.                                     NC1224.2
 038000     GO TO IND-FAIL-GF-1.                                         NC1224.2
@@ -382,7 +382,7 @@
 038400 IND-FAIL-GF-1.                                                   NC1224.2
 038500     PERFORM FAIL.                                                NC1224.2
 038600     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N.                      NC1224.2
-038700     MOVE 43 TO CORRECT-N.                                        NC1224.2
+038700     MOVE 63 TO CORRECT-N.                                        NC1224.2
 038800 IND-WRITE-GF-1.                                                  NC1224.2
 038900     MOVE "IND-TEST-GF-1" TO PAR-NAME.                            NC1224.2
 039000     MOVE "TALLY FOR CHARACTERS" TO FEATURE.                      NC1224.2
@@ -397,7 +397,7 @@
 039900     INSPECT TABLE1-REC (INDEX1) TALLYING WRK-DU-999 (INDEX2)     NC1224.2
 040000        FOR ALL "A".                                              NC1224.2
 040100 IND-TEST-GF-2-1.                                                 NC1224.2
-040200     IF WRK-DU-999 (INDEX2) EQUAL TO 2                            NC1224.2
+040200     IF WRK-DU-999 (INDEX2) EQUAL TO 4                            NC1224.2
 040300        PERFORM PASS                                              NC1224.2
 040400        GO TO IND-WRITE-GF-2.                                     NC1224.2
 040500     GO TO IND-FAIL-GF-2.                                         NC1224.2
@@ -407,7 +407,7 @@
 040900 IND-FAIL-GF-2.                                                   NC1224.2
 041000     PERFORM FAIL.                                                NC1224.2
 041100     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N.                      NC1224.2
-041200     MOVE 2 TO CORRECT-N.                                         NC1224.2
+041200     MOVE 4 TO CORRECT-N.                                         NC1224.2
 041300 IND-WRITE-GF-2.                                                  NC1224.2
 041400     MOVE "IND-TEST-GF-2" TO PAR-NAME.                            NC1224.2
 041500     MOVE "TALLY FOR LITERAL" TO FEATURE.                         NC1224.2
@@ -447,7 +447,7 @@
 044900     INSPECT TABLE1-REC (INDEX1) TALLYING WRK-DU-999 (INDEX2)     NC1224.2
 045000        FOR LEADING "A".                                          NC1224.2
 045100 IND-TEST-GF-4-1.                                                 NC1224.2
-045200     IF WRK-DU-999 (INDEX2) EQUAL TO 6                            NC1224.2
+045200     IF WRK-DU-999 (INDEX2) EQUAL TO 5                            NC1224.2
 045300        PERFORM PASS                                              NC1224.2
 045400        GO TO IND-WRITE-GF-4.                                     NC1224.2
 045500     GO TO IND-FAIL-GF-4.                                         NC1224.2
@@ -457,7 +457,7 @@
 045900 IND-FAIL-GF-4.                                                   NC1224.2
 046000     PERFORM FAIL.                                                NC1224.2
 046100     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N.                      NC1224.2
-046200     MOVE 6 TO CORRECT-N.                                         NC1224.2
+046200     MOVE 5 TO CORRECT-N.                                         NC1224.2
 046300 IND-WRITE-GF-4.                                                  NC1224.2
 046400     MOVE "IND-TEST-GF-4" TO PAR-NAME.                            NC1224.2
 046500     MOVE "TALLY LEADING LIT." TO FEATURE.                        NC1224.2

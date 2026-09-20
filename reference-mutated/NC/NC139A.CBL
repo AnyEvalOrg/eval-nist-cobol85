@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         NC1394.2
 000200 PROGRAM-ID.                                                      NC1394.2
 000300     NC139A.                                                      NC1394.2
-000400****************************************************************  NC1394.2
-000500*                                                              *  NC1394.2
-000600*    VALIDATION FOR:-                                          *  NC1394.2
-000700*                                                              *  NC1394.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1394.2
-000900*                                                              *  NC1394.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1394.2
-001100*                                                              *  NC1394.2
-001200****************************************************************  NC1394.2
-001300*                                                              *  NC1394.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1394.2
-001500*                                                              *  NC1394.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1394.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1394.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1394.2
-001900*                                                              *  NC1394.2
-002000****************************************************************  NC1394.2
-002100*                                                                 NC1394.2
-002200*    PROGRAM NC139A TESTS THE USE OF NUMERIC LITERALS WITH        NC1394.2
-002300*    RELATIVE INDEXING WHEN ACCESSING 2 AND 3 DIMENSIONAL         NC1394.2
-002400*    TABLES.                                                      NC1394.2
-002500*    THE USE OF INDEXES AND SUBSCRIPTS TOGETHER IS ALSO TESTED.   NC1394.2
-002600*                                                                 NC1394.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            NC1394.2
 002800 CONFIGURATION SECTION.                                           NC1394.2
 002900 SOURCE-COMPUTER.                                                 NC1394.2
@@ -40,24 +40,24 @@
 004000 01  PRINT-REC PICTURE X(120).                                    NC1394.2
 004100 01  DUMMY-RECORD PICTURE X(120).                                 NC1394.2
 004200 WORKING-STORAGE SECTION.                                         NC1394.2
-004300*         LITERALS AND INDEX-NAMES MAY BE MIXED IN A TABLE        NC1394.2
-004400*    REFERENCE.  THE LITERALS MAY BE SIGNED BUT MUST BE POSITIVE. NC1394.2
-004500*    RELATIVE INDEXING WITH BOTH POSITIVE AND NEGATIVE INTEGERS   NC1394.2
-004600*    IS PERMITTED.                                                NC1394.2
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
 004700 01  WS-2      PIC 9.                                             NC1394.2
 004800 01  WS-PLUS-2 PIC S9.                                            NC1394.2
 004900 01  WS-4      PIC 9.                                             NC1394.2
 005000 01  WS-PLUS-4 PIC S9.                                            NC1394.2
 005100 77  TEMP PIC XXX.                                                NC1394.2
 005200 77  EXPECTED-VALUE  PIC XXX.                                     NC1394.2
-005300*        TWO DIMENSIONAL TABLE, 6X4, WITH INDEXES.                NC1394.2
+005300*                                                                         
 005400 01  GRP-TAB1.                                                    NC1394.2
 005500     02  GRP-1  OCCURS 6 TIMES                                    NC1394.2
 005600                INDEXED BY IN1.                                   NC1394.2
 005700         03  ELEM1  PIC  XXX                                      NC1394.2
 005800                OCCURS 4 TIMES                                    NC1394.2
 005900                INDEXED BY IN2.                                   NC1394.2
-006000*       THREE DIMENSIONAL TABLE, 3X2X4, WITH INDEXES.             NC1394.2
+006000*                                                                         
 006100 01  GRP-TAB2.                                                    NC1394.2
 006200     02  GRP-2   OCCURS 3 TIMES                                   NC1394.2
 006300                 INDEXED BY INDEX1.                               NC1394.2
@@ -266,7 +266,7 @@
 026800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1394.2
 026900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1394.2
 027000      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1394.2
-027100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1394.2
+027100*                                                                         
 027200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1394.2
 027300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1394.2
 027400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1394.2
@@ -338,18 +338,18 @@
 034000 BAIL-OUT-EX. EXIT.                                               NC1394.2
 034100 CCVS1-EXIT.                                                      NC1394.2
 034200     EXIT.                                                        NC1394.2
-034300*********************************                                 NC1394.2
-034400*        STATEMENT DELETION INSTRUCTIONS                          NC1394.2
-034500*         IF THE COMPILER REJECTS ANY OF THE TABLE REFERENCES IN  NC1394.2
-034600*    THIS ROUTINE, DELETE THAT LINE OF CODE BY PLACING AN * IN    NC1394.2
-034700*    COLUMN 7.  LEAVE THE PERFORM...THRU STATEMENT.  THE TEST     NC1394.2
-034800*    ELEMENT DELETED APPEARS AS A FAILURE ON THE OUTPUT REPORT.   NC1394.2
-034900*****************************************                         NC1394.2
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
+034600*                                                                         
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
 035000 SECT-NC139A-001 SECTION.                                         NC1394.2
 035100 NC139A-001.                                                      NC1394.2
 035200     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC1394.2
-035300*        THIS SECTION STORES AAA THRU XXX IN THE TWO TABLES       NC1394.2
-035400*    REFERENCED IN THE TESTS.                                     NC1394.2
+035300*                                                                         
+035400*                                                                         
 035500 BUILD-TABLE.                                                     NC1394.2
 035600     SET IN1 TO 1.                                                NC1394.2
 035700     MOVE VALUES-1 TO GRP-1 (IN1).                                NC1394.2
@@ -360,11 +360,11 @@
 036200     MOVE VALUES-6 TO GRP-1 (IN1 + 5).                            NC1394.2
 036300     MOVE GRP-TAB1 TO GRP-TAB2.                                   NC1394.2
 036400 SECT-TH110-0002 SECTION.                                         NC1394.2
-036500*       THIS SECTION CONTAINS THE TESTS WHICH VALIDATE            NC1394.2
-036600*    THE HANDLING OF LITERALS MIXED WITH INDEX-NAMES              NC1394.2
-036700*    IN REFERENCING TWO AND THREE DIMENSIONAL TABLES.             NC1394.2
+036500*                                                                         
+036600*                                                                         
+036700*                                                                         
 036800 IND-INIT-001.                                                    NC1394.2
-036900*        THIS TEST MIXES UNSIGNED LITERALS WITH INDEX-NAMES.      NC1394.2
+036900*                                                                         
 037000     SET IN1  IN2  TO 1.                                          NC1394.2
 037100     SET INDEX1  INDEX2  INDEX3  TO 1.                            NC1394.2
 037200     MOVE "AAA" TO EXPECTED-VALUE.                                NC1394.2
@@ -398,7 +398,7 @@
 040000     PERFORM DE-LETE.                                             NC1394.2
 040100     PERFORM SYNTAX-CHECK-WRITE.                                  NC1394.2
 040200 IND-INIT-002.                                                    NC1394.2
-040300*       THIS TEST MIXES SIGNED LITERALS WITH INDEX-NAMES.         NC1394.2
+040300*                                                                         
 040400     MOVE ZERO TO REC-CT.                                         NC1394.2
 040500     MOVE SPACE TO TEMP.                                          NC1394.2
 040600     MOVE "GGG" TO EXPECTED-VALUE.                                NC1394.2
@@ -437,7 +437,7 @@
 043900     PERFORM DE-LETE.                                             NC1394.2
 044000     PERFORM SYNTAX-CHECK-WRITE.                                  NC1394.2
 044100 IND-INIT-003.                                                    NC1394.2
-044200*       THIS TEST MIXES UNSIGNED LITERALS WITH RELATIVE INDEXING. NC1394.2
+044200*                                                                         
 044300     MOVE ZERO TO REC-CT.                                         NC1394.2
 044400     MOVE SPACE TO TEMP.                                          NC1394.2
 044500     MOVE "SSS" TO EXPECTED-VALUE.                                NC1394.2
@@ -485,7 +485,7 @@
 048700     PERFORM DE-LETE.                                             NC1394.2
 048800     PERFORM SYNTAX-CHECK-WRITE.                                  NC1394.2
 048900 IND-INIT-004.                                                    NC1394.2
-049000*        THIS TEST MIXES SIGNED LITERALS WITH RELATIVE INDEXING.  NC1394.2
+049000*                                                                         
 049100     MOVE ZERO TO REC-CT.                                         NC1394.2
 049200     MOVE SPACE TO TEMP.                                          NC1394.2
 049300     MOVE "VVV" TO EXPECTED-VALUE.                                NC1394.2
@@ -533,8 +533,8 @@
 053500     PERFORM DE-LETE.                                             NC1394.2
 053600     PERFORM SYNTAX-CHECK-WRITE.                                  NC1394.2
 053700 IND-INIT-005.                                                    NC1394.2
-053800*        THIS TEST MIXES SIGNED AND UNSIGNED LITERALS             NC1394.2
-053900*    WITH RELATIVE INDEXING.                                      NC1394.2
+053800*                                                                         
+053900*                                                                         
 054000     MOVE ZERO TO REC-CT.                                         NC1394.2
 054100     MOVE SPACE TO TEMP.                                          NC1394.2
 054200     MOVE "PPP" TO EXPECTED-VALUE.                                NC1394.2
@@ -564,7 +564,7 @@
 056600     PERFORM SYNTAX-CHECK-WRITE.                                  NC1394.2
 056700 IND-INIT-006.                                                    NC1394.2
 056800     MOVE "IV-21 4.3.8.2" TO ANSI-REFERENCE.                      NC1394.2
-056900*        THIS TEST MIXES DATA-NAMES WITH RELATIVE INDEXING.       NC1394.2
+056900*                                                                         
 057000     MOVE ZERO TO REC-CT.                                         NC1394.2
 057100     MOVE SPACE TO TEMP.                                          NC1394.2
 057200     MOVE "PPP" TO EXPECTED-VALUE.                                NC1394.2

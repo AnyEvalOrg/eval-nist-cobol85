@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1144.2
 000300     IF114A.                                                      IF1144.2
 000400                                                                  IF1144.2
-000500***********************************************************       IF1144.2
-000600*                                                         *       IF1144.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1144.2
-000800* It contains tests for the Intrinsic Function            *       IF1144.2
-000900* INTEGER-PART.                                           *       IF1144.2
-001000*                                                         *       IF1144.2
-001100***********************************************************       IF1144.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1144.2
 001300 CONFIGURATION SECTION.                                           IF1144.2
 001400 SOURCE-COMPUTER.                                                 IF1144.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1144.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1144.2
 002700 WORKING-STORAGE SECTION.                                         IF1144.2
-002800***********************************************************       IF1144.2
-002900* Variables specific to the Intrinsic Function Test IF114A*       IF1144.2
-003000***********************************************************       IF1144.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 500000.        IF1144.2
 003200 01  B                   PIC S9(10)          VALUE 1.             IF1144.2
 003300 01  E                   PIC S9(6)V9(5)      VALUE 399999.122.    IF1144.2
@@ -40,9 +40,9 @@
 004000     02  IND OCCURS 5 TIMES PIC 9.                                IF1144.2
 004100 01  TEMP                PIC S9(5)V9(5).                          IF1144.2
 004200 01  WS-INT              PIC S9(10).                              IF1144.2
-004300*                                                                 IF1144.2
-004400**********************************************************        IF1144.2
-004500*                                                                 IF1144.2
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
 004600 01  TEST-RESULTS.                                                IF1144.2
 004700     02 FILLER                   PIC X      VALUE SPACE.          IF1144.2
 004800     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1144.2
@@ -302,16 +302,16 @@
 030200 BAIL-OUT-EX. EXIT.                                               IF1144.2
 030300 CCVS1-EXIT.                                                      IF1144.2
 030400     EXIT.                                                        IF1144.2
-030500********************************************************          IF1144.2
-030600*                                                      *          IF1144.2
-030700*    Intrinsic Function Tests    IF114A - INTEGER-PART *          IF1144.2
-030800*                                                      *          IF1144.2
-030900********************************************************          IF1144.2
+030500*                                                                         
+030600*                                                                         
+030700*                                                                         
+030800*                                                                         
+030900*                                                                         
 031000 SECT-IF114A SECTION.                                             IF1144.2
 031100 F-INTPART-INFO.                                                  IF1144.2
 031200     MOVE     "See ref. A-47 2.18" TO ANSI-REFERENCE.             IF1144.2
 031300     MOVE     "INTEGER-PART Function"     TO FEATURE.             IF1144.2
-031400*****************TEST (a) ******************************          IF1144.2
+031400*                                                                         
 031500 F-INTPART-01.                                                    IF1144.2
 031600     MOVE ZERO TO WS-INT.                                         IF1144.2
 031700 F-INTPART-TEST-01.                                               IF1144.2
@@ -329,7 +329,7 @@
 032900 F-INTPART-WRITE-01.                                              IF1144.2
 033000     MOVE "F-INTPART-01" TO PAR-NAME.                             IF1144.2
 033100     PERFORM  PRINT-DETAIL.                                       IF1144.2
-033200*****************TEST (b) ******************************          IF1144.2
+033200*                                                                         
 033300 F-INTPART-02.                                                    IF1144.2
 033400     MOVE ZERO TO WS-INT.                                         IF1144.2
 033500 F-INTPART-TEST-02.                                               IF1144.2
@@ -345,7 +345,7 @@
 034500 F-INTPART-WRITE-02.                                              IF1144.2
 034600     MOVE "F-INTPART-02" TO PAR-NAME.                             IF1144.2
 034700     PERFORM  PRINT-DETAIL.                                       IF1144.2
-034800*****************TEST (c) ******************************          IF1144.2
+034800*                                                                         
 034900 F-INTPART-03.                                                    IF1144.2
 035000     MOVE ZERO TO WS-INT.                                         IF1144.2
 035100 F-INTPART-TEST-03.                                               IF1144.2
@@ -361,7 +361,7 @@
 036100 F-INTPART-WRITE-03.                                              IF1144.2
 036200     MOVE "F-INTPART-03" TO PAR-NAME.                             IF1144.2
 036300     PERFORM  PRINT-DETAIL.                                       IF1144.2
-036400*****************TEST (d) ******************************          IF1144.2
+036400*                                                                         
 036500 F-INTPART-04.                                                    IF1144.2
 036600     MOVE ZERO TO WS-INT.                                         IF1144.2
 036700 F-INTPART-TEST-04.                                               IF1144.2
@@ -379,7 +379,7 @@
 037900 F-INTPART-WRITE-04.                                              IF1144.2
 038000     MOVE "F-INTPART-04" TO PAR-NAME.                             IF1144.2
 038100     PERFORM  PRINT-DETAIL.                                       IF1144.2
-038200*****************TEST (e) ******************************          IF1144.2
+038200*                                                                         
 038300 F-INTPART-05.                                                    IF1144.2
 038400     MOVE ZERO TO WS-INT.                                         IF1144.2
 038500 F-INTPART-TEST-05.                                               IF1144.2
@@ -397,7 +397,7 @@
 039700 F-INTPART-WRITE-05.                                              IF1144.2
 039800     MOVE "F-INTPART-05" TO PAR-NAME.                             IF1144.2
 039900     PERFORM  PRINT-DETAIL.                                       IF1144.2
-040000*****************TEST (f) ******************************          IF1144.2
+040000*                                                                         
 040100 F-INTPART-06.                                                    IF1144.2
 040200     MOVE ZERO TO WS-INT.                                         IF1144.2
 040300 F-INTPART-TEST-06.                                               IF1144.2
@@ -415,7 +415,7 @@
 041500 F-INTPART-WRITE-06.                                              IF1144.2
 041600     MOVE "F-INTPART-06" TO PAR-NAME.                             IF1144.2
 041700     PERFORM  PRINT-DETAIL.                                       IF1144.2
-041800*****************TEST (g) ******************************          IF1144.2
+041800*                                                                         
 041900 F-INTPART-07.                                                    IF1144.2
 042000     MOVE ZERO TO WS-INT.                                         IF1144.2
 042100 F-INTPART-TEST-07.                                               IF1144.2
@@ -433,7 +433,7 @@
 043300 F-INTPART-WRITE-07.                                              IF1144.2
 043400     MOVE "F-INTPART-07" TO PAR-NAME.                             IF1144.2
 043500     PERFORM  PRINT-DETAIL.                                       IF1144.2
-043600*****************TEST (h) ******************************          IF1144.2
+043600*                                                                         
 043700 F-INTPART-08.                                                    IF1144.2
 043800     MOVE ZERO TO WS-INT.                                         IF1144.2
 043900 F-INTPART-TEST-08.                                               IF1144.2
@@ -451,15 +451,15 @@
 045100 F-INTPART-WRITE-08.                                              IF1144.2
 045200     MOVE "F-INTPART-08" TO PAR-NAME.                             IF1144.2
 045300     PERFORM  PRINT-DETAIL.                                       IF1144.2
-045400*****************TEST (i) ******************************          IF1144.2
+045400*                                                                         
 045500 F-INTPART-09.                                                    IF1144.2
 045600     MOVE ZERO TO WS-INT.                                         IF1144.2
 045700 F-INTPART-TEST-09.                                               IF1144.2
 045800     COMPUTE WS-INT = FUNCTION INTEGER-PART(A).                   IF1144.2
-045900     IF WS-INT = 530000 THEN                                      IF1144.2
+045900     IF WS-INT = 900000 THEN                                      IF1144.2
 046000                    PERFORM PASS                                  IF1144.2
 046100     ELSE                                                         IF1144.2
-046200                    MOVE  530000  TO CORRECT-N                    IF1144.2
+046200                    MOVE  900000  TO CORRECT-N                    IF1144.2
 046300                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 046400                    PERFORM FAIL.                                 IF1144.2
 046500     GO TO F-INTPART-WRITE-09.                                    IF1144.2
@@ -469,7 +469,7 @@
 046900 F-INTPART-WRITE-09.                                              IF1144.2
 047000     MOVE "F-INTPART-09" TO PAR-NAME.                             IF1144.2
 047100     PERFORM  PRINT-DETAIL.                                       IF1144.2
-047200*****************TEST (j) ******************************          IF1144.2
+047200*                                                                         
 047300 F-INTPART-10.                                                    IF1144.2
 047400     MOVE ZERO TO WS-INT.                                         IF1144.2
 047500 F-INTPART-TEST-10.                                               IF1144.2
@@ -487,7 +487,7 @@
 048700 F-INTPART-WRITE-10.                                              IF1144.2
 048800     MOVE "F-INTPART-10" TO PAR-NAME.                             IF1144.2
 048900     PERFORM  PRINT-DETAIL.                                       IF1144.2
-049000*****************TEST (k) ******************************          IF1144.2
+049000*                                                                         
 049100 F-INTPART-11.                                                    IF1144.2
 049200     MOVE ZERO TO WS-INT.                                         IF1144.2
 049300 F-INTPART-TEST-11.                                               IF1144.2
@@ -505,7 +505,7 @@
 050500 F-INTPART-WRITE-11.                                              IF1144.2
 050600     MOVE "F-INTPART-11" TO PAR-NAME.                             IF1144.2
 050700     PERFORM  PRINT-DETAIL.                                       IF1144.2
-050800*****************TEST (l) ******************************          IF1144.2
+050800*                                                                         
 050900 F-INTPART-12.                                                    IF1144.2
 051000     MOVE ZERO TO WS-INT.                                         IF1144.2
 051100 F-INTPART-TEST-12.                                               IF1144.2
@@ -523,15 +523,15 @@
 052300 F-INTPART-WRITE-12.                                              IF1144.2
 052400     MOVE "F-INTPART-12" TO PAR-NAME.                             IF1144.2
 052500     PERFORM  PRINT-DETAIL.                                       IF1144.2
-052600*****************TEST (m) ******************************          IF1144.2
+052600*                                                                         
 052700 F-INTPART-13.                                                    IF1144.2
 052800     MOVE ZERO TO WS-INT.                                         IF1144.2
 052900 F-INTPART-TEST-13.                                               IF1144.2
 053000     COMPUTE WS-INT = FUNCTION INTEGER-PART(IND(1)).              IF1144.2
-053100     IF WS-INT = 8 THEN                                           IF1144.2
+053100     IF WS-INT = 2 THEN                                           IF1144.2
 053200                    PERFORM PASS                                  IF1144.2
 053300     ELSE                                                         IF1144.2
-053400                    MOVE 8 TO CORRECT-N                           IF1144.2
+053400                    MOVE 2 TO CORRECT-N                           IF1144.2
 053500                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 053600                    PERFORM FAIL.                                 IF1144.2
 053700     GO TO F-INTPART-WRITE-13.                                    IF1144.2
@@ -541,7 +541,7 @@
 054100 F-INTPART-WRITE-13.                                              IF1144.2
 054200     MOVE "F-INTPART-13" TO PAR-NAME.                             IF1144.2
 054300     PERFORM  PRINT-DETAIL.                                       IF1144.2
-054400*****************TEST (n) ******************************          IF1144.2
+054400*                                                                         
 054500 F-INTPART-14.                                                    IF1144.2
 054600     MOVE ZERO TO WS-INT.                                         IF1144.2
 054700 F-INTPART-TEST-14.                                               IF1144.2
@@ -559,7 +559,7 @@
 055900 F-INTPART-WRITE-14.                                              IF1144.2
 056000     MOVE "F-INTPART-14" TO PAR-NAME.                             IF1144.2
 056100     PERFORM  PRINT-DETAIL.                                       IF1144.2
-056200*****************TEST (o) ******************************          IF1144.2
+056200*                                                                         
 056300 F-INTPART-15.                                                    IF1144.2
 056400     MOVE ZERO TO WS-INT.                                         IF1144.2
 056500 F-INTPART-TEST-15.                                               IF1144.2
@@ -577,7 +577,7 @@
 057700 F-INTPART-WRITE-15.                                              IF1144.2
 057800     MOVE "F-INTPART-15" TO PAR-NAME.                             IF1144.2
 057900     PERFORM  PRINT-DETAIL.                                       IF1144.2
-058000*****************TEST (p) ******************************          IF1144.2
+058000*                                                                         
 058100 F-INTPART-16.                                                    IF1144.2
 058200     MOVE ZERO TO WS-INT.                                         IF1144.2
 058300 F-INTPART-TEST-16.                                               IF1144.2
@@ -595,7 +595,7 @@
 059500 F-INTPART-WRITE-16.                                              IF1144.2
 059600     MOVE "F-INTPART-16" TO PAR-NAME.                             IF1144.2
 059700     PERFORM  PRINT-DETAIL.                                       IF1144.2
-059800*****************TEST (q) ******************************          IF1144.2
+059800*                                                                         
 059900 F-INTPART-17.                                                    IF1144.2
 060000     MOVE ZERO TO WS-INT.                                         IF1144.2
 060100 F-INTPART-TEST-17.                                               IF1144.2
@@ -613,7 +613,7 @@
 061300 F-INTPART-WRITE-17.                                              IF1144.2
 061400     MOVE "F-INTPART-17" TO PAR-NAME.                             IF1144.2
 061500     PERFORM  PRINT-DETAIL.                                       IF1144.2
-061600*****************TEST (r) ******************************          IF1144.2
+061600*                                                                         
 061700 F-INTPART-18.                                                    IF1144.2
 061800     MOVE ZERO TO WS-INT.                                         IF1144.2
 061900 F-INTPART-TEST-18.                                               IF1144.2
@@ -631,7 +631,7 @@
 063100 F-INTPART-WRITE-18.                                              IF1144.2
 063200     MOVE "F-INTPART-18" TO PAR-NAME.                             IF1144.2
 063300     PERFORM  PRINT-DETAIL.                                       IF1144.2
-063400*****************TEST (s) ******************************          IF1144.2
+063400*                                                                         
 063500 F-INTPART-19.                                                    IF1144.2
 063600     MOVE ZERO TO WS-INT.                                         IF1144.2
 063700 F-INTPART-TEST-19.                                               IF1144.2
@@ -649,7 +649,7 @@
 064900 F-INTPART-WRITE-19.                                              IF1144.2
 065000     MOVE "F-INTPART-19" TO PAR-NAME.                             IF1144.2
 065100     PERFORM  PRINT-DETAIL.                                       IF1144.2
-065200*****************TEST (t) ******************************          IF1144.2
+065200*                                                                         
 065300 F-INTPART-20.                                                    IF1144.2
 065400     MOVE ZERO TO TEMP.                                           IF1144.2
 065500 F-INTPART-TEST-20.                                               IF1144.2
@@ -668,7 +668,7 @@
 066800 F-INTPART-WRITE-20.                                              IF1144.2
 066900     MOVE "F-INTPART-20" TO PAR-NAME.                             IF1144.2
 067000     PERFORM  PRINT-DETAIL.                                       IF1144.2
-067100*****************TEST (u) ******************************          IF1144.2
+067100*                                                                         
 067200 F-INTPART-21.                                                    IF1144.2
 067300     MOVE ZERO TO WS-INT.                                         IF1144.2
 067400 F-INTPART-TEST-21.                                               IF1144.2
@@ -687,16 +687,16 @@
 068700 F-INTPART-WRITE-21.                                              IF1144.2
 068800     MOVE "F-INTPART-21" TO PAR-NAME.                             IF1144.2
 068900     PERFORM  PRINT-DETAIL.                                       IF1144.2
-069000*****************TEST (v) ******************************          IF1144.2
+069000*                                                                         
 069100 F-INTPART-22.                                                    IF1144.2
 069200     MOVE ZERO TO WS-INT.                                         IF1144.2
 069300 F-INTPART-TEST-22.                                               IF1144.2
 069400     COMPUTE WS-INT = FUNCTION INTEGER-PART(3.2) +                IF1144.2
 069500                      FUNCTION INTEGER-PART(1.3).                 IF1144.2
-069600     IF WS-INT = 8 THEN                                           IF1144.2
+069600     IF WS-INT = 5 THEN                                           IF1144.2
 069700                    PERFORM PASS                                  IF1144.2
 069800     ELSE                                                         IF1144.2
-069900                    MOVE 8 TO CORRECT-N                           IF1144.2
+069900                    MOVE 5 TO CORRECT-N                           IF1144.2
 070000                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 070100                    PERFORM FAIL.                                 IF1144.2
 070200     GO TO F-INTPART-WRITE-22.                                    IF1144.2
@@ -706,7 +706,7 @@
 070600 F-INTPART-WRITE-22.                                              IF1144.2
 070700     MOVE "F-INTPART-22" TO PAR-NAME.                             IF1144.2
 070800     PERFORM  PRINT-DETAIL.                                       IF1144.2
-070900***************** SPECIAL TEST 1 ***********************          IF1144.2
+070900*                                                                         
 071000 F-INTPART-23.                                                    IF1144.2
 071100     MOVE 4.4 TO ARG1.                                            IF1144.2
 071200     PERFORM F-INTPART-TEST-23                                    IF1144.2
@@ -716,17 +716,17 @@
 071600     ELSE                                                         IF1144.2
 071700                            PERFORM FAIL.                         IF1144.2
 071800     GO TO F-INTPART-WRITE-23.                                    IF1144.2
-071900*                                                                 IF1144.2
+071900*                                                                         
 072000 F-INTPART-TEST-23.                                               IF1144.2
 072100     COMPUTE ARG1 = ARG1 + 1.                                     IF1144.2
-072200*                                                                 IF1144.2
+072200*                                                                         
 072300 F-INTPART-DELETE-23.                                             IF1144.2
 072400     PERFORM  DE-LETE.                                            IF1144.2
 072500     GO TO    F-INTPART-WRITE-23.                                 IF1144.2
 072600 F-INTPART-WRITE-23.                                              IF1144.2
 072700     MOVE "F-INTPART-23" TO PAR-NAME.                             IF1144.2
 072800     PERFORM  PRINT-DETAIL.                                       IF1144.2
-072900*******************END OF TESTS**************************         IF1144.2
+072900*                                                                         
 073000 CCVS-EXIT SECTION.                                               IF1144.2
 073100 CCVS-999999.                                                     IF1144.2
 073200     GO TO CLOSE-FILES.                                           IF1144.2

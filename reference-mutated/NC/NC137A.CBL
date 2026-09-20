@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC1374.2
 000200 PROGRAM-ID.                                                      NC1374.2
 000300     NC137A.                                                      NC1374.2
-000400****************************************************************  NC1374.2
-000500*                                                              *  NC1374.2
-000600*    VALIDATION FOR:-                                          *  NC1374.2
-000700*                                                              *  NC1374.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1374.2
-000900*                                                              *  NC1374.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1374.2
-001100*                                                              *  NC1374.2
-001200****************************************************************  NC1374.2
-001300*                                                              *  NC1374.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1374.2
-001500*                                                              *  NC1374.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1374.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1374.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1374.2
-001900*                                                              *  NC1374.2
-002000****************************************************************  NC1374.2
-002100*                                                                 NC1374.2
-002200*    PROGRAM NC137A VERIFIES THE ACCURACY OF BUILDING AND         NC1374.2
-002300*    ACCESSING A 3 DIMENSIONAL TABLE USING INDEXES.               NC1374.2
-002400*                                                                 NC1374.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC1374.2
 002600 CONFIGURATION SECTION.                                           NC1374.2
 002700 SOURCE-COMPUTER.                                                 NC1374.2
@@ -260,7 +260,7 @@
 026200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1374.2
 026300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1374.2
 026400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1374.2
-026500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1374.2
+026500*                                                                         
 026600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1374.2
 026700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1374.2
 026800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1374.2

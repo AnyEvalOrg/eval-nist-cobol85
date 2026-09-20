@@ -1,80 +1,80 @@
 000100 IDENTIFICATION DIVISION.                                         IX2164.2
 000200 PROGRAM-ID.                                                      IX2164.2
 000300     IX216A.                                                      IX2164.2
-000400****************************************************************  IX2164.2
-000500*                                                              *  IX2164.2
-000600*    VALIDATION FOR:-                                          *  IX2164.2
-000700*                                                              *  IX2164.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2164.2
-000900*                                                              *  IX2164.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2164.2
-001100*                                                              *  IX2164.2
-001200****************************************************************  IX2164.2
-001300*                                                                 IX2164.2
-001400*         NEW TESTS:                                              IX2164.2
-001500*                                                                 IX2164.2
-001600*             SELECT OPTIONAL ...   WITH                          IX2164.2
-001700*                    --------                                     IX2164.2
-001800*             OPEN EXTEND ...   (FOR A NON-EXISTING FILE)         IX2164.2
-001900*                  ------              ------------               IX2164.2
-002000*         THEN THE FILE IS CLOSED AFTER WRITING 300 RECORDS       IX2164.2
-002100*         AND OPENED WITH:                                        IX2164.2
-002200*                                                                 IX2164.2
-002300*             OPEN EXTEND ...   (FOR AN EXISTING FILE)            IX2164.2
-002400*                  ------               --------                  IX2164.2
-002500*         AND     CLOSE IX-FS2 LOCK.                              IX2164.2
-002600*                              ----                               IX2164.2
-002700*                                                                 IX2164.2
-002800*         ALL OTHER TESTS ARE IDENTICAL WITH THE TESTS IN IX104.  IX2164.2
-002900*                                                                 IX2164.2
-003000*                                                                 IX2164.2
-003100*    THIS PROGRAM TESTS THE SYNTACTICAL CONSTRUCTS AND SEMANTIC   IX2164.2
-003200*    ACTIONS ASSOCIATED WITH THE FOLLOWING ELEMENTS:              IX2164.2
-003300*                                                                 IX2164.2
-003400*    (1) FILE STATUS                                              IX2164.2
-003500*    (2) USE AFTER EXCEPTION USING FILE-NAME                      IX2164.2
-003600*    (3) READ                                                     IX2164.2
-003700*    (4) WRITE                                                    IX2164.2
-003800*    (5) REWRITE                                                  IX2164.2
-003900*    (6) RECORD KEY                                               IX2164.2
-004000*    (7) ACCESS                                                   IX2164.2
-004100*                                                                 IX2164.2
-004200*    THIS PROGRAM CREATES AN INDEXED FILE SEQUENTIALLY (ACCESS    IX2164.2
-004300*    MODE SEQUENTIAL) AND THEN UPDATES SELECTIVE RECORDS OF THE   IX2164.2
-004400*    FILE.  THE FILE STATUS CONTENTS ARE CAPTURED AND TESTED FOR  IX2164.2
-004500*    ACCURACY FOR EACH OPEN, CLOSE, READ AND REWRITE STATEMENT    IX2164.2
-004600*    USED.  THE READ, WRITE AND REWRITE STATEMENTS ARE USED       IX2164.2
-004700*    WITHOUT THE APPROPRIATE AT END OR INVALID KEY PHRASES. THE   IX2164.2
-004800*    OMISSION OF THESE PHRASES ARE PERMITTED IF AN APPLICABLE USE IX2164.2
-004900*    PROCEDURE HAS BEEN SPECIFIED.                                IX2164.2
-005000*                                                                 IX2164.2
-005100*                                                                 IX2164.2
-005200*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX2164.2
-005300*                                                                 IX2164.2
-005400*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX2164.2
-005500*                    CLAUSE FOR DATA FILE IX-FD2                  IX2164.2
-005600*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX2164.2
-005700*                    CLAUSE FOR INDEX FILE IX-FD2                 IX2164.2
-005800*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX2164.2
-005900*             X-62   IMPLEMENTOR-NAME FOR RAW-DATA (OPTIONAL)     IX2164.2
-006000*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX2164.2
-006100*             X-83   IMPLEMENTOR-NAME FOR OBJECT-COMPUTER         IX2164.2
-006200*                                                                 IX2164.2
-006300*         NOTE:  X-CARDS 45 AND 62          ARE OPTIONAL          IX2164.2
-006400*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX2164.2
-006500*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX2164.2
-006600*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX2164.2
-006700*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX2164.2
-006800*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX2164.2
-006900*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX2164.2
-007000*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX2164.2
-007100*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX2164.2
-007200*               THEY ARE AS FOLLOWS                               IX2164.2
-007300*                                                                 IX2164.2
-007400*                  J  SELECTS X-CARD 45                           IX2164.2
-007500*                  P  SELECTS X-CARD 62                           IX2164.2
-007600*                                                                 IX2164.2
-007700******************************************************            IX2164.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
 007800 ENVIRONMENT DIVISION.                                            IX2164.2
 007900 CONFIGURATION SECTION.                                           IX2164.2
 008000 SOURCE-COMPUTER.                                                 IX2164.2
@@ -336,8 +336,8 @@
 036000              DEPENDING ON  WRK-CS-09V00-012.                     IX2164.2
 036100     GO TO    IX-FS2-01-EXIT.                                     IX2164.2
 036200 IX-FS2-01-03.                                                    IX2164.2
-036300*ENTRY FROM SEGMENT INX-TEST-001.                                 IX2164.2
-036400*    SHOULD NOT ENTER HERE UNLESS SPACE ALLOCATION TOO SMALL.     IX2164.2
+036300*                                                                         
+036400*                                                                         
 036500     ADD     1 TO  WRK-CS-09V00-014.                              IX2164.2
 036600 IX-FS2-01-05.                                                    IX2164.2
 036700     ADD      1 TO WRK-CS-09V00-017.                              IX2164.2
@@ -399,7 +399,7 @@
 044700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2164.2
 044800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2164.2
 044900      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2164.2
-045000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2164.2
+045000*                                                                         
 045100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2164.2
 045200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2164.2
 045300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2164.2
@@ -484,7 +484,7 @@
 053200     MOVE    "IX"                TO XFILE-ORGANIZATION (2).       IX2164.2
 053300     MOVE     "S"             TO  XLABEL-TYPE        (2).         IX2164.2
 053400     MOVE     000001          TO  XRECORD-NUMBER     (2).         IX2164.2
-053500*INITIALIZE  RECORD WORK AREA NUMBER 2.                           IX2164.2
+053500*                                                                         
 053600     MOVE     1         TO  WRK-CS-09V00-012.                     IX2164.2
 053700     MOVE     ZERO      TO  WRK-CS-09V00-013 WRK-CS-09V00-014     IX2164.2
 053800                            WRK-CS-09V00-015 WRK-CS-09V00-016     IX2164.2
@@ -493,7 +493,7 @@
 054100     MOVE     SPACE     TO  IX-FS2-STATUS.                        IX2164.2
 054200     MOVE    ZERO TO WRK-DU-09V00-001.                            IX2164.2
 054300 OPEN-TEST-GF-01.                                                 IX2164.2
-054400*   FILE IX-FS2   DOES NOT EXIST **********************           IX2164.2
+054400*                                                                         
 054500     OPEN    EXTEND     IX-FS2.                                   IX2164.2
 054600     IF IX-FS2-STATUS = "05"                                      IX2164.2
 054700         GO TO OPEN-PASS-GF-01.                                   IX2164.2
@@ -511,7 +511,7 @@
 055900     PERFORM PRINT-DETAIL.                                        IX2164.2
 056000     MOVE GRP-0101 TO IX-FS2-KEY.                                 IX2164.2
 056100     MOVE     IX-FS2-STATUS TO WRK-XN-0002-001.                   IX2164.2
-056200*CAPTURE STATUS KEY AFTER  OPEN STATEMENT IS EXECUTED.            IX2164.2
+056200*                                                                         
 056300 WRITE-INIT-GF-01.                                                IX2164.2
 056400     MOVE    "99"  TO IX-FS2-STATUS.                              IX2164.2
 056500     MOVE     XRECORD-NUMBER (2) TO WRK-DU-09V00-001.             IX2164.2
@@ -573,13 +573,13 @@
 062100 WRITE-TEST-GF-04.                                                IX2164.2
 062200     MOVE "OP EXT STATUS EXP:00" TO FEATURE.                      IX2164.2
 062300     MOVE "WRITE-TEST-GF-04" TO PAR-NAME.                         IX2164.2
-062400*    IF       WRK-XN-0002-001 NOT EQUAL TO  "00"                  IX2164.2
-062500*           MOVE "IX-3; 1.3.4 (1) A; STATUS AFTER OPEN" TO RE-MARKIX2164.2
-062600*             MOVE WRK-XN-0002-001 TO COMPUTED-A                  IX2164.2
-062700*             MOVE "00" TO CORRECT-A                              IX2164.2
-062800*             PERFORM  FAIL                                       IX2164.2
-062900*             ELSE                                                IX2164.2
-063000*             PERFORM  PASS.                                      IX2164.2
+062400*                                                                         
+062500*                                                                         
+062600*                                                                         
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
+063000*                                                                         
 063100     PERFORM DE-LETE.                                             IX2164.2
 063200     PERFORM  PRINT-DETAIL.                                       IX2164.2
 063300 WRITE-TEST-GF-05.                                                IX2164.2
@@ -635,7 +635,7 @@
 068300     MOVE      IX-FS2-STATUS TO WRK-XN-0002-001                   IX2164.2
 068400     MOVE     SPACE TO IX-FS2-STATUS.                             IX2164.2
 068500     MOVE    "UPDATE  IX-FS2"  TO FEATURE.                        IX2164.2
-068600*CAPTURE THE CONTENTS OF STATUS KEY AFTER OPEN IS EXECUTED.       IX2164.2
+068600*                                                                         
 068700 RWRT-TEST-GF-01.                                                 IX2164.2
 068800     ADD      1 TO WRK-CS-09V00-014.                              IX2164.2
 068900     ADD      1 TO WRK-CS-09V00-015.                              IX2164.2

@@ -1,41 +1,41 @@
 000100 IDENTIFICATION DIVISION.                                         IX1054.2
 000200 PROGRAM-ID.                                                      IX1054.2
 000300     IX105A.                                                      IX1054.2
-000400****************************************************************  IX1054.2
-000500*                                                              *  IX1054.2
-000600*    VALIDATION FOR:-                                          *  IX1054.2
-000700*                                                              *  IX1054.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1054.2
-000900*                                                              *  IX1054.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1054.2
-001100*                                                              *  IX1054.2
-001200****************************************************************  IX1054.2
-001300*GENERAL:    THIS PROGRAM PROCESSES THREE INDEXED I-O FILES       IX1054.2
-001400*            IDENTIFIED AS IX-FR1,IX-FR2 AND IX-FR3.  THE FUNCTIONIX1054.2
-001500*            OF THIS PROGRAM IS TO CREATE THREE INDEXED FILES     IX1054.2
-001600*            RANDOMLLY (ACCESS MODE RANDOM) AND VERIFY THAT THEY  IX1054.2
-001700*            WERE CREATED CORRECTLY.  THE FILES PROCESSED         IX1054.2
-001800*            CONTAIN VARIABLE LENGTH RECORDS.                     IX1054.2
-001900*                                                                 IX1054.2
-002000*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    IX1054.2
-002100*            PROGRAM ARE:                                         IX1054.2
-002200*                                                                 IX1054.2
-002300*                 X-24   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR IX1054.2
-002400*                         INDEXED  I-O DATA FILE-1                IX1054.2
-002500*                 X-25   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR IX1054.2
-002600*                         INDEXED  I-O DATA FILE-2                IX1054.2
-002700*                 X-26   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR IX1054.2
-002800*                         INDEXED  I-O DATA FILE-3                IX1054.2
-002900*                 X-55   SYSTEM PRINTER                           IX1054.2
-003000*                 X-62   FOR RAW-DATA                             IX1054.2
-003100*                 X-82   SOURCE-COMPUTER                          IX1054.2
-003200*                 X-83   OBJECT-COMPUTER.                         IX1054.2
-003300*                                                                 IX1054.2
-003400*  THIS PROGRAM SHOULD BE RUN ONLY WHEN AN IMPLEMENTATION   *     IX1054.2
-003500*  PROVIDES VARIABLE-LENGTH RECORDS FOR THE RECORD CONTAINS *     IX1054.2
-003600*  INTEGER TO INTEGER CLAUSE.                               *     IX1054.2
-003700*                                                           *     IX1054.2
-003800***************************************************               IX1054.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
 003900 ENVIRONMENT DIVISION.                                            IX1054.2
 004000 CONFIGURATION SECTION.                                           IX1054.2
 004100 SOURCE-COMPUTER.                                                 IX1054.2
@@ -365,7 +365,7 @@
 037100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1054.2
 037200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1054.2
 037300      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1054.2
-037400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1054.2
+037400*                                                                         
 037500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1054.2
 037600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1054.2
 037700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1054.2
@@ -442,8 +442,8 @@
 044800     MOVE "WRITE SHORT & LONG " TO FEATURE.                       IX1054.2
 044900     MOVE "WRITE-TEST-GF-01" TO PAR-NAME.                         IX1054.2
 045000 WRITE-TEST-GF-01.                                                IX1054.2
-045100*    CREATE AN INDEXED FILE OF 180 RECORDS.  THE RECORDS SIZE IS  IX1054.2
-045200*    VARIABLE LENGTH (056 TO 100 CHARACTERS).                     IX1054.2
+045100*                                                                         
+045200*                                                                         
 045300     MOVE 1 TO FILE-NO.                                           IX1054.2
 045400     OPEN OUTPUT IX-FR1.                                          IX1054.2
 045500     PERFORM WRITE-TEST-GF-01-SHORT-REC 20 TIMES.                 IX1054.2
@@ -460,7 +460,7 @@
 046600     GO TO WRITE-TEST-GF-01-FAIL.                                 IX1054.2
 046700 WRITE-DELETE-GF-01.                                              IX1054.2
 046800     PERFORM DE-LETE.                                             IX1054.2
-046900*    NOTE IX-FR1 IS NOT CREATED  SO SKIP TO WRITE-TEST-5.         IX1054.2
+046900*                                                                         
 047000     PERFORM PRINT-DETAIL.                                        IX1054.2
 047100     GO TO WRITE-INIT-GF-02.                                      IX1054.2
 047200 WRITE-TEST-GF-01-LONG-REC.                                       IX1054.2
@@ -489,7 +489,7 @@
 049500 READ-INIT-F2-01.                                                 IX1054.2
 049600     MOVE "READ TO VERIFY     " TO FEATURE.                       IX1054.2
 049700     MOVE "READ-TEST-F2-01    " TO PAR-NAME.                      IX1054.2
-049800*    VERIFY NUMBER OF RECORDS IN FILE.                            IX1054.2
+049800*                                                                         
 049900     OPEN INPUT IX-FR1.                                           IX1054.2
 050000     MOVE 1 TO KEY-VALUE.                                         IX1054.2
 050100     MOVE KEY-BUILD TO IX-FR1-KEY.                                IX1054.2
@@ -524,18 +524,18 @@
 053000     MOVE "READ  SHORT RECORDS" TO FEATURE.                       IX1054.2
 053100     MOVE "READ-TEST-GF-02    " TO PAR-NAME.                      IX1054.2
 053200 READ-TEST-F2-02.                                                 IX1054.2
-053300*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-053400*    SHORT RECORD.                                                IX1054.2
+053300*                                                                         
+053400*                                                                         
 053500     READ IX-FR1 INVALID KEY                                      IX1054.2
 053600         PERFORM FAIL                                             IX1054.2
 053700         MOVE "KEY00010" TO CORRECT-A                             IX1054.2
 053800         MOVE "***INVALID KEY***" TO COMPUTED-A                   IX1054.2
 053900         MOVE "INVALID KEY IX-FR1 IX-28 4.5.2" TO RE-MARK         IX1054.2
 054000         GO TO READ-TEST-F2-02-WRITE.                             IX1054.2
-054100*    NOTE  *** IF REC-NUMBER-1B CONTAINS THE RECORD NUMBER        IX1054.2
-054200*          THEN FIXED LENGTH RECORDS WERE WRITTEN INSTEAD         IX1054.2
-054300*          OF VARIABLE LENGTH RECORDS.                            IX1054.2
-054400*    NOTE  CHECK LENGTH OF RECORD 10.                             IX1054.2
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
+054400*                                                                         
 054500 COMPARE-FOR-TEST-F2-02.                                          IX1054.2
 054600     IF REC-NUMBER-1B EQUAL TO "010"                              IX1054.2
 054700        MOVE "LONG RECORD CREATED" TO COMPUTED-A                  IX1054.2
@@ -547,8 +547,8 @@
 055300     PERFORM PRINT-DETAIL.                                        IX1054.2
 055400     CLOSE IX-FR1.                                                IX1054.2
 055500 READ-INIT-F2-03.                                                 IX1054.2
-055600*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-055700*    LONG RECORD.                                                 IX1054.2
+055600*                                                                         
+055700*                                                                         
 055800     OPEN INPUT IX-FR1.                                           IX1054.2
 055900     MOVE 144 TO KEY-VALUE.                                       IX1054.2
 056000     MOVE KEY-BUILD TO IX-FR1-KEY.                                IX1054.2
@@ -561,8 +561,8 @@
 056700         MOVE "***INVALID KEY***" TO COMPUTED-A                   IX1054.2
 056800         MOVE "INVAILD KEY IX-FR1" TO RE-MARK                     IX1054.2
 056900         GO TO READ-WRITE-F2-03.                                  IX1054.2
-057000*    NOTE  *** IF REC-NUMBER-1B CONTAINS THE RECORD NUMBER        IX1054.2
-057100*              THEN LONG RECORDS WERE WRITTEN.                    IX1054.2
+057000*                                                                         
+057100*                                                                         
 057200 COMPARE-FOR-TEST-F2-03.                                          IX1054.2
 057300     IF REC-NUMBER-1B NOT EQUAL TO "144" GO TO READ-FAIL-F2-03.   IX1054.2
 057400     PERFORM PASS.                                                IX1054.2
@@ -585,8 +585,8 @@
 059100 WRITE-INIT-GF-02.                                                IX1054.2
 059200     MOVE "WRITE IX-FS2       " TO FEATURE.                       IX1054.2
 059300     MOVE "WRITE-TEST-GF-02    " TO PAR-NAME.                     IX1054.2
-059400*    CREATE AN INDEXED FILE OF 101 RECORDS.  THE RECORD SIZE IS   IX1054.2
-059500*    VARIABLE LENGTH (056 TO 101 CHARACTERS).                     IX1054.2
+059400*                                                                         
+059500*                                                                         
 059600     MOVE ZERO TO KEY-VALUE  THREE-POS-NUM  SHORT-SW.             IX1054.2
 059700     MOVE 2 TO FILE-NO.                                           IX1054.2
 059800     OPEN OUTPUT IX-FR2.                                          IX1054.2
@@ -605,7 +605,7 @@
 061100     GO TO WRITE-TEST-GF-02-FAIL.                                 IX1054.2
 061200 WRITE-DELETE-GF-02.                                              IX1054.2
 061300     PERFORM DE-LETE.                                             IX1054.2
-061400*    NOTE IX-FR2 IS NOT CREATED  SO SKIP TO WRITE-TEST-9.         IX1054.2
+061400*                                                                         
 061500     PERFORM PRINT-DETAIL.                                        IX1054.2
 061600     GO TO WRITE-INIT-GF-03.                                      IX1054.2
 061700 WRITE-TEST-GF-02-LONG-REC.                                       IX1054.2
@@ -631,7 +631,7 @@
 063700     PERFORM PRINT-DETAIL.                                        IX1054.2
 063800     CLOSE IX-FR2.                                                IX1054.2
 063900 READ-INIT-F2-05.                                                 IX1054.2
-064000*    VERIFY NUMBER OF RECORDS IN FILE.                            IX1054.2
+064000*                                                                         
 064100     MOVE "READ IX-FS2 VERIFY " TO FEATURE.                       IX1054.2
 064200     MOVE "READ-TEST-F2-05    " TO PAR-NAME.                      IX1054.2
 064300     OPEN INPUT IX-FR2.                                           IX1054.2
@@ -659,8 +659,8 @@
 066500 READ-TEST-F2-05-WRITE.                                           IX1054.2
 066600     PERFORM PRINT-DETAIL.                                        IX1054.2
 066700 READ-INIT-F2-06.                                                 IX1054.2
-066800*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-066900*    SHORT RECORD.                                                IX1054.2
+066800*                                                                         
+066900*                                                                         
 067000     MOVE "READ               " TO FEATURE.                       IX1054.2
 067100     MOVE "READ-TEST-F2-06    " TO PAR-NAME.                      IX1054.2
 067200     MOVE 100 TO KEY-VALUE.                                       IX1054.2
@@ -672,10 +672,10 @@
 067800         MOVE "***INVALID KEY***" TO COMPUTED-A                   IX1054.2
 067900         MOVE "INVAILD KEY IX-FR2 IX-28 4.5.2 " TO RE-MARK        IX1054.2
 068000         GO TO READ-TEST-F2-06-WRITE.                             IX1054.2
-068100*    NOTE  *** IF REC-NUMBER-2B CONTAINS THE RECORD NUMBER        IX1054.2
-068200*          THEN FIXED LENGTH RECORDS WERE WRITTEN INSTEAD         IX1054.2
-068300*          OF VARIABLE LENGTH RECORDS.                            IX1054.2
-068400*    NOTE  CHECK LENGTH OF RECORD 100.                            IX1054.2
+068100*                                                                         
+068200*                                                                         
+068300*                                                                         
+068400*                                                                         
 068500 COMPARE-FOR-TEST-F2-06.                                          IX1054.2
 068600     IF REC-NUMBER-2B EQUAL TO "100"                              IX1054.2
 068700        MOVE "LONG RECORD CREATED" TO COMPUTED-A                  IX1054.2
@@ -686,8 +686,8 @@
 069200 READ-TEST-F2-06-WRITE.                                           IX1054.2
 069300     PERFORM PRINT-DETAIL.                                        IX1054.2
 069400 READ-INIT-F2-07.                                                 IX1054.2
-069500*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-069600*    LONG RECORD.                                                 IX1054.2
+069500*                                                                         
+069600*                                                                         
 069700     MOVE "READ               " TO FEATURE.                       IX1054.2
 069800     MOVE "READ-TEST-F2-07    " TO PAR-NAME.                      IX1054.2
 069900     MOVE 12 TO KEY-VALUE.                                        IX1054.2
@@ -699,8 +699,8 @@
 070500         MOVE "***INVALID KEY***" TO COMPUTED-A                   IX1054.2
 070600         MOVE "INVALID KEY IX-FR2 IX-28 4.5.2" TO RE-MARK         IX1054.2
 070700         GO TO READ-TEST-F2-07-WRITE.                             IX1054.2
-070800*    NOTE  ** IF REC-NUMBER-1B CONTAINS THE RECORD NUMBER         IX1054.2
-070900*             THEN LONG RECORDS WERE WRITTEN.                     IX1054.2
+070800*                                                                         
+070900*                                                                         
 071000 COMPARE-FOR-TEST-F2-07.                                          IX1054.2
 071100     IF REC-NUMBER-2B EQUAL TO "012"                              IX1054.2
 071200        PERFORM PASS                                              IX1054.2
@@ -721,8 +721,8 @@
 072700 READ-TEST-F2-07-EXIT.                                            IX1054.2
 072800     CLOSE IX-FR2.                                                IX1054.2
 072900 WRITE-INIT-GF-03.                                                IX1054.2
-073000*    CREATE AN INDEXED FILE OF 120 RECORDS.  THE RECORD SIZE IS   IX1054.2
-073100*    VARIABLE LENGTH (056-102 CHARACTERS).                        IX1054.2
+073000*                                                                         
+073100*                                                                         
 073200     MOVE "WRITE IX-FS3       " TO FEATURE.                       IX1054.2
 073300     MOVE "WRITE-TEST-GF-03   " TO PAR-NAME.                      IX1054.2
 073400     MOVE ZERO TO KEY-VALUE  THREE-POS-NUM  SHORT-SW.             IX1054.2
@@ -745,7 +745,7 @@
 075100     GO TO WRITE-TEST-GF-03-FAIL.                                 IX1054.2
 075200 WRITE-DELETE-GF-03.                                              IX1054.2
 075300     PERFORM DE-LETE.                                             IX1054.2
-075400*    NOTE IX-FR3 IS NOT CREATED  SO SKIP TO END-PARAGRAPH.        IX1054.2
+075400*                                                                         
 075500     PERFORM PRINT-DETAIL.                                        IX1054.2
 075600     GO TO CCVS-EXIT.                                             IX1054.2
 075700 WRITE-TEST-GF-03-LONG-REC.                                       IX1054.2
@@ -771,8 +771,8 @@
 077700     PERFORM PRINT-DETAIL.                                        IX1054.2
 077800     CLOSE IX-FR3.                                                IX1054.2
 077900 READ-INIT-F2-08.                                                 IX1054.2
-078000*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-078100*    LONG RECORD.                                                 IX1054.2
+078000*                                                                         
+078100*                                                                         
 078200     MOVE "READ IX-FS3 VERIFY " TO FEATURE.                       IX1054.2
 078300     MOVE "READ-TEST-F2-08    " TO PAR-NAME.                      IX1054.2
 078400     OPEN INPUT IX-FR3.                                           IX1054.2
@@ -789,8 +789,8 @@
 079500        ADD 1 TO KEY-VALUE                                        IX1054.2
 079600        MOVE KEY-BUILD TO IX-FR3-KEY                              IX1054.2
 079700        GO TO READ-TEST-F2-08.                                    IX1054.2
-079800*    NOTE  *** IF REC-NUMBER-3B CONTAINS THE RECORD NUMBER        IX1054.2
-079900*              THEN LONG RECORDS WERE WRITTEN.                    IX1054.2
+079800*                                                                         
+079900*                                                                         
 080000 COMPARE-FOR-TEST-F2-08.                                          IX1054.2
 080100     IF REC-NUMBER-3B EQUAL TO "016"                              IX1054.2
 080200        PERFORM PASS                                              IX1054.2
@@ -802,8 +802,8 @@
 080800 READ-TEST-F2-08-WRITE.                                           IX1054.2
 080900     PERFORM PRINT-DETAIL.                                        IX1054.2
 081000 READ-INIT-09.                                                    IX1054.2
-081100*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-081200*    SHORT RECORD.                                                IX1054.2
+081100*                                                                         
+081200*                                                                         
 081300     MOVE "READ  SHORT RECORDS" TO FEATURE.                       IX1054.2
 081400     MOVE "READ-TEST-F2-09    " TO PAR-NAME.                      IX1054.2
 081500     MOVE 71 TO KEY-VALUE.                                        IX1054.2
@@ -815,10 +815,10 @@
 082100         MOVE "***INVALID KEY***" TO COMPUTED-A                   IX1054.2
 082200         MOVE "INVAILD KEY IX-FR3 IX-28 4.5.2" TO RE-MARK         IX1054.2
 082300         GO TO READ-TEST-F2-09-WRITE.                             IX1054.2
-082400*    NOTE  *** IF REC-NUMBER-1B CONTAINS THE RECORD NUMBER        IX1054.2
-082500*          THEN FIXED LENGTH RECORDS WERE WRITTEN INSTEAD         IX1054.2
-082600*          OF VARIABLE LENGTH RECORDS.                            IX1054.2
-082700*    NOTE  CHECK LENGTH OF RECORD 71.                             IX1054.2
+082400*                                                                         
+082500*                                                                         
+082600*                                                                         
+082700*                                                                         
 082800 COMPARE-FOR-TEST-F2-09.                                          IX1054.2
 082900     IF REC-NUMBER-3B EQUAL TO "071"                              IX1054.2
 083000        MOVE "LONG RECORD CREATED" TO COMPUTED-A                  IX1054.2
@@ -829,8 +829,8 @@
 083500 READ-TEST-F2-09-WRITE.                                           IX1054.2
 083600     PERFORM PRINT-DETAIL.                                        IX1054.2
 083700 READ-INIT-F2-10.                                                 IX1054.2
-083800*    VERIFY VARIABLE LENGTH RECORDS WERE CREATED BY TESTING       IX1054.2
-083900*    LONG RECORD.                                                 IX1054.2
+083800*                                                                         
+083900*                                                                         
 084000     MOVE "READ LONG   RECORDS" TO FEATURE.                       IX1054.2
 084100     MOVE "READ-TEST-F2-10    " TO PAR-NAME.                      IX1054.2
 084200     MOVE 120 TO KEY-VALUE.                                       IX1054.2
@@ -842,8 +842,8 @@
 084800         MOVE "***INVALID KEY***" TO COMPUTED-A                   IX1054.2
 084900         MOVE "INVAILD KEY IX-FR3 IX-28 4.5.2" TO RE-MARK         IX1054.2
 085000         GO TO READ-TEST-F2-10-WRITE.                             IX1054.2
-085100*    NOTE  *** IF REC-NUMBER-3B CONTAINS THE RECORD NUMBER        IX1054.2
-085200*          THEN LONG RECORDS WERE WITTEN.                         IX1054.2
+085100*                                                                         
+085200*                                                                         
 085300 COMPARE-FOR-TEST-F2-10.                                          IX1054.2
 085400     IF REC-NUMBER-3B EQUAL TO "120"                              IX1054.2
 085500        PERFORM PASS                                              IX1054.2

@@ -1,84 +1,84 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1324.2
 000200 PROGRAM-ID.                                                      SQ1324.2
 000300     SQ132A.                                                      SQ1324.2
-000400***************************************************************   SQ1324.2
-000500*                                                             *   SQ1324.2
-000600*    VALIDATION FOR:-                                         *   SQ1324.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1324.2
-000800*    USING CCVS85 VERSION 4.2.                                *   SQ1324.2
-000900*                                                             *   SQ1324.2
-001000*    CREATION DATE     /     VALIDATION DATE                  *   SQ1324.2
-001100*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1324.2
-001200*                                                             *   SQ1324.2
-001300***************************************************************   SQ1324.2
-001400*                                                             *   SQ1324.2
-001500*      X-CARDS USED BY THIS PROGRAM ARE :-                    *   SQ1324.2
-001600*                                                             *   SQ1324.2
-001700*            X-14   SEQUENTIAL MASS STORAGE FILE.             *   SQ1324.2
-001800*            X-55   SYSTEM PRINTER                            *   SQ1324.2
-001900*            X-82   SOURCE-COMPUTER                           *   SQ1324.2
-002000*            X-83   OBJECT-COMPUTER                           *   SQ1324.2
-002100*            X-84   LABEL RECORDS OPTION                      *   SQ1324.2
-002200*                                                             *   SQ1324.2
-002300***************************************************************   SQ1324.2
-002400*                                                             *   SQ1324.2
-002500*    THIS PROGRAM CHECKS FOR THE CORRECT RESPONSE TOCLOSING   *   SQ1324.2
-002600*    AN UNOPENED FILE.  THE TEST FOR CORRECT I-O STATUS CODE  *   SQ1324.2
-002700*    42 IS IN THE DECLARATIVES.  AN ABNORMAL TERMINATION IS   *   SQ1324.2
-002800*    POSSIBLE AFTER THE TEST OF THE I-O STATUS CODE IS        *   SQ1324.2
-002900*    ACCOMPLISHED BUT BEFORE CONTROL IS RETURNED TO THE MAIN  *   SQ1324.2
-003000*    LINE CODE.                                               *   SQ1324.2
-003100*                                                             *   SQ1324.2
-003200***************************************************************   SQ1324.2
-003300*                                                                 SQ1324.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 ENVIRONMENT DIVISION.                                            SQ1324.2
 003500 CONFIGURATION SECTION.                                           SQ1324.2
 003600 SOURCE-COMPUTER.                                                 SQ1324.2
 003700     GNU-Linux.                                                   SQ1324.2
 003800 OBJECT-COMPUTER.                                                 SQ1324.2
 003900     GNU-Linux.                                                   SQ1324.2
-004000*                                                                 SQ1324.2
+004000*                                                                         
 004100 INPUT-OUTPUT SECTION.                                            SQ1324.2
 004200 FILE-CONTROL.                                                    SQ1324.2
 004300     SELECT PRINT-FILE ASSIGN TO                                  SQ1324.2
 004400     "REPORT".                                                    SQ1324.2
-004500*                                                                 SQ1324.2
+004500*                                                                         
 004600     SELECT SQ-FS1 ASSIGN TO                                      SQ1324.2
 004700     "XXXXX014"                                                   SQ1324.2
 004800            FILE STATUS SQ-FS1-STATUS.                            SQ1324.2
-004900*                                                                 SQ1324.2
-005000*                                                                 SQ1324.2
+004900*                                                                         
+005000*                                                                         
 005100 DATA DIVISION.                                                   SQ1324.2
 005200 FILE SECTION.                                                    SQ1324.2
 005300 FD  PRINT-FILE                                                   SQ1324.2
 005700               .                                                  SQ1324.2
 005800 01  PRINT-REC    PICTURE X(120).                                 SQ1324.2
 005900 01  DUMMY-RECORD PICTURE X(120).                                 SQ1324.2
-006000*                                                                 SQ1324.2
+006000*                                                                         
 006100 FD  SQ-FS1                                                       SQ1324.2
 006300                .                                                 SQ1324.2
 006400 01  SQ-FS1R1-F-G-120 PIC X(120).                                 SQ1324.2
-006500*                                                                 SQ1324.2
+006500*                                                                         
 006600 WORKING-STORAGE SECTION.                                         SQ1324.2
-006700*                                                                 SQ1324.2
-006800**************************************************************    SQ1324.2
-006900*                                                            *    SQ1324.2
-007000*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE  *    SQ1324.2
-007100*                                                            *    SQ1324.2
-007200**************************************************************    SQ1324.2
-007300*                                                                 SQ1324.2
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
 007400 01  SQ-FS1-STATUS.                                               SQ1324.2
 007500   03  SQ-FS1-KEY-1   PIC X.                                      SQ1324.2
 007600   03  SQ-FS1-KEY-2   PIC X.                                      SQ1324.2
-007700*                                                                 SQ1324.2
-007800**************************************************************    SQ1324.2
-007900*                                                            *    SQ1324.2
-008000*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS             *    SQ1324.2
-008100*                                                            *    SQ1324.2
-008200**************************************************************    SQ1324.2
-008300*                                                                 SQ1324.2
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
 008400 01  REC-SKEL-SUB   PIC 99.                                       SQ1324.2
-008500*                                                                 SQ1324.2
+008500*                                                                         
 008600 01  FILE-RECORD-INFORMATION-REC.                                 SQ1324.2
 008700     03 FILE-RECORD-INFO-SKELETON.                                SQ1324.2
 008800        05 FILLER                 PICTURE X(48)       VALUE       SQ1324.2
@@ -130,7 +130,7 @@
 013400           07 FILLER              PIC X(9).                       SQ1324.2
 013500           07 ALTERNATE-KEY2      PIC X(29).                      SQ1324.2
 013600           07 FILLER              PIC X(7).                       SQ1324.2
-013700*                                                                 SQ1324.2
+013700*                                                                         
 013800 01  TEST-RESULTS.                                                SQ1324.2
 013900     02 FILLER              PIC X      VALUE SPACE.               SQ1324.2
 014000     02  PAR-NAME.                                                SQ1324.2
@@ -170,7 +170,7 @@
 017400         04 FILLER                           PIC X.               SQ1324.2
 017500     03 FILLER PIC X(2) VALUE SPACE.                              SQ1324.2
 017600     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ1324.2
-017700*                                                                 SQ1324.2
+017700*                                                                         
 017800 01  CCVS-C-1.                                                    SQ1324.2
 017900     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ1324.2
 018000     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ1324.2
@@ -186,7 +186,7 @@
 019000     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ1324.2
 019100     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ1324.2
 019200     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ1324.2
-019300*                                                                 SQ1324.2
+019300*                                                                         
 019400 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ1324.2
 019500 01  REC-CT            PIC 99       VALUE ZERO.                   SQ1324.2
 019600 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ1324.2
@@ -211,7 +211,7 @@
 021500   02  FILLER            PIC X(28)  VALUE                         SQ1324.2
 021600            " COPY - NOT FOR DISTRIBUTION".                       SQ1324.2
 021700   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1324.2
-021800*                                                                 SQ1324.2
+021800*                                                                         
 021900 01  CCVS-H-2B.                                                   SQ1324.2
 022000   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF".       SQ1324.2
 022100   02  TEST-ID           PIC X(9).                                SQ1324.2
@@ -273,8 +273,8 @@
 027700-    "******************************".                            SQ1324.2
 027800 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1324.2
 027900     "SQ132A".                                                    SQ1324.2
-028000*                                                                 SQ1324.2
-028100*                                                                 SQ1324.2
+028000*                                                                         
+028100*                                                                         
 028200 PROCEDURE DIVISION.                                              SQ1324.2
 028300 DECLARATIVES.                                                    SQ1324.2
 028400 SQ132A-DECLARATIVE-001-SECT SECTION.                             SQ1324.2
@@ -292,17 +292,17 @@
 029600         PERFORM DECL-FAIL                                        SQ1324.2
 029700         GO TO DECL-ABNORMAL-TERM                                 SQ1324.2
 029800     END-IF.                                                      SQ1324.2
-029900*                                                                 SQ1324.2
+029900*                                                                         
 030000 DECL-PASS.                                                       SQ1324.2
 030100     MOVE   "PASS " TO P-OR-F.                                    SQ1324.2
 030200     ADD     1 TO PASS-COUNTER.                                   SQ1324.2
 030300     PERFORM DECL-PRINT-DETAIL.                                   SQ1324.2
-030400*                                                                 SQ1324.2
+030400*                                                                         
 030500 DECL-FAIL.                                                       SQ1324.2
 030600     MOVE   "FAIL*" TO P-OR-F.                                    SQ1324.2
 030700     ADD     1 TO ERROR-COUNTER.                                  SQ1324.2
 030800     PERFORM DECL-PRINT-DETAIL.                                   SQ1324.2
-030900*                                                                 SQ1324.2
+030900*                                                                         
 031000 DECL-PRINT-DETAIL.                                               SQ1324.2
 031100     IF REC-CT NOT EQUAL TO ZERO                                  SQ1324.2
 031200             MOVE "." TO PARDOT-X                                 SQ1324.2
@@ -320,7 +320,7 @@
 032400     IF REC-CT EQUAL TO ZERO                                      SQ1324.2
 032500         MOVE    SPACE TO PAR-NAME.                               SQ1324.2
 032600     MOVE    SPACE TO RE-MARK.                                    SQ1324.2
-032700*                                                                 SQ1324.2
+032700*                                                                         
 032800 DECL-WRITE-LINE.                                                 SQ1324.2
 032900     ADD     1 TO RECORD-COUNT.                                   SQ1324.2
 033000     IF RECORD-COUNT GREATER 50                                   SQ1324.2
@@ -335,11 +335,11 @@
 033900         MOVE    DUMMY-HOLD TO DUMMY-RECORD                       SQ1324.2
 034000         MOVE    ZERO TO RECORD-COUNT.                            SQ1324.2
 034100     PERFORM DECL-WRT-LN.                                         SQ1324.2
-034200*                                                                 SQ1324.2
+034200*                                                                         
 034300 DECL-WRT-LN.                                                     SQ1324.2
 034400     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1324.2
 034500     MOVE    SPACE TO DUMMY-RECORD.                               SQ1324.2
-034600*                                                                 SQ1324.2
+034600*                                                                         
 034700 DECL-FAIL-ROUTINE.                                               SQ1324.2
 034800     IF COMPUTED-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.      SQ1324.2
 034900     IF CORRECT-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.       SQ1324.2
@@ -358,7 +358,7 @@
 036200     MOVE    SPACES TO COR-ANSI-REFERENCE.                        SQ1324.2
 036300 DECL-FAIL-EX.                                                    SQ1324.2
 036400     EXIT.                                                        SQ1324.2
-036500*                                                                 SQ1324.2
+036500*                                                                         
 036600 DECL-BAIL.                                                       SQ1324.2
 036700     IF COMPUTED-A NOT EQUAL TO SPACE GO TO DECL-BAIL-WRITE.      SQ1324.2
 036800     IF CORRECT-A EQUAL TO SPACE GO TO DECL-BAIL-EX.              SQ1324.2
@@ -371,19 +371,19 @@
 037500     MOVE SPACES TO INF-ANSI-REFERENCE.                           SQ1324.2
 037600 DECL-BAIL-EX.                                                    SQ1324.2
 037700     EXIT.                                                        SQ1324.2
-037800*                                                                 SQ1324.2
+037800*                                                                         
 037900 DECL-ABNORMAL-TERM.                                              SQ1324.2
 038000     MOVE SPACE TO DUMMY-RECORD.                                  SQ1324.2
 038100     PERFORM DECL-WRITE-LINE.                                     SQ1324.2
 038200     MOVE "ABNORMAL TERMINATION AT THIS POINT IS ACCEPTABLE"      SQ1324.2
 038300             TO DUMMY-RECORD.                                     SQ1324.2
 038400     PERFORM DECL-WRITE-LINE 3 TIMES.                             SQ1324.2
-038500*                                                                 SQ1324.2
+038500*                                                                         
 038600 END-DECLS.                                                       SQ1324.2
 038700     EXIT.                                                        SQ1324.2
 038800 END DECLARATIVES.                                                SQ1324.2
-038900*                                                                 SQ1324.2
-039000*                                                                 SQ1324.2
+038900*                                                                         
+039000*                                                                         
 039100 CCVS1 SECTION.                                                   SQ1324.2
 039200 OPEN-FILES.                                                      SQ1324.2
 039300     OPEN    OUTPUT PRINT-FILE.                                   SQ1324.2
@@ -394,18 +394,18 @@
 039800     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1324.2
 039900     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1324.2
 040000     GO TO CCVS1-EXIT.                                            SQ1324.2
-040100*                                                                 SQ1324.2
+040100*                                                                         
 040200 CCVS-INIT-FILE.                                                  SQ1324.2
 040300     ADD     1 TO REC-SKL-SUB.                                    SQ1324.2
 040400     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1324.2
 040500                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1324.2
-040600*                                                                 SQ1324.2
+040600*                                                                         
 040700 CLOSE-FILES.                                                     SQ1324.2
 040800     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1324.2
 040900     CLOSE   PRINT-FILE.                                          SQ1324.2
 041000 TERMINATE-CCVS.                                                  SQ1324.2
 041100     STOP    RUN.                                                 SQ1324.2
-041200*                                                                 SQ1324.2
+041200*                                                                         
 041300 INSPT.                                                           SQ1324.2
 041400     MOVE   "INSPT" TO P-OR-F.                                    SQ1324.2
 041500     ADD     1 TO INSPECT-COUNTER.                                SQ1324.2
@@ -415,18 +415,18 @@
 041900     MOVE   "PASS " TO P-OR-F.                                    SQ1324.2
 042000     ADD     1 TO PASS-COUNTER.                                   SQ1324.2
 042100     PERFORM PRINT-DETAIL.                                        SQ1324.2
-042200*                                                                 SQ1324.2
+042200*                                                                         
 042300 FAIL.                                                            SQ1324.2
 042400     MOVE   "FAIL*" TO P-OR-F.                                    SQ1324.2
 042500     ADD     1 TO ERROR-COUNTER.                                  SQ1324.2
 042600     PERFORM PRINT-DETAIL.                                        SQ1324.2
-042700*                                                                 SQ1324.2
+042700*                                                                         
 042800 DE-LETE.                                                         SQ1324.2
 042900     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1324.2
 043000     MOVE   "*****" TO P-OR-F.                                    SQ1324.2
 043100     ADD     1 TO DELETE-COUNTER.                                 SQ1324.2
 043200     PERFORM PRINT-DETAIL.                                        SQ1324.2
-043300*                                                                 SQ1324.2
+043300*                                                                         
 043400 PRINT-DETAIL.                                                    SQ1324.2
 043500     IF REC-CT NOT EQUAL TO ZERO                                  SQ1324.2
 043600         MOVE   "." TO PARDOT-X                                   SQ1324.2
@@ -443,7 +443,7 @@
 044700     MOVE    SPACE TO CORRECT-X.                                  SQ1324.2
 044800     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1324.2
 044900     MOVE    SPACE TO RE-MARK.                                    SQ1324.2
-045000*                                                                 SQ1324.2
+045000*                                                                         
 045100 HEAD-ROUTINE.                                                    SQ1324.2
 045200     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1324.2
 045300     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1324.2
@@ -459,7 +459,7 @@
 046300 END-RTN-EXIT.                                                    SQ1324.2
 046400     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1324.2
 046500     PERFORM WRITE-LINE 2 TIMES.                                  SQ1324.2
-046600*                                                                 SQ1324.2
+046600*                                                                         
 046700 END-ROUTINE-1.                                                   SQ1324.2
 046800     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1324.2
 046900     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1324.2
@@ -492,7 +492,7 @@
 049600     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1324.2
 049700     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1324.2
 049800     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1324.2
-049900*                                                                 SQ1324.2
+049900*                                                                         
 050000 WRITE-LINE.                                                      SQ1324.2
 050100     ADD     1 TO RECORD-COUNT.                                   SQ1324.2
 050200     IF RECORD-COUNT GREATER 50                                   SQ1324.2
@@ -505,7 +505,7 @@
 050900         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1324.2
 051000         MOVE  ZERO TO RECORD-COUNT.                              SQ1324.2
 051100     PERFORM WRT-LN.                                              SQ1324.2
-051200*                                                                 SQ1324.2
+051200*                                                                         
 051300 WRT-LN.                                                          SQ1324.2
 051400     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1324.2
 051500     MOVE    SPACE TO DUMMY-RECORD.                               SQ1324.2
@@ -543,36 +543,36 @@
 054700     EXIT.                                                        SQ1324.2
 054800 CCVS1-EXIT.                                                      SQ1324.2
 054900     EXIT.                                                        SQ1324.2
-055000*                                                                 SQ1324.2
-055100***************************************************************   SQ1324.2
-055200*                                                             *   SQ1324.2
-055300*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND*   SQ1324.2
-055400*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.       *   SQ1324.2
-055500*                                                             *   SQ1324.2
-055600***************************************************************   SQ1324.2
-055700*                                                                 SQ1324.2
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
+055700*                                                                         
 055800 SECT-SQ132A-0001 SECTION.                                        SQ1324.2
-055900*                                                                 SQ1324.2
-056000*    THIS TEST CLOSES A FILE THAT HAS NEVER BEEN OPENED.          SQ1324.2
-056100*    I-O STATUS CODE 42 SHOULD BE GENERATED.                      SQ1324.2
-056200*                                                                 SQ1324.2
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
 056300 CLOSE-INIT-O1.                                                   SQ1324.2
 056400     MOVE   "CLOSED UNOPENED FILE" TO FEATURE.                    SQ1324.2
 056500     MOVE   "**" TO SQ-FS1-STATUS.                                SQ1324.2
 056600     MOVE   "CLOS-TEST-01" TO PAR-NAME.                           SQ1324.2
 056700     MOVE   1 TO REC-CT.                                          SQ1324.2
-056800*                                                                 SQ1324.2
+056800*                                                                         
 056900 CLOSE-TEST-01.                                                   SQ1324.2
 057000     IF REC-CT = 0                                                SQ1324.2
 057100         OPEN INPUT SQ-FS1.                                       SQ1324.2
-057200*    THIS IF STATEMENT SHOULD NEVER BE TRUE.  IT IS INCLUDED IN   SQ1324.2
-057300*    AN ATTEMPT TO AVOID A COMPILER DETECTING THE CLOSE OF AN     SQ1324.2
-057400*    UNOPENED FILE WITHOUT EXECUTING THE PROGRAM.  HOWEVER, IF    SQ1324.2
-057500*    THE DETECTION IS MADE AT COMPILE TIME, THE TEST SHOULD BE    SQ1324.2
-057600*    CONSIDERED PASSED.                                           SQ1324.2
-057700*                                                                 SQ1324.2
+057200*                                                                         
+057300*                                                                         
+057400*                                                                         
+057500*                                                                         
+057600*                                                                         
+057700*                                                                         
 057800     CLOSE SQ-FS1.                                                SQ1324.2
-057900*                                                                 SQ1324.2
+057900*                                                                         
 058000 CCVS-EXIT SECTION.                                               SQ1324.2
 058100 CCVS-999999.                                                     SQ1324.2
 058200     GO TO   CLOSE-FILES.                                         SQ1324.2

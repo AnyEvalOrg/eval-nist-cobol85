@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1224.2
 000300     IF122A.                                                      IF1224.2
 000400                                                                  IF1224.2
-000500***********************************************************       IF1224.2
-000600*                                                         *       IF1224.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1224.2
-000800* It contains tests for the Intrinsic Function MIDRANGE   *       IF1224.2
-000900*                                                         *       IF1224.2
-001000***********************************************************       IF1224.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1224.2
 001200 CONFIGURATION SECTION.                                           IF1224.2
 001300 SOURCE-COMPUTER.                                                 IF1224.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1224.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1224.2
 002600 WORKING-STORAGE SECTION.                                         IF1224.2
-002700***********************************************************       IF1224.2
-002800* Variables specific to the Intrinsic Function Test IF122A*       IF1224.2
-002900***********************************************************       IF1224.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 5.             IF1224.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1224.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1224.2
@@ -48,9 +48,9 @@
 004800 01  WS-NUM              PIC S9(6)V9(7).                          IF1224.2
 004900 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1224.2
 005000 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1224.2
-005100*                                                                 IF1224.2
-005200**********************************************************        IF1224.2
-005300*                                                                 IF1224.2
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400 01  TEST-RESULTS.                                                IF1224.2
 005500     02 FILLER                   PIC X      VALUE SPACE.          IF1224.2
 005600     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1224.2
@@ -344,16 +344,16 @@
 034400 BAIL-OUT-EX. EXIT.                                               IF1224.2
 034500 CCVS1-EXIT.                                                      IF1224.2
 034600     EXIT.                                                        IF1224.2
-034700********************************************************          IF1224.2
-034800*                                                      *          IF1224.2
-034900*    Intrinsic Function Tests        IF122A - MIDRANGE *          IF1224.2
-035000*                                                      *          IF1224.2
-035100********************************************************          IF1224.2
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
 035200 SECT-IF122A SECTION.                                             IF1224.2
 035300 F-MIDRANGE-INFO.                                                 IF1224.2
 035400     MOVE     "See ref. A-55 2.26" TO ANSI-REFERENCE.             IF1224.2
 035500     MOVE     "MIDRANGE Function" TO FEATURE.                     IF1224.2
-035600*****************TEST (a) - SIMPLE TEST*****************          IF1224.2
+035600*                                                                         
 035700 F-MIDRANGE-01.                                                   IF1224.2
 035800     MOVE ZERO TO WS-NUM.                                         IF1224.2
 035900 F-MIDRANGE-TEST-01.                                              IF1224.2
@@ -372,7 +372,7 @@
 037200 F-MIDRANGE-WRITE-01.                                             IF1224.2
 037300     MOVE "F-MIDRANGE-01" TO PAR-NAME.                            IF1224.2
 037400     PERFORM  PRINT-DETAIL.                                       IF1224.2
-037500*****************TEST (b) - SIMPLE TEST*****************          IF1224.2
+037500*                                                                         
 037600 F-MIDRANGE-02.                                                   IF1224.2
 037700     EVALUATE FUNCTION MIDRANGE(3.9, -0.3, 8.7, 100.2)            IF1224.2
 037800     WHEN 49.9490 THRU 49.9510                                    IF1224.2
@@ -386,7 +386,7 @@
 038600 F-MIDRANGE-WRITE-02.                                             IF1224.2
 038700     MOVE "F-MIDRANGE-02" TO PAR-NAME.                            IF1224.2
 038800     PERFORM  PRINT-DETAIL.                                       IF1224.2
-038900*****************TEST (c) - SIMPLE TEST*****************          IF1224.2
+038900*                                                                         
 039000 F-MIDRANGE-03.                                                   IF1224.2
 039100     IF FUNCTION MIDRANGE(A, B, C, D) = 3 THEN                    IF1224.2
 039200                    PERFORM PASS                                  IF1224.2
@@ -399,7 +399,7 @@
 039900 F-MIDRANGE-WRITE-03.                                             IF1224.2
 040000     MOVE "F-MIDRANGE-03" TO PAR-NAME.                            IF1224.2
 040100     PERFORM  PRINT-DETAIL.                                       IF1224.2
-040200*****************TEST (d) - SIMPLE TEST*****************          IF1224.2
+040200*                                                                         
 040300 F-MIDRANGE-04.                                                   IF1224.2
 040400     MOVE ZERO TO WS-NUM.                                         IF1224.2
 040500 F-MIDRANGE-TEST-04.                                              IF1224.2
@@ -418,7 +418,7 @@
 041800 F-MIDRANGE-WRITE-04.                                             IF1224.2
 041900     MOVE "F-MIDRANGE-04" TO PAR-NAME.                            IF1224.2
 042000     PERFORM  PRINT-DETAIL.                                       IF1224.2
-042100*****************TEST (e) - SIMPLE TEST*****************          IF1224.2
+042100*                                                                         
 042200 F-MIDRANGE-05.                                                   IF1224.2
 042300     MOVE ZERO TO WS-NUM.                                         IF1224.2
 042400 F-MIDRANGE-TEST-05.                                              IF1224.2
@@ -437,7 +437,7 @@
 043700 F-MIDRANGE-WRITE-05.                                             IF1224.2
 043800     MOVE "F-MIDRANGE-05" TO PAR-NAME.                            IF1224.2
 043900     PERFORM  PRINT-DETAIL.                                       IF1224.2
-044000*****************TEST (f) - SIMPLE TEST*****************          IF1224.2
+044000*                                                                         
 044100 F-MIDRANGE-06.                                                   IF1224.2
 044200     MOVE ZERO TO WS-NUM.                                         IF1224.2
 044300 F-MIDRANGE-TEST-06.                                              IF1224.2
@@ -456,7 +456,7 @@
 045600 F-MIDRANGE-WRITE-06.                                             IF1224.2
 045700     MOVE "F-MIDRANGE-06" TO PAR-NAME.                            IF1224.2
 045800     PERFORM  PRINT-DETAIL.                                       IF1224.2
-045900*****************TEST (g) - SIMPLE TEST*****************          IF1224.2
+045900*                                                                         
 046000 F-MIDRANGE-07.                                                   IF1224.2
 046100     MOVE ZERO TO WS-NUM.                                         IF1224.2
 046200 F-MIDRANGE-TEST-07.                                              IF1224.2
@@ -475,7 +475,7 @@
 047500 F-MIDRANGE-WRITE-07.                                             IF1224.2
 047600     MOVE "F-MIDRANGE-07" TO PAR-NAME.                            IF1224.2
 047700     PERFORM  PRINT-DETAIL.                                       IF1224.2
-047800*****************TEST (h) - SIMPLE TEST*****************          IF1224.2
+047800*                                                                         
 047900 F-MIDRANGE-08.                                                   IF1224.2
 048000     MOVE ZERO TO WS-NUM.                                         IF1224.2
 048100 F-MIDRANGE-TEST-08.                                              IF1224.2
@@ -495,7 +495,7 @@
 049500 F-MIDRANGE-WRITE-08.                                             IF1224.2
 049600     MOVE "F-MIDRANGE-08" TO PAR-NAME.                            IF1224.2
 049700     PERFORM  PRINT-DETAIL.                                       IF1224.2
-049800*****************TEST (i) - SIMPLE TEST*****************          IF1224.2
+049800*                                                                         
 049900 F-MIDRANGE-09.                                                   IF1224.2
 050000     MOVE ZERO TO WS-NUM.                                         IF1224.2
 050100 F-MIDRANGE-TEST-09.                                              IF1224.2
@@ -515,7 +515,7 @@
 051500 F-MIDRANGE-WRITE-09.                                             IF1224.2
 051600     MOVE "F-MIDRANGE-09" TO PAR-NAME.                            IF1224.2
 051700     PERFORM  PRINT-DETAIL.                                       IF1224.2
-051800*****************TEST (j) - SIMPLE TEST*****************          IF1224.2
+051800*                                                                         
 051900 F-MIDRANGE-10.                                                   IF1224.2
 052000     MOVE ZERO TO WS-NUM.                                         IF1224.2
 052100 F-MIDRANGE-TEST-10.                                              IF1224.2
@@ -534,7 +534,7 @@
 053400 F-MIDRANGE-WRITE-10.                                             IF1224.2
 053500     MOVE "F-MIDRANGE-10" TO PAR-NAME.                            IF1224.2
 053600     PERFORM  PRINT-DETAIL.                                       IF1224.2
-053700*****************TEST (l) - SIMPLE TEST*****************          IF1224.2
+053700*                                                                         
 053800 F-MIDRANGE-12.                                                   IF1224.2
 053900     MOVE ZERO TO WS-NUM.                                         IF1224.2
 054000 F-MIDRANGE-TEST-12.                                              IF1224.2
@@ -552,7 +552,7 @@
 055200 F-MIDRANGE-WRITE-12.                                             IF1224.2
 055300     MOVE "F-MIDRANGE-12" TO PAR-NAME.                            IF1224.2
 055400     PERFORM  PRINT-DETAIL.                                       IF1224.2
-055500*****************TEST (m) - SIMPLE TEST*****************          IF1224.2
+055500*                                                                         
 055600 F-MIDRANGE-13.                                                   IF1224.2
 055700     MOVE ZERO TO WS-NUM.                                         IF1224.2
 055800 F-MIDRANGE-TEST-13.                                              IF1224.2
@@ -570,7 +570,7 @@
 057000 F-MIDRANGE-WRITE-13.                                             IF1224.2
 057100     MOVE "F-MIDRANGE-13" TO PAR-NAME.                            IF1224.2
 057200     PERFORM  PRINT-DETAIL.                                       IF1224.2
-057300*****************TEST (a) - COMPLEX TEST****************          IF1224.2
+057300*                                                                         
 057400 F-MIDRANGE-14.                                                   IF1224.2
 057500     MOVE ZERO TO WS-NUM.                                         IF1224.2
 057600     MOVE  22.4995   TO MIN-RANGE.                                IF1224.2
@@ -592,7 +592,7 @@
 059200 F-MIDRANGE-WRITE-14.                                             IF1224.2
 059300     MOVE "F-MIDRANGE-14" TO PAR-NAME.                            IF1224.2
 059400     PERFORM  PRINT-DETAIL.                                       IF1224.2
-059500*****************TEST (b) - COMPLEX TEST****************          IF1224.2
+059500*                                                                         
 059600 F-MIDRANGE-15.                                                   IF1224.2
 059700     MOVE ZERO TO WS-NUM.                                         IF1224.2
 059800     MOVE 83.9983 TO MIN-RANGE.                                   IF1224.2
@@ -614,7 +614,7 @@
 061400 F-MIDRANGE-WRITE-15.                                             IF1224.2
 061500     MOVE "F-MIDRANGE-15" TO PAR-NAME.                            IF1224.2
 061600     PERFORM  PRINT-DETAIL.                                       IF1224.2
-061700*****************TEST (c) - COMPLEX TEST****************          IF1224.2
+061700*                                                                         
 061800 F-MIDRANGE-16.                                                   IF1224.2
 061900     MOVE ZERO TO WS-NUM.                                         IF1224.2
 062000     MOVE 2.49995 TO MIN-RANGE.                                   IF1224.2
@@ -637,7 +637,7 @@
 063700 F-MIDRANGE-WRITE-16.                                             IF1224.2
 063800     MOVE "F-MIDRANGE-16" TO PAR-NAME.                            IF1224.2
 063900     PERFORM  PRINT-DETAIL.                                       IF1224.2
-064000*****************TEST (d) - COMPLEX TEST****************          IF1224.2
+064000*                                                                         
 064100 F-MIDRANGE-17.                                                   IF1224.2
 064200     MOVE ZERO TO WS-NUM.                                         IF1224.2
 064300     MOVE 3.49993 TO MIN-RANGE.                                   IF1224.2
@@ -660,7 +660,7 @@
 066000 F-MIDRANGE-WRITE-17.                                             IF1224.2
 066100     MOVE "F-MIDRANGE-17" TO PAR-NAME.                            IF1224.2
 066200     PERFORM  PRINT-DETAIL.                                       IF1224.2
-066300*****************SPECIAL PERFORM TEST**********************       IF1224.2
+066300*                                                                         
 066400 F-MIDRANGE-18.                                                   IF1224.2
 066500     PERFORM F-MIDRANGE-TEST-18                                   IF1224.2
 066600       UNTIL FUNCTION MIDRANGE(1, ARG1) > 10.                     IF1224.2
@@ -674,7 +674,7 @@
 067400 F-MIDRANGE-WRITE-18.                                             IF1224.2
 067500     MOVE "F-MIDRANGE-18" TO PAR-NAME.                            IF1224.2
 067600     PERFORM  PRINT-DETAIL.                                       IF1224.2
-067700********************END OF TESTS***************                   IF1224.2
+067700*                                                                         
 067800 CCVS-EXIT SECTION.                                               IF1224.2
 067900 CCVS-999999.                                                     IF1224.2
 068000     GO TO CLOSE-FILES.                                           IF1224.2

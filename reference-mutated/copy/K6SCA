@@ -200,7 +200,7 @@
 020200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      K6SCA4.2
 020300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               K6SCA4.2
 020400      ADD PASS-COUNTER TO ERROR-HOLD.                             K6SCA4.2
-020500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   K6SCA4.2
+020500*                                                                         
 020600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            K6SCA4.2
 020700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              K6SCA4.2
 020800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                K6SCA4.2

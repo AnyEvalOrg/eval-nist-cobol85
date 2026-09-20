@@ -218,7 +218,7 @@
 022000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SG1024.2
 022100      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SG1024.2
 022200      ADD PASS-COUNTER TO ERROR-HOLD.                             SG1024.2
-022300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SG1024.2
+022300*                                                                         
 022400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SG1024.2
 022500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SG1024.2
 022600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SG1024.2
@@ -289,7 +289,7 @@
 029100     GO TO TEST-1D.                                               SG1024.2
 029200 TEST-1C.                                                         SG1024.2
 029300     ALTER PARA-1-22 TO PROCEED TO PARA-2-22.                     SG1024.2
-029400*    NOTE ALTERED PARAGRAPH IN SECTION 22.                        SG1024.2
+029400*                                                                         
 029500     PERFORM TEST22.                                              SG1024.2
 029600 TEST-1D.                                                         SG1024.2
 029700     EXIT.                                                        SG1024.2
@@ -346,11 +346,11 @@
 034800     MOVE 4 TO RANGE-X (1).                                       SG1024.2
 034900     MOVE 3 TO RANGE-SUB.                                         SG1024.2
 035000     ALTER TEST-1A TO PROCEED TO TEST-1C.                         SG1024.2
-035100*    NOTE ALTERED PARAGRAPH IN SECTION 00.                        SG1024.2
+035100*                                                                         
 035200     PERFORM TEST-1.                                              SG1024.2
 035300     PERFORM TEST-1.                                              SG1024.2
-035400*    NOTE 2ND PERFORM VERIFIES THAT TEST-1A IS STILL ALTERED      SG1024.2
-035500*         TO TEST-1B.                                             SG1024.2
+035400*                                                                         
+035500*                                                                         
 035600     IF SEG-CALC EQUAL TO 2                                       SG1024.2
 035700         PERFORM PASS                                             SG1024.2
 035800         GO TO TEST-1-WRITE.                                      SG1024.2
@@ -496,7 +496,7 @@
 049800     PERFORM TEST-3A THRU TEST-3EXIT.                             SG1024.2
 049900     PERFORM TEST-3C.                                             SG1024.2
 050000     GO TO TEST-3X.                                               SG1024.2
-050100*    NOTE PERFORMING AND GO TO SECTION 66 PARAGRAPHS.             SG1024.2
+050100*                                                                         
 050200 TEST-3-DELETE.                                                   SG1024.2
 050300     PERFORM DE-LETE.                                             SG1024.2
 050400 TEST-3-WRITE.                                                    SG1024.2
@@ -568,7 +568,7 @@
 057000     MOVE "SEG-TEST-6" TO PAR-NAME.                               SG1024.2
 057100     PERFORM PRINT-DETAIL.                                        SG1024.2
 057200     GO TO SEG-TEST-7.                                            SG1024.2
-057300*    NOTE PERFORM RESIDENT SECTIONS 7 THRU 22.                    SG1024.2
+057300*                                                                         
 057400 SEG-TEST8 SECTION 84.                                            SG1024.2
 057500 SEG-TEST-8.                                                      SG1024.2
 057600     ALTER PARA-8 TO PROCEED TO SEG-TEST-8A.                      SG1024.2

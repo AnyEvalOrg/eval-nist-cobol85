@@ -1,24 +1,24 @@
 000100 IDENTIFICATION DIVISION.                                         OBSQ54.2
 000200 PROGRAM-ID.                                                      OBSQ54.2
 000300     OBSQ5A.                                                      OBSQ54.2
-000400****************************************************************  OBSQ54.2
-000500*                                                              *  OBSQ54.2
-000600*    VALIDATION FOR:-                                          *  OBSQ54.2
-000700*    " HIGH       ".                                              OBSQ54.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  OBSQ54.2
-000900*                                                              *  OBSQ54.2
-001000*    CREATION DATE     /     VALIDATION DATE                   *  OBSQ54.2
-001100*    "4.2 ".                                                      OBSQ54.2
-001200*                                                              *  OBSQ54.2
-001300*         THE ROUTINE OBSQ5A TESTS THE USE OF THE MULTIPLE FILE   OBSQ54.2
-001400*    CLAUSE BY READING AND VALIDATING THE TWO MULTIPLE FILE TAPES OBSQ54.2
-001500*    CREATED IN OBSQ3A. TAPE ONE IS PROCESSED USING THE MULTIPLE  OBSQ54.2
-001600*    FILE CLAUSE WITH POSITION PHRASE.  ONLY FILE SQ-FS3 IS       OBSQ54.2
-001700*    SPECIFIED AND PROCESSED FROM THIS TAPE.  TAPE TWO IS         OBSQ54.2
-001800*    PROCESSED USING THE MULTIPLE FILE CLAUSE WITHOUT THE         OBSQ54.2
-001900*    POSITION PHRASE.  ALL FOUR FILES ON THIS TAPE ARE PROCESSED. OBSQ54.2
-002000*    THESE FILES WERE CREATED USING A MULTIPLE FILE CLAUSE WITH   OBSQ54.2
-002100*    POSITION PHRASE.                                             OBSQ54.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
 002200 ENVIRONMENT DIVISION.                                            OBSQ54.2
 002300 CONFIGURATION SECTION.                                           OBSQ54.2
 002400 SOURCE-COMPUTER.                                                 OBSQ54.2
@@ -301,7 +301,7 @@
 034600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      OBSQ54.2
 034700      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   OBSQ54.2
 034800      ADD PASS-COUNTER TO ERROR-HOLD.                             OBSQ54.2
-034900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   OBSQ54.2
+034900*                                                                         
 035000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            OBSQ54.2
 035100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              OBSQ54.2
 035200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                OBSQ54.2
@@ -405,7 +405,7 @@
 045000 SEQ-CLOSE-001.                                                   OBSQ54.2
 045100     CLOSE SQ-FS3.                                                OBSQ54.2
 045200 SEQ-INIT-002.                                                    OBSQ54.2
-045300*             THIS TEST READS AND VALIDATES FILE SQ-FS5.          OBSQ54.2
+045300*                                                                         
 045400     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    OBSQ54.2
 045500     OPEN INPUT SQ-FS5.                                           OBSQ54.2
 045600 SEQ-TEST-002.                                                    OBSQ54.2
@@ -447,7 +447,7 @@
 049200 SEQ-CLOSE-002.                                                   OBSQ54.2
 049300     CLOSE SQ-FS5 WITH NO REWIND.                                 OBSQ54.2
 049400 SEQ-INIT-003.                                                    OBSQ54.2
-049500*             THIS TEST READS AND VALIDATES FILE SQ-FS6.          OBSQ54.2
+049500*                                                                         
 049600     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    OBSQ54.2
 049700     OPEN INPUT SQ-FS6 WITH NO REWIND.                            OBSQ54.2
 049800 SEQ-TEST-003.                                                    OBSQ54.2
@@ -489,7 +489,7 @@
 053400 SEQ-CLOSE-003.                                                   OBSQ54.2
 053500     CLOSE SQ-FS6 WITH NO REWIND.                                 OBSQ54.2
 053600 SEQ-INIT-004.                                                    OBSQ54.2
-053700*             THIS TEST READS AND VALIDATES FILE SQ-FS7.          OBSQ54.2
+053700*                                                                         
 053800     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    OBSQ54.2
 053900     OPEN INPUT SQ-FS7 WITH NO REWIND.                            OBSQ54.2
 054000 SEQ-TEST-004.                                                    OBSQ54.2
@@ -531,7 +531,7 @@
 057600 SEQ-CLOSE-004.                                                   OBSQ54.2
 057700     CLOSE SQ-FS7 WITH NO REWIND.                                 OBSQ54.2
 057800 SEQ-INIT-005.                                                    OBSQ54.2
-057900*             THIS TEST READS AND VALIDATES FILE SQ-FS8.          OBSQ54.2
+057900*                                                                         
 058000     MOVE 0 TO REC-COUNT,    RECORDS-IN-ERROR.                    OBSQ54.2
 058100     OPEN INPUT SQ-FS8 WITH NO REWIND.                            OBSQ54.2
 058200 SEQ-TEST-005.                                                    OBSQ54.2

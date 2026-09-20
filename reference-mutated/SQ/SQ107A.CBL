@@ -1,43 +1,43 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1074.2
 000200 PROGRAM-ID.                                                      SQ1074.2
 000300     SQ107A.                                                      SQ1074.2
-000400****************************************************************  SQ1074.2
-000500*                                                              *  SQ1074.2
-000600*    VALIDATION FOR:-                                          *  SQ1074.2
-000700*    " HIGH       ".                                              SQ1074.2
-000800*                                                              *  SQ1074.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ1074.2
-001000*    "4.2 ".                                                      SQ1074.2
-001100*                                                              *  SQ1074.2
-001200****************************************************************  SQ1074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300                                                                  SQ1074.2
-001400*        THIS ROUTINE BUILDS A SEQUENTIAL MASS STORAGE FILE       SQ1074.2
-001500*    WHICH CONTAINS BOTH 120 CHARACTER AND 151 CHARACTER          SQ1074.2
-001600*    RECORDS.  THE MASS STORAGE FILE CONSISTS OF 1 SHORT,         SQ1074.2
-001700*    1 LONG, 10 SHORT, 100 LONG, AND 338 SHORT RECORDS FOR        SQ1074.2
-001800*    A TOTAL OF 450 RECORDS IN THE FILE.  THE MASS STORAGE        SQ1074.2
-001900*    FILE IS READ AND FIELDS IN THE RECORDS ARE CHECKED           SQ1074.2
-002000*    AGAINST THE EXPECTED VALUES.                                 SQ1074.2
-002100*                                                                 SQ1074.2
-002200*        AN INFORMATION SECTION AT THE END OF THE ROUTINE         SQ1074.2
-002300*    CHECKS THE FIELD WHICH CONTAINS THE XRECORD-NUMBER.          SQ1074.2
-002400*    THIS FIELD IS PART OF A LONG RECORD ONLY.  IF THE            SQ1074.2
-002500*    XRECORD-NUMBER IS THERE FOR A SHORT RECORD, IT MEANS         SQ1074.2
-002600*    THE MAXIMUM SIZE RECORD IS ALWAYS WRITTEN.                   SQ1074.2
-002700*                                                                 SQ1074.2
-002800*    NEW FEATURE: THE LOGICAL RECORD EXTEND ACROSS THE PHYSICAL   SQ1074.2
-002900*                 RECORD.  (VII-23; 3.3.3 (2) A)                  SQ1074.2
-003000*                                                                 SQ1074.2
-003100*                                                                 SQ1074.2
-003200*    USED X-CARDS:                                                SQ1074.2
-003300*         XXXXX014                                                SQ1074.2
-003400*         XXXXX055                                                SQ1074.2
-003500*     P   XXXXX062                                                SQ1074.2
-003600*         XXXXX082                                                SQ1074.2
-003700*         XXXXX083                                                SQ1074.2
-003800*     C   XXXXX084                                                SQ1074.2
-003900*                                                                 SQ1074.2
-004000*                                                                 SQ1074.2
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 ENVIRONMENT DIVISION.                                            SQ1074.2
 004200 CONFIGURATION SECTION.                                           SQ1074.2
 004300 SOURCE-COMPUTER.                                                 SQ1074.2
@@ -302,7 +302,7 @@
 035100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ1074.2
 035200      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ1074.2
 035300      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ1074.2
-035400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ1074.2
+035400*                                                                         
 035500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ1074.2
 035600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ1074.2
 035700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ1074.2
@@ -389,11 +389,11 @@
 043800     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          SQ1074.2
 043900     MOVE "FILE HAS 120 AND 151 CHAR RECS" TO RE-MARK.            SQ1074.2
 044000     PERFORM PRINT-DETAIL.                                        SQ1074.2
-044100*        A SEQUENTIAL MASS STORAGE FILE CONTAINING 450            SQ1074.2
-044200*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS RECORDS         SQ1074.2
-044300*    OF 120 CHARACTERS AND RECORDS OF 151 CHARACTERS.  THE        SQ1074.2
-044400*    SEQUENCE IN WHICH THE RECORDS WERE WRITTEN IS S-L-10S-       SQ1074.2
-044500*    100L-338S.                                                   SQ1074.2
+044100*                                                                         
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
 044600 SEQ-CLOSE-017.                                                   SQ1074.2
 044700     CLOSE SQ-VS7.                                                SQ1074.2
 044800     GO TO READ-INIT-GF-01.                                       SQ1074.2
@@ -585,10 +585,10 @@
 063400 SEQ-CLOSE-018.                                                   SQ1074.2
 063500     CLOSE SQ-VS7.                                                SQ1074.2
 063600 SECT-SQ107A-0002 SECTION.                                        SQ1074.2
-063700*        THIS SECTION CHECKS IF THE ENTIRE RECORD AREA IS         SQ1074.2
-063800*    WRITTEN ON THE MASS STORAGE DEVICE WHEN A SHORT RECORD       SQ1074.2
-063900*    IS WRITTEN.  THE RECORD NUMBER IN CHARACTERS 126 THROUGH     SQ1074.2
-064000*    130 IS UNIQUE FOR EACH RECORD.                               SQ1074.2
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
 064100 INFO-INIT-004.                                                   SQ1074.2
 064200     OPEN INPUT SQ-VS7.                                           SQ1074.2
 064300     MOVE ZERO TO COUNT-OF-RECS.                                  SQ1074.2

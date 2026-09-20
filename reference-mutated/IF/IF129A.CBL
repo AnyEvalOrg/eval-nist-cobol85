@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1294.2
 000300     IF129A.                                                      IF1294.2
 000400                                                                  IF1294.2
-000500***********************************************************       IF1294.2
-000600*                                                         *       IF1294.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1294.2
-000800* It contains tests for the Intrinsic Function ORD-MIN.   *       IF1294.2
-000900*                                                         *       IF1294.2
-001000*                                                         *       IF1294.2
-001100***********************************************************       IF1294.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1294.2
 001300 CONFIGURATION SECTION.                                           IF1294.2
 001400 SOURCE-COMPUTER.                                                 IF1294.2
@@ -29,9 +29,9 @@
 002900 01  PRINT-REC PICTURE X(120).                                    IF1294.2
 003000 01  DUMMY-RECORD PICTURE X(120).                                 IF1294.2
 003100 WORKING-STORAGE SECTION.                                         IF1294.2
-003200***********************************************************       IF1294.2
-003300* Variables specific to the Intrinsic Function Test IF129A*       IF1294.2
-003400***********************************************************       IF1294.2
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 01  A                   PIC S9(10)     VALUE 5.                  IF1294.2
 003600 01  B                   PIC S9(10)     VALUE 7.                  IF1294.2
 003700 01  C                   PIC S9(10)     VALUE 4.                  IF1294.2
@@ -46,9 +46,9 @@
 004600     02 IND OCCURS 5 TIMES   PIC 9.                               IF1294.2
 004700 01  TEMP                PIC S9(10).                              IF1294.2
 004800 01  WS-INT              PIC S9(10).                              IF1294.2
-004900*                                                                 IF1294.2
-005000**********************************************************        IF1294.2
-005100*                                                                 IF1294.2
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
 005200 01  TEST-RESULTS.                                                IF1294.2
 005300     02 FILLER                   PIC X      VALUE SPACE.          IF1294.2
 005400     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1294.2
@@ -308,16 +308,16 @@
 030800 BAIL-OUT-EX. EXIT.                                               IF1294.2
 030900 CCVS1-EXIT.                                                      IF1294.2
 031000     EXIT.                                                        IF1294.2
-031100********************************************************          IF1294.2
-031200*                                                      *          IF1294.2
-031300*    Intrinsic Function Tests         IF129A - ORD-MIN *          IF1294.2
-031400*                                                      *          IF1294.2
-031500********************************************************          IF1294.2
+031100*                                                                         
+031200*                                                                         
+031300*                                                                         
+031400*                                                                         
+031500*                                                                         
 031600 SECT-IF129A SECTION.                                             IF1294.2
 031700 F-ORD-MIN-INFO.                                                  IF1294.2
 031800     MOVE     "See ref. A-62 2.33" TO ANSI-REFERENCE.             IF1294.2
 031900     MOVE     "ORD-MIN Function"     TO FEATURE.                  IF1294.2
-032000*****************TEST (a) ******************************          IF1294.2
+032000*                                                                         
 032100 F-ORD-MIN-01.                                                    IF1294.2
 032200     MOVE ZERO TO WS-INT.                                         IF1294.2
 032300 F-ORD-MIN-TEST-01.                                               IF1294.2
@@ -335,7 +335,7 @@
 033500 F-ORD-MIN-WRITE-01.                                              IF1294.2
 033600     MOVE "F-ORD-MIN-01" TO PAR-NAME.                             IF1294.2
 033700     PERFORM  PRINT-DETAIL.                                       IF1294.2
-033800*****************TEST (b) ******************************          IF1294.2
+033800*                                                                         
 033900 F-ORD-MIN-TEST-02.                                               IF1294.2
 034000     EVALUATE FUNCTION ORD-MIN(3, 2, 7, 1, 5)                     IF1294.2
 034100     WHEN 4                                                       IF1294.2
@@ -349,7 +349,7 @@
 034900 F-ORD-MIN-WRITE-02.                                              IF1294.2
 035000     MOVE "F-ORD-MIN-02" TO PAR-NAME.                             IF1294.2
 035100     PERFORM  PRINT-DETAIL.                                       IF1294.2
-035200*****************TEST (c) ******************************          IF1294.2
+035200*                                                                         
 035300 F-ORD-MIN-03.                                                    IF1294.2
 035400     MOVE ZERO TO WS-INT.                                         IF1294.2
 035500 F-ORD-MIN-TEST-03.                                               IF1294.2
@@ -364,7 +364,7 @@
 036400 F-ORD-MIN-WRITE-03.                                              IF1294.2
 036500     MOVE "F-ORD-MIN-03" TO PAR-NAME.                             IF1294.2
 036600     PERFORM  PRINT-DETAIL.                                       IF1294.2
-036700*****************TEST (d) ******************************          IF1294.2
+036700*                                                                         
 036800 F-ORD-MIN-04.                                                    IF1294.2
 036900     MOVE ZERO TO WS-INT.                                         IF1294.2
 037000 F-ORD-MIN-TEST-04.                                               IF1294.2
@@ -382,15 +382,15 @@
 038200 F-ORD-MIN-WRITE-04.                                              IF1294.2
 038300     MOVE "F-ORD-MIN-04" TO PAR-NAME.                             IF1294.2
 038400     PERFORM  PRINT-DETAIL.                                       IF1294.2
-038500*****************TEST (e) ******************************          IF1294.2
+038500*                                                                         
 038600 F-ORD-MIN-05.                                                    IF1294.2
 038700     MOVE ZERO TO WS-INT.                                         IF1294.2
 038800 F-ORD-MIN-TEST-05.                                               IF1294.2
 038900     COMPUTE WS-INT = FUNCTION ORD-MIN(A, B, D).                  IF1294.2
-039000     IF WS-INT = 5 THEN                                           IF1294.2
+039000     IF WS-INT = 7 THEN                                           IF1294.2
 039100                        PERFORM PASS                              IF1294.2
 039200     ELSE                                                         IF1294.2
-039300                        MOVE 5    TO CORRECT-N                    IF1294.2
+039300                        MOVE 7    TO CORRECT-N                    IF1294.2
 039400                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 039500                        PERFORM FAIL.                             IF1294.2
 039600     GO TO F-ORD-MIN-WRITE-05.                                    IF1294.2
@@ -400,7 +400,7 @@
 040000 F-ORD-MIN-WRITE-05.                                              IF1294.2
 040100     MOVE "F-ORD-MIN-05" TO PAR-NAME.                             IF1294.2
 040200     PERFORM  PRINT-DETAIL.                                       IF1294.2
-040300*****************TEST (f) ******************************          IF1294.2
+040300*                                                                         
 040400 F-ORD-MIN-06.                                                    IF1294.2
 040500     MOVE ZERO TO WS-INT.                                         IF1294.2
 040600 F-ORD-MIN-TEST-06.                                               IF1294.2
@@ -418,7 +418,7 @@
 041800 F-ORD-MIN-WRITE-06.                                              IF1294.2
 041900     MOVE "F-ORD-MIN-06" TO PAR-NAME.                             IF1294.2
 042000     PERFORM  PRINT-DETAIL.                                       IF1294.2
-042100*****************TEST (g) ******************************          IF1294.2
+042100*                                                                         
 042200 F-ORD-MIN-07.                                                    IF1294.2
 042300     MOVE ZERO TO WS-INT.                                         IF1294.2
 042400 F-ORD-MIN-TEST-07.                                               IF1294.2
@@ -436,7 +436,7 @@
 043600 F-ORD-MIN-WRITE-07.                                              IF1294.2
 043700     MOVE "F-ORD-MIN-07" TO PAR-NAME.                             IF1294.2
 043800     PERFORM  PRINT-DETAIL.                                       IF1294.2
-043900*****************TEST (h) ******************************          IF1294.2
+043900*                                                                         
 044000 F-ORD-MIN-08.                                                    IF1294.2
 044100     MOVE ZERO TO WS-INT.                                         IF1294.2
 044200 F-ORD-MIN-TEST-08.                                               IF1294.2
@@ -454,15 +454,15 @@
 045400 F-ORD-MIN-WRITE-08.                                              IF1294.2
 045500     MOVE "F-ORD-MIN-08" TO PAR-NAME.                             IF1294.2
 045600     PERFORM  PRINT-DETAIL.                                       IF1294.2
-045700*****************TEST (i) ******************************          IF1294.2
+045700*                                                                         
 045800 F-ORD-MIN-09.                                                    IF1294.2
 045900     MOVE ZERO TO WS-INT.                                         IF1294.2
 046000 F-ORD-MIN-TEST-09.                                               IF1294.2
 046100     COMPUTE WS-INT = FUNCTION ORD-MIN("S", "D", J).              IF1294.2
-046200     IF WS-INT = 1 THEN                                           IF1294.2
+046200     IF WS-INT = 5 THEN                                           IF1294.2
 046300                        PERFORM PASS                              IF1294.2
 046400     ELSE                                                         IF1294.2
-046500                        MOVE 1   TO CORRECT-N                     IF1294.2
+046500                        MOVE 5   TO CORRECT-N                     IF1294.2
 046600                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 046700                        PERFORM FAIL.                             IF1294.2
 046800     GO TO F-ORD-MIN-WRITE-09.                                    IF1294.2
@@ -472,7 +472,7 @@
 047200 F-ORD-MIN-WRITE-09.                                              IF1294.2
 047300     MOVE "F-ORD-MIN-09" TO PAR-NAME.                             IF1294.2
 047400     PERFORM  PRINT-DETAIL.                                       IF1294.2
-047500*****************TEST (j) ******************************          IF1294.2
+047500*                                                                         
 047600 F-ORD-MIN-10.                                                    IF1294.2
 047700     MOVE ZERO TO WS-INT.                                         IF1294.2
 047800 F-ORD-MIN-TEST-10.                                               IF1294.2
@@ -490,15 +490,15 @@
 049000 F-ORD-MIN-WRITE-10.                                              IF1294.2
 049100     MOVE "F-ORD-MIN-10" TO PAR-NAME.                             IF1294.2
 049200     PERFORM  PRINT-DETAIL.                                       IF1294.2
-049300*****************TEST (k) ******************************          IF1294.2
+049300*                                                                         
 049400 F-ORD-MIN-11.                                                    IF1294.2
 049500     MOVE ZERO TO WS-INT.                                         IF1294.2
 049600 F-ORD-MIN-TEST-11.                                               IF1294.2
 049700     COMPUTE WS-INT = FUNCTION ORD-MIN(IND(1), IND(2), IND(3)).   IF1294.2
-049800     IF WS-INT = 6 THEN                                           IF1294.2
+049800     IF WS-INT = 3 THEN                                           IF1294.2
 049900                        PERFORM PASS                              IF1294.2
 050000     ELSE                                                         IF1294.2
-050100                        MOVE 6   TO CORRECT-N                     IF1294.2
+050100                        MOVE 3   TO CORRECT-N                     IF1294.2
 050200                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 050300                        PERFORM FAIL.                             IF1294.2
 050400     GO TO F-ORD-MIN-WRITE-11.                                    IF1294.2
@@ -508,7 +508,7 @@
 050800 F-ORD-MIN-WRITE-11.                                              IF1294.2
 050900     MOVE "F-ORD-MIN-11" TO PAR-NAME.                             IF1294.2
 051000     PERFORM  PRINT-DETAIL.                                       IF1294.2
-051100*****************TEST (l) ******************************          IF1294.2
+051100*                                                                         
 051200 F-ORD-MIN-12.                                                    IF1294.2
 051300     MOVE ZERO TO WS-INT.                                         IF1294.2
 051400 F-ORD-MIN-TEST-12.                                               IF1294.2
@@ -526,7 +526,7 @@
 052600 F-ORD-MIN-WRITE-12.                                              IF1294.2
 052700     MOVE "F-ORD-MIN-12" TO PAR-NAME.                             IF1294.2
 052800     PERFORM  PRINT-DETAIL.                                       IF1294.2
-052900*****************TEST (m) ******************************          IF1294.2
+052900*                                                                         
 053000 F-ORD-MIN-13.                                                    IF1294.2
 053100     MOVE ZERO TO WS-INT.                                         IF1294.2
 053200 F-ORD-MIN-TEST-13.                                               IF1294.2
@@ -545,7 +545,7 @@
 054500 F-ORD-MIN-WRITE-13.                                              IF1294.2
 054600     MOVE "F-ORD-MIN-13" TO PAR-NAME.                             IF1294.2
 054700     PERFORM  PRINT-DETAIL.                                       IF1294.2
-054800*****************TEST (n) ******************************          IF1294.2
+054800*                                                                         
 054900 F-ORD-MIN-14.                                                    IF1294.2
 055000     MOVE ZERO TO WS-INT.                                         IF1294.2
 055100 F-ORD-MIN-TEST-14.                                               IF1294.2
@@ -563,7 +563,7 @@
 056300 F-ORD-MIN-WRITE-14.                                              IF1294.2
 056400     MOVE "F-ORD-MIN-14" TO PAR-NAME.                             IF1294.2
 056500     PERFORM  PRINT-DETAIL.                                       IF1294.2
-056600*****************TEST (o) ******************************          IF1294.2
+056600*                                                                         
 056700 F-ORD-MIN-15.                                                    IF1294.2
 056800     MOVE ZERO TO WS-INT.                                         IF1294.2
 056900 F-ORD-MIN-TEST-15.                                               IF1294.2
@@ -581,7 +581,7 @@
 058100 F-ORD-MIN-WRITE-15.                                              IF1294.2
 058200     MOVE "F-ORD-MIN-15" TO PAR-NAME.                             IF1294.2
 058300     PERFORM  PRINT-DETAIL.                                       IF1294.2
-058400*****************TEST (p) ******************************          IF1294.2
+058400*                                                                         
 058500 F-ORD-MIN-16.                                                    IF1294.2
 058600     MOVE ZERO TO WS-INT.                                         IF1294.2
 058700 F-ORD-MIN-TEST-16.                                               IF1294.2
@@ -600,15 +600,15 @@
 060000 F-ORD-MIN-WRITE-16.                                              IF1294.2
 060100     MOVE "F-ORD-MIN-16" TO PAR-NAME.                             IF1294.2
 060200     PERFORM  PRINT-DETAIL.                                       IF1294.2
-060300*****************SPECIAL TEST 1******************************     IF1294.2
+060300*                                                                         
 060400 F-ORD-MIN-17.                                                    IF1294.2
 060500     MOVE 10 TO ARG1                                              IF1294.2
 060600     PERFORM F-ORD-MIN-TEST-17                                    IF1294.2
 060700       UNTIL FUNCTION ORD-MIN(2, ARG1) > 1.                       IF1294.2
-060800*                                                                 IF1294.2
-060900**    when ARG1 = 10 .. 2 ORD-MIN(2,ARG1) = 1                     IF1294.2
-061000**    when ARG1 = 1 , ORD-MIN(5,ARG1) = 2                         IF1294.2
-061100*                                                                 IF1294.2
+060800*                                                                         
+060900*                                                                         
+061000*                                                                         
+061100*                                                                         
 061200     IF ARG1 = 1 THEN                                             IF1294.2
 061300                        PERFORM PASS                              IF1294.2
 061400     ELSE                                                         IF1294.2
@@ -616,17 +616,17 @@
 061600                        MOVE ARG1   TO COMPUTED-N                 IF1294.2
 061700                        PERFORM FAIL.                             IF1294.2
 061800     GO TO F-ORD-MIN-WRITE-17.                                    IF1294.2
-061900*                                                                 IF1294.2
+061900*                                                                         
 062000 F-ORD-MIN-TEST-17.                                               IF1294.2
 062100     COMPUTE ARG1 = ARG1 - 1.                                     IF1294.2
-062200*                                                                 IF1294.2
+062200*                                                                         
 062300 F-ORD-MIN-DELETE-17.                                             IF1294.2
 062400     PERFORM  DE-LETE.                                            IF1294.2
 062500     GO TO    F-ORD-MIN-WRITE-17.                                 IF1294.2
 062600 F-ORD-MIN-WRITE-17.                                              IF1294.2
 062700     MOVE "F-ORD-MIN-17" TO PAR-NAME.                             IF1294.2
 062800     PERFORM  PRINT-DETAIL.                                       IF1294.2
-062900*******************END OF TESTS**************************         IF1294.2
+062900*                                                                         
 063000 CCVS-EXIT SECTION.                                               IF1294.2
 063100 CCVS-999999.                                                     IF1294.2
 063200     GO TO CLOSE-FILES.                                           IF1294.2

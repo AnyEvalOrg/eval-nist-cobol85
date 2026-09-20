@@ -1,180 +1,180 @@
 000100 IDENTIFICATION DIVISION.                                         IX2094.2
 000200 PROGRAM-ID.                                                      IX2094.2
 000300     IX209A.                                                      IX2094.2
-000400****************************************************************  IX2094.2
-000500*                                                              *  IX2094.2
-000600*    VALIDATION FOR:-                                          *  IX2094.2
-000700*                                                              *  IX2094.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX2094.2
-000900*                                                              *  IX2094.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX2094.2
-001100*                                                              *  IX2094.2
-001200****************************************************************  IX2094.2
-001300*                                                              *  IX2094.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IX2094.2
-001500*                                                              *  IX2094.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IX2094.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IX2094.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IX2094.2
-001900*                                                              *  IX2094.2
-002000****************************************************************  IX2094.2
-002100*         "IX209A"                                                IX2094.2
-002200******************************************************************IX2094.2
-002300*    THE PURPOSE OF THIS PROGRAM IS TO TEST USE OF THE            IX2094.2
-002400*    START --- EQUAL TO --- STATEMENT USING FIRST THE PRIME       IX2094.2
-002500*    RECORD KEY AND THEN WITH EACH OF THE ALTERNATE RECORD KEYS   IX2094.2
-002600*    AS THE KEY OF REFERENCE.   THE START STATEMENT NAMES,        IX2094.2
-002700*    IN ITS CONSTRUCT , EITHER THE DATA NAME SPECIFIED IN THE     IX2094.2
-002800*    KEY CLAUSE OR A DATA ITEM THAT IS SUBORDINATE TO THE         IX2094.2
-002900*    KEY NAME.   DIFFERENT KEY VALUES ARE USED FOR TESTING.       IX2094.2
-003000*    IF A KEY VALUE IS PROVIDED WHICH MATCHES A RECORD IN THE FILEIX2094.2
-003100*    WHEN THE START IS EXECUTED THEN THE RECORD IS EXPECTED TO    IX2094.2
-003200*    MADE AVAILABLE BY THE SUBSEQUENT READ STATEMENT.  IF A KEY   IX2094.2
-003300*    VALUE IS PROVIDED WHICH DOES NOT  MATCH ANY RECORD IN THE    IX2094.2
-003400*    FILE THEN THE INVALID KEY PATH IS EXPECTED TO BE TAKEN.      IX2094.2
-003500*    THE FILE STATUS CONTENTS RESULTING FROM EXECUTION OF THE     IX2094.2
-003600*    START TESTS ARE SAVED AND CHECKED IN LATER TESTS.            IX2094.2
-003700*                                                                 IX2094.2
-003800*            REFERENCE   AMERICAN NATIONAL STANDARD               IX2094.2
-003900*                        PROGRAMMING LANGUAGE COBOL, X3.23-198X.  IX2094.2
-004000*                        SECTION IX, INDEX I-O, THE START         IX2094.2
-004100*                        STATEMENT. PARAGRAPHS 4.7.3 (3), (4);    IX2094.2
-004200*                                              4.7.4 (1), (4), (5)IX2094.2
-004300*                                                        AND      IX2094.2
-004400*                        THE FILE STATUS PARAGRAPH 1.3.4          IX2094.2
-004500*                                                                 IX2094.2
-004600*    BEFORE EXECUTION OF THE START IN EACH TEST, A RECORD IS MADE IX2094.2
-004700*    AVAILABLE FROM THE FILE THAT IS DIFFERENT THAN WILL RESULT   IX2094.2
-004800*    FROM THE TEST, AND THE RECORD KEY IS LOADED WITH A KEY VALUE.IX2094.2
-004900*    DEPENDING ON THE NATURE OF THE TEST THE KEY VALUE MAY OR     IX2094.2
-005000*    MAY NOT BE A VALID KEY FOR THE FILE.                         IX2094.2
-005100*                                                                 IX2094.2
-005200*    THIS PROGRAM FIRST CREATES AN  INDEXED SEQUENTIAL FILE       IX2094.2
-005300*    CONTAINING TWO ALTERNATE KEYS AND  THE ONE REQUIRED RECORD   IX2094.2
-005400*    KEY FOR THE FILE.  IMMEDIATELY FOLLOWING FILE CREATION THE   IX2094.2
-005500*    FILE IS READ AND THE RECORDS OF THE FILE VERIFIED FOR        IX2094.2
-005600*    ACCURACY.  NEXT THE TESTS ARE EXECUTED USING THE START ---   IX2094.2
-005700*    EQUAL TO --- STATEMENT.                                      IX2094.2
-005800*    THE RECORDS IN THE FILE ARE CREATED IN SEQUENTIAL ORDER BY   IX2094.2
-005900*    RECORD KEY VALUE.  FOLLOWING  IS A SAMPLE OF THE DATA        IX2094.2
-006000*    CONTENTS FOR THE RECORD KEY AND TWO ALTERNATE RECORD KEYS IN IX2094.2
-006100*    THE FILE.                                                    IX2094.2
-006200*                                                                 IX2094.2
-006300*   REC-NO  RECORD-KEY      ALTERNATE-KEY-1     ALTERNATE-KEY-2   IX2094.2
-006400*   ------  ----------      ---------------     ---------------   IX2094.2
-006500*    001   BBBBBBBBBC002 EEEEEEEEEF000ALTKEY1 WWWWWWWWWV398ALTKEY2IX2094.2
-006600*    002   BBBBBBBBCC004 EEEEEEEEFF004ALTKEY1 WWWWWWWWVV396ALTKEY2IX2094.2
-006700*    003   BBBBBBBCCC006 EEEEEEEFFF006ALTKEY1 WWWWWWWVVV394ALTKEY2IX2094.2
-006800*     .          .                 .                    .         IX2094.2
-006900*     .          .                 .                    .         IX2094.2
-007000*     .          .                 .                    .         IX2094.2
-007100*    010   CCCCCCCCCC020 FFFFFFFFFF020ALTKEY1 VVVVVVVVVV380ALTKEY2IX2094.2
-007200*    011   CCCCCCCCCD022 FFFFFFFFFG022ALTKEY1 VVVVVVVVVV380ALTKEY2IX2094.2
-007300*    012   CCCCCCCCDD024 FFFFFFFFGG024ALTKEY1 VVVVVVVVUU376ALTKEY2IX2094.2
-007400*     .          .                 .                    .         IX2094.2
-007500*     .          .                 .                    .         IX2094.2
-007600*     .          .                 .                    .         IX2094.2
-007700*    200   UUUUUUUUUU400 YYYYYYYYYY400ALTKEY1 DDDDDDDDDD000ALTKEY2IX2094.2
-007800*                                                                 IX2094.2
-007900*     NOTE 1 - ALTERNATE KEY NUMBER 2 CONTAINS DUPLICATE KEYS     IX2094.2
-008000*              EVERY 10TH AND 11TH RECORDS.                       IX2094.2
-008100*                                                                 IX2094.2
-008200*     NOTE 2 - THE FIRST 50 RECORDS AND LAST 25 RECORDS OF THE    IX2094.2
-008300*    FILE FOLLOW THE ABOVE SEQUENTIAL KEY PATTERN.  FOR THE MIDDLEIX2094.2
-008400*    125 RECORDS ONLY THE NUMBER PART OF THE KEYS ARE VARIED      IX2094.2
-008500*    AND VARIED IN THE SEQUENCE SHOWN ABOVE.  THAT IS, RECORD-KEY IX2094.2
-008600*    AND ALTERNATE-KEY-1 ARE INCREMENTED BY 2 AND THE ALTERNATE-  IX2094.2
-008700*    KEY-2 IS DECREMENTED BY 2 EACH TIME A RECORD IS WRITTEN TO   IX2094.2
-008800*    THE FILE.  THE FILE IS DESIGNED TO BE LARGE ENOUGH SO THAT   IX2094.2
-008900*    AN I-O OPERATION IS REQUIRED FOR EACH RECORD ACCESSED FROM   IX2094.2
-009000*    THE FILE.                                                    IX2094.2
-009100*                                                                 IX2094.2
-009200*    FILE CHARACTERISTICS ARE: FILE SIZE            = 200 RECORDS IX2094.2
-009300*                              RECORD SIZE          = 240 CHARS.  IX2094.2
-009400*                              RECORD KEY SIZE      = 13  CHARS.  IX2094.2
-009500*                              ALTERNATE KEY 1 SIZE = 20  CHARS.  IX2094.2
-009600*                              ALTERNATE KEY 2 SIZE = 20  CHARS.  IX2094.2
-009700*                              ACCESS MODE          = SEQUENTIAL  IX2094.2
-009800*                                                                 IX2094.2
-009900*    A LIST OF COBOL ELEMENTS WITH THE PARAGRAPH NAME IN PARENTH- IX2094.2
-010000*    ESIS THAT TESTS THE ELEMENT AND A SHORT DESCRIPTION OF THE   IX2094.2
-010100*    TEST FOLLOWS.                                                IX2094.2
-010200*                                                                 IX2094.2
-010300*      WRITE --- INVALID KEY---. (INX-TEST-001) - THIS TEST CREATEIX2094.2
-010400*            A FILE OF 200 RECORDS CONTAINING ONE RECORD KEY AND  IX2094.2
-010500*            TWO ALTERNATE KEYS.                                  IX2094.2
-010600*      READ ---AT END ---. (INX-TEST-002) - THIS TEST READS THE   IX2094.2
-010700*            FILE CREATED IN INX-TEST-001 AND VERIFIES THAT   THE IX2094.2
-010800*            FILE WAS CREATED CORRECTLY.                          IX2094.2
-010900*      START --- KEY IS EQUAL TO RECORD-KEY INVALID KEY ---. (INX-IX2094.2
-011000*            TEST-003.01 THRU INX-TEST-003.04) - THE START        IX2094.2
-011100*            STATEMENT IS EXECUTED USING THE RECORD-KEY FOR THE   IX2094.2
-011200*            FILE CONTAINING KEY VALUES WHICH RESPECTIVELY EQUAL AIX2094.2
-011300*            RECORD IN THE FILE (.01), BETWEEN TWO EXISTING KEY   IX2094.2
-011400*            VALUES (02), LESS THAN THE FIRST RECORD IN THE FILE  IX2094.2
-011500*            (.03) AND GREATER THAN THAN THE LAST RECORD IN THE   IX2094.2
-011600*            FILE (.04).                                          IX2094.2
-011700*      START --- KEY IS EQUAL TO DATA-ITEM  INVALID KEY ---. (INX-IX2094.2
-011800*            TEST-003.05 THRU INX-TEST-003.09) - THE START        IX2094.2
-011900*            STATEMENT IS EXECUTED USING A DATA ITEM WHICH IS     IX2094.2
-012000*            SUBORDINATE TO  THE RECORD-KEY NAME OF THE FILE      IX2094.2
-012100*            AND  CONTAINING KEY VALUES WHICH RESPECTIVELY EQUAL AIX2094.2
-012200*            RECORD IN THE FILE (.05), EQUAL A VALUE PRESENT IN   IX2094.2
-012300*            IN MORE THAN ONE RECORD IN THE FILE (.06),           IX2094.2
-012400*            NOT EQUAL TO ANY RECORD IN THE FILE (.07, LESS THAN  IX2094.2
-012500*            THE FIRST RECORD IN THE FILE (.08) AND GREATER THAN  IX2094.2
-012600*            THE LAST RECORD IN THE FILE (.09.                    IX2094.2
-012700*      FILE STATUS. (INX-TEST-004.01 THRU INX-TEST-004.09) - THESEIX2094.2
-012800*            TESTS CHECK THE CONTENTS OF THE FILE STATUS RESULTINGIX2094.2
-012900*            FROM THE START IN INX-TEST-003.01 THRU               IX2094.2
-013000*            INX-TEST-003.09.                                     IX2094.2
-013100*      START --- KEY IS EQUAL TO ALTNATE-KEY INVALID KEY --. (INX-IX2094.2
-013200*            TEST-005.01 THRU INX-TEST-005.04) - THE START        IX2094.2
-013300*            STATEMENT IS EXECUTED USING THE ALTERNATE-KEY FOR THEIX2094.2
-013400*            FILE CONTAINING KEY VALUES WHICH RESPECTIVELY EQUAL AIX2094.2
-013500*            RECORD IN THE FILE (.01), BETWEEN TWO EXISTING KEY   IX2094.2
-013600*            VALUES (02), LESS THAN THE FIRST RECORD IN THE FILE  IX2094.2
-013700*            (.03) AND GREATER THAN THAN THE LAST RECORD IN THE   IX2094.2
-013800*            FILE (.04).                                          IX2094.2
-013900*      START --- KEY IS EQUAL TO DATA-ITEM  INVALID KEY ---. (INX-IX2094.2
-014000*            TEST-005.05 THRU INX-TEST-005.09) - THE START        IX2094.2
-014100*            STATEMENT IS EXECUTED USING A DATA ITEM WHICH IS     IX2094.2
-014200*            SUBORDINATE TO THE ALTERNATE-KEY NAME OF THE FILE    IX2094.2
-014300*            AND  CONTAINING KEY VALUES WHICH RESPECTIVELY EQUAL AIX2094.2
-014400*            RECORD IN THE FILE (.05), EQUAL A VALUE PRESENT IN   IX2094.2
-014500*            IN MORE THAN ONE RECORD IN THE FILE (.06),           IX2094.2
-014600*            NOT EQUAL TO ANY RECORD IN THE FILE (.07, LESS THAN  IX2094.2
-014700*            THE FIRST RECORD IN THE FILE (.08) AND GREATER THAN  IX2094.2
-014800*            THE LAST RECORD IN THE FILE (.09.                    IX2094.2
-014900*      FILE STATUS. (INX-TEST-006.01 THRU INX-TEST-006.09) - THESEIX2094.2
-015000*            TESTS CHECK THE CONTENTS OF THE FILE STATUS RESULTINGIX2094.2
-015100*            FROM THE START IN INX-TEST-005.01 THRU               IX2094.2
-015200*            INX-TEST-005.09.                                     IX2094.2
-015300*      START --- KEY IS EQUAL TO ALTNATE-KEY INVALID KEY --. (INX-IX2094.2
-015400*            TEST-007.01 THRU INX-TEST-007.04) - THE START        IX2094.2
-015500*            STATEMENT IS EXECUTED USING THE ALTERNATE-KEY        IX2094.2
-015600*            WHICH SPECIFIES THE DUPLICATES OPTION FOR THE FILE   IX2094.2
-015700*            AND  CONTAINING KEY VALUES WHICH RESPECTIVELY EQUAL AIX2094.2
-015800*            RECORD IN THE FILE (.01), BETWEEN TWO EXISTING KEY   IX2094.2
-015900*            VALUES (02), LESS THAN THE FIRST RECORD IN THE FILE  IX2094.2
-016000*            (.03) AND GREATER THAN THAN THE LAST RECORD IN THE   IX2094.2
-016100*            FILE (.04).                                          IX2094.2
-016200*      START --- KEY IS EQUAL TO DATA-ITEM  INVALID KEY ---. (INX-IX2094.2
-016300*            TEST-007.05 THRU INX-TEST-007.09) - THE START        IX2094.2
-016400*            STATEMENT IS EXECUTED USING A DATA ITEM WHICH IS     IX2094.2
-016500*            SUBORDINATE TO THE ALTERNATE-KEY W/DUP FOR THE FILE  IX2094.2
-016600*            AND  CONTAINING KEY VALUES WHICH RESPECTIVELY EQUAL AIX2094.2
-016700*            RECORD IN THE FILE (.05), EQUAL A VALUE PRESENT IN   IX2094.2
-016800*            IN MORE THAN ONE RECORD IN THE FILE (.06),           IX2094.2
-016900*            NOT EQUAL TO ANY RECORD IN THE FILE (.07, LESS THAN  IX2094.2
-017000*            THE FIRST RECORD IN THE FILE (.08) AND GREATER THAN  IX2094.2
-017100*            THE LAST RECORD IN THE FILE (.09.                    IX2094.2
-017200*      FILE STATUS. (INX-TEST-008.01 THRU INX-TEST-008.09) - THESEIX2094.2
-017300*            TESTS CHECK THE CONTENTS OF THE FILE STATUS RESULTINGIX2094.2
-017400*            FROM THE START IN INX-TEST-007.01 THRU               IX2094.2
-017500*            INX-TEST-007.09.                                     IX2094.2
-017600*                                                                 IX2094.2
-017700******************************************************************IX2094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
+008900*                                                                         
+009000*                                                                         
+009100*                                                                         
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
+010500*                                                                         
+010600*                                                                         
+010700*                                                                         
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
+011100*                                                                         
+011200*                                                                         
+011300*                                                                         
+011400*                                                                         
+011500*                                                                         
+011600*                                                                         
+011700*                                                                         
+011800*                                                                         
+011900*                                                                         
+012000*                                                                         
+012100*                                                                         
+012200*                                                                         
+012300*                                                                         
+012400*                                                                         
+012500*                                                                         
+012600*                                                                         
+012700*                                                                         
+012800*                                                                         
+012900*                                                                         
+013000*                                                                         
+013100*                                                                         
+013200*                                                                         
+013300*                                                                         
+013400*                                                                         
+013500*                                                                         
+013600*                                                                         
+013700*                                                                         
+013800*                                                                         
+013900*                                                                         
+014000*                                                                         
+014100*                                                                         
+014200*                                                                         
+014300*                                                                         
+014400*                                                                         
+014500*                                                                         
+014600*                                                                         
+014700*                                                                         
+014800*                                                                         
+014900*                                                                         
+015000*                                                                         
+015100*                                                                         
+015200*                                                                         
+015300*                                                                         
+015400*                                                                         
+015500*                                                                         
+015600*                                                                         
+015700*                                                                         
+015800*                                                                         
+015900*                                                                         
+016000*                                                                         
+016100*                                                                         
+016200*                                                                         
+016300*                                                                         
+016400*                                                                         
+016500*                                                                         
+016600*                                                                         
+016700*                                                                         
+016800*                                                                         
+016900*                                                                         
+017000*                                                                         
+017100*                                                                         
+017200*                                                                         
+017300*                                                                         
+017400*                                                                         
+017500*                                                                         
+017600*                                                                         
+017700*                                                                         
 017800 ENVIRONMENT DIVISION.                                            IX2094.2
 017900 CONFIGURATION SECTION.                                           IX2094.2
 018000 SOURCE-COMPUTER.                                                 IX2094.2
@@ -666,7 +666,7 @@
 071400      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX2094.2
 071500      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX2094.2
 071600      ADD PASS-COUNTER TO ERROR-HOLD.                             IX2094.2
-071700*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX2094.2
+071700*                                                                         
 071800      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX2094.2
 071900      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX2094.2
 072000      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX2094.2
@@ -847,37 +847,37 @@
 089500     MOVE    "START EQ TO RECKEY"  TO FEATURE.                    IX2094.2
 089600     MOVE    "START-TEST-GF-01" TO PAR-NAME.                      IX2094.2
 089700     MOVE    "********************" TO HOLD-FILESTATUS-RECORD.    IX2094.2
-089800*                                                                 IX2094.2
-089900* THIS TEST TESTS THE  "START -- EQUAL TO" FOR PROPER POSITIONING IX2094.2
-090000* OF THE RECORD POINTER FOR THE SUBSEQUENT READ STATEMENT.        IX2094.2
-090100* START-TEST-GF-01 USE ONLY THE PRIME RECORD KEY FOR ESTABLISHING IX2094.2
-090200* THE CURRENT RECORD POINTER FOR THE FILE.  THE FOLLOWING IS A    IX2094.2
-090300* SUMMARY OF THE TEST CONDITIONS AND THE EXPECTED ACTION TO BE    IX2094.2
-090400* TAKEN FOR THE  TESTS.                                           IX2094.2
-090500*                                                                 IX2094.2
-090600*                      CONDITIONS (CONTENTS OF KEY) / ACTION      IX2094.2
-090700*                                                                 IX2094.2
-090800*   START-TEST-GF-01 - EQUAL A RECORD IN FILE / RECORD FOUND      IX2094.2
-090900*   START-TEST-GF-02 - BETWEEN 2 EXISTING KEY VALUES / INVALID KEYIX2094.2
-091000*   START-TEST-GF-03 - LESS THAN FIRST FILE RECORD / INVALID KEY  IX2094.2
-091100*   START-TEST-GF-04 - GREATER THAN LAST FILE RECORD / INVALID KEYIX2094.2
-091200*   START-TEST-GF-05 - UNEQUAL SIZE OPERANDS (EQUAL) / RECORD FOUNIX2094.2
-091300*   START-TEST-GF-06 - UNEQUAL SIZE OPERANDS (EQUAL) / RECORD FOUNIX2094.2
-091400*   START-TEST-GF-07 - UNEQUAL SIZE OPERANDS (UNEQUAL) / INVLD KEYIX2094.2
-091500*   START-TEST-GF-08 - UNEQUAL SIZE OPERANDS (UNEQUAL) / INVLD KEYIX2094.2
-091600*   START-TEST-GF-09 - UNEQUAL SIZE OPERANDS (UNEQUAL) /INVLD KEY IX2094.2
-091700*                                                                 IX2094.2
-091800*  BEFORE EACH TEST A RECORD IS MADE AVAILABLE WHICH IS DIFFERENT IX2094.2
-091900*  THAN THE ONE WHICH IS EXPECTED TO BE PRESENT FOLLOWING A TEST. IX2094.2
-092000*  IF AN INVALID KEY IS EXPECTED FROM THE TEST, THE KEYS          IX2094.2
-092100*  ASSOCIATED WITH THE FILE WHICH ARE NOT PARTICIPATING IN THE    IX2094.2
-092200*  START STATEMENT WILL BE LOADED WITH VALUES WHICH WOULD         IX2094.2
-092300*  MATCH RECORDS IN THE FILE.  IF KEY MATCH IS EXPECTED FROM      IX2094.2
-092400*  THE TEST, THE KEYS ASSOCIATED WITH THE FILE WHICH ARE NOT      IX2094.2
-092500*  PARTICIPATING IN THE START STATEMENT WILL BE LOADED WITH       IX2094.2
-092600*  VALUES WHICH WOULD NOT MATCH RECORDS IN THE FILE.  THE FILE    IX2094.2
-092700*  STATUS FROM EXECUTION OF EACH START IS CAPTURED FOR LATER TESTSIX2094.2
-092800*                                                                 IX2094.2
+089800*                                                                         
+089900*                                                                         
+090000*                                                                         
+090100*                                                                         
+090200*                                                                         
+090300*                                                                         
+090400*                                                                         
+090500*                                                                         
+090600*                                                                         
+090700*                                                                         
+090800*                                                                         
+090900*                                                                         
+091000*                                                                         
+091100*                                                                         
+091200*                                                                         
+091300*                                                                         
+091400*                                                                         
+091500*                                                                         
+091600*                                                                         
+091700*                                                                         
+091800*                                                                         
+091900*                                                                         
+092000*                                                                         
+092100*                                                                         
+092200*                                                                         
+092300*                                                                         
+092400*                                                                         
+092500*                                                                         
+092600*                                                                         
+092700*                                                                         
+092800*                                                                         
 092900 START-INIT-GF-01-01.                                             IX2094.2
 093000     PERFORM START-INITIALIZE-RECORD.                             IX2094.2
 093100     MOVE    "START-TEST-GF-01" TO PAR-NAME.                      IX2094.2
@@ -892,11 +892,11 @@
 094000     MOVE    WRK-FS1-ALTKEY1 TO IX-ALT-KEY1-AREA.                 IX2094.2
 094100     MOVE    WRK-FS1-ALTKEY2 TO IX-ALT-KEY2-AREA.                 IX2094.2
 094200 START-TEST-GF-01.                                                IX2094.2
-094300*                                                                 IX2094.2
-094400*  START-TEST-GF-01 - THE START SHOULD FIND A RECORD IN THE FILE  IX2094.2
-094500*                    WHICH HAS A RECORD KEY VALUE OF              IX2094.2
-094600*                    CCCCCCCCCD022 (RECORD NUMBER 11).            IX2094.2
-094700*                                                                 IX2094.2
+094300*                                                                         
+094400*                                                                         
+094500*                                                                         
+094600*                                                                         
+094700*                                                                         
 094800     START   IX-FS1                                               IX2094.2
 094900                    KEY IS EQUAL TO IX-FS1-KEY                    IX2094.2
 095000          INVALID KEY   MOVE FS1-STATUS TO FILESTATUS (1)         IX2094.2
@@ -937,13 +937,13 @@
 098500     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 098600     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 098700 START-TEST-GF-02.                                                IX2094.2
-098800*                                                                 IX2094.2
-098900*  START-TEST-GF-02 - THE START SHOULD NOT FIND A RECORD IN THE   IX2094.2
-099000*                    FILE WHICH HAS A RECORD KEY VALUE OF         IX2094.2
-099100*                    "EEEEEEEFFF067". THIS KEY VALUE IS           IX2094.2
-099200*                    SEQUENTIALLY LOCATED BETWEEN TWO CURRENTLY   IX2094.2
-099300*                    EXISTING RECORD KEYS IN THE FILE.            IX2094.2
-099400*                                                                 IX2094.2
+098800*                                                                         
+098900*                                                                         
+099000*                                                                         
+099100*                                                                         
+099200*                                                                         
+099300*                                                                         
+099400*                                                                         
 099500     START   IX-FS1                                               IX2094.2
 099600                     KEY IS EQUAL TO IX-FS1-KEY                   IX2094.2
 099700          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (2)       IX2094.2
@@ -978,13 +978,13 @@
 102600     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 102700     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 102800 START-TEST-GF-03.                                                IX2094.2
-102900*                                                                 IX2094.2
-103000*  START-TEST-GF-03  - THE START STATEMENT SHOULD NOT FIND A      IX2094.2
-103100*                    RECORD IN THE FILE WHICH HAS A RECORD        IX2094.2
-103200*                    KEY VALUE OF "BBBBBBBBBC001".  THIS KEY      IX2094.2
-103300*                    VALUE IS SEQUENTIALLY LOWER THAN ANY         IX2094.2
-103400*                    CURRENTLY EXISTING KEY IN THE FILE.          IX2094.2
-103500*                                                                 IX2094.2
+102900*                                                                         
+103000*                                                                         
+103100*                                                                         
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
+103500*                                                                         
 103600     START   IX-FS1                                               IX2094.2
 103700                     KEY IS EQUAL TO IX-FS1-KEY                   IX2094.2
 103800          INVALID KEY    MOVE FS1-STATUS TO FILESTATUS (3)        IX2094.2
@@ -1019,15 +1019,15 @@
 106700     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 106800     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 106900 START-TEST-GF-04.                                                IX2094.2
-107000*                                                                 IX2094.2
-107100*  START-TEST-GF-04  - THE START STATEMENT SHOULD NOT FIND A      IX2094.2
-107200*                    RECORD IN THE  FILE WHICH HAS A RECORD       IX2094.2
-107300*                    KEY VALUE OF "UUUUUUUUUU401".  THIS          IX2094.2
-107400*                    VALUE IS SEQUENTIALLY  ONE GREATER THAN      IX2094.2
-107500*                    ANY RECORD KEY CURRENTLY EXISTING IN         IX2094.2
-107600*                    THE FILE.  AN INVALID KEY CONDITION          IX2094.2
-107700*                    IS EXPECTED WHEN THE START IS EXECUTED.      IX2094.2
-107800*                                                                 IX2094.2
+107000*                                                                         
+107100*                                                                         
+107200*                                                                         
+107300*                                                                         
+107400*                                                                         
+107500*                                                                         
+107600*                                                                         
+107700*                                                                         
+107800*                                                                         
 107900     START   IX-FS1                                               IX2094.2
 108000                     KEY IS EQUAL TO IX-FS1-KEY                   IX2094.2
 108100          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (4)       IX2094.2
@@ -1062,18 +1062,18 @@
 111000     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 111100     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 111200 START-TEST-GF-05.                                                IX2094.2
-111300*  START-TEST-GF-05  - THE START STATEMENT USES AN OPERAND        IX2094.2
-111400*                    IN THE KEY PHRASE WHICH IS NOT THE NAME      IX2094.2
-111500*                    OF A RECORD   KEY BUT IS THE NAME OF A       IX2094.2
-111600*                    DATA ITEM WHICH IS SUBORDINATE TO THE        IX2094.2
-111700*                    RECORD KEY.  THE CONTENTS OF THE DATA ITEM   IX2094.2
-111800*                    (POSITIONS 1 THRU 5 OF THE RECORD KEY)       IX2094.2
-111900*                    IS A UNIQUE KEY VALUE FOR THE FILE. THE      IX2094.2
-112000*                    BALANCE OF THE KEY (POSITIONS 6 THRU 13) IS  IX2094.2
-112100*                    NOT A VALID KEY VALUE FOR THE FILE.  THE     IX2094.2
-112200*                    RECORD WITH THE RECORD KEY "CDDDDDDDDD038"   IX2094.2
-112300*                    (RECORD NUMBER 19) IS EXPECTED TO BE FOUND.  IX2094.2
-112400*                                                                 IX2094.2
+111300*                                                                         
+111400*                                                                         
+111500*                                                                         
+111600*                                                                         
+111700*                                                                         
+111800*                                                                         
+111900*                                                                         
+112000*                                                                         
+112100*                                                                         
+112200*                                                                         
+112300*                                                                         
+112400*                                                                         
 112500     START   IX-FS1                                               IX2094.2
 112600                    KEY IS EQUAL TO IX-FS1-KEY-1-5                IX2094.2
 112700          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (5)       IX2094.2
@@ -1113,23 +1113,23 @@
 116100     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 116200     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 116300 START-TEST-GF-06.                                                IX2094.2
-116400*                                                                 IX2094.2
-116500*  START-TEST-GF-06  - THE START STATEMENT USES AN OPERAND IN THE IX2094.2
-116600*                    KEY PHRASE WHICH IS NOT THE NAME OF A RECORD IX2094.2
-116700*                    KEY BUT IS THE NAME OF A DATA ITEM THAT IS   IX2094.2
-116800*                    SUBORDINATE TO THE RECORD KEY.  THE CONTENTS IX2094.2
-116900*                    OF THE DATA ITEM (POSITIONS 1 THRU 5 OF THE  IX2094.2
-117000*                    RECORD KEY)  IS A DUPLICATE OF THE FIRST     IX2094.2
-117100*                    5 POSITIONS OF 5 OTHER RECORDS IN THE FILE.  IX2094.2
-117200*                    THIS TEST EXPECTS THE RECORD POINTER         IX2094.2
-117300*                    TO BE POSITIONED TO RECORD KEY TTTTTTTTTT380 IX2094.2
-117400*                    (RECORD NUMBER 190) WHICH WAS THE            IX2094.2
-117500*                    FIRST RECORD WRITTEN TO THE FILE THAT        IX2094.2
-117600*                    CONTAINS TTTTT IN THE FIRST 5 POSITIONS OF   IX2094.2
-117700*                    THE KEY.  THE RECORD KEY WAS LOADED WITH THE IX2094.2
-117800*                    VALUE "TTTTTUUUUU390" (KEY FOR RECORD NUMBER IX2094.2
-117900*                    195) BEFORE THE START WAS EXECUTED.          IX2094.2
-118000*                                                                 IX2094.2
+116400*                                                                         
+116500*                                                                         
+116600*                                                                         
+116700*                                                                         
+116800*                                                                         
+116900*                                                                         
+117000*                                                                         
+117100*                                                                         
+117200*                                                                         
+117300*                                                                         
+117400*                                                                         
+117500*                                                                         
+117600*                                                                         
+117700*                                                                         
+117800*                                                                         
+117900*                                                                         
+118000*                                                                         
 118100     START   IX-FS1                                               IX2094.2
 118200                    KEY IS EQUAL TO IX-FS1-KEY-1-5                IX2094.2
 118300          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (6)       IX2094.2
@@ -1169,22 +1169,22 @@
 121700     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 121800     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 121900 START-TEST-GF-07.                                                IX2094.2
-122000*                                                                 IX2094.2
-122100*  START-TEST-GF-07  - THE START STATEMENT USES AN OPERAND IN THE IX2094.2
-122200*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-122300*                    A DATA ITEM SUBORDINATE TO THE RECORD KEY    IX2094.2
-122400*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-122500*                    (POSITIONS 1 THRU 10 OF THE RECORD KEY)      IX2094.2
-122600*                    IS LOADED WITH "CCCCCCD022".  NO SUCH RECORD IX2094.2
-122700*                    SHOULD BE IN THE FILE.  IF IN THE COMPARSION,IX2094.2
-122800*                    THE LONGER OPERAND IS TRUNCATED ON THE LEFT  IX2094.2
-122900*                    INSTEAD OF ON THE RIGHT THE CONTENTS OF      IX2094.2
-123000*                    THE DATA ITEM WILL MATCH A RECORD IN THE     IX2094.2
-123100*                    FILE.  THIS TEST EXPECTS THE LONGER OPERAND  IX2094.2
-123200*                    TO BE TRUNCATED ON THE RIGHT CAUSING NO      IX2094.2
-123300*                    DATA ITEM MATCH AND RESULTING IN AN INVALID  IX2094.2
-123400*                    KEY CONDITION WHEN THE START IS EXECUTED.    IX2094.2
-123500*                                                                 IX2094.2
+122000*                                                                         
+122100*                                                                         
+122200*                                                                         
+122300*                                                                         
+122400*                                                                         
+122500*                                                                         
+122600*                                                                         
+122700*                                                                         
+122800*                                                                         
+122900*                                                                         
+123000*                                                                         
+123100*                                                                         
+123200*                                                                         
+123300*                                                                         
+123400*                                                                         
+123500*                                                                         
 123600     START   IX-FS1                                               IX2094.2
 123700                    KEY IS EQUAL TO IX-FS1-KEY-1-10               IX2094.2
 123800          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (7)       IX2094.2
@@ -1219,19 +1219,19 @@
 126700     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 126800     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 126900 START-TEST-GF-08.                                                IX2094.2
-127000*                                                                 IX2094.2
-127100*  START-TEST-GF-08  - THIS TEST USES AN OPERAND IN THE           IX2094.2
-127200*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-127300*                    A DATA ITEM SUBORDINATE TO THE RECORD KEY    IX2094.2
-127400*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-127500*                    (POSITIONS 1 THRU 10 OF THE RECORD KEY) IS   IX2094.2
-127600*                    LOADED WITH "ABBBBBBBBC".  THIS KEY VALUE    IX2094.2
-127700*                    IS LOWER THAN ANY RECORD KEY VALUE IN        IX2094.2
-127800*                    POSITION 1 THRU 10 EXISTING IN THE FILE      IX2094.2
-127900*                    THEREFORE AN INVALID KEY CONDITION IS        IX2094.2
-128000*                    EXPECTED WHEN THE START STATEMENT IS         IX2094.2
-128100*                    EXECUTED.                                    IX2094.2
-128200*                                                                 IX2094.2
+127000*                                                                         
+127100*                                                                         
+127200*                                                                         
+127300*                                                                         
+127400*                                                                         
+127500*                                                                         
+127600*                                                                         
+127700*                                                                         
+127800*                                                                         
+127900*                                                                         
+128000*                                                                         
+128100*                                                                         
+128200*                                                                         
 128300     START   IX-FS1                                               IX2094.2
 128400                    KEY IS EQUAL TO IX-FS1-KEY-1-10               IX2094.2
 128500          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (8)       IX2094.2
@@ -1266,19 +1266,19 @@
 131400     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 131500     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 131600 START-TEST-GF-09.                                                IX2094.2
-131700*                                                                 IX2094.2
-131800*  START-TEST-GF-09  - THIS TEST USES AN OPERAND IN THE           IX2094.2
-131900*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-132000*                    A DATA ITEM SUBORDINATE TO THE RECORD KEY    IX2094.2
-132100*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-132200*                    (POSITIONS 1 THRU 10 OF THE RECORD KEY) IS   IX2094.2
-132300*                    LOADED WITH "UUUUUUUUUV".  THIS KEY VALUE    IX2094.2
-132400*                    IS GREATER THAN ANY RECORD KEY VALUE IN      IX2094.2
-132500*                    POSITION 1 THRU 10 EXISTING IN THE FILE      IX2094.2
-132600*                    THEREFORE AN INVALID KEY CONDITION IS        IX2094.2
-132700*                    EXPECTED WHEN THE START STATEMENT IS         IX2094.2
-132800*                    EXECUTED.                                    IX2094.2
-132900*                                                                 IX2094.2
+131700*                                                                         
+131800*                                                                         
+131900*                                                                         
+132000*                                                                         
+132100*                                                                         
+132200*                                                                         
+132300*                                                                         
+132400*                                                                         
+132500*                                                                         
+132600*                                                                         
+132700*                                                                         
+132800*                                                                         
+132900*                                                                         
 133000     START   IX-FS1                                               IX2094.2
 133100                    KEY IS EQUAL TO IX-FS1-KEY-1-10               IX2094.2
 133200          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (9)       IX2094.2
@@ -1303,18 +1303,18 @@
 135100 START-INIT-GF-FILE-STATUS.                                       IX2094.2
 135200     MOVE "FILE STATUS START:00"   TO FEATURE.                    IX2094.2
 135300     MOVE   "START-TEST-GF-10" TO PAR-NAME.                       IX2094.2
-135400*                                                                 IX2094.2
-135500*  THIS SERIES OF TESTS CHECKS THE CONTENTS OF THE FILE STATUS    IX2094.2
-135600*                                                                 IX2094.2
+135400*                                                                         
+135500*                                                                         
+135600*                                                                         
 135700 START-TEST-GF-10.                                                IX2094.2
 135800     IF      FILESTATUS (1)  EQUAL TO "**"                        IX2094.2
 135900             PERFORM DE-LETE                                      IX2094.2
 136000             GO TO  START-WRITE-GF-10.                            IX2094.2
-136100*                                                                 IX2094.2
-136200*  START-TEST-GF-10 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-136300*                    RESULTING FROM START-TEST-GF-01.  THE FILE   IX2094.2
-136400*                    STATUS CONTENTS IS EXPECTED TO BE "00".      IX2094.2
-136500*                                                                 IX2094.2
+136100*                                                                         
+136200*                                                                         
+136300*                                                                         
+136400*                                                                         
+136500*                                                                         
 136600     IF      FILESTATUS (1)  EQUAL TO "00"                        IX2094.2
 136700             PERFORM PASS                                         IX2094.2
 136800     ELSE                                                         IX2094.2
@@ -1330,11 +1330,11 @@
 137800     IF      FILESTATUS (2)  EQUAL TO "**"                        IX2094.2
 137900             PERFORM DE-LETE                                      IX2094.2
 138000             GO TO  START-WRITE-GF-11.                            IX2094.2
-138100*                                                                 IX2094.2
-138200*  START-TEST-GF-11 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-138300*                    RESULTING FROM START-TEST-GF-02. THE FILE    IX2094.2
-138400*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-138500*                                                                 IX2094.2
+138100*                                                                         
+138200*                                                                         
+138300*                                                                         
+138400*                                                                         
+138500*                                                                         
 138600     IF      FILESTATUS (2)  EQUAL TO "23"                        IX2094.2
 138700             PERFORM  PASS                                        IX2094.2
 138800             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1354,11 +1354,11 @@
 140200*                                                                         
 140300*                                                                         
 140400*                                                                         
-140500     IF      FILESTATUS (3)  EQUAL TO "A3"                        IX2094.2
+140500     IF      FILESTATUS (3)  EQUAL TO "33"                        IX2094.2
 140600             PERFORM  PASS                                        IX2094.2
 140700             ELSE  PERFORM  FAIL                                  IX2094.2
 140800     MOVE "IX-3; 1.3.4 (1) A; FROM START-TEST-GF-03  " TO RE-MARK IX2094.2
-140900             MOVE    "A3"  TO CORRECT-A                           IX2094.2
+140900             MOVE    "33"  TO CORRECT-A                           IX2094.2
 141000             MOVE   FILESTATUS (3)  TO COMPUTED-A.                IX2094.2
 141100 START-WRITE-GF-12.                                               IX2094.2
 141200     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -1368,11 +1368,11 @@
 141600     IF      FILESTATUS (4)  EQUAL TO "**"                        IX2094.2
 141700             PERFORM DE-LETE                                      IX2094.2
 141800             GO TO  START-WRITE-GF-13.                            IX2094.2
-141900*                                                                 IX2094.2
-142000*  START-TEST-GF-13 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-142100*                    RESULTING FROM START-TEST-GF-04. THE FILE    IX2094.2
-142200*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-142300*                                                                 IX2094.2
+141900*                                                                         
+142000*                                                                         
+142100*                                                                         
+142200*                                                                         
+142300*                                                                         
 142400     IF      FILESTATUS (4)  EQUAL TO "23"                        IX2094.2
 142500             PERFORM  PASS                                        IX2094.2
 142600             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1387,11 +1387,11 @@
 143500     IF      FILESTATUS (5)  EQUAL TO "**"                        IX2094.2
 143600             PERFORM DE-LETE                                      IX2094.2
 143700             GO TO  START-WRITE-GF-14.                            IX2094.2
-143800*                                                                 IX2094.2
-143900*  START-TEST-GF-14 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-144000*                    RESULTING FROM START-TEST-GF-05. THE FILE    IX2094.2
-144100*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2094.2
-144200*                                                                 IX2094.2
+143800*                                                                         
+143900*                                                                         
+144000*                                                                         
+144100*                                                                         
+144200*                                                                         
 144300     IF      FILESTATUS (5)  EQUAL TO "00"                        IX2094.2
 144400             PERFORM  PASS                                        IX2094.2
 144500             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1406,11 +1406,11 @@
 145400     IF      FILESTATUS (6)  EQUAL TO "**"                        IX2094.2
 145500             PERFORM DE-LETE                                      IX2094.2
 145600             GO TO  START-WRITE-GF-15.                            IX2094.2
-145700*                                                                 IX2094.2
-145800*  START-TEST-GF-15 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-145900*                    RESULTING FROM START-TEST-GF-06. THE FILE    IX2094.2
-146000*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2094.2
-146100*                                                                 IX2094.2
+145700*                                                                         
+145800*                                                                         
+145900*                                                                         
+146000*                                                                         
+146100*                                                                         
 146200     IF      FILESTATUS (6)  EQUAL TO "00"                        IX2094.2
 146300             PERFORM  PASS                                        IX2094.2
 146400             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1425,11 +1425,11 @@
 147300     IF      FILESTATUS (7)  EQUAL TO "**"                        IX2094.2
 147400             PERFORM DE-LETE                                      IX2094.2
 147500             GO TO  START-WRITE-GF-16.                            IX2094.2
-147600*                                                                 IX2094.2
-147700*  START-TEST-GF-16 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-147800*                    RESULTING FROM START-TEST-GF-07. THE FILE    IX2094.2
-147900*                    STATUS CONTENTS IS EXPECTED TO BE "23"       IX2094.2
-148000*                                                                 IX2094.2
+147600*                                                                         
+147700*                                                                         
+147800*                                                                         
+147900*                                                                         
+148000*                                                                         
 148100     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2094.2
 148200             PERFORM  PASS                                        IX2094.2
 148300             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1444,11 +1444,11 @@
 149200     IF      FILESTATUS (8)  EQUAL TO "**"                        IX2094.2
 149300             PERFORM DE-LETE                                      IX2094.2
 149400             GO TO  START-WRITE-GF-17.                            IX2094.2
-149500*                                                                 IX2094.2
-149600*  START-TEST-GF-07 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-149700*                    RESULTING FROM START-TEST-GF-08. THE FILE    IX2094.2
-149800*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-149900*                                                                 IX2094.2
+149500*                                                                         
+149600*                                                                         
+149700*                                                                         
+149800*                                                                         
+149900*                                                                         
 150000     IF      FILESTATUS (8)  EQUAL TO "23"                        IX2094.2
 150100             PERFORM  PASS                                        IX2094.2
 150200             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1463,11 +1463,11 @@
 151100     IF      FILESTATUS (9)  EQUAL TO "**"                        IX2094.2
 151200             PERFORM DE-LETE                                      IX2094.2
 151300             GO TO  START-WRITE-GF-18.                            IX2094.2
-151400*                                                                 IX2094.2
-151500*  START-TEST-GF-18 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-151600*                    RESULTING FROM START-TEST-GF-09. THE FILE    IX2094.2
-151700*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-151800*                                                                 IX2094.2
+151400*                                                                         
+151500*                                                                         
+151600*                                                                         
+151700*                                                                         
+151800*                                                                         
 151900     IF      FILESTATUS (9)  EQUAL TO "23"                        IX2094.2
 152000             PERFORM PASS                                         IX2094.2
 152100     ELSE    PERFORM FAIL                                         IX2094.2
@@ -1476,44 +1476,44 @@
 152400             MOVE   FILESTATUS (9)  TO COMPUTED-A.                IX2094.2
 152500 START-WRITE-GF-18.                                               IX2094.2
 152600     PERFORM  PRINT-DETAIL.                                       IX2094.2
-152700******************************************************************IX2094.2
+152700*                                                                         
 152800                                                                  IX2094.2
 152900 START-INIT-005.                                                  IX2094.2
 153000     OPEN    INPUT  IX-FS1.                                       IX2094.2
 153100     MOVE    "STR EQ ALTKY W/O DUP" TO FEATURE.                   IX2094.2
 153200     MOVE    "START-TEST-GF-19" TO PAR-NAME.                      IX2094.2
 153300     MOVE    "********************" TO HOLD-FILESTATUS-RECORD.    IX2094.2
-153400*                                                                 IX2094.2
-153500* THIS TEST TESTS THE  "START -- EQUAL TO" FOR PROPER POSITIONING IX2094.2
-153600* OF THE RECORD POINTER FOR THE SUBSEQUENT READ STATEMENT.        IX2094.2
-153700* START-TEST-GF-19/27 USES ONLY THE ALTERNATE RECORD KEY WITHOUT  IX2094.2
-153800* THE DUPLICATES OPTION FOR ESTABLISHING THE CURRENT RECORD       IX2094.2
-153900* POINTER FOR THE FILE.  THE FOLLOWING IS A SUMMARY OF THE TEST   IX2094.2
-154000* CONDITIONS AND THE EXPECTED ACTION TO BE TAKEN FOR THE TESTS.   IX2094.2
-154100*                                                                 IX2094.2
-154200*                      CONDITIONS (CONTENTS OF KEY) / ACTION      IX2094.2
-154300*                                                                 IX2094.2
-154400*   START-TEST-GF-19  - EQUAL A RECORD IN FILE / RECORD FOUND     IX2094.2
-154500*   START-TEST-GF-20  - BETWEEN 2 EXISTING KEY VALUES / INVALID KEIX2094.2
-154600*   START-TEST-GF-21  - LESS THAN FIRST FILE RECORD / INVALID KEY IX2094.2
-154700*   START-TEST-GF-22  - GREATER THAN LAST FILE RECORD / INVALID KEIX2094.2
-154800*   START-TEST-GF-23  - UNEQUAL SIZE OPERANDS (EQUAL) / RECORD FOUIX2094.2
-154900*   START-TEST-GF-24  - UNEQUAL SIZE OPERANDS (EQUAL) / RECORD FOUIX2094.2
-155000*   START-TEST-GF-25  - UNEQUAL SIZE OPERANDS (UNEQUAL) / INVLD KEIX2094.2
-155100*   START-TEST-GF-26  - UNEQUAL SIZE OPERANDS (UNEQUAL) / INVLD KEIX2094.2
-155200*   START-TEST-GF-27  - UNEQUAL SIZE OPERANDS (UNEQUAL) /INVLD KEYIX2094.2
-155300*                                                                 IX2094.2
-155400*  BEFORE EACH TEST A RECORD IS MADE AVAILABLE WHICH IS DIFFERENT IX2094.2
-155500*  THAN THE ONE WHICH IS EXPECTED TO BE PRESENT FOLLOWING A TEST. IX2094.2
-155600*  IF AN INVALID KEY IS EXPECTED FROM THE TEST, THE KEYS          IX2094.2
-155700*  ASSOCIATED WITH THE FILE WHICH ARE NOT PARTICIPATING IN THE    IX2094.2
-155800*  START STATEMENT WILL BE LOADED WITH VALUES WHICH WOULD         IX2094.2
-155900*  MATCH RECORDS IN THE FILE.  IF KEY MATCH IS EXPECTED FROM      IX2094.2
-156000*  THE TEST, THE KEYS ASSOCIATED WITH THE FILE WHICH ARE NOT      IX2094.2
-156100*  PARTICIPATING IN THE START STATEMENT WILL BE LOADED WITH       IX2094.2
-156200*  VALUES WHICH WOULD NOT MATCH RECORDS IN THE FILE.  THE FILE    IX2094.2
-156300*  STATUS FROM EXECUTION OF EACH START IS CAPTURED FOR LATER TESTSIX2094.2
-156400*                                                                 IX2094.2
+153400*                                                                         
+153500*                                                                         
+153600*                                                                         
+153700*                                                                         
+153800*                                                                         
+153900*                                                                         
+154000*                                                                         
+154100*                                                                         
+154200*                                                                         
+154300*                                                                         
+154400*                                                                         
+154500*                                                                         
+154600*                                                                         
+154700*                                                                         
+154800*                                                                         
+154900*                                                                         
+155000*                                                                         
+155100*                                                                         
+155200*                                                                         
+155300*                                                                         
+155400*                                                                         
+155500*                                                                         
+155600*                                                                         
+155700*                                                                         
+155800*                                                                         
+155900*                                                                         
+156000*                                                                         
+156100*                                                                         
+156200*                                                                         
+156300*                                                                         
+156400*                                                                         
 156500 START-INIT-GF-19.                                                IX2094.2
 156600     PERFORM START-INITIALIZE-RECORD.                             IX2094.2
 156700     IF      INIT-FLAG NOT EQUAL TO ZERO                          IX2094.2
@@ -1527,11 +1527,11 @@
 157500     MOVE    WRK-FS1-ALTKEY1 TO IX-ALT-KEY1-AREA.                 IX2094.2
 157600     MOVE    WRK-FS1-ALTKEY2 TO IX-ALT-KEY2-AREA.                 IX2094.2
 157700 START-TEST-GF-19.                                                IX2094.2
-157800*                                                                 IX2094.2
-157900*  START-TEST-GF-19 - THE START SHOULD FIND A RECORD IN THE FILE  IX2094.2
-158000*                    WHICH HAS AN ALTERNATE KEY VALUE OF          IX2094.2
-158100*                    XXXXXXXXXY382ALTKEY1 (RECORD NUMBER 191).    IX2094.2
-158200*                                                                 IX2094.2
+157800*                                                                         
+157900*                                                                         
+158000*                                                                         
+158100*                                                                         
+158200*                                                                         
 158300     START   IX-FS1                                               IX2094.2
 158400                    KEY IS EQUAL TO IX-FS1-ALTKEY1                IX2094.2
 158500        INVALID KEY     MOVE FS1-STATUS TO FILESTATUS (1)         IX2094.2
@@ -1572,13 +1572,13 @@
 162000     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 162100     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 162200 START-TEST-GF-20.                                                IX2094.2
-162300*                                                                 IX2094.2
-162400*  START-TEST-GF.02  - THE START SHOULD NOT FIND A RECORD IN THE  IX2094.2
-162500*                    FILE WHICH HAS AN ALTERNATE KEY VALUE OF     IX2094.2
-162600*                    HHHHHHHIII067ALTKEY1.  THIS KEY VALUE IS     IX2094.2
-162700*                    SEQUENTIALLY LOCATED BETWEEN TWO CURRENTLY   IX2094.2
-162800*                    EXISTING ALTERNATE KEYS IN THE FILE.         IX2094.2
-162900*                                                                 IX2094.2
+162300*                                                                         
+162400*                                                                         
+162500*                                                                         
+162600*                                                                         
+162700*                                                                         
+162800*                                                                         
+162900*                                                                         
 163000     START   IX-FS1                                               IX2094.2
 163100                    KEY IS EQUAL TO IX-FS1-ALTKEY1                IX2094.2
 163200          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (2)       IX2094.2
@@ -1614,13 +1614,13 @@
 166200     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 166300     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 166400 START-TEST-GF-21.                                                IX2094.2
-166500*                                                                 IX2094.2
-166600*  START-TEST-GF-21 - THE START STATEMENT SHOULD NOT FIND A       IX2094.2
-166700*                    RECORD IN THE FILE WHICH HAS AN ALTERNATE    IX2094.2
-166800*                    KEY VALUE OF EEEEEEEEEF001ALTKEY1.  THIS KEY IX2094.2
-166900*                    VALUE IS SEQUENTIALLY LOWER THAN ANY         IX2094.2
-167000*                    CURRENTLY EXISTING KEY IN THE FILE.          IX2094.2
-167100*                                                                 IX2094.2
+166500*                                                                         
+166600*                                                                         
+166700*                                                                         
+166800*                                                                         
+166900*                                                                         
+167000*                                                                         
+167100*                                                                         
 167200     START   IX-FS1                                               IX2094.2
 167300                    KEY IS EQUAL TO IX-FS1-ALTKEY1                IX2094.2
 167400          INVALID KEY    MOVE FS1-STATUS TO FILESTATUS (3)        IX2094.2
@@ -1656,15 +1656,15 @@
 170400     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 170500     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 170600 START-TEST-GF-22.                                                IX2094.2
-170700*                                                                 IX2094.2
-170800*  START-TEST-GF-22 - THE START STATEMENT SHOULD NOT FIND A       IX2094.2
-170900*                    RECORD IN THE FILE WHICH HAS AN ALTERNATE    IX2094.2
-171000*                    KEY VALUE OF YYYYYYYYYY401ALTKEY1.  THIS     IX2094.2
-171100*                    VALUE IS SEQUENTIALLY GREATER THAN           IX2094.2
-171200*                    ANY ALTERNATE KEY CURRENTLY EXISTING IN      IX2094.2
-171300*                    THE FILE.  AN INVALID KEY CONDITION          IX2094.2
-171400*                    IS EXPECTED WHEN THE START IS EXECUTED.      IX2094.2
-171500*                                                                 IX2094.2
+170700*                                                                         
+170800*                                                                         
+170900*                                                                         
+171000*                                                                         
+171100*                                                                         
+171200*                                                                         
+171300*                                                                         
+171400*                                                                         
+171500*                                                                         
 171600     START   IX-FS1                                               IX2094.2
 171700                    KEY IS EQUAL TO IX-FS1-ALTKEY1                IX2094.2
 171800          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (4)       IX2094.2
@@ -1699,20 +1699,20 @@
 174700     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 174800     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 174900 START-TEST-GF-23.                                                IX2094.2
-175000*  START-TEST-GF-23 - THE START STATEMENT USES AN OPERAND         IX2094.2
-175100*                    IN THE KEY PHRASE WHICH IS NOT THE NAME      IX2094.2
-175200*                    OF AN ALTERNATE KEY BUT IS THE NAME OF A     IX2094.2
-175300*                    DATA ITEM WHICH IS SUBORDINATE TO THE        IX2094.2
-175400*                    ALTERNATE KEY.  THE CONTENTS OF THE DATA ITEMIX2094.2
-175500*                    (POSITIONS 1 THRU 5 OF THE ALTERNATE KEY)    IX2094.2
-175600*                    IS A UNIQUE KEY VALUE FOR THE FILE.  THE     IX2094.2
-175700*                    BALANCE OF THE KEY (POSITIONS 6 THRU 13 OF   IX2094.2
-175800*                    THE ALTERNATE KEY IS NOT A VALID KEY VALUE   IX2094.2
-175900*                    FOR THE FILE.  THE                           IX2094.2
-176000*                    RECORD WITH THE ALTERNATE KEY "GGGGHHHHHH052 IX2094.2
-176100*                    ALTKEY1 (RECORD NUMBER 26) IS EXPECTED TO    IX2094.2
-176200*                    BE FOUND.                                    IX2094.2
-176300*                                                                 IX2094.2
+175000*                                                                         
+175100*                                                                         
+175200*                                                                         
+175300*                                                                         
+175400*                                                                         
+175500*                                                                         
+175600*                                                                         
+175700*                                                                         
+175800*                                                                         
+175900*                                                                         
+176000*                                                                         
+176100*                                                                         
+176200*                                                                         
+176300*                                                                         
 176400     START   IX-FS1                                               IX2094.2
 176500                    KEY IS EQUAL TO IX-FS1-ALTKEY1-1-5            IX2094.2
 176600          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (5)       IX2094.2
@@ -1752,23 +1752,23 @@
 180000     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 180100     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 180200 START-TEST-GF-24.                                                IX2094.2
-180300*                                                                 IX2094.2
-180400*  START-TEST-GF-24 - THE START STATEMENT USES AN OPERAND IN THE  IX2094.2
-180500*                    KEY PHRASE WHICH IS NOT THE NAME OF AN       IX2094.2
-180600*                    ALTERNATE KEY BUT IS THE NAME OF A DATA ITEM IX2094.2
-180700*                    THAT IS SUBORDINATE TO THE KEY.  THE CONTENTSIX2094.2
-180800*                    OF THE DATA ITEM (POSITIONS 1 THRU 5 OF THE  IX2094.2
-180900*                    ALTERNATE KEY) IS A DUPLICATE OF THE FIRST   IX2094.2
-181000*                    5 POSITIONS OF 5 OTHER RECORDS IN THE FILE.  IX2094.2
-181100*                    THIS TEST EXPECTS THE RECORD POINTER         IX2094.2
-181200*                    TO BE POSITIONED TO RECORD KEY XXXXXXXXXX380 IX2094.2
-181300*                    ALTKEY1 (RECORD NUMBER 190) WHICH WAS THE    IX2094.2
-181400*                    FIRST RECORD WRITTEN TO THE FILE THAT        IX2094.2
-181500*                    CONTAINS XXXXX IN THE FIRST 5 POSITIONS OF   IX2094.2
-181600*                  THE KEY.  THE ALTERNATE KEY WAS LOADED WITH THEIX2094.2
-181700*                    VALUE XXXXXYYYYY390ALTKEY1 (KEY FOR RECORD   IX2094.2
-181800*                     NUMBER 195) BEFORE THE START WAS EXECUTED.  IX2094.2
-181900*                                                                 IX2094.2
+180300*                                                                         
+180400*                                                                         
+180500*                                                                         
+180600*                                                                         
+180700*                                                                         
+180800*                                                                         
+180900*                                                                         
+181000*                                                                         
+181100*                                                                         
+181200*                                                                         
+181300*                                                                         
+181400*                                                                         
+181500*                                                                         
+181600*                                                                         
+181700*                                                                         
+181800*                                                                         
+181900*                                                                         
 182000     START   IX-FS1                                               IX2094.2
 182100                    KEY IS EQUAL TO IX-FS1-ALTKEY1-1-5            IX2094.2
 182200          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (6)       IX2094.2
@@ -1808,22 +1808,22 @@
 185600     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 185700     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 185800 START-TEST-GF-25.                                                IX2094.2
-185900*                                                                 IX2094.2
-186000*  START-TEST-GF-25 - THE START STATEMENT USES AN OPERAND IN THE  IX2094.2
-186100*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-186200*                    A DATA ITEM SUBORDINATE TO THE ALTERNATE KEY IX2094.2
-186300*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-186400*                    POSITIONS 1 THRU 10 OF THE ALTERNATE KEY)    IX2094.2
-186500*                    IS LOADED WITH "022ALTKEY1". NO SUCH RECORD  IX2094.2
-186600*                    SHOULD BE IN THE FILE.  IF IN THE COMPARSION,IX2094.2
-186700*                    THE LONGER OPERAND IS TRUNCATED ON THE LEFT  IX2094.2
-186800*                    INSTEAD OF ON THE RIGHT THE CONTENTS OF      IX2094.2
-186900*                    THE DATA ITEM WILL MATCH A RECORD IN THE     IX2094.2
-187000*                    FILE.  THIS TEST EXPECTS THE LONGER OPERAND  IX2094.2
-187100*                    TO BE TRUNCATED ON THE RIGHT CAUSING NO      IX2094.2
-187200*                    DATA ITEM MATCH AND RESULTING IN AN INVALID  IX2094.2
-187300*                    KEY CONDITION WHEN THE START IS EXECUTED.    IX2094.2
-187400*                                                                 IX2094.2
+185900*                                                                         
+186000*                                                                         
+186100*                                                                         
+186200*                                                                         
+186300*                                                                         
+186400*                                                                         
+186500*                                                                         
+186600*                                                                         
+186700*                                                                         
+186800*                                                                         
+186900*                                                                         
+187000*                                                                         
+187100*                                                                         
+187200*                                                                         
+187300*                                                                         
+187400*                                                                         
 187500     START  IX-FS1                                                IX2094.2
 187600                   KEY IS EQUAL TO IX-FS1-ALTKEY1-1-10            IX2094.2
 187700          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (7)       IX2094.2
@@ -1858,19 +1858,19 @@
 190600     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 190700     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 190800 START-TEST-GF-26.                                                IX2094.2
-190900*                                                                 IX2094.2
-191000*  START-TEST-GF-26 - THIS TEST USES AN OPERAND IN THE            IX2094.2
-191100*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-191200*                    A DATA ITEM SUBORDINATE TO THE ALTERNATE KEY IX2094.2
-191300*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-191400*                    (POSITIONS 1 THRU 10 OF THE RECORD KEY) IS   IX2094.2
-191500*                    LOADED WITH "EEEEEEEEEE". THIS KEY VALUE     IX2094.2
-191600*                    IS LOWER THAN ANY ALTERNATE KEY VALUE IN     IX2094.2
-191700*                    POSITION 1 THRU 10 EXISTING IN THE FILE      IX2094.2
-191800*                    THEREFORE AN INVALID KEY CONDITION IS        IX2094.2
-191900*                    EXPECTED WHEN THE START STATEMENT IS         IX2094.2
-192000*                    EXECUTED.                                    IX2094.2
-192100*                                                                 IX2094.2
+190900*                                                                         
+191000*                                                                         
+191100*                                                                         
+191200*                                                                         
+191300*                                                                         
+191400*                                                                         
+191500*                                                                         
+191600*                                                                         
+191700*                                                                         
+191800*                                                                         
+191900*                                                                         
+192000*                                                                         
+192100*                                                                         
 192200     START  IX-FS1                                                IX2094.2
 192300                   KEY IS EQUAL TO IX-FS1-ALTKEY1-1-10            IX2094.2
 192400          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (8)       IX2094.2
@@ -1905,19 +1905,19 @@
 195300     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 195400     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 195500 START-TEST-GF-27.                                                IX2094.2
-195600*                                                                 IX2094.2
-195700*  START-TEST-GF-27 - THIS TEST USES AN OPERAND IN THE            IX2094.2
-195800*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-195900*                    A DATA ITEM SUBORDINATE TO THE ALTERNATE KEY IX2094.2
-196000*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-196100*                    (POSITIONS 1 THRU 10 OF THE RECORD KEY) IS   IX2094.2
-196200*                    LOADED WITH "YYYYYZYYYY". THIS KEY VALUE     IX2094.2
-196300*                    IS GREATER THAN ANY ALTERNATE KEY VALUE IN   IX2094.2
-196400*                    POSITION 1 THRU 10 EXISTING IN THE FILE      IX2094.2
-196500*                    THEREFORE AN INVALID KEY CONDITION IS        IX2094.2
-196600*                    EXPECTED WHEN THE START STATEMENT IS         IX2094.2
-196700*                    EXECUTED.                                    IX2094.2
-196800*                                                                 IX2094.2
+195600*                                                                         
+195700*                                                                         
+195800*                                                                         
+195900*                                                                         
+196000*                                                                         
+196100*                                                                         
+196200*                                                                         
+196300*                                                                         
+196400*                                                                         
+196500*                                                                         
+196600*                                                                         
+196700*                                                                         
+196800*                                                                         
 196900     START  IX-FS1                                                IX2094.2
 197000                   KEY IS EQUAL TO IX-FS1-ALTKEY1-1-10            IX2094.2
 197100          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (9)       IX2094.2
@@ -1944,19 +1944,19 @@
 199200 START-INIT-FILE-STATUS-2.                                        IX2094.2
 199300     MOVE             "FILE STATUS START:00"   TO FEATURE.        IX2094.2
 199400     MOVE "START-TEST-GF-28" TO PAR-NAME.                         IX2094.2
-199500*                                                                 IX2094.2
-199600*  THIS SERIES OF TESTS CHECKS THE CONTENTS OF THE FILE STATUS    IX2094.2
-199700*  CAPTURED FROM THE LAST NINE TSTS.                              IX2094.2
-199800*                                                                 IX2094.2
+199500*                                                                         
+199600*                                                                         
+199700*                                                                         
+199800*                                                                         
 199900 START-TEST-GF-28.                                                IX2094.2
 200000     IF      FILESTATUS (1)  EQUAL TO "**"                        IX2094.2
 200100             PERFORM DE-LETE                                      IX2094.2
 200200             GO TO  START-WRITE-GF-28.                            IX2094.2
-200300*                                                                 IX2094.2
-200400*  START-TEST-GF-28 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-200500*                    RESULTING FROM START-TEST-GF-19. THE FILE    IX2094.2
-200600*                    STATUS CONTENTS IS EXPECTED TO BE "00".      IX2094.2
-200700*                                                                 IX2094.2
+200300*                                                                         
+200400*                                                                         
+200500*                                                                         
+200600*                                                                         
+200700*                                                                         
 200800     IF      FILESTATUS (1)  EQUAL TO "00"                        IX2094.2
 200900             PERFORM PASS                                         IX2094.2
 201000     ELSE                                                         IX2094.2
@@ -1972,11 +1972,11 @@
 202000     IF      FILESTATUS (2)  EQUAL TO "**"                        IX2094.2
 202100             PERFORM DE-LETE                                      IX2094.2
 202200             GO TO  START-WRITE-GF-29.                            IX2094.2
-202300*                                                                 IX2094.2
-202400*  START-TEST-GF-29 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-202500*                    RESULTING FROM START-TEST-GF-20. THE FILE    IX2094.2
-202600*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-202700*                                                                 IX2094.2
+202300*                                                                         
+202400*                                                                         
+202500*                                                                         
+202600*                                                                         
+202700*                                                                         
 202800     IF      FILESTATUS (2)  EQUAL TO "23"                        IX2094.2
 202900             PERFORM  PASS                                        IX2094.2
 203000             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -1991,11 +1991,11 @@
 203900     IF      FILESTATUS (3)  EQUAL TO "**"                        IX2094.2
 204000             PERFORM DE-LETE                                      IX2094.2
 204100             GO TO  START-WRITE-GF-30.                            IX2094.2
-204200*                                                                 IX2094.2
-204300*  START-TEST-GF-30 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-204400*                    RESULTING FROM START-TEST-GF-21. THE FILE    IX2094.2
-204500*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-204600*                                                                 IX2094.2
+204200*                                                                         
+204300*                                                                         
+204400*                                                                         
+204500*                                                                         
+204600*                                                                         
 204700     IF      FILESTATUS (3)  EQUAL TO "23"                        IX2094.2
 204800             PERFORM  PASS                                        IX2094.2
 204900             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2010,11 +2010,11 @@
 205800     IF      FILESTATUS (4)  EQUAL TO "**"                        IX2094.2
 205900             PERFORM DE-LETE                                      IX2094.2
 206000             GO TO  START-WRITE-GF-31.                            IX2094.2
-206100*                                                                 IX2094.2
-206200*  START-TEST-GF-31 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-206300*                    RESULTING FROM START-TEST-GF-22. THE FILE    IX2094.2
-206400*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-206500*                                                                 IX2094.2
+206100*                                                                         
+206200*                                                                         
+206300*                                                                         
+206400*                                                                         
+206500*                                                                         
 206600     IF      FILESTATUS (4)  EQUAL TO "23"                        IX2094.2
 206700             PERFORM  PASS                                        IX2094.2
 206800             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2029,11 +2029,11 @@
 207700     IF      FILESTATUS (5)  EQUAL TO "**"                        IX2094.2
 207800             PERFORM DE-LETE                                      IX2094.2
 207900             GO TO  START-WRITE-GF-32.                            IX2094.2
-208000*                                                                 IX2094.2
-208100*  START-TEST-GF.05  - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2094.2
-208200*                    RESULTING FROM START-TEST-GF-23. THE FILE    IX2094.2
-208300*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2094.2
-208400*                                                                 IX2094.2
+208000*                                                                         
+208100*                                                                         
+208200*                                                                         
+208300*                                                                         
+208400*                                                                         
 208500     IF      FILESTATUS (5)  EQUAL TO "00"                        IX2094.2
 208600             PERFORM  PASS                                        IX2094.2
 208700             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2053,11 +2053,11 @@
 210100*                                                                         
 210200*                                                                         
 210300*                                                                         
-210400     IF      FILESTATUS (6)  EQUAL TO "0A"                        IX2094.2
+210400     IF      FILESTATUS (6)  EQUAL TO "10"                        IX2094.2
 210500             PERFORM  PASS                                        IX2094.2
 210600             ELSE  PERFORM  FAIL                                  IX2094.2
 210700     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-24    " TO RE-MARKIX2094.2
-210800             MOVE   "0A"  TO CORRECT-A                            IX2094.2
+210800             MOVE   "10"  TO CORRECT-A                            IX2094.2
 210900             MOVE   FILESTATUS (6)  TO COMPUTED-A.                IX2094.2
 211000 START-WRITE-GF-33.                                               IX2094.2
 211100     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -2067,11 +2067,11 @@
 211500     IF      FILESTATUS (7)  EQUAL TO "**"                        IX2094.2
 211600             PERFORM DE-LETE                                      IX2094.2
 211700             GO TO  START-WRITE-GF-34.                            IX2094.2
-211800*                                                                 IX2094.2
-211900*  START-TEST-GF-34  - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2094.2
-212000*                    RESULTING FROM START-TEST-GF-25. THE FILE    IX2094.2
-212100*                    STATUS CONTENTS IS EXPECTED TO BE "23"       IX2094.2
-212200*                                                                 IX2094.2
+211800*                                                                         
+211900*                                                                         
+212000*                                                                         
+212100*                                                                         
+212200*                                                                         
 212300     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2094.2
 212400             PERFORM  PASS                                        IX2094.2
 212500             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2086,11 +2086,11 @@
 213400     IF      FILESTATUS (8)  EQUAL TO "**"                        IX2094.2
 213500             PERFORM DE-LETE                                      IX2094.2
 213600             GO TO  START-WRITE-GF-35.                            IX2094.2
-213700*                                                                 IX2094.2
-213800*  START-TEST-GF-35  - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2094.2
-213900*                    RESULTING FROM START-TEST-GF-26. THE FILE    IX2094.2
-214000*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-214100*                                                                 IX2094.2
+213700*                                                                         
+213800*                                                                         
+213900*                                                                         
+214000*                                                                         
+214100*                                                                         
 214200     IF      FILESTATUS (8)  EQUAL TO "23"                        IX2094.2
 214300             PERFORM  PASS                                        IX2094.2
 214400             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2105,11 +2105,11 @@
 215300     IF      FILESTATUS (9)  EQUAL TO "**"                        IX2094.2
 215400             PERFORM DE-LETE                                      IX2094.2
 215500             GO TO  START-WRITE-GF-36.                            IX2094.2
-215600*                                                                 IX2094.2
-215700*  START-TEST-GF-36 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-215800*                    RESULTING FROM START-TEST-GF-27. THE FILE    IX2094.2
-215900*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-216000*                                                                 IX2094.2
+215600*                                                                         
+215700*                                                                         
+215800*                                                                         
+215900*                                                                         
+216000*                                                                         
 216100     IF      FILESTATUS (9)  EQUAL TO "23"                        IX2094.2
 216200             PERFORM PASS                                         IX2094.2
 216300     ELSE    PERFORM FAIL                                         IX2094.2
@@ -2125,38 +2125,38 @@
 217300     MOVE    "STRT EQ ALTKY W/DUP"  TO FEATURE.                   IX2094.2
 217400     MOVE    "START-TEST-GF-37" TO PAR-NAME.                      IX2094.2
 217500     MOVE    "********************" TO HOLD-FILESTATUS-RECORD.    IX2094.2
-217600*                                                                 IX2094.2
-217700* THIS TEST TESTS THE  "START -- EQUAL TO" FOR PROPER POSITIONING IX2094.2
-217800* OF THE RECORD POINTER FOR THE SUBSEQUENT READ STATEMENT.        IX2094.2
-217900* START-TEST-007 USES ONLY THE ALTERNATE RECORD KEY WITH DUPLI-   IX2094.2
-218000* CATES OPTION (ALTERNATE-KEY2) FOR ESTABLISHING                  IX2094.2
-218100* THE CURRENT RECORD POINTER FOR THE FILE.  THE FOLLOWING IS A    IX2094.2
-218200* SUMMARY OF THE TEST CONDITIONS AND THE EXPECTED ACTION TO BE    IX2094.2
-218300* TAKEN FOR THE  TESTS.                                           IX2094.2
-218400*                                                                 IX2094.2
-218500*                      CONDITIONS (CONTENTS OF KEY) / ACTION      IX2094.2
-218600*                                                                 IX2094.2
-218700*   START-TEST-GF-37 - EQUAL A RECORD IN FILE / RECORD FOUND      IX2094.2
-218800*   START-TEST-GF-38 - BETWEEN 2 EXISTING KEY VALUES / INVALID KEYIX2094.2
-218900*   START-TEST-GF-39 - LESS THAN FIRST FILE RECORD / INVALID KEY  IX2094.2
-219000*   START-TEST-GF-40 - GREATER THAN LAST FILE RECORD / INVALID KEYIX2094.2
-219100*   START-TEST-GF-41 - UNEQUAL SIZE OPERANDS (EQUAL) / RECORD FOUNIX2094.2
-219200*   START-TEST-GF-42 - UNEQUAL SIZE OPERANDS (EQUAL) / RECORD FOUNIX2094.2
-219300*   START-TEST-GF-43 - UNEQUAL SIZE OPERANDS (UNEQUAL) / INVLD KEYIX2094.2
-219400*   START-TEST-GF-44 - UNEQUAL SIZE OPERANDS (UNEQUAL) / INVLD KEYIX2094.2
-219500*   START-TEST-GF-45 - UNEQUAL SIZE OPERANDS (UNEQUAL) /INVLD KEY IX2094.2
-219600*                                                                 IX2094.2
-219700*  BEFORE EACH TEST A RECORD IS MADE AVAILABLE WHICH IS DIFFERENT IX2094.2
-219800*  THAN THE ONE WHICH IS EXPECTED TO BE PRESENT FOLLOWING A TEST. IX2094.2
-219900*  IF AN INVALID KEY IS EXPECTED FROM THE TEST, THE KEYS          IX2094.2
-220000*  ASSOCIATED WITH THE FILE WHICH ARE NOT PARTICIPATING IN THE    IX2094.2
-220100*  START STATEMENT WILL BE LOADED WITH VALUES WHICH WOULD MATCH   IX2094.2
-220200*  RECORDS IN THE FILE.  IF A KEY MATCH IS EXPECTED FROM          IX2094.2
-220300*  THE TEST, THE KEYS ASSOCIATED WITH THE FILE WHICH ARE NOT      IX2094.2
-220400*  PARTICIPATING IN THE START STATEMENT WILL BE LOADED WITH       IX2094.2
-220500*  VALUES WHICH WOULD NOT MATCH RECORDS IN THE FILE.  THE FILE    IX2094.2
-220600*  STATUS FROM EXECUTION OF EACH START IS CAPTURED FOR LATER TESTSIX2094.2
-220700*                                                                 IX2094.2
+217600*                                                                         
+217700*                                                                         
+217800*                                                                         
+217900*                                                                         
+218000*                                                                         
+218100*                                                                         
+218200*                                                                         
+218300*                                                                         
+218400*                                                                         
+218500*                                                                         
+218600*                                                                         
+218700*                                                                         
+218800*                                                                         
+218900*                                                                         
+219000*                                                                         
+219100*                                                                         
+219200*                                                                         
+219300*                                                                         
+219400*                                                                         
+219500*                                                                         
+219600*                                                                         
+219700*                                                                         
+219800*                                                                         
+219900*                                                                         
+220000*                                                                         
+220100*                                                                         
+220200*                                                                         
+220300*                                                                         
+220400*                                                                         
+220500*                                                                         
+220600*                                                                         
+220700*                                                                         
 220800 START-INIT-GF-37.                                                IX2094.2
 220900     MOVE "START-TEST-GF-37" TO PAR-NAME.                         IX2094.2
 221000     PERFORM START-INITIALIZE-RECORD.                             IX2094.2
@@ -2171,11 +2171,11 @@
 221900     MOVE    WRK-FS1-ALTKEY1 TO IX-ALT-KEY1-AREA.                 IX2094.2
 222000     MOVE    WRK-FS1-ALTKEY2 TO IX-ALT-KEY2-AREA.                 IX2094.2
 222100 START-TEST-GF-37.                                                IX2094.2
-222200*                                                                 IX2094.2
-222300*  START-TEST-GF-37 - THE START SHOULD FIND A RECORD IN THE FILE  IX2094.2
-222400*                    WHICH HAS AN ALTERNATE RECORD KEY VALUE OF   IX2094.2
-222500*                    VVVVVVVVUU376ALTKEY2 (RECORD NUMBER 12).     IX2094.2
-222600*                                                                 IX2094.2
+222200*                                                                         
+222300*                                                                         
+222400*                                                                         
+222500*                                                                         
+222600*                                                                         
 222700     START  IX-FS1                                                IX2094.2
 222800                   KEY IS EQUAL TO IX-FS1-ALTKEY2                 IX2094.2
 222900          INVALID KEY   MOVE FS1-STATUS TO FILESTATUS (1)         IX2094.2
@@ -2216,13 +2216,13 @@
 226400     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 226500     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 226600 START-TEST-GF-38.                                                IX2094.2
-226700*                                                                 IX2094.2
-226800*  START-TEST-GF-38- THE START SHOULD NOT FIND A RECORD IN THE    IX2094.2
-226900*                    FILE WHICH HAS AN ALTERNATE RECORD KEY VALUE IX2094.2
-227000*                    OF TTTTTTTSSS335ALTKEY2.  THIS KEY VALUE IS  IX2094.2
-227100*                    SEQUENTIALLY LOCATED BETWEEN TWO CURRENTLY   IX2094.2
-227200*                    EXISTING ALTERNATE KEYS IN THE FILE.         IX2094.2
-227300*                                                                 IX2094.2
+226700*                                                                         
+226800*                                                                         
+226900*                                                                         
+227000*                                                                         
+227100*                                                                         
+227200*                                                                         
+227300*                                                                         
 227400     START  IX-FS1                                                IX2094.2
 227500                   KEY IS EQUAL TO IX-FS1-ALTKEY2                 IX2094.2
 227600          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (2)       IX2094.2
@@ -2257,13 +2257,13 @@
 230500     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 230600     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 230700 START-TEST-GF-39.                                                IX2094.2
-230800*                                                                 IX2094.2
-230900*  START-TEST-GF-39 - THE START STATEMENT SHOULD NOT FIND A       IX2094.2
-231000*                    RECORD IN THE FILE WHICH HAS AN ALTERNATE    IX2094.2
-231100*                    KEY VALUE OF DDDDDDDDDC000ALTKEY2.  THIS KEY IX2094.2
-231200*                    VALUE IS SEQUENTIALLY LOWER THAN ANY         IX2094.2
-231300*                    CURRENTLY EXISTING KEY IN THE FILE.          IX2094.2
-231400*                                                                 IX2094.2
+230800*                                                                         
+230900*                                                                         
+231000*                                                                         
+231100*                                                                         
+231200*                                                                         
+231300*                                                                         
+231400*                                                                         
 231500     START  IX-FS1                                                IX2094.2
 231600                   KEY IS EQUAL TO IX-FS1-ALTKEY2                 IX2094.2
 231700          INVALID KEY    MOVE FS1-STATUS TO FILESTATUS (3)        IX2094.2
@@ -2298,15 +2298,15 @@
 234600     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 234700     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 234800 START-TEST-GF-40.                                                IX2094.2
-234900*                                                                 IX2094.2
-235000*  START-TEST-GF-40 - THE START STATEMENT SHOULD NOT FIND A       IX2094.2
-235100*                    RECORD IN THE FILE WHICH HAS AN ALTERNATE    IX2094.2
-235200*                    KEY VALUE OF WWWWWWWWWV399ALTKEY2.  THIS     IX2094.2
-235300*                    VALUE IS SEQUENTIALLY  ONE GREATER THAN      IX2094.2
-235400*                    ANY ALTERNATE KEY CURRENTLY EXISTING IN      IX2094.2
-235500*                    THE FILE.  AN INVALID KEY CONDITION          IX2094.2
-235600*                    IS EXPECTED WHEN THE START IS EXECUTED.      IX2094.2
-235700*                                                                 IX2094.2
+234900*                                                                         
+235000*                                                                         
+235100*                                                                         
+235200*                                                                         
+235300*                                                                         
+235400*                                                                         
+235500*                                                                         
+235600*                                                                         
+235700*                                                                         
 235800     START  IX-FS1                                                IX2094.2
 235900                   KEY IS EQUAL TO IX-FS1-ALTKEY2                 IX2094.2
 236000          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (4)       IX2094.2
@@ -2341,21 +2341,21 @@
 238900     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 239000     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 239100 START-TEST-GF-41.                                                IX2094.2
-239200*                                                                 IX2094.2
-239300*  START-TEST-GF-41 - THE START STATEMENT USES AN OPERAND         IX2094.2
-239400*                    IN THE KEY PHRASE WHICH IS NOT THE NAME      IX2094.2
-239500*                    OF AN ALTERNATE KEY BUT IS THE NAME OF A     IX2094.2
-239600*                    DATA ITEM WHICH IS SUBORDINATE TO THE        IX2094.2
-239700*                    ALTERNATE KEY.  THE CONTENTS OF THE DATA ITEMIX2094.2
-239800*                    (POSITIONS 1 THRU 5 OF THE ALTERNATE KEY)    IX2094.2
-239900*                    IS A UNIQUE KEY VALUE FOR THE FILE. THE      IX2094.2
-240000*                    BALANCE OF THE ALTERNATE KEY (POSITIONS 6    IX2094.2
-240100*                    THRU 20)  IN NOT A VALID KEY VALUE FOR THE   IX2094.2
-240200*                    FILE.   THE                                  IX2094.2
-240300*                    RECORD WITH THE ALTERNATE KEY                IX2094.2
-240400*                    VUUUUUUUUU362ALTKEY2 (RECORD NUMBER 19) IS   IX2094.2
-240500*                    EXPECTED TO BE FOUND.                        IX2094.2
-240600*                                                                 IX2094.2
+239200*                                                                         
+239300*                                                                         
+239400*                                                                         
+239500*                                                                         
+239600*                                                                         
+239700*                                                                         
+239800*                                                                         
+239900*                                                                         
+240000*                                                                         
+240100*                                                                         
+240200*                                                                         
+240300*                                                                         
+240400*                                                                         
+240500*                                                                         
+240600*                                                                         
 240700     START  IX-FS1                                                IX2094.2
 240800                   KEY IS EQUAL TO IX-FS1-ALTKEY2-1-5             IX2094.2
 240900          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (5)       IX2094.2
@@ -2395,27 +2395,27 @@
 244300     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 244400     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 244500 START-TEST-GF-42.                                                IX2094.2
-244600*                                                                 IX2094.2
-244700*  START-TEST-GF-42 - THE START STATEMENT USES AN OPERAND IN THE  IX2094.2
-244800*                    KEY PHRASE WHICH IS NOT THE NAME OF AN ALTER-IX2094.2
-244900*                    NATE KEY BUT IS THE NAME OF A DATA ITEM THAT IX2094.2
-245000*                    SUBORDINATE TO THE ALTERNATE KEY. THE CONTENTIX2094.2
-245100*                    OF THE DATA ITEM (POSITIONS 1 THRU 5 OF THE  IX2094.2
-245200*                    ALTERNATE KEY) IS A DUPLICATE OF THE FIRST   IX2094.2
-245300*                    5 POSITIONS OF 5 OTHER RECORDS IN THE FILE.  IX2094.2
-245400*                    THIS TEST EXPECTS THE RECORD POINTER         IX2094.2
-245500*                    TO BE POSITIONED TO ALTERNATE KEY            IX2094.2
-245600*                    EEEEEDDDDD020ALTKEY2 (RECORD NO 195) WHICH   IX2094.2
-245700*                    IS THE FIRST RECORD ALPHABETICALLY IN THE    IX2094.2
-245800*                    FILE THAT CONTAINS EEEEE IN THE FIRST 5      IX2094.2
-245900*                    POSITIONS OF THE KEY.  NOTE THIS IS ALSO     IX2094.2
-246000*                    A RECORD IN WHICH THE VALUE OF THE FULL      IX2094.2
-246100*                    20 POSITION KEY IS A DUPLICATE OF ANOTHER    IX2094.2
-246200*                    RECORD (RECORD NUMBER 191).  THE ALTERNATE   IX2094.2
-246300*                    KEY WAS LOADED WITH THE VALUE                IX2094.2
-246400*                    EEEEEDDDDD010ALTKEY2 (KEY FOR RECORD NUMBER  IX2094.2
-246500*                    195) BEFORE THE START WAS EXECUTED.          IX2094.2
-246600*                                                                 IX2094.2
+244600*                                                                         
+244700*                                                                         
+244800*                                                                         
+244900*                                                                         
+245000*                                                                         
+245100*                                                                         
+245200*                                                                         
+245300*                                                                         
+245400*                                                                         
+245500*                                                                         
+245600*                                                                         
+245700*                                                                         
+245800*                                                                         
+245900*                                                                         
+246000*                                                                         
+246100*                                                                         
+246200*                                                                         
+246300*                                                                         
+246400*                                                                         
+246500*                                                                         
+246600*                                                                         
 246700     START  IX-FS1                                                IX2094.2
 246800                   KEY IS EQUAL TO IX-FS1-ALTKEY2-1-5             IX2094.2
 246900          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (6)       IX2094.2
@@ -2455,22 +2455,22 @@
 250300     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 250400     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 250500 START-TEST-GF-43.                                                IX2094.2
-250600*                                                                 IX2094.2
-250700*  START-TEST-GF-43 - THE START STATEMENT USES AN OPERAND IN THE  IX2094.2
-250800*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-250900*                    A DATA ITEM SUBORDINATE TO THE ALTERNATE KEY IX2094.2
-251000*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-251100*                    (POSITIONS 1 THRU 10 OF THE RECORD KEY)      IX2094.2
-251200*                    IS LOADED WITH "380ALTKEY2".  NO SUCH RECORD IX2094.2
-251300*                    SHOULD BE IN THE FILE.  IF IN THE COMPARSION,IX2094.2
-251400*                    THE LONGER OPERAND IS TRUNCATED ON THE LEFT  IX2094.2
-251500*                    INSTEAD OF ON THE RIGHT THE CONTENTS OF      IX2094.2
-251600*                    THE DATA ITEM WILL MATCH A RECORD IN THE     IX2094.2
-251700*                    FILE.  THIS TEST EXPECTS THE LONGER OPERAND  IX2094.2
-251800*                    TO BE TRUNCATED ON THE RIGHT CAUSING NO      IX2094.2
-251900*                    DATA ITEM MATCH AND RESULTING IN AN INVALID  IX2094.2
-252000*                    KEY CONDITION WHEN THE START IS EXECUTED.    IX2094.2
-252100*                                                                 IX2094.2
+250600*                                                                         
+250700*                                                                         
+250800*                                                                         
+250900*                                                                         
+251000*                                                                         
+251100*                                                                         
+251200*                                                                         
+251300*                                                                         
+251400*                                                                         
+251500*                                                                         
+251600*                                                                         
+251700*                                                                         
+251800*                                                                         
+251900*                                                                         
+252000*                                                                         
+252100*                                                                         
 252200     START  IX-FS1                                                IX2094.2
 252300                   KEY IS EQUAL TO IX-FS1-ALTKEY2-1-10            IX2094.2
 252400          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (7)       IX2094.2
@@ -2505,19 +2505,19 @@
 255300     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 255400     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 255500 START-TEST-GF-44.                                                IX2094.2
-255600*                                                                 IX2094.2
-255700*  START-TEST-GF-44 - THIS TEST USES AN OPERAND IN THE            IX2094.2
-255800*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-255900*                    A DATA ITEM SUBORDINATE TO THE ALTERNATE KEY IX2094.2
-256000*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-256100*                    (POSITIONS 1 THRU 10 OF THE ALTERNATE KEY) ISIX2094.2
-256200*                    LOADED WITH "DDDDDDDDDC".  THIS KEY VALUE    IX2094.2
-256300*                    IS LOWER THAN ANY ALTERNATE KEY VALUE IN     IX2094.2
-256400*                    POSITION 1 THRU 10 EXISTING IN THE FILE      IX2094.2
-256500*                    THEREFORE AN INVALID KEY CONDITION IS        IX2094.2
-256600*                    EXPECTED WHEN THE START STATEMENT IS         IX2094.2
-256700*                    EXECUTED.                                    IX2094.2
-256800*                                                                 IX2094.2
+255600*                                                                         
+255700*                                                                         
+255800*                                                                         
+255900*                                                                         
+256000*                                                                         
+256100*                                                                         
+256200*                                                                         
+256300*                                                                         
+256400*                                                                         
+256500*                                                                         
+256600*                                                                         
+256700*                                                                         
+256800*                                                                         
 256900     START  IX-FS1                                                IX2094.2
 257000                   KEY IS EQUAL TO IX-FS1-ALTKEY2-1-10            IX2094.2
 257100          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (8)       IX2094.2
@@ -2552,19 +2552,19 @@
 260000     MOVE    WRK-FS1-ALTKEY1  TO IX-ALT-KEY1-AREA.                IX2094.2
 260100     MOVE    WRK-FS1-ALTKEY2  TO IX-ALT-KEY2-AREA.                IX2094.2
 260200 START-TEST-GF-45.                                                IX2094.2
-260300*                                                                 IX2094.2
-260400*  START-TEST-GF-45 - THIS TEST USES AN OPERAND IN THE            IX2094.2
-260500*                    KEY PHRASE OF THE START STATEMENT WHICH IS   IX2094.2
-260600*                    A DATA ITEM SUBORDINATE TO THE ALTERNATE KEY IX2094.2
-260700*                    NAME.  THE CONTENTS OF THE DATA ITEM         IX2094.2
-260800*                    (POSITIONS 1 THRU 10 OF THE ALTERNATE KEY) ISIX2094.2
-260900*                    LOADED WITH "WWWWWWWWWW".  THIS KEY VALUE    IX2094.2
-261000*                    IS GREATER THAN ANY ALTERNATE KEY VALUE IN   IX2094.2
-261100*                    POSITION 1 THRU 10 EXISTING IN THE FILE      IX2094.2
-261200*                    THEREFORE AN INVALID KEY CONDITION IS        IX2094.2
-261300*                    EXPECTED WHEN THE START STATEMENT IS         IX2094.2
-261400*                    EXECUTED.                                    IX2094.2
-261500*                                                                 IX2094.2
+260300*                                                                         
+260400*                                                                         
+260500*                                                                         
+260600*                                                                         
+260700*                                                                         
+260800*                                                                         
+260900*                                                                         
+261000*                                                                         
+261100*                                                                         
+261200*                                                                         
+261300*                                                                         
+261400*                                                                         
+261500*                                                                         
 261600     START  IX-FS1                                                IX2094.2
 261700                   KEY IS EQUAL TO IX-FS1-ALTKEY2-1-10            IX2094.2
 261800          INVALID KEY    MOVE  FS1-STATUS TO FILESTATUS (9)       IX2094.2
@@ -2591,19 +2591,19 @@
 263900 START-INIT-FILE-STATUS-03.                                       IX2094.2
 264000     MOVE             "FILE STATUS START:00"   TO FEATURE.        IX2094.2
 264100     MOVE "START-TEST-GF-46" TO PAR-NAME.                         IX2094.2
-264200*                                                                 IX2094.2
-264300*  THIS SERIES OF TESTS CHECKS THE CONTENTS OF THE FILE STATUS    IX2094.2
-264400*  CAPTURED FROM THE NINE TESTS BEFORE.                           IX2094.2
-264500*                                                                 IX2094.2
+264200*                                                                         
+264300*                                                                         
+264400*                                                                         
+264500*                                                                         
 264600 START-TEST-GF-46.                                                IX2094.2
 264700     IF      FILESTATUS (1)  EQUAL TO "**"                        IX2094.2
 264800             PERFORM DE-LETE                                      IX2094.2
 264900             GO TO  START-WRITE-GF-46.                            IX2094.2
-265000*                                                                 IX2094.2
-265100*  START-TEST-GF-046 - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2094.2
-265200*                    RESULTING FROM START-TEST-GF-37. THE FILE    IX2094.2
-265300*                    STATUS CONTENTS IS EXPECTED TO BE "00".      IX2094.2
-265400*                                                                 IX2094.2
+265000*                                                                         
+265100*                                                                         
+265200*                                                                         
+265300*                                                                         
+265400*                                                                         
 265500     IF      FILESTATUS (1)  EQUAL TO "00"                        IX2094.2
 265600             PERFORM PASS                                         IX2094.2
 265700     ELSE                                                         IX2094.2
@@ -2619,11 +2619,11 @@
 266700     IF      FILESTATUS (2)  EQUAL TO "**"                        IX2094.2
 266800             PERFORM DE-LETE                                      IX2094.2
 266900             GO TO  START-WRITE-GF-47.                            IX2094.2
-267000*                                                                 IX2094.2
-267100*  START-TEST-GF-47 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-267200*                    RESULTING FROM START-TEST-GF-38. THE FILE    IX2094.2
-267300*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-267400*                                                                 IX2094.2
+267000*                                                                         
+267100*                                                                         
+267200*                                                                         
+267300*                                                                         
+267400*                                                                         
 267500     IF      FILESTATUS (2)  EQUAL TO "23"                        IX2094.2
 267600             PERFORM  PASS                                        IX2094.2
 267700             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2643,11 +2643,11 @@
 269100*                                                                         
 269200*                                                                         
 269300*                                                                         
-269400     IF      FILESTATUS (3)  EQUAL TO "U3"                        IX2094.2
+269400     IF      FILESTATUS (3)  EQUAL TO "26"                        IX2094.2
 269500             PERFORM  PASS                                        IX2094.2
 269600     ELSE PERFORM FAIL                                            IX2094.2
 269700     MOVE "IX-4; 1.3.4 (3) C; SEE START-TEST-GF-39    " TO RE-MARKIX2094.2
-269800             MOVE    "U3"  TO CORRECT-A                           IX2094.2
+269800             MOVE    "26"  TO CORRECT-A                           IX2094.2
 269900             MOVE  FILESTATUS (3) TO COMPUTED-A.                  IX2094.2
 270000 START-WRITE-GF-48.                                               IX2094.2
 270100     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -2657,11 +2657,11 @@
 270500     IF      FILESTATUS (4)  EQUAL TO "**"                        IX2094.2
 270600             PERFORM DE-LETE                                      IX2094.2
 270700             GO TO  START-WRITE-GF-49.                            IX2094.2
-270800*                                                                 IX2094.2
-270900*  START-TEST-GF-49 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-271000*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-271100*                    RESULTING FROM START-TEST-GF-40. THE FILE    IX2094.2
-271200*                                                                 IX2094.2
+270800*                                                                         
+270900*                                                                         
+271000*                                                                         
+271100*                                                                         
+271200*                                                                         
 271300     IF      FILESTATUS (4)  EQUAL TO "23"                        IX2094.2
 271400             PERFORM  PASS                                        IX2094.2
 271500             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2681,11 +2681,11 @@
 272900*                                                                         
 273000*                                                                         
 273100*                                                                         
-273200     IF      FILESTATUS (5)  EQUAL TO "0L"                        IX2094.2
+273200     IF      FILESTATUS (5)  EQUAL TO "10"                        IX2094.2
 273300             PERFORM  PASS                                        IX2094.2
 273400     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-41    " TO RE-MARKIX2094.2
 273500             ELSE  PERFORM  FAIL                                  IX2094.2
-273600             MOVE    "0L"  TO CORRECT-A                           IX2094.2
+273600             MOVE    "10"  TO CORRECT-A                           IX2094.2
 273700             MOVE   FILESTATUS (5)  TO COMPUTED-A.                IX2094.2
 273800 START-WRITE-GF-50.                                               IX2094.2
 273900     MOVE    "FROM START-TEST-007.05" TO RE-MARK.                 IX2094.2
@@ -2696,11 +2696,11 @@
 274400     IF      FILESTATUS (6)  EQUAL TO "**"                        IX2094.2
 274500             PERFORM DE-LETE                                      IX2094.2
 274600             GO TO  START-WRITE-GF-51.                            IX2094.2
-274700*                                                                 IX2094.2
-274800*  START-TEST-GF-51 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-274900*                    RESULTING FROM START-TEST-GF-42. THE FILE    IX2094.2
-275000*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2094.2
-275100*                                                                 IX2094.2
+274700*                                                                         
+274800*                                                                         
+274900*                                                                         
+275000*                                                                         
+275100*                                                                         
 275200     IF      FILESTATUS (6)  EQUAL TO "00"                        IX2094.2
 275300             PERFORM  PASS                                        IX2094.2
 275400             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2715,11 +2715,11 @@
 276300     IF      FILESTATUS (7)  EQUAL TO "**"                        IX2094.2
 276400             PERFORM DE-LETE                                      IX2094.2
 276500             GO TO  START-WRITE-GF-52.                            IX2094.2
-276600*                                                                 IX2094.2
-276700*  START-TEST-GF-52 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-276800*                    RESULTING FROM START-TEST-GF-43. THE FILE    IX2094.2
-276900*                    STATUS CONTENTS IS EXPECTED TO BE "23"       IX2094.2
-277000*                                                                 IX2094.2
+276600*                                                                         
+276700*                                                                         
+276800*                                                                         
+276900*                                                                         
+277000*                                                                         
 277100     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2094.2
 277200             PERFORM  PASS                                        IX2094.2
 277300             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2734,11 +2734,11 @@
 278200     IF      FILESTATUS (8)  EQUAL TO "**"                        IX2094.2
 278300             PERFORM DE-LETE                                      IX2094.2
 278400             GO TO  START-WRITE-GF-53.                            IX2094.2
-278500*                                                                 IX2094.2
-278600*  START-TEST-GF-53 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-278700*                    RESULTING FROM START-TEST-GF-44. THE FILE    IX2094.2
-278800*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-278900*                                                                 IX2094.2
+278500*                                                                         
+278600*                                                                         
+278700*                                                                         
+278800*                                                                         
+278900*                                                                         
 279000     IF      FILESTATUS (8)  EQUAL TO "23"                        IX2094.2
 279100             PERFORM  PASS                                        IX2094.2
 279200             ELSE  PERFORM  FAIL                                  IX2094.2
@@ -2753,11 +2753,11 @@
 280100     IF      FILESTATUS (9)  EQUAL TO "**"                        IX2094.2
 280200             PERFORM DE-LETE                                      IX2094.2
 280300             GO TO  START-WRITE-GF-54.                            IX2094.2
-280400*                                                                 IX2094.2
-280500*  START-TEST-GF-54 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-280600*                    RESULTING FROM START-TEST-GF-45. THE FILE    IX2094.2
-280700*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-280800*                                                                 IX2094.2
+280400*                                                                         
+280500*                                                                         
+280600*                                                                         
+280700*                                                                         
+280800*                                                                         
 280900     IF      FILESTATUS (9)  EQUAL TO "23"                        IX2094.2
 281000             PERFORM  PASS                                        IX2094.2
 281100     ELSE    PERFORM FAIL                                         IX2094.2
@@ -2766,10 +2766,10 @@
 281400             MOVE   FILESTATUS (9)  TO COMPUTED-A.                IX2094.2
 281500 START-WRITE-GF-54.                                               IX2094.2
 281600     PERFORM  PRINT-DETAIL.                                       IX2094.2
-281700*START-WRITE-008.                                                 IX2094.2
+281700*                                                                         
 281800     GO TO   START-TEST-COMPLETE.                                 IX2094.2
-281900*START-CLOSE-FILES.                                               IX2094.2
-282000*    GO TO   START-TEST-COMPLETE.                                 IX2094.2
+281900*                                                                         
+282000*                                                                         
 282100 START-INITIALIZE-RECORD.                                         IX2094.2
 282200     MOVE    "GGGGGGGGGG200" TO  FS1-RECKEY-1-13.                 IX2094.2
 282300     MOVE    ZERO  TO INIT-FLAG.                                  IX2094.2

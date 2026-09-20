@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         NC1344.2
 000200 PROGRAM-ID.                                                      NC1344.2
 000300     NC134A.                                                      NC1344.2
-000400****************************************************************  NC1344.2
-000500*                                                              *  NC1344.2
-000600*    VALIDATION FOR:-                                          *  NC1344.2
-000700*                                                              *  NC1344.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1344.2
-000900*                                                              *  NC1344.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1344.2
-001100*                                                              *  NC1344.2
-001200****************************************************************  NC1344.2
-001300*                                                              *  NC1344.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1344.2
-001500*                                                              *  NC1344.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1344.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1344.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1344.2
-001900*                                                              *  NC1344.2
-002000****************************************************************  NC1344.2
-002100*                                                                 NC1344.2
-002200*   PROGRAM NC134A TESTS THE ACCESSING OF A THREE-DIMENSIONAL     NC1344.2
-002300*   TABLE USING NUMERIC LITERALS AND DATA-NAMES AS SUBSCRIPTS.    NC1344.2
-002400*   RELATIVE SUBSCRIPTING IS ALSO USED.                           NC1344.2
-002500*                                                                 NC1344.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            NC1344.2
 002700 CONFIGURATION SECTION.                                           NC1344.2
 002800 SOURCE-COMPUTER.                                                 NC1344.2
@@ -283,7 +283,7 @@
 028500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1344.2
 028600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1344.2
 028700      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1344.2
-028800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1344.2
+028800*                                                                         
 028900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1344.2
 029000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1344.2
 029100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1344.2
@@ -361,7 +361,7 @@
 036300     MOVE 1 TO SUBSCRIPT-1.                                       NC1344.2
 036400     MOVE 1 TO W-3.                                               NC1344.2
 036500     PERFORM BUILD-TABLE 100 TIMES.                               NC1344.2
-036600*    NOTE TABLE IS CONSTRUCTED WITH VALUES FROM 1 TO 100.         NC1344.2
+036600*                                                                         
 036700     MOVE "SUBSCRIPTING" TO FEATURE.                              NC1344.2
 036800 TEST-1.                                                          NC1344.2
 036900     IF TAB-ELE (50) EQUAL TO 50 PERFORM PASS ELSE GO TO TST-11.  NC1344.2
@@ -487,13 +487,13 @@
 048900     MOVE "TABTEST-5" TO PAR-NAME.                                NC1344.2
 049000     PERFORM PRINT-DETAIL.                                        NC1344.2
 049100 TABTEST-6.                                                       NC1344.2
-049200      IF YEAR-1 (1  1) EQUAL TO "0010020Z3" PERFORM PASS ELSE GO  NC1344.2
+049200      IF YEAR-1 (1  1) EQUAL TO "001002503" PERFORM PASS ELSE GO  NC1344.2
 049300     TO TTST-61.                                                  NC1344.2
 049400     GO TO TTST-62.                                               NC1344.2
 049500 TTST-61.                                                         NC1344.2
 049600     PERFORM FAIL.                                                NC1344.2
 049700     MOVE YEAR-1 (1  1) TO COMPUTED-A.                            NC1344.2
-049800     MOVE "0010020Z3" TO CORRECT-A.                               NC1344.2
+049800     MOVE "001002503" TO CORRECT-A.                               NC1344.2
 049900 TTST-62.                                                         NC1344.2
 050000     MOVE "TABTEST-6" TO PAR-NAME.                                NC1344.2
 050100     PERFORM PRINT-DETAIL.                                        NC1344.2
@@ -547,34 +547,34 @@
 054900     MOVE "TABTEST-10" TO PAR-NAME.                               NC1344.2
 055000     PERFORM PRINT-DETAIL.                                        NC1344.2
 055100 TABTEST-11.                                                      NC1344.2
-055200     IF YEAR-1 (+10  +10) EQUAL TO "X98299300"                    NC1344.2
+055200     IF YEAR-1 (+10  +10) EQUAL TO "298299301"                    NC1344.2
 055300             PERFORM PASS                                         NC1344.2
 055400             GO TO TABTEST-11B.                                   NC1344.2
 055500     MOVE YEAR-1 (+10  +10) TO COMPUTED-A.                        NC1344.2
-055600     MOVE "X98299300" TO CORRECT-A.                               NC1344.2
+055600     MOVE "298299301" TO CORRECT-A.                               NC1344.2
 055700     PERFORM FAIL.                                                NC1344.2
 055800     GO TO TABTEST-11B.                                           NC1344.2
 055900 TABTEST-11A.                                                     NC1344.2
 056000     PERFORM DE-LETE.                                             NC1344.2
 056100 TABTEST-11B.                                                     NC1344.2
 056200     MOVE "TABTEST-11" TO PAR-NAME.                               NC1344.2
-056300*    NOTE SIGNED NUMERIC LITERALS AS SUBSCRIPTS.                  NC1344.2
+056300*                                                                         
 056400     PERFORM PRINT-DETAIL.                                        NC1344.2
 056500 TABTEST-12.                                                      NC1344.2
 056600     MOVE 1 TO W-1.                                               NC1344.2
-056700     IF YEAR-1 (W-1  +1) EQUAL TO "00100J003"                     NC1344.2
+056700     IF YEAR-1 (W-1  +1) EQUAL TO "001006003"                     NC1344.2
 056800             PERFORM PASS                                         NC1344.2
 056900             GO TO TABTEST-12B.                                   NC1344.2
 057000     MOVE YEAR-1 (W-1  +1) TO COMPUTED-A.                         NC1344.2
-057100     MOVE "00100J003" TO CORRECT-A.                               NC1344.2
+057100     MOVE "001006003" TO CORRECT-A.                               NC1344.2
 057200     PERFORM FAIL.                                                NC1344.2
 057300     GO TO TABTEST-12B.                                           NC1344.2
 057400 TABTEST-12A.                                                     NC1344.2
 057500     PERFORM DE-LETE.                                             NC1344.2
 057600 TABTEST-12B.                                                     NC1344.2
 057700     MOVE "TABTEST-12" TO PAR-NAME.                               NC1344.2
-057800*    NOTE SIGNED NUMERIC LITERAL AND                              NC1344.2
-057900*          UNSIGNED NUMERIC ITEM AS SUBSCRIPTS.                   NC1344.2
+057800*                                                                         
+057900*                                                                         
 058000     PERFORM PRINT-DETAIL.                                        NC1344.2
 058100 TABTEST-13.                                                      NC1344.2
 058200     IF ANIMAL (+8  +1  +3) EQUAL TO 213                          NC1344.2
@@ -588,7 +588,7 @@
 059000     PERFORM DE-LETE.                                             NC1344.2
 059100 TABTEST-13B.                                                     NC1344.2
 059200     MOVE "TABTEST-13" TO PAR-NAME.                               NC1344.2
-059300*    NOTE SIGNED NUMERIC LITERALS AS SUBSCRIPTS.                  NC1344.2
+059300*                                                                         
 059400     PERFORM PRINT-DETAIL.                                        NC1344.2
 059500 TABTEST-14.                                                      NC1344.2
 059600     MOVE 1 TO W-2.                                               NC1344.2
@@ -603,8 +603,8 @@
 060500     PERFORM DE-LETE.                                             NC1344.2
 060600 TABTEST-14B.                                                     NC1344.2
 060700     MOVE "TABTEST-14" TO PAR-NAME.                               NC1344.2
-060800*    NOTE SIGNED NUMERIC LITERALS AND                             NC1344.2
-060900*         UNSIGNED NUMERIC ITEM AS SUBSCRIPTS.                    NC1344.2
+060800*                                                                         
+060900*                                                                         
 061000     PERFORM PRINT-DETAIL.                                        NC1344.2
 061100 TABTEST-15.                                                      NC1344.2
 061200     MOVE 8 TO W-1.                                               NC1344.2
@@ -620,10 +620,10 @@
 062200     PERFORM DE-LETE.                                             NC1344.2
 062300 TABTEST-15B.                                                     NC1344.2
 062400     MOVE "TABTEST-15" TO PAR-NAME.                               NC1344.2
-062500*    NOTE UNSIGNED NUMERIC ITEMS AND SIGNED NUMERIC LITERAL       NC1344.2
+062500*                                                                         
 062600     PERFORM PRINT-DETAIL.                                        NC1344.2
 062700 TABINIT-16.                                                      NC1344.2
-062800*    ==-->  RELATIVE SUBSCRIPTING  <--==                          NC1344.2
+062800*                                                                         
 062900     MOVE   "IV-22 4.3.8.4 GR4" TO ANSI-REFERENCE.                NC1344.2
 063000     MOVE 1  TO W-1.                                              NC1344.2
 063100     MOVE 20 TO W-2.                                              NC1344.2
@@ -642,7 +642,7 @@
 064400     MOVE "TABTEST-16" TO PAR-NAME.                               NC1344.2
 064500     PERFORM PRINT-DETAIL.                                        NC1344.2
 064600 TABINIT-17.                                                      NC1344.2
-064700*    ==-->  RELATIVE SUBSCRIPTING  <--==                          NC1344.2
+064700*                                                                         
 064800     MOVE   "IV-22 4.3.8.4 GR4" TO ANSI-REFERENCE.                NC1344.2
 064900     MOVE   9 TO W-1.                                             NC1344.2
 065000     MOVE   6 TO W-2.                                             NC1344.2
@@ -660,7 +660,7 @@
 066200 TTST-172.                                                        NC1344.2
 066300     MOVE "TABTEST-17" TO PAR-NAME.                               NC1344.2
 066400     PERFORM PRINT-DETAIL.                                        NC1344.2
-066500*    USED AS SUBSCRIPT.                                           NC1344.2
+066500*                                                                         
 066600 WRITE-TABLE.                                                     NC1344.2
 066700     PERFORM BLANK-LINE-PRINT 2 TIMES.                            NC1344.2
 066800     MOVE 1 TO SUBSCRIPT-3                                        NC1344.2

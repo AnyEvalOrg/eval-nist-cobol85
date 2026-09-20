@@ -1,8 +1,8 @@
 SG202A.CBL: in section 'SEC45':
 SG202A.CBL: in paragraph 'P4502':
 SG202A.CBL:347: warning: P4501 and P0003 are not in the same SECTION [-Wsuspicious-perform-thru]
-  345 | 034700*             REFERENCING A OVERLAYABLE FOLLOWED BY A  PERMANENT  S..
-  346 | 034800*             SEGMENT  OF THE FIXED PORTION WILL BE EXECUTED OK.  S..
+  345 | 034700*..
+  346 | 034800*..
   347 > 034900     PERFORM P4501 THRU P0003.                                    S..
   348 | 035000     IF PERF-OVER-RES IS EQUAL TO "AB" PERFORM PASS               S..
   349 | 035100         ELSE MOVE PERF-OVER-RES TO COMPUTED-A                    S..
@@ -23,5 +23,5 @@ SG202A.CBL:365: warning: P0004 and P4802 are not in the same SECTION [-Wsuspicio
   363 | 036500*..
   364 | 036600*..
   365 > 036700     PERFORM P0004 THRU P4802.                                    S..
-  366 | 036800     IF PERF-RES-OVER EQUAL TO "X7" PERFORM PASS                  S..
+  366 | 036800     IF PERF-RES-OVER EQUAL TO "XU" PERFORM PASS                  S..
   367 | 036900         ELSE MOVE PERF-RES-OVER TO COMPUTED-A                    S..

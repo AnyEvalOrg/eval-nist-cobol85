@@ -16,7 +16,7 @@ TEST RESULT OF IF127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD Function         FAIL* F-ORD-01                                                                                    
                                                                                                                         
                                      COMPUTED=  000000066.000000000                                                     
-                                     CORRECT =  000000062.000000000  See ref. A-60 2.31                                 
+                                     CORRECT =  000000061.000000000  See ref. A-60 2.31                                 
                                                                                                                         
  ORD Function         PASS  F-ORD-02                                                                                    
  ORD Function         PASS  F-ORD-03                                                                                    
@@ -24,12 +24,12 @@ TEST RESULT OF IF127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD Function         FAIL* F-ORD-05                                                                                    
                                                                                                                         
                                      COMPUTED=  000000101.000000000                                                     
-                                     CORRECT =  000000501.000000000  See ref. A-60 2.31                                 
+                                     CORRECT =  000000102.000000000  See ref. A-60 2.31                                 
                                                                                                                         
  ORD Function         FAIL* F-ORD-06                                                                                    
                                                                                                                         
                                      COMPUTED=  000000052.000000000                                                     
-                                     CORRECT =  000000002.000000000  See ref. A-60 2.31                                 
+                                     CORRECT =  000000062.000000000  See ref. A-60 2.31                                 
                                                                                                                         
  ORD Function         PASS  F-ORD-07                                                                                    
  ORD Function         PASS  F-ORD-08                                                                                    

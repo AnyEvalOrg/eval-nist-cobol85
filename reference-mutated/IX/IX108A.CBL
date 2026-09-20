@@ -1,63 +1,63 @@
 000100 IDENTIFICATION DIVISION.                                         IX1084.2
 000200 PROGRAM-ID.                                                      IX1084.2
 000300     IX108A.                                                      IX1084.2
-000400****************************************************************  IX1084.2
-000500*                                                              *  IX1084.2
-000600*    VALIDATION FOR:-                                          *  IX1084.2
-000700*                                                              *  IX1084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1084.2
-000900*                                                              *  IX1084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1084.2
-001100*                                                              *  IX1084.2
-001200****************************************************************  IX1084.2
-001300*                                                                 IX1084.2
-001400*         NEW TESTS:                                              IX1084.2
-001500*                                                                 IX1084.2
-001600*         READ STATEMENT WITH THE PHRASES:                        IX1084.2
-001700*         READ ...  NOT AT END   AND   END-READ                   IX1084.2
-001800*         FOR FORMAT 1 AND 2 OF THE READ STATEMENT                IX1084.2
-001900*                                                                 IX1084.2
-002000*         DELETE STATEMENT WITH THE PHRASES:                      IX1084.2
-002100*         DELETE ... NOT INVALID  AND  END-DELETE                 IX1084.2
-002200*                                                                 IX1084.2
-002300*         REWRITE STATEMENT WITH THE PHRASES:                     IX1084.2
-002400*         REWRITE  ...   NOT INVALID KEY   AND   END-REWRITE      IX1084.2
-002500*                                                                 IX1084.2
-002600*         WRITE STATEMENT WITH THE PHRASES:                       IX1084.2
-002700*         WRITE  ...   NOT INVALID KEY   AND  END-WRITE           IX1084.2
-002800*                                                                 IX1084.2
-002900*                                                                 IX1084.2
-003000*                                                                 IX1084.2
-003100*                                                                 IX1084.2
-003200*       X-CARDS  WHICH MUST BE REPLACED FOR THIS PROGRAM ARE      IX1084.2
-003300*                                                                 IX1084.2
-003400*             X-24   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1084.2
-003500*                    CLAUSE FOR DATA FILE IX-FD1                  IX1084.2
-003600*             X-44   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1084.2
-003700*                    CLAUSE FOR INDEX FILE IX-FD1                 IX1084.2
-003800*             X-25   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1084.2
-003900*                    CLAUSE FOR DATA FILE IX-FD2                  IX1084.2
-004000*             X-45   INDEXED FILE IMPLEMENTOR-NAME IN ASSIGN TO   IX1084.2
-004100*                    CLAUSE FOR INDEX FILE IX-FD2                 IX1084.2
-004200*             X-55   IMPLEMENTOR-NAME FOR SYSTEM PRINTER          IX1084.2
-004300*             X-62   FOR RAW-DATA                                 IX1084.2
-004400*             X-82   IMPLEMENTOR-NAME FOR SOURCE-COMPUTER         IX1084.2
-004500*             X-84   LABEL RECORDS OF PRINT-FILE                  IX1084.2
-004600*                                                                 IX1084.2
-004700*         NOTE:  X-CARDS 45, 62 AND 84   ARE OPTIONAL             IX1084.2
-004800*               AND NEED ONLY TO BE PRESENT IF THE COMPILER RE-   IX1084.2
-004900*               QUIRES THIS CODE BE AVAILABLE FOR PROPER PROGRAM  IX1084.2
-005000*               COMPILATION AND EXECUTION. IF THE VP-ROUTINE IS   IX1084.2
-005100*               USED THE  X-CARDS MAY BE AUTOMATICALLY SELECTED   IX1084.2
-005200*               FOR INCLUSION IN THE PROGRAM BY SPECIFYING THE    IX1084.2
-005300*               APPROPRIATE LETTER IN THE "*OPT" VP-ROUTINE       IX1084.2
-005400*               CONTROL CARD. THE LETTER  CORRESPONDS TO A        IX1084.2
-005500*               CHARACTER IN POSITION 7 OF THE SOURCE LINE AND    IX1084.2
-005600*               THEY ARE AS FOLLOWS                               IX1084.2
-005700*                                                                 IX1084.2
-005800*                  J  SELECTS X-CARD 45                           IX1084.2
-005900*                                                                 IX1084.2
-006000******************************************************            IX1084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
 006100 ENVIRONMENT DIVISION.                                            IX1084.2
 006200 CONFIGURATION SECTION.                                           IX1084.2
 006300 SOURCE-COMPUTER.                                                 IX1084.2
@@ -341,8 +341,8 @@
 036800              DEPENDING ON  WRK-CS-09V00-012.                     IX1084.2
 036900     GO TO    IX-FS2-01-EXIT.                                     IX1084.2
 037000 IX-FS2-01-03.                                                    IX1084.2
-037100*ENTRY FROM SEGMENT INX-TEST-001.                                 IX1084.2
-037200*    SHOULD NOT ENTER HERE UNLESS SPACE ALLOCATION TOO SMALL.     IX1084.2
+037100*                                                                         
+037200*                                                                         
 037300     ADD     1 TO  WRK-CS-09V00-014.                              IX1084.2
 037400 IX-FS2-01-05.                                                    IX1084.2
 037500     ADD      1 TO WRK-CS-09V00-017.                              IX1084.2
@@ -404,7 +404,7 @@
 045500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1084.2
 045600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1084.2
 045700      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1084.2
-045800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1084.2
+045800*                                                                         
 045900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1084.2
 046000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1084.2
 046100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1084.2
@@ -477,11 +477,11 @@
 052800 CCVS1-EXIT.                                                      IX1084.2
 052900     EXIT.                                                        IX1084.2
 053000 SECT-IX-04-001 SECTION.                                          IX1084.2
-053100******************************************************************IX1084.2
-053200*                                                                *IX1084.2
-053300*   TEST  1   CREATE INDEXED FILE IX-FS2                         *IX1084.2
-053400*                                                                *IX1084.2
-053500******************************************************************IX1084.2
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
+053400*                                                                         
+053500*                                                                         
 053600 WRITE-INIT-GF-01.                                                IX1084.2
 053700     MOVE     "WRITE NOT INVALID END-" TO  FEATURE.               IX1084.2
 053800     MOVE     "IX-FS2"        TO  XFILE-NAME (2).                 IX1084.2
@@ -588,11 +588,11 @@
 063900                                                                  IX1084.2
 064000     CLOSE IX-FS1 IX-FS2.                                         IX1084.2
 064100                                                                  IX1084.2
-064200******************************************************************IX1084.2
-064300*                                                                *IX1084.2
-064400*   TESTS:      R E A D         NOT INVALID    END-READ          *IX1084.2
-064500*                                                                *IX1084.2
-064600******************************************************************IX1084.2
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
 064700 READ-INIT-F1-01.                                                 IX1084.2
 064800     OPEN INPUT IX-FS1.                                           IX1084.2
 064900     MOVE "READ-TEST-F1-01" TO PAR-NAME.                          IX1084.2
@@ -616,11 +616,11 @@
 066700 READ-WRITE-F1-01.                                                IX1084.2
 066800     PERFORM PRINT-DETAIL.                                        IX1084.2
 066900                                                                  IX1084.2
-067000******************************************************************IX1084.2
-067100*   TEST  READ .. NOT AT END   ... END-READ.                     *IX1084.2
-067200*                                                                *IX1084.2
-067300*         IX-28, 4.5.4                                           *IX1084.2
-067400******************************************************************IX1084.2
+067000*                                                                         
+067100*                                                                         
+067200*                                                                         
+067300*                                                                         
+067400*                                                                         
 067500 READ-INIT-F1-02.                                                 IX1084.2
 067600     MOVE "READ-TEST-F1-02-1" TO PAR-NAME.                        IX1084.2
 067700     MOVE "READ . NOT INV. . END-" TO FEATURE.                    IX1084.2
@@ -659,11 +659,11 @@
 071000 READ-WRITE-F1-02-2.                                              IX1084.2
 071100     PERFORM PRINT-DETAIL.                                        IX1084.2
 071200                                                                  IX1084.2
-071300******************************************************************IX1084.2
-071400*   TEST: IF READ .. NOT AT END   ... END-READ ...      .        *IX1084.2
-071500*                                                                *IX1084.2
-071600*         IX-28, 4.5.4                                           *IX1084.2
-071700******************************************************************IX1084.2
+071300*                                                                         
+071400*                                                                         
+071500*                                                                         
+071600*                                                                         
+071700*                                                                         
 071800 READ-INIT-F1-03.                                                 IX1084.2
 071900     MOVE "READ-TEST-F1-03-1" TO PAR-NAME.                        IX1084.2
 072000     MOVE "IF . READ . NOT INV. . END-" TO FEATURE.               IX1084.2
@@ -719,11 +719,11 @@
 077000                                                                  IX1084.2
 077100     CLOSE IX-FS1.                                                IX1084.2
 077200                                                                  IX1084.2
-077300******************************************************************IX1084.2
-077400*   TEST  READ    NOT INVALID                                    *IX1084.2
-077500*                                                                *IX1084.2
-077600*         IX-28, 4.5.4                                           *IX1084.2
-077700******************************************************************IX1084.2
+077300*                                                                         
+077400*                                                                         
+077500*                                                                         
+077600*                                                                         
+077700*                                                                         
 077800 READ-INIT-F2-01.                                                 IX1084.2
 077900     MOVE     2     TO  WRK-CS-09V00-012.                         IX1084.2
 078000     MOVE     ZERO  TO  WRK-CS-09V00-013.                         IX1084.2
@@ -763,11 +763,11 @@
 081400 READ-WRITE-F2-01.                                                IX1084.2
 081500     PERFORM PRINT-DETAIL.                                        IX1084.2
 081600                                                                  IX1084.2
-081700******************************************************************IX1084.2
-081800*   TEST  READ .. NOT INVALID  ... END-READ.                     *IX1084.2
-081900*                                                                *IX1084.2
-082000*         IX-28, 4.5.4                                           *IX1084.2
-082100******************************************************************IX1084.2
+081700*                                                                         
+081800*                                                                         
+081900*                                                                         
+082000*                                                                         
+082100*                                                                         
 082200 READ-INIT-F2-02.                                                 IX1084.2
 082300     MOVE "READ-TEST-F2-02-1" TO PAR-NAME.                        IX1084.2
 082400     MOVE "READ . NOT INV. . END-" TO FEATURE.                    IX1084.2
@@ -808,11 +808,11 @@
 085900 READ-WRITE-F2-02-2.                                              IX1084.2
 086000     PERFORM PRINT-DETAIL.                                        IX1084.2
 086100                                                                  IX1084.2
-086200******************************************************************IX1084.2
-086300*   TEST: IF READ .. NOT INVALID  ... END-READ ...      .        *IX1084.2
-086400*                                                                *IX1084.2
-086500*         IX-28, 4.5.4                                           *IX1084.2
-086600******************************************************************IX1084.2
+086200*                                                                         
+086300*                                                                         
+086400*                                                                         
+086500*                                                                         
+086600*                                                                         
 086700 READ-INIT-F2-03.                                                 IX1084.2
 086800     MOVE "READ-TEST-F2-03-1" TO PAR-NAME.                        IX1084.2
 086900     MOVE "IF . READ . NOT INV. . END-" TO FEATURE.               IX1084.2
@@ -870,16 +870,16 @@
 092100                                                                  IX1084.2
 092200     CLOSE IX-FS2.                                                IX1084.2
 092300                                                                  IX1084.2
-092400******************************************************************IX1084.2
-092500*                                                                *IX1084.2
-092600*   TESTS:   D E L E T E        NOT INVALID    END-DELETE        *IX1084.2
-092700*         FOR A FILE WHICH IS IN RANDOM ACCESS MODE              *IX1084.2
-092800*                                                                *IX1084.2
-092900*                                                                *IX1084.2
-093000*   TEST  DELETE  NOT INVALID                                    *IX1084.2
-093100*                                                                *IX1084.2
-093200*         IX-21, 4.3.2                                           *IX1084.2
-093300******************************************************************IX1084.2
+092400*                                                                         
+092500*                                                                         
+092600*                                                                         
+092700*                                                                         
+092800*                                                                         
+092900*                                                                         
+093000*                                                                         
+093100*                                                                         
+093200*                                                                         
+093300*                                                                         
 093400 DELETE-INIT-GF-01.                                               IX1084.2
 093500     MOVE     2     TO  WRK-CS-09V00-012.                         IX1084.2
 093600     MOVE     ZERO  TO  WRK-CS-09V00-013.                         IX1084.2
@@ -925,11 +925,11 @@
 097600 DELETE-WRITE-GF-01.                                              IX1084.2
 097700     PERFORM PRINT-DETAIL.                                        IX1084.2
 097800                                                                  IX1084.2
-097900******************************************************************IX1084.2
-098000*   TEST  DELETE  NOT INVALID  ... END-DELETE.                   *IX1084.2
-098100*                                                                *IX1084.2
-098200*         IX-21, 4.3.2                                           *IX1084.2
-098300******************************************************************IX1084.2
+097900*                                                                         
+098000*                                                                         
+098100*                                                                         
+098200*                                                                         
+098300*                                                                         
 098400 DELETE-INIT-GF-02.                                               IX1084.2
 098500     MOVE "DELETE-TEST-GF-02-1"   TO PAR-NAME.                    IX1084.2
 098600     MOVE "DELETE NOT INV. . END-" TO FEATURE.                    IX1084.2
@@ -976,11 +976,11 @@
 102700 DELETE-WRITE-GF-02-2.                                            IX1084.2
 102800     PERFORM PRINT-DETAIL.                                        IX1084.2
 102900                                                                  IX1084.2
-103000******************************************************************IX1084.2
-103100*   TEST: IF DELETE. NOT INVALID  ... END-DELETE ...    .        *IX1084.2
-103200*                                                                *IX1084.2
-103300*         IX-21, 4.3.2                                           *IX1084.2
-103400******************************************************************IX1084.2
+103000*                                                                         
+103100*                                                                         
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
 103500 DELETE-INIT-GF-03.                                               IX1084.2
 103600     MOVE "DELETE-TEST-GF-03-1"   TO PAR-NAME.                    IX1084.2
 103700     MOVE "IF .DELETE. NOT INV. . END-" TO FEATURE.               IX1084.2
@@ -1045,16 +1045,16 @@
 109600                                                                  IX1084.2
 109700      CLOSE IX-FS2.                                               IX1084.2
 109800                                                                  IX1084.2
-109900******************************************************************IX1084.2
-110000*                                                                *IX1084.2
-110100*   TESTS:   R E W R I T E      NOT INVALID    END-REWRITE       *IX1084.2
-110200*         FOR A FILE WHICH IS IN RANDOM ACCESS MODE              *IX1084.2
-110300*                                                                *IX1084.2
-110400*                                                                *IX1084.2
-110500*   TEST  REWRITE NOT INVALID                                    *IX1084.2
-110600*                                                                *IX1084.2
-110700*         IX-33, 4.6.2                                           *IX1084.2
-110800******************************************************************IX1084.2
+109900*                                                                         
+110000*                                                                         
+110100*                                                                         
+110200*                                                                         
+110300*                                                                         
+110400*                                                                         
+110500*                                                                         
+110600*                                                                         
+110700*                                                                         
+110800*                                                                         
 110900 REWRITE-INIT-GF-01.                                              IX1084.2
 111000     MOVE     2     TO  WRK-CS-09V00-012.                         IX1084.2
 111100     MOVE     ZERO  TO  WRK-CS-09V00-013.                         IX1084.2
@@ -1101,11 +1101,11 @@
 115200 REWRITE-WRITE-GF-01.                                             IX1084.2
 115300     PERFORM PRINT-DETAIL.                                        IX1084.2
 115400                                                                  IX1084.2
-115500******************************************************************IX1084.2
-115600*   TEST  REWRITE NOT INVALID  ... END-DELETE.                   *IX1084.2
-115700*                                                                *IX1084.2
-115800*         IX-33, 4.6.2                                           *IX1084.2
-115900******************************************************************IX1084.2
+115500*                                                                         
+115600*                                                                         
+115700*                                                                         
+115800*                                                                         
+115900*                                                                         
 116000 REWRITE-INIT-GF-02.                                              IX1084.2
 116100     MOVE "REWRITE-TEST-GF-02-1"  TO PAR-NAME.                    IX1084.2
 116200     MOVE "REWRITE NOT INV. . END-" TO FEATURE.                   IX1084.2
@@ -1153,11 +1153,11 @@
 120400 REWRITE-WRITE-GF-02-2.                                           IX1084.2
 120500     PERFORM PRINT-DETAIL.                                        IX1084.2
 120600                                                                  IX1084.2
-120700******************************************************************IX1084.2
-120800*   TEST: IF REWRITE. NOT INVALID ... END-DELETE ...    .        *IX1084.2
-120900*                                                                *IX1084.2
-121000*         IX-33, 4.6.2                                           *IX1084.2
-121100******************************************************************IX1084.2
+120700*                                                                         
+120800*                                                                         
+120900*                                                                         
+121000*                                                                         
+121100*                                                                         
 121200 REWRITE-INIT-GF-03.                                              IX1084.2
 121300     MOVE "REWRITE-TEST-GF-03-1"  TO PAR-NAME.                    IX1084.2
 121400     MOVE "IF .REWRITE. NOT INV. . END-" TO FEATURE.              IX1084.2
@@ -1224,16 +1224,16 @@
 127500     CLOSE IX-FS2.                                                IX1084.2
 127600                                                                  IX1084.2
 127700                                                                  IX1084.2
-127800******************************************************************IX1084.2
-127900*                                                                *IX1084.2
-128000*   TESTS:   R E W R I T E      NOT INVALID    END-REWRITE       *IX1084.2
-128100*         FOR A FILE WHICH IS IN SEQUENTIAL ACCESS MODE          *IX1084.2
-128200*                                                                *IX1084.2
-128300*                                                                *IX1084.2
-128400*   TEST  REWRITE NOT INVALID                                    *IX1084.2
-128500*                                                                *IX1084.2
-128600*         IX-33, 4.6.2                                           *IX1084.2
-128700******************************************************************IX1084.2
+127800*                                                                         
+127900*                                                                         
+128000*                                                                         
+128100*                                                                         
+128200*                                                                         
+128300*                                                                         
+128400*                                                                         
+128500*                                                                         
+128600*                                                                         
+128700*                                                                         
 128800 RWR-SEQ-INIT-GF-01.                                              IX1084.2
 128900     MOVE     2     TO  WRK-CS-09V00-012.                         IX1084.2
 129000     MOVE     ZERO  TO  WRK-CS-09V00-013.                         IX1084.2
@@ -1255,11 +1255,11 @@
 130600     MOVE     ZERO  TO  SWITCH-NOT-INVALID.                       IX1084.2
 130700     MOVE     ZERO  TO  SWITCH-END-XXX.                           IX1084.2
 130800 RWR-SEQ-TEST-GF-01-0.                                            IX1084.2
-130900******************************************************************IX1084.2
-131000*                                                                *IX1084.2
-131100*   READ AND REWRITE THE FIRST THREE RECORDS                     *IX1084.2
-131200*                                                                *IX1084.2
-131300******************************************************************IX1084.2
+130900*                                                                         
+131000*                                                                         
+131100*                                                                         
+131200*                                                                         
+131300*                                                                         
 131400     READ  IX-FS1 AT END                                          IX1084.2
 131500              MOVE " READ FAILED " TO RE-MARK                     IX1084.2
 131600              PERFORM FAIL                                        IX1084.2
@@ -1283,11 +1283,11 @@
 133400 RWR-SEQ-WRITE-GF-01.                                             IX1084.2
 133500     PERFORM PRINT-DETAIL.                                        IX1084.2
 133600                                                                  IX1084.2
-133700******************************************************************IX1084.2
-133800*   TEST  REWRITE NOT INVALID  ... END-DELETE.                   *IX1084.2
-133900*                                                                *IX1084.2
-134000*         IX-33, 4.6.2                                           *IX1084.2
-134100******************************************************************IX1084.2
+133700*                                                                         
+133800*                                                                         
+133900*                                                                         
+134000*                                                                         
+134100*                                                                         
 134200 RWR-SEQ-INIT-GF-02.                                              IX1084.2
 134300     MOVE "RWR-SEQ-TEST-GF-02-1"  TO PAR-NAME.                    IX1084.2
 134400     MOVE "REWRITE NOT INV. . END-" TO FEATURE.                   IX1084.2
@@ -1333,11 +1333,11 @@
 138400 RWR-SEQ-WRITE-GF-02-2.                                           IX1084.2
 138500     PERFORM PRINT-DETAIL.                                        IX1084.2
 138600                                                                  IX1084.2
-138700******************************************************************IX1084.2
-138800*   TEST: IF REWRITE. NOT INVALID ... END-DELETE ...    .        *IX1084.2
-138900*                                                                *IX1084.2
-139000*         IX-33, 4.6.2                                           *IX1084.2
-139100******************************************************************IX1084.2
+138700*                                                                         
+138800*                                                                         
+138900*                                                                         
+139000*                                                                         
+139100*                                                                         
 139200 RWR-SEQ-INIT-GF-03.                                              IX1084.2
 139300     MOVE "RWR-SEQ-TEST-GF-03-1"  TO PAR-NAME.                    IX1084.2
 139400     MOVE "IF .REWRITE. NOT INV. . END-" TO FEATURE.              IX1084.2

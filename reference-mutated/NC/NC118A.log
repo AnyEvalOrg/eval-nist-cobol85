@@ -30,7 +30,7 @@ TEST RESULT OF NC118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    ROUNDED,SIZE ERROR FAIL* SIG-TEST-GF-7-2                                                                             
                                                                                                                         
                                      COMPUTED=  000666999.666333000                                                     
-                                     CORRECT =  000666999.666933000  VI-42 5.12.4                                       
+                                     CORRECT =  000666999.667333000  VI-42 5.12.4                                       
                                                                                                                         
    ROUNDED,SIZE ERROR PASS  SIG-TEST-GF-14-1                                                                            
    ROUNDED,SIZE ERROR PASS  SIG-TEST-GF-14-2                                                                            
@@ -39,7 +39,7 @@ TEST RESULT OF NC118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    SERIES             FAIL* SIG-TEST-GF-16                                                                              
                                                                                                                         
                                      COMPUTED=  0242.43322201100000                                                     
-                                     CORRECT =  0542.43322201100000  VI-42 5.12.4                                       
+                                     CORRECT =  0242.43322401100000  VI-42 5.12.4                                       
                                                                                                                                                                                                                                                 
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
@@ -61,7 +61,7 @@ TEST RESULT OF NC118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    COMP VS. DISPLAY   FAIL* SIG-TEST-GF-19-1                                                                            
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000006   VI-42 5.12.4                                       
+                                     CORRECT =  000000000000000009   VI-42 5.12.4                                       
                                                                                                                         
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-19-2                                                                            
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-20-1                                                                            

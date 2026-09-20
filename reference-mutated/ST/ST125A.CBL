@@ -1,59 +1,59 @@
 000100 IDENTIFICATION DIVISION.                                         ST1254.2
 000200 PROGRAM-ID.                                                      ST1254.2
 000300     ST125A.                                                      ST1254.2
-000400****************************************************************  ST1254.2
-000500*                                                              *  ST1254.2
-000600*    VALIDATION FOR:-                                          *  ST1254.2
-000700*                                                              *  ST1254.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1254.2
-000900*                                                              *  ST1254.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1254.2
-001100*                                                              *  ST1254.2
-001200****************************************************************  ST1254.2
-001300*                                                              *  ST1254.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  ST1254.2
-001500*                                                              *  ST1254.2
-001600*        X-01                                                  *  ST1254.2
-001700*        X-02                                                  *  ST1254.2
-001800*        X-03                                                  *  ST1254.2
-001900*        X-27                                                  *  ST1254.2
-002000*        X-55  - SYSTEM PRINTER NAME.                          *  ST1254.2
-002100*        X-69                                                  *  ST1254.2
-002200*        X-74                                                  *  ST1254.2
-002300*        X-75                                                  *  ST1254.2
-002400*        X-82  - SOURCE COMPUTER NAME.                         *  ST1254.2
-002500*        X-83  - OBJECT COMPUTER NAME.                         *  ST1254.2
-002600*                                                              *  ST1254.2
-002700****************************************************************  ST1254.2
-002800*                                                                 ST1254.2
-002900*    THIS PROGRAM TESTS THE FACILITY OF MULTIPLE FILES IN THE     ST1254.2
-003000*    "GIVING" PHRASE OF THE "SORT" STATEMENT.                     ST1254.2
-003100*    THE CONTENT OF THE 3 OUTPUT FILES WILL BE VERIFIED IN        ST1254.2
-003200*    PROGRAM ST126A.                                              ST1254.2
-003300*    THIS PROGRAM BUILDS A FILE OF NINE RECORDS. EACH RECORD HAS  ST1254.2
-003400*    THREE KEYS, AND THE VALUES OF THE RECORDS ARE SHOWN BELOW-   ST1254.2
-003500*             S                                                   ST1254.2
-003600*             O                                                   ST1254.2
-003700*             R               SORT                                ST1254.2
-003800*             T  SORT         KEY                                 ST1254.2
-003900*             K  KEY           -2                                 ST1254.2
-004000*             E   -1           ..                                 ST1254.2
-004100*             Y   ..         .    .                               ST1254.2
-004200*             -  .  .      .        .                             ST1254.2
-004300*             3 .    .   .            .                           ST1254.2
-004400*             ..      ..                .                         ST1254.2
-004500*              11111112888888888888888888                         ST1254.2
-004600*              11111112999999999999999999                         ST1254.2
-004700*              11111112999999999999999999                         ST1254.2
-004800*              00000001999999999999999999                         ST1254.2
-004900*             000000001999999999999999999                         ST1254.2
-005000*             000000001999999999999999999                         ST1254.2
-005100*             000000001999999999999999999                         ST1254.2
-005200*             000000001999999999999999999                         ST1254.2
-005300*             000000001999999999999999999                         ST1254.2
-005400*    THERE IS AN ASSUMED DECIMAL POINT BETWEEN THE FIRST AND      ST1254.2
-005500*    SECOND COLUMNS OF SORTKEY-1.                                 ST1254.2
-005600*                                                                 ST1254.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
 005700 ENVIRONMENT DIVISION.                                            ST1254.2
 005800 CONFIGURATION SECTION.                                           ST1254.2
 005900 SOURCE-COMPUTER.                                                 ST1254.2
@@ -301,7 +301,7 @@
 031800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1254.2
 031900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1254.2
 032000      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1254.2
-032100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1254.2
+032100*                                                                         
 032200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1254.2
 032300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1254.2
 032400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1254.2

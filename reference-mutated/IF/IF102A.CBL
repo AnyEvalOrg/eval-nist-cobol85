@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1024.2
 000300     IF102A.                                                      IF1024.2
 000400                                                                  IF1024.2
-000500***********************************************************       IF1024.2
-000600*                                                         *       IF1024.2
-000700*   This program is intended to form part of the CCVS85   *       IF1024.2
-000800*   COBOL Test Suite. It contains tests for the           *       IF1024.2
-000900*   Intrinsic Function ANNUITY.                           *       IF1024.2
-001000*                                                         *       IF1024.2
-001100***********************************************************       IF1024.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1024.2
 001300 CONFIGURATION SECTION.                                           IF1024.2
 001400 SOURCE-COMPUTER.                                                 IF1024.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1024.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1024.2
 002700 WORKING-STORAGE SECTION.                                         IF1024.2
-002800***********************************************************       IF1024.2
-002900* Variables specific to the Intrinsic Function Test IF102A*       IF1024.2
-003000***********************************************************       IF1024.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(10)          VALUE 4.             IF1024.2
 003200 01  B                   PIC S9(5)V9(5)      VALUE .25.           IF1024.2
 003300 01  C                   PIC S9(10)          VALUE 10.            IF1024.2
@@ -39,9 +39,9 @@
 003900 01  WS-NUM              PIC S9(5)V9(6).                          IF1024.2
 004000 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1024.2
 004100 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1024.2
-004200*                                                                 IF1024.2
-004300**********************************************************        IF1024.2
-004400*                                                                 IF1024.2
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
 004500 01  TEST-RESULTS.                                                IF1024.2
 004600     02 FILLER                   PIC X      VALUE SPACE.          IF1024.2
 004700     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1024.2
@@ -335,16 +335,16 @@
 033500 BAIL-OUT-EX. EXIT.                                               IF1024.2
 033600 CCVS1-EXIT.                                                      IF1024.2
 033700     EXIT.                                                        IF1024.2
-033800********************************************************          IF1024.2
-033900*                                                      *          IF1024.2
-034000*    Intrinsic Function Tests         IF102A - ANNUITY *          IF1024.2
-034100*                                                      *          IF1024.2
-034200********************************************************          IF1024.2
+033800*                                                                         
+033900*                                                                         
+034000*                                                                         
+034100*                                                                         
+034200*                                                                         
 034300 SECT-IF102A SECTION.                                             IF1024.2
 034400 F-ANNUITY-INFO.                                                  IF1024.2
 034500     MOVE     "See ref. A-34 2.6" TO ANSI-REFERENCE.              IF1024.2
 034600     MOVE     "ANNUITY Function" TO FEATURE.                      IF1024.2
-034700*****************TEST (a) - SIMPLE TEST*****************          IF1024.2
+034700*                                                                         
 034800 F-ANNUITY-01.                                                    IF1024.2
 034900     MOVE ZERO TO WS-NUM.                                         IF1024.2
 035000     MOVE  0.249995 TO MIN-RANGE.                                 IF1024.2
@@ -366,7 +366,7 @@
 036600 F-ANNUITY-WRITE-01.                                              IF1024.2
 036700     MOVE "F-ANNUITY-01" TO PAR-NAME.                             IF1024.2
 036800     PERFORM  PRINT-DETAIL.                                       IF1024.2
-036900*****************TEST (b) - SIMPLE TEST*****************          IF1024.2
+036900*                                                                         
 037000 F-ANNUITY-02.                                                    IF1024.2
 037100     EVALUATE FUNCTION ANNUITY(2.9, 4)                            IF1024.2
 037200     WHEN  2.91252 THRU  2.91264                                  IF1024.2
@@ -380,7 +380,7 @@
 038000 F-ANNUITY-WRITE-02.                                              IF1024.2
 038100     MOVE "F-ANNUITY-02" TO PAR-NAME.                             IF1024.2
 038200     PERFORM  PRINT-DETAIL.                                       IF1024.2
-038300*****************TEST (c) - SIMPLE TEST*****************          IF1024.2
+038300*                                                                         
 038400 F-ANNUITY-03.                                                    IF1024.2
 038500     MOVE  0.308663 TO MIN-RANGE.                                 IF1024.2
 038600     MOVE  0.308675 TO MAX-RANGE.                                 IF1024.2
@@ -397,7 +397,7 @@
 039700 F-ANNUITY-WRITE-03.                                              IF1024.2
 039800     MOVE "F-ANNUITY-03" TO PAR-NAME.                             IF1024.2
 039900     PERFORM  PRINT-DETAIL.                                       IF1024.2
-040000*****************TEST (d) - SIMPLE TEST*****************          IF1024.2
+040000*                                                                         
 040100 F-ANNUITY-04.                                                    IF1024.2
 040200     MOVE ZERO TO WS-NUM.                                         IF1024.2
 040300     MOVE  0.694430 TO MIN-RANGE.                                 IF1024.2
@@ -419,7 +419,7 @@
 041900 F-ANNUITY-WRITE-04.                                              IF1024.2
 042000     MOVE "F-ANNUITY-04" TO PAR-NAME.                             IF1024.2
 042100     PERFORM  PRINT-DETAIL.                                       IF1024.2
-042200*****************TEST (e) - SIMPLE TEST*****************          IF1024.2
+042200*                                                                         
 042300 F-ANNUITY-05.                                                    IF1024.2
 042400     MOVE ZERO TO WS-NUM.                                         IF1024.2
 042500     MOVE  0.423434 TO MIN-RANGE.                                 IF1024.2
@@ -441,7 +441,7 @@
 044100 F-ANNUITY-WRITE-05.                                              IF1024.2
 044200     MOVE "F-ANNUITY-05" TO PAR-NAME.                             IF1024.2
 044300     PERFORM  PRINT-DETAIL.                                       IF1024.2
-044400*****************TEST (f) - SIMPLE TEST*****************          IF1024.2
+044400*                                                                         
 044500 F-ANNUITY-06.                                                    IF1024.2
 044600     MOVE ZERO TO WS-NUM.                                         IF1024.2
 044700     MOVE  3.99992 TO MIN-RANGE.                                  IF1024.2
@@ -463,7 +463,7 @@
 046300 F-ANNUITY-WRITE-06.                                              IF1024.2
 046400     MOVE "F-ANNUITY-06" TO PAR-NAME.                             IF1024.2
 046500     PERFORM  PRINT-DETAIL.                                       IF1024.2
-046600*****************TEST (g) -SIMPLE TEST******************          IF1024.2
+046600*                                                                         
 046700 F-ANNUITY-07.                                                    IF1024.2
 046800     MOVE ZERO TO WS-NUM.                                         IF1024.2
 046900     MOVE  5.00054 TO MIN-RANGE.                                  IF1024.2
@@ -485,7 +485,7 @@
 048500 F-ANNUITY-WRITE-07.                                              IF1024.2
 048600     MOVE "F-ANNUITY-07" TO PAR-NAME.                             IF1024.2
 048700     PERFORM  PRINT-DETAIL.                                       IF1024.2
-048800*****************TEST (h) - SIMPLE TEST*****************          IF1024.2
+048800*                                                                         
 048900 F-ANNUITY-08.                                                    IF1024.2
 049000     MOVE ZERO TO WS-NUM.                                         IF1024.2
 049100     MOVE  4.03217   TO MIN-RANGE.                                IF1024.2
@@ -507,7 +507,7 @@
 050700 F-ANNUITY-WRITE-08.                                              IF1024.2
 050800     MOVE "F-ANNUITY-08" TO PAR-NAME.                             IF1024.2
 050900     PERFORM  PRINT-DETAIL.                                       IF1024.2
-051000*****************TEST (a) - COMPLEX TEST****************          IF1024.2
+051000*                                                                         
 051100 F-ANNUITY-09.                                                    IF1024.2
 051200     MOVE ZERO TO WS-NUM.                                         IF1024.2
 051300     MOVE  0.204824 TO MIN-RANGE.                                 IF1024.2
@@ -529,7 +529,7 @@
 052900 F-ANNUITY-WRITE-09.                                              IF1024.2
 053000     MOVE "F-ANNUITY-09" TO PAR-NAME.                             IF1024.2
 053100     PERFORM  PRINT-DETAIL.                                       IF1024.2
-053200*****************TEST (b) - COMPLEX TEST****************          IF1024.2
+053200*                                                                         
 053300 F-ANNUITY-10.                                                    IF1024.2
 053400     MOVE ZERO TO WS-NUM.                                         IF1024.2
 053500     MOVE 0.576553 TO MIN-RANGE.                                  IF1024.2
@@ -552,7 +552,7 @@
 055200 F-ANNUITY-WRITE-10.                                              IF1024.2
 055300     MOVE "F-ANNUITY-10" TO PAR-NAME.                             IF1024.2
 055400     PERFORM  PRINT-DETAIL.                                       IF1024.2
-055500*****************TEST (c) - COMPLEX TEST****************          IF1024.2
+055500*                                                                         
 055600 F-ANNUITY-11.                                                    IF1024.2
 055700     MOVE ZERO TO WS-NUM.                                         IF1024.2
 055800     MOVE 4.49978 TO MIN-RANGE.                                   IF1024.2
@@ -574,7 +574,7 @@
 057400 F-ANNUITY-WRITE-11.                                              IF1024.2
 057500     MOVE "F-ANNUITY-11" TO PAR-NAME.                             IF1024.2
 057600     PERFORM  PRINT-DETAIL.                                       IF1024.2
-057700*****************TEST (d) - COMPLEX TEST****************          IF1024.2
+057700*                                                                         
 057800 F-ANNUITY-12.                                                    IF1024.2
 057900     MOVE ZERO TO WS-NUM.                                         IF1024.2
 058000     MOVE 0.999960 TO MIN-RANGE.                                  IF1024.2
@@ -597,7 +597,7 @@
 059700 F-ANNUITY-WRITE-12.                                              IF1024.2
 059800     MOVE "F-ANNUITY-12" TO PAR-NAME.                             IF1024.2
 059900     PERFORM  PRINT-DETAIL.                                       IF1024.2
-060000*****************SPECIAL PERFORM TEST**********************       IF1024.2
+060000*                                                                         
 060100 F-ANNUITY-13.                                                    IF1024.2
 060200     PERFORM F-ANNUITY-TEST-13                                    IF1024.2
 060300       UNTIL FUNCTION ANNUITY(0, ARG2) < .25.                     IF1024.2
@@ -611,7 +611,7 @@
 061100 F-ANNUITY-WRITE-13.                                              IF1024.2
 061200     MOVE "F-ANNUITY-13" TO PAR-NAME.                             IF1024.2
 061300     PERFORM  PRINT-DETAIL.                                       IF1024.2
-061400********************END OF TESTS***************                   IF1024.2
+061400*                                                                         
 061500 CCVS-EXIT SECTION.                                               IF1024.2
 061600 CCVS-999999.                                                     IF1024.2
 061700     GO TO CLOSE-FILES.                                           IF1024.2

@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1074.2
 000300     IF107A.                                                      IF1074.2
 000400                                                                  IF1074.2
-000500***********************************************************       IF1074.2
-000600*                                                         *       IF1074.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1074.2
-000800* It contains tests for the Intrinsic Function            *       IF1074.2
-000900* CURRENT-DATE.                                           *       IF1074.2
-001000*                                                         *       IF1074.2
-001100***********************************************************       IF1074.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1074.2
 001300 CONFIGURATION SECTION.                                           IF1074.2
 001400 SOURCE-COMPUTER.                                                 IF1074.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1074.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1074.2
 002700 WORKING-STORAGE SECTION.                                         IF1074.2
-002800***********************************************************       IF1074.2
-002900* Variables specific to the Intrinsic Function Test IF107A*       IF1074.2
-003000***********************************************************       IF1074.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  TEMP1                       PIC X(21).                       IF1074.2
 003200 01  TEMP2                       PIC X(21).                       IF1074.2
 003300 01  WS-FIRST                    VALUE SPACES.                    IF1074.2
@@ -59,9 +59,9 @@
 005900              88 CON-OFFSET      VALUE 00 THRU 13.                IF1074.2
 006000     02  WS-OFFSET2              PIC 99.                          IF1074.2
 006100              88 CON-OFFSET2     VALUE 00 THRU 59.                IF1074.2
-006200*                                                                 IF1074.2
-006300**********************************************************        IF1074.2
-006400*                                                                 IF1074.2
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
 006500 01  TEST-RESULTS.                                                IF1074.2
 006600     02 FILLER                   PIC X      VALUE SPACE.          IF1074.2
 006700     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1074.2
@@ -322,16 +322,16 @@
 032200 BAIL-OUT-EX. EXIT.                                               IF1074.2
 032300 CCVS1-EXIT.                                                      IF1074.2
 032400     EXIT.                                                        IF1074.2
-032500********************************************************          IF1074.2
-032600*                                                      *          IF1074.2
-032700*    Intrinsic Function Tests   IF107A - CURRENT-DATE *           IF1074.2
-032800*                                                      *          IF1074.2
-032900********************************************************          IF1074.2
+032500*                                                                         
+032600*                                                                         
+032700*                                                                         
+032800*                                                                         
+032900*                                                                         
 033000 SECT-IF107A SECTION.                                             IF1074.2
 033100 F-WHENCOMP-INFO.                                                 IF1074.2
 033200     MOVE     "See ref. A-39 2.11" TO ANSI-REFERENCE.             IF1074.2
 033300     MOVE     "CURRENT-DATE"     TO FEATURE.                      IF1074.2
-033400*****************TEST (a) ******************************          IF1074.2
+033400*                                                                         
 033500 F-WHENCOMP-01.                                                   IF1074.2
 033600     MOVE SPACES TO TEMP1.                                        IF1074.2
 033700     MOVE SPACES TO WS-DATE.                                      IF1074.2
@@ -360,7 +360,7 @@
 036000 F-WHENCOMP-WRITE-01.                                             IF1074.2
 036100     MOVE "F-WHENCOMP-01" TO PAR-NAME.                            IF1074.2
 036200     PERFORM  PRINT-DETAIL.                                       IF1074.2
-036300*****************TEST (b) ******************************          IF1074.2
+036300*                                                                         
 036400 F-WHENCOMP-TEST-02.                                              IF1074.2
 036500     IF FUNCTION CURRENT-DATE >= TEMP1 THEN                       IF1074.2
 036600                    PERFORM PASS                                  IF1074.2
@@ -373,7 +373,7 @@
 037300 F-WHENCOMP-WRITE-02.                                             IF1074.2
 037400     MOVE "F-WHENCOMP-02" TO PAR-NAME.                            IF1074.2
 037500     PERFORM  PRINT-DETAIL.                                       IF1074.2
-037600*******************END OF TESTS**************************         IF1074.2
+037600*                                                                         
 037700 CCVS-EXIT SECTION.                                               IF1074.2
 037800 CCVS-999999.                                                     IF1074.2
 037900     GO TO CLOSE-FILES.                                           IF1074.2

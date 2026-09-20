@@ -1,123 +1,123 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1014.2
 000200 PROGRAM-ID.                                                      SQ1014.2
 000300     SQ101M.                                                      SQ1014.2
-000400****************************************************************  SQ1014.2
-000500*                                                              *  SQ1014.2
-000600*    VALIDATION FOR:-                                          *  SQ1014.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1014.2
-000800*    USING CCVS85 VERSION 1.0 ISSUED IN JANUARY 1986.          *  SQ1014.2
-000900*                             REVISED 1986, AUGUST             *  SQ1014.2
-001000*                                                              *  SQ1014.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ1014.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1014.2
-001300*                                                              *  SQ1014.2
-001400****************************************************************  SQ1014.2
-001500*                                                              *  SQ1014.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1014.2
-001700*                                                              *  SQ1014.2
-001800*            X-55   SYSTEM PRINTER                             *  SQ1014.2
-001900*            X-82   SOURCE-COMPUTER                            *  SQ1014.2
-002000*            X-83   OBJECT-COMPUTER.                           *  SQ1014.2
-002100*                                                              *  SQ1014.2
-002200****************************************************************  SQ1014.2
-002300*                                                              *  SQ1014.2
-002400*    SQ101M TESTS THE LEVEL 1 FACILITIES FOR CONTROL OF THE    *  SQ1014.2
-002500*    POSITION OF LINES ON A PRINTED PAGE.  THE PRINCIPAL       *  SQ1014.2
-002600*    FACILITY IS THE ADVANCING PHRASE OF THE WRITE STATEMENT   *  SQ1014.2
-002700*    WHEN THE ASSOCIATED PHYSICAL FILE IS DESIGNATED AS A      *  SQ1014.2
-002800*    PRINTER.  THE FROM PHRASE OF THE WRITE STATEMENT IS ALSO  *  SQ1014.2
-002900*    TESTED.                                                   *  SQ1014.2
-003000*                                                              *  SQ1014.2
-003100*    ALL POSSIBLE LEVEL 1 COMBINATIONS OF THE FORMAT OF THE    *  SQ1014.2
-003200*    ADVANCING PHRASE ARE TESTED WITH AND WITHOUT THE FROM     *  SQ1014.2
-003300*    PHRASE.  THE VALUES USED FOR INTEGER INCLUDE ONE-DIGIT    *  SQ1014.2
-003400*    AND TWO-DIGIT UNSIGNED NUMERIC LITERALS, EIGHTEEN DIGIT   *  SQ1014.2
-003500*    NUMERIC LITERALS WITH LEADING ZEROS, AND THE FIGURATIVE   *  SQ1014.2
-003600*    CONSTANT ZERO.  DATA ITEMS USED AS IDENTIFIER-2 INCLUDE   *  SQ1014.2
-003700*    LEVEL 77, LEVEL 01, AND SUBORDINATE ELEMENTARY ITEMS.  A  *  SQ1014.2
-003800*    SIMILAR RANGE OF TYPES, BUT INCLUDING GROUP ITEMS, IS     *  SQ1014.2
-003900*    USED FOR IDENTIFIER-2.                                    *  SQ1014.2
-004000*                                                              *  SQ1014.2
-004100*    IN ADDITION TO THE ABOVE TESTS, A TEST IS MADE TO ENSURE  *  SQ1014.2
-004200*    THAT CHARACTERS DESIGNATED TO BE PRINTED IN COLUMN 1 DO   *  SQ1014.2
-004300*    NOT ACT AS CARRIAGE CONTROL CHARACTERS.                   *  SQ1014.2
-004400*                                                              *  SQ1014.2
-004500*    BECAUSE OF THE NATURE OF THESE TESTS A "PASS" OR "FAIL"   *  SQ1014.2
-004600*    CANNOT BE DETERMINED WITHIN THE PROGRAM.  THE PRINTED     *  SQ1014.2
-004700*    OUTPUT MUST BE EXAMINED TO DETERMINE WHETHER EACH TEST    *  SQ1014.2
-004800*    HAS BEEN PASSED OR FAILED.                                *  SQ1014.2
-004900*                                                              *  SQ1014.2
-005000****************************************************************  SQ1014.2
-005100*                                                                 SQ1014.2
-005200*                                                                 SQ1014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
 005300 ENVIRONMENT DIVISION.                                            SQ1014.2
 005400 CONFIGURATION SECTION.                                           SQ1014.2
 005500 SOURCE-COMPUTER.                                                 SQ1014.2
 005600     GNU-Linux.                                                   SQ1014.2
 005700 OBJECT-COMPUTER.                                                 SQ1014.2
 005800     GNU-Linux.                                                   SQ1014.2
-005900*                                                                 SQ1014.2
+005900*                                                                         
 006000 INPUT-OUTPUT SECTION.                                            SQ1014.2
 006100 FILE-CONTROL.                                                    SQ1014.2
 006200     SELECT PRINT-FILE ASSIGN TO                                  SQ1014.2
 006300     "REPORT".                                                    SQ1014.2
-006400*                                                                 SQ1014.2
-007100*                                                                 SQ1014.2
+006400*                                                                         
+007100*                                                                         
 007200 DATA DIVISION.                                                   SQ1014.2
 007300 FILE SECTION.                                                    SQ1014.2
 007400 FD  PRINT-FILE                                                   SQ1014.2
 007800               .                                                  SQ1014.2
 007900 01  PRINT-REC    PICTURE X(120).                                 SQ1014.2
 008000 01  DUMMY-RECORD PICTURE X(120).                                 SQ1014.2
-009600*                                                                 SQ1014.2
-009700*                                                                 SQ1014.2
+009600*                                                                         
+009700*                                                                         
 009800 WORKING-STORAGE SECTION.                                         SQ1014.2
-009900*                                                                 SQ1014.2
-010000***************************************************************   SQ1014.2
-010100*                                                             *   SQ1014.2
-010200*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1014.2
-010300*                                                             *   SQ1014.2
-010400***************************************************************   SQ1014.2
-010500*                                                                 SQ1014.2
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
+010500*                                                                         
 010600 77  QU-OTE             PIC X   VALUE QUOTE.                      SQ1014.2
 010700 77  IDENTIFIER-2       PIC 99       VALUE 0.                     SQ1014.2
 010800 77  LONG-ZERO          PIC 9(18)    VALUE 0.                     SQ1014.2
 010900 77  LONG-ONE           PIC 9(18)    VALUE 1.                     SQ1014.2
 011000 01  IDENT-2-S99        PIC S99.                                  SQ1014.2
 011100 01  IDENT-2-C99        PIC 99  COMP.                             SQ1014.2
-011200*                                                                 SQ1014.2
+011200*                                                                         
 011300 01  ONE                PIC 9        VALUE 1.                     SQ1014.2
-011400*                                                                 SQ1014.2
+011400*                                                                         
 011500 01  SPACING-VALUES-1.                                            SQ1014.2
 011600     02 TWO               PIC 9      VALUE 2.                     SQ1014.2
 011700     02 SPACING-VALUES-2.                                         SQ1014.2
 011800        03 THREE            PIC 9    VALUE 3.                     SQ1014.2
 011900        03 SPACING-VALUES-3.                                      SQ1014.2
 012000           04 FOUR            PIC 9  VALUE 4.                     SQ1014.2
-012100*                                                                 SQ1014.2
+012100*                                                                         
 012200 01  CHAR-LINE.                                                   SQ1014.2
 012300     03  LIN-CH   PIC X.                                          SQ1014.2
 012400     03  FILLER   PIC X.                                          SQ1014.2
 012500     03  LIN-SER  PIC 999.                                        SQ1014.2
 012600     03  FILLER   PIC X(115).                                     SQ1014.2
-012700*                                                                 SQ1014.2
+012700*                                                                         
 012800 77  SEVENTY-SEVEN     PIC X(120)   VALUE "  THIS WAS WRITTEN FROMSQ1014.2
 012900-    " A 77 LEVEL ENTRY.  IT SHOULD BE 2 LINES BELOW AND 1 LINE ABSQ1014.2
 013000-    "OVE THE BRACKETING WRT-TEST LINES.".                        SQ1014.2
-013100*                                                                 SQ1014.2
+013100*                                                                         
 013200 77  SEVENTY-SEVEN-2    PIC X(120)   VALUE "THIS LINE WAS WRITTEN SQ1014.2
 013300-    "FROM A 77 LEVEL ENTRY.  IT SHOULD BE 7 LINES BELOW AND 1 LINSQ1014.2
 013400-    "E ABOVE THE BRACKETING WRT-TEST LINES.".                    SQ1014.2
-013500*                                                                 SQ1014.2
+013500*                                                                         
 013600 01  OH-ONE             PIC X(120)   VALUE "THIS LINE WAS WRITTEN SQ1014.2
 013700-    "FROM AN 01 LEVEL ENTRY. IT SHOULD BE 1 LINE BELOW AND 5 LINESQ1014.2
 013800-    "S ABOVE THE BRACKETING WRT-TEST LINES.".                    SQ1014.2
-013900*                                                                 SQ1014.2
+013900*                                                                         
 014000 01  LEVEL-1.                                                     SQ1014.2
 014100     03 OH-THREE        PIC X(120)   VALUE "THIS LINE WAS WRITTEN SQ1014.2
 014200-       "FROM AN 03 LEVEL ENTRY. IT SHOULD BE 1 LINE BELOW AND 6 LSQ1014.2
 014300-       "INES ABOVE THE BRACKETING WRT-TEST LINES.".              SQ1014.2
-014400*                                                                 SQ1014.2
+014400*                                                                         
 014500 01  TEST-LINE-1.                                                 SQ1014.2
 014600     02 FILLER          PIC X(20)  VALUE SPACE.                   SQ1014.2
 014700     02 FILLER          PIC X(20)  VALUE "THIS LINE SHOULD BE ".  SQ1014.2
@@ -126,7 +126,7 @@
 015000     02 LINES-ABOVE-1   PIC XX.                                   SQ1014.2
 015100     02 FILLER          PIC X(59)  VALUE                          SQ1014.2
 015200                  " LINES ABOVE THE BRACKETING WRT-TEST LINES".   SQ1014.2
-015300*                                                                 SQ1014.2
+015300*                                                                         
 015400 01  LEVEL-ONE.                                                   SQ1014.2
 015500     02 LEVEL-TWO.                                                SQ1014.2
 015600        03 TEST-LINE-2.                                           SQ1014.2
@@ -138,7 +138,7 @@
 016200           04 LINES-ABOVE-2   PIC XX.                             SQ1014.2
 016300           04 FILLER          PIC X(59)   VALUE                   SQ1014.2
 016400                  " LINES ABOVE THE BRACKETING WRT-TEST LINES".   SQ1014.2
-016500*                                                                 SQ1014.2
+016500*                                                                         
 016600 01  OVERPRINTED-LINE.                                            SQ1014.2
 016700     02 FILLER            PIC X(20)  VALUE SPACE.                 SQ1014.2
 016800     02 FILLER            PIC X(9)   VALUE "WRT-TEST-".           SQ1014.2
@@ -156,7 +156,7 @@
 018000     02 FILLER            PIC X(100) VALUE "THIS LINE SHOULD BE 1 SQ1014.2
 018100-       "LINE BELOW THE WRT-TEST LINE AND ALSO BE THE LAST LINE ONSQ1014.2
 018200-       " THIS PAGE".                                             SQ1014.2
-018300*                                                                 SQ1014.2
+018300*                                                                         
 018400 01  NEW-PAGE-LINE.                                               SQ1014.2
 018500     02 FILLER            PIC X(20)  VALUE SPACE.                 SQ1014.2
 018600     02 FILLER            PIC X(100) VALUE "THIS LINE SHOULD APPEASQ1014.2
@@ -165,7 +165,7 @@
 018900     02 FILLER            PIC X(20)  VALUE SPACE.                 SQ1014.2
 019000     02 FILLER            PIC X(100) VALUE "A WRT-TEST LINE SHOULDSQ1014.2
 019100-       " FOLLOW IMMEDIATELY ON THE NEXT LINE".                   SQ1014.2
-019200*                                                                 SQ1014.2
+019200*                                                                         
 019300 01  NOTE-1.                                                      SQ1014.2
 019400     02 FILLER          PIC X(40)    VALUE "BECAUSE OF THE NATURE SQ1014.2
 019500-    "OF THESE TESTS A ".                                         SQ1014.2
@@ -196,18 +196,18 @@
 022000 01  NOTE-7             PIC X(120)   VALUE "ONLY FIVE OF THE LETTESQ1014.2
 022100-    "RS A AND B SHOULD BE JUMBLED TOGETHER; THE REST SHOULD BE RESQ1014.2
 022200-    "ADABLE.  IF ANY OTHER LINE IS".                             SQ1014.2
-022300*                                                                 SQ1014.2
+022300*                                                                         
 022400 01  NOTE-8             PIC X(120)   VALUE                        SQ1014.2
 022500         "INVOLVED IN OVERPRINTING, AN ERROR HAS OCCURRED".       SQ1014.2
-022600*                                                                 SQ1014.2
-022700***************************************************************   SQ1014.2
-022800*                                                             *   SQ1014.2
-022900*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1014.2
-023000*                                                             *   SQ1014.2
-023100***************************************************************   SQ1014.2
-023200*                                                                 SQ1014.2
+022600*                                                                         
+022700*                                                                         
+022800*                                                                         
+022900*                                                                         
+023000*                                                                         
+023100*                                                                         
+023200*                                                                         
 023300 01  REC-SKEL-SUB   PIC 99.                                       SQ1014.2
-023400*                                                                 SQ1014.2
+023400*                                                                         
 023500 01  FILE-RECORD-INFORMATION-REC.                                 SQ1014.2
 023600     03 FILE-RECORD-INFO-SKELETON.                                SQ1014.2
 023700        05 FILLER                 PICTURE X(48)       VALUE       SQ1014.2
@@ -259,7 +259,7 @@
 028300           07 FILLER              PIC X(9).                       SQ1014.2
 028400           07 ALTERNATE-KEY2      PIC X(29).                      SQ1014.2
 028500           07 FILLER              PIC X(7).                       SQ1014.2
-028600*                                                                 SQ1014.2
+028600*                                                                         
 028700 01  TEST-RESULTS.                                                SQ1014.2
 028800     02 FILLER              PIC X      VALUE SPACE.               SQ1014.2
 028900     02 FEATURE             PIC X(24)  VALUE SPACE.               SQ1014.2
@@ -335,7 +335,7 @@
 035900   02  FILLER            PIC X(28)  VALUE                         SQ1014.2
 036000            " COPY - NOT FOR DISTRIBUTION".                       SQ1014.2
 036100   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1014.2
-036200*                                                                 SQ1014.2
+036200*                                                                         
 036300 01  CCVS-H-2B.                                                   SQ1014.2
 036400   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1014.2
 036500   02  TEST-ID           PIC X(9).                                SQ1014.2
@@ -408,36 +408,36 @@
 044200     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1014.2
 044300     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1014.2
 044400     GO TO CCVS1-EXIT.                                            SQ1014.2
-044500*                                                                 SQ1014.2
+044500*                                                                         
 044600 CCVS-INIT-FILE.                                                  SQ1014.2
 044700     ADD     1 TO REC-SKL-SUB.                                    SQ1014.2
 044800     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1014.2
 044900                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1014.2
-045000*                                                                 SQ1014.2
+045000*                                                                         
 045100 CLOSE-FILES.                                                     SQ1014.2
 045200     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1014.2
 045300     CLOSE   PRINT-FILE.                                          SQ1014.2
 046600 TERMINATE-CCVS.                                                  SQ1014.2
 046800     STOP    RUN.                                                 SQ1014.2
-046900*                                                                 SQ1014.2
+046900*                                                                         
 047000 INSPT.                                                           SQ1014.2
 047100     MOVE   "INSPT" TO P-OR-F.                                    SQ1014.2
 047200     ADD     1 TO INSPECT-COUNTER.                                SQ1014.2
-047300*                                                                 SQ1014.2
+047300*                                                                         
 047400 PASS.                                                            SQ1014.2
 047500     MOVE   "PASS " TO P-OR-F.                                    SQ1014.2
 047600     ADD     1 TO PASS-COUNTER.                                   SQ1014.2
-047700*                                                                 SQ1014.2
+047700*                                                                         
 047800 FAIL.                                                            SQ1014.2
 047900     MOVE   "FAIL*" TO P-OR-F.                                    SQ1014.2
 048000     ADD     1 TO ERROR-COUNTER.                                  SQ1014.2
-048100*                                                                 SQ1014.2
+048100*                                                                         
 048200 DE-LETE.                                                         SQ1014.2
 048300     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1014.2
 048400     MOVE   "*****" TO P-OR-F.                                    SQ1014.2
 048500     ADD     1 TO DELETE-COUNTER.                                 SQ1014.2
 048600     PERFORM PRINT-DETAIL.                                        SQ1014.2
-048700*                                                                 SQ1014.2
+048700*                                                                         
 048800 PRINT-DETAIL.                                                    SQ1014.2
 048900     IF REC-CT NOT EQUAL TO ZERO                                  SQ1014.2
 049000         MOVE   "." TO PARDOT-X                                   SQ1014.2
@@ -454,7 +454,7 @@
 050100     MOVE    SPACE TO CORRECT-X.                                  SQ1014.2
 050200     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1014.2
 050300     MOVE    SPACE TO RE-MARK.                                    SQ1014.2
-050400*                                                                 SQ1014.2
+050400*                                                                         
 050500 HEAD-ROUTINE.                                                    SQ1014.2
 050600     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1014.2
 050700     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1014.2
@@ -470,7 +470,7 @@
 051700 END-RTN-EXIT.                                                    SQ1014.2
 051800     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1014.2
 051900     PERFORM WRITE-LINE 2 TIMES.                                  SQ1014.2
-052000*                                                                 SQ1014.2
+052000*                                                                         
 052100 END-ROUTINE-1.                                                   SQ1014.2
 052200     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1014.2
 052300     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1014.2
@@ -503,7 +503,7 @@
 055000     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1014.2
 055100     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1014.2
 055200     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1014.2
-055300*                                                                 SQ1014.2
+055300*                                                                         
 055400 WRITE-LINE.                                                      SQ1014.2
 055500     ADD     1 TO RECORD-COUNT.                                   SQ1014.2
 055600     IF RECORD-COUNT GREATER 50                                   SQ1014.2
@@ -516,7 +516,7 @@
 056300         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1014.2
 056400         MOVE  ZERO TO RECORD-COUNT.                              SQ1014.2
 056500     PERFORM WRT-LN.                                              SQ1014.2
-056600*                                                                 SQ1014.2
+056600*                                                                         
 056700 WRT-LN.                                                          SQ1014.2
 056800     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1014.2
 056900     MOVE    SPACE TO DUMMY-RECORD.                               SQ1014.2
@@ -554,14 +554,14 @@
 060100     EXIT.                                                        SQ1014.2
 060200 CCVS1-EXIT.                                                      SQ1014.2
 060300     EXIT.                                                        SQ1014.2
-060400*                                                                 SQ1014.2
-060500****************************************************************  SQ1014.2
-060600*                                                              *  SQ1014.2
-060700*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1014.2
-060800*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1014.2
-060900*                                                              *  SQ1014.2
-061000****************************************************************  SQ1014.2
-061100*                                                                 SQ1014.2
+060400*                                                                         
+060500*                                                                         
+060600*                                                                         
+060700*                                                                         
+060800*                                                                         
+060900*                                                                         
+061000*                                                                         
+061100*                                                                         
 061200 SECT-SQ101-0001 SECTION.                                         SQ1014.2
 061300 WRT-PREAMBLE.                                                    SQ1014.2
 061400     MOVE NOTE-1 TO PRINT-REC.                                    SQ1014.2
@@ -582,26 +582,26 @@
 062900     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      SQ1014.2
 063000     MOVE SPACE TO DUMMY-RECORD.                                  SQ1014.2
 063100     PERFORM BLANK-LINE-PRINT.                                    SQ1014.2
-063200*                                                                 SQ1014.2
-063300****************************************************************  SQ1014.2
-063400*                                                              *  SQ1014.2
-063500*    THE STANDARD PAGE HEADING OF THE MONITOR OUTPUT AND THE   *  SQ1014.2
-063600*    PREAMBLE DESCRIBING MONTORING REQUIREMENTS WILL HAVE USED *  SQ1014.2
-063700*    24 LINES ON THE FIRST PAGE OF PRINTED OUTPUT.  THE TESTS  *  SQ1014.2
-063800*    ARE ARRANGED WHEREVER POSSIBLE SO THAT THE BLANK LINES    *  SQ1014.2
-063900*    WHICH MUST BE COUNTED DO NOT INCLUDE A BOUNDARY BETWEEN   *  SQ1014.2
-064000*    TWO PAGES.                                                *  SQ1014.2
-064100*                                                              *  SQ1014.2
-064200*    IT IS ASSUMED THAT A PHYSICAL PAGE CAN SHOW AT LEAST 60   *  SQ1014.2
-064300*    PRINTED LINES.  THERE ARE THUS AT LEAST 36 LINES LEFT ON  *  SQ1014.2
-064400*    THIS FIRST PAGE.                                          *  SQ1014.2
-064500*                                                              *  SQ1014.2
-064600****************************************************************  SQ1014.2
-064700*                                                                 SQ1014.2
+063200*                                                                         
+063300*                                                                         
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
+063700*                                                                         
+063800*                                                                         
+063900*                                                                         
+064000*                                                                         
+064100*                                                                         
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
+064700*                                                                         
 064800 WRT-INIT-GF-01.                                                  SQ1014.2
-064900*                                                                 SQ1014.2
-065000*    THIS TEST ADVANCES THE PRINT POSITION 8 LINES                SQ1014.2
-065100*                                                                 SQ1014.2
+064900*                                                                         
+065000*                                                                         
+065100*                                                                         
 065200     MOVE   "WRT BEFORE ADV INT LINES" TO FEATURE.                SQ1014.2
 065300     MOVE   "WRT-TEST-GF-01" TO PAR-NAME.                         SQ1014.2
 065400     GO TO   WRT-TEST-GF-01.                                      SQ1014.2
@@ -616,11 +616,11 @@
 066300     MOVE TEST-LINE-1 TO PRINT-REC.                               SQ1014.2
 066400     WRITE PRINT-REC BEFORE ADVANCING 7 LINES.                    SQ1014.2
 066500 WRT-END-GF-01.                                                   SQ1014.2
-066600*                                                                 SQ1014.2
+066600*                                                                         
 066700 WRT-INIT-GF-02.                                                  SQ1014.2
-066800*                                                                 SQ1014.2
-066900*    THIS TEST ADVANCES THE PRINT POSITION 7 LINES                SQ1014.2
-067000*                                                                 SQ1014.2
+066800*                                                                         
+066900*                                                                         
+067000*                                                                         
 067100     MOVE   "WRT BEFORE ADV INT LINE" TO FEATURE.                 SQ1014.2
 067200     MOVE   "WRT-TEST-GF-02" TO PAR-NAME.                         SQ1014.2
 067300     GO TO   WRT-TEST-GF-02.                                      SQ1014.2
@@ -635,11 +635,11 @@
 068200     MOVE TEST-LINE-1 TO DUMMY-RECORD.                            SQ1014.2
 068300     WRITE DUMMY-RECORD BEFORE ADVANCING 6 LINE.                  SQ1014.2
 068400 WRT-END-GF-02.                                                   SQ1014.2
-068500*                                                                 SQ1014.2
+068500*                                                                         
 068600 WRT-INIT-GF-03.                                                  SQ1014.2
-068700*                                                                 SQ1014.2
-068800*    THIS TEST ADVANCES THE PRINT POSITION 6 LINES                SQ1014.2
-068900*                                                                 SQ1014.2
+068700*                                                                         
+068800*                                                                         
+068900*                                                                         
 069000     MOVE   "WRT BEFORE INTEGER LINES" TO FEATURE.                SQ1014.2
 069100     MOVE   "WRT-TEST-GF-03" TO PAR-NAME.                         SQ1014.2
 069200     GO TO   WRT-TEST-GF-03.                                      SQ1014.2
@@ -654,11 +654,11 @@
 070100     MOVE    TEST-LINE-2 TO PRINT-REC.                            SQ1014.2
 070200     WRITE   PRINT-REC BEFORE 5 LINES.                            SQ1014.2
 070300 WRT-END-GF-03.                                                   SQ1014.2
-070400*                                                                 SQ1014.2
+070400*                                                                         
 070500 WRT-INIT-GF-04.                                                  SQ1014.2
-070600*                                                                 SQ1014.2
-070700*    THIS TEST ADVANCES THE PRINT POSITION 5 LINES                SQ1014.2
-070800*                                                                 SQ1014.2
+070600*                                                                         
+070700*                                                                         
+070800*                                                                         
 070900     MOVE   "WRT BEFORE INTEGER LINE" TO FEATURE.                 SQ1014.2
 071000     MOVE   "WRT-TEST-GF-04" TO PAR-NAME.                         SQ1014.2
 071100     GO TO   WRT-TEST-GF-04.                                      SQ1014.2
@@ -673,11 +673,11 @@
 072000     MOVE TEST-LINE-2 TO DUMMY-RECORD.                            SQ1014.2
 072100     WRITE DUMMY-RECORD BEFORE 4 LINE.                            SQ1014.2
 072200 WRT-END-GF-04.                                                   SQ1014.2
-072300*                                                                 SQ1014.2
+072300*                                                                         
 072400 WRT-INIT-GF-05.                                                  SQ1014.2
-072500*                                                                 SQ1014.2
-072600*    THIS TEST ADVANCES THE PRINT POSITION 5 LINES                SQ1014.2
-072700*                                                                 SQ1014.2
+072500*                                                                         
+072600*                                                                         
+072700*                                                                         
 072800     MOVE   "WRT AFTER ADV INT LINES" TO FEATURE.                 SQ1014.2
 072900     MOVE   "WRT-TEST-GF-05" TO PAR-NAME.                         SQ1014.2
 073000     GO TO   WRT-TEST-GF-05.                                      SQ1014.2
@@ -692,15 +692,15 @@
 073900     MOVE TEST-LINE-1 TO PRINT-REC.                               SQ1014.2
 074000     WRITE PRINT-REC AFTER ADVANCING 3 LINES.                     SQ1014.2
 074100 WRT-END-GF-05.                                                   SQ1014.2
-074200*                                                                 SQ1014.2
+074200*                                                                         
 074300 WRT-INIT-GF-06.                                                  SQ1014.2
-074400*                                                                 SQ1014.2
-074500*    THE NEXT TEST IN NORMAL SEQUENCE WOULD COME VERY NEAR TO     SQ1014.2
-074600*    OVERFLOWING THE CURRENT PAGE, SO THE FIRST OF THE TESTS OF   SQ1014.2
-074700*    ADVANCING PAGE IS INSERTED HERE.  IT SHOULD LEAVE LINE 2     SQ1014.2
-074800*    ON THE NEW PAGE AS THE CURRENT LINE, SO THAT THE FIRST       SQ1014.2
-074900*    WRT-TEST LINE ON THE NEW PAGE IS THE THIRD PRINTABLE LINE.   SQ1014.2
-075000*                                                                 SQ1014.2
+074400*                                                                         
+074500*                                                                         
+074600*                                                                         
+074700*                                                                         
+074800*                                                                         
+074900*                                                                         
+075000*                                                                         
 075100     MOVE   "WRT BEFORE ADV PAGE" TO FEATURE.                     SQ1014.2
 075200     MOVE   "WRT-TEST-GF-06" TO PAR-NAME.                         SQ1014.2
 075300     GO TO   WRT-TEST-GF-06.                                      SQ1014.2
@@ -717,11 +717,11 @@
 076400     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 076500     WRITE   PRINT-REC BEFORE ADVANCING 0 LINE.                   SQ1014.2
 076600 WRT-END-GF-06.                                                   SQ1014.2
-076700*                                                                 SQ1014.2
+076700*                                                                         
 076800 WRT-INIT-GF-07.                                                  SQ1014.2
-076900*                                                                 SQ1014.2
-077000*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES TO LINE 6      SQ1014.2
-077100*                                                                 SQ1014.2
+076900*                                                                         
+077000*                                                                         
+077100*                                                                         
 077200     MOVE   "WRT AFTER ADV INT LINE" TO FEATURE.                  SQ1014.2
 077300     MOVE   "WRT-TEST-GF-07" TO PAR-NAME.                         SQ1014.2
 077400     GO TO   WRT-TEST-GF-07.                                      SQ1014.2
@@ -736,14 +736,14 @@
 078300     MOVE    TEST-LINE-1 TO DUMMY-RECORD.                         SQ1014.2
 078400     WRITE   DUMMY-RECORD AFTER ADVANCING 2 LINES.                SQ1014.2
 078500 WRT-END-GF-07.                                                   SQ1014.2
-078600*                                                                 SQ1014.2
+078600*                                                                         
 078700 WRT-INIT-GF-08.                                                  SQ1014.2
-078800*                                                                 SQ1014.2
-078900*    THIS TEST IS IN TWO PARTS.  IT PRINTS ON THE LINE BELOW      SQ1014.2
-079000*    THE MARKER LINE, THEN OVERPRINTS THAT LINE, ADVANCING ZERO   SQ1014.2
-079100*    LINES AFTER PRINTING.                                        SQ1014.2
-079200*    TOTAL PAPER ADVANCE IS TWO LINES, TO LINE 8.                 SQ1014.2
-079300*                                                                 SQ1014.2
+078800*                                                                         
+078900*                                                                         
+079000*                                                                         
+079100*                                                                         
+079200*                                                                         
+079300*                                                                         
 079400     MOVE   "WRT AFTER INT LINE/S" TO FEATURE.                    SQ1014.2
 079500     MOVE   "WRT-TEST-GF-08" TO PAR-NAME.                         SQ1014.2
 079600     GO TO   WRT-TEST-GF-08.                                      SQ1014.2
@@ -760,11 +760,11 @@
 080700     MOVE    OVERPRINT-LINE TO PRINT-REC.                         SQ1014.2
 080800     WRITE   PRINT-REC AFTER 0 LINE.                              SQ1014.2
 080900 WRT-END-GF-08.                                                   SQ1014.2
-081000*                                                                 SQ1014.2
+081000*                                                                         
 081100 WRT-INIT-GF-09.                                                  SQ1014.2
-081200*                                                                 SQ1014.2
-081300*    THIS TEST ADVANCES THE PRINT POSITION 12 LINES, TO LINE 20   SQ1014.2
-081400*                                                                 SQ1014.2
+081200*                                                                         
+081300*                                                                         
+081400*                                                                         
 081500     MOVE    1 TO REC-CT.                                         SQ1014.2
 081600     MOVE   "WRT FRM BFR ADV INT LINS" TO FEATURE.                SQ1014.2
 081700     MOVE   "WRT-TEST-GF-09" TO PAR-NAME.                         SQ1014.2
@@ -779,11 +779,11 @@
 082600     MOVE   "11" TO LINES-ABOVE-1.                                SQ1014.2
 082700     WRITE  PRINT-REC FROM TEST-LINE-1 BEFORE ADVANCING 10 LINES. SQ1014.2
 082800 WRT-END-GF-09.                                                   SQ1014.2
-082900*                                                                 SQ1014.2
+082900*                                                                         
 083000 WRT-INIT-GF-10.                                                  SQ1014.2
-083100*                                                                 SQ1014.2
-083200*    THIS TEST ADVANCES THE PRINT POSITION 22 LINES, TO LINE 44   SQ1014.2
-083300*                                                                 SQ1014.2
+083100*                                                                         
+083200*                                                                         
+083300*                                                                         
 083400     MOVE   "WRT FRM BFR ADV INT LINE" TO FEATURE.                SQ1014.2
 083500     MOVE   "WRT-TEST-GF-10" TO PAR-NAME.                         SQ1014.2
 083600     GO TO   WRT-TEST-GF-10.                                      SQ1014.2
@@ -797,11 +797,11 @@
 084400     MOVE   "21" TO LINES-ABOVE-2.                                SQ1014.2
 084500     WRITE DUMMY-RECORD FROM TEST-LINE-2 BEFORE ADVANCING 20 LINE.SQ1014.2
 084600 WRT-END-GF-10.                                                   SQ1014.2
-084700*                                                                 SQ1014.2
+084700*                                                                         
 084800 WRT-INIT-GF-11.                                                  SQ1014.2
-084900*                                                                 SQ1014.2
-085000*    THIS TEST ADVANCES THE PRINT POSITION 13 LINES, TO LINE 57   SQ1014.2
-085100*                                                                 SQ1014.2
+084900*                                                                         
+085000*                                                                         
+085100*                                                                         
 085200     MOVE   "WRT FRM BEFORE INT LINES" TO FEATURE.                SQ1014.2
 085300     MOVE   "WRT-TEST-GF-11" TO PAR-NAME.                         SQ1014.2
 085400     GO TO   WRT-TEST-GF-11.                                      SQ1014.2
@@ -815,15 +815,15 @@
 086200     MOVE   "12" TO LINES-ABOVE-1.                                SQ1014.2
 086300     WRITE   PRINT-REC FROM TEST-LINE-1 BEFORE 11 LINES.          SQ1014.2
 086400 WRT-END-GF-11.                                                   SQ1014.2
-086500*                                                                 SQ1014.2
+086500*                                                                         
 086600 WRT-INIT-GF-12.                                                  SQ1014.2
-086700*                                                                 SQ1014.2
-086800*    THE NEXT TEST IN NORMAL SEQUENCE WOULD PROBABLY OVERFLOW     SQ1014.2
-086900*    THE CURRENT PAGE, SO ANOTHER TEST OF ADVANCING PAGE IS       SQ1014.2
-087000*    INSERTED HERE.  IT SHOULD LEAVE LINE 2 ON THE NEW PAGE AS    SQ1014.2
-087100*    THE CURRENT LINE, SO THAT THE FIRST WRT-TEST LINE ON THE     SQ1014.2
-087200*    NEW PAGE IS ON THE THIRD PRINTABLE LINE.                     SQ1014.2
-087300*                                                                 SQ1014.2
+086700*                                                                         
+086800*                                                                         
+086900*                                                                         
+087000*                                                                         
+087100*                                                                         
+087200*                                                                         
+087300*                                                                         
 087400     MOVE   "WRITE BEFORE PAGE" TO FEATURE.                       SQ1014.2
 087500     MOVE   "WRT-TEST-GF-12" TO PAR-NAME.                         SQ1014.2
 087600     GO TO   WRT-TEST-GF-12.                                      SQ1014.2
@@ -840,11 +840,11 @@
 088700     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 088800     WRITE   PRINT-REC BEFORE ADVANCING 0 LINE.                   SQ1014.2
 088900 WRT-END-GF-12.                                                   SQ1014.2
-089000*                                                                 SQ1014.2
+089000*                                                                         
 089100 WRT-INIT-GF-13.                                                  SQ1014.2
-089200*                                                                 SQ1014.2
-089300*    THIS TEST ADVANCES THE PRINT POSITION 42 LINES, TO LINE 44   SQ1014.2
-089400*                                                                 SQ1014.2
+089200*                                                                         
+089300*                                                                         
+089400*                                                                         
 089500     MOVE   "WRT FROM BEFORE INT LINE" TO FEATURE.                SQ1014.2
 089600     MOVE   "WRT-TEST-GF-13" TO PAR-NAME.                         SQ1014.2
 089700     GO TO   WRT-TEST-GF-13.                                      SQ1014.2
@@ -858,15 +858,15 @@
 090500     MOVE "41" TO LINES-ABOVE-2.                                  SQ1014.2
 090600     WRITE DUMMY-RECORD FROM TEST-LINE-2 BEFORE 40 LINE.          SQ1014.2
 090700 WRT-END-GF-13.                                                   SQ1014.2
-090800*                                                                 SQ1014.2
+090800*                                                                         
 090900 WRT-INIT-GF-14.                                                  SQ1014.2
-091000*                                                                 SQ1014.2
-091100*    THE NEXT TEST IN NORMAL SEQUENCE WOULD PROBABLY OVERFLOW     SQ1014.2
-091200*    THE CURRENT PAGE, SO ANOTHER TEST OF ADVANCING PAGE IS       SQ1014.2
-091300*    INSERTED HERE.  IT SHOULD LEAVE LINE 2 ON THE NEW PAGE AS    SQ1014.2
-091400*    THE CURRENT LINE, SO THAT THE FIRST WRT-TEST LINE ON THE     SQ1014.2
-091500*    NEW PAGE IS ON THE THIRD PRINTABLE LINE.                     SQ1014.2
-091600*                                                                 SQ1014.2
+091000*                                                                         
+091100*                                                                         
+091200*                                                                         
+091300*                                                                         
+091400*                                                                         
+091500*                                                                         
+091600*                                                                         
 091700     MOVE   "WRT AFTER ADV PAGE" TO FEATURE.                      SQ1014.2
 091800     MOVE   "WRT-TEST-GF-14" TO PAR-NAME.                         SQ1014.2
 091900     GO TO   WRT-TEST-GF-14.                                      SQ1014.2
@@ -881,11 +881,11 @@
 092800     MOVE NEXT-LINE TO PRINT-REC.                                 SQ1014.2
 092900     WRITE PRINT-REC AFTER ADVANCING 1 LINE.                      SQ1014.2
 093000 WRT-END-GF-14.                                                   SQ1014.2
-093100*                                                                 SQ1014.2
+093100*                                                                         
 093200 WRT-INIT-GF-15.                                                  SQ1014.2
-093300*                                                                 SQ1014.2
-093400*    THIS TEST ADVANCES THE PRINT POSITION 52 LINES, TO LINE 54   SQ1014.2
-093500*                                                                 SQ1014.2
+093300*                                                                         
+093400*                                                                         
+093500*                                                                         
 093600     MOVE   "WRT FRM AFT ADV INT LINS" TO FEATURE.                SQ1014.2
 093700     MOVE   "WRT-TEST-GF-15" TO PAR-NAME.                         SQ1014.2
 093800     GO TO   WRT-TEST-GF-15.                                      SQ1014.2
@@ -899,11 +899,11 @@
 094600     MOVE "1" TO LINES-ABOVE-1.                                   SQ1014.2
 094700     WRITE PRINT-REC FROM TEST-LINE-1 AFTER ADVANCING 50 LINES.   SQ1014.2
 094800 WRT-END-GF-15.                                                   SQ1014.2
-094900*                                                                 SQ1014.2
+094900*                                                                         
 095000 WRT-INIT-GF-16.                                                  SQ1014.2
-095100*                                                                 SQ1014.2
-095200*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 55    SQ1014.2
-095300*                                                                 SQ1014.2
+095100*                                                                         
+095200*                                                                         
+095300*                                                                         
 095400     MOVE   "WRT FRM AFT ADV INT LINE" TO FEATURE.                SQ1014.2
 095500     MOVE   "WRT-TEST-GF-16" TO PAR-NAME.                         SQ1014.2
 095600     GO TO   WRT-TEST-GF-16.                                      SQ1014.2
@@ -917,15 +917,15 @@
 096400     MOVE   "1" TO LINES-ABOVE-1.                                 SQ1014.2
 096500     WRITE   PRINT-REC FROM TEST-LINE-1 AFTER ADVANCING 1 LINE.   SQ1014.2
 096600 WRT-END-GF-16.                                                   SQ1014.2
-096700*                                                                 SQ1014.2
+096700*                                                                         
 096800 WRT-INIT-GF-17.                                                  SQ1014.2
-096900*                                                                 SQ1014.2
-097000*    THE NEXT TEST IN NORMAL SEQUENCE WOULD PROBABLY OVERFLOW     SQ1014.2
-097100*    THE CURRENT PAGE, SO ANOTHER TEST OF ADVANCING PAGE IS       SQ1014.2
-097200*    INSERTED HERE.  IT SHOULD LEAVE LINE 2 ON THE NEW PAGE AS    SQ1014.2
-097300*    THE CURRENT LINE, SO THAT THE FIRST WRT-TEST LINE ON THE     SQ1014.2
-097400*    NEW PAGE IS ON THE THIRD PRINTABLE LINE.                     SQ1014.2
-097500*                                                                 SQ1014.2
+096900*                                                                         
+097000*                                                                         
+097100*                                                                         
+097200*                                                                         
+097300*                                                                         
+097400*                                                                         
+097500*                                                                         
 097600     MOVE   "WRITE AFTER PAGE" TO FEATURE.                        SQ1014.2
 097700     MOVE   "WRT-TEST-GF-17" TO PAR-NAME.                         SQ1014.2
 097800     GO TO   WRT-TEST-GF-17.                                      SQ1014.2
@@ -940,11 +940,11 @@
 098700     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 098800     WRITE   PRINT-REC AFTER ADVANCING 1 LINE.                    SQ1014.2
 098900 WRT-END-GF-17.                                                   SQ1014.2
-099000*                                                                 SQ1014.2
+099000*                                                                         
 099100 WRT-INIT-GF-18.                                                  SQ1014.2
-099200*                                                                 SQ1014.2
-099300*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 5     SQ1014.2
-099400*                                                                 SQ1014.2
+099200*                                                                         
+099300*                                                                         
+099400*                                                                         
 099500     MOVE   "WRT FRM AFTER INT LINE/S" TO FEATURE.                SQ1014.2
 099600     MOVE   "WRT-TEST-GF-18" TO PAR-NAME.                         SQ1014.2
 099700     GO TO   WRT-TEST-GF-18.                                      SQ1014.2
@@ -961,11 +961,11 @@
 100800     WRITE PRINT-REC FROM OVERPRINT-LINE AFTER                    SQ1014.2
 100900              000000000000000000 LINES.                           SQ1014.2
 101000 WRT-END-GF-18.                                                   SQ1014.2
-101100*                                                                 SQ1014.2
+101100*                                                                         
 101200 WRT-INIT-GF-19.                                                  SQ1014.2
-101300*                                                                 SQ1014.2
-101400*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 8     SQ1014.2
-101500*                                                                 SQ1014.2
+101300*                                                                         
+101400*                                                                         
+101500*                                                                         
 101600     MOVE   "WRITE" TO FEATURE.                                   SQ1014.2
 101700     MOVE   "WRT-TEST-GF-19" TO PAR-NAME.                         SQ1014.2
 101800     GO TO   WRT-TEST-GF-19.                                      SQ1014.2
@@ -980,11 +980,11 @@
 102700     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 102800     WRITE   PRINT-REC.                                           SQ1014.2
 102900 WRT-END-GF-19.                                                   SQ1014.2
-103000*                                                                 SQ1014.2
+103000*                                                                         
 103100 WRT-INIT-GF-20.                                                  SQ1014.2
-103200*                                                                 SQ1014.2
-103300*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 11    SQ1014.2
-103400*                                                                 SQ1014.2
+103200*                                                                         
+103300*                                                                         
+103400*                                                                         
 103500     MOVE   "WRITE FROM" TO FEATURE.                              SQ1014.2
 103600     MOVE   "WRT-TEST-GF-20" TO PAR-NAME.                         SQ1014.2
 103700     GO TO   WRT-TEST-GF-20.                                      SQ1014.2
@@ -998,12 +998,12 @@
 104500     MOVE   "1" TO LINES-ABOVE-1.                                 SQ1014.2
 104600     WRITE   PRINT-REC FROM TEST-LINE-1.                          SQ1014.2
 104700 WRT-END-GF-20.                                                   SQ1014.2
-104800*                                                                 SQ1014.2
+104800*                                                                         
 104900 WRT-INIT-GF-21.                                                  SQ1014.2
-105000*                                                                 SQ1014.2
-105100*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 14    SQ1014.2
-105200*    IDENTIFIER-1 IS A SUBORDINATE GROUP ITEM                     SQ1014.2
-105300*                                                                 SQ1014.2
+105000*                                                                         
+105100*                                                                         
+105200*                                                                         
+105300*                                                                         
 105400     MOVE   "WRT SUBGR BFR ADV INT" TO FEATURE.                   SQ1014.2
 105500     MOVE   "WRT-TEST-GF-21" TO PAR-NAME.                         SQ1014.2
 105600     GO TO   WRT-TEST-GF-21.                                      SQ1014.2
@@ -1017,12 +1017,12 @@
 106400     MOVE   "2" TO LINES-ABOVE-2.                                 SQ1014.2
 106500     WRITE   PRINT-REC FROM TEST-LINE-2 BEFORE ADVANCING 1.       SQ1014.2
 106600 WRT-END-GF-21.                                                   SQ1014.2
-106700*                                                                 SQ1014.2
+106700*                                                                         
 106800 WRT-INIT-GF-22.                                                  SQ1014.2
-106900*                                                                 SQ1014.2
-107000*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 18    SQ1014.2
-107100*    IDENTIFIER-1 IS A SUBORDINATE GROUP ITEM                     SQ1014.2
-107200*                                                                 SQ1014.2
+106900*                                                                         
+107000*                                                                         
+107100*                                                                         
+107200*                                                                         
 107300     MOVE   "WRT SUBGRP BEFORE INT" TO FEATURE.                   SQ1014.2
 107400     MOVE   "WRT-TEST-GF-22" TO PAR-NAME.                         SQ1014.2
 107500     GO TO   WRT-TEST-GF-22.                                      SQ1014.2
@@ -1036,11 +1036,11 @@
 108300     MOVE   "3" TO LINES-ABOVE-2.                                 SQ1014.2
 108400     WRITE   PRINT-REC FROM TEST-LINE-2 BEFORE 2.                 SQ1014.2
 108500 WRT-END-GF-22.                                                   SQ1014.2
-108600*                                                                 SQ1014.2
+108600*                                                                         
 108700 WRT-INIT-GF-23.                                                  SQ1014.2
-108800*                                                                 SQ1014.2
-108900*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 21    SQ1014.2
-109000*                                                                 SQ1014.2
+108800*                                                                         
+108900*                                                                         
+109000*                                                                         
 109100     MOVE   "WRT FROM 77 AFT ADV INT" TO FEATURE.                 SQ1014.2
 109200     MOVE   "WRT-TEST-23" TO PAR-NAME.                            SQ1014.2
 109300     GO TO   WRT-TEST-GF-23.                                      SQ1014.2
@@ -1052,11 +1052,11 @@
 109900     PERFORM WRITE-TEST-LINE.                                     SQ1014.2
 110000     WRITE PRINT-REC FROM SEVENTY-SEVEN AFTER ADVANCING 1.        SQ1014.2
 110100 WRT-END-GF-23.                                                   SQ1014.2
-110200*                                                                 SQ1014.2
+110200*                                                                         
 110300 WRT-INIT-GF-24.                                                  SQ1014.2
-110400*                                                                 SQ1014.2
-110500*    THIS TEST ADVANCES THE PRINT POSITION 5 LINES, TO LINE 26    SQ1014.2
-110600*                                                                 SQ1014.2
+110400*                                                                         
+110500*                                                                         
+110600*                                                                         
 110700     MOVE   "WRT FROM AFTER INT" TO FEATURE.                      SQ1014.2
 110800     MOVE   "WRT-TEST-GF-24" TO PAR-NAME.                         SQ1014.2
 110900     GO TO   WRT-TEST-GF-24.                                      SQ1014.2
@@ -1070,11 +1070,11 @@
 111700     MOVE   "1" TO LINES-ABOVE-1.                                 SQ1014.2
 111800     WRITE   PRINT-REC FROM TEST-LINE-1 AFTER 3.                  SQ1014.2
 111900 WRT-END-GF-24.                                                   SQ1014.2
-112000*                                                                 SQ1014.2
+112000*                                                                         
 112100 WRT-INIT-GF-25.                                                  SQ1014.2
-112200*                                                                 SQ1014.2
-112300*    THIS TEST ADVANCES THE PRINT POSITION 2 LINES, TO LINE 28    SQ1014.2
-112400*                                                                 SQ1014.2
+112200*                                                                         
+112300*                                                                         
+112400*                                                                         
 112500     MOVE   "WRT BEFORE ADV ZERO" TO FEATURE.                     SQ1014.2
 112600     MOVE   "WRT-TEST-GF-25" TO PAR-NAME.                         SQ1014.2
 112700     GO TO   WRT-TEST-GF-25.                                      SQ1014.2
@@ -1089,11 +1089,11 @@
 113600     MOVE TEST-LINE-1 TO PRINT-REC.                               SQ1014.2
 113700     WRITE PRINT-REC BEFORE ADVANCING ZERO.                       SQ1014.2
 113800 WRT-END-GF-25.                                                   SQ1014.2
-113900*                                                                 SQ1014.2
+113900*                                                                         
 114000 WRT-INIT-GF-26.                                                  SQ1014.2
-114100*                                                                 SQ1014.2
-114200*    THIS TEST ADVANCES THE PRINT POSITION 7 LINES, TO LINE 35    SQ1014.2
-114300*                                                                 SQ1014.2
+114100*                                                                         
+114200*                                                                         
+114300*                                                                         
 114400     MOVE   "WRT BEFORE INT" TO FEATURE.                          SQ1014.2
 114500     MOVE   "WRT-TEST-GF-26" TO PAR-NAME.                         SQ1014.2
 114600     GO TO   WRT-TEST-GF-26.                                      SQ1014.2
@@ -1108,11 +1108,11 @@
 115500     MOVE    TEST-LINE-2 TO PRINT-REC.                            SQ1014.2
 115600     WRITE   PRINT-REC BEFORE 5.                                  SQ1014.2
 115700 WRT-END-GF-26.                                                   SQ1014.2
-115800*                                                                 SQ1014.2
+115800*                                                                         
 115900 WRT-INIT-GF-27.                                                  SQ1014.2
-116000*                                                                 SQ1014.2
-116100*    THIS TEST ADVANCES THE PRINT POSITION 7 LINES, TO LINE 42    SQ1014.2
-116200*                                                                 SQ1014.2
+116000*                                                                         
+116100*                                                                         
+116200*                                                                         
 116300     MOVE   "WRT AFTER ADVANCING INT" TO FEATURE.                 SQ1014.2
 116400     MOVE   "WRT-TEST-GF-27" TO PAR-NAME.                         SQ1014.2
 116500     GO TO   WRT-TEST-GF-27.                                      SQ1014.2
@@ -1127,11 +1127,11 @@
 117400     MOVE    TEST-LINE-2 TO PRINT-REC.                            SQ1014.2
 117500     WRITE   PRINT-REC AFTER ADVANCING 5.                         SQ1014.2
 117600 WRT-END-GF-27.                                                   SQ1014.2
-117700*                                                                 SQ1014.2
+117700*                                                                         
 117800 WRT-INIT-GF-28.                                                  SQ1014.2
-117900*                                                                 SQ1014.2
-118000*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 45    SQ1014.2
-118100*                                                                 SQ1014.2
+117900*                                                                         
+118000*                                                                         
+118100*                                                                         
 118200     MOVE   "WRT AFTER INT" TO FEATURE.                           SQ1014.2
 118300     MOVE   "WRT-TEST-GF-28" TO PAR-NAME.                         SQ1014.2
 118400     GO TO   WRT-TEST-GF-28.                                      SQ1014.2
@@ -1146,14 +1146,14 @@
 119300     MOVE    TEST-LINE-2 TO PRINT-REC.                            SQ1014.2
 119400     WRITE   PRINT-REC AFTER 1.                                   SQ1014.2
 119500 WRT-END-GF-28.                                                   SQ1014.2
-119600*                                                                 SQ1014.2
+119600*                                                                         
 119700 WRT-INIT-GF-29.                                                  SQ1014.2
-119800*                                                                 SQ1014.2
-119900*    THIS TEST ADVANCES THE PRINT POSITION TO A NEW PAGE.  IT     SQ1014.2
-120000*    SHOULD LEAVE LINE 2 ON THE NEW PAGE AS THE CURRENT LINE, SO  SQ1014.2
-120100*    THAT THE FIRST WRT-TEST LINE ON THE NEW PAGE IS ON THE       SQ1014.2
-120200*    THIRD PRINTABLE LINE.                                        SQ1014.2
-120300*                                                                 SQ1014.2
+119800*                                                                         
+119900*                                                                         
+120000*                                                                         
+120100*                                                                         
+120200*                                                                         
+120300*                                                                         
 120400     MOVE   "WRT FROM BEFORE ADV PAGE" TO FEATURE.                SQ1014.2
 120500     MOVE   "WRT-TEST-GF-29" TO PAR-NAME.                         SQ1014.2
 120600     GO TO   WRT-TEST-GF-29.                                      SQ1014.2
@@ -1169,13 +1169,13 @@
 121600     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 121700     WRITE   PRINT-REC BEFORE ADVANCING 0 LINE.                   SQ1014.2
 121800 WRT-END-GF-29.                                                   SQ1014.2
-121900*                                                                 SQ1014.2
+121900*                                                                         
 122000 WRT-INIT-GF-30.                                                  SQ1014.2
-122100*                                                                 SQ1014.2
-122200*    THIS TEST ADVANCES THE PRINT POSITION MANY LINES,            SQ1014.2
-122300*    OVERFLOWING SEVERAL PAGES.  NO SPECIAL PROVISION IS MADE     SQ1014.2
-122400*    FOR OVERFLOW HANDLING.                                       SQ1014.2
-122500*                                                                 SQ1014.2
+122100*                                                                         
+122200*                                                                         
+122300*                                                                         
+122400*                                                                         
+122500*                                                                         
 122600     MOVE   "CHARACTERS IN COLUMN 1" TO FEATURE.                  SQ1014.2
 122700     MOVE   "WRT-TEST-GF-30" TO PAR-NAME.                         SQ1014.2
 122800     GO TO   WRT-TEST-GF-30.                                      SQ1014.2
@@ -1286,14 +1286,14 @@
 133300     MOVE "z" TO LIN-CH PERFORM COL-1-CHAR-PRINT.                 SQ1014.2
 133400     MOVE QU-OTE TO LIN-CH PERFORM COL-1-CHAR-PRINT.              SQ1014.2
 133500 WRT-END-GF-30.                                                   SQ1014.2
-133600*                                                                 SQ1014.2
+133600*                                                                         
 133700 WRT-INIT-GF-31.                                                  SQ1014.2
-133800*                                                                 SQ1014.2
-133900*    THIS TEST ADVANCES THE PRINT POSITION TO A NEW PAGE.  IT     SQ1014.2
-134000*    SHOULD LEAVE LINE 2 ON THE NEW PAGE AS THE CURRENT LINE, SO  SQ1014.2
-134100*    THAT THE FIRST WRT-TEST LINE ON THE NEW PAGE IS ON THE       SQ1014.2
-134200*    THIRD PRINTABLE LINE.                                        SQ1014.2
-134300*                                                                 SQ1014.2
+133800*                                                                         
+133900*                                                                         
+134000*                                                                         
+134100*                                                                         
+134200*                                                                         
+134300*                                                                         
 134400     MOVE   "WRT FROM BEFORE PAGE" TO FEATURE.                    SQ1014.2
 134500     MOVE   "WRT-TEST-GF-31" TO PAR-NAME.                         SQ1014.2
 134600     GO TO   WRT-TEST-GF-31.                                      SQ1014.2
@@ -1309,11 +1309,11 @@
 135600     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 135700     WRITE   PRINT-REC BEFORE ADVANCING 0 LINE.                   SQ1014.2
 135800 WRT-END-GF-31.                                                   SQ1014.2
-135900*                                                                 SQ1014.2
+135900*                                                                         
 136000 WRT-INIT-GF-32.                                                  SQ1014.2
-136100*                                                                 SQ1014.2
-136200*    THIS TEST ADVANCES THE PRINT POSITION 2 LINES, TO LINE 5     SQ1014.2
-136300*                                                                 SQ1014.2
+136100*                                                                         
+136200*                                                                         
+136300*                                                                         
 136400     MOVE   "WRT FRM BFR ADV P99 LINE" TO FEATURE.                SQ1014.2
 136500     MOVE   "WRT-TEST-GF-32" TO PAR-NAME.                         SQ1014.2
 136600     GO TO   WRT-TEST-GF-32.                                      SQ1014.2
@@ -1329,11 +1329,11 @@
 137600     WRITE PRINT-REC FROM TEST-LINE-1 BEFORE ADVANCING            SQ1014.2
 137700              IDENTIFIER-2 LINE.                                  SQ1014.2
 137800 WRT-END-GF-32.                                                   SQ1014.2
-137900*                                                                 SQ1014.2
+137900*                                                                         
 138000 WRT-INIT-GF-33.                                                  SQ1014.2
-138100*                                                                 SQ1014.2
-138200*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 8     SQ1014.2
-138300*                                                                 SQ1014.2
+138100*                                                                         
+138200*                                                                         
+138300*                                                                         
 138400     MOVE   "WRT FRM BFR ADV P99 LINS" TO FEATURE.                SQ1014.2
 138500     MOVE   "WRT-TEST-GF-33" TO PAR-NAME.                         SQ1014.2
 138600     GO TO   WRT-TEST-GF-33.                                      SQ1014.2
@@ -1349,11 +1349,11 @@
 139600     WRITE PRINT-REC FROM TEST-LINE-1 BEFORE ADVANCING            SQ1014.2
 139700              IDENTIFIER-2 LINES.                                 SQ1014.2
 139800 WRT-END-GF-33.                                                   SQ1014.2
-139900*                                                                 SQ1014.2
+139900*                                                                         
 140000 WRT-INIT-GF-34.                                                  SQ1014.2
-140100*                                                                 SQ1014.2
-140200*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 12    SQ1014.2
-140300*                                                                 SQ1014.2
+140100*                                                                         
+140200*                                                                         
+140300*                                                                         
 140400     MOVE "WRT FRM BEFORE ADV PIC99" TO FEATURE.                  SQ1014.2
 140500     MOVE "WRT-TEST-GF-34" TO PAR-NAME.                           SQ1014.2
 140600     GO TO   WRT-TEST-GF-34.                                      SQ1014.2
@@ -1369,11 +1369,11 @@
 141600     WRITE   PRINT-REC FROM TEST-LINE-1 BEFORE ADVANCING          SQ1014.2
 141700              IDENTIFIER-2.                                       SQ1014.2
 141800 WRT-END-GF-34.                                                   SQ1014.2
-141900*                                                                 SQ1014.2
+141900*                                                                         
 142000 WRT-INIT-GF-35.                                                  SQ1014.2
-142100*                                                                 SQ1014.2
-142200*    THIS TEST ADVANCES THE PRINT POSITION 5 LINES, TO LINE 17    SQ1014.2
-142300*                                                                 SQ1014.2
+142100*                                                                         
+142200*                                                                         
+142300*                                                                         
 142400     MOVE   "WRT FROM BEFORE P99 LINE" TO FEATURE.                SQ1014.2
 142500     MOVE   "WRT-TEST-GF-35" TO PAR-NAME.                         SQ1014.2
 142600     GO TO   WRT-TEST-GF-35.                                      SQ1014.2
@@ -1388,11 +1388,11 @@
 143500     MOVE   "4" TO LINES-ABOVE-1.                                 SQ1014.2
 143600     WRITE PRINT-REC FROM TEST-LINE-1 BEFORE IDENTIFIER-2 LINE.   SQ1014.2
 143700 WRT-END-GF-35.                                                   SQ1014.2
-143800*                                                                 SQ1014.2
+143800*                                                                         
 143900 WRT-INIT-GF-36.                                                  SQ1014.2
-144000*                                                                 SQ1014.2
-144100*    THIS TEST ADVANCES THE PRINT POSITION 6 LINES, TO LINE 23    SQ1014.2
-144200*                                                                 SQ1014.2
+144000*                                                                         
+144100*                                                                         
+144200*                                                                         
 144300     MOVE   "WRT FRM BEFORE P99 LINES" TO FEATURE.                SQ1014.2
 144400     MOVE   "WRT-TEST-GF-36" TO PAR-NAME.                         SQ1014.2
 144500     GO TO   WRT-TEST-GF-36.                                      SQ1014.2
@@ -1405,11 +1405,11 @@
 145200     MOVE    4 TO IDENTIFIER-2.                                   SQ1014.2
 145300     WRITE   PRINT-REC FROM OH-ONE BEFORE IDENTIFIER-2 LINES.     SQ1014.2
 145400 WRT-END-GF-36.                                                   SQ1014.2
-145500*                                                                 SQ1014.2
+145500*                                                                         
 145600 WRT-INIT-GF-37.                                                  SQ1014.2
-145700*                                                                 SQ1014.2
-145800*    THIS TEST ADVANCES THE PRINT POSITION 7 LINES, TO LINE 29    SQ1014.2
-145900*                                                                 SQ1014.2
+145700*                                                                         
+145800*                                                                         
+145900*                                                                         
 146000     MOVE   "WRT FROM 03 BEFORE PIC99" TO FEATURE.                SQ1014.2
 146100     MOVE   "WRT-TEST-GF-37" TO PAR-NAME.                         SQ1014.2
 146200     GO TO   WRT-TEST-GF-37.                                      SQ1014.2
@@ -1422,11 +1422,11 @@
 146900     MOVE    5 TO IDENTIFIER-2.                                   SQ1014.2
 147000     WRITE   PRINT-REC FROM OH-THREE BEFORE IDENTIFIER-2.         SQ1014.2
 147100 WRT-END-GF-37.                                                   SQ1014.2
-147200*                                                                 SQ1014.2
+147200*                                                                         
 147300 WRT-INIT-GF-38.                                                  SQ1014.2
-147400*                                                                 SQ1014.2
-147500*    THIS TEST ADVANCES THE PRINT POSITION 8 LINES, TO LINE 37    SQ1014.2
-147600*                                                                 SQ1014.2
+147400*                                                                         
+147500*                                                                         
+147600*                                                                         
 147700     MOVE   "WRT FRM AFT ADV P99 LINE" TO FEATURE.                SQ1014.2
 147800     MOVE   "WRT-TEST-GF-38" TO PAR-NAME.                         SQ1014.2
 147900     GO TO   WRT-TEST-GF-38.                                      SQ1014.2
@@ -1440,11 +1440,11 @@
 148700     WRITE   PRINT-REC FROM SEVENTY-SEVEN-2 AFTER ADVANCING       SQ1014.2
 148800              IDENTIFIER-2 LINE.                                  SQ1014.2
 148900 WRT-END-GF-38.                                                   SQ1014.2
-149000*                                                                 SQ1014.2
+149000*                                                                         
 149100 WRT-INIT-GF-39.                                                  SQ1014.2
-149200*                                                                 SQ1014.2
-149300*    THIS TEST ADVANCES THE PRINT POSITION 9 LINES, TO LINE 46    SQ1014.2
-149400*                                                                 SQ1014.2
+149200*                                                                         
+149300*                                                                         
+149400*                                                                         
 149500     MOVE   "WRT FRM AFT ADV P99 LINS" TO FEATURE.                SQ1014.2
 149600     MOVE   "WRT-TEST-GF-39" TO PAR-NAME.                         SQ1014.2
 149700     GO TO   WRT-TEST-GF-39.                                      SQ1014.2
@@ -1460,11 +1460,11 @@
 150700     WRITE   PRINT-REC FROM TEST-LINE-1 AFTER ADVANCING           SQ1014.2
 150800              IDENTIFIER-2 LINES.                                 SQ1014.2
 150900 WRT-END-GF-39.                                                   SQ1014.2
-151000*                                                                 SQ1014.2
+151000*                                                                         
 151100 WRT-INIT-GF-40.                                                  SQ1014.2
-151200*                                                                 SQ1014.2
-151300*    THIS TEST ADVANCES THE PRINT POSITION 10 LINES, TO LINE 56   SQ1014.2
-151400*                                                                 SQ1014.2
+151200*                                                                         
+151300*                                                                         
+151400*                                                                         
 151500     MOVE "WRT FRM AFT ADV ID2" TO FEATURE.                       SQ1014.2
 151600     MOVE "WRT-TEST-44" TO PAR-NAME.                              SQ1014.2
 151700     PERFORM WRITE-TEST-LINE.                                     SQ1014.2
@@ -1474,14 +1474,14 @@
 152100     WRITE PRINT-REC FROM TEST-LINE-1 AFTER ADVANCING             SQ1014.2
 152200              IDENTIFIER-2.                                       SQ1014.2
 152300 WRT-END-GF-40.                                                   SQ1014.2
-152400*                                                                 SQ1014.2
+152400*                                                                         
 152500 WRT-INIT-GF-41.                                                  SQ1014.2
-152600*                                                                 SQ1014.2
-152700*    THIS TEST ADVANCES THE PRINT POSITION TO A NEW PAGE.  IT     SQ1014.2
-152800*    SHOULD LEAVE LINE 2 ON THE NEW PAGE AS THE CURRENT LINE, SO  SQ1014.2
-152900*    THAT THE FIRST WRT-TEST LINE ON THE NEW PAGE IS ON THE       SQ1014.2
-153000*    THIRD PRINTABLE LINE.                                        SQ1014.2
-153100*                                                                 SQ1014.2
+152600*                                                                         
+152700*                                                                         
+152800*                                                                         
+152900*                                                                         
+153000*                                                                         
+153100*                                                                         
 153200     MOVE   "WRT FROM AFTER ADV PAGE" TO FEATURE.                 SQ1014.2
 153300     MOVE   "WRT-TEST-GF-41" TO PAR-NAME.                         SQ1014.2
 153400     GO TO   WRT-TEST-GF-41.                                      SQ1014.2
@@ -1495,11 +1495,11 @@
 154200     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 154300     WRITE   PRINT-REC AFTER ADVANCING 1 LINE.                    SQ1014.2
 154400 WRT-END-GF-41.                                                   SQ1014.2
-154500*                                                                 SQ1014.2
+154500*                                                                         
 154600 WRT-INIT-GF-42.                                                  SQ1014.2
-154700*                                                                 SQ1014.2
-154800*    THIS TEST ADVANCES THE PRINT POSITION 2 LINES, TO LINE 5     SQ1014.2
-154900*                                                                 SQ1014.2
+154700*                                                                         
+154800*                                                                         
+154900*                                                                         
 155000     MOVE   "WRT FROM AFTER ID2 LINE" TO FEATURE.                 SQ1014.2
 155100     MOVE   "WRT-TEST-GF-42" TO PAR-NAME.                         SQ1014.2
 155200     GO TO   WRT-TEST-GF-42.                                      SQ1014.2
@@ -1514,11 +1514,11 @@
 156100     MOVE   "1" TO LINES-ABOVE-1.                                 SQ1014.2
 156200     WRITE PRINT-REC FROM TEST-LINE-1 AFTER IDENTIFIER-2 LINE.    SQ1014.2
 156300 WRT-END-GF-42.                                                   SQ1014.2
-156400*                                                                 SQ1014.2
+156400*                                                                         
 156500 WRT-INIT-GF-43.                                                  SQ1014.2
-156600*                                                                 SQ1014.2
-156700*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 9     SQ1014.2
-156800*                                                                 SQ1014.2
+156600*                                                                         
+156700*                                                                         
+156800*                                                                         
 156900     MOVE   "WRT FROM AFTER S99 LINES" TO FEATURE.                SQ1014.2
 157000     MOVE   "WRT-TEST-GF-43" TO PAR-NAME.                         SQ1014.2
 157100     GO TO   WRT-TEST-GF-43.                                      SQ1014.2
@@ -1533,11 +1533,11 @@
 158000     MOVE   "1" TO LINES-ABOVE-1.                                 SQ1014.2
 158100     WRITE   PRINT-REC FROM TEST-LINE-1 AFTER IDENT-2-S99 LINES.  SQ1014.2
 158200 WRT-END-GF-43.                                                   SQ1014.2
-158300*                                                                 SQ1014.2
+158300*                                                                         
 158400 WRT-INIT-GF-44.                                                  SQ1014.2
-158500*                                                                 SQ1014.2
-158600*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 12    SQ1014.2
-158700*                                                                 SQ1014.2
+158500*                                                                         
+158600*                                                                         
+158700*                                                                         
 158800     MOVE   "WRT FROM AFTER C99" TO FEATURE.                      SQ1014.2
 158900     MOVE   "WRT-TEST-GF-44" TO PAR-NAME.                         SQ1014.2
 159000     GO TO   WRT-TEST-GF-44.                                      SQ1014.2
@@ -1552,11 +1552,11 @@
 159900     MOVE   "1" TO LINES-ABOVE-1.                                 SQ1014.2
 160000     WRITE   PRINT-REC FROM TEST-LINE-1 AFTER IDENT-2-C99.        SQ1014.2
 160100 WRT-END-GF-44.                                                   SQ1014.2
-160200*                                                                 SQ1014.2
+160200*                                                                         
 160300 WRT-INIT-GF-45.                                                  SQ1014.2
-160400*                                                                 SQ1014.2
-160500*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 16    SQ1014.2
-160600*                                                                 SQ1014.2
+160400*                                                                         
+160500*                                                                         
+160600*                                                                         
 160700     MOVE   "WRT BEFORE ADV S99 LINE" TO FEATURE.                 SQ1014.2
 160800     MOVE   "WRT-TEST-GF-45" TO PAR-NAME.                         SQ1014.2
 160900     GO TO   WRT-TEST-GF-45.                                      SQ1014.2
@@ -1572,11 +1572,11 @@
 161900     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 162000     WRITE PRINT-REC BEFORE ADVANCING IDENT-2-S99 LINE.           SQ1014.2
 162100 WRT-END-GF-45.                                                   SQ1014.2
-162200*                                                                 SQ1014.2
+162200*                                                                         
 162300 WRT-INIT-GF-46.                                                  SQ1014.2
-162400*                                                                 SQ1014.2
-162500*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 20    SQ1014.2
-162600*                                                                 SQ1014.2
+162400*                                                                         
+162500*                                                                         
+162600*                                                                         
 162700     MOVE   "WRT BEFORE ADV S99 LINES" TO FEATURE.                SQ1014.2
 162800     MOVE   "WRT-TEST-GF-46" TO PAR-NAME.                         SQ1014.2
 162900     GO TO   WRT-TEST-GF-46.                                      SQ1014.2
@@ -1592,11 +1592,11 @@
 163900     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 164000     WRITE   PRINT-REC BEFORE ADVANCING IDENT-2-S99 LINES.        SQ1014.2
 164100 WRT-END-GF-46.                                                   SQ1014.2
-164200*                                                                 SQ1014.2
+164200*                                                                         
 164300 WRT-INIT-GF-47.                                                  SQ1014.2
-164400*                                                                 SQ1014.2
-164500*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 24    SQ1014.2
-164600*                                                                 SQ1014.2
+164400*                                                                         
+164500*                                                                         
+164600*                                                                         
 164700     MOVE   "WRT BEFORE ADV S99" TO FEATURE.                      SQ1014.2
 164800     MOVE   "WRT-TEST-GF-47" TO PAR-NAME.                         SQ1014.2
 164900     GO TO   WRT-TEST-GF-47.                                      SQ1014.2
@@ -1612,11 +1612,11 @@
 165900     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 166000     WRITE   PRINT-REC BEFORE ADVANCING IDENT-2-S99.              SQ1014.2
 166100 WRT-END-GF-47.                                                   SQ1014.2
-166200*                                                                 SQ1014.2
+166200*                                                                         
 166300 WRT-INIT-GF-48.                                                  SQ1014.2
-166400*                                                                 SQ1014.2
-166500*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 27    SQ1014.2
-166600*                                                                 SQ1014.2
+166400*                                                                         
+166500*                                                                         
+166600*                                                                         
 166700     MOVE   "WRT BEFORE PIC9 LINE" TO FEATURE.                    SQ1014.2
 166800     MOVE   "WRT-TEST-GF-48" TO PAR-NAME.                         SQ1014.2
 166900     GO TO   WRT-TEST-GF-48.                                      SQ1014.2
@@ -1632,11 +1632,11 @@
 167900     WRITE   PRINT-REC BEFORE ONE LINE.                           SQ1014.2
 168000     PERFORM INSPT.                                               SQ1014.2
 168100 WRT-END-GF-48.                                                   SQ1014.2
-168200*                                                                 SQ1014.2
+168200*                                                                         
 168300 WRT-INIT-GF-49.                                                  SQ1014.2
-168400*                                                                 SQ1014.2
-168500*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 31    SQ1014.2
-168600*                                                                 SQ1014.2
+168400*                                                                         
+168500*                                                                         
+168600*                                                                         
 168700     MOVE   "WRT BEFORE PIC9 LINES" TO FEATURE.                   SQ1014.2
 168800     MOVE   "WRT-TEST-GF-49" TO PAR-NAME.                         SQ1014.2
 168900     GO TO   WRT-TEST-GF-49.                                      SQ1014.2
@@ -1651,11 +1651,11 @@
 169800     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 169900     WRITE   PRINT-REC BEFORE TWO LINES.                          SQ1014.2
 170000 WRT-END-GF-49.                                                   SQ1014.2
-170100*                                                                 SQ1014.2
+170100*                                                                         
 170200 WRT-INIT-GF-50.                                                  SQ1014.2
-170300*                                                                 SQ1014.2
-170400*    THIS TEST ADVANCES THE PRINT POSITION 5 LINES, TO LINE 36    SQ1014.2
-170500*                                                                 SQ1014.2
+170300*                                                                         
+170400*                                                                         
+170500*                                                                         
 170600     MOVE   "WRT BEFORE PIC9" TO FEATURE.                         SQ1014.2
 170700     MOVE   "WRT-TEST-GF-50" TO PAR-NAME.                         SQ1014.2
 170800     GO TO   WRT-TEST-GF-50.                                      SQ1014.2
@@ -1670,11 +1670,11 @@
 171700     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 171800     WRITE   PRINT-REC BEFORE THREE.                              SQ1014.2
 171900 WRT-END-GF-50.                                                   SQ1014.2
-172000*                                                                 SQ1014.2
+172000*                                                                         
 172100 WRT-INIT-GF-51.                                                  SQ1014.2
-172200*                                                                 SQ1014.2
-172300*    THIS TEST ADVANCES THE PRINT POSITION 6 LINES, TO LINE 42    SQ1014.2
-172400*                                                                 SQ1014.2
+172200*                                                                         
+172300*                                                                         
+172400*                                                                         
 172500     MOVE   "WRT AFTER ADV PIC9 LINE" TO FEATURE.                 SQ1014.2
 172600     MOVE   "WRT-TEST-GF-51" TO PAR-NAME.                         SQ1014.2
 172700     GO TO   WRT-TEST-GF-51.                                      SQ1014.2
@@ -1689,11 +1689,11 @@
 173600     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 173700     WRITE   PRINT-REC AFTER ADVANCING FOUR LINE.                 SQ1014.2
 173800 WRT-END-GF-51.                                                   SQ1014.2
-173900*                                                                 SQ1014.2
+173900*                                                                         
 174000 WRT-INIT-GF-52.                                                  SQ1014.2
-174100*                                                                 SQ1014.2
-174200*    THIS TEST ADVANCES THE PRINT POSITION 2 LINES, TO LINE 44    SQ1014.2
-174300*                                                                 SQ1014.2
+174100*                                                                         
+174200*                                                                         
+174300*                                                                         
 174400     MOVE   "WRT AFT ADV 9(18) LINES" TO FEATURE.                 SQ1014.2
 174500     MOVE   "WRT-TEST-GF-52" TO PAR-NAME.                         SQ1014.2
 174600     GO TO   WRT-TEST-GF-52.                                      SQ1014.2
@@ -1708,11 +1708,11 @@
 175500     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 175600     WRITE   PRINT-REC AFTER ADVANCING LONG-ZERO LINES.           SQ1014.2
 175700 WRT-END-GF-52.                                                   SQ1014.2
-175800*                                                                 SQ1014.2
+175800*                                                                         
 175900 WRT-INIT-GF-53.                                                  SQ1014.2
-176000*                                                                 SQ1014.2
-176100*    THIS TEST ADVANCES THE PRINT POSITION 3 LINES, TO LINE 47    SQ1014.2
-176200*                                                                 SQ1014.2
+176000*                                                                         
+176100*                                                                         
+176200*                                                                         
 176300     MOVE   "WRT AFTER ADV 9(18)" TO FEATURE.                     SQ1014.2
 176400     MOVE   "WRT-TEST-GF-53" TO PAR-NAME.                         SQ1014.2
 176500     GO TO   WRT-TEST-GF-53.                                      SQ1014.2
@@ -1727,11 +1727,11 @@
 177400     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 177500     WRITE   PRINT-REC AFTER ADVANCING LONG-ONE.                  SQ1014.2
 177600 WRT-END-GF-53.                                                   SQ1014.2
-177700*                                                                 SQ1014.2
+177700*                                                                         
 177800 WRT-INIT-GF-54.                                                  SQ1014.2
-177900*                                                                 SQ1014.2
-178000*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 51    SQ1014.2
-178100*                                                                 SQ1014.2
+177900*                                                                         
+178000*                                                                         
+178100*                                                                         
 178200     MOVE   "WRT AFTER S99 LINE" TO FEATURE.                      SQ1014.2
 178300     MOVE   "WRT-TEST-GF-54" TO PAR-NAME.                         SQ1014.2
 178400     GO TO   WRT-TEST-GF-54.                                      SQ1014.2
@@ -1747,11 +1747,11 @@
 179400     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 179500     WRITE   PRINT-REC AFTER IDENT-2-S99 LINE.                    SQ1014.2
 179600 WRT-END-GF-54.                                                   SQ1014.2
-179700*                                                                 SQ1014.2
+179700*                                                                         
 179800 WRT-INIT-GF-55.                                                  SQ1014.2
-179900*                                                                 SQ1014.2
-180000*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 55    SQ1014.2
-180100*                                                                 SQ1014.2
+179900*                                                                         
+180000*                                                                         
+180100*                                                                         
 180200     MOVE   "WRT AFTER PIC99 LINES" TO FEATURE.                   SQ1014.2
 180300     MOVE   "WRT-TEST-GF-55" TO PAR-NAME.                         SQ1014.2
 180400     GO TO   WRT-TEST-GF-55.                                      SQ1014.2
@@ -1767,11 +1767,11 @@
 181400     MOVE    TEST-LINE-1 TO PRINT-REC.                            SQ1014.2
 181500     WRITE   PRINT-REC AFTER IDENTIFIER-2 LINES.                  SQ1014.2
 181600 WRT-END-GF-55.                                                   SQ1014.2
-181700*                                                                 SQ1014.2
+181700*                                                                         
 181800 WRT-INIT-GF-56.                                                  SQ1014.2
-181900*                                                                 SQ1014.2
-182000*    THIS TEST ADVANCES THE PRINT POSITION 4 LINES, TO LINE 59    SQ1014.2
-182100*                                                                 SQ1014.2
+181900*                                                                         
+182000*                                                                         
+182100*                                                                         
 182200     MOVE   "WRT AFTER PIC99" TO FEATURE.                         SQ1014.2
 182300     MOVE   "WRT-TEST-GF-56" TO PAR-NAME.                         SQ1014.2
 182400     GO TO   WRT-TEST-GF-56.                                      SQ1014.2
@@ -1787,14 +1787,14 @@
 183400     MOVE TEST-LINE-1 TO PRINT-REC.                               SQ1014.2
 183500     WRITE PRINT-REC AFTER IDENTIFIER-2.                          SQ1014.2
 183600 WRT-END-GF-56.                                                   SQ1014.2
-183700*                                                                 SQ1014.2
+183700*                                                                         
 183800 WRT-INIT-GF-57.                                                  SQ1014.2
-183900*                                                                 SQ1014.2
-184000*    THIS TEST ADVANCES THE PRINT POSITION TO A NEW PAGE.  IT     SQ1014.2
-184100*    SHOULD LEAVE LINE 2 ON THE NEW PAGE AS THE CURRENT LINE, SO  SQ1014.2
-184200*    THAT THE FIRST WRT-TEST LINE ON THE NEW PAGE IS ON THE       SQ1014.2
-184300*    THIRD PRINTABLE LINE.                                        SQ1014.2
-184400*                                                                 SQ1014.2
+183900*                                                                         
+184000*                                                                         
+184100*                                                                         
+184200*                                                                         
+184300*                                                                         
+184400*                                                                         
 184500     MOVE   "WRT FROM AFTER PAGE" TO FEATURE.                     SQ1014.2
 184600     MOVE   "WRT-TEST-GF-57" TO PAR-NAME.                         SQ1014.2
 184700     GO TO   WRT-TEST-GF-57.                                      SQ1014.2
@@ -1808,27 +1808,27 @@
 185500     MOVE    NEXT-LINE TO PRINT-REC.                              SQ1014.2
 185600     WRITE   PRINT-REC AFTER ADVANCING 1 LINE.                    SQ1014.2
 185700 WRT-END-GF-57.                                                   SQ1014.2
-185800*                                                                 SQ1014.2
+185800*                                                                         
 185900 AFTER-LAST-TEST.                                                 SQ1014.2
 186000     MOVE    "FINAL WRT TEST LINE" TO FEATURE.                    SQ1014.2
 186100     MOVE     "AFTER-LAST-TEST" TO PAR-NAME.                      SQ1014.2
 186200     PERFORM  WRITE-TEST-LINE.                                    SQ1014.2
-186300*                                                                 SQ1014.2
-186400*                                                                 SQ1014.2
+186300*                                                                         
+186400*                                                                         
 186500 SQ-END-ROUTINE.                                                  SQ1014.2
 186600     GO TO CCVS-EXIT.                                             SQ1014.2
-186700*                                                                 SQ1014.2
+186700*                                                                         
 186800 WRITE-TEST-LINE.                                                 SQ1014.2
 186900     MOVE    TEST-RESULTS TO PRINT-REC.                           SQ1014.2
 187000     WRITE   PRINT-REC AFTER ADVANCING 1 LINE.                    SQ1014.2
 187100     MOVE    SPACE TO PRINT-REC.                                  SQ1014.2
 187200     WRITE   PRINT-REC AFTER ADVANCING 1 LINE.                    SQ1014.2
-187300*                                                                 SQ1014.2
+187300*                                                                         
 187400 COL-1-CHAR-PRINT.                                                SQ1014.2
 187500     ADD     1 TO LIN-SER                                         SQ1014.2
 187600     MOVE    CHAR-LINE TO PRINT-REC                               SQ1014.2
 187700     WRITE   PRINT-REC AFTER ADVANCING 1 LINE.                    SQ1014.2
-187800*                                                                 SQ1014.2
+187800*                                                                         
 187900 CCVS-EXIT SECTION.                                               SQ1014.2
 188000 CCVS-999999.                                                     SQ1014.2
 188100     GO TO CLOSE-FILES.                                           SQ1014.2

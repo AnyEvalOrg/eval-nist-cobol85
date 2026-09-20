@@ -16,7 +16,7 @@ TEST RESULT OF IF118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LOWER-CASE Function  FAIL* F-LOWCASE-01                                                                                
                                                                                                                         
                                      COMPUTED= figure                                                                   
-                                     CORRECT = figuPe                See ref. A-51 2.22                                 
+                                     CORRECT = finure                See ref. A-51 2.22                                 
                                                                                                                         
  LOWER-CASE Function  PASS  F-LOWCASE-02                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-03                                                                                
@@ -26,12 +26,12 @@ TEST RESULT OF IF118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LOWER-CASE Function  FAIL* F-LOWCASE-07                                                                                
                                                                                                                         
                                      COMPUTED= weed                                                                     
-                                     CORRECT = weLd                  See ref. A-51 2.22                                 
+                                     CORRECT = weem                  See ref. A-51 2.22                                 
                                                                                                                         
  LOWER-CASE Function  FAIL* F-LOWCASE-08                                                                                
                                                                                                                         
                                      COMPUTED= was                                                                      
-                                     CORRECT = waS                   See ref. A-51 2.22                                 
+                                     CORRECT = wns                   See ref. A-51 2.22                                 
                                                                                                                         
  LOWER-CASE Function  PASS  F-LOWCASE-09                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-10                                                                                

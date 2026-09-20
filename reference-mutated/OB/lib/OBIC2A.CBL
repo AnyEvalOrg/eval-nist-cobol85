@@ -1,34 +1,34 @@
 000100 IDENTIFICATION DIVISION.                                         OBIC24.2
 000200 PROGRAM-ID.                                                      OBIC24.2
 000300     OBIC2A.                                                      OBIC24.2
-000400****************************************************************  OBIC24.2
-000500*                                                              *  OBIC24.2
-000600*    VALIDATION FOR:-                                          *  OBIC24.2
-000700*                                                              *  OBIC24.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".OBIC24.2
-000900*                                                              *  OBIC24.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".OBIC24.2
-001100*                                                              *  OBIC24.2
-001200****************************************************************  OBIC24.2
-001300*                                                              *  OBIC24.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  OBIC24.2
-001500*                                                              *  OBIC24.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  OBIC24.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  OBIC24.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  OBIC24.2
-001900*                                                              *  OBIC24.2
-002000****************************************************************  OBIC24.2
-002100*                                                                 OBIC24.2
-002200*        THE SUBPROGRAM IC219 TESTS THE USE OF A SORT STATEMENT   OBIC24.2
-002300*    IN A SEGMENTED SUBPROGRAM.  THE FIRST NON-DECLARATIVE SECTIONOBIC24.2
-002400*    OF THE SUBPROGRAM CONSISTS OF A SORT STATEMENT AND A STOP RUNOBIC24.2
-002500*    STATEMENT IN A FIXED PERMANENT SEGMENT.  THE SORT INPUT      OBIC24.2
-002600*    PROCEDURE AND THE SORT OUTPUT PROCEDURE ARE CONTAINED IN TWO OBIC24.2
-002700*    INDEPENDENT SEGMENTS.  THE MAIN PROGRAM IC218 CALLS THIS     OBIC24.2
-002800*    SUBPROGRAM AND THE SUBPROGRAM IC220 IS CALLED FROM THE       OBIC24.2
-002900*    OUTPUT PROCEDURE SECTION TO PRINT THE OUTPUT REPORT.         OBIC24.2
-003000*                                                                 OBIC24.2
-003100******************************************************************OBIC24.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
 003200 ENVIRONMENT DIVISION.                                            OBIC24.2
 003300 CONFIGURATION SECTION.                                           OBIC24.2
 003400 SOURCE-COMPUTER.                                                 OBIC24.2
@@ -128,11 +128,11 @@
 012800 01  SORT-LINK           PICTURE 9.                               OBIC24.2
 012900 PROCEDURE DIVISION USING SORT-LINK.                              OBIC24.2
 013000 SECT-IC219-0001 SECTION 30.                                      OBIC24.2
-013100*                                                                 OBIC24.2
-013200*        THIS SECTION CONTAINS A SORT STATEMENT AND A STOP RUN    OBIC24.2
-013300*    STATEMENT, THE ONLY STATEMENTS PERMITTED IN THE FIRST NON-   OBIC24.2
-013400*    DECLARATIVE PORTION OF THE PROCEDURE DIVISION IN SORT LEVEL 1OBIC24.2
-013500*                                                                 OBIC24.2
+013100*                                                                         
+013200*                                                                         
+013300*                                                                         
+013400*                                                                         
+013500*                                                                         
 013600 SORT-PARAGRAPH.                                                  OBIC24.2
 013700     SORT ST-FS1                                                  OBIC24.2
 013800         ASCENDING KEY ST-FS1-121-124                             OBIC24.2
@@ -142,20 +142,20 @@
 014200             OUTPUT PROCEDURE IS SECT-IC219-0003.                 OBIC24.2
 014300     STOP RUN.                                                    OBIC24.2
 014400 SECT-IC219-0002 SECTION 60.                                      OBIC24.2
-014500*                                                                 OBIC24.2
-014600*        THE SORT INPUT PROCEDURE RELEASES 500 SORT RECORDS OF    OBIC24.2
-014700*    LENGTH 126 CHARACTERS.  THREE ITEMS ARE USED AS THE SORT KEY,OBIC24.2
-014800*    THEY ARE CHARACTERS 121-124 PICX(4), CHARACTERS 125-126      OBIC24.2
-014900*    PIC 99, AND THE RECORD NUMBER FIELD CHARACTERS 35-40 PIC 9(6)OBIC24.2
-015000*    THE RECORDS ARE WRITTEN WITH THE SORT KEY ITEMS CONTAINING   OBIC24.2
-015100*    THE FOLLOWING CHARACTERS                                     OBIC24.2
-015200*                                                                 OBIC24.2
-015300*        FIRST 100 RECORDS  ABCD  00 THRU 99  000001 THRU 000100  OBIC24.2
-015400*        SECOND 100 RECORDS AAAA  00 THRU 99  000101 THRU 000200  OBIC24.2
-015500*        THIRD 100 RECORDS  ABCD  00 THRU 99  000201 THRU 00300   OBIC24.2
-015600*        FOURTH 100 RECORDS UVWY  00 THRU 99  000301 THRU 000400  OBIC24.2
-015700*        FIFTH 100 RECORDS  UVWX  00 THRU 99  000401 THRU 000500  OBIC24.2
-015800*                                                                 OBIC24.2
+014500*                                                                         
+014600*                                                                         
+014700*                                                                         
+014800*                                                                         
+014900*                                                                         
+015000*                                                                         
+015100*                                                                         
+015200*                                                                         
+015300*                                                                         
+015400*                                                                         
+015500*                                                                         
+015600*                                                                         
+015700*                                                                         
+015800*                                                                         
 015900 SORT-INPUT-PROCEDURE.                                            OBIC24.2
 016000     MOVE 1 TO SORT-LINK.                                         OBIC24.2
 016100     MOVE FILE-RECORD-INFO-SKELETON TO FILE-RECORD-INFO (1).      OBIC24.2
@@ -197,27 +197,27 @@
 019700 SECT-IC219-0002-EXIT.                                            OBIC24.2
 019800     EXIT.                                                        OBIC24.2
 019900 SECT-IC219-0003 SECTION 80.                                      OBIC24.2
-020000*                                                                 OBIC24.2
-020100*        THE SORT OUTPUT PROCEDURE RETURNS 500 SORT RECORDS.  THE OBIC24.2
-020200*    DATA ITEMS COMPRISING THE SORT KEY ARE CHECKED TO ENSURE THE OBIC24.2
-020300*    RECORDS ARE RETURNED IN THE EXPECTED SORT ORDER.  THE SUBPRO-OBIC24.2
-020400*    GRAM IC220 IS CALLED TO PRODUCE THE OUTPUT REPORT FOR THE    OBIC24.2
-020500*    TEST RESULTS.                                                OBIC24.2
-020600*                                                                 OBIC24.2
-020700*        THE RECORDS SHOULD BE RETURNED WITH THE SORT KEY ITEMS   OBIC24.2
-020800*    CONTAINING THE FOLLOWING CHARACTERS                          OBIC24.2
-020900*                                                                 OBIC24.2
-021000*        FIRST 100 RECORDS  AAAA  00 THRU 99  000101 THRU 000200  OBIC24.2
-021100*                           ABCD  00          000001              OBIC24.2
-021200*        NEXT               ABCD  00          000201              OBIC24.2
-021300*            200            ABCD  01          000002              OBIC24.2
-021400*               RECORDS     ABCD  01          000202              OBIC24.2
-021500*                            . . .            . . .               OBIC24.2
-021600*                           ABCD  99          000100              OBIC24.2
-021700*                           ABCD  99          000300              OBIC24.2
-021800*        FOURTH 100 RECORDS UVWX  00 THRU 99  000401 THRU 000500  OBIC24.2
-021900*        FIFTH 100 RECORDS  UVWY  00 THRU 99  000301 THRU 000400  OBIC24.2
-022000*                                                                 OBIC24.2
+020000*                                                                         
+020100*                                                                         
+020200*                                                                         
+020300*                                                                         
+020400*                                                                         
+020500*                                                                         
+020600*                                                                         
+020700*                                                                         
+020800*                                                                         
+020900*                                                                         
+021000*                                                                         
+021100*                                                                         
+021200*                                                                         
+021300*                                                                         
+021400*                                                                         
+021500*                                                                         
+021600*                                                                         
+021700*                                                                         
+021800*                                                                         
+021900*                                                                         
+022000*                                                                         
 022100 SORT-OUTPUT-INIT.                                                OBIC24.2
 022200     MOVE 2 TO SORT-LINK.                                         OBIC24.2
 022300     MOVE 1 TO PRINT-FLAG.                                        OBIC24.2

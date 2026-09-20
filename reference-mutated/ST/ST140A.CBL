@@ -1,113 +1,113 @@
 000100 IDENTIFICATION DIVISION.                                         ST1404.2
 000200 PROGRAM-ID.                                                      ST1404.2
 000300     ST140A.                                                      ST1404.2
-000400****************************************************************  ST1404.2
-000500*                                                              *  ST1404.2
-000600*    VALIDATION FOR:-                                          *  ST1404.2
-000700*                                                              *  ST1404.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".ST1404.2
-000900*                                                              *  ST1404.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".ST1404.2
-001100*                                                              *  ST1404.2
-001200****************************************************************  ST1404.2
-001300*                                                                 ST1404.2
-001400*    OBJECTIVE -                                                  ST1404.2
-001500*        ROUTINE ST210  IS A TEST OF THE MERGE STATEMENT USING    ST1404.2
-001600*    THE ASCII COLLATING SEQUENCE AND MULTIPLE FILE TAPE.         ST1404.2
-001700*    THIS ROUTINE IS A TEST OF THE COMPILERS ABILITY TO MERGE     ST1404.2
-001800*    THE SECOND FILE OF A MULTI-FILE REEL WITH A MASS-STORAGE     ST1404.2
-001900*    FILE TO PRODUCE A MASS-STORAGE FILE.                         ST1404.2
-002000*                                                                 ST1404.2
-002100*                                                                 ST1404.2
-002200*    FEATURES TESTED -                                            ST1404.2
-002300*    *   ALPHABET-NAME IS STANDARD-1 (THE ASCII COLLATING SEQ.)   ST1404.2
-002400*    *   COLLATING SEQUENCE IS ALPHABET-NAME                      ST1404.2
-002500*    *   MULTIPLE FILE TAPE                                       ST1404.2
-002600*    *   FIXED LENGTH RECORDS                                     ST1404.2
-002700*    *   SAME SORT AREA IN THE I-O-CONTROL PARAGRAPH              ST1404.2
-002800*    *   QUALIFIED ALPHANUMERIC AND NUMERIC SORT KEYS             ST1404.2
-002900*    *   USING FILE-NAME SERIES                                   ST1404.2
-003000*    *   OUTPUT PROCEDURE IS SECTION-NAME                         ST1404.2
-003100*    *   RETURN RECORD INTO     PART OF THE OUTPUT PROCEDURE      ST1404.2
-003200*                                                                 ST1404.2
-003300*    *   MERGE MERGE-FILE-NAME                                    ST1404.2
-003400*        ON DESCENDING KEY KEY-1 OF DATA-NAME-1                   ST1404.2
-003500*        ASCENDING KEY-2 OF DATA-NAME-2                           ST1404.2
-003600*        COLLATING SEQUENCE IS ALPHABET-NAME                      ST1404.2
-003700*        OUTPUT PROCEDURE IS SECTION-NAME.                        ST1404.2
-003800*                                                                 ST1404.2
-003900*                                                                 ST1404.2
-004000*                                                                 ST1404.2
-004100*                                                                 ST1404.2
-004200*    FILES USED -                                                 ST1404.2
-004300*    *   FILES SQ-FS1 AND SQ-FS3 ARE WRITTEN ONTO A MULTIPLE      ST1404.2
-004400*    FILE TAPE.  FILE SQ-FS2 IS WRITTEN ONTO MASS-STORAGE.        ST1404.2
-004500*    THEN THE MERGE STATEMENT USES SQ-FS3 AND SQ-FS2 TO CREATE  A ST1404.2
-004600*    NEW MASS-STORAGE FILE SQ-FS4.  ALL FILES HAVE FIXED LENGTH   ST1404.2
-004700*    RECORDS AND 132 CHARACTERS PER RECORD.                       ST1404.2
-004800*                                                                 ST1404.2
-004900*        SQ-FS1                                                   ST1404.2
-005000*    51 RECORDS                                                   ST1404.2
-005100*    FIXED LENGTH RECORDS 132 CHARACTERS                          ST1404.2
-005200*    BLOCKED 1                                                    ST1404.2
-005300*    RESERVE 2 AREAS                                              ST1404.2
-005400*                                                                 ST1404.2
-005500*        SQ-FS2                                                   ST1404.2
-005600*    51 RECORDS                                                   ST1404.2
-005700*    FIXED LENGTH RECORDS 132 CHARACTERS                          ST1404.2
-005800*    BLOCKED 2                                                    ST1404.2
-005900*    RESERVE 4 AREAS                                              ST1404.2
-006000*                                                                 ST1404.2
-006100*        SQ-FS3                                                   ST1404.2
-006200*    51 RECORDS                                                   ST1404.2
-006300*    FIXED LENGTH RECORDS 132 CHARACTERS                          ST1404.2
-006400*    BLOCKED 1                                                    ST1404.2
-006500*    RESERVE 6 AREAS                                              ST1404.2
-006600*                                                                 ST1404.2
-006700*        NOTE THAT FILE SQ-FS3 IS THE SECOND POSITION             ST1404.2
-006800*    ON A MULTIPLE FILE TAPE.  BOTH FILES SQ-FS1 AND SQ-FS3 ARE   ST1404.2
-006900*    ON THE SAME MULTIPLE FILE TAPE.                              ST1404.2
-007000*                                                                 ST1404.2
-007100*        SQ-FS4                                                   ST1404.2
-007200*    FINAL TOTAL OF 102 RECORDS AS A RESULT OF THE MERGE          ST1404.2
-007300*    FIXED LENGTH RECORDS 132 CHARACTERS                          ST1404.2
-007400*    BLOCKED 3                                                    ST1404.2
-007500*    RESERVE 4 AREAS                                              ST1404.2
-007600*                                                                 ST1404.2
-007700*                                                                 ST1404.2
-007800*    X-CARDS USED  -                                              ST1404.2
-007900*    X-XXX008     SQ-FS1                                          ST1404.2
-008000*    X-XXX014     SQ-FS2                                          ST1404.2
-008100*    X-XXX009     SQ-FS3                                          ST1404.2
-008200*    X-XXX015     SQ-FS4                                          ST1404.2
-008300*    X-XXX027     MERGE FILE ST-FS1                               ST1404.2
-008400*    X-55         SYSTEM PRINTER NAME.                            ST1404.2
-008500*    X-82         SOURCE COMPUTER NAME.                           ST1404.2
-008600*    X-83         OBJECT COMPUTER NAME.                           ST1404.2
-008700*                                                                 ST1404.2
-008800*                                                                 ST1404.2
-008900*    OPTIONS RECOMMENDED -                                        ST1404.2
-009000*    *   *OPT8  X  TO BE USED IF NECESSARY TO DUMP THE            ST1404.2
-009100*                  FILES AS THEY ARE CREATED AND READ DURING      ST1404.2
-009200*                  MRG-TESTS 3 THRU 8.                            ST1404.2
-009300*                                                                 ST1404.2
-009400*                                                                 ST1404.2
-009500*    TEST DESCRIPTIONS -                                          ST1404.2
-009600*    BLD-TEST-001     CHECKS THE CREATION OF SQ-FS1               ST1404.2
-009700*    BLD-TEST-002     CHECKS THE CREATION OF SQ-FS2               ST1404.2
-009800*    BLD-TEST-003     CHECKS THE CREATION OF SQ-FS3               ST1404.2
-009900*    MRG-TEST-003     TESTS RECORDS 1-20 ON MERGE RESULT SQ-FS4   ST1404.2
-010000*    MRG-TEST-004     TESTS RECORDS 21-40 ON MERGE RESULT SQ-FS4  ST1404.2
-010100*    MRG-TEST-005     TESTS RECORDS 41-60 ON MERGE RESULT SQ-FS4  ST1404.2
-010200*    MRG-TEST-006     TESTS RECORDS 61-80 ON MERGE RESULT SQ-FS4  ST1404.2
-010300*    MRG-TEST-007     TESTS RECORDS 81-100 ON MERGE RESULT SQ-FS4 ST1404.2
-010400*    MRG-TEST-008     TESTS RECORDS 101-102 ON MERGE RESULT SQ-FS4ST1404.2
-010500*    MRG-TEST-009     AN EOF CHECK ON SQ-FS4                      ST1404.2
-010600*    MRG-TEST-010     CHECK THAT THE NUMERIC KEY ON THE LAST      ST1404.2
-010700*                     RECORD ON SQ-FS4 EQUALS 102                 ST1404.2
-010800*                                                                 ST1404.2
-010900*                                                                 ST1404.2
-011000*    ************************************************************ ST1404.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
+004400*                                                                         
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
+004800*                                                                         
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
+006000*                                                                         
+006100*                                                                         
+006200*                                                                         
+006300*                                                                         
+006400*                                                                         
+006500*                                                                         
+006600*                                                                         
+006700*                                                                         
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
+007500*                                                                         
+007600*                                                                         
+007700*                                                                         
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
+008500*                                                                         
+008600*                                                                         
+008700*                                                                         
+008800*                                                                         
+008900*                                                                         
+009000*                                                                         
+009100*                                                                         
+009200*                                                                         
+009300*                                                                         
+009400*                                                                         
+009500*                                                                         
+009600*                                                                         
+009700*                                                                         
+009800*                                                                         
+009900*                                                                         
+010000*                                                                         
+010100*                                                                         
+010200*                                                                         
+010300*                                                                         
+010400*                                                                         
+010500*                                                                         
+010600*                                                                         
+010700*                                                                         
+010800*                                                                         
+010900*                                                                         
+011000*                                                                         
 011100 ENVIRONMENT DIVISION.                                            ST1404.2
 011200 CONFIGURATION SECTION.                                           ST1404.2
 011300 SOURCE-COMPUTER.                                                 ST1404.2
@@ -516,7 +516,7 @@
 053800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      ST1404.2
 053900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               ST1404.2
 054000      ADD PASS-COUNTER TO ERROR-HOLD.                             ST1404.2
-054100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   ST1404.2
+054100*                                                                         
 054200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            ST1404.2
 054300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              ST1404.2
 054400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                ST1404.2

@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1384.2
 000300     IF138A.                                                      IF1384.2
 000400                                                                  IF1384.2
-000500***********************************************************       IF1384.2
-000600*                                                         *       IF1384.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1384.2
-000800* It contains tests for the Intrinsic Function SUM .      *       IF1384.2
-000900*                                                         *       IF1384.2
-001000***********************************************************       IF1384.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1384.2
 001200 CONFIGURATION SECTION.                                           IF1384.2
 001300 SOURCE-COMPUTER.                                                 IF1384.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1384.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1384.2
 002600 WORKING-STORAGE SECTION.                                         IF1384.2
-002700***********************************************************       IF1384.2
-002800* Variables specific to the Intrinsic Function Test IF138A*       IF1384.2
-002900***********************************************************       IF1384.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 5.             IF1384.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1384.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1384.2
@@ -48,9 +48,9 @@
 004800 01  WS-NUM              PIC S9(6)V9(7).                          IF1384.2
 004900 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1384.2
 005000 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1384.2
-005100*                                                                 IF1384.2
-005200**********************************************************        IF1384.2
-005300*                                                                 IF1384.2
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
 005400 01  TEST-RESULTS.                                                IF1384.2
 005500     02 FILLER                   PIC X      VALUE SPACE.          IF1384.2
 005600     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1384.2
@@ -344,25 +344,25 @@
 034400 BAIL-OUT-EX. EXIT.                                               IF1384.2
 034500 CCVS1-EXIT.                                                      IF1384.2
 034600     EXIT.                                                        IF1384.2
-034700********************************************************          IF1384.2
-034800*                                                      *          IF1384.2
-034900*    Intrinsic Function Tests         IF138A - SUM     *          IF1384.2
-035000*                                                      *          IF1384.2
-035100********************************************************          IF1384.2
+034700*                                                                         
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
 035200 SECT-IF138A SECTION.                                             IF1384.2
 035300 F-SUM-INFO.                                                      IF1384.2
 035400     MOVE     "See ref. A-69 2.40" TO ANSI-REFERENCE.             IF1384.2
 035500     MOVE     "SUM Function" TO FEATURE.                          IF1384.2
-035600*****************TEST (a) - SIMPLE TEST*****************          IF1384.2
+035600*                                                                         
 035700 F-SUM-01.                                                        IF1384.2
 035800     MOVE ZERO TO WS-NUM.                                         IF1384.2
 035900 F-SUM-TEST-01.                                                   IF1384.2
 036000     COMPUTE WS-NUM = FUNCTION SUM(5, -2, -14, 0).                IF1384.2
-036100     IF WS-NUM = -81 THEN                                         IF1384.2
+036100     IF WS-NUM = -41 THEN                                         IF1384.2
 036200                    PERFORM PASS                                  IF1384.2
 036300     ELSE                                                         IF1384.2
 036400                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-036500                    MOVE -81 TO CORRECT-N                         IF1384.2
+036500                    MOVE -41 TO CORRECT-N                         IF1384.2
 036600                    PERFORM FAIL.                                 IF1384.2
 036700     GO TO F-SUM-WRITE-01.                                        IF1384.2
 036800 F-SUM-DELETE-01.                                                 IF1384.2
@@ -371,7 +371,7 @@
 037100 F-SUM-WRITE-01.                                                  IF1384.2
 037200     MOVE "F-SUM-01" TO PAR-NAME.                                 IF1384.2
 037300     PERFORM  PRINT-DETAIL.                                       IF1384.2
-037400*****************TEST (b) - SIMPLE TEST*****************          IF1384.2
+037400*                                                                         
 037500 F-SUM-02.                                                        IF1384.2
 037600     EVALUATE FUNCTION SUM(3.9, -0.3, 8.7, 100.2)                 IF1384.2
 037700     WHEN 112.498 THRU 122.502                                    IF1384.2
@@ -385,7 +385,7 @@
 038500 F-SUM-WRITE-02.                                                  IF1384.2
 038600     MOVE "F-SUM-02" TO PAR-NAME.                                 IF1384.2
 038700     PERFORM  PRINT-DETAIL.                                       IF1384.2
-038800*****************TEST (c) - SIMPLE TEST*****************          IF1384.2
+038800*                                                                         
 038900 F-SUM-03.                                                        IF1384.2
 039000     IF FUNCTION SUM(A, B, C, D) = 18 THEN                        IF1384.2
 039100                    PERFORM PASS                                  IF1384.2
@@ -398,7 +398,7 @@
 039800 F-SUM-WRITE-03.                                                  IF1384.2
 039900     MOVE "F-SUM-03" TO PAR-NAME.                                 IF1384.2
 040000     PERFORM  PRINT-DETAIL.                                       IF1384.2
-040100*****************TEST (d) - SIMPLE TEST*****************          IF1384.2
+040100*                                                                         
 040200 F-SUM-04.                                                        IF1384.2
 040300     MOVE ZERO TO WS-NUM.                                         IF1384.2
 040400 F-SUM-TEST-04.                                                   IF1384.2
@@ -417,7 +417,7 @@
 041700 F-SUM-WRITE-04.                                                  IF1384.2
 041800     MOVE "F-SUM-04" TO PAR-NAME.                                 IF1384.2
 041900     PERFORM  PRINT-DETAIL.                                       IF1384.2
-042000*****************TEST (e) - SIMPLE TEST*****************          IF1384.2
+042000*                                                                         
 042100 F-SUM-05.                                                        IF1384.2
 042200     MOVE ZERO TO WS-NUM.                                         IF1384.2
 042300 F-SUM-TEST-05.                                                   IF1384.2
@@ -436,7 +436,7 @@
 043600 F-SUM-WRITE-05.                                                  IF1384.2
 043700     MOVE "F-SUM-05" TO PAR-NAME.                                 IF1384.2
 043800     PERFORM  PRINT-DETAIL.                                       IF1384.2
-043900*****************TEST (f) - SIMPLE TEST*****************          IF1384.2
+043900*                                                                         
 044000 F-SUM-06.                                                        IF1384.2
 044100     MOVE ZERO TO WS-NUM.                                         IF1384.2
 044200 F-SUM-TEST-06.                                                   IF1384.2
@@ -455,7 +455,7 @@
 045500 F-SUM-WRITE-06.                                                  IF1384.2
 045600     MOVE "F-SUM-06" TO PAR-NAME.                                 IF1384.2
 045700     PERFORM  PRINT-DETAIL.                                       IF1384.2
-045800*****************TEST (g) - SIMPLE TEST*****************          IF1384.2
+045800*                                                                         
 045900 F-SUM-07.                                                        IF1384.2
 046000     MOVE ZERO TO WS-NUM.                                         IF1384.2
 046100 F-SUM-TEST-07.                                                   IF1384.2
@@ -473,16 +473,16 @@
 047300 F-SUM-WRITE-07.                                                  IF1384.2
 047400     MOVE "F-SUM-07" TO PAR-NAME.                                 IF1384.2
 047500     PERFORM  PRINT-DETAIL.                                       IF1384.2
-047600*****************TEST (h) - SIMPLE TEST*****************          IF1384.2
+047600*                                                                         
 047700 F-SUM-08.                                                        IF1384.2
 047800     MOVE ZERO TO WS-NUM.                                         IF1384.2
 047900 F-SUM-TEST-08.                                                   IF1384.2
 048000     COMPUTE WS-NUM = FUNCTION SUM(IND(P), IND(Q), IND(R)).       IF1384.2
-048100     IF WS-NUM = 66 THEN                                          IF1384.2
+048100     IF WS-NUM = 15 THEN                                          IF1384.2
 048200                    PERFORM PASS                                  IF1384.2
 048300     ELSE                                                         IF1384.2
 048400                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-048500                    MOVE 66 TO CORRECT-N                          IF1384.2
+048500                    MOVE 15 TO CORRECT-N                          IF1384.2
 048600                    PERFORM FAIL.                                 IF1384.2
 048700     GO TO F-SUM-WRITE-08.                                        IF1384.2
 048800 F-SUM-DELETE-08.                                                 IF1384.2
@@ -491,16 +491,16 @@
 049100 F-SUM-WRITE-08.                                                  IF1384.2
 049200     MOVE "F-SUM-08" TO PAR-NAME.                                 IF1384.2
 049300     PERFORM  PRINT-DETAIL.                                       IF1384.2
-049400*****************TEST (i) - SIMPLE TEST*****************          IF1384.2
+049400*                                                                         
 049500 F-SUM-09.                                                        IF1384.2
 049600     MOVE ZERO TO WS-NUM.                                         IF1384.2
 049700 F-SUM-TEST-09.                                                   IF1384.2
 049800     COMPUTE WS-NUM = FUNCTION SUM (4 0 5 3 7).
-049900     IF WS-NUM = 10 THEN                                          IF1384.2
+049900     IF WS-NUM = 18 THEN                                          IF1384.2
 050000                    PERFORM PASS                                  IF1384.2
 050100     ELSE                                                         IF1384.2
 050200                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-050300                    MOVE 10 TO CORRECT-N                          IF1384.2
+050300                    MOVE 18 TO CORRECT-N                          IF1384.2
 050400                    PERFORM FAIL.                                 IF1384.2
 050500     GO TO F-SUM-WRITE-09.                                        IF1384.2
 050600 F-SUM-DELETE-09.                                                 IF1384.2
@@ -509,7 +509,7 @@
 050900 F-SUM-WRITE-09.                                                  IF1384.2
 051000     MOVE "F-SUM-09" TO PAR-NAME.                                 IF1384.2
 051100     PERFORM  PRINT-DETAIL.                                       IF1384.2
-051200*****************TEST (k) - SIMPLE TEST*****************          IF1384.2
+051200*                                                                         
 051300 F-SUM-11.                                                        IF1384.2
 051400     MOVE ZERO TO WS-NUM.                                         IF1384.2
 051500 F-SUM-TEST-11.                                                   IF1384.2
@@ -527,7 +527,7 @@
 052700 F-SUM-WRITE-11.                                                  IF1384.2
 052800     MOVE "F-SUM-11" TO PAR-NAME.                                 IF1384.2
 052900     PERFORM  PRINT-DETAIL.                                       IF1384.2
-053000*****************TEST (a) - COMPLEX TEST****************          IF1384.2
+053000*                                                                         
 053100 F-SUM-12.                                                        IF1384.2
 053200     MOVE ZERO TO WS-NUM.                                         IF1384.2
 053300     MOVE  41.5992 TO MIN-RANGE.                                  IF1384.2
@@ -549,7 +549,7 @@
 054900 F-SUM-WRITE-12.                                                  IF1384.2
 055000     MOVE "F-SUM-12" TO PAR-NAME.                                 IF1384.2
 055100     PERFORM  PRINT-DETAIL.                                       IF1384.2
-055200*****************TEST (b) - COMPLEX TEST****************          IF1384.2
+055200*                                                                         
 055300 F-SUM-13.                                                        IF1384.2
 055400     MOVE ZERO TO WS-NUM.                                         IF1384.2
 055500     MOVE  82.7583 TO MIN-RANGE.                                  IF1384.2
@@ -571,7 +571,7 @@
 057100 F-SUM-WRITE-13.                                                  IF1384.2
 057200     MOVE "F-SUM-13" TO PAR-NAME.                                 IF1384.2
 057300     PERFORM  PRINT-DETAIL.                                       IF1384.2
-057400*****************TEST (c) - COMPLEX TEST****************          IF1384.2
+057400*                                                                         
 057500 F-SUM-14.                                                        IF1384.2
 057600     MOVE ZERO TO WS-NUM.                                         IF1384.2
 057700     MOVE 89.9982 TO MIN-RANGE.                                   IF1384.2
@@ -593,7 +593,7 @@
 059300 F-SUM-WRITE-14.                                                  IF1384.2
 059400     MOVE "F-SUM-14" TO PAR-NAME.                                 IF1384.2
 059500     PERFORM  PRINT-DETAIL.                                       IF1384.2
-059600*****************TEST (d) - COMPLEX TEST****************          IF1384.2
+059600*                                                                         
 059700 F-SUM-15.                                                        IF1384.2
 059800     MOVE ZERO TO WS-NUM.                                         IF1384.2
 059900     MOVE 4.99990 TO MIN-RANGE.                                   IF1384.2
@@ -616,7 +616,7 @@
 061600 F-SUM-WRITE-15.                                                  IF1384.2
 061700     MOVE "F-SUM-15" TO PAR-NAME.                                 IF1384.2
 061800     PERFORM  PRINT-DETAIL.                                       IF1384.2
-061900*****************TEST (e) - COMPLEX TEST****************          IF1384.2
+061900*                                                                         
 062000 F-SUM-16.                                                        IF1384.2
 062100     MOVE ZERO TO WS-NUM.                                         IF1384.2
 062200     MOVE 3.99992 TO MIN-RANGE.                                   IF1384.2
@@ -639,7 +639,7 @@
 063900 F-SUM-WRITE-16.                                                  IF1384.2
 064000     MOVE "F-SUM-16" TO PAR-NAME.                                 IF1384.2
 064100     PERFORM  PRINT-DETAIL.                                       IF1384.2
-064200*****************SPECIAL PERFORM TEST**********************       IF1384.2
+064200*                                                                         
 064300 F-SUM-17.                                                        IF1384.2
 064400     PERFORM F-SUM-TEST-17                                        IF1384.2
 064500       UNTIL FUNCTION SUM(ARG1, 1) > 10.                          IF1384.2
@@ -653,7 +653,7 @@
 065300 F-SUM-WRITE-17.                                                  IF1384.2
 065400     MOVE "F-SUM-17" TO PAR-NAME.                                 IF1384.2
 065500     PERFORM  PRINT-DETAIL.                                       IF1384.2
-065600********************END OF TESTS***************                   IF1384.2
+065600*                                                                         
 065700 CCVS-EXIT SECTION.                                               IF1384.2
 065800 CCVS-999999.                                                     IF1384.2
 065900     GO TO CLOSE-FILES.                                           IF1384.2

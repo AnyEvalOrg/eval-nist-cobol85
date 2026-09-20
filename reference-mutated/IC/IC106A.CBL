@@ -1,35 +1,35 @@
 000100 IDENTIFICATION DIVISION.                                         IC1064.2
 000200 PROGRAM-ID.                                                      IC1064.2
 000300     IC106A.                                                      IC1064.2
-000400****************************************************************  IC1064.2
-000500*                                                              *  IC1064.2
-000600*    VALIDATION FOR:-                                          *  IC1064.2
-000700*                                                              *  IC1064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1064.2
-000900*                                                              *  IC1064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1064.2
-001100*                                                              *  IC1064.2
-001200****************************************************************  IC1064.2
-001300*                                                              *  IC1064.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1064.2
-001500*                                                              *  IC1064.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1064.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1064.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1064.2
-001900*                                                              *  IC1064.2
-002000****************************************************************  IC1064.2
-002100*        THIS PROGRAM CALLS A SUBPROGRAM WITH TWO TABLES          IC1064.2
-002200*    AND AN INDEX DATA ITEM REFERENCED IN THE USING PHRASE        IC1064.2
-002300*    OF THE CALL STATEMENT.  BOTH OF THE TABLES CONTAIN AN        IC1064.2
-002400*    INDEXED BY CLAUSE.                                           IC1064.2
-002500*        THE TESTS IN THIS PROGRAM VERIFY THAT                    IC1064.2
-002600*           (1)  THE INDICES IN THE MAIN PROGRAM AND THE          IC1064.2
-002700*                SUBPROGRAM ARE SEPARATE,                         IC1064.2
-002800*           (2)  AN INDEX DATA ITEM SET IN A MAIN PROGRAM         IC1064.2
-002900*                CAN BE USED TO SET AN INDEX IN A SUBPROGRAM,     IC1064.2
-003000*           (3)  TABLES CAN BE SHARED BETWEEN A MAIN PROGRAM      IC1064.2
-003100*                AND A SUBPROGRAM.                                IC1064.2
-003200*        THE SUBPROGRAM IC107 IS CALLED BY THIS PROGRAM.          IC1064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
 003300 ENVIRONMENT DIVISION.                                            IC1064.2
 003400 CONFIGURATION SECTION.                                           IC1064.2
 003500 SOURCE-COMPUTER.                                                 IC1064.2
@@ -243,7 +243,7 @@
 024500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1064.2
 024600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1064.2
 024700      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1064.2
-024800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1064.2
+024800*                                                                         
 024900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1064.2
 025000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1064.2
 025100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1064.2
@@ -320,8 +320,8 @@
 032200 LINK-TEST-01.                                                    IC1064.2
 032300     MOVE "SEPARATE INDEXES" TO FEATURE.                          IC1064.2
 032400     MOVE "LINK-TEST-01" TO PAR-NAME.                             IC1064.2
-032500*        THIS TEST VERIFIES THAT IN1 HAS NOT BEEN AFFECTED        IC1064.2
-032600*    BY THE USE OF AN INDEX FOR TABLE-1 IN THE SUBPROGRAM.        IC1064.2
+032500*                                                                         
+032600*                                                                         
 032700 LINK-TEST-01-01.                                                 IC1064.2
 032800     MOVE 1 TO REC-CT.                                            IC1064.2
 032900     IF DN1 (IN1) EQUAL TO "F"                                    IC1064.2
@@ -350,9 +350,9 @@
 035200 LINK-TEST-02.                                                    IC1064.2
 035300     MOVE "INDEX DATA ITEM" TO FEATURE.                           IC1064.2
 035400     MOVE "LINK-TEST-02" TO PAR-NAME.                             IC1064.2
-035500*        THIS TEST VERIFIES THAT THE INDEX DATA ITEM WAS          IC1064.2
-035600*    USED IN THE SUBPROGRAM TO SET AN INDEX AND AN INDEX          IC1064.2
-035700*    DATA ITEM.                                                   IC1064.2
+035500*                                                                         
+035600*                                                                         
+035700*                                                                         
 035800 LINK-TEST-02-01.                                                 IC1064.2
 035900     MOVE 1 TO REC-CT.                                            IC1064.2
 036000     IF DN2 (7) IS EQUAL TO "G"                                   IC1064.2
@@ -380,9 +380,9 @@
 038200 LINK-TEST-03.                                                    IC1064.2
 038300     MOVE "SUBPROGRAM INDEX" TO FEATURE.                          IC1064.2
 038400     MOVE "LINK-TEST-03" TO PAR-NAME.                             IC1064.2
-038500*        THIS TEST  VERIFIES THAT A SUBPROGRAM INDEX FOR          IC1064.2
-038600*    A TABLE DEFINED IN THE LINKAGE SECTION OF IC107 CAN BE       IC1064.2
-038700*    USED TO REFERENCE THE TABLE.                                 IC1064.2
+038500*                                                                         
+038600*                                                                         
+038700*                                                                         
 038800 LINK-TEST-03-01.                                                 IC1064.2
 038900     MOVE 1 TO REC-CT.                                            IC1064.2
 039000     IF DN2 (1) EQUAL TO "A"                                      IC1064.2
@@ -397,21 +397,21 @@
 039900     PERFORM PRINT-DETAIL.                                        IC1064.2
 040000 LINK-TEST-03-02.                                                 IC1064.2
 040100     ADD 1 TO REC-CT.                                             IC1064.2
-040200     IF DN2 (2) EQUAL TO "H"                                      IC1064.2
+040200     IF DN2 (2) EQUAL TO "Z"                                      IC1064.2
 040300         PERFORM PASS                                             IC1064.2
 040400         GO TO LINK-WRITE-03-02.                                  IC1064.2
 040500 LINK-FAIL-03-02.                                                 IC1064.2
 040600     PERFORM FAIL.                                                IC1064.2
 040700     MOVE DN2 (2) TO COMPUTED-A.                                  IC1064.2
-040800     MOVE "H" TO CORRECT-A.                                       IC1064.2
+040800     MOVE "Z" TO CORRECT-A.                                       IC1064.2
 040900     MOVE "INDEX IN LINKAGE SECTION" TO RE-MARK.                  IC1064.2
 041000 LINK-WRITE-03-02.                                                IC1064.2
 041100     PERFORM PRINT-DETAIL.                                        IC1064.2
 041200 LINK-TEST-04.                                                    IC1064.2
 041300     MOVE "INDEX DATA ITEM" TO FEATURE.                           IC1064.2
 041400     MOVE "LINK-TEST-04" TO PAR-NAME.                             IC1064.2
-041500*        THIS TEST VERIFIES THAT AN INDEX DATA ITEM               IC1064.2
-041600*    SET IN THE SUBPROGRAM CAN BE USED IN THE MAIN PROGRAM.       IC1064.2
+041500*                                                                         
+041600*                                                                         
 041700 LINK-TEST-04-01.                                                 IC1064.2
 041800     MOVE 1 TO REC-CT.                                            IC1064.2
 041900     SET IN1 TO IDN1.                                             IC1064.2
@@ -458,13 +458,13 @@
 046000*                                                                         
 046100 LINK-TEST-05-01.                                                 IC1064.2
 046200     MOVE 1 TO REC-CT.                                            IC1064.2
-046300     IF DN2 (4) EQUAL TO "Q"                                      IC1064.2
+046300     IF DN2 (4) EQUAL TO "N"                                      IC1064.2
 046400         PERFORM PASS                                             IC1064.2
 046500         GO TO LINK-WRITE-05-01.                                  IC1064.2
 046600 LINK-FAIL-05-01.                                                 IC1064.2
 046700     PERFORM FAIL.                                                IC1064.2
 046800     MOVE DN2 (4) TO COMPUTED-A.                                  IC1064.2
-046900     MOVE "Q" TO CORRECT-A.                                       IC1064.2
+046900     MOVE "N" TO CORRECT-A.                                       IC1064.2
 047000     MOVE "TABLES DEFINED IN LINKAGE SEC" TO RE-MARK.             IC1064.2
 047100 LINK-WRITE-05-01.                                                IC1064.2
 047200     PERFORM PRINT-DETAIL.                                        IC1064.2
@@ -487,13 +487,13 @@
 048900*                                                                         
 049000 LINK-TEST-06-01.                                                 IC1064.2
 049100     MOVE 1 TO REC-CT.                                            IC1064.2
-049200     IF DN2 (8) EQUAL TO "2"                                      IC1064.2
+049200     IF DN2 (8) EQUAL TO "D"                                      IC1064.2
 049300         PERFORM PASS                                             IC1064.2
 049400         GO TO LINK-WRITE-06-01.                                  IC1064.2
 049500 LINK-FAIL-06-01.                                                 IC1064.2
 049600     PERFORM FAIL.                                                IC1064.2
 049700     MOVE DN2 (8) TO COMPUTED-A.                                  IC1064.2
-049800     MOVE "2" TO CORRECT-A.                                       IC1064.2
+049800     MOVE "D" TO CORRECT-A.                                       IC1064.2
 049900     MOVE "REDEFINED ITEM IN LINKAGE SEC" TO RE-MARK.             IC1064.2
 050000 LINK-WRITE-06-01.                                                IC1064.2
 050100     PERFORM PRINT-DETAIL.                                        IC1064.2

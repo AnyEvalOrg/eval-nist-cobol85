@@ -1,30 +1,30 @@
 000100 IDENTIFICATION DIVISION.                                         NC2334.2
 000200 PROGRAM-ID.                                                      NC2334.2
 000300     NC233A.                                                      NC2334.2
-000400****************************************************************  NC2334.2
-000500*                                                              *  NC2334.2
-000600*    VALIDATION FOR:-                                          *  NC2334.2
-000700*                                                              *  NC2334.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2334.2
-000900*                                                              *  NC2334.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2334.2
-001100*                                                              *  NC2334.2
-001200****************************************************************  NC2334.2
-001300*                                                              *  NC2334.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2334.2
-001500*                                                              *  NC2334.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2334.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2334.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2334.2
-001900*                                                              *  NC2334.2
-002000****************************************************************  NC2334.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
 002100                                                                  NC2334.2
-002200*                                                              *  NC2334.2
-002300*    PROGRAM NC233A USES FORMAT 2 OF THE "SEARCH" STATEMENT    *  NC2334.2
-002400*    TO ACCESS THRE AND SEVEN-DIMENSIONAL TABLES.              *  NC2334.2
-002500*    THE SCOPE TERMINATOR "END-SEARCH" IS ALSO TESTED.         *  NC2334.2
-002600*                                                              *  NC2334.2
-002700****************************************************************  NC2334.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
 002800 ENVIRONMENT DIVISION.                                            NC2334.2
 002900 CONFIGURATION SECTION.                                           NC2334.2
 003000 SOURCE-COMPUTER.                                                 NC2334.2
@@ -350,7 +350,7 @@
 035200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2334.2
 035300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2334.2
 035400      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2334.2
-035500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2334.2
+035500*                                                                         
 035600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2334.2
 035700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2334.2
 035800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2334.2

@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1164.2
 000300     IF116A.                                                      IF1164.2
 000400                                                                  IF1164.2
-000500***********************************************************       IF1164.2
-000600*                                                         *       IF1164.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1164.2
-000800* It contains tests for the Intrinsic Function LOG.       *       IF1164.2
-000900*                                                         *       IF1164.2
-001000***********************************************************       IF1164.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1164.2
 001200 CONFIGURATION SECTION.                                           IF1164.2
 001300 SOURCE-COMPUTER.                                                 IF1164.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1164.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1164.2
 002600 WORKING-STORAGE SECTION.                                         IF1164.2
-002700***********************************************************       IF1164.2
-002800* Variables specific to the Intrinsic Function Test IF116A*       IF1164.2
-002900***********************************************************       IF1164.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 600000.        IF1164.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1164.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1164.2
@@ -42,9 +42,9 @@
 004200 01  WS-NUM              PIC S9(5)V9(6).                          IF1164.2
 004300 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1164.2
 004400 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1164.2
-004500*                                                                 IF1164.2
-004600**********************************************************        IF1164.2
-004700*                                                                 IF1164.2
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
 004800 01  TEST-RESULTS.                                                IF1164.2
 004900     02 FILLER                   PIC X      VALUE SPACE.          IF1164.2
 005000     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1164.2
@@ -338,16 +338,16 @@
 033800 BAIL-OUT-EX. EXIT.                                               IF1164.2
 033900 CCVS1-EXIT.                                                      IF1164.2
 034000     EXIT.                                                        IF1164.2
-034100********************************************************          IF1164.2
-034200*                                                      *          IF1164.2
-034300*    Intrinsic Function Tests         IF116A - LOG     *          IF1164.2
-034400*                                                      *          IF1164.2
-034500********************************************************          IF1164.2
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
 034600 SECT-IF116A SECTION.                                             IF1164.2
 034700 F-LOG-INFO.                                                      IF1164.2
 034800     MOVE     "See ref. A-49 2.20" TO ANSI-REFERENCE.             IF1164.2
 034900     MOVE     "LOG Function" TO FEATURE.                          IF1164.2
-035000*****************TEST (a) - SIMPLE TEST*****************          IF1164.2
+035000*                                                                         
 035100 F-LOG-01.                                                        IF1164.2
 035200     MOVE ZERO TO WS-NUM.                                         IF1164.2
 035300     MOVE  0.999980 TO MIN-RANGE.                                 IF1164.2
@@ -369,7 +369,7 @@
 036900 F-LOG-WRITE-01.                                                  IF1164.2
 037000     MOVE "F-LOG-01" TO PAR-NAME.                                 IF1164.2
 037100     PERFORM  PRINT-DETAIL.                                       IF1164.2
-037200*****************TEST (b) - SIMPLE TEST*****************          IF1164.2
+037200*                                                                         
 037300 F-LOG-02.                                                        IF1164.2
 037400     EVALUATE FUNCTION LOG(1)                                     IF1164.2
 037500     WHEN -0.000020 THRU 0.000020                                 IF1164.2
@@ -383,7 +383,7 @@
 038300 F-LOG-WRITE-02.                                                  IF1164.2
 038400     MOVE "F-LOG-02" TO PAR-NAME.                                 IF1164.2
 038500     PERFORM  PRINT-DETAIL.                                       IF1164.2
-038600*****************TEST (d) - SIMPLE TEST*****************          IF1164.2
+038600*                                                                         
 038700 F-LOG-04.                                                        IF1164.2
 038800     MOVE ZERO TO WS-NUM.                                         IF1164.2
 038900     MOVE -6.90789  TO MIN-RANGE.                                 IF1164.2
@@ -405,7 +405,7 @@
 040500 F-LOG-WRITE-04.                                                  IF1164.2
 040600     MOVE "F-LOG-04" TO PAR-NAME.                                 IF1164.2
 040700     PERFORM  PRINT-DETAIL.                                       IF1164.2
-040800*****************TEST (e) - SIMPLE TEST*****************          IF1164.2
+040800*                                                                         
 040900 F-LOG-05.                                                        IF1164.2
 041000     MOVE ZERO TO WS-NUM.                                         IF1164.2
 041100     MOVE  9.21015 TO MIN-RANGE.                                  IF1164.2
@@ -427,7 +427,7 @@
 042700 F-LOG-WRITE-05.                                                  IF1164.2
 042800     MOVE "F-LOG-05" TO PAR-NAME.                                 IF1164.2
 042900     PERFORM  PRINT-DETAIL.                                       IF1164.2
-043000*****************TEST (f) - SIMPLE TEST*****************          IF1164.2
+043000*                                                                         
 043100 F-LOG-06.                                                        IF1164.2
 043200     MOVE ZERO TO WS-NUM.                                         IF1164.2
 043300     MOVE  8.01598 TO MIN-RANGE.                                  IF1164.2
@@ -449,7 +449,7 @@
 044900 F-LOG-WRITE-06.                                                  IF1164.2
 045000     MOVE "F-LOG-06" TO PAR-NAME.                                 IF1164.2
 045100     PERFORM  PRINT-DETAIL.                                       IF1164.2
-045200*****************TEST (g) - SIMPLE TEST*****************          IF1164.2
+045200*                                                                         
 045300 F-LOG-07.                                                        IF1164.2
 045400     MOVE ZERO TO WS-NUM.                                         IF1164.2
 045500     MOVE -9.90368 TO MIN-RANGE.                                  IF1164.2
@@ -471,7 +471,7 @@
 047100 F-LOG-WRITE-07.                                                  IF1164.2
 047200     MOVE "F-LOG-07" TO PAR-NAME.                                 IF1164.2
 047300     PERFORM  PRINT-DETAIL.                                       IF1164.2
-047400*****************TEST (h) - SIMPLE TEST*****************          IF1164.2
+047400*                                                                         
 047500 F-LOG-08.                                                        IF1164.2
 047600     MOVE ZERO TO WS-NUM.                                         IF1164.2
 047700     MOVE  13.3044 TO MIN-RANGE.                                  IF1164.2
@@ -493,7 +493,7 @@
 049300 F-LOG-WRITE-08.                                                  IF1164.2
 049400     MOVE "F-LOG-08" TO PAR-NAME.                                 IF1164.2
 049500     PERFORM  PRINT-DETAIL.                                       IF1164.2
-049600*****************TEST (i) - SIMPLE TEST*****************          IF1164.2
+049600*                                                                         
 049700 F-LOG-09.                                                        IF1164.2
 049800     MOVE ZERO TO WS-NUM.                                         IF1164.2
 049900     MOVE  10.3733 TO MIN-RANGE.                                  IF1164.2
@@ -515,7 +515,7 @@
 051500 F-LOG-WRITE-09.                                                  IF1164.2
 051600     MOVE "F-LOG-09" TO PAR-NAME.                                 IF1164.2
 051700     PERFORM  PRINT-DETAIL.                                       IF1164.2
-051800*****************TEST (j) - SIMPLE TEST*****************          IF1164.2
+051800*                                                                         
 051900 F-LOG-10.                                                        IF1164.2
 052000     MOVE ZERO TO WS-NUM.                                         IF1164.2
 052100     MOVE -10.8199 TO MIN-RANGE.                                  IF1164.2
@@ -537,7 +537,7 @@
 053700 F-LOG-WRITE-10.                                                  IF1164.2
 053800     MOVE "F-LOG-10" TO PAR-NAME.                                 IF1164.2
 053900     PERFORM  PRINT-DETAIL.                                       IF1164.2
-054000*****************TEST (k) - SIMPLE TEST*****************          IF1164.2
+054000*                                                                         
 054100 F-LOG-11.                                                        IF1164.2
 054200     MOVE ZERO TO WS-NUM.                                         IF1164.2
 054300     MOVE  1.09859 TO MIN-RANGE.                                  IF1164.2
@@ -559,7 +559,7 @@
 055900 F-LOG-WRITE-11.                                                  IF1164.2
 056000     MOVE "F-LOG-11" TO PAR-NAME.                                 IF1164.2
 056100     PERFORM  PRINT-DETAIL.                                       IF1164.2
-056200*****************TEST (a) - COMPLEX TEST****************          IF1164.2
+056200*                                                                         
 056300 F-LOG-12.                                                        IF1164.2
 056400     MOVE ZERO TO WS-NUM.                                         IF1164.2
 056500     MOVE  1.00032 TO MIN-RANGE.                                  IF1164.2
@@ -581,7 +581,7 @@
 058100 F-LOG-WRITE-12.                                                  IF1164.2
 058200     MOVE "F-LOG-12" TO PAR-NAME.                                 IF1164.2
 058300     PERFORM  PRINT-DETAIL.                                       IF1164.2
-058400*****************TEST (b) - COMPLEX TEST****************          IF1164.2
+058400*                                                                         
 058500 F-LOG-13.                                                        IF1164.2
 058600     MOVE ZERO TO WS-NUM.                                         IF1164.2
 058700     MOVE -2.30267 TO MIN-RANGE.                                  IF1164.2
@@ -603,7 +603,7 @@
 060300 F-LOG-WRITE-13.                                                  IF1164.2
 060400     MOVE "F-LOG-13" TO PAR-NAME.                                 IF1164.2
 060500     PERFORM  PRINT-DETAIL.                                       IF1164.2
-060600*****************TEST (c) - COMPLEX TEST****************          IF1164.2
+060600*                                                                         
 060700 F-LOG-14.                                                        IF1164.2
 060800     MOVE ZERO TO WS-NUM.                                         IF1164.2
 060900     MOVE  0.962479 TO MIN-RANGE.                                 IF1164.2
@@ -625,7 +625,7 @@
 062500 F-LOG-WRITE-14.                                                  IF1164.2
 062600     MOVE "F-LOG-14" TO PAR-NAME.                                 IF1164.2
 062700     PERFORM  PRINT-DETAIL.                                       IF1164.2
-062800*****************TEST (d) - COMPLEX TEST****************          IF1164.2
+062800*                                                                         
 062900 F-LOG-15.                                                        IF1164.2
 063000     MOVE ZERO TO WS-NUM.                                         IF1164.2
 063100     MOVE -0.105364 TO MIN-RANGE.                                 IF1164.2
@@ -647,7 +647,7 @@
 064700 F-LOG-WRITE-15.                                                  IF1164.2
 064800     MOVE "F-LOG-15" TO PAR-NAME.                                 IF1164.2
 064900     PERFORM  PRINT-DETAIL.                                       IF1164.2
-065000*****************TEST (e) - COMPLEX TEST****************          IF1164.2
+065000*                                                                         
 065100 F-LOG-16.                                                        IF1164.2
 065200     MOVE ZERO TO WS-NUM.                                         IF1164.2
 065300     MOVE  1.94583 TO MIN-RANGE.                                  IF1164.2
@@ -669,7 +669,7 @@
 066900 F-LOG-WRITE-16.                                                  IF1164.2
 067000     MOVE "F-LOG-16" TO PAR-NAME.                                 IF1164.2
 067100     PERFORM  PRINT-DETAIL.                                       IF1164.2
-067200*****************TEST (f) - COMPLEX TEST****************          IF1164.2
+067200*                                                                         
 067300 F-LOG-17.                                                        IF1164.2
 067400     MOVE ZERO TO WS-NUM.                                         IF1164.2
 067500     MOVE  2.99561 TO MIN-RANGE.                                  IF1164.2
@@ -691,7 +691,7 @@
 069100 F-LOG-WRITE-17.                                                  IF1164.2
 069200     MOVE "F-LOG-17" TO PAR-NAME.                                 IF1164.2
 069300     PERFORM  PRINT-DETAIL.                                       IF1164.2
-069400*****************TEST (g) - COMPLEX TEST****************          IF1164.2
+069400*                                                                         
 069500 F-LOG-18.                                                        IF1164.2
 069600     MOVE ZERO TO WS-NUM.                                         IF1164.2
 069700     MOVE  1.09857 TO MIN-RANGE.                                  IF1164.2
@@ -713,7 +713,7 @@
 071300 F-LOG-WRITE-18.                                                  IF1164.2
 071400     MOVE "F-LOG-18" TO PAR-NAME.                                 IF1164.2
 071500     PERFORM  PRINT-DETAIL.                                       IF1164.2
-071600*****************TEST (h) - COMPLEX TEST****************          IF1164.2
+071600*                                                                         
 071700 F-LOG-19.                                                        IF1164.2
 071800     MOVE ZERO TO WS-NUM.                                         IF1164.2
 071900     MOVE  0.632497 TO MIN-RANGE.                                 IF1164.2
@@ -735,7 +735,7 @@
 073500 F-LOG-WRITE-19.                                                  IF1164.2
 073600     MOVE "F-LOG-19" TO PAR-NAME.                                 IF1164.2
 073700     PERFORM  PRINT-DETAIL.                                       IF1164.2
-073800*****************TEST (i) - COMPLEX TEST****************          IF1164.2
+073800*                                                                         
 073900 F-LOG-20.                                                        IF1164.2
 074000     MOVE ZERO TO WS-NUM.                                         IF1164.2
 074100     MOVE  2.08164 TO MIN-RANGE.                                  IF1164.2
@@ -757,7 +757,7 @@
 075700 F-LOG-WRITE-20.                                                  IF1164.2
 075800     MOVE "F-LOG-20" TO PAR-NAME.                                 IF1164.2
 075900     PERFORM  PRINT-DETAIL.                                       IF1164.2
-076000*****************TEST (j) - COMPLEX TEST****************          IF1164.2
+076000*                                                                         
 076100 F-LOG-21.                                                        IF1164.2
 076200     MOVE ZERO TO WS-NUM.                                         IF1164.2
 076300     MOVE  1.60937 TO MIN-RANGE.                                  IF1164.2
@@ -779,7 +779,7 @@
 077900 F-LOG-WRITE-21.                                                  IF1164.2
 078000     MOVE "F-LOG-21" TO PAR-NAME.                                 IF1164.2
 078100     PERFORM  PRINT-DETAIL.                                       IF1164.2
-078200*****************TEST (k) - COMPLEX TEST****************          IF1164.2
+078200*                                                                         
 078300 F-LOG-22.                                                        IF1164.2
 078400     MOVE ZERO TO WS-NUM.                                         IF1164.2
 078500     MOVE  1.48569 TO MIN-RANGE.                                  IF1164.2
@@ -801,7 +801,7 @@
 080100 F-LOG-WRITE-22.                                                  IF1164.2
 080200     MOVE "F-LOG-22" TO PAR-NAME.                                 IF1164.2
 080300     PERFORM  PRINT-DETAIL.                                       IF1164.2
-080400*****************TEST (l) - COMPLEX TEST****************          IF1164.2
+080400*                                                                         
 080500 F-LOG-23.                                                        IF1164.2
 080600     MOVE ZERO TO WS-NUM.                                         IF1164.2
 080700     MOVE 4.99980 TO MIN-RANGE.                                   IF1164.2
@@ -823,7 +823,7 @@
 082300 F-LOG-WRITE-23.                                                  IF1164.2
 082400     MOVE "F-LOG-23" TO PAR-NAME.                                 IF1164.2
 082500     PERFORM  PRINT-DETAIL.                                       IF1164.2
-082600*****************TEST (m) - COMPLEX TEST****************          IF1164.2
+082600*                                                                         
 082700 F-LOG-24.                                                        IF1164.2
 082800     MOVE ZERO TO WS-NUM.                                         IF1164.2
 082900     MOVE 0.665702 TO MIN-RANGE.                                  IF1164.2
@@ -845,7 +845,7 @@
 084500 F-LOG-WRITE-24.                                                  IF1164.2
 084600     MOVE "F-LOG-24" TO PAR-NAME.                                 IF1164.2
 084700     PERFORM  PRINT-DETAIL.                                       IF1164.2
-084800*****************TEST (n) - COMPLEX TEST****************          IF1164.2
+084800*                                                                         
 084900 F-LOG-25.                                                        IF1164.2
 085000     MOVE ZERO TO WS-NUM.                                         IF1164.2
 085100     MOVE 1.69307 TO MIN-RANGE.                                   IF1164.2
@@ -868,7 +868,7 @@
 086800 F-LOG-WRITE-25.                                                  IF1164.2
 086900     MOVE "F-LOG-25" TO PAR-NAME.                                 IF1164.2
 087000     PERFORM  PRINT-DETAIL.                                       IF1164.2
-087100*****************SPECIAL PERFORM TEST**********************       IF1164.2
+087100*                                                                         
 087200 F-LOG-26.                                                        IF1164.2
 087300     MOVE ZERO TO WS-NUM.                                         IF1164.2
 087400     PERFORM F-LOG-TEST-26                                        IF1164.2
@@ -883,7 +883,7 @@
 088300 F-LOG-WRITE-26.                                                  IF1164.2
 088400     MOVE "F-LOG-26" TO PAR-NAME.                                 IF1164.2
 088500     PERFORM  PRINT-DETAIL.                                       IF1164.2
-088600********************END OF TESTS***************                   IF1164.2
+088600*                                                                         
 088700 CCVS-EXIT SECTION.                                               IF1164.2
 088800 CCVS-999999.                                                     IF1164.2
 088900     GO TO CLOSE-FILES.                                           IF1164.2

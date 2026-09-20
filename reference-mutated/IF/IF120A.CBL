@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1204.2
 000300     IF120A.                                                      IF1204.2
 000400                                                                  IF1204.2
-000500***********************************************************       IF1204.2
-000600*                                                         *       IF1204.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1204.2
-000800* It contains tests for the Intrinsic Function MEAN.      *       IF1204.2
-000900*                                                         *       IF1204.2
-001000***********************************************************       IF1204.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1204.2
 001200 CONFIGURATION SECTION.                                           IF1204.2
 001300 SOURCE-COMPUTER.                                                 IF1204.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1204.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1204.2
 002600 WORKING-STORAGE SECTION.                                         IF1204.2
-002700***********************************************************       IF1204.2
-002800* Variables specific to the Intrinsic Function Test IF120A*       IF1204.2
-002900***********************************************************       IF1204.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 5.             IF1204.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1204.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1204.2
@@ -49,9 +49,9 @@
 004900 01  WS-NUM              PIC S9(6)V9(6).                          IF1204.2
 005000 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1204.2
 005100 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1204.2
-005200*                                                                 IF1204.2
-005300**********************************************************        IF1204.2
-005400*                                                                 IF1204.2
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
 005500 01  TEST-RESULTS.                                                IF1204.2
 005600     02 FILLER                   PIC X      VALUE SPACE.          IF1204.2
 005700     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1204.2
@@ -345,16 +345,16 @@
 034500 BAIL-OUT-EX. EXIT.                                               IF1204.2
 034600 CCVS1-EXIT.                                                      IF1204.2
 034700     EXIT.                                                        IF1204.2
-034800********************************************************          IF1204.2
-034900*                                                      *          IF1204.2
-035000*    Intrinsic Function Tests         IF120A - MEAN    *          IF1204.2
-035100*                                                      *          IF1204.2
-035200********************************************************          IF1204.2
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
+035200*                                                                         
 035300 SECT-IF120A SECTION.                                             IF1204.2
 035400 F-MEAN-TEST-INFO.                                                IF1204.2
 035500     MOVE     "See ref. A-53 2.24" TO ANSI-REFERENCE.             IF1204.2
 035600     MOVE     "MEAN Function" TO FEATURE.                         IF1204.2
-035700*****************TEST (a) - SIMPLE TEST*****************          IF1204.2
+035700*                                                                         
 035800 F-MEAN-01.                                                       IF1204.2
 035900     MOVE ZERO TO WS-NUM.                                         IF1204.2
 036000 F-MEAN-TEST-01.                                                  IF1204.2
@@ -373,7 +373,7 @@
 037300 F-MEAN-WRITE-01.                                                 IF1204.2
 037400     MOVE "F-MEAN-01" TO PAR-NAME.                                IF1204.2
 037500     PERFORM  PRINT-DETAIL.                                       IF1204.2
-037600*****************TEST (b) - SIMPLE TEST*****************          IF1204.2
+037600*                                                                         
 037700 F-MEAN-02.                                                       IF1204.2
 037800     EVALUATE FUNCTION MEAN(3.9, -0.3, 8.7, 100.2)                IF1204.2
 037900     WHEN 28.1244 THRU 28.1256                                    IF1204.2
@@ -387,7 +387,7 @@
 038700 F-MEAN-WRITE-02.                                                 IF1204.2
 038800     MOVE "F-MEAN-02" TO PAR-NAME.                                IF1204.2
 038900     PERFORM  PRINT-DETAIL.                                       IF1204.2
-039000*****************TEST (c) - SIMPLE TEST*****************          IF1204.2
+039000*                                                                         
 039100 F-MEAN-03.                                                       IF1204.2
 039200     IF (FUNCTION MEAN(A, B, C, D) >= 4.49991) AND                IF1204.2
 039300        (FUNCTION MEAN(A, B, C, D) <= 4.50009)                    IF1204.2
@@ -401,7 +401,7 @@
 040100 F-MEAN-WRITE-03.                                                 IF1204.2
 040200     MOVE "F-MEAN-03" TO PAR-NAME.                                IF1204.2
 040300     PERFORM  PRINT-DETAIL.                                       IF1204.2
-040400*****************TEST (d) - SIMPLE TEST*****************          IF1204.2
+040400*                                                                         
 040500 F-MEAN-04.                                                       IF1204.2
 040600     MOVE ZERO TO WS-NUM.                                         IF1204.2
 040700 F-MEAN-TEST-04.                                                  IF1204.2
@@ -420,7 +420,7 @@
 042000 F-MEAN-WRITE-04.                                                 IF1204.2
 042100     MOVE "F-MEAN-04" TO PAR-NAME.                                IF1204.2
 042200     PERFORM  PRINT-DETAIL.                                       IF1204.2
-042300*****************TEST (e) - SIMPLE TEST*****************          IF1204.2
+042300*                                                                         
 042400 F-MEAN-05.                                                       IF1204.2
 042500     MOVE ZERO TO WS-NUM.                                         IF1204.2
 042600 F-MEAN-TEST-05.                                                  IF1204.2
@@ -439,7 +439,7 @@
 043900 F-MEAN-WRITE-05.                                                 IF1204.2
 044000     MOVE "F-MEAN-05" TO PAR-NAME.                                IF1204.2
 044100     PERFORM  PRINT-DETAIL.                                       IF1204.2
-044200*****************TEST (f) - SIMPLE TEST*****************          IF1204.2
+044200*                                                                         
 044300 F-MEAN-06.                                                       IF1204.2
 044400     MOVE ZERO TO WS-NUM.                                         IF1204.2
 044500 F-MEAN-TEST-06.                                                  IF1204.2
@@ -458,7 +458,7 @@
 045800 F-MEAN-WRITE-06.                                                 IF1204.2
 045900     MOVE "F-MEAN-06" TO PAR-NAME.                                IF1204.2
 046000     PERFORM  PRINT-DETAIL.                                       IF1204.2
-046100*****************TEST (g) - SIMPLE TEST*****************          IF1204.2
+046100*                                                                         
 046200 F-MEAN-07.                                                       IF1204.2
 046300     MOVE ZERO TO WS-NUM.                                         IF1204.2
 046400 F-MEAN-TEST-07.                                                  IF1204.2
@@ -477,7 +477,7 @@
 047700 F-MEAN-WRITE-07.                                                 IF1204.2
 047800     MOVE "F-MEAN-07" TO PAR-NAME.                                IF1204.2
 047900     PERFORM  PRINT-DETAIL.                                       IF1204.2
-048000*****************TEST (h) - SIMPLE TEST*****************          IF1204.2
+048000*                                                                         
 048100 F-MEAN-08.                                                       IF1204.2
 048200     MOVE ZERO TO WS-NUM.                                         IF1204.2
 048300 F-MEAN-TEST-08.                                                  IF1204.2
@@ -496,7 +496,7 @@
 049600 F-MEAN-WRITE-08.                                                 IF1204.2
 049700     MOVE "F-MEAN-08" TO PAR-NAME.                                IF1204.2
 049800     PERFORM  PRINT-DETAIL.                                       IF1204.2
-049900*****************TEST (i) - SIMPLE TEST*****************          IF1204.2
+049900*                                                                         
 050000 F-MEAN-09.                                                       IF1204.2
 050100     MOVE ZERO TO WS-NUM.                                         IF1204.2
 050200 F-MEAN-TEST-09.                                                  IF1204.2
@@ -515,7 +515,7 @@
 051500 F-MEAN-WRITE-09.                                                 IF1204.2
 051600     MOVE "F-MEAN-09" TO PAR-NAME.                                IF1204.2
 051700     PERFORM  PRINT-DETAIL.                                       IF1204.2
-051800*****************TEST (k) - SIMPLE TEST*****************          IF1204.2
+051800*                                                                         
 051900 F-MEAN-11.                                                       IF1204.2
 052000     MOVE ZERO TO WS-NUM.                                         IF1204.2
 052100 F-MEAN-TEST-11.                                                  IF1204.2
@@ -533,7 +533,7 @@
 053300 F-MEAN-WRITE-11.                                                 IF1204.2
 053400     MOVE "F-MEAN-11" TO PAR-NAME.                                IF1204.2
 053500     PERFORM  PRINT-DETAIL.                                       IF1204.2
-053600*****************TEST (l) - SIMPLE TEST*****************          IF1204.2
+053600*                                                                         
 053700 F-MEAN-12.                                                       IF1204.2
 053800     MOVE ZERO TO WS-NUM.                                         IF1204.2
 053900 F-MEAN-TEST-12.                                                  IF1204.2
@@ -551,7 +551,7 @@
 055100 F-MEAN-WRITE-12.                                                 IF1204.2
 055200     MOVE "F-MEAN-12" TO PAR-NAME.                                IF1204.2
 055300     PERFORM  PRINT-DETAIL.                                       IF1204.2
-055400*****************TEST (a) - COMPLEX TEST****************          IF1204.2
+055400*                                                                         
 055500 F-MEAN-13.                                                       IF1204.2
 055600     MOVE ZERO TO WS-NUM.                                         IF1204.2
 055700     MOVE  20.6896 TO MIN-RANGE.                                  IF1204.2
@@ -573,7 +573,7 @@
 057300 F-MEAN-WRITE-13.                                                 IF1204.2
 057400     MOVE "F-MEAN-13" TO PAR-NAME.                                IF1204.2
 057500     PERFORM  PRINT-DETAIL.                                       IF1204.2
-057600*****************TEST (b) - COMPLEX TEST****************          IF1204.2
+057600*                                                                         
 057700 F-MEAN-14.                                                       IF1204.2
 057800     MOVE ZERO TO WS-NUM.                                         IF1204.2
 057900     MOVE 83.9983 TO MIN-RANGE.                                   IF1204.2
@@ -595,7 +595,7 @@
 059500 F-MEAN-WRITE-14.                                                 IF1204.2
 059600     MOVE "F-MEAN-14" TO PAR-NAME.                                IF1204.2
 059700     PERFORM  PRINT-DETAIL.                                       IF1204.2
-059800*****************TEST (c) - COMPLEX TEST****************          IF1204.2
+059800*                                                                         
 059900 F-MEAN-15.                                                       IF1204.2
 060000     MOVE ZERO TO WS-NUM.                                         IF1204.2
 060100     MOVE 2.49995 TO MIN-RANGE.                                   IF1204.2
@@ -618,7 +618,7 @@
 061800 F-MEAN-WRITE-15.                                                 IF1204.2
 061900     MOVE "F-MEAN-15" TO PAR-NAME.                                IF1204.2
 062000     PERFORM  PRINT-DETAIL.                                       IF1204.2
-062100*****************TEST (d) - COMPLEX TEST****************          IF1204.2
+062100*                                                                         
 062200 F-MEAN-16.                                                       IF1204.2
 062300     MOVE ZERO TO WS-NUM.                                         IF1204.2
 062400     MOVE 4.49991 TO MIN-RANGE.                                   IF1204.2
@@ -640,7 +640,7 @@
 064000 F-MEAN-WRITE-16.                                                 IF1204.2
 064100     MOVE "F-MEAN-16" TO PAR-NAME.                                IF1204.2
 064200     PERFORM  PRINT-DETAIL.                                       IF1204.2
-064300*****************TEST (e) - COMPLEX TEST****************          IF1204.2
+064300*                                                                         
 064400 F-MEAN-17.                                                       IF1204.2
 064500     MOVE ZERO TO WS-NUM.                                         IF1204.2
 064600     MOVE  20.7996 TO MIN-RANGE.                                  IF1204.2
@@ -662,7 +662,7 @@
 066200 F-MEAN-WRITE-17.                                                 IF1204.2
 066300     MOVE "F-MEAN-17" TO PAR-NAME.                                IF1204.2
 066400     PERFORM  PRINT-DETAIL.                                       IF1204.2
-066500*****************SPECIAL PERFORM TEST**********************       IF1204.2
+066500*                                                                         
 066600 F-MEAN-18.                                                       IF1204.2
 066700     MOVE ZERO TO WS-NUM.                                         IF1204.2
 066800     PERFORM F-MEAN-TEST-18                                       IF1204.2
@@ -678,7 +678,7 @@
 067800 F-MEAN-WRITE-18.                                                 IF1204.2
 067900     MOVE "F-MEAN-18" TO PAR-NAME.                                IF1204.2
 068000     PERFORM  PRINT-DETAIL.                                       IF1204.2
-068100********************END OF TESTS***************                   IF1204.2
+068100*                                                                         
 068200 CCVS-EXIT SECTION.                                               IF1204.2
 068300 CCVS-999999.                                                     IF1204.2
 068400     GO TO CLOSE-FILES.                                           IF1204.2

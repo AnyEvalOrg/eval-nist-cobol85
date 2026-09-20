@@ -1,36 +1,36 @@
 000100 IDENTIFICATION DIVISION.                                         IC1014.2
 000200 PROGRAM-ID.                                                      IC1014.2
 000300     IC101A.                                                      IC1014.2
-000400****************************************************************  IC1014.2
-000500*                                                              *  IC1014.2
-000600*    VALIDATION FOR:-                                          *  IC1014.2
-000700*                                                              *  IC1014.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1014.2
-000900*                                                              *  IC1014.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1014.2
-001100*                                                              *  IC1014.2
-001200****************************************************************  IC1014.2
-001300*                                                              *  IC1014.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1014.2
-001500*                                                              *  IC1014.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1014.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1014.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1014.2
-001900*                                                              *  IC1014.2
-002000****************************************************************  IC1014.2
-002100*         THIS ROUTINE CHECKS THE USE OF THE CALL STATEMENT       IC1014.2
-002200*    WITH ONE PARAMETER IN THE USING PHRASE.  SUBSEQUENT CALLS    IC1014.2
-002300*    CHECK THAT THE CALLED ROUTINE REMAINS IN THE LAST USED STATE.IC1014.2
-002400*                                                                 IC1014.2
-002500*        THERE ARE NO DELETE PARAGRAPHS IN THIS ROUTINE           IC1014.2
-002600*    SINCE THESE ARE THE BASIC CALL TESTS AND IF A CALL           IC1014.2
-002700*    STATEMENT IS REJECTED THERE IS NO REASON TO RUN THE ROUTINE. IC1014.2
-002800*                                                                 IC1014.2
-002900*    THE FIRST THREE CALLS USE A DATA-NAME THE SAME AS            IC1014.2
-003000*    THE NAME IN THE SUBPROGRAM.  THE LAST TWO CALLS USE          IC1014.2
-003100*    A DIFFERENT DATA-NAME FROM THE NAME IN THE SUBPROGRAM.       IC1014.2
-003200*    THE PICTURE CLAUSES FOR DATA-NAMES IN THE USING PHRASES      IC1014.2
-003300*    OF THE CALLED AND CALLING PROGRAMS ARE IDENTICAL.            IC1014.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
 003400 ENVIRONMENT DIVISION.                                            IC1014.2
 003500 CONFIGURATION SECTION.                                           IC1014.2
 003600 SOURCE-COMPUTER.                                                 IC1014.2
@@ -236,7 +236,7 @@
 023800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1014.2
 023900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1014.2
 024000      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1014.2
-024100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1014.2
+024100*                                                                         
 024200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1014.2
 024300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1014.2
 024400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1014.2
@@ -309,11 +309,11 @@
 031100     MOVE "CALL-TEST-01" TO PAR-NAME.                             IC1014.2
 031200 CALL-TEST-1.                                                     IC1014.2
 031300     CALL "IC102A" USING DN1.                                     IC1014.2
-031400     IF DN1 IS EQUAL TO 7                                         IC1014.2
+031400     IF DN1 IS EQUAL TO 8                                         IC1014.2
 031500         PERFORM PASS                                             IC1014.2
 031600             GO TO CALL-WRITE-1.                                  IC1014.2
 031700 CALL-FAIL-1.                                                     IC1014.2
-031800     MOVE 7 TO CORRECT-18V0.                                      IC1014.2
+031800     MOVE 8 TO CORRECT-18V0.                                      IC1014.2
 031900     MOVE DN1 TO COMPUTED-18V0.                                   IC1014.2
 032000     PERFORM FAIL.                                                IC1014.2
 032100 CALL-WRITE-1.                                                    IC1014.2
@@ -322,11 +322,11 @@
 032400     MOVE 0 TO DN1.                                               IC1014.2
 032500 CALL-TEST-2.                                                     IC1014.2
 032600     CALL "IC102A" USING DN1.                                     IC1014.2
-032700     IF DN1 IS EQUAL TO 6                                         IC1014.2
+032700     IF DN1 IS EQUAL TO 7                                         IC1014.2
 032800         PERFORM PASS                                             IC1014.2
 032900             GO TO CALL-WRITE-2.                                  IC1014.2
 033000 CALL-FAIL-2.                                                     IC1014.2
-033100     MOVE 6 TO CORRECT-18V0.                                      IC1014.2
+033100     MOVE 7 TO CORRECT-18V0.                                      IC1014.2
 033200     MOVE DN1 TO COMPUTED-18V0.                                   IC1014.2
 033300     PERFORM FAIL.                                                IC1014.2
 033400 CALL-WRITE-2.                                                    IC1014.2
@@ -336,11 +336,11 @@
 033800     ADD 4 TO DN1.                                                IC1014.2
 033900 CALL-TEST-3.                                                     IC1014.2
 034000     CALL "IC102A" USING DN1.                                     IC1014.2
-034100     IF DN1 IS EQUAL TO 6                                         IC1014.2
+034100     IF DN1 IS EQUAL TO 2                                         IC1014.2
 034200         PERFORM PASS                                             IC1014.2
 034300             GO TO CALL-WRITE-3.                                  IC1014.2
 034400 CALL-FAIL-3.                                                     IC1014.2
-034500     MOVE 6 TO CORRECT-18V0.                                      IC1014.2
+034500     MOVE 2 TO CORRECT-18V0.                                      IC1014.2
 034600     MOVE DN1 TO COMPUTED-18V0.                                   IC1014.2
 034700     PERFORM FAIL.                                                IC1014.2
 034800 CALL-WRITE-3.                                                    IC1014.2

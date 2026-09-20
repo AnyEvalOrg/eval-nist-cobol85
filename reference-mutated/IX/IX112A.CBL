@@ -1,37 +1,37 @@
 000100 IDENTIFICATION DIVISION.                                         IX1124.2
 000200 PROGRAM-ID.                                                      IX1124.2
 000300     IX112A.                                                      IX1124.2
-000400****************************************************************  IX1124.2
-000500*                                                              *  IX1124.2
-000600*    VALIDATION FOR:-                                          *  IX1124.2
-000700*                                                              *  IX1124.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1124.2
-000900*                                                              *  IX1124.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1124.2
-001100*                                                              *  IX1124.2
-001200****************************************************************  IX1124.2
-001300*                                                                 IX1124.2
-001400*    1.  THE  ROUTINE  CREATES  THE  MASS  STORAGE  FILE  IX-VS2  IX1124.2
-001500*        CONTAINING  50  RECORDS. EACH BLOCK CONTAINS 2 RECORDS,  IX1124.2
-001600*        EACH  RECORD  CONTAINS  240 CHARACTERS, ORGANIZATION IS  IX1124.2
-001700*        INDEXED,  ACCESS  IS SEQUENTIAL. THEN THE FILE IS OPENED IX1124.2
-001800*        AS I-O AND IT IS ATTEMTED TO REWRITE A RECORD WITH A     IX1124.2
-001900*        WRONG RECORD LENGTH.                                     IX1124.2
-002000*                                                                 IX1124.2
-002100*    2. THE ROUTINE READS THE CREATED FILE, VERIFIES IT AND       IX1124.2
-002200*       CHECKS THE FILE STATUS CODE:                              IX1124.2
-002300*           44  -  AFTER REWRITE   (WITH WRONG RECORD LENGTH)     IX1124.2
-002400*                                                                 IX1124.2
-002500*    3. X-CARDS USED IN THIS PROGRAM:                             IX1124.2
-002600*                                                                 IX1124.2
-002700*                 XXXXX024                                        IX1124.2
-002800*                 XXXXX055.                                       IX1124.2
-002900*                 XXXXX062.                                       IX1124.2
-003000*                 XXXXX082.                                       IX1124.2
-003100*                 XXXXX083.                                       IX1124.2
-003200*                 XXXXX084                                        IX1124.2
-003300*                                                                 IX1124.2
-003400*                                                                 IX1124.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 ENVIRONMENT DIVISION.                                            IX1124.2
 003600 CONFIGURATION SECTION.                                           IX1124.2
 003700 SOURCE-COMPUTER.                                                 IX1124.2
@@ -40,10 +40,10 @@
 004000     GNU-Linux.                                                   IX1124.2
 004100 INPUT-OUTPUT SECTION.                                            IX1124.2
 004200 FILE-CONTROL.                                                    IX1124.2
-004800*                                                                 IX1124.2
+004800*                                                                         
 004900     SELECT PRINT-FILE ASSIGN TO                                  IX1124.2
 005000     "REPORT".                                                    IX1124.2
-005100*                                                                 IX1124.2
+005100*                                                                         
 005200     SELECT IX-VS2 ASSIGN                                         IX1124.2
 005300     "XXXXX024"                                                   IX1124.2
 005400     ORGANIZATION IS INDEXED                                      IX1124.2
@@ -490,7 +490,7 @@
 055200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1124.2
 055300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1124.2
 055400      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1124.2
-055500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1124.2
+055500*                                                                         
 055600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1124.2
 055700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1124.2
 055800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1124.2
@@ -577,13 +577,13 @@
 063900     MOVE 000001 TO XRECORD-NUMBER (1).                           IX1124.2
 064000     MOVE 0 TO COUNT-OF-RECS.                                     IX1124.2
 064100                                                                  IX1124.2
-064200******************************************************************IX1124.2
-064300*   TEST  1                                                      *IX1124.2
-064400*         OPEN OUTPUT ...                 00 EXPECTED            *IX1124.2
-064500*         IX-3, 1.3.4 (1) a                                      *IX1124.2
-064600*    STATUS 00 CHECK ON OUTPUT FILE IX-VS2                       *IX1124.2
-064700*    THE OUTPUT STATEMENT IS SUCCESSFULLY EXECUTED               *IX1124.2
-064800******************************************************************IX1124.2
+064200*                                                                         
+064300*                                                                         
+064400*                                                                         
+064500*                                                                         
+064600*                                                                         
+064700*                                                                         
+064800*                                                                         
 064900 OPN-INIT-GF-01-0.                                                IX1124.2
 065000     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 065100     MOVE 1 TO STATUS-TEST-00.                                    IX1124.2
@@ -604,13 +604,13 @@
 066600     PERFORM PASS.                                                IX1124.2
 066700 OPN-WRITE-GF-01-0.                                               IX1124.2
 066800     PERFORM PRINT-DETAIL.                                        IX1124.2
-066900******************************************************************IX1124.2
-067000*   TEST  2                                                      *IX1124.2
-067100*         WRITE                           00 EXPECTED            *IX1124.2
-067200*         IX-3, 1.3.4 (1) a                                      *IX1124.2
-067300*    CREATING A INDEXED FILE WITH 50 RECORDS                     *IX1124.2
-067400*    KEY:  FROM  000000001 TO 000000050                          *IX1124.2
-067500******************************************************************IX1124.2
+066900*                                                                         
+067000*                                                                         
+067100*                                                                         
+067200*                                                                         
+067300*                                                                         
+067400*                                                                         
+067500*                                                                         
 067600 WRI-INIT-GF-01-0.                                                IX1124.2
 067700     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 067800     MOVE SPACES TO IX-VS2-STATUS.                                IX1124.2
@@ -621,7 +621,7 @@
 068300     MOVE XRECORD-NUMBER (1) TO GRP-0101-KEY, COUNT-OF-RECS.      IX1124.2
 068400     MOVE GRP-0101 TO XRECORD-KEY (1).                            IX1124.2
 068500     MOVE GRP-0102 TO ALTERNATE-KEY1 (1).                         IX1124.2
-068600*    THE VALUE OF THE ALTERNATE KEY IS 50 TIMES UNCHANGED        *IX1124.2
+068600*                                                                         
 068700     MOVE FILE-RECORD-INFO (1) TO IX-VS2R1-F-G-240.               IX1124.2
 068800     WRITE IX-VS2R1-F-G-240.                                      IX1124.2
 068900     IF IX-VS2-STATUS  NOT = "00"                                 IX1124.2
@@ -650,12 +650,12 @@
 071200     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          IX1124.2
 071300     PERFORM PRINT-DETAIL.                                        IX1124.2
 071400                                                                  IX1124.2
-071500******************************************************************IX1124.2
-071600*   TEST  3                                                      *IX1124.2
-071700*         WRITE  (WRONG SEQUENCE)         21 EXPECTED            *IX1124.2
-071800*         IX-4, 1.3.4 (3) a                                      *IX1124.2
-071900*    KEY:        000000049                                       *IX1124.2
-072000******************************************************************IX1124.2
+071500*                                                                         
+071600*                                                                         
+071700*                                                                         
+071800*                                                                         
+071900*                                                                         
+072000*                                                                         
 072100 WRI-INIT-GF-02-0.                                                IX1124.2
 072200     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 072300     MOVE SPACES TO IX-VS2-STATUS.                                IX1124.2
@@ -683,11 +683,11 @@
 074500 WRI-WRITE-GF-02-0.                                               IX1124.2
 074600     PERFORM PRINT-DETAIL.                                        IX1124.2
 074700                                                                  IX1124.2
-074800******************************************************************IX1124.2
-074900*   TEST  4                                                      *IX1124.2
-075000*         CLOSE OUTPUT                    00 EXPECTED            *IX1124.2
-075100*         IX-3, 1.3.4 (1) a                                      *IX1124.2
-075200******************************************************************IX1124.2
+074800*                                                                         
+074900*                                                                         
+075000*                                                                         
+075100*                                                                         
+075200*                                                                         
 075300 CLO-INIT-GF-01-0.                                                IX1124.2
 075400     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 075500     MOVE SPACES TO IX-VS2-STATUS.                                IX1124.2
@@ -708,15 +708,15 @@
 077000 CLO-WRITE-GF-01-0.                                               IX1124.2
 077100     PERFORM PRINT-DETAIL.                                        IX1124.2
 077200                                                                  IX1124.2
-077300******************************************************************IX1124.2
-077400*    A INDEXED FILE WITH 50 RECORDS HAS BEEN CREATED.            *IX1124.2
-077500******************************************************************IX1124.2
+077300*                                                                         
+077400*                                                                         
+077500*                                                                         
 077600                                                                  IX1124.2
-077700******************************************************************IX1124.2
-077800*   TEST  5                                                      *IX1124.2
-077900*         OPEN INPUT                      00 EXPECTED            *IX1124.2
-078000*         IX-3, 1.3.4 (1) a                                      *IX1124.2
-078100******************************************************************IX1124.2
+077700*                                                                         
+077800*                                                                         
+077900*                                                                         
+078000*                                                                         
+078100*                                                                         
 078200 OPN-INIT-GF-02-0.                                                IX1124.2
 078300     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 078400     MOVE SPACES TO IX-VS2-STATUS.                                IX1124.2
@@ -738,11 +738,11 @@
 080000 OPN-WRITE-GF-02-0.                                               IX1124.2
 080100     PERFORM PRINT-DETAIL.                                        IX1124.2
 080200                                                                  IX1124.2
-080300******************************************************************IX1124.2
-080400*   TEST  6                                                      *IX1124.2
-080500*         READ                  OO EXPECTED                      *IX1124.2
-080600*         IX-3, 1.3.4 (1) a                                      *IX1124.2
-080700******************************************************************IX1124.2
+080300*                                                                         
+080400*                                                                         
+080500*                                                                         
+080600*                                                                         
+080700*                                                                         
 080800 REA-INIT-F1-01-0.                                                IX1124.2
 080900     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 081000     MOVE 1 TO STATUS-TEST-10.                                    IX1124.2
@@ -767,13 +767,13 @@
 082900 REA-WRITE-F1-01-0.                                               IX1124.2
 083000     PERFORM PRINT-DETAIL.                                        IX1124.2
 083100                                                                  IX1124.2
-083200******************************************************************IX1124.2
-083300*   TEST  7                                                      *IX1124.2
-083400*         REWRITE   (WITH WRONG RECORD LENGTH (SHORTER))         *IX1124.2
-083500*         IX-5, 1.3.4 (5) d 1 & 2                                *IX1124.2
-083600*         FILE STATUS  00   OR  44   EXPECTED                    *IX1124.2
-083700*    KEY:        000000005                                       *IX1124.2
-083800******************************************************************IX1124.2
+083200*                                                                         
+083300*                                                                         
+083400*                                                                         
+083500*                                                                         
+083600*                                                                         
+083700*                                                                         
+083800*                                                                         
 083900 RWR-INIT-GF-01-0.                                                IX1124.2
 084000     ADD  1 TO TEST-NUMBER.                                       IX1124.2
 084100     CLOSE IX-VS2.                                                IX1124.2

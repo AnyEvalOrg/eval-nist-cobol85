@@ -2,13 +2,13 @@
 000200 PROGRAM-ID.                                                      IF1014.2
 000300     IF101A.                                                      IF1014.2
 000400                                                                  IF1014.2
-000500***********************************************************       IF1014.2
-000600*                                                         *       IF1014.2
-000700*   This program is intended to form part of the CCVS85   *       IF1014.2
-000800*   COBOL Test Suite. It contains tests for the           *       IF1014.2
-000900*   Intrinsic Function ACOS.                              *       IF1014.2
-001000*                                                         *       IF1014.2
-001100***********************************************************       IF1014.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
 001200 ENVIRONMENT DIVISION.                                            IF1014.2
 001300 CONFIGURATION SECTION.                                           IF1014.2
 001400 SOURCE-COMPUTER.                                                 IF1014.2
@@ -25,9 +25,9 @@
 002500 01  PRINT-REC PICTURE X(120).                                    IF1014.2
 002600 01  DUMMY-RECORD PICTURE X(120).                                 IF1014.2
 002700 WORKING-STORAGE SECTION.                                         IF1014.2
-002800***********************************************************       IF1014.2
-002900* Variables specific to the Intrinsic Function Test IF101A*       IF1014.2
-003000***********************************************************       IF1014.2
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 01  A                   PIC S9(5)V9(5)      VALUE -0.00004.      IF1014.2
 003200 01  B                   PIC S9(10)          VALUE 4.             IF1014.2
 003300 01  C                   PIC S9(10)          VALUE 100000.        IF1014.2
@@ -42,9 +42,9 @@
 004200 01  WS-NUM              PIC S9(5)V9(6).                          IF1014.2
 004300 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1014.2
 004400 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1014.2
-004500*                                                                 IF1014.2
-004600**********************************************************        IF1014.2
-004700*                                                                 IF1014.2
+004500*                                                                         
+004600*                                                                         
+004700*                                                                         
 004800 01  TEST-RESULTS.                                                IF1014.2
 004900     02 FILLER                   PIC X      VALUE SPACE.          IF1014.2
 005000     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1014.2
@@ -338,16 +338,16 @@
 033800 BAIL-OUT-EX. EXIT.                                               IF1014.2
 033900 CCVS1-EXIT.                                                      IF1014.2
 034000     EXIT.                                                        IF1014.2
-034100********************************************************          IF1014.2
-034200*                                                      *          IF1014.2
-034300*    Intrinsic Function Tests         IF101A - ACOS    *          IF1014.2
-034400*                                                      *          IF1014.2
-034500********************************************************          IF1014.2
+034100*                                                                         
+034200*                                                                         
+034300*                                                                         
+034400*                                                                         
+034500*                                                                         
 034600 SECT-IF101A SECTION.                                             IF1014.2
 034700 F-ACOS-INFO.                                                     IF1014.2
 034800     MOVE     "See ref. A-33 2.5" TO ANSI-REFERENCE.              IF1014.2
 034900     MOVE     "ACOS Function" TO FEATURE.                         IF1014.2
-035000*****************TEST (a) - SIMPLE TEST*****************          IF1014.2
+035000*                                                                         
 035100 F-ACOS-01.                                                       IF1014.2
 035200     MOVE ZERO TO WS-NUM.                                         IF1014.2
 035300     MOVE  0.000000 TO MIN-RANGE.                                 IF1014.2
@@ -369,7 +369,7 @@
 036900 F-ACOS-WRITE-01.                                                 IF1014.2
 037000     MOVE "F-ACOS-01" TO PAR-NAME.                                IF1014.2
 037100     PERFORM  PRINT-DETAIL.                                       IF1014.2
-037200*****************TEST (b) - SIMPLE TEST*****************          IF1014.2
+037200*                                                                         
 037300 F-ACOS-02.                                                       IF1014.2
 037400     MOVE  1.04718 TO MIN-RANGE.                                  IF1014.2
 037500     MOVE  1.04722 TO MAX-RANGE.                                  IF1014.2
@@ -386,7 +386,7 @@
 038600 F-ACOS-WRITE-02.                                                 IF1014.2
 038700     MOVE "F-ACOS-02" TO PAR-NAME.                                IF1014.2
 038800     PERFORM  PRINT-DETAIL.                                       IF1014.2
-038900*****************TEST (c) - SIMPLE TEST*****************          IF1014.2
+038900*                                                                         
 039000 F-ACOS-03.                                                       IF1014.2
 039100     EVALUATE FUNCTION ACOS(0)                                    IF1014.2
 039200     WHEN 1.57076 THRU 1.57082                                    IF1014.2
@@ -400,7 +400,7 @@
 040000 F-ACOS-WRITE-03.                                                 IF1014.2
 040100     MOVE "F-ACOS-03" TO PAR-NAME.                                IF1014.2
 040200     PERFORM  PRINT-DETAIL.                                       IF1014.2
-040300*****************TEST (d) - SIMPLE TEST*****************          IF1014.2
+040300*                                                                         
 040400 F-ACOS-04.                                                       IF1014.2
 040500     MOVE ZERO TO WS-NUM.                                         IF1014.2
 040600     MOVE  3.14153 TO MIN-RANGE.                                  IF1014.2
@@ -422,7 +422,7 @@
 042200 F-ACOS-WRITE-04.                                                 IF1014.2
 042300     MOVE "F-ACOS-04" TO PAR-NAME.                                IF1014.2
 042400     PERFORM  PRINT-DETAIL.                                       IF1014.2
-042500*****************TEST (e) - SIMPLE TEST*****************          IF1014.2
+042500*                                                                         
 042600 F-ACOS-05.                                                       IF1014.2
 042700     MOVE ZERO TO WS-NUM.                                         IF1014.2
 042800     MOVE  0.044724 TO MIN-RANGE.                                 IF1014.2
@@ -444,7 +444,7 @@
 044400 F-ACOS-WRITE-05.                                                 IF1014.2
 044500     MOVE "F-ACOS-05" TO PAR-NAME.                                IF1014.2
 044600     PERFORM  PRINT-DETAIL.                                       IF1014.2
-044700*****************TEST (f) - SIMPLE TEST*****************          IF1014.2
+044700*                                                                         
 044800 F-ACOS-06.                                                       IF1014.2
 044900     MOVE ZERO TO WS-NUM.                                         IF1014.2
 045000     MOVE  1.05868 TO MIN-RANGE.                                  IF1014.2
@@ -466,7 +466,7 @@
 046600 F-ACOS-WRITE-06.                                                 IF1014.2
 046700     MOVE "F-ACOS-06" TO PAR-NAME.                                IF1014.2
 046800     PERFORM  PRINT-DETAIL.                                       IF1014.2
-046900*****************TEST (g) - SIMPLE TEST*****************          IF1014.2
+046900*                                                                         
 047000 F-ACOS-07.                                                       IF1014.2
 047100     MOVE ZERO TO WS-NUM.                                         IF1014.2
 047200     MOVE  1.56976 TO MIN-RANGE.                                  IF1014.2
@@ -488,7 +488,7 @@
 048800 F-ACOS-WRITE-07.                                                 IF1014.2
 048900     MOVE "F-ACOS-07" TO PAR-NAME.                                IF1014.2
 049000     PERFORM  PRINT-DETAIL.                                       IF1014.2
-049100*****************TEST (h) - SIMPLE TEST*****************          IF1014.2
+049100*                                                                         
 049200 F-ACOS-08.                                                       IF1014.2
 049300     MOVE ZERO TO WS-NUM.                                         IF1014.2
 049400     MOVE  3.09680 TO MIN-RANGE.                                  IF1014.2
@@ -510,7 +510,7 @@
 051000 F-ACOS-WRITE-08.                                                 IF1014.2
 051100     MOVE "F-ACOS-08" TO PAR-NAME.                                IF1014.2
 051200     PERFORM  PRINT-DETAIL.                                       IF1014.2
-051300*****************TEST (i) - SIMPLE TEST*****************          IF1014.2
+051300*                                                                         
 051400 F-ACOS-09.                                                       IF1014.2
 051500     MOVE ZERO TO WS-NUM.                                         IF1014.2
 051600     MOVE  1.57080 TO MIN-RANGE.                                  IF1014.2
@@ -532,7 +532,7 @@
 053200 F-ACOS-WRITE-09.                                                 IF1014.2
 053300     MOVE "F-ACOS-09" TO PAR-NAME.                                IF1014.2
 053400     PERFORM  PRINT-DETAIL.                                       IF1014.2
-053500*****************TEST (j) - SIMPLE TEST*****************          IF1014.2
+053500*                                                                         
 053600 F-ACOS-10.                                                       IF1014.2
 053700     MOVE ZERO TO WS-NUM.                                         IF1014.2
 053800     MOVE  1.57074 TO MIN-RANGE.                                  IF1014.2
@@ -554,7 +554,7 @@
 055400 F-ACOS-WRITE-10.                                                 IF1014.2
 055500     MOVE "F-ACOS-10" TO PAR-NAME.                                IF1014.2
 055600     PERFORM  PRINT-DETAIL.                                       IF1014.2
-055700*****************TEST (a) - COMPLEX TEST****************          IF1014.2
+055700*                                                                         
 055800 F-ACOS-11.                                                       IF1014.2
 055900     MOVE ZERO TO WS-NUM.                                         IF1014.2
 056000     MOVE  0.785367 TO MIN-RANGE.                                 IF1014.2
@@ -576,7 +576,7 @@
 057600 F-ACOS-WRITE-11.                                                 IF1014.2
 057700     MOVE "F-ACOS-11" TO PAR-NAME.                                IF1014.2
 057800     PERFORM  PRINT-DETAIL.                                       IF1014.2
-057900*****************TEST (b) - COMPLEX TEST****************          IF1014.2
+057900*                                                                         
 058000 F-ACOS-12.                                                       IF1014.2
 058100     MOVE ZERO TO WS-NUM.                                         IF1014.2
 058200     MOVE  0.523577  TO MIN-RANGE.                                IF1014.2
@@ -598,7 +598,7 @@
 059800 F-ACOS-WRITE-12.                                                 IF1014.2
 059900     MOVE "F-ACOS-12" TO PAR-NAME.                                IF1014.2
 060000     PERFORM  PRINT-DETAIL.                                       IF1014.2
-060100*****************TEST (c) - COMPLEX TEST****************          IF1014.2
+060100*                                                                         
 060200 F-ACOS-13.                                                       IF1014.2
 060300     MOVE ZERO TO WS-NUM.                                         IF1014.2
 060400     MOVE  1.58073 TO MIN-RANGE.                                  IF1014.2
@@ -620,7 +620,7 @@
 062000 F-ACOS-WRITE-13.                                                 IF1014.2
 062100     MOVE "F-ACOS-13" TO PAR-NAME.                                IF1014.2
 062200     PERFORM  PRINT-DETAIL.                                       IF1014.2
-062300*****************TEST (d) - COMPLEX TEST****************          IF1014.2
+062300*                                                                         
 062400 F-ACOS-14.                                                       IF1014.2
 062500     MOVE ZERO TO WS-NUM.                                         IF1014.2
 062600     MOVE  0.141533 TO MIN-RANGE.                                 IF1014.2
@@ -642,7 +642,7 @@
 064200 F-ACOS-WRITE-14.                                                 IF1014.2
 064300     MOVE "F-ACOS-14" TO PAR-NAME.                                IF1014.2
 064400     PERFORM  PRINT-DETAIL.                                       IF1014.2
-064500*****************TEST (e) - COMPLEX TEST****************          IF1014.2
+064500*                                                                         
 064600 F-ACOS-15.                                                       IF1014.2
 064700     MOVE ZERO TO WS-NUM.                                         IF1014.2
 064800     MOVE  1.05866 TO MIN-RANGE.                                  IF1014.2
@@ -664,7 +664,7 @@
 066400 F-ACOS-WRITE-15.                                                 IF1014.2
 066500     MOVE "F-ACOS-15" TO PAR-NAME.                                IF1014.2
 066600     PERFORM  PRINT-DETAIL.                                       IF1014.2
-066700*****************TEST (f) - COMPLEX TEST****************          IF1014.2
+066700*                                                                         
 066800 F-ACOS-16.                                                       IF1014.2
 066900     MOVE ZERO TO WS-NUM.                                         IF1014.2
 067000     MOVE  2.99993 TO MIN-RANGE.                                  IF1014.2
@@ -686,7 +686,7 @@
 068600 F-ACOS-WRITE-16.                                                 IF1014.2
 068700     MOVE "F-ACOS-16" TO PAR-NAME.                                IF1014.2
 068800     PERFORM  PRINT-DETAIL.                                       IF1014.2
-068900*****************TEST (g) - COMPLEX TEST****************          IF1014.2
+068900*                                                                         
 069000 F-ACOS-17.                                                       IF1014.2
 069100     MOVE ZERO TO WS-NUM.                                         IF1014.2
 069200     MOVE  -0.000040 TO MIN-RANGE.                                IF1014.2
@@ -708,7 +708,7 @@
 070800 F-ACOS-WRITE-17.                                                 IF1014.2
 070900     MOVE "F-ACOS-17" TO PAR-NAME.                                IF1014.2
 071000     PERFORM  PRINT-DETAIL.                                       IF1014.2
-071100*****************TEST (h) - COMPLEX TEST****************          IF1014.2
+071100*                                                                         
 071200 F-ACOS-18.                                                       IF1014.2
 071300     MOVE ZERO TO WS-NUM.                                         IF1014.2
 071400     MOVE  0.679646 TO MIN-RANGE.                                 IF1014.2
@@ -730,7 +730,7 @@
 073000 F-ACOS-WRITE-18.                                                 IF1014.2
 073100     MOVE "F-ACOS-18" TO PAR-NAME.                                IF1014.2
 073200     PERFORM  PRINT-DETAIL.                                       IF1014.2
-073300*****************TEST (i) - COMPLEX TEST****************          IF1014.2
+073300*                                                                         
 073400 F-ACOS-19.                                                       IF1014.2
 073500     MOVE ZERO TO WS-NUM.                                         IF1014.2
 073600     MOVE  0.000000 TO MIN-RANGE.                                 IF1014.2
@@ -752,7 +752,7 @@
 075200 F-ACOS-WRITE-19.                                                 IF1014.2
 075300     MOVE "F-ACOS-19" TO PAR-NAME.                                IF1014.2
 075400     PERFORM  PRINT-DETAIL.                                       IF1014.2
-075500*****************TEST (j) - COMPLEX TEST****************          IF1014.2
+075500*                                                                         
 075600 F-ACOS-20.                                                       IF1014.2
 075700     MOVE ZERO TO WS-NUM.                                         IF1014.2
 075800     MOVE  0.000000 TO MIN-RANGE.                                 IF1014.2
@@ -774,7 +774,7 @@
 077400 F-ACOS-WRITE-20.                                                 IF1014.2
 077500     MOVE "F-ACOS-20" TO PAR-NAME.                                IF1014.2
 077600     PERFORM  PRINT-DETAIL.                                       IF1014.2
-077700*****************TEST (k) - COMPLEX TEST****************          IF1014.2
+077700*                                                                         
 077800 F-ACOS-21.                                                       IF1014.2
 077900     MOVE ZERO TO WS-NUM.                                         IF1014.2
 078000     MOVE  1.31806 TO MIN-RANGE.                                  IF1014.2
@@ -796,7 +796,7 @@
 079600 F-ACOS-WRITE-21.                                                 IF1014.2
 079700     MOVE "F-ACOS-21" TO PAR-NAME.                                IF1014.2
 079800     PERFORM  PRINT-DETAIL.                                       IF1014.2
-079900*****************TEST (l) - COMPLEX TEST****************          IF1014.2
+079900*                                                                         
 080000 F-ACOS-22.                                                       IF1014.2
 080100     MOVE ZERO TO WS-NUM.                                         IF1014.2
 080200     MOVE  1.57073 TO MIN-RANGE.                                  IF1014.2
@@ -818,7 +818,7 @@
 081800 F-ACOS-WRITE-22.                                                 IF1014.2
 081900     MOVE "F-ACOS-22" TO PAR-NAME.                                IF1014.2
 082000     PERFORM  PRINT-DETAIL.                                       IF1014.2
-082100*****************TEST (m) - COMPLEX TEST****************          IF1014.2
+082100*                                                                         
 082200 F-ACOS-23.                                                       IF1014.2
 082300     MOVE ZERO TO WS-NUM.                                         IF1014.2
 082400     MOVE  2.60285  TO MIN-RANGE.                                 IF1014.2
@@ -840,7 +840,7 @@
 084000 F-ACOS-WRITE-23.                                                 IF1014.2
 084100     MOVE "F-ACOS-23" TO PAR-NAME.                                IF1014.2
 084200     PERFORM  PRINT-DETAIL.                                       IF1014.2
-084300*****************TEST (n) - COMPLEX TEST****************          IF1014.2
+084300*                                                                         
 084400 F-ACOS-24.                                                       IF1014.2
 084500     MOVE ZERO TO WS-NUM.                                         IF1014.2
 084600     MOVE 1.57073 TO MIN-RANGE.                                   IF1014.2
@@ -862,7 +862,7 @@
 086200 F-ACOS-WRITE-24.                                                 IF1014.2
 086300     MOVE "F-ACOS-24" TO PAR-NAME.                                IF1014.2
 086400     PERFORM  PRINT-DETAIL.                                       IF1014.2
-086500*****************TEST (o) - COMPLEX TEST****************          IF1014.2
+086500*                                                                         
 086600 F-ACOS-25.                                                       IF1014.2
 086700     MOVE ZERO TO WS-NUM.                                         IF1014.2
 086800     MOVE 0.000000 TO MIN-RANGE.                                  IF1014.2
@@ -885,7 +885,7 @@
 088500 F-ACOS-WRITE-25.                                                 IF1014.2
 088600     MOVE "F-ACOS-25" TO PAR-NAME.                                IF1014.2
 088700     PERFORM  PRINT-DETAIL.                                       IF1014.2
-088800*****************SPECIAL PERFORM TEST**********************       IF1014.2
+088800*                                                                         
 088900 F-ACOS-26.                                                       IF1014.2
 089000     MOVE ZERO TO ARG1.                                           IF1014.2
 089100     PERFORM F-ACOS-TEST-26                                       IF1014.2
@@ -900,7 +900,7 @@
 090000 F-ACOS-WRITE-26.                                                 IF1014.2
 090100     MOVE "F-ACOS-26" TO PAR-NAME.                                IF1014.2
 090200     PERFORM  PRINT-DETAIL.                                       IF1014.2
-090300********************END OF TESTS***************                   IF1014.2
+090300*                                                                         
 090400 CCVS-EXIT SECTION.                                               IF1014.2
 090500 CCVS-999999.                                                     IF1014.2
 090600     GO TO CLOSE-FILES.                                           IF1014.2

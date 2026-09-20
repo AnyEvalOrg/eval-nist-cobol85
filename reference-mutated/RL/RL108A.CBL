@@ -1,45 +1,45 @@
 000100 IDENTIFICATION DIVISION.                                         RL1084.2
 000200 PROGRAM-ID.                                                      RL1084.2
 000300     RL108A.                                                      RL1084.2
-000400****************************************************************  RL1084.2
-000500*                                                              *  RL1084.2
-000600*    VALIDATION FOR:-                                          *  RL1084.2
-000700*                                                              *  RL1084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL1084.2
-000900*                                                              *  RL1084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL1084.2
-001100*                                                              *  RL1084.2
-001200****************************************************************  RL1084.2
-001300*                                                              *  RL1084.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  RL1084.2
-001500*                                                              *  RL1084.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  RL1084.2
-001700*        X-61  - "LITERAL" IN "ASSIGN TO" CLAUSE FOR           *  RL1084.2
-001800*                RELATIVE I-O DATA FILE.                       *  RL1084.2
-001900*        X-69  - ADDITIONAL "VALUE OF" CLAUSE.                 *  RL1084.2
-002000*        X-74  - VALUE OF IMPLEMENTOR-NAME.                    *  RL1084.2
-002100*        X-75  - OBJECT OF "VALUE" CLAUSE.                     *  RL1084.2
-002200*        X-82  - SOURCE COMPUTER NAME.                         *  RL1084.2
-002300*        X-83  - OBJECT COMPUTER NAME.                         *  RL1084.2
-002400*                                                              *  RL1084.2
-002500****************************************************************  RL1084.2
-002600*RL108A *                                                         RL1084.2
-002700***************************************************               RL1084.2
-002800*GENERAL:    THIS RUN UNIT IS THE FIRST OF A SERIES WHICH         RL1084.2
-002900*            PROCESSES A RELATIVE I-O FILE.  THE FUNCTION OF THIS RL1084.2
-003000*            PROGRAM IS TO CREATE A RELATIVE FILE SEQUENTIALLY    RL1084.2
-003100*            (ACCESS MODE SEQUENTIAL) AND VERIFY THAT IT WAS      RL1084.2
-003200*            CREATED CORRECTLY.  THE FILE IS IDENTIFED AS "RL-FS1"RL1084.2
-003300*            AND IS PASSED TO SUBSEQUENT RUN UNITS FOR PROCESSING.RL1084.2
-003400*                                                                 RL1084.2
-003500*    THIS PROGRAM TESTS THE NEW SYNTACTICAL CONSTRUCTS AND        RL1084.2
-003600*    SEMANTIC ACTIONS OF THE FOLLOWING ELEMENTS:                  RL1084.2
-003700*        - ASSIGN                                                 RL1084.2
-003800*        - ORGANIZATION                                           RL1084.2
-003900*        - ACCESS                                                 RL1084.2
-004000*        - READ                                                   RL1084.2
-004100*        - WRITE                                                  RL1084.2
-004200****************************************************************  RL1084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
 004300 ENVIRONMENT DIVISION.                                            RL1084.2
 004400 CONFIGURATION SECTION.                                           RL1084.2
 004500 SOURCE-COMPUTER.                                                 RL1084.2
@@ -54,7 +54,7 @@
 005400     "XXXXX061"                                                   RL1084.2
 005500             ORGANIZATION RELATIVE                                RL1084.2
 005600             ACCESS SEQUENTIAL.                                   RL1084.2
-005700*                                                                 RL1084.2
+005700*                                                                         
 005800 DATA DIVISION.                                                   RL1084.2
 005900 FILE SECTION.                                                    RL1084.2
 006000 FD  PRINT-FILE.                                                  RL1084.2
@@ -313,7 +313,7 @@
 032000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL1084.2
 032100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL1084.2
 032200      ADD PASS-COUNTER TO ERROR-HOLD.                             RL1084.2
-032300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL1084.2
+032300*                                                                         
 032400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL1084.2
 032500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL1084.2
 032600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL1084.2

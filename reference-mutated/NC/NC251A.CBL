@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC2514.2
 000200 PROGRAM-ID.                                                      NC2514.2
 000300     NC251A.                                                      NC2514.2
-000400****************************************************************  NC2514.2
-000500*                                                              *  NC2514.2
-000600*    VALIDATION FOR:-                                          *  NC2514.2
-000700*                                                              *  NC2514.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2514.2
-000900*                                                              *  NC2514.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2514.2
-001100*                                                              *  NC2514.2
-001200****************************************************************  NC2514.2
-001300*                                                              *  NC2514.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2514.2
-001500*                                                              *  NC2514.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2514.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2514.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2514.2
-001900*                                                              *  NC2514.2
-002000****************************************************************  NC2514.2
-002100*                                                              *  NC2514.2
-002200*    THIS PROGRAM TESTS FORMAT 5 OF THE DIVIDE STATEMENT.      *  NC2514.2
-002300*                                                              *  NC2514.2
-002400****************************************************************  NC2514.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC2514.2
 002600 CONFIGURATION SECTION.                                           NC2514.2
 002700 SOURCE-COMPUTER.                                                 NC2514.2
@@ -335,7 +335,7 @@
 033700      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2514.2
 033800      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2514.2
 033900      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2514.2
-034000*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2514.2
+034000*                                                                         
 034100      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2514.2
 034200      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2514.2
 034300      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2514.2
@@ -434,7 +434,7 @@
 043600 DIV-WRITE-5.                                                     NC2514.2
 043700     MOVE "DIV-TEST-5" TO PAR-NAME.                               NC2514.2
 043800     PERFORM PRINT-DETAIL.                                        NC2514.2
-043900*                                                                 NC2514.2
+043900*                                                                         
 044000 DIV-INIT-F5-3.                                                   NC2514.2
 044100     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 044200     MOVE   "DIV-TEST-F5-3-0"  TO PAR-NAME.                       NC2514.2
@@ -481,7 +481,7 @@
 048300     ELSE                                                         NC2514.2
 048400             PERFORM PASS                                         NC2514.2
 048500             PERFORM PRINT-DETAIL.                                NC2514.2
-048600*                                                                 NC2514.2
+048600*                                                                         
 048700 DIV-INIT-F5-4.                                                   NC2514.2
 048800     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 048900     MOVE   "DIV-TEST-F5-4-0"  TO PAR-NAME.                       NC2514.2
@@ -527,7 +527,7 @@
 052900     ELSE                                                         NC2514.2
 053000             PERFORM PASS                                         NC2514.2
 053100             PERFORM PRINT-DETAIL.                                NC2514.2
-053200*                                                                 NC2514.2
+053200*                                                                         
 053300 DIV-INIT-F5-5.                                                   NC2514.2
 053400     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 053500     MOVE   "DIV-TEST-F5-5-0"  TO PAR-NAME.                       NC2514.2
@@ -574,7 +574,7 @@
 057600     ELSE                                                         NC2514.2
 057700             PERFORM PASS                                         NC2514.2
 057800             PERFORM PRINT-DETAIL.                                NC2514.2
-057900*                                                                 NC2514.2
+057900*                                                                         
 058000 DIV-TEST-12.                                                     NC2514.2
 058100     DIVIDE 230 BY DIV-30-Y2 GIVING DIV-Z2-30 REMAINDER           NC2514.2
 058200     DIV-30-A2.                                                   NC2514.2
@@ -590,7 +590,7 @@
 059200 DIV-WRITE-12.                                                    NC2514.2
 059300     MOVE "DIV-TEST-12" TO PAR-NAME.                              NC2514.2
 059400     PERFORM PRINT-DETAIL.                                        NC2514.2
-059500*                                                                 NC2514.2
+059500*                                                                         
 059600 DIV-INIT-F5-7.                                                   NC2514.2
 059700     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 059800     MOVE   "DIV-TEST-F5-7-0"  TO PAR-NAME.                       NC2514.2
@@ -630,7 +630,7 @@
 063200     ELSE                                                         NC2514.2
 063300             PERFORM PASS                                         NC2514.2
 063400             PERFORM PRINT-DETAIL.                                NC2514.2
-063500*                                                                 NC2514.2
+063500*                                                                         
 063600 DIV-INIT-F5-8.                                                   NC2514.2
 063700     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 063800     MOVE   "DIV-TEST-F5-8-0"  TO PAR-NAME.                       NC2514.2
@@ -670,8 +670,8 @@
 067200     ELSE                                                         NC2514.2
 067300             PERFORM PASS                                         NC2514.2
 067400             PERFORM PRINT-DETAIL.                                NC2514.2
-067500*                                                                 NC2514.2
-067600*                                                                 NC2514.2
+067500*                                                                         
+067600*                                                                         
 067700 DIV-INIT-F5-9.                                                   NC2514.2
 067800     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 067900     MOVE   "DIV-TEST-F5-9-0"  TO PAR-NAME.                       NC2514.2
@@ -710,7 +710,7 @@
 071200     ELSE                                                         NC2514.2
 071300             PERFORM PASS                                         NC2514.2
 071400             PERFORM PRINT-DETAIL.                                NC2514.2
-071500*                                                                 NC2514.2
+071500*                                                                         
 071600 DIV-INIT-F5-10.                                                  NC2514.2
 071700     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2514.2
 071800     MOVE   "DIV-TEST-F5-10-0" TO PAR-NAME.                       NC2514.2
@@ -756,7 +756,7 @@
 075800     ELSE                                                         NC2514.2
 075900             PERFORM PASS                                         NC2514.2
 076000             PERFORM PRINT-DETAIL.                                NC2514.2
-076100*                                                                 NC2514.2
+076100*                                                                         
 076200 DIV-INIT-F5-11.                                                  NC2514.2
 076300     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2514.2
 076400     MOVE   "DIV-TEST-F5-11-0"  TO PAR-NAME.                      NC2514.2
@@ -803,7 +803,7 @@
 080500     ELSE                                                         NC2514.2
 080600             PERFORM PASS                                         NC2514.2
 080700             PERFORM PRINT-DETAIL.                                NC2514.2
-080800*                                                                 NC2514.2
+080800*                                                                         
 080900 DIV-INIT-F5-12.                                                  NC2514.2
 081000     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2514.2
 081100     MOVE   "DIV-TEST-F5-12-0" TO PAR-NAME.                       NC2514.2
@@ -851,7 +851,7 @@
 085300     ELSE                                                         NC2514.2
 085400             PERFORM PASS                                         NC2514.2
 085500             PERFORM PRINT-DETAIL.                                NC2514.2
-085600*                                                                 NC2514.2
+085600*                                                                         
 085700 DIV-INIT-F5-13.                                                  NC2514.2
 085800     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2514.2
 085900     MOVE   "DIV-TEST-F5-13-0"  TO PAR-NAME.                      NC2514.2
@@ -899,7 +899,7 @@
 090100     ELSE                                                         NC2514.2
 090200             PERFORM PASS                                         NC2514.2
 090300             PERFORM PRINT-DETAIL.                                NC2514.2
-090400*                                                                 NC2514.2
+090400*                                                                         
 090500 DIV-INIT-F5-14.                                                  NC2514.2
 090600     MOVE   "VI-82 6.11.4 GR9" TO ANSI-REFERENCE.                 NC2514.2
 090700     MOVE   "DIV-TEST-F5-14-0" TO PAR-NAME.                       NC2514.2
@@ -969,7 +969,7 @@
 097100             MOVE    WRK-XN-00001-2 TO COMPUTED-A                 NC2514.2
 097200             PERFORM FAIL                                         NC2514.2
 097300             PERFORM PRINT-DETAIL.                                NC2514.2
-097400*                                                                 NC2514.2
+097400*                                                                         
 097500 DIV-INIT-F5-15.                                                  NC2514.2
 097600     MOVE   "VI-82 6.11.4 GR9" TO ANSI-REFERENCE.                 NC2514.2
 097700     MOVE   "DIV-TEST-F5-15-0"  TO PAR-NAME.                      NC2514.2
@@ -1039,7 +1039,7 @@
 104100             MOVE    WRK-XN-00001-1 TO COMPUTED-A                 NC2514.2
 104200             PERFORM FAIL                                         NC2514.2
 104300             PERFORM PRINT-DETAIL.                                NC2514.2
-104400*                                                                 NC2514.2
+104400*                                                                         
 104500 DIV-INIT-F5-16.                                                  NC2514.2
 104600     MOVE   "VI-82 6.11.4 GR9" TO ANSI-REFERENCE.                 NC2514.2
 104700     MOVE   "DIV-TEST-F5-16-0" TO PAR-NAME.                       NC2514.2
@@ -1109,7 +1109,7 @@
 111100             MOVE    WRK-XN-00001-2 TO COMPUTED-A                 NC2514.2
 111200             PERFORM FAIL                                         NC2514.2
 111300             PERFORM PRINT-DETAIL.                                NC2514.2
-111400*                                                                 NC2514.2
+111400*                                                                         
 111500 DIV-INIT-F5-17.                                                  NC2514.2
 111600     MOVE   "VI-82 6.11.4 GR9" TO ANSI-REFERENCE.                 NC2514.2
 111700     MOVE   "DIV-TEST-F5-17-0"  TO PAR-NAME.                      NC2514.2
@@ -1179,7 +1179,7 @@
 118100             MOVE    WRK-XN-00001-2 TO COMPUTED-A                 NC2514.2
 118200             PERFORM FAIL                                         NC2514.2
 118300             PERFORM PRINT-DETAIL.                                NC2514.2
-118400*                                                                 NC2514.2
+118400*                                                                         
 118500 DIV-INIT-F5-18.                                                  NC2514.2
 118600     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2514.2
 118700     MOVE   "DIV-TEST-F5-18-0" TO PAR-NAME.                       NC2514.2
@@ -1251,7 +1251,7 @@
 125300             MOVE    WRK-XN-00001-2 TO COMPUTED-A                 NC2514.2
 125400             PERFORM FAIL                                         NC2514.2
 125500             PERFORM PRINT-DETAIL.                                NC2514.2
-125600*                                                                 NC2514.2
+125600*                                                                         
 125700 DIV-INIT-F5-19.                                                  NC2514.2
 125800     MOVE   "VI-82 6.11.4 GR8" TO ANSI-REFERENCE.                 NC2514.2
 125900     MOVE   "DIV-TEST-F5-19-0"  TO PAR-NAME.                      NC2514.2
@@ -1323,7 +1323,7 @@
 132500             MOVE    WRK-XN-00001-2 TO COMPUTED-A                 NC2514.2
 132600             PERFORM FAIL                                         NC2514.2
 132700             PERFORM PRINT-DETAIL.                                NC2514.2
-132800*                                                                 NC2514.2
+132800*                                                                         
 132900 DIV-INIT-F5-20.                                                  NC2514.2
 133000     MOVE   "VI-82 6.11.4 GR4" TO ANSI-REFERENCE.                 NC2514.2
 133100     MOVE   "DIV-TEST-F5-20-0"  TO PAR-NAME.                      NC2514.2
@@ -1378,7 +1378,7 @@
 138000     ELSE                                                         NC2514.2
 138100             PERFORM PASS                                         NC2514.2
 138200             PERFORM PRINT-DETAIL.                                NC2514.2
-138300*                                                                 NC2514.2
+138300*                                                                         
 138400 DIV-INIT-F5-21.                                                  NC2514.2
 138500     MOVE "DIV-TEST-F5-21" TO PAR-NAME.                           NC2514.2
 138600     MOVE 10.0 TO WRK-DU-2V1-1.                                   NC2514.2
@@ -1409,7 +1409,7 @@
 141100     PERFORM PRINT-DETAIL ELSE                                    NC2514.2
 141200     PERFORM FAIL MOVE WRK-NE-1 TO COMPUTED-A MOVE                NC2514.2
 141300     ".0000/92653,58979,32"  TO CORRECT-A PERFORM PRINT-DETAIL.   NC2514.2
-141400*                                                                 NC2514.2
+141400*                                                                         
 141500 CCVS-EXIT SECTION.                                               NC2514.2
 141600 CCVS-999999.                                                     NC2514.2
 141700     GO TO CLOSE-FILES.                                           NC2514.2

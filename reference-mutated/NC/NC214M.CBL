@@ -1,27 +1,27 @@
 000100 IDENTIFICATION DIVISION.                                         NC2144.2
 000200 PROGRAM-ID.                                                      NC2144.2
 000300     NC214M.                                                      NC2144.2
-000400****************************************************************  NC2144.2
-000500*                                                              *  NC2144.2
-000600*    VALIDATION FOR:-                                          *  NC2144.2
-000700*                                                              *  NC2144.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2144.2
-000900*                                                              *  NC2144.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2144.2
-001100*                                                              *  NC2144.2
-001200****************************************************************  NC2144.2
-001300*                                                              *  NC2144.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2144.2
-001500*                                                              *  NC2144.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2144.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2144.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2144.2
-001900*                                                              *  NC2144.2
-002000****************************************************************  NC2144.2
-002100*                                                              *  NC2144.2
-002200*    PROGRAM NC214M TESTS FORMAT 2 OF THE "ACCEPT" STATEMENT.  *  NC2144.2
-002300*                                                              *  NC2144.2
-002400****************************************************************  NC2144.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
 002500 ENVIRONMENT DIVISION.                                            NC2144.2
 002600 CONFIGURATION SECTION.                                           NC2144.2
 002700 SOURCE-COMPUTER.                                                 NC2144.2
@@ -30,29 +30,29 @@
 003000     GNU-Linux                                                    NC2144.2
 003100     PROGRAM COLLATING SEQUENCE IS N-A-T-I-V-E.                   NC2144.2
 003200 SPECIAL-NAMES.                                                   NC2144.2
-003300*                                                                 NC2144.2
-003400*                                                                 NC2144.2
-003500*    THE FOLLOWING IS THE ALPHABET FOR THE PROGRAM COLLATING      NC2144.2
-003600*    SEQUENCE CLAUSE.                                             NC2144.2
-003700*                                                                 NC2144.2
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
 003800     ALPHABET                                                     NC2144.2
 003900     N-A-T-I-V-E IS NATIVE                                        NC2144.2
-004000*                                                                 NC2144.2
-004100*                                                                 NC2144.2
-004200*                                                                 NC2144.2
-004300*                                                                 NC2144.2
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
+004300*                                                                         
 004400     ALPHABET                                                     NC2144.2
 004500     THE-ONE-CHARACTER-ALPHABET IS "Q" ALSO LOW-VALUE             NC2144.2
 004600                                       ALSO HIGH-VALUE            NC2144.2
 004700                                       ALSO QUOTE                 NC2144.2
 004800                                       ALSO SPACES.               NC2144.2
-004900*                                                                 NC2144.2
-005000*                                                                 NC2144.2
-005100*    COLLATING-AND-ALPHABET-TEST-9     *****     TEST OF SYNTAX   NC2144.2
-005200*    ON THE PROGRAM COLLATING SEQUENCE CLAUSE AND ALPHABET-NAME   NC2144.2
-005300*    CLAUSES.                                                     NC2144.2
-005400*                                                                 NC2144.2
-005500*                                                                 NC2144.2
+004900*                                                                         
+005000*                                                                         
+005100*                                                                         
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
+005500*                                                                         
 005600 INPUT-OUTPUT SECTION.                                            NC2144.2
 005700 FILE-CONTROL.                                                    NC2144.2
 005800     SELECT PRINT-FILE ASSIGN TO                                  NC2144.2
@@ -271,7 +271,7 @@
 027300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2144.2
 027400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2144.2
 027500      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2144.2
-027600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2144.2
+027600*                                                                         
 027700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2144.2
 027800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2144.2
 027900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2144.2
@@ -340,7 +340,7 @@
 034200     EXIT.                                                        NC2144.2
 034300 SECT-NC214M-001 SECTION.                                         NC2144.2
 034400 ACC-INIT-F2-1.                                                   NC2144.2
-034500*    ===---> TEST THE ACCEPT FROM DATE STATEMENT <---===          NC2144.2
+034500*                                                                         
 034600     MOVE "ACC-TEST-F2-1" TO PAR-NAME.                            NC2144.2
 034700     MOVE "VI-72 6.5.4 GR7" TO ANSI-REFERENCE.                    NC2144.2
 034800     MOVE "ACCEPT DATE" TO FEATURE.                               NC2144.2
@@ -354,9 +354,9 @@
 035600     PERFORM DE-LETE.                                             NC2144.2
 035700 ACC-WRITE-F2-1.                                                  NC2144.2
 035800     PERFORM PRINT-DETAIL.                                        NC2144.2
-035900*                                                                 NC2144.2
+035900*                                                                         
 036000 ACC-INIT-F2-2.                                                   NC2144.2
-036100*    ===---> TEST THE ACCEPT FROM DAY STATEMENT <---===           NC2144.2
+036100*                                                                         
 036200     MOVE "ACC-TEST-F2-2" TO PAR-NAME.                            NC2144.2
 036300     MOVE "VI-72 6.5.4 GR8" TO ANSI-REFERENCE.                    NC2144.2
 036400     MOVE "ACCEPT DAY" TO FEATURE.                                NC2144.2
@@ -370,9 +370,9 @@
 037200     PERFORM DE-LETE.                                             NC2144.2
 037300 ACC-WRITE-F2-2.                                                  NC2144.2
 037400     PERFORM PRINT-DETAIL.                                        NC2144.2
-037500*                                                                 NC2144.2
+037500*                                                                         
 037600 ACC-INIT-F2-3.                                                   NC2144.2
-037700*    ===---> TEST THE ACCEPT FROM TIME STATEMENT <---===          NC2144.2
+037700*                                                                         
 037800     MOVE "ACC-TEST-F2-3" TO PAR-NAME.                            NC2144.2
 037900     MOVE "VI-72 6.5.4 GR9" TO ANSI-REFERENCE.                    NC2144.2
 038000     MOVE "ACCEPT TIME" TO FEATURE.                               NC2144.2
@@ -386,9 +386,9 @@
 038800     PERFORM DE-LETE.                                             NC2144.2
 038900 ACC-WRITE-F2-3.                                                  NC2144.2
 039000     PERFORM PRINT-DETAIL.                                        NC2144.2
-039100*                                                                 NC2144.2
+039100*                                                                         
 039200 ACC-INIT-F2-4.                                                   NC2144.2
-039300*    ===---> TEST THE ACCEPT FROM DAY-OF-WEEK STATEMENT <---===   NC2144.2
+039300*                                                                         
 039400     MOVE "ACC-TEST-F2-4" TO PAR-NAME.                            NC2144.2
 039500     MOVE "VI-72 6.5.4 GR10" TO ANSI-REFERENCE.                   NC2144.2
 039600     MOVE "ACCEPT DAY-OF-WEEK" TO FEATURE.                        NC2144.2

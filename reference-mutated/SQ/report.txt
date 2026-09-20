@@ -52,7 +52,7 @@ SQ153A.CBL      1    1    0       0       0 OK
 SQ154A.CBL      1    1    0       0       0 OK
 SQ155A.CBL      1    1    0       0       0 OK
 SQ156A.CBL      1    1    0       0       0 OK
-SQ201M.CBL     23    9    3       0      11 
+SQ201M.CBL     23   12    0       0      11 OK
 SQ202A.CBL      1    1    0       0       0 OK
 SQ203A.SUB      4    4    0       0       0 OK
 SQ204A.CBL      2    2    0       0       0 OK
@@ -86,9 +86,9 @@ SQ302M.CBL      0    0    0       0       0 OK
 SQ303M.CBL      0    0    0       0       0 OK
 SQ401M.CBL      0    0    0       0       0 OK
 --------    ----- ---- ---- ------- -------
-Total         607  515    3       0      89
+Total         607  518    0       0      89
 
 Number of programs:    85
-Successfully executed: 84
+Successfully executed: 85
 Compile error:          0
 Execute error:          0

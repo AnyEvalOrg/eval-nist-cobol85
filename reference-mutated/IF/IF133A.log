@@ -16,7 +16,7 @@ TEST RESULT OF IF133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  REM Function         FAIL* F-REM-01                                                                                    
                                                                                                                         
                                      COMPUTED=  000000000.000000000                                                     
-                                     CORRECT =  000000001.000000000  See ref. A-66 2.37                                 
+                                     CORRECT =  000000008.000000000  See ref. A-66 2.37                                 
                                                                                                                         
  REM Function         PASS  F-REM-02                                                                                    
  REM Function         PASS  F-REM-03                                                                                    
@@ -30,7 +30,7 @@ TEST RESULT OF IF133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  REM Function         FAIL* F-REM-07                                                                                    
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-66 2.37                                 
+                                     CORRECT =  000000007.000000000  See ref. A-66 2.37                                 
                                                                                                                         
  REM Function         PASS  F-REM-08                                                                                    
  REM Function         PASS  F-REM-09                                                                                    

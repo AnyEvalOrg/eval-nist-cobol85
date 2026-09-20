@@ -1,85 +1,85 @@
 000100 IDENTIFICATION DIVISION.                                         SQ1254.2
 000200 PROGRAM-ID.                                                      SQ1254.2
 000300     SQ125A.                                                      SQ1254.2
-000400****************************************************************  SQ1254.2
-000500*                                                              *  SQ1254.2
-000600*    VALIDATION FOR:-                                          *  SQ1254.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ1254.2
-000800*    USING CCVS85 VERSION 3.0                                  *  SQ1254.2
-000900*                             REVISED 1986, AUGUST             *  SQ1254.2
-001000*                                                              *  SQ1254.2
-001100*    CREATION DATE     /     VALIDATION DATE                   *  SQ1254.2
-001200*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ1254.2
-001300*                                                              *  SQ1254.2
-001400****************************************************************  SQ1254.2
-001500*                                                              *  SQ1254.2
-001600*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SQ1254.2
-001700*                                                              *  SQ1254.2
-001800*            X-01   SEQUENTIAL MAGNETIC TAPE FILE.             *  SQ1254.2
-001900*            X-55   SYSTEM PRINTER                             *  SQ1254.2
-002000*            X-82   SOURCE-COMPUTER                            *  SQ1254.2
-002100*            X-83   OBJECT-COMPUTER                            *  SQ1254.2
-002200*            X-84   LABEL RECORDS OPTION                       *  SQ1254.2
-002300*                                                              *  SQ1254.2
-002400*                                                              *  SQ1254.2
-002500****************************************************************  SQ1254.2
-002600*                                                              *  SQ1254.2
-002700*    SQ125A ATTEMPTS TO OPEN FOR OUTPUT A MAGNETIC TAPE FILE   *  SQ1254.2
-002800*    WHICH IS ALREADY OPEN IN THE OUTPUT MODE.  THIS SHOULD    *  SQ1254.2
-002900*    RESULT IN A RECOGNITION OF A LOGIC ERROR CONDITION AND AN *  SQ1254.2
-003000*    I-O STATUS OF "41".  THE PROGRAM CONTAINS AN APPLICABLE   *  SQ1254.2
-003100*    DECLARATIVE PROCEDURE, WHICH SHOULD BE IMPLEMENTED.       *  SQ1254.2
-003200*                                                              *  SQ1254.2
-003300****************************************************************  SQ1254.2
-003400*                                                                 SQ1254.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
 003500 ENVIRONMENT DIVISION.                                            SQ1254.2
 003600 CONFIGURATION SECTION.                                           SQ1254.2
 003700 SOURCE-COMPUTER.                                                 SQ1254.2
 003800     GNU-Linux.                                                   SQ1254.2
 003900 OBJECT-COMPUTER.                                                 SQ1254.2
 004000     GNU-Linux.                                                   SQ1254.2
-004100*                                                                 SQ1254.2
+004100*                                                                         
 004200 INPUT-OUTPUT SECTION.                                            SQ1254.2
 004300 FILE-CONTROL.                                                    SQ1254.2
 004400     SELECT PRINT-FILE ASSIGN TO                                  SQ1254.2
 004500     "REPORT".                                                    SQ1254.2
-004600*                                                                 SQ1254.2
+004600*                                                                         
 004700     SELECT SQ-FS1 ASSIGN TO                                      SQ1254.2
 004800     "XXXXX001"                                                   SQ1254.2
 004900            FILE STATUS IS SQ-FS1-STATUS.                         SQ1254.2
-005000*                                                                 SQ1254.2
-005100*                                                                 SQ1254.2
+005000*                                                                         
+005100*                                                                         
 005200 DATA DIVISION.                                                   SQ1254.2
 005300 FILE SECTION.                                                    SQ1254.2
 005400 FD  PRINT-FILE                                                   SQ1254.2
 005800               .                                                  SQ1254.2
 005900 01  PRINT-REC    PICTURE X(120).                                 SQ1254.2
 006000 01  DUMMY-RECORD PICTURE X(120).                                 SQ1254.2
-006100*                                                                 SQ1254.2
+006100*                                                                         
 006200 FD  SQ-FS1                                                       SQ1254.2
 006400                .                                                 SQ1254.2
 006500 01  SQ-FS1R1-F-G-120 PIC X(120).                                 SQ1254.2
-006600*                                                                 SQ1254.2
+006600*                                                                         
 006700 WORKING-STORAGE SECTION.                                         SQ1254.2
-006800*                                                                 SQ1254.2
-006900***************************************************************   SQ1254.2
-007000*                                                             *   SQ1254.2
-007100*    WORKING-STORAGE DATA ITEMS SPECIFIC TO THIS TEST SUITE   *   SQ1254.2
-007200*                                                             *   SQ1254.2
-007300***************************************************************   SQ1254.2
-007400*                                                                 SQ1254.2
+006800*                                                                         
+006900*                                                                         
+007000*                                                                         
+007100*                                                                         
+007200*                                                                         
+007300*                                                                         
+007400*                                                                         
 007500 01  SQ-FS1-STATUS.                                               SQ1254.2
 007600   03  SQ-FS1-KEY-1   PIC X.                                      SQ1254.2
 007700   03  SQ-FS1-KEY-2   PIC X.                                      SQ1254.2
-007800*                                                                 SQ1254.2
-007900***************************************************************   SQ1254.2
-008000*                                                             *   SQ1254.2
-008100*    WORKING-STORAGE DATA ITEMS USED BY THE CCVS              *   SQ1254.2
-008200*                                                             *   SQ1254.2
-008300***************************************************************   SQ1254.2
-008400*                                                                 SQ1254.2
+007800*                                                                         
+007900*                                                                         
+008000*                                                                         
+008100*                                                                         
+008200*                                                                         
+008300*                                                                         
+008400*                                                                         
 008500 01  REC-SKEL-SUB   PIC 99.                                       SQ1254.2
-008600*                                                                 SQ1254.2
+008600*                                                                         
 008700 01  FILE-RECORD-INFORMATION-REC.                                 SQ1254.2
 008800     03 FILE-RECORD-INFO-SKELETON.                                SQ1254.2
 008900        05 FILLER                 PICTURE X(48)       VALUE       SQ1254.2
@@ -131,7 +131,7 @@
 013500           07 FILLER              PIC X(9).                       SQ1254.2
 013600           07 ALTERNATE-KEY2      PIC X(29).                      SQ1254.2
 013700           07 FILLER              PIC X(7).                       SQ1254.2
-013800*                                                                 SQ1254.2
+013800*                                                                         
 013900 01  TEST-RESULTS.                                                SQ1254.2
 014000     02 FILLER              PIC X      VALUE SPACE.               SQ1254.2
 014100     02  PAR-NAME.                                                SQ1254.2
@@ -171,7 +171,7 @@
 017500         04 FILLER                           PIC X.               SQ1254.2
 017600     03 FILLER PIC X(2) VALUE SPACE.                              SQ1254.2
 017700     03 COR-ANSI-REFERENCE             PIC X(48) VALUE SPACE.     SQ1254.2
-017800*                                                                 SQ1254.2
+017800*                                                                         
 017900 01  CCVS-C-1.                                                    SQ1254.2
 018000     02 FILLER  PIC IS X        VALUE  SPACE.                     SQ1254.2
 018100     02 FILLER  PIC IS X(17)    VALUE "PARAGRAPH-NAME".           SQ1254.2
@@ -187,7 +187,7 @@
 019100     02 FILLER  PIC X(19)  VALUE  SPACE.                          SQ1254.2
 019200     02 FILLER  PIC X(4)   VALUE "FAIL".                          SQ1254.2
 019300     02 FILLER  PIC X(72)  VALUE  SPACE.                          SQ1254.2
-019400*                                                                 SQ1254.2
+019400*                                                                         
 019500 01  REC-SKL-SUB       PIC 9(2)     VALUE ZERO.                   SQ1254.2
 019600 01  REC-CT            PIC 99       VALUE ZERO.                   SQ1254.2
 019700 01  DELETE-COUNTER    PIC 999      VALUE ZERO.                   SQ1254.2
@@ -212,7 +212,7 @@
 021600   02  FILLER            PIC X(28)  VALUE                         SQ1254.2
 021700            " COPY - NOT FOR DISTRIBUTION".                       SQ1254.2
 021800   02  FILLER            PIC X(41)  VALUE SPACE.                  SQ1254.2
-021900*                                                                 SQ1254.2
+021900*                                                                         
 022000 01  CCVS-H-2B.                                                   SQ1254.2
 022100   02  FILLER            PIC X(15)  VALUE "TEST RESULT OF ".      SQ1254.2
 022200   02  TEST-ID           PIC X(9).                                SQ1254.2
@@ -274,8 +274,8 @@
 027800-    "******************************".                            SQ1254.2
 027900 01  CCVS-PGM-ID  PIC X(9)   VALUE                                SQ1254.2
 028000     "SQ125A".                                                    SQ1254.2
-028100*                                                                 SQ1254.2
-028200*                                                                 SQ1254.2
+028100*                                                                         
+028200*                                                                         
 028300 PROCEDURE DIVISION.                                              SQ1254.2
 028400 DECLARATIVES.                                                    SQ1254.2
 028500 SQ125A-DECLARATIVE-001-SECT SECTION.                             SQ1254.2
@@ -292,18 +292,18 @@
 029600             PERFORM DECL-FAIL                                    SQ1254.2
 029700             GO TO ABNORMAL-TERM-DECL                             SQ1254.2
 029800     END-IF.                                                      SQ1254.2
-029900*                                                                 SQ1254.2
-030000*                                                                 SQ1254.2
+029900*                                                                         
+030000*                                                                         
 030100 DECL-PASS.                                                       SQ1254.2
 030200     MOVE   "PASS " TO P-OR-F.                                    SQ1254.2
 030300     ADD     1 TO PASS-COUNTER.                                   SQ1254.2
 030400     PERFORM DECL-PRINT-DETAIL.                                   SQ1254.2
-030500*                                                                 SQ1254.2
+030500*                                                                         
 030600 DECL-FAIL.                                                       SQ1254.2
 030700     MOVE   "FAIL*" TO P-OR-F.                                    SQ1254.2
 030800     ADD     1 TO ERROR-COUNTER.                                  SQ1254.2
 030900     PERFORM DECL-PRINT-DETAIL.                                   SQ1254.2
-031000*                                                                 SQ1254.2
+031000*                                                                         
 031100 DECL-PRINT-DETAIL.                                               SQ1254.2
 031200     IF REC-CT NOT EQUAL TO ZERO                                  SQ1254.2
 031300             MOVE "." TO PARDOT-X                                 SQ1254.2
@@ -321,7 +321,7 @@
 032500     IF REC-CT EQUAL TO ZERO                                      SQ1254.2
 032600         MOVE    SPACE TO PAR-NAME.                               SQ1254.2
 032700     MOVE    SPACE TO RE-MARK.                                    SQ1254.2
-032800*                                                                 SQ1254.2
+032800*                                                                         
 032900 DECL-WRITE-LINE.                                                 SQ1254.2
 033000     ADD     1 TO RECORD-COUNT.                                   SQ1254.2
 033100     IF RECORD-COUNT GREATER 50                                   SQ1254.2
@@ -336,11 +336,11 @@
 034000         MOVE    DUMMY-HOLD TO DUMMY-RECORD                       SQ1254.2
 034100         MOVE    ZERO TO RECORD-COUNT.                            SQ1254.2
 034200     PERFORM DECL-WRT-LN.                                         SQ1254.2
-034300*                                                                 SQ1254.2
+034300*                                                                         
 034400 DECL-WRT-LN.                                                     SQ1254.2
 034500     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1254.2
 034600     MOVE    SPACE TO DUMMY-RECORD.                               SQ1254.2
-034700*                                                                 SQ1254.2
+034700*                                                                         
 034800 DECL-FAIL-ROUTINE.                                               SQ1254.2
 034900     IF COMPUTED-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.      SQ1254.2
 035000     IF CORRECT-X NOT EQUAL TO SPACE GO TO DECL-FAIL-WRITE.       SQ1254.2
@@ -359,7 +359,7 @@
 036300     MOVE    SPACES TO COR-ANSI-REFERENCE.                        SQ1254.2
 036400 DECL-FAIL-EX.                                                    SQ1254.2
 036500     EXIT.                                                        SQ1254.2
-036600*                                                                 SQ1254.2
+036600*                                                                         
 036700 DECL-BAIL.                                                       SQ1254.2
 036800     IF COMPUTED-A NOT EQUAL TO SPACE GO TO DECL-BAIL-WRITE.      SQ1254.2
 036900     IF CORRECT-A EQUAL TO SPACE GO TO DECL-BAIL-EX.              SQ1254.2
@@ -370,19 +370,19 @@
 037400     PERFORM DECL-WRITE-LINE 2 TIMES.                             SQ1254.2
 037500 DECL-BAIL-EX.                                                    SQ1254.2
 037600     EXIT.                                                        SQ1254.2
-037700*                                                                 SQ1254.2
+037700*                                                                         
 037800 ABNORMAL-TERM-DECL.                                              SQ1254.2
 037900     MOVE SPACE TO DUMMY-RECORD.                                  SQ1254.2
 038000     PERFORM DECL-WRITE-LINE.                                     SQ1254.2
 038100     MOVE "ABNORMAL TERMINATION AT THIS POINT IS ACCEPTABLE"      SQ1254.2
 038200             TO DUMMY-RECORD.                                     SQ1254.2
 038300     PERFORM DECL-WRITE-LINE 3 TIMES.                             SQ1254.2
-038400*                                                                 SQ1254.2
-038500*                                                                 SQ1254.2
+038400*                                                                         
+038500*                                                                         
 038600 END-DECLS.                                                       SQ1254.2
 038700 END DECLARATIVES.                                                SQ1254.2
-038800*                                                                 SQ1254.2
-038900*                                                                 SQ1254.2
+038800*                                                                         
+038900*                                                                         
 039000 CCVS1 SECTION.                                                   SQ1254.2
 039100 OPEN-FILES.                                                      SQ1254.2
 039200     OPEN    OUTPUT PRINT-FILE.                                   SQ1254.2
@@ -393,18 +393,18 @@
 039700     MOVE    ZERO TO REC-SKEL-SUB.                                SQ1254.2
 039800     PERFORM CCVS-INIT-FILE 10 TIMES.                             SQ1254.2
 039900     GO TO CCVS1-EXIT.                                            SQ1254.2
-040000*                                                                 SQ1254.2
+040000*                                                                         
 040100 CCVS-INIT-FILE.                                                  SQ1254.2
 040200     ADD     1 TO REC-SKL-SUB.                                    SQ1254.2
 040300     MOVE    FILE-RECORD-INFO-SKELETON TO                         SQ1254.2
 040400                  FILE-RECORD-INFO (REC-SKL-SUB).                 SQ1254.2
-040500*                                                                 SQ1254.2
+040500*                                                                         
 040600 CLOSE-FILES.                                                     SQ1254.2
 040700     PERFORM END-ROUTINE THRU END-ROUTINE-13.                     SQ1254.2
 040800     CLOSE   PRINT-FILE.                                          SQ1254.2
 040900 TERMINATE-CCVS.                                                  SQ1254.2
 041000     STOP    RUN.                                                 SQ1254.2
-041100*                                                                 SQ1254.2
+041100*                                                                         
 041200 INSPT.                                                           SQ1254.2
 041300     MOVE   "INSPT" TO P-OR-F.                                    SQ1254.2
 041400     ADD     1 TO INSPECT-COUNTER.                                SQ1254.2
@@ -414,18 +414,18 @@
 041800     MOVE   "PASS " TO P-OR-F.                                    SQ1254.2
 041900     ADD     1 TO PASS-COUNTER.                                   SQ1254.2
 042000     PERFORM PRINT-DETAIL.                                        SQ1254.2
-042100*                                                                 SQ1254.2
+042100*                                                                         
 042200 FAIL.                                                            SQ1254.2
 042300     MOVE   "FAIL*" TO P-OR-F.                                    SQ1254.2
 042400     ADD     1 TO ERROR-COUNTER.                                  SQ1254.2
 042500     PERFORM PRINT-DETAIL.                                        SQ1254.2
-042600*                                                                 SQ1254.2
+042600*                                                                         
 042700 DE-LETE.                                                         SQ1254.2
 042800     MOVE   "****TEST DELETED****" TO RE-MARK.                    SQ1254.2
 042900     MOVE   "*****" TO P-OR-F.                                    SQ1254.2
 043000     ADD     1 TO DELETE-COUNTER.                                 SQ1254.2
 043100     PERFORM PRINT-DETAIL.                                        SQ1254.2
-043200*                                                                 SQ1254.2
+043200*                                                                         
 043300 PRINT-DETAIL.                                                    SQ1254.2
 043400     IF REC-CT NOT EQUAL TO ZERO                                  SQ1254.2
 043500         MOVE   "." TO PARDOT-X                                   SQ1254.2
@@ -442,7 +442,7 @@
 044600     MOVE    SPACE TO CORRECT-X.                                  SQ1254.2
 044700     IF REC-CT EQUAL TO ZERO  MOVE SPACE TO PAR-NAME.             SQ1254.2
 044800     MOVE    SPACE TO RE-MARK.                                    SQ1254.2
-044900*                                                                 SQ1254.2
+044900*                                                                         
 045000 HEAD-ROUTINE.                                                    SQ1254.2
 045100     MOVE CCVS-H-1  TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1254.2
 045200     MOVE CCVS-H-2A TO DUMMY-RECORD. PERFORM WRITE-LINE 2 TIMES.  SQ1254.2
@@ -458,7 +458,7 @@
 046200 END-RTN-EXIT.                                                    SQ1254.2
 046300     MOVE    CCVS-E-1 TO DUMMY-RECORD.                            SQ1254.2
 046400     PERFORM WRITE-LINE 2 TIMES.                                  SQ1254.2
-046500*                                                                 SQ1254.2
+046500*                                                                         
 046600 END-ROUTINE-1.                                                   SQ1254.2
 046700     ADD     ERROR-COUNTER   TO ERROR-HOLD                        SQ1254.2
 046800     ADD     INSPECT-COUNTER TO ERROR-HOLD.                       SQ1254.2
@@ -491,7 +491,7 @@
 049500     MOVE   "TEST(S) REQUIRE INSPECTION" TO ENDER-DESC.           SQ1254.2
 049600     MOVE    CCVS-E-2 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1254.2
 049700     MOVE    CCVS-E-3 TO DUMMY-RECORD. PERFORM WRITE-LINE.        SQ1254.2
-049800*                                                                 SQ1254.2
+049800*                                                                         
 049900 WRITE-LINE.                                                      SQ1254.2
 050000     ADD     1 TO RECORD-COUNT.                                   SQ1254.2
 050100     IF RECORD-COUNT GREATER 50                                   SQ1254.2
@@ -504,7 +504,7 @@
 050800         MOVE  DUMMY-HOLD TO DUMMY-RECORD                         SQ1254.2
 050900         MOVE  ZERO TO RECORD-COUNT.                              SQ1254.2
 051000     PERFORM WRT-LN.                                              SQ1254.2
-051100*                                                                 SQ1254.2
+051100*                                                                         
 051200 WRT-LN.                                                          SQ1254.2
 051300     WRITE   DUMMY-RECORD AFTER ADVANCING 1 LINES.                SQ1254.2
 051400     MOVE    SPACE TO DUMMY-RECORD.                               SQ1254.2
@@ -542,21 +542,21 @@
 054600     EXIT.                                                        SQ1254.2
 054700 CCVS1-EXIT.                                                      SQ1254.2
 054800     EXIT.                                                        SQ1254.2
-054900*                                                                 SQ1254.2
-055000****************************************************************  SQ1254.2
-055100*                                                              *  SQ1254.2
-055200*    THIS POINT MARKS THE END OF THE CCVS MONITOR ROUTINES AND *  SQ1254.2
-055300*    THE START OF THE TESTS OF SPECIFIC COBOL FEATURES.        *  SQ1254.2
-055400*                                                              *  SQ1254.2
-055500****************************************************************  SQ1254.2
-055600*                                                                 SQ1254.2
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
 055700 SECT-SQ125A-MAIN SECTION.                                        SQ1254.2
-055800*                                                                 SQ1254.2
-055900*    THE FIRST ACTION IS TO CREATE THE FILE BY MEANS OF AN        SQ1254.2
-056000*    OPEN OUTPUT STATEMENT.                                       SQ1254.2
-056100*                                                                 SQ1254.2
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
 056200 SEQ-INIT-01.                                                     SQ1254.2
-056300*                                                                 SQ1254.2
+056300*                                                                         
 056400     MOVE    1 TO REC-CT                                          SQ1254.2
 056500     MOVE   "CREATE FILE, OPEN OUTPUT" TO FEATURE                 SQ1254.2
 056600     MOVE   "SEQ-TEST-OP-01" TO PAR-NAME                          SQ1254.2
@@ -566,9 +566,9 @@
 057000     MOVE   "SEQ-TEST-OP-01" TO PAR-NAME.                         SQ1254.2
 057100     MOVE    1 TO REC-CT.                                         SQ1254.2
 057200 SEQ-TEST-OP-01-01.                                               SQ1254.2
-057300*                                                                 SQ1254.2
-057400*    CHECK THE I-O STATUS VALUE RETURNED BY THE FIRST OPEN.       SQ1254.2
-057500*                                                                 SQ1254.2
+057300*                                                                         
+057400*                                                                         
+057500*                                                                         
 057600     IF  SQ-FS1-STATUS = "00"                                     SQ1254.2
 057700         PERFORM PASS                                             SQ1254.2
 057800     ELSE                                                         SQ1254.2
@@ -579,11 +579,11 @@
 058300         MOVE   "VII-3, 1.5.3(1)A" TO ANSI-REFERENCE              SQ1254.2
 058400         PERFORM FAIL.                                            SQ1254.2
 058500 SEQ-TEST-01-01-END.                                              SQ1254.2
-058600*                                                                 SQ1254.2
-058700*                                                                 SQ1254.2
-058800*    HAVING OPENED THE FILE, THE NEXT ACTION IS TO ATTEMPT        SQ1254.2
-058900*    TO OPEN IT FOR OUTPUT AGAIN.                                 SQ1254.2
-059000*                                                                 SQ1254.2
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
+059000*                                                                         
 059100 SEQ-INIT-02.                                                     SQ1254.2
 059200     MOVE    1 TO REC-CT                                          SQ1254.2
 059300     MOVE   "OPEN OUTPUT ON OPEN FILE" TO FEATURE                 SQ1254.2

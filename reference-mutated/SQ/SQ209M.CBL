@@ -1,26 +1,26 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2094.2
 000200 PROGRAM-ID.                                                      SQ2094.2
 000300     SQ209M.                                                      SQ2094.2
-000400****************************************************************  SQ2094.2
-000500*                                                              *  SQ2094.2
-000600*    VALIDATION FOR:-                                          *  SQ2094.2
-000700*    " HIGH       ".                                              SQ2094.2
-000800*                                                              *  SQ2094.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2094.2
-001000*    "4.2 ".                                                      SQ2094.2
-001100*                                                              *  SQ2094.2
-001200*        THE ROUTINE SQ209M TESTS THE USE OF THE LEVEL 2 WRITE    SQ2094.2
-001300*    STATEMENT AND THE LINAGE CLAUSE FOR A FILE DESIGNATED AS     SQ2094.2
-001400*    PRINTER OUTPUT.  THESE STATEMENTS CONTROL THE VERTICAL       SQ2094.2
-001500*    POSITONING OF EACH LINE ON A PRINTED PAGE.  THE LINAGE       SQ2094.2
-001600*    CLAUSE SPECIFICALLY CONTROLS THE VERTICAL FORMAT OF A LOGICALSQ2094.2
-001700*    PRINT PAGE.  SQ209M IS DESIGNED TO TEST THE MINIMUM          SQ2094.2
-001800*    CONFIGURATION OF THE LINAGE CLAUSE.  IT IS ASSUMED THAT ALL  SQ2094.2
-001900*    LEVEL 2 NUCLEUS OPTIONS ARE AVAILABLE IN TESTING SQ210.      SQ2094.2
-002000*        BECAUSE OF THE NATURE OF THESE TESTS A "PASS" OR "FAIL"  SQ2094.2
-002100*    CANNOT BE DETERMINED WITHIN THE PROGRAM.  THE USER MUST      SQ2094.2
-002200*    VISUALLY CHECK THE POSITION OF EACH LINE TO DETERMINE THE    SQ2094.2
-002300*    ACCURACY OF THE VARIOUS WRITE OPTIONS.                       SQ2094.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
 002400 ENVIRONMENT DIVISION.                                            SQ2094.2
 002500 CONFIGURATION SECTION.                                           SQ2094.2
 002600 SOURCE-COMPUTER.                                                 SQ2094.2
@@ -264,7 +264,7 @@
 031200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2094.2
 031300      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2094.2
 031400      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2094.2
-031500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2094.2
+031500*                                                                         
 031600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2094.2
 031700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2094.2
 031800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2094.2
@@ -334,9 +334,9 @@
 038200     MOVE SPACE TO DUMMY-RECORD.                                  SQ2094.2
 038300     PERFORM BLANK-LINE-PRINT.                                    SQ2094.2
 038400 WRITE-TEST-GF-01.                                                SQ2094.2
-038500*             THIS TEST CHECKS THE VERTICAL SPACING BETWEEN       SQ2094.2
-038600*             LOGICAL PAGES.  BECAUSE ONLY THE TOP PHRASE IS      SQ2094.2
-038700*             SPECIFIED THERE SHOULD BE TWO SPACES BETWEEN PAGES. SQ2094.2
+038500*                                                                         
+038600*                                                                         
+038700*                                                                         
 038800     MOVE "SPACE BTWN LOG PAGES" TO FEATURE.                      SQ2094.2
 038900     MOVE "WRITE-TEST-GF-01" TO PAR-NAME.                         SQ2094.2
 039000     PERFORM PRINT-DETAIL.                                        SQ2094.2
@@ -345,9 +345,9 @@
 039300     WRITE PRINT-REC AFTER ONE LINE.                              SQ2094.2
 039400     WRITE PRINT-REC FROM FIRST-LINE-1 AFTER ADVANCING PAGE.      SQ2094.2
 039500 WRITE-TEST-GF-02.                                                SQ2094.2
-039600*             THIS TEST SHOWS THE RESULTS OF A WRITE BEFORE       SQ2094.2
-039700*             OPERATION WITH AN EOP PHRASE. ONLY LINAGE IS        SQ2094.2
-039800*             SPECIFIED.                                          SQ2094.2
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
 039900     MOVE "WRITE BEFORE" TO FEATURE.                              SQ2094.2
 040000     MOVE "WRITE-TEST-GF-02" TO PAR-NAME.                         SQ2094.2
 040100     PERFORM PRINT-DETAIL.                                        SQ2094.2
@@ -366,9 +366,9 @@
 041400     MOVE 1 TO DL3-LINE-NO.                                       SQ2094.2
 041500     PERFORM WRITE-BEFORE 60 TIMES.                               SQ2094.2
 041600 WRITE-TEST-GF-03.                                                SQ2094.2
-041700*             THIS TEST SHOWS THE RESULTS OF A WRITE AFTER        SQ2094.2
-041800*             OPERATION WITH AN EOP PHRASE. ONLY LINAGE IS        SQ2094.2
-041900*             SPECIFIED.                                          SQ2094.2
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
 042000     MOVE "WRITE AFTER" TO FEATURE.                               SQ2094.2
 042100     MOVE "WRITE-TEST-GF-03" TO PAR-NAME.                         SQ2094.2
 042200     PERFORM PRINT-DETAIL.                                        SQ2094.2

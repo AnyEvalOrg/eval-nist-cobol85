@@ -1,19 +1,19 @@
 {
   "population": "Mutated standalone .CBL programs",
   "indexed_programs": 381,
-  "eligible": 97,
+  "eligible": 78,
   "by_module": {
-    "NC": 49,
-    "SM": 4,
+    "NC": 37,
+    "SM": 1,
     "IC": 9,
-    "SQ": 1,
-    "RL": 1,
+    "SQ": 0,
+    "RL": 0,
     "IX": 3,
     "ST": 3,
-    "SG": 2,
+    "SG": 3,
     "OB": 0,
     "IF": 22,
-    "RW": 3,
+    "RW": 0,
     "DB": 0
   },
   "programs": [
@@ -1791,9 +1791,9 @@
       "program": "NC114M",
       "module": "NC",
       "source_path": "NC/NC114M.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 5,
       "inspection_count": 1,
@@ -2141,9 +2141,9 @@
       "program": "NC174A",
       "module": "NC",
       "source_path": "NC/NC174A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 77,
       "inspection_count": 0,
@@ -2201,9 +2201,9 @@
       "program": "NC202A",
       "module": "NC",
       "source_path": "NC/NC202A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 77,
       "inspection_count": 0,
@@ -2237,9 +2237,9 @@
       "program": "NC205A",
       "module": "NC",
       "source_path": "NC/NC205A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 10,
       "inspection_count": 0,
@@ -2273,9 +2273,9 @@
       "program": "NC208A",
       "module": "NC",
       "source_path": "NC/NC208A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 24,
       "inspection_count": 0,
@@ -2421,9 +2421,9 @@
       "program": "NC222A",
       "module": "NC",
       "source_path": "NC/NC222A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -2433,9 +2433,9 @@
       "program": "NC223A",
       "module": "NC",
       "source_path": "NC/NC223A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 94,
       "inspection_count": 0,
@@ -2445,9 +2445,9 @@
       "program": "NC224A",
       "module": "NC",
       "source_path": "NC/NC224A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -2457,9 +2457,9 @@
       "program": "NC225A",
       "module": "NC",
       "source_path": "NC/NC225A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 63,
       "inspection_count": 0,
@@ -2661,9 +2661,9 @@
       "program": "NC247A",
       "module": "NC",
       "source_path": "NC/NC247A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 20,
       "inspection_count": 0,
@@ -2673,9 +2673,9 @@
       "program": "NC248A",
       "module": "NC",
       "source_path": "NC/NC248A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -2722,9 +2722,9 @@
       "program": "NC253A",
       "module": "NC",
       "source_path": "NC/NC253A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 61,
       "inspection_count": 0,
@@ -3215,11 +3215,11 @@
       "program": "RL211A",
       "module": "RL",
       "source_path": "RL/RL211A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
-      "result_rows": 22,
+      "result_rows": 1,
       "inspection_count": 0,
       "inspection_justification": null
     },
@@ -3304,9 +3304,9 @@
       "program": "RW101A",
       "module": "RW",
       "source_path": "RW/RW101A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -3328,9 +3328,9 @@
       "program": "RW103A",
       "module": "RW",
       "source_path": "RW/RW103A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -3340,9 +3340,9 @@
       "program": "RW104A",
       "module": "RW",
       "source_path": "RW/RW104A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 14,
       "inspection_count": 0,
@@ -3438,9 +3438,9 @@
       "program": "SG105A",
       "module": "SG",
       "source_path": "SG/SG105A.CBL",
-      "eligible": false,
+      "eligible": true,
       "reasons": [
-        "planted sites without matching FAIL rows"
+        "self_checking_report"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3606,9 +3606,9 @@
       "program": "SM105A",
       "module": "SM",
       "source_path": "SM/SM105A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3643,9 +3643,9 @@
       "program": "SM201A",
       "module": "SM",
       "source_path": "SM/SM201A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 11,
       "inspection_count": 0,
@@ -3687,9 +3687,9 @@
       "program": "SM205A",
       "module": "SM",
       "source_path": "SM/SM205A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -4394,9 +4394,9 @@
       "program": "SQ201M",
       "module": "SQ",
       "source_path": "SQ/SQ201M.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer_than_3_mutable_sites"
       ],
       "result_rows": 12,
       "inspection_count": 11,
@@ -5279,12 +5279,12 @@
     }
   ],
   "mutation_summary": {
-    "candidates": 108,
-    "planted_sites": 364,
-    "shipped_sites": 331,
+    "candidates": 88,
+    "planted_sites": 293,
+    "shipped_sites": 263,
     "original_exclusions": 58,
-    "insufficient_sites": 215,
-    "execution_exclusions": 11,
+    "insufficient_sites": 235,
+    "execution_exclusions": 10,
     "pending": 0
   }
 }

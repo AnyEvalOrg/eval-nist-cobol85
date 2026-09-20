@@ -19,25 +19,25 @@
 001900     "4.2 ".                                                      DB2024.2
 002000 SECURITY.                                                        DB2024.2
 002100     NONE.                                                        DB2024.2
-002200*                                                                 DB2024.2
-002300*    *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *DB2024.2
-002400*                                                                 DB2024.2
-002500*                       PROGRAM ABSTRACT                          DB2024.2
-002600*                                                                 DB2024.2
-002700*    DB202A TESTS THE CPABILITY OF THE DEBUG MODULE TO HANDLE     DB2024.2
-002800*    DEBUGGING PROCEDURES WHICH ARE MONITORING I-O FUNCTIONS      DB2024.2
-002900*    OF THE SEQUENTIAL I-O MODULE.  THIS PROGRAM IS TO BE         DB2024.2
-003000*    COMPILED AND EXECUTED WITH BOTH COMPILE AND OBJECT TIME      DB2024.2
-003100*    DEBUGGING SWITCHES ON.  THE DEBUGGING PROCEDURES SHOULD      DB2024.2
-003200*    BE INCLUDED IN COMPILATION AND GENERATE CODE.                DB2024.2
-003300*                                                                 DB2024.2
-003400*    DURING EXECUTION, A SEQUENTIAL FILE IS CREATED CONTAINING    DB2024.2
-003500*    80-CHARACTER RECORDS.  THE FILE US THEN READ.  EXECUTION     DB2024.2
-003600*    OF "OPEN", "READ", AND "WRITE" FUNCTION SHOULD TRIGGER THE   DB2024.2
-003700*    APPROPRIATE DEBUGGING PROCEDURES.                            DB2024.2
-003800*                                                                 DB2024.2
-003900*                                                                 DB2024.2
-004000*                                                                 DB2024.2
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
 004100 ENVIRONMENT DIVISION.                                            DB2024.2
 004200 CONFIGURATION SECTION.                                           DB2024.2
 004300 SOURCE-COMPUTER.                                                 DB2024.2
@@ -60,9 +60,9 @@
 006000 01  PRINT-REC PICTURE X(120).                                    DB2024.2
 006100 01  DUMMY-RECORD PICTURE X(120).                                 DB2024.2
 006200 FD  SEQ-FILE                                                     DB2024.2
-006500*      XXXXX074  REPLACE WITH IMPLEMENTOR NAME (*OPT C ONLY)      DB2024.2
-006800*      XXXXX075  REPLACE WITH VALUE CLAUSE OBJECT (*OPT C ONLY)   DB2024.2
-007000*      XXXXX069  REPLACE WITH ADDITIONAL INFO (*OPT G ONLY)       DB2024.2
+006500*                                                                         
+006800*                                                                         
+007000*                                                                         
 007100     LABEL RECORDS ARE STANDARD.                                  DB2024.2
 007200 01  SEQ-REC-1 PIC X(120).                                        DB2024.2
 007300 01  SEQ-REC-2 PIC X(120).                                        DB2024.2
@@ -311,7 +311,7 @@
 031800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      DB2024.2
 031900      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   DB2024.2
 032000      ADD PASS-COUNTER TO ERROR-HOLD.                             DB2024.2
-032100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   DB2024.2
+032100*                                                                         
 032200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            DB2024.2
 032300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              DB2024.2
 032400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                DB2024.2
@@ -378,12 +378,12 @@
 038500     MOVE 0 TO KEY-1.                                             DB2024.2
 038600     MOVE "OPEN-TEST-1" TO PAR-NAME.                              DB2024.2
 038700     MOVE "DEBUG OPEN FILENAME" TO FEATURE.                       DB2024.2
-038800******************************************************************DB2024.2
-038900*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2024.2
-039000*    "OPEN-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2024.2
-039100*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "OPEN       *DB2024.2
-039200*    OUTPUT SEQ-FILE.".                                          *DB2024.2
-039300******************************************************************DB2024.2
+038800*                                                                         
+038900*                                                                         
+039000*                                                                         
+039100*                                                                         
+039200*                                                                         
+039300*                                                                         
 039400 OPEN-TEST-1.                                                     DB2024.2
 039500     OPEN OUTPUT SEQ-FILE.                                        DB2024.2
 039600     IF KEY-1 IS EQUAL TO 1                                       DB2024.2
@@ -486,12 +486,12 @@
 049300 WRITE-REC-1.                                                     DB2024.2
 049400     MOVE SPACES TO SEQ-REC-3.                                    DB2024.2
 049500     ADD 1 TO XRECORD-NUMBER (1).                                 DB2024.2
-049600******************************************************************DB2024.2
-049700*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2024.2
-049800*    "WRITE-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT    *DB2024.2
-049900*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS,             *DB2024.2
-050000*    "WRITE SEQ-REC-1 FROM FILE-RECORD-INFO-P1-120 (1).".        *DB2024.2
-050100******************************************************************DB2024.2
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
 050200     WRITE SEQ-REC-1 FROM FILE-RECORD-INFO-P1-120 (1).            DB2024.2
 050300 WRITE-TEST-1A.                                                   DB2024.2
 050400     MOVE "WRITE-TEST-1A" TO PAR-NAME.                            DB2024.2
@@ -651,12 +651,12 @@
 065800     MOVE 0 TO KEY-1.                                             DB2024.2
 065900     MOVE "CLOSE-TEST-1" TO PAR-NAME.                             DB2024.2
 066000     MOVE "DEBUG CLOSE FILENAME" TO FEATURE.                      DB2024.2
-066100******************************************************************DB2024.2
-066200*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2024.2
-066300*    "CLOSE-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT    *DB2024.2
-066400*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS,             *DB2024.2
-066500*    "CLOSE SEQ-FILE.".                                          *DB2024.2
-066600******************************************************************DB2024.2
+066100*                                                                         
+066200*                                                                         
+066300*                                                                         
+066400*                                                                         
+066500*                                                                         
+066600*                                                                         
 066700 CLOSE-TEST-1.                                                    DB2024.2
 066800     CLOSE SEQ-FILE.                                              DB2024.2
 066900     IF KEY-1 IS EQUAL TO 1                                       DB2024.2
@@ -731,13 +731,13 @@
 073800     MOVE 0 TO KEY-1.                                             DB2024.2
 073900     MOVE "READ-TEST-1" TO PAR-NAME.                              DB2024.2
 074000     MOVE "DEBUG READ FILENAME" TO FEATURE.                       DB2024.2
-074100******************************************************************DB2024.2
-074200*    THE DEBUG-LINE (INSPT) TEST NAMED IN THE OUTPUT REPORT AS   *DB2024.2
-074300*    "READ-TEST-1A" SHOULD POINT TO THE EXECUTABLE STATEMENT     *DB2024.2
-074400*    WHICH FOLLOWS THIS COMMENT SET AND WHICH READS, "READ       *DB2024.2
-074500*    SEQ-FILE AT END PERFORM READ-TEST-1-DELETE GO TO            *DB2024.2
-074600*    READ-TEST-2.".                                              *DB2024.2
-074700******************************************************************DB2024.2
+074100*                                                                         
+074200*                                                                         
+074300*                                                                         
+074400*                                                                         
+074500*                                                                         
+074600*                                                                         
+074700*                                                                         
 074800 READ-TEST-1.                                                     DB2024.2
 074900     READ SEQ-FILE  AT END                                        DB2024.2
 075000         PERFORM READ-TEST-1-DELETE                               DB2024.2

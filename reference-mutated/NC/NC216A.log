@@ -21,7 +21,7 @@ TEST RESULT OF NC216A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ALL BEFORE INITIAL   FAIL* INS-TEST-F1-6                                                                               
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000002.000000000  VI-94                                              
+                                     CORRECT =  000000006.000000000  VI-94                                              
                                                                                                                         
  LEAD LIT INITIAL FIG PASS  INS-TEST-F1-7                                                                               
  REP CHARS BY SPACES  PASS  INS-TEST-F2-8                                                                               
@@ -54,7 +54,7 @@ TEST RESULT OF NC216A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
                                      COMPUTED=  000000015.000000000                                                     
-                                     CORRECT =  000000045.000000000  VI-94 6.17.3                                       
+                                     CORRECT =  000000055.000000000  VI-94 6.17.3                                       
                                                                                                                         
  REPLACE SERIES       PASS  INS-TEST-F3-20     .02                                                                      
  REPLACE BEFORE       PASS  INS-TEST-F2-21                                                                              
@@ -69,7 +69,7 @@ TEST RESULT OF NC216A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FOR CHARS AFTER LIT  FAIL* INS-TEST-F1-29                                                                              
                                                                                                                         
                                      COMPUTED=  000000044.000000000                                                     
-                                     CORRECT =  000000048.000000000  VI-94 6.17.3 SR4                                   
+                                     CORRECT =  000000014.000000000  VI-94 6.17.3 SR4                                   
                                                                                                                         
  FOR CHARS AFTER LIT  PASS  INS-TEST-F1-30                                                                              
  FOR CHARS AFTER LIT  PASS  INS-TEST-F1-31                                                                              

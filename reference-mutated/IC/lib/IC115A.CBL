@@ -1,39 +1,39 @@
 000100 IDENTIFICATION DIVISION.                                         IC1154.2
 000200 PROGRAM-ID.                                                      IC1154.2
 000300     IC115A.                                                      IC1154.2
-000400****************************************************************  IC1154.2
-000500*                                                              *  IC1154.2
-000600*    VALIDATION FOR:-                                          *  IC1154.2
-000700*                                                              *  IC1154.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1154.2
-000900*                                                              *  IC1154.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1154.2
-001100*                                                              *  IC1154.2
-001200****************************************************************  IC1154.2
-001300*                                                              *  IC1154.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1154.2
-001500*                                                              *  IC1154.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1154.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1154.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1154.2
-001900*                                                              *  IC1154.2
-002000****************************************************************  IC1154.2
-002100*                                                                 IC1154.2
-002200*         THE ROUTINE IC115 IS A SUBPROGRAM CALLED BY IC114.      IC1154.2
-002300*    THIS SUBPROGRAM CONTAINS A FILE SECTION, A WORKING-STORAGE   IC1154.2
-002400*    SECTION AND A LINKAGE SECTION.  THE FILE SQ-FS3 IS CREATED   IC1154.2
-002500*    AND VERIFIED IN THIS ROUTINE.  THE FILE IS OPENED AND READ   IC1154.2
-002600*    AGAIN.  EACH RECORD IS CHECKED BY MOVING IT TO THE LINKAGE   IC1154.2
-002700*    SECTION AND RETURNING TO THE MAIN PROGRAM TO VERIFY THE      IC1154.2
-002800*    RECORD CONTENTS.  THE PRINTING OF THE OUTPUT REPORT FOR THE  IC1154.2
-002900*    TEST RESULTS IS PERFORMED BY RETURNING TO THE MAIN PROGRAM   IC1154.2
-003000*    IC114.                                                       IC1154.2
-003100*                                                                 IC1154.2
-003200*         THIS SUBPROGRAM IS ADAPTED FROM THE SEQUENTIAL I-O      IC1154.2
-003300*    ROUTINE SQ104.  IF THAT ROUTINE DOES NOT PERFORM CORRECTLY   IC1154.2
-003400*    THEN THE RESULTS OF THESE TESTS ARE INCONCLUSIVE.            IC1154.2
-003500*                                                                 IC1154.2
-003600********************************************                      IC1154.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
 003700 ENVIRONMENT DIVISION.                                            IC1154.2
 003800 CONFIGURATION SECTION.                                           IC1154.2
 003900 SOURCE-COMPUTER.                                                 IC1154.2
@@ -125,8 +125,8 @@
 013000     GO TO SECT-IC115-0002 SECT-IC115-0003 SECT-IC115-0004        IC1154.2
 013100           SECT-IC115-0005 SECT-IC115-0006                        IC1154.2
 013200              DEPENDING ON CALL-FLAG.                             IC1154.2
-013300*        THE IDENTIFIER CALL-FLAG CONTROLS THE SUBPROGRAM         IC1154.2
-013400*    PROCESSING AND IT IS SET BY THE CALLING PROGRAM IC114.       IC1154.2
+013300*                                                                         
+013400*                                                                         
 013500 SECT-IC115-0002 SECTION.                                         IC1154.2
 013600 LINK-INIT-10.                                                    IC1154.2
 013700     MOVE FILE-RECORD-INFO-SKELETON TO                            IC1154.2
@@ -152,14 +152,14 @@
 015700 LINK-TEST-10-01.                                                 IC1154.2
 015800     CLOSE SQ-FS3.                                                IC1154.2
 015900     MOVE XRECORD-NUMBER (1) TO COUNT-OF-RECORDS.                 IC1154.2
-016000*         A MASS STORAGE SEQUENTIAL FILE WITH 120 CHARACTERS PER  IC1154.2
-016100*    RECORD HAS BEEN CREATED.  THE FILE CONTAINS 649 RECORDS.     IC1154.2
+016000*                                                                         
+016100*                                                                         
 016200 LINK-EXIT-10.                                                    IC1154.2
 016300     EXIT PROGRAM.                                                IC1154.2
 016400 SECT-IC115-0003 SECTION.                                         IC1154.2
 016500 LINK-INIT-11.                                                    IC1154.2
-016600*         THIS TEST READS AND CHECKS THE FILE CREATED IN          IC1154.2
-016700*    SECT-IC115-0002.                                             IC1154.2
+016600*                                                                         
+016700*                                                                         
 016800     OPEN INPUT SQ-FS3.                                           IC1154.2
 016900 LINK-TEST-11.                                                    IC1154.2
 017000     READ SQ-FS3 RECORD                                           IC1154.2
@@ -193,12 +193,12 @@
 019800     READ SQ-FS3 RECORD                                           IC1154.2
 019900           AT END MOVE 1 TO EOF-FLAG.                             IC1154.2
 020000     MOVE SQ-FS3R1-F-G-120 TO FILE-REC-SQ-FS3.                    IC1154.2
-020100*                                                                 IC1154.2
-020200*         THE MAIN PROGRAM IC114 REPEATLY CALLS THE SUBPROGRAM    IC1154.2
-020300*    IC115 TO READ THE FILE SQ-FS3.  THE DATA RECORD IS MOVED     IC1154.2
-020400*    TO A LINKAGE RECORD FOR CHECKING OF THE CONTENTS BY THE      IC1154.2
-020500*    MAIN PROGRAM.                                                IC1154.2
-020600*                                                                 IC1154.2
+020100*                                                                         
+020200*                                                                         
+020300*                                                                         
+020400*                                                                         
+020500*                                                                         
+020600*                                                                         
 020700 LINK-EXIT-12.                                                    IC1154.2
 020800     EXIT PROGRAM.                                                IC1154.2
 020900 SECT-IC115-0006 SECTION.                                         IC1154.2

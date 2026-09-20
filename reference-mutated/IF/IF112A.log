@@ -19,18 +19,18 @@ TEST RESULT OF IF112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-OF-DATE      FAIL* F-DATEOFINT-04                                                                              
                                                                                                                         
                                      COMPUTED=  000000406.000000000                                                     
-                                     CORRECT =  000000436.000000000  See ref. A-45 2.16                                 
+                                     CORRECT =  000000456.000000000  See ref. A-45 2.16                                 
                                                                                                                         
  INTEGER-OF-DATE      FAIL* F-DATEOFINT-05                                                                              
                                                                                                                         
                                      COMPUTED=  000000365.000000000                                                     
-                                     CORRECT =  000000395.000000000  See ref. A-45 2.16                                 
+                                     CORRECT =  000000665.000000000  See ref. A-45 2.16                                 
                                                                                                                         
  INTEGER-OF-DATE      PASS  F-DATEOFINT-06                                                                              
  INTEGER-OF-DATE      FAIL* F-DATEOFINT-07                                                                              
                                                                                                                         
                                      COMPUTED=  000000800.000000000                                                     
-                                     CORRECT =  000000820.000000000  See ref. A-45 2.16                                 
+                                     CORRECT =  000000870.000000000  See ref. A-45 2.16                                 
                                                                                                                         
  INTEGER-OF-DATE      PASS  F-DATEOFINT-10                                                                              
  ***********************************************************************************************************************

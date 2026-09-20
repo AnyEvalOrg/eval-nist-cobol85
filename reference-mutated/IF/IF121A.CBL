@@ -2,12 +2,12 @@
 000200 PROGRAM-ID.                                                      IF1214.2
 000300     IF121A.                                                      IF1214.2
 000400                                                                  IF1214.2
-000500***********************************************************       IF1214.2
-000600*                                                         *       IF1214.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1214.2
-000800* It contains tests for the Intrinsic Function MEDIAN.    *       IF1214.2
-000900*                                                         *       IF1214.2
-001000***********************************************************       IF1214.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
 001100 ENVIRONMENT DIVISION.                                            IF1214.2
 001200 CONFIGURATION SECTION.                                           IF1214.2
 001300 SOURCE-COMPUTER.                                                 IF1214.2
@@ -24,9 +24,9 @@
 002400 01  PRINT-REC PICTURE X(120).                                    IF1214.2
 002500 01  DUMMY-RECORD PICTURE X(120).                                 IF1214.2
 002600 WORKING-STORAGE SECTION.                                         IF1214.2
-002700***********************************************************       IF1214.2
-002800* Variables specific to the Intrinsic Function Test IF121A*       IF1214.2
-002900***********************************************************       IF1214.2
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 01  A                   PIC S9(10)          VALUE 5.             IF1214.2
 003100 01  B                   PIC S9(10)          VALUE 7.             IF1214.2
 003200 01  C                   PIC S9(10)          VALUE -4.            IF1214.2
@@ -49,9 +49,9 @@
 004900 01  WS-NUM              PIC S9(6)V9(7).                          IF1214.2
 005000 01  MIN-RANGE           PIC S9(5)V9(7).                          IF1214.2
 005100 01  MAX-RANGE           PIC S9(5)V9(7).                          IF1214.2
-005200*                                                                 IF1214.2
-005300**********************************************************        IF1214.2
-005400*                                                                 IF1214.2
+005200*                                                                         
+005300*                                                                         
+005400*                                                                         
 005500 01  TEST-RESULTS.                                                IF1214.2
 005600     02 FILLER                   PIC X      VALUE SPACE.          IF1214.2
 005700     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1214.2
@@ -345,16 +345,16 @@
 034500 BAIL-OUT-EX. EXIT.                                               IF1214.2
 034600 CCVS1-EXIT.                                                      IF1214.2
 034700     EXIT.                                                        IF1214.2
-034800********************************************************          IF1214.2
-034900*                                                      *          IF1214.2
-035000*    Intrinsic Function Tests         IF121A - MEDIAN  *          IF1214.2
-035100*                                                      *          IF1214.2
-035200********************************************************          IF1214.2
+034800*                                                                         
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
+035200*                                                                         
 035300 SECT-IF121A SECTION.                                             IF1214.2
 035400 F-MEDIAN-INFO.                                                   IF1214.2
 035500     MOVE     "See ref. A-54 2.25" TO ANSI-REFERENCE.             IF1214.2
 035600     MOVE     "MEDIAN Function" TO FEATURE.                       IF1214.2
-035700*****************TEST (a) - SIMPLE TEST*****************          IF1214.2
+035700*                                                                         
 035800 F-MEDIAN-01.                                                     IF1214.2
 035900     MOVE ZERO TO WS-NUM.                                         IF1214.2
 036000 F-MEDIAN-TEST-01.                                                IF1214.2
@@ -372,7 +372,7 @@
 037200 F-MEDIAN-WRITE-01.                                               IF1214.2
 037300     MOVE "F-MEDIAN-01" TO PAR-NAME.                              IF1214.2
 037400     PERFORM  PRINT-DETAIL.                                       IF1214.2
-037500*****************TEST (b) - SIMPLE TEST*****************          IF1214.2
+037500*                                                                         
 037600 F-MEDIAN-02.                                                     IF1214.2
 037700     EVALUATE FUNCTION MEDIAN(3.9, -0.3, 8.7, 100.2)              IF1214.2
 037800     WHEN 6.29987 THRU 6.30013                                    IF1214.2
@@ -386,7 +386,7 @@
 038600 F-MEDIAN-WRITE-02.                                               IF1214.2
 038700     MOVE "F-MEDIAN-02" TO PAR-NAME.                              IF1214.2
 038800     PERFORM  PRINT-DETAIL.                                       IF1214.2
-038900*****************TEST (c) - SIMPLE TEST*****************          IF1214.2
+038900*                                                                         
 039000 F-MEDIAN-03.                                                     IF1214.2
 039100     IF FUNCTION MEDIAN(A, B, C, D) = 6    THEN                   IF1214.2
 039200                    PERFORM PASS                                  IF1214.2
@@ -399,7 +399,7 @@
 039900 F-MEDIAN-WRITE-03.                                               IF1214.2
 040000     MOVE "F-MEDIAN-03" TO PAR-NAME.                              IF1214.2
 040100     PERFORM  PRINT-DETAIL.                                       IF1214.2
-040200*****************TEST (d) - SIMPLE TEST*****************          IF1214.2
+040200*                                                                         
 040300 F-MEDIAN-04.                                                     IF1214.2
 040400     MOVE ZERO TO WS-NUM.                                         IF1214.2
 040500 F-MEDIAN-TEST-04.                                                IF1214.2
@@ -418,7 +418,7 @@
 041800 F-MEDIAN-WRITE-04.                                               IF1214.2
 041900     MOVE "F-MEDIAN-04" TO PAR-NAME.                              IF1214.2
 042000     PERFORM  PRINT-DETAIL.                                       IF1214.2
-042100*****************TEST (e) - SIMPLE TEST*****************          IF1214.2
+042100*                                                                         
 042200 F-MEDIAN-05.                                                     IF1214.2
 042300     MOVE ZERO TO WS-NUM.                                         IF1214.2
 042400 F-MEDIAN-TEST-05.                                                IF1214.2
@@ -437,7 +437,7 @@
 043700 F-MEDIAN-WRITE-05.                                               IF1214.2
 043800     MOVE "F-MEDIAN-05" TO PAR-NAME.                              IF1214.2
 043900     PERFORM  PRINT-DETAIL.                                       IF1214.2
-044000*****************TEST (f) - SIMPLE TEST*****************          IF1214.2
+044000*                                                                         
 044100 F-MEDIAN-06.                                                     IF1214.2
 044200     MOVE ZERO TO WS-NUM.                                         IF1214.2
 044300 F-MEDIAN-TEST-06.                                                IF1214.2
@@ -456,7 +456,7 @@
 045600 F-MEDIAN-WRITE-06.                                               IF1214.2
 045700     MOVE "F-MEDIAN-06" TO PAR-NAME.                              IF1214.2
 045800     PERFORM  PRINT-DETAIL.                                       IF1214.2
-045900*****************TEST (g) - SIMPLE TEST*****************          IF1214.2
+045900*                                                                         
 046000 F-MEDIAN-07.                                                     IF1214.2
 046100     MOVE ZERO TO WS-NUM.                                         IF1214.2
 046200 F-MEDIAN-TEST-07.                                                IF1214.2
@@ -474,17 +474,17 @@
 047400 F-MEDIAN-WRITE-07.                                               IF1214.2
 047500     MOVE "F-MEDIAN-07" TO PAR-NAME.                              IF1214.2
 047600     PERFORM  PRINT-DETAIL.                                       IF1214.2
-047700*****************TEST (h) - SIMPLE TEST*****************          IF1214.2
+047700*                                                                         
 047800 F-MEDIAN-08.                                                     IF1214.2
 047900     MOVE ZERO TO WS-NUM.                                         IF1214.2
 048000 F-MEDIAN-TEST-08.                                                IF1214.2
 048100     COMPUTE WS-NUM = FUNCTION MEDIAN(IND(P), IND(Q), IND(R)).    IF1214.2
 048200                                                                  IF1214.2
-048300     IF WS-NUM = 1 THEN                                           IF1214.2
+048300     IF WS-NUM = 4 THEN                                           IF1214.2
 048400                    PERFORM PASS                                  IF1214.2
 048500     ELSE                                                         IF1214.2
 048600                    MOVE WS-NUM TO COMPUTED-N                     IF1214.2
-048700                    MOVE 1 TO CORRECT-N                           IF1214.2
+048700                    MOVE 4 TO CORRECT-N                           IF1214.2
 048800                    PERFORM FAIL.                                 IF1214.2
 048900     GO TO F-MEDIAN-WRITE-08.                                     IF1214.2
 049000 F-MEDIAN-DELETE-08.                                              IF1214.2
@@ -493,16 +493,16 @@
 049300 F-MEDIAN-WRITE-08.                                               IF1214.2
 049400     MOVE "F-MEDIAN-08" TO PAR-NAME.                              IF1214.2
 049500     PERFORM  PRINT-DETAIL.                                       IF1214.2
-049600*****************TEST (i) - SIMPLE TEST*****************          IF1214.2
+049600*                                                                         
 049700 F-MEDIAN-09.                                                     IF1214.2
 049800     MOVE ZERO TO WS-NUM.                                         IF1214.2
 049900 F-MEDIAN-TEST-09.                                                IF1214.2
 050000     COMPUTE WS-NUM = FUNCTION MEDIAN (4 0 5 3 7).
-050100     IF WS-NUM = 0 THEN                                           IF1214.2
+050100     IF WS-NUM = 1 THEN                                           IF1214.2
 050200                    PERFORM PASS                                  IF1214.2
 050300     ELSE                                                         IF1214.2
 050400                    MOVE WS-NUM TO COMPUTED-N                     IF1214.2
-050500                    MOVE 0 TO CORRECT-N                           IF1214.2
+050500                    MOVE 1 TO CORRECT-N                           IF1214.2
 050600                    PERFORM FAIL.                                 IF1214.2
 050700     GO TO F-MEDIAN-WRITE-09.                                     IF1214.2
 050800 F-MEDIAN-DELETE-09.                                              IF1214.2
@@ -511,7 +511,7 @@
 051100 F-MEDIAN-WRITE-09.                                               IF1214.2
 051200     MOVE "F-MEDIAN-09" TO PAR-NAME.                              IF1214.2
 051300     PERFORM  PRINT-DETAIL.                                       IF1214.2
-051400*****************TEST (k) - SIMPLE TEST*****************          IF1214.2
+051400*                                                                         
 051500 F-MEDIAN-11.                                                     IF1214.2
 051600     MOVE ZERO TO WS-NUM.                                         IF1214.2
 051700 F-MEDIAN-TEST-11.                                                IF1214.2
@@ -529,7 +529,7 @@
 052900 F-MEDIAN-WRITE-11.                                               IF1214.2
 053000     MOVE "F-MEDIAN-11" TO PAR-NAME.                              IF1214.2
 053100     PERFORM  PRINT-DETAIL.                                       IF1214.2
-053200*****************TEST (l) - SIMPLE TEST*****************          IF1214.2
+053200*                                                                         
 053300 F-MEDIAN-12.                                                     IF1214.2
 053400     MOVE ZERO TO WS-NUM.                                         IF1214.2
 053500 F-MEDIAN-TEST-12.                                                IF1214.2
@@ -547,7 +547,7 @@
 054700 F-MEDIAN-WRITE-12.                                               IF1214.2
 054800     MOVE "F-MEDIAN-12" TO PAR-NAME.                              IF1214.2
 054900     PERFORM  PRINT-DETAIL.                                       IF1214.2
-055000*****************TEST (a) - COMPLEX TEST****************          IF1214.2
+055000*                                                                         
 055100 F-MEDIAN-13.                                                     IF1214.2
 055200     MOVE ZERO TO WS-NUM.                                         IF1214.2
 055300     MOVE  20.7996 TO MIN-RANGE.                                  IF1214.2
@@ -569,7 +569,7 @@
 056900 F-MEDIAN-WRITE-13.                                               IF1214.2
 057000     MOVE "F-MEDIAN-13" TO PAR-NAME.                              IF1214.2
 057100     PERFORM  PRINT-DETAIL.                                       IF1214.2
-057200*****************TEST (b) - COMPLEX TEST****************          IF1214.2
+057200*                                                                         
 057300 F-MEDIAN-14.                                                     IF1214.2
 057400     MOVE ZERO TO WS-NUM.                                         IF1214.2
 057500     MOVE  34.2593 TO MIN-RANGE.                                  IF1214.2
@@ -591,7 +591,7 @@
 059100 F-MEDIAN-WRITE-14.                                               IF1214.2
 059200     MOVE "F-MEDIAN-14" TO PAR-NAME.                              IF1214.2
 059300     PERFORM  PRINT-DETAIL.                                       IF1214.2
-059400*****************TEST (c) - COMPLEX TEST****************          IF1214.2
+059400*                                                                         
 059500 F-MEDIAN-15.                                                     IF1214.2
 059600     MOVE ZERO TO WS-NUM.                                         IF1214.2
 059700     MOVE 83.9983 TO MIN-RANGE.                                   IF1214.2
@@ -613,7 +613,7 @@
 061300 F-MEDIAN-WRITE-15.                                               IF1214.2
 061400     MOVE "F-MEDIAN-15" TO PAR-NAME.                              IF1214.2
 061500     PERFORM  PRINT-DETAIL.                                       IF1214.2
-061600*****************TEST (d) - COMPLEX TEST****************          IF1214.2
+061600*                                                                         
 061700 F-MEDIAN-16.                                                     IF1214.2
 061800     MOVE ZERO TO WS-NUM.                                         IF1214.2
 061900     MOVE 3.39932 TO MIN-RANGE.                                   IF1214.2
@@ -636,7 +636,7 @@
 063600 F-MEDIAN-WRITE-16.                                               IF1214.2
 063700     MOVE "F-MEDIAN-16" TO PAR-NAME.                              IF1214.2
 063800     PERFORM  PRINT-DETAIL.                                       IF1214.2
-063900*****************TEST (e) - COMPLEX TEST****************          IF1214.2
+063900*                                                                         
 064000 F-MEDIAN-17.                                                     IF1214.2
 064100     MOVE ZERO TO WS-NUM.                                         IF1214.2
 064200     MOVE 2.24995 TO MIN-RANGE.                                   IF1214.2
@@ -659,7 +659,7 @@
 065900 F-MEDIAN-WRITE-17.                                               IF1214.2
 066000     MOVE "F-MEDIAN-17" TO PAR-NAME.                              IF1214.2
 066100     PERFORM  PRINT-DETAIL.                                       IF1214.2
-066200*****************SPECIAL PERFORM TEST**********************       IF1214.2
+066200*                                                                         
 066300 F-MEDIAN-18.                                                     IF1214.2
 066400     PERFORM F-MEDIAN-TEST-18                                     IF1214.2
 066500       UNTIL FUNCTION MEDIAN(1, ARG1, ARG2, 20) > 10.             IF1214.2
@@ -674,7 +674,7 @@
 067400 F-MEDIAN-WRITE-18.                                               IF1214.2
 067500     MOVE "F-MEDIAN-18" TO PAR-NAME.                              IF1214.2
 067600     PERFORM  PRINT-DETAIL.                                       IF1214.2
-067700********************END OF TESTS***************                   IF1214.2
+067700*                                                                         
 067800 CCVS-EXIT SECTION.                                               IF1214.2
 067900 CCVS-999999.                                                     IF1214.2
 068000     GO TO CLOSE-FILES.                                           IF1214.2

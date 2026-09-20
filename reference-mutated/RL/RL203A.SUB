@@ -1,38 +1,38 @@
 000100 IDENTIFICATION DIVISION.                                         RL2034.2
 000200 PROGRAM-ID.                                                      RL2034.2
 000300     RL203A.                                                      RL2034.2
-000400****************************************************************  RL2034.2
-000500*                                                              *  RL2034.2
-000600*    VALIDATION FOR:-                                          *  RL2034.2
-000700*                                                              *  RL2034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".RL2034.2
-000900*                                                              *  RL2034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".RL2034.2
-001100*                                                              *  RL2034.2
-001200****************************************************************  RL2034.2
-001300*GENERAL:    THIS PROGRAM IS THE THIRD OF A SERIES.  THE FUNCTION RL2034.2
-001400*            OF THIS PROGRAM IS TO PROCESS THE FILE SEQUENTIALLY  RL2034.2
-001500*            (ACCESS MODE IS DYNAMIC).    THE FILE USED IS THAT   RL2034.2
-001600*            RESULTING FROM RL102.                                RL2034.2
-001700*                                                                 RL2034.2
-001800*            FIRST, THE FILE IS VERIFIED FOR ACCURACY OF ITS 500  RL2034.2
-001900*            RECORDS.  SECONDLY, RECORDS OF THER FILE ARE         RL2034.2
-002000*            SELECTIVELY DELETED AND THIRDLY THE ACCURACY OF EACH RL2034.2
-002100*            RECORD IN THE FILE IS AGAIN VERIFIED.                RL2034.2
-002200*                                                                 RL2034.2
-002300*            X-CARD PARAMETERS WHICH MUST BE SUPPLIED FOR THIS    RL2034.2
-002400*            PROGRAM ARE:                                         RL2034.2
-002500*                                                                 RL2034.2
-002600*                 X-21   IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR RL2034.2
-002700*                         RELATIVE  I-O DATA FILE                 RL2034.2
-002800*                 X-55   SYSTEM PRINTER                           RL2034.2
-002900*                 X-69   ADDITIONAL VALUE OF CLAUSES              RL2034.2
-003000*                 X-74   VALUE OF IMPLEMENTOR-NAME                RL2034.2
-003100*                 X-75   OBJECT OF VALUE OF CLAUSE                RL2034.2
-003200*                 X-82   SOURCE-COMPUTER                          RL2034.2
-003300*                 X-83   OBJECT-COMPUTER.                         RL2034.2
-003400*                                                                 RL2034.2
-003500***************************************************               RL2034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
 003600 ENVIRONMENT DIVISION.                                            RL2034.2
 003700 CONFIGURATION SECTION.                                           RL2034.2
 003800 SOURCE-COMPUTER.                                                 RL2034.2
@@ -313,7 +313,7 @@
 032000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      RL2034.2
 032100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               RL2034.2
 032200      ADD PASS-COUNTER TO ERROR-HOLD.                             RL2034.2
-032300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   RL2034.2
+032300*                                                                         
 032400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            RL2034.2
 032500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              RL2034.2
 032600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                RL2034.2
@@ -384,7 +384,7 @@
 039100 SECT-RL-03-001 SECTION.                                          RL2034.2
 039200 REL-INIT-006.                                                    RL2034.2
 039300     MOVE  99 TO RL-FD1-KEY.                                      RL2034.2
-039400*    CONTAIN THE NUMBER OF THE RECORD PREVIOUSLY READ.            RL2034.2
+039400*                                                                         
 039500     OPEN INPUT RL-FD1.                                           RL2034.2
 039600     MOVE     "REL-TEST-006" TO   PAR-NAME.                       RL2034.2
 039700     MOVE     ZERO TO             WRK-CS-09V00-006.               RL2034.2
@@ -424,7 +424,7 @@
 043100              ELSE                                                RL2034.2
 043200              PERFORM PASS.                                       RL2034.2
 043300     PERFORM  PRINT-DETAIL.                                       RL2034.2
-043400*    .01                                                          RL2034.2
+043400*                                                                         
 043500     ADD      1 TO REC-CT.                                        RL2034.2
 043600     IF       WRK-CS-09V00-007 EQUAL TO 400                       RL2034.2
 043700              PERFORM PASS                                        RL2034.2
@@ -435,7 +435,7 @@
 044200              PERFORM FAIL.                                       RL2034.2
 044300     PERFORM  PRINT-DETAIL.                                       RL2034.2
 044400     ADD      1 TO REC-CT.                                        RL2034.2
-044500*    .02                                                          RL2034.2
+044500*                                                                         
 044600     IF      WRK-CS-09V00-008 EQUAL TO 100                        RL2034.2
 044700              PERFORM PASS                                        RL2034.2
 044800              ELSE                                                RL2034.2
@@ -445,7 +445,7 @@
 045200              PERFORM FAIL.                                       RL2034.2
 045300     PERFORM  PRINT-DETAIL.                                       RL2034.2
 045400     ADD      1 TO REC-CT.                                        RL2034.2
-045500*    .03                                                          RL2034.2
+045500*                                                                         
 045600     IF      WRK-CS-09V00-009 EQUAL TO ZERO                       RL2034.2
 045700             PERFORM PASS                                         RL2034.2
 045800             ELSE                                                 RL2034.2
@@ -455,7 +455,7 @@
 046200             PERFORM FAIL.                                        RL2034.2
 046300     PERFORM PRINT-DETAIL.                                        RL2034.2
 046400     ADD     01 TO REC-CT.                                        RL2034.2
-046500*    .04                                                          RL2034.2
+046500*                                                                         
 046600     IF      WRK-CS-09V00-010 EQUAL TO ZERO                       RL2034.2
 046700             PERFORM PASS                                         RL2034.2
 046800             ELSE                                                 RL2034.2
@@ -465,14 +465,14 @@
 047200             PERFORM FAIL.                                        RL2034.2
 047300     PERFORM PRINT-DETAIL.                                        RL2034.2
 047400     ADD     01 TO REC-CT.                                        RL2034.2
-047500*    .05                                                          RL2034.2
+047500*                                                                         
 047600     MOVE    WRK-CS-09V00-011 TO RL-FD1-KEY.                      RL2034.2
 047700     MOVE RL-FD1-KEY TO COMPUTED-18V0.                            RL2034.2
 047800     MOVE    "INFORMATION" TO CORRECT-A.                          RL2034.2
 047900     MOVE    "STATUS AFTER OPEN" TO RE-MARK.                      RL2034.2
 048000     PERFORM PRINT-DETAIL.                                        RL2034.2
 048100     ADD     01 TO REC-CT.                                        RL2034.2
-048200*    .06                                                          RL2034.2
+048200*                                                                         
 048300     CLOSE    RL-FD1.                                             RL2034.2
 048400 REL-INIT-007.                                                    RL2034.2
 048500     MOVE     "REL-TEST-007" TO PAR-NAME                          RL2034.2
@@ -518,7 +518,7 @@
 052500              PERFORM PASS.                                       RL2034.2
 052600     PERFORM  PRINT-DETAIL.                                       RL2034.2
 052700     ADD      01 TO REC-CT.                                       RL2034.2
-052800*    .01                                                          RL2034.2
+052800*                                                                         
 052900     IF       WRK-CS-09V00-008 NOT EQUAL TO 125                   RL2034.2
 053000              MOVE WRK-CS-09V00-008 TO COMPUTED-18V0              RL2034.2
 053100              MOVE 125              TO CORRECT-18V0               RL2034.2
@@ -528,7 +528,7 @@
 053500              PERFORM PASS.                                       RL2034.2
 053600     PERFORM  PRINT-DETAIL.                                       RL2034.2
 053700     ADD      01 TO REC-CT.                                       RL2034.2
-053800*    .02                                                          RL2034.2
+053800*                                                                         
 053900     CLOSE    RL-FD1.                                             RL2034.2
 054000 REL-INIT-008.                                                    RL2034.2
 054100     MOVE     "REL-TEST-008" TO PAR-NAME.                         RL2034.2
@@ -571,7 +571,7 @@
 057800              PERFORM  PASS.                                      RL2034.2
 057900     PERFORM  PRINT-DETAIL.                                       RL2034.2
 058000     ADD      01 TO REC-CT.                                       RL2034.2
-058100*    .01                                                          RL2034.2
+058100*                                                                         
 058200     IF       WRK-CS-09V00-009 NOT EQUAL TO ZERO                  RL2034.2
 058300              MOVE WRK-CS-09V00-009 TO COMPUTED-18V0              RL2034.2
 058400             MOVE   ZERO TO CORRECT-18V0                          RL2034.2
@@ -581,7 +581,7 @@
 058800              PERFORM PASS.                                       RL2034.2
 058900     PERFORM  PRINT-DETAIL.                                       RL2034.2
 059000     ADD      01  TO  REC-CT.                                     RL2034.2
-059100*    .02                                                          RL2034.2
+059100*                                                                         
 059200     IF       WRK-CS-09V00-010 NOT EQUAL TO 375                   RL2034.2
 059300              MOVE "KEY MISMATCH" TO RE-MARK                      RL2034.2
 059400             MOVE 375 TO CORRECT-18V0                             RL2034.2
@@ -591,7 +591,7 @@
 059800              PERFORM PASS.                                       RL2034.2
 059900     PERFORM  PRINT-DETAIL.                                       RL2034.2
 060000     ADD      01 TO REC-CT.                                       RL2034.2
-060100*    .03                                                          RL2034.2
+060100*                                                                         
 060200     IF      WRK-CS-09V00-011  NOT EQUAL TO 375                   RL2034.2
 060300             MOVE   375  TO CORRECT-18V0                          RL2034.2
 060400             MOVE  "INCORRECT RECORD FOUND"  TO RE-MARK           RL2034.2
@@ -600,7 +600,7 @@
 060700             ELSE                                                 RL2034.2
 060800             PERFORM  PASS.                                       RL2034.2
 060900     PERFORM   PRINT-DETAIL.                                      RL2034.2
-061000*04                                                               RL2034.2
+061000*                                                                         
 061100     CLOSE    RL-FD1.                                             RL2034.2
 061200 CCVS-EXIT SECTION.                                               RL2034.2
 061300 CCVS-999999.                                                     RL2034.2

@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         NC2474.2
 000200 PROGRAM-ID.                                                      NC2474.2
 000300     NC247A.                                                      NC2474.2
-000400****************************************************************  NC2474.2
-000500*                                                              *  NC2474.2
-000600*    VALIDATION FOR:-                                          *  NC2474.2
-000700*                                                              *  NC2474.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC2474.2
-000900*                                                              *  NC2474.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC2474.2
-001100*                                                              *  NC2474.2
-001200****************************************************************  NC2474.2
-001300*                                                              *  NC2474.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC2474.2
-001500*                                                              *  NC2474.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC2474.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC2474.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC2474.2
-001900*                                                              *  NC2474.2
-002000****************************************************************  NC2474.2
-002100*                                                                 NC2474.2
-002200*                                                                 NC2474.2
-002300*    PROGRAM NC247A TESTS FORMAT2 OF THE "OCCURS" CLAUSE TO    *  NC2474.2
-002400*    VERIFY THAT THE NUMBER OF TABLE OCCURRENCES CARIES        *  NC2474.2
-002500*    ACCORDING TO THE CURRENT VALUE OF THE IDENTIDIER ON WHICH *  NC2474.2
-002600*    IT DEPENDS.                                               *  NC2474.2
-002700*                                                              *  NC2474.2
-002800****************************************************************  NC2474.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            NC2474.2
 003000 CONFIGURATION SECTION.                                           NC2474.2
 003100 SOURCE-COMPUTER.                                                 NC2474.2
@@ -258,7 +258,7 @@
 026000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC2474.2
 026100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC2474.2
 026200      ADD PASS-COUNTER TO ERROR-HOLD.                             NC2474.2
-026300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC2474.2
+026300*                                                                         
 026400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC2474.2
 026500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC2474.2
 026600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC2474.2
@@ -339,7 +339,7 @@
 034100     MOVE "7" TO ODO-XN-00001-O009D (7).                          NC2474.2
 034200     MOVE "8" TO ODO-XN-00001-O009D (8).                          NC2474.2
 034300     MOVE "9" TO ODO-XN-00001-O009D (9).                          NC2474.2
-034400*                                                                 NC2474.2
+034400*                                                                         
 034500 IF-INIT-GF-1.                                                    NC2474.2
 034600     MOVE "IF-TEST-GF-1" TO PAR-NAME.                             NC2474.2
 034700     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -360,7 +360,7 @@
 036200     MOVE "CONDITION NOT EQUAL" TO COMPUTED-A.                    NC2474.2
 036300 IF-WRITE-GF-1.                                                   NC2474.2
 036400     PERFORM PRINT-DETAIL.                                        NC2474.2
-036500*                                                                 NC2474.2
+036500*                                                                         
 036600 IF-INIT-GF-2.                                                    NC2474.2
 036700     MOVE WRK-GRP-00019 TO RE-MARK.                               NC2474.2
 036800     MOVE "IF-TEST-GF-2" TO PAR-NAME.                             NC2474.2
@@ -383,7 +383,7 @@
 038500     MOVE "CONDITION NOT EQUAL" TO COMPUTED-A.                    NC2474.2
 038600 IF-WRITE-GF-2.                                                   NC2474.2
 038700     PERFORM PRINT-DETAIL.                                        NC2474.2
-038800*                                                                 NC2474.2
+038800*                                                                         
 038900 INS-INIT-F1-1.                                                   NC2474.2
 039000     MOVE "INS-TEST-F1-1" TO PAR-NAME.                            NC2474.2
 039100     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -392,7 +392,7 @@
 039400     MOVE 0 TO WRK-DU-05V00.                                      NC2474.2
 039500 INS-TEST-F1-1.                                                   NC2474.2
 039600     INSPECT ODO-GRP-00009 TALLYING WRK-DU-05V00 FOR ALL "7".     NC2474.2
-039700     IF WRK-DU-05V00 IS EQUAL TO 3                                NC2474.2
+039700     IF WRK-DU-05V00 IS EQUAL TO 1                                NC2474.2
 039800         PERFORM PASS                                             NC2474.2
 039900         GO TO INS-WRITE-F1-1                                     NC2474.2
 040000     ELSE                                                         NC2474.2
@@ -402,11 +402,11 @@
 040400     GO TO INS-WRITE-F1-1.                                        NC2474.2
 040500 INS-FAIL-F1-1.                                                   NC2474.2
 040600     PERFORM FAIL                                                 NC2474.2
-040700     MOVE 3 TO  CORRECT-18V0                                      NC2474.2
+040700     MOVE 1 TO  CORRECT-18V0                                      NC2474.2
 040800     MOVE WRK-DU-05V00 TO COMPUTED-18V0.                          NC2474.2
 040900 INS-WRITE-F1-1.                                                  NC2474.2
 041000     PERFORM PRINT-DETAIL.                                        NC2474.2
-041100*                                                                 NC2474.2
+041100*                                                                         
 041200 INS-INIT-F1-2.                                                   NC2474.2
 041300     MOVE "INS-TEST-F1-2" TO PAR-NAME.                            NC2474.2
 041400     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -417,7 +417,7 @@
 041900     MOVE WRK-GRP-00019 TO RE-MARK.                               NC2474.2
 042000 INS-TEST-F1-2.                                                   NC2474.2
 042100     INSPECT ODO-GRP-00009 TALLYING WRK-DU-05V00 FOR ALL "7".     NC2474.2
-042200     IF WRK-DU-05V00 IS EQUAL TO 7                                NC2474.2
+042200     IF WRK-DU-05V00 IS EQUAL TO 0                                NC2474.2
 042300         PERFORM PASS                                             NC2474.2
 042400         GO TO INS-WRITE-F1-2                                     NC2474.2
 042500     ELSE                                                         NC2474.2
@@ -427,11 +427,11 @@
 042900     GO TO INS-WRITE-F1-2.                                        NC2474.2
 043000 INS-FAIL-F1-2.                                                   NC2474.2
 043100     PERFORM FAIL                                                 NC2474.2
-043200     MOVE 7 TO CORRECT-18V0                                       NC2474.2
+043200     MOVE 0 TO CORRECT-18V0                                       NC2474.2
 043300     MOVE WRK-DU-05V00 TO COMPUTED-18V0.                          NC2474.2
 043400 INS-WRITE-F1-2.                                                  NC2474.2
 043500     PERFORM PRINT-DETAIL.                                        NC2474.2
-043600*                                                                 NC2474.2
+043600*                                                                         
 043700 MOV-INIT-F1-1.                                                   NC2474.2
 043800     MOVE "MOV-TEST-F1-1" TO PAR-NAME.                            NC2474.2
 043900     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -454,7 +454,7 @@
 045600     MOVE WRK-GRP-00019 TO COMPUTED-A.                            NC2474.2
 045700 MOV-WRITE-F1-1.                                                  NC2474.2
 045800     PERFORM PRINT-DETAIL.                                        NC2474.2
-045900*                                                                 NC2474.2
+045900*                                                                         
 046000 MOV-INIT-F1-2.                                                   NC2474.2
 046100     MOVE "MOV-TEST-F1-2" TO PAR-NAME.                            NC2474.2
 046200     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -478,7 +478,7 @@
 048000     MOVE WRK-GRP-00019 TO COMPUTED-A.                            NC2474.2
 048100 MOV-WRITE-F1-2.                                                  NC2474.2
 048200     PERFORM PRINT-DETAIL.                                        NC2474.2
-048300*                                                                 NC2474.2
+048300*                                                                         
 048400 MOV-INIT-F1-3.                                                   NC2474.2
 048500     MOVE "MOV-TEST-F1-3" TO PAR-NAME.                            NC2474.2
 048600     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -491,7 +491,7 @@
 049300     MOVE "3 ACTIVE: TEST PASS" TO GRP-ODO.                       NC2474.2
 049400     MOVE 9 TO DOI-DU-01V00.                                      NC2474.2
 049500 MOV-TEST-F1-3.                                                   NC2474.2
-049600     IF GRP-ODO IS EQUAL TO "9 ACTIVE: TESTNPASS"                 NC2474.2
+049600     IF GRP-ODO IS EQUAL TO "9 ACTIVE: TEST PASS"                 NC2474.2
 049700         PERFORM PASS                                             NC2474.2
 049800         GO TO MOV-WRITE-F1-3                                     NC2474.2
 049900     ELSE                                                         NC2474.2
@@ -501,11 +501,11 @@
 050300     GO TO MOV-WRITE-F1-3.                                        NC2474.2
 050400 MOV-FAIL-F1-3.                                                   NC2474.2
 050500     PERFORM FAIL                                                 NC2474.2
-050600     MOVE "9 ACTIVE: TESTNPASS" TO CORRECT-A                      NC2474.2
+050600     MOVE "9 ACTIVE: TEST PASS" TO CORRECT-A                      NC2474.2
 050700     MOVE GRP-ODO TO COMPUTED-A.                                  NC2474.2
 050800 MOV-WRITE-F1-3.                                                  NC2474.2
 050900     PERFORM PRINT-DETAIL.                                        NC2474.2
-051000*                                                                 NC2474.2
+051000*                                                                         
 051100 MOV-INIT-F1-4.                                                   NC2474.2
 051200     MOVE "MOV-TEST-F1-4" TO PAR-NAME.                            NC2474.2
 051300     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -534,24 +534,24 @@
 053600     MOVE "9 ACTIVE: TEST PASS" TO CORRECT-A.                     NC2474.2
 053700 MOV-WRITE-F1-4.                                                  NC2474.2
 053800     PERFORM PRINT-DETAIL.                                        NC2474.2
-053900*                                                                 NC2474.2
+053900*                                                                         
 054000 MOV-INIT-F1-5.                                                   NC2474.2
 054100     MOVE   "MOV-TEST-F1-5" TO PAR-NAME.                          NC2474.2
 054200     MOVE   "VI-26 5.8.3 SR5" TO ANSI-REFERENCE.                  NC2474.2
-054300*    MOVE    9  TO DOI-DU-01V00.                                  NC2474.2
-054400*    MOVE   "Z" TO ODO-XN-00001-O009D (1).                        NC2474.2
-054500*    MOVE   "E" TO ODO-XN-00001-O009D (2).                        NC2474.2
-054600*    MOVE   "R" TO ODO-XN-00001-O009D (3).                        NC2474.2
-054700*    MOVE   "O" TO ODO-XN-00001-O009D (4).                        NC2474.2
-054800*    MOVE   "*" TO WRK-XN-00001.                                  NC2474.2
-054900*    MOVE    ZERO TO DOI-DU-01V00.                                NC2474.2
-055000*    MOVE    ODO-XN-00001-O009D (1) TO WRK-XN-00001.              NC2474.2
-055100*MOV-TEST-F1-5.                                                   NC2474.2
-055200*    IF      WRK-XN-00001 = "*"                                   NC2474.2
-055300*            PERFORM PASS                                         NC2474.2
-055400*            GO TO MOV-WRITE-F1-5                                 NC2474.2
-055500*    ELSE                                                         NC2474.2
-055600*            GO TO MOV-FAIL-F1-5.                                 NC2474.2
+054300*                                                                         
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
+054800*                                                                         
+054900*                                                                         
+055000*                                                                         
+055100*                                                                         
+055200*                                                                         
+055300*                                                                         
+055400*                                                                         
+055500*                                                                         
+055600*                                                                         
 055700 MOV-DELETE-F1-5.                                                 NC2474.2
 055800     PERFORM DE-LETE.                                             NC2474.2
 055900     GO TO   MOV-WRITE-F1-5.                                      NC2474.2
@@ -563,7 +563,7 @@
 056500     PERFORM FAIL.                                                NC2474.2
 056600 MOV-WRITE-F1-5.                                                  NC2474.2
 056700     PERFORM PRINT-DETAIL.                                        NC2474.2
-056800*                                                                 NC2474.2
+056800*                                                                         
 056900 MOV-INIT-F1-6.                                                   NC2474.2
 057000     MOVE   "MOV-TEST-F1-6" TO PAR-NAME.                          NC2474.2
 057100     MOVE   "VI-26 5.8.3 SR5" TO ANSI-REFERENCE.                  NC2474.2
@@ -596,7 +596,7 @@
 059800     PERFORM FAIL.                                                NC2474.2
 059900 MOV-WRITE-F1-6.                                                  NC2474.2
 060000     PERFORM PRINT-DETAIL.                                        NC2474.2
-060100*                                                                 NC2474.2
+060100*                                                                         
 060200 SCH-INIT-F1-1.                                                   NC2474.2
 060300     MOVE "SCH-TEST-F1-1" TO PAR-NAME.                            NC2474.2
 060400     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -618,7 +618,7 @@
 062000     MOVE "7 WAS NOT FOUND" TO COMPUTED-A.                        NC2474.2
 062100 SCH-WRITE-F1-1.                                                  NC2474.2
 062200     PERFORM PRINT-DETAIL.                                        NC2474.2
-062300*                                                                 NC2474.2
+062300*                                                                         
 062400 SCH-INIT-F1-2.                                                   NC2474.2
 062500     MOVE "SCH-TEST-F1-2" TO PAR-NAME.                            NC2474.2
 062600     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -642,7 +642,7 @@
 064400     MOVE "7 WAS FOUND" TO COMPUTED-A.                            NC2474.2
 064500 SCH-WRITE-F1-2.                                                  NC2474.2
 064600     PERFORM PRINT-DETAIL.                                        NC2474.2
-064700*                                                                 NC2474.2
+064700*                                                                         
 064800 SCH-INIT-F2-3.                                                   NC2474.2
 064900     MOVE "SCH-TEST-F2-3" TO PAR-NAME.                            NC2474.2
 065000     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -663,7 +663,7 @@
 066500     MOVE "7 WAS NOT FOUND" TO COMPUTED-A.                        NC2474.2
 066600 SCH-WRITE-F2-3.                                                  NC2474.2
 066700     PERFORM PRINT-DETAIL.                                        NC2474.2
-066800*                                                                 NC2474.2
+066800*                                                                         
 066900 SCH-INIT-4.                                                      NC2474.2
 067000     MOVE "SCH-TEST-4" TO PAR-NAME.                               NC2474.2
 067100     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -686,7 +686,7 @@
 068800     MOVE "7 WAS FOUND" TO COMPUTED-A.                            NC2474.2
 068900 SCH-WRITE-4.                                                     NC2474.2
 069000     PERFORM PRINT-DETAIL.                                        NC2474.2
-069100*                                                                 NC2474.2
+069100*                                                                         
 069200 STR-INIT-GF-1.                                                   NC2474.2
 069300     MOVE "STR-TEST-GF-1" TO PAR-NAME.                            NC2474.2
 069400     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -710,7 +710,7 @@
 071200     MOVE WRK-XN-00020 TO COMPUTED-A.                             NC2474.2
 071300 STR-WRITE-GF-1.                                                  NC2474.2
 071400     PERFORM PRINT-DETAIL.                                        NC2474.2
-071500*                                                                 NC2474.2
+071500*                                                                         
 071600 STR-INIT-GF-2.                                                   NC2474.2
 071700     MOVE "STR-TEST-GF-2" TO PAR-NAME.                            NC2474.2
 071800     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -735,7 +735,7 @@
 073700     MOVE WRK-XN-00020 TO COMPUTED-A.                             NC2474.2
 073800 STR-WRITE-GF-2.                                                  NC2474.2
 073900     PERFORM PRINT-DETAIL.                                        NC2474.2
-074000*                                                                 NC2474.2
+074000*                                                                         
 074100 STR-TEST-GF-3.                                                   NC2474.2
 074200     PERFORM INIT-WRK-AREA.                                       NC2474.2
 074300     MOVE SPACES TO WRK-XN-00020.                                 NC2474.2
@@ -758,7 +758,7 @@
 076000     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
 076100     MOVE "STRING LITERAL AND PARTIAL ODO" TO RE-MARK.            NC2474.2
 076200     PERFORM PRINT-DETAIL.                                        NC2474.2
-076300*                                                                 NC2474.2
+076300*                                                                         
 076400 STR-INIT-GF-4.                                                   NC2474.2
 076500     MOVE "STR-TEST-GF-4" TO PAR-NAME.                            NC2474.2
 076600     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -785,7 +785,7 @@
 078700     MOVE "NO EXIT NECESSARY" TO CORRECT-A.                       NC2474.2
 078800 STR-WRITE-GF-4.                                                  NC2474.2
 078900     PERFORM PRINT-DETAIL.                                        NC2474.2
-079000*                                                                 NC2474.2
+079000*                                                                         
 079100 UST-INIT-GF-1.                                                   NC2474.2
 079200     MOVE "UST-TEST-GF-1" TO PAR-NAME.                            NC2474.2
 079300     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -808,7 +808,7 @@
 081000     MOVE "123456789" TO CORRECT-A.                               NC2474.2
 081100 UST-WRITE-GF-1.                                                  NC2474.2
 081200     PERFORM PRINT-DETAIL.                                        NC2474.2
-081300*                                                                 NC2474.2
+081300*                                                                         
 081400 UST-INIT-GF-2.                                                   NC2474.2
 081500     MOVE "UST-TEST-GF-2" TO PAR-NAME.                            NC2474.2
 081600     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -832,7 +832,7 @@
 083400     MOVE "123" TO CORRECT-A.                                     NC2474.2
 083500 UST-WRITE-GF-2.                                                  NC2474.2
 083600     PERFORM PRINT-DETAIL.                                        NC2474.2
-083700*                                                                 NC2474.2
+083700*                                                                         
 083800 UST-INIT-GF-3.                                                   NC2474.2
 083900     MOVE "UST-TEST-GF-3" TO PAR-NAME.                            NC2474.2
 084000     MOVE "VI-26 5.8" TO ANSI-REFERENCE.                          NC2474.2
@@ -856,7 +856,7 @@
 085800     MOVE "3 ACTIVE: 123" TO CORRECT-A.                           NC2474.2
 085900 UST-WRITE-GF-3.                                                  NC2474.2
 086000     PERFORM PRINT-DETAIL.                                        NC2474.2
-086100*                                                                 NC2474.2
+086100*                                                                         
 086200 CCVS-EXIT SECTION.                                               NC2474.2
 086300 CCVS-999999.                                                     NC2474.2
 086400     GO TO CLOSE-FILES.                                           NC2474.2

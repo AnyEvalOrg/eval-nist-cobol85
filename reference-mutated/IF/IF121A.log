@@ -23,12 +23,12 @@ TEST RESULT OF IF121A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MEDIAN Function      FAIL* F-MEDIAN-08                                                                                 
                                                                                                                         
                                      COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000001.000000000  See ref. A-54 2.25                                 
+                                     CORRECT =  000000004.000000000  See ref. A-54 2.25                                 
                                                                                                                         
  MEDIAN Function      FAIL* F-MEDIAN-09                                                                                 
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000000.000000000  See ref. A-54 2.25                                 
+                                     CORRECT =  000000001.000000000  See ref. A-54 2.25                                 
                                                                                                                         
  MEDIAN Function      PASS  F-MEDIAN-11                                                                                 
  MEDIAN Function      FAIL* F-MEDIAN-12                                                                                 

@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         SM2064.2
 000200 PROGRAM-ID.                                                      SM2064.2
 000300     SM206A.                                                      SM2064.2
-000400****************************************************************  SM2064.2
-000500*                                                              *  SM2064.2
-000600*    VALIDATION FOR:-                                          *  SM2064.2
-000700*                                                              *  SM2064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2064.2
-000900*                                                              *  SM2064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2064.2
-001100*                                                              *  SM2064.2
-001200****************************************************************  SM2064.2
-001300*                                                              *  SM2064.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2064.2
-001500*                                                              *  SM2064.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2064.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2064.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2064.2
-001900*                                                              *  SM2064.2
-002000****************************************************************  SM2064.2
-002100*                                                              *  SM2064.2
-002200*    PROGRAM NC206A TESTS THE "REPLACING" PHRASE OF THE "COPY" *  SM2064.2
-002300*    STATEMENT USING A VARIETY OF PSEUDO-TEXT OPERANDS.        *  SM2064.2
-002400*    MAXIMUM AND MINIMUM LENGTH TEXT WORDS ARE ALSO TESTED.    *  SM2064.2
-002500*                                                              *  SM2064.2
-002600****************************************************************  SM2064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700 ENVIRONMENT DIVISION.                                            SM2064.2
 002800 CONFIGURATION SECTION.                                           SM2064.2
 002900 SOURCE-COMPUTER.                                                 SM2064.2
@@ -258,7 +258,7 @@
 026000      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2064.2
 026100      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2064.2
 026200      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2064.2
-026300*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2064.2
+026300*                                                                         
 026400      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2064.2
 026500      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2064.2
 026600      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2064.2
@@ -326,36 +326,36 @@
 032800 CCVS1-EXIT.                                                      SM2064.2
 032900     EXIT.                                                        SM2064.2
 033000 SECT-SM206-0001 SECTION.                                         SM2064.2
-033100*                                                                 SM2064.2
-033200*********************** COPY STATEMENT USED **********************SM2064.2
-033300*                                                                 SM2064.2
-033400*    COPY                                                    KP001SM2064.2
-033500*            REPLACING ==PERFORM FAIL. == BY ====.                SM2064.2
-033600*                                                                 SM2064.2
-033700******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+033100*                                                                         
+033200*                                                                         
+033300*                                                                         
+033400*                                                                         
+033500*                                                                         
+033600*                                                                         
+033700*                                                                         
 033800     COPY                                                    KP001SM2064.2
 033900             REPLACING ==PERFORM FAIL. == BY ====.                SM2064.2
-034000*********************** END OF COPIED TEXT ***********************SM2064.2
+034000*                                                                         
 034100 SECT-SM206-0002 SECTION.                                         SM2064.2
 034200 PST-INIT-002.                                                    SM2064.2
 034300     MOVE   +00005 TO WRK-DS-05V00-O005-001 OF GRP-002 (1).       SM2064.2
 034400     MOVE   +000000005 TO WRK-DS-09V00-901.                       SM2064.2
 034500 PST-TEST-002.                                                    SM2064.2
-034600*    THIS TEST EXERCISES THE REPLACING PHRASE BY REPLACING        SM2064.2
-034700*    PSEUDO-TEXT BY AN IDENTIFIER.                                SM2064.2
+034600*                                                                         
+034700*                                                                         
 034800     MOVE    "PSEUDO-TEXT/IDENTIFR" TO FEATURE.                   SM2064.2
-034900*                                                                 SM2064.2
-035000*********************** COPY STATEMENT USED **********************SM2064.2
-035100*                                                                 SM2064.2
-035200*    COPY                                                    KP002SM2064.2
-035300*            REPLACING == WRK-DS-09V00-901                        SM2064.2
-035400*                         SUBTRACT 1 FROM                         SM2064.2
-035500*                         WRK-DS-05V00-O005-001 IN GRP-002 (1)==  SM2064.2
-035600*            BY       WRK-DS-05V00-O005-001 IN WRK-XN-00050-0005  SM2064.2
-035700*-(COL 7)          F-001 IN GRP-006 IN GRP-004 IN GRP-002 IN GRP-0SM2064.2
-035800*-(COL 7)              01 (1).                                    SM2064.2
-035900*                                                                 SM2064.2
-036000******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+034900*                                                                         
+035000*                                                                         
+035100*                                                                         
+035200*                                                                         
+035300*                                                                         
+035400*                                                                         
+035500*                                                                         
+035600*                                                                         
+035700*                                                                         
+035800*                                                                         
+035900*                                                                         
+036000*                                                                         
 036100     COPY                                                    KP002SM2064.2
 036200             REPLACING == WRK-DS-09V00-901                        SM2064.2
 036300                          SUBTRACT 1 FROM                         SM2064.2
@@ -363,7 +363,7 @@
 036500             BY         WRK-DS-05V00-O005-001 IN WRK-XN-00050-O005SM2064.2
 036600-                  F-001 IN GRP-006 IN GRP-004 IN GRP-002 IN GRP-0SM2064.2
 036700-                      01 (1).                                    SM2064.2
-036800*********************** END OF COPIED TEXT ***********************SM2064.2
+036800*                                                                         
 036900     MOVE    "PST-TEST-002" TO PAR-NAME.                          SM2064.2
 037000     MOVE    01 TO REC-CT.                                        SM2064.2
 037100     IF      WRK-DS-05V00-O005-001 OF GRP-002 (1) EQUAL TO +6     SM2064.2
@@ -374,9 +374,9 @@
 037600                 COMPUTED-18V0                                    SM2064.2
 037700             PERFORM FAIL.                                        SM2064.2
 037800     PERFORM PRINT-DETAIL.                                        SM2064.2
-037900*    THIS IDENTIFIER SHOULD HAVE BEEN INCREMENTED BY ONE AS A     SM2064.2
-038000*    RESULT OF THE REPLACING PHRASE SPECIFIED IN THE COPY         SM2064.2
-038100*    STATEMENT.                                                   SM2064.2
+037900*                                                                         
+038000*                                                                         
+038100*                                                                         
 038200     ADD     +01 TO REC-CT.                                       SM2064.2
 038300     IF      WRK-DS-09V00-901 NOT EQUAL TO +5                     SM2064.2
 038400             MOVE +5 TO CORRECT-18V0                              SM2064.2
@@ -384,8 +384,8 @@
 038600             PERFORM FAIL                                         SM2064.2
 038700             ELSE                                                 SM2064.2
 038800             PERFORM PASS.                                        SM2064.2
-038900*    THIS IDENTIFIER SHOULD NOT HAVE BEEN ALTERED AS A RESULT OF  SM2064.2
-039000*    THE REPLACING PHRASE OF THE COPY STATEMENT.                  SM2064.2
+038900*                                                                         
+039000*                                                                         
 039100     PERFORM PRINT-DETAIL.                                        SM2064.2
 039200     ADD     +01 TO REC-CT.                                       SM2064.2
 039300     IF      WRK-DS-05V00-O005-001 IN WRK-XN-00050-O005F-001 IN   SM2064.2
@@ -399,31 +399,31 @@
 040100                  GRP-003 (2) TO COMPUTED-18V0                    SM2064.2
 040200             MOVE +9 TO  CORRECT-18V0                             SM2064.2
 040300             PERFORM FAIL.                                        SM2064.2
-040400*    THE REPLACING PHRASE SHOULD NOT HAVE AFFECTED THE ACTION TO  SM2064.2
-040500*    BE TAKEN ON THIS IDENTIFIER IN THE TEXT BEING COPIED.        SM2064.2
-040600*                                                                 SM2064.2
-040700*                                                                 SM2064.2
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
 040800     PERFORM PRINT-DETAIL.                                        SM2064.2
-040900*THIS IS THE BEGINNING OF PST-TEST-003.                           SM2064.2
-041000*                                                                 SM2064.2
+040900*                                                                         
+041000*                                                                         
 041100 PST-INIT-003.                                                    SM2064.2
 041200     MOVE "PSEUDO-TEXT/LITERAL" TO FEATURE.                       SM2064.2
 041300     MOVE "PST-TEST-003" TO PAR-NAME.                             SM2064.2
 041400     MOVE    +00005 TO WRK-DS-05V00-O005-001 OF GRP-002 (3).      SM2064.2
 041500     MOVE    +000000005 TO WRK-DS-09V00-901.                      SM2064.2
 041600     MOVE    ZERO TO  WRK-DS-05V00-O005-001 IN GRP-003 (3).       SM2064.2
-041700*                                                                 SM2064.2
-041800*********************** COPY STATEMENT USED **********************SM2064.2
-041900*                                                                 SM2064.2
-042000*    COPY                                                    KP003SM2064.2
-042100*             REPLACING ==+00001== BY  +2                         SM2064.2
-042200*                       == 1 ==    BY  -3.                        SM2064.2
-042300*                                                                 SM2064.2
-042400******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
 042500     COPY                                                    KP003SM2064.2
 042600             REPLACING ==+00001== BY  +2                          SM2064.2
 042700                       == 1 ==    BY  -3 .                        SM2064.2
-042800*********************** END OF COPIED TEXT ***********************SM2064.2
+042800*                                                                         
 042900 PST-TEST-003-1.                                                  SM2064.2
 043000     MOVE    01 TO REC-CT.                                        SM2064.2
 043100     IF      WRK-DS-05V00-O005-001 IN GRP-003 (3) EQUAL TO +00009 SM2064.2
@@ -452,27 +452,27 @@
 045400             COMPUTED-18V0.                                       SM2064.2
 045500     PERFORM PRINT-DETAIL.                                        SM2064.2
 045600     MOVE 0 TO WRK-DS-09V00-901.                                  SM2064.2
-045700*THE NEXT BIT OF CODING REPRESENTS WHAT WE FEEL IS PST-TEST-004,  SM2064.2
-045800*            WHAT YOU SEE IS WHAT THIS COMPILER FEELS IS          SM2064.2
-045900*                PST-TEST-004.                                    SM2064.2
-046000*                                                                 SM2064.2
-046100*********************** COPY STATEMENT USED **********************SM2064.2
-046200*                                                                 SM2064.2
-046300*            COPY                                            KP004SM2064.2
-046400*                REPLACING ==THIS IS NOT REAL COBOL-74 SYNTAX HOWESM2064.2
-046500*-(COL 7)        VER SHOVE==                                      SM2064.2
-046600*                BY MOVE                                          SM2064.2
-046700*                   == DELETE==                                   SM2064.2
-046800*                BY DE-LETE.                                      SM2064.2
-046900*                                                                 SM2064.2
-047000******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
+046100*                                                                         
+046200*                                                                         
+046300*                                                                         
+046400*                                                                         
+046500*                                                                         
+046600*                                                                         
+046700*                                                                         
+046800*                                                                         
+046900*                                                                         
+047000*                                                                         
 047100             COPY                                        KP004    SM2064.2
 047200                 REPLACING ==THIS IS NOT REAL COBOL-74 SYNTAX HOWESM2064.2
 047300-                VER SHOVE==                                      SM2064.2
 047400                 BY MOVE                                          SM2064.2
 047500                     == DELETE==                                  SM2064.2
 047600                 BY  DE-LETE.                                     SM2064.2
-047700*********************** END OF COPIED TEXT ***********************SM2064.2
+047700*                                                                         
 047800 PST-WRITE-004.                                                   SM2064.2
 047900     MOVE    "PST-TEST-004" TO PAR-NAME.                          SM2064.2
 048000     MOVE    01 TO REC-CT.                                        SM2064.2
@@ -493,18 +493,18 @@
 049500     PERFORM PRINT-DETAIL.                                        SM2064.2
 049600 PST-TEST-005.                                                    SM2064.2
 049700     MOVE 0 TO WRK-DS-09V00-901.                                  SM2064.2
-049800*                                                                 SM2064.2
-049900*********************** COPY STATEMENT USED **********************SM2064.2
-050000*                                                                 SM2064.2
-050100*    COPY                                                    KP005SM2064.2
-050200*             REPLACING == 1 == BY  == 5 ==                       SM2064.2
-050300*                       == 5 == BY  == 7 ==.                      SM2064.2
-050400*                                                                 SM2064.2
-050500******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+049800*                                                                         
+049900*                                                                         
+050000*                                                                         
+050100*                                                                         
+050200*                                                                         
+050300*                                                                         
+050400*                                                                         
+050500*                                                                         
 050600     COPY                                                    KP005SM2064.2
 050700              REPLACING == 1 == BY  == 5 ==                       SM2064.2
 050800                        == 5 == BY  == 7 ==.                      SM2064.2
-050900*********************** END OF COPIED TEXT ***********************SM2064.2
+050900*                                                                         
 051000     IF WRK-DS-09V00-901 IS EQUAL TO 5                            SM2064.2
 051100         PERFORM PASS   GO TO PST-WRITE-005.                      SM2064.2
 051200     PERFORM FAIL.                                                SM2064.2
@@ -522,18 +522,18 @@
 052400     PERFORM PRINT-DETAIL.                                        SM2064.2
 052500 PST-TEST-006.                                                    SM2064.2
 052600     MOVE 0 TO WRK-DS-09V00-901.                                  SM2064.2
-052700*                                                                 SM2064.2
-052800*********************** COPY STATEMENT USED **********************SM2064.2
-052900*                                                                 SM2064.2
-053000*    COPY                                                    KP006SM2064.2
-053100*            REPLACING ==001== BY == 3 ==                         SM2064.2
-053200*                      ==005== BY == 7 ==.                        SM2064.2
-053300*                                                                 SM2064.2
-053400******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+052700*                                                                         
+052800*                                                                         
+052900*                                                                         
+053000*                                                                         
+053100*                                                                         
+053200*                                                                         
+053300*                                                                         
+053400*                                                                         
 053500     COPY                                                    KP006SM2064.2
 053600             REPLACING ==001== BY == 3 ==                         SM2064.2
 053700                       ==005== BY == 7 ==.                        SM2064.2
-053800*********************** END OF COPIED TEXT ***********************SM2064.2
+053800*                                                                         
 053900     IF WRK-DS-09V00-901 IS EQUAL TO 1005                         SM2064.2
 054000         PERFORM PASS   GO TO PST-WRITE-006.                      SM2064.2
 054100     PERFORM FAIL.                                                SM2064.2
@@ -553,18 +553,18 @@
 055500 PST-TEST-007.                                                    SM2064.2
 055600     PERFORM FAIL.                                                SM2064.2
 055700     SUBTRACT 1 FROM ERROR-COUNTER.                               SM2064.2
-055800*                                                                 SM2064.2
-055900*********************** COPY STATEMENT USED **********************SM2064.2
-056000*                                                                 SM2064.2
-056100*    COPY                                                   KP007 SM2064.2
-056200*        REPLACING ==FAIL. SUBTRACT 1 FROM ERROR-COUNTER. ==      SM2064.2
-056300*        BY ==PASS. ==.                                           SM2064.2
-056400*                                                                 SM2064.2
-056500******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+055800*                                                                         
+055900*                                                                         
+056000*                                                                         
+056100*                                                                         
+056200*                                                                         
+056300*                                                                         
+056400*                                                                         
+056500*                                                                         
 056600     COPY                                                   KP007 SM2064.2
 056700         REPLACING ==FAIL. SUBTRACT 1 FROM ERROR-COUNTER. ==      SM2064.2
 056800         BY ==PASS. ==.                                           SM2064.2
-056900*********************** END OF COPIED TEXT ***********************SM2064.2
+056900*                                                                         
 057000     IF P-OR-F IS EQUAL TO "FAIL*"  ADD 1 TO ERROR-COUNTER.       SM2064.2
 057100     GO TO PST-WRITE-007.                                         SM2064.2
 057200 PST-DELETE-007.                                                  SM2064.2
@@ -575,17 +575,17 @@
 057700     MOVE 01 TO REC-CT.                                           SM2064.2
 057800     PERFORM PRINT-DETAIL.                                        SM2064.2
 057900 PST-TEST-008.                                                    SM2064.2
-058000*    PERFORM PASS.                                                SM2064.2
-058100*                                                                 SM2064.2
-058200*********************** COPY STATEMENT USED **********************SM2064.2
-058300*                                                                 SM2064.2
-058400*D   COPY                                                  KP007. SM2064.2
-058500*                                                                 SM2064.2
-058600******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
-058700*D   COPY                                                  KP007. SM2064.2
-058800*********************** END OF COPIED TEXT ***********************SM2064.2
-058900*    IF P-OR-F IS EQUAL TO "FAIL*"  ADD 1 TO ERROR-COUNTER.       SM2064.2
-059000*    GO TO PST-WRITE-008.                                         SM2064.2
+058000*                                                                         
+058100*                                                                         
+058200*                                                                         
+058300*                                                                         
+058400*                                                                         
+058500*                                                                         
+058600*                                                                         
+058700*                                                                         
+058800*                                                                         
+058900*                                                                         
+059000*                                                                         
 059100 PST-DELETE-008.                                                  SM2064.2
 059200     PERFORM DE-LETE.                                             SM2064.2
 059300 PST-WRITE-008.                                                   SM2064.2
@@ -595,20 +595,20 @@
 059700 PST-TEST-009.                                                    SM2064.2
 059800     PERFORM FAIL.                                                SM2064.2
 059900     SUBTRACT 1 FROM ERROR-COUNTER.                               SM2064.2
-060000*                                                                 SM2064.2
-060100*********************** COPY STATEMENT USED **********************SM2064.2
-060200*                                                                 SM2064.2
-060300*    COPY                                                   KP008 SM2064.2
-060400*        REPLACING ==FAIL. THIS IS GARBAGE. SUBTRACT 1 FROM       SM2064.2
-060500*                    ERROR-COUNTER. ==                            SM2064.2
-060600*        BY  ==PASS. ==.                                          SM2064.2
-060700*                                                                 SM2064.2
-060800******************** COPIED TEXT BEGINS BELOW ********************SM2064.2
+060000*                                                                         
+060100*                                                                         
+060200*                                                                         
+060300*                                                                         
+060400*                                                                         
+060500*                                                                         
+060600*                                                                         
+060700*                                                                         
+060800*                                                                         
 060900     COPY                                                   KP008 SM2064.2
 061000         REPLACING ==FAIL. THIS IS GARBAGE. SUBTRACT 1 FROM       SM2064.2
 061100                     ERROR-COUNTER. ==                            SM2064.2
 061200         BY  ==PASS. ==.                                          SM2064.2
-061300*********************** END OF COPIED TEXT ***********************SM2064.2
+061300*                                                                         
 061400     IF P-OR-F IS EQUAL TO "FAIL*"  ADD 1 TO ERROR-COUNTER.       SM2064.2
 061500     GO TO PST-WRITE-009.                                         SM2064.2
 061600 PST-DELETE-009.                                                  SM2064.2
@@ -617,9 +617,9 @@
 061900     MOVE "DEBUG LINE IN TEXT" TO FEATURE.                        SM2064.2
 062000     MOVE "PST-TEST-009" TO PAR-NAME.                             SM2064.2
 062100     PERFORM PRINT-DETAIL.                                        SM2064.2
-062200*                                                                 SM2064.2
+062200*                                                                         
 062300 PST-TEST-10.                                                     SM2064.2
-062400*    ===-->  MINIMUM LENGTH TEXT WORD  <--===                     SM2064.2
+062400*                                                                         
 062500     MOVE   "XII-2 2.3 SR8" TO ANSI-REFERENCE.                    SM2064.2
 062600     MOVE   "PST-TEST-10"   TO PAR-NAME.                          SM2064.2
 062700     MOVE   "T" TO WRK-XN-00001.                                  SM2064.2
@@ -629,9 +629,9 @@
 063100     PERFORM PRINT-DETAIL.                                        SM2064.2
 063200     GO TO   PST-INIT-11.                                         SM2064.2
 063300 PST-TEST-10-0.                                                   SM2064.2
-063400********************* COPY TEXT USED ***************************  SM2064.2
-063500*    IF      WRK-XN-00001 = "G"                                *  SM2064.2
-063600*********************END OF COPY TEXT***************************  SM2064.2
+063400*                                                                         
+063500*                                                                         
+063600*                                                                         
 063700     COPY    KP009                                                SM2064.2
 063800             REPLACING =="G"== BY =="T"==.                        SM2064.2
 063900                                                                  SM2064.2
@@ -644,23 +644,23 @@
 064600             MOVE    WRK-XN-00001 TO COMPUTED-X                   SM2064.2
 064700             PERFORM FAIL                                         SM2064.2
 064800             PERFORM PRINT-DETAIL.                                SM2064.2
-064900*                                                                 SM2064.2
+064900*                                                                         
 065000 PST-INIT-11.                                                     SM2064.2
-065100*    ===-->  MAXIMUM LENGTH TEXT WORD  <--===                     SM2064.2
+065100*                                                                         
 065200     MOVE   "XII-2 2.3 (SR8) AND XII-5 2.4(GR11)"                 SM2064.2
 065300          TO ANSI-REFERENCE.                                      SM2064.2
 065400     MOVE   "PST-TEST-11" TO PAR-NAME.                            SM2064.2
 065500     MOVE    SPACES      TO WRK-XN-00322.                         SM2064.2
 065600     MOVE    1 TO REC-CT.                                         SM2064.2
 065700 REP-TEST-11-0.                                                   SM2064.2
-065800********************* COPY TEXT USED ***************************  SM2064.2
-065900*    YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYSM2064.2
-066000*    YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYSM2064.2
-066100*    YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYSM2064.2
-066200*    YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYSM2064.2
-066300*    YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYSM2064.2
-066400*    YYYYYYYYYYYYYYYYY                                            SM2064.2
-066500*********************END OF COPY TEXT***************************  SM2064.2
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
+066200*                                                                         
+066300*                                                                         
+066400*                                                                         
+066500*                                                                         
 066600 PST-DELETE-11.                                                   SM2064.2
 066700     PERFORM DE-LETE.                                             SM2064.2
 066800     PERFORM PRINT-DETAIL.                                        SM2064.2
@@ -703,7 +703,7 @@
 070500             MOVE    WRK-DU-99-LONGER TO COMPUTED-N               SM2064.2
 070600             PERFORM FAIL                                         SM2064.2
 070700             PERFORM PRINT-DETAIL.                                SM2064.2
-070800*                                                                 SM2064.2
+070800*                                                                         
 070900 CCVS-EXIT SECTION.                                               SM2064.2
 071000 CCVS-999999.                                                     SM2064.2
 071100     GO TO CLOSE-FILES.                                           SM2064.2

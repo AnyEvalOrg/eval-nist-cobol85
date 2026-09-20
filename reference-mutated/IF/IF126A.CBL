@@ -2,14 +2,14 @@
 000200 PROGRAM-ID.                                                      IF1264.2
 000300     IF126A.                                                      IF1264.2
 000400                                                                  IF1264.2
-000500***********************************************************       IF1264.2
-000600*                                                         *       IF1264.2
-000700* This program forms part of the CCVS85 COBOL Test Suite. *       IF1264.2
-000800* It contains tests for the Intrinsic Function            *       IF1264.2
-000900* NUMVAL-C.                                               *       IF1264.2
-001000*                                                         *       IF1264.2
-001100*                                                         *       IF1264.2
-001200***********************************************************       IF1264.2
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
 001300 ENVIRONMENT DIVISION.                                            IF1264.2
 001400 CONFIGURATION SECTION.                                           IF1264.2
 001500 SOURCE-COMPUTER.                                                 IF1264.2
@@ -26,9 +26,9 @@
 002600 01  PRINT-REC PICTURE X(120).                                    IF1264.2
 002700 01  DUMMY-RECORD PICTURE X(120).                                 IF1264.2
 002800 WORKING-STORAGE SECTION.                                         IF1264.2
-002900***********************************************************       IF1264.2
-003000* Variables specific to the Intrinsic Function Test IF126A*       IF1264.2
-003100***********************************************************       IF1264.2
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
 003200 01  A                   PIC X(1)       VALUE "4".                IF1264.2
 003300 01  B                   PIC X(5)       VALUE "203".              IF1264.2
 003400 01  C                   PIC X(4)       VALUE ".429".             IF1264.2
@@ -52,9 +52,9 @@
 005200 01  U                   PIC X(15)       VALUE " $ 3,890.20 + ".  IF1264.2
 005300 01  TEMP                PIC S9(7)V9(5).                          IF1264.2
 005400                                                                  IF1264.2
-005500*                                                                 IF1264.2
-005600**********************************************************        IF1264.2
-005700*                                                                 IF1264.2
+005500*                                                                         
+005600*                                                                         
+005700*                                                                         
 005800 01  TEST-RESULTS.                                                IF1264.2
 005900     02 FILLER                   PIC X      VALUE SPACE.          IF1264.2
 006000     02 FEATURE                  PIC X(20)  VALUE SPACE.          IF1264.2
@@ -314,16 +314,16 @@
 031400 BAIL-OUT-EX. EXIT.                                               IF1264.2
 031500 CCVS1-EXIT.                                                      IF1264.2
 031600     EXIT.                                                        IF1264.2
-031700********************************************************          IF1264.2
-031800*                                                      *          IF1264.2
-031900*    Intrinsic Function Tests       IF126A - NUMVAL-C  *          IF1264.2
-032000*                                                      *          IF1264.2
-032100********************************************************          IF1264.2
+031700*                                                                         
+031800*                                                                         
+031900*                                                                         
+032000*                                                                         
+032100*                                                                         
 032200 SECT-IF126A SECTION.                                             IF1264.2
 032300 F-NUMVALC-INFO.                                                  IF1264.2
 032400     MOVE     "See ref. A-59 2.30" TO ANSI-REFERENCE.             IF1264.2
 032500     MOVE     "NUMVAL-C Function"     TO FEATURE.                 IF1264.2
-032600*****************TEST (a) ******************************          IF1264.2
+032600*                                                                         
 032700 F-NUMVALC-01.                                                    IF1264.2
 032800     MOVE ZERO TO TEMP.                                           IF1264.2
 032900 F-NUMVALC-TEST-01.                                               IF1264.2
@@ -341,7 +341,7 @@
 034100 F-NUMVALC-WRITE-01.                                              IF1264.2
 034200     MOVE "F-NUMVALC-01" TO PAR-NAME.                             IF1264.2
 034300     PERFORM  PRINT-DETAIL.                                       IF1264.2
-034400*****************TEST (b) *******************************         IF1264.2
+034400*                                                                         
 034500 F-NUMVALC-02.                                                    IF1264.2
 034600     MOVE 77  TO TEMP.                                            IF1264.2
 034700 F-NUMVALC-TEST-02.                                               IF1264.2
@@ -359,7 +359,7 @@
 035900 F-NUMVALC-WRITE-02.                                              IF1264.2
 036000     MOVE "F-NUMVALC-02" TO PAR-NAME.                             IF1264.2
 036100     PERFORM  PRINT-DETAIL.                                       IF1264.2
-036200*****************TEST (c) ******************************          IF1264.2
+036200*                                                                         
 036300 F-NUMVALC-TEST-03.                                               IF1264.2
 036400     IF FUNCTION NUMVAL-C ("92,483") = 92483 THEN                 IF1264.2
 036500                        PERFORM PASS                              IF1264.2
@@ -372,7 +372,7 @@
 037200 F-NUMVALC-WRITE-03.                                              IF1264.2
 037300     MOVE "F-NUMVALC-03" TO PAR-NAME.                             IF1264.2
 037400     PERFORM  PRINT-DETAIL.                                       IF1264.2
-037500*****************TEST (d) ******************************          IF1264.2
+037500*                                                                         
 037600 F-NUMVALC-04.                                                    IF1264.2
 037700     MOVE ZERO TO TEMP.                                           IF1264.2
 037800 F-NUMVALC-TEST-04.                                               IF1264.2
@@ -391,7 +391,7 @@
 039100 F-NUMVALC-WRITE-04.                                              IF1264.2
 039200     MOVE "F-NUMVALC-04" TO PAR-NAME.                             IF1264.2
 039300     PERFORM  PRINT-DETAIL.                                       IF1264.2
-039400*****************TEST (e) ******************************          IF1264.2
+039400*                                                                         
 039500 F-NUMVALC-05.                                                    IF1264.2
 039600     MOVE ZERO TO TEMP.                                           IF1264.2
 039700 F-NUMVALC-TEST-05.                                               IF1264.2
@@ -410,7 +410,7 @@
 041000 F-NUMVALC-WRITE-05.                                              IF1264.2
 041100     MOVE "F-NUMVALC-05" TO PAR-NAME.                             IF1264.2
 041200     PERFORM  PRINT-DETAIL.                                       IF1264.2
-041300*****************TEST (f) ******************************          IF1264.2
+041300*                                                                         
 041400 F-NUMVALC-06.                                                    IF1264.2
 041500     MOVE ZERO TO TEMP.                                           IF1264.2
 041600 F-NUMVALC-TEST-06.                                               IF1264.2
@@ -429,7 +429,7 @@
 042900 F-NUMVALC-WRITE-06.                                              IF1264.2
 043000     MOVE "F-NUMVALC-06" TO PAR-NAME.                             IF1264.2
 043100     PERFORM  PRINT-DETAIL.                                       IF1264.2
-043200*****************TEST (g) ******************************          IF1264.2
+043200*                                                                         
 043300 F-NUMVALC-07.                                                    IF1264.2
 043400     MOVE ZERO TO TEMP.                                           IF1264.2
 043500 F-NUMVALC-TEST-07.                                               IF1264.2
@@ -448,7 +448,7 @@
 044800 F-NUMVALC-WRITE-07.                                              IF1264.2
 044900     MOVE "F-NUMVALC-07" TO PAR-NAME.                             IF1264.2
 045000     PERFORM  PRINT-DETAIL.                                       IF1264.2
-045100*****************TEST (h) ******************************          IF1264.2
+045100*                                                                         
 045200 F-NUMVALC-08.                                                    IF1264.2
 045300     MOVE ZERO TO TEMP.                                           IF1264.2
 045400 F-NUMVALC-TEST-08.                                               IF1264.2
@@ -467,7 +467,7 @@
 046700 F-NUMVALC-WRITE-08.                                              IF1264.2
 046800     MOVE "F-NUMVALC-08" TO PAR-NAME.                             IF1264.2
 046900     PERFORM  PRINT-DETAIL.                                       IF1264.2
-047000*****************TEST (i) ******************************          IF1264.2
+047000*                                                                         
 047100 F-NUMVALC-09.                                                    IF1264.2
 047200     MOVE ZERO TO TEMP.                                           IF1264.2
 047300 F-NUMVALC-TEST-09.                                               IF1264.2
@@ -486,7 +486,7 @@
 048600 F-NUMVALC-WRITE-09.                                              IF1264.2
 048700     MOVE "F-NUMVALC-09" TO PAR-NAME.                             IF1264.2
 048800     PERFORM  PRINT-DETAIL.                                       IF1264.2
-048900*****************TEST (j) ******************************          IF1264.2
+048900*                                                                         
 049000 F-NUMVALC-10.                                                    IF1264.2
 049100     MOVE ZERO TO TEMP.                                           IF1264.2
 049200 F-NUMVALC-TEST-10.                                               IF1264.2
@@ -505,7 +505,7 @@
 050500 F-NUMVALC-WRITE-10.                                              IF1264.2
 050600     MOVE "F-NUMVALC-10" TO PAR-NAME.                             IF1264.2
 050700     PERFORM  PRINT-DETAIL.                                       IF1264.2
-050800*****************TEST (k) ******************************          IF1264.2
+050800*                                                                         
 050900 F-NUMVALC-11.                                                    IF1264.2
 051000     MOVE ZERO TO TEMP.                                           IF1264.2
 051100 F-NUMVALC-TEST-11.                                               IF1264.2
@@ -524,7 +524,7 @@
 052400 F-NUMVALC-WRITE-11.                                              IF1264.2
 052500     MOVE "F-NUMVALC-11" TO PAR-NAME.                             IF1264.2
 052600     PERFORM  PRINT-DETAIL.                                       IF1264.2
-052700*****************TEST (l) ******************************          IF1264.2
+052700*                                                                         
 052800 F-NUMVALC-12.                                                    IF1264.2
 052900     MOVE ZERO TO TEMP.                                           IF1264.2
 053000 F-NUMVALC-TEST-12.                                               IF1264.2
@@ -543,7 +543,7 @@
 054300 F-NUMVALC-WRITE-12.                                              IF1264.2
 054400     MOVE "F-NUMVALC-12" TO PAR-NAME.                             IF1264.2
 054500     PERFORM  PRINT-DETAIL.                                       IF1264.2
-054600*****************TEST (m) ******************************          IF1264.2
+054600*                                                                         
 054700 F-NUMVALC-13.                                                    IF1264.2
 054800     MOVE ZERO TO TEMP.                                           IF1264.2
 054900 F-NUMVALC-TEST-13.                                               IF1264.2
@@ -562,7 +562,7 @@
 056200 F-NUMVALC-WRITE-13.                                              IF1264.2
 056300     MOVE "F-NUMVALC-13" TO PAR-NAME.                             IF1264.2
 056400     PERFORM  PRINT-DETAIL.                                       IF1264.2
-056500*****************TEST (n) ******************************          IF1264.2
+056500*                                                                         
 056600 F-NUMVALC-14.                                                    IF1264.2
 056700     MOVE ZERO TO TEMP.                                           IF1264.2
 056800 F-NUMVALC-TEST-14.                                               IF1264.2
@@ -581,7 +581,7 @@
 058100 F-NUMVALC-WRITE-14.                                              IF1264.2
 058200     MOVE "F-NUMVALC-14" TO PAR-NAME.                             IF1264.2
 058300     PERFORM  PRINT-DETAIL.                                       IF1264.2
-058400*****************TEST (o) ******************************          IF1264.2
+058400*                                                                         
 058500 F-NUMVALC-15.                                                    IF1264.2
 058600     MOVE ZERO TO TEMP.                                           IF1264.2
 058700 F-NUMVALC-TEST-15.                                               IF1264.2
@@ -600,15 +600,15 @@
 060000 F-NUMVALC-WRITE-15.                                              IF1264.2
 060100     MOVE "F-NUMVALC-15" TO PAR-NAME.                             IF1264.2
 060200     PERFORM  PRINT-DETAIL.                                       IF1264.2
-060300*****************TEST (p) ******************************          IF1264.2
+060300*                                                                         
 060400 F-NUMVALC-16.                                                    IF1264.2
 060500     MOVE ZERO TO TEMP.                                           IF1264.2
 060600 F-NUMVALC-TEST-16.                                               IF1264.2
 060700     COMPUTE TEMP = FUNCTION NUMVAL-C ("$5", "$").                IF1264.2
-060800     IF TEMP = 3 THEN                                             IF1264.2
+060800     IF TEMP = 7 THEN                                             IF1264.2
 060900                        PERFORM PASS                              IF1264.2
 061000     ELSE                                                         IF1264.2
-061100                        MOVE  3  TO CORRECT-N                     IF1264.2
+061100                        MOVE  7  TO CORRECT-N                     IF1264.2
 061200                        MOVE TEMP TO COMPUTED-N                   IF1264.2
 061300                        PERFORM FAIL.                             IF1264.2
 061400     GO TO F-NUMVALC-WRITE-16.                                    IF1264.2
@@ -618,7 +618,7 @@
 061800 F-NUMVALC-WRITE-16.                                              IF1264.2
 061900     MOVE "F-NUMVALC-16" TO PAR-NAME.                             IF1264.2
 062000     PERFORM  PRINT-DETAIL.                                       IF1264.2
-062100*****************TEST (q) ******************************          IF1264.2
+062100*                                                                         
 062200 F-NUMVALC-17.                                                    IF1264.2
 062300     MOVE ZERO TO TEMP.                                           IF1264.2
 062400 F-NUMVALC-TEST-17.                                               IF1264.2
@@ -636,7 +636,7 @@
 063600 F-NUMVALC-WRITE-17.                                              IF1264.2
 063700     MOVE "F-NUMVALC-17" TO PAR-NAME.                             IF1264.2
 063800     PERFORM  PRINT-DETAIL.                                       IF1264.2
-063900*****************TEST (r) ******************************          IF1264.2
+063900*                                                                         
 064000 F-NUMVALC-18.                                                    IF1264.2
 064100     MOVE ZERO TO TEMP.                                           IF1264.2
 064200 F-NUMVALC-TEST-18.                                               IF1264.2
@@ -654,7 +654,7 @@
 065400 F-NUMVALC-WRITE-18.                                              IF1264.2
 065500     MOVE "F-NUMVALC-18" TO PAR-NAME.                             IF1264.2
 065600     PERFORM  PRINT-DETAIL.                                       IF1264.2
-065700*****************TEST (t) ******************************          IF1264.2
+065700*                                                                         
 065800 F-NUMVALC-20.                                                    IF1264.2
 065900     MOVE ZERO TO TEMP.                                           IF1264.2
 066000 F-NUMVALC-TEST-20.                                               IF1264.2
@@ -673,7 +673,7 @@
 067300 F-NUMVALC-WRITE-20.                                              IF1264.2
 067400     MOVE "F-NUMVALC-20" TO PAR-NAME.                             IF1264.2
 067500     PERFORM  PRINT-DETAIL.                                       IF1264.2
-067600*****************TEST (u) ******************************          IF1264.2
+067600*                                                                         
 067700 F-NUMVALC-21.                                                    IF1264.2
 067800     MOVE ZERO TO TEMP.                                           IF1264.2
 067900 F-NUMVALC-TEST-21.                                               IF1264.2
@@ -691,7 +691,7 @@
 069100 F-NUMVALC-WRITE-21.                                              IF1264.2
 069200     MOVE "F-NUMVALC-21" TO PAR-NAME.                             IF1264.2
 069300     PERFORM  PRINT-DETAIL.                                       IF1264.2
-069400*****************TEST (v) ******************************          IF1264.2
+069400*                                                                         
 069500 F-NUMVALC-22.                                                    IF1264.2
 069600     MOVE ZERO TO TEMP.                                           IF1264.2
 069700 F-NUMVALC-TEST-22.                                               IF1264.2
@@ -710,7 +710,7 @@
 071000 F-NUMVALC-WRITE-22.                                              IF1264.2
 071100     MOVE "F-NUMVALC-22" TO PAR-NAME.                             IF1264.2
 071200     PERFORM  PRINT-DETAIL.                                       IF1264.2
-071300*****************TEST (w) ******************************          IF1264.2
+071300*                                                                         
 071400 F-NUMVALC-23.                                                    IF1264.2
 071500     MOVE ZERO TO TEMP.                                           IF1264.2
 071600 F-NUMVALC-TEST-23.                                               IF1264.2
@@ -729,7 +729,7 @@
 072900 F-NUMVALC-WRITE-23.                                              IF1264.2
 073000     MOVE "F-NUMVALC-23" TO PAR-NAME.                             IF1264.2
 073100     PERFORM  PRINT-DETAIL.                                       IF1264.2
-073200*****************TEST (x) ******************************          IF1264.2
+073200*                                                                         
 073300 F-NUMVALC-24.                                                    IF1264.2
 073400     MOVE ZERO TO TEMP.                                           IF1264.2
 073500 F-NUMVALC-TEST-24.                                               IF1264.2
@@ -748,7 +748,7 @@
 074800 F-NUMVALC-WRITE-24.                                              IF1264.2
 074900     MOVE "F-NUMVALC-24" TO PAR-NAME.                             IF1264.2
 075000     PERFORM  PRINT-DETAIL.                                       IF1264.2
-075100*****************TEST (y) ******************************          IF1264.2
+075100*                                                                         
 075200 F-NUMVALC-25.                                                    IF1264.2
 075300     MOVE ZERO TO TEMP.                                           IF1264.2
 075400 F-NUMVALC-TEST-25.                                               IF1264.2
@@ -767,7 +767,7 @@
 076700 F-NUMVALC-WRITE-25.                                              IF1264.2
 076800     MOVE "F-NUMVALC-25" TO PAR-NAME.                             IF1264.2
 076900     PERFORM  PRINT-DETAIL.                                       IF1264.2
-077000*****************TEST (z) ******************************          IF1264.2
+077000*                                                                         
 077100 F-NUMVALC-26.                                                    IF1264.2
 077200     MOVE ZERO TO TEMP.                                           IF1264.2
 077300 F-NUMVALC-TEST-26.                                               IF1264.2
@@ -786,7 +786,7 @@
 078600 F-NUMVALC-WRITE-26.                                              IF1264.2
 078700     MOVE "F-NUMVALC-26" TO PAR-NAME.                             IF1264.2
 078800     PERFORM  PRINT-DETAIL.                                       IF1264.2
-078900*****************TEST (aa) ******************************         IF1264.2
+078900*                                                                         
 079000 F-NUMVALC-27.                                                    IF1264.2
 079100     MOVE ZERO TO TEMP.                                           IF1264.2
 079200 F-NUMVALC-TEST-27.                                               IF1264.2
@@ -805,7 +805,7 @@
 080500 F-NUMVALC-WRITE-27.                                              IF1264.2
 080600     MOVE "F-NUMVALC-27" TO PAR-NAME.                             IF1264.2
 080700     PERFORM  PRINT-DETAIL.                                       IF1264.2
-080800*****************TEST (bb) ******************************         IF1264.2
+080800*                                                                         
 080900 F-NUMVALC-28.                                                    IF1264.2
 081000     MOVE ZERO TO TEMP.                                           IF1264.2
 081100 F-NUMVALC-TEST-28.                                               IF1264.2
@@ -824,7 +824,7 @@
 082400 F-NUMVALC-WRITE-28.                                              IF1264.2
 082500     MOVE "F-NUMVALC-28" TO PAR-NAME.                             IF1264.2
 082600     PERFORM  PRINT-DETAIL.                                       IF1264.2
-082700*****************TEST (cc) ******************************         IF1264.2
+082700*                                                                         
 082800 F-NUMVALC-29.                                                    IF1264.2
 082900     MOVE ZERO TO TEMP.                                           IF1264.2
 083000 F-NUMVALC-TEST-29.                                               IF1264.2
@@ -843,15 +843,15 @@
 084300 F-NUMVALC-WRITE-29.                                              IF1264.2
 084400     MOVE "F-NUMVALC-29" TO PAR-NAME.                             IF1264.2
 084500     PERFORM  PRINT-DETAIL.                                       IF1264.2
-084600*****************TEST (dd) ******************************         IF1264.2
+084600*                                                                         
 084700 F-NUMVALC-30.                                                    IF1264.2
 084800     MOVE ZERO TO TEMP.                                           IF1264.2
 084900 F-NUMVALC-TEST-30.                                               IF1264.2
 085000     COMPUTE TEMP = FUNCTION NUMVAL-C ("90") + 10.                IF1264.2
-085100     IF TEMP = 102 THEN                                           IF1264.2
+085100     IF TEMP = 103 THEN                                           IF1264.2
 085200                        PERFORM PASS                              IF1264.2
 085300     ELSE                                                         IF1264.2
-085400                        MOVE  102  TO CORRECT-N                   IF1264.2
+085400                        MOVE  103  TO CORRECT-N                   IF1264.2
 085500                        MOVE TEMP TO COMPUTED-N                   IF1264.2
 085600                        PERFORM FAIL.                             IF1264.2
 085700     GO TO F-NUMVALC-WRITE-30.                                    IF1264.2
@@ -861,7 +861,7 @@
 086100 F-NUMVALC-WRITE-30.                                              IF1264.2
 086200     MOVE "F-NUMVALC-30" TO PAR-NAME.                             IF1264.2
 086300     PERFORM  PRINT-DETAIL.                                       IF1264.2
-086400*****************TEST (ee) ******************************         IF1264.2
+086400*                                                                         
 086500 F-NUMVALC-31.                                                    IF1264.2
 086600     MOVE ZERO TO TEMP.                                           IF1264.2
 086700 F-NUMVALC-TEST-31.                                               IF1264.2
@@ -880,7 +880,7 @@
 088000 F-NUMVALC-WRITE-31.                                              IF1264.2
 088100     MOVE "F-NUMVALC-31" TO PAR-NAME.                             IF1264.2
 088200     PERFORM  PRINT-DETAIL.                                       IF1264.2
-088300*******************END OF TESTS**************************         IF1264.2
+088300*                                                                         
 088400 CCVS-EXIT SECTION.                                               IF1264.2
 088500 CCVS-999999.                                                     IF1264.2
 088600     GO TO CLOSE-FILES.                                           IF1264.2

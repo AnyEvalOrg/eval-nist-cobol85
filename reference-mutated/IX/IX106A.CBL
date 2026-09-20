@@ -1,45 +1,45 @@
 000100 IDENTIFICATION DIVISION.                                         IX1064.2
 000200 PROGRAM-ID.                                                      IX1064.2
 000300     IX106A.                                                      IX1064.2
-000400****************************************************************  IX1064.2
-000500*                                                              *  IX1064.2
-000600*    VALIDATION FOR:-                                          *  IX1064.2
-000700*                                                              *  IX1064.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IX1064.2
-000900*                                                              *  IX1064.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IX1064.2
-001100*                                                              *  IX1064.2
-001200****************************************************************  IX1064.2
-001300* THE PURPOSE OF THIS PROGRAM IS TO TEST THE ABILITY TO           IX1064.2
-001400* USE THE THREE DIFFERENT TYPES OF FILES (SEQUENTIAL ,            IX1064.2
-001500* INDEXED , AND RELATIVE) IN ONE PROGRAM . THE PROGRAM            IX1064.2
-001600* IS BROKEN INTO FIVE SECTIONS . THE FIRST SECTION TESTS          IX1064.2
-001700* THE ABILITY TO CREATE A RELATIVE FILE RANDOMLY . THE            IX1064.2
-001800* SECOND SECTION TESTS THE ABILITY TO USE ALL THREE FILE          IX1064.2
-001900* TYPES , READING IN THE RELATIVE FILE AND WRITING OUT THE        IX1064.2
-002000* SEQUENTIAL AND INDEXED FILES . THE THIRD SECTION FURTHER        IX1064.2
-002100* TESTS THE ABILITY TO USE THE THREE FILE TYPES . THE FOURTH      IX1064.2
-002200* SECTION TESTS THE ABILITY TO DELETE RECORDS FROM THE            IX1064.2
-002300* DIFFERENT FILE TYPES . THE FIFTH SECTION TESTS THE ABILITY      IX1064.2
-002400* TO REWRITE RECORDS TO EACH OF THE FILE TYPES .                  IX1064.2
-002500*                                                                 IX1064.2
-002600* X-CARDS WHICH MUST BE RELACED WITH IMPLEMENTORS NAMES' IN       IX1064.2
-002700* THIS PROGRAM ARE :                                              IX1064.2
-002800*                                                                 IX1064.2
-002900*        X-14 IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR            IX1064.2
-003000*             SEQUENTIAL FILE .                                   IX1064.2
-003100*        X-21 IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR            IX1064.2
-003200*             RELATIVE FILE-1 , FILE-2 .                          IX1064.2
-003300*        X-24 IMPLEMENTOR-NAME IN ASSIGN TO CLAUSE FOR            IX1064.2
-003400*             INDEXED FILE .                                      IX1064.2
-003500*        X-44 SYSTEM-NAME IN ASSIGN CLAUSE FOR                    IX1064.2
-003600*        INDEXED FILE .                                           IX1064.2
-003700*        X-55 SYSTEM PRINTER .                                    IX1064.2
-003800*        X-62   FOR RAW-DATA                                      IX1064.2
-003900*        X-82 SOURCE-COMPUTER .                                   IX1064.2
-004000*        X-83 OBJECT-COMPUTER .                                   IX1064.2
-004100*    C   X-84 PRINTE-FILE LABELS                                  IX1064.2
-004200****************************************************************  IX1064.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
+003100*                                                                         
+003200*                                                                         
+003300*                                                                         
+003400*                                                                         
+003500*                                                                         
+003600*                                                                         
+003700*                                                                         
+003800*                                                                         
+003900*                                                                         
+004000*                                                                         
+004100*                                                                         
+004200*                                                                         
 004300 ENVIRONMENT DIVISION.                                            IX1064.2
 004400 CONFIGURATION SECTION.                                           IX1064.2
 004500 SOURCE-COMPUTER.                                                 IX1064.2
@@ -199,7 +199,7 @@
 022700 01  WRK-CS-09V00-003 PIC S9(09)       USAGE COMP VALUE ZERO.     IX1064.2
 022800 01  RL-KEY   PIC 9(3).                                           IX1064.2
 022900 01  RL-KEY2  PIC 9(3).                                           IX1064.2
-023000*                                                                 IX1064.2
+023000*                                                                         
 023100 01  WRK-FR1-RECKEY.                                              IX1064.2
 023200     05 FR1-RECKEY-1-13.                                          IX1064.2
 023300        10 FR1-RECKEY-1-10       PICTURE X(10).                   IX1064.2
@@ -639,7 +639,7 @@
 069100      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IX1064.2
 069200      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IX1064.2
 069300      ADD PASS-COUNTER TO ERROR-HOLD.                             IX1064.2
-069400*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IX1064.2
+069400*                                                                         
 069500      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IX1064.2
 069600      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IX1064.2
 069700      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IX1064.2
@@ -711,11 +711,11 @@
 076300 BAIL-OUT-EX. EXIT.                                               IX1064.2
 076400 CCVS1-EXIT.                                                      IX1064.2
 076500     EXIT.                                                        IX1064.2
-076600******************************************************************IX1064.2
+076600*                                                                         
 076700 SECT-0001-RIS101 SECTION.                                        IX1064.2
-076800*                                                                 IX1064.2
-076900* THIS SECTION CREATES A RELATIVE FILE RANDOMLY.                  IX1064.2
-077000*                                                                 IX1064.2
+076800*                                                                         
+076900*                                                                         
+077000*                                                                         
 077100 WRITE-INT-GF-01.                                                 IX1064.2
 077200     OPEN    OUTPUT RL-FR1.                                       IX1064.2
 077300     MOVE    "RL-FR1" TO XFILE-NAME           (1).                IX1064.2
@@ -736,23 +736,23 @@
 078800     PERFORM WRITE-TEST-GF-01-R1 75 TIMES.                        IX1064.2
 078900     GO TO   WRITE-TEST-GF-01.                                    IX1064.2
 079000 WRITE-TEST-GF-01-R1.                                             IX1064.2
-079100*                                                                 IX1064.2
-079200* WRITE-TEST-GF-01-R1 - WRITES THREE RECORDS FOR EACH PASS THRU . IX1064.2
-079300*                      1) FOR THE FIRST RECORD CREATED RL-KEY IS  IX1064.2
-079400*                         SET TO FR1-RECKEY-11-13 .               IX1064.2
-079500*                      2) FOR THE SECOND RECORD CREATED RL-KEY IS IX1064.2
-079600*                         SET TO FR1-ALTKEY1-11-13 .              IX1064.2
-079700*                      3) FOR THE THIRD RECORD CREATED RL-KEY IS  IX1064.2
-079800*                         SET TO FR1-ALTKEY2-11-13 .              IX1064.2
-079900*                      THESE RECORD KEYS ARE IN THREE DIFFERENT   IX1064.2
-080000*                      ORDERINGS.                                 IX1064.2
-080100*                      1) FR1-RECKEY-11-13 ARE THE NUMBERS FROM   IX1064.2
-080200*                         225 TO 151 DECENDING .                  IX1064.2
-080300*                      2) FR1-ALTKEY1-11-13 ARE THE NUMBERS FROM  IX1064.2
-080400*                         1 TO 75 ASCENDING .                     IX1064.2
-080500*                      3) FR1-ALTKEY-11-13 ARE THE NUMBERS FROM   IX1064.2
-080600*                         76 TO 151 ASCENDING .                   IX1064.2
-080700*                                                                 IX1064.2
+079100*                                                                         
+079200*                                                                         
+079300*                                                                         
+079400*                                                                         
+079500*                                                                         
+079600*                                                                         
+079700*                                                                         
+079800*                                                                         
+079900*                                                                         
+080000*                                                                         
+080100*                                                                         
+080200*                                                                         
+080300*                                                                         
+080400*                                                                         
+080500*                                                                         
+080600*                                                                         
+080700*                                                                         
 080800     ADD     001  TO XRECORD-NUMBER (1).                          IX1064.2
 080900     ADD     001  TO  KEYSUB.                                     IX1064.2
 081000     MOVE    RECKEY-VALUE (KEYSUB) TO FR1-RECKEY-1-13.            IX1064.2
@@ -796,12 +796,12 @@
 084800     PERFORM PRINT-DETAIL.                                        IX1064.2
 084900 WRITE-TEST-GF-01-END.                                            IX1064.2
 085000     CLOSE   RL-FR1.                                              IX1064.2
-085100******************************************************************IX1064.2
+085100*                                                                         
 085200 SECT-0002-RIS101 SECTION.                                        IX1064.2
-085300*                                                                 IX1064.2
-085400* THIS SECTION CREATES A SEQUENTIAL AND AN INDEXED FILE USING THE IX1064.2
-085500* RELATIVE FILE CREATED IN THE PREVIOUS SECTION AS INPUT .        IX1064.2
-085600*                                                                 IX1064.2
+085300*                                                                         
+085400*                                                                         
+085500*                                                                         
+085600*                                                                         
 085700 WRITE-INIT-GF-02.                                                IX1064.2
 085800     OPEN    OUTPUT IX-FS1 SQ-FS1.                                IX1064.2
 085900     OPEN    INPUT RL-FR1.                                        IX1064.2
@@ -820,14 +820,14 @@
 087200     MOVE    "WRITE SQ-FS1  " TO FEATURE.                         IX1064.2
 087300     MOVE    "WRITE-TEST-GF-02" TO PAR-NAME.                      IX1064.2
 087400 WRITE-TEST-GF-02-01.                                             IX1064.2
-087500*                                                                 IX1064.2
-087600* WRITE-TEST-GF-02-01 - READS IN THE RELATIVE FILE IN SEQUENCE ,  IX1064.2
-087700*                      MOVES RL-FR1-ALTKEY1-11-13 TO              IX1064.2
-087800*                      RL-FR1-ALTKEY2-11-13 SO THAT ALL THE       IX1064.2
-087900*                      KEYS ON THE RECORD ARE THE SAME , THEN     IX1064.2
-088000*                      WRITES A SEQUENTIAL RECORD AND AN INDEXED  IX1064.2
-088100*                      FILE RECORD .                              IX1064.2
-088200*                                                                 IX1064.2
+087500*                                                                         
+087600*                                                                         
+087700*                                                                         
+087800*                                                                         
+087900*                                                                         
+088000*                                                                         
+088100*                                                                         
+088200*                                                                         
 088300     ADD     001 TO RL-KEY.                                       IX1064.2
 088400     READ RL-FR1                                                  IX1064.2
 088500         INVALID KEY ADD 001 TO INVKEY-COUNTER-RL.                IX1064.2
@@ -850,14 +850,14 @@
 090200         INVALID KEY ADD 001 TO INVKEY-COUNTER-IX.                IX1064.2
 090300     ADD 001 TO EXCUT-COUNTER-06V00.                              IX1064.2
 090400 WRITE-TEST-GF-02-02.                                             IX1064.2
-090500*                                                                 IX1064.2
-090600* WRITE-TEST-GF-02-02 - READS IN THE RELATIVE FILE IN SEQUENCE    IX1064.2
-090700*                 STARTING AT NUMBER 76 WHERE WRITE-TEST-GF-02-01 IX1064.2
-090800*                     LEFT OFF . MOVES RL-FR1-ALTKEY2-11-13 TO    IX1064.2
-090900*                     RL-FR1-ALTKEY1-11-13 SO THAT ALL THE KEYS   IX1064.2
-091000*                     IN THE RECORD ARE THE SAME . WRITES A       IX1064.2
-091100*                     SEQUENTIAL AND AN INDEXED FILE RECORD .     IX1064.2
-091200*                                                                 IX1064.2
+090500*                                                                         
+090600*                                                                         
+090700*                                                                         
+090800*                                                                         
+090900*                                                                         
+091000*                                                                         
+091100*                                                                         
+091200*                                                                         
 091300     ADD     001 TO RL-KEY.                                       IX1064.2
 091400     READ RL-FR1                                                  IX1064.2
 091500         INVALID KEY ADD 001 TO INVKEY-COUNTER-RL.                IX1064.2
@@ -876,15 +876,15 @@
 092800         INVALID KEY ADD 001 TO INVKEY-COUNTER-IX.                IX1064.2
 092900     ADD 001 TO EXCUT-COUNTER-06V00.                              IX1064.2
 093000 WRITE-TEST-GF-02-03.                                             IX1064.2
-093100*                                                                 IX1064.2
-093200* WRITE-TEST-GF-02-03 - READS IN THE RELATIVE FILE IN SEQUENCE    IX1064.2
-093300*                STARTING AT NUMBER 151 WHERE WRITE-TEST-GF-02-02 IX1064.2
-093400*                    LEFT OFF . MOVES RL-FR1-KEY-11-13 TO         IX1064.2
-093500*                    RL-FR1-ALTKEY1-11-13 AND RL-ALTKEY2-11-13    IX1064.2
-093600*                    SO THAT ALL THE KEYS IN THE RECORD ARE       IX1064.2
-093700*                    THE SAME . WRITES A SEQUENTIAL AND AN        IX1064.2
-093800*                    INDEXED FILE RECORD .                        IX1064.2
-093900*                                                                 IX1064.2
+093100*                                                                         
+093200*                                                                         
+093300*                                                                         
+093400*                                                                         
+093500*                                                                         
+093600*                                                                         
+093700*                                                                         
+093800*                                                                         
+093900*                                                                         
 094000     ADD     001 TO RL-KEY.                                       IX1064.2
 094100     READ RL-FR1                                                  IX1064.2
 094200         INVALID KEY ADD 001 TO INVKEY-COUNTER-RL.                IX1064.2
@@ -920,12 +920,12 @@
 097200     PERFORM WRITE-INT-GF-02-SQ.                                  IX1064.2
 097300     MOVE "WRITE-TEST-GF-02-3" TO PAR-NAME.                       IX1064.2
 097400     PERFORM WRITE-TEST-CHECK.                                    IX1064.2
-097500******************************************************************IX1064.2
+097500*                                                                         
 097600 SECT-0003-RIS101 SECTION.                                        IX1064.2
-097700*                                                                 IX1064.2
-097800* THIS SECTION TESTS THE ABILITY TO HAVE ALL THREE DIFFERNT FILE  IX1064.2
-097900* TYPES OPENED AND USED AT THE SAME TIME .                        IX1064.2
-098000*                                                                 IX1064.2
+097700*                                                                         
+097800*                                                                         
+097900*                                                                         
+098000*                                                                         
 098100 READ-TEST-F2-01-01.                                              IX1064.2
 098200     MOVE ZEROES TO REC-CT.                                       IX1064.2
 098300     OPEN INPUT RL-FR1.                                           IX1064.2
@@ -934,11 +934,11 @@
 098600     MOVE    "OPEN ALL - SEPARATE" TO FEATURE.                    IX1064.2
 098700     MOVE    "READ-TEST-F2-01-02" TO PAR-NAME.                    IX1064.2
 098800 READ-TEST-F2-01-02.                                              IX1064.2
-098900*                                                                 IX1064.2
-099000* READ-TEST-F2-01-02 - THIS TESTS THE ABILITY TO READ ALL THREE   IX1064.2
-099100*                      TYPES OF FILES IN ANY ORDER WITH ALL OF THEIX1064.2
-099200*                      FILES OPEN AT ONCE .                       IX1064.2
-099300*                                                                 IX1064.2
+098900*                                                                         
+099000*                                                                         
+099100*                                                                         
+099200*                                                                         
+099300*                                                                         
 099400     MOVE ZERO TO RL-KEY.                                         IX1064.2
 099500     ADD 001 TO RL-KEY.                                           IX1064.2
 099600     READ SQ-FS1 INTO IX-FS1R1-F-G-241 AT END GO TEST-FINISH-EXIT.IX1064.2
@@ -988,23 +988,23 @@
 104000     MOVE    "READ-TEST-F2-02   " TO PAR-NAME.                    IX1064.2
 104100     PERFORM PASS.                                                IX1064.2
 104200     PERFORM PRINT-DETAIL.                                        IX1064.2
-104300******************************************************************IX1064.2
+104300*                                                                         
 104400 SECT-0004-RIS101 SECTION.                                        IX1064.2
-104500*                                                                 IX1064.2
-104600* THIS SECTION TESTS THE ABILITY TO DELETE RECORDS FROM ONE FILE  IX1064.2
-104700* TYPE WHILE HAVING THE OTHER FILES OPEN .                        IX1064.2
-104800*                                                                 IX1064.2
+104500*                                                                         
+104600*                                                                         
+104700*                                                                         
+104800*                                                                         
 104900 DELETE-TEST-GF-01.                                               IX1064.2
-105000*                                                                 IX1064.2
-105100* DELETE-TEST-GF-01-01 -IN THIS TEST RECORD NUMBER 121 IS DELETED IX1064.2
-105200*                  THE RELATIVE FILE . THE FILE IS THEN CLOSED .  IX1064.2
-105300*                   THE RELATIVE FILE IS THEN RE-OPENED AND       IX1064.2
-105400*                   READ EXPECTING TO FIND 122 VALID RECORDS      IX1064.2
-105500*                   AND AN INVALID KEY FOR WHAT USED TO BE        IX1064.2
-105600*                   THE 122ND RECORD.  RL-FR1-RECKEY-11-13        IX1064.2
-105700*                   IS CHECKED TO SEE IF RECORD 123 IS READ       IX1064.2
-105800*                   AS IT SHOULD BE.                              IX1064.2
-105900*                                                                 IX1064.2
+105000*                                                                         
+105100*                                                                         
+105200*                                                                         
+105300*                                                                         
+105400*                                                                         
+105500*                                                                         
+105600*                                                                         
+105700*                                                                         
+105800*                                                                         
+105900*                                                                         
 106000     OPEN I-O IX-FS1 RL-FR1 SQ-FS1.                               IX1064.2
 106100     MOVE    ZERO TO IX-FS1-KEY-11-13.                            IX1064.2
 106200     MOVE    ZERO TO RL-KEY.                                      IX1064.2
@@ -1042,12 +1042,12 @@
 109400     PERFORM PRINT-DETAIL.                                        IX1064.2
 109500 DELETE-TEST-GF-01-END.                                           IX1064.2
 109600     CLOSE RL-FR1 IX-FS1 SQ-FS1.                                  IX1064.2
-109700******************************************************************IX1064.2
+109700*                                                                         
 109800 SECT-TEST-005-RIS101 SECTION.                                    IX1064.2
-109900*                                                                 IX1064.2
-110000* THIS SECTION TESTS THE ABILITY TO REWRITE A FILE WHILE OTHER    IX1064.2
-110100* FILES ARE BEING MANIPULATED .                                   IX1064.2
-110200*                                                                 IX1064.2
+109900*                                                                         
+110000*                                                                         
+110100*                                                                         
+110200*                                                                         
 110300 REWRITE-INIT-GF-01.                                              IX1064.2
 110400     OPEN I-O SQ-FS1 IX-FS1 RL-FR1.                               IX1064.2
 110500     MOVE ZEROES TO RL-KEY.                                       IX1064.2
@@ -1055,11 +1055,11 @@
 110700     MOVE    ZERO TO INVKEY-COUNTER-RL.                           IX1064.2
 110800     MOVE    ZERO TO INVKEY-COUNTER-IX.                           IX1064.2
 110900 REWRITE-TEST-GF-01.                                              IX1064.2
-111000*                                                                 IX1064.2
-111100* REWRITE-TEST-GF-01:TESTS THE ABILITY TO REWRITE A RELATIVE FILE IX1064.2
-111200*                    WHILE ALSO MANIPULATING DATA FROM AN INEXED  IX1064.2
-111300*                    FILE .                                       IX1064.2
-111400*                                                                 IX1064.2
+111000*                                                                         
+111100*                                                                         
+111200*                                                                         
+111300*                                                                         
+111400*                                                                         
 111500 READ-INIT-RL.                                                    IX1064.2
 111600     READ RL-FR1                                                  IX1064.2
 111700         INVALID KEY                                              IX1064.2
@@ -1101,12 +1101,12 @@
 115300     ELSE                                                         IX1064.2
 115400         PERFORM PASS.                                            IX1064.2
 115500     PERFORM PRINT-DETAIL.                                        IX1064.2
-115600***************************************************************   IX1064.2
+115600*                                                                         
 115700 REWRITE-TEST-GF-02.                                              IX1064.2
-115800*                                                                 IX1064.2
-115900* REWRITE-TEST-GF-02   TESTS THE ABILITY TO REWRITE A SEQUENTIAL  IX1064.2
-116000*                      FILE WHILE WORKING WITH A RELATIVE ALSO .  IX1064.2
-116100*                                                                 IX1064.2
+115800*                                                                         
+115900*                                                                         
+116000*                                                                         
+116100*                                                                         
 116200     PERFORM READ-TEST-F2-02       9 TIMES.                       IX1064.2
 116300     MOVE 15 TO RL-KEY.                                           IX1064.2
 116400     READ RL-FR1 INTO SQ-FS1R1-F-G-241                            IX1064.2
@@ -1130,12 +1130,12 @@
 118200         MOVE "90" TO CORRECT-A                                   IX1064.2
 118300         MOVE SQ-FS1-KEY-11-13 TO COMPUTED-A.                     IX1064.2
 118400     PERFORM PRINT-DETAIL.                                        IX1064.2
-118500********* END OF 005-02 REWRITE SQ RECORD ************************IX1064.2
+118500*                                                                         
 118600 REWRITE-TEST-GF-03.                                              IX1064.2
-118700*                                                                 IX1064.2
-118800* REWRITE-TEST-GF-03  TESTS THE ABILITY TO REWRITE AN INDEXED FILEIX1064.2
-118900*                      WHILE ALSO READING A RELATIVE FILE .       IX1064.2
-119000*                                                                 IX1064.2
+118700*                                                                         
+118800*                                                                         
+118900*                                                                         
+119000*                                                                         
 119100     MOVE 15 TO RL-KEY.                                           IX1064.2
 119200     MOVE "077" TO IX-FS1-KEY-11-13.                              IX1064.2
 119300     MOVE "REWRITE-TEST-GF-03 " TO PAR-NAME.                      IX1064.2

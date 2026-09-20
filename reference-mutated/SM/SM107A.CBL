@@ -1,28 +1,28 @@
 000100 IDENTIFICATION DIVISION.                                         SM1074.2
 000200 PROGRAM-ID.                                                      SM1074.2
 000300     SM107A.                                                      SM1074.2
-000400****************************************************************  SM1074.2
-000500*                                                              *  SM1074.2
-000600*    VALIDATION FOR:-                                          *  SM1074.2
-000700*                                                              *  SM1074.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM1074.2
-000900*                                                              *  SM1074.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM1074.2
-001100*                                                              *  SM1074.2
-001200****************************************************************  SM1074.2
-001300*                                                              *  SM1074.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM1074.2
-001500*                                                              *  SM1074.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM1074.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM1074.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM1074.2
-001900*                                                              *  SM1074.2
-002000****************************************************************  SM1074.2
-002100*                                                              *  SM1074.2
-002200*    PROGRAM SM107A TESTS THE CAPABILITY TO COPY 1599 RECORDS  *  SM1074.2
-002300*    BY A SINGLE "COPY" STATEMENT IN THE PROCEDURE DIVISION.   *  SM1074.2
-002400*                                                              *  SM1074.2
-002500****************************************************************  SM1074.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
 002600 ENVIRONMENT DIVISION.                                            SM1074.2
 002700 CONFIGURATION SECTION.                                           SM1074.2
 002800 SOURCE-COMPUTER.                                                 SM1074.2
@@ -226,7 +226,7 @@
 022800      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM1074.2
 022900      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM1074.2
 023000      ADD PASS-COUNTER TO ERROR-HOLD.                             SM1074.2
-023100*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM1074.2
+023100*                                                                         
 023200      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM1074.2
 023300      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM1074.2
 023400      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM1074.2
@@ -297,14 +297,14 @@
 029900     MOVE " IF NO OTHER REPORT LINES APPEAR BELOW, ""COPY K7SEA"" SM1074.2
 030000-         "FAILED." TO PRINT-REC.                                 SM1074.2
 030100     PERFORM WRITE-LINE.                                          SM1074.2
-030200*                                                                 SM1074.2
-030300*********************** COPY STATEMENT USED **********************SM1074.2
-030400*                                                                 SM1074.2
-030500*COPY  K7SEA                                                      SM1074.2
-030600*                                                                 SM1074.2
-030700******************** COPIED TEXT BEGINS BELOW ********************SM1074.2
+030200*                                                                         
+030300*                                                                         
+030400*                                                                         
+030500*                                                                         
+030600*                                                                         
+030700*                                                                         
 030800  COPY  K7SEA.                                                    SM1074.2
-030900*********************** END OF COPIED TEXT ***********************SM1074.2
+030900*                                                                         
 031000 CCVS-EXIT SECTION.                                               SM1074.2
 031100 CCVS-999999.                                                     SM1074.2
 031200     GO TO CLOSE-FILES.                                           SM1074.2

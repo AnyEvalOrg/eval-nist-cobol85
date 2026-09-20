@@ -1,32 +1,32 @@
 000100 IDENTIFICATION DIVISION.                                         SM2024.2
 000200 PROGRAM-ID.                                                      SM2024.2
 000300     SM202A.                                                      SM2024.2
-000400****************************************************************  SM2024.2
-000500*                                                              *  SM2024.2
-000600*    VALIDATION FOR:-                                          *  SM2024.2
-000700*                                                              *  SM2024.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2024.2
-000900*                                                              *  SM2024.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2024.2
-001100*                                                              *  SM2024.2
-001200****************************************************************  SM2024.2
-001300*                                                              *  SM2024.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2024.2
-001500*                                                              *  SM2024.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2024.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2024.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2024.2
-001900*                                                              *  SM2024.2
-002000****************************************************************  SM2024.2
-002100*                                                              *  SM2024.2
-002200*    PROGRAM SM202A READS THE FILE PRODUCED BY SM201A TO       *  SM2024.2
-002300*    VERIFY THE PROPER EXECUTION OF THE "COPY REPLACING"       *  SM2024.2
-002400*    STATEMENTS IN SM201A.  A NUMBER OF FURTHER TESTS USING    *  SM2024.2
-002500*    VARIOUS NUMERIC AMD ALPHANUMERIC LITERALS, QUALIFIED      *  SM2024.2
-002600*    DATA NAMES AND MULTIPLE "REPLACING" OPERANDS ARE ALSO     *  SM2024.2
-002700*    CARRIED OUT.                                              *  SM2024.2
-002800*                                                              *  SM2024.2
-002900****************************************************************  SM2024.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
 003000 ENVIRONMENT DIVISION.                                            SM2024.2
 003100 CONFIGURATION SECTION.                                           SM2024.2
 003200 SOURCE-COMPUTER.                                                 SM2024.2
@@ -266,7 +266,7 @@
 027300      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2024.2
 027400      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2024.2
 027500      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2024.2
-027600*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2024.2
+027600*                                                                         
 027700      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2024.2
 027800      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2024.2
 027900      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2024.2
@@ -412,20 +412,20 @@
 041900                                                                  SM2024.2
 042000                                                                  SM2024.2
 042100                                                                  SM2024.2
-042200*                                                                 SM2024.2
-042300*********************** COPY STATEMENT USED **********************SM2024.2
-042400*                                                                 SM2024.2
-042500*                                                      COPY K2SEA SM2024.2
-042600*             REPLACING PARA-X BY PARA-2                          SM2024.2
-042700*                       12345 BY PARA-3                           SM2024.2
-042800*                       DUMMY-PASS BY PASS.                       SM2024.2
-042900*                                                                 SM2024.2
-043000******************** COPIED TEXT BEGINS BELOW ********************SM2024.2
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
+042600*                                                                         
+042700*                                                                         
+042800*                                                                         
+042900*                                                                         
+043000*                                                                         
 043100                                                       COPY K2SEA SM2024.2
 043200              REPLACING PARA-X BY PARA-2                          SM2024.2
 043300                        12345 BY PARA-3                           SM2024.2
 043400                        DUMMY-PASS BY PASS.                       SM2024.2
-043500*********************** END OF COPIED TEXT ***********************SM2024.2
+043500*                                                                         
 043600 COPY-A-15 SECTION.                                               SM2024.2
 043700 COPY-DELETE-15.                                                  SM2024.2
 043800     PERFORM  DE-LETE.                                            SM2024.2
@@ -441,22 +441,22 @@
 044800                                                                  SM2024.2
 044900                                                                  SM2024.2
 045000                                                                  SM2024.2
-045100*                                                                 SM2024.2
-045200*********************** COPY STATEMENT USED **********************SM2024.2
-045300*                                                                 SM2024.2
-045400*                                                      COPY K2PRA SM2024.2
-045500*             REPLACING FALSE-DATA-1 BY "TRUE "                   SM2024.2
-045600*                       FALSE-DATA-2 BY " TWO$"                   SM2024.2
-045700*                       FALSE-DATA-3 BY "+ 2 ="                   SM2024.2
-045800*                       FALSE-DATA-4 BY 4.                        SM2024.2
-045900*                                                                 SM2024.2
-046000******************** COPIED TEXT BEGINS BELOW ********************SM2024.2
+045100*                                                                         
+045200*                                                                         
+045300*                                                                         
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
+046000*                                                                         
 046100                                                       COPY K2PRA SM2024.2
 046200              REPLACING FALSE-DATA-1 BY "TRUE "                   SM2024.2
 046300                        FALSE-DATA-2 BY " TWO$"                   SM2024.2
 046400                        FALSE-DATA-3 BY "+ 2 ="                   SM2024.2
 046500                        FALSE-DATA-4 BY 4.                        SM2024.2
-046600*********************** END OF COPIED TEXT ***********************SM2024.2
+046600*                                                                         
 046700 COPY-DELETE-16.                                                  SM2024.2
 046800     PERFORM  DE-LETE.                                            SM2024.2
 046900 COPY-WRITE-16.                                                   SM2024.2
@@ -478,18 +478,18 @@
 048500                                                                  SM2024.2
 048600                                                                  SM2024.2
 048700                                                                  SM2024.2
-048800*                                                                 SM2024.2
-048900*********************** COPY STATEMENT USED **********************SM2024.2
-049000*                                                                 SM2024.2
-049100*                                                      COPY K2PRA SM2024.2
-049200*             REPLACING FALSE-DATA-1 BY TRUE-Q-04 OF TRUE-Q-03    SM2024.2
-049300*                                                 IN TRUE-Q-02    SM2024.2
-049400*                       COPY-WRITE-16 BY COPY-WRITE-17            SM2024.2
-049500*                       FALSE-DATA-2 BY " TWO FIVE "              SM2024.2
-049600*                       FALSE-DATA-3 BY Z(2, 1, 1)                SM2024.2
-049700*                       FALSE-DATA-4 BY +000004.99.               SM2024.2
-049800*                                                                 SM2024.2
-049900******************** COPIED TEXT BEGINS BELOW ********************SM2024.2
+048800*                                                                         
+048900*                                                                         
+049000*                                                                         
+049100*                                                                         
+049200*                                                                         
+049300*                                                                         
+049400*                                                                         
+049500*                                                                         
+049600*                                                                         
+049700*                                                                         
+049800*                                                                         
+049900*                                                                         
 050000                                                       COPY K2PRA SM2024.2
 050100              REPLACING FALSE-DATA-1 BY TRUE-Q-04 OF TRUE-Q-03    SM2024.2
 050200                                                  IN TRUE-Q-02    SM2024.2
@@ -497,7 +497,7 @@
 050400                        FALSE-DATA-2 BY " TWO FIVE "              SM2024.2
 050500                        FALSE-DATA-3 BY Z (2, 1, 1)               SM2024.2
 050600                        FALSE-DATA-4 BY +000004.99.               SM2024.2
-050700*********************** END OF COPIED TEXT ***********************SM2024.2
+050700*                                                                         
 050800 COPY-DELETE-17.                                                  SM2024.2
 050900     PERFORM  DE-LETE.                                            SM2024.2
 051000 COPY-WRITE-17.                                                   SM2024.2

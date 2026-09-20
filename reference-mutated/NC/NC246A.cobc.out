@@ -9,7 +9,7 @@ NC246A.CBL:1226: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
 NC246A.CBL: in paragraph 'QUAL-TEST-12':
 NC246A.CBL:1301: warning: GO TO SECTION 'CCVS-EXIT' [-Wgoto-section]
  1299 | 130100             PERFORM PRINT-DETAIL.                                N..
- 1300 | 130200*                                                                 N..
+ 1300 | 130200*..
  1301 > 130300     GO TO CCVS-EXIT.                                             N..
- 1302 | 130400*                                                                 N..
+ 1302 | 130400*..
  1303 | 130500 SECT-TH220-0003 SECTION.                                         N..

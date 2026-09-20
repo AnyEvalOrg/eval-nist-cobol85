@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         IC2084.2
 000200 PROGRAM-ID.                                                      IC2084.2
 000300     IC208A.                                                      IC2084.2
-000400****************************************************************  IC2084.2
-000500*                                                              *  IC2084.2
-000600*    VALIDATION FOR:-                                          *  IC2084.2
-000700*                                                              *  IC2084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC2084.2
-000900*                                                              *  IC2084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC2084.2
-001100*                                                              *  IC2084.2
-001200****************************************************************  IC2084.2
-001300*                                                              *  IC2084.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC2084.2
-001500*                                                              *  IC2084.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC2084.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC2084.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC2084.2
-001900*                                                              *  IC2084.2
-002000****************************************************************  IC2084.2
-002100*        THE SUBPROGRAM IC208 CONTAINS TABLES AND AN INDEX        IC2084.2
-002200*    DATA ITEM WHICH ARE DEFINED IN THE LINKAGE SECTION           IC2084.2
-002300*    AND NAMED AS OPERANDS IN THE USING PHRASE OF THE             IC2084.2
-002400*    PROCEDURE DIVISION HEADER.  ONE OF THE TABLES IS DEFINED     IC2084.2
-002500*    WITH AN OCCURS DEPENDING ON CLAUSE AND HAS CONDITION-NAME    IC2084.2
-002600*    ENTRIES ASSOCIATED WITH IT.  THE SEARCH STATEMENT IS USED    IC2084.2
-002700*    TO TEST THE VARIABLE LENGTH TABLE CAPABILITY.                IC2084.2
-002800****************************************************************  IC2084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            IC2084.2
 003000 CONFIGURATION SECTION.                                           IC2084.2
 003100 SOURCE-COMPUTER.                                                 IC2084.2
@@ -50,13 +50,13 @@
 005000 PROCEDURE DIVISION USING TABLE-01, TABLE-02, INDEX-1, DN3.       IC2084.2
 005100 SECT-IC208-0001 SECTION.                                         IC2084.2
 005200 LINK-TEST-01.                                                    IC2084.2
-005300*    THIS TEST USES THE INDEX DATA ITEM SET IN THE CALLING        IC2084.2
-005400*    PROGRAM TO SET AN INDEX AND REFERENCE A TABLE ITEM.          IC2084.2
+005300*                                                                         
+005400*                                                                         
 005500     SET IN1 TO INDEX-1.                                          IC2084.2
 005600     MOVE DN1 (IN1) TO DN2 (1).                                   IC2084.2
-005700*        LINK-TEST-02 TESTS THE VARIABLE LENGTH TABLE CAPABILITY  IC2084.2
-005800*    WITH THE DATA-NAME WHOSE CONTENTS IS THE TABLE LENGTH        IC2084.2
-005900*    DEFINED IN THE LINKAGE SECTION.                              IC2084.2
+005700*                                                                         
+005800*                                                                         
+005900*                                                                         
 006000 LINK-TEST-02-01.                                                 IC2084.2
 006100     SET IN1 TO 1.                                                IC2084.2
 006200     SEARCH DN1 VARYING IN1                                       IC2084.2
@@ -84,8 +84,8 @@
 008400             MOVE "G" TO DN2 (5).                                 IC2084.2
 008500 LINK-TEST-03.                                                    IC2084.2
 008600     MOVE 10 TO DN3.                                              IC2084.2
-008700*        LINK-TEST-03 TESTS THE USE OF CONDITION-NAMES WHICH      IC2084.2
-008800*    WERE DEFINED IN THE LINKAGE SECTION.                         IC2084.2
+008700*                                                                         
+008800*                                                                         
 008900 LINK-TEST-03-01.                                                 IC2084.2
 009000     IF CN1 (1)  MOVE "A" TO DN2 (6).                             IC2084.2
 009100 LINK-TEST-03-02.                                                 IC2084.2
@@ -94,8 +94,8 @@
 009400 LINK-TEST-03-03.                                                 IC2084.2
 009500     IF CN2 (8) MOVE "H" TO DN2 (8).                              IC2084.2
 009600 LINK-TEST-04.                                                    IC2084.2
-009700*        THIS TEST SETS THE INDEX DATA ITEM AND TABLE LENGTH      IC2084.2
-009800*    FOR REFERENCE IN THE CALLING PROGRAM.                        IC2084.2
+009700*                                                                         
+009800*                                                                         
 009900     SET IN1 TO 2.                                                IC2084.2
 010000     SET INDEX-1 TO IN1.                                          IC2084.2
 010100     MOVE 9 TO DN3.                                               IC2084.2

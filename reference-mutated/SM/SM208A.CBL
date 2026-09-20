@@ -1,29 +1,29 @@
 000100 IDENTIFICATION DIVISION.                                         SM2084.2
 000200 PROGRAM-ID. SM208A.                                              SM2084.2
 000300 REPLACE OFF.                                                     SM2084.2
-000400****************************************************************  SM2084.2
-000500*                                                              *  SM2084.2
-000600*    VALIDATION FOR:-                                          *  SM2084.2
-000700*                                                              *  SM2084.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SM2084.2
-000900*                                                              *  SM2084.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SM2084.2
-001100*                                                              *  SM2084.2
-001200****************************************************************  SM2084.2
-001300*                                                              *  SM2084.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  SM2084.2
-001500*                                                              *  SM2084.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  SM2084.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  SM2084.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  SM2084.2
-001900*                                                              *  SM2084.2
-002000****************************************************************  SM2084.2
-002100*                                                              *  SM2084.2
-002200*    PROGRAM SM208A TESTS FORMATS 1 AND 2 OF THE "REPLACE"     *  SM2084.2
-002300*    STATEMENT WITH VARIOUS COMBINATIONS OF PSEUDO-TEXT IN     *  SM2084.2
-002400*    EACH OF THE FOUR DIVISIONS.                               *  SM2084.2
-002500*                                                              *  SM2084.2
-002600****************************************************************  SM2084.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
 002700                                                                  SM2084.2
 002800                                                                  SM2084.2
 002900 ENVIRONMENT DIVISION.                                            SM2084.2
@@ -42,8 +42,8 @@
 004200 01  PRINT-REC PICTURE X(120).                                    SM2084.2
 004300 01  DUMMY-RECORD PICTURE X(120).                                 SM2084.2
 004400 WORKING-STORAGE SECTION.                                         SM2084.2
-004500*    THE ANSI-REFERENCE FOR THE TEST OF THE FIRST FOUR "01"       SM2084.2
-004600*    LEVEL DATA-ITEMS IS "XII-7 3.4 GR3 AND XII-6 3.4 GR2".       SM2084.2
+004500*                                                                         
+004600*                                                                         
 004700 REPLACE ==PICTURE== BY ==PIC==.                                  SM2084.2
 004800 01  A     PICTURE X.                                             SM2084.2
 004900 01  B     PICTURE S9(7) COMP.                                    SM2084.2
@@ -253,7 +253,7 @@
 025500      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SM2084.2
 025600      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               SM2084.2
 025700      ADD PASS-COUNTER TO ERROR-HOLD.                             SM2084.2
-025800*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SM2084.2
+025800*                                                                         
 025900      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SM2084.2
 026000      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SM2084.2
 026100      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SM2084.2
@@ -322,7 +322,7 @@
 032400     EXIT.                                                        SM2084.2
 032500 SECT-SM208A-001 SECTION.                                         SM2084.2
 032600 REP-INIT-1.                                                      SM2084.2
-032700*    ===-->  MULTIPLE OPERANDS  <--===                            SM2084.2
+032700*                                                                         
 032800     MOVE   "XII-6 3.2"  TO ANSI-REFERENCE.                       SM2084.2
 032900     MOVE   "REP-TEST-1" TO PAR-NAME.                             SM2084.2
 033000     MOVE    SPACE       TO WRK-XN-00001.                         SM2084.2
@@ -347,9 +347,9 @@
 034900             PERFORM FAIL                                         SM2084.2
 035000             PERFORM PRINT-DETAIL.                                SM2084.2
 035100 REPLACE OFF.                                                     SM2084.2
-035200*                                                                 SM2084.2
+035200*                                                                         
 035300 REP-INIT-2.                                                      SM2084.2
-035400*    ===-->  MINIMUM AND MAXIMUM LENGTHS  <--===                  SM2084.2
+035400*                                                                         
 035500     MOVE   "XII-6 3.3 (SR5&6) AND XII-8 3.4(GR11)"               SM2084.2
 035600          TO ANSI-REFERENCE.                                      SM2084.2
 035700     MOVE   "REP-TEST-2" TO PAR-NAME.                             SM2084.2
@@ -390,7 +390,7 @@
 039200             ADD     1 TO REC-CT                                  SM2084.2
 039300             MOVE   """""""""""""""" TO CORRECT-X                 SM2084.2
 039400             MOVE    WRK-XN-00322-2 TO COMPUTED-X                 SM2084.2
-039500*            PERFORM FAIL                                         SM2084.2
+039500*                                                                         
 039600             PERFORM PRINT-DETAIL                                 SM2084.2
 039700             PERFORM WITH TEST AFTER                              SM2084.2
 039800                VARYING X1 FROM 1 BY 1                            SM2084.2
@@ -401,9 +401,9 @@
 040300                MOVE  WRK-XN-00322-20 (X1) TO COMPUTED-X          SM2084.2
 040400                PERFORM PRINT-DETAIL                              SM2084.2
 040500             END-PERFORM.                                         SM2084.2
-040600*                                                                 SM2084.2
+040600*                                                                         
 040700 REP-INIT-3.                                                      SM2084.2
-040800*    ===-->  MINIMUM AND MAXIMUM LENGTHS  <--===                  SM2084.2
+040800*                                                                         
 040900     MOVE   "XII-6 3.3 (SR5&6) AND XII-8 3.4(GR11)"               SM2084.2
 041000          TO ANSI-REFERENCE.                                      SM2084.2
 041100     MOVE   "REP-TEST-3" TO PAR-NAME.                             SM2084.2
@@ -445,7 +445,7 @@
 044700             ADD     1 TO REC-CT                                  SM2084.2
 044800             MOVE    SPACE TO CORRECT-X                           SM2084.2
 044900             MOVE    WRK-XN-00322-2 TO COMPUTED-X                 SM2084.2
-045000*            PERFORM FAIL                                         SM2084.2
+045000*                                                                         
 045100             PERFORM PRINT-DETAIL                                 SM2084.2
 045200             PERFORM WITH TEST AFTER                              SM2084.2
 045300                     VARYING X1 FROM 1 BY 1                       SM2084.2
@@ -455,9 +455,9 @@
 045700                     MOVE    WRK-XN-00322-20 (X1) TO COMPUTED-X   SM2084.2
 045800                     PERFORM PRINT-DETAIL                         SM2084.2
 045900             END-PERFORM.                                         SM2084.2
-046000*                                                                 SM2084.2
+046000*                                                                         
 046100 REP-INIT-4.                                                      SM2084.2
-046200*    ===-->  INSERTING SPACES  <--===                             SM2084.2
+046200*                                                                         
 046300     MOVE   "XII-8 3.4 (GR10)"  TO ANSI-REFERENCE.                SM2084.2
 046400     MOVE   "REP-TEST-4" TO PAR-NAME.                             SM2084.2
 046500     MOVE    SPACE       TO WRK-XN-00001.                         SM2084.2
@@ -485,9 +485,9 @@
 048700             PERFORM FAIL                                         SM2084.2
 048800             PERFORM PRINT-DETAIL.                                SM2084.2
 048900 REPLACE OFF.                                                     SM2084.2
-049000*                                                                 SM2084.2
+049000*                                                                         
 049100 REP-INIT-5.                                                      SM2084.2
-049200*    ===-->  DELETING SOURCE  <--===                              SM2084.2
+049200*                                                                         
 049300     MOVE   "XII-6 3.3 (SR4)" TO ANSI-REFERENCE.                  SM2084.2
 049400     MOVE   "REP-TEST-5" TO PAR-NAME.                             SM2084.2
 049500     MOVE    SPACES      TO WRK-XN-00020 WRK-XN-00001.            SM2084.2
@@ -510,23 +510,23 @@
 051200             MOVE   "REPLACE FAILED" TO RE-MARK                   SM2084.2
 051300             PERFORM FAIL                                         SM2084.2
 051400             PERFORM PRINT-DETAIL.                                SM2084.2
-051500*                                                                 SM2084.2
+051500*                                                                         
 051600 REP-INIT-6.                                                      SM2084.2
-051700*    ===-->  EMBEDDED COMMENT AND BLANK LINES <--===              SM2084.2
+051700*                                                                         
 051800     MOVE   "XII-7/8 3.4 (GR7)" TO ANSI-REFERENCE.                SM2084.2
 051900     MOVE   "REP-TEST-6" TO PAR-NAME.                             SM2084.2
 052000 REP-TEST-6-0.                                                    SM2084.2
 052100 REPLACE ==MOVE "FAIL" TO==                                       SM2084.2
 052200      BY ==MOVE "PASS" TO==.                                      SM2084.2
 052300      MOVE                                                        SM2084.2
-052400*                                                                 SM2084.2
-052500*                                                                 SM2084.2
-052600*                                                                 SM2084.2
+052400*                                                                         
+052500*                                                                         
+052600*                                                                         
 052700     "FAIL"                                                       SM2084.2
 052800                                                                  SM2084.2
 052900     TO P-OR-F.                                                   SM2084.2
 053000                                                                  SM2084.2
-053100*                                                                 SM2084.2
+053100*                                                                         
 053200 REPLACE OFF.                                                     SM2084.2
 053300     GO TO   REP-TEST-6-1.                                        SM2084.2
 053400 REP-DELETE-6.                                                    SM2084.2
@@ -543,9 +543,9 @@
 054500             MOVE    P-OR-F TO COMPUTED-X                         SM2084.2
 054600             PERFORM FAIL                                         SM2084.2
 054700             PERFORM PRINT-DETAIL.                                SM2084.2
-054800*                                                                 SM2084.2
+054800*                                                                         
 054900 REP-INIT-7.                                                      SM2084.2
-055000*    ===-->  EMBEDDED DEBUG LINES <--===                          SM2084.2
+055000*                                                                         
 055100     MOVE   "XII-8 3.4 (GR8)" TO ANSI-REFERENCE.                  SM2084.2
 055200     MOVE   "REP-TEST-7" TO PAR-NAME.                             SM2084.2
 055300     MOVE   "A" TO WS-A.                                          SM2084.2
@@ -562,11 +562,11 @@
 056400                                                                  SM2084.2
 056500     MOVE WS-A TO WS-B.                                           SM2084.2
 056600                                                                  SM2084.2
-056700*D    MOVE                                                        SM2084.2
-056800*D    WS-D                                                        SM2084.2
-056900*D    TO WS-F.                                                    SM2084.2
+056700*                                                                         
+056800*                                                                         
+056900*                                                                         
 057000                                                                  SM2084.2
-057100*                                                                 SM2084.2
+057100*                                                                         
 057200 REPLACE OFF.                                                     SM2084.2
 057300     GO TO   REP-TEST-7-1.
 057400 REP-DELETE-7.                                                    SM2084.2
@@ -583,9 +583,9 @@
 058500             MOVE    WS-B TO COMPUTED-X                           SM2084.2
 058600             PERFORM FAIL                                         SM2084.2
 058700             PERFORM PRINT-DETAIL.                                SM2084.2
-058800*                                                                 SM2084.2
+058800*                                                                         
 058900 REP-INIT-8.                                                      SM2084.2
-059000*    ===-->  SEPARATORS  <--===                                   SM2084.2
+059000*                                                                         
 059100     MOVE   "XII-7 3.4 GR6(b)" TO ANSI-REFERENCE.                 SM2084.2
 059200     MOVE   "REP-TEST-8" TO PAR-NAME.                             SM2084.2
 059300     MOVE    SPACES      TO P-OR-F.                               SM2084.2
@@ -609,9 +609,9 @@
 061100             MOVE    P-OR-F TO COMPUTED-X                         SM2084.2
 061200             PERFORM FAIL                                         SM2084.2
 061300             PERFORM PRINT-DETAIL.                                SM2084.2
-061400*                                                                 SM2084.2
+061400*                                                                         
 061500 REP-INIT-9.                                                      SM2084.2
-061600*    ===-->  SEQUENCE OF COPY AND REPLACE STATEMENTS  <--===      SM2084.2
+061600*                                                                         
 061700     MOVE   "XII-7 3.4 GR4" TO ANSI-REFERENCE.                    SM2084.2
 061800     MOVE   "REP-TEST-9" TO PAR-NAME.                             SM2084.2
 061900     MOVE   "FAIL"       TO P-OR-F.                               SM2084.2
@@ -634,7 +634,7 @@
 063600             MOVE    P-OR-F TO COMPUTED-X                         SM2084.2
 063700             PERFORM FAIL                                         SM2084.2
 063800             PERFORM PRINT-DETAIL.                                SM2084.2
-063900*                                                                 SM2084.2
+063900*                                                                         
 064000 CCVS-EXIT SECTION.                                               SM2084.2
 064100 CCVS-999999.                                                     SM2084.2
 064200     GO TO CLOSE-FILES.                                           SM2084.2

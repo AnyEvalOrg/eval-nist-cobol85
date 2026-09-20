@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         SQ2224.2
 000200 PROGRAM-ID.                                                      SQ2224.2
 000300     SQ222A.                                                      SQ2224.2
-000400****************************************************************  SQ2224.2
-000500*                                                              *  SQ2224.2
-000600*    VALIDATION FOR:-                                          *  SQ2224.2
-000700*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".SQ2224.2
-000800*                                                              *  SQ2224.2
-000900*    CREATION DATE     /     VALIDATION DATE                   *  SQ2224.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".SQ2224.2
-001100*                                                              *  SQ2224.2
-001200*        THIS ROUTINE CHECKS:                                     SQ2224.2
-001300*                                                                 SQ2224.2
-001400*           RECORD    VARYING.                                    SQ2224.2
-001500*                                                                 SQ2224.2
-001600*        THIS ROUTINE BUILDS A SEQUENTIAL MASS STORAGE FILE       SQ2224.2
-001700*    WHICH CONTAINS BOTH 120 CHARACTER AND 151 CHARACTER          SQ2224.2
-001800*    RECORDS.  THE MASS STORAGE FILE CONSISTS OF 1 SHORT,         SQ2224.2
-001900*    1 LONG, 10 SHORT, 100 LONG, AND 338 SHORT RECORDS FOR        SQ2224.2
-002000*    A TOTAL OF 450 RECORDS IN THE FILE.  THE MASS STORAGE        SQ2224.2
-002100*    FILE IS READ AND FIELDS IN THE RECORDS ARE CHECKED           SQ2224.2
-002200*    AGAINST THE EXPECTED VALUES.                                 SQ2224.2
-002300*                                                                 SQ2224.2
-002400*        AN INFORMATION SECTION AT THE END OF THE ROUTINE         SQ2224.2
-002500*    CHECKS THE FIELD WHICH CONTAINS THE XRECORD-NUMBER.          SQ2224.2
-002600*    THIS FIELD IS PART OF A LONG RECORD ONLY.  IF THE            SQ2224.2
-002700*    XRECORD-NUMBER IS THERE FOR A SHORT RECORD, IT MEANS         SQ2224.2
-002800*    THE MAXIMUM SIZE RECORD IS ALWAYS WRITTEN.                   SQ2224.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            SQ2224.2
 003000 CONFIGURATION SECTION.                                           SQ2224.2
 003100 SOURCE-COMPUTER.                                                 SQ2224.2
@@ -290,7 +290,7 @@
 033900      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      SQ2224.2
 034000      ERROR-HOLD. ADD DELETE-CNT TO ERROR-HOLD.                   SQ2224.2
 034100      ADD PASS-COUNTER TO ERROR-HOLD.                             SQ2224.2
-034200*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   SQ2224.2
+034200*                                                                         
 034300      MOVE PASS-COUNTER TO CCVS-E-4-1.                            SQ2224.2
 034400      MOVE ERROR-HOLD TO CCVS-E-4-2.                              SQ2224.2
 034500      MOVE CCVS-E-4 TO CCVS-E-2-2.                                SQ2224.2
@@ -377,11 +377,11 @@
 042600     MOVE COUNT-OF-RECS TO CORRECT-18V0.                          SQ2224.2
 042700     MOVE "FILE HAS 120 AND 151 CHAR RECS" TO RE-MARK.            SQ2224.2
 042800     PERFORM PRINT-DETAIL.                                        SQ2224.2
-042900*        A SEQUENTIAL MASS STORAGE FILE CONTAINING 450            SQ2224.2
-043000*    RECORDS HAS BEEN CREATED.  THE FILE CONTAINS RECORDS         SQ2224.2
-043100*    OF 120 CHARACTERS AND RECORDS OF 151 CHARACTERS.  THE        SQ2224.2
-043200*    SEQUENCE IN WHICH THE RECORDS WERE WRITTEN IS S-L-10S-       SQ2224.2
-043300*    100L-338S.                                                   SQ2224.2
+042900*                                                                         
+043000*                                                                         
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
 043400 WRITE-CLOSE-GF-01.                                               SQ2224.2
 043500     CLOSE SQ-VS7.                                                SQ2224.2
 043600     GO TO READ-INIT-F1-01.                                       SQ2224.2
@@ -578,10 +578,10 @@
 062700 READ-CLOSE-F1-06.                                                SQ2224.2
 062800     CLOSE SQ-VS7.                                                SQ2224.2
 062900 SECT-SQ222A-0002 SECTION.                                        SQ2224.2
-063000*        THIS SECTION CHECKS IF THE ENTIRE RECORD AREA IS         SQ2224.2
-063100*    WRITTEN ON THE MASS STORAGE DEVICE WHEN A SHORT RECORD       SQ2224.2
-063200*    IS WRITTEN.  THE RECORD NUMBER IN CHARACTERS 126 THROUGH     SQ2224.2
-063300*    130 IS UNIQUE FOR EACH RECORD.                               SQ2224.2
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
 063400 INFO-INIT-01.                                                    SQ2224.2
 063500     OPEN INPUT SQ-VS7.                                           SQ2224.2
 063600     MOVE ZERO TO COUNT-OF-RECS.                                  SQ2224.2

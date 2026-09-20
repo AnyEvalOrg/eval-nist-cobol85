@@ -1,33 +1,33 @@
 000100 IDENTIFICATION DIVISION.                                         NC1144.2
 000200 PROGRAM-ID.                                                      NC1144.2
 000300     NC114M.                                                      NC1144.2
-000400****************************************************************  NC1144.2
-000500*                                                              *  NC1144.2
-000600*    VALIDATION FOR:-                                          *  NC1144.2
-000700*                                                              *  NC1144.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".NC1144.2
-000900*                                                              *  NC1144.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".NC1144.2
-001100*                                                              *  NC1144.2
-001200****************************************************************  NC1144.2
-001300*                                                              *  NC1144.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  NC1144.2
-001500*                                                              *  NC1144.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  NC1144.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  NC1144.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  NC1144.2
-001900*                                                              *  NC1144.2
-002000****************************************************************  NC1144.2
-002100*                                                                 NC1144.2
-002200*    PROGRAM NC114M TESTS:                                        NC1144.2
-002300*                                                                 NC1144.2
-002400*        ALPHA-NUMERIC EDITING                                    NC1144.2
-002500*        COMMENT LINES                                            NC1144.2
-002600*        UNIQUENESS OF REFERENCE (DATA, PARAGRAPH & SECTION NAME) NC1144.2
-002700*        SEQUENCE NUMBERING                                       NC1144.2
-002800*                                                                 NC1144.2
-002900******************************************************************NC1144.2
-003000*                                                                 NC1144.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
+002900*                                                                         
+003000*                                                                         
 003100 ENVIRONMENT DIVISION.                                            NC1144.2
 003200 CONFIGURATION SECTION.                                           NC1144.2
 003300 SOURCE-COMPUTER.                                                 NC1144.2
@@ -54,16 +54,16 @@
 005400 01  WRK-AE-2 PIC A/AA.                                           NC1144.2
 005500 01  WRK-AE-3  PIC XBXXX/XXX/XXX/XXX/XXXBXX.                      NC1144.2
 005600 01  WRK-NE-1 PIC 9/99   .                                        NC1144.2
-005700/ STROKE-COMMENT-TEST-7   SHOULD PAGE EJECT AND PRINT ON TOP LINE NC1144.2
-005800/ STROKE-COMMENT-TEST-7   SHOULD PAGE EJECT AND PRINT ON TOP LINE NC1144.2
-005900* ASTERISK COMMENT SHOULD NOT BE SYNTAX CHECKED "(,$*.)-/+> <,....NC1144.2
-006000*SIGN-LEADING-TEST-9     ) ,  >   ;   <                           NC1144.2
+005700/                                                                         
+005800/                                                                         
+005900*                                                                         
+006000*                                                                         
 006100 01  WRK-DS-L-18V0-1 PIC S9(18)    SIGN IS LEADING      .         NC1144.2
-006200* SIGN-TRAILING-TEST-10                                           NC1144.2
+006200*                                                                         
 006300 01  WRK-DS-T-18V0-1 PIC S9(18)  SIGN TRAILING .                  NC1144.2
-006400* SIGN-SEPARATE-TEST-11                                           NC1144.2
+006400*                                                                         
 006500 01  WRK-DS-S-18V0-1 PIC S9(18) SIGN TRAILING SEPARATE CHARACTER. NC1144.2
-006600* REDEFINITION-TEST-12                                            NC1144.2
+006600*                                                                         
 006700 01  WRK-XN-18-1 PIC X(18).                                       NC1144.2
 006800 01  WRK-AN-18-X-1 REDEFINES WRK-XN-18-1 PIC A(18).               NC1144.2
 006900 01  GRP-X-1 REDEFINES WRK-XN-18-1.                               NC1144.2
@@ -74,9 +74,9 @@
 007400 01  WRK-XN-18-2 PIC X(18) VALUE "123456789012345678".            NC1144.2
 007500 01  WRK-DS-LS-1P17-1 PIC S9P(17) SIGN LEADING SEPARATE           NC1144.2
 007600     CHARACTER VALUE  -100000000000000000.                        NC1144.2
-007700/ STROKE-COMMENT-TEST-7   SHOULD PAGE EJECT AND PRINT ON TOP LINE NC1144.2
+007700/                                                                         
 007800 01  PIC-SYNTAX-TEST-19  PIC AB9.                                 NC1144.2
-007900/ STROKE-COMMENT-TEST-7   SHOULD PAGE EJECT AND PRINT ON TOP LINE NC1144.2
+007900/                                                                         
 008000 01  TEST-RESULTS.                                                NC1144.2
 008100     02 FILLER                   PIC X      VALUE SPACE.          NC1144.2
 008200     02 FEATURE                  PIC X(20)  VALUE SPACE.          NC1144.2
@@ -264,7 +264,7 @@
 026600      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      NC1144.2
 026700      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               NC1144.2
 026800      ADD PASS-COUNTER TO ERROR-HOLD.                             NC1144.2
-026900*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   NC1144.2
+026900*                                                                         
 027000      MOVE PASS-COUNTER TO CCVS-E-4-1.                            NC1144.2
 027100      MOVE ERROR-HOLD TO CCVS-E-4-2.                              NC1144.2
 027200      MOVE CCVS-E-4 TO CCVS-E-2-2.                                NC1144.2
@@ -336,8 +336,8 @@
 033800 BAIL-OUT-EX. EXIT.                                               NC1144.2
 033900 CCVS1-EXIT.                                                      NC1144.2
 034000     EXIT.                                                        NC1144.2
-034100/ STROKE-COMMENT-TEST-7   SHOULD PAGE EJECT AND PRINT ON TOP LINE NC1144.2
-034200* NULL1-NU-L-TEST-13                                              NC1144.2
+034100/                                                                         
+034200*                                                                         
 034300 0 SECTION.                                                       NC1144.2
 034400 NULL1 SECTION.                                                   NC1144.2
 034500 NU-L               SECTION                                      .NC1144.2
@@ -347,15 +347,15 @@
 034900 D   .                                                            NC1144.2
 035000 THE-END.                                                         NC1144.2
 035100     EXIT.                                                        NC1144.2
-035200/ STROKE-COMMENT-TEST-7   SHOULD PAGE EJECT AND PRINT ON TOP LINE NC1144.2
-035300* ASTERISK COMMENT SHOULD NOT BE SYNTAX CHECKED "(,l*.)-/+> <,....NC1144.2
+035200/                                                                         
+035300*                                                                         
 035400 SECT-NC114-1 SECTION.                                            NC1144.2
 035500 ALPHA-EDIT-TEST-4.                                               NC1144.2
 035600     IF WRK-AE-1 EQUAL TO "ABC" NEXT SENTENCE ELSE MOVE "ABC" TO  NC1144.2
 035700         CORRECT-A GO TO ALPHA-EDIT-FAIL-4.                       NC1144.2
 035800     MOVE "DEF" TO WRK-AE-1.                                      NC1144.2
-035900     IF WRK-AE-1 EQUAL TO "W E" PERFORM PASS                      NC1144.2
-036000         GO TO ALPHA-EDIT-WRITE-4 ELSE MOVE "W E" TO CORRECT-A    NC1144.2
+035900     IF WRK-AE-1 EQUAL TO "D E" PERFORM PASS                      NC1144.2
+036000         GO TO ALPHA-EDIT-WRITE-4 ELSE MOVE "D E" TO CORRECT-A    NC1144.2
 036100         GO TO ALPHA-EDIT-FAIL-4.                                 NC1144.2
 036200 ALPHA-EDIT-DELETE-4.                                             NC1144.2
 036300     PERFORM DE-LETE.                                             NC1144.2
@@ -370,7 +370,7 @@
 037200*                                                                         
 037300 ALPHA-EDIT-TEST-5.                                               NC1144.2
 037400     MOVE "ABC" TO WRK-AE-2.                                      NC1144.2
-037500     IF WRK-AE-2 EQUAL TO "A/BK" PERFORM PASS                     NC1144.2
+037500     IF WRK-AE-2 EQUAL TO "A/BC" PERFORM PASS                     NC1144.2
 037600         GO TO ALPHA-EDIT-WRITE-5 ELSE GO TO ALPHA-EDIT-FAIL-5.   NC1144.2
 037700 ALPHA-EDIT-DELETE-5.                                             NC1144.2
 037800     PERFORM DE-LETE.                                             NC1144.2
@@ -378,14 +378,14 @@
 038000 ALPHA-EDIT-FAIL-5.                                               NC1144.2
 038100     PERFORM FAIL.                                                NC1144.2
 038200     MOVE WRK-AE-2 TO COMPUTED-A.                                 NC1144.2
-038300     MOVE "A/BK" TO CORRECT-A.                                    NC1144.2
+038300     MOVE "A/BC" TO CORRECT-A.                                    NC1144.2
 038400 ALPHA-EDIT-WRITE-5.                                              NC1144.2
 038500     MOVE "ALPHA-ED-TEST-5" TO PAR-NAME.                          NC1144.2
 038600     MOVE "/ AS EDIT CHARACTER" TO FEATURE.                       NC1144.2
 038700     PERFORM PRINT-DETAIL.                                        NC1144.2
 038800 NUM-EDIT-TEST-6.                                                 NC1144.2
 038900     MOVE 123 TO WRK-NE-1.                                        NC1144.2
-039000     IF WRK-NE-1 EQUAL TO "1V23" PERFORM PASS                     NC1144.2
+039000     IF WRK-NE-1 EQUAL TO "1/23" PERFORM PASS                     NC1144.2
 039100         GO TO NUM-EDIT-WRITE-6 ELSE GO TO NUM-EDIT-FAIL-6.       NC1144.2
 039200 NUM-EDIT-DELETE-6.                                               NC1144.2
 039300     PERFORM DE-LETE.                                             NC1144.2
@@ -393,12 +393,12 @@
 039500 NUM-EDIT-FAIL-6.                                                 NC1144.2
 039600     PERFORM FAIL.                                                NC1144.2
 039700     MOVE WRK-NE-1 TO COMPUTED-A.                                 NC1144.2
-039800     MOVE "1V23" TO CORRECT-A.                                    NC1144.2
+039800     MOVE "1/23" TO CORRECT-A.                                    NC1144.2
 039900 NUM-EDIT-WRITE-6.                                                NC1144.2
 040000     MOVE "NUM-EDIT-TEST-6" TO PAR-NAME.                          NC1144.2
 040100     MOVE "/ AS EDIT CHARACTER" TO FEATURE.                       NC1144.2
 040200     PERFORM PRINT-DETAIL.                                        NC1144.2
-040300* ASTERISK COMMENT SHOULD NOT BE SYNTAX CHECKED "(,l*.)-/+> <,....NC1144.2
+040300*                                                                         
 040400 ELEM-MOVE-TEST-16.                                               NC1144.2
 040500     MOVE WRK-DS-LS-1P17-1 TO WRK-XN-18-2.                        NC1144.2
 040600     IF WRK-XN-18-2 EQUAL TO "100000000000000000" PERFORM PASS    NC1144.2
@@ -437,12 +437,12 @@
 043900     MOVE    SPACE TO TEST-RESULTS.                               NC1144.2
 044000     MOVE    " PICTURE AB9  **  CHECK DATA DIV." TO TEST-RESULTS. NC1144.2
 044100     PERFORM PRINT-DETAIL.                                        NC1144.2
-044200*                                                                 NC1144.2
-044300*    THE FOLLOWING LINES HAVE SPECIAL CHARACTERS IN THE           NC1144.2
-044400*    SEQUENCE AREA (COLS 1-6) AND MANUAL VERIFICATION OF          NC1144.2
-044500*    THEIR POSITION ON THE COMPILATION LISTING IS REQUESTED       NC1144.2
-044600*    IN THE REPORT.                                               NC1144.2
-044700*                                                                 NC1144.2
+044200*                                                                         
+044300*                                                                         
+044400*                                                                         
+044500*                                                                         
+044600*                                                                         
+044700*                                                                         
 044800 SEQ-NUM-TEST-1.                                                  NC1144.2
 044900     MOVE   "IV-44  7.2.1"         TO ANSI-REFERENCE.             NC1144.2
 045000     MOVE    SPACES                TO TEST-RESULTS.               NC1144.2
@@ -479,7 +479,7 @@
 048100     MOVE   "   ENTRY-6:    23 4" TO RE-MARK.                     NC1144.2
 048200     PERFORM PRINT-DETAIL.                                        NC1144.2
 048300     PERFORM INSPT.                                               NC1144.2
-048400*                                                                 NC1144.2
+048400*                                                                         
 048500                                                                  NC1144.2
 ABCDEF
 */+(>'
@@ -491,8 +491,8 @@ Z=.,;<
 049300                                                                  NC1144.2
 049400                                                                  NC1144.2
 049500                                                                  NC1144.2
-049600*                                                                 NC1144.2
+049600*                                                                         
 049700 CCVS-EXIT SECTION.                                               NC1144.2
 049800 CCVS-999999.                                                     NC1144.2
 049900     GO TO CLOSE-FILES.                                           NC1144.2
-050000* ASTERISK COMMENT AS THE LAST LINE IN THE SOURCE PROGRAM LISTING NC1144.2
+050000*                                                                         

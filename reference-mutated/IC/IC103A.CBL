@@ -1,31 +1,31 @@
 000100 IDENTIFICATION DIVISION.                                         IC1034.2
 000200 PROGRAM-ID.                                                      IC1034.2
 000300     IC103A.                                                      IC1034.2
-000400****************************************************************  IC1034.2
-000500*                                                              *  IC1034.2
-000600*    VALIDATION FOR:-                                          *  IC1034.2
-000700*                                                              *  IC1034.2
-000800*    "ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     ".IC1034.2
-000900*                                                              *  IC1034.2
-001000*    "COBOL 85 VERSION 4.2, Apr  1993 SSVG                      ".IC1034.2
-001100*                                                              *  IC1034.2
-001200****************************************************************  IC1034.2
-001300*                                                              *  IC1034.2
-001400*      X-CARDS USED BY THIS PROGRAM ARE :-                     *  IC1034.2
-001500*                                                              *  IC1034.2
-001600*        X-55  - SYSTEM PRINTER NAME.                          *  IC1034.2
-001700*        X-82  - SOURCE COMPUTER NAME.                         *  IC1034.2
-001800*        X-83  - OBJECT COMPUTER NAME.                         *  IC1034.2
-001900*                                                              *  IC1034.2
-002000****************************************************************  IC1034.2
-002100*        THIS PROGRAM TESTS THE USE OF MULTIPLE DATA-NAMES        IC1034.2
-002200*    IN THE USING PHRASE OF THE CALL STATEMENT.  TWO 01 GROUP     IC1034.2
-002300*    ITEMS AND AN ELEMENTARY 77 ITEM ARE THE PARAMETERS.  THE     IC1034.2
-002400*    DATA DEFINITIONS FOR THE GROUP ITEM PARAMETERS ARE NOT       IC1034.2
-002500*    THE SAME AS IN THE SUBPROGRAM BUT THE NUMBER OF CHARACTERS   IC1034.2
-002600*    ARE IDENTICAL.                                               IC1034.2
-002700*        THIS PROGRAM ALSO CALLS A SUBPROGRAM WITH MORE           IC1034.2
-002800*    THAN ONE EXIT PROGRAM STATEMENT.                             IC1034.2
+000400*                                                                         
+000500*                                                                         
+000600*                                                                         
+000700*                                                                         
+000800*                                                                         
+000900*                                                                         
+001000*                                                                         
+001100*                                                                         
+001200*                                                                         
+001300*                                                                         
+001400*                                                                         
+001500*                                                                         
+001600*                                                                         
+001700*                                                                         
+001800*                                                                         
+001900*                                                                         
+002000*                                                                         
+002100*                                                                         
+002200*                                                                         
+002300*                                                                         
+002400*                                                                         
+002500*                                                                         
+002600*                                                                         
+002700*                                                                         
+002800*                                                                         
 002900 ENVIRONMENT DIVISION.                                            IC1034.2
 003000 CONFIGURATION SECTION.                                           IC1034.2
 003100 SOURCE-COMPUTER.                                                 IC1034.2
@@ -240,7 +240,7 @@
 024200      ADD ERROR-COUNTER TO ERROR-HOLD ADD INSPECT-COUNTER TO      IC1034.2
 024300      ERROR-HOLD. ADD DELETE-COUNTER TO ERROR-HOLD.               IC1034.2
 024400      ADD PASS-COUNTER TO ERROR-HOLD.                             IC1034.2
-024500*     IF PASS-COUNTER EQUAL TO ERROR-HOLD GO TO END-ROUTINE-12.   IC1034.2
+024500*                                                                         
 024600      MOVE PASS-COUNTER TO CCVS-E-4-1.                            IC1034.2
 024700      MOVE ERROR-HOLD TO CCVS-E-4-2.                              IC1034.2
 024800      MOVE CCVS-E-4 TO CCVS-E-2-2.                                IC1034.2
@@ -308,9 +308,9 @@
 031000 CCVS1-EXIT.                                                      IC1034.2
 031100     EXIT.                                                        IC1034.2
 031200 SECT-IC103-0001 SECTION.                                         IC1034.2
-031300*        THE TESTS IN THIS SECTION CALL A SUBPROGRAM WHICH        IC1034.2
-031400*    HAS FOUR EXIT PROGRAM STATEMENTS.  A DIFFERENT EXIT IS       IC1034.2
-031500*    TAKEN FOR EACH CALL TO THE SUBPROGRAM.                       IC1034.2
+031300*                                                                         
+031400*                                                                         
+031500*                                                                         
 031600 EXIT-INIT.                                                       IC1034.2
 031700     MOVE "MULTIPLE EXIT PROGRM" TO FEATURE.                      IC1034.2
 031800 EXIT-INIT-001.                                                   IC1034.2
@@ -381,9 +381,9 @@
 038300     PERFORM PRINT-DETAIL.                                        IC1034.2
 038400     GO TO SECT-IC103-0002.                                       IC1034.2
 038500 EXIT-DELETES.                                                    IC1034.2
-038600*        IF THE SUBPROGRAM WITH MULTIPLE EXIT PROGRAM             IC1034.2
-038700*    STATEMENTS CANNOT BE INCLUDED IN THE RUN UNIT                IC1034.2
-038800*    DELETE PARAGRAPH EXIT-INIT-001 THRU EXIT-WRITE-004.          IC1034.2
+038600*                                                                         
+038700*                                                                         
+038800*                                                                         
 038900     PERFORM DE-LETE.                                             IC1034.2
 039000     MOVE "EXIT-TEST-01" TO PAR-NAME.                             IC1034.2
 039100     PERFORM PRINT-DETAIL.                                        IC1034.2
@@ -397,11 +397,11 @@
 039900     MOVE "EXIT-TEST-04" TO PAR-NAME.                             IC1034.2
 040000     PERFORM PRINT-DETAIL.                                        IC1034.2
 040100 SECT-IC103-0002 SECTION.                                         IC1034.2
-040200*        THIS SECTION CALLS A SUBPROGRAM WITH TWO GROUP ITEMS     IC1034.2
-040300*    AND ONE ELEMENTARY ITEM IN THE USING PHRASE. THE ITEM        IC1034.2
-040400*    DESCRIPTIONS ARE DIFFERENT IN THE SUBPROGRAM FROM THE MAIN   IC1034.2
-040500*    PROGRAM, BUT THE NUMBER OF CHARACTERS IS IDENTICAL.          IC1034.2
-040600*    REFERENCE  X3.23-1974,  SECTION XII, 3.1 AND 3.2.            IC1034.2
+040200*                                                                         
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
 040700 CALL-INIT-06.                                                    IC1034.2
 040800     MOVE "CALL-TEST-06" TO PAR-NAME.                             IC1034.2
 040900     MOVE 0 TO NUMER-FIELD  ELEM-77 NUM-ITEM.                     IC1034.2
@@ -414,8 +414,8 @@
 041600     PERFORM DE-LETE.                                             IC1034.2
 041700     PERFORM PRINT-DETAIL.                                        IC1034.2
 041800     GO TO CCVS-EXIT.                                             IC1034.2
-041900*       IF IC104 CANNOT BE INCLUDED IN THE RUN UNIT               IC1034.2
-042000*    DELETE THE PARAGRAPH CALL-TEST-06.                           IC1034.2
+041900*                                                                         
+042000*                                                                         
 042100 CALL-TEST-06-01.                                                 IC1034.2
 042200     IF ALPHA-NUM-FIELD NOT EQUAL TO "IC104"                      IC1034.2
 042300         GO TO CALL-FAIL-06-01.                                   IC1034.2
@@ -430,13 +430,13 @@
 043200     ADD 1 TO REC-CT.                                             IC1034.2
 043300     PERFORM PRINT-DETAIL.                                        IC1034.2
 043400 CALL-TEST-06-02.                                                 IC1034.2
-043500     IF NUMER-FIELD EQUAL TO 21                                   IC1034.2
+043500     IF NUMER-FIELD EQUAL TO 95                                   IC1034.2
 043600         PERFORM PASS                                             IC1034.2
 043700         GO TO CALL-WRITE-06-02.                                  IC1034.2
 043800 CALL-FAIL-06-02.                                                 IC1034.2
 043900     PERFORM FAIL.                                                IC1034.2
 044000     MOVE NUMER-FIELD TO COMPUTED-18V0.                           IC1034.2
-044100     MOVE 21 TO CORRECT-18V0.                                     IC1034.2
+044100     MOVE 95 TO CORRECT-18V0.                                     IC1034.2
 044200     MOVE "NUMERIC DISPLAY PARAMETER" TO RE-MARK.                 IC1034.2
 044300 CALL-WRITE-06-02.                                                IC1034.2
 044400     ADD 1 TO REC-CT.                                             IC1034.2
@@ -454,13 +454,13 @@
 045600     ADD 1 TO REC-CT.                                             IC1034.2
 045700     PERFORM PRINT-DETAIL.                                        IC1034.2
 045800 CALL-TEST-06-04.                                                 IC1034.2
-045900     IF ELEM-77 EQUAL TO 0.7652                                   IC1034.2
+045900     IF ELEM-77 EQUAL TO 0.4654                                   IC1034.2
 046000         PERFORM PASS                                             IC1034.2
 046100         GO TO CALL-WRITE-06-04.                                  IC1034.2
 046200 CALL-FAIL-06-04.                                                 IC1034.2
 046300     PERFORM FAIL.                                                IC1034.2
 046400     MOVE ELEM-77 TO COMPUTED-4V14.                               IC1034.2
-046500     MOVE 0.7652 TO CORRECT-4V14.                                 IC1034.2
+046500     MOVE 0.4654 TO CORRECT-4V14.                                 IC1034.2
 046600     MOVE "COMPUTATIONAL PARAMETER" TO RE-MARK.                   IC1034.2
 046700 CALL-WRITE-06-04.                                                IC1034.2
 046800     ADD 1 TO REC-CT.                                             IC1034.2
@@ -478,13 +478,13 @@
 048000     ADD 1 TO REC-CT.                                             IC1034.2
 048100     PERFORM PRINT-DETAIL.                                        IC1034.2
 048200 CALL-TEST-06-06.                                                 IC1034.2
-048300     IF ALPHA-EDITED EQUAL TO "AB M0D"                            IC1034.2
+048300     IF ALPHA-EDITED EQUAL TO "AB C5D"                            IC1034.2
 048400         PERFORM PASS                                             IC1034.2
 048500         GO TO CALL-WRITE-06-06.                                  IC1034.2
 048600 CALL-FAIL-06-06.                                                 IC1034.2
 048700     PERFORM FAIL.                                                IC1034.2
 048800     MOVE ALPHA-EDITED TO COMPUTED-A.                             IC1034.2
-048900     MOVE "AB M0D" TO CORRECT-A.                                  IC1034.2
+048900     MOVE "AB C5D" TO CORRECT-A.                                  IC1034.2
 049000     MOVE "ALPHANUMERIC EDITED" TO RE-MARK.                       IC1034.2
 049100 CALL-WRITE-06-06.                                                IC1034.2
 049200     ADD 1 TO REC-CT.                                             IC1034.2

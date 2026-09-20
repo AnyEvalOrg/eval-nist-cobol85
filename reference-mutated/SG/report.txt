@@ -4,7 +4,7 @@ SG101A.CBL    151  151    0       0       0 OK
 SG102A.CBL      8    8    0       0       0 OK
 SG103A.CBL      7    7    0       0       0 OK
 SG104A.CBL      9    7    2       0       0 
-SG105A.CBL      9    7    2       0       0 
+SG105A.CBL      9    6    3       0       0 
 SG106A.CBL      9    8    1       0       0 
 SG201A.CBL     79   76    3       0       0 
 SG202A.CBL      5    2    3       0       0 
@@ -14,7 +14,7 @@ SG302M.CBL      0    0    0       0       0 OK
 SG303M.CBL      0    0    0       0       0 OK
 SG401M.CBL      0    0    0       0       0 OK
 --------    ----- ---- ---- ------- -------
-Total         310  296   14       0       0
+Total         310  295   15       0       0
 
 Number of programs:    13
 Successfully executed:  7
