@@ -26,7 +26,7 @@ TEST RESULT OF IF127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD Function         FAIL* F-ORD-07                                                                                    
                                                                                                                         
                                      COMPUTED=  000000105.000000000                                                     
-                                     CORRECT =  000000100.000000000  See ref. A-60 2.31                                 
+                                     CORRECT =  000000165.000000000  See ref. A-60 2.31                                 
                                                                                                                         
  ORD Function         PASS  F-ORD-08                                                                                    
  ORD Function         PASS  F-ORD-09                                                                                    

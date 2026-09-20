@@ -627,7 +627,7 @@
 062900 MOVE-TEST-F1-8-0.                                                NC1054.2
 063000     MOVE     MOVE32 TO MOVE41.                                   NC1054.2
 063100 MOVE-TEST-F1-8-1.                                                NC1054.2
-063200     IF       MOVE41 EQUAL TO "  ABCTE"                           NC1054.2
+063200     IF       MOVE41 EQUAL TO "  DEFGH"                           NC1054.2
 063300              PERFORM PASS                                        NC1054.2
 063400              ELSE                                                NC1054.2
 063500              GO TO MOVE-FAIL-F1-8.                               NC1054.2
@@ -638,7 +638,7 @@
 064000     GO TO    MOVE-WRITE-F1-8.                                    NC1054.2
 064100 MOVE-FAIL-F1-8.                                                  NC1054.2
 064200     MOVE     MOVE41 TO COMPUTED-A.                               NC1054.2
-064300     MOVE "  ABCTE" TO CORRECT-A.                                 NC1054.2
+064300     MOVE "  DEFGH" TO CORRECT-A.                                 NC1054.2
 064400     PERFORM  FAIL.                                               NC1054.2
 064500 MOVE-WRITE-F1-8.                                                 NC1054.2
 064600     MOVE "MOVE-TEST-F1-8" TO PAR-NAME.                           NC1054.2
@@ -1006,7 +1006,7 @@
 100800 MOVE-TEST-F1-26-0.                                               NC1054.2
 100900     MOVE     MOVE51 TO MOVE67.                                   NC1054.2
 101000 MOVE-TEST-F1-26-1.                                               NC1054.2
-101100     IF       MOVE67 EQUAL TO "11345-"                            NC1054.2
+101100     IF       MOVE67 EQUAL TO "13245-"                            NC1054.2
 101200              PERFORM PASS                                        NC1054.2
 101300              ELSE                                                NC1054.2
 101400              GO TO MOVE-FAIL-F1-26.                              NC1054.2
@@ -1017,7 +1017,7 @@
 101900     GO TO    MOVE-WRITE-F1-26.                                   NC1054.2
 102000 MOVE-FAIL-F1-26.                                                 NC1054.2
 102100     MOVE     MOVE67 TO COMPUTED-A.                               NC1054.2
-102200     MOVE "11345-" TO CORRECT-A.                                  NC1054.2
+102200     MOVE "13245-" TO CORRECT-A.                                  NC1054.2
 102300     PERFORM  FAIL.                                               NC1054.2
 102400 MOVE-WRITE-F1-26.                                                NC1054.2
 102500     MOVE "MOVE-TEST-F1-26" TO PAR-NAME.                          NC1054.2

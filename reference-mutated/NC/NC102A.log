@@ -32,15 +32,15 @@ TEST RESULT OF NC102A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PERFORM              PASS  PFM-TEST-F1-1                                                                               
  PERFORM              PASS  PFM-TEST-F1-2                                                                               
  PERFORM TIMES        PASS  PFM-TEST-F2-1                                                                               
- NESTED PERFORM THRU  FAIL* PFM-TEST-F1-3                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000070.000000000                                                     
-                                     CORRECT =  000000079.000000000  V1-111 6.20.4 GR10                                 
-                                                                                                                        
+ NESTED PERFORM THRU  PASS  PFM-TEST-F1-3                                                                               
  NESTED PERFORM       PASS  PFM-TEST-F1-4                                                                               
  PERFORM SECTION-NAME PASS  PFM-TEST-F1-5                                                                               
  PERFORM EXIT PARAS   PASS  PFM-TEST-F2-2                                                                               
- PERFORM              PASS  PFM-TEST-F1-6                                                                                                                                                                                                       
+ PERFORM              FAIL* PFM-TEST-F1-6                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000302.000000000                                                     
+                                     CORRECT =  000111302.000000000  V1-111 6.20.4 GR10                                 
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -55,15 +55,15 @@ TEST RESULT OF NC102A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
  PERFORM TIMES        PASS  PFM-TEST-F2-3                                                                               
- PERFORM THRU         FAIL* PFM-TEST-F1-7                                                                               
-                                                                                                                        
-                                     COMPUTED=  000050504.000000000                                                     
-                                     CORRECT =  000050304.000000000  V1-111 6.20.4 GR10                                 
-                                                                                                                        
+ PERFORM THRU         PASS  PFM-TEST-F1-7                                                                               
  PERFORM THRU, TIMES  PASS  PFM-TEST-F2-4                                                                               
  NESTED PERFORM       PASS  PFM-TEST-F1-8                                                                               
  NESTED PERFORM       PASS  PFM-TEST-F2-5                                                                               
- NESTED PERFORM       PASS  PFM-TEST-F1-9                                                                               
+ NESTED PERFORM       FAIL* PFM-TEST-F1-9                                                                               
+                                                                                                                        
+                                     COMPUTED= ABCDEFGHIJKLMNOPQRST                                                     
+                                     CORRECT = JKLMNOPQRSTUVWXYZABC  V1-111 6.20.4 GR10                                 
+                                                                                                                        
  PERFORM GO TO PARAS  PASS  PFM-TEST-F1-10                                                                              
  PERFORM ... TIMES    PASS  PFM-TEST-F2-6                                                                               
  PERFORM ... TIMES    PASS  PFM-TEST-F1-11-1                                                                            

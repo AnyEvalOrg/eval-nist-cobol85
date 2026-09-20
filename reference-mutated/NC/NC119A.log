@@ -23,13 +23,13 @@ TEST RESULT OF NC119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT             FAIL* SUB-TEST-GF-3                                                                               
                                                                                                                         
                                      COMPUTED=  000322111.111223000                                                     
-                                     CORRECT =  000322111.131223000  VI-42 5.12.4                                       
+                                     CORRECT =  000322111.333223000  VI-42 5.12.4                                       
                                                                                                                         
    GIVING             PASS  SUB-TEST-GF-13                                                                              
    GIVING             FAIL* SUB-TEST-GF-14                                                                              
                                                                                                                         
                                      COMPUTED= -000344777.777443000                                                     
-                                     CORRECT = -000344777.777433000  VI-42 5.12.4                                       
+                                     CORRECT = -000344777.777003000  VI-42 5.12.4                                       
                                                                                                                         
    ROUNDED            PASS  SUB-TEST-GF-4                                                                               
    ROUNDED            PASS  SUB-TEST-GF-15                                                                              

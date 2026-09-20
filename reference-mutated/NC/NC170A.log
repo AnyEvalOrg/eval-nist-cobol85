@@ -30,7 +30,7 @@ TEST RESULT OF NC170A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-10-1                                                                            
                                                                                                                         
                                      COMPUTED=  011111111111111111                                                      
-                                     CORRECT =  011111111111116111   V1-107 6.19.4 GR2                                  
+                                     CORRECT =  088888888888888888   V1-107 6.19.4 GR2                                  
                                                                                                                         
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-?0-2                                                                            
  MULTIPLY BY GIVING   PASS  MPY-TEST-F2-11                                                                              
@@ -39,7 +39,7 @@ TEST RESULT OF NC170A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY GIVING   FAIL* MPY-TEST-F2-14                                                                              
                                                                                                                         
                                      COMPUTED= -329999999999999967                                                      
-                                     CORRECT = -329999996999999967   V1-107 6.19.4 GR2                                  
+                                     CORRECT = -323333333333333367   V1-107 6.19.4 GR2                                  
                                                                                                                                                                                                                                                 
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         

@@ -378,10 +378,10 @@
 037800     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 037900 F-LOWCASE-TEST-05.                                               IF1184.2
 038000     MOVE FUNCTION LOWER-CASE("8isaNUMBER") TO WS-ANUM.           IF1184.2
-038100     IF WS-ANUM = "8isknumber" THEN                               IF1184.2
+038100     IF WS-ANUM = "3nxfszrgjw" THEN                               IF1184.2
 038200                    PERFORM PASS                                  IF1184.2
 038300     ELSE                                                         IF1184.2
-038400                    MOVE "8isknumber"  TO CORRECT-A               IF1184.2
+038400                    MOVE "3nxfszrgjw"  TO CORRECT-A               IF1184.2
 038500                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 038600                    PERFORM FAIL.                                 IF1184.2
 038700     GO TO F-LOWCASE-WRITE-05.                                    IF1184.2
@@ -432,10 +432,10 @@
 043200     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 043300 F-LOWCASE-TEST-08.                                               IF1184.2
 043400     MOVE FUNCTION LOWER-CASE(C) TO WS-ANUM.                      IF1184.2
-043500     IF WS-ANUM = "whs" THEN                                      IF1184.2
+043500     IF WS-ANUM = "aew" THEN                                      IF1184.2
 043600                    PERFORM PASS                                  IF1184.2
 043700     ELSE                                                         IF1184.2
-043800                    MOVE "whs"  TO CORRECT-A                      IF1184.2
+043800                    MOVE "aew"  TO CORRECT-A                      IF1184.2
 043900                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 044000                    PERFORM FAIL.                                 IF1184.2
 044100     GO TO F-LOWCASE-WRITE-08.                                    IF1184.2

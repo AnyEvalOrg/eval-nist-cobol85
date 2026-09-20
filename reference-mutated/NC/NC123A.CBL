@@ -465,7 +465,7 @@
 046700 IND-TEST-GF-5-0.                                                 NC1234.2
 046800     ADD TABLE1-NUM (INDEX1) TO TABLE2-NUM (INDEX2) ROUNDED.      NC1234.2
 046900 IND-TEST-GF-5-1.                                                 NC1234.2
-047000     IF TABLE2-NUM (INDEX2) EQUAL TO 7.7                          NC1234.2
+047000     IF TABLE2-NUM (INDEX2) EQUAL TO 3.7                          NC1234.2
 047100        PERFORM PASS                                              NC1234.2
 047200        ELSE GO TO IND-FAIL-GF-5.                                 NC1234.2
 047300     GO TO IND-WRITE-GF-5.                                        NC1234.2
@@ -475,7 +475,7 @@
 047700 IND-FAIL-GF-5.                                                   NC1234.2
 047800     PERFORM FAIL.                                                NC1234.2
 047900     MOVE TABLE2-NUM (INDEX2) TO COMPUTED-14V4.                   NC1234.2
-048000     MOVE 7.7 TO CORRECT-14V4.                                    NC1234.2
+048000     MOVE 3.7 TO CORRECT-14V4.                                    NC1234.2
 048100 IND-WRITE-GF-5.                                                  NC1234.2
 048200     MOVE "IND-TEST-GF-5" TO PAR-NAME.                            NC1234.2
 048300     PERFORM PRINT-DETAIL.                                        NC1234.2
@@ -596,7 +596,7 @@
 059800 IND-TEST-GF-7-0.                                                 NC1234.2
 059900     ADD TABLE4-NUM2 (3  1) TO TABLE4-NUM2 (INDEX4-1  INDEX4-2).  NC1234.2
 060000 IND-TEST-GF-7-1.                                                 NC1234.2
-060100     IF TABLE4-NUM2 (INDEX4-1  INDEX4-2) EQUAL TO 50              NC1234.2
+060100     IF TABLE4-NUM2 (INDEX4-1  INDEX4-2) EQUAL TO 51              NC1234.2
 060200        PERFORM PASS                                              NC1234.2
 060300        ELSE GO TO IND-FAIL-GF-7.                                 NC1234.2
 060400     GO TO IND-WRITE-GF-7.                                        NC1234.2
@@ -606,7 +606,7 @@
 060800 IND-FAIL-GF-7.                                                   NC1234.2
 060900     PERFORM FAIL.                                                NC1234.2
 061000     MOVE TABLE4-NUM2 (INDEX4-1  INDEX4-2) TO COMPUTED-14V4.      NC1234.2
-061100     MOVE 50 TO CORRECT-14V4.                                     NC1234.2
+061100     MOVE 51 TO CORRECT-14V4.                                     NC1234.2
 061200 IND-WRITE-GF-7.                                                  NC1234.2
 061300     MOVE "IND-TEST-GF-7" TO PAR-NAME.                            NC1234.2
 061400     PERFORM PRINT-DETAIL.                                        NC1234.2

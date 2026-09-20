@@ -1452,7 +1452,7 @@
 145400*                                                                         
 145500 UST-TEST-GF-11.                                                  NC2184.2
 145600     UNSTRING GRP1-XN-10 INTO ID4D-XXXX ID4C-XXX ID4B-XX ID4A-X.  NC2184.2
-145700     IF      GRP4-XN-10 = "JHIEFGAYCD"                            NC2184.2
+145700     IF      GRP4-XN-10 = "MKLHIJDEFG"                            NC2184.2
 145800             PERFORM PASS                                         NC2184.2
 145900             GO TO UST-WRITE-GF-11-1                              NC2184.2
 146000     ELSE                                                         NC2184.2
@@ -1463,7 +1463,7 @@
 146500 UST-FAIL-GF-11-1.                                                NC2184.2
 146600     PERFORM FAIL                                                 NC2184.2
 146700     MOVE    GRP4-XN-10 TO COMPUTED-A                             NC2184.2
-146800     MOVE    "JHIEFGAYCD" TO CORRECT-A.                           NC2184.2
+146800     MOVE    "MKLHIJDEFG" TO CORRECT-A.                           NC2184.2
 146900 UST-WRITE-GF-11-1.                                               NC2184.2
 147000     PERFORM PRINT-DETAIL.                                        NC2184.2
 147100*                                                                         
@@ -1774,7 +1774,7 @@
 177600     GO      TO UST-INIT-GF-18.                                   NC2184.2
 177700*                                                                         
 177800 UST-TEST-GF-17-1.                                                NC2184.2
-177900     IF      GRP4-XN-6 = "F     "                                 NC2184.2
+177900     IF      GRP4-XN-6 = "D     "                                 NC2184.2
 178000             PERFORM PASS                                         NC2184.2
 178100             GO TO UST-WRITE-GF-17-1                              NC2184.2
 178200     ELSE                                                         NC2184.2
@@ -1785,7 +1785,7 @@
 178700 UST-FAIL-GF-17-1.                                                NC2184.2
 178800     PERFORM FAIL                                                 NC2184.2
 178900     MOVE    GRP4-XN-6 TO COMPUTED-A                              NC2184.2
-179000     MOVE    "F     " TO CORRECT-A.                               NC2184.2
+179000     MOVE    "D     " TO CORRECT-A.                               NC2184.2
 179100 UST-WRITE-GF-17-1.                                               NC2184.2
 179200     PERFORM PRINT-DETAIL.                                        NC2184.2
 179300*                                                                         

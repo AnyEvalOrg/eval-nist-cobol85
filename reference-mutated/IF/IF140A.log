@@ -18,7 +18,7 @@ TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  UPPER-CASE Function  FAIL* F-UPCASE-03                                                                                 
                                                                                                                         
                                      COMPUTED= HIGHNLOW                                                                 
-                                     CORRECT = HIGHKLOW              See ref. A-73 2.44                                 
+                                     CORRECT = OPNOUSVD              See ref. A-73 2.44                                 
                                                                                                                         
  UPPER-CASE Function  FAIL* F-UPCASE-04                                                                                 
                                                                                                                         
@@ -29,7 +29,7 @@ TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  UPPER-CASE Function  FAIL* F-UPCASE-06                                                                                 
                                                                                                                         
                                      COMPUTED= TUMBLE                                                                   
-                                     CORRECT = TUMFLE                See ref. A-73 2.44                                 
+                                     CORRECT = YZRGQJ                See ref. A-73 2.44                                 
                                                                                                                         
  UPPER-CASE Function  PASS  F-UPCASE-07                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-08                                                                                 

@@ -25,7 +25,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.build_dataset import _build, build, read, dependencies
-from scripts.cobol_fields import data_fields, resolve_field, replacement_options, paired_literal
+from scripts.cobol_fields import data_fields, resolve_field, replacement_options, paired_literal, representable
 from scripts.mutation_private import mutation_salt, salt_sha256, private_manifest_path, check_salt, write_private
 
 LITERAL = r'''(?:"(?:[^"\n]|"")*"|'(?:[^'\n]|'')*'|[+-]?(?:\d+(?:\.\d+)?|\.\d+))'''
@@ -33,7 +33,7 @@ ITEM = r'[A-Z][A-Z0-9-]*(?:\s*\([^\n()]+\))?'
 CONDITION = re.compile(r'\bIF\s+(?P<item>' + ITEM + r')\s+(?:IS\s+)?(?P<op>NOT\s+EQUAL(?:\s+TO)?|EQUAL(?:\s+TO)?|=|<|>)\s*(?P<literal>' + LITERAL + r')(?=\s|\.(?:\s|$))', re.I)
 EXTENDED_CONDITION = re.compile(CONDITION.pattern.replace('NOT\\s+EQUAL', 'NOT\\s*=|NOT\\s+EQUAL'), re.I)
 CORRECT = re.compile(r'\bMOVE\s+(?P<literal>' + LITERAL + r')\s+TO\s+CORRECT-(?P<kind>N|A|X|18V0|0V18|4V14|14V4)\b', re.I)
-ALGORITHM = 'hmac-sha256-program-v6-four-site-pool'
+ALGORITHM = 'hmac-sha256-program-v7-pattern-preserving'
 
 
 def value(literal):
@@ -82,7 +82,7 @@ def source_code(source, *, continuations=False):
     return ''.join(code), offsets
 
 
-def supported_sites(source, extended=True):
+def supported_sites(source, extended=True, *, require_replacements=True):
     code, offsets = source_code(source)
     sites = []
     fields = data_fields(source)
@@ -134,8 +134,10 @@ def supported_sites(source, extended=True):
             continue
         field = resolve_field(fields, m['item'])
         correct_field = resolve_field(fields, 'CORRECT-' + correct['kind'])
+        if not representable(m['literal'], field) or not representable(correct['literal'], correct_field):
+            continue
         options = replacement_options(m['literal'], correct['literal'], field, correct_field)
-        if not options:
+        if require_replacements and not options:
             continue
         sites.append(dict(item=m['item'], field=field, correct_field=correct_field, options=options, paragraph=paragraph[-1], operator=m['op'], kind=correct['kind'],
                           spans=[(offsets[a], offsets[b-1]+1) for a, b in spans],

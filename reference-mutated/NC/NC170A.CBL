@@ -733,10 +733,10 @@
 073500         GIVING WRK-DS-09V08 ROUNDED ON SIZE ERROR                NC1704.2
 073600         MOVE "0" TO WRK-XN-00001.                                NC1704.2
 073700 MPY-TEST-F2-10-1.                                                NC1704.2
-073800     IF WRK-DS-17V00-S EQUAL TO 11111111111116111                 NC1704.2
+073800     IF WRK-DS-17V00-S EQUAL TO 88888888888888888                 NC1704.2
 073900         PERFORM PASS                                             NC1704.2
 074000         GO TO MPY-WRITE-F2-10-1.                                 NC1704.2
-074100     MOVE  11111111111116111  TO CORRECT-18V0.                    NC1704.2
+074100     MOVE  88888888888888888  TO CORRECT-18V0.                    NC1704.2
 074200     MOVE  WRK-DS-17V00-S     TO COMPUTED-18V0.                   NC1704.2
 074300     PERFORM FAIL.                                                NC1704.2
 074400     GO TO MPY-WRITE-F2-10-1.                                     NC1704.2
@@ -827,10 +827,10 @@
 082900     MULTIPLY A02THREES-CS-18V00 BY A16NINES-CU-18V00             NC1704.2
 083000             GIVING WRK-CS-18V00.                                 NC1704.2
 083100 MPY-TEST-F2-14.                                                  NC1704.2
-083200     IF WRK-CS-18V00 EQUAL TO -329999996999999967                 NC1704.2
+083200     IF WRK-CS-18V00 EQUAL TO -323333333333333367                 NC1704.2
 083300         PERFORM PASS                                             NC1704.2
 083400         GO TO MPY-WRITE-F2-14.                                   NC1704.2
-083500     MOVE -329999996999999967 TO CORRECT-18V0.                    NC1704.2
+083500     MOVE -323333333333333367 TO CORRECT-18V0.                    NC1704.2
 083600     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1704.2
 083700     PERFORM FAIL.                                                NC1704.2
 083800     GO TO MPY-WRITE-F2-14.                                       NC1704.2

@@ -704,7 +704,7 @@
 070600 MOVE-TEST-F1-14-0.                                               NC1044.2
 070700     MOVE     MOVE51 TO MOVE16.                                   NC1044.2
 070800 MOVE-TEST-F1-14-1.                                               NC1044.2
-070900     IF       MOVE16 EQUAL TO "12305CR"                           NC1044.2
+070900     IF       MOVE16 EQUAL TO "12645CR"                           NC1044.2
 071000              PERFORM PASS                                        NC1044.2
 071100              ELSE                                                NC1044.2
 071200              GO TO MOVE-FAIL-F1-14.                              NC1044.2
@@ -715,7 +715,7 @@
 071700     GO TO    MOVE-WRITE-F1-14.                                   NC1044.2
 071800 MOVE-FAIL-F1-14.                                                 NC1044.2
 071900     MOVE     MOVE16 TO COMPUTED-A.                               NC1044.2
-072000     MOVE "12305CR" TO CORRECT-A.                                 NC1044.2
+072000     MOVE "12645CR" TO CORRECT-A.                                 NC1044.2
 072100     PERFORM  FAIL.                                               NC1044.2
 072200 MOVE-WRITE-F1-14.                                                NC1044.2
 072300     MOVE "MOVE-TEST-F1-14" TO PAR-NAME.                          NC1044.2
@@ -1000,7 +1000,7 @@
 100200 MOVE-TEST-F1-28-0.                                               NC1044.2
 100300     MOVE     MOVE23 TO MOVE11.                                   NC1044.2
 100400 MOVE-TEST-F1-28-1.                                               NC1044.2
-100500     IF       MOVE11 EQUAL TO "$00,123.65"                        NC1044.2
+100500     IF       MOVE11 EQUAL TO "$88,123.45"                        NC1044.2
 100600              PERFORM PASS                                        NC1044.2
 100700              ELSE                                                NC1044.2
 100800              GO TO MOVE-FAIL-F1-28.                              NC1044.2
@@ -1011,7 +1011,7 @@
 101300     GO TO    MOVE-WRITE-F1-28.                                   NC1044.2
 101400 MOVE-FAIL-F1-28.                                                 NC1044.2
 101500     MOVE     MOVE11 TO COMPUTED-A.                               NC1044.2
-101600     MOVE "$00,123.65" TO CORRECT-A.                              NC1044.2
+101600     MOVE "$88,123.45" TO CORRECT-A.                              NC1044.2
 101700     PERFORM  FAIL.                                               NC1044.2
 101800 MOVE-WRITE-F1-28.                                                NC1044.2
 101900     MOVE "MOVE-TEST-F1-28" TO PAR-NAME.                          NC1044.2

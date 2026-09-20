@@ -1,7 +1,7 @@
 {
   "population": "Mutated standalone .CBL programs",
   "indexed_programs": 381,
-  "eligible": 17,
+  "eligible": 16,
   "by_module": {
     "NC": 13,
     "SM": 0,
@@ -12,7 +12,7 @@
     "ST": 0,
     "SG": 0,
     "OB": 0,
-    "IF": 4,
+    "IF": 3,
     "RW": 0,
     "DB": 0
   },
@@ -705,9 +705,9 @@
       "program": "IF112A",
       "module": "IF",
       "source_path": "IF/IF112A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "fewer than 4 supported sites"
       ],
       "result_rows": 8,
       "inspection_count": 0,
@@ -5279,11 +5279,11 @@
     }
   ],
   "mutation_summary": {
-    "candidates": 20,
-    "planted_sites": 43,
-    "shipped_sites": 37,
+    "candidates": 19,
+    "planted_sites": 41,
+    "shipped_sites": 35,
     "original_exclusions": 58,
-    "insufficient_sites": 303,
+    "insufficient_sites": 304,
     "execution_exclusions": 3,
     "pending": 0
   }

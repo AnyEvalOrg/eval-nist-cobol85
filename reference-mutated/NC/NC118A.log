@@ -17,14 +17,18 @@ TEST RESULT OF NC118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD ---                                                                                                                
    TO                 PASS  SIG-TEST-GF-2                                                                               
    TO                 PASS  SIG-TEST-GF-3                                                                               
-   TO                 FAIL* SIG-TEST-GF-4                                                                               
+   TO                 PASS  SIG-TEST-GF-4                                                                               
+   GIVING             FAIL* SIG-TEST-GF-10                                                                              
                                                                                                                         
-                                     COMPUTED=  000000001111122233                                                      
-                                     CORRECT =  000000001111522233   VI-42 5.12.4                                       
+                                     COMPUTED=  000333666.666333000                                                     
+                                     CORRECT =  000333222.666333000  VI-42 5.12.4                                       
                                                                                                                         
-   GIVING             PASS  SIG-TEST-GF-10                                                                              
    GIVING             PASS  SIG-TEST-GF-11                                                                              
-   ROUNDED            PASS  SIG-TEST-GF-5                                                                               
+   ROUNDED            FAIL* SIG-TEST-GF-5                                                                               
+                                                                                                                        
+                                     COMPUTED=  000055555.000000000                                                     
+                                     CORRECT =  000066666.000000000  VI-42 5.12.4                                       
+                                                                                                                        
    ROUNDED            PASS  SIG-TEST-GF-12                                                                              
    ROUNDED            PASS  SIG-TEST-GF-13-1                                                                            
    ROUNDED            PASS  SIG-TEST-GF-13-2                                                                            
@@ -36,11 +40,7 @@ TEST RESULT OF NC118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    ROUNDED,SIZE ERROR PASS  SIG-TEST-GF-14-2                                                                            
    ROUNDED,SIZE ERROR PASS  SIG-TEST-GF-15-1                                                                            
    ROUNDED,SIZE ERROR PASS  SIG-TEST-GF-15-2                                                                            
-   SERIES             PASS  SIG-TEST-GF-16                                                                              
-   SERIES             PASS  SIG-TEST-GF-17                                                                              
-   SERIES             PASS  SIG-TEST-GF-18                                                                              
-   COMP VS. DISPLAY   PASS  SIG-TEST-GF-8                                                                               
-   COMP VS. DISPLAY   PASS  SIG-TEST-GF-9                                                                                                                                                                                                       
+   SERIES             PASS  SIG-TEST-GF-16                                                                                                                                                                                                      
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,16 +54,16 @@ TEST RESULT OF NC118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+   SERIES             PASS  SIG-TEST-GF-17                                                                              
+   SERIES             PASS  SIG-TEST-GF-18                                                                              
+   COMP VS. DISPLAY   PASS  SIG-TEST-GF-8                                                                               
+   COMP VS. DISPLAY   PASS  SIG-TEST-GF-9                                                                               
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-19-1                                                                            
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-19-2                                                                            
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-20-1                                                                            
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-20-2                                                                            
    COMP VS. DISPLAY   PASS  SIG-TEST-GF-21                                                                              
-   COMP VS. DISPLAY   FAIL* SIG-TEST-GF-22                                                                              
-                                                                                                                        
-                                     COMPUTED=  666667444444444443                                                      
-                                     CORRECT =  666667444444444445   VI-42 5.12.4                                       
-                                                                                                                        
+   COMP VS. DISPLAY   PASS  SIG-TEST-GF-22                                                                              
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

@@ -12,8 +12,9 @@
     "inspect_ai": "0.3.260"
   },
   "dataset": {
-    "source": "NIST CCVS85 newcob.val",
-    "revision": "8aa735e1ad3a0aa7ffe59181a51d94cc9c87e13645a9009a202de28a9b1fbbe5"
+    "source": null,
+    "source_file": null,
+    "revision": null
   },
   "model": {
     "name": null,

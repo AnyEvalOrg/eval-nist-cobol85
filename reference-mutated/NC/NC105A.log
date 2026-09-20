@@ -23,7 +23,7 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MISC MOVE            FAIL* MOVE-TEST-F1-8                                                                              
                                                                                                                         
                                      COMPUTED=   ABCDE                                                                  
-                                     CORRECT =   ABCTE               VI-102 6.18.2                                      
+                                     CORRECT =   DEFGH               VI-102 6.18.2                                      
                                                                                                                         
  GROUP MOVE           PASS  MOVE-TEST-F1-9                                                                              
  GROUP MOVE           PASS  MOVE-TEST-F1-10                                                                             
@@ -58,7 +58,7 @@ TEST RESULT OF NC105A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  EDITED MOVE          FAIL* MOVE-TEST-F1-26                                                                             
                                                                                                                         
                                      COMPUTED= 12345-                                                                   
-                                     CORRECT = 11345-                VI-102 6.18.2                                      
+                                     CORRECT = 13245-                VI-102 6.18.2                                      
                                                                                                                         
  EDITED MOVE          PASS  MOVE-TEST-F1-27                                                                             
  EDITED MOVE          PASS  MOVE-TEST-F1-28                                                                             

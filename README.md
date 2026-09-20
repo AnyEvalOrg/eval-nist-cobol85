@@ -10,8 +10,8 @@ binary metric is pass@1 (one generation, one epoch, no model judge).
 
 <!-- population:begin -->
 The indexed population contains 381 standalone `.CBL` programs.
-The shipped dataset contains **17** programs validated against GnuCOBOL logs.
-Exclusions are **58 original + 303 insufficient-site + 3 execution-evidence**;
+The shipped dataset contains **16** programs validated against GnuCOBOL logs.
+Exclusions are **58 original + 304 insufficient-site + 3 execution-evidence**;
 **0** candidates await fresh operator logs.
 
 | Module | Shipped eligible programs |
@@ -25,13 +25,13 @@ Exclusions are **58 original + 303 insufficient-site + 3 execution-evidence**;
 | ST | 0 |
 | SG | 0 |
 | OB | 0 |
-| IF | 4 |
+| IF | 3 |
 | RW | 0 |
 | DB | 0 |
-| **Total** | **17** |
+| **Total** | **16** |
 
-There are 20 mutation candidates with 43 planted sites;
-37 sites belong to the shipped population.
+There are 19 mutation candidates with 41 planted sites;
+35 sites belong to the shipped population.
 
 <!-- population:end -->
 
@@ -45,10 +45,14 @@ HMAC-SHA256(NIST_MUTATION_SALT, program name) as its random seed. The script
 requires at least 4 supported sites and selects K = max(2, round(0.25 * sites)),
 capped at half the sites (rounded down). `round` uses Python’s nearest-integer,
 ties-to-even rule. Programs below the threshold are excluded with reason
-`fewer than 4 supported sites`. It changes a numeric
-digit or an alphanumeric character in both the IF expectation and its matching
-MOVE to CORRECT. Replacements preserve byte width, character class and fixed-format
-columns. Both the compared item and CORRECT field must have a resolved PICTURE
+`fewer than 4 supported sites`. It changes a whole maximal repeated-digit run
+to another repeated digit in both the IF expectation and its matching MOVE to CORRECT. Numeric literals without
+repeated runs use a delta that preserves digit count and introduces no repeated
+run or isolated run outlier. Signs, decimal points and editing characters remain
+fixed. Alphanumeric literals change a whole word-like token, preserving its case,
+character classes and repeated-character pattern. Sites with no representable,
+pattern-preserving replacement are excluded before sampling. Replacements preserve
+byte width, character class and fixed-format columns. Both the compared item and CORRECT field must have a resolved PICTURE
 and USAGE: replacements respect numeric precision, scale, signs, supported editing,
 and elementary or simple group layouts (including fixed OCCURS). Ambiguous names,
 unresolved COPY layouts, unsupported usages, floating editing and reference
@@ -129,7 +133,7 @@ recorded only in the private manifest, like the uniform comment edits.
 ## Known limitations
 
 The original NIST suite is public. Anyone who can diff the shipped sources
-against `newcob.val` can recover every altered site. The alteration removes known repeated-literal and direct-data-flow shortcuts;
+against `newcob.val` can recover every altered site. The alteration addresses known repeated-literal, repeated-run outlier and direct-data-flow shortcuts;
 it does not establish that arbitrary source-only reasoning cannot recover an
 expectation, and it does not defend against a model that has memorized the
 original suite. Literal uniqueness and conservative local data-flow analysis are
@@ -139,14 +143,19 @@ static analyses can still reveal results.
 Scoring therefore also relies on the sandbox having no access to the original
 suite or a COBOL compiler.
 
-Two fabrication regressions run source readers over all 381 indexed programs.
+Three fabrication regressions run source readers over all 381 indexed programs.
 The frequency/consistency reader infers one-character variants from dominant
-expectations and visible data literals; the other reader predicts all PASS.
-Both receive privileged report layout information, but derive verdicts and
-COMPUTED/CORRECT evidence only from public source. Neither may pass any shipped
-program under `compare_reports`. A positive control demonstrates that the first
-reader reproduces the repeated-string attack with full evidence. Pending mutation
-candidates are also checked against private planted-site witnesses, so missing
+expectations and visible data literals; the outlier-repair reader repairs a single
+exceptional digit inside an otherwise repeated run; the third predicts all PASS.
+They receive privileged report layout information, but derive verdicts and
+COMPUTED/CORRECT evidence only from public source, including source-derived ANSI
+annotations at the exact scored columns. None may pass any shipped program under
+`compare_reports`. Synthetic positive controls reproduce the repeated-string and
+run-outlier attacks with full evidence. A separate reader supplied with true
+planted verdicts and values from the private manifest must pass every shipped
+report, so formatting differences cannot explain attack rejection. That full-report
+positive control requires execution logs and skips while the dataset is pending.
+Pending mutation candidates are also checked against private planted-site witnesses, so missing
 logs cannot produce a vacuous success. These witness checks are necessary-behavior
 checks, not reference execution; fresh GnuCOBOL logs are still required to ship.
 
@@ -247,7 +256,8 @@ provider chart exception; Docker uses the Python-only recipe with networking dis
 `publication.py` suppresses sandbox transcript events and provider diagnostic logs
 within private grading, including exception paths. This is tested against pinned
 Inspect APIs; redaction.yaml adds an exporter policy. The standalone run.py emits
-a target-free bundle and leaves live serving receipts/provenance null. AnyEval's
+a target-free bundle, reads dataset source and artifact hash from the loaded
+manifest at run time, and leaves live serving receipts/provenance null. AnyEval's
 application integration must supply those receipts and pin the image digest.
 The wheel contains Python code, runtime configuration, and packaged `data/` only;
 the reference provenance tree stays in the repository/source distribution.

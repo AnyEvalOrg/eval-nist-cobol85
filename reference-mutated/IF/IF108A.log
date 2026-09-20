@@ -22,13 +22,13 @@ TEST RESULT OF IF108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DATE-OF-INTEGER      FAIL* F-DATEOFINT-07                                                                              
                                                                                                                         
                                      COMPUTED=  016011231.000000000                                                     
-                                     CORRECT =  016011237.000000000  See ref. A-41 2.12                                 
+                                     CORRECT =  016077231.000000000  See ref. A-41 2.12                                 
                                                                                                                         
  DATE-OF-INTEGER      PASS  F-DATEOFINT-08                                                                              
  DATE-OF-INTEGER      FAIL* F-DATEOFINT-09                                                                              
                                                                                                                         
                                      COMPUTED=  032020202.000000000                                                     
-                                     CORRECT =  032029202.000000000  See ref. A-41 2.12                                 
+                                     CORRECT =  032060202.000000000  See ref. A-41 2.12                                 
                                                                                                                         
  DATE-OF-INTEGER      PASS  F-DATEOFINT-10                                                                              
  ***********************************************************************************************************************

@@ -28,14 +28,14 @@ TEST RESULT OF IF118A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LOWER-CASE Function  FAIL* F-LOWCASE-05                                                                                
                                                                                                                         
                                      COMPUTED= 8isanumber                                                               
-                                     CORRECT = 8isknumber            See ref. A-51 2.22                                 
+                                     CORRECT = 3nxfszrgjw            See ref. A-51 2.22                                 
                                                                                                                         
  LOWER-CASE Function  PASS  F-LOWCASE-06                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-07                                                                                
  LOWER-CASE Function  FAIL* F-LOWCASE-08                                                                                
                                                                                                                         
                                      COMPUTED= was                                                                      
-                                     CORRECT = whs                   See ref. A-51 2.22                                 
+                                     CORRECT = aew                   See ref. A-51 2.22                                 
                                                                                                                         
  LOWER-CASE Function  PASS  F-LOWCASE-09                                                                                
  LOWER-CASE Function  PASS  F-LOWCASE-10                                                                                

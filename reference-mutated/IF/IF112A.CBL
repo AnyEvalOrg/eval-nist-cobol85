@@ -374,10 +374,10 @@
 037400     MOVE ZERO TO WS-INT.                                         IF1124.2
 037500 F-DATEOFINT-TEST-05.                                             IF1124.2
 037600     COMPUTE WS-INT = FUNCTION INTEGER-OF-DATE(16011231).         IF1124.2
-037700     IF WS-INT = 345      THEN                                    IF1124.2
+037700     IF WS-INT = 365      THEN                                    IF1124.2
 037800                        PERFORM PASS                              IF1124.2
 037900     ELSE                                                         IF1124.2
-038000                        MOVE  345      TO CORRECT-N               IF1124.2
+038000                        MOVE  365      TO CORRECT-N               IF1124.2
 038100                        MOVE WS-INT TO COMPUTED-N                 IF1124.2
 038200                        PERFORM FAIL.                             IF1124.2
 038300     GO TO F-DATEOFINT-WRITE-05.                                  IF1124.2
@@ -392,10 +392,10 @@
 039200     MOVE ZERO TO WS-INT.                                         IF1124.2
 039300 F-DATEOFINT-TEST-06.                                             IF1124.2
 039400     COMPUTE WS-INT = FUNCTION INTEGER-OF-DATE(A) + 10.           IF1124.2
-039500     IF WS-INT = 450 THEN                                         IF1124.2
+039500     IF WS-INT = 410 THEN                                         IF1124.2
 039600                        PERFORM PASS                              IF1124.2
 039700     ELSE                                                         IF1124.2
-039800                        MOVE  450 TO CORRECT-N                    IF1124.2
+039800                        MOVE  410 TO CORRECT-N                    IF1124.2
 039900                        MOVE WS-INT TO COMPUTED-N                 IF1124.2
 040000                        PERFORM FAIL.                             IF1124.2
 040100     GO TO F-DATEOFINT-WRITE-06.                                  IF1124.2

@@ -345,10 +345,10 @@
 034500     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 034600 F-REVERSE-TEST-03.                                               IF1344.2
 034700     MOVE FUNCTION REVERSE("highnLOW") TO WS-ANUM.                IF1344.2
-034800     IF WS-ANUM = "WOLnhuih" THEN                                 IF1344.2
+034800     IF WS-ANUM = "CURtnmon" THEN                                 IF1344.2
 034900                    PERFORM PASS                                  IF1344.2
 035000     ELSE                                                         IF1344.2
-035100                    MOVE "WOLnhuih"  TO CORRECT-A                 IF1344.2
+035100                    MOVE "CURtnmon"  TO CORRECT-A                 IF1344.2
 035200                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 035300                    PERFORM FAIL.                                 IF1344.2
 035400     GO TO F-REVERSE-WRITE-03.                                    IF1344.2
@@ -435,10 +435,10 @@
 043500     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 043600 F-REVERSE-TEST-08.                                               IF1344.2
 043700     MOVE FUNCTION REVERSE(C) TO WS-ANUM.                         IF1344.2
-043800     IF WS-ANUM = "       suW" THEN                               IF1344.2
+043800     IF WS-ANUM = "       xfB" THEN                               IF1344.2
 043900                    PERFORM PASS                                  IF1344.2
 044000     ELSE                                                         IF1344.2
-044100                    MOVE "       suW"  TO CORRECT-A               IF1344.2
+044100                    MOVE "       xfB"  TO CORRECT-A               IF1344.2
 044200                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 044300                    PERFORM FAIL.                                 IF1344.2
 044400     GO TO F-REVERSE-WRITE-08.                                    IF1344.2

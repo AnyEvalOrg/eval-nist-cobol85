@@ -11,7 +11,7 @@ IF108A.CBL     10    8    2       0       0
 IF109A.CBL      8    6    2       0       0 
 IF110A.CBL      9    9    0       0       0 OK
 IF111A.CBL     23   23    0       0       0 OK
-IF112A.CBL      8    6    2       0       0 
+IF112A.CBL      8    8    0       0       0 OK
 IF113A.CBL      8    8    0       0       0 OK
 IF114A.CBL     23   23    0       0       0 OK
 IF115A.CBL      8    8    0       0       0 OK
@@ -46,9 +46,9 @@ IF401M.CBL      0    0    0       0       0 OK
 IF402M.CBL      1    1    0       0       0 OK
 IF403M.CBL      0    0    0       0       0 OK
 --------    ----- ---- ---- ------- -------
-Total         733  709   24       0       0
+Total         733  711   22       0       0
 
 Number of programs:    45
-Successfully executed: 34
+Successfully executed: 35
 Compile error:          0
 Execute error:          0

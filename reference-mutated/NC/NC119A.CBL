@@ -511,7 +511,7 @@
 051300              A05ONES-DS-LS-00V05                                 NC1194.2
 051400              A06ONES-DS-TS-03V03 FROM WRK-DS-TS-06V06.           NC1194.2
 051500 SUB-TEST-GF-3-1.                                                 NC1194.2
-051600     IF       WRK-DS-TS-06V06 EQUAL TO 322111.131223              NC1194.2
+051600     IF       WRK-DS-TS-06V06 EQUAL TO 322111.333223              NC1194.2
 051700              PERFORM PASS GO TO SUB-WRITE-GF-3.                  NC1194.2
 051800     GO       TO SUB-FAIL-GF-3.                                   NC1194.2
 051900 SUB-DELETE-GF-3.                                                 NC1194.2
@@ -519,7 +519,7 @@
 052100     GO       TO SUB-WRITE-GF-3.                                  NC1194.2
 052200 SUB-FAIL-GF-3.                                                   NC1194.2
 052300     MOVE     WRK-DS-TS-06V06 TO COMPUTED-N.                      NC1194.2
-052400     MOVE     322111.131223 TO CORRECT-N.                         NC1194.2
+052400     MOVE     322111.333223 TO CORRECT-N.                         NC1194.2
 052500     PERFORM  FAIL.                                               NC1194.2
 052600 SUB-WRITE-GF-3.                                                  NC1194.2
 052700     MOVE     "SUB-TEST-GF-3" TO PAR-NAME.                        NC1194.2
@@ -553,7 +553,7 @@
 055500              A05ONES-DS-LS-00V05                                 NC1194.2
 055600              A12THREES-DS-06V06                                  NC1194.2
 055700              A06THREES-DS-03V03 FROM ZERO GIVING WRK-DS-TS-06V06.NC1194.2
-055800     IF       WRK-DS-TS-06V06 EQUAL TO -344777.777433             NC1194.2
+055800     IF       WRK-DS-TS-06V06 EQUAL TO -344777.777003             NC1194.2
 055900              PERFORM PASS GO TO SUB-WRITE-GF-14.                 NC1194.2
 056000     GO       TO SUB-FAIL-GF-14.                                  NC1194.2
 056100 SUB-DELETE-GF-14.                                                NC1194.2
@@ -561,7 +561,7 @@
 056300     GO       TO SUB-WRITE-GF-14.                                 NC1194.2
 056400 SUB-FAIL-GF-14.                                                  NC1194.2
 056500     MOVE     WRK-DS-TS-06V06 TO COMPUTED-N.                      NC1194.2
-056600     MOVE     -344777.777433 TO CORRECT-N.                        NC1194.2
+056600     MOVE     -344777.777003 TO CORRECT-N.                        NC1194.2
 056700     PERFORM  FAIL.                                               NC1194.2
 056800 SUB-WRITE-GF-14.                                                 NC1194.2
 056900     MOVE     "SUB-TEST-GF-14" TO PAR-NAME.                       NC1194.2

@@ -533,7 +533,7 @@
 053500              A10ONES-DS-T-10V00                                  NC1184.2
 053600              A05ONES-DS-L-05V00 TO WRK-DS-10V00.                 NC1184.2
 053700 SIG-TEST-GF-4-1.                                                 NC1184.2
-053800     IF       WRK-DS-10V00 EQUAL TO 1111522233                    NC1184.2
+053800     IF       WRK-DS-10V00 EQUAL TO 1111122233                    NC1184.2
 053900              PERFORM PASS GO TO SIG-WRITE-GF-4.                  NC1184.2
 054000     GO       TO SIG-FAIL-GF-4.                                   NC1184.2
 054100 SIG-DELETE-GF-4.                                                 NC1184.2
@@ -541,7 +541,7 @@
 054300     GO       TO SIG-WRITE-GF-4.                                  NC1184.2
 054400 SIG-FAIL-GF-4.                                                   NC1184.2
 054500     MOVE     WRK-DS-10V00 TO COMPUTED-18V0.                      NC1184.2
-054600     MOVE     1111522233   TO CORRECT-18V0.                       NC1184.2
+054600     MOVE     1111122233   TO CORRECT-18V0.                       NC1184.2
 054700     PERFORM  FAIL.                                               NC1184.2
 054800 SIG-WRITE-GF-4.                                                  NC1184.2
 054900     MOVE     "SIG-TEST-GF-4" TO PAR-NAME.                        NC1184.2
@@ -554,7 +554,7 @@
 055600     ADD      A06THREES-DS-03V03                                  NC1184.2
 055700              A12THREES-DS-06V06 GIVING WRK-DS-09V09.             NC1184.2
 055800 SIG-TEST-GF-10-1.                                                NC1184.2
-055900     IF       WRK-DS-09V09 EQUAL TO 000333666.666333000           NC1184.2
+055900     IF       WRK-DS-09V09 EQUAL TO 000333222.666333000           NC1184.2
 056000              PERFORM PASS GO TO SIG-WRITE-GF-10.                 NC1184.2
 056100     GO       TO SIG-FAIL-GF-10.                                  NC1184.2
 056200 SIG-DELETE-GF-10.                                                NC1184.2
@@ -562,7 +562,7 @@
 056400     GO       TO SIG-WRITE-GF-10.                                 NC1184.2
 056500 SIG-FAIL-GF-10.                                                  NC1184.2
 056600     MOVE     WRK-DS-09V09 TO COMPUTED-N.                         NC1184.2
-056700     MOVE     000333666.666333000 TO CORRECT-N.                   NC1184.2
+056700     MOVE     000333222.666333000 TO CORRECT-N.                   NC1184.2
 056800     PERFORM  FAIL.                                               NC1184.2
 056900 SIG-WRITE-GF-10.                                                 NC1184.2
 057000     MOVE     "SIG-TEST-GF-10" TO PAR-NAME.                       NC1184.2
@@ -596,7 +596,7 @@
 059800 SIG-TEST-GF-5-0.                                                 NC1184.2
 059900     ADD      55554.5 TO WRK-DS-T-05V00 ROUNDED.                  NC1184.2
 060000 SIG-TEST-GF-5-1.                                                 NC1184.2
-060100     IF       WRK-DS-T-05V00 EQUAL TO 55555                       NC1184.2
+060100     IF       WRK-DS-T-05V00 EQUAL TO 66666                       NC1184.2
 060200              PERFORM PASS GO TO SIG-WRITE-GF-5.                  NC1184.2
 060300     GO       TO SIG-FAIL-GF-5.                                   NC1184.2
 060400 SIG-DELETE-GF-5.                                                 NC1184.2
@@ -604,7 +604,7 @@
 060600     GO       TO SIG-WRITE-GF-5.                                  NC1184.2
 060700 SIG-FAIL-GF-5.                                                   NC1184.2
 060800     MOVE     WRK-DS-T-05V00 TO COMPUTED-N.                       NC1184.2
-060900     MOVE     55555 TO CORRECT-N.                                 NC1184.2
+060900     MOVE     66666 TO CORRECT-N.                                 NC1184.2
 061000     PERFORM  FAIL.                                               NC1184.2
 061100 SIG-WRITE-GF-5.                                                  NC1184.2
 061200     MOVE     "SIG-TEST-GF-5" TO PAR-NAME.                        NC1184.2
@@ -1018,10 +1018,10 @@
 102000     ADD A18SIXES-CS-18V00  A12SEVENS-CU-18V00 GIVING             NC1184.2
 102100             WRK-DS-T-18V00.                                      NC1184.2
 102200 SIG-TEST-GF-22-1.                                                NC1184.2
-102300     IF WRK-DS-T-18V00 EQUAL TO 666667444444444445                NC1184.2
+102300     IF WRK-DS-T-18V00 EQUAL TO 666667444444444443                NC1184.2
 102400         PERFORM PASS                                             NC1184.2
 102500         GO TO SIG-WRITE-GF-22.                                   NC1184.2
-102600     MOVE 666667444444444445 TO CORRECT-18V0.                     NC1184.2
+102600     MOVE 666667444444444443 TO CORRECT-18V0.                     NC1184.2
 102700     MOVE WRK-DS-T-18V00 TO COMPUTED-18V0.                        NC1184.2
 102800     PERFORM FAIL.                                                NC1184.2
 102900     GO TO SIG-WRITE-GF-22.                                       NC1184.2

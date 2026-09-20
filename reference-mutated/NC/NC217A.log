@@ -54,7 +54,7 @@ TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
                                      COMPUTED= 1001+                                                                    
-                                     CORRECT = 1003+                 VI-130 6.24.3+4                                    
+                                     CORRECT = 1991+                 VI-130 6.24.3+4                                    
                                                                                                                         
  SIGN TRAILING        PASS  STR-TEST-GF-17     .02                                                                      
  NEG LEADING SEPARATE PASS  STR-TEST-GF-18     .01                                                                      
@@ -62,7 +62,7 @@ TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NEGATIVE SIGN TRAIL  FAIL* STR-TEST-GF-19     .01                                                                      
                                                                                                                         
                                      COMPUTED= 1001-                                                                    
-                                     CORRECT = 1004-                 VI-130 6.24.3+4                                    
+                                     CORRECT = 1991-                 VI-130 6.24.3+4                                    
                                                                                                                         
  NEGATIVE SIGN TRAIL  PASS  STR-TEST-GF-19     .02                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-20     .01                                                                      

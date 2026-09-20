@@ -16,7 +16,7 @@ TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DAY-OF-INTEGER       FAIL* F-DAYOFINT-01                                                                               
                                                                                                                         
                                      COMPUTED=  001601001.000000000                                                     
-                                     CORRECT =  001601091.000000000  See ref. A-42 2.13                                 
+                                     CORRECT =  001601221.000000000  See ref. A-42 2.13                                 
                                                                                                                         
  DAY-OF-INTEGER       PASS  F-DAYOFINT-02                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-03                                                                               
@@ -26,7 +26,7 @@ TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DAY-OF-INTEGER       FAIL* F-DAYOFINT-07                                                                               
                                                                                                                         
                                      COMPUTED=  003202002.000000000                                                     
-                                     CORRECT =  003202082.000000000  See ref. A-42 2.13                                 
+                                     CORRECT =  003202332.000000000  See ref. A-42 2.13                                 
                                                                                                                         
  DAY-OF-INTEGER       PASS  F-DAYOFINT-08                                                                               
  ***********************************************************************************************************************

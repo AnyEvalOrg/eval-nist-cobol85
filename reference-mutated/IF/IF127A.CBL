@@ -449,10 +449,10 @@
 044900     MOVE ZERO TO WS-INT.                                         IF1274.2
 045000 F-ORD-TEST-07.                                                   IF1274.2
 045100     COMPUTE WS-INT = FUNCTION ORD("g") + 1.                      IF1274.2
-045200     IF WS-INT = 100 THEN                                         IF1274.2
+045200     IF WS-INT = 165 THEN                                         IF1274.2
 045300                        PERFORM PASS                              IF1274.2
 045400     ELSE                                                         IF1274.2
-045500                        MOVE 100  TO CORRECT-N                    IF1274.2
+045500                        MOVE 165  TO CORRECT-N                    IF1274.2
 045600                        MOVE WS-INT TO COMPUTED-N                 IF1274.2
 045700                        PERFORM FAIL.                             IF1274.2
 045800     GO TO F-ORD-WRITE-07.                                        IF1274.2

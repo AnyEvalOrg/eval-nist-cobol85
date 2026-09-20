@@ -29,7 +29,7 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE NUMERIC INTEGER FAIL* MOVE-TEST-F1-14                                                                             
                                                                                                                         
                                      COMPUTED= 12345CR                                                                  
-                                     CORRECT = 12305CR               V1-102 6.18.2                                      
+                                     CORRECT = 12645CR               V1-102 6.18.2                                      
                                                                                                                         
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-15                                                                             
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-16                                                                             
@@ -60,7 +60,7 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE NUM NON-INTEGER FAIL* MOVE-TEST-F1-28                                                                             
                                                                                                                         
                                      COMPUTED= $00,123.45                                                               
-                                     CORRECT = $00,123.65            V1-102 6.18.2                                      
+                                     CORRECT = $88,123.45            V1-102 6.18.2                                      
                                                                                                                         
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-29                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-30                                                                             

@@ -785,10 +785,10 @@
 078700              MOVE PERFORM1 TO COMPUTED-A                         NC1024.2
 078800              PERFORM FAIL                                        NC1024.2
 078900              GO TO PFM-WRITE-F1-3.                               NC1024.2
-079000     IF       PERFORM4 EQUAL TO 79.0                              NC1024.2
+079000     IF       PERFORM4 EQUAL TO 70.0                              NC1024.2
 079100              PERFORM PASS                                        NC1024.2
 079200              ELSE                                                NC1024.2
-079300              MOVE 79.0 TO CORRECT-N                              NC1024.2
+079300              MOVE 70.0 TO CORRECT-N                              NC1024.2
 079400              MOVE     PERFORM4 TO COMPUTED-N                     NC1024.2
 079500              PERFORM FAIL.                                       NC1024.2
 079600     GO TO    PFM-WRITE-F1-3.                                     NC1024.2
@@ -863,7 +863,7 @@
 086500     ADD      100 TO P-COUNT.                                     NC1024.2
 086600 PFM-TESTT-F1-6 SECTION.                                          NC1024.2
 086700 PFM-TESTTT-F1-6.                                                 NC1024.2
-086800     IF       P-COUNT EQUAL TO 000302                             NC1024.2
+086800     IF       P-COUNT EQUAL TO 111302                             NC1024.2
 086900              PERFORM PASS GO TO PFM-WRITE-F1-6.                  NC1024.2
 087000     GO       TO PFM-FAIL-F1-6.                                   NC1024.2
 087100 PFM-DELETE-F1-6.                                                 NC1024.2
@@ -871,7 +871,7 @@
 087300     GO       TO PFM-WRITE-F1-6.                                  NC1024.2
 087400 PFM-FAIL-F1-6.                                                   NC1024.2
 087500     MOVE     P-COUNT TO COMPUTED-N.                              NC1024.2
-087600     MOVE     000302 TO CORRECT-N.                                NC1024.2
+087600     MOVE     111302 TO CORRECT-N.                                NC1024.2
 087700     PERFORM  FAIL.                                               NC1024.2
 087800 PFM-WRITE-F1-6.                                                  NC1024.2
 087900     MOVE "PERFORM             " TO FEATURE.                      NC1024.2
@@ -925,7 +925,7 @@
 092700     ADD      10000 TO P-COUNT.                                   NC1024.2
 092800 PFM-TESTT-F1-7 SECTION.                                          NC1024.2
 092900 PFM-TESTTT-F1-7.                                                 NC1024.2
-093000     IF       P-COUNT EQUAL TO 050304                             NC1024.2
+093000     IF       P-COUNT EQUAL TO 050504                             NC1024.2
 093100              PERFORM PASS                                        NC1024.2
 093200              GO TO PFM-WRITE-F1-7.                               NC1024.2
 093300     GO       TO PFM-FAIL-F1-7.                                   NC1024.2
@@ -934,7 +934,7 @@
 093600     GO       TO PFM-WRITE-F1-7.                                  NC1024.2
 093700 PFM-FAIL-F1-7.                                                   NC1024.2
 093800     MOVE     P-COUNT TO COMPUTED-N.                              NC1024.2
-093900     MOVE     050304 TO CORRECT-N.                                NC1024.2
+093900     MOVE     050504 TO CORRECT-N.                                NC1024.2
 094000     PERFORM  FAIL.                                               NC1024.2
 094100 PFM-WRITE-F1-7.                                                  NC1024.2
 094200     MOVE "PERFORM THRU        " TO FEATURE.                      NC1024.2
@@ -1047,10 +1047,10 @@
 104900     MOVE     SPACES TO PERFORM-HOLD.                             NC1024.2
 105000 PFM-TEST-F1-9.                                                   NC1024.2
 105100     PERFORM A101.                                                NC1024.2
-105200     IF PERFORM-HOLD EQUAL TO "ABCDEFGHIJKLMNOPQRST"              NC1024.2
+105200     IF PERFORM-HOLD EQUAL TO "JKLMNOPQRSTUVWXYZABC"              NC1024.2
 105300         PERFORM PASS                                             NC1024.2
 105400         GO TO PFM-WRITE-F1-9.                                    NC1024.2
-105500     MOVE "ABCDEFGHIJKLMNOPQRST" TO CORRECT-A.                    NC1024.2
+105500     MOVE "JKLMNOPQRSTUVWXYZABC" TO CORRECT-A.                    NC1024.2
 105600     MOVE PERFORM-HOLD TO COMPUTED-A.                             NC1024.2
 105700     PERFORM FAIL.                                                NC1024.2
 105800     GO TO PFM-WRITE-F1-9.                                        NC1024.2

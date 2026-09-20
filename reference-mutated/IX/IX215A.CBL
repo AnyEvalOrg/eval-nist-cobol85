@@ -1475,7 +1475,7 @@
 152900             GIVING RECORDS-WRITTEN.                              IX2154.2
 153000     IF      RECORDS-WRITTEN EQUAL TO 200                         IX2154.2
 153100             PERFORM  PASS                                        IX2154.2
-153200             MOVE "FILE IX-FD2 CREATED (??? RECORDS)" TO RE-MARK  IX2154.2
+153200             MOVE "FILE IX-FD2 CREATED (200 RECORDS)" TO RE-MARK  IX2154.2
 153300     ELSE    PERFORM FAIL                                         IX2154.2
 153400             MOVE                                          "IX-41;IX2154.2
 153500-       "WRONG NUMBER OF RECORDS WRITTEN (MAY ALREADY EXIST)"     IX2154.2
@@ -2091,7 +2091,7 @@
 214500             GIVING RECORDS-WRITTEN.                              IX2154.2
 214600     IF      RECORDS-WRITTEN EQUAL TO 200                         IX2154.2
 214700             PERFORM  PASS                                        IX2154.2
-214800             MOVE "FILE IX-FD3 CREATED (??? RECORDS)" TO RE-MARK  IX2154.2
+214800             MOVE "FILE IX-FD3 CREATED (200 RECORDS)" TO RE-MARK  IX2154.2
 214900     ELSE    PERFORM FAIL                                         IX2154.2
 215000             MOVE                                          "IX-41;IX2154.2
 215100-       "WRONG NUMBER OF RECORDS WRITTEN (MAY ALREADY EXIST)"     IX2154.2

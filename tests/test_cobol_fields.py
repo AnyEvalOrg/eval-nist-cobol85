@@ -115,6 +115,7 @@ def test_every_private_manifest_literal_is_representable():
             offset = sum(len(l) for l in source_lines[:first['line']-1]) + first['column']-1
             assert offset in sites, name
             site = sites[offset]
+            assert first['mutated'] in site['options'], name
             pair = (resolve_field(fields, site['item']), resolve_field(fields, 'CORRECT-'+site['kind']))
             for replacement, field in zip(mutation['replacements'], pair):
                 old, new = replacement['original'], replacement['mutated']
@@ -148,3 +149,63 @@ def test_full_picture_tokens_and_nearest_usage_are_resolved():
     assert fields['PRINTED']['usage'] == 'DISPLAY'
     assert fields['PRINTED']['picture'] == '999CR'
     assert fields['UNKNOWN'] is None
+
+
+@pytest.mark.parametrize('literal', ['3333.333', '-3333.333', '+3333.333', '0000.000'])
+def test_repeated_digits_change_as_whole_maximal_runs(literal):
+    import re
+    field = picture_field('S9(4)V999')
+    options = replacement_options(literal, literal, field, field)
+    assert options
+    runs = list(re.finditer(r'([0-9])\1+', literal))
+    for changed in options:
+        altered = [run for run in runs if changed[run.start():run.end()] != run[0]]
+        assert len(altered) == 1
+        run = altered[0]
+        assert len(set(changed[run.start():run.end()])) == 1
+        assert changed[:run.start()] == literal[:run.start()]
+        assert changed[run.end():] == literal[run.end():]
+
+
+@pytest.mark.parametrize('literal', ['1234.567', '-1234.567', '1.234', '121'])
+def test_delta_preserves_digits_and_introduces_no_runs_or_outliers(literal):
+    import re
+    from scripts.cobol_fields import run_outlier
+    field = picture_field('S9(4)V999')
+    options = replacement_options(literal, literal, field, field)
+    assert options
+    for changed in options:
+        assert len(changed) == len(literal)
+        assert not re.search(r'([0-9])\1+', changed)
+        assert not run_outlier(changed)
+        assert ''.join(c for c in changed if not c.isdigit()) == ''.join(c for c in literal if not c.isdigit())
+
+
+def test_structured_text_changes_an_entire_word_token():
+    import re
+    literal = '"ALPHA BETA-42"'
+    field = picture_field('X(20)')
+    options = replacement_options(literal, literal, field, field)
+    assert options
+    for changed in options:
+        tokens = list(re.finditer(r'[A-Za-z0-9]+', literal))
+        altered = [t for t in tokens if changed[t.start():t.end()] != t[0]]
+        assert len(altered) == 1
+        token = altered[0]
+        assert all(a != b for a, b in zip(token[0], changed[token.start():token.end()]))
+
+
+def test_no_pattern_preserving_replacement_excludes_site():
+    from test_mutations import fixed as program
+    field = picture_field('X(3)')
+    assert not replacement_options('"..."', '"..."', field, field)
+    source = program('''TEST-1.
+    IF DATA-ITEM = "..."
+       PERFORM PASS
+    ELSE
+       MOVE DATA-ITEM TO COMPUTED-A
+       MOVE "..." TO CORRECT-A
+       PERFORM FAIL.
+    PERFORM PRINT-DETAIL.''').replace('01 DATA-ITEM PIC 99.', '01 DATA-ITEM PIC X(3).').replace(
+        '01 CORRECT-N PIC -9(9).9(9).', '01 CORRECT-A PIC X(20).')
+    assert not find_sites(source)

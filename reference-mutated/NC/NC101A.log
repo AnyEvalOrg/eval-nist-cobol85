@@ -22,7 +22,7 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY          FAIL* MPY-TEST-F1-5                                                                               
                                                                                                                         
                                      COMPUTED=  000074073999999925                                                      
-                                     CORRECT =  000074073999699925   VI-106 6.19.4 GR1                                  
+                                     CORRECT =  999974073999999925   VI-106 6.19.4 GR1                                  
                                                                                                                         
  MULTIPLY BY          PASS  MPY-TEST-F1-6                                                                               
  MULTIPLY BY          PASS  MPY-TEST-F1-7-1                                                                             
@@ -37,7 +37,7 @@ TEST RESULT OF NC101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY          FAIL* MPY-TEST-F1-12                                                                              
                                                                                                                         
                                      COMPUTED=  000000000111111111                                                      
-                                     CORRECT =  000000000111171111   VI-106 6.19.4 GR1                                  
+                                     CORRECT =  000000000999999999   VI-106 6.19.4 GR1                                  
                                                                                                                         
  MULTIPLY BY          PASS  MPY-TEST-F1-13-1   .01                                                                      
  MULTIPLY BY          PASS  MPY-TEST-F1-13-2   .02                                                                                                                                                                                              

@@ -1934,8 +1934,8 @@
   },
   "IF112A": {
    "module": "IF",
-   "report_line": "8    6    2       0       0",
-   "report_bytes": 5083,
+   "report_line": "8    8    0       0       0 OK",
+   "report_bytes": 4115,
    "stdout_bytes": 61
   },
   "IF113A": {

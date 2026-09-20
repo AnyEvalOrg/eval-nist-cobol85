@@ -28,7 +28,7 @@ TEST RESULT OF NC120A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY          FAIL* SIG-TEST-GF-6                                                                               
                                                                                                                         
                                      COMPUTED=  000074073999999925                                                      
-                                     CORRECT =  000074073999999922   VI-42 5.12.4                                       
+                                     CORRECT =  000074073111111125   VI-42 5.12.4                                       
                                                                                                                         
  MULTIPLY BY          PASS  SIG-TEST-GF-7                                                                               
  MULTIPLY BY          PASS  SIG-TEST-GF-8-1                                                                             
@@ -56,7 +56,7 @@ TEST RESULT OF NC120A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
                                                                                                                         
                                      COMPUTED=  000000000000111111                                                      
-                                     CORRECT =  000000000000311111   VI-42 5.12.4                                       
+                                     CORRECT =  000000000000333333   VI-42 5.12.4                                       
                                                                                                                         
  MULTIPLY BY GIVING   PASS  SIG-TEST-GF-19-1                                                                            
  MULTIPLY BY GIVING   PASS  SIG-TEST-GF-?9-2                                                                            
@@ -74,7 +74,7 @@ TEST RESULT OF NC120A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLY BY GIVING   FAIL* SIG-TEST-GF-26                                                                              
                                                                                                                         
                                      COMPUTED= -329999999999999967                                                      
-                                     CORRECT = -329999999992999967   VI-42 5.12.4                                       
+                                     CORRECT = -324444444444444467   VI-42 5.12.4                                       
                                                                                                                         
  MULTIPLY BY GIVING   PASS  SIG-TEST-GF-27                                                                              
  ***********************************************************************************************************************

@@ -1115,7 +1115,7 @@
 111700     GO      TO STR-INIT-GF-18.                                   NC2174.2
 111800*                                                                         
 111900 STR-TEST-GF-17-1.                                                NC2174.2
-112000     IF      ID7-XN-5 = "1003+"                                   NC2174.2
+112000     IF      ID7-XN-5 = "1991+"                                   NC2174.2
 112100             PERFORM PASS                                         NC2174.2
 112200             GO TO STR-WRITE-GF-17-1                              NC2174.2
 112300     ELSE                                                         NC2174.2
@@ -1126,7 +1126,7 @@
 112800 STR-FAIL-GF-17-1.                                                NC2174.2
 112900     PERFORM FAIL                                                 NC2174.2
 113000     MOVE    ID7-XN-5 TO COMPUTED-A                               NC2174.2
-113100     MOVE    "1003+" TO CORRECT-A.                                NC2174.2
+113100     MOVE    "1991+" TO CORRECT-A.                                NC2174.2
 113200 STR-WRITE-GF-17-1.                                               NC2174.2
 113300     PERFORM PRINT-DETAIL.                                        NC2174.2
 113400*                                                                         
@@ -1220,7 +1220,7 @@
 122200     GO      TO STR-INIT-GF-20.                                   NC2174.2
 122300*                                                                         
 122400 STR-TEST-GF-19-1.                                                NC2174.2
-122500     IF      ID7-XN-5 = "1004-"                                   NC2174.2
+122500     IF      ID7-XN-5 = "1991-"                                   NC2174.2
 122600             PERFORM PASS                                         NC2174.2
 122700             GO TO STR-WRITE-GF-19-1                              NC2174.2
 122800     ELSE                                                         NC2174.2
@@ -1231,7 +1231,7 @@
 123300 STR-FAIL-GF-19-1.                                                NC2174.2
 123400     PERFORM FAIL                                                 NC2174.2
 123500     MOVE    ID7-XN-5 TO COMPUTED-A                               NC2174.2
-123600     MOVE    "1004-" TO CORRECT-A.                                NC2174.2
+123600     MOVE    "1991-" TO CORRECT-A.                                NC2174.2
 123700 STR-WRITE-GF-19-1.                                               NC2174.2
 123800     PERFORM PRINT-DETAIL.                                        NC2174.2
 123900*                                                                         

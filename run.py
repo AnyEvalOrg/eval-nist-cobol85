@@ -27,6 +27,14 @@ def validate_sample_id(sample_id: str) -> str:
 
 def emit_bundle(log, args, out: Path) -> dict:
     bundle = json.loads((HERE / "bundle.template.json").read_text())
+    from nist_cobol85.dataset import manifest
+
+    info = manifest()
+    bundle["dataset"] = {
+        "source": info["source"],
+        "source_file": info["source_file"],
+        "revision": info["artifact_sha256"],
+    }
     bundle["generated_at"] = datetime.now(timezone.utc).isoformat()
     bundle["eval"]["sample_id"] = args.sample_id
     bundle["eval"]["task"] = TASK_PREFIX + args.task

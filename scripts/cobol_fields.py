@@ -206,21 +206,82 @@ def paired_literal(mutated, original, correct):
     return mutated
 
 
+def run_outlier(raw):
+    """A digit segment with one exceptional digit is cheaply repairable."""
+    if re.search(r'([0-9])\1+(?!\1)[0-9]\1{2,}', raw):
+        return True
+    for part in re.findall(r'[0-9]+', raw):
+        if len(part) >= 3 and any(part.count(c) == len(part)-1 for c in set(part)):
+            return True
+    return False
+
+
+def pattern_replacements(raw):
+    # A maximal word-like token is indivisible. Rotate every letter/digit in
+    # that token together, retaining case, repeated characters and separators.
+    if re.search(r'[A-Za-z]', raw):
+        for token in re.finditer(r'[A-Za-z0-9]+', raw):
+            if not re.search(r'[A-Za-z]', token[0]):
+                continue
+            for delta in range(1, 10):
+                changed = ''
+                for char in token[0]:
+                    alphabet = ('0123456789' if char.isdigit() else
+                                'ABCDEFGHIJKLMNOPQRSTUVWXYZ' if char.isupper() else
+                                'abcdefghijklmnopqrstuvwxyz')
+                    changed += alphabet[(alphabet.index(char) + delta) % len(alphabet)]
+                yield raw[:token.start()] + changed + raw[token.end():]
+        return
+    runs = list(re.finditer(r'([0-9])\1+', raw))
+    if runs:
+        for run in runs:
+            for digit in '0123456789':
+                if digit == run[1]:
+                    continue
+                # Keep maximal run boundaries, not just the overall width.
+                if ((run.start() and raw[run.start()-1] == digit)
+                        or (run.end() < len(raw) and raw[run.end()] == digit)):
+                    continue
+                yield raw[:run.start()] + digit * len(run[0]) + raw[run.end():]
+        return
+    # Apply a delta to the scaled magnitude, then restore every sign, decimal,
+    # editing character and digit position. Do not introduce repeated runs.
+    positions = [i for i, c in enumerate(raw) if c in '0123456789']
+    if not positions:
+        return
+    digits = ''.join(raw[i] for i in positions)
+    for power in range(len(digits)):
+        for delta in range(-9, 10):
+            magnitude = int(digits) + delta * 10 ** power
+            if not delta or magnitude < 0:
+                continue
+            replacement = str(magnitude).zfill(len(digits))
+            if len(replacement) != len(digits) or (digits[0] != '0' and replacement[0] == '0'):
+                continue
+            changed = list(raw)
+            for i, digit in zip(positions, replacement):
+                changed[i] = digit
+            changed = ''.join(changed)
+            if not re.search(r'([0-9])\1', changed):
+                yield changed
+
+
 def replacement_options(literal, correct, field, correct_field):
     if not representable(literal, field) or not representable(correct, correct_field):
         return []
-    options = []
     quoted = literal.startswith(('"', "'"))
-    for i in range(1 if quoted else 0, len(literal) - (1 if quoted else 0)):
-        char = literal[i]
-        alphabet = ('0123456789' if char in '0123456789' else
-                    'ABCDEFGHIJKLMNOPQRSTUVWXYZ' if quoted and char in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' else
-                    'abcdefghijklmnopqrstuvwxyz' if quoted and char in 'abcdefghijklmnopqrstuvwxyz' else '')
-        for replacement in alphabet:
-            if replacement == char:
-                continue
-            changed = literal[:i] + replacement + literal[i+1:]
-            paired = paired_literal(changed, literal, correct)
-            if representable(changed, field) and representable(paired, correct_field):
-                options.append(changed)
+    raw = literal[1:-1] if quoted else literal
+    options = []
+    # CR/DB are fixed editing symbols, not word tokens.
+    suffix = raw[-2:] if field['category'] == 'edited' and raw.endswith(('CR', 'DB')) else ''
+    body = raw[:-2] if suffix else raw
+    for replacement in pattern_replacements(body):
+        replacement += suffix
+        if not re.search(r'[A-Za-z]', body) and run_outlier(replacement):
+            continue
+        changed = literal[0] + replacement + literal[-1] if quoted else replacement
+        paired = paired_literal(changed, literal, correct)
+        if (changed != literal and representable(changed, field)
+                and representable(paired, correct_field) and changed not in options):
+            options.append(changed)
     return options
