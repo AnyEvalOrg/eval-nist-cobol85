@@ -14,11 +14,7 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
  INDEXING             PASS  TABLE BUILD                   TABLE CREATED CORRECTLY                                       
- INDEXING             FAIL* IDX-TEST-1                                                                                  
-                                                                                                                        
-                                     COMPUTED= 333                                                                      
-                                     CORRECT = 335                                                                      
-                                                                                                                        
+ INDEXING             PASS  IDX-TEST-1                                                                                  
  INDEXING             PASS  IDX-TEST-2                                                                                  
  INDEXING             PASS  IDX-TEST-3                                                                                  
  INDEXING             PASS  IDX-TEST-4                                                                                  
@@ -35,12 +31,16 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET STATEMENT        PASS  IDX-TEST-15                                                                                 
  SET STATEMENT        PASS  IDX-TEST-16                                                                                 
  SET STATEMENT        PASS  IDX-TEST-17                                                                                 
- SET STATEMENT        FAIL* IDX-TEST-18                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-18                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-19                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-?0                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-21                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-??                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-23                                                                                 
+ SET STATEMENT        PASS  IDX-TEST-24                                                                                 
+ ***********************************************************************************************************************
                                                                                                                         
-                                     COMPUTED= 48                                                                       
-                                     CORRECT = 68                                                                       
-                                                                                                                        
- SET STATEMENT        PASS  IDX-TEST-19                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,24 +54,12 @@ TEST RESULT OF NC133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- SET STATEMENT        PASS  IDX-TEST-?0                                                                                 
- SET STATEMENT        PASS  IDX-TEST-21                                                                                 
- SET STATEMENT        FAIL* IDX-TEST-??                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000005.000000000                                                     
-                                                                                                                        
- SET STATEMENT        PASS  IDX-TEST-23                                                                                 
- SET STATEMENT        PASS  IDX-TEST-24                                                                                 
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
                                                                                                                         
                                                                                                                         
                                                     END OF TEST-  NC133A                                                
                                                                                                                         
-                                                    022 OF 025  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    025 OF 025  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

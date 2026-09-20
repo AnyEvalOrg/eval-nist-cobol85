@@ -508,10 +508,10 @@
 050800 F-REVERSE-TEST-12.                                               IF1344.2
 050900     MOVE FUNCTION REVERSE(FUNCTION REVERSE("???????"))           IF1344.2
 051000       TO WS-ANUM.                                                IF1344.2
-051100     IF WS-ANUM = "giZCard" THEN                                  IF1344.2
+051100     IF WS-ANUM = "giZZard" THEN                                  IF1344.2
 051200                    PERFORM PASS                                  IF1344.2
 051300     ELSE                                                         IF1344.2
-051400                    MOVE "giZCard"  TO CORRECT-A                  IF1344.2
+051400                    MOVE "giZZard"  TO CORRECT-A                  IF1344.2
 051500                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 051600                    PERFORM FAIL.                                 IF1344.2
 051700     GO TO F-REVERSE-WRITE-12.                                    IF1344.2

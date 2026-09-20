@@ -457,25 +457,25 @@
 045900     ADD 1 TO REC-CT.                                             IC2354.2
 046000     PERFORM PRINT-DETAIL.                                        IC2354.2
 046100 CALL-TEST-06-03.                                                 IC2354.2
-046200     IF ALPHA-FIELD EQUAL TO "YEC"                                IC2354.2
+046200     IF ALPHA-FIELD EQUAL TO "YES"                                IC2354.2
 046300         PERFORM PASS                                             IC2354.2
 046400         GO TO CALL-WRITE-06-03.                                  IC2354.2
 046500 CALL-FAIL-06-03.                                                 IC2354.2
 046600     PERFORM FAIL.                                                IC2354.2
 046700     MOVE ALPHA-FIELD TO COMPUTED-A.                              IC2354.2
-046800     MOVE "YEC" TO CORRECT-A.                                     IC2354.2
+046800     MOVE "YES" TO CORRECT-A.                                     IC2354.2
 046900     MOVE "ALPHABETIC PARAMETER" TO RE-MARK.                      IC2354.2
 047000 CALL-WRITE-06-03.                                                IC2354.2
 047100     ADD 1 TO REC-CT.                                             IC2354.2
 047200     PERFORM PRINT-DETAIL.                                        IC2354.2
 047300 CALL-TEST-06-04.                                                 IC2354.2
-047400     IF ELEM-77 EQUAL TO 0.7254                                   IC2354.2
+047400     IF ELEM-77 EQUAL TO 0.7654                                   IC2354.2
 047500         PERFORM PASS                                             IC2354.2
 047600         GO TO CALL-WRITE-06-04.                                  IC2354.2
 047700 CALL-FAIL-06-04.                                                 IC2354.2
 047800     PERFORM FAIL.                                                IC2354.2
 047900     MOVE ELEM-77 TO COMPUTED-4V14.                               IC2354.2
-048000     MOVE 0.7254 TO CORRECT-4V14.                                 IC2354.2
+048000     MOVE 0.7654 TO CORRECT-4V14.                                 IC2354.2
 048100     MOVE "COMPUTATIONAL PARAMETER" TO RE-MARK.                   IC2354.2
 048200 CALL-WRITE-06-04.                                                IC2354.2
 048300     ADD 1 TO REC-CT.                                             IC2354.2
@@ -518,13 +518,13 @@
 052000     ADD 1 TO REC-CT.                                             IC2354.2
 052100     PERFORM PRINT-DETAIL.                                        IC2354.2
 052200 CALL-TEST-06-08.                                                 IC2354.2
-052300     IF      SUBSCRIPTED-DATA (4) = "1H"                          IC2354.2
+052300     IF      SUBSCRIPTED-DATA (4) = "1A"                          IC2354.2
 052400             PERFORM PASS                                         IC2354.2
 052500             GO TO CALL-WRITE-06-08.                              IC2354.2
 052600 CALL-FAIL-06-08.                                                 IC2354.2
 052700     PERFORM FAIL.                                                IC2354.2
 052800     MOVE    SUBSCRIPTED-DATA (4) TO COMPUTED-A.                  IC2354.2
-052900     MOVE   "1H"        TO CORRECT-A.                             IC2354.2
+052900     MOVE   "1A"        TO CORRECT-A.                             IC2354.2
 053000     MOVE   "SUBSCRIPTED LINKAGE DATA ITEM" TO RE-MARK.           IC2354.2
 053100 CALL-WRITE-06-08.                                                IC2354.2
 053200     MOVE   "XVII-46 (59)" TO ANSI-REFERENCE.                     IC2354.2

@@ -13,13 +13,21 @@ TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- DAY-OF-INTEGER       PASS  F-DAYOFINT-01                                                                               
+ DAY-OF-INTEGER       FAIL* F-DAYOFINT-01                                                                               
+                                                                                                                        
+                                     COMPUTED=  001601001.000000000                                                     
+                                     CORRECT =  001601091.000000000  See ref. A-42 2.13                                 
+                                                                                                                        
  DAY-OF-INTEGER       PASS  F-DAYOFINT-02                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-03                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-04                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-05                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-06                                                                               
- DAY-OF-INTEGER       PASS  F-DAYOFINT-07                                                                               
+ DAY-OF-INTEGER       FAIL* F-DAYOFINT-07                                                                               
+                                                                                                                        
+                                     COMPUTED=  003202002.000000000                                                     
+                                     CORRECT =  003202082.000000000  See ref. A-42 2.13                                 
+                                                                                                                        
  DAY-OF-INTEGER       PASS  F-DAYOFINT-08                                                                               
  ***********************************************************************************************************************
                                                                                                                         
@@ -28,8 +36,8 @@ TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF109A                                                
                                                                                                                         
-                                                    008 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    NO  TEST(S) FAILED                                                  
+                                                    006 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    002 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

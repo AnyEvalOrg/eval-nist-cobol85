@@ -336,13 +336,13 @@
 033800     PERFORM PRINT-DETAIL.                                        IC2034.2
 033900 CALL-TEST-04-02.                                                 IC2034.2
 034000     ADD 1 TO REC-CT.                                             IC2034.2
-034100     IF DN2 IS EQUAL TO "YJS"                                     IC2034.2
+034100     IF DN2 IS EQUAL TO "YES"                                     IC2034.2
 034200         PERFORM PASS                                             IC2034.2
 034300         GO TO CALL-WRITE-04-02.                                  IC2034.2
 034400 CALL-FAIL-04-02.                                                 IC2034.2
 034500     PERFORM FAIL.                                                IC2034.2
 034600     MOVE DN2 TO COMPUTED-A.                                      IC2034.2
-034700     MOVE "YJS" TO CORRECT-A.                                     IC2034.2
+034700     MOVE "YES" TO CORRECT-A.                                     IC2034.2
 034800     MOVE "DN2 INCORRECT" TO RE-MARK.                             IC2034.2
 034900 CALL-WRITE-04-02.                                                IC2034.2
 035000     PERFORM PRINT-DETAIL.                                        IC2034.2
@@ -374,13 +374,13 @@
 037600     GO TO CNCL-TEST-01.                                          IC2034.2
 037700 CALL-TEST-05-01.                                                 IC2034.2
 037800     MOVE 1 TO REC-CT.                                            IC2034.2
-037900     IF DN5 EQUAL TO 0                                            IC2034.2
+037900     IF DN5 EQUAL TO 2                                            IC2034.2
 038000         PERFORM PASS                                             IC2034.2
 038100         GO TO CALL-WRITE-05-01.                                  IC2034.2
 038200 CALL-FAIL-05-01.                                                 IC2034.2
 038300     PERFORM FAIL.                                                IC2034.2
 038400     MOVE DN5 TO COMPUTED-18V0.                                   IC2034.2
-038500     MOVE 0 TO CORRECT-18V0.                                      IC2034.2
+038500     MOVE 2 TO CORRECT-18V0.                                      IC2034.2
 038600     MOVE "DN5 INCORRECT" TO RE-MARK.                             IC2034.2
 038700 CALL-WRITE-05-01.                                                IC2034.2
 038800     PERFORM PRINT-DETAIL.                                        IC2034.2
@@ -451,13 +451,13 @@
 045300     PERFORM PRINT-DETAIL.                                        IC2034.2
 045400 CNCL-TEST-01-03.                                                 IC2034.2
 045500     ADD 1 TO REC-CT.                                             IC2034.2
-045600     IF DN4 EQUAL TO "EQCAL"                                      IC2034.2
+045600     IF DN4 EQUAL TO "EQUAL"                                      IC2034.2
 045700         PERFORM PASS                                             IC2034.2
 045800         GO TO CNCL-WRITE-01-03.                                  IC2034.2
 045900 CNCL-FAIL-01-03.                                                 IC2034.2
 046000     PERFORM FAIL.                                                IC2034.2
 046100     MOVE DN4 TO COMPUTED-A.                                      IC2034.2
-046200     MOVE "EQCAL" TO CORRECT-A.                                   IC2034.2
+046200     MOVE "EQUAL" TO CORRECT-A.                                   IC2034.2
 046300     MOVE "DN4 INCORRECT" TO RE-MARK.                             IC2034.2
 046400 CNCL-WRITE-01-03.                                                IC2034.2
 046500     PERFORM PRINT-DETAIL.                                        IC2034.2
@@ -596,7 +596,7 @@
 059800     MOVE SPACE TO DN2, DN4, TABLE-2.                             IC2034.2
 059900     MOVE ZERO TO DN1.                                            IC2034.2
 060000     CALL "IC205A" USING TABLE-1, TABLE-2, DN1.                   IC2034.2
-060100     IF TABLE-2 EQUAL TO "WB"                                     IC2034.2
+060100     IF TABLE-2 EQUAL TO "AB"                                     IC2034.2
 060200         PERFORM PASS                                             IC2034.2
 060300         GO TO CNCL-WRITE-05.                                     IC2034.2
 060400     GO TO CNCL-FAIL-05.                                          IC2034.2
@@ -605,7 +605,7 @@
 060700     GO TO CNCL-WRITE-05.                                         IC2034.2
 060800 CNCL-FAIL-05.                                                    IC2034.2
 060900     PERFORM FAIL.                                                IC2034.2
-061000     MOVE "WB" TO CORRECT-A.                                      IC2034.2
+061000     MOVE "AB" TO CORRECT-A.                                      IC2034.2
 061100     MOVE TABLE-2 TO COMPUTED-A.                                  IC2034.2
 061200     MOVE "T??LE-2 INCORRECT" TO RE-MARK.                         IC2034.2
 061300 CNCL-WRITE-05.                                                   IC2034.2
@@ -652,13 +652,13 @@
 065400     PERFORM PRINT-DETAIL.                                        IC2034.2
 065500 CNCL-TEST-06-03.                                                 IC2034.2
 065600     ADD 1 TO REC-CT.                                             IC2034.2
-065700     IF DN4 EQUAL TO "ENUAL"                                      IC2034.2
+065700     IF DN4 EQUAL TO "EQUAL"                                      IC2034.2
 065800         PERFORM PASS                                             IC2034.2
 065900         GO TO CNCL-WRITE-06-03.                                  IC2034.2
 066000 CNCL-FAIL-06-03.                                                 IC2034.2
 066100     PERFORM FAIL.                                                IC2034.2
 066200     MOVE DN4 TO COMPUTED-A.                                      IC2034.2
-066300     MOVE "ENUAL" TO CORRECT-A.                                   IC2034.2
+066300     MOVE "EQUAL" TO CORRECT-A.                                   IC2034.2
 066400     MOVE "DN4 INCORRECT" TO RE-MARK.                             IC2034.2
 066500 CNCL-WRITE-06-03.                                                IC2034.2
 066600     PERFORM PRINT-DETAIL.                                        IC2034.2

@@ -353,12 +353,12 @@
 035300     PERFORM  PRINT-DETAIL.                                       ST1184.2
 035400 SORT-TEST-6.                                                     ST1184.2
 035500     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-035600     IF       SORTKEY-3 EQUAL TO +.6000000001000000               ST1184.2
+035600     IF       SORTKEY-3 EQUAL TO +.6000000000000000               ST1184.2
 035700              PERFORM PASS GO TO SORT-WRITE-6.                    ST1184.2
 035800 SORT-FAIL-6.                                                     ST1184.2
 035900     PERFORM  FAIL.                                               ST1184.2
 036000     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         ST1184.2
-036100     MOVE     +.6000000001000000     TO CORRECT-0V18.             ST1184.2
+036100     MOVE     +.6000000000000000     TO CORRECT-0V18.             ST1184.2
 036200 SORT-WRITE-6.                                                    ST1184.2
 036300     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1184.2
 036400     PERFORM  PRINT-DETAIL.                                       ST1184.2
@@ -431,23 +431,23 @@
 043100     PERFORM  PRINT-DETAIL.                                       ST1184.2
 043200 SORT-TEST-11.                                                    ST1184.2
 043300     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-043400     IF       SORTKEY-7 EQUAL TO 413                              ST1184.2
+043400     IF       SORTKEY-7 EQUAL TO 418                              ST1184.2
 043500              PERFORM PASS GO TO SORT-WRITE-11.                   ST1184.2
 043600 SORT-FAIL-11.                                                    ST1184.2
 043700     PERFORM  FAIL.                                               ST1184.2
 043800     MOVE     SORTKEY-7 TO COMPUTED-N                             ST1184.2
-043900     MOVE     413 TO CORRECT-N.                                   ST1184.2
+043900     MOVE     418 TO CORRECT-N.                                   ST1184.2
 044000 SORT-WRITE-11.                                                   ST1184.2
 044100     MOVE     "SORT-TEST-11" TO PAR-NAME.                         ST1184.2
 044200     PERFORM  PRINT-DETAIL.                                       ST1184.2
 044300 SORT-TEST-12.                                                    ST1184.2
 044400     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-044500     IF       SORTKEY-8 EQUAL TO -10                              ST1184.2
+044500     IF       SORTKEY-8 EQUAL TO -14                              ST1184.2
 044600              PERFORM PASS GO TO SORT-WRITE-12.                   ST1184.2
 044700 SORT-FAIL-12.                                                    ST1184.2
 044800     PERFORM  FAIL.                                               ST1184.2
 044900     MOVE     SORTKEY-8 TO COMPUTED-N.                            ST1184.2
-045000     MOVE     -10 TO CORRECT-N.                                   ST1184.2
+045000     MOVE     -14 TO CORRECT-N.                                   ST1184.2
 045100 SORT-WRITE-12.                                                   ST1184.2
 045200     MOVE     "SORT-TEST-12" TO PAR-NAME.                         ST1184.2
 045300     PERFORM  PRINT-DETAIL.                                       ST1184.2
@@ -475,12 +475,12 @@
 047500     PERFORM  PRINT-DETAIL.                                       ST1184.2
 047600 SORT-TEST-15.                                                    ST1184.2
 047700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1184.2
-047800     IF       SORTKEY-3 EQUAL TO +.5000000000000000               ST1184.2
+047800     IF       SORTKEY-3 EQUAL TO +.6000000000000000               ST1184.2
 047900              PERFORM PASS GO TO SORT-WRITE-15.                   ST1184.2
 048000 SORT-FAIL-15.                                                    ST1184.2
 048100     PERFORM  FAIL.                                               ST1184.2
 048200     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         ST1184.2
-048300     MOVE     +.5000000000000000     TO CORRECT-0V18.             ST1184.2
+048300     MOVE     +.6000000000000000     TO CORRECT-0V18.             ST1184.2
 048400 SORT-WRITE-15.                                                   ST1184.2
 048500     MOVE     "SORT-TEST-15" TO PAR-NAME.                         ST1184.2
 048600     PERFORM  PRINT-DETAIL.                                       ST1184.2

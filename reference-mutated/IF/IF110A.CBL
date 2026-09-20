@@ -392,11 +392,11 @@
 039200     MOVE ZERO TO WS-NUM.                                         IF1104.2
 039300 F-FACTORIAL-TEST-04.                                             IF1104.2
 039400     COMPUTE WS-NUM = FUNCTION FACTORIAL(IND(4)).                 IF1104.2
-039500     IF WS-NUM = 2 THEN                                           IF1104.2
+039500     IF WS-NUM = 6 THEN                                           IF1104.2
 039600                    PERFORM PASS                                  IF1104.2
 039700     ELSE                                                         IF1104.2
 039800                    MOVE WS-NUM TO COMPUTED-N                     IF1104.2
-039900                    MOVE 2 TO CORRECT-N                           IF1104.2
+039900                    MOVE 6 TO CORRECT-N                           IF1104.2
 040000                    PERFORM FAIL.                                 IF1104.2
 040100     GO TO F-FACTORIAL-WRITE-04.                                  IF1104.2
 040200 F-FACTORIAL-DELETE-04.                                           IF1104.2
@@ -410,11 +410,11 @@
 041000     MOVE ZERO TO WS-NUM.                                         IF1104.2
 041100 F-FACTORIAL-TEST-05.                                             IF1104.2
 041200     COMPUTE WS-NUM = FUNCTION FACTORIAL(IND(A)).                 IF1104.2
-041300     IF WS-NUM = 5940 THEN                                        IF1104.2
+041300     IF WS-NUM = 5040 THEN                                        IF1104.2
 041400                    PERFORM PASS                                  IF1104.2
 041500     ELSE                                                         IF1104.2
 041600                    MOVE WS-NUM TO COMPUTED-N                     IF1104.2
-041700                    MOVE 5940 TO CORRECT-N                        IF1104.2
+041700                    MOVE 5040 TO CORRECT-N                        IF1104.2
 041800                    PERFORM FAIL.                                 IF1104.2
 041900     GO TO F-FACTORIAL-WRITE-05.                                  IF1104.2
 042000 F-FACTORIAL-DELETE-05.                                           IF1104.2
@@ -429,11 +429,11 @@
 042900 F-FACTORIAL-TEST-06.                                             IF1104.2
 043000     COMPUTE WS-NUM = FUNCTION FACTORIAL(                         IF1104.2
 043100                      FUNCTION FACTORIAL(3)).                     IF1104.2
-043200     IF WS-NUM = 820 THEN                                         IF1104.2
+043200     IF WS-NUM = 720 THEN                                         IF1104.2
 043300                    PERFORM PASS                                  IF1104.2
 043400     ELSE                                                         IF1104.2
 043500                    MOVE WS-NUM TO COMPUTED-N                     IF1104.2
-043600                    MOVE 820 TO CORRECT-N                         IF1104.2
+043600                    MOVE 720 TO CORRECT-N                         IF1104.2
 043700                    PERFORM FAIL.                                 IF1104.2
 043800     GO TO F-FACTORIAL-WRITE-06.                                  IF1104.2
 043900 F-FACTORIAL-DELETE-06.                                           IF1104.2

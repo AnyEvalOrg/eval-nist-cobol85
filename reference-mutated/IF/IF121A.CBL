@@ -480,11 +480,11 @@
 048000 F-MEDIAN-TEST-08.                                                IF1214.2
 048100     COMPUTE WS-NUM = FUNCTION MEDIAN(IND(P), IND(Q), IND(R)).    IF1214.2
 048200                                                                  IF1214.2
-048300     IF WS-NUM = 4 THEN                                           IF1214.2
+048300     IF WS-NUM = 5 THEN                                           IF1214.2
 048400                    PERFORM PASS                                  IF1214.2
 048500     ELSE                                                         IF1214.2
 048600                    MOVE WS-NUM TO COMPUTED-N                     IF1214.2
-048700                    MOVE 4 TO CORRECT-N                           IF1214.2
+048700                    MOVE 5 TO CORRECT-N                           IF1214.2
 048800                    PERFORM FAIL.                                 IF1214.2
 048900     GO TO F-MEDIAN-WRITE-08.                                     IF1214.2
 049000 F-MEDIAN-DELETE-08.                                              IF1214.2
@@ -498,11 +498,11 @@
 049800     MOVE ZERO TO WS-NUM.                                         IF1214.2
 049900 F-MEDIAN-TEST-09.                                                IF1214.2
 050000     COMPUTE WS-NUM = FUNCTION MEDIAN (4 0 5 3 7).
-050100     IF WS-NUM = 1 THEN                                           IF1214.2
+050100     IF WS-NUM = 4 THEN                                           IF1214.2
 050200                    PERFORM PASS                                  IF1214.2
 050300     ELSE                                                         IF1214.2
 050400                    MOVE WS-NUM TO COMPUTED-N                     IF1214.2
-050500                    MOVE 1 TO CORRECT-N                           IF1214.2
+050500                    MOVE 4 TO CORRECT-N                           IF1214.2
 050600                    PERFORM FAIL.                                 IF1214.2
 050700     GO TO F-MEDIAN-WRITE-09.                                     IF1214.2
 050800 F-MEDIAN-DELETE-09.                                              IF1214.2
@@ -534,11 +534,11 @@
 053400     MOVE ZERO TO WS-NUM.                                         IF1214.2
 053500 F-MEDIAN-TEST-12.                                                IF1214.2
 053600     COMPUTE WS-NUM = FUNCTION MEDIAN(A, 5, A).                   IF1214.2
-053700     IF WS-NUM = 3 THEN                                           IF1214.2
+053700     IF WS-NUM = 5 THEN                                           IF1214.2
 053800                    PERFORM PASS                                  IF1214.2
 053900     ELSE                                                         IF1214.2
 054000                    MOVE WS-NUM TO COMPUTED-N                     IF1214.2
-054100                    MOVE 3 TO CORRECT-N                           IF1214.2
+054100                    MOVE 5 TO CORRECT-N                           IF1214.2
 054200                    PERFORM FAIL.                                 IF1214.2
 054300     GO TO F-MEDIAN-WRITE-12.                                     IF1214.2
 054400 F-MEDIAN-DELETE-12.                                              IF1214.2

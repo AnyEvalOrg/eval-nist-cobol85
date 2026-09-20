@@ -35,7 +35,7 @@ TEST RESULT OF IF134A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  REVERSE Function     FAIL* F-REVERSE-12                                                                                
                                                                                                                         
                                      COMPUTED= ???????                                                                  
-                                     CORRECT = giZCard               See ref. A-67 2.38                                 
+                                     CORRECT = giZZard               See ref. A-67 2.38                                 
                                                                                                                         
  REVERSE Function     PASS  F-REVERSE-13                                                                                
  ***********************************************************************************************************************

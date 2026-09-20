@@ -15,22 +15,10 @@ TEST RESULT OF IC108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
  SUBPROGRAM CALLS     PASS  CALL-TEST-07       .01                                                                      
  SUBPROGRAM CALLS     PASS  CALL-TEST-07       .02                                                                      
- SUBPROGRAM CALLS     FAIL* CALL-TEST-07       .03        SUBPROGRAM ?????? ERROR                                       
-                                                                                                                        
-                                     COMPUTED= IC111A                                                                   
-                                     CORRECT = PC111A                                                                   
-                                                                                                                        
- SUBPRGMS CALLED ONCE FAIL* CALL-TEST-08       .01        IC?09A CALLED N TIMES                                         
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000007                                                      
-                                                                                                                        
+ SUBPROGRAM CALLS     PASS  CALL-TEST-07       .03                                                                      
+ SUBPRGMS CALLED ONCE PASS  CALL-TEST-08       .01                                                                      
  SUBPRGMS CALLED ONCE PASS  CALL-TEST-08       .02                                                                      
- SUBPRGMS CALLED ONCE FAIL* CALL-TEST-08       .03        IC???A CALLED N TIMES                                         
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000002                                                      
-                                                                                                                        
+ SUBPRGMS CALLED ONCE PASS  CALL-TEST-08       .03                                                                      
  USING OPERANDS       PASS  LINK-TEST-07       .01                                                                      
  USING OPERANDS       PASS  LINK-TEST-07       .02                                                                      
  USING OPERANDS       PASS  LINK-TEST-07       .03                                                                      
@@ -41,8 +29,8 @@ TEST RESULT OF IC108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC108A                                                
                                                                                                                         
-                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    009 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

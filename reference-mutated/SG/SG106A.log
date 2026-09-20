@@ -22,11 +22,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG106A
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-12                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-13                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-14                                                                                
- SORT - 8 ASC. KEYS   FAIL* SORT-TEST-15                                                                                
-                                                                                                                        
-                                     COMPUTED=  .600000000000000000                                                     
-                                     CORRECT =  .600000000000000100                                                     
-                                                                                                                        
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-15                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-16                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-17                                                                                
  ***********************************************************************************************************************
@@ -36,8 +32,8 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG106A
                                                                                                                         
                                                     END OF TEST-  SG106A    NTIS DISTRIBUTION COBOL 74                  
                                                                                                                         
-                                                    008 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    001 TEST(S) FAILED                                                  
+                                                    009 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

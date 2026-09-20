@@ -21,26 +21,26 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO          PASS  DIV-TEST-F1-4-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-5-1                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-5-2                                                                             
- DIVIDE INTO          FAIL* DIV-TEST-F1-6                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000008000001   V1-81 6.11.4 GR1                                   
-                                                                                                                        
+ DIVIDE INTO          PASS  DIV-TEST-F1-6                                                                               
  DIVIDE INTO          PASS  DIV-TEST-F1-7                                                                               
  DIVIDE INTO          PASS  DIV-TEST-F?-8-?                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F?-8-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-9-1                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-9-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-1?-1                                                                            
- DIVIDE INTO          FAIL* DIV-TEST-F?-?0-2              ON SIZE ERROR NOT EXECUTED                                    
-                                                                                                                        
-                                     COMPUTED= 1                                                                        
-                                     CORRECT = 9                     V1-81 6.11.4 GR1                                   
-                                                                                                                        
+ DIVIDE INTO          PASS  DIV-TEST-F?-?0-2                                                                            
  DIVIDE INTO          PASS  DIV-TEST-F1-11-1                                                                            
  DIVIDE INTO          PASS  DIV-TEST-F1-11-2                                                                            
- DIVIDE INTO          FAIL* DIV-TEST-F1-12                                                                              
-                                                                                                                                                                                                                                                
+ DIVIDE INTO          PASS  DIV-TEST-F1-12                                                                              
+ DIVIDE INTO          PASS  DIV-TEST-F1-13                                                                              
+ DIVIDE INTO          PASS  DIV-TEST-F1-14-1   .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-14-2   .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-15-1   .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-15-2   .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-16-1   .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-16-2   .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-17-1   .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-17-2   .02                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,18 +54,6 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     COMPUTED= -000000001.000000000                                                     
-                                     CORRECT = -000000009.000000000  V1-81 6.11.4 GR1                                   
-                                                                                                                        
- DIVIDE INTO          PASS  DIV-TEST-F1-13                                                                              
- DIVIDE INTO          PASS  DIV-TEST-F1-14-1   .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-14-2   .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-15-1   .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-15-2   .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-16-1   .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-16-2   .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-17-1   .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-17-2   .02                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-18     .01                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-18     .02                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-18     .03                                                                      
@@ -96,7 +84,19 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO          PASS  DIV-TEST-F1-21     .05                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-21     .06                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-21     .07                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-21     .08                                                                                                                                                                                              
+ DIVIDE INTO          PASS  DIV-TEST-F1-21     .08                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .03                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .04                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .05                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .06                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .07                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-22     .08                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-23     .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-23     .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-23     .03                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-23     .04                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,18 +110,6 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .03                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .04                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .05                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .06                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .07                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-22     .08                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-23     .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-23     .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-23     .03                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-23     .04                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-23     .05                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-23     .06                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-23     .07                                                                      
@@ -152,7 +140,19 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO          PASS  DIV-TEST-F1-28     .02                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-28     .03                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-28     .04                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-28     .05                                                                                                                                                                                              
+ DIVIDE INTO          PASS  DIV-TEST-F1-28     .05                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-29     .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-29     .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-29     .03                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-30     .01                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-30     .02                                                                      
+ DIVIDE INTO          PASS  DIV-TEST-F1-30     .03                                                                      
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  NC171A                                                                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,21 +166,9 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- DIVIDE INTO          PASS  DIV-TEST-F1-29     .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-29     .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-29     .03                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-30     .01                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-30     .02                                                                      
- DIVIDE INTO          PASS  DIV-TEST-F1-30     .03                                                                      
- ***********************************************************************************************************************
                                                                                                                         
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                    END OF TEST-  NC171A                                                
-                                                                                                                        
-                                                    105 OF 108  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    108 OF 108  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -58,11 +58,7 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    EDITED MOVE        PASS  RENAM-TEST-15                                                                               
    ADD, SIZE ERROR    PASS  RENAM-TEST-16                                                                               
    ADD, SIZE ERROR    PASS  RENAM-TEST-17                                                                               
-   THROUGH            FAIL* RENAM-TEST-18                                                                               
-                                                                                                                        
-                                     COMPUTED= CHICAGO ILL                                                              
-                                     CORRECT = CHIMAGO ILL                                                              
-                                                                                                                        
+   THROUGH            PASS  RENAM-TEST-18                                                                               
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -94,32 +90,24 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COMPUTE              PASS  COMP-TEST-20                                                                                
  COMPUTE              PASS  COMP-TEST-21                                                                                
  COMPUTE              PASS  COMP-TEST-22                                                                                
- COMPUTE              FAIL* COMP-TEST-23                  OSE NOT EXECUTED                                              
-                                                                                                                        
-                                     COMPUTED= 8                                                                        
-                                     CORRECT = 3                                                                        
-                                                                                                                        
+ COMPUTE              PASS  COMP-TEST-23                                                                                
  COMPUTE              PASS  COMP-TEST-24                                                                                
  COMPUTE              PASS  COMP-TEST-25                                                                                
  COMPUTE              PASS  COMP-TEST-26                                                                                
  COMPUTE              PASS  COMP-TEST-27                                                                                
- COMPUTE              PASS  COMP-TEST-28                                                                                                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+ COMPUTE              PASS  COMP-TEST-28                                                                                
  COMPUTE              PASS  COMP-TEST-29                                                                                
  COMPUTE              PASS  COMP-TEST-30                                                                                
- COMPUTE              FAIL* COMP-TEST-31                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000066.000000000                                                     
-                                     CORRECT =  000000086.000000000                                                     
-                                                                                                                        
+ COMPUTE              PASS  COMP-TEST-31                                                                                
  COMPUTE              PASS  COMP-TEST-32                                                                                
  COMPUTE              PASS  COMP-TEST-33                                                                                
  COMPUTE              PASS  COMP-TEST-34                                                                                
  COMPUTE              PASS  COMP-TEST-35                                                                                
- COMPUTE              PASS  COMP-TEST-36                                                                                
+ COMPUTE              PASS  COMP-TEST-36                                                                                                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
  COMPUTE              PASS  COMP-TEST-37                                                                                
  COMPUTE              PASS  COMP-TEST-38                                                                                
                             COMP-TEST-39                  NOT USED                                                      
@@ -127,11 +115,7 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                             COMP-TEST-41                  NOT USED                                                      
                             COMP-TEST-42                  NOT USED                                                      
  COMPUTE              PASS  COMP-TEST-43                                                                                
- COMPUTE              FAIL* COMP-TEST-44                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000010                                                      
-                                     CORRECT =  000000000000000060                                                      
-                                                                                                                        
+ COMPUTE              PASS  COMP-TEST-44                                                                                
  COMPUTE SERIES       PASS  COMP-TEST-045-1                                                                             
  COMPUTE SERIES       PASS  COMP-TEST-045-2                                                                             
  COMPUTE SERIES       PASS  COMP-TEST-045-3                                                                             
@@ -142,8 +126,8 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC252A                                                
                                                                                                                         
-                                                    070 OF 076  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    006 TEST(S) FAILED                                                  
+                                                    074 OF 075  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    001 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

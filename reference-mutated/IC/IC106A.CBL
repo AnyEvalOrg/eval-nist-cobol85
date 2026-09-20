@@ -397,13 +397,13 @@
 039900     PERFORM PRINT-DETAIL.                                        IC1064.2
 040000 LINK-TEST-03-02.                                                 IC1064.2
 040100     ADD 1 TO REC-CT.                                             IC1064.2
-040200     IF DN2 (2) EQUAL TO "Z"                                      IC1064.2
+040200     IF DN2 (2) EQUAL TO "B"                                      IC1064.2
 040300         PERFORM PASS                                             IC1064.2
 040400         GO TO LINK-WRITE-03-02.                                  IC1064.2
 040500 LINK-FAIL-03-02.                                                 IC1064.2
 040600     PERFORM FAIL.                                                IC1064.2
 040700     MOVE DN2 (2) TO COMPUTED-A.                                  IC1064.2
-040800     MOVE "Z" TO CORRECT-A.                                       IC1064.2
+040800     MOVE "B" TO CORRECT-A.                                       IC1064.2
 040900     MOVE "INDEX IN LINKAGE SECTION" TO RE-MARK.                  IC1064.2
 041000 LINK-WRITE-03-02.                                                IC1064.2
 041100     PERFORM PRINT-DETAIL.                                        IC1064.2
@@ -458,13 +458,13 @@
 046000*                                                                         
 046100 LINK-TEST-05-01.                                                 IC1064.2
 046200     MOVE 1 TO REC-CT.                                            IC1064.2
-046300     IF DN2 (4) EQUAL TO "N"                                      IC1064.2
+046300     IF DN2 (4) EQUAL TO "D"                                      IC1064.2
 046400         PERFORM PASS                                             IC1064.2
 046500         GO TO LINK-WRITE-05-01.                                  IC1064.2
 046600 LINK-FAIL-05-01.                                                 IC1064.2
 046700     PERFORM FAIL.                                                IC1064.2
 046800     MOVE DN2 (4) TO COMPUTED-A.                                  IC1064.2
-046900     MOVE "N" TO CORRECT-A.                                       IC1064.2
+046900     MOVE "D" TO CORRECT-A.                                       IC1064.2
 047000     MOVE "TABLES ?EFINE? IN LINKAGE SEC" TO RE-MARK.             IC1064.2
 047100 LINK-WRITE-05-01.                                                IC1064.2
 047200     PERFORM PRINT-DETAIL.                                        IC1064.2
@@ -487,13 +487,13 @@
 048900*                                                                         
 049000 LINK-TEST-06-01.                                                 IC1064.2
 049100     MOVE 1 TO REC-CT.                                            IC1064.2
-049200     IF DN2 (8) EQUAL TO "D"                                      IC1064.2
+049200     IF DN2 (8) EQUAL TO "X"                                      IC1064.2
 049300         PERFORM PASS                                             IC1064.2
 049400         GO TO LINK-WRITE-06-01.                                  IC1064.2
 049500 LINK-FAIL-06-01.                                                 IC1064.2
 049600     PERFORM FAIL.                                                IC1064.2
 049700     MOVE DN2 (8) TO COMPUTED-A.                                  IC1064.2
-049800     MOVE "D" TO CORRECT-A.                                       IC1064.2
+049800     MOVE "X" TO CORRECT-A.                                       IC1064.2
 049900     MOVE "REDEFINED ITEM IN LINKAGE SEC" TO RE-MARK.             IC1064.2
 050000 LINK-WRITE-06-01.                                                IC1064.2
 050100     PERFORM PRINT-DETAIL.                                        IC1064.2

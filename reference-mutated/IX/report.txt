@@ -29,12 +29,12 @@ IX205A.CBL     12   12    0       0       0 OK
 IX206A.CBL     10   10    0       0       0 OK
 IX207A.CBL      8    8    0       0       0 OK
 IX208A.CBL     29   29    0       0       0 OK
-IX209A.CBL     56   47    9       0       0 
-IX210A.CBL     39   31    8       0       0 
+IX209A.CBL     56   56    0       0       0 OK
+IX210A.CBL     39   39    0       0       0 OK
 IX211A.CBL     17   17    0       0       0 OK
 IX212A.CBL     24   24    0       0       0 OK
 IX213A.CBL     21   21    0       0       0 OK
-IX214A.CBL     39   34    5       0       0 
+IX214A.CBL     39   39    0       0       0 OK
 IX215A.CBL     33   33    0       0       0 OK
 IX216A.CBL     15   14    0       1       0 OK
 IX217A.CBL      6    6    0       0       0 OK
@@ -43,9 +43,9 @@ IX301M.CBL      0    0    0       0       0 OK
 IX302M.CBL      0    0    0       0       0 OK
 IX401M.CBL      0    0    0       0       0 OK
 --------    ----- ---- ---- ------- -------
-Total         508  485   22       1       0
+Total         508  507    0       1       0
 
 Number of programs:    42
-Successfully executed: 39
+Successfully executed: 42
 Compile error:          0
 Execute error:          0

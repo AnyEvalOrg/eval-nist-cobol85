@@ -483,7 +483,7 @@
 048500     PERFORM  PRINT-DETAIL.                                       NC1774.2
 048600 ADD-TEST-F2-2.                                                   NC1774.2
 048700     ADD      N-16 N-4 GIVING N-3 ROUNDED.                        NC1774.2
-048800     IF       N-3 EQUAL TO 56806                                  NC1774.2
+048800     IF       N-3 EQUAL TO 52806                                  NC1774.2
 048900              PERFORM PASS                                        NC1774.2
 049000              GO TO ADD-WRITE-F2-2.                               NC1774.2
 049100     GO TO    ADD-FAIL-F2-2.                                      NC1774.2
@@ -492,7 +492,7 @@
 049400     GO TO    ADD-WRITE-F2-2.                                     NC1774.2
 049500 ADD-FAIL-F2-2.                                                   NC1774.2
 049600     MOVE     N-3 TO COMPUTED-N.                                  NC1774.2
-049700     MOVE     56806 TO CORRECT-N.                                 NC1774.2
+049700     MOVE     52806 TO CORRECT-N.                                 NC1774.2
 049800     PERFORM  FAIL.                                               NC1774.2
 049900 ADD-WRITE-F2-2.                                                  NC1774.2
 050000     MOVE "ADD-TEST-F2-2 " TO PAR-NAME.                           NC1774.2
@@ -559,7 +559,7 @@
 056100     MOVE     ZERO TO WRK-DS-09V09.                               NC1774.2
 056200     ADD      A06THREES-DS-03V03                                  NC1774.2
 056300              A12THREES-DS-06V06 GIVING WRK-DS-09V09.             NC1774.2
-056400     IF       WRK-DS-09V09 EQUAL TO 000533666.666333000           NC1774.2
+056400     IF       WRK-DS-09V09 EQUAL TO 000333666.666333000           NC1774.2
 056500              PERFORM PASS GO TO ADD-WRITE-F2-5.                  NC1774.2
 056600     GO       TO ADD-FAIL-F2-5.                                   NC1774.2
 056700 ADD-DELETE-F2-5.                                                 NC1774.2
@@ -567,7 +567,7 @@
 056900     GO       TO ADD-WRITE-F2-5.                                  NC1774.2
 057000 ADD-FAIL-F2-5.                                                   NC1774.2
 057100     MOVE     WRK-DS-09V09 TO COMPUTED-N.                         NC1774.2
-057200     MOVE     000533666.666333000 TO CORRECT-N.                   NC1774.2
+057200     MOVE     000333666.666333000 TO CORRECT-N.                   NC1774.2
 057300     PERFORM  FAIL.                                               NC1774.2
 057400 ADD-WRITE-F2-5.                                                  NC1774.2
 057500     MOVE     "ADD-TEST-F2-5" TO PAR-NAME.                        NC1774.2
@@ -904,10 +904,10 @@
 090600     MOVE ZERO TO WRK-CS-18V00.                                   NC1774.2
 090700     ADD A14TWOS-CS-18V00  A12THREES-CU-18V00 GIVING              NC1774.2
 090800             WRK-CS-18V00 ROUNDED.                                NC1774.2
-090900     IF WRK-CS-18V00 EQUAL TO -400021888888888889                 NC1774.2
+090900     IF WRK-CS-18V00 EQUAL TO -000021888888888889                 NC1774.2
 091000         PERFORM PASS                                             NC1774.2
 091100         GO TO ADD-WRITE-F2-20.                                   NC1774.2
-091200     MOVE -400021888888888889 TO CORRECT-18V0.                    NC1774.2
+091200     MOVE -000021888888888889 TO CORRECT-18V0.                    NC1774.2
 091300     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1774.2
 091400     PERFORM FAIL.                                                NC1774.2
 091500     GO TO ADD-WRITE-F2-20.                                       NC1774.2
@@ -920,10 +920,10 @@
 092200     MOVE ZERO TO WRK-CS-18V00.                                   NC1774.2
 092300     ADD A14TWOS-CS-18V00  A14TWOS-CS-18V00                       NC1774.2
 092400             GIVING WRK-CS-18V00.                                 NC1774.2
-092500     IF WRK-CS-18V00 EQUAL TO -000044444444474444                 NC1774.2
+092500     IF WRK-CS-18V00 EQUAL TO -000044444444444444                 NC1774.2
 092600         PERFORM PASS                                             NC1774.2
 092700         GO TO ADD-WRITE-F2-21.                                   NC1774.2
-092800     MOVE -000044444444474444 TO CORRECT-18V0.                    NC1774.2
+092800     MOVE -000044444444444444 TO CORRECT-18V0.                    NC1774.2
 092900     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1774.2
 093000     PERFORM FAIL.                                                NC1774.2
 093100     GO TO ADD-WRITE-F2-21.                                       NC1774.2
@@ -2116,7 +2116,7 @@
 211800              A12THREES-DS-06V06                                  NC1774.2
 211900          TO  A06THREES-DS-03V03 GIVING WRK-DS-06V06.             NC1774.2
 212000 ADD-TEST-F2-41-1.                                                NC1774.2
-212100     IF       WRK-DS-06V06 EQUAL TO 344727.777443                 NC1774.2
+212100     IF       WRK-DS-06V06 EQUAL TO 344777.777443                 NC1774.2
 212200              PERFORM PASS GO TO ADD-WRITE-F2-41.                 NC1774.2
 212300     GO       TO ADD-FAIL-F2-41.                                  NC1774.2
 212400 ADD-DELETE-F2-41.                                                NC1774.2
@@ -2124,7 +2124,7 @@
 212600     GO       TO ADD-WRITE-F2-41.                                 NC1774.2
 212700 ADD-FAIL-F2-41.                                                  NC1774.2
 212800     MOVE     WRK-DS-06V06 TO COMPUTED-N.                         NC1774.2
-212900     MOVE     344727.777443 TO CORRECT-N.                         NC1774.2
+212900     MOVE     344777.777443 TO CORRECT-N.                         NC1774.2
 213000     PERFORM  FAIL.                                               NC1774.2
 213100 ADD-WRITE-F2-41.                                                 NC1774.2
 213200     MOVE     "ADD-TEST-F2-41" TO PAR-NAME.                       NC1774.2

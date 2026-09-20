@@ -417,13 +417,13 @@
 041900*                                                                         
 042000*                                                                         
 042100 CALL-TEST-06-01.                                                 IC1034.2
-042200     IF ALPHA-NUM-FIELD NOT EQUAL TO "IJ104"                      IC1034.2
+042200     IF ALPHA-NUM-FIELD NOT EQUAL TO "IC104"                      IC1034.2
 042300         GO TO CALL-FAIL-06-01.                                   IC1034.2
 042400     PERFORM PASS.                                                IC1034.2
 042500     GO TO CALL-WRITE-06-01.                                      IC1034.2
 042600 CALL-FAIL-06-01.                                                 IC1034.2
 042700     MOVE ALPHA-NUM-FIELD TO COMPUTED-A.                          IC1034.2
-042800     MOVE "IJ104" TO CORRECT-A.                                   IC1034.2
+042800     MOVE "IC104" TO CORRECT-A.                                   IC1034.2
 042900     PERFORM FAIL.                                                IC1034.2
 043000     MOVE "ALPHANUMERIC PARAMETER" TO RE-MARK.                    IC1034.2
 043100 CALL-WRITE-06-01.                                                IC1034.2
@@ -442,13 +442,13 @@
 044400     ADD 1 TO REC-CT.                                             IC1034.2
 044500     PERFORM PRINT-DETAIL.                                        IC1034.2
 044600 CALL-TEST-06-03.                                                 IC1034.2
-044700     IF ALPHA-FIELD EQUAL TO "JES"                                IC1034.2
+044700     IF ALPHA-FIELD EQUAL TO "YES"                                IC1034.2
 044800         PERFORM PASS                                             IC1034.2
 044900         GO TO CALL-WRITE-06-03.                                  IC1034.2
 045000 CALL-FAIL-06-03.                                                 IC1034.2
 045100     PERFORM FAIL.                                                IC1034.2
 045200     MOVE ALPHA-FIELD TO COMPUTED-A.                              IC1034.2
-045300     MOVE "JES" TO CORRECT-A.                                     IC1034.2
+045300     MOVE "YES" TO CORRECT-A.                                     IC1034.2
 045400     MOVE "ALPHABETIC PARAMETER" TO RE-MARK.                      IC1034.2
 045500 CALL-WRITE-06-03.                                                IC1034.2
 045600     ADD 1 TO REC-CT.                                             IC1034.2
@@ -466,13 +466,13 @@
 046800     ADD 1 TO REC-CT.                                             IC1034.2
 046900     PERFORM PRINT-DETAIL.                                        IC1034.2
 047000 CALL-TEST-06-05.                                                 IC1034.2
-047100     IF NUM-ITEM EQUAL TO 55                                      IC1034.2
+047100     IF NUM-ITEM EQUAL TO 25                                      IC1034.2
 047200         PERFORM PASS                                             IC1034.2
 047300         GO TO CALL-WRITE-06-05.                                  IC1034.2
 047400 CALL-FAIL-06-05.                                                 IC1034.2
 047500     PERFORM FAIL.                                                IC1034.2
 047600     MOVE NUM-ITEM TO COMPUTED-18V0.                              IC1034.2
-047700     MOVE 55 TO CORRECT-18V0.                                     IC1034.2
+047700     MOVE 25 TO CORRECT-18V0.                                     IC1034.2
 047800     MOVE "SIGNED NUMERIC PARAMETER" TO RE-MARK.                  IC1034.2
 047900 CALL-WRITE-06-05.                                                IC1034.2
 048000     ADD 1 TO REC-CT.                                             IC1034.2

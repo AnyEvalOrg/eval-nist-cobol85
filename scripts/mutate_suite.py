@@ -7,7 +7,8 @@ through another IF. Reject compound predicates, continued literals, ambiguous
 CORRECT moves, and missing computed-data evidence. Equality/inequality and
 symbolic ordering predicates are recognized; execution validates every site.
 Also support direct NOT equality jumps to a local FAIL block with only evidence
-and diagnostic MOVEs. Selection requires at least six supported sites.
+and diagnostic MOVEs. Selection requires at least four sites surviving literal-uniqueness and
+conservative local literal-data-flow checks across shipped dependencies.
 """
 from __future__ import annotations
 import argparse
@@ -23,7 +24,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from scripts.build_dataset import _build, build, read
+from scripts.build_dataset import _build, build, read, dependencies
 from scripts.cobol_fields import data_fields, resolve_field, replacement_options, paired_literal
 from scripts.mutation_private import mutation_salt, salt_sha256, private_manifest_path, check_salt, write_private
 
@@ -32,7 +33,7 @@ ITEM = r'[A-Z][A-Z0-9-]*(?:\s*\([^\n()]+\))?'
 CONDITION = re.compile(r'\bIF\s+(?P<item>' + ITEM + r')\s+(?:IS\s+)?(?P<op>NOT\s+EQUAL(?:\s+TO)?|EQUAL(?:\s+TO)?|=|<|>)\s*(?P<literal>' + LITERAL + r')(?=\s|\.(?:\s|$))', re.I)
 EXTENDED_CONDITION = re.compile(CONDITION.pattern.replace('NOT\\s+EQUAL', 'NOT\\s*=|NOT\\s+EQUAL'), re.I)
 CORRECT = re.compile(r'\bMOVE\s+(?P<literal>' + LITERAL + r')\s+TO\s+CORRECT-(?P<kind>N|A|X|18V0|0V18|4V14|14V4)\b', re.I)
-ALGORITHM = 'hmac-sha256-program-v4-six-sites-quarter-uniform-diagnostics'
+ALGORITHM = 'hmac-sha256-program-v6-four-site-pool'
 
 
 def value(literal):
@@ -81,7 +82,7 @@ def source_code(source, *, continuations=False):
     return ''.join(code), offsets
 
 
-def find_sites(source, extended=True):
+def supported_sites(source, extended=True):
     code, offsets = source_code(source)
     sites = []
     fields = data_fields(source)
@@ -144,6 +145,149 @@ def find_sites(source, extended=True):
     for site in sites:
         key = tuple(site['spans'][1]); counts[key] = counts.get(key, 0) + 1
     return [s for s in sites if counts[tuple(s['spans'][1])] == 1]
+
+
+# Consume identifiers before numbers, so digits in names/PIC clauses cannot be
+# mistaken for standalone constants. Quoted strings are always a single token.
+TOKENS = re.compile(LITERAL + r"|[A-Z][A-Z0-9-]*|[^\s]", re.I)
+FIGURATIVE = {'ZERO', 'ZEROS', 'ZEROES', 'SPACE', 'SPACES', 'QUOTE',
+              'QUOTES', 'HIGH-VALUE', 'HIGH-VALUES', 'LOW-VALUE', 'LOW-VALUES'}
+
+
+def literal_tokens(code):
+    for token in TOKENS.finditer(code):
+        if re.fullmatch(LITERAL, token[0]):
+            yield token
+
+
+def repeated_expectation(source, site, dependency_sources=()):
+    """Reject equal values and string echoes outside the two paired operands.
+
+    Scan continued source too, including diagnostics and dependency closure.
+    Include comments before scrubbing: eligibility must not rely on erasure.
+    """
+    expected = value(site['literals'][0])
+    for unit, own in [(source, True), *((s, False) for s in dependency_sources)]:
+        comments = '\n'.join(line[7:] for line in unit.splitlines()
+                             if line[6:7] in {'*', '/'})
+        if str(expected) in comments or any(value(t[0]) == expected for t in literal_tokens(comments)):
+            return True
+        code, offsets = source_code(unit, continuations=True)
+        for token in literal_tokens(code):
+            span = (offsets[token.start()], offsets[token.end()-1]+1)
+            if own and span in site['spans']:
+                continue
+            other = value(token[0])
+            if other == expected:
+                return True
+            # A diagnostic or a quoted numeric constant also reveals the value.
+            if isinstance(other, str) and str(expected) in other:
+                return True
+    return False
+
+
+def literal_fed(source, site, dependency_sources=()):
+    """May-flow analysis: never erase literal provenance at branch joins.
+
+    Deliberately over-approximate MOVE chains, group/child writes and REDEFINES.
+    A literal assignment anywhere in the paragraph disqualifies the site even
+    if a later computation overwrites it. Unknown MOVE forms fail closed.
+    """
+    code, _ = source_code(source, continuations=True)
+    proc = re.search(r'\bPROCEDURE\s+DIVISION\b', code, re.I)
+    if not proc:
+        return True
+    data_units = [code[:proc.start()]]
+    for dependency in dependency_sources:
+        dependency_code, _ = source_code(dependency, continuations=True)
+        boundary = re.search(r'\bPROCEDURE\s+DIVISION\b', dependency_code, re.I)
+        data_units.append(dependency_code[:boundary.start()] if boundary else dependency_code)
+    related, tainted = {}, set()
+    for data in data_units:
+        # Literal contents cannot introduce declarations or VALUE clauses.
+        data = re.sub(r'"(?:[^"\n]|"")*"|\'(?:[^\'\n]|\'\')*\'',
+                      lambda m: ' ' * len(m[0]), data)
+        declarations = list(re.finditer(r'(?m)^\s*(\d{2})\s+([A-Z][A-Z0-9-]*)\b', data, re.I))
+        stack = []
+        for i, declaration in enumerate(declarations):
+            level, name = int(declaration[1]), declaration[2].upper()
+            if level in {66, 88}:
+                continue
+            body = data[declaration.end():declarations[i+1].start() if i+1 < len(declarations) else len(data)]
+            while stack and (stack[-1][0] >= level or level == 77):
+                stack.pop()
+            related.setdefault(name, set())
+            for _, parent in stack:
+                related[name].add(parent)
+                related.setdefault(parent, set()).add(name)
+            alias = re.search(r'\bREDEFINES\s+([A-Z][A-Z0-9-]*)', body, re.I)
+            if alias:
+                other = alias[1].upper()
+                related[name].add(other)
+                related.setdefault(other, set()).add(name)
+            if re.search(r'\bVALUE(?:S)?\b', body, re.I):
+                tainted.add(name)
+            stack.append((level, name))
+    # Locate paragraphs with strings masked, preventing labels inside literals.
+    masked = re.sub(r'"(?:[^"\n]|"")*"|\'(?:[^\'\n]|\'\')*\'',
+                    lambda m: ' ' * len(m[0]), code)
+    headers = list(re.finditer(r'(?m)^([A-Z0-9][A-Z0-9-]*)\.', masked))
+    header = next((i for i, h in enumerate(headers) if h[1] == site['paragraph']), None)
+    if header is None:
+        return True
+    block = code[headers[header].end():headers[header+1].start() if header+1 < len(headers) else len(code)]
+    ts = [t[0].upper() if not t[0].startswith(('"', "'")) else t[0]
+          for t in TOKENS.finditer(block)]
+    edges = []
+    verbs = {'MOVE', 'IF', 'ELSE', 'END-IF', 'PERFORM', 'GO', 'ADD', 'SUBTRACT',
+             'MULTIPLY', 'DIVIDE', 'COMPUTE', 'INITIALIZE', 'SET', 'DISPLAY',
+             'ACCEPT', 'READ', 'WRITE', 'STRING', 'UNSTRING', 'INSPECT', 'CONTINUE',
+             'STOP', 'EXIT', 'END-MOVE', 'END-PERFORM'}
+    for i, token in enumerate(ts):
+        if token not in {'MOVE', 'INITIALIZE', 'SET'}:
+            continue
+        end = next((j for j in range(i+1, len(ts)) if ts[j] in verbs or ts[j] == '.'), len(ts))
+        statement = ts[i+1:end]
+        if token == 'INITIALIZE':
+            tainted.update(t for t in statement if t in related)
+            continue
+        if token == 'SET':
+            if 'TO' in statement and any(re.fullmatch(LITERAL, t) or t in FIGURATIVE for t in statement[statement.index('TO')+1:]):
+                tainted.update(t for t in statement[:statement.index('TO')] if t in related)
+            continue
+        if 'TO' not in statement or not statement:
+            return True
+        split = statement.index('TO')
+        senders = statement[:split]
+        if not senders or senders[0] in {'CORR', 'CORRESPONDING', 'ALL'}:
+            return True
+        targets = [t for t in statement[split+1:] if t in related]
+        literal = (bool(re.fullmatch(LITERAL, senders[0])) or senders[0] in FIGURATIVE
+                   or (len(senders) > 1 and senders[0] in {'X', 'H', 'B', 'N', 'NX', 'Z'}
+                       and senders[1].startswith(('"', "'"))))
+        for target in targets:
+            if literal:
+                tainted.add(target)
+            else:
+                edges.append((senders[0], target))
+    while True:
+        before = set(tainted)
+        for name in list(tainted):
+            tainted.update(related.get(name, ()))
+        for sender, target in edges:
+            if sender in tainted:
+                tainted.add(target)
+        if before == tainted:
+            break
+    item = re.sub(r'\s*\([^)]*\)', '', site['item']).strip().upper()
+    return item in tainted
+
+
+def find_sites(source, extended=True, *, dependency_sources=()):
+    dependency_sources = tuple(dependency_sources)
+    return [site for site in supported_sites(source, extended)
+            if not repeated_expectation(source, site, dependency_sources)
+            and not literal_fed(source, site, dependency_sources)]
 
 
 def comment_edits(source):
@@ -233,13 +377,13 @@ def diagnostic_edits(source, sites):
     return edits, audit
 
 
-def mutate(source, name, *, select=True):
+def mutate(source, name, *, select=True, dependency_sources=()):
     salt = mutation_salt()
-    sites = find_sites(source)
+    sites = find_sites(source, dependency_sources=dependency_sources)
     seed = hmac.new(salt, name.encode('utf-8'), hashlib.sha256).digest()
     rng = random.Random(int.from_bytes(seed, 'big'))
-    count = min(max(3, round(0.25 * len(sites))), len(sites)//2)
-    selected = rng.sample(sites, count) if select and len(sites) >= 6 else []
+    count = min(max(2, round(0.25 * len(sites))), len(sites)//2)
+    selected = rng.sample(sites, count) if select and len(sites) >= 4 else []
     edits, manifest = [], []
     for site in sorted(selected, key=lambda s: s['spans'][0]):
         original = site['literals'][0]
@@ -254,7 +398,7 @@ def mutate(source, name, *, select=True):
         manifest.append(dict(item=site['item'], field=site['field'], correct_field=site['correct_field'], paragraph=site['paragraph'], operator=site['operator'], kind=site['kind'], replacements=replacements))
     comments, audit = comment_edits(source)
     edits.extend(comments)
-    diagnostics, diagnostic_audit = diagnostic_edits(source, sites)
+    diagnostics, diagnostic_audit = diagnostic_edits(source, supported_sites(source))
     edits.extend(diagnostics)
     for a, b, replacement in sorted(edits, reverse=True):
         source = source[:a] + replacement + source[b:]
@@ -278,10 +422,12 @@ def generate(reference, destination, data):
     for name, entry in sorted(json.loads((reference/'index.json').read_text())['programs'].items()):
         rel = f'{entry["module"]}/{name}.CBL'
         source = read(reference/rel)
-        changed, details = mutate(source, name, select=decisions[name]['eligible'])
-        candidate = decisions[name]['eligible'] and len(details['mutations']) >= 3
+        copies, libraries = dependencies(reference/rel, reference)
+        changed, details = mutate(source, name, select=decisions[name]['eligible'],
+                                  dependency_sources=(*copies.values(), *libraries.values()))
+        candidate = decisions[name]['eligible'] and len(details['mutations']) >= 2
         eligible = candidate
-        reasons = [] if candidate else (['fewer than 6 supported sites'] if decisions[name]['eligible'] else decisions[name]['reasons'])
+        reasons = [] if candidate else (['fewer than 4 supported sites'] if decisions[name]['eligible'] else decisions[name]['reasons'])
         programs[name] = dict(**details, eligible=eligible, reasons=reasons, source_path=rel,
                               original_sha256=hashlib.sha256(source.encode('latin1')).hexdigest(),
                               mutated_sha256=hashlib.sha256(changed.encode('latin1')).hexdigest(),

@@ -19,49 +19,18 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  READ FILE IX-FS1     PASS  READ-TEST-F1-01               RECORDS IN FILE                                               
 *** INFORMATION ***         000000000000000200       000000000000000200                                                 
                                                                                                                         
- START EQ TO RECKEY         START-TEST-GF-01              RECORD KEY VALUES                                             
-*** INFORMATION ***        CCCCCCCCCD022            CCCCCCCCCD022                                                       
-                                                                                                                        
- START EQ TO RECKEY   FAIL*                               IX-36; 4.7.2 ETC.                                             
-                                                                                                                        
-                                     COMPUTED=  000000000000000011                                                      
-                                     CORRECT =  000000000000000016                                                      
-                                                                                                                        
+ START EQ TO RECKEY   PASS  START-TEST-GF-01                                                                            
  START EQ TO RECKEY   PASS  START-TEST-GF-02                                                                            
  START EQ TO RECKEY   PASS  START-TEST-GF-03                                                                            
  START EQ TO RECKEY   PASS  START-TEST-GF-04                                                                            
  START EQ TO RECKEY   PASS  START-TEST-GF-05                                                                            
- START EQ TO RECKEY         START-TEST-GF-06              RECORD KEY VALUES                                             
-*** INFORMATION ***        TTTTTTTTTT380            TTTTTTTTTT380                                                       
-                                                                                                                        
- START EQ TO RECKEY   FAIL*                               IX-36; 4.7.2 ETC.; SUBORDINATE D-I OF KEY                     
-                                                                                                                        
-                                     COMPUTED=  000000000000000190                                                      
-                                     CORRECT =  000000000000000090                                                      
-                                                                                                                        
+ START EQ TO RECKEY   PASS  START-TEST-GF-06                                                                            
  START EQ TO RECKEY   PASS  START-TEST-GF-07                                                                            
- START EQ TO RECKEY   PASS  START-TEST-GF-08                                                                                                                                                                                                    
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
+ START EQ TO RECKEY   PASS  START-TEST-GF-08                                                                            
  START EQ TO RECKEY   PASS  START-TEST-GF-09                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-10                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-11                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-12              IX-3; 1.3.4 (1) A; FROM START-TEST-GF-03                      
-                                                                                                                        
-                                     COMPUTED= 23                                                                       
-                                     CORRECT = 73                                                                       
-                                                                                                                        
+ FILE STATUS START:?? PASS  START-TEST-GF-12                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-13                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-14                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-15                                                                            
@@ -71,32 +40,7 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  STR EQ ALTKY W/O DUP PASS  START-TEST-GF-19                                                                            
  STR EQ ALTKY W/O DUP PASS  START-TEST-GF-20              INVALID KEY                                                   
  STR EQ ALTKY W/O DUP PASS  START-TEST-GF-21              INVALID KEY                                                   
- STR EQ ALTKY W/O DUP PASS  START-TEST-GF-22                                                                            
- STR EQ ALTKY W/O DUP PASS  START-TEST-GF-23                                                                            
- STR EQ ALTKY W/O DUP PASS  START-TEST-GF-24                                                                            
- STR EQ ALTKY W/O DUP PASS  START-TEST-GF-25                                                                            
- STR EQ ALTKY W/O DUP PASS  START-TEST-GF-26                                                                            
- STR EQ ALTKY W/O DUP PASS  START-TEST-GF-27                                                                            
- FILE STATUS START:00 PASS  START-TEST-GF-28                                                                            
- FILE STATUS START:?? PASS  START-TEST-GF-29                                                                            
- FILE STATUS START:?? PASS  START-TEST-GF-30                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-31              IX-4; 1.3.4 (3) C; SEE START-TEST-GF-22                       
-                                                                                                                        
-                                     COMPUTED= 23                                                                       
-                                     CORRECT = 21                                                                       
-                                                                                                                        
- FILE STATUS START:?? FAIL* START-TEST-GF-32              IX-3; 1.3.4 (1) A; SEE START-TEST-GF-23                       
-                                                                                                                        
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 06                                                                       
-                                                                                                                        
- FILE STATUS START:?? FAIL* START-TEST-GF-33              IX-3; 1.3.4 (1) A; SEE START-TEST-GF-24                       
-                                                                                                                        
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 60                                                                       
-                                                                                                                        
- FILE STATUS START:?? PASS  START-TEST-GF-34                                                                            
- FILE STATUS START:?? PASS  START-TEST-GF-35                                                                                                                                                                                                    
+ STR EQ ALTKY W/O DUP PASS  START-TEST-GF-22                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,6 +54,19 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ STR EQ ALTKY W/O DUP PASS  START-TEST-GF-23                                                                            
+ STR EQ ALTKY W/O DUP PASS  START-TEST-GF-24                                                                            
+ STR EQ ALTKY W/O DUP PASS  START-TEST-GF-25                                                                            
+ STR EQ ALTKY W/O DUP PASS  START-TEST-GF-26                                                                            
+ STR EQ ALTKY W/O DUP PASS  START-TEST-GF-27                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-28                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-29                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-30                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-31                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-32                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-33                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-34                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-35                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-36                                                                            
  STRT EQ ALTKY W/DUP  PASS  START-TEST-GF-37                                                                            
  STRT EQ ALTKY W/DUP  PASS  START-TEST-GF-38                                                                            
@@ -122,23 +79,11 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  STRT EQ ALTKY W/DUP  PASS  START-TEST-GF-45                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-46                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-47                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-48              IX-4; 1.3.4 (3) C; SEE START-TEST-GF-39                       
-                                                                                                                        
-                                     COMPUTED= 23                                                                       
-                                     CORRECT = 24                                                                       
-                                                                                                                        
+ FILE STATUS START:?? PASS  START-TEST-GF-48                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-49                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-50              FROM START-TEST-??7.05                                        
-                                                                                                                        
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 50                                                                       
-                                                                                                                        
+ FILE STATUS START:?? PASS  START-TEST-GF-50              FROM START-TEST-??7.05                                        
  FILE STATUS START:?? PASS  START-TEST-GF-51                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-52              IX-4; 1.3.4 (3) C; SEE START-TEST-GF-43                       
-                                                                                                                        
-                                     COMPUTED= 23                                                                       
-                                     CORRECT = 13                                                                       
-                                                                                                                        
+ FILE STATUS START:?? PASS  START-TEST-GF-52                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-53                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-54                                                                            
  ***********************************************************************************************************************
@@ -148,8 +93,21 @@ TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IX209A                                                
                                                                                                                         
-                                                    047 OF 056  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    009 TEST(S) FAILED                                                  
+                                                    056 OF 056  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                      
+                                                    NO  TEST(S) REQUIRE INSPECTION                                                                                                                                                              
+                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
+                                                                                                                        
+                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
+                                                                                                                        
+TEST RESULT OF IX209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
+                                                                                                                        
+                                                                                                                        
+ FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
+                                                                                                                        
+                                                                                                                        
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+ ***********************************************************************************************************************
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

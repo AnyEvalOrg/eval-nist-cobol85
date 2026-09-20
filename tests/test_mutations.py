@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 import pytest
-from scripts.mutate_suite import mutate, find_sites, generate
+from scripts.mutate_suite import mutate, find_sites, supported_sites, generate
 from scripts.build_dataset import build, validate_mutated
 from nist_cobol85.prompts import user_prompt
 from test_scoring import record
@@ -17,7 +17,7 @@ def test_mutated_inventory_and_exact_edits(synthetic_mutation):
     changed, details = mutate(fixture['original'], 'SYNTH')
     assert changed == fixture['changed']
     assert details['mutations'] == entry['mutations']
-    assert len(entry['mutations']) == min(max(3, round(0.25 * entry['mutable_sites'])), entry['mutable_sites']//2)
+    assert len(entry['mutations']) == min(max(2, round(0.25 * entry['mutable_sites'])), entry['mutable_sites']//2)
     assert len(changed) == len(fixture['original'])
     restored = changed.splitlines(keepends=True)
     for site in entry['mutations']:
@@ -218,7 +218,7 @@ def test_eligible_entry_cannot_bypass_validation_with_empty_mutations(synthetic_
     tmp_path = synthetic_mutation['tree']
     entry = next(iter(payload['programs'].values()))
     entry.update(mutations=[], mutation_candidate=False)
-    with pytest.raises(ValueError, match='fewer than 3 mutations'):
+    with pytest.raises(ValueError, match='fewer than 2 mutations'):
         validate_mutated(tmp_path, payload)
 
 
@@ -348,7 +348,7 @@ def test_generation_invalidates_every_candidate_and_uses_external_manifest(tmp_p
     records, eligibility, manifest = build(destination, data)
     assert len(records) == 1 and manifest['status'] == 'ready'
     assert eligibility['mutation_summary']['pending'] == 0
-    assert eligibility['mutation_summary']['shipped_sites'] == 3
+    assert eligibility['mutation_summary']['shipped_sites'] == 2
     # A policy change also invalidates evidence if a program happens to retain
     # exactly the same selected operands and source bytes under the new rule.
     from scripts.mutation_private import write_private
@@ -370,29 +370,30 @@ def test_comment_edits_are_independent_of_selection(monkeypatch, synthetic_mutat
     first, a = mutate(source, 'SYNTH')
     monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-two')
     second, b = mutate(source, 'SYNTH')
-    assert {s['paragraph'] for s in a['mutations']} != {s['paragraph'] for s in b['mutations']}
+    assert len(a['mutations']) == len(b['mutations']) == 2
+    assert a['mutable_sites'] == b['mutable_sites'] == 5
     assert a['comment_changes'] == b['comment_changes']
-    assert len(a['diagnostic_changes']) == 6
+    assert len(a['diagnostic_changes']) == 1
     assert a['diagnostic_changes'] == b['diagnostic_changes']
-    assert first.count('"EXPECTED ??"') == second.count('"EXPECTED ??"') == 6
+    assert first.count('"EXPECTED ??"') == second.count('"EXPECTED ??"') == 1
     assert [l for l in first.splitlines() if l[6:7] in {'*', '/'}] == [l for l in second.splitlines() if l[6:7] in {'*', '/'}]
     assert all(not l[7:].strip() for l in first.splitlines() if l[6:7] in {'*', '/'})
 
 
-@pytest.mark.parametrize('count', [0, 1, 3, 5, 6, 7, 10, 14, 18, 26, 50])
-def test_six_site_threshold_and_quarter_selection(count):
+@pytest.mark.parametrize('count', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 18, 26, 50])
+def test_four_site_threshold_and_quarter_selection(count):
     source = fixed('\n'.join(f'''TEST-{i}.
-    IF DATA-ITEM = 42
+    IF DATA-ITEM = {10+i}
         PERFORM PASS
     ELSE
         MOVE DATA-ITEM TO COMPUTED-N
-        MOVE 42 TO CORRECT-N
+        MOVE {10+i} TO CORRECT-N
         PERFORM FAIL.
     PERFORM PRINT-DETAIL.''' for i in range(count)))
     _, details = mutate(source, 'SYNTH')
     assert details['mutable_sites'] == count
     selected = len(details['mutations'])
-    assert selected == (min(max(3, round(0.25 * count)), count//2) if count >= 6 else 0)
+    assert selected == (min(max(2, round(0.25 * count)), count//2) if count >= 4 else 0)
     assert selected <= count//2
 
 
@@ -431,11 +432,8 @@ def test_diagnostic_strings_scrub_every_candidate(monkeypatch, count, select, sh
     first, a = mutate(source, 'SYNTH', select=select)
     monkeypatch.setenv('NIST_MUTATION_SALT', 'comment-key-two')
     second, b = mutate(source, 'SYNTH', select=select)
-    if count >= 6 and select:
-        assert {s['paragraph'] for s in a['mutations']} != {s['paragraph'] for s in b['mutations']}
-    else:
-        assert not a['mutations'] and not b['mutations']
-    assert a['mutable_sites'] == count
+    assert not a['mutations'] and not b['mutations']
+    assert a['mutable_sites'] == 0
     assert a['diagnostic_changes'] == b['diagnostic_changes']
     assert len(a['diagnostic_changes']) == 3 * count
     for changed, details in [(first, a), (second, b)]:
@@ -471,11 +469,11 @@ def test_generation_explains_insufficient_sites(tmp_path, synthetic_mutation, co
     payload = generate(reference, tmp_path/'mutated', data)
     entry = payload['programs']['SYNTH']
     assert not entry['eligible'] and not entry['mutation_candidate']
-    assert entry['reasons'] == ['fewer than 6 supported sites']
-    assert entry['mutable_sites'] == count
+    assert entry['reasons'] == ['fewer than 4 supported sites']
+    assert entry['mutable_sites'] == 0
     assert len(entry['diagnostic_changes']) == 3 * count
     public = json.loads((data/'eligibility.json').read_text())
-    assert 'fewer than 6 supported sites' in public['programs'][0]['reasons']
+    assert 'fewer than 4 supported sites' in public['programs'][0]['reasons']
     assert public['mutation_summary']['insufficient_sites'] == 1
 
 
@@ -489,7 +487,7 @@ def test_continued_diagnostic_literals_preserve_physical_columns():
     changed, details = mutate(source, 'SYNTH')
     assert changed.count('      -    "?????? ERROR ??????" TO RE-MARK.') == 6
     assert len(source) == len(changed)
-    edits, audit = diagnostic_edits(source, find_sites(source))
+    edits, audit = diagnostic_edits(source, supported_sites(source))
     assert details['diagnostic_changes'] == audit
     assert len(audit) == 18
     for a, b, replacement in edits:
@@ -498,7 +496,7 @@ def test_continued_diagnostic_literals_preserve_physical_columns():
         assert changed[a:b] == replacement
 
 
-@pytest.mark.parametrize('sites,reason', [(3, 'fewer than 6 supported sites'),
+@pytest.mark.parametrize('sites,reason', [(3, 'fewer than 4 supported sites'),
                                          (18, 'incorrect mutation count')])
 def test_validation_enforces_site_count(synthetic_mutation, sites, reason):
     payload = synthetic_mutation['payload']

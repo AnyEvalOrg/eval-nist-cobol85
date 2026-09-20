@@ -310,45 +310,45 @@
 031000     PERFORM  PRINT-DETAIL.                                       ST1084.2
 031100 SORT-TEST-3.                                                     ST1084.2
 031200     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1084.2
-031300     IF       SORTKEY-6 EQUAL TO "A         "                     ST1084.2
+031300     IF       SORTKEY-6 EQUAL TO "Z         "                     ST1084.2
 031400              PERFORM PASS GO TO SORT-WRITE-3.                    ST1084.2
 031500 SORT-FAIL-3.                                                     ST1084.2
 031600     PERFORM  FAIL.                                               ST1084.2
 031700     MOVE     SORTKEY-6 TO COMPUTED-A.                            ST1084.2
-031800     MOVE     "A         "           TO CORRECT-A.                ST1084.2
+031800     MOVE     "Z         "           TO CORRECT-A.                ST1084.2
 031900 SORT-WRITE-3.                                                    ST1084.2
 032000     MOVE     "SORT-TEST-3 " TO PAR-NAME.                         ST1084.2
 032100     PERFORM  PRINT-DETAIL.                                       ST1084.2
 032200 SORT-TEST-4.                                                     ST1084.2
 032300     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1084.2
-032400     IF       SORTKEY-5 EQUAL TO "O                   "           ST1084.2
+032400     IF       SORTKEY-5 EQUAL TO "Z                   "           ST1084.2
 032500              PERFORM PASS GO TO SORT-WRITE-4.                    ST1084.2
 032600 SORT-FAIL-4.                                                     ST1084.2
 032700     PERFORM  FAIL.                                               ST1084.2
 032800     MOVE     SORTKEY-5 TO COMPUTED-A.                            ST1084.2
-032900     MOVE     "O                   " TO CORRECT-A.                ST1084.2
+032900     MOVE     "Z                   " TO CORRECT-A.                ST1084.2
 033000 SORT-WRITE-4.                                                    ST1084.2
 033100     MOVE     "SORT-TEST-4 " TO PAR-NAME.                         ST1084.2
 033200     PERFORM  PRINT-DETAIL.                                       ST1084.2
 033300 SORT-TEST-5.                                                     ST1084.2
 033400     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1084.2
-033500     IF       SORTKEY-4 EQUAL TO "         C"                     ST1084.2
+033500     IF       SORTKEY-4 EQUAL TO "         X"                     ST1084.2
 033600              PERFORM PASS GO TO SORT-WRITE-5.                    ST1084.2
 033700 SORT-FAIL-5.                                                     ST1084.2
 033800     PERFORM  FAIL.                                               ST1084.2
 033900     MOVE     SORTKEY-4 TO COMPUTED-A.                            ST1084.2
-034000     MOVE     "         C"           TO CORRECT-A.                ST1084.2
+034000     MOVE     "         X"           TO CORRECT-A.                ST1084.2
 034100 SORT-WRITE-5.                                                    ST1084.2
 034200     MOVE     "SORT-TEST-5 " TO PAR-NAME.                         ST1084.2
 034300     PERFORM  PRINT-DETAIL.                                       ST1084.2
 034400 SORT-TEST-6.                                                     ST1084.2
 034500     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1084.2
-034600     IF       SORTKEY-3 EQUAL TO +.9000000000000000               ST1084.2
+034600     IF       SORTKEY-3 EQUAL TO +.6000000000000000               ST1084.2
 034700              PERFORM PASS GO TO SORT-WRITE-6.                    ST1084.2
 034800 SORT-FAIL-6.                                                     ST1084.2
 034900     PERFORM  FAIL.                                               ST1084.2
 035000     MOVE     SORTKEY-3 TO COMPUTED-0V18.                         ST1084.2
-035100     MOVE     +.9000000000000000     TO CORRECT-0V18.             ST1084.2
+035100     MOVE     +.6000000000000000     TO CORRECT-0V18.             ST1084.2
 035200 SORT-WRITE-6.                                                    ST1084.2
 035300     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1084.2
 035400     PERFORM  PRINT-DETAIL.                                       ST1084.2

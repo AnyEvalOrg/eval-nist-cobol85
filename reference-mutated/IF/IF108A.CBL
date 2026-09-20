@@ -393,10 +393,10 @@
 039300     MOVE ZERO TO WS-DATE.                                        IF1084.2
 039400 F-DATEOFINT-TEST-06.                                             IF1084.2
 039500     COMPUTE WS-DATE = FUNCTION DATE-OF-INTEGER(C).               IF1084.2
-039600     IF WS-DATE = 16011026 THEN                                   IF1084.2
+039600     IF WS-DATE = 16011027 THEN                                   IF1084.2
 039700                        PERFORM PASS                              IF1084.2
 039800     ELSE                                                         IF1084.2
-039900                        MOVE  16011026  TO CORRECT-N              IF1084.2
+039900                        MOVE  16011027  TO CORRECT-N              IF1084.2
 040000                        MOVE WS-DATE TO COMPUTED-N                IF1084.2
 040100                        PERFORM FAIL.                             IF1084.2
 040200     GO TO F-DATEOFINT-WRITE-06.                                  IF1084.2
@@ -411,10 +411,10 @@
 041100     MOVE ZERO TO WS-DATE.                                        IF1084.2
 041200 F-DATEOFINT-TEST-07.                                             IF1084.2
 041300     COMPUTE WS-DATE = FUNCTION DATE-OF-INTEGER(365).             IF1084.2
-041400     IF WS-DATE = 16019231 THEN                                   IF1084.2
+041400     IF WS-DATE = 16011237 THEN                                   IF1084.2
 041500                        PERFORM PASS                              IF1084.2
 041600     ELSE                                                         IF1084.2
-041700                        MOVE  16019231  TO CORRECT-N              IF1084.2
+041700                        MOVE  16011237  TO CORRECT-N              IF1084.2
 041800                        MOVE WS-DATE TO COMPUTED-N                IF1084.2
 041900                        PERFORM FAIL.                             IF1084.2
 042000     GO TO F-DATEOFINT-WRITE-07.                                  IF1084.2
@@ -448,10 +448,10 @@
 044800 F-DATEOFINT-TEST-09.                                             IF1084.2
 044900     COMPUTE WS-DATE = FUNCTION DATE-OF-INTEGER(D) +              IF1084.2
 045000                    FUNCTION DATE-OF-INTEGER(D).                  IF1084.2
-045100     IF WS-DATE = 32720202 THEN                                   IF1084.2
+045100     IF WS-DATE = 32029202 THEN                                   IF1084.2
 045200                        PERFORM PASS                              IF1084.2
 045300     ELSE                                                         IF1084.2
-045400                        MOVE  32720202  TO CORRECT-N              IF1084.2
+045400                        MOVE  32029202  TO CORRECT-N              IF1084.2
 045500                        MOVE WS-DATE TO COMPUTED-N                IF1084.2
 045600                        PERFORM FAIL.                             IF1084.2
 045700     GO TO F-DATEOFINT-WRITE-09.                                  IF1084.2

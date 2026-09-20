@@ -19,28 +19,28 @@ TEST RESULT OF IF114A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-PART Functio PASS  F-INTPART-04                                                                                
  INTEGER-PART Functio PASS  F-INTPART-05                                                                                
  INTEGER-PART Functio PASS  F-INTPART-06                                                                                
- INTEGER-PART Functio FAIL* F-INTPART-07                                                                                
-                                                                                                                        
-                                     COMPUTED=  000230492.000000000                                                     
-                                     CORRECT =  000230452.000000000  See ref. A-47 2.18                                 
-                                                                                                                        
+ INTEGER-PART Functio PASS  F-INTPART-07                                                                                
  INTEGER-PART Functio PASS  F-INTPART-?8                                                                                
- INTEGER-PART Functio FAIL* F-INTPART-09                                                                                
-                                                                                                                        
-                                     COMPUTED=  000500000.000000000                                                     
-                                     CORRECT =  000520000.000000000  See ref. A-47 2.18                                 
-                                                                                                                        
+ INTEGER-PART Functio PASS  F-INTPART-09                                                                                
  INTEGER-PART Functio PASS  F-INTPART-10                                                                                
  INTEGER-PART Functio PASS  F-INTPART-??                                                                                
  INTEGER-PART Functio PASS  F-INTPART-12                                                                                
- INTEGER-PART Functio FAIL* F-INTPART-13                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000005.000000000  See ref. A-47 2.18                                 
-                                                                                                                        
+ INTEGER-PART Functio PASS  F-INTPART-13                                                                                
  INTEGER-PART Functio PASS  F-INTPART-1?                                                                                
  INTEGER-PART Functio PASS  F-INTPART-15                                                                                
- INTEGER-PART Functio PASS  F-INTPART-16                                                                                                                                                                                                        
+ INTEGER-PART Functio PASS  F-INTPART-16                                                                                
+ INTEGER-PART Functio PASS  F-INTPART-17                                                                                
+ INTEGER-PART Functio PASS  F-INTPART-18                                                                                
+ INTEGER-PART Functio PASS  F-INTPART??9                                                                                
+ INTEGER-PART Functio PASS  F-INTPART-20                                                                                
+ INTEGER-PART Functio PASS  F-INTPART-21                                                                                
+ INTEGER-PART Functio PASS  F-INTPART-22                                                                                
+ INTEGER-PART Functio PASS  F-INTPART-23                                                                                
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,30 +54,10 @@ TEST RESULT OF IF114A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- INTEGER-PART Functio PASS  F-INTPART-17                                                                                
- INTEGER-PART Functio PASS  F-INTPART-18                                                                                
- INTEGER-PART Functio FAIL* F-INTPART??9                                                                                
-                                                                                                                        
-                                     COMPUTED= -000000001.000000000                                                     
-                                     CORRECT = -000000008.000000000  See ref. A-47 2.18                                 
-                                                                                                                        
- INTEGER-PART Functio PASS  F-INTPART-20                                                                                
- INTEGER-PART Functio PASS  F-INTPART-21                                                                                
- INTEGER-PART Functio FAIL* F-INTPART-22                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000002.000000000  See ref. A-47 2.18                                 
-                                                                                                                        
- INTEGER-PART Functio PASS  F-INTPART-23                                                                                
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
                                                     END OF TEST-  IF114A                                                
                                                                                                                         
-                                                    018 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    005 TEST(S) FAILED                                                  
+                                                    023 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

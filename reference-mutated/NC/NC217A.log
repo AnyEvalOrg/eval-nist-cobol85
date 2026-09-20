@@ -16,11 +16,7 @@ TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LIT DEL BY SIZE      PASS  STR-TEST-GF-1      .01                                                                      
  LIT DEL BY SIZE      PASS  STR-TEST-GF-1      .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-2      .01                                                                      
- LIT DEL BY LIT       FAIL* STR-TEST-GF-2      .02                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                    
-                                     CORRECT = ABCJE                 VI-130 6.24.3+4                                    
-                                                                                                                        
+ LIT DEL BY LIT       PASS  STR-TEST-GF-2      .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-2      .03                                                                      
  ID DEL BY QUAL ID    PASS  STR-TEST-GF-3      .01                                                                      
  ID DEL BY QUAL ID    PASS  STR-TEST-GF-3      .02                                                                      
@@ -48,91 +44,51 @@ TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LITERAL SERIES       PASS  STR-TEST-GF-13                                                                              
  IDENTIFIER SERIES    PASS  STR-TEST-GF-14                                                                              
  SIGN LEADING         PASS  STR-TEST-GF-15     .01                                                                      
- SIGN LEADING         PASS  STR-TEST-GF-15     .02                                                                                                                                                                                              
+ SIGN LEADING         PASS  STR-TEST-GF-15     .02                                                                      
+ SIGN LEADING         PASS  STR-TEST-GF-16     .01                                                                      
+ SIGN LEADING         PASS  STR-TEST-GF-16     .02                                                                      
+ SIGN TRAILING        FAIL* STR-TEST-GF-17     .01                                                                      
+                                                                                                                                                                                                                                                
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- SIGN LEADING         PASS  STR-TEST-GF-16     .01                                                                      
- SIGN LEADING         PASS  STR-TEST-GF-16     .02                                                                      
- SIGN TRAILING        PASS  STR-TEST-GF-17     .01                                                                      
+                                     COMPUTED= 1001+                                                                    
+                                     CORRECT = 1003+                 VI-130 6.24.3+4                                    
+                                                                                                                        
  SIGN TRAILING        PASS  STR-TEST-GF-17     .02                                                                      
- NEG LEADING SEPARATE FAIL* STR-TEST-GF-18     .01                                                                      
+ NEG LEADING SEPARATE PASS  STR-TEST-GF-18     .01                                                                      
+ NEG LEADING SEPARATE PASS  STR-TEST-GF-18     .02                                                                      
+ NEGATIVE SIGN TRAIL  FAIL* STR-TEST-GF-19     .01                                                                      
                                                                                                                         
-                                     COMPUTED= -1 -1                                                                    
-                                     CORRECT = -9 -1                 VI-130 6.24.3+4                                    
+                                     COMPUTED= 1001-                                                                    
+                                     CORRECT = 1004-                 VI-130 6.24.3+4                                    
                                                                                                                         
- NEG LEADING SEPARATE FAIL* STR-TEST-GF-18     .02                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000006.000000000                                                     
-                                     CORRECT =  000000000.000000000  VI-130 6.24.3+4                                    
-                                                                                                                        
- NEGATIVE SIGN TRAIL  PASS  STR-TEST-GF-19     .01                                                                      
- NEGATIVE SIGN TRAIL  FAIL* STR-TEST-GF-19     .02                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000006.000000000                                                     
-                                     CORRECT =  000000008.000000000  VI-130 6.24.3+4                                    
-                                                                                                                        
+ NEGATIVE SIGN TRAIL  PASS  STR-TEST-GF-19     .02                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-20     .01                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-20     .01                                                                      
- LITERAL SERIES       FAIL* STR-TEST-GF-20     .02                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000038.000000000                                                     
-                                     CORRECT =  000000008.000000000  VI-130 6.24.3+4                                    
-                                                                                                                        
- LIT DEL BY SIZE      FAIL* STR-TEST-GF-21     .01                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                    
-                                     CORRECT = ABEDE                 VI-130 6.24.3 GR4                                  
-                                                                                                                        
- LIT DEL BY SIZE      FAIL* STR-TEST-GF-21     .02                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000006.000000000                                                     
-                                     CORRECT =  000000000.000000000  VI-130 6.24.3 GR4                                  
-                                                                                                                        
+ LITERAL SERIES       PASS  STR-TEST-GF-20     .02                                                                      
+ LIT DEL BY SIZE      PASS  STR-TEST-GF-21     .01                                                                      
+ LIT DEL BY SIZE      PASS  STR-TEST-GF-21     .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-22     .01                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-22     .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-22     .03                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-23     .01                                                                      
- LITERAL SERIES       FAIL* STR-TEST-GF-23     .02                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                    
-                                     CORRECT = ABCYE                 VI-132 6.24.4 GR9, 10                              
-                                                                                                                        
+ LITERAL SERIES       PASS  STR-TEST-GF-23     .02                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-23     .03                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-24     .01                                                                      
- LIT DEL BY LIT       FAIL* STR-TEST-GF-24     .02                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                                                                                                                                            
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                     CORRECT = FBCDE                 VI-132 6.24.4 GR9, 10                              
-                                                                                                                        
+ LIT DEL BY LIT       PASS  STR-TEST-GF-24     .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-24     .03                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-25                                                                              
- LITERAL SERIES       FAIL* STR-TEST-GF-25-1   .01                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                    
-                                     CORRECT = ABCBE                 VI-132 6.24.4 GR9, 10                              
-                                                                                                                        
+ LITERAL SERIES       PASS  STR-TEST-GF-25-1   .01                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-25-1   .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-26     .01                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-2?-2   .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-2?-2   .03                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-2?-2   .04                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-2?-2   .05                                                                      
- LIT DEL BY LIT       FAIL* STR-TEST-GF-27     .01                                                                      
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                    
-                                     CORRECT = ABJDE                 VI-132 6.24.4 GR9, 10                              
-                                                                                                                        
- LIT DEL BY LIT       FAIL* STR-TEST-GF-27     .02                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000006.000000000                                                     
-                                     CORRECT =  000000007.000000000  VI-132 6.24.4 GR9, 10                              
-                                                                                                                        
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .01                                                                      
+ LIT DEL BY LIT       PASS  STR-TEST-GF-27     .02                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-27     .03                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-27     .04                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-27     .05                                                                      
@@ -147,7 +103,11 @@ TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LIT DEL BY LIT       PASS  STR-TEST-GF-29     .04                                                                      
  LIT DEL BY LIT       PASS  STR-TEST-GF-29     .05                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-30     .01                                                                      
- LITERAL SERIES       PASS  STR-TEST-GF-30     .02                                                                      
+ LITERAL SERIES       PASS  STR-TEST-GF-30     .02                                                                                                                                                                                              
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
  LITERAL SERIES       PASS  STR-TEST-GF-30     .03                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-30     .04                                                                      
  LITERAL SERIES       PASS  STR-TEST-GF-30     .05                                                                      
@@ -158,12 +118,8 @@ TEST RESULT OF NC217A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC217A                                                
                                                                                                                         
-                                                    070 OF 082  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                                    012 TEST(S) FAILED                                                  
+                                                    080 OF 082  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    002 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -19,24 +19,12 @@ TEST RESULT OF IC235A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLE EXIT PROGRM PASS  EXIT-TEST-04                                                                                
  CALL USING DN SERIES PASS  CALL-TEST-06       .01                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .02                                                                      
- CALL USING DN SERIES FAIL* CALL-TEST-06       .03        ALPHABETIC PARAMETER                                          
-                                                                                                                        
-                                     COMPUTED= YES                                                                      
-                                     CORRECT = YEC                                                                      
-                                                                                                                        
- CALL USING DN SERIES FAIL* CALL-TEST-06       .04        COMPUTATIONAL PARAMETER                                       
-                                                                                                                        
-                                     COMPUTED=  0000.76540000000000                                                     
-                                     CORRECT =  0000.72540000000000                                                     
-                                                                                                                        
+ CALL USING DN SERIES PASS  CALL-TEST-06       .03                                                                      
+ CALL USING DN SERIES PASS  CALL-TEST-06       .04                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .05                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .06                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .07                                                                      
- CALL USING DN SERIES FAIL* CALL-TEST-06       .08        SUBSCRIPTED LINKAGE DATA ITEM                                 
-                                                                                                                        
-                                     COMPUTED= 1A                                                                       
-                                     CORRECT = 1H                    XVII-46 (59)                                       
-                                                                                                                        
+ CALL USING DN SERIES PASS  CALL-TEST-06       .08                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -44,8 +32,8 @@ TEST RESULT OF IC235A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC235A                                                
                                                                                                                         
-                                                    009 OF 012  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    012 OF 012  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

@@ -340,11 +340,11 @@
 034200     PERFORM PRINT-DETAIL.                                        NC1334.2
 034300 IDX-TEST-1.                                                      NC1334.2
 034400     SET IDX-1 TO 3.                                              NC1334.2
-034500     IF ENTRY-A-1 (IDX-1) EQUAL TO "335"                          NC1334.2
+034500     IF ENTRY-A-1 (IDX-1) EQUAL TO "333"                          NC1334.2
 034600         PERFORM PASS                                             NC1334.2
 034700         GO TO IDX-WRITE-1.                                       NC1334.2
 034800     MOVE ENTRY-A-1 (IDX-1) TO COMPUTED-A.                        NC1334.2
-034900     MOVE "335" TO CORRECT-A.                                     NC1334.2
+034900     MOVE "333" TO CORRECT-A.                                     NC1334.2
 035000     PERFORM FAIL.                                                NC1334.2
 035100     GO TO IDX-WRITE-1.                                           NC1334.2
 035200 IDX-DELETE-1.                                                    NC1334.2
@@ -594,10 +594,10 @@
 059600 IDX-TEST-18.                                                     NC1334.2
 059700     MOVE 4 TO COMP-S-IDX18.                                      NC1334.2
 059800     SET IDX-2 TO COMP-S-IDX18.                                   NC1334.2
-059900     IF ENTRY-A-2 (IDX-2) EQUAL TO "68"                           NC1334.2
+059900     IF ENTRY-A-2 (IDX-2) EQUAL TO "48"                           NC1334.2
 060000         PERFORM PASS                                             NC1334.2
 060100         GO TO IDX-WRITE-18.                                      NC1334.2
-060200     MOVE "68" TO CORRECT-A.                                      NC1334.2
+060200     MOVE "48" TO CORRECT-A.                                      NC1334.2
 060300     MOVE ENTRY-A-2 (IDX-2) TO COMPUTED-A.                        NC1334.2
 060400     PERFORM FAIL.                                                NC1334.2
 060500     GO TO IDX-WRITE-18.                                          NC1334.2
@@ -654,11 +654,11 @@
 065600 IDX-TEST-22.                                                     NC1334.2
 065700     SET IDX-2 TO 2.                                              NC1334.2
 065800     SET COMP-U-IDX1 TO IDX-2.                                    NC1334.2
-065900     IF COMP-U-IDX1 EQUAL TO 5                                    NC1334.2
+065900     IF COMP-U-IDX1 EQUAL TO 2                                    NC1334.2
 066000         PERFORM PASS                                             NC1334.2
 066100         GO TO IDX-WRITE-22.                                      NC1334.2
 066200     MOVE COMP-U-IDX1 TO COMPUTED-N.                              NC1334.2
-066300     MOVE 5 TO CORRECT-N.                                         NC1334.2
+066300     MOVE 2 TO CORRECT-N.                                         NC1334.2
 066400     PERFORM FAIL.                                                NC1334.2
 066500     GO TO IDX-WRITE-22.                                          NC1334.2
 066600 IDX-DELETE-22.                                                   NC1334.2

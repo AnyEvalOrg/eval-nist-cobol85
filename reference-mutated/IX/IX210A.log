@@ -21,14 +21,7 @@ TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  START GT RECKEY      PASS  START-TEST-GF-01                                                                            
  START GT RECKEY      PASS  START-TEST-GF-02                                                                            
- START GT RECKEY            START-TEST-GF-03              RECORD KEY VALUES                                             
-*** INFORMATION ***        BBBBBBBBBC002            BBBBBBBBBC002                                                       
-                                                                                                                        
- START GT RECKEY      FAIL*                               RECORD NUMBER; IX-36 ETC                                      
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000061                                                      
-                                                                                                                        
+ START GT RECKEY      PASS  START-TEST-GF-03                                                                            
  START GT RECKEY      PASS  START-TEST-GF-04              INVALID KEY OK.                                               
  START GT RECKEY      PASS  START-TEST-GF-05              SUBORDINATE DATA ITEM OF KEY                                  
  START GT RECKEY      PASS  START-TEST-GF-06              SUBORDINATE DATA ITEM IN KEY                                  
@@ -38,9 +31,16 @@ TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:00 PASS  START-TEST-GF-10                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-11                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-12                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-13              FROM START-TEST-GF-04; IX-4 1.3.4 (3) C                       
-                                                                                                                        
-                                     COMPUTED= 23                                                                                                                                                                                               
+ FILE STATUS START:?? PASS  START-TEST-GF-13                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-14                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-15                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-16                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-17                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-18                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-19                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-20                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-21                                                                            
+ STR GT ALTKY W/O DUP PASS  START-TEST-GF-22              INVALID KEY OK.                                                                                                                                                                       
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,70 +54,19 @@ TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     CORRECT = 28                                                                       
-                                                                                                                        
- FILE STATUS START:?? PASS  START-TEST-GF-14                                                                            
- FILE STATUS START:?? PASS  START-TEST-GF-15                                                                            
- FILE STATUS START:?? PASS  START-TEST-GF-16                                                                            
- FILE STATUS START:?? PASS  START-TEST-GF-17                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-18              FROM START-TEST-GF-09; IX-4 1.3.4 (3) C                       
-                                                                                                                        
-                                     COMPUTED= 23                                                                       
-                                     CORRECT = 24                                                                       
-                                                                                                                        
- STR GT ALTKY W/O DUP PASS  START-TEST-GF-19                                                                            
- STR GT ALTKY W/O DUP PASS  START-TEST-GF-20                                                                            
- STR GT ALTKY W/O DUP       START-TEST-GF-21              ALTERNATE RECORD KEY1 VALUES                                  
-*** INFORMATION ***        EEEEEEEEEF002ALTKEY1     EEEEEEEEEF002ALTKEY1                                                
-                                                                                                                        
- STR GT ALTKY W/O DUP FAIL*                               RECORD NUMBER; IX-36 ETC                                      
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000501                                                      
-                                                                                                                        
- STR GT ALTKY W/O DUP PASS  START-TEST-GF-22              INVALID KEY OK.                                               
  STR GT ALTKY W/O DUP PASS  START-TEST-GF-23              SUBORDINATE DATA ITEM OF KEY                                  
  STR GT ALTKY W/O DUP PASS  START-TEST-GF-24              SUBORDINATE DATA ITEM IN KEY                                  
  STR GT ALTKY W/O DUP PASS  START-TEST-GF-25              INVALID KEY                                                   
  STR GT ALTKY W/O DUP PASS  START-TEST-GF-26              SUBORDINATE DATA ITEM IN KEY                                  
  STR GT ALTKY W/O DUP PASS  START-TEST-GF-27              INVALID KEY OK.                                               
  FILE STATUS START:?? PASS  START-TEST-GF-28                                                                            
- FILE STATUS START:?? FAIL* START-TEST-GF-29              FROM START-TEST-GF-20; IX-3 1.3.4 (1) A                       
-                                                                                                                        
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 06                                                                       
-                                                                                                                        
- FILE STATUS START:?? FAIL* START-TEST-GF-30              FROM START-TEST-GF-21; IX-3 1.3.4 (1) A                       
-                                                                                                                        
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 01                                                                       
-                                                                                                                        
+ FILE STATUS START:?? PASS  START-TEST-GF-29                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-30                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-31                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-32                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-33                                                                            
- FILE STATUS START:00 FAIL* START-TEST-GF-34              FROM START-TEST-GF-25; IX-4 1.3.4 (3) C                       
-                                                                                                                                                                                                                                                
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
-                                     COMPUTED= 23                                                                       
-                                     CORRECT = 26                                                                       
-                                                                                                                        
- FILE STATUS START:?? FAIL* START-TEST-GF-35              FROM START-TEST-GF-26; IX-3 1.3.4 (1) A                       
-                                                                                                                        
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 20                                                                       
-                                                                                                                        
+ FILE STATUS START:00 PASS  START-TEST-GF-34                                                                            
+ FILE STATUS START:?? PASS  START-TEST-GF-35                                                                            
  FILE STATUS START:?? PASS  START-TEST-GF-36                                                                            
  START SERIES         PASS  START-TEST-GF-37              MULTIPLE STARTS BEFORE READ                                   
  ***********************************************************************************************************************
@@ -127,8 +76,8 @@ TEST RESULT OF IX210A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IX210A                                                
                                                                                                                         
-                                                    031 OF 039  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    008 TEST(S) FAILED                                                  
+                                                    039 OF 039  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

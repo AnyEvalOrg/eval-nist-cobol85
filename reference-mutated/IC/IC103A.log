@@ -17,23 +17,11 @@ TEST RESULT OF IC103A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLE EXIT PROGRM PASS  EXIT-TEST-02                                                                                
  MULTIPLE EXIT PROGRM PASS  EXIT-TEST-03                                                                                
  MULTIPLE EXIT PROGRM PASS  EXIT-TEST-04                                                                                
- CALL USING DN SERIES FAIL* CALL-TEST-06       .01        ALPHANUMERIC PARAMETER                                        
-                                                                                                                        
-                                     COMPUTED= IC104                                                                    
-                                     CORRECT = IJ104                                                                    
-                                                                                                                        
+ CALL USING DN SERIES PASS  CALL-TEST-06       .01                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .02                                                                      
- CALL USING DN SERIES FAIL* CALL-TEST-06       .03        ALPHABETIC PARAMETER                                          
-                                                                                                                        
-                                     COMPUTED= YES                                                                      
-                                     CORRECT = JES                                                                      
-                                                                                                                        
+ CALL USING DN SERIES PASS  CALL-TEST-06       .03                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .04                                                                      
- CALL USING DN SERIES FAIL* CALL-TEST-06       .05        SIGNED NUMERIC PARAMETER                                      
-                                                                                                                        
-                                     COMPUTED=  000000000000000025                                                      
-                                     CORRECT =  000000000000000055                                                      
-                                                                                                                        
+ CALL USING DN SERIES PASS  CALL-TEST-06       .05                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .06                                                                      
  ***********************************************************************************************************************
                                                                                                                         
@@ -42,8 +30,8 @@ TEST RESULT OF IC103A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC103A                                                
                                                                                                                         
-                                                    007 OF 010  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    010 OF 010  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

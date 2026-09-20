@@ -39,8 +39,8 @@ TEST RESULT OF ST127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DUPLICATE KEYS       PASS  SORT-TEST-26-1                                                                              
  DUPLICATE KEYS       PASS  SORT-TEST-26-2                                                                              
  DUPLICATE KEYS       PASS  SORT-TEST-13                                                                                
- DUPLICATE KEYS       FAIL* SORT-TEST-14                                                                                
-                                                                                                                                                                                                                                                
+ DUPLICATE KEYS       PASS  SORT-TEST-14                                                                                
+ DUPLICATE KEYS       PASS  SORT-TEST-15                                                                                                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,15 +54,7 @@ TEST RESULT OF ST127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     COMPUTED= Z                                                                        
-                                     CORRECT = C                     XI-18 4.4.4 GR(3)b                                 
-                                                                                                                        
- DUPLICATE KEYS       PASS  SORT-TEST-15                                                                                
- DUPLICATE KEYS       FAIL* SORT-TEST-16                                                                                
-                                                                                                                        
-                                     COMPUTED=  000123456.000000000                                                     
-                                     CORRECT =  000723456.000000000  XI-18 4.4.4 GR(3)b                                 
-                                                                                                                        
+ DUPLICATE KEYS       PASS  SORT-TEST-16                                                                                
  DUPLICATE KEYS       PASS  SORT-TEST-17                                                                                
  ***********************************************************************************************************************
                                                                                                                         
@@ -71,8 +63,8 @@ TEST RESULT OF ST127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  ST127A                                                
                                                                                                                         
-                                                    025 OF 027  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    002 TEST(S) FAILED                                                  
+                                                    027 OF 027  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

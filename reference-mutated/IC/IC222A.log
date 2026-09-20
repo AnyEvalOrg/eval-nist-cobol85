@@ -22,25 +22,13 @@ TEST RESULT OF IC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CALL ON EXCEPTION    PASS  CALL-TEST-4        .01                                                                      
  END-CALL OBSERVANCE  PASS  CALL-TEST-4        .02                                                                      
  AVAILABLE  -- NOT ON PASS  CALL-TEST-5        .01                                                                      
- END-CALL OBSERVANCE  FAIL* CALL-TEST-5        .02        INCORRECT CONTROL FLOW                                        
-                                                                                                                        
-                                     COMPUTED=  000000003.000000000                                                     
-                                     CORRECT =  000000008.000000000  X-28 5.2.4 (3)A                                    
-                                                                                                                        
+ END-CALL OBSERVANCE  PASS  CALL-TEST-5        .02                                                                      
  AVAILABLE  -- ---    PASS  CALL-TEST-6        .01                                                                      
  END-CALL OBSERVANCE  PASS  CALL-TEST-6        .02                                                                      
  AVAILABLE  OV ---    PASS  CALL-TEST-7        .01                                                                      
- END-CALL OBSERVANCE  FAIL* CALL-TEST-7        .02        INCORRECT CONTROL FLOW                                        
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000008.000000000  X-27 5.2.4 (2)                                     
-                                                                                                                        
+ END-CALL OBSERVANCE  PASS  CALL-TEST-7        .02                                                                      
  NO PROGRAM OV ---    PASS  CALL-TEST-8        .01                                                                      
- END-CALL OBSERVANCE  FAIL* CALL-TEST-8        .02        INCORRECT CONTROL FLOW                                        
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000005.000000000  X-28 5.2.4 (3)A                                    
-                                                                                                                        
+ END-CALL OBSERVANCE  PASS  CALL-TEST-8        .02                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -48,12 +36,8 @@ TEST RESULT OF IC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC222A                                                
                                                                                                                         
-                                                    013 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                                    003 TEST(S) FAILED                                                  
+                                                    016 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.              COPYRIGHT 1985,1986

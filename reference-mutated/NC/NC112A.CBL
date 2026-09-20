@@ -760,10 +760,10 @@
 076200     MOVE "MOVE-TEST-F?-?-?" TO PAR-NAME.                         NC1124.2
 076300     PERFORM PRINT-DETAIL.                                        NC1124.2
 076400 MOVE-TEST-F1-1-2.                                                NC1124.2
-076500     IF DNAME-2 EQUAL TO 7                                        NC1124.2
+076500     IF DNAME-2 EQUAL TO 1                                        NC1124.2
 076600         PERFORM PASS                                             NC1124.2
 076700         GO TO MOVE-WRITE-F1-1-2.                                 NC1124.2
-076800     MOVE 7 TO CORRECT-N.                                         NC1124.2
+076800     MOVE 1 TO CORRECT-N.                                         NC1124.2
 076900     MOVE DNAME-2 TO COMPUTED-N.                                  NC1124.2
 077000     PERFORM FAIL.                                                NC1124.2
 077100     GO TO MOVE-WRITE-F1-1-2.                                     NC1124.2
@@ -812,10 +812,10 @@
 081400     MOVE "MOVE-TEST-F?-?-5 " TO PAR-NAME.                        NC1124.2
 081500     PERFORM PRINT-DETAIL.                                        NC1124.2
 081600 MOVE-TEST-F1-1-6.                                                NC1124.2
-081700     IF DNAME-6  EQUAL TO 7                                       NC1124.2
+081700     IF DNAME-6  EQUAL TO 1                                       NC1124.2
 081800         PERFORM PASS                                             NC1124.2
 081900         GO TO MOVE-WRITE-F1-1-6.                                 NC1124.2
-082000     MOVE 7 TO CORRECT-N.                                         NC1124.2
+082000     MOVE 1 TO CORRECT-N.                                         NC1124.2
 082100     MOVE DNAME-6  TO COMPUTED-N.                                 NC1124.2
 082200     PERFORM FAIL.                                                NC1124.2
 082300     GO TO MOVE-WRITE-F1-1-6.                                     NC1124.2
@@ -825,10 +825,10 @@
 082700     MOVE "MOVE-TEST-F?-?-6 " TO PAR-NAME.                        NC1124.2
 082800     PERFORM PRINT-DETAIL.                                        NC1124.2
 082900 MOVE-TEST-F1-1-7.                                                NC1124.2
-083000     IF DNAME-7  EQUAL TO 2                                       NC1124.2
+083000     IF DNAME-7  EQUAL TO 1                                       NC1124.2
 083100         PERFORM PASS                                             NC1124.2
 083200         GO TO MOVE-WRITE-F1-1-7.                                 NC1124.2
-083300     MOVE 2 TO CORRECT-N.                                         NC1124.2
+083300     MOVE 1 TO CORRECT-N.                                         NC1124.2
 083400     MOVE DNAME-7  TO COMPUTED-N.                                 NC1124.2
 083500     PERFORM FAIL.                                                NC1124.2
 083600     GO TO MOVE-WRITE-F1-1-7.                                     NC1124.2
@@ -891,10 +891,10 @@
 089300                  DNAME-9                                         NC1124.2
 089400                  DNAME-10.                                       NC1124.2
 089500 MOVE-TEST-F1-2-1.                                                NC1124.2
-089600     IF DNAME-1  EQUAL TO 9                                       NC1124.2
+089600     IF DNAME-1  EQUAL TO 0                                       NC1124.2
 089700         PERFORM PASS                                             NC1124.2
 089800         GO TO MOVE-WRITE-F1-2-1.                                 NC1124.2
-089900     MOVE 9 TO CORRECT-N.                                         NC1124.2
+089900     MOVE 0 TO CORRECT-N.                                         NC1124.2
 090000     MOVE DNAME-1  TO COMPUTED-N.                                 NC1124.2
 090100     PERFORM FAIL.                                                NC1124.2
 090200     GO TO MOVE-WRITE-F1-2-1.                                     NC1124.2
@@ -982,10 +982,10 @@
 098400     MOVE "MOVE-TEST-F1-2-7" TO PAR-NAME.                         NC1124.2
 098500     PERFORM PRINT-DETAIL.                                        NC1124.2
 098600 MOVE-TEST-F1-2-8.                                                NC1124.2
-098700     IF DNAME-8  EQUAL TO 2                                       NC1124.2
+098700     IF DNAME-8  EQUAL TO 0                                       NC1124.2
 098800         PERFORM PASS                                             NC1124.2
 098900         GO TO MOVE-WRITE-F1-2-8.                                 NC1124.2
-099000     MOVE 2 TO CORRECT-N.                                         NC1124.2
+099000     MOVE 0 TO CORRECT-N.                                         NC1124.2
 099100     MOVE DNAME-8  TO COMPUTED-N.                                 NC1124.2
 099200     PERFORM FAIL.                                                NC1124.2
 099300     GO TO MOVE-WRITE-F1-2-8.                                     NC1124.2

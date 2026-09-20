@@ -13,34 +13,34 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- MIN Function         FAIL* F-MIN-01                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000003.000000000                                                     
-                                     CORRECT =  000000009.000000000  See ref. A-56 2.27                                 
-                                                                                                                        
+ MIN Function         PASS  F-MIN-01                                                                                    
  MIN Function         PASS  F-MIN-02                                                                                    
  MIN Function         PASS  F-MIN-03                                                                                    
  MIN Function         PASS  F-MIN-04                                                                                    
- MIN Function         FAIL* F-MIN-0?                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000006.000000000  See ref. A-56 2.27                                 
-                                                                                                                        
+ MIN Function         PASS  F-MIN-0?                                                                                    
  MIN Function         PASS  F-MIN-06                                                                                    
  MIN Function         PASS  F-MIN-07                                                                                    
  MIN Function         PASS  F-MIN-08                                                                                    
- MIN Function         FAIL* F-MIN-09                                                                                    
-                                                                                                                        
-                                     COMPUTED= -000000010.000000000                                                     
-                                     CORRECT = -000000011.000000000  See ref. A-56 2.27                                 
-                                                                                                                        
+ MIN Function         PASS  F-MIN-09                                                                                    
  MIN Function         PASS  F-MIN-10                                                                                    
  MIN Function         FAIL* F-M?N-11                                                                                    
                                                                                                                         
                                      COMPUTED= ?                                                                        
                                      CORRECT = I                     See ref. A-56 2.27                                 
                                                                                                                         
- MIN Function         FAIL* F-MIN-12                                                                                                                                                                                                            
+ MIN Function         FAIL* F-MIN-12                                                                                    
+                                                                                                                        
+                                     COMPUTED= ?                                                                        
+                                     CORRECT = J                     See ref. A-56 2.27                                 
+                                                                                                                        
+ MIN Function         PASS  F-MIN-13                                                                                    
+ MIN Function         PASS  F-MIN-1?                                                                                    
+ MIN Function         PASS  F-MIN-15                                                                                    
+ MIN Function         PASS  F-MIN-17                                                                                    
+ MIN Function         PASS  F-MIN-18                                                                                    
+ MIN Function         PASS  F-MIN-19                                                                                    
+ MIN Function         PASS  F-MIN-20                                                                                    
+ MIN Function         PASS  F-MIN-21                                                                                                                                                                                                            
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,18 +54,6 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                                                                                                        
-                                     COMPUTED= ?                                                                        
-                                     CORRECT = J                     See ref. A-56 2.27                                 
-                                                                                                                        
- MIN Function         PASS  F-MIN-13                                                                                    
- MIN Function         PASS  F-MIN-1?                                                                                    
- MIN Function         PASS  F-MIN-15                                                                                    
- MIN Function         PASS  F-MIN-17                                                                                    
- MIN Function         PASS  F-MIN-18                                                                                    
- MIN Function         PASS  F-MIN-19                                                                                    
- MIN Function         PASS  F-MIN-20                                                                                    
- MIN Function         PASS  F-MIN-21                                                                                    
  MIN Function         PASS  F-MIN-22                                                                                    
  MIN Function         PASS  F-MIN-23                                                                                    
  MIN Function         PASS  F-MIN-24                                                                                    
@@ -76,8 +64,8 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF123A                                                
                                                                                                                         
-                                                    018 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    005 TEST(S) FAILED                                                  
+                                                    021 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    002 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

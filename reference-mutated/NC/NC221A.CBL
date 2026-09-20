@@ -411,7 +411,7 @@
 041300     INSPECT TABLE1-REC (INDEX1 + 1)                              NC2214.2
 041400        TALLYING WRK-DU-999 (INDEX2 + 1)                          NC2214.2
 041500        FOR CHARACTERS AFTER " W".                                NC2214.2
-041600     IF WRK-DU-999 (INDEX2 + 1) EQUAL TO 67                       NC2214.2
+041600     IF WRK-DU-999 (INDEX2 + 1) EQUAL TO 68                       NC2214.2
 041700        PERFORM PASS                                              NC2214.2
 041800        GO TO INS-WRITE-F1-2.                                     NC2214.2
 041900     GO TO INS-FAIL-F1-2.                                         NC2214.2
@@ -421,7 +421,7 @@
 042300 INS-FAIL-F1-2.                                                   NC2214.2
 042400     PERFORM FAIL.                                                NC2214.2
 042500     MOVE WRK-DU-999 (INDEX2 + 1) TO COMPUTED-N.                  NC2214.2
-042600     MOVE 67 TO CORRECT-N.                                        NC2214.2
+042600     MOVE 68 TO CORRECT-N.                                        NC2214.2
 042700 INS-WRITE-F1-2.                                                  NC2214.2
 042800     PERFORM PRINT-DETAIL.                                        NC2214.2
 042900*                                                                         
@@ -436,7 +436,7 @@
 043800     INSPECT TABLE1-REC (INDEX1 - 1)                              NC2214.2
 043900        TALLYING WRK-DU-999 (INDEX2 - 2)                          NC2214.2
 044000        FOR ALL " " BEFORE INITIAL "W.C.".                        NC2214.2
-044100     IF WRK-DU-999 (INDEX2 - 2) EQUAL TO 7                        NC2214.2
+044100     IF WRK-DU-999 (INDEX2 - 2) EQUAL TO 4                        NC2214.2
 044200        PERFORM PASS                                              NC2214.2
 044300        GO TO INS-WRITE-F1-3.                                     NC2214.2
 044400     GO TO INS-FAIL-F1-3.                                         NC2214.2
@@ -446,7 +446,7 @@
 044800 INS-FAIL-F1-3.                                                   NC2214.2
 044900     PERFORM FAIL.                                                NC2214.2
 045000     MOVE WRK-DU-999 (INDEX2 - 2) TO COMPUTED-N.                  NC2214.2
-045100     MOVE 7 TO CORRECT-N.                                         NC2214.2
+045100     MOVE 4 TO CORRECT-N.                                         NC2214.2
 045200 INS-WRITE-F1-3.                                                  NC2214.2
 045300     PERFORM PRINT-DETAIL.                                        NC2214.2
 045400*                                                                         
@@ -909,7 +909,7 @@
 091100     PERFORM PRINT-DETAIL.                                        NC2214.2
 091200     GO TO CCVS-999999.                                           NC2214.2
 091300 INS-TEST-F3-12-1.                                                NC2214.2
-091400     IF WRK-DU-999 (INDEX2) EQUAL TO 51                           NC2214.2
+091400     IF WRK-DU-999 (INDEX2) EQUAL TO 81                           NC2214.2
 091500        PERFORM PASS                                              NC2214.2
 091600        GO TO INS-WRITE-F3-12-1                                   NC2214.2
 091700        ELSE                                                      NC2214.2
@@ -919,7 +919,7 @@
 092100     GO TO INS-WRITE-F3-12-1.                                     NC2214.2
 092200 INS-FAIL-F3-12-1.                                                NC2214.2
 092300     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N                       NC2214.2
-092400     MOVE 51 TO CORRECT-N                                         NC2214.2
+092400     MOVE 81 TO CORRECT-N                                         NC2214.2
 092500     PERFORM FAIL.                                                NC2214.2
 092600 INS-WRITE-F3-12-1.                                               NC2214.2
 092700     PERFORM PRINT-DETAIL.                                        NC2214.2

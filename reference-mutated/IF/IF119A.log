@@ -17,11 +17,7 @@ TEST RESULT OF IF119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MAX Function         PASS  F-MAX-02                                                                                    
  MAX Function         PASS  F-MAX-03                                                                                    
  MAX Function         PASS  F-MAX-04                                                                                    
- MAX Function         FAIL* F-MAX-05                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000010.000000000                                                     
-                                     CORRECT =  000000040.000000000  See ref. A-52 2.23                                 
-                                                                                                                        
+ MAX Function         PASS  F-MAX-05                                                                                    
  MAX Function         PASS  F-MAX-06                                                                                    
  MAX Function         PASS  F-MAX-07                                                                                    
  MAX Function         PASS  F-MAX-08                                                                                    
@@ -30,17 +26,21 @@ TEST RESULT OF IF119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MAX Function         FAIL* F-MAX-11                                                                                    
                                                                                                                         
                                      COMPUTED= R                                                                        
-                                     CORRECT = r                     See ref. A-52 2.23                                 
+                                     CORRECT = a                     See ref. A-52 2.23                                 
                                                                                                                         
  MAX Function         PASS  F-MAX-12                                                                                    
  MAX Function         PASS  F-MAX-13                                                                                    
- MAX Function         FAIL* F-MAX-14                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000006.000000000  See ref. A-52 2.23                                 
-                                                                                                                        
+ MAX Function         PASS  F-MAX-14                                                                                    
  MAX Function         PASS  F-MAX-15                                                                                    
- MAX Function         PASS  F-MAX-17                                                                                                                                                                                                            
+ MAX Function         PASS  F-MAX-17                                                                                    
+ MAX Function         PASS  F-MAX-18                                                                                    
+ MAX Function         PASS  F-MAX-19                                                                                    
+ MAX Function         PASS  F-MAX-20                                                                                    
+ MAX Function         PASS  F-MAX-21                                                                                    
+ MAX Function         PASS  F-MAX-22                                                                                    
+ MAX Function         PASS  F-MAX-23                                                                                    
+ MAX Function         PASS  F-MAX-24                                                                                    
+ ***********************************************************************************************************************                                                                                                                        
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,22 +54,14 @@ TEST RESULT OF IF119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- MAX Function         PASS  F-MAX-18                                                                                    
- MAX Function         PASS  F-MAX-19                                                                                    
- MAX Function         PASS  F-MAX-20                                                                                    
- MAX Function         PASS  F-MAX-21                                                                                    
- MAX Function         PASS  F-MAX-22                                                                                    
- MAX Function         PASS  F-MAX-23                                                                                    
- MAX Function         PASS  F-MAX-24                                                                                    
- ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
                                                                                                                         
                                                                                                                         
                                                     END OF TEST-  IF119A                                                
                                                                                                                         
-                                                    020 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    022 OF 023  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    001 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

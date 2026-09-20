@@ -1015,7 +1015,7 @@
 106300                     MOVE  "AT END ON READ" TO COMPUTED-A         IX2104.2
 106400                     GO TO START-FAIL-GF-03.                      IX2104.2
 106500     MOVE    IX-FS1R1-F-G-240  TO  FILE-RECORD-INFO (1).          IX2104.2
-106600     IF      XRECORD-NUMBER (1) EQUAL TO 61                       IX2104.2
+106600     IF      XRECORD-NUMBER (1) EQUAL TO 01                       IX2104.2
 106700             PERFORM PASS                                         IX2104.2
 106800             MOVE SPACE TO RE-MARK                                IX2104.2
 106900             GO TO START-EXIT-GF-03.                              IX2104.2
@@ -1024,7 +1024,7 @@
 107200     MOVE     XRECORD-NUMBER (1)  TO COMPUTED-18V0.               IX2104.2
 107300 START-FAIL-GF-03.                                                IX2104.2
 107400     PERFORM FAIL.                                                IX2104.2
-107500     MOVE    61   TO CORRECT-18V0.                                IX2104.2
+107500     MOVE    01   TO CORRECT-18V0.                                IX2104.2
 107600     MOVE "RECORD NUMBER; IX-36 ETC " TO RE-MARK.                 IX2104.2
 107700     GO TO   START-EXIT-GF-03.                                    IX2104.2
 107800 START-DELETE-GF-03.                                              IX2104.2
@@ -1413,11 +1413,11 @@
 146100*                                                                         
 146200*                                                                         
 146300*                                                                         
-146400     IF      FILESTATUS (4)  EQUAL TO "28"                        IX2104.2
+146400     IF      FILESTATUS (4)  EQUAL TO "23"                        IX2104.2
 146500             PERFORM  PASS                                        IX2104.2
 146600             ELSE  PERFORM  FAIL                                  IX2104.2
 146700         MOVE "FROM START-TEST-GF-04; IX-4 1.3.4 (3) C" TO RE-MARKIX2104.2
-146800             MOVE    "28"  TO CORRECT-A                           IX2104.2
+146800             MOVE    "23"  TO CORRECT-A                           IX2104.2
 146900             MOVE   FILESTATUS (4)  TO COMPUTED-A.                IX2104.2
 147000 START-WRITE-GF-13.                                               IX2104.2
 147100     PERFORM  PRINT-DETAIL.                                       IX2104.2
@@ -1508,11 +1508,11 @@
 155600*                                                                         
 155700*                                                                         
 155800*                                                                         
-155900     IF      FILESTATUS (9)  EQUAL TO "24"                        IX2104.2
+155900     IF      FILESTATUS (9)  EQUAL TO "23"                        IX2104.2
 156000             PERFORM PASS                                         IX2104.2
 156100     ELSE    PERFORM FAIL                                         IX2104.2
 156200         MOVE "FROM START-TEST-GF-09; IX-4 1.3.4 (3) C" TO RE-MARKIX2104.2
-156300             MOVE  "24"  TO CORRECT-A                             IX2104.2
+156300             MOVE  "23"  TO CORRECT-A                             IX2104.2
 156400             MOVE   FILESTATUS (9)  TO COMPUTED-A.                IX2104.2
 156500 START-WRITE-GF-18.                                               IX2104.2
 156600     PERFORM  PRINT-DETAIL.                                       IX2104.2
@@ -1681,7 +1681,7 @@
 172900                     MOVE  "AT END ON READ" TO COMPUTED-A         IX2104.2
 173000                     GO TO START-FAIL-GF-21.                      IX2104.2
 173100     MOVE    IX-FS1R1-F-G-240  TO  FILE-RECORD-INFO (1).          IX2104.2
-173200     IF      XRECORD-NUMBER (1)  EQUAL TO 501                     IX2104.2
+173200     IF      XRECORD-NUMBER (1)  EQUAL TO 001                     IX2104.2
 173300             PERFORM PASS                                         IX2104.2
 173400             MOVE SPACE TO RE-MARK                                IX2104.2
 173500             GO TO START-EXIT-GF-21.                              IX2104.2
@@ -1690,7 +1690,7 @@
 173800     MOVE     XRECORD-NUMBER (1)  TO COMPUTED-18V0.               IX2104.2
 173900 START-FAIL-GF-21.                                                IX2104.2
 174000     PERFORM FAIL.                                                IX2104.2
-174100     MOVE    501  TO CORRECT-18V0.                                IX2104.2
+174100     MOVE    001  TO CORRECT-18V0.                                IX2104.2
 174200     MOVE "RECORD NUMBER; IX-36 ETC " TO RE-MARK.                 IX2104.2
 174300     GO TO   START-EXIT-GF-21.                                    IX2104.2
 174400 START-DELETE-GF-21.                                              IX2104.2
@@ -2046,11 +2046,11 @@
 209400*                                                                         
 209500*                                                                         
 209600*                                                                         
-209700     IF      FILESTATUS (2) EQUAL TO "06"                         IX2104.2
+209700     IF      FILESTATUS (2) EQUAL TO "00"                         IX2104.2
 209800             PERFORM  PASS                                        IX2104.2
 209900             ELSE  PERFORM  FAIL                                  IX2104.2
 210000         MOVE "FROM START-TEST-GF-20; IX-3 1.3.4 (1) A" TO RE-MARKIX2104.2
-210100             MOVE    "06"  TO CORRECT-A                           IX2104.2
+210100             MOVE    "00"  TO CORRECT-A                           IX2104.2
 210200             MOVE   FILESTATUS (2)  TO COMPUTED-A.                IX2104.2
 210300 START-WRITE-GF-29.                                               IX2104.2
 210400     PERFORM  PRINT-DETAIL.                                       IX2104.2
@@ -2065,11 +2065,11 @@
 211300*                                                                         
 211400*                                                                         
 211500*                                                                         
-211600     IF      FILESTATUS (3) EQUAL TO "01"                         IX2104.2
+211600     IF      FILESTATUS (3) EQUAL TO "00"                         IX2104.2
 211700             PERFORM  PASS                                        IX2104.2
 211800             ELSE  PERFORM  FAIL                                  IX2104.2
 211900         MOVE "FROM START-TEST-GF-21; IX-3 1.3.4 (1) A" TO RE-MARKIX2104.2
-212000             MOVE    "01"  TO CORRECT-A                           IX2104.2
+212000             MOVE    "00"  TO CORRECT-A                           IX2104.2
 212100             MOVE   FILESTATUS (3)  TO COMPUTED-A.                IX2104.2
 212200 START-WRITE-GF-30.                                               IX2104.2
 212300     PERFORM  PRINT-DETAIL.                                       IX2104.2
@@ -2141,11 +2141,11 @@
 218900*                                                                         
 219000*                                                                         
 219100*                                                                         
-219200     IF      FILESTATUS (7)  EQUAL TO "26"                        IX2104.2
+219200     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2104.2
 219300             PERFORM  PASS                                        IX2104.2
 219400             ELSE  PERFORM  FAIL                                  IX2104.2
 219500         MOVE "FROM START-TEST-GF-25; IX-4 1.3.4 (3) C" TO RE-MARKIX2104.2
-219600             MOVE    "26"  TO CORRECT-A                           IX2104.2
+219600             MOVE    "23"  TO CORRECT-A                           IX2104.2
 219700             MOVE   FILESTATUS (7)  TO COMPUTED-A.                IX2104.2
 219800 START-WRITE-GF-34.                                               IX2104.2
 219900     PERFORM  PRINT-DETAIL.                                       IX2104.2
@@ -2160,11 +2160,11 @@
 220800*                                                                         
 220900*                                                                         
 221000*                                                                         
-221100     IF      FILESTATUS (8) EQUAL TO "20"                         IX2104.2
+221100     IF      FILESTATUS (8) EQUAL TO "00"                         IX2104.2
 221200             PERFORM  PASS                                        IX2104.2
 221300             ELSE  PERFORM  FAIL                                  IX2104.2
 221400         MOVE "FROM START-TEST-GF-26; IX-3 1.3.4 (1) A" TO RE-MARKIX2104.2
-221500             MOVE    "20"  TO CORRECT-A                           IX2104.2
+221500             MOVE    "00"  TO CORRECT-A                           IX2104.2
 221600             MOVE   FILESTATUS (8)  TO COMPUTED-A.                IX2104.2
 221700 START-WRITE-GF-35.                                               IX2104.2
 221800     PERFORM  PRINT-DETAIL.                                       IX2104.2

@@ -16,11 +16,7 @@ TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MAX Function     PASS  F-ORD-MAX-01                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-02                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-03                                                                                
- ORD-MAX Function     FAIL* F-ORD-MAX-04                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000001.000000000  See ref. A-61 2.32                                 
-                                                                                                                        
+ ORD-MAX Function     PASS  F-ORD-MAX-04                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-05                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-06                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-07                                                                                
@@ -29,31 +25,10 @@ TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ORD-MAX Function     PASS  F-ORD-MAX-10                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-??                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-12                                                                                
- ORD-MAX Function     FAIL* F-ORD-MAX-13                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000002.000000000                                                     
-                                     CORRECT =  000000001.000000000  See ref. A-61 2.32                                 
-                                                                                                                        
+ ORD-MAX Function     PASS  F-ORD-MAX-13                                                                                
  ORD-MAX Function     PASS  F-ORD-MAX-14                                                                                
- ORD-MAX Function     FAIL* F-ORD-MAX-15                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-61 2.32                                 
-                                                                                                                        
- ORD-MAX Function     PASS  F-ORD-MAX-16                                                                                                                                                                                                        
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
+ ORD-MAX Function     PASS  F-ORD-MAX-15                                                                                
+ ORD-MAX Function     PASS  F-ORD-MAX-16                                                                                
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -61,8 +36,8 @@ TEST RESULT OF IF128A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF128A                                                
                                                                                                                         
-                                                    013 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    016 OF 016  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

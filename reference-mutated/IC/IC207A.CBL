@@ -337,13 +337,13 @@
 033900     MOVE "LINK-TEST-02" TO PAR-NAME.                             IC2074.2
 034000     MOVE "VAR. LENGTH TABLE" TO FEATURE.                         IC2074.2
 034100 LINK-TEST-02-01.                                                 IC2074.2
-034200     IF DN2 (2) EQUAL TO "T"                                      IC2074.2
+034200     IF DN2 (2) EQUAL TO "Z"                                      IC2074.2
 034300         PERFORM PASS                                             IC2074.2
 034400         GO TO LINK-WRITE-02-01.                                  IC2074.2
 034500 LINK-FAIL-02-01.                                                 IC2074.2
 034600     PERFORM FAIL.                                                IC2074.2
 034700     MOVE DN2 (2) TO COMPUTED-A.                                  IC2074.2
-034800     MOVE "T" TO CORRECT-A.                                       IC2074.2
+034800     MOVE "Z" TO CORRECT-A.                                       IC2074.2
 034900     MOVE "VALUE OF DN2(2)" TO RE-MARK.                           IC2074.2
 035000 LINK-WRITE-02-01.                                                IC2074.2
 035100     PERFORM PRINT-DETAIL.                                        IC2074.2
@@ -415,13 +415,13 @@
 041700     PERFORM PRINT-DETAIL.                                        IC2074.2
 041800 LINK-TEST-03-03.                                                 IC2074.2
 041900     ADD 1 TO REC-CT.                                             IC2074.2
-042000     IF DN2 (8) EQUAL TO "A"                                      IC2074.2
+042000     IF DN2 (8) EQUAL TO "H"                                      IC2074.2
 042100         PERFORM PASS                                             IC2074.2
 042200         GO TO LINK-WRITE-03-03.                                  IC2074.2
 042300 LINK-FAIL-03-03.                                                 IC2074.2
 042400     PERFORM FAIL.                                                IC2074.2
 042500     MOVE DN2 (8) TO COMPUTED-A.                                  IC2074.2
-042600     MOVE "A" TO CORRECT-A.                                       IC2074.2
+042600     MOVE "H" TO CORRECT-A.                                       IC2074.2
 042700     MOVE "VALUE OF DN2(8)" TO RE-MARK.                           IC2074.2
 042800 LINK-WRITE-03-03.                                                IC2074.2
 042900     PERFORM PRINT-DETAIL.                                        IC2074.2
@@ -460,13 +460,13 @@
 046200 LINK-TEST-04-03.                                                 IC2074.2
 046300     ADD 1 TO REC-CT.                                             IC2074.2
 046400     MOVE TABLE-01 TO DN5.                                        IC2074.2
-046500     IF DN5 EQUAL TO "ABCWEFGHI      "                            IC2074.2
+046500     IF DN5 EQUAL TO "ABCDEFGHI      "                            IC2074.2
 046600         PERFORM PASS                                             IC2074.2
 046700         GO TO LINK-WRITE-04-03.                                  IC2074.2
 046800 LINK-FAIL-04-03.                                                 IC2074.2
 046900     PERFORM FAIL.                                                IC2074.2
 047000     MOVE DN5 TO COMPUTED-A.                                      IC2074.2
-047100     MOVE "ABCWEFGHI      " TO CORRECT-A.                         IC2074.2
+047100     MOVE "ABCDEFGHI      " TO CORRECT-A.                         IC2074.2
 047200     MOVE "CONTENTS OF TABLE-01" TO RE-MARK.                      IC2074.2
 047300 LINK-WRITE-04-03.                                                IC2074.2
 047400     PERFORM PRINT-DETAIL.                                        IC2074.2

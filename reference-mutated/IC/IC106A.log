@@ -18,25 +18,13 @@ TEST RESULT OF IC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INDEX DATA ITEM      PASS  LINK-TEST-02       .01                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-02       .02                                                                      
  SUBPROGRAM INDEX     PASS  LINK-TEST-03       .01                                                                      
- SUBPROGRAM INDEX     FAIL* LINK-TEST-03       .02        INDEX IN LINKAGE SECTION                                      
-                                                                                                                        
-                                     COMPUTED= B                                                                        
-                                     CORRECT = Z                                                                        
-                                                                                                                        
+ SUBPROGRAM INDEX     PASS  LINK-TEST-03       .02                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .01                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .02                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .03                                                                      
- TABLE REFERENCES     FAIL* LINK-TEST-05       .01        TABLES ?EFINE? IN LINKAGE SEC                                 
-                                                                                                                        
-                                     COMPUTED= D                                                                        
-                                     CORRECT = N                                                                        
-                                                                                                                        
+ TABLE REFERENCES     PASS  LINK-TEST-05       .01                                                                      
  TABLE REFERENCES     PASS  LINK-TEST-05       .02                                                                      
- REDEFINED ITEM       FAIL* LINK-TEST-06       .01        REDEFINED ITEM IN LINKAGE SEC                                 
-                                                                                                                        
-                                     COMPUTED= X                                                                        
-                                     CORRECT = D                                                                        
-                                                                                                                        
+ REDEFINED ITEM       PASS  LINK-TEST-06       .01                                                                      
  REDEFINED ITEM       PASS  LINK-TEST-06       .02                                                                      
  REDEFINED ITEM       PASS  LINK-TEST-06       .03                                                                      
  ***********************************************************************************************************************
@@ -46,12 +34,8 @@ TEST RESULT OF IC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC106A                                                
                                                                                                                         
-                                                    011 OF 014  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                                                                                                                                         
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+                                                    014 OF 014  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

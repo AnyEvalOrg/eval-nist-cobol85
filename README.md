@@ -10,28 +10,28 @@ binary metric is pass@1 (one generation, one epoch, no model judge).
 
 <!-- population:begin -->
 The indexed population contains 381 standalone `.CBL` programs.
-The shipped dataset contains **58** programs validated against GnuCOBOL logs.
-Exclusions are **58 original + 252 insufficient-site + 13 execution-evidence**;
+The shipped dataset contains **17** programs validated against GnuCOBOL logs.
+Exclusions are **58 original + 303 insufficient-site + 3 execution-evidence**;
 **0** candidates await fresh operator logs.
 
 | Module | Shipped eligible programs |
 |---|---:|
-| NC | 33 |
+| NC | 13 |
 | SM | 0 |
-| IC | 6 |
+| IC | 0 |
 | SQ | 0 |
 | RL | 0 |
-| IX | 3 |
-| ST | 2 |
-| SG | 1 |
+| IX | 0 |
+| ST | 0 |
+| SG | 0 |
 | OB | 0 |
-| IF | 13 |
+| IF | 4 |
 | RW | 0 |
 | DB | 0 |
-| **Total** | **58** |
+| **Total** | **17** |
 
-There are 71 mutation candidates with 381 planted sites;
-333 sites belong to the shipped population.
+There are 20 mutation candidates with 43 planted sites;
+37 sites belong to the shipped population.
 
 <!-- population:end -->
 
@@ -42,10 +42,10 @@ counts require the existing source audits (NC114M and SQ201M), followed by fresh
 
 Each candidate source in `reference-mutated/<MODULE>/<PROG>.CBL` uses
 HMAC-SHA256(NIST_MUTATION_SALT, program name) as its random seed. The script
-requires at least 6 supported sites and selects K = max(3, round(0.25 * sites)),
+requires at least 4 supported sites and selects K = max(2, round(0.25 * sites)),
 capped at half the sites (rounded down). `round` uses Python’s nearest-integer,
 ties-to-even rule. Programs below the threshold are excluded with reason
-`fewer than 6 supported sites`. It changes a numeric
+`fewer than 4 supported sites`. It changes a numeric
 digit or an alphanumeric character in both the IF expectation and its matching
 MOVE to CORRECT. Replacements preserve byte width, character class and fixed-format
 columns. Both the compared item and CORRECT field must have a resolved PICTURE
@@ -53,6 +53,22 @@ and USAGE: replacements respect numeric precision, scale, signs, supported editi
 and elementary or simple group layouts (including fixed OCCURS). Ambiguous names,
 unresolved COPY layouts, unsupported usages, floating editing and reference
 modification are excluded before sampling.
+A structurally supported site is mutable only when its original expectation is
+unique outside its own IF/CORRECT operands across the entire program and the
+transitive copybook/library sources shipped with it. Equal numeric spellings,
+quoted values, continued literals and diagnostic-string echoes are checked before
+sampling. Repeated expectations at other sites are rejected together. Comment echoes are
+also rejected before the uniform comment scrubbing step.
+
+A conservative paragraph-local may-flow check also rejects literal-fed compared
+items: direct and conditional MOVEs, VALUE-initialized senders, MOVE chains,
+figurative constants, INITIALIZE/constant SET, group writes and REDEFINES aliases.
+Literal provenance is never cleared at branch joins or by later overwrites;
+ambiguous MOVE forms are rejected. Even a later computation does not rescue a
+paragraph that directly assigns a literal to the compared item. These checks can
+exclude valid computational tests intentionally. The four-site threshold and
+at-most-half selection cap apply only after these recoverability checks.
+
 COMPUTED receives the actual data item without modification. A faithful conversion
 must therefore reproduce the resulting FAIL rows and their evidence values.
 
@@ -101,7 +117,8 @@ They inherit predecessor files: report.pl removes `XXXXX*` only before `.CBL`
 execution. They remain outside the standalone sample population; an inventory test
 asserts the count. Library subprograms are dependencies, not samples.
 
-For every supported site in every program, selected or not, string literals in
+For every structurally supported site in every program, selected or not (including
+sites rejected by the recoverability checks), string literals in
 the same paragraph and its diagnostic paragraphs (direct branch targets or
 fall-through failure blocks) have occurrences
 of the original expected literal replaced with same-width neutral placeholders.
@@ -112,11 +129,26 @@ recorded only in the private manifest, like the uniform comment edits.
 ## Known limitations
 
 The original NIST suite is public. Anyone who can diff the shipped sources
-against `newcob.val` can recover every altered site. The alteration defends
-against source-only fabrication by a model that has only the shipped program;
-it does not defend against a model that has memorized the original suite.
+against `newcob.val` can recover every altered site. The alteration removes known repeated-literal and direct-data-flow shortcuts;
+it does not establish that arbitrary source-only reasoning cannot recover an
+expectation, and it does not defend against a model that has memorized the
+original suite. Literal uniqueness and conservative local data-flow analysis are
+necessary filters, not a proof of computational difficulty. Arithmetic, global
+control/data flow, semantic relationships among unique constants, and other
+static analyses can still reveal results.
 Scoring therefore also relies on the sandbox having no access to the original
 suite or a COBOL compiler.
+
+Two fabrication regressions run source readers over all 381 indexed programs.
+The frequency/consistency reader infers one-character variants from dominant
+expectations and visible data literals; the other reader predicts all PASS.
+Both receive privileged report layout information, but derive verdicts and
+COMPUTED/CORRECT evidence only from public source. Neither may pass any shipped
+program under `compare_reports`. A positive control demonstrates that the first
+reader reproduces the repeated-string attack with full evidence. Pending mutation
+candidates are also checked against private planted-site witnesses, so missing
+logs cannot produce a vacuous success. These witness checks are necessary-behavior
+checks, not reference execution; fresh GnuCOBOL logs are still required to ship.
 
 ## Prompt and execution protocol
 

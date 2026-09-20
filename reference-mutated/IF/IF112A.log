@@ -17,8 +17,16 @@ TEST RESULT OF IF112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INTEGER-OF-DATE      PASS  F-DATEOFINT-02                                                                              
  INTEGER-OF-DATE      PASS  F-DATEOFINT-03                                                                              
  INTEGER-OF-DATE      PASS  F-DATEOFINT-04                                                                              
- INTEGER-OF-DATE      PASS  F-DATEOFINT-05                                                                              
- INTEGER-OF-DATE      PASS  F-DATEOFINT-06                                                                              
+ INTEGER-OF-DATE      FAIL* F-DATEOFINT-05                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000365.000000000                                                     
+                                     CORRECT =  000000345.000000000  See ref. A-45 2.16                                 
+                                                                                                                        
+ INTEGER-OF-DATE      FAIL* F-DATEOFINT-06                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000410.000000000                                                     
+                                     CORRECT =  000000450.000000000  See ref. A-45 2.16                                 
+                                                                                                                        
  INTEGER-OF-DATE      PASS  F-DATEOFINT-07                                                                              
  INTEGER-OF-DATE      PASS  F-DATEOFINT-10                                                                              
  ***********************************************************************************************************************
@@ -28,8 +36,8 @@ TEST RESULT OF IF112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IF112A                                                
                                                                                                                         
-                                                    008 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    NO  TEST(S) FAILED                                                  
+                                                    006 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    002 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

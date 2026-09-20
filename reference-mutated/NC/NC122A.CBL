@@ -372,7 +372,7 @@
 037400     INSPECT TABLE1-REC (INDEX1) TALLYING WRK-DU-999 (INDEX2)     NC1224.2
 037500        FOR CHARACTERS.                                           NC1224.2
 037600 IND-TEST-GF-1-1.                                                 NC1224.2
-037700     IF WRK-DU-999 (INDEX2) EQUAL TO 63                           NC1224.2
+037700     IF WRK-DU-999 (INDEX2) EQUAL TO 83                           NC1224.2
 037800        PERFORM PASS                                              NC1224.2
 037900        GO TO IND-WRITE-GF-1.                                     NC1224.2
 038000     GO TO IND-FAIL-GF-1.                                         NC1224.2
@@ -382,7 +382,7 @@
 038400 IND-FAIL-GF-1.                                                   NC1224.2
 038500     PERFORM FAIL.                                                NC1224.2
 038600     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N.                      NC1224.2
-038700     MOVE 63 TO CORRECT-N.                                        NC1224.2
+038700     MOVE 83 TO CORRECT-N.                                        NC1224.2
 038800 IND-WRITE-GF-1.                                                  NC1224.2
 038900     MOVE "IND-TEST-GF-1" TO PAR-NAME.                            NC1224.2
 039000     MOVE "TALLY FOR CHARACTERS" TO FEATURE.                      NC1224.2
@@ -397,7 +397,7 @@
 039900     INSPECT TABLE1-REC (INDEX1) TALLYING WRK-DU-999 (INDEX2)     NC1224.2
 040000        FOR ALL "A".                                              NC1224.2
 040100 IND-TEST-GF-2-1.                                                 NC1224.2
-040200     IF WRK-DU-999 (INDEX2) EQUAL TO 4                            NC1224.2
+040200     IF WRK-DU-999 (INDEX2) EQUAL TO 8                            NC1224.2
 040300        PERFORM PASS                                              NC1224.2
 040400        GO TO IND-WRITE-GF-2.                                     NC1224.2
 040500     GO TO IND-FAIL-GF-2.                                         NC1224.2
@@ -407,7 +407,7 @@
 040900 IND-FAIL-GF-2.                                                   NC1224.2
 041000     PERFORM FAIL.                                                NC1224.2
 041100     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N.                      NC1224.2
-041200     MOVE 4 TO CORRECT-N.                                         NC1224.2
+041200     MOVE 8 TO CORRECT-N.                                         NC1224.2
 041300 IND-WRITE-GF-2.                                                  NC1224.2
 041400     MOVE "IND-TEST-GF-2" TO PAR-NAME.                            NC1224.2
 041500     MOVE "TALLY FOR LITERAL" TO FEATURE.                         NC1224.2
@@ -447,7 +447,7 @@
 044900     INSPECT TABLE1-REC (INDEX1) TALLYING WRK-DU-999 (INDEX2)     NC1224.2
 045000        FOR LEADING "A".                                          NC1224.2
 045100 IND-TEST-GF-4-1.                                                 NC1224.2
-045200     IF WRK-DU-999 (INDEX2) EQUAL TO 5                            NC1224.2
+045200     IF WRK-DU-999 (INDEX2) EQUAL TO 1                            NC1224.2
 045300        PERFORM PASS                                              NC1224.2
 045400        GO TO IND-WRITE-GF-4.                                     NC1224.2
 045500     GO TO IND-FAIL-GF-4.                                         NC1224.2
@@ -457,7 +457,7 @@
 045900 IND-FAIL-GF-4.                                                   NC1224.2
 046000     PERFORM FAIL.                                                NC1224.2
 046100     MOVE WRK-DU-999 (INDEX2) TO COMPUTED-N.                      NC1224.2
-046200     MOVE 5 TO CORRECT-N.                                         NC1224.2
+046200     MOVE 1 TO CORRECT-N.                                         NC1224.2
 046300 IND-WRITE-GF-4.                                                  NC1224.2
 046400     MOVE "IND-TEST-GF-4" TO PAR-NAME.                            NC1224.2
 046500     MOVE "TALLY LEADING LIT." TO FEATURE.                        NC1224.2

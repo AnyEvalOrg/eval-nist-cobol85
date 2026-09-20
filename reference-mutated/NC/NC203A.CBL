@@ -414,7 +414,7 @@
 041600     DIVIDE  22 INTO WRK-DS-06V06 GIVING WRK-DS-05V00             NC2034.2
 041700             REMAINDER WRK-DS-02V00.                              NC2034.2
 041800     ADD     WRK-DS-02V00 TO WRK-DS-05V00.                        NC2034.2
-041900     IF      WRK-DS-05V00 EQUAL TO 2061                           NC2034.2
+041900     IF      WRK-DS-05V00 EQUAL TO 5060                           NC2034.2
 042000              PERFORM PASS                                        NC2034.2
 042100              GO TO DIV-WRITE-F4-1.                               NC2034.2
 042200     GO TO DIV-FAIL-F4-1.                                         NC2034.2
@@ -423,7 +423,7 @@
 042500     GO TO DIV-WRITE-F4-1.                                        NC2034.2
 042600 DIV-FAIL-F4-1.                                                   NC2034.2
 042700     MOVE     WRK-DS-05V00 TO COMPUTED-N.                         NC2034.2
-042800     MOVE     2061 TO CORRECT-N.                                  NC2034.2
+042800     MOVE     5060 TO CORRECT-N.                                  NC2034.2
 042900     PERFORM  FAIL.                                               NC2034.2
 043000 DIV-WRITE-F4-1.                                                  NC2034.2
 043100     PERFORM  PRINT-DETAIL.                                       NC2034.2
@@ -744,7 +744,7 @@
 074600     MOVE   "DIV-TEST-F4-8-2" TO PAR-NAME.                        NC2034.2
 074700     ADD     1 TO REC-CT.                                         NC2034.2
 074800 DIV-TEST-F4-8-2.                                                 NC2034.2
-074900     IF      NE-04V01-0006 NOT = "**10.8"                         NC2034.2
+074900     IF      NE-04V01-0006 NOT = "**11.8"                         NC2034.2
 075000             GO TO DIV-FAIL-F4-8-2.                               NC2034.2
 075100     PERFORM PASS                                                 NC2034.2
 075200     GO TO DIV-WRITE-F4-8-2.                                      NC2034.2
@@ -753,7 +753,7 @@
 075500     GO TO    DIV-WRITE-F4-8-2.                                   NC2034.2
 075600 DIV-FAIL-F4-8-2.                                                 NC2034.2
 075700     MOVE    NE-04V01-0006 TO COMPUTED-A                          NC2034.2
-075800     MOVE   "**10.8" TO CORRECT-A                                 NC2034.2
+075800     MOVE   "**11.8" TO CORRECT-A                                 NC2034.2
 075900     MOVE   "INVALID REMAINDER" TO RE-MARK                        NC2034.2
 076000     PERFORM FAIL.                                                NC2034.2
 076100 DIV-WRITE-F4-8-2.                                                NC2034.2
@@ -1063,7 +1063,7 @@
 106500     MOVE   "DIV-TEST-F4-13-3" TO PAR-NAME.                       NC2034.2
 106600     ADD     1 TO REC-CT.                                         NC2034.2
 106700 DIV-TEST-F4-13-3.                                                NC2034.2
-106800     IF      WRK-XN-00001-1 NOT = "H"                             NC2034.2
+106800     IF      WRK-XN-00001-1 NOT = "A"                             NC2034.2
 106900             GO TO DIV-FAIL-F4-13-3.                              NC2034.2
 107000     PERFORM PASS                                                 NC2034.2
 107100     GO TO DIV-WRITE-F4-13-3.                                     NC2034.2
@@ -1073,7 +1073,7 @@
 107500 DIV-FAIL-F4-13-3.                                                NC2034.2
 107600     MOVE   "ON SIZE ERROR SHOULD H?VE EXECUTED"                  NC2034.2
 107700          TO RE-MARK                                              NC2034.2
-107800     MOVE   "H"    TO CORRECT-A                                   NC2034.2
+107800     MOVE   "A"    TO CORRECT-A                                   NC2034.2
 107900     MOVE    WRK-XN-00001-1 TO COMPUTED-A                         NC2034.2
 108000     PERFORM FAIL.                                                NC2034.2
 108100 DIV-WRITE-F4-13-3.                                               NC2034.2
@@ -1175,7 +1175,7 @@
 117700     MOVE   "DIV-TEST-F4-14-4" TO PAR-NAME.                       NC2034.2
 117800     ADD     1 TO REC-CT.                                         NC2034.2
 117900 DIV-TEST-F4-14-4.                                                NC2034.2
-118000     IF      WRK-XN-00001-2 NOT = "U"                             NC2034.2
+118000     IF      WRK-XN-00001-2 NOT = "B"                             NC2034.2
 118100             GO TO DIV-FAIL-F4-14-4.                              NC2034.2
 118200     PERFORM PASS                                                 NC2034.2
 118300     GO TO DIV-WRITE-F4-14-4.                                     NC2034.2
@@ -1184,7 +1184,7 @@
 118600     GO TO DIV-WRITE-F4-14-4.                                     NC2034.2
 118700 DIV-FAIL-F4-14-4.                                                NC2034.2
 118800     MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK                 NC2034.2
-118900     MOVE   "U" TO CORRECT-A                                      NC2034.2
+118900     MOVE   "B" TO CORRECT-A                                      NC2034.2
 119000     MOVE    WRK-XN-00001-2 TO COMPUTED-A                         NC2034.2
 119100     PERFORM FAIL.                                                NC2034.2
 119200 DIV-WRITE-F4-14-4.                                               NC2034.2
@@ -1453,7 +1453,7 @@
 145500     MOVE   "DIV-TEST-F4-17-4" TO PAR-NAME.                       NC2034.2
 145600     ADD     1 TO REC-CT.                                         NC2034.2
 145700 DIV-TEST-F4-17-4.                                                NC2034.2
-145800     IF      WRK-XN-00001-2 NOT = "O"                             NC2034.2
+145800     IF      WRK-XN-00001-2 NOT = "C"                             NC2034.2
 145900             GO TO DIV-FAIL-F4-17-4.                              NC2034.2
 146000     PERFORM PASS                                                 NC2034.2
 146100     GO TO DIV-WRITE-F4-17-4.                                     NC2034.2
@@ -1462,7 +1462,7 @@
 146400     GO TO DIV-WRITE-F4-17-4.                                     NC2034.2
 146500 DIV-FAIL-F4-17-4.                                                NC2034.2
 146600     MOVE   "S?OPE TERMINATOR IGNORED" TO RE-MARK                 NC2034.2
-146700     MOVE   "O" TO CORRECT-A                                      NC2034.2
+146700     MOVE   "C" TO CORRECT-A                                      NC2034.2
 146800     MOVE    WRK-XN-00001-2 TO COMPUTED-A                         NC2034.2
 146900     PERFORM FAIL.                                                NC2034.2
 147000 DIV-WRITE-F4-17-4.                                               NC2034.2

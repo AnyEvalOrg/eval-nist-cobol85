@@ -44,13 +44,14 @@ def test_packaged_data_checksums():
 def test_insufficient_site_eligibility_without_logs():
     from scripts.mutate_suite import find_sites
     info = json.loads((ROOT/'nist_cobol85/data/eligibility.json').read_text())
-    insufficient = [p for p in info['programs'] if 'fewer than 6 supported sites' in p['reasons']]
+    insufficient = [p for p in info['programs'] if 'fewer than 4 supported sites' in p['reasons']]
     assert len(insufficient) == info['mutation_summary']['insufficient_sites']
     assert insufficient
     for decision in insufficient:
         assert not decision['eligible'], decision['program']
         source = (ROOT/'reference'/decision['source_path']).read_bytes().decode('latin1')
-        assert len(find_sites(source)) < 6, decision['program']
+        copies, libraries = dependencies(ROOT/'reference'/decision['source_path'], ROOT/'reference')
+        assert len(find_sites(source, dependency_sources=(*copies.values(), *libraries.values()))) < 4, decision['program']
 
 
 def test_dependency_closure_and_qualified_copybooks(records):

@@ -17,22 +17,10 @@ TEST RESULT OF NC239A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  LEVEL 1 INT INDEXING PASS  TH1-TEST-GF-1                                                                               
  LEVEL 2 INT INDEXING PASS  TH2-TEST-GF-1                                                                               
  LEVEL 2 INT INDEXING PASS  TH2-TEST-GF-2                                                                               
- LEVEL 2 INT INDEXING FAIL* TH2-TEST-GF-3                 INTERNAL INDEXING LEVEL 2                                     
-                                                                                                                        
-                                     COMPUTED= SEC (03,07)                                                              
-                                     CORRECT = UEC (03,07)           IV-21 & II-15 4.4.2                                
-                                                                                                                        
- LEVEL 3 INT INDEXING FAIL* TH3-TEST-GF-1                 INTERNAL INDEXING LEVEL 3                                     
-                                                                                                                        
-                                     COMPUTED= ELEM (02,06,10)                                                          
-                                     CORRECT = EYEM (02,06,10)       IV-21 & II-15 4.4.2                                
-                                                                                                                        
+ LEVEL 2 INT INDEXING PASS  TH2-TEST-GF-3                                                                               
+ LEVEL 3 INT INDEXING PASS  TH3-TEST-GF-1                                                                               
  LEVEL 3 INT INDEXING PASS  TH3-TEST-GF-2                                                                               
- LEVEL 3 INT INDEXING FAIL* TH3-TEST-GF-3                 INTERNAL INDEXING LEVEL 3                                     
-                                                                                                                        
-                                     COMPUTED= ELEM (09,08,07)                                                          
-                                     CORRECT = ELEM (09,06,07)       IV-21 & II-15 4.4.2                                
-                                                                                                                        
+ LEVEL 3 INT INDEXING PASS  TH3-TEST-GF-3                                                                               
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -40,8 +28,8 @@ TEST RESULT OF NC239A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC239A                                                
                                                                                                                         
-                                                    005 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    008 OF 008  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

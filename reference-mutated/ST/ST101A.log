@@ -18,48 +18,23 @@ TEST RESULT OF ST101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                           ST102 AND ST103.                                              
  SORT --- FIVE KEYS   PASS  SORT-TEST-1                                                                                 
  SORT --- FIVE KEYS   PASS  SORT-TEST-2                                                                                 
- SORT --- FIVE KEYS   FAIL* SORT-TEST-3                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000106001000200002                                                      
-                                     CORRECT =  000106001030200002                                                      
-                                                                                                                        
+ SORT --- FIVE KEYS   PASS  SORT-TEST-3                                                                                 
  SORT --- FIVE KEYS   PASS  SORT-TEST-4                                                                                 
- SORT --- FIVE KEYS   FAIL* SORT-TEST-5                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000201001000200002                                                      
-                                     CORRECT =  000206001000200002                                                      
-                                                                                                                        
- SORT --- FIVE KEYS   FAIL* SORT-TEST-6                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000201002000100001                                                      
-                                     CORRECT =  000201002005100001                                                      
-                                                                                                                        
+ SORT --- FIVE KEYS   PASS  SORT-TEST-5                                                                                 
+ SORT --- FIVE KEYS   PASS  SORT-TEST-6                                                                                 
  SORT --- FIVE KEYS   PASS  SORT-TEST-7                                                                                 
  SORT --- FIVE KEYS   PASS  SORT-TEST-8                                                                                 
  SORT --- FIVE KEYS   PASS  SORT-TEST-9                                                                                 
  THE FILE BUILT IN ST101A IS USED BY ST102A. ST102A DOES NOT PRODUCE A REPORT- THE R ESULTS ARE CHECKED IN ST103A.      
  ***********************************************************************************************************************
                                                                                                                         
-                                                                                                                                                                                                                                                
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF ST101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
                                                     END OF TEST-  ST101A                                                
                                                                                                                         
-                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    009 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

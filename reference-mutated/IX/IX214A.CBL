@@ -1473,11 +1473,11 @@
 152100*                                                                         
 152200*                                                                         
 152300*                                                                         
-152400     IF      FILESTATUS (7)  EQUAL TO "26"                        IX2144.2
+152400     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2144.2
 152500             PERFORM  PASS                                        IX2144.2
 152600             ELSE  PERFORM  FAIL                                  IX2144.2
 152700         MOVE "FROM START-TEST-GF-07; IX-4 1.3.4 (3) C" TO RE-MARKIX2144.2
-152800             MOVE    "26"  TO CORRECT-A                           IX2144.2
+152800             MOVE    "23"  TO CORRECT-A                           IX2144.2
 152900             MOVE   FILESTATUS (7)  TO COMPUTED-A.                IX2144.2
 153000 START-TEST-GF-16A.                                               IX2144.2
 153100     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -1513,11 +1513,11 @@
 156100*                                                                         
 156200*                                                                         
 156300*                                                                         
-156400     IF      FILESTATUS (9)  EQUAL TO "93"                        IX2144.2
+156400     IF      FILESTATUS (9)  EQUAL TO "23"                        IX2144.2
 156500             PERFORM PASS                                         IX2144.2
 156600     ELSE    PERFORM FAIL                                         IX2144.2
 156700         MOVE "FROM START-TEST-GF-09; IX-4 1.3.4 (3) C" TO RE-MARKIX2144.2
-156800             MOVE  "93"  TO CORRECT-A                             IX2144.2
+156800             MOVE  "23"  TO CORRECT-A                             IX2144.2
 156900             MOVE   FILESTATUS (9)  TO COMPUTED-A.                IX2144.2
 157000 START-TEST-GF-18A.                                               IX2144.2
 157100     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -2047,11 +2047,11 @@
 209500*                                                                         
 209600*                                                                         
 209700*                                                                         
-209800     IF      FILESTATUS (2) EQUAL TO "80"                         IX2144.2
+209800     IF      FILESTATUS (2) EQUAL TO "00"                         IX2144.2
 209900             PERFORM  PASS                                        IX2144.2
 210000             ELSE  PERFORM  FAIL                                  IX2144.2
 210100         MOVE "IX-3; 1.3.4 (1) A;FROM START-TEST-GF-20" TO RE-MARKIX2144.2
-210200             MOVE    "80"  TO CORRECT-A                           IX2144.2
+210200             MOVE    "00"  TO CORRECT-A                           IX2144.2
 210300             MOVE   FILESTATUS (2)  TO COMPUTED-A.                IX2144.2
 210400 START-TEST-GF-29A.                                               IX2144.2
 210500     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -2086,11 +2086,11 @@
 213400*                                                                         
 213500*                                                                         
 213600*                                                                         
-213700     IF      FILESTATUS (4)  EQUAL TO "25"                        IX2144.2
+213700     IF      FILESTATUS (4)  EQUAL TO "23"                        IX2144.2
 213800             PERFORM  PASS                                        IX2144.2
 213900             ELSE  PERFORM  FAIL                                  IX2144.2
 214000         MOVE "FROM START-TEST-GF-04; IX-4 1.3.4 (3) C" TO RE-MARKIX2144.2
-214100             MOVE    "25"  TO CORRECT-A                           IX2144.2
+214100             MOVE    "23"  TO CORRECT-A                           IX2144.2
 214200             MOVE   FILESTATUS (4)  TO COMPUTED-A.                IX2144.2
 214300 START-TEST-GF-31A.                                               IX2144.2
 214400     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -2126,11 +2126,11 @@
 217400*                                                                         
 217500*                                                                         
 217600*                                                                         
-217700     IF      FILESTATUS (6)  EQUAL TO "08"                        IX2144.2
+217700     IF      FILESTATUS (6)  EQUAL TO "00"                        IX2144.2
 217800             PERFORM  PASS                                        IX2144.2
 217900             ELSE  PERFORM  FAIL                                  IX2144.2
 218000         MOVE "IX-3; 1.3.4 (1) A;FROM START-TEST-GF-24" TO RE-MARKIX2144.2
-218100             MOVE   "08"  TO CORRECT-A                            IX2144.2
+218100             MOVE   "00"  TO CORRECT-A                            IX2144.2
 218200             MOVE   FILESTATUS (6)  TO COMPUTED-A.                IX2144.2
 218300 START-TEST-GF-33A.                                               IX2144.2
 218400     PERFORM  PRINT-DETAIL.                                       IX2144.2

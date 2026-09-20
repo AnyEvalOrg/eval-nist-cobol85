@@ -605,10 +605,10 @@
 060500     MOVE ZERO TO TEMP.                                           IF1264.2
 060600 F-NUMVALC-TEST-16.                                               IF1264.2
 060700     COMPUTE TEMP = FUNCTION NUMVAL-C ("$?", "$").                IF1264.2
-060800     IF TEMP = 7 THEN                                             IF1264.2
+060800     IF TEMP = 5 THEN                                             IF1264.2
 060900                        PERFORM PASS                              IF1264.2
 061000     ELSE                                                         IF1264.2
-061100                        MOVE  7  TO CORRECT-N                     IF1264.2
+061100                        MOVE  5  TO CORRECT-N                     IF1264.2
 061200                        MOVE TEMP TO COMPUTED-N                   IF1264.2
 061300                        PERFORM FAIL.                             IF1264.2
 061400     GO TO F-NUMVALC-WRITE-16.                                    IF1264.2
@@ -848,10 +848,10 @@
 084800     MOVE ZERO TO TEMP.                                           IF1264.2
 084900 F-NUMVALC-TEST-30.                                               IF1264.2
 085000     COMPUTE TEMP = FUNCTION NUMVAL-C ("90") + 10.                IF1264.2
-085100     IF TEMP = 103 THEN                                           IF1264.2
+085100     IF TEMP = 100 THEN                                           IF1264.2
 085200                        PERFORM PASS                              IF1264.2
 085300     ELSE                                                         IF1264.2
-085400                        MOVE  103  TO CORRECT-N                   IF1264.2
+085400                        MOVE  100  TO CORRECT-N                   IF1264.2
 085500                        MOVE TEMP TO COMPUTED-N                   IF1264.2
 085600                        PERFORM FAIL.                             IF1264.2
 085700     GO TO F-NUMVALC-WRITE-30.                                    IF1264.2
@@ -867,10 +867,10 @@
 086700 F-NUMVALC-TEST-31.                                               IF1264.2
 086800     COMPUTE TEMP = FUNCTION NUMVAL-C ("2") +                     IF1264.2
 086900                    FUNCTION NUMVAL-C ("8").                      IF1264.2
-087000     IF TEMP = 70 THEN                                            IF1264.2
+087000     IF TEMP = 10 THEN                                            IF1264.2
 087100                        PERFORM PASS                              IF1264.2
 087200     ELSE                                                         IF1264.2
-087300                        MOVE  70  TO CORRECT-N                    IF1264.2
+087300                        MOVE  10  TO CORRECT-N                    IF1264.2
 087400                        MOVE TEMP TO COMPUTED-N                   IF1264.2
 087500                        PERFORM FAIL.                             IF1264.2
 087600     GO TO F-NUMVALC-WRITE-31.                                    IF1264.2

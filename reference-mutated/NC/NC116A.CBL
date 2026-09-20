@@ -557,7 +557,7 @@
 055900 SIG-WRTE-GF-3-1.                                                 NC1164.2
 056000     PERFORM PRINT-DETAIL.                                        NC1164.2
 056100 SIG-TEST-GF-3-2.                                                 NC1164.2
-056200     IF TEST3N-AN-3 NOT EQUAL TO "187"                            NC1164.2
+056200     IF TEST3N-AN-3 NOT EQUAL TO "127"                            NC1164.2
 056300         GO TO SIG-FAIL-GF-3-2.                                   NC1164.2
 056400     PERFORM PASS.                                                NC1164.2
 056500     GO TO SIG-WRTE-GF-3-2.                                       NC1164.2
@@ -565,7 +565,7 @@
 056700     PERFORM DE-LETE.                                             NC1164.2
 056800 SIG-FAIL-GF-3-2.                                                 NC1164.2
 056900     PERFORM FAIL.                                                NC1164.2
-057000     MOVE "187" TO CORRECT-A.                                     NC1164.2
+057000     MOVE "127" TO CORRECT-A.                                     NC1164.2
 057100     MOVE TEST3N-AN-3 TO COMPUTED-A.                              NC1164.2
 057200 SIG-WRTE-GF-3-2.                                                 NC1164.2
 057300     MOVE 2 TO REC-CT.                                            NC1164.2
@@ -595,7 +595,7 @@
 059700 SIG-WRTE-GF-4-1.                                                 NC1164.2
 059800     PERFORM PRINT-DETAIL.                                        NC1164.2
 059900 SIG-TEST-GF-4-2.                                                 NC1164.2
-060000     IF TEST4N-AN-3 NOT EQUAL TO "312"                            NC1164.2
+060000     IF TEST4N-AN-3 NOT EQUAL TO "362"                            NC1164.2
 060100         GO TO SIG-FAIL-GF-4-2.                                   NC1164.2
 060200     PERFORM PASS.                                                NC1164.2
 060300     GO TO SIG-WRTE-GF-4-2.                                       NC1164.2
@@ -603,7 +603,7 @@
 060500     PERFORM DE-LETE.                                             NC1164.2
 060600 SIG-FAIL-GF-4-2.                                                 NC1164.2
 060700     PERFORM FAIL.                                                NC1164.2
-060800     MOVE "312" TO CORRECT-A.                                     NC1164.2
+060800     MOVE "362" TO CORRECT-A.                                     NC1164.2
 060900     MOVE TEST4N-AN-3 TO COMPUTED-A.                              NC1164.2
 061000 SIG-WRTE-GF-4-2.                                                 NC1164.2
 061100     MOVE 2 TO REC-CT.                                            NC1164.2
@@ -1141,13 +1141,13 @@
 114300     PERFORM PRINT-DETAIL.                                        NC1164.2
 114400 SIG-TEST-GF-13-3.                                                NC1164.2
 114500     MOVE DS-L-5 TO WRK-DS-TS-5.                                  NC1164.2
-114600     IF GRP-10 EQUAL TO "91775+"                                  NC1164.2
+114600     IF GRP-10 EQUAL TO "91275+"                                  NC1164.2
 114700         PERFORM PASS                                             NC1164.2
 114800         GO TO SIG-WRITE-GF-13-3.                                 NC1164.2
 114900 SIG-FAIL-GF-13-3.                                                NC1164.2
 115000     PERFORM FAIL.                                                NC1164.2
 115100     MOVE GRP-10 TO COMPUTED-A.                                   NC1164.2
-115200     MOVE "91775+" TO CORRECT-A.                                  NC1164.2
+115200     MOVE "91275+" TO CORRECT-A.                                  NC1164.2
 115300     MOVE "MOVE DS-L-5 TO WRK-DS-TS-5" TO RE-MARK.                NC1164.2
 115400 SIG-WRITE-GF-13-3.                                               NC1164.2
 115500     MOVE 3 TO REC-CT.                                            NC1164.2
@@ -1209,13 +1209,13 @@
 121100 SIG-TEST-GF-14-3.                                                NC1164.2
 121200     MOVE SPACE TO AN-006.                                        NC1164.2
 121300     MOVE DS-L-4 TO AN-006.                                       NC1164.2
-121400     IF AN-006 EQUAL TO "9137  "                                  NC1164.2
+121400     IF AN-006 EQUAL TO "9127  "                                  NC1164.2
 121500         PERFORM PASS                                             NC1164.2
 121600         GO TO SIG-WRITE-GF-14-3.                                 NC1164.2
 121700 SIG-FAIL-GF-14-3.                                                NC1164.2
 121800     PERFORM FAIL.                                                NC1164.2
 121900     MOVE AN-006 TO COMPUTED-A.                                   NC1164.2
-122000     MOVE "9137  " TO CORRECT-A.                                  NC1164.2
+122000     MOVE "9127  " TO CORRECT-A.                                  NC1164.2
 122100     MOVE "MOVE DS-L-4 TO AN-006" TO RE-MARK.                     NC1164.2
 122200 SIG-WRITE-GF-14-3.                                               NC1164.2
 122300     MOVE 3 TO REC-CT.                                            NC1164.2

@@ -13,25 +13,21 @@ TEST RESULT OF IF127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- ORD Function         FAIL* F-ORD-01                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000066.000000000                                                     
-                                     CORRECT =  000000061.000000000  See ref. A-60 2.31                                 
-                                                                                                                        
+ ORD Function         PASS  F-ORD-01                                                                                    
  ORD Function         PASS  F-ORD-02                                                                                    
  ORD Function         PASS  F-ORD-03                                                                                    
  ORD Function         PASS  F-ORD-04                                                                                    
  ORD Function         FAIL* F-ORD-05                                                                                    
                                                                                                                         
                                      COMPUTED=  000000101.000000000                                                     
-                                     CORRECT =  000000102.000000000  See ref. A-60 2.31                                 
+                                     CORRECT =  000000105.000000000  See ref. A-60 2.31                                 
                                                                                                                         
- ORD Function         FAIL* F-ORD-06                                                                                    
+ ORD Function         PASS  F-ORD-06                                                                                    
+ ORD Function         FAIL* F-ORD-07                                                                                    
                                                                                                                         
-                                     COMPUTED=  000000052.000000000                                                     
-                                     CORRECT =  000000062.000000000  See ref. A-60 2.31                                 
+                                     COMPUTED=  000000105.000000000                                                     
+                                     CORRECT =  000000100.000000000  See ref. A-60 2.31                                 
                                                                                                                         
- ORD Function         PASS  F-ORD-07                                                                                    
  ORD Function         PASS  F-ORD-08                                                                                    
  ORD Function         PASS  F-ORD-09                                                                                    
  ***********************************************************************************************************************
@@ -40,7 +36,11 @@ TEST RESULT OF IF127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                                                                                         
                                                     END OF TEST-  IF127A                                                
-                                                                                                                                                                                                                                                
+                                                                                                                        
+                                                    007 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    002 TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,8 +54,4 @@ TEST RESULT OF IF127A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

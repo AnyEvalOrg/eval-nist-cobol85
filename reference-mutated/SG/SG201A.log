@@ -14,17 +14,9 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
                                                                                                                         
  ***********************************************************************************************************************
  SEGMENT-LIMIT        PASS  SEG-TEST-1                                                                                  
- SEGMENT-LIMIT        FAIL* SEG-TEST-2                                                                                  
-                                                                                                                        
-                                     COMPUTED= GOOD                                                                     
-                                     CORRECT = GPOD                                                                     
-                                                                                                                        
+ SEGMENT-LIMIT        PASS  SEG-TEST-2                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-3                                                                                  
- SEGMENT-LIMIT        FAIL* SEG-TEST-4                                                                                  
-                                                                                                                        
-                                     COMPUTED= GOOD                                                                     
-                                     CORRECT = GSOD                                                                     
-                                                                                                                        
+ SEGMENT-LIMIT        PASS  SEG-TEST-4                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-5                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-6                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-7                                                                                  
@@ -33,30 +25,14 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        PASS  SEG-TEST-10                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-11                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-12                                                                                 
- SEGMENT-LIMIT        FAIL* SEG-TEST-13                                                                                 
-                                                                                                                        
-                                     COMPUTED= GOOD                                                                     
-                                     CORRECT = VOOD                                                                     
-                                                                                                                        
+ SEGMENT-LIMIT        PASS  SEG-TEST-13                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-14                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-15                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-16                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-17                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-18                                                                                 
- SEGMENT-LIMIT        FAIL* SEG-TEST-19                                                                                 
-                                                                                                                        
-                                     COMPUTED= GOOD                                                                     
-                                     CORRECT = SOOD                                                                     
-                                                                                                                        
- SEGMENT-LIMIT        FAIL* SEG-TEST-20                                                                                                                                                                                                         
- FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                                                                                                        
-                                     COMPUTED= GOOD                                                                     
-                                     CORRECT = GOOX                                                                     
-                                                                                                                        
+ SEGMENT-LIMIT        PASS  SEG-TEST-19                                                                                 
+ SEGMENT-LIMIT        PASS  SEG-TEST-20                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-21                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-22                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-23                                                                                 
@@ -72,7 +48,11 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        PASS  SEG-TEST-33                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-34                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-35                                                                                 
- SEGMENT-LIMIT        PASS  SEG-TEST-36                                                                                 
+ SEGMENT-LIMIT        PASS  SEG-TEST-36                                                                                                                                                                                                         
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
  SEGMENT-LIMIT        PASS  SEG-TEST-37                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-38                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-39                                                                                 
@@ -103,11 +83,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        PASS  SEG-TEST-64                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-65                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-66                                                                                 
- SEGMENT-LIMIT        PASS  SEG-TEST-67                                                                                                                                                                                                         
- FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
+ SEGMENT-LIMIT        PASS  SEG-TEST-67                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-68                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-69                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-70                                                                                 
@@ -127,8 +103,12 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
                                                                                                                         
                                                     END OF TEST-  SG201A    NTIS DISTRIBUTION COBOL 74                  
                                                                                                                         
-                                                    074 OF 079  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    005 TEST(S) FAILED                                                  
+                                                    079 OF 079  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
+ FEATURE              PASS  PARAGRAPH-NAME                                                  REMARKS                     
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

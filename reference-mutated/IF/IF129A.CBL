@@ -387,10 +387,10 @@
 038700     MOVE ZERO TO WS-INT.                                         IF1294.2
 038800 F-ORD-MIN-TEST-05.                                               IF1294.2
 038900     COMPUTE WS-INT = FUNCTION ORD-MIN(A, B, D).                  IF1294.2
-039000     IF WS-INT = 5 THEN                                           IF1294.2
+039000     IF WS-INT = 1 THEN                                           IF1294.2
 039100                        PERFORM PASS                              IF1294.2
 039200     ELSE                                                         IF1294.2
-039300                        MOVE 5    TO CORRECT-N                    IF1294.2
+039300                        MOVE 1    TO CORRECT-N                    IF1294.2
 039400                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 039500                        PERFORM FAIL.                             IF1294.2
 039600     GO TO F-ORD-MIN-WRITE-05.                                    IF1294.2
@@ -459,10 +459,10 @@
 045900     MOVE ZERO TO WS-INT.                                         IF1294.2
 046000 F-ORD-MIN-TEST-09.                                               IF1294.2
 046100     COMPUTE WS-INT = FUNCTION ORD-MIN("S", "D", J).              IF1294.2
-046200     IF WS-INT = 3 THEN                                           IF1294.2
+046200     IF WS-INT = 2 THEN                                           IF1294.2
 046300                        PERFORM PASS                              IF1294.2
 046400     ELSE                                                         IF1294.2
-046500                        MOVE 3   TO CORRECT-N                     IF1294.2
+046500                        MOVE 2   TO CORRECT-N                     IF1294.2
 046600                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 046700                        PERFORM FAIL.                             IF1294.2
 046800     GO TO F-ORD-MIN-WRITE-09.                                    IF1294.2
@@ -495,10 +495,10 @@
 049500     MOVE ZERO TO WS-INT.                                         IF1294.2
 049600 F-ORD-MIN-TEST-11.                                               IF1294.2
 049700     COMPUTE WS-INT = FUNCTION ORD-MIN(IND(1), IND(2), IND(3)).   IF1294.2
-049800     IF WS-INT = 1 THEN                                           IF1294.2
+049800     IF WS-INT = 2 THEN                                           IF1294.2
 049900                        PERFORM PASS                              IF1294.2
 050000     ELSE                                                         IF1294.2
-050100                        MOVE 1   TO CORRECT-N                     IF1294.2
+050100                        MOVE 2   TO CORRECT-N                     IF1294.2
 050200                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 050300                        PERFORM FAIL.                             IF1294.2
 050400     GO TO F-ORD-MIN-WRITE-11.                                    IF1294.2
@@ -587,10 +587,10 @@
 058700 F-ORD-MIN-TEST-16.                                               IF1294.2
 058800     COMPUTE WS-INT = FUNCTION ORD-MIN(9, 3, A) +                 IF1294.2
 058900                      FUNCTION ORD-MIN(1, 1).                     IF1294.2
-059000     IF WS-INT = 2 THEN                                           IF1294.2
+059000     IF WS-INT = 3 THEN                                           IF1294.2
 059100                        PERFORM PASS                              IF1294.2
 059200     ELSE                                                         IF1294.2
-059300                        MOVE 2    TO CORRECT-N                    IF1294.2
+059300                        MOVE 3    TO CORRECT-N                    IF1294.2
 059400                        MOVE WS-INT TO COMPUTED-N                 IF1294.2
 059500                        PERFORM FAIL.                             IF1294.2
 059600     GO TO F-ORD-MIN-WRITE-16.                                    IF1294.2

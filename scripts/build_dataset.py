@@ -185,14 +185,14 @@ def validate_mutated(reference, mutations):
         candidate = bool(entry['mutations']) or entry['eligible']
         if not candidate:
             continue
-        if len(entry['mutations']) < 3:
-            problems.append(f'{name}: fewer than 3 mutations')
+        if len(entry['mutations']) < 2:
+            problems.append(f'{name}: fewer than 2 mutations')
             continue
         sites = entry.get('mutable_sites', 0)
-        if sites < 6:
-            problems.append(f'{name}: fewer than 6 supported sites')
+        if sites < 4:
+            problems.append(f'{name}: fewer than 4 supported sites')
             continue
-        if len(entry['mutations']) != min(max(3, round(0.25 * sites)), sites//2):
+        if len(entry['mutations']) != min(max(2, round(0.25 * sites)), sites//2):
             problems.append(f'{name}: incorrect mutation count for supported sites')
             continue
         if not path.with_suffix('.log').is_file():

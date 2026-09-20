@@ -20,27 +20,27 @@ TEST RESULT OF IF121A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MEDIAN Function      PASS  F-MEDIAN-05                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-06                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-07                                                                                 
- MEDIAN Function      FAIL* F-MEDIAN-08                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000004.000000000  See ref. A-54 2.25                                 
-                                                                                                                        
- MEDIAN Function      FAIL* F-MEDIAN-09                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000001.000000000  See ref. A-54 2.25                                 
-                                                                                                                        
+ MEDIAN Function      PASS  F-MEDIAN-08                                                                                 
+ MEDIAN Function      PASS  F-MEDIAN-09                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-11                                                                                 
- MEDIAN Function      FAIL* F-MEDIAN-12                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000000005.000000000                                                     
-                                     CORRECT =  000000003.000000000  See ref. A-54 2.25                                 
-                                                                                                                        
+ MEDIAN Function      PASS  F-MEDIAN-12                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-13                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-14                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-15                                                                                 
  MEDIAN Function      PASS  F-MEDIAN-16                                                                                 
- MEDIAN Function      PASS  F-MEDIAN-17                                                                                                                                                                                                         
+ MEDIAN Function      PASS  F-MEDIAN-17                                                                                 
+ MEDIAN Function      PASS  F-MEDIAN-18                                                                                 
+ ***********************************************************************************************************************
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                    END OF TEST-  IF121A                                                
+                                                                                                                        
+                                                    017 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
+                                                    NO  TEST(S) DELETED                                                 
+                                                    NO  TEST(S) REQUIRE INSPECTION                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,16 +54,4 @@ TEST RESULT OF IF121A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- MEDIAN Function      PASS  F-MEDIAN-18                                                                                 
- ***********************************************************************************************************************
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                    END OF TEST-  IF121A                                                
-                                                                                                                        
-                                                    014 OF 017  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
-                                                    NO  TEST(S) DELETED                                                 
-                                                    NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

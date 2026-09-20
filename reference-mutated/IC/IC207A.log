@@ -14,28 +14,16 @@ TEST RESULT OF IC207A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
  INDEX DATA ITEM      PASS  LINK-TEST-01                                                                                
- VAR. LENGTH TABLE    FAIL* LINK-TEST-02       .01        VALUE OF DN2(2)                                               
-                                                                                                                        
-                                     COMPUTED= Z                                                                        
-                                     CORRECT = T                                                                        
-                                                                                                                        
+ VAR. LENGTH TABLE    PASS  LINK-TEST-02       .01                                                                      
  VAR. LENGTH TABLE    PASS  LINK-TEST-02       .02                                                                      
  VAR. LENGTH TABLE    PASS  LINK-TEST-02       .03                                                                      
  VAR. LENGTH TABLE    PASS  LINK-TEST-02       .04                                                                      
  CONDITION NAME       PASS  LINK-TEST-03       .01                                                                      
  CONDITION NAME       PASS  LINK-TEST-03       .02                                                                      
- CONDITION NAME       FAIL* LINK-TEST-03       .03        VALUE OF DN2(8)                                               
-                                                                                                                        
-                                     COMPUTED= H                                                                        
-                                     CORRECT = A                                                                        
-                                                                                                                        
+ CONDITION NAME       PASS  LINK-TEST-03       .03                                                                      
  CALL PARAMETERS      PASS  LINK-TEST-04       .01                                                                      
  CALL PARAMETERS      PASS  LINK-TEST-04       .02                                                                      
- CALL PARAMETERS      FAIL* LINK-TEST-04       .03        CONTENTS OF TABLE-01                                          
-                                                                                                                        
-                                     COMPUTED= ABCDEFGHI                                                                
-                                     CORRECT = ABCWEFGHI                                                                
-                                                                                                                        
+ CALL PARAMETERS      PASS  LINK-TEST-04       .03                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
@@ -43,8 +31,8 @@ TEST RESULT OF IC207A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  IC207A                                                
                                                                                                                         
-                                                    008 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    011 OF 011  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

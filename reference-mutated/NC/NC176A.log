@@ -20,17 +20,9 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD                  PASS  ADD-TEST-F1-4-2                                                                             
  ADD ---                                                                                                                
    TO                 PASS  ADD-TEST-F1-5                                                                               
-   TO                 FAIL* ADD-TEST-F1-6                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000001111122222                                                      
-                                     CORRECT =  000000001111122272   VI-74 6.6.4 GR4                                    
-                                                                                                                        
+   TO                 PASS  ADD-TEST-F1-6                                                                               
    TO                 PASS  ADD-TEST-F1-7                                                                               
-   ROUNDED            FAIL* ADD-TEST-F1-8                                                                               
-                                                                                                                        
-                                     COMPUTED=  000055555.000000000                                                     
-                                     CORRECT =  000055585.000000000  VI-74 6.6.4 GR4                                    
-                                                                                                                        
+   ROUNDED            PASS  ADD-TEST-F1-8                                                                               
    SIZE ERROR         PASS  ADD-TEST-F1-9-1                                                                             
    SIZE ERROR         PASS  ADD-TEST-F1-9-2                                                                             
    ROUNDED,SIZE ERROR PASS  ADD-TEST-F1-10-1                                                                            
@@ -38,9 +30,17 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    ROUNDED,SIZE ERROR PASS  ADD-TEST-F1-11-1                                                                            
    ROUNDED,SIZE ERROR PASS  ADD-TEST-F1-11-2                                                                            
    COMP VS. DISPLAY   PASS  ADD-TEST-F1-12                                                                              
-   COMP VS. DISPLAY   FAIL* ADD-TEST-F1-13                                                                              
-                                                                                                                        
-                                     COMPUTED=  222222222222222222                                                                                                                                                                              
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-13                                                                              
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-14                                                                              
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-15-1                                                                            
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-15-2                                                                            
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-16                                                                              
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-17                                                                              
+   COMP VS. DISPLAY   PASS  ADD-TEST-F1-18                                                                              
+ ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-19                                                                              
+ ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-20                                                                              
+ ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-21                                                                              
+ ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-22                                                                                                                                                                                                      
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,37 +54,13 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     CORRECT =  222222222022222222   VI-74 6.6.4 GR4                                    
-                                                                                                                        
-   COMP VS. DISPLAY   FAIL* ADD-TEST-F1-14                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000099.000000000                                                     
-                                     CORRECT =  000000090.000000000  VI-74 6.6.4 GR4                                    
-                                                                                                                        
-   COMP VS. DISPLAY   PASS  ADD-TEST-F1-15-1                                                                            
-   COMP VS. DISPLAY   PASS  ADD-TEST-F1-15-2                                                                            
-   COMP VS. DISPLAY   FAIL* ADD-TEST-F1-16                                                                              
-                                                                                                                        
-                                     COMPUTED= -555577777777777777                                                      
-                                     CORRECT = -555575777777777777   VI-74 6.6.4 GR4                                    
-                                                                                                                        
-   COMP VS. DISPLAY   PASS  ADD-TEST-F1-17                                                                              
-   COMP VS. DISPLAY   PASS  ADD-TEST-F1-18                                                                              
- ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-19                                                                              
- ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-20                                                                              
- ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-21                                                                              
- ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-22                                                                              
  ADD, COMP, SIZE ERR  PASS  ADD-TEST-F1-23                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-24                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-25                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-26                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-27                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-28                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-29                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000027   V1-67 6.4.2                                        
-                                                                                                                        
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-29                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-30                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-31                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-32                                                                              
@@ -95,36 +71,11 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-37                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-38                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-39                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-40                                                                              
-                                                                                                                                                                                                                                                
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
-                                     COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000025   V1-67 6.4.2                                        
-                                                                                                                        
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-40                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-41                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-42                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000029   V1-67 6.4.2                                        
-                                                                                                                        
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-42                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-43                                                                              
- ADD LIMIT TESTS      FAIL* ADD-TEST-F1-44                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000000000000021                                                      
-                                     CORRECT =  000000000000000020   V1-67 6.4.2                                        
-                                                                                                                        
+ ADD LIMIT TESTS      PASS  ADD-TEST-F1-44                                                                              
  ADD LIMIT TESTS      PASS  ADD-TEST-F1-45                                                                              
  ADD-TO-SERIES        PASS  ADD-TEST-F1-46     .01                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-46     .02                                                                      
@@ -145,14 +96,7 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD-TO-SERIES        PASS  ADD-TEST-F1-48-4   .04                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-48-5   .05                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-48-6   .06                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-48-7   .07                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-1   .01                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-2   .02                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-3   .03                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-4   .04                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-5   .05                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-6   .06                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-49-7   .07                                                                                                                                                                                              
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-48-7   .07                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -166,6 +110,13 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-1   .01                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-2   .02                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-3   .03                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-4   .04                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-5   .05                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-6   .06                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-49-7   .07                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-50-1   .01                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-50-2   .02                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-50-3   .03                                                                      
@@ -201,14 +152,7 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD-TO-SERIES        PASS  ADD-TEST-F1-55-2   .02                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-55-3   .03                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-55-4   .04                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-55-5   .05                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-56-1   .01                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-56-2   .02                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-56-3   .03                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-56-4   .04                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-56-5   .05                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-57-1   .01                                                                      
- ADD-TO-SERIES        PASS  ADD-TEST-F1-57-2   .02                                                                                                                                                                                              
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-55-5   .05                                                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -222,6 +166,13 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-56-1   .01                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-56-2   .02                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-56-3   .03                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-56-4   .04                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-56-5   .05                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-57-1   .01                                                                      
+ ADD-TO-SERIES        PASS  ADD-TEST-F1-57-2   .02                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-57-3   .03                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-58-1   .01                                                                      
  ADD-TO-SERIES        PASS  ADD-TEST-F1-58-2   .02                                                                      
@@ -233,8 +184,8 @@ TEST RESULT OF NC176A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  NC176A                                                
                                                                                                                         
-                                                    115 OF 124  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    009 TEST(S) FAILED                                                  
+                                                    124 OF 124  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

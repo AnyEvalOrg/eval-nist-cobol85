@@ -42,8 +42,8 @@ def synthetic_mutation(tmp_path):
         name = f'TEST-{number}'
         source += ''.join('       ' + line + '\n' for line in [
             name + '.', f'    MOVE "{name}" TO PAR-NAME.',
-            '    IF DATA-ITEM = 42', '        PERFORM PASS', '    ELSE',
-            '        MOVE DATA-ITEM TO COMPUTED-N', '        MOVE 42 TO CORRECT-N',
+            f'    IF DATA-ITEM = {42+number}', '        PERFORM PASS', '    ELSE',
+            '        MOVE DATA-ITEM TO COMPUTED-N', f'        MOVE {42+number} TO CORRECT-N',
             '        PERFORM FAIL.', '    PERFORM PRINT-DETAIL.'])
     changed, details = mutate(source, 'SYNTH')
     entry = dict(**details, eligible=True, reasons=[], source_path='NC/SYNTH.CBL',
@@ -57,9 +57,10 @@ def synthetic_mutation(tmp_path):
     rows = []
     for site in details['mutations']:
         rows += [' ' + 'FEATURE'.ljust(20) + ' FAIL* ' + site['paragraph'].ljust(22),
-                 ' '*30 + '       COMPUTED='.ljust(17) + '42',
+                 ' '*30 + '       COMPUTED='.ljust(17) + site['replacements'][0]['original'],
                  ' '*30 + '       CORRECT ='.ljust(17) + site['replacements'][1]['mutated']]
     rows += [' ' + 'FEATURE'.ljust(20) + ' PASS  ' + 'UNMUTATED'.ljust(22),
-             ' 1 OF 4 TESTS WERE EXECUTED SUCCESSFULLY', ' 3 TEST(S) FAILED']
+             f" 1 OF {len(details['mutations'])+1} TESTS WERE EXECUTED SUCCESSFULLY",
+             f" {len(details['mutations'])} TEST(S) FAILED"]
     report = '\n'.join(rows) + '\n'
     return dict(payload=payload, path=path, tree=tree, original=source, changed=changed, report=report)

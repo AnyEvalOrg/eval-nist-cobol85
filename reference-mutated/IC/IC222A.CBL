@@ -765,11 +765,11 @@
 076700*                                                                         
 076800*                                                                         
 076900     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-077000     IF      CALL-FLAG = 8                                        IC2224.2
+077000     IF      CALL-FLAG = 3                                        IC2224.2
 077100             PERFORM PASS                                         IC2224.2
 077200     ELSE                                                         IC2224.2
 077300             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-077400             MOVE    8 TO CORRECT-N                               IC2224.2
+077400             MOVE    3 TO CORRECT-N                               IC2224.2
 077500             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 077600             PERFORM FAIL.                                        IC2224.2
 077700     PERFORM PRINT-DETAIL.                                        IC2224.2
@@ -917,11 +917,11 @@
 091900*                                                                         
 092000*                                                                         
 092100     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-092200     IF      CALL-FLAG = 8                                        IC2224.2
+092200     IF      CALL-FLAG = 1                                        IC2224.2
 092300             PERFORM PASS                                         IC2224.2
 092400     ELSE                                                         IC2224.2
 092500             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-092600             MOVE    8 TO CORRECT-N                               IC2224.2
+092600             MOVE    1 TO CORRECT-N                               IC2224.2
 092700             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 092800             PERFORM FAIL.                                        IC2224.2
 092900     PERFORM PRINT-DETAIL.                                        IC2224.2
@@ -998,11 +998,11 @@
 100000*                                                                         
 100100*                                                                         
 100200     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-100300     IF      CALL-FLAG = 5                                        IC2224.2
+100300     IF      CALL-FLAG = 1                                        IC2224.2
 100400             PERFORM PASS                                         IC2224.2
 100500     ELSE                                                         IC2224.2
 100600             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-100700             MOVE    5 TO CORRECT-N                               IC2224.2
+100700             MOVE    1 TO CORRECT-N                               IC2224.2
 100800             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 100900             PERFORM FAIL.                                        IC2224.2
 101000     PERFORM PRINT-DETAIL.                                        IC2224.2

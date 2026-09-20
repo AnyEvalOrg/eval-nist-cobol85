@@ -619,7 +619,7 @@
 062600     OPEN    OUTPUT SORTOUT-1A.                                   ST1194.2
 062700 SORT-TEST-1.                                                     ST1194.2
 062800     PERFORM  RET-1.                                              ST1194.2
-062900     IF       RDF-KEYS EQUAL TO 009000000900509                   ST1194.2
+062900     IF       RDF-KEYS EQUAL TO 009000000900009                   ST1194.2
 063000              PERFORM PASS GO TO SORT-WRITE-1.                    ST1194.2
 063100     GO       TO SORT-FAIL-1.                                     ST1194.2
 063200 SORT-DELETE-1.                                                   ST1194.2
@@ -627,7 +627,7 @@
 063400     GO       TO SORT-WRITE-1.                                    ST1194.2
 063500 SORT-FAIL-1.                                                     ST1194.2
 063600     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1194.2
-063700     MOVE     009000000900509 TO CORRECT-18V0.                    ST1194.2
+063700     MOVE     009000000900009 TO CORRECT-18V0.                    ST1194.2
 063800     PERFORM  FAIL.                                               ST1194.2
 063900 SORT-WRITE-1.                                                    ST1194.2
 064000     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         ST1194.2
@@ -665,7 +665,7 @@
 067200                                                                  ST1194.2
 067300 SORT-TEST-4.                                                     ST1194.2
 067400     PERFORM  RET-2 48 TIMES.                                     ST1194.2
-067500     IF       RDF-KEYS EQUAL TO 206061000200002                   ST1194.2
+067500     IF       RDF-KEYS EQUAL TO 206001000200002                   ST1194.2
 067600              PERFORM PASS GO TO SORT-WRITE-4.                    ST1194.2
 067700     GO       TO SORT-FAIL-4.                                     ST1194.2
 067800 SORT-DELETE-4.                                                   ST1194.2
@@ -673,7 +673,7 @@
 068000     GO       TO SORT-WRITE-4.                                    ST1194.2
 068100 SORT-FAIL-4.                                                     ST1194.2
 068200     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1194.2
-068300     MOVE    206061000200002 TO CORRECT-18V0.                     ST1194.2
+068300     MOVE    206001000200002 TO CORRECT-18V0.                     ST1194.2
 068400     PERFORM  FAIL.                                               ST1194.2
 068500 SORT-WRITE-4.                                                    ST1194.2
 068600     MOVE     "SORT-TEST-4 " TO PAR-NAME.                         ST1194.2
@@ -701,7 +701,7 @@
 070800     PERFORM  RET-6 THRU RET-6-EXIT.                              ST1194.2
 070900     PERFORM  RET-7 THRU RET-7-EXIT.                              ST1194.2
 071000     PERFORM  RET-8 THRU RET-8-EXIT.                              ST1194.2
-071100     IF       RDF-KEYS EQUAL TO 201002000103001                   ST1194.2
+071100     IF       RDF-KEYS EQUAL TO 201002000100001                   ST1194.2
 071200              PERFORM PASS GO TO SORT-WRITE-6.                    ST1194.2
 071300     GO       TO SORT-FAIL-6.                                     ST1194.2
 071400 SORT-DELETE-6.                                                   ST1194.2
@@ -709,7 +709,7 @@
 071600     GO       TO SORT-WRITE-6.                                    ST1194.2
 071700 SORT-FAIL-6.                                                     ST1194.2
 071800     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1194.2
-071900     MOVE     201002000103001 TO CORRECT-18V0.                    ST1194.2
+071900     MOVE     201002000100001 TO CORRECT-18V0.                    ST1194.2
 072000     PERFORM  FAIL.                                               ST1194.2
 072100 SORT-WRITE-6.                                                    ST1194.2
 072200     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1194.2

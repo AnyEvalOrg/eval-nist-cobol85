@@ -627,7 +627,7 @@
 062900*                                                                         
 063000 PFM-TEST-F3-2.                                                   NC2014.2
 063100     PERFORM PFM-C UNTIL PERFORM2 GREATER THAN 25.                NC2014.2
-063200     IF PERFORM2 EQUAL TO 54 PERFORM PASS                         NC2014.2
+063200     IF PERFORM2 EQUAL TO 50 PERFORM PASS                         NC2014.2
 063300                             GO TO PFM-WRITE-F3-2.                NC2014.2
 063400     GO TO PFM-FAIL-F3-2.                                         NC2014.2
 063500 PFM-DELETE-F3-2.                                                 NC2014.2
@@ -635,7 +635,7 @@
 063700     GO TO PFM-WRITE-F3-2.                                        NC2014.2
 063800 PFM-FAIL-F3-2.                                                   NC2014.2
 063900     MOVE PERFORM2 TO COMPUTED-N.                                 NC2014.2
-064000     MOVE 54 TO CORRECT-N.                                        NC2014.2
+064000     MOVE 50 TO CORRECT-N.                                        NC2014.2
 064100     PERFORM FAIL.                                                NC2014.2
 064200 PFM-WRITE-F3-2.                                                  NC2014.2
 064300     PERFORM PRINT-DETAIL.                                        NC2014.2
@@ -1004,7 +1004,7 @@
 100600              FROM -5.5                                           NC2014.2
 100700              BY 0.1                                              NC2014.2
 100800              UNTIL PERFORM4 > 90.                                NC2014.2
-100900     IF       PERFORM4 EQUAL TO 90.3                              NC2014.2
+100900     IF       PERFORM4 EQUAL TO 90.1                              NC2014.2
 101000              PERFORM PASS GO TO PFM-WRITE-F4-7.                  NC2014.2
 101100     GO       TO PFM-FAIL-F4-7.                                   NC2014.2
 101200*                                                                         
@@ -1015,7 +1015,7 @@
 101700 PFM-FAIL-F4-7.                                                   NC2014.2
 101800     PERFORM  FAIL.                                               NC2014.2
 101900     MOVE PERFORM4 TO COMPUTED-N.                                 NC2014.2
-102000     MOVE 90.3 TO CORRECT-N.                                      NC2014.2
+102000     MOVE 90.1 TO CORRECT-N.                                      NC2014.2
 102100 PFM-WRITE-F4-7.                                                  NC2014.2
 102200     PERFORM  PRINT-DETAIL.                                       NC2014.2
 102300*                                                                         
@@ -1262,7 +1262,7 @@
 126400 PFM-B-F3-6.                                                      NC2014.2
 126500     ADD     1 TO WRK-DS-02V00.                                   NC2014.2
 126600 PFM-TESTT-F3-6.                                                  NC2014.2
-126700     IF      WRK-DS-02V00 EQUAL TO 39                             NC2014.2
+126700     IF      WRK-DS-02V00 EQUAL TO 99                             NC2014.2
 126800             PERFORM PASS GO TO PFM-WRITE-F3-6.                   NC2014.2
 126900     GO TO   PFM-FAIL-F3-6.                                       NC2014.2
 127000 PFM-DELETE-F3-6.                                                 NC2014.2
@@ -1270,7 +1270,7 @@
 127200     GO      TO PFM-WRITE-F3-6.                                   NC2014.2
 127300 PFM-FAIL-F3-6.                                                   NC2014.2
 127400     MOVE    WRK-DS-02V00 TO COMPUTED-N.                          NC2014.2
-127500     MOVE    39 TO CORRECT-N.                                     NC2014.2
+127500     MOVE    99 TO CORRECT-N.                                     NC2014.2
 127600     PERFORM  FAIL.                                               NC2014.2
 127700 PFM-WRITE-F3-6.                                                  NC2014.2
 127800     MOVE     "PFM-TEST-F3-6  " TO PAR-NAME.                      NC2014.2
@@ -2097,11 +2097,11 @@
 209900     MOVE   "PFM-TEST-F4-24" TO PAR-NAME.                         NC2014.2
 210000     PERFORM PRINT-DETAIL.                                        NC2014.2
 210100 PFM-TEST-F4-24-2.                                                NC2014.2
-210200     IF      S1 EQUAL TO 1                                        NC2014.2
+210200     IF      S1 EQUAL TO 4                                        NC2014.2
 210300             PERFORM PASS GO TO PFM-WRITE-F4-24-2.                NC2014.2
 210400     PERFORM FAIL.                                                NC2014.2
 210500     MOVE    S1  TO COMPUTED-N.                                   NC2014.2
-210600     MOVE    1   TO CORRECT-N.                                    NC2014.2
+210600     MOVE    4   TO CORRECT-N.                                    NC2014.2
 210700     GO TO   PFM-WRITE-F4-24-2.                                   NC2014.2
 210800 PFM-DELETE-F4-24-2.                                              NC2014.2
 210900     PERFORM DE-LETE.                                             NC2014.2

@@ -343,13 +343,13 @@
 034500     PERFORM PRINT-DETAIL.                                        IC1084.2
 034600 CALL-TEST-07-03.                                                 IC1084.2
 034700     ADD 1 TO REC-CT.                                             IC1084.2
-034800     IF DN3 EQUAL TO "PC111A"                                     IC1084.2
+034800     IF DN3 EQUAL TO "IC111A"                                     IC1084.2
 034900         PERFORM PASS                                             IC1084.2
 035000         GO TO CALL-WRITE-07-03.                                  IC1084.2
 035100 CALL-FAIL-07-03.                                                 IC1084.2
 035200     PERFORM FAIL.                                                IC1084.2
 035300     MOVE DN3 TO COMPUTED-A.                                      IC1084.2
-035400     MOVE "PC111A" TO CORRECT-A.                                  IC1084.2
+035400     MOVE "IC111A" TO CORRECT-A.                                  IC1084.2
 035500     MOVE "SUBPROGRAM ?????? ERROR" TO RE-MARK.                   IC1084.2
 035600 CALL-WRITE-07-03.                                                IC1084.2
 035700     PERFORM PRINT-DETAIL.                                        IC1084.2
@@ -360,13 +360,13 @@
 036200     MOVE "SUBPRGMS CALLED ONCE" TO FEATURE.                      IC1084.2
 036300 CALL-TEST-08-01.                                                 IC1084.2
 036400     MOVE 1 TO REC-CT.                                            IC1084.2
-036500     IF DN4 EQUAL TO 7                                            IC1084.2
+036500     IF DN4 EQUAL TO 1                                            IC1084.2
 036600         PERFORM PASS                                             IC1084.2
 036700         GO TO CALL-WRITE-08-01.                                  IC1084.2
 036800 CALL-FAIL-08-01.                                                 IC1084.2
 036900     PERFORM FAIL.                                                IC1084.2
 037000     MOVE DN4 TO COMPUTED-18V0.                                   IC1084.2
-037100     MOVE 7 TO CORRECT-18V0.                                      IC1084.2
+037100     MOVE 1 TO CORRECT-18V0.                                      IC1084.2
 037200     MOVE "IC?09A CALLED N TIMES" TO RE-MARK.                     IC1084.2
 037300 CALL-WRITE-08-01.                                                IC1084.2
 037400     PERFORM PRINT-DETAIL.                                        IC1084.2
@@ -384,13 +384,13 @@
 038600     PERFORM PRINT-DETAIL.                                        IC1084.2
 038700 CALL-TEST-08-03.                                                 IC1084.2
 038800     ADD 1 TO REC-CT.                                             IC1084.2
-038900     IF DN6 EQUAL TO 2                                            IC1084.2
+038900     IF DN6 EQUAL TO 1                                            IC1084.2
 039000         PERFORM PASS                                             IC1084.2
 039100         GO TO CALL-WRITE-08-03.                                  IC1084.2
 039200 CALL-FAIL-08-03.                                                 IC1084.2
 039300     PERFORM FAIL.                                                IC1084.2
 039400     MOVE DN6 TO COMPUTED-18V0.                                   IC1084.2
-039500     MOVE 2 TO CORRECT-18V0.                                      IC1084.2
+039500     MOVE 1 TO CORRECT-18V0.                                      IC1084.2
 039600     MOVE "IC???A CALLED N TIMES" TO RE-MARK.                     IC1084.2
 039700 CALL-WRITE-08-03.                                                IC1084.2
 039800     PERFORM PRINT-DETAIL.                                        IC1084.2

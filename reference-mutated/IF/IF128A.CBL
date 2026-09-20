@@ -403,10 +403,10 @@
 040300     MOVE ZERO TO WS-INT.                                         IF1284.2
 040400 F-ORD-MAX-TEST-04.                                               IF1284.2
 040500     COMPUTE WS-INT = FUNCTION ORD-MAX(A, B, C).                  IF1284.2
-040600     IF WS-INT = 1 THEN                                           IF1284.2
+040600     IF WS-INT = 2 THEN                                           IF1284.2
 040700                        PERFORM PASS                              IF1284.2
 040800     ELSE                                                         IF1284.2
-040900                        MOVE 1   TO CORRECT-N                     IF1284.2
+040900                        MOVE 2   TO CORRECT-N                     IF1284.2
 041000                        MOVE WS-INT TO COMPUTED-N                 IF1284.2
 041100                        PERFORM FAIL.                             IF1284.2
 041200     GO TO F-ORD-MAX-WRITE-04.                                    IF1284.2
@@ -566,10 +566,10 @@
 056600 F-ORD-MAX-TEST-13.                                               IF1284.2
 056700     COMPUTE WS-INT = FUNCTION ORD-MAX(                           IF1284.2
 056800                           FUNCTION ORD-MAX(1, 4), 3, 1).         IF1284.2
-056900     IF WS-INT = 1 THEN                                           IF1284.2
+056900     IF WS-INT = 2 THEN                                           IF1284.2
 057000                        PERFORM PASS                              IF1284.2
 057100     ELSE                                                         IF1284.2
-057200                        MOVE 1    TO CORRECT-N                    IF1284.2
+057200                        MOVE 2    TO CORRECT-N                    IF1284.2
 057300                        MOVE WS-INT TO COMPUTED-N                 IF1284.2
 057400                        PERFORM FAIL.                             IF1284.2
 057500     GO TO F-ORD-MAX-WRITE-13.                                    IF1284.2
@@ -603,10 +603,10 @@
 060300 F-ORD-MAX-TEST-15.                                               IF1284.2
 060400     COMPUTE WS-INT = FUNCTION ORD-MAX(2, 3, A) +                 IF1284.2
 060500                      FUNCTION ORD-MAX(1, 1).                     IF1284.2
-060600     IF WS-INT = 8 THEN                                           IF1284.2
+060600     IF WS-INT = 4 THEN                                           IF1284.2
 060700                        PERFORM PASS                              IF1284.2
 060800     ELSE                                                         IF1284.2
-060900                        MOVE 8   TO CORRECT-N                     IF1284.2
+060900                        MOVE 4   TO CORRECT-N                     IF1284.2
 061000                        MOVE WS-INT TO COMPUTED-N                 IF1284.2
 061100                        PERFORM FAIL.                             IF1284.2
 061200     GO TO F-ORD-MAX-WRITE-15.                                    IF1284.2
