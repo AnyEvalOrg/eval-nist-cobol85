@@ -641,18 +641,18 @@
 064300 MOVE-TEST-F1-11-0.                                               NC1044.2
 064400     MOVE     MOVE49 TO MOVE12.                                   NC1044.2
 064500 MOVE-TEST-F1-11-1.                                               NC1044.2
-064600     IF       MOVE12 EQUAL TO "    $045"                          NC1044.2
+064600     IF       MOVE12 EQUAL TO " 0  $045"                          NC1044.2
 064700              PERFORM PASS                                        NC1044.2
 064800              ELSE                                                NC1044.2
 064900              GO TO MOVE-FAIL-F1-11.                              NC1044.2
-065000*    NOTE NI TO NE MOVE, FLOAT CURRENCY SIGN.                     NC1044.2
+065000*                                                                         
 065100     GO TO    MOVE-WRITE-F1-11.                                   NC1044.2
 065200 MOVE-DELETE-F1-11.                                               NC1044.2
 065300     PERFORM  DE-LETE.                                            NC1044.2
 065400     GO TO    MOVE-WRITE-F1-11.                                   NC1044.2
 065500 MOVE-FAIL-F1-11.                                                 NC1044.2
 065600     MOVE     MOVE12 TO COMPUTED-A.                               NC1044.2
-065700     MOVE "    $045" TO CORRECT-A.                                NC1044.2
+065700     MOVE " 0  $045" TO CORRECT-A.                                NC1044.2
 065800     PERFORM  FAIL.                                               NC1044.2
 065900 MOVE-WRITE-F1-11.                                                NC1044.2
 066000     MOVE "MOVE-TEST-F1-11" TO PAR-NAME.                          NC1044.2
@@ -830,7 +830,7 @@
 083200 MOVE-TEST-F1-20-0.                                               NC1044.2
 083300     MOVE     MOVE1 TO MOVE21.                                    NC1044.2
 083400 MOVE-TEST-F1-20-1.                                               NC1044.2
-083500     IF       MOVE21 EQUAL TO "12045  "                           NC1044.2
+083500     IF       MOVE21 EQUAL TO "12345  "                           NC1044.2
 083600              PERFORM PASS                                        NC1044.2
 083700              ELSE                                                NC1044.2
 083800              GO TO MOVE-FAIL-F1-20.                              NC1044.2
@@ -841,7 +841,7 @@
 084300     GO TO    MOVE-WRITE-F1-20.                                   NC1044.2
 084400 MOVE-FAIL-F1-20.                                                 NC1044.2
 084500     MOVE     MOVE21 TO COMPUTED-A.                               NC1044.2
-084600     MOVE "12045  " TO CORRECT-A.                                 NC1044.2
+084600     MOVE "12345  " TO CORRECT-A.                                 NC1044.2
 084700     PERFORM  FAIL.                                               NC1044.2
 084800 MOVE-WRITE-F1-20.                                                NC1044.2
 084900     MOVE "MOVE-TEST-F1-20" TO PAR-NAME.                          NC1044.2
@@ -915,18 +915,18 @@
 091700 MOVE-TEST-F1-24-0.                                               NC1044.2
 091800     MOVE     MOVE23 TO MOVE3.                                    NC1044.2
 091900 MOVE-TEST-F1-24-1.                                               NC1044.2
-092000     IF       MOVE3 EQUAL TO 23                                   NC1044.2
+092000     IF       MOVE3 EQUAL TO 43                                   NC1044.2
 092100              PERFORM PASS                                        NC1044.2
 092200              ELSE                                                NC1044.2
 092300              GO TO MOVE-FAIL-F1-24.                              NC1044.2
-092400*    NOTE NNI TO NI MOVE, TRUNCATION LEFT AND RIGHT.              NC1044.2
+092400*                                                                         
 092500     GO TO    MOVE-WRITE-F1-24.                                   NC1044.2
 092600 MOVE-DELETE-F1-24.                                               NC1044.2
 092700     PERFORM  DE-LETE.                                            NC1044.2
 092800     GO TO    MOVE-WRITE-F1-24.                                   NC1044.2
 092900 MOVE-FAIL-F1-24.                                                 NC1044.2
 093000     MOVE     MOVE3 TO COMPUTED-N.                                NC1044.2
-093100     MOVE     23 TO CORRECT-N.                                    NC1044.2
+093100     MOVE     43 TO CORRECT-N.                                    NC1044.2
 093200     PERFORM  FAIL.                                               NC1044.2
 093300 MOVE-WRITE-F1-24.                                                NC1044.2
 093400     MOVE "MOVE-TEST-F1-24" TO PAR-NAME.                          NC1044.2
@@ -1000,7 +1000,7 @@
 100200 MOVE-TEST-F1-28-0.                                               NC1044.2
 100300     MOVE     MOVE23 TO MOVE11.                                   NC1044.2
 100400 MOVE-TEST-F1-28-1.                                               NC1044.2
-100500     IF       MOVE11 EQUAL TO "$00,1E3.45"                        NC1044.2
+100500     IF       MOVE11 EQUAL TO "$00,123.45"                        NC1044.2
 100600              PERFORM PASS                                        NC1044.2
 100700              ELSE                                                NC1044.2
 100800              GO TO MOVE-FAIL-F1-28.                              NC1044.2
@@ -1011,7 +1011,7 @@
 101300     GO TO    MOVE-WRITE-F1-28.                                   NC1044.2
 101400 MOVE-FAIL-F1-28.                                                 NC1044.2
 101500     MOVE     MOVE11 TO COMPUTED-A.                               NC1044.2
-101600     MOVE "$00,1E3.45" TO CORRECT-A.                              NC1044.2
+101600     MOVE "$00,123.45" TO CORRECT-A.                              NC1044.2
 101700     PERFORM  FAIL.                                               NC1044.2
 101800 MOVE-WRITE-F1-28.                                                NC1044.2
 101900     MOVE "MOVE-TEST-F1-28" TO PAR-NAME.                          NC1044.2
@@ -1127,7 +1127,7 @@
 112900 MOVE-TEST-F1-34-0.                                               NC1044.2
 113000     MOVE     MOVE50 TO MOVE4.                                    NC1044.2
 113100 MOVE-TEST-F1-34-1.                                               NC1044.2
-113200     IF       MOVE4 EQUAL TO 0032345                              NC1044.2
+113200     IF       MOVE4 EQUAL TO 0012345                              NC1044.2
 113300              PERFORM PASS                                        NC1044.2
 113400              ELSE                                                NC1044.2
 113500              GO TO MOVE-FAIL-F1-34.                              NC1044.2
@@ -1138,7 +1138,7 @@
 114000     GO TO    MOVE-WRITE-F1-34.                                   NC1044.2
 114100 MOVE-FAIL-F1-34.                                                 NC1044.2
 114200     MOVE     MOVE4 TO COMPUTED-N.                                NC1044.2
-114300     MOVE     0032345  TO CORRECT-N.                              NC1044.2
+114300     MOVE     0012345  TO CORRECT-N.                              NC1044.2
 114400     PERFORM  FAIL.                                               NC1044.2
 114500 MOVE-WRITE-F1-34.                                                NC1044.2
 114600     MOVE "MOVE-TEST-F1-34" TO PAR-NAME.                          NC1044.2
@@ -1359,18 +1359,18 @@
 136100 MOVE-TEST-F1-45-0.                                               NC1044.2
 136200     MOVE     MOVE32 TO MOVE35.                                   NC1044.2
 136300 MOVE-TEST-F1-45-1.                                               NC1044.2
-136400     IF       MOVE35 EQUAL TO "ABC"                               NC1044.2
+136400     IF       MOVE35 EQUAL TO "TBC"                               NC1044.2
 136500              PERFORM PASS                                        NC1044.2
 136600              ELSE                                                NC1044.2
 136700              GO TO MOVE-FAIL-F1-45.                              NC1044.2
-136800*    NOTE AN TO A MOVE, TRUNCATION ON RIGHT.                      NC1044.2
+136800*                                                                         
 136900     GO TO    MOVE-WRITE-F1-45.                                   NC1044.2
 137000 MOVE-DELETE-F1-45.                                               NC1044.2
 137100     PERFORM  DE-LETE.                                            NC1044.2
 137200     GO TO    MOVE-WRITE-F1-45.                                   NC1044.2
 137300 MOVE-FAIL-F1-45.                                                 NC1044.2
 137400     MOVE     MOVE35 TO COMPUTED-A.                               NC1044.2
-137500     MOVE "ABC" TO CORRECT-A.                                     NC1044.2
+137500     MOVE "TBC" TO CORRECT-A.                                     NC1044.2
 137600     PERFORM  FAIL.                                               NC1044.2
 137700 MOVE-WRITE-F1-45.                                                NC1044.2
 137800     MOVE "MOVE-TEST-F1-45" TO PAR-NAME.                          NC1044.2
@@ -1401,7 +1401,7 @@
 140300 MOVE-TEST-F1-47-0.                                               NC1044.2
 140400     MOVE     MOVE36 TO MOVE20.                                   NC1044.2
 140500 MOVE-TEST-F1-47-1.                                               NC1044.2
-140600     IF       MOVE20 EQUAL TO "1 A8"                              NC1044.2
+140600     IF       MOVE20 EQUAL TO "1 A0"                              NC1044.2
 140700              PERFORM PASS                                        NC1044.2
 140800              ELSE                                                NC1044.2
 140900              GO TO MOVE-FAIL-F1-47.                              NC1044.2
@@ -1412,7 +1412,7 @@
 141400     GO TO    MOVE-WRITE-F1-47.                                   NC1044.2
 141500 MOVE-FAIL-F1-47.                                                 NC1044.2
 141600     MOVE     MOVE20 TO COMPUTED-A.                               NC1044.2
-141700     MOVE "1 A8" TO CORRECT-A.                                    NC1044.2
+141700     MOVE "1 A0" TO CORRECT-A.                                    NC1044.2
 141800     PERFORM  FAIL.                                               NC1044.2
 141900 MOVE-WRITE-F1-47.                                                NC1044.2
 142000     MOVE "MOVE-TEST-F1-47" TO PAR-NAME.                          NC1044.2
@@ -1629,10 +1629,10 @@
 163100         DNAME33  DNAME34  DNAME35  DNAME36  DNAME37  DNAME38     NC1044.2
 163200         DNAME39  DNAME40  DNAME41  DNAME42  DNAME19.             NC1044.2
 163300 MOVE-TEST-F1-57-1.                                               NC1044.2
-163400     IF DNAME19 EQUAL TO 9                                        NC1044.2
+163400     IF DNAME19 EQUAL TO 1                                        NC1044.2
 163500         PERFORM PASS                                             NC1044.2
 163600         GO TO MOVE-WRITE-F1-57-1.                                NC1044.2
-163700     MOVE 9 TO CORRECT-18V0.                                      NC1044.2
+163700     MOVE 1 TO CORRECT-18V0.                                      NC1044.2
 163800     MOVE DNAME19 TO COMPUTED-18V0.                               NC1044.2
 163900     PERFORM FAIL.                                                NC1044.2
 164000     GO TO MOVE-WRITE-F1-57-1.                                    NC1044.2
@@ -1798,12 +1798,12 @@
 180000     MOVE "MOVE-TEST-F1-57-12 " TO PAR-NAME.                      NC1044.2
 180100     PERFORM PRINT-DETAIL.                                        NC1044.2
 180200 MOVE-TEST-F1-57-13.                                              NC1044.2
-180300     IF DNAME33 EQUAL TO 1                                        NC1044.2
+180300     IF DNAME33 EQUAL TO 5                                        NC1044.2
 180400         PERFORM PASS                                             NC1044.2
 180500         GO TO MOVE-WRITE-F1-57-13.                               NC1044.2
-180600*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-57-1.    NC1044.2
+180600*                                                                         
 180700     MOVE DNAME33 TO COMPUTED-18V0.                               NC1044.2
-180800     MOVE 1 TO CORRECT-18V0.                                      NC1044.2
+180800     MOVE 5 TO CORRECT-18V0.                                      NC1044.2
 180900     PERFORM FAIL.                                                NC1044.2
 181000     GO TO MOVE-WRITE-F1-57-13.                                   NC1044.2
 181100 MOVE-DELETE-F1-57-13.                                            NC1044.2
@@ -1812,12 +1812,12 @@
 181400     MOVE "MOVE-TEST-F1-57-13 " TO PAR-NAME.                      NC1044.2
 181500     PERFORM PRINT-DETAIL.                                        NC1044.2
 181600 MOVE-TEST-F1-57-14.                                              NC1044.2
-181700     IF DNAME34 EQUAL TO 5                                        NC1044.2
+181700     IF DNAME34 EQUAL TO 1                                        NC1044.2
 181800         PERFORM PASS                                             NC1044.2
 181900         GO TO MOVE-WRITE-F1-57-14.                               NC1044.2
 182000*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-57-1.    NC1044.2
 182100     MOVE DNAME34 TO COMPUTED-18V0.                               NC1044.2
-182200     MOVE 5 TO CORRECT-18V0.                                      NC1044.2
+182200     MOVE 1 TO CORRECT-18V0.                                      NC1044.2
 182300     PERFORM FAIL.                                                NC1044.2
 182400     GO TO MOVE-WRITE-F1-57-14.                                   NC1044.2
 182500 MOVE-DELETE-F1-57-14.                                            NC1044.2
@@ -1868,12 +1868,12 @@
 187000     MOVE "MOVE-TEST-F1-57-17 " TO PAR-NAME.                      NC1044.2
 187100     PERFORM PRINT-DETAIL.                                        NC1044.2
 187200 MOVE-TEST-F1-57-18.                                              NC1044.2
-187300     IF DNAME38 EQUAL TO 1                                        NC1044.2
+187300     IF DNAME38 EQUAL TO 6                                        NC1044.2
 187400         PERFORM PASS                                             NC1044.2
 187500         GO TO MOVE-WRITE-F1-57-18.                               NC1044.2
-187600*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-57-1.    NC1044.2
+187600*                                                                         
 187700     MOVE DNAME38 TO COMPUTED-18V0.                               NC1044.2
-187800     MOVE 1 TO CORRECT-18V0.                                      NC1044.2
+187800     MOVE 6 TO CORRECT-18V0.                                      NC1044.2
 187900     PERFORM FAIL.                                                NC1044.2
 188000     GO TO MOVE-WRITE-F1-57-18.                                   NC1044.2
 188100 MOVE-DELETE-F1-57-18.                                            NC1044.2
@@ -1896,12 +1896,12 @@
 189800     MOVE "MOVE-TEST-F1-57-19 " TO PAR-NAME.                      NC1044.2
 189900     PERFORM PRINT-DETAIL.                                        NC1044.2
 190000 MOVE-TEST-F1-57-20.                                              NC1044.2
-190100     IF DNAME40 EQUAL TO 1                                        NC1044.2
+190100     IF DNAME40 EQUAL TO 0                                        NC1044.2
 190200         PERFORM PASS                                             NC1044.2
 190300         GO TO MOVE-WRITE-F1-57-20.                               NC1044.2
-190400*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-57-1.    NC1044.2
+190400*                                                                         
 190500     MOVE DNAME40 TO COMPUTED-18V0.                               NC1044.2
-190600     MOVE 1 TO CORRECT-18V0.                                      NC1044.2
+190600     MOVE 0 TO CORRECT-18V0.                                      NC1044.2
 190700     PERFORM FAIL.                                                NC1044.2
 190800     GO TO MOVE-WRITE-F1-57-20.                                   NC1044.2
 190900 MOVE-DELETE-F1-57-20.                                            NC1044.2
@@ -2249,11 +2249,11 @@
 225100         ANDATA12  ANDATA13  ANDATA14  ANDATA15  ANDATA16         NC1044.2
 225200         ANDATA17  ANDATA18  ANDATA19  ANDATA20  ANDATA21.        NC1044.2
 225300 MOVE-TEST-F1-59-1.                                               NC1044.2
-225400     IF ANDATA1  EQUAL TO "6"                                     NC1044.2
+225400     IF ANDATA1  EQUAL TO "A"                                     NC1044.2
 225500         PERFORM PASS                                             NC1044.2
 225600         GO TO MOVE-WRITE-F1-59-1.                                NC1044.2
 225700     MOVE ANDATA1  TO COMPUTED-A.                                 NC1044.2
-225800     MOVE "6" TO CORRECT-A.                                       NC1044.2
+225800     MOVE "A" TO CORRECT-A.                                       NC1044.2
 225900     PERFORM FAIL.                                                NC1044.2
 226000     GO TO MOVE-WRITE-F1-59-1.                                    NC1044.2
 226100 MOVE-DELETE-F1-59-1.                                             NC1044.2
@@ -2276,12 +2276,12 @@
 227800     MOVE "MOVE-TEST-F1-59-2 " TO PAR-NAME.                       NC1044.2
 227900     PERFORM PRINT-DETAIL.                                        NC1044.2
 228000 MOVE-TEST-F1-59-3.                                               NC1044.2
-228100     IF ANDATA3  EQUAL TO "A"                                     NC1044.2
+228100     IF ANDATA3  EQUAL TO "S"                                     NC1044.2
 228200         PERFORM PASS                                             NC1044.2
 228300         GO TO MOVE-WRITE-F1-59-3.                                NC1044.2
-228400*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
+228400*                                                                         
 228500     MOVE ANDATA3  TO COMPUTED-A.                                 NC1044.2
-228600     MOVE "A" TO CORRECT-A.                                       NC1044.2
+228600     MOVE "S" TO CORRECT-A.                                       NC1044.2
 228700     PERFORM FAIL.                                                NC1044.2
 228800     GO TO MOVE-WRITE-F1-59-3.                                    NC1044.2
 228900 MOVE-DELETE-F1-59-3.                                             NC1044.2
@@ -2304,12 +2304,12 @@
 230600     MOVE "MOVE-TEST-F1-59-4 " TO PAR-NAME.                       NC1044.2
 230700     PERFORM PRINT-DETAIL.                                        NC1044.2
 230800 MOVE-TEST-F1-59-5.                                               NC1044.2
-230900     IF ANDATA5  EQUAL TO "A"                                     NC1044.2
+230900     IF ANDATA5  EQUAL TO "M"                                     NC1044.2
 231000         PERFORM PASS                                             NC1044.2
 231100         GO TO MOVE-WRITE-F1-59-5.                                NC1044.2
-231200*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
+231200*                                                                         
 231300     MOVE ANDATA5  TO COMPUTED-A.                                 NC1044.2
-231400     MOVE "A" TO CORRECT-A.                                       NC1044.2
+231400     MOVE "M" TO CORRECT-A.                                       NC1044.2
 231500     PERFORM FAIL.                                                NC1044.2
 231600     GO TO MOVE-WRITE-F1-59-5.                                    NC1044.2
 231700 MOVE-DELETE-F1-59-5.                                             NC1044.2
@@ -2332,12 +2332,12 @@
 233400     MOVE "MOVE-TEST-F1-59-6 " TO PAR-NAME.                       NC1044.2
 233500     PERFORM PRINT-DETAIL.                                        NC1044.2
 233600 MOVE-TEST-F1-59-7.                                               NC1044.2
-233700     IF ANDATA7  EQUAL TO "U"                                     NC1044.2
+233700     IF ANDATA7  EQUAL TO "A"                                     NC1044.2
 233800         PERFORM PASS                                             NC1044.2
 233900         GO TO MOVE-WRITE-F1-59-7.                                NC1044.2
 234000*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
 234100     MOVE ANDATA7  TO COMPUTED-A.                                 NC1044.2
-234200     MOVE "U" TO CORRECT-A.                                       NC1044.2
+234200     MOVE "A" TO CORRECT-A.                                       NC1044.2
 234300     PERFORM FAIL.                                                NC1044.2
 234400     GO TO MOVE-WRITE-F1-59-7.                                    NC1044.2
 234500 MOVE-DELETE-F1-59-7.                                             NC1044.2
@@ -2416,12 +2416,12 @@
 241800     MOVE "MOVE-TEST-F1-59-12 " TO PAR-NAME.                      NC1044.2
 241900     PERFORM PRINT-DETAIL.                                        NC1044.2
 242000 MOVE-TEST-F1-59-13.                                              NC1044.2
-242100     IF ANDATA13 EQUAL TO "8"                                     NC1044.2
+242100     IF ANDATA13 EQUAL TO "A"                                     NC1044.2
 242200         PERFORM PASS                                             NC1044.2
 242300         GO TO MOVE-WRITE-F1-59-13.                               NC1044.2
 242400*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
 242500     MOVE ANDATA13 TO COMPUTED-A.                                 NC1044.2
-242600     MOVE "8" TO CORRECT-A.                                       NC1044.2
+242600     MOVE "A" TO CORRECT-A.                                       NC1044.2
 242700     PERFORM FAIL.                                                NC1044.2
 242800     GO TO MOVE-WRITE-F1-59-13.                                   NC1044.2
 242900 MOVE-DELETE-F1-59-13.                                            NC1044.2
@@ -2458,12 +2458,12 @@
 246000     MOVE "MOVE-TEST-F1-59-15 " TO PAR-NAME.                      NC1044.2
 246100     PERFORM PRINT-DETAIL.                                        NC1044.2
 246200 MOVE-TEST-F1-59-16.                                              NC1044.2
-246300     IF ANDATA16 EQUAL TO "K"                                     NC1044.2
+246300     IF ANDATA16 EQUAL TO "4"                                     NC1044.2
 246400         PERFORM PASS                                             NC1044.2
 246500         GO TO MOVE-WRITE-F1-59-16.                               NC1044.2
-246600*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
+246600*                                                                         
 246700     MOVE ANDATA16 TO COMPUTED-A.                                 NC1044.2
-246800     MOVE "K" TO CORRECT-A.                                       NC1044.2
+246800     MOVE "4" TO CORRECT-A.                                       NC1044.2
 246900     PERFORM FAIL.                                                NC1044.2
 247000     GO TO MOVE-WRITE-F1-59-16.                                   NC1044.2
 247100 MOVE-DELETE-F1-59-16.                                            NC1044.2
@@ -2472,12 +2472,12 @@
 247400     MOVE "MOVE-TEST-F1-59-16 " TO PAR-NAME.                      NC1044.2
 247500     PERFORM PRINT-DETAIL.                                        NC1044.2
 247600 MOVE-TEST-F1-59-17.                                              NC1044.2
-247700     IF ANDATA17 EQUAL TO "9"                                     NC1044.2
+247700     IF ANDATA17 EQUAL TO "A"                                     NC1044.2
 247800         PERFORM PASS                                             NC1044.2
 247900         GO TO MOVE-WRITE-F1-59-17.                               NC1044.2
 248000*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
 248100     MOVE ANDATA17 TO COMPUTED-A.                                 NC1044.2
-248200     MOVE "9" TO CORRECT-A.                                       NC1044.2
+248200     MOVE "A" TO CORRECT-A.                                       NC1044.2
 248300     PERFORM FAIL.                                                NC1044.2
 248400     GO TO MOVE-WRITE-F1-59-17.                                   NC1044.2
 248500 MOVE-DELETE-F1-59-17.                                            NC1044.2
@@ -2500,12 +2500,12 @@
 250200     MOVE "MOVE-TEST-F1-59-18 " TO PAR-NAME.                      NC1044.2
 250300     PERFORM PRINT-DETAIL.                                        NC1044.2
 250400 MOVE-TEST-F1-59-19.                                              NC1044.2
-250500     IF ANDATA19 EQUAL TO "A"                                     NC1044.2
+250500     IF ANDATA19 EQUAL TO "K"                                     NC1044.2
 250600         PERFORM PASS                                             NC1044.2
 250700         GO TO MOVE-WRITE-F1-59-19.                               NC1044.2
-250800*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-59-1.    NC1044.2
+250800*                                                                         
 250900     MOVE ANDATA19 TO COMPUTED-A.                                 NC1044.2
-251000     MOVE "A" TO CORRECT-A.                                       NC1044.2
+251000     MOVE "K" TO CORRECT-A.                                       NC1044.2
 251100     PERFORM FAIL.                                                NC1044.2
 251200     GO TO MOVE-WRITE-F1-59-19.                                   NC1044.2
 251300 MOVE-DELETE-F1-59-19.                                            NC1044.2
@@ -2577,12 +2577,12 @@
 257900     MOVE "MOVE-TEST-F1-60-2 " TO PAR-NAME.                       NC1044.2
 258000     PERFORM PRINT-DETAIL.                                        NC1044.2
 258100 MOVE-TEST-F1-60-3.                                               NC1044.2
-258200     IF ANDATA3  EQUAL TO "ABQ"                                   NC1044.2
+258200     IF ANDATA3  EQUAL TO "ABC"                                   NC1044.2
 258300         PERFORM PASS                                             NC1044.2
 258400         GO TO MOVE-WRITE-F1-60-3.                                NC1044.2
 258500*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-60-1.    NC1044.2
 258600     MOVE ANDATA3  TO COMPUTED-A.                                 NC1044.2
-258700     MOVE "ABQ"                  TO CORRECT-A.                    NC1044.2
+258700     MOVE "ABC"                  TO CORRECT-A.                    NC1044.2
 258800     PERFORM FAIL.                                                NC1044.2
 258900     GO TO MOVE-WRITE-F1-60-3.                                    NC1044.2
 259000 MOVE-DELETE-F1-60-3.                                             NC1044.2
@@ -2591,12 +2591,12 @@
 259300     MOVE "MOVE-TEST-F1-60-3 " TO PAR-NAME.                       NC1044.2
 259400     PERFORM PRINT-DETAIL.                                        NC1044.2
 259500 MOVE-TEST-F1-60-4.                                               NC1044.2
-259600     IF ANDATA4  EQUAL TO "ABCD"                                  NC1044.2
+259600     IF ANDATA4  EQUAL TO "4BCD"                                  NC1044.2
 259700         PERFORM PASS                                             NC1044.2
 259800         GO TO MOVE-WRITE-F1-60-4.                                NC1044.2
-259900*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-60-1.    NC1044.2
+259900*                                                                         
 260000     MOVE ANDATA4  TO COMPUTED-A.                                 NC1044.2
-260100     MOVE "ABCD"                 TO CORRECT-A.                    NC1044.2
+260100     MOVE "4BCD"                 TO CORRECT-A.                    NC1044.2
 260200     PERFORM FAIL.                                                NC1044.2
 260300     GO TO MOVE-WRITE-F1-60-4.                                    NC1044.2
 260400 MOVE-DELETE-F1-60-4.                                             NC1044.2
@@ -2605,12 +2605,12 @@
 260700     MOVE "MOVE-TEST-F1-60-4 " TO PAR-NAME.                       NC1044.2
 260800     PERFORM PRINT-DETAIL.                                        NC1044.2
 260900 MOVE-TEST-F1-60-5.                                               NC1044.2
-261000     IF ANDATA5  EQUAL TO "ABCDI"                                 NC1044.2
+261000     IF ANDATA5  EQUAL TO "ABCDE"                                 NC1044.2
 261100         PERFORM PASS                                             NC1044.2
 261200         GO TO MOVE-WRITE-F1-60-5.                                NC1044.2
 261300*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-60-1.    NC1044.2
 261400     MOVE ANDATA5  TO COMPUTED-A.                                 NC1044.2
-261500     MOVE "ABCDI"                TO CORRECT-A.                    NC1044.2
+261500     MOVE "ABCDE"                TO CORRECT-A.                    NC1044.2
 261600     PERFORM FAIL.                                                NC1044.2
 261700     GO TO MOVE-WRITE-F1-60-5.                                    NC1044.2
 261800 MOVE-DELETE-F1-60-5.                                             NC1044.2
@@ -2661,12 +2661,12 @@
 266300     MOVE "MOVE-TEST-F1-60-8 " TO PAR-NAME.                       NC1044.2
 266400     PERFORM PRINT-DETAIL.                                        NC1044.2
 266500 MOVE-TEST-F1-60-9.                                               NC1044.2
-266600     IF ANDATA9  EQUAL TO "ABCDEFGHI"                             NC1044.2
+266600     IF ANDATA9  EQUAL TO "ABCDEFUHI"                             NC1044.2
 266700         PERFORM PASS                                             NC1044.2
 266800         GO TO MOVE-WRITE-F1-60-9.                                NC1044.2
-266900*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-60-1.    NC1044.2
+266900*                                                                         
 267000     MOVE ANDATA9  TO COMPUTED-A.                                 NC1044.2
-267100     MOVE "ABCDEFGHI"            TO CORRECT-A.                    NC1044.2
+267100     MOVE "ABCDEFUHI"            TO CORRECT-A.                    NC1044.2
 267200     PERFORM FAIL.                                                NC1044.2
 267300     GO TO MOVE-WRITE-F1-60-9.                                    NC1044.2
 267400 MOVE-DELETE-F1-60-9.                                             NC1044.2
@@ -2675,12 +2675,12 @@
 267700     MOVE "MOVE-TEST-F1-60-9 " TO PAR-NAME.                       NC1044.2
 267800     PERFORM PRINT-DETAIL.                                        NC1044.2
 267900 MOVE-TEST-F1-60-10.                                              NC1044.2
-268000     IF ANDATA10 EQUAL TO "ABCDEFGHIJ"                            NC1044.2
+268000     IF ANDATA10 EQUAL TO "ABCDEFGVIJ"                            NC1044.2
 268100         PERFORM PASS                                             NC1044.2
 268200         GO TO MOVE-WRITE-F1-60-10.                               NC1044.2
-268300*    NOTE   THIS TEST DEPENDS ON PARAGRAPH  MOVE-TEST-F1-60-1.    NC1044.2
+268300*                                                                         
 268400     MOVE ANDATA10 TO COMPUTED-A.                                 NC1044.2
-268500     MOVE "ABCDEFGHIJ"           TO CORRECT-A.                    NC1044.2
+268500     MOVE "ABCDEFGVIJ"           TO CORRECT-A.                    NC1044.2
 268600     PERFORM FAIL.                                                NC1044.2
 268700     GO TO MOVE-WRITE-F1-60-10.                                   NC1044.2
 268800 MOVE-DELETE-F1-60-10.                                            NC1044.2

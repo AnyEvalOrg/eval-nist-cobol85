@@ -22,16 +22,8 @@ TEST RESULT OF ST108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-12                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-13                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-14                                                                                
- SORT - 8 ASC. KEYS   FAIL* SORT-TEST-15                                                                                
-                                                                                                                        
-                                     COMPUTED=  .600000000000000000                                                     
-                                     CORRECT =  .600000000000050000                                                     
-                                                                                                                        
- SORT - 8 ASC. KEYS   FAIL* SORT-TEST-16                                                                                
-                                                                                                                        
-                                     COMPUTED=  000123456.000000000                                                     
-                                     CORRECT =  000023456.000000000                                                     
-                                                                                                                        
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-15                                                                                
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-16                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-17                                                                                
  ***********************************************************************************************************************
                                                                                                                         
@@ -40,21 +32,8 @@ TEST RESULT OF ST108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                     END OF TEST-  ST108A                                                
                                                                                                                         
-                                                    007 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                                                                                                                                                
-                                       OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
-                                                                                                                        
-                                        CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
-                                                                                                                        
-TEST RESULT OF ST108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.     
-                                                                                                                        
-                                                                                                                        
- FOR OFFICIAL USE ONLY            COBOL 85 VERSION 4.2, Apr  1993 SSVG                        COPYRIGHT   1985          
-                                                                                                                        
-                                                                                                                        
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
- ***********************************************************************************************************************
-                                                    002 TEST(S) FAILED                                                  
+                                                    009 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    NO  TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1985

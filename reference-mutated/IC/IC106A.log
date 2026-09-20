@@ -21,24 +21,24 @@ TEST RESULT OF IC106A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBPROGRAM INDEX     FAIL* LINK-TEST-03       .02        INDEX IN LINKAGE SECTION                                      
                                                                                                                         
                                      COMPUTED= B                                                                        
-                                     CORRECT = N                                                                        
+                                     CORRECT = H                                                                        
                                                                                                                         
  INDEX DATA ITEM      PASS  LINK-TEST-04       .01                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .02                                                                      
  INDEX DATA ITEM      PASS  LINK-TEST-04       .03                                                                      
- TABLE REFERENCES     PASS  LINK-TEST-05       .01                                                                      
+ TABLE REFERENCES     FAIL* LINK-TEST-05       .01        TABLES DEFINED IN LINKAGE SEC                                 
+                                                                                                                        
+                                     COMPUTED= D                                                                        
+                                     CORRECT = Q                                                                        
+                                                                                                                        
  TABLE REFERENCES     PASS  LINK-TEST-05       .02                                                                      
- REDEFINED ITEM       PASS  LINK-TEST-06       .01                                                                      
- REDEFINED ITEM       FAIL* LINK-TEST-06       .02        REDEFINED ITEM IN LINKAGE SEC                                 
+ REDEFINED ITEM       FAIL* LINK-TEST-06       .01        REDEFINED ITEM IN LINKAGE SEC                                 
                                                                                                                         
-                                     COMPUTED= Y                                                                        
-                                     CORRECT = C                                                                        
+                                     COMPUTED= X                                                                        
+                                     CORRECT = 2                                                                        
                                                                                                                         
- REDEFINED ITEM       FAIL* LINK-TEST-06       .03        REDEFINED ITEM IN LINKAGE SEC                                 
-                                                                                                                        
-                                     COMPUTED= Z                                                                        
-                                     CORRECT = 0                                                                        
-                                                                                                                        
+ REDEFINED ITEM       PASS  LINK-TEST-06       .02                                                                      
+ REDEFINED ITEM       PASS  LINK-TEST-06       .03                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

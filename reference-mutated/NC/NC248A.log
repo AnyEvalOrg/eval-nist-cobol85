@@ -23,18 +23,18 @@ TEST RESULT OF NC248A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET ... DOWN BY      FAIL* SET-TEST-F2-8                 CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE                
                                                                                                                         
                                      COMPUTED= J                                                                        
-                                     CORRECT = 1                     VI-128 6.22.4 GR7                                  
+                                     CORRECT = S                     VI-128 6.22.4 GR7                                  
                                                                                                                         
  SET ... DOWN BY      FAIL* SET-TEST-F2-9      .01        CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE                
                                                                                                                         
                                      COMPUTED= 6                                                                        
-                                     CORRECT = Z                     VI-128 6.22.4 GR7                                  
+                                     CORRECT = 1                     VI-128 6.22.4 GR7                                  
                                                                                                                         
  SET ... DOWN BY      PASS  SET-TEST-F2-9      .02                                                                      
  SET ... DOWN BY      FAIL* SET-TEST-F2-9      .03        CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE                
                                                                                                                         
                                      COMPUTED= *                                                                        
-                                     CORRECT = 1                     VI-128 6.22.4 GR7                                  
+                                     CORRECT = M                     VI-128 6.22.4 GR7                                  
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

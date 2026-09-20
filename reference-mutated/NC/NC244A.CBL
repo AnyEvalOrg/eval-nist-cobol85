@@ -355,7 +355,7 @@
 035700     MOVE "RELATIVE INDEXING   " TO FEATURE.                      NC2444.2
 035800 IDX-TEST-F1-1.                                                   NC2444.2
 035900     SET IDX-4  IDX-14 TO SUB-COMP2.                              NC2444.2
-036000     IF ENTRY-2 (IDX-4 + 49, IDX-14 + 9) EQUAL TO "4J"            NC2444.2
+036000     IF ENTRY-2 (IDX-4 + 49, IDX-14 + 9) EQUAL TO "JP"            NC2444.2
 036100         PERFORM PASS                                             NC2444.2
 036200         GO TO IDX-WRITE-F1-1                                     NC2444.2
 036300     ELSE                                                         NC2444.2
@@ -365,7 +365,7 @@
 036700     GO TO IDX-WRITE-F1-1.                                        NC2444.2
 036800 IDX-FAIL-F1-1.                                                   NC2444.2
 036900     MOVE ENTRY-2 (IDX-4 + 49, IDX-14 + 9) TO COMPUTED-A.         NC2444.2
-037000     MOVE "4J" TO CORRECT-A.                                      NC2444.2
+037000     MOVE "JP" TO CORRECT-A.                                      NC2444.2
 037100     PERFORM FAIL.                                                NC2444.2
 037200 IDX-WRITE-F1-1.                                                  NC2444.2
 037300     PERFORM PRINT-DETAIL.                                        NC2444.2
@@ -377,7 +377,7 @@
 037900 IDX-TEST-F2-2.                                                   NC2444.2
 038000     SET IDX-3 TO SUB-COMP3.                                      NC2444.2
 038100     SET IDX-3 DOWN BY SUB-7.                                     NC2444.2
-038200     IF ENTRY-1 (IDX-3) EQUAL TO 49                               NC2444.2
+038200     IF ENTRY-1 (IDX-3) EQUAL TO 79                               NC2444.2
 038300         PERFORM PASS                                             NC2444.2
 038400         GO TO IDX-WRITE-F2-2                                     NC2444.2
 038500     ELSE                                                         NC2444.2
@@ -387,7 +387,7 @@
 038900     GO TO IDX-WRITE-F2-2.                                        NC2444.2
 039000 IDX-FAIL-F2-2.                                                   NC2444.2
 039100     MOVE ENTRY-1 (IDX-3) TO COMPUTED-N.                          NC2444.2
-039200     MOVE 49 TO CORRECT-N.                                        NC2444.2
+039200     MOVE 79 TO CORRECT-N.                                        NC2444.2
 039300     PERFORM FAIL.                                                NC2444.2
 039400 IDX-WRITE-F2-2.                                                  NC2444.2
 039500     PERFORM PRINT-DETAIL.                                        NC2444.2
@@ -399,7 +399,7 @@
 040100 IDX-TEST-F2-3.                                                   NC2444.2
 040200     SET IDX-2 TO SUB-COMP6.                                      NC2444.2
 040300     SET IDX-2 UP BY SUB-COMP1.                                   NC2444.2
-040400     IF ENTRY-1 (IDX-2) EQUAL TO 72                               NC2444.2
+040400     IF ENTRY-1 (IDX-2) EQUAL TO 62                               NC2444.2
 040500         PERFORM PASS                                             NC2444.2
 040600         GO TO IDX-WRITE-F2-3                                     NC2444.2
 040700     ELSE                                                         NC2444.2
@@ -409,7 +409,7 @@
 041100     GO TO IDX-WRITE-F2-3.                                        NC2444.2
 041200 IDX-FAIL-F2-3.                                                   NC2444.2
 041300     MOVE ENTRY-1 (IDX-2) TO COMPUTED-N.                          NC2444.2
-041400     MOVE 72 TO CORRECT-N.                                        NC2444.2
+041400     MOVE 62 TO CORRECT-N.                                        NC2444.2
 041500     PERFORM FAIL.                                                NC2444.2
 041600 IDX-WRITE-F2-3.                                                  NC2444.2
 041700     PERFORM PRINT-DETAIL.                                        NC2444.2

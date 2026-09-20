@@ -345,10 +345,10 @@
 034500     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 034600 F-REVERSE-TEST-03.                                               IF1344.2
 034700     MOVE FUNCTION REVERSE("highnLOW") TO WS-ANUM.                IF1344.2
-034800     IF WS-ANUM = "WOLnhgih" THEN                                 IF1344.2
+034800     IF WS-ANUM = "WOLnhTih" THEN                                 IF1344.2
 034900                    PERFORM PASS                                  IF1344.2
 035000     ELSE                                                         IF1344.2
-035100                    MOVE "WOLnhgih"  TO CORRECT-A                 IF1344.2
+035100                    MOVE "WOLnhTih"  TO CORRECT-A                 IF1344.2
 035200                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 035300                    PERFORM FAIL.                                 IF1344.2
 035400     GO TO F-REVERSE-WRITE-03.                                    IF1344.2
@@ -417,10 +417,10 @@
 041700     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 041800 F-REVERSE-TEST-07.                                               IF1344.2
 041900     MOVE FUNCTION REVERSE(B) TO WS-ANUM.                         IF1344.2
-042000     IF WS-ANUM = " E    DEEW" THEN                               IF1344.2
+042000     IF WS-ANUM = "      DEEW" THEN                               IF1344.2
 042100                    PERFORM PASS                                  IF1344.2
 042200     ELSE                                                         IF1344.2
-042300                    MOVE " E    DEEW"  TO CORRECT-A               IF1344.2
+042300                    MOVE "      DEEW"  TO CORRECT-A               IF1344.2
 042400                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 042500                    PERFORM FAIL.                                 IF1344.2
 042600     GO TO F-REVERSE-WRITE-07.                                    IF1344.2
@@ -435,10 +435,10 @@
 043500     MOVE SPACES TO WS-ANUM.                                      IF1344.2
 043600 F-REVERSE-TEST-08.                                               IF1344.2
 043700     MOVE FUNCTION REVERSE(C) TO WS-ANUM.                         IF1344.2
-043800     IF WS-ANUM = "  K    saW" THEN                               IF1344.2
+043800     IF WS-ANUM = "       XaW" THEN                               IF1344.2
 043900                    PERFORM PASS                                  IF1344.2
 044000     ELSE                                                         IF1344.2
-044100                    MOVE "  K    saW"  TO CORRECT-A               IF1344.2
+044100                    MOVE "       XaW"  TO CORRECT-A               IF1344.2
 044200                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 044300                    PERFORM FAIL.                                 IF1344.2
 044400     GO TO F-REVERSE-WRITE-08.                                    IF1344.2
@@ -508,10 +508,10 @@
 050800 F-REVERSE-TEST-12.                                               IF1344.2
 050900     MOVE FUNCTION REVERSE(FUNCTION REVERSE("giZZard"))           IF1344.2
 051000       TO WS-ANUM.                                                IF1344.2
-051100     IF WS-ANUM = "giZZard" THEN                                  IF1344.2
+051100     IF WS-ANUM = "giZZarI" THEN                                  IF1344.2
 051200                    PERFORM PASS                                  IF1344.2
 051300     ELSE                                                         IF1344.2
-051400                    MOVE "giZZard"  TO CORRECT-A                  IF1344.2
+051400                    MOVE "giZZarI"  TO CORRECT-A                  IF1344.2
 051500                    MOVE WS-ANUM TO COMPUTED-A                    IF1344.2
 051600                    PERFORM FAIL.                                 IF1344.2
 051700     GO TO F-REVERSE-WRITE-12.                                    IF1344.2
@@ -527,10 +527,10 @@
 052700 F-REVERSE-TEST-13.                                               IF1344.2
 052800     COMPUTE TEMP = FUNCTION LENGTH(FUNCTION REVERSE("HOMER")) +  IF1344.2
 052900                    FUNCTION LENGTH(FUNCTION REVERSE("Gizzard")). IF1344.2
-053000     IF TEMP = 52 THEN                                            IF1344.2
+053000     IF TEMP = 12 THEN                                            IF1344.2
 053100                    PERFORM PASS                                  IF1344.2
 053200     ELSE                                                         IF1344.2
-053300                    MOVE 52  TO CORRECT-N                         IF1344.2
+053300                    MOVE 12  TO CORRECT-N                         IF1344.2
 053400                    MOVE TEMP TO COMPUTED-N                       IF1344.2
 053500                    PERFORM FAIL.                                 IF1344.2
 053600     GO TO F-REVERSE-WRITE-13.                                    IF1344.2

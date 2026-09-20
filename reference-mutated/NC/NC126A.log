@@ -84,19 +84,19 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-2                                                                             
                                                                                                                         
                                      COMPUTED= CD                                                                       
-                                     CORRECT = 8D                    VI-21 5.3.3 SR1                                    
+                                     CORRECT = CI                    VI-21 5.3.3 SR1                                    
                                                                                                                         
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-3                                                                             
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-4                                                                             
-                                                                                                                        
-                                     COMPUTED= GH                                                                       
-                                     CORRECT = 3H                    VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-4                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-5                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-6                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-7                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-8                                                                             
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-9                                                                                                                                                                                                     
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-9                                                                             
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-10                                                                            
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-11                                                                            
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-12                                                                            
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-13                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,19 +110,11 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-10                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-11                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-12                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-13                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-14                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-15                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-16                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-17                                                                            
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-18                                                                            
-                                                                                                                        
-                                     COMPUTED= 54                                                                       
-                                     CORRECT = O4                    VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-18                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-19                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-20                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-21                                                                            
@@ -135,23 +127,31 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-28                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-29                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-30                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-31                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-31                                                                            
+                                                                                                                        
+                                     COMPUTED= TH                                                                       
+                                     CORRECT = RH                    VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-32                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-33                                                                            
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-34                                                                            
-                                                                                                                        
-                                     COMPUTED= IT                                                                       
-                                     CORRECT = XT                    VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-34                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-35                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-36                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-37                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-37                                                                            
+                                                                                                                        
+                                     COMPUTED=  W                                                                       
+                                     CORRECT = 2W                    VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-38                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-39                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-40                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-41                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-42                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-43                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-43                                                                            
+                                                                                                                        
+                                     COMPUTED= N                                                                        
+                                     CORRECT = NO                    VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-44                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
@@ -166,11 +166,7 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-2-45                                                                            
-                                                                                                                        
-                                     COMPUTED= E                                                                        
-                                     CORRECT = G                     VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-45                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-46                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-47                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-2-48                                                                            
@@ -188,17 +184,17 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-6                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-7                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-8                                                                             
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-9                                                                             
-                                                                                                                        
-                                     COMPUTED= N P L D                                                                  
-                                     CORRECT = N U L D               VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-9                                                                             
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-10                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-11                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-12                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-13                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-14                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-15                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-15                                                                            
+                                                                                                                        
+                                     COMPUTED= 2345678902                                                               
+                                     CORRECT = 2345673902            VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-16                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-17                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-18                                                                            
@@ -208,7 +204,11 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-22                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-23                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-24                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-25                                                                                                                                                                                                    
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-25                                                                            
+                                                                                                                        
+                                     COMPUTED= 2  8   9                                                                 
+                                     CORRECT = 2  8   1              VI-21 5.3.3 SR1                                    
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -222,27 +222,19 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-26                                                                            
-                                                                                                                        
-                                     COMPUTED= 2250001                                                                  
-                                     CORRECT = 22500B1               VI-21 5.3.3 SR1                                    
-                                                                                                                        
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-27                                                                            
-                                                                                                                        
-                                     COMPUTED= 0,001,692                                                                
-                                     CORRECT = W,001,692             VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-26                                                                            
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-27                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-28                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-29                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-29                                                                            
+                                                                                                                        
+                                     COMPUTED= $**1.00                                                                  
+                                     CORRECT = $**1.03               VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-30                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-31                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-32                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-33                                                                            
- ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-34                                                                            
-                                                                                                                        
-                                     COMPUTED=   2  1                                                                   
-                                     CORRECT =   2 W1                VI-21 5.3.3 SR1                                    
-                                                                                                                        
+ ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-34                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-35                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-36                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-37                                                                            
@@ -250,7 +242,11 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-39                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-40                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-41                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-42                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-42                                                                            
+                                                                                                                        
+                                     COMPUTED= ****                                                                     
+                                     CORRECT = T***                  VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-43                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-44                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-45                                                                            
@@ -258,7 +254,11 @@ TEST RESULT OF NC126A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-47                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-48                                                                            
  ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-49                                                                            
- ELEMENTRY ITEM CHK   PASS  LEV-TEST-GF-3-50                                                                            
+ ELEMENTRY ITEM CHK   FAIL* LEV-TEST-GF-3-50                                                                            
+                                                                                                                        
+                                     COMPUTED=                                                                          
+                                     CORRECT = B                     VI-21 5.3.3 SR1                                    
+                                                                                                                        
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

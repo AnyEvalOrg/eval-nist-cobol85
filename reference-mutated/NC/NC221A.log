@@ -13,34 +13,34 @@ TEST RESULT OF NC221A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- TALLY FOR LEADING    FAIL* INS-TEST-F1-1                                                                               
+ TALLY FOR LEADING    PASS  INS-TEST-F1-1                                                                               
+ TALLY FOR CHAR AFTER FAIL* INS-TEST-F1-2                                                                               
                                                                                                                         
-                                     COMPUTED=  000000001.000000000                                                     
+                                     COMPUTED=  000000068.000000000                                                     
+                                     CORRECT =  000000062.000000000  IV-21 4.3.8.2                                      
+                                                                                                                        
+ TALLY FOR ALL BEFORE FAIL* INS-TEST-F1-3                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000004.000000000                                                     
                                      CORRECT =  000000005.000000000  IV-21 4.3.8.2                                      
                                                                                                                         
- TALLY FOR CHAR AFTER PASS  INS-TEST-F1-2                                                                               
- TALLY FOR ALL BEFORE PASS  INS-TEST-F1-3                                                                               
  REPLACE BEFORE FIRST PASS  INS-TEST-F2-4                                                                               
  REPLACE LEAD AFTER   PASS  INS-TEST-F2-5                                                                               
  REPLACE FIRST BEFORE PASS  INS-TEST-F2-6                                                                               
  REPLACE ALL AFTER    PASS  INS-TEST-F2-7                                                                               
- TALLY REPLACE CHARS  FAIL* INS-TEST-F3-8      .01                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000006.000000000                                                     
-                                     CORRECT =  000000004.000000000  IV-21 4.3.8.2                                      
-                                                                                                                        
+ TALLY REPLACE CHARS  PASS  INS-TEST-F3-8      .01                                                                      
  TALLY REPLACE CHARS  PASS  INS-TEST-F3-8      .02                                                                      
  TALLY BEFORE REPLACE PASS  INS-TEST-F3-9      .01                                                                      
  TALLY BEFORE REPLACE PASS  INS-TEST-F3-9      .02                                                                      
  TALLY LEAD REPL LEAD PASS  INS-TEST-F3-10     .01                                                                      
  TALLY LEAD REPL LEAD PASS  INS-TEST-F3-10     .02                                                                      
- TALLY REPL FIRST AFT FAIL* INS-TEST-F3-11     .01                                                                      
-                                                                                                                        
-                                     COMPUTED=  000000008.000000000                                                     
-                                     CORRECT =  000000000.000000000  IV-21 4.3.8.2                                      
-                                                                                                                        
+ TALLY REPL FIRST AFT PASS  INS-TEST-F3-11     .01                                                                      
  TALLY REPL FIRST AFT PASS  INS-TEST-F3-11     .02                                                                      
- TALLY CHARS REPL BEF PASS  INS-TEST-F3-12     .01                                                                      
+ TALLY CHARS REPL BEF FAIL* INS-TEST-F3-12     .01                                                                      
+                                                                                                                        
+                                     COMPUTED=  000000081.000000000                                                     
+                                     CORRECT =  000000001.000000000  IV-21 4.3.8.2                                      
+                                                                                                                        
  TALLY CHARS REPL BEF PASS  INS-TEST-F3-12     .02                                                                      
  ***********************************************************************************************************************
                                                                                                                         

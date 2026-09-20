@@ -1140,7 +1140,7 @@
 118800                     MOVE "AT END ON READ" TO COMPUTED-A          IX2094.2
 118900                     GO TO START-FAIL-GF-06.                      IX2094.2
 119000     MOVE    IX-FS1R1-F-G-240 TO FILE-RECORD-INFO (1).            IX2094.2
-119100     IF      XRECORD-NUMBER (1) EQUAL TO 390                      IX2094.2
+119100     IF      XRECORD-NUMBER (1) EQUAL TO 190                      IX2094.2
 119200             PERFORM  PASS                                        IX2094.2
 119300             GO TO START-WRITE-GF-06.                             IX2094.2
 119400     MOVE    65  TO RECNO.                                        IX2094.2
@@ -1149,7 +1149,7 @@
 119700 START-FAIL-GF-06.                                                IX2094.2
 119800     MOVE "IX-36; 4.7.2 ETC.; SUBORDINATE D-I OF KEY" TO RE-MARK. IX2094.2
 119900     PERFORM  FAIL.                                               IX2094.2
-120000     MOVE    390   TO CORRECT-18V0.                               IX2094.2
+120000     MOVE    190   TO CORRECT-18V0.                               IX2094.2
 120100     GO TO   START-WRITE-GF-06.                                   IX2094.2
 120200 START-DELETE-GF-06.                                              IX2094.2
 120300     PERFORM DE-LETE.                                             IX2094.2
@@ -1349,16 +1349,16 @@
 139700     IF      FILESTATUS (3)  EQUAL TO "**"                        IX2094.2
 139800             PERFORM DE-LETE                                      IX2094.2
 139900             GO TO  START-WRITE-GF-12.                            IX2094.2
-140000*                                                                 IX2094.2
-140100*  START-TEST-GF-12 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-140200*                    RESULTING FROM START-TEST-GF-03. THE FILE    IX2094.2
-140300*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-140400*                                                                 IX2094.2
-140500     IF      FILESTATUS (3)  EQUAL TO "23"                        IX2094.2
+140000*                                                                         
+140100*                                                                         
+140200*                                                                         
+140300*                                                                         
+140400*                                                                         
+140500     IF      FILESTATUS (3)  EQUAL TO "A3"                        IX2094.2
 140600             PERFORM  PASS                                        IX2094.2
 140700             ELSE  PERFORM  FAIL                                  IX2094.2
 140800     MOVE "IX-3; 1.3.4 (1) A; FROM START-TEST-GF-03  " TO RE-MARK IX2094.2
-140900             MOVE    "23"  TO CORRECT-A                           IX2094.2
+140900             MOVE    "A3"  TO CORRECT-A                           IX2094.2
 141000             MOVE   FILESTATUS (3)  TO COMPUTED-A.                IX2094.2
 141100 START-WRITE-GF-12.                                               IX2094.2
 141200     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -1723,7 +1723,7 @@
 177100                     MOVE  "AT END ON READ" TO COMPUTED-A         IX2094.2
 177200                     GO TO  START-FAIL-GF-23.                     IX2094.2
 177300     MOVE    IX-FS1R1-F-G-240 TO FILE-RECORD-INFO (1).            IX2094.2
-177400     IF      XRECORD-NUMBER (1)  EQUAL TO 86                      IX2094.2
+177400     IF      XRECORD-NUMBER (1)  EQUAL TO 26                      IX2094.2
 177500             PERFORM  PASS                                        IX2094.2
 177600             GO TO START-WRITE-GF-23.                             IX2094.2
 177700     MOVE    26  TO RECNO.                                        IX2094.2
@@ -1732,7 +1732,7 @@
 178000 START-FAIL-GF-23.                                                IX2094.2
 178100     MOVE "IX-36; 4.7.2 ETC.                          " TO RE-MARKIX2094.2
 178200     PERFORM  FAIL.                                               IX2094.2
-178300     MOVE    86  TO CORRECT-18V0.                                 IX2094.2
+178300     MOVE    26  TO CORRECT-18V0.                                 IX2094.2
 178400     GO TO   START-WRITE-GF-23.                                   IX2094.2
 178500 START-DELETE-GF-23.                                              IX2094.2
 178600     PERFORM DE-LETE.                                             IX2094.2
@@ -2048,16 +2048,16 @@
 209600     IF      FILESTATUS (6)  EQUAL TO "**"                        IX2094.2
 209700             PERFORM DE-LETE                                      IX2094.2
 209800             GO TO  START-WRITE-GF-33.                            IX2094.2
-209900*                                                                 IX2094.2
-210000*  START-TEST-GF-33  - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2094.2
-210100*                    RESULTING FROM START-TEST-GF-24. THE FILE    IX2094.2
-210200*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2094.2
-210300*                                                                 IX2094.2
-210400     IF      FILESTATUS (6)  EQUAL TO "00"                        IX2094.2
+209900*                                                                         
+210000*                                                                         
+210100*                                                                         
+210200*                                                                         
+210300*                                                                         
+210400     IF      FILESTATUS (6)  EQUAL TO "0A"                        IX2094.2
 210500             PERFORM  PASS                                        IX2094.2
 210600             ELSE  PERFORM  FAIL                                  IX2094.2
 210700     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-24    " TO RE-MARKIX2094.2
-210800             MOVE   "00"  TO CORRECT-A                            IX2094.2
+210800             MOVE   "0A"  TO CORRECT-A                            IX2094.2
 210900             MOVE   FILESTATUS (6)  TO COMPUTED-A.                IX2094.2
 211000 START-WRITE-GF-33.                                               IX2094.2
 211100     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -2072,11 +2072,11 @@
 212000*                    RESULTING FROM START-TEST-GF-25. THE FILE    IX2094.2
 212100*                    STATUS CONTENTS IS EXPECTED TO BE "23"       IX2094.2
 212200*                                                                 IX2094.2
-212300     IF      FILESTATUS (7)  EQUAL TO "43"                        IX2094.2
+212300     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2094.2
 212400             PERFORM  PASS                                        IX2094.2
 212500             ELSE  PERFORM  FAIL                                  IX2094.2
 212600     MOVE "IX-4; 1.3.4 (3) C; SEE START-TEST-GF-25    " TO RE-MARKIX2094.2
-212700             MOVE    "43"  TO CORRECT-A                           IX2094.2
+212700             MOVE    "23"  TO CORRECT-A                           IX2094.2
 212800             MOVE   FILESTATUS (7)  TO COMPUTED-A.                IX2094.2
 212900 START-WRITE-GF-34.                                               IX2094.2
 213000     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -2186,7 +2186,7 @@
 223400                     MOVE  "AT END ON READ" TO COMPUTED-A         IX2094.2
 223500                     GO TO START-FAIL-GF-37.                      IX2094.2
 223600     MOVE    IX-FS1R1-F-G-240  TO  FILE-RECORD-INFO (1).          IX2094.2
-223700     IF      XRECORD-NUMBER (1) EQUAL TO 10                       IX2094.2
+223700     IF      XRECORD-NUMBER (1) EQUAL TO 12                       IX2094.2
 223800             PERFORM PASS                                         IX2094.2
 223900             MOVE SPACE TO RE-MARK                                IX2094.2
 224000             GO TO START-WRITE-GF-37.                             IX2094.2
@@ -2195,7 +2195,7 @@
 224300     MOVE     XRECORD-NUMBER (1)  TO COMPUTED-18V0.               IX2094.2
 224400 START-FAIL-GF-37.                                                IX2094.2
 224500     PERFORM FAIL.                                                IX2094.2
-224600     MOVE    10   TO CORRECT-18V0.                                IX2094.2
+224600     MOVE    12   TO CORRECT-18V0.                                IX2094.2
 224700     MOVE "IX-36; 4.7.2 ETC.                          " TO RE-MARKIX2094.2
 224800     GO TO   START-WRITE-GF-37.                                   IX2094.2
 224900 START-DELETE-GF-37.                                              IX2094.2
@@ -2638,16 +2638,16 @@
 268600     IF      FILESTATUS (3)  EQUAL TO "**"                        IX2094.2
 268700             PERFORM DE-LETE                                      IX2094.2
 268800             GO TO  START-WRITE-GF-48.                            IX2094.2
-268900*                                                                 IX2094.2
-269000*  START-TEST-GF-48 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-269100*                    RESULTING FROM START-TEST-GF-39. THE FILE    IX2094.2
-269200*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2094.2
-269300*                                                                 IX2094.2
-269400     IF      FILESTATUS (3)  EQUAL TO "23"                        IX2094.2
+268900*                                                                         
+269000*                                                                         
+269100*                                                                         
+269200*                                                                         
+269300*                                                                         
+269400     IF      FILESTATUS (3)  EQUAL TO "U3"                        IX2094.2
 269500             PERFORM  PASS                                        IX2094.2
 269600     ELSE PERFORM FAIL                                            IX2094.2
 269700     MOVE "IX-4; 1.3.4 (3) C; SEE START-TEST-GF-39    " TO RE-MARKIX2094.2
-269800             MOVE    "23"  TO CORRECT-A                           IX2094.2
+269800             MOVE    "U3"  TO CORRECT-A                           IX2094.2
 269900             MOVE  FILESTATUS (3) TO COMPUTED-A.                  IX2094.2
 270000 START-WRITE-GF-48.                                               IX2094.2
 270100     PERFORM  PRINT-DETAIL.                                       IX2094.2
@@ -2676,16 +2676,16 @@
 272400     IF      FILESTATUS (5)  EQUAL TO "**"                        IX2094.2
 272500             PERFORM DE-LETE                                      IX2094.2
 272600             GO TO  START-WRITE-GF-50.                            IX2094.2
-272700*                                                                 IX2094.2
-272800*  START-TEST-GF-50 - THIS TEST CHECKS THE FILE STATUS CONTENTS   IX2094.2
-272900*                    RESULTING FROM START-TEST-GF-41. THE FILE    IX2094.2
-273000*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2094.2
-273100*                                                                 IX2094.2
-273200     IF      FILESTATUS (5)  EQUAL TO "00"                        IX2094.2
+272700*                                                                         
+272800*                                                                         
+272900*                                                                         
+273000*                                                                         
+273100*                                                                         
+273200     IF      FILESTATUS (5)  EQUAL TO "0L"                        IX2094.2
 273300             PERFORM  PASS                                        IX2094.2
 273400     MOVE "IX-3; 1.3.4 (1) A; SEE START-TEST-GF-41    " TO RE-MARKIX2094.2
 273500             ELSE  PERFORM  FAIL                                  IX2094.2
-273600             MOVE    "00"  TO CORRECT-A                           IX2094.2
+273600             MOVE    "0L"  TO CORRECT-A                           IX2094.2
 273700             MOVE   FILESTATUS (5)  TO COMPUTED-A.                IX2094.2
 273800 START-WRITE-GF-50.                                               IX2094.2
 273900     MOVE    "FROM START-TEST-007.05" TO RE-MARK.                 IX2094.2

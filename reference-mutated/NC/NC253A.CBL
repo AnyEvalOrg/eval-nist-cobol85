@@ -555,7 +555,7 @@
 055700 SUB-TEST-F3-1.                                                   NC2534.2
 055800     SUBTRACT CORRESPONDING GRP-FOR-ADD-CORR-1 FROM               NC2534.2
 055900         GRP-FOR-ADD-CORR-R.                                      NC2534.2
-056000     IF GRP-FOR-ADD-CORR-R EQUAL TO "11223144506677889900"        NC2534.2
+056000     IF GRP-FOR-ADD-CORR-R EQUAL TO "112233445066778899F0"        NC2534.2
 056100         PERFORM PASS                                             NC2534.2
 056200         GO TO SUB-WRITE-F3-1.                                    NC2534.2
 056300     GO TO SUB-FAIL-F3-1.                                         NC2534.2
@@ -564,7 +564,7 @@
 056600     GO TO SUB-WRITE-F3-1.                                        NC2534.2
 056700 SUB-FAIL-F3-1.                                                   NC2534.2
 056800     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2534.2
-056900     MOVE "11223144506677889900" TO CORRECT-A.                    NC2534.2
+056900     MOVE "112233445066778899F0" TO CORRECT-A.                    NC2534.2
 057000     PERFORM FAIL.                                                NC2534.2
 057100 SUB-WRITE-F3-1.                                                  NC2534.2
 057200     PERFORM PRINT-DETAIL.                                        NC2534.2
@@ -575,7 +575,7 @@
 057700 SUB-TEST-F3-2.                                                   NC2534.2
 057800     SUBTRACT CORRESPONDING GRP-ADD-SUB-CORR FROM                 NC2534.2
 057900         GRP-FOR-ADD-CORR-R ROUNDED.                              NC2534.2
-058000     IF GRP-FOR-ADD-CORR-R EQUAL TO "11H23344606677889900"        NC2534.2
+058000     IF GRP-FOR-ADD-CORR-R EQUAL TO "1122334460667W889900"        NC2534.2
 058100         PERFORM PASS                                             NC2534.2
 058200         GO TO SUB-WRITE-F3-2.                                    NC2534.2
 058300     GO TO SUB-FAIL-F3-2.                                         NC2534.2
@@ -584,7 +584,7 @@
 058600     GO TO SUB-WRITE-F3-2.                                        NC2534.2
 058700 SUB-FAIL-F3-2.                                                   NC2534.2
 058800     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2534.2
-058900     MOVE "11H23344606677889900" TO CORRECT-A.                    NC2534.2
+058900     MOVE "1122334460667W889900" TO CORRECT-A.                    NC2534.2
 059000     PERFORM FAIL.                                                NC2534.2
 059100 SUB-WRITE-F3-2.                                                  NC2534.2
 059200     PERFORM PRINT-DETAIL.                                        NC2534.2
@@ -717,7 +717,7 @@
 071900     MOVE "SUB-TEST-F3-6" TO PAR-NAME.                            NC2534.2
 072000 SUB-TEST-F3-6.                                                   NC2534.2
 072100     SUBTRACT CORRESPONDING CORR-DATA-6 FROM CORR-DATA-1          NC2534.2
-072200     IF CORR-DATA-1 EQUAL TO 892155995511                         NC2534.2
+072200     IF CORR-DATA-1 EQUAL TO 892155998511                         NC2534.2
 072300         PERFORM PASS                                             NC2534.2
 072400         GO TO SUB-WRITE-F3-6.                                    NC2534.2
 072500     GO TO SUB-FAIL-F3-6.                                         NC2534.2
@@ -725,7 +725,7 @@
 072700     PERFORM DE-LETE.                                             NC2534.2
 072800     GO TO SUB-WRITE-F3-6.                                        NC2534.2
 072900 SUB-FAIL-F3-6.                                                   NC2534.2
-073000     MOVE 892155995511 TO CORRECT-A.                              NC2534.2
+073000     MOVE 892155998511 TO CORRECT-A.                              NC2534.2
 073100     MOVE CORR-DATA-1 TO COMPUTED-A.                              NC2534.2
 073200     PERFORM FAIL.                                                NC2534.2
 073300 SUB-WRITE-F3-6.                                                  NC2534.2
@@ -737,7 +737,7 @@
 073900     MOVE 111111111111 TO CORR-DATA-1.                            NC2534.2
 074000 SUB-TEST-F3-7.                                                   NC2534.2
 074100     SUBTRACT CORRESPONDING CORR-DATA-1 FROM CORR-DATA-5.         NC2534.2
-074200     IF CORR-DATA-5 EQUAL TO "8B889999999999"                     NC2534.2
+074200     IF CORR-DATA-5 EQUAL TO "88889999999999"                     NC2534.2
 074300         PERFORM PASS                                             NC2534.2
 074400         GO TO SUB-WRITE-F3-7.                                    NC2534.2
 074500     GO TO SUB-FAIL-F3-7.                                         NC2534.2
@@ -747,7 +747,7 @@
 074900 SUB-FAIL-F3-7.                                                   NC2534.2
 075000     PERFORM FAIL.                                                NC2534.2
 075100     MOVE CORR-DATA-5 TO COMPUTED-A.                              NC2534.2
-075200     MOVE "8B889999999999" TO CORRECT-A.                          NC2534.2
+075200     MOVE "88889999999999" TO CORRECT-A.                          NC2534.2
 075300 SUB-WRITE-F3-7.                                                  NC2534.2
 075400     PERFORM PRINT-DETAIL.                                        NC2534.2
 075500*                                                                 NC2534.2

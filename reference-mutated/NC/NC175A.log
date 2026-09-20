@@ -19,13 +19,17 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT FROM GIVING PASS  SUB-TEST-F2-3-2                                                                             
  SUBTRACT FROM GIVING PASS  SUB-TEST-F2-4-1                                                                             
  SUBTRACT FROM GIVING PASS  SUB-TEST-F2-4-2                                                                             
-   GIVING             FAIL* SUB-TEST-F2-5                                                                               
+   GIVING             PASS  SUB-TEST-F2-5                                                                               
+   GIVING             FAIL* SUB-TEST-F2-6                                                                               
                                                                                                                         
-                                     COMPUTED=  000333000.000333000                                                     
-                                     CORRECT =  000133000.000333000  VI-134 6.25.4 GR2                                  
+                                     COMPUTED= -000344777.777443000                                                     
+                                     CORRECT = -000344707.777443000  VI-134 6.25.4 GR2                                  
                                                                                                                         
-   GIVING             PASS  SUB-TEST-F2-6                                                                               
-   GIVING             PASS  SUB-TEST-F2-7                                                                               
+   GIVING             FAIL* SUB-TEST-F2-7                                                                               
+                                                                                                                        
+                                     COMPUTED= -000100000.000000000                                                     
+                                     CORRECT = -000100070.000000000  VI-134 6.25.4 GR2                                  
+                                                                                                                        
    GIVING             PASS  SUB-TEST-F2-8-1                                                                             
    GIVING             PASS  SUB-TEST-F2-8-2                                                                             
    GIVING             PASS  SUB-TEST-F2-9-1                                                                             
@@ -33,11 +37,7 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    GIVING             PASS  SUB-TEST-F2-10-1                                                                            
    GIVING             PASS  SUB-TEST-F2-10-2                                                                            
    SERIES             PASS  SUB-TEST-F2-11                                                                              
-   SERIES             FAIL* SUB-TEST-F2-12                                                                              
-                                                                                                                        
-                                     COMPUTED= -0242.43322201100000                                                     
-                                     CORRECT = -0242.43320201100000  VI-134 6.25.4 GR2                                  
-                                                                                                                        
+   SERIES             PASS  SUB-TEST-F2-12                                                                              
    SERIES             PASS  SUB-TEST-F2-13                                                                              
    SERIES             PASS  SUB-TEST-F2-14                                                                              
    SERIES             PASS  SUB-TEST-F2-15-1                                                                                                                                                                                                    
@@ -55,17 +55,17 @@ TEST RESULT OF NC175A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
    SERIES             PASS  SUB-TEST-F2-15-2                                                                            
-   SERIES             PASS  SUB-TEST-F2-16-1                                                                            
+   SERIES             FAIL* SUB-TEST-F2-16-1                                                                            
+                                                                                                                        
+                                     COMPUTED=  000000000000000000                                                      
+                                     CORRECT =  000000000000000007   VI-134 6.25.4 GR2                                  
+                                                                                                                        
    SERIES             PASS  SUB-TEST-F2-16-2                                                                            
    SERIES             PASS  SUB-TEST-F2-17-1                                                                            
    SERIES             PASS  SUB-TEST-F2-17-2                                                                            
    SERIES             PASS  SUB-TEST-F2-18                                                                              
    SERIES             PASS  SUB-TEST-F2-19                                                                              
-   SERIES             FAIL* SUB-TEST-F2-20                                                                              
-                                                                                                                        
-                                     COMPUTED= -004444111111111111                                                      
-                                     CORRECT = -004444111111118111   VI-134 6.25.4 GR2                                  
-                                                                                                                        
+   SERIES             PASS  SUB-TEST-F2-20                                                                              
    SERIES             PASS  SUB-TEST-F2-21                                                                              
    SERIES             PASS  SUB-TEST-F2-22                                                                              
    SERIES             PASS  SUB-TEST-F2-23                                                                              

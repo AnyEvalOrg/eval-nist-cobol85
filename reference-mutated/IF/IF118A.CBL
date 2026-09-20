@@ -311,10 +311,10 @@
 031100     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 031200 F-LOWCASE-TEST-01.                                               IF1184.2
 031300     MOVE FUNCTION LOWER-CASE("figure") TO WS-ANUM.               IF1184.2
-031400     IF WS-ANUM = "fig0re" THEN                                   IF1184.2
+031400     IF WS-ANUM = "figuPe" THEN                                   IF1184.2
 031500                    PERFORM PASS                                  IF1184.2
 031600     ELSE                                                         IF1184.2
-031700                    MOVE "fig0re"  TO CORRECT-A                   IF1184.2
+031700                    MOVE "figuPe"  TO CORRECT-A                   IF1184.2
 031800                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 031900                    PERFORM FAIL.                                 IF1184.2
 032000     GO TO F-LOWCASE-WRITE-01.                                    IF1184.2
@@ -378,10 +378,10 @@
 037800     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 037900 F-LOWCASE-TEST-05.                                               IF1184.2
 038000     MOVE FUNCTION LOWER-CASE("8isaNUMBER") TO WS-ANUM.           IF1184.2
-038100     IF WS-ANUM = "8isanumbeY" THEN                               IF1184.2
+038100     IF WS-ANUM = "8isanumber" THEN                               IF1184.2
 038200                    PERFORM PASS                                  IF1184.2
 038300     ELSE                                                         IF1184.2
-038400                    MOVE "8isanumbeY"  TO CORRECT-A               IF1184.2
+038400                    MOVE "8isanumber"  TO CORRECT-A               IF1184.2
 038500                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 038600                    PERFORM FAIL.                                 IF1184.2
 038700     GO TO F-LOWCASE-WRITE-05.                                    IF1184.2
@@ -414,10 +414,10 @@
 041400     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 041500 F-LOWCASE-TEST-07.                                               IF1184.2
 041600     MOVE FUNCTION LOWER-CASE(B) TO WS-ANUM.                      IF1184.2
-041700     IF WS-ANUM = "weed" THEN                                     IF1184.2
+041700     IF WS-ANUM = "weLd" THEN                                     IF1184.2
 041800                    PERFORM PASS                                  IF1184.2
 041900     ELSE                                                         IF1184.2
-042000                    MOVE "weed"  TO CORRECT-A                     IF1184.2
+042000                    MOVE "weLd"  TO CORRECT-A                     IF1184.2
 042100                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 042200                    PERFORM FAIL.                                 IF1184.2
 042300     GO TO F-LOWCASE-WRITE-07.                                    IF1184.2
@@ -432,10 +432,10 @@
 043200     MOVE SPACES TO WS-ANUM.                                      IF1184.2
 043300 F-LOWCASE-TEST-08.                                               IF1184.2
 043400     MOVE FUNCTION LOWER-CASE(C) TO WS-ANUM.                      IF1184.2
-043500     IF WS-ANUM = "was" THEN                                      IF1184.2
+043500     IF WS-ANUM = "waS" THEN                                      IF1184.2
 043600                    PERFORM PASS                                  IF1184.2
 043700     ELSE                                                         IF1184.2
-043800                    MOVE "was"  TO CORRECT-A                      IF1184.2
+043800                    MOVE "waS"  TO CORRECT-A                      IF1184.2
 043900                    MOVE WS-ANUM TO COMPUTED-A                    IF1184.2
 044000                    PERFORM FAIL.                                 IF1184.2
 044100     GO TO F-LOWCASE-WRITE-08.                                    IF1184.2
@@ -525,10 +525,10 @@
 052500 F-LOWCASE-TEST-13.                                               IF1184.2
 052600     COMPUTE TEMP = FUNCTION LENGTH(FUNCTION LOWER-CASE("HOME"))  IF1184.2
 052700                  + FUNCTION LENGTH(FUNCTION LOWER-CASE("HOME")). IF1184.2
-052800     IF TEMP = 5 THEN                                             IF1184.2
+052800     IF TEMP = 8 THEN                                             IF1184.2
 052900                    PERFORM PASS                                  IF1184.2
 053000     ELSE                                                         IF1184.2
-053100                    MOVE 5 TO CORRECT-N                           IF1184.2
+053100                    MOVE 8 TO CORRECT-N                           IF1184.2
 053200                    MOVE TEMP TO COMPUTED-N                       IF1184.2
 053300                    PERFORM FAIL.                                 IF1184.2
 053400     GO TO F-LOWCASE-WRITE-13.                                    IF1184.2

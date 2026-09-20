@@ -315,10 +315,10 @@
 031500     MOVE ZERO TO TEMP.                                           IF1254.2
 031600 F-NUMVAL-TEST-01.                                                IF1254.2
 031700     COMPUTE TEMP = FUNCTION NUMVAL ("9").                        IF1254.2
-031800     IF TEMP = 9 THEN                                             IF1254.2
+031800     IF TEMP = 5 THEN                                             IF1254.2
 031900                        PERFORM PASS                              IF1254.2
 032000     ELSE                                                         IF1254.2
-032100                        MOVE 9 TO CORRECT-N                       IF1254.2
+032100                        MOVE 5 TO CORRECT-N                       IF1254.2
 032200                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 032300                        PERFORM FAIL.                             IF1254.2
 032400     GO TO F-NUMVAL-WRITE-01.                                     IF1254.2
@@ -479,10 +479,10 @@
 047900     MOVE ZERO TO TEMP.                                           IF1254.2
 048000 F-NUMVAL-TEST-10.                                                IF1254.2
 048100     COMPUTE TEMP = FUNCTION NUMVAL (A).                          IF1254.2
-048200     IF TEMP = 3 THEN                                             IF1254.2
+048200     IF TEMP = 9 THEN                                             IF1254.2
 048300                        PERFORM PASS                              IF1254.2
 048400     ELSE                                                         IF1254.2
-048500                        MOVE  3  TO CORRECT-N                     IF1254.2
+048500                        MOVE  9  TO CORRECT-N                     IF1254.2
 048600                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 048700                        PERFORM FAIL.                             IF1254.2
 048800     GO TO F-NUMVAL-WRITE-10.                                     IF1254.2
@@ -497,10 +497,10 @@
 049700     MOVE ZERO TO TEMP.                                           IF1254.2
 049800 F-NUMVAL-TEST-11.                                                IF1254.2
 049900     COMPUTE TEMP = FUNCTION NUMVAL (B).                          IF1254.2
-050000     IF TEMP = 283 THEN                                           IF1254.2
+050000     IF TEMP = 293 THEN                                           IF1254.2
 050100                        PERFORM PASS                              IF1254.2
 050200     ELSE                                                         IF1254.2
-050300                        MOVE  283  TO CORRECT-N                   IF1254.2
+050300                        MOVE  293  TO CORRECT-N                   IF1254.2
 050400                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 050500                        PERFORM FAIL.                             IF1254.2
 050600     GO TO F-NUMVAL-WRITE-11.                                     IF1254.2
@@ -667,10 +667,10 @@
 066700 F-NUMVAL-TEST-20.                                                IF1254.2
 066800     COMPUTE TEMP = (FUNCTION NUMVAL ("2") +                      IF1254.2
 066900                     FUNCTION NUMVAL ("8") ).                     IF1254.2
-067000     IF TEMP = 12 THEN                                            IF1254.2
+067000     IF TEMP = 10 THEN                                            IF1254.2
 067100                        PERFORM PASS                              IF1254.2
 067200     ELSE                                                         IF1254.2
-067300                        MOVE  12  TO CORRECT-N                    IF1254.2
+067300                        MOVE  10  TO CORRECT-N                    IF1254.2
 067400                        MOVE TEMP TO COMPUTED-N                   IF1254.2
 067500                        PERFORM FAIL.                             IF1254.2
 067600     GO TO F-NUMVAL-WRITE-20.                                     IF1254.2

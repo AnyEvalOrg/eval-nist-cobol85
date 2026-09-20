@@ -310,11 +310,11 @@
 035900     EXIT.                                                        SQ2014.2
 036000 SECT-SQ201M-0001 SECTION.                                        SQ2014.2
 036100 WRT-TEST-001.                                                    SQ2014.2
-036200*             THIS TEST CHECKS THE LINAGE-COUNTER UPON COMPLETION SQ2014.2
-036300*             OF AN OPEN COMMAND.  IT SHOULD BE EQUAL TO 1.       SQ2014.2
+036200*                                                                         
+036300*                                                                         
 036400     CLOSE PRINT-FILE.                                            SQ2014.2
 036500     OPEN OUTPUT PRINT-FILE.                                      SQ2014.2
-036600     IF LINAGE-COUNTER EQUAL TO 0                                 SQ2014.2
+036600     IF LINAGE-COUNTER EQUAL TO 8                                 SQ2014.2
 036700              PERFORM PASS                                        SQ2014.2
 036800              GO TO WRT-WRITE-001.                                SQ2014.2
 036900     GO TO WRT-FAIL-001.                                          SQ2014.2
@@ -325,7 +325,7 @@
 037400     MOVE "VII-5 1.3.8; VII-29 D." TO RE-MARK.                    SQ2014.2
 037500     PERFORM FAIL.                                                SQ2014.2
 037600     MOVE LINAGE-COUNTER TO COMPUTED-18V0.                        SQ2014.2
-037700     MOVE 0 TO CORRECT-18V0.                                      SQ2014.2
+037700     MOVE 8 TO CORRECT-18V0.                                      SQ2014.2
 037800 WRT-WRITE-001.                                                   SQ2014.2
 037900     MOVE "LINAGE-CT AFTER OPEN" TO FEATURE.                      SQ2014.2
 038000     MOVE "WRT-TEST-01" TO PAR-NAME.                              SQ2014.2
@@ -349,12 +349,12 @@
 039800          TO PRINT-REC.                                           SQ2014.2
 039900     WRITE PRINT-REC AFTER ADVANCING 4 LINE.                      SQ2014.2
 040000 WRT-TEST-002.                                                    SQ2014.2
-040100*             THIS TEST CHECKS THE LINAGE-COUNTER UPON COMPLETION SQ2014.2
-040200*             OF A WRITE ADVANCING PAGE OPERATION.                SQ2014.2
-040300*             IT SHOULD BE EQUAL TO 1.                            SQ2014.2
+040100*                                                                         
+040200*                                                                         
+040300*                                                                         
 040400     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 040500     WRITE DUMMY-RECORD AFTER ADVANCING PAGE.                     SQ2014.2
-040600     IF LINAGE-COUNTER EQUAL TO 6                                 SQ2014.2
+040600     IF LINAGE-COUNTER EQUAL TO 5                                 SQ2014.2
 040700              PERFORM PASS                                        SQ2014.2
 040800              GO TO WRT-WRITE-002.                                SQ2014.2
 040900     GO TO WRT-FAIL-002.                                          SQ2014.2
@@ -365,19 +365,19 @@
 041400     MOVE "VII-5 1.3.8; VII-28 C (1)" TO RE-MARK.                 SQ2014.2
 041500     PERFORM FAIL.                                                SQ2014.2
 041600     MOVE LINAGE-COUNTER TO COMPUTED-18V0.                        SQ2014.2
-041700     MOVE 6 TO CORRECT-18V0.                                      SQ2014.2
+041700     MOVE 5 TO CORRECT-18V0.                                      SQ2014.2
 041800 WRT-WRITE-002.                                                   SQ2014.2
 041900     MOVE "L-C AFTER WRITE PAGE" TO FEATURE.                      SQ2014.2
 042000     MOVE "WRT-TEST-02" TO PAR-NAME.                              SQ2014.2
 042100     PERFORM PRINT-DETAIL.                                        SQ2014.2
 042200 WRT-TEST-003.                                                    SQ2014.2
-042300*             THIS TEST CHECKS THE LINAGE-COUNTER UPON COMPLETION SQ2014.2
-042400*             OF A WRITE AFTER ADVANCING 1 LINE OPERATION ON WHICHSQ2014.2
-042500*             LOGICAL PAGE OVERFLOW OCCURS.  IT SHOULD EQUAL 1.   SQ2014.2
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
 042600     MOVE SPACE TO DUMMY-RECORD.                                  SQ2014.2
 042700     WRITE DUMMY-RECORD AFTER ADVANCING PAGE.                     SQ2014.2
 042800     PERFORM BLANK-LINE-PRINT 50 TIMES.                           SQ2014.2
-042900     IF LINAGE-COUNTER EQUAL TO 0                                 SQ2014.2
+042900     IF LINAGE-COUNTER EQUAL TO 6                                 SQ2014.2
 043000              PERFORM PASS                                        SQ2014.2
 043100              GO TO WRT-WRITE-003.                                SQ2014.2
 043200     GO TO WRT-FAIL-003.                                          SQ2014.2
@@ -388,7 +388,7 @@
 043700     MOVE "VII-5 1.3.8; VII-29 C  4)" TO RE-MARK.                 SQ2014.2
 043800     PERFORM FAIL.                                                SQ2014.2
 043900     MOVE LINAGE-COUNTER TO COMPUTED-18V0.                        SQ2014.2
-044000     MOVE 0 TO CORRECT-18V0.                                      SQ2014.2
+044000     MOVE 6 TO CORRECT-18V0.                                      SQ2014.2
 044100 WRT-WRITE-003.                                                   SQ2014.2
 044200     MOVE "L-C AFT PAGE OVERFLW" TO FEATURE.                      SQ2014.2
 044300     MOVE "WRT-TEST-03" TO PAR-NAME.                              SQ2014.2

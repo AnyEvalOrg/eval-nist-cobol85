@@ -804,7 +804,7 @@
 080600         TBL-ITEM-1 OF TABLE-LEVEL-1B OF TABLE-LEVEL-2A IN        NC2074.2
 080700         TABLE-LEVEL-3A IN TABLE-LEVEL-4B IN TABLE-LEVEL-5A       NC2074.2
 080800         GIVING ACCUMULATOR2.                                     NC2074.2
-080900     IF ACCUMULATOR2 EQUAL TO 00                                  NC2074.2
+080900     IF ACCUMULATOR2 EQUAL TO 20                                  NC2074.2
 081000         PERFORM PASS                                             NC2074.2
 081100         GO TO ADD-WRITE-F2-10.                                   NC2074.2
 081200     GO TO ADD-FAIL-F2-10.                                        NC2074.2
@@ -813,7 +813,7 @@
 081500     GO TO ADD-WRITE-F2-10.                                       NC2074.2
 081600 ADD-FAIL-F2-10.                                                  NC2074.2
 081700     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-081800     MOVE 00 TO CORRECT-N.                                        NC2074.2
+081800     MOVE 20 TO CORRECT-N.                                        NC2074.2
 081900     PERFORM FAIL.                                                NC2074.2
 082000 ADD-WRITE-F2-10.                                                 NC2074.2
 082100     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -904,7 +904,7 @@
 090600         TBL-ITEM-1 IN TABLE-LEVEL-1B IN TABLE-LEVEL-2A IN        NC2074.2
 090700         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 090800         GIVING ACCUMULATOR2.                                     NC2074.2
-090900     IF ACCUMULATOR2 EQUAL TO 28                                  NC2074.2
+090900     IF ACCUMULATOR2 EQUAL TO 68                                  NC2074.2
 091000         PERFORM PASS                                             NC2074.2
 091100         GO TO ADD-WRITE-F2-14.                                   NC2074.2
 091200     GO TO ADD-FAIL-F2-14.                                        NC2074.2
@@ -913,7 +913,7 @@
 091500     GO TO ADD-WRITE-F2-14.                                       NC2074.2
 091600 ADD-FAIL-F2-14.                                                  NC2074.2
 091700     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-091800     MOVE 28 TO CORRECT-N.                                        NC2074.2
+091800     MOVE 68 TO CORRECT-N.                                        NC2074.2
 091900     PERFORM FAIL.                                                NC2074.2
 092000 ADD-WRITE-F2-14.                                                 NC2074.2
 092100     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -1212,7 +1212,7 @@
 121400         FROM TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 121500         TABLE-LEVEL-3A IN TABLE-LEVEL-4A OF TABLE-LEVEL-5B       NC2074.2
 121600         GIVING ACCUMULATOR1.                                     NC2074.2
-121700     IF ACCUMULATOR1 EQUAL TO 55                                  NC2074.2
+121700     IF ACCUMULATOR1 EQUAL TO 15                                  NC2074.2
 121800         PERFORM PASS                                             NC2074.2
 121900         GO TO SUB-WRITE-F2-1.                                    NC2074.2
 122000     GO TO SUB-FAIL-F2-1.                                         NC2074.2
@@ -1220,7 +1220,7 @@
 122200     PERFORM DE-LETE.                                             NC2074.2
 122300     GO TO SUB-WRITE-F2-1.                                        NC2074.2
 122400 SUB-FAIL-F2-1.                                                   NC2074.2
-122500     MOVE 55 TO CORRECT-N.                                        NC2074.2
+122500     MOVE 15 TO CORRECT-N.                                        NC2074.2
 122600     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
 122700     PERFORM FAIL.                                                NC2074.2
 122800 SUB-WRITE-F2-1.                                                  NC2074.2
@@ -1360,7 +1360,7 @@
 136200         FROM TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2B OF   NC2074.2
 136300         TABLE-LEVEL-3B IN TABLE-LEVEL-4A OF TABLE-LEVEL-5B       NC2074.2
 136400         GIVING ACCUMULATOR1.                                     NC2074.2
-136500     IF ACCUMULATOR1 EQUAL TO 7                                   NC2074.2
+136500     IF ACCUMULATOR1 EQUAL TO 3                                   NC2074.2
 136600         PERFORM PASS                                             NC2074.2
 136700         GO TO SUB-WRITE-F2-7.                                    NC2074.2
 136800     GO TO SUB-FAIL-F2-7.                                         NC2074.2
@@ -1368,7 +1368,7 @@
 137000     PERFORM DE-LETE.                                             NC2074.2
 137100     GO TO SUB-WRITE-F2-7.                                        NC2074.2
 137200 SUB-FAIL-F2-7.                                                   NC2074.2
-137300     MOVE 7 TO CORRECT-N.                                         NC2074.2
+137300     MOVE 3 TO CORRECT-N.                                         NC2074.2
 137400     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
 137500     PERFORM FAIL.                                                NC2074.2
 137600 SUB-WRITE-F2-7.                                                  NC2074.2
@@ -1456,7 +1456,7 @@
 145800         FROM TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2B OF   NC2074.2
 145900         TABLE-LEVEL-3A IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 146000         GIVING ACCUMULATOR2.                                     NC2074.2
-146100     IF ACCUMULATOR2 EQUAL TO 5                                   NC2074.2
+146100     IF ACCUMULATOR2 EQUAL TO 0                                   NC2074.2
 146200         PERFORM PASS                                             NC2074.2
 146300         GO TO SUB-WRITE-F2-11.                                   NC2074.2
 146400     GO TO SUB-FAIL-F2-11.                                        NC2074.2
@@ -1464,7 +1464,7 @@
 146600     PERFORM DE-LETE.                                             NC2074.2
 146700     GO TO SUB-WRITE-F2-11.                                       NC2074.2
 146800 SUB-FAIL-F2-11.                                                  NC2074.2
-146900     MOVE 5 TO CORRECT-N.                                         NC2074.2
+146900     MOVE 0 TO CORRECT-N.                                         NC2074.2
 147000     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
 147100     PERFORM FAIL.                                                NC2074.2
 147200 SUB-WRITE-F2-11.                                                 NC2074.2
@@ -1924,7 +1924,7 @@
 192600         BY   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 192700         TABLE-LEVEL-3B IN TABLE-LEVEL-4A OF TABLE-LEVEL-5A       NC2074.2
 192800     GIVING ACCUMULATOR1.                                         NC2074.2
-192900     IF ACCUMULATOR1 EQUAL TO 25                                  NC2074.2
+192900     IF ACCUMULATOR1 EQUAL TO 75                                  NC2074.2
 193000         PERFORM PASS                                             NC2074.2
 193100         GO TO MPY-WRITE-F2-5.                                    NC2074.2
 193200     GO TO MPY-FAIL-F2-5.                                         NC2074.2
@@ -1933,7 +1933,7 @@
 193500     GO TO MPY-WRITE-F2-5.                                        NC2074.2
 193600 MPY-FAIL-F2-5.                                                   NC2074.2
 193700     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
-193800     MOVE 25 TO CORRECT-N.                                        NC2074.2
+193800     MOVE 75 TO CORRECT-N.                                        NC2074.2
 193900     PERFORM FAIL.                                                NC2074.2
 194000 MPY-WRITE-F2-5.                                                  NC2074.2
 194100     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -1995,7 +1995,7 @@
 199700     MULTIPLY TBL-ITEM-1 OF TABLE-LEVEL-1B IN TABLE-LEVEL-2B OF   NC2074.2
 199800         TABLE-LEVEL-3B IN TABLE-LEVEL-4A OF TABLE-LEVEL-5A BY 1  NC2074.2
 199900     GIVING ACCUMULATOR1.                                         NC2074.2
-200000     IF ACCUMULATOR1 EQUAL TO 9                                   NC2074.2
+200000     IF ACCUMULATOR1 EQUAL TO 8                                   NC2074.2
 200100         PERFORM PASS                                             NC2074.2
 200200         GO TO MPY-WRITE-F2-8.                                    NC2074.2
 200300     GO TO MPY-FAIL-F2-8.                                         NC2074.2
@@ -2004,7 +2004,7 @@
 200600     GO TO MPY-WRITE-F2-8.                                        NC2074.2
 200700 MPY-FAIL-F2-8.                                                   NC2074.2
 200800     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
-200900     MOVE 9 TO CORRECT-N.                                         NC2074.2
+200900     MOVE 8 TO CORRECT-N.                                         NC2074.2
 201000     PERFORM FAIL.                                                NC2074.2
 201100 MPY-WRITE-F2-8.                                                  NC2074.2
 201200     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -2018,7 +2018,7 @@
 202000     MULTIPLY TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 202100         TABLE-LEVEL-3A IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A BY 1  NC2074.2
 202200     GIVING ACCUMULATOR2.                                         NC2074.2
-202300     IF ACCUMULATOR2 EQUAL TO 5                                   NC2074.2
+202300     IF ACCUMULATOR2 EQUAL TO 9                                   NC2074.2
 202400         PERFORM PASS                                             NC2074.2
 202500         GO TO MPY-WRITE-F2-9.                                    NC2074.2
 202600     GO TO MPY-FAIL-F2-9.                                         NC2074.2
@@ -2027,7 +2027,7 @@
 202900     GO TO MPY-WRITE-F2-9.                                        NC2074.2
 203000 MPY-FAIL-F2-9.                                                   NC2074.2
 203100     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-203200     MOVE 5 TO CORRECT-N.                                         NC2074.2
+203200     MOVE 9 TO CORRECT-N.                                         NC2074.2
 203300     PERFORM FAIL.                                                NC2074.2
 203400 MPY-WRITE-F2-9.                                                  NC2074.2
 203500     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -2162,7 +2162,7 @@
 216400         BY   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2B OF   NC2074.2
 216500         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 216600     GIVING ACCUMULATOR2.                                         NC2074.2
-216700     IF ACCUMULATOR2 EQUAL TO 225                                 NC2074.2
+216700     IF ACCUMULATOR2 EQUAL TO 229                                 NC2074.2
 216800         PERFORM PASS                                             NC2074.2
 216900         GO TO MPY-WRITE-F2-15.                                   NC2074.2
 217000     GO TO MPY-FAIL-F2-15.                                        NC2074.2
@@ -2171,7 +2171,7 @@
 217300     GO TO MPY-WRITE-F2-15.                                       NC2074.2
 217400 MPY-FAIL-F2-15.                                                  NC2074.2
 217500     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-217600     MOVE 225 TO CORRECT-N.                                       NC2074.2
+217600     MOVE 229 TO CORRECT-N.                                       NC2074.2
 217700     PERFORM FAIL.                                                NC2074.2
 217800 MPY-WRITE-F2-15.                                                 NC2074.2
 217900     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -2187,7 +2187,7 @@
 218900         BY   TBL-ITEM-1 OF TABLE-LEVEL-1B IN TABLE-LEVEL-2B OF   NC2074.2
 219000         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A       NC2074.2
 219100     GIVING ACCUMULATOR2.                                         NC2074.2
-219200     IF ACCUMULATOR2 EQUAL TO 276                                 NC2074.2
+219200     IF ACCUMULATOR2 EQUAL TO 256                                 NC2074.2
 219300         PERFORM PASS                                             NC2074.2
 219400         GO TO MPY-WRITE-F2-16.                                   NC2074.2
 219500     GO TO MPY-FAIL-F2-16.                                        NC2074.2
@@ -2196,7 +2196,7 @@
 219800     GO TO MPY-WRITE-F2-16.                                       NC2074.2
 219900 MPY-FAIL-F2-16.                                                  NC2074.2
 220000     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
-220100     MOVE 276 TO CORRECT-N.                                       NC2074.2
+220100     MOVE 256 TO CORRECT-N.                                       NC2074.2
 220200     PERFORM FAIL.                                                NC2074.2
 220300 MPY-WRITE-F2-16.                                                 NC2074.2
 220400     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -2262,7 +2262,7 @@
 226400         BY   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 226500         TABLE-LEVEL-3A IN TABLE-LEVEL-4A OF TABLE-LEVEL-5A       NC2074.2
 226600     GIVING ACCUMULATOR1.                                         NC2074.2
-226700     IF ACCUMULATOR1 EQUAL TO 1                                   NC2074.2
+226700     IF ACCUMULATOR1 EQUAL TO 0                                   NC2074.2
 226800         PERFORM PASS                                             NC2074.2
 226900         GO TO DIV-WRITE-F3-1.                                    NC2074.2
 227000     GO TO DIV-FAIL-F3-1.                                         NC2074.2
@@ -2271,7 +2271,7 @@
 227300     GO TO DIV-WRITE-F3-1.                                        NC2074.2
 227400 DIV-FAIL-F3-1.                                                   NC2074.2
 227500     MOVE ACCUMULATOR1 TO COMPUTED-N.                             NC2074.2
-227600     MOVE 1 TO CORRECT-N.                                         NC2074.2
+227600     MOVE 0 TO CORRECT-N.                                         NC2074.2
 227700     PERFORM FAIL.                                                NC2074.2
 227800 DIV-WRITE-F3-1.                                                  NC2074.2
 227900     PERFORM PRINT-DETAIL.                                        NC2074.2
@@ -2548,7 +2548,7 @@
 255000     DIVIDE   TBL-ITEM-1 OF TABLE-LEVEL-1A IN TABLE-LEVEL-2A OF   NC2074.2
 255100         TABLE-LEVEL-3B IN TABLE-LEVEL-4B OF TABLE-LEVEL-5A BY 13 NC2074.2
 255200     GIVING ACCUMULATOR2.                                         NC2074.2
-255300     IF ACCUMULATOR2 EQUAL TO 1                                   NC2074.2
+255300     IF ACCUMULATOR2 EQUAL TO 3                                   NC2074.2
 255400         PERFORM PASS                                             NC2074.2
 255500         GO TO DIV-WRITE-F3-13.                                   NC2074.2
 255600     GO TO DIV-FAIL-F3-13.                                        NC2074.2
@@ -2556,7 +2556,7 @@
 255800     PERFORM DE-LETE.                                             NC2074.2
 255900     GO TO DIV-WRITE-F3-13.                                       NC2074.2
 256000 DIV-FAIL-F3-13.                                                  NC2074.2
-256100     MOVE 1 TO CORRECT-N.                                         NC2074.2
+256100     MOVE 3 TO CORRECT-N.                                         NC2074.2
 256200     MOVE ACCUMULATOR2 TO COMPUTED-N.                             NC2074.2
 256300     PERFORM FAIL.                                                NC2074.2
 256400 DIV-WRITE-F3-13.                                                 NC2074.2

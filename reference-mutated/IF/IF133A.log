@@ -20,19 +20,19 @@ TEST RESULT OF IF133A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  REM Function         PASS  F-REM-02                                                                                    
  REM Function         PASS  F-REM-03                                                                                    
- REM Function         PASS  F-REM-04                                                                                    
+ REM Function         FAIL* F-REM-04                                                                                    
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000000.000000000  See ref. A-66 2.37                                 
+                                                                                                                        
  REM Function         PASS  F-REM-05                                                                                    
- REM Function         FAIL* F-REM-06                                                                                    
+ REM Function         PASS  F-REM-06                                                                                    
+ REM Function         FAIL* F-REM-07                                                                                    
                                                                                                                         
-                                     COMPUTED= -000000001.000000000                                                     
-                                     CORRECT = -000000004.000000000  See ref. A-66 2.37                                 
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000008.000000000  See ref. A-66 2.37                                 
                                                                                                                         
- REM Function         PASS  F-REM-07                                                                                    
- REM Function         FAIL* F-REM-08                                                                                    
-                                                                                                                        
-                                     COMPUTED= -000000001.000000000                                                     
-                                     CORRECT = -000000004.000000000  See ref. A-66 2.37                                 
-                                                                                                                        
+ REM Function         PASS  F-REM-08                                                                                    
  REM Function         PASS  F-REM-09                                                                                    
  REM Function         PASS  F-REM-10                                                                                    
  REM Function         PASS  F-REM-11                                                                                    

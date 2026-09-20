@@ -597,7 +597,7 @@
 059900 ADD-TEST-F1-5.                                                   NC1764.2
 060000     MOVE     A18TWOS-DS-18V00 TO WRK-DS-18V00.                   NC1764.2
 060100     ADD      A18ONES-DS-18V00 TO WRK-DS-18V00.                   NC1764.2
-060200     IF       WRK-DS-18V00 EQUAL TO 343333333333333333            NC1764.2
+060200     IF       WRK-DS-18V00 EQUAL TO 333333333333333333            NC1764.2
 060300              PERFORM PASS GO TO ADD-WRITE-F1-5.                  NC1764.2
 060400     GO       TO ADD-FAIL-F1-5.                                   NC1764.2
 060500 ADD-DELETE-F1-5.                                                 NC1764.2
@@ -605,7 +605,7 @@
 060700     GO       TO ADD-WRITE-F1-5.                                  NC1764.2
 060800 ADD-FAIL-F1-5.                                                   NC1764.2
 060900     MOVE     WRK-DS-18V00 TO COMPUTED-18V0.                      NC1764.2
-061000     MOVE     343333333333333333   TO CORRECT-18V0.               NC1764.2
+061000     MOVE     333333333333333333   TO CORRECT-18V0.               NC1764.2
 061100     PERFORM  FAIL.                                               NC1764.2
 061200 ADD-WRITE-F1-5.                                                  NC1764.2
 061300     MOVE     "ADD-TEST-F1-5" TO PAR-NAME.                        NC1764.2
@@ -679,7 +679,7 @@
 068100     MOVE     "ADD-TEST-F1-9-1" TO PAR-NAME.                      NC1764.2
 068200     PERFORM  PRINT-DETAIL.                                       NC1764.2
 068300 ADD-TEST-F1-9-2.                                                 NC1764.2
-068400     IF       WRK-DS-02V00 EQUAL TO -12                           NC1764.2
+068400     IF       WRK-DS-02V00 EQUAL TO -11                           NC1764.2
 068500              PERFORM PASS GO TO ADD-WRITE-F1-9-2.                NC1764.2
 068600*    THIS TEST DEPENDS ON THE RESULTS OF TEST-F1-9-1 ABOVE.       NC1764.2
 068700     GO       TO ADD-FAIL-F1-9-2.                                 NC1764.2
@@ -689,7 +689,7 @@
 069100 ADD-FAIL-F1-9-2.                                                 NC1764.2
 069200     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1764.2
 069300     MOVE     WRK-DS-02V00 TO COMPUTED-N.                         NC1764.2
-069400     MOVE     -12 TO CORRECT-N.                                   NC1764.2
+069400     MOVE     -11 TO CORRECT-N.                                   NC1764.2
 069500     PERFORM  FAIL.                                               NC1764.2
 069600 ADD-WRITE-F1-9-2.                                                NC1764.2
 069700     MOVE     "ADD-TEST-F1-9-2" TO PAR-NAME.                      NC1764.2
@@ -783,7 +783,7 @@
 078500 ADD-TEST-F1-13.                                                  NC1764.2
 078600     MOVE     A18ONES-DS-18V00 TO WRK-DS-18V00.                   NC1764.2
 078700     ADD      A18ONES-CS-18V00 TO WRK-DS-18V00.                   NC1764.2
-078800     IF       WRK-DS-18V00 EQUAL TO 222222222222222222            NC1764.2
+078800     IF       WRK-DS-18V00 EQUAL TO 222222222222222422            NC1764.2
 078900              PERFORM PASS GO TO ADD-WRITE-F1-13.                 NC1764.2
 079000     GO       TO ADD-FAIL-F1-13.                                  NC1764.2
 079100 ADD-DELETE-F1-13.                                                NC1764.2
@@ -791,7 +791,7 @@
 079300     GO       TO ADD-WRITE-F1-13.                                 NC1764.2
 079400 ADD-FAIL-F1-13.                                                  NC1764.2
 079500     MOVE     WRK-DS-18V00 TO COMPUTED-18V0.                      NC1764.2
-079600     MOVE     222222222222222222 TO CORRECT-18V0.                 NC1764.2
+079600     MOVE     222222222222222422 TO CORRECT-18V0.                 NC1764.2
 079700     PERFORM  FAIL.                                               NC1764.2
 079800 ADD-WRITE-F1-13.                                                 NC1764.2
 079900     MOVE     "ADD-TEST-F1-13" TO PAR-NAME.                       NC1764.2
@@ -860,10 +860,10 @@
 086200 ADD-TEST-F1-17.                                                  NC1764.2
 086300     MOVE A12SEVENS-CU-18V00 TO WRK-CS-18V00.                     NC1764.2
 086400     ADD A18SIXES-CS-18V00 TO WRK-CS-18V00.                       NC1764.2
-086500     IF WRK-CS-18V00 EQUAL TO +666667444444442443                 NC1764.2
+086500     IF WRK-CS-18V00 EQUAL TO +666667444444444443                 NC1764.2
 086600         PERFORM PASS                                             NC1764.2
 086700         GO TO ADD-WRITE-F1-17.                                   NC1764.2
-086800     MOVE +666667444444442443 TO CORRECT-18V0.                    NC1764.2
+086800     MOVE +666667444444444443 TO CORRECT-18V0.                    NC1764.2
 086900     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1764.2
 087000     PERFORM FAIL.                                                NC1764.2
 087100     GO TO ADD-WRITE-F1-17.                                       NC1764.2
@@ -1156,10 +1156,10 @@
 115800     MOVE "ADD-TEST-F1-27 " TO PAR-NAME.                          NC1764.2
 115900     PERFORM PRINT-DETAIL.                                        NC1764.2
 116000 ADD-TEST-F1-28.                                                  NC1764.2
-116100     IF DNAME25 EQUAL TO 21                                       NC1764.2
+116100     IF DNAME25 EQUAL TO 22                                       NC1764.2
 116200         PERFORM PASS                                             NC1764.2
 116300         GO TO ADD-WRITE-F1-28.                                   NC1764.2
-116400     MOVE 21 TO CORRECT-18V0.                                     NC1764.2
+116400     MOVE 22 TO CORRECT-18V0.                                     NC1764.2
 116500     MOVE DNAME25 TO COMPUTED-18V0.                               NC1764.2
 116600     PERFORM FAIL.                                                NC1764.2
 116700     GO TO ADD-WRITE-F1-28.                                       NC1764.2
@@ -1325,10 +1325,10 @@
 132700     MOVE "ADD-TEST-F1-40 " TO PAR-NAME.                          NC1764.2
 132800     PERFORM PRINT-DETAIL.                                        NC1764.2
 132900 ADD-TEST-F1-41.                                                  NC1764.2
-133000     IF DNAME38 EQUAL TO 21                                       NC1764.2
+133000     IF DNAME38 EQUAL TO 91                                       NC1764.2
 133100         PERFORM PASS                                             NC1764.2
 133200         GO TO ADD-WRITE-F1-41.                                   NC1764.2
-133300     MOVE 21 TO CORRECT-18V0.                                     NC1764.2
+133300     MOVE 91 TO CORRECT-18V0.                                     NC1764.2
 133400     MOVE DNAME38 TO COMPUTED-18V0.                               NC1764.2
 133500     PERFORM FAIL.                                                NC1764.2
 133600     GO TO ADD-WRITE-F1-41.                                       NC1764.2
@@ -1338,10 +1338,10 @@
 134000     MOVE "ADD-TEST-F1-41 " TO PAR-NAME.                          NC1764.2
 134100     PERFORM PRINT-DETAIL.                                        NC1764.2
 134200 ADD-TEST-F1-42.                                                  NC1764.2
-134300     IF DNAME39 EQUAL TO 27                                       NC1764.2
+134300     IF DNAME39 EQUAL TO 21                                       NC1764.2
 134400         PERFORM PASS                                             NC1764.2
 134500         GO TO ADD-WRITE-F1-42.                                   NC1764.2
-134600     MOVE 27 TO CORRECT-18V0.                                     NC1764.2
+134600     MOVE 21 TO CORRECT-18V0.                                     NC1764.2
 134700     MOVE DNAME39 TO COMPUTED-18V0.                               NC1764.2
 134800     PERFORM FAIL.                                                NC1764.2
 134900     GO TO ADD-WRITE-F1-42.                                       NC1764.2
@@ -1351,10 +1351,10 @@
 135300     MOVE "ADD-TEST-F1-42 " TO PAR-NAME.                          NC1764.2
 135400     PERFORM PRINT-DETAIL.                                        NC1764.2
 135500 ADD-TEST-F1-43.                                                  NC1764.2
-135600     IF DNAME40 EQUAL TO 21                                       NC1764.2
+135600     IF DNAME40 EQUAL TO 23                                       NC1764.2
 135700         PERFORM PASS                                             NC1764.2
 135800         GO TO ADD-WRITE-F1-43.                                   NC1764.2
-135900     MOVE 21 TO CORRECT-18V0.                                     NC1764.2
+135900     MOVE 23 TO CORRECT-18V0.                                     NC1764.2
 136000     MOVE DNAME40 TO COMPUTED-18V0.                               NC1764.2
 136100     PERFORM FAIL.                                                NC1764.2
 136200     GO TO ADD-WRITE-F1-43.                                       NC1764.2

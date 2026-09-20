@@ -16,24 +16,24 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        PASS  SEG-TEST-1                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-2                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-3                                                                                  
- SEGMENT-LIMIT        PASS  SEG-TEST-4                                                                                  
- SEGMENT-LIMIT        PASS  SEG-TEST-5                                                                                  
- SEGMENT-LIMIT        FAIL* SEG-TEST-6                                                                                  
+ SEGMENT-LIMIT        FAIL* SEG-TEST-4                                                                                  
                                                                                                                         
                                      COMPUTED= GOOD                                                                     
-                                     CORRECT = GOSD                                                                     
+                                     CORRECT = EOOD                                                                     
                                                                                                                         
+ SEGMENT-LIMIT        PASS  SEG-TEST-5                                                                                  
+ SEGMENT-LIMIT        PASS  SEG-TEST-6                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-7                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-8                                                                                  
- SEGMENT-LIMIT        FAIL* SEG-TEST-9                                                                                  
-                                                                                                                        
-                                     COMPUTED= GOOD                                                                     
-                                     CORRECT = GOOT                                                                     
-                                                                                                                        
+ SEGMENT-LIMIT        PASS  SEG-TEST-9                                                                                  
  SEGMENT-LIMIT        PASS  SEG-TEST-10                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-11                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-12                                                                                 
- SEGMENT-LIMIT        PASS  SEG-TEST-13                                                                                 
+ SEGMENT-LIMIT        FAIL* SEG-TEST-13                                                                                 
+                                                                                                                        
+                                     COMPUTED= GOOD                                                                     
+                                     CORRECT = GOWD                                                                     
+                                                                                                                        
  SEGMENT-LIMIT        PASS  SEG-TEST-14                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-15                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-16                                                                                 
@@ -42,7 +42,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG201A
  SEGMENT-LIMIT        FAIL* SEG-TEST-19                                                                                 
                                                                                                                         
                                      COMPUTED= GOOD                                                                     
-                                     CORRECT = GO1D                                                                     
+                                     CORRECT = GIOD                                                                     
                                                                                                                         
  SEGMENT-LIMIT        PASS  SEG-TEST-20                                                                                 
  SEGMENT-LIMIT        PASS  SEG-TEST-21                                                                                 

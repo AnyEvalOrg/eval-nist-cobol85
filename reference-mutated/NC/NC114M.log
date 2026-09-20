@@ -16,19 +16,19 @@ TEST RESULT OF NC114M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  B AS EDIT CHARACTER  FAIL* ALPHA-ED-TEST-4                                                                             
                                                                                                                         
                                      COMPUTED= D E                                                                      
-                                     CORRECT = DSE                                                                      
+                                     CORRECT = W E                                                                      
                                                                                                                         
  / AS EDIT CHARACTER  FAIL* ALPHA-ED-TEST-5                                                                             
                                                                                                                         
                                      COMPUTED= A/BC                                                                     
-                                     CORRECT = A/BZ                                                                     
+                                     CORRECT = A/BK                                                                     
                                                                                                                         
- / AS EDIT CHARACTER  PASS  NUM-EDIT-TEST-6                                                                             
- STRIP MINUS SIGN     FAIL* MOVE-TEST-16                                                                                
+ / AS EDIT CHARACTER  FAIL* NUM-EDIT-TEST-6                                                                             
                                                                                                                         
-                                     COMPUTED= 100000000000000000                                                       
-                                     CORRECT = 10000V000000000000                                                       
+                                     COMPUTED= 1/23                                                                     
+                                     CORRECT = 1V23                                                                     
                                                                                                                         
+ STRIP MINUS SIGN     PASS  MOVE-TEST-16                                                                                
  / AND B EDITS        PASS  MOVE-TEST-17                                                                                
  ***********************************************************************************************************************
                                                                                                                         

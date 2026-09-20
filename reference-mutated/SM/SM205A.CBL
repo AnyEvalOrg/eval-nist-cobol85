@@ -425,7 +425,7 @@
 043200     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 043300 COPY-TEST-2.                                                     SM2054.2
 043400     PERFORM  RET-1.                                              SM2054.2
-043500     IF       RDF-KEYS EQUAL TO 009002000900008                   SM2054.2
+043500     IF       RDF-KEYS EQUAL TO 009000600900008                   SM2054.2
 043600              PERFORM PASS-1 GO TO COPY-WRITE-2.                  SM2054.2
 043700     GO       TO COPY-FAIL-1-2.                                   SM2054.2
 043800 COPY-DELETE-2.                                                   SM2054.2
@@ -433,14 +433,14 @@
 044000     GO       TO COPY-WRITE-2.                                    SM2054.2
 044100 COPY-FAIL-1-2.                                                   SM2054.2
 044200     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-044300     MOVE     009002000900008 TO CORRECT-18V0.                    SM2054.2
+044300     MOVE     009000600900008 TO CORRECT-18V0.                    SM2054.2
 044400     PERFORM  FAIL-1.                                             SM2054.2
 044500 COPY-WRITE-2.                                                    SM2054.2
 044600     MOVE     "COPY-TEST-2 " TO PAR-NAME.                         SM2054.2
 044700     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 044800 COPY-TEST-3.                                                     SM2054.2
 044900     PERFORM  RET-1.                                              SM2054.2
-045000     IF       RDF-KEYS EQUAL TO 006001000200002                   SM2054.2
+045000     IF       RDF-KEYS EQUAL TO 106001000200002                   SM2054.2
 045100              PERFORM PASS-1 GO TO COPY-WRITE-3.                  SM2054.2
 045200     GO       TO COPY-FAIL-1-3.                                   SM2054.2
 045300 COPY-DELETE-3.                                                   SM2054.2
@@ -448,7 +448,7 @@
 045500     GO       TO COPY-WRITE-3.                                    SM2054.2
 045600 COPY-FAIL-1-3.                                                   SM2054.2
 045700     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-045800     MOVE     006001000200002 TO CORRECT-18V0.                    SM2054.2
+045800     MOVE     106001000200002 TO CORRECT-18V0.                    SM2054.2
 045900     PERFORM  FAIL-1.                                             SM2054.2
 046000 COPY-WRITE-3.                                                    SM2054.2
 046100     MOVE     "COPY-TEST-3 " TO PAR-NAME.                         SM2054.2
@@ -471,7 +471,7 @@
 047800     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 047900 COPY-TEST-5.                                                     SM2054.2
 048000     PERFORM  RET-2 40 TIMES.                                     SM2054.2
-048100     IF       RDF-KEYS EQUAL TO 201001000200702                   SM2054.2
+048100     IF       RDF-KEYS EQUAL TO 201001000400002                   SM2054.2
 048200              PERFORM PASS-1 GO TO COPY-WRITE-5.                  SM2054.2
 048300     GO       TO COPY-FAIL-1-5.                                   SM2054.2
 048400 COPY-DELETE-5.                                                   SM2054.2
@@ -479,14 +479,14 @@
 048600     GO       TO COPY-WRITE-5.                                    SM2054.2
 048700 COPY-FAIL-1-5.                                                   SM2054.2
 048800     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-048900     MOVE     201001000200702 TO CORRECT-18V0.                    SM2054.2
+048900     MOVE     201001000400002 TO CORRECT-18V0.                    SM2054.2
 049000     PERFORM  FAIL-1.                                             SM2054.2
 049100 COPY-WRITE-5.                                                    SM2054.2
 049200     MOVE     "COPY-TEST-5 " TO PAR-NAME.                         SM2054.2
 049300     PERFORM  PRINT-DETAIL-1.                                     SM2054.2
 049400 COPY-TEST-6.                                                     SM2054.2
 049500     PERFORM  RET-2  7 TIMES.                                     SM2054.2
-049600     IF       RDF-KEYS EQUAL TO 201002000100001                   SM2054.2
+049600     IF       RDF-KEYS EQUAL TO 211002000100001                   SM2054.2
 049700              PERFORM PASS-1 GO TO COPY-WRITE-6.                  SM2054.2
 049800     GO       TO COPY-FAIL-1-6.                                   SM2054.2
 049900 COPY-DELETE-6.                                                   SM2054.2
@@ -494,7 +494,7 @@
 050100     GO       TO COPY-WRITE-6.                                    SM2054.2
 050200 COPY-FAIL-1-6.                                                   SM2054.2
 050300     MOVE     RDF-KEYS TO COMPUTED-18V0.                          SM2054.2
-050400     MOVE     201002000100001 TO CORRECT-18V0.                    SM2054.2
+050400     MOVE     211002000100001 TO CORRECT-18V0.                    SM2054.2
 050500     PERFORM  FAIL-1.                                             SM2054.2
 050600 COPY-WRITE-6.                                                    SM2054.2
 050700     MOVE     "COPY-TEST-6 " TO PAR-NAME.                         SM2054.2

@@ -16,17 +16,17 @@ TEST RESULT OF NC244A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  RELATIVE INDEXING    FAIL* IDX-TEST-F1-1                                                                               
                                                                                                                         
                                      COMPUTED= JJ                                                                       
-                                     CORRECT = 4J                    VI-126 6.22.2                                      
+                                     CORRECT = JP                    VI-126 6.22.2                                      
                                                                                                                         
  SET DN BY COMP ITEM  FAIL* IDX-TEST-F2-2                                                                               
                                                                                                                         
                                      COMPUTED=  000000029.000000000                                                     
-                                     CORRECT =  000000049.000000000  VI-126 6.22.2                                      
+                                     CORRECT =  000000079.000000000  VI-126 6.22.2                                      
                                                                                                                         
  SET UP BY COMP ITEM  FAIL* IDX-TEST-F2-3                                                                               
                                                                                                                         
                                      COMPUTED=  000000012.000000000                                                     
-                                     CORRECT =  000000072.000000000  VI-126 6.22.2                                      
+                                     CORRECT =  000000062.000000000  VI-126 6.22.2                                      
                                                                                                                         
  MULT OPERND SET STMT PASS  IDX-TEST-F2-4                                                                               
  PFM VARYNG COMP ITEM PASS  IDX-TEST-F2-5                                                                               

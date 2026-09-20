@@ -334,11 +334,11 @@
 033600     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 033700     PERFORM 32.                                                  SG2014.2
 033800     PERFORM 32.                                                  SG2014.2
-033900     IF TEST-CHECK EQUAL TO "GOOD"                                SG2014.2
+033900     IF TEST-CHECK EQUAL TO "EOOD"                                SG2014.2
 034000         PERFORM PASS                                             SG2014.2
 034100         GO TO SEG-WRITE-4.                                       SG2014.2
 034200     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-034300     MOVE "GOOD" TO CORRECT-A.                                    SG2014.2
+034300     MOVE "EOOD" TO CORRECT-A.                                    SG2014.2
 034400     PERFORM FAIL.                                                SG2014.2
 034500     GO TO SEG-WRITE-4.                                           SG2014.2
 034600 SEG-DELETE-4.                                                    SG2014.2
@@ -366,11 +366,11 @@
 036800     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 036900     PERFORM 34.                                                  SG2014.2
 037000     PERFORM 34.                                                  SG2014.2
-037100     IF TEST-CHECK EQUAL TO "GOSD"                                SG2014.2
+037100     IF TEST-CHECK EQUAL TO "GOOD"                                SG2014.2
 037200         PERFORM PASS                                             SG2014.2
 037300         GO TO SEG-WRITE-6.                                       SG2014.2
 037400     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-037500     MOVE "GOSD" TO CORRECT-A.                                    SG2014.2
+037500     MOVE "GOOD" TO CORRECT-A.                                    SG2014.2
 037600     PERFORM FAIL.                                                SG2014.2
 037700     GO TO SEG-WRITE-6.                                           SG2014.2
 037800 SEG-DELETE-6.                                                    SG2014.2
@@ -414,11 +414,11 @@
 041600     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 041700     PERFORM 37.                                                  SG2014.2
 041800     PERFORM 37.                                                  SG2014.2
-041900     IF TEST-CHECK EQUAL TO "GOOT"                                SG2014.2
+041900     IF TEST-CHECK EQUAL TO "GOOD"                                SG2014.2
 042000         PERFORM PASS                                             SG2014.2
 042100         GO TO SEG-WRITE-9.                                       SG2014.2
 042200     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-042300     MOVE "GOOT" TO CORRECT-A.                                    SG2014.2
+042300     MOVE "GOOD" TO CORRECT-A.                                    SG2014.2
 042400     PERFORM FAIL.                                                SG2014.2
 042500     GO TO SEG-WRITE-9.                                           SG2014.2
 042600 SEG-DELETE-9.                                                    SG2014.2
@@ -478,11 +478,11 @@
 048000     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 048100     PERFORM 41.                                                  SG2014.2
 048200     PERFORM 41.                                                  SG2014.2
-048300     IF TEST-CHECK EQUAL TO "GOOD"                                SG2014.2
+048300     IF TEST-CHECK EQUAL TO "GOWD"                                SG2014.2
 048400         PERFORM PASS                                             SG2014.2
 048500         GO TO SEG-WRITE-13.                                      SG2014.2
 048600     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-048700     MOVE "GOOD" TO CORRECT-A.                                    SG2014.2
+048700     MOVE "GOWD" TO CORRECT-A.                                    SG2014.2
 048800     PERFORM FAIL.                                                SG2014.2
 048900     GO TO SEG-WRITE-13.                                          SG2014.2
 049000 SEG-DELETE-13.                                                   SG2014.2
@@ -574,11 +574,11 @@
 057600     MOVE SPACE TO TEST-CHECK.                                    SG2014.2
 057700     PERFORM 47.                                                  SG2014.2
 057800     PERFORM 47.                                                  SG2014.2
-057900     IF TEST-CHECK EQUAL TO "GO1D"                                SG2014.2
+057900     IF TEST-CHECK EQUAL TO "GIOD"                                SG2014.2
 058000         PERFORM PASS                                             SG2014.2
 058100         GO TO SEG-WRITE-19.                                      SG2014.2
 058200     MOVE TEST-CHECK TO COMPUTED-A.                               SG2014.2
-058300     MOVE "GO1D" TO CORRECT-A.                                    SG2014.2
+058300     MOVE "GIOD" TO CORRECT-A.                                    SG2014.2
 058400     PERFORM FAIL.                                                SG2014.2
 058500     GO TO SEG-WRITE-19.                                          SG2014.2
 058600 SEG-DELETE-19.                                                   SG2014.2

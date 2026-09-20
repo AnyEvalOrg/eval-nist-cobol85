@@ -540,7 +540,7 @@
 054200     MOVE   99  TO  ADD-CORR-9 OF GRP-FOR-ADD-CORR-1.             NC2024.2
 054300 ADD-TEST-F3-1.                                                   NC2024.2
 054400     ADD CORRESPONDING GRP-FOR-ADD-CORR-1 TO GRP-FOR-ADD-CORR-R.  NC2024.2
-054500     IF GRP-FOR-ADD-CORR-R EQUAL TO "112B3344506677889900"        NC2024.2
+054500     IF GRP-FOR-ADD-CORR-R EQUAL TO "31223344506677889900"        NC2024.2
 054600         PERFORM PASS                                             NC2024.2
 054700         GO TO ADD-WRITE-F3-1.                                    NC2024.2
 054800     GO TO ADD-FAIL-F3-1.                                         NC2024.2
@@ -549,7 +549,7 @@
 055100     GO TO ADD-WRITE-F3-1.                                        NC2024.2
 055200 ADD-FAIL-F3-1.                                                   NC2024.2
 055300     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2024.2
-055400     MOVE "112B3344506677889900" TO CORRECT-A.                    NC2024.2
+055400     MOVE "31223344506677889900" TO CORRECT-A.                    NC2024.2
 055500     PERFORM FAIL.                                                NC2024.2
 055600 ADD-WRITE-F3-1.                                                  NC2024.2
 055700     PERFORM PRINT-DETAIL.                                        NC2024.2
@@ -596,7 +596,7 @@
 059800 ADD-TEST-F3-3-1.                                                 NC2024.2
 059900     ADD CORRESPONDING GRP-SUBTRACT-CORR-3 TO GRP-FOR-ADD-CORR-R  NC2024.2
 060000         ON SIZE ERROR MOVE "1" TO WRK-XN-00001.                  NC2024.2
-060100     IF GRP-FOR-ADD-CORR-R EQUAL TO "F0223344000000000000"        NC2024.2
+060100     IF GRP-FOR-ADD-CORR-R EQUAL TO "00223344000000000000"        NC2024.2
 060200                   PERFORM PASS                                   NC2024.2
 060300                   GO TO ADD-WRITE-F3-3-1.                        NC2024.2
 060400     GO TO ADD-FAIL-F3-3-1.                                       NC2024.2
@@ -604,7 +604,7 @@
 060600     PERFORM DE-LETE.                                             NC2024.2
 060700     GO TO ADD-WRITE-F3-3-1.                                      NC2024.2
 060800 ADD-FAIL-F3-3-1.                                                 NC2024.2
-060900     MOVE "F0223344000000000000" TO CORRECT-A.                    NC2024.2
+060900     MOVE "00223344000000000000" TO CORRECT-A.                    NC2024.2
 061000     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2024.2
 061100     PERFORM FAIL.                                                NC2024.2
 061200 ADD-WRITE-F3-3-1.                                                NC2024.2
@@ -636,7 +636,7 @@
 063800 ADD-TEST-F3-4.                                                   NC2024.2
 063900     ADD CORRESPONDING GRP-SUBTRACT-CORR-1 OF GRP-SUBTRACT-CORR-3 NC2024.2
 064000             TO GRP-SUBTRACT-CORR-1 OF GRP-FOR-ADD-CORR-R.        NC2024.2
-064100     IF GRP-FOR-ADD-CORR-R EQUAL TO "00223344008000000000"        NC2024.2
+064100     IF GRP-FOR-ADD-CORR-R EQUAL TO "0022334400000N000000"        NC2024.2
 064200                  PERFORM PASS                                    NC2024.2
 064300                  GO TO ADD-WRITE-F3-4.                           NC2024.2
 064400     GO TO ADD-FAIL-F3-4.                                         NC2024.2
@@ -644,7 +644,7 @@
 064600     PERFORM DE-LETE.                                             NC2024.2
 064700     GO TO ADD-WRITE-F3-4.                                        NC2024.2
 064800 ADD-FAIL-F3-4.                                                   NC2024.2
-064900     MOVE "00223344008000000000" TO CORRECT-A.                    NC2024.2
+064900     MOVE "0022334400000N000000" TO CORRECT-A.                    NC2024.2
 065000     MOVE GRP-FOR-ADD-CORR-R TO COMPUTED-A.                       NC2024.2
 065100     PERFORM FAIL.                                                NC2024.2
 065200 ADD-WRITE-F3-4.                                                  NC2024.2
@@ -886,7 +886,7 @@
 088800     MOVE   "VI-74 6.6.4 GR3" TO ANSI-REFERENCE.                  NC2024.2
 088900     MOVE "ADD-TEST-F3-8-2" TO PAR-NAME.                          NC2024.2
 089000 ADD-TEST-F3-8-2.                                                 NC2024.2
-089100     IF CORR-DATA-2 EQUAL TO "999999999999"                       NC2024.2
+089100     IF CORR-DATA-2 EQUAL TO "9W9999999999"                       NC2024.2
 089200                 PERFORM PASS                                     NC2024.2
 089300                 GO TO ADD-WRITE-F3-8-2.                          NC2024.2
 089400     GO TO ADD-FAIL-F3-8-2.                                       NC2024.2
@@ -896,7 +896,7 @@
 089800 ADD-FAIL-F3-8-2.                                                 NC2024.2
 089900     PERFORM FAIL.                                                NC2024.2
 090000     MOVE CORR-DATA-2 TO COMPUTED-A.                              NC2024.2
-090100     MOVE "999999999999" TO CORRECT-A.                            NC2024.2
+090100     MOVE "9W9999999999" TO CORRECT-A.                            NC2024.2
 090200     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC2024.2
 090300 ADD-WRITE-F3-8-2.                                                NC2024.2
 090400     PERFORM PRINT-DETAIL.                                        NC2024.2

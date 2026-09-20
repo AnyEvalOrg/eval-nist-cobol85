@@ -23,7 +23,11 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-8                                                                              
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-9                                                                              
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-10                                                                             
- MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-11                                                                             
+ MOVE NUMERIC INTEGER FAIL* MOVE-TEST-F1-11                                                                             
+                                                                                                                        
+                                     COMPUTED=     $045                                                                 
+                                     CORRECT =  0  $045              V1-102 6.18.2                                      
+                                                                                                                        
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-12                                                                             
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-13                                                                             
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-14                                                                             
@@ -32,15 +36,11 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-17                                                                             
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-18                                                                             
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-19                                                                             
- MOVE NUMERIC INTEGER FAIL* MOVE-TEST-F1-20                                                                             
-                                                                                                                        
-                                     COMPUTED= 12345                                                                    
-                                     CORRECT = 12045                 V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-20                                                                             
  MOVE NUMERIC INTEGER PASS  MOVE-TEST-F1-21                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-22                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-23                                                                             
- MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-24                                                                                                                                                                                                     
+ MOVE NUM NON-INTEGER FAIL* MOVE-TEST-F1-24                                                                                                                                                                                                     
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,24 +54,20 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                                                                                                        
+                                     COMPUTED=  000000023.000000000                                                     
+                                     CORRECT =  000000043.000000000  V1-102 6.18.2                                      
+                                                                                                                        
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-25                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-26                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-27                                                                             
- MOVE NUM NON-INTEGER FAIL* MOVE-TEST-F1-28                                                                             
-                                                                                                                        
-                                     COMPUTED= $00,123.45                                                               
-                                     CORRECT = $00,1E3.45            V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-28                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-29                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-30                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-31                                                                             
  MOVE NUM NON-INTEGER PASS  MOVE-TEST-F1-32                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-33                                                                             
- MOVE ALPHANUMERIC    FAIL* MOVE-TEST-F1-34                                                                             
-                                                                                                                        
-                                     COMPUTED=  000012345.000000000                                                     
-                                     CORRECT =  000032345.000000000  V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-34                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-35                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-36                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-37                                                                             
@@ -82,13 +78,13 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-42                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-43                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-44                                                                             
- MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-45                                                                             
+ MOVE ALPHANUMERIC    FAIL* MOVE-TEST-F1-45                                                                             
+                                                                                                                        
+                                     COMPUTED= ABC                                                                      
+                                     CORRECT = TBC                   V1-102 6.18.2                                      
+                                                                                                                        
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-46                                                                             
- MOVE ALPHANUMERIC    FAIL* MOVE-TEST-F1-47                                                                             
-                                                                                                                        
-                                     COMPUTED= 1 A0                                                                     
-                                     CORRECT = 1 A8                  V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-47                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-48                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-49                                                                             
  MOVE ALPHANUMERIC    PASS  MOVE-TEST-F1-50                                                                             
@@ -96,7 +92,11 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE ALPHABETIC      PASS  MOVE-TEST-F1-52                                                                             
  MOVE ALPHABETIC      PASS  MOVE-TEST-F1-53                                                                             
  MOVE ALPHABETIC      PASS  MOVE-TEST-F1-54                                                                             
- MOVE ALPHABETIC      PASS  MOVE-TEST-F1-55                                                                                                                                                                                                     
+ MOVE ALPHABETIC      PASS  MOVE-TEST-F1-55                                                                             
+ MOVE ALPHABETIC      PASS  MOVE-TEST-F1-56                                                                             
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-1                                                                           
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-2                                                                           
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-3                                                                                                                                                                                                   
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,14 +110,6 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- MOVE ALPHABETIC      PASS  MOVE-TEST-F1-56                                                                             
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-57-1                                                                           
-                                                                                                                        
-                                     COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000009   V1-102 6.18.2                                      
-                                                                                                                        
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-2                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-3                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-4                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-5                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-6                                                                           
@@ -127,18 +119,26 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-10                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-11                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-12                                                                          
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-13                                                                          
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-57-14                                                                          
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-57-13                                                                          
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
                                      CORRECT =  000000000000000005   V1-102 6.18.2                                      
                                                                                                                         
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-14                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-15                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-16                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-17                                                                          
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-18                                                                          
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-57-18                                                                          
+                                                                                                                        
+                                     COMPUTED=  000000000000000001                                                      
+                                     CORRECT =  000000000000000006   V1-102 6.18.2                                      
+                                                                                                                        
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-19                                                                          
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-20                                                                          
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-57-20                                                                          
+                                                                                                                        
+                                     COMPUTED=  000000000000000001                                                      
+                                     CORRECT =  000000000000000000   V1-102 6.18.2                                      
+                                                                                                                        
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-21                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-57-22                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-58-1                                                                           
@@ -175,40 +175,40 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-58-19                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-58-20                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-58-21                                                                          
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-1                                                                           
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = 6                     V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-1                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-2                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-3                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-4                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-5                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-6                                                                           
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-7                                                                           
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-3                                                                           
                                                                                                                         
                                      COMPUTED= A                                                                        
-                                     CORRECT = U                     V1-102 6.18.2                                      
+                                     CORRECT = S                     V1-102 6.18.2                                      
                                                                                                                         
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-4                                                                           
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-5                                                                           
+                                                                                                                        
+                                     COMPUTED= A                                                                        
+                                     CORRECT = M                     V1-102 6.18.2                                      
+                                                                                                                        
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-6                                                                           
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-7                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-8                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-9                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-10                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-11                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-12                                                                          
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-13                                                                          
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = 8                     V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-13                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-14                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-15                                                                          
  MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-16                                                                          
                                                                                                                         
                                      COMPUTED= A                                                                        
-                                     CORRECT = K                     V1-102 6.18.2                                      
+                                     CORRECT = 4                     V1-102 6.18.2                                      
                                                                                                                         
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-17                                                                          
-                                                                                                                                                                                                                                                
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-17                                                                          
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-18                                                                          
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-59-19                                                                          
+                                                                                                                        
+                                     COMPUTED= A                                                                        
+                                     CORRECT = K                     V1-102 6.18.2                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -222,31 +222,31 @@ TEST RESULT OF NC104A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                     COMPUTED= A                                                                        
-                                     CORRECT = 9                     V1-102 6.18.2                                      
                                                                                                                         
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-18                                                                          
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-19                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-20                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-59-21                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-1                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-2                                                                           
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-60-3                                                                           
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-3                                                                           
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-60-4                                                                           
                                                                                                                         
-                                     COMPUTED= ABC                                                                      
-                                     CORRECT = ABQ                   V1-102 6.18.2                                      
+                                     COMPUTED= ABCD                                                                     
+                                     CORRECT = 4BCD                  V1-102 6.18.2                                      
                                                                                                                         
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-4                                                                           
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-60-5                                                                           
-                                                                                                                        
-                                     COMPUTED= ABCDE                                                                    
-                                     CORRECT = ABCDI                 V1-102 6.18.2                                      
-                                                                                                                        
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-5                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-6                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-7                                                                           
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-8                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-9                                                                           
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-10                                                                          
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-60-9                                                                           
+                                                                                                                        
+                                     COMPUTED= ABCDEFGHI                                                                
+                                     CORRECT = ABCDEFUHI             V1-102 6.18.2                                      
+                                                                                                                        
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-60-10                                                                          
+                                                                                                                        
+                                     COMPUTED= ABCDEFGHIJ                                                               
+                                     CORRECT = ABCDEFGVIJ            V1-102 6.18.2                                      
+                                                                                                                        
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-11                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-12                                                                          
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-60-13                                                                          

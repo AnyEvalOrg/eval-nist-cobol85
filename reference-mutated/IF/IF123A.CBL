@@ -365,11 +365,11 @@
 036500     MOVE ZERO TO WS-NUM.                                         IF1234.2
 036600 F-MIN-TEST-01.                                                   IF1234.2
 036700     COMPUTE WS-NUM = FUNCTION MIN(5, 6, 10, 3, 7).               IF1234.2
-036800     IF WS-NUM = 3 THEN                                           IF1234.2
+036800     IF WS-NUM = 5 THEN                                           IF1234.2
 036900                    PERFORM PASS                                  IF1234.2
 037000     ELSE                                                         IF1234.2
 037100                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-037200                    MOVE 3 TO CORRECT-N                           IF1234.2
+037200                    MOVE 5 TO CORRECT-N                           IF1234.2
 037300                    PERFORM FAIL.                                 IF1234.2
 037400     GO TO F-MIN-WRITE-01.                                        IF1234.2
 037500 F-MIN-DELETE-01.                                                 IF1234.2
@@ -430,11 +430,11 @@
 043000     MOVE ZERO TO WS-NUM.                                         IF1234.2
 043100 F-MIN-TEST-05.                                                   IF1234.2
 043200     COMPUTE WS-NUM = FUNCTION MIN(A, B, D).                      IF1234.2
-043300     IF WS-NUM = 5 THEN                                           IF1234.2
+043300     IF WS-NUM = 8 THEN                                           IF1234.2
 043400                    PERFORM PASS                                  IF1234.2
 043500     ELSE                                                         IF1234.2
 043600                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-043700                    MOVE 5 TO CORRECT-N                           IF1234.2
+043700                    MOVE 8 TO CORRECT-N                           IF1234.2
 043800                    PERFORM FAIL.                                 IF1234.2
 043900     GO TO F-MIN-WRITE-05.                                        IF1234.2
 044000 F-MIN-DELETE-05.                                                 IF1234.2
@@ -504,11 +504,11 @@
 050400     MOVE ZERO TO WS-NUM.                                         IF1234.2
 050500 F-MIN-TEST-09.                                                   IF1234.2
 050600     COMPUTE WS-NUM = FUNCTION MIN(A, 4, 8, -10, C, 0).           IF1234.2
-050700     IF WS-NUM = -00 THEN                                         IF1234.2
+050700     IF WS-NUM = -80 THEN                                         IF1234.2
 050800                    PERFORM PASS                                  IF1234.2
 050900     ELSE                                                         IF1234.2
 051000                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-051100                    MOVE -00 TO CORRECT-N                         IF1234.2
+051100                    MOVE -80 TO CORRECT-N                         IF1234.2
 051200                    PERFORM FAIL.                                 IF1234.2
 051300     GO TO F-MIN-WRITE-09.                                        IF1234.2
 051400 F-MIN-DELETE-09.                                                 IF1234.2
@@ -559,11 +559,11 @@
 055900     MOVE ZERO TO WS-NUM.                                         IF1234.2
 056000 F-MIN-TEST-12.                                                   IF1234.2
 056100     MOVE FUNCTION MIN("a", J, "J") TO WS-ANUM.                   IF1234.2
-056200     IF WS-ANUM = "6" THEN                                        IF1234.2
+056200     IF WS-ANUM = "J" THEN                                        IF1234.2
 056300                    PERFORM PASS                                  IF1234.2
 056400     ELSE                                                         IF1234.2
 056500                    MOVE WS-ANUM TO COMPUTED-A                    IF1234.2
-056600                    MOVE "6" TO CORRECT-A                         IF1234.2
+056600                    MOVE "J" TO CORRECT-A                         IF1234.2
 056700                    PERFORM FAIL.                                 IF1234.2
 056800     GO TO F-MIN-WRITE-12.                                        IF1234.2
 056900 F-MIN-DELETE-12.                                                 IF1234.2
@@ -613,11 +613,11 @@
 061300     MOVE ZERO TO WS-NUM.                                         IF1234.2
 061400 F-MIN-TEST-15.                                                   IF1234.2
 061500     COMPUTE WS-NUM = FUNCTION MIN (4 0 5 3 7).
-061600     IF WS-NUM = 8 THEN                                           IF1234.2
+061600     IF WS-NUM = 0 THEN                                           IF1234.2
 061700                    PERFORM PASS                                  IF1234.2
 061800     ELSE                                                         IF1234.2
 061900                    MOVE WS-NUM TO COMPUTED-N                     IF1234.2
-062000                    MOVE 8 TO CORRECT-N                           IF1234.2
+062000                    MOVE 0 TO CORRECT-N                           IF1234.2
 062100                    PERFORM FAIL.                                 IF1234.2
 062200     GO TO F-MIN-WRITE-15.                                        IF1234.2
 062300 F-MIN-DELETE-15.                                                 IF1234.2

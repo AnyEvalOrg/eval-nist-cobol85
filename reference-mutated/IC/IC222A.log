@@ -14,11 +14,7 @@ TEST RESULT OF IC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
  AVAILABLE ON         PASS  CALL-TEST-1        .01                                                                      
- END-CALL OBSERVANCE  FAIL* CALL-TEST-1        .02        INCORRECT CONTROL FLOW                                        
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000006.000000000  X-27 5.2.4 (2)                                     
-                                                                                                                        
+ END-CALL OBSERVANCE  PASS  CALL-TEST-1        .02                                                                      
  NO PROGRAM ON        PASS  CALL-TEST-2        .01                                                                      
  END-CALL OBSERVANCE  PASS  CALL-TEST-2        .02                                                                      
  AVAILABLE  ON NOT ON PASS  CALL-TEST-3        .01                                                                      
@@ -29,7 +25,7 @@ TEST RESULT OF IC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  END-CALL OBSERVANCE  FAIL* CALL-TEST-5        .02        INCORRECT CONTROL FLOW                                        
                                                                                                                         
                                      COMPUTED=  000000003.000000000                                                     
-                                     CORRECT =  000000005.000000000  X-28 5.2.4 (3)A                                    
+                                     CORRECT =  000000008.000000000  X-28 5.2.4 (3)A                                    
                                                                                                                         
  AVAILABLE  -- ---    PASS  CALL-TEST-6        .01                                                                      
  END-CALL OBSERVANCE  PASS  CALL-TEST-6        .02                                                                      
@@ -37,10 +33,14 @@ TEST RESULT OF IC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  END-CALL OBSERVANCE  FAIL* CALL-TEST-7        .02        INCORRECT CONTROL FLOW                                        
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000002.000000000  X-27 5.2.4 (2)                                     
+                                     CORRECT =  000000005.000000000  X-27 5.2.4 (2)                                     
                                                                                                                         
  NO PROGRAM OV ---    PASS  CALL-TEST-8        .01                                                                      
- END-CALL OBSERVANCE  PASS  CALL-TEST-8        .02                                                                      
+ END-CALL OBSERVANCE  FAIL* CALL-TEST-8        .02        INCORRECT CONTROL FLOW                                        
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000007.000000000  X-28 5.2.4 (3)A                                    
+                                                                                                                        
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

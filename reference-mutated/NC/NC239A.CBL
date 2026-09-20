@@ -354,12 +354,12 @@
 035600     MOVE "TABLE-TEST" TO PAR-NAME.                               NC2394.2
 035700     MOVE "IV-21 & II-15 4.4.2" TO ANSI-REFERENCE.                NC2394.2
 035800     SET IDX-1 TO 5.                                              NC2394.2
-035900     IF ENTRY-1 (IDX-1) IS NOT EQUAL TO "GHP05"                   NC2394.2
+035900     IF ENTRY-1 (IDX-1) IS NOT EQUAL TO "GRP05"                   NC2394.2
 036000         GO TO TABLE-FAIL.                                        NC2394.2
 036100     PERFORM PASS.                                                NC2394.2
 036200     GO TO TABLE-WRITE.                                           NC2394.2
 036300 TABLE-FAIL.                                                      NC2394.2
-036400     MOVE "GHP05" TO CORRECT-A                                    NC2394.2
+036400     MOVE "GRP05" TO CORRECT-A                                    NC2394.2
 036500     MOVE ENTRY-1 (IDX-1) TO COMPUTED-A                           NC2394.2
 036600     MOVE "INTERNAL INDEXING LEVEL 1  " TO RE-MARK                NC2394.2
 036700     PERFORM FAIL.                                                NC2394.2
@@ -372,7 +372,7 @@
 037400     MOVE "LEVEL 1 INT INDEXING" TO FEATURE.                      NC2394.2
 037500     SET IDX-1 TO 8.                                              NC2394.2
 037600 TH1-TEST-GF-1.                                                   NC2394.2
-037700     IF ENTRY-1 (IDX-1) IS NOT EQUAL TO "MRP08"                   NC2394.2
+037700     IF ENTRY-1 (IDX-1) IS NOT EQUAL TO "GRP08"                   NC2394.2
 037800          GO TO TH1-FAIL-GF-1.                                    NC2394.2
 037900     PERFORM PASS.                                                NC2394.2
 038000     GO TO TH1-WRITE-GF-1.                                        NC2394.2
@@ -380,7 +380,7 @@
 038200     PERFORM DE-LETE.                                             NC2394.2
 038300     GO TO TH1-WRITE-GF-1.                                        NC2394.2
 038400 TH1-FAIL-GF-1.                                                   NC2394.2
-038500     MOVE "MRP08" TO CORRECT-A                                    NC2394.2
+038500     MOVE "GRP08" TO CORRECT-A                                    NC2394.2
 038600     MOVE ENTRY-1 (IDX-1) TO COMPUTED-A                           NC2394.2
 038700     MOVE "INTERNAL INDEXING LEVEL 1  " TO RE-MARK                NC2394.2
 038800     PERFORM FAIL.                                                NC2394.2
@@ -437,7 +437,7 @@
 043900     SET IDX-1 TO 3.                                              NC2394.2
 044000     SET IDX-2 TO 7.                                              NC2394.2
 044100 TH2-TEST-GF-3.                                                   NC2394.2
-044200     IF ENTRY-2 (IDX-1, IDX-2) IS NOT EQUAL TO "SEC (03,07)"      NC2394.2
+044200     IF ENTRY-2 (IDX-1, IDX-2) IS NOT EQUAL TO "SEN (03,07)"      NC2394.2
 044300         GO TO TH2-FAIL-GF-3.                                     NC2394.2
 044400     PERFORM PASS.                                                NC2394.2
 044500     GO TO TH2-WRITE-GF-3.                                        NC2394.2
@@ -445,7 +445,7 @@
 044700     PERFORM DE-LETE.                                             NC2394.2
 044800     GO TO TH2-WRITE-GF-3.                                        NC2394.2
 044900 TH2-FAIL-GF-3.                                                   NC2394.2
-045000     MOVE "SEC (03,07)" TO CORRECT-A                              NC2394.2
+045000     MOVE "SEN (03,07)" TO CORRECT-A                              NC2394.2
 045100     MOVE ENTRY-2 (IDX-1, IDX-2) TO COMPUTED-A                    NC2394.2
 045200     MOVE "INTERNAL INDEXING LEVEL 2  " TO RE-MARK                NC2394.2
 045300     PERFORM FAIL.                                                NC2394.2
@@ -461,7 +461,7 @@
 046300     SET IDX-3 TO 10.                                             NC2394.2
 046400 TH3-TEST-GF-1.                                                   NC2394.2
 046500     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) IS NOT EQUAL TO             NC2394.2
-046600              "ELEM (02,06,10)"                                   NC2394.2
+046600              "ELEM (02L06,10)"                                   NC2394.2
 046700         GO TO TH3-FAIL-GF-1.                                     NC2394.2
 046800     PERFORM PASS.                                                NC2394.2
 046900     GO TO TH3-WRITE-GF-1.                                        NC2394.2
@@ -469,7 +469,7 @@
 047100     PERFORM DE-LETE.                                             NC2394.2
 047200     GO TO TH3-WRITE-GF-1.                                        NC2394.2
 047300 TH3-FAIL-GF-1.                                                   NC2394.2
-047400     MOVE "ELEM (02,06,10)" TO CORRECT-A                          NC2394.2
+047400     MOVE "ELEM (02L06,10)" TO CORRECT-A                          NC2394.2
 047500     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A             NC2394.2
 047600     MOVE "INTERNAL INDEXING LEVEL 3  " TO RE-MARK                NC2394.2
 047700     PERFORM FAIL.                                                NC2394.2
@@ -507,7 +507,7 @@
 050900     SET IDX-3 TO 7.                                              NC2394.2
 051000 TH3-TEST-GF-3.                                                   NC2394.2
 051100     IF ENTRY-3 (IDX-1, IDX-2, IDX-3) IS NOT EQUAL TO             NC2394.2
-051200         "ELEM (09,B8,07)"                                        NC2394.2
+051200         "ELEM (09,08107)"                                        NC2394.2
 051300         GO TO TH3-FAIL-GF-3.                                     NC2394.2
 051400     PERFORM PASS.                                                NC2394.2
 051500     GO TO TH3-WRITE-GF-3.                                        NC2394.2
@@ -515,7 +515,7 @@
 051700     PERFORM DE-LETE.                                             NC2394.2
 051800     GO TO TH3-WRITE-GF-3.                                        NC2394.2
 051900 TH3-FAIL-GF-3.                                                   NC2394.2
-052000     MOVE "ELEM (09,B8,07)" TO CORRECT-A                          NC2394.2
+052000     MOVE "ELEM (09,08107)" TO CORRECT-A                          NC2394.2
 052100     MOVE ENTRY-3 (IDX-1, IDX-2, IDX-3) TO COMPUTED-A             NC2394.2
 052200     MOVE "INTERNAL INDEXING LEVEL 3  " TO RE-MARK                NC2394.2
 052300     PERFORM FAIL.                                                NC2394.2

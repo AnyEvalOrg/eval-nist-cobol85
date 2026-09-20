@@ -611,7 +611,7 @@
 061300         GIVING WRK-DS-18V00 ON SIZE ERROR                        NC1724.2
 061400         MOVE "1" TO WRK-XN-00001.                                NC1724.2
 061500 DIV-TEST-F2-7-1.                                                 NC1724.2
-061600     IF WRK-DS-18V00 EQUAL TO 000000000000000000                  NC1724.2
+061600     IF WRK-DS-18V00 EQUAL TO 000000000000040000                  NC1724.2
 061700         PERFORM PASS                                             NC1724.2
 061800         GO TO DIV-WRITE-F2-7-1.                                  NC1724.2
 061900     GO TO DIV-FAIL-F2-7-1.                                       NC1724.2
@@ -619,7 +619,7 @@
 062100     PERFORM DE-LETE.                                             NC1724.2
 062200     GO TO DIV-WRITE-F2-7-1.                                      NC1724.2
 062300 DIV-FAIL-F2-7-1.                                                 NC1724.2
-062400     MOVE  000000000000000000 TO CORRECT-18V0.                    NC1724.2
+062400     MOVE  000000000000040000 TO CORRECT-18V0.                    NC1724.2
 062500     MOVE  WRK-DS-18V00       TO COMPUTED-18V0.                   NC1724.2
 062600     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1724.2
 062700     PERFORM FAIL.                                                NC1724.2
@@ -687,7 +687,7 @@
 068900         MOVE "1" TO WRK-XN-00001.                                NC1724.2
 069000 DIV-TEST-F2-9-1.                                                 NC1724.2
 069100     MOVE WRK-DS-0201P TO WRK-DS-05V00.                           NC1724.2
-069200     IF WRK-DS-05V00 EQUAL TO  -50020                             NC1724.2
+069200     IF WRK-DS-05V00 EQUAL TO  -00020                             NC1724.2
 069300         PERFORM PASS                                             NC1724.2
 069400         GO TO DIV-WRITE-F2-9-1.                                  NC1724.2
 069500     GO TO DIV-FAIL-F2-9-1.                                       NC1724.2
@@ -695,17 +695,17 @@
 069700     PERFORM DE-LETE.                                             NC1724.2
 069800     GO TO DIV-WRITE-F2-9-1.                                      NC1724.2
 069900 DIV-FAIL-F2-9-1.                                                 NC1724.2
-070000     MOVE -50020 TO CORRECT-N.                                    NC1724.2
+070000     MOVE -00020 TO CORRECT-N.                                    NC1724.2
 070100     MOVE WRK-DS-05V00 TO COMPUTED-N.                             NC1724.2
 070200     PERFORM FAIL.                                                NC1724.2
 070300 DIV-WRITE-F2-9-1.                                                NC1724.2
 070400     MOVE "DIV-TEST-F2-9-1         " TO PAR-NAME.                 NC1724.2
 070500     PERFORM PRINT-DETAIL.                                        NC1724.2
 070600 DIV-TEST-F2-9-2.                                                 NC1724.2
-070700     IF WRK-XN-00001 EQUAL TO "B"                                 NC1724.2
+070700     IF WRK-XN-00001 EQUAL TO "0"                                 NC1724.2
 070800         PERFORM PASS                                             NC1724.2
 070900         GO TO DIV-WRITE-F2-9-2.                                  NC1724.2
-071000     MOVE "B" TO CORRECT-A.                                       NC1724.2
+071000     MOVE "0" TO CORRECT-A.                                       NC1724.2
 071100     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1724.2
 071200     MOVE   "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.    NC1724.2
 071300     PERFORM FAIL.                                                NC1724.2
@@ -738,10 +738,10 @@
 074000     MOVE "DIV-TEST-F2-10-1         " TO PAR-NAME.                NC1724.2
 074100     PERFORM PRINT-DETAIL.                                        NC1724.2
 074200 DIV-TEST-F2-10-2.                                                NC1724.2
-074300     IF WRK-XN-00001 EQUAL TO "1"                                 NC1724.2
+074300     IF WRK-XN-00001 EQUAL TO "T"                                 NC1724.2
 074400         PERFORM PASS                                             NC1724.2
 074500         GO TO DIV-WRITE-F2-10-2.                                 NC1724.2
-074600     MOVE "1" TO CORRECT-A.                                       NC1724.2
+074600     MOVE "T" TO CORRECT-A.                                       NC1724.2
 074700     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1724.2
 074800     MOVE   "ON SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.    NC1724.2
 074900     PERFORM FAIL.                                                NC1724.2
@@ -757,7 +757,7 @@
 075900 DIV-TEST-F2-11.                                                  NC1724.2
 076000     DIVIDE A01ONE-CS-00V01 INTO A99-CS-02V00 GIVING              NC1724.2
 076100         WRK-DS-05V00.                                            NC1724.2
-076200     IF WRK-DS-05V00 EQUAL TO 00990                               NC1724.2
+076200     IF WRK-DS-05V00 EQUAL TO 00290                               NC1724.2
 076300        PERFORM PASS                                              NC1724.2
 076400         GO TO DIV-WRITE-F2-11.                                   NC1724.2
 076500     GO TO DIV-FAIL-F2-11.                                        NC1724.2
@@ -765,7 +765,7 @@
 076700     PERFORM DE-LETE.                                             NC1724.2
 076800     GO TO DIV-WRITE-F2-11.                                       NC1724.2
 076900 DIV-FAIL-F2-11.                                                  NC1724.2
-077000     MOVE  00990              TO CORRECT-N.                       NC1724.2
+077000     MOVE  00290              TO CORRECT-N.                       NC1724.2
 077100     MOVE  WRK-DS-05V00       TO COMPUTED-N.                      NC1724.2
 077200     PERFORM FAIL.                                                NC1724.2
 077300 DIV-WRITE-F2-11.                                                 NC1724.2
@@ -797,10 +797,10 @@
 079900 DIV-TEST-F2-13.                                                  NC1724.2
 080000     DIVIDE A02THREES-CS-18V00 INTO A02THREES-CS-18V00            NC1724.2
 080100             GIVING WRK-CS-18V00.                                 NC1724.2
-080200     IF WRK-CS-18V00 EQUAL TO 000000000000800001                  NC1724.2
+080200     IF WRK-CS-18V00 EQUAL TO 000000000000000001                  NC1724.2
 080300         PERFORM PASS                                             NC1724.2
 080400         GO TO DIV-WRITE-F2-13.                                   NC1724.2
-080500     MOVE 000000000000800001 TO CORRECT-18V0.                     NC1724.2
+080500     MOVE 000000000000000001 TO CORRECT-18V0.                     NC1724.2
 080600     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1724.2
 080700     PERFORM FAIL.                                                NC1724.2
 080800     GO TO DIV-WRITE-F2-13.                                       NC1724.2

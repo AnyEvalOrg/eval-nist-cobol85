@@ -14,11 +14,7 @@ TEST RESULT OF NC112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
  ***********************************************************************************************************************
  ADD LIMITS TESTS     PASS  ADD-TEST-F1-1                                                                               
- ADD LIMITS TESTS     FAIL* ADD-TEST-F1-2                                                                               
-                                                                                                                        
-                                     COMPUTED= 00000000000000010                                                        
-                                     CORRECT = 30                    V1-74 6.6.4 GR1,2                                  
-                                                                                                                        
+ ADD LIMITS TESTS     PASS  ADD-TEST-F1-2                                                                               
  ADD LIMITS TESTS     PASS  ADD-TEST-F2-1                                                                               
  ADD LIMITS TESTS     PASS  ADD-TEST-F2-2                                                                               
  ADD LIMITS TESTS     PASS  ADD-TEST-F1-3                                                                               
@@ -32,7 +28,11 @@ TEST RESULT OF NC112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT LIMITS      PASS  SUB-TEST-F2-1                                                                               
  SUBTRACT LIMITS      PASS  SUB-TEST-F2-2                                                                               
  SUBTRACT LIMITS      PASS  SUB-TEST-F2-3                                                                               
- SUBTRACT LIMITS      PASS  SUB-TEST-F1-2                                                                               
+ SUBTRACT LIMITS      FAIL* SUB-TEST-F1-2                                                                               
+                                                                                                                        
+                                     COMPUTED= 00000000000000005                                                        
+                                     CORRECT = 0                     V1-134 6.25.4 GR1,2                                
+                                                                                                                        
  SUBTRACT LIMITS      PASS  SUB-TEST-F2-4                                                                               
  ***********************************************************************************************************************
                                                                                                                         
@@ -62,11 +62,7 @@ TEST RESULT OF NC112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-4                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-5                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-6                                                                            
- MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-1-7                                                                            
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000006.000000000  V1-134 6.25.4 GR1,2                                
-                                                                                                                        
+ MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-7                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-8                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-9                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-1-10                                                                           
@@ -75,7 +71,11 @@ TEST RESULT OF NC112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-3                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-4                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-5                                                                            
- MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-6                                                                            
+ MOVE LIMITS TESTS    FAIL* MOVE-TEST-F1-2-6                                                                            
+                                                                                                                        
+                                     COMPUTED=  000000000.000000000                                                     
+                                     CORRECT =  000000002.000000000  V1-134 6.25.4 GR1,2                                
+                                                                                                                        
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-7                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-8                                                                            
  MOVE LIMITS TESTS    PASS  MOVE-TEST-F1-2-9                                                                            

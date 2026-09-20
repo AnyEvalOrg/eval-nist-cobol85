@@ -5,3 +5,7 @@ recursive-include scaffolds *.yaml
 recursive-include reference *
 include run.py bundle.template.json
 recursive-include reference-mutated *
+
+global-exclude mutations*.json
+prune nist-private
+prune .private

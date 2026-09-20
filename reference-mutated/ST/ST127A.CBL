@@ -349,18 +349,18 @@
 034900 B-IS-LESS-THAN-SPACE SECTION.                                    ST1274.2
 035000 SORT-INIT-A.                                                     ST1274.2
 035100     MOVE     "SORT - 8 ASC. KEYS" TO FEATURE.                    ST1274.2
-035200*        NOTE THE RECORDS SHOULD BE SORTED INTO THE FOLLOWING     ST1274.2
-035300*             ORDER --- 8 7 6 5 4 3 1 2 --- THAT IS,              ST1274.2
-035400*             THE 8TH RECORD SORTS UP TO THE 1ST POSITION,        ST1274.2
-035500*             THE 7TH RECORD SORTS UP TO THE 2ND POSITION, ETC.   ST1274.2
+035200*                                                                         
+035300*                                                                         
+035400*                                                                         
+035500*                                                                         
 035600 SORT-TEST-1.                                                     ST1274.2
 035700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-035800     IF       SORTKEY-7 EQUAL TO 419                              ST1274.2
+035800     IF       SORTKEY-7 EQUAL TO 218                              ST1274.2
 035900              PERFORM PASS GO TO SORT-WRITE-1.                    ST1274.2
 036000 SORT-FAIL-1.                                                     ST1274.2
 036100     PERFORM  FAIL.                                               ST1274.2
 036200     MOVE     SORTKEY-7 TO COMPUTED-N.                            ST1274.2
-036300     MOVE     419 TO CORRECT-N.                                   ST1274.2
+036300     MOVE     218 TO CORRECT-N.                                   ST1274.2
 036400 SORT-WRITE-1.                                                    ST1274.2
 036500     MOVE     "SORT-TEST-1 " TO PAR-NAME.                         ST1274.2
 036600     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -377,23 +377,23 @@
 037700     PERFORM  PRINT-DETAIL.                                       ST1274.2
 037800 SORT-TEST-3.                                                     ST1274.2
 037900     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-038000     IF       SORTKEY-6 EQUAL TO "Z       O "                     ST1274.2
+038000     IF       SORTKEY-6 EQUAL TO "Z         "                     ST1274.2
 038100              PERFORM PASS GO TO SORT-WRITE-3.                    ST1274.2
 038200 SORT-FAIL-3.                                                     ST1274.2
 038300     PERFORM  FAIL.                                               ST1274.2
 038400     MOVE     SORTKEY-6 TO COMPUTED-A.                            ST1274.2
-038500     MOVE     "Z       O "           TO CORRECT-A.                ST1274.2
+038500     MOVE     "Z         "           TO CORRECT-A.                ST1274.2
 038600 SORT-WRITE-3.                                                    ST1274.2
 038700     MOVE     "SORT-TEST-3 " TO PAR-NAME.                         ST1274.2
 038800     PERFORM  PRINT-DETAIL.                                       ST1274.2
 038900 SORT-TEST-4.                                                     ST1274.2
 039000     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-039100     IF       SORTKEY-5 EQUAL TO "Z             L     "           ST1274.2
+039100     IF       SORTKEY-5 EQUAL TO "Z                   "           ST1274.2
 039200              PERFORM PASS GO TO SORT-WRITE-4.                    ST1274.2
 039300 SORT-FAIL-4.                                                     ST1274.2
 039400     PERFORM  FAIL.                                               ST1274.2
 039500     MOVE     SORTKEY-5 TO COMPUTED-A.                            ST1274.2
-039600     MOVE     "Z             L     " TO CORRECT-A.                ST1274.2
+039600     MOVE     "Z                   " TO CORRECT-A.                ST1274.2
 039700 SORT-WRITE-4.                                                    ST1274.2
 039800     MOVE     "SORT-TEST-4 " TO PAR-NAME.                         ST1274.2
 039900     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -421,12 +421,12 @@
 042100     PERFORM  PRINT-DETAIL.                                       ST1274.2
 042200 SORT-TEST-7.                                                     ST1274.2
 042300     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-042400     IF       SORTKEY-2 EQUAL TO "    X"                          ST1274.2
+042400     IF       SORTKEY-2 EQUAL TO "G   X"                          ST1274.2
 042500              PERFORM PASS GO TO SORT-WRITE-7.                    ST1274.2
 042600 SORT-FAIL-7.                                                     ST1274.2
 042700     PERFORM  FAIL.                                               ST1274.2
 042800     MOVE     SORTKEY-2 TO COMPUTED-A.                            ST1274.2
-042900     MOVE     "    X" TO CORRECT-A.                               ST1274.2
+042900     MOVE     "G   X" TO CORRECT-A.                               ST1274.2
 043000 SORT-WRITE-7.                                                    ST1274.2
 043100     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         ST1274.2
 043200     PERFORM  PRINT-DETAIL.                                       ST1274.2
@@ -525,12 +525,12 @@
 052500     PERFORM  PRINT-DETAIL.                                       ST1274.2
 052600 SORT-TEST-14.                                                    ST1274.2
 052700     RETURN   SORTFILE-1H AT END GO TO RETURN-ERROR.              ST1274.2
-052800     IF       SORTKEY-5 EQUAL TO "Z                   "           ST1274.2
+052800     IF       SORTKEY-5 EQUAL TO "Z            R      "           ST1274.2
 052900              PERFORM PASS GO TO SORT-WRITE-14.                   ST1274.2
 053000 SORT-FAIL-14.                                                    ST1274.2
 053100     PERFORM  FAIL.                                               ST1274.2
 053200     MOVE     SORTKEY-5 TO COMPUTED-A.                            ST1274.2
-053300     MOVE     "Z                   " TO CORRECT-A.                ST1274.2
+053300     MOVE     "Z            R      " TO CORRECT-A.                ST1274.2
 053400 SORT-WRITE-14.                                                   ST1274.2
 053500     MOVE     "SORT-TEST-14" TO PAR-NAME.                         ST1274.2
 053600     PERFORM  PRINT-DETAIL.                                       ST1274.2

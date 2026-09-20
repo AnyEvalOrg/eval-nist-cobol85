@@ -13,24 +13,24 @@ TEST RESULT OF IF109A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- DAY-OF-INTEGER       PASS  F-DAYOFINT-01                                                                               
+ DAY-OF-INTEGER       FAIL* F-DAYOFINT-01                                                                               
+                                                                                                                        
+                                     COMPUTED=  001601001.000000000                                                     
+                                     CORRECT =  001601021.000000000  See ref. A-42 2.13                                 
+                                                                                                                        
  DAY-OF-INTEGER       PASS  F-DAYOFINT-02                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-03                                                                               
- DAY-OF-INTEGER       FAIL* F-DAYOFINT-04                                                                               
-                                                                                                                        
-                                     COMPUTED=  001601004.000000000                                                     
-                                     CORRECT =  001601008.000000000  See ref. A-42 2.13                                 
-                                                                                                                        
+ DAY-OF-INTEGER       PASS  F-DAYOFINT-04                                                                               
  DAY-OF-INTEGER       PASS  F-DAYOFINT-05                                                                               
  DAY-OF-INTEGER       FAIL* F-DAYOFINT-06                                                                               
                                                                                                                         
                                      COMPUTED=  001601011.000000000                                                     
-                                     CORRECT =  001601013.000000000  See ref. A-42 2.13                                 
+                                     CORRECT =  001606011.000000000  See ref. A-42 2.13                                 
                                                                                                                         
  DAY-OF-INTEGER       FAIL* F-DAYOFINT-07                                                                               
                                                                                                                         
                                      COMPUTED=  003202002.000000000                                                     
-                                     CORRECT =  003272002.000000000  See ref. A-42 2.13                                 
+                                     CORRECT =  009202002.000000000  See ref. A-42 2.13                                 
                                                                                                                         
  DAY-OF-INTEGER       PASS  F-DAYOFINT-08                                                                               
  ***********************************************************************************************************************

@@ -393,11 +393,11 @@
 039300     MOVE ZERO TO WS-NUM.                                         IF1334.2
 039400 F-REM-TEST-04.                                                   IF1334.2
 039500     COMPUTE WS-NUM = FUNCTION REM(A, 2).                         IF1334.2
-039600     IF WS-NUM = 1 THEN                                           IF1334.2
+039600     IF WS-NUM = 0 THEN                                           IF1334.2
 039700                    PERFORM PASS                                  IF1334.2
 039800     ELSE                                                         IF1334.2
 039900                    MOVE WS-NUM TO COMPUTED-N                     IF1334.2
-040000                    MOVE 1 TO CORRECT-N                           IF1334.2
+040000                    MOVE 0 TO CORRECT-N                           IF1334.2
 040100                    PERFORM FAIL.                                 IF1334.2
 040200     GO TO F-REM-WRITE-04.                                        IF1334.2
 040300 F-REM-DELETE-04.                                                 IF1334.2
@@ -430,11 +430,11 @@
 043000     MOVE ZERO TO WS-NUM.                                         IF1334.2
 043100 F-REM-TEST-06.                                                   IF1334.2
 043200     COMPUTE WS-NUM = FUNCTION REM(-11, -5).                      IF1334.2
-043300     IF WS-NUM = -4    THEN                                       IF1334.2
+043300     IF WS-NUM = -1    THEN                                       IF1334.2
 043400                    PERFORM PASS                                  IF1334.2
 043500     ELSE                                                         IF1334.2
 043600                    MOVE WS-NUM TO COMPUTED-N                     IF1334.2
-043700                    MOVE -4    TO CORRECT-N                       IF1334.2
+043700                    MOVE -1    TO CORRECT-N                       IF1334.2
 043800                    PERFORM FAIL.                                 IF1334.2
 043900     GO TO F-REM-WRITE-06.                                        IF1334.2
 044000 F-REM-DELETE-06.                                                 IF1334.2
@@ -448,11 +448,11 @@
 044800     MOVE ZERO TO WS-NUM.                                         IF1334.2
 044900 F-REM-TEST-07.                                                   IF1334.2
 045000     COMPUTE WS-NUM = FUNCTION REM(11, -5).                       IF1334.2
-045100     IF WS-NUM = 1 THEN                                           IF1334.2
+045100     IF WS-NUM = 8 THEN                                           IF1334.2
 045200                    PERFORM PASS                                  IF1334.2
 045300     ELSE                                                         IF1334.2
 045400                    MOVE WS-NUM TO COMPUTED-N                     IF1334.2
-045500                    MOVE 1 TO CORRECT-N                           IF1334.2
+045500                    MOVE 8 TO CORRECT-N                           IF1334.2
 045600                    PERFORM FAIL.                                 IF1334.2
 045700     GO TO F-REM-WRITE-07.                                        IF1334.2
 045800 F-REM-DELETE-07.                                                 IF1334.2
@@ -466,11 +466,11 @@
 046600     MOVE ZERO TO WS-NUM.                                         IF1334.2
 046700 F-REM-TEST-08.                                                   IF1334.2
 046800     COMPUTE WS-NUM = FUNCTION REM(-11, 5).                       IF1334.2
-046900     IF WS-NUM = -4 THEN                                          IF1334.2
+046900     IF WS-NUM = -1 THEN                                          IF1334.2
 047000                    PERFORM PASS                                  IF1334.2
 047100     ELSE                                                         IF1334.2
 047200                    MOVE WS-NUM TO COMPUTED-N                     IF1334.2
-047300                    MOVE -4 TO CORRECT-N                          IF1334.2
+047300                    MOVE -1 TO CORRECT-N                          IF1334.2
 047400                    PERFORM FAIL.                                 IF1334.2
 047500     GO TO F-REM-WRITE-08.                                        IF1334.2
 047600 F-REM-DELETE-08.                                                 IF1334.2

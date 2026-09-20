@@ -445,49 +445,49 @@
 044700     ADD 1 TO REC-CT.                                             IC2354.2
 044800     PERFORM PRINT-DETAIL.                                        IC2354.2
 044900 CALL-TEST-06-02.                                                 IC2354.2
-045000     IF NUMER-FIELD EQUAL TO 35                                   IC2354.2
+045000     IF NUMER-FIELD EQUAL TO 25                                   IC2354.2
 045100         PERFORM PASS                                             IC2354.2
 045200         GO TO CALL-WRITE-06-02.                                  IC2354.2
 045300 CALL-FAIL-06-02.                                                 IC2354.2
 045400     PERFORM FAIL.                                                IC2354.2
 045500     MOVE NUMER-FIELD TO COMPUTED-18V0.                           IC2354.2
-045600     MOVE 35 TO CORRECT-18V0.                                     IC2354.2
+045600     MOVE 25 TO CORRECT-18V0.                                     IC2354.2
 045700     MOVE "NUMERIC DISPLAY PARAMETER" TO RE-MARK.                 IC2354.2
 045800 CALL-WRITE-06-02.                                                IC2354.2
 045900     ADD 1 TO REC-CT.                                             IC2354.2
 046000     PERFORM PRINT-DETAIL.                                        IC2354.2
 046100 CALL-TEST-06-03.                                                 IC2354.2
-046200     IF ALPHA-FIELD EQUAL TO "YES"                                IC2354.2
+046200     IF ALPHA-FIELD EQUAL TO "YE1"                                IC2354.2
 046300         PERFORM PASS                                             IC2354.2
 046400         GO TO CALL-WRITE-06-03.                                  IC2354.2
 046500 CALL-FAIL-06-03.                                                 IC2354.2
 046600     PERFORM FAIL.                                                IC2354.2
 046700     MOVE ALPHA-FIELD TO COMPUTED-A.                              IC2354.2
-046800     MOVE "YES" TO CORRECT-A.                                     IC2354.2
+046800     MOVE "YE1" TO CORRECT-A.                                     IC2354.2
 046900     MOVE "ALPHABETIC PARAMETER" TO RE-MARK.                      IC2354.2
 047000 CALL-WRITE-06-03.                                                IC2354.2
 047100     ADD 1 TO REC-CT.                                             IC2354.2
 047200     PERFORM PRINT-DETAIL.                                        IC2354.2
 047300 CALL-TEST-06-04.                                                 IC2354.2
-047400     IF ELEM-77 EQUAL TO 0.7854                                   IC2354.2
+047400     IF ELEM-77 EQUAL TO 0.3654                                   IC2354.2
 047500         PERFORM PASS                                             IC2354.2
 047600         GO TO CALL-WRITE-06-04.                                  IC2354.2
 047700 CALL-FAIL-06-04.                                                 IC2354.2
 047800     PERFORM FAIL.                                                IC2354.2
 047900     MOVE ELEM-77 TO COMPUTED-4V14.                               IC2354.2
-048000     MOVE 0.7854 TO CORRECT-4V14.                                 IC2354.2
+048000     MOVE 0.3654 TO CORRECT-4V14.                                 IC2354.2
 048100     MOVE "COMPUTATIONAL PARAMETER" TO RE-MARK.                   IC2354.2
 048200 CALL-WRITE-06-04.                                                IC2354.2
 048300     ADD 1 TO REC-CT.                                             IC2354.2
 048400     PERFORM PRINT-DETAIL.                                        IC2354.2
 048500 CALL-TEST-06-05.                                                 IC2354.2
-048600     IF NUM-ITEM EQUAL TO 28                                      IC2354.2
+048600     IF NUM-ITEM EQUAL TO 75                                      IC2354.2
 048700         PERFORM PASS                                             IC2354.2
 048800         GO TO CALL-WRITE-06-05.                                  IC2354.2
 048900 CALL-FAIL-06-05.                                                 IC2354.2
 049000     PERFORM FAIL.                                                IC2354.2
 049100     MOVE NUM-ITEM TO COMPUTED-18V0.                              IC2354.2
-049200     MOVE 28 TO CORRECT-18V0.                                     IC2354.2
+049200     MOVE 75 TO CORRECT-18V0.                                     IC2354.2
 049300     MOVE "SIGNED NUMERIC PARAMETER" TO RE-MARK.                  IC2354.2
 049400 CALL-WRITE-06-05.                                                IC2354.2
 049500     ADD 1 TO REC-CT.                                             IC2354.2

@@ -483,7 +483,7 @@
 048500     PERFORM  PRINT-DETAIL.                                       NC1774.2
 048600 ADD-TEST-F2-2.                                                   NC1774.2
 048700     ADD      N-16 N-4 GIVING N-3 ROUNDED.                        NC1774.2
-048800     IF       N-3 EQUAL TO 52806                                  NC1774.2
+048800     IF       N-3 EQUAL TO 52800                                  NC1774.2
 048900              PERFORM PASS                                        NC1774.2
 049000              GO TO ADD-WRITE-F2-2.                               NC1774.2
 049100     GO TO    ADD-FAIL-F2-2.                                      NC1774.2
@@ -492,7 +492,7 @@
 049400     GO TO    ADD-WRITE-F2-2.                                     NC1774.2
 049500 ADD-FAIL-F2-2.                                                   NC1774.2
 049600     MOVE     N-3 TO COMPUTED-N.                                  NC1774.2
-049700     MOVE     52806 TO CORRECT-N.                                 NC1774.2
+049700     MOVE     52800 TO CORRECT-N.                                 NC1774.2
 049800     PERFORM  FAIL.                                               NC1774.2
 049900 ADD-WRITE-F2-2.                                                  NC1774.2
 050000     MOVE "ADD-TEST-F2-2 " TO PAR-NAME.                           NC1774.2
@@ -559,7 +559,7 @@
 056100     MOVE     ZERO TO WRK-DS-09V09.                               NC1774.2
 056200     ADD      A06THREES-DS-03V03                                  NC1774.2
 056300              A12THREES-DS-06V06 GIVING WRK-DS-09V09.             NC1774.2
-056400     IF       WRK-DS-09V09 EQUAL TO 000333766.666333000           NC1774.2
+056400     IF       WRK-DS-09V09 EQUAL TO 000333616.666333000           NC1774.2
 056500              PERFORM PASS GO TO ADD-WRITE-F2-5.                  NC1774.2
 056600     GO       TO ADD-FAIL-F2-5.                                   NC1774.2
 056700 ADD-DELETE-F2-5.                                                 NC1774.2
@@ -567,7 +567,7 @@
 056900     GO       TO ADD-WRITE-F2-5.                                  NC1774.2
 057000 ADD-FAIL-F2-5.                                                   NC1774.2
 057100     MOVE     WRK-DS-09V09 TO COMPUTED-N.                         NC1774.2
-057200     MOVE     000333766.666333000 TO CORRECT-N.                   NC1774.2
+057200     MOVE     000333616.666333000 TO CORRECT-N.                   NC1774.2
 057300     PERFORM  FAIL.                                               NC1774.2
 057400 ADD-WRITE-F2-5.                                                  NC1774.2
 057500     MOVE     "ADD-TEST-F2-5" TO PAR-NAME.                        NC1774.2
@@ -778,7 +778,7 @@
 078000     PERFORM  PRINT-DETAIL.                                       NC1774.2
 078100 ADD-TEST-F2-14.                                                  NC1774.2
 078200     ADD ADD-12 ADD-13 GIVING ADD-14.                             NC1774.2
-078300     IF       ADD-14 EQUAL TO 104.001                             NC1774.2
+078300     IF       ADD-14 EQUAL TO 100.001                             NC1774.2
 078400              PERFORM PASS GO TO ADD-WRITE-F2-14.                 NC1774.2
 078500     GO       TO ADD-FAIL-F2-14.                                  NC1774.2
 078600 ADD-DELETE-F2-14.                                                NC1774.2
@@ -786,7 +786,7 @@
 078800     GO       TO ADD-WRITE-F2-14.                                 NC1774.2
 078900 ADD-FAIL-F2-14.                                                  NC1774.2
 079000     MOVE     ADD-14  TO COMPUTED-N.                              NC1774.2
-079100     MOVE     104.001   TO CORRECT-N.                             NC1774.2
+079100     MOVE     100.001   TO CORRECT-N.                             NC1774.2
 079200     PERFORM FAIL.                                                NC1774.2
 079300 ADD-WRITE-F2-14.                                                 NC1774.2
 079400     MOVE     "ADD-TEST-F2-14" TO PAR-NAME.                       NC1774.2
@@ -796,11 +796,11 @@
 079800     ADD MINUS-NAME1 MINUS-NAME2 -34 -1 PLUS-NAME1                NC1774.2
 079900         PLUS-NAME2 EVEN-NAME1 35  GIVING WHOLE-FIELD             NC1774.2
 080000         ON SIZE ERROR  MOVE "1" TO SIZE-ERR.                     NC1774.2
-080100     IF WHOLE-FIELD EQUAL TO +2                                   NC1774.2
+080100     IF WHOLE-FIELD EQUAL TO +1                                   NC1774.2
 080200         PERFORM PASS                                             NC1774.2
 080300         GO TO ADD-WRITE-F2-15-1.                                 NC1774.2
 080400     MOVE WHOLE-FIELD TO COMPUTED-18V0.                           NC1774.2
-080500     MOVE +2 TO CORRECT-18V0.                                     NC1774.2
+080500     MOVE +1 TO CORRECT-18V0.                                     NC1774.2
 080600     PERFORM FAIL.                                                NC1774.2
 080700     GO TO ADD-WRITE-F2-15-1.                                     NC1774.2
 080800 ADD-DELETE-F2-15-1.                                              NC1774.2
@@ -920,10 +920,10 @@
 092200     MOVE ZERO TO WRK-CS-18V00.                                   NC1774.2
 092300     ADD A14TWOS-CS-18V00  A14TWOS-CS-18V00                       NC1774.2
 092400             GIVING WRK-CS-18V00.                                 NC1774.2
-092500     IF WRK-CS-18V00 EQUAL TO -000044444444444444                 NC1774.2
+092500     IF WRK-CS-18V00 EQUAL TO -800044444444444444                 NC1774.2
 092600         PERFORM PASS                                             NC1774.2
 092700         GO TO ADD-WRITE-F2-21.                                   NC1774.2
-092800     MOVE -000044444444444444 TO CORRECT-18V0.                    NC1774.2
+092800     MOVE -800044444444444444 TO CORRECT-18V0.                    NC1774.2
 092900     MOVE WRK-CS-18V00 TO COMPUTED-18V0.                          NC1774.2
 093000     PERFORM FAIL.                                                NC1774.2
 093100     GO TO ADD-WRITE-F2-21.                                       NC1774.2

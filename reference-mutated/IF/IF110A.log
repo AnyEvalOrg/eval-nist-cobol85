@@ -16,22 +16,22 @@ TEST RESULT OF IF110A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FACTORIAL Function   PASS  F-FACTORIAL-01                                                                              
  FACTORIAL Function   PASS  F-FACTORIAL-02                                                                              
  FACTORIAL Function   PASS  F-FACTORIAL-03                                                                              
- FACTORIAL Function   PASS  F-FACTORIAL-04                                                                              
+ FACTORIAL Function   FAIL* F-FACTORIAL-04                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000006.000000000                                                     
+                                     CORRECT =  000000004.000000000  See ref. A-43 2.14                                 
+                                                                                                                        
  FACTORIAL Function   FAIL* F-FACTORIAL-05                                                                              
                                                                                                                         
                                      COMPUTED=  000005040.000000000                                                     
-                                     CORRECT =  000005020.000000000  See ref. A-43 2.14                                 
+                                     CORRECT =  000005140.000000000  See ref. A-43 2.14                                 
                                                                                                                         
  FACTORIAL Function   FAIL* F-FACTORIAL-06                                                                              
                                                                                                                         
                                      COMPUTED=  000000720.000000000                                                     
-                                     CORRECT =  000000740.000000000  See ref. A-43 2.14                                 
+                                     CORRECT =  000000780.000000000  See ref. A-43 2.14                                 
                                                                                                                         
- FACTORIAL Function   FAIL* F-FACTORIAL-07                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000008.000000000                                                     
-                                     CORRECT =  000000006.000000000  See ref. A-43 2.14                                 
-                                                                                                                        
+ FACTORIAL Function   PASS  F-FACTORIAL-07                                                                              
  FACTORIAL Function   PASS  F-FACTORIAL-08                                                                              
  FACTORIAL Function   PASS  F-FACTORIAL-09                                                                              
  ***********************************************************************************************************************

@@ -15,29 +15,29 @@ TEST RESULT OF IF134A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
  REVERSE Function     PASS  F-REVERSE-01                                                                                
  REVERSE Function     PASS  F-REVERSE-02                                                                                
- REVERSE Function     PASS  F-REVERSE-03                                                                                
+ REVERSE Function     FAIL* F-REVERSE-03                                                                                
+                                                                                                                        
+                                     COMPUTED= WOLnhgih                                                                 
+                                     CORRECT = WOLnhTih              See ref. A-67 2.38                                 
+                                                                                                                        
  REVERSE Function     PASS  F-REVERSE-04                                                                                
  REVERSE Function     PASS  F-REVERSE-05                                                                                
  REVERSE Function     PASS  F-REVERSE-06                                                                                
- REVERSE Function     FAIL* F-REVERSE-07                                                                                
-                                                                                                                        
-                                     COMPUTED=       DEEW                                                               
-                                     CORRECT =  E    DEEW            See ref. A-67 2.38                                 
-                                                                                                                        
+ REVERSE Function     PASS  F-REVERSE-07                                                                                
  REVERSE Function     FAIL* F-REVERSE-08                                                                                
                                                                                                                         
                                      COMPUTED=        saW                                                               
-                                     CORRECT =   K    saW            See ref. A-67 2.38                                 
+                                     CORRECT =        XaW            See ref. A-67 2.38                                 
                                                                                                                         
  REVERSE Function     PASS  F-REVERSE-09                                                                                
  REVERSE Function     PASS  F-REVERSE-10                                                                                
  REVERSE Function     PASS  F-REVERSE-11                                                                                
- REVERSE Function     PASS  F-REVERSE-12                                                                                
- REVERSE Function     FAIL* F-REVERSE-13                                                                                
+ REVERSE Function     FAIL* F-REVERSE-12                                                                                
                                                                                                                         
-                                     COMPUTED=  000000012.000000000                                                     
-                                     CORRECT =  000000052.000000000  See ref. A-67 2.38                                 
+                                     COMPUTED= giZZard                                                                  
+                                     CORRECT = giZZarI               See ref. A-67 2.38                                 
                                                                                                                         
+ REVERSE Function     PASS  F-REVERSE-13                                                                                
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                                                                                                                                                 

@@ -13,11 +13,7 @@ TEST RESULT OF NC201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- PERFORM UNTIL        FAIL* PFM-TEST-F3-1                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000048.000000000                                                     
-                                     CORRECT =  000000028.000000000  VI-112 6.20.4 GR10(d)                              
-                                                                                                                        
+ PERFORM UNTIL        PASS  PFM-TEST-F3-1                                                                               
  PERFORM UNTIL        PASS  PFM-TEST-F3-2                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-1                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-2                                                                               
@@ -26,19 +22,23 @@ TEST RESULT OF NC201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PERFORM VARYING      PASS  PFM-TEST-F3-3                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-5                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-6                                                                               
- PERFORM VARYING      PASS  PFM-TEST-F4-7                                                                               
+ PERFORM VARYING      FAIL* PFM-TEST-F4-7                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000090.100000000                                                     
+                                     CORRECT =  000000060.100000000  VI-122 6.20.4 GR10(C)                              
+                                                                                                                        
  PERFORM VARYING      PASS  PFM-TEST-F4-8                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-9                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F4-10                                                                              
  PERFORM VARYING      PASS  PFM-TEST-F4-11                                                                              
- PERFORM VARYING      FAIL* PFM-TEST-F4-12                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000007.000000000                                                     
-                                     CORRECT =  000000002.000000000  VI-122 6.20.4 GR10(C)                              
-                                                                                                                        
+ PERFORM VARYING      PASS  PFM-TEST-F4-12                                                                              
  PERFORM VARYING      PASS  PFM-TEST-F3-4                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F3-5                                                                               
- PERFORM VARYING      PASS  PFM-TEST-F3-6                                                                               
+ PERFORM VARYING      FAIL* PFM-TEST-F3-6                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000099.000000000                                                     
+                                     CORRECT =  000000019.000000000  VI-112 6.20.2 GR10                                 
+                                                                                                                        
  PERFORM VARYING      PASS  PFM-TEST-F3-7                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F3-8                                                                               
  PERFORM VARYING      PASS  PFM-TEST-F3-9                                                                               
@@ -82,12 +82,12 @@ TEST RESULT OF NC201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  CHANGE BY INCR.      PASS  PFM-TEST-F4-21                PERFORM VARYING                                               
  CHANGE BY INCR.      PASS  PFM-TEST-F4-22                PERFORM VARYING                                               
  CHANGE BY INCR.      PASS  PFM-TEST-F4-23                                                                              
+ CHANGE BY INCR.      PASS  PFM-TEST-F4-24                                                                              
  CHANGE BY INCR.      FAIL* PFM-TEST-F4-24                                                                              
                                                                                                                         
-                                     COMPUTED=  000000080.000000000                                                     
-                                     CORRECT =  000000087.000000000  VI-112 6.20.4 GR10(d)                              
+                                     COMPUTED=  000000004.000000000                                                     
+                                     CORRECT =  000000002.000000000  VI-112 6.20.4 GR10(d)                              
                                                                                                                         
- CHANGE BY INCR.      PASS  PFM-TEST-F4-24                                                                              
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

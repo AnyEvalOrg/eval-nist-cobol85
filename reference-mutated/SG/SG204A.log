@@ -17,25 +17,17 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG204A
  SORT, INPUT PROC     PASS  SORT-TEST-2                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-3                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-4                                                                                 
- SORT, INPUT PROC     FAIL* SORT-TEST-5                                                                                 
-                                                                                                                        
-                                     COMPUTED= 567AZAZ                                                                  
-                                     CORRECT = R67AZAZ                                                                  
-                                                                                                                        
+ SORT, INPUT PROC     PASS  SORT-TEST-5                                                                                 
  SORT, INPUT PROC     PASS  SORT-TEST-6                                                                                 
  SORT, INPUT PROC     FAIL* SORT-TEST-7                                                                                 
                                                                                                                         
                                      COMPUTED= 567AHBH                                                                  
-                                     CORRECT = 667AHBH                                                                  
+                                     CORRECT = 56SAHBH                                                                  
                                                                                                                         
- SORT, INPUT PROC     FAIL* SORT-TEST-8                                                                                 
-                                                                                                                        
-                                     COMPUTED= 567AABA                                                                  
-                                     CORRECT = R67AABA                                                                  
-                                                                                                                        
+ SORT, INPUT PROC     PASS  SORT-TEST-8                                                                                 
  SORT, OUTPUT PROC    PASS  SORT-TEST-9                                                                                 
- SORT, OUTPUT PROC    PASS  SORT-TEST-10                                                                                
- SORT, OUTPUT PROC    PASS  SORT-TEST-11                                                                                
+ SORT, OUTPUT PROC    FAIL* SORT-TEST-10                                                                                
+ SORT, OUTPUT PROC    FAIL* SORT-TEST-11                                                                                
  SORT, OUTPUT PROC    PASS  SORT-TEST-12                                                                                
  SORT, OUTPUT PROC    PASS  SORT-TEST-13                                                                                
  SORT, OUTPUT PROC    PASS  SORT-TEST-14                                                                                

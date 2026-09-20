@@ -360,17 +360,17 @@
 036700     MOVE "INITIATE REPORT" TO FEATURE.                           RW1014.2
 036800     PERFORM PRINT-DETAIL.                                        RW1014.2
 036900 INIT-TEST-02.                                                    RW1014.2
-037000*                                                                 RW1014.2
-037100*        AFTER EXECUTION OF THE INITIATE STATEMENT FOR A REPORT,  RW1014.2
-037200*    THE REPORT PAGE-COUNTER SHOULD BE SET TO ONE.                RW1014.2
-037300*    REFERENCE PAGE VIII-53, 3.2.4(1)C, THE INITIATE STATEMENT.   RW1014.2
-037400*                                                                 RW1014.2
-037500     IF PAGE-COUNTER EQUAL TO 9                                   RW1014.2
+037000*                                                                         
+037100*                                                                         
+037200*                                                                         
+037300*                                                                         
+037400*                                                                         
+037500     IF PAGE-COUNTER EQUAL TO 0                                   RW1014.2
 037600         PERFORM PASS                                             RW1014.2
 037700         GO TO INIT-WRITE-02.                                     RW1014.2
 037800 INIT-FAIL-02.                                                    RW1014.2
 037900     PERFORM FAIL.                                                RW1014.2
-038000     MOVE 9 TO CORRECT-18V0.                                      RW1014.2
+038000     MOVE 0 TO CORRECT-18V0.                                      RW1014.2
 038100     MOVE PAGE-COUNTER TO COMPUTED-18V0.                          RW1014.2
 038200     MOVE "PAGE-COUNTER AFTER INITIATE" TO RE-MARK.               RW1014.2
 038300 INIT-WRITE-02.                                                   RW1014.2
@@ -384,28 +384,28 @@
 039100     ADD 1 TO WS-COUNTER.                                         RW1014.2
 039200     MOVE LINE-COUNTER TO STORE-LINE-COUNTER.                     RW1014.2
 039300     GENERATE RW-FS1-GROUP.                                       RW1014.2
-039400*                                                                 RW1014.2
-039500*    OUTPUT REPORT INFO                                           RW1014.2
-039600*         THE DETAIL REPORT GROUP SHOULD BE PRESENTED ON THE FIRSTRW1014.2
-039700*    LINE OF THE REPORT PAGE.                                     RW1014.2
-039800*    REFERENCE  PAGE VIII-18, 2.5.5.8.1(4)B, BODY GROUP PRE. RULESRW1014.2
-039900*                                                                 RW1014.2
+039400*                                                                         
+039500*                                                                         
+039600*                                                                         
+039700*                                                                         
+039800*                                                                         
+039900*                                                                         
 040000 GENER-TEST-01.                                                   RW1014.2
-040100     IF LINE-COUNTER NOT EQUAL TO 1                               RW1014.2
+040100     IF LINE-COUNTER NOT EQUAL TO 3                               RW1014.2
 040200         GO TO GENER-FAIL-01.                                     RW1014.2
-040300*                                                                 RW1014.2
-040400*         THE LINE-COUNTER SETTING AFTER THE GENERATE STATEMENT   RW1014.2
-040500*    IS EQUAL TO THE LINE NUMBER ON WHICH THE PRINT LINE WAS      RW1014.2
-040600*    PRESENTED, IN THIS CASE ONE.                                 RW1014.2
-040700*    REFERENCE  PAGE VIII-19, 2.5.5.8.1(6)D, FINAL L-C SETTING    RW1014.2
-040800*                                                                 RW1014.2
+040300*                                                                         
+040400*                                                                         
+040500*                                                                         
+040600*                                                                         
+040700*                                                                         
+040800*                                                                         
 040900 GENER-PASS-01.                                                   RW1014.2
 041000     PERFORM PASS.                                                RW1014.2
 041100     GO TO GENER-WRITE-01.                                        RW1014.2
 041200 GENER-FAIL-01.                                                   RW1014.2
 041300     PERFORM FAIL.                                                RW1014.2
 041400     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1014.2
-041500     MOVE 1 TO CORRECT-18V0.                                      RW1014.2
+041500     MOVE 3 TO CORRECT-18V0.                                      RW1014.2
 041600     MOVE "LINE-COUNTER AFTER FIRST GENER" TO RE-MARK.            RW1014.2
 041700 GENER-WRITE-01.                                                  RW1014.2
 041800     MOVE "GENER-TEST-1" TO PAR-NAME.                             RW1014.2
@@ -494,19 +494,19 @@
 050100     ADD 1 TO WS-COUNTER.                                         RW1014.2
 050200     MOVE LINE-COUNTER TO STORE-LINE-COUNTER.                     RW1014.2
 050300     GENERATE RW-FS1-GROUP.                                       RW1014.2
-050400*                                                                 RW1014.2
-050500*         AFTER EXECUTION OF THE GENERATE STATEMENT LINE-COUNTER  RW1014.2
-050600*    SHOULD EQUAL 20 AND PAGE-COUNTER SHOULD EQUAL ONE.           RW1014.2
-050700*                                                                 RW1014.2
+050400*                                                                         
+050500*                                                                         
+050600*                                                                         
+050700*                                                                         
 050800 GENER-TEST-05.                                                   RW1014.2
-050900     IF LINE-COUNTER NOT EQUAL TO 22                              RW1014.2
+050900     IF LINE-COUNTER NOT EQUAL TO 25                              RW1014.2
 051000        GO TO GENER-FAIL-05.                                      RW1014.2
 051100 GENER-PASS-05.                                                   RW1014.2
 051200     PERFORM PASS.                                                RW1014.2
 051300     GO TO GENER-WRITE-05.                                        RW1014.2
 051400 GENER-FAIL-05.                                                   RW1014.2
 051500     PERFORM FAIL.                                                RW1014.2
-051600     MOVE 22 TO CORRECT-18V0.                                     RW1014.2
+051600     MOVE 25 TO CORRECT-18V0.                                     RW1014.2
 051700     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1014.2
 051800     MOVE "LINE-COUNTER AFTER LAST GENER" TO RE-MARK.             RW1014.2
 051900 GENER-WRITE-05.                                                  RW1014.2
@@ -514,14 +514,14 @@
 052100     MOVE "LAST GENERATE" TO FEATURE.                             RW1014.2
 052200     PERFORM PRINT-DETAIL.                                        RW1014.2
 052300 GENER-TEST-06.                                                   RW1014.2
-052400     IF PAGE-COUNTER NOT EQUAL TO 0                               RW1014.2
+052400     IF PAGE-COUNTER NOT EQUAL TO 1                               RW1014.2
 052500         GO TO GENER-FAIL-06.                                     RW1014.2
 052600 GENER-PASS-06.                                                   RW1014.2
 052700     PERFORM PASS.                                                RW1014.2
 052800     GO TO GENER-WRITE-06.                                        RW1014.2
 052900 GENER-FAIL-06.                                                   RW1014.2
 053000     PERFORM FAIL.                                                RW1014.2
-053100     MOVE 0 TO CORRECT-18V0.                                      RW1014.2
+053100     MOVE 1 TO CORRECT-18V0.                                      RW1014.2
 053200     MOVE PAGE-COUNTER TO COMPUTED-18V0.                          RW1014.2
 053300     MOVE "PAGE-COUNTER AFTER LAST GENER" TO RE-MARK.             RW1014.2
 053400 GENER-WRITE-06.                                                  RW1014.2

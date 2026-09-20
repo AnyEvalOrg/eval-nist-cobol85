@@ -1048,7 +1048,7 @@
 105000     MOVE     SPACE TO GRP-MOVE-CORR-R.                           NC2084.2
 105100     MOVE     CORRESPONDING GRP-MOVE-CORR-1 TO GRP-MOVE-CORR-R.   NC2084.2
 105200 MOV-TEST-F1-4.                                                   NC2084.2
-105300     IF       GRP-MOVE-CORR-R EQUAL TO "1  111222333XYZ   "       NC2084.2
+105300     IF       GRP-MOVE-CORR-R EQUAL TO "   111222333XYZ   "       NC2084.2
 105400              PERFORM PASS GO TO MOV-WRITE-F1-4.                  NC2084.2
 105500     GO       TO MOVE-FAIL-F1-4.                                  NC2084.2
 105600 MOV-DELETE-F1-4.                                                 NC2084.2
@@ -1056,7 +1056,7 @@
 105800     GO       TO MOV-WRITE-F1-4.                                  NC2084.2
 105900 MOVE-FAIL-F1-4.                                                  NC2084.2
 106000     MOVE     GRP-MOVE-CORR-R TO COMPUTED-A.                      NC2084.2
-106100     MOVE     "1  111222333XYZ   " TO CORRECT-A.                  NC2084.2
+106100     MOVE     "   111222333XYZ   " TO CORRECT-A.                  NC2084.2
 106200     PERFORM  FAIL.                                               NC2084.2
 106300 MOV-WRITE-F1-4.                                                  NC2084.2
 106400     PERFORM  PRINT-DETAIL.                                       NC2084.2
@@ -1069,7 +1069,7 @@
 107100     MOVE     CORRESPONDING GRP-TO-MOVE-CORR-1 TO                 NC2084.2
 107200              GRP-TO-MOVE-CORR-TO.                                NC2084.2
 107300 MOV-TEST-F1-5.                                                   NC2084.2
-107400     IF       GRP-TO-MOVE-CORR-TO EQUAL TO "111 M       123ABC45" NC2084.2
+107400     IF       GRP-TO-MOVE-CORR-TO EQUAL TO "111         123AB245" NC2084.2
 107500              PERFORM PASS GO TO MOV-WRITE-F1-5.                  NC2084.2
 107600     GO       TO MOVE-FAIL-F1-5.                                  NC2084.2
 107700 MOV-DELETE-F1-5.                                                 NC2084.2
@@ -1077,7 +1077,7 @@
 107900     GO       TO MOV-WRITE-F1-5.                                  NC2084.2
 108000 MOVE-FAIL-F1-5.                                                  NC2084.2
 108100     MOVE     GRP-TO-MOVE-CORR-TO TO COMPUTED-A.                  NC2084.2
-108200     MOVE     "111 M       123ABC45" TO CORRECT-A.                NC2084.2
+108200     MOVE     "111         123AB245" TO CORRECT-A.                NC2084.2
 108300     PERFORM  FAIL.                                               NC2084.2
 108400 MOV-WRITE-F1-5.                                                  NC2084.2
 108500     PERFORM  PRINT-DETAIL.                                       NC2084.2
@@ -1088,7 +1088,7 @@
 109000     MOVE "MOVE CORRESPONDING" TO FEATURE.                        NC2084.2
 109100     MOVE CORRESPONDING MOVE54 TO MOVE60.                         NC2084.2
 109200 MOV-TEST-F1-6.                                                   NC2084.2
-109300     IF MOVE60 EQUAL TO "X0A"                                     NC2084.2
+109300     IF MOVE60 EQUAL TO "XY5"                                     NC2084.2
 109400            PERFORM PASS                                          NC2084.2
 109500            GO TO MOV-WRITE-F1-6.                                 NC2084.2
 109600     GO TO MOV-FAIL-F1-6.                                         NC2084.2
@@ -1097,7 +1097,7 @@
 109900     GO TO  MOV-WRITE-F1-6.                                       NC2084.2
 110000 MOV-FAIL-F1-6.                                                   NC2084.2
 110100     MOVE MOVE60 TO COMPUTED-A                                    NC2084.2
-110200     MOVE "X0A" TO CORRECT-A                                      NC2084.2
+110200     MOVE "XY5" TO CORRECT-A                                      NC2084.2
 110300     PERFORM FAIL.                                                NC2084.2
 110400 MOV-WRITE-F1-6.                                                  NC2084.2
 110500     PERFORM PRINT-DETAIL.                                        NC2084.2
@@ -1108,7 +1108,7 @@
 111000     MOVE "MOVE CORRESPONDING" TO FEATURE.                        NC2084.2
 111100     MOVE "*" TO MOVE56 OF MOVE60 MOVE58 OF MOVE60 MOVE65.        NC2084.2
 111200 MOV-TEST-F1-7.                                                   NC2084.2
-111300     IF MOVE60 EQUAL TO "***"                                     NC2084.2
+111300     IF MOVE60 EQUAL TO "**Y"                                     NC2084.2
 111400            PERFORM PASS                                          NC2084.2
 111500            GO TO MOV-WRITE-F1-7.                                 NC2084.2
 111600     GO TO MOV-FAIL-F1-7.                                         NC2084.2
@@ -1117,7 +1117,7 @@
 111900     GO TO MOV-WRITE-F1-7.                                        NC2084.2
 112000 MOV-FAIL-F1-7.                                                   NC2084.2
 112100     MOVE MOVE60 TO COMPUTED-A                                    NC2084.2
-112200     MOVE "***" TO CORRECT-A                                      NC2084.2
+112200     MOVE "**Y" TO CORRECT-A                                      NC2084.2
 112300     PERFORM FAIL.                                                NC2084.2
 112400 MOV-WRITE-F1-7.                                                  NC2084.2
 112500     PERFORM PRINT-DETAIL.                                        NC2084.2

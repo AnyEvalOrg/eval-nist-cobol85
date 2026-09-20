@@ -782,11 +782,11 @@
 079800     PERFORM  DE-LETE.                                            NC1744.2
 079900     GO TO    RELAT-WRITE-GF-1.                                   NC1744.2
 080000 RELAT-CHECK-GF-1.                                                NC1744.2
-080100     IF       VAL EQUAL TO 6                                      NC1744.2
+080100     IF       VAL EQUAL TO 2                                      NC1744.2
 080200             PERFORM PASS                                         NC1744.2
 080300             GO TO RELAT-WRITE-GF-1.                              NC1744.2
 080400     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-080500     MOVE 6 TO CORRECT-A.                                         NC1744.2
+080500     MOVE 2 TO CORRECT-A.                                         NC1744.2
 080600     PERFORM FAIL.                                                NC1744.2
 080700 RELAT-WRITE-GF-1.                                                NC1744.2
 080800     MOVE "RELAT-TEST-GF-1" TO PAR-NAME.                          NC1744.2
@@ -806,11 +806,11 @@
 082200     PERFORM DE-LETE.                                             NC1744.2
 082300     GO TO   RELAT-WRITE-GF-2.                                    NC1744.2
 082400 RELAT-CHECK-GF-2.                                                NC1744.2
-082500     IF       VAL EQUAL TO 3                                      NC1744.2
+082500     IF       VAL EQUAL TO 8                                      NC1744.2
 082600              PERFORM PASS                                        NC1744.2
 082700              GO TO RELAT-WRITE-GF-2.                             NC1744.2
 082800     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-082900     MOVE 3 TO CORRECT-A.                                         NC1744.2
+082900     MOVE 8 TO CORRECT-A.                                         NC1744.2
 083000     PERFORM  FAIL.                                               NC1744.2
 083100 RELAT-WRITE-GF-2.                                                NC1744.2
 083200     MOVE "RELAT-TEST-GF-2" TO PAR-NAME.                          NC1744.2
@@ -831,11 +831,11 @@
 084700     PERFORM  DE-LETE.                                            NC1744.2
 084800     GO TO    RELAT-WRITE-GF-3.                                   NC1744.2
 084900 RELAT-CHECK-GF-3.                                                NC1744.2
-085000     IF       VAL EQUAL TO 3                                      NC1744.2
+085000     IF       VAL EQUAL TO 5                                      NC1744.2
 085100              PERFORM PASS                                        NC1744.2
 085200              GO TO RELAT-WRITE-GF-3.                             NC1744.2
 085300     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-085400     MOVE 3 TO CORRECT-A.                                         NC1744.2
+085400     MOVE 5 TO CORRECT-A.                                         NC1744.2
 085500     PERFORM  FAIL.                                               NC1744.2
 085600 RELAT-WRITE-GF-3.                                                NC1744.2
 085700     MOVE "RELAT-TEST-GF-3" TO PAR-NAME.                          NC1744.2
@@ -881,11 +881,11 @@
 089700     PERFORM  DE-LETE.                                            NC1744.2
 089800     GO TO    RELAT-WRITE-GF-5.                                   NC1744.2
 089900 RELAT-CHECK-GF-5.                                                NC1744.2
-090000     IF       VAL EQUAL TO 7                                      NC1744.2
+090000     IF       VAL EQUAL TO 3                                      NC1744.2
 090100              PERFORM PASS                                        NC1744.2
 090200              GO TO RELAT-WRITE-GF-5.                             NC1744.2
 090300     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-090400     MOVE 7 TO CORRECT-A.                                         NC1744.2
+090400     MOVE 3 TO CORRECT-A.                                         NC1744.2
 090500     PERFORM  FAIL.                                               NC1744.2
 090600 RELAT-WRITE-GF-5.                                                NC1744.2
 090700     MOVE "RELAT-TEST-GF-5" TO PAR-NAME.                          NC1744.2
@@ -907,11 +907,11 @@
 092300     PERFORM  DE-LETE.                                            NC1744.2
 092400     GO TO    RELAT-WRITE-GF-6.                                   NC1744.2
 092500 RELAT-CHECK-GF-6.                                                NC1744.2
-092600     IF       VAL EQUAL TO 0                                      NC1744.2
+092600     IF       VAL EQUAL TO 3                                      NC1744.2
 092700              PERFORM PASS                                        NC1744.2
 092800              GO TO RELAT-WRITE-GF-6.                             NC1744.2
 092900     MOVE VAL TO COMPUTED-A.                                      NC1744.2
-093000     MOVE 0 TO CORRECT-A.                                         NC1744.2
+093000     MOVE 3 TO CORRECT-A.                                         NC1744.2
 093100     PERFORM  FAIL.                                               NC1744.2
 093200 RELAT-WRITE-GF-6.                                                NC1744.2
 093300     MOVE "RELAT-TEST-GF-6" TO PAR-NAME.                          NC1744.2

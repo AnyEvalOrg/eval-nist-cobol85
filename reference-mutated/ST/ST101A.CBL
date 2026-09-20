@@ -436,7 +436,7 @@
 044300     PERFORM  PRINT-DETAIL.                                       ST1014.2
 044400 SORT-TEST-3.                                                     ST1014.2
 044500     PERFORM  RET-1.                                              ST1014.2
-044600     IF       RDF-KEYS EQUAL TO 106001000200002                   ST1014.2
+044600     IF       RDF-KEYS EQUAL TO 106021000200002                   ST1014.2
 044700              PERFORM PASS GO TO SORT-WRITE-3.                    ST1014.2
 044800     GO       TO SORT-FAIL-3.                                     ST1014.2
 044900 SORT-DELETE-3.                                                   ST1014.2
@@ -444,7 +444,7 @@
 045100     GO       TO SORT-WRITE-3.                                    ST1014.2
 045200 SORT-FAIL-3.                                                     ST1014.2
 045300     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-045400     MOVE     106001000200002  TO CORRECT-18V0.                   ST1014.2
+045400     MOVE     106021000200002  TO CORRECT-18V0.                   ST1014.2
 045500     PERFORM  FAIL.                                               ST1014.2
 045600 SORT-WRITE-3.                                                    ST1014.2
 045700     MOVE     "SORT-TEST-3 " TO PAR-NAME.                         ST1014.2
@@ -467,7 +467,7 @@
 047400     PERFORM  PRINT-DETAIL.                                       ST1014.2
 047500 SORT-TEST-5.                                                     ST1014.2
 047600     PERFORM  RET-2 40 TIMES.                                     ST1014.2
-047700     IF       RDF-KEYS EQUAL TO 201001000200002                   ST1014.2
+047700     IF       RDF-KEYS EQUAL TO 201021000200002                   ST1014.2
 047800              PERFORM PASS GO TO SORT-WRITE-5.                    ST1014.2
 047900     GO       TO SORT-FAIL-5.                                     ST1014.2
 048000 SORT-DELETE-5.                                                   ST1014.2
@@ -475,14 +475,14 @@
 048200     GO       TO SORT-WRITE-5.                                    ST1014.2
 048300 SORT-FAIL-5.                                                     ST1014.2
 048400     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-048500     MOVE     201001000200002 TO CORRECT-18V0.                    ST1014.2
+048500     MOVE     201021000200002 TO CORRECT-18V0.                    ST1014.2
 048600     PERFORM  FAIL.                                               ST1014.2
 048700 SORT-WRITE-5.                                                    ST1014.2
 048800     MOVE     "SORT-TEST-5 " TO PAR-NAME.                         ST1014.2
 048900     PERFORM  PRINT-DETAIL.                                       ST1014.2
 049000 SORT-TEST-6.                                                     ST1014.2
 049100     PERFORM  RET-2 7 TIMES.                                      ST1014.2
-049200     IF       RDF-KEYS EQUAL TO 201002006100001                   ST1014.2
+049200     IF       RDF-KEYS EQUAL TO 501002000100001                   ST1014.2
 049300              PERFORM PASS GO TO SORT-WRITE-6.                    ST1014.2
 049400     GO       TO SORT-FAIL-6.                                     ST1014.2
 049500 SORT-DELETE-6.                                                   ST1014.2
@@ -490,14 +490,14 @@
 049700     GO       TO SORT-WRITE-6.                                    ST1014.2
 049800 SORT-FAIL-6.                                                     ST1014.2
 049900     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-050000     MOVE     201002006100001 TO CORRECT-18V0.                    ST1014.2
+050000     MOVE     501002000100001 TO CORRECT-18V0.                    ST1014.2
 050100     PERFORM  FAIL.                                               ST1014.2
 050200 SORT-WRITE-6.                                                    ST1014.2
 050300     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1014.2
 050400     PERFORM  PRINT-DETAIL.                                       ST1014.2
 050500 SORT-TEST-7.                                                     ST1014.2
 050600     PERFORM  RET-2.                                              ST1014.2
-050700     IF       RDF-KEYS EQUAL TO 900608000000000                   ST1014.2
+050700     IF       RDF-KEYS EQUAL TO 900008000000000                   ST1014.2
 050800              PERFORM PASS GO TO SORT-WRITE-7.                    ST1014.2
 050900     GO       TO SORT-FAIL-7.                                     ST1014.2
 051000 SORT-DELETE-7.                                                   ST1014.2
@@ -505,14 +505,14 @@
 051200     GO       TO SORT-WRITE-7.                                    ST1014.2
 051300 SORT-FAIL-7.                                                     ST1014.2
 051400     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-051500     MOVE     900608000000000 TO CORRECT-18V0.                    ST1014.2
+051500     MOVE     900008000000000 TO CORRECT-18V0.                    ST1014.2
 051600     PERFORM  FAIL.                                               ST1014.2
 051700 SORT-WRITE-7.                                                    ST1014.2
 051800     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         ST1014.2
 051900     PERFORM  PRINT-DETAIL.                                       ST1014.2
 052000 SORT-TEST-8.                                                     ST1014.2
 052100     PERFORM  RET-2.                                              ST1014.2
-052200     IF       RDF-KEYS EQUAL TO 900009000900000                   ST1014.2
+052200     IF       RDF-KEYS EQUAL TO 900009000000000                   ST1014.2
 052300              PERFORM PASS GO TO SORT-WRITE-8.                    ST1014.2
 052400     GO       TO SORT-FAIL-8.                                     ST1014.2
 052500 SORT-DELETE-8.                                                   ST1014.2
@@ -520,7 +520,7 @@
 052700     GO       TO SORT-WRITE-8.                                    ST1014.2
 052800 SORT-FAIL-8.                                                     ST1014.2
 052900     MOVE     RDF-KEYS TO COMPUTED-18V0.                          ST1014.2
-053000     MOVE     900009000900000 TO CORRECT-18V0.                    ST1014.2
+053000     MOVE     900009000000000 TO CORRECT-18V0.                    ST1014.2
 053100     PERFORM  FAIL.                                               ST1014.2
 053200 SORT-WRITE-8.                                                    ST1014.2
 053300     MOVE     "SORT-TEST-8 " TO PAR-NAME.                         ST1014.2

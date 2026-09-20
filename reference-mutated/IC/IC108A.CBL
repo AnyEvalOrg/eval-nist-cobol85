@@ -319,13 +319,13 @@
 032100     MOVE "CALL-TEST-07" TO PAR-NAME.                             IC1084.2
 032200 CALL-TEST-07-01.                                                 IC1084.2
 032300     MOVE 1 TO REC-CT.                                            IC1084.2
-032400     IF DN1 IS EQUAL TO "I5109A"                                  IC1084.2
+032400     IF DN1 IS EQUAL TO "IC109A"                                  IC1084.2
 032500         PERFORM PASS                                             IC1084.2
 032600         GO TO CALL-WRITE-07-01.                                  IC1084.2
 032700 CALL-FAIL-07-01.                                                 IC1084.2
 032800     PERFORM FAIL.                                                IC1084.2
 032900     MOVE DN1 TO COMPUTED-A.                                      IC1084.2
-033000     MOVE "I5109A" TO CORRECT-A.                                  IC1084.2
+033000     MOVE "IC109A" TO CORRECT-A.                                  IC1084.2
 033100     MOVE "SUBPROGRAM IC109A ERROR" TO RE-MARK.                   IC1084.2
 033200 CALL-WRITE-07-01.                                                IC1084.2
 033300     PERFORM PRINT-DETAIL.                                        IC1084.2
@@ -343,13 +343,13 @@
 034500     PERFORM PRINT-DETAIL.                                        IC1084.2
 034600 CALL-TEST-07-03.                                                 IC1084.2
 034700     ADD 1 TO REC-CT.                                             IC1084.2
-034800     IF DN3 EQUAL TO "IC111A"                                     IC1084.2
+034800     IF DN3 EQUAL TO "ZC111A"                                     IC1084.2
 034900         PERFORM PASS                                             IC1084.2
 035000         GO TO CALL-WRITE-07-03.                                  IC1084.2
 035100 CALL-FAIL-07-03.                                                 IC1084.2
 035200     PERFORM FAIL.                                                IC1084.2
 035300     MOVE DN3 TO COMPUTED-A.                                      IC1084.2
-035400     MOVE "IC111A" TO CORRECT-A.                                  IC1084.2
+035400     MOVE "ZC111A" TO CORRECT-A.                                  IC1084.2
 035500     MOVE "SUBPROGRAM IC111A ERROR" TO RE-MARK.                   IC1084.2
 035600 CALL-WRITE-07-03.                                                IC1084.2
 035700     PERFORM PRINT-DETAIL.                                        IC1084.2
@@ -360,13 +360,13 @@
 036200     MOVE "SUBPRGMS CALLED ONCE" TO FEATURE.                      IC1084.2
 036300 CALL-TEST-08-01.                                                 IC1084.2
 036400     MOVE 1 TO REC-CT.                                            IC1084.2
-036500     IF DN4 EQUAL TO 1                                            IC1084.2
+036500     IF DN4 EQUAL TO 8                                            IC1084.2
 036600         PERFORM PASS                                             IC1084.2
 036700         GO TO CALL-WRITE-08-01.                                  IC1084.2
 036800 CALL-FAIL-08-01.                                                 IC1084.2
 036900     PERFORM FAIL.                                                IC1084.2
 037000     MOVE DN4 TO COMPUTED-18V0.                                   IC1084.2
-037100     MOVE 1 TO CORRECT-18V0.                                      IC1084.2
+037100     MOVE 8 TO CORRECT-18V0.                                      IC1084.2
 037200     MOVE "IC109A CALLED N TIMES" TO RE-MARK.                     IC1084.2
 037300 CALL-WRITE-08-01.                                                IC1084.2
 037400     PERFORM PRINT-DETAIL.                                        IC1084.2
@@ -414,13 +414,13 @@
 041600     PERFORM PRINT-DETAIL.                                        IC1084.2
 041700 LINK-TEST-07-02.                                                 IC1084.2
 041800     ADD 1 TO REC-CT.                                             IC1084.2
-041900     IF DN8 EQUAL TO "W"                                          IC1084.2
+041900     IF DN8 EQUAL TO "A"                                          IC1084.2
 042000         PERFORM PASS                                             IC1084.2
 042100         GO TO LINK-WRITE-07-02.                                  IC1084.2
 042200 LINK-FAIL-07-02.                                                 IC1084.2
 042300     PERFORM FAIL.                                                IC1084.2
 042400     MOVE DN8 TO COMPUTED-A.                                      IC1084.2
-042500     MOVE "W" TO CORRECT-A.                                       IC1084.2
+042500     MOVE "A" TO CORRECT-A.                                       IC1084.2
 042600     MOVE "IC110A WK-STORAGE OPERAND" TO RE-MARK.                 IC1084.2
 042700 LINK-WRITE-07-02.                                                IC1084.2
 042800     PERFORM PRINT-DETAIL.                                        IC1084.2

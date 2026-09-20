@@ -13,14 +13,18 @@ TEST RESULT OF IC108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- SUBPROGRAM CALLS     FAIL* CALL-TEST-07       .01        SUBPROGRAM IC109A ERROR                                       
-                                                                                                                        
-                                     COMPUTED= IC109A                                                                   
-                                     CORRECT = I5109A                                                                   
-                                                                                                                        
+ SUBPROGRAM CALLS     PASS  CALL-TEST-07       .01                                                                      
  SUBPROGRAM CALLS     PASS  CALL-TEST-07       .02                                                                      
- SUBPROGRAM CALLS     PASS  CALL-TEST-07       .03                                                                      
- SUBPRGMS CALLED ONCE PASS  CALL-TEST-08       .01                                                                      
+ SUBPROGRAM CALLS     FAIL* CALL-TEST-07       .03        SUBPROGRAM IC111A ERROR                                       
+                                                                                                                        
+                                     COMPUTED= IC111A                                                                   
+                                     CORRECT = ZC111A                                                                   
+                                                                                                                        
+ SUBPRGMS CALLED ONCE FAIL* CALL-TEST-08       .01        IC109A CALLED N TIMES                                         
+                                                                                                                        
+                                     COMPUTED=  000000000000000001                                                      
+                                     CORRECT =  000000000000000008                                                      
+                                                                                                                        
  SUBPRGMS CALLED ONCE PASS  CALL-TEST-08       .02                                                                      
  SUBPRGMS CALLED ONCE FAIL* CALL-TEST-08       .03        IC111A CALLED N TIMES                                         
                                                                                                                         
@@ -28,11 +32,7 @@ TEST RESULT OF IC108A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                      CORRECT =  000000000000000000                                                      
                                                                                                                         
  USING OPERANDS       PASS  LINK-TEST-07       .01                                                                      
- USING OPERANDS       FAIL* LINK-TEST-07       .02        IC110A WK-STORAGE OPERAND                                     
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = W                                                                        
-                                                                                                                        
+ USING OPERANDS       PASS  LINK-TEST-07       .02                                                                      
  USING OPERANDS       PASS  LINK-TEST-07       .03                                                                      
  ***********************************************************************************************************************
                                                                                                                         

@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 from decimal import Decimal
 import hashlib
+import hmac
 import json
 from pathlib import Path
 import random
@@ -24,6 +25,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.build_dataset import _build, build, read
+from scripts.mutation_private import mutation_salt, salt_sha256, private_manifest_path, check_salt, write_private
 
 LITERAL = r'''(?:"(?:[^"\n]|"")*"|'(?:[^'\n]|'')*'|[+-]?(?:\d+(?:\.\d+)?|\.\d+))'''
 ITEM = r'[A-Z][A-Z0-9-]*(?:\s*\([^\n()]+\))?'
@@ -116,15 +118,77 @@ def find_sites(source, extended=True):
     return [s for s in sites if counts[tuple(s['spans'][1])] == 1]
 
 
+def comment_edits(source, sites):
+    """Scrub comments in selected paragraphs, preserving all source coordinates.
+
+    Literal replacements are safe, same-width edits. Other nonempty comments
+    in these scopes are conservatively blanked: prose can encode expectations
+    without containing the literal (including on continuation comment lines).
+    """
+    lines = source.splitlines(keepends=True)
+    starts, offset = [], 0
+    for line in lines:
+        starts.append(offset)
+        offset += len(line)
+    paragraphs = [i for i, line in enumerate(lines)
+                  if len(line) > 7 and line[6] == ' '
+                  and re.match(r'[A-Z0-9][A-Z0-9-]*\.(?:\s|$)', line[7:72])]
+    changes = {}
+    for site, literals in sites:
+        first = source.count('\n', 0, site['spans'][0][0])
+        last = source.count('\n', 0, site['spans'][1][0])
+        begin = max(i for i in paragraphs if i <= first)
+        end = next((i for i in paragraphs if i > last), len(lines))
+        if end < len(lines):
+            while end > last + 1 and (not lines[end-1].strip() or
+                                      (len(lines[end-1]) > 6 and lines[end-1][6] in '*/')):
+                end -= 1
+        while begin and (not lines[begin-1].strip() or
+                         (len(lines[begin-1]) > 6 and lines[begin-1][6] in '*/')):
+            begin -= 1
+        for i in range(begin, end):
+            line = lines[i]
+            if len(line) <= 6 or line[6] not in '*/' or not line[7:].strip():
+                continue
+            changes.setdefault(i, []).extend(literals)
+    edits, audit = [], []
+    for i, literals in sorted(changes.items()):
+        old = lines[i][7:].rstrip('\r\n')
+        # One pass avoids cascading changes when two selected sites share scope.
+        mapping = {}
+        ambiguous = False
+        for original, mutated in literals:
+            for before, after in ((original, mutated),
+                                  (original.strip('"\''), mutated.strip('"\''))):
+                if before in mapping and mapping[before] != after:
+                    ambiguous = True
+                mapping[before] = after
+        pattern = '|'.join(re.escape(v) for v in sorted(mapping, key=len, reverse=True) if v)
+        changed = re.sub(pattern, lambda m: mapping[m[0]], old) if pattern else old
+        action = 'rewrite'
+        # Only simple literal-labelled assertions can be retained safely. A
+        # mixed comment may repeat the expectation in words beside the number.
+        prose = re.sub(pattern, '', old) if pattern else old
+        words = set(re.findall(r'[A-Z]+', prose.upper()))
+        labels = {'EXPECTED', 'EXPECT', 'VALUE', 'RESULT', 'IS', 'ARE', 'THE',
+                  'SHOULD', 'BE', 'EQUAL', 'TO', 'CORRECT', 'CONSTANT', 'ASSERTION'}
+        safe = words <= labels and not re.search(r'[0-9]', prose)
+        if ambiguous or changed == old or not safe:
+            changed = ' ' * len(old)
+            action = 'strip'
+        edits.append((starts[i] + 7, starts[i] + 7 + len(old), changed))
+        audit.append(dict(line=i+1, column=8, action=action, original=old, mutated=changed))
+    return edits, audit
+
+
 def mutate(source, name):
-    # Preserve every v1 selection (and therefore validated source/log pairs).
-    # Broaden only programs that previously had fewer than three sites.
+    salt = mutation_salt()
     legacy_sites = find_sites(source, extended=False)
     sites = legacy_sites if len(legacy_sites) >= 3 else find_sites(source)
-    seed = hashlib.sha256(('nist-expectations-v1:' + name).encode()).hexdigest()
-    rng = random.Random(int(seed, 16))
+    seed = hmac.new(salt, name.encode('utf-8'), hashlib.sha256).digest()
+    rng = random.Random(int.from_bytes(seed, 'big'))
     selected = rng.sample(sites, max(3, (len(sites) + 5)//10)) if len(sites) >= 3 else []
-    edits, manifest = [], []
+    edits, manifest, comment_sites = [], [], []
     for site in sorted(selected, key=lambda s: s['spans'][0]):
         original = site['literals'][0]
         mutated = change(original, rng)
@@ -141,20 +205,27 @@ def mutate(source, name):
             edits.append((a, b, new))
             replacements.append(dict(line=source.count('\n', 0, a)+1,
                                      column=a-source.rfind('\n', 0, a), original=old, mutated=new))
+        comment_sites.append((site, list(zip(site['literals'], (mutated, paired)))))
         manifest.append(dict(paragraph=site['paragraph'], operator=site['operator'], kind=site['kind'], replacements=replacements))
+    comments, audit = comment_edits(source, comment_sites)
+    edits.extend(comments)
     for a, b, replacement in sorted(edits, reverse=True):
         source = source[:a] + replacement + source[b:]
-    return source, dict(seed=seed, mutable_sites=len(sites), mutations=manifest)
+    return source, dict(mutable_sites=len(sites), mutations=manifest, comment_changes=audit)
 
 
 def generate(reference, destination, data):
+    fingerprint = salt_sha256()
+    prior_path = private_manifest_path()
+    prior_payload = json.loads(prior_path.read_text()) if prior_path.exists() else None
+    if prior_payload is not None:
+        check_salt(prior_payload)
     # Baseline eligibility comes from the original frozen reports, not from
     # missing mutated logs. The public builder never accepts this baseline.
     with tempfile.TemporaryDirectory() as tmp:
         _, baseline, _ = _build(reference, Path(tmp))
     decisions = {d['program']: d for d in baseline['programs']}
-    prior_path = data/'mutations.json'
-    prior = json.loads(prior_path.read_text())['programs'] if prior_path.exists() else {}
+    prior = prior_payload['programs'] if prior_payload else {}
     programs = {}
     for name, entry in sorted(json.loads((reference/'index.json').read_text())['programs'].items()):
         rel = f'{entry["module"]}/{name}.CBL'
@@ -179,10 +250,13 @@ def generate(reference, destination, data):
             programs[name].update(eligible=False, reasons=['awaiting mutated logs'])
         dest = destination/rel
         dest.parent.mkdir(parents=True, exist_ok=True)
-        if not dest.exists() or dest.read_bytes() != changed.encode('latin1'):
+        changed_bytes = changed.encode('latin1')
+        source_changed = not dest.exists() or dest.read_bytes() != changed_bytes
+        if source_changed or (candidate and not same):
             dest.with_suffix('.log').unlink(missing_ok=True)
             dest.with_suffix('.out').unlink(missing_ok=True)
-            dest.write_bytes(changed.encode('latin1'))
+        if source_changed:
+            dest.write_bytes(changed_bytes)
     for path in reference.rglob('*'):
         if path.is_file() and (path.suffix in {'.DAT', '.inp', '.SUB'} or path.parent.name in {'lib', 'copy', 'copyalt'} or path.name in {'index.json', 'report.pl', 'expand.pl', 'EXEC85.conf.in', 'cobc-version.txt'}):
             dest = destination/path.relative_to(reference)
@@ -192,12 +266,12 @@ def generate(reference, destination, data):
             if not dest.exists() or dest.read_bytes() != path.read_bytes():
                 shutil.copyfile(path, dest)
     data.mkdir(parents=True, exist_ok=True)
-    payload = dict(schema_version=1, algorithm='nist-expectations-v1', programs=programs)
-    (data/'mutations.json').write_text(json.dumps(payload, indent=2, sort_keys=True)+'\n')
+    payload = dict(schema_version=2, algorithm='hmac-sha256-program-v2', salt_sha256=fingerprint, programs=programs)
+    write_private(prior_path, payload)
     # Pending new candidates are excluded explicitly; keep shipping the already
     # validated population. The builder promotes them after fresh logs arrive.
-    build(destination, data, data/'mutations.json')
-    payload = json.loads((data/'mutations.json').read_text())
+    build(destination, data)
+    payload = json.loads(prior_path.read_text())
     programs = payload['programs']
     print(f'Mutated eligible programs: {sum(p["eligible"] for p in programs.values())}; excluded: {sum(not p["eligible"] for p in programs.values())}')
     return payload
@@ -209,4 +283,7 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=ROOT/'reference-mutated')
     parser.add_argument('--data', type=Path, default=ROOT/'nist_cobol85/data')
     args = parser.parse_args()
-    generate(args.reference, args.output, args.data)
+    try:
+        generate(args.reference, args.output, args.data)
+    except ValueError as error:
+        parser.exit(1, str(error) + '\n')

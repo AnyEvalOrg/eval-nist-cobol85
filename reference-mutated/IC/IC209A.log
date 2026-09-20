@@ -13,21 +13,21 @@ TEST RESULT OF IC209A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- CALL...USING DATA-NM PASS  CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
- CALL...USING DATA-NM FAIL* CALL-TEST-2                   SUBPROGRAM1 CALLS SUBPROGRAM2                                 
+ CALL...USING DATA-NM FAIL* CALL-TEST-1                   MAIN PROGRAM CALLS SUBPROGRAM1                                
                                                                                                                         
                                      COMPUTED= Y                                                                        
-                                     CORRECT = X                                                                        
+                                     CORRECT = 8                                                                        
                                                                                                                         
+ CALL...USING DATA-NM PASS  CALL-TEST-2                   SUBPROGRAM1 CALLS SUBPROGRAM2                                 
  CALL...USING DATA-NM FAIL* CALL-TEST-3                   SUBPROGRAM1 CALLS SUBPROGRAM3                                 
                                                                                                                         
                                      COMPUTED= Y                                                                        
-                                     CORRECT = 2                                                                        
+                                     CORRECT = A                                                                        
                                                                                                                         
  CANCEL               FAIL* CANCEL-TEST-1                 SUBPROGRAM1 CANCELS SUBPROGRAM2                               
                                                                                                                         
                                      COMPUTED= Y                                                                        
-                                     CORRECT = U                                                                        
+                                     CORRECT = 3                                                                        
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

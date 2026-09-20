@@ -19,17 +19,17 @@ TEST RESULT OF ST119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                           ST119 GENERATES OUTPUT                                        
                                                           WHICH AFFECTS PROGRAMS                                        
                                                           ST120 AND ST121.                                              
- SORT --- FIVE KEYS   PASS  SORT-TEST-1                                                                                 
+ SORT --- FIVE KEYS   FAIL* SORT-TEST-1                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000009000000900009                                                      
+                                     CORRECT =  000009000000900007   XI-19 4.4.4 GR(7)                                  
+                                                                                                                        
  SORT --- FIVE KEYS   PASS  SORT-TEST-2                                                                                 
- SORT --- FIVE KEYS   FAIL* SORT-TEST-3                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000106001000200002                                                      
-                                     CORRECT =  000106001000240002   XI-19 4.4.4 GR(7)                                  
-                                                                                                                        
+ SORT --- FIVE KEYS   PASS  SORT-TEST-3                                                                                 
  SORT --- FIVE KEYS   FAIL* SORT-TEST-4                                                                                 
                                                                                                                         
                                      COMPUTED=  000206001000200002                                                      
-                                     CORRECT =  000206001090200002   XI-19 4.4.4 GR(7)                                  
+                                     CORRECT =  000207001000200002   XI-19 4.4.4 GR(7)                                  
                                                                                                                         
  SORT --- FIVE KEYS   PASS  SORT-TEST-5                                                                                 
  SORT --- FIVE KEYS   PASS  RET-3                                                                                       
@@ -55,7 +55,7 @@ TEST RESULT OF ST119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
                                      COMPUTED=  000201002000100001                                                      
-                                     CORRECT =  000201002000100004   XI-14 4.3.4 GR(2) & (4)                            
+                                     CORRECT =  000201002000100401   XI-14 4.3.4 GR(2) & (4)                            
                                                                                                                         
                       PASS  SORT-TEST-7                                                                                 
                       PASS  SORT-TEST-8                                                                                 

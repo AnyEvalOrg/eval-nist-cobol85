@@ -460,7 +460,7 @@
 046200     GO TO MOV-INIT-F2-4.                                         NC2224.2
 046300 MOV-TEST-F2-3-1.                                                 NC2224.2
 046400     MOVE   "MOV-TEST-F2-3-1" TO PAR-NAME.                        NC2224.2
-046500     IF      MOVE-TEST-3-B = -125.45                              NC2224.2
+046500     IF      MOVE-TEST-3-B = -120.45                              NC2224.2
 046600             PERFORM PASS                                         NC2224.2
 046700             GO TO MOV-WRITE-F2-3-1                               NC2224.2
 046800     ELSE                                                         NC2224.2
@@ -469,7 +469,7 @@
 047100     PERFORM DE-LETE.                                             NC2224.2
 047200     GO TO MOV-WRITE-F2-3-1.                                      NC2224.2
 047300 MOV-FAIL-F2-3-1.                                                 NC2224.2
-047400     MOVE   -125.45 TO CORRECT-N                                  NC2224.2
+047400     MOVE   -120.45 TO CORRECT-N                                  NC2224.2
 047500     MOVE    MOVE-TEST-3-B TO COMPUTED-N                          NC2224.2
 047600     MOVE   "DE-EDITING MOVE ERROR" TO RE-MARK                    NC2224.2
 047700     PERFORM FAIL.                                                NC2224.2
@@ -510,7 +510,7 @@
 051200     GO TO CCVS-999999.                                           NC2224.2
 051300 MOV-TEST-F2-4-1.                                                 NC2224.2
 051400     MOVE   "MOV-TEST-F2-4-1" TO PAR-NAME.                        NC2224.2
-051500     IF      MOVE-TEST-4-B = -42.987606                           NC2224.2
+051500     IF      MOVE-TEST-4-B = -02.987600                           NC2224.2
 051600             PERFORM PASS                                         NC2224.2
 051700             GO TO MOV-WRITE-F2-4-1                               NC2224.2
 051800     ELSE                                                         NC2224.2
@@ -519,17 +519,17 @@
 052100     PERFORM DE-LETE.                                             NC2224.2
 052200     GO TO MOV-WRITE-F2-4-1.                                      NC2224.2
 052300 MOV-FAIL-F2-4-1.                                                 NC2224.2
-052400     MOVE   -42.987606 TO CORRECT-N                               NC2224.2
+052400     MOVE   -02.987600 TO CORRECT-N                               NC2224.2
 052500     MOVE    MOVE-TEST-4-B TO COMPUTED-N                          NC2224.2
 052600     MOVE   "DE-EDITING MOVE ERROR" TO RE-MARK                    NC2224.2
 052700     PERFORM FAIL.                                                NC2224.2
 052800 MOV-WRITE-F2-4-1.                                                NC2224.2
 052900     PERFORM PRINT-DETAIL.                                        NC2224.2
-053000*                                                                 NC2224.2
+053000*                                                                         
 053100 MOV-TEST-F2-4-2.                                                 NC2224.2
 053200     ADD     1 TO REC-CT.                                         NC2224.2
 053300     MOVE   "MOV-TEST-F2-4-2" TO PAR-NAME.                        NC2224.2
-053400     IF      MOVE-TEST-4-A = "-44 .98 76/00"                      NC2224.2
+053400     IF      MOVE-TEST-4-A = "742 .98 76/00"                      NC2224.2
 053500             PERFORM PASS                                         NC2224.2
 053600             GO TO MOV-WRITE-F2-4-2                               NC2224.2
 053700     ELSE                                                         NC2224.2
@@ -538,7 +538,7 @@
 054000     PERFORM DE-LETE.                                             NC2224.2
 054100     GO TO MOV-WRITE-F2-4-2.                                      NC2224.2
 054200 MOV-FAIL-F2-4-2.                                                 NC2224.2
-054300     MOVE   "-44 .98 76/00" TO CORRECT-X                          NC2224.2
+054300     MOVE   "742 .98 76/00" TO CORRECT-X                          NC2224.2
 054400     MOVE    MOVE-TEST-4-A TO COMPUTED-X                          NC2224.2
 054500     MOVE   "EDITED DATA MOVE ERROR" TO RE-MARK                   NC2224.2
 054600     PERFORM FAIL.                                                NC2224.2

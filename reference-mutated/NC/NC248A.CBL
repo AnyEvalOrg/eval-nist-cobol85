@@ -525,9 +525,9 @@
 052700 SET-DELETE-F2-8.                                                 NC2484.2
 052800     PERFORM DE-LETE.                                             NC2484.2
 052900     GO TO   SET-WRITE-F2-8-1.                                    NC2484.2
-053000*                                                                 NC2484.2
+053000*                                                                         
 053100 SET-TEST-F2-8-1.                                                 NC2484.2
-053200     IF      TEST-8-1 = "1"                                       NC2484.2
+053200     IF      TEST-8-1 = "S"                                       NC2484.2
 053300             PERFORM PASS                                         NC2484.2
 053400             GO TO   SET-WRITE-F2-8-1                             NC2484.2
 053500     ELSE                                                         NC2484.2
@@ -540,7 +540,7 @@
 054200     MOVE   "CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE"      NC2484.2
 054300          TO RE-MARK.                                             NC2484.2
 054400     MOVE    TEST-8-1 TO COMPUTED-X.                              NC2484.2
-054500     MOVE   "1"       TO CORRECT-X.                               NC2484.2
+054500     MOVE   "S"       TO CORRECT-X.                               NC2484.2
 054600 SET-WRITE-F2-8-1.                                                NC2484.2
 054700     PERFORM PRINT-DETAIL.                                        NC2484.2
 054800*                                                                 NC2484.2
@@ -557,9 +557,9 @@
 055900 SET-DELETE-F2-9.                                                 NC2484.2
 056000     PERFORM DE-LETE.                                             NC2484.2
 056100     GO TO   SET-WRITE-F2-9-3.                                    NC2484.2
-056200*                                                                 NC2484.2
+056200*                                                                         
 056300 SET-TEST-F2-9-1.                                                 NC2484.2
-056400     IF      TEST-9-1 = "Z"                                       NC2484.2
+056400     IF      TEST-9-1 = "1"                                       NC2484.2
 056500             PERFORM PASS                                         NC2484.2
 056600             GO TO   SET-WRITE-F2-9-1                             NC2484.2
 056700     ELSE                                                         NC2484.2
@@ -572,7 +572,7 @@
 057400     MOVE   "CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE"      NC2484.2
 057500          TO RE-MARK.                                             NC2484.2
 057600     MOVE    TEST-9-1 TO COMPUTED-X.                              NC2484.2
-057700     MOVE   "Z"       TO CORRECT-X.                               NC2484.2
+057700     MOVE   "1"       TO CORRECT-X.                               NC2484.2
 057800 SET-WRITE-F2-9-1.                                                NC2484.2
 057900     PERFORM PRINT-DETAIL.                                        NC2484.2
 058000*                                                                 NC2484.2
@@ -594,10 +594,10 @@
 059600     MOVE   "6"       TO CORRECT-X.                               NC2484.2
 059700 SET-WRITE-F2-9-2.                                                NC2484.2
 059800     PERFORM PRINT-DETAIL.                                        NC2484.2
-059900*                                                                 NC2484.2
+059900*                                                                         
 060000 SET-TEST-F2-9-3.                                                 NC2484.2
 060100     ADD     1 TO REC-CT.                                         NC2484.2
-060200     IF      TEST-9-3 = "1"                                       NC2484.2
+060200     IF      TEST-9-3 = "M"                                       NC2484.2
 060300             PERFORM PASS                                         NC2484.2
 060400             GO TO   SET-WRITE-F2-9-3                             NC2484.2
 060500     ELSE                                                         NC2484.2
@@ -610,7 +610,7 @@
 061200     MOVE   "CONDITION VARIABLE NOT SET TO FIRST TRUE VALUE"      NC2484.2
 061300          TO RE-MARK.                                             NC2484.2
 061400     MOVE    TEST-9-3 TO COMPUTED-X.                              NC2484.2
-061500     MOVE   "1"       TO CORRECT-X.                               NC2484.2
+061500     MOVE   "M"       TO CORRECT-X.                               NC2484.2
 061600 SET-WRITE-F2-9-3.                                                NC2484.2
 061700     PERFORM PRINT-DETAIL.                                        NC2484.2
 061800*                                                                 NC2484.2

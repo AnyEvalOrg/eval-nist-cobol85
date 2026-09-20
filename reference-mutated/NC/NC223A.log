@@ -32,60 +32,56 @@ TEST RESULT OF NC223A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INITIALIZE STATEMENT PASS  INI-TEST-GF-2-7    .07                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-2-8    .08                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-2-9    .09                                                                      
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-2-10   .10        WRONGLY AFFECTED BY OTHER INITIALISATION                      
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-2-10   .10                                                                      
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-3-1    .01        INCORRECTLY INITIALIZED                                       
                                                                                                                         
-                                     COMPUTED=      /                                                                   
-                                     CORRECT =      / C              VI-91/2 6.16.2 GR2                                 
+                                     COMPUTED= **********                                                               
+                                     CORRECT = ***N******            VI-91/2 6.16.2 GR2                                 
                                                                                                                         
- INITIALIZE STATEMENT PASS  INI-TEST-GF-3-1    .01                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-3-2    .02                                                                      
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-3-2    .02        INCORRECTLY INITIALIZED                                       
+                                                                                                                        
+                                     COMPUTED= **********                                                               
+                                     CORRECT = **I*******            VI-91/2 6.16.2 GR2                                 
+                                                                                                                        
  INITIALIZE STATEMENT PASS  INI-TEST-GF-3-3    .03                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-3-4    .04                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-3-5    .05                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-3-6    .06                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-3-7    .07                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-3-8    .08                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-3-9    .09                                                                      
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-3-10   .10        WRONGLY AFFECTED BY OTHER INITIALISATION                      
-                                                                                                                        
-                                     COMPUTED= AAAAAA                                                                                                                                                                                           
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-3-8    .08                                                                                                                                                                                              
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
-                                     CORRECT = BAAAAA                VI-91/2 6.16.2 GR2                                 
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-3-9    .09                                                                      
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-3-10   .10                                                                      
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-4-1    .01        INCORRECTLY INITIALIZED                                       
                                                                                                                         
- INITIALIZE STATEMENT PASS  INI-TEST-GF-4-1    .01                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-4-2    .02                                                                      
+                                     COMPUTED= DD DD/DD                                                                 
+                                     CORRECT = DDFDD/DD              VI-91/2 6.16.2 GR2                                 
+                                                                                                                        
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-4-2    .02        INCORRECTLY INITIALIZED                                       
+                                                                                                                        
+                                     COMPUTED= DD DD/DD                                                                 
+                                     CORRECT = DD DM/DD              VI-91/2 6.16.2 GR2                                 
+                                                                                                                        
  INITIALIZE STATEMENT PASS  INI-TEST-GF-4-3    .03                                                                      
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-4-4    .04        WRONGLY AFFECTED BY OTHER INITIALISATION                      
-                                                                                                                        
-                                     COMPUTED=   $0.00                                                                  
-                                     CORRECT =   $M.00               VI-91/2 6.16.2 GR2                                 
-                                                                                                                        
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-4-5    .05        WRONGLY AFFECTED BY OTHER INITIALISATION                      
-                                                                                                                        
-                                     COMPUTED= **********                                                               
-                                     CORRECT = 4*********            VI-91/2 6.16.2 GR2                                 
-                                                                                                                        
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-4-4    .04                                                                      
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-4-5    .05                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-4-6    .06                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-4-7    .07                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-4-8    .08                                                                      
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-4-8    .08        WRONGLY AFFECTED BY OTHER INITIALISATION                      
+                                                                                                                        
+                                     COMPUTED=   $0.00                                                                  
+                                     CORRECT = D $0.00               VI-91/2 6.16.2 GR2                                 
+                                                                                                                        
  INITIALIZE STATEMENT PASS  INI-TEST-GF-4-9    .09                                                                      
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-4-10   .10        WRONGLY AFFECTED BY OTHER INITIALISATION                      
-                                                                                                                        
-                                     COMPUTED= AAAAAA                                                                   
-                                     CORRECT = ARAAAA                VI-91/2 6.16.2 GR2                                 
-                                                                                                                        
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-4-10   .10                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-1    .01                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-2    .02                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-3    .03                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-4    .04                                                                      
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-5-5    .05        WRONGLY AFFECTED BY OTHER INITIALISATION                      
-                                                                                                                        
-                                     COMPUTED= DD DD/DD                                                                 
-                                     CORRECT = DD JD/DD              VI-91/2 6.16.2 GR2                                 
-                                                                                                                        
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-5-5    .05                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-6    .06                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-7    .07                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-5-8    .08                                                                      
@@ -100,27 +96,31 @@ TEST RESULT OF NC223A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  INITIALIZE STATEMENT PASS  INI-TEST-GF-6-7    .07                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-6-8    .08                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-6-9    .09                                                                      
- INITIALIZE STATEMENT FAIL* INI-TEST-GF-6-10   .10        WRONGLY AFFECTED BY OTHER INITIALISATION                      
-                                                                                                                        
-                                     COMPUTED= AAAAAA                                                                   
-                                     CORRECT = PAAAAA                VI-91/2 6.16.2 GR2                                                                                                                                                         
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                                                                                                        
+ INITIALIZE STATEMENT PASS  INI-TEST-GF-6-10   .10                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-1    .01                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-2    .02                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-3    .03                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-4    .04                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-5    .05                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-7-6    .06                                                                      
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-7-6    .06        WRONGLY AFFECTED BY OTHER INITIALISATION                      
+                                                                                                                                                                                                                                                
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
+                                                                                                                        
+ ***********************************************************************************************************************
+                                     COMPUTED= AAAAAA                                                                   
+                                     CORRECT = AAAQAA                VI-91 6.16.2                                       
+                                                                                                                        
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-7    .07                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-8    .08                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-9    .09                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-7-10   .10                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-8-1    .01                                                                      
- INITIALIZE STATEMENT PASS  INI-TEST-GF-8-2    .02                                                                      
+ INITIALIZE STATEMENT FAIL* INI-TEST-GF-8-2    .02        INCORRECTLY INITIALIZED                                       
+                                                                                                                        
+                                     COMPUTED=   $0.00                                                                  
+                                     CORRECT =   $0Y00               VI-91 6.16.4 GR2                                   
+                                                                                                                        
  INITIALIZE STATEMENT PASS  INI-TEST-GF-8-3    .03                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-8-4    .04                                                                      
  INITIALIZE STATEMENT PASS  INI-TEST-GF-8-5    .05                                                                      

@@ -456,7 +456,7 @@
 045800 COPY-INIT-A.                                                     SM1014.2
 045900     MOVE     "  SECTION" TO FEATURE.                             SM1014.2
 046000 COPY-TEST-3.                                                     SM1014.2
-046100     IF       COPYSECT-1 EQUAL TO 45427                           SM1014.2
+046100     IF       COPYSECT-1 EQUAL TO 95427                           SM1014.2
 046200              PERFORM PASS GO TO COPY-WRITE-3.                    SM1014.2
 046300*        NOTE COPY-TEST-3, 4, 5, 6 TEST THE COPYING OF AN         SM1014.2
 046400*             ENTIRE SECTION.                                     SM1014.2
@@ -466,13 +466,13 @@
 046800     GO       TO COPY-WRITE-3.                                    SM1014.2
 046900 COPY-FAIL-3.                                                     SM1014.2
 047000     MOVE     COPYSECT-1 TO COMPUTED-N.                           SM1014.2
-047100     MOVE     45427   TO CORRECT-N.                               SM1014.2
+047100     MOVE     95427   TO CORRECT-N.                               SM1014.2
 047200     PERFORM  FAIL.                                               SM1014.2
 047300 COPY-WRITE-3.                                                    SM1014.2
 047400     MOVE     "COPY-TEST-3 " TO PAR-NAME.                         SM1014.2
 047500     PERFORM  PRINT-DETAIL.                                       SM1014.2
 047600 COPY-TEST-4.                                                     SM1014.2
-047700     IF       COPYSECT-2 EQUAL TO 23121                           SM1014.2
+047700     IF       COPYSECT-2 EQUAL TO 24121                           SM1014.2
 047800              PERFORM PASS GO TO COPY-WRITE-4.                    SM1014.2
 047900     GO       TO COPY-FAIL-4.                                     SM1014.2
 048000 COPY-DELETE-4.                                                   SM1014.2
@@ -480,7 +480,7 @@
 048200     GO       TO COPY-WRITE-4.                                    SM1014.2
 048300 COPY-FAIL-4.                                                     SM1014.2
 048400     MOVE     COPYSECT-2 TO COMPUTED-N.                           SM1014.2
-048500     MOVE     23121   TO CORRECT-N.                               SM1014.2
+048500     MOVE     24121   TO CORRECT-N.                               SM1014.2
 048600     PERFORM  FAIL.                                               SM1014.2
 048700 COPY-WRITE-4.                                                    SM1014.2
 048800     MOVE     "COPY-TEST-4 " TO PAR-NAME.                         SM1014.2
@@ -500,7 +500,7 @@
 050200     MOVE     "COPY-TEST-5 " TO PAR-NAME.                         SM1014.2
 050300     PERFORM  PRINT-DETAIL.                                       SM1014.2
 050400 COPY-TEST-6.                                                     SM1014.2
-050500     IF       COPYSECT-4 EQUAL TO "PYTXT"                         SM1014.2
+050500     IF       COPYSECT-4 EQUAL TO "PYTS1"                         SM1014.2
 050600              PERFORM PASS GO TO COPY-WRITE-6.                    SM1014.2
 050700     GO       TO COPY-FAIL-6.                                     SM1014.2
 050800 COPY-DELETE-6.                                                   SM1014.2
@@ -508,7 +508,7 @@
 051000     GO       TO COPY-WRITE-6.                                    SM1014.2
 051100 COPY-FAIL-6.                                                     SM1014.2
 051200     MOVE     COPYSECT-4 TO COMPUTED-A.                           SM1014.2
-051300     MOVE     "PYTXT" TO CORRECT-A.                               SM1014.2
+051300     MOVE     "PYTS1" TO CORRECT-A.                               SM1014.2
 051400     PERFORM  FAIL.                                               SM1014.2
 051500 COPY-WRITE-6.                                                    SM1014.2
 051600     MOVE     "COPY-TEST-6 " TO PAR-NAME.                         SM1014.2
@@ -539,15 +539,15 @@
 054100     MOVE     "OUTPUT CHECKED IN SM102A" TO RE-MARK.              SM1014.2
 054200     PERFORM  PRINT-DETAIL.                                       SM1014.2
 054300 COPY-TEST-8.                                                     SM1014.2
-054400*                                                                 SM1014.2
-054500*********************** COPY STATEMENT USED **********************SM1014.2
-054600*                                                                 SM1014.2
-054700*    ADD     COPY K1P01. TO WRK-DS-05V00.                         SM1014.2
-054800*                                                                 SM1014.2
-054900******************** COPIED TEXT BEGINS BELOW ********************SM1014.2
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
+054800*                                                                         
+054900*                                                                         
 055000     ADD     COPY K1P01. TO WRK-DS-05V00.                         SM1014.2
-055100*********************** END OF COPIED TEXT ***********************SM1014.2
-055200     IF       WRK-DS-05V00 EQUAL TO 97524                         SM1014.2
+055100*                                                                         
+055200     IF       WRK-DS-05V00 EQUAL TO 97513                         SM1014.2
 055300             PERFORM PASS                                         SM1014.2
 055400             GO TO COPY-WRITE-8.                                  SM1014.2
 055500     GO TO    COPY-FAIL-8.                                        SM1014.2
@@ -556,7 +556,7 @@
 055800     GO TO    COPY-WRITE-8.                                       SM1014.2
 055900 COPY-FAIL-8.                                                     SM1014.2
 056000     MOVE    WRK-DS-05V00 TO COMPUTED-N.                          SM1014.2
-056100     MOVE    97524        TO CORRECT-N.                           SM1014.2
+056100     MOVE    97513        TO CORRECT-N.                           SM1014.2
 056200     PERFORM FAIL.                                                SM1014.2
 056300 COPY-WRITE-8.                                                    SM1014.2
 056400     MOVE     "COPY-TEST-8" TO PAR-NAME.                          SM1014.2

@@ -60,7 +60,7 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SENDING ITEM DS-LS   FAIL* SIG-TEST-GF-9      .04        MOVE DS-LS-5 TO CS-005                                        
                                                                                                                         
                                      COMPUTED=  000000000000091275                                                      
-                                     CORRECT =  000000000000091285   VI-42 5.12.4                                       
+                                     CORRECT =  000000000000091225   VI-42 5.12.4                                       
                                                                                                                         
  SENDING ITEM DS-TS-4 PASS  SIG-TEST-GF-10     .01                                                                      
  SENDING ITEM DS-TS-4 PASS  SIG-TEST-GF-10     .02                                                                      
@@ -84,19 +84,19 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SIGNED NUM. TO ALPHA PASS  SIG-TEST-GF-14     .04                                                                      
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .01                                                                      
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .02                                                                      
- RECEIVING ITEM DS-LS FAIL* SIG-TEST-GF-15     .03        MOVE DS-005 TO WRK-DS-LS-5                                    
-                                                                                                                        
-                                     COMPUTED= -15759                                                                   
-                                     CORRECT = -15769                VI-42 5.12.4                                       
-                                                                                                                        
+ RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .03                                                                      
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .04                                                                      
- RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .05                                                                      
+ RECEIVING ITEM DS-LS FAIL* SIG-TEST-GF-15     .05        MOVE 15759 TO WRK-DS-LS-5                                     
+                                                                                                                        
+                                     COMPUTED= +15759                                                                   
+                                     CORRECT = +15757                VI-42 5.12.4                                       
+                                                                                                                        
  RECEIVING ITEM DS-LS PASS  SIG-TEST-GF-15     .06                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .01                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .02                                                                      
- RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .03                                                                      
- RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .04                                                                      
- RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .05                                                                                                                                                                                              
+ RECEIVING ITEM DS-TS FAIL* SIG-TEST-GF-16     .03        MOVE DS-005 TO WRK-DS-TS-5                                    
+                                                                                                                        
+                                     COMPUTED= 15759-                                                                                                                                                                                           
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -110,13 +110,13 @@ TEST RESULT OF NC116A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+                                     CORRECT = 15Y59-                VI-42 5.12.4                                       
+                                                                                                                        
+ RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .04                                                                      
+ RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .05                                                                      
  RECEIVING ITEM DS-TS PASS  SIG-TEST-GF-16     .06                                                                      
  PRECEDENCE OF SUBORD PASS  SIG-TEST-GF-17                                                                              
- PRECEDENCE OF SUBORD FAIL* SIG-TEST-GF-18                POSITIVE SIGN EXPECTED                                        
-                                                                                                                        
-                                     COMPUTED= +                                                                        
-                                     CORRECT = N                     VI-42 5.12.4 GR3                                   
-                                                                                                                        
+ PRECEDENCE OF SUBORD PASS  SIG-TEST-GF-18                                                                              
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

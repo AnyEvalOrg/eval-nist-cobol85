@@ -432,7 +432,7 @@
 043400*                                                                 NC2174.2
 043500 STR-TEST-GF-2-3.                                                 NC2174.2
 043600     ADD     1 TO REC-CT.                                         NC2174.2
-043700     IF      ID8-DU-2V0 = 9                                       NC2174.2
+043700     IF      ID8-DU-2V0 = 6                                       NC2174.2
 043800          PERFORM PASS                                            NC2174.2
 043900          GO TO STR-WRITE-GF-2-3                                  NC2174.2
 044000     ELSE                                                         NC2174.2
@@ -443,7 +443,7 @@
 044500 STR-FAIL-GF-2-3.                                                 NC2174.2
 044600     PERFORM FAIL                                                 NC2174.2
 044700     MOVE    ID8-DU-2V0 TO COMPUTED-N                             NC2174.2
-044800     MOVE    9 TO CORRECT-N.                                      NC2174.2
+044800     MOVE    6 TO CORRECT-N.                                      NC2174.2
 044900 STR-WRITE-GF-2-3.                                                NC2174.2
 045000     PERFORM PRINT-DETAIL.                                        NC2174.2
 045100*                                                                 NC2174.2
@@ -1166,9 +1166,9 @@
 116800     PERFORM DE-LETE.                                             NC2174.2
 116900     PERFORM PRINT-DETAIL.                                        NC2174.2
 117000     GO      TO STR-INIT-GF-19.                                   NC2174.2
-117100*                                                                 NC2174.2
+117100*                                                                         
 117200 STR-TEST-GF-18-1.                                                NC2174.2
-117300     IF      ID7-XN-5 = "-1 -1"                                   NC2174.2
+117300     IF      ID7-XN-5 = "-1 01"                                   NC2174.2
 117400             PERFORM PASS                                         NC2174.2
 117500             GO TO STR-WRITE-GF-18-1                              NC2174.2
 117600     ELSE                                                         NC2174.2
@@ -1179,7 +1179,7 @@
 118100 STR-FAIL-GF-18-1.                                                NC2174.2
 118200     PERFORM FAIL                                                 NC2174.2
 118300     MOVE    ID7-XN-5 TO COMPUTED-A                               NC2174.2
-118400     MOVE    "-1 -1" TO CORRECT-A.                                NC2174.2
+118400     MOVE    "-1 01" TO CORRECT-A.                                NC2174.2
 118500 STR-WRITE-GF-18-1.                                               NC2174.2
 118600     PERFORM PRINT-DETAIL.                                        NC2174.2
 118700*                                                                 NC2174.2
@@ -1296,10 +1296,10 @@
 129800     MOVE    ANS-XN-37 TO CORRECT-A.                              NC2174.2
 129900 STR-WRITE-GF-20-2.                                               NC2174.2
 130000     PERFORM PRINT-DETAIL.                                        NC2174.2
-130100*                                                                 NC2174.2
+130100*                                                                         
 130200 STR-TEST-GF-20-3.                                                NC2174.2
 130300     ADD     1 TO REC-CT.                                         NC2174.2
-130400     IF      MY-BOSS-DU-2V0 = 38                                  NC2174.2
+130400     IF      MY-BOSS-DU-2V0 = 30                                  NC2174.2
 130500             PERFORM PASS                                         NC2174.2
 130600             GO TO STR-WRITE-GF-20-3                              NC2174.2
 130700     ELSE                                                         NC2174.2
@@ -1310,7 +1310,7 @@
 131200 STR-FAIL-GF-20-3.                                                NC2174.2
 131300     PERFORM FAIL                                                 NC2174.2
 131400     MOVE    MY-BOSS-DU-2V0 TO COMPUTED-N                         NC2174.2
-131500     MOVE    38 TO CORRECT-N.                                     NC2174.2
+131500     MOVE    30 TO CORRECT-N.                                     NC2174.2
 131600 STR-WRITE-GF-20-3.                                               NC2174.2
 131700     PERFORM PRINT-DETAIL.                                        NC2174.2
 131800*                                                                 NC2174.2
@@ -1332,9 +1332,9 @@
 133400     PERFORM DE-LETE.                                             NC2174.2
 133500     PERFORM PRINT-DETAIL.                                        NC2174.2
 133600     GO TO   STR-INIT-GF-22.                                      NC2174.2
-133700*                                                                 NC2174.2
+133700*                                                                         
 133800 STR-TEST-GF-21-1.                                                NC2174.2
-133900     IF      TEST-21-GROUP = "ABC8E"                              NC2174.2
+133900     IF      TEST-21-GROUP = "ABCDR"                              NC2174.2
 134000             PERFORM PASS                                         NC2174.2
 134100             GO TO STR-WRITE-GF-21-1                              NC2174.2
 134200     ELSE                                                         NC2174.2
@@ -1345,13 +1345,13 @@
 134700 STR-FAIL-GF-21-1.                                                NC2174.2
 134800     PERFORM FAIL                                                 NC2174.2
 134900     MOVE    TEST-21-GROUP TO COMPUTED-A                          NC2174.2
-135000     MOVE   "ABC8E" TO CORRECT-A.                                 NC2174.2
+135000     MOVE   "ABCDR" TO CORRECT-A.                                 NC2174.2
 135100 STR-WRITE-GF-21-1.                                               NC2174.2
 135200     PERFORM PRINT-DETAIL.                                        NC2174.2
-135300*                                                                 NC2174.2
+135300*                                                                         
 135400 STR-TEST-GF-21-2.                                                NC2174.2
 135500     ADD 1 TO REC-CT.                                             NC2174.2
-135600     IF      ID8-DU-2V0 = 7                                       NC2174.2
+135600     IF      ID8-DU-2V0 = 8                                       NC2174.2
 135700             PERFORM PASS                                         NC2174.2
 135800             GO TO STR-WRITE-GF-21-2                              NC2174.2
 135900     ELSE                                                         NC2174.2
@@ -1362,7 +1362,7 @@
 136400 STR-FAIL-GF-21-2.                                                NC2174.2
 136500     PERFORM FAIL                                                 NC2174.2
 136600     MOVE    ID8-DU-2V0 TO COMPUTED-N                             NC2174.2
-136700     MOVE    7 TO CORRECT-N.                                      NC2174.2
+136700     MOVE    8 TO CORRECT-N.                                      NC2174.2
 136800 STR-WRITE-GF-21-2.                                               NC2174.2
 136900     PERFORM PRINT-DETAIL.                                        NC2174.2
 137000*                                                                 NC2174.2
@@ -1665,10 +1665,10 @@
 166700     MOVE    6 TO CORRECT-N.                                      NC2174.2
 166800 STR-WRITE-GF-26-2.                                               NC2174.2
 166900     PERFORM PRINT-DETAIL.                                        NC2174.2
-167000*                                                                 NC2174.2
+167000*                                                                         
 167100 STR-TEST-GF-26-3.                                                NC2174.2
 167200     ADD     1 TO REC-CT.                                         NC2174.2
-167300     IF      WRK-XN-00001-1 = "2"                                 NC2174.2
+167300     IF      WRK-XN-00001-1 = "1"                                 NC2174.2
 167400             PERFORM PASS                                         NC2174.2
 167500             GO TO STR-WRITE-GF-26-3                              NC2174.2
 167600     ELSE                                                         NC2174.2
@@ -1678,7 +1678,7 @@
 168000     GO TO STR-WRITE-GF-26-3.                                     NC2174.2
 168100 STR-FAIL-GF-26-3.                                                NC2174.2
 168200     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2174.2
-168300     MOVE   "2" TO CORRECT-X                                      NC2174.2
+168300     MOVE   "1" TO CORRECT-X                                      NC2174.2
 168400     MOVE   "ON OVERFLOW SHOULD HAVE EXECUTED" TO RE-MARK         NC2174.2
 168500     PERFORM FAIL.                                                NC2174.2
 168600 STR-WRITE-GF-26-3.                                               NC2174.2
@@ -1748,7 +1748,7 @@
 175000*                                                                 NC2174.2
 175100 STR-TEST-GF-27-1.                                                NC2174.2
 175200     MOVE    1 TO REC-CT.                                         NC2174.2
-175300     IF      ID7-XN-5 = "AB0DE"                                   NC2174.2
+175300     IF      ID7-XN-5 = "ABCDE"                                   NC2174.2
 175400             PERFORM PASS                                         NC2174.2
 175500             GO TO STR-WRITE-GF-27-1                              NC2174.2
 175600     ELSE                                                         NC2174.2
@@ -1759,7 +1759,7 @@
 176100 STR-FAIL-GF-27-1.                                                NC2174.2
 176200     PERFORM FAIL                                                 NC2174.2
 176300     MOVE    ID7-XN-5 TO COMPUTED-A                               NC2174.2
-176400     MOVE   "AB0DE" TO CORRECT-A.                                 NC2174.2
+176400     MOVE   "ABCDE" TO CORRECT-A.                                 NC2174.2
 176500 STR-WRITE-GF-27-1.                                               NC2174.2
 176600     PERFORM PRINT-DETAIL.                                        NC2174.2
 176700*                                                                 NC2174.2
@@ -1818,7 +1818,7 @@
 182000*                                                                 NC2174.2
 182100 STR-TEST-GF-27-5.                                                NC2174.2
 182200     ADD     1 TO REC-CT.                                         NC2174.2
-182300     IF      WRK-XN-00001-3 = "Q"                                 NC2174.2
+182300     IF      WRK-XN-00001-3 = "Z"                                 NC2174.2
 182400             PERFORM PASS                                         NC2174.2
 182500             GO TO STR-WRITE-GF-27-5                              NC2174.2
 182600     ELSE                                                         NC2174.2
@@ -1828,7 +1828,7 @@
 183000     GO TO STR-WRITE-GF-27-5.                                     NC2174.2
 183100 STR-FAIL-GF-27-5.                                                NC2174.2
 183200     MOVE    WRK-XN-00001-3 TO COMPUTED-X                         NC2174.2
-183300     MOVE   "Q" TO CORRECT-X                                      NC2174.2
+183300     MOVE   "Z" TO CORRECT-X                                      NC2174.2
 183400     MOVE   "SCOPE TERMINATOR IGNORED" TO RE-MARK                 NC2174.2
 183500     PERFORM FAIL.                                                NC2174.2
 183600 STR-WRITE-GF-27-5.                                               NC2174.2
@@ -2123,10 +2123,10 @@
 212500     MOVE    6 TO CORRECT-N.                                      NC2174.2
 212600 STR-WRITE-GF-30-2.                                               NC2174.2
 212700     PERFORM PRINT-DETAIL.                                        NC2174.2
-212800*                                                                 NC2174.2
+212800*                                                                         
 212900 STR-TEST-GF-30-3.                                                NC2174.2
 213000     ADD     1 TO REC-CT.                                         NC2174.2
-213100     IF      WRK-XN-00001-1 = "A"                                 NC2174.2
+213100     IF      WRK-XN-00001-1 = "D"                                 NC2174.2
 213200             PERFORM PASS                                         NC2174.2
 213300             GO TO STR-WRITE-GF-30-3                              NC2174.2
 213400     ELSE                                                         NC2174.2
@@ -2136,7 +2136,7 @@
 213800     GO TO STR-WRITE-GF-30-3.                                     NC2174.2
 213900 STR-FAIL-GF-30-3.                                                NC2174.2
 214000     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2174.2
-214100     MOVE   "A"    TO CORRECT-X                                   NC2174.2
+214100     MOVE   "D"    TO CORRECT-X                                   NC2174.2
 214200     MOVE   "NOT ON OVERFLOW SHOULD HAVE EXECUTED"                NC2174.2
 214300          TO RE-MARK                                              NC2174.2
 214400     PERFORM FAIL.                                                NC2174.2

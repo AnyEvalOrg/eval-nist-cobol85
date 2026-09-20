@@ -1,16 +1,16 @@
 {
   "population": "Mutated standalone .CBL programs",
   "indexed_programs": 381,
-  "eligible": 101,
+  "eligible": 97,
   "by_module": {
-    "NC": 50,
+    "NC": 49,
     "SM": 4,
-    "IC": 10,
+    "IC": 9,
     "SQ": 1,
     "RL": 1,
     "IX": 3,
     "ST": 3,
-    "SG": 4,
+    "SG": 2,
     "OB": 0,
     "IF": 22,
     "RW": 3,
@@ -418,9 +418,10 @@
       "program": "IC222A",
       "module": "IC",
       "source_path": "IC/IC222A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "FAIL rows outside mutated sites",
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 16,
       "inspection_count": 0,
@@ -2708,9 +2709,10 @@
       "program": "NC252A",
       "module": "NC",
       "source_path": "NC/NC252A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "FAIL rows outside mutated sites",
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 75,
       "inspection_count": 0,
@@ -3217,7 +3219,7 @@
       "reasons": [
         "self_checking_report"
       ],
-      "result_rows": 480,
+      "result_rows": 22,
       "inspection_count": 0,
       "inspection_justification": null
     },
@@ -3424,9 +3426,9 @@
       "program": "SG104A",
       "module": "SG",
       "source_path": "SG/SG104A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -3438,7 +3440,6 @@
       "source_path": "SG/SG105A.CBL",
       "eligible": false,
       "reasons": [
-        "FAIL rows lack matching mutated COMPUTED/CORRECT evidence",
         "planted sites without matching FAIL rows"
       ],
       "result_rows": 9,
@@ -3497,9 +3498,10 @@
       "program": "SG204A",
       "module": "SG",
       "source_path": "SG/SG204A.CBL",
-      "eligible": true,
+      "eligible": false,
       "reasons": [
-        "self_checking_report"
+        "FAIL rows lack matching mutated COMPUTED/CORRECT evidence",
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 15,
       "inspection_count": 0,
@@ -4887,7 +4889,7 @@
       "source_path": "ST/ST108A.CBL",
       "eligible": false,
       "reasons": [
-        "planted sites without matching FAIL rows"
+        "mutation did not bite"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -5004,7 +5006,7 @@
       "source_path": "ST/ST118A.CBL",
       "eligible": false,
       "reasons": [
-        "mutation did not bite"
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 9,
       "inspection_count": 0,
@@ -5105,7 +5107,7 @@
       "source_path": "ST/ST127A.CBL",
       "eligible": false,
       "reasons": [
-        "mutation did not bite"
+        "planted sites without matching FAIL rows"
       ],
       "result_rows": 27,
       "inspection_count": 0,
@@ -5275,5 +5277,14 @@
       "inspection_count": 0,
       "inspection_justification": null
     }
-  ]
+  ],
+  "mutation_summary": {
+    "candidates": 108,
+    "planted_sites": 364,
+    "shipped_sites": 331,
+    "original_exclusions": 58,
+    "insufficient_sites": 215,
+    "execution_exclusions": 11,
+    "pending": 0
+  }
 }

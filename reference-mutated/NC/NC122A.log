@@ -13,24 +13,24 @@ TEST RESULT OF NC122A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- TALLY FOR CHARACTERS PASS  IND-TEST-GF-1                                                                               
+ TALLY FOR CHARACTERS FAIL* IND-TEST-GF-1                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000083.000000000                                                     
+                                     CORRECT =  000000043.000000000  IV-21 4.3.8.2.3/4                                  
+                                                                                                                        
  TALLY FOR LITERAL    FAIL* IND-TEST-GF-2                                                                               
                                                                                                                         
                                      COMPUTED=  000000008.000000000                                                     
-                                     CORRECT =  000000006.000000000  IV-21 4.3.8.2.3/4                                  
+                                     CORRECT =  000000002.000000000  IV-21 4.3.8.2.3/4                                  
                                                                                                                         
  TALLY FOR ALL SPACE  PASS  IND-TEST-GF-3                                                                               
  TALLY LEADING LIT.   FAIL* IND-TEST-GF-4                                                                               
                                                                                                                         
                                      COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000003.000000000  IV-21 4.3.8.2.3/4                                  
+                                     CORRECT =  000000006.000000000  IV-21 4.3.8.2.3/4                                  
                                                                                                                         
  FOR CHARS AFTER LIT. PASS  IND-TEST-GF-5                                                                               
- ALL BEFORE INITIAL   FAIL* IND-TEST-GF-6                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000009.000000000  IV-21 4.3.8.2.3/4                                  
-                                                                                                                        
+ ALL BEFORE INITIAL   PASS  IND-TEST-GF-6                                                                               
  LEAD. LIT. INITIAL   PASS  IND-TEST-GF-7                                                                               
  REP. CHARS BY SPACE  PASS  IND-TEST-GF-8                                                                               
  CHARS BEFORE INITIAL PASS  IND-TEST-GF-9                                                                               

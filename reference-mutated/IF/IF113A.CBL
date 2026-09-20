@@ -312,10 +312,10 @@
 031200     MOVE ZERO TO WS-INT.                                         IF1134.2
 031300 F-INTOFDAY-TEST-01.                                              IF1134.2
 031400     COMPUTE WS-INT = FUNCTION INTEGER-OF-DAY(1601001).           IF1134.2
-031500     IF WS-INT = 0 THEN                                           IF1134.2
+031500     IF WS-INT = 9 THEN                                           IF1134.2
 031600                        PERFORM PASS                              IF1134.2
 031700     ELSE                                                         IF1134.2
-031800                        MOVE  0 TO CORRECT-N                      IF1134.2
+031800                        MOVE  9 TO CORRECT-N                      IF1134.2
 031900                        MOVE WS-INT TO COMPUTED-N                 IF1134.2
 032000                        PERFORM FAIL.                             IF1134.2
 032100     GO TO F-INTOFDAY-WRITE-01.                                   IF1134.2
@@ -393,10 +393,10 @@
 039300     MOVE ZERO TO WS-INT.                                         IF1134.2
 039400 F-INTOFDAY-TEST-06.                                              IF1134.2
 039500     COMPUTE WS-INT = FUNCTION INTEGER-OF-DAY(A) + 10.            IF1134.2
-039600     IF WS-INT = 410 THEN                                         IF1134.2
+039600     IF WS-INT = 510 THEN                                         IF1134.2
 039700                        PERFORM PASS                              IF1134.2
 039800     ELSE                                                         IF1134.2
-039900                        MOVE  410 TO CORRECT-N                    IF1134.2
+039900                        MOVE  510 TO CORRECT-N                    IF1134.2
 040000                        MOVE WS-INT TO COMPUTED-N                 IF1134.2
 040100                        PERFORM FAIL.                             IF1134.2
 040200     GO TO F-INTOFDAY-WRITE-06.                                   IF1134.2
@@ -412,10 +412,10 @@
 041200 F-INTOFDAY-TEST-07.                                              IF1134.2
 041300     COMPUTE WS-INT = FUNCTION INTEGER-OF-DAY(A) +                IF1134.2
 041400                       FUNCTION INTEGER-OF-DAY(A).                IF1134.2
-041500     IF WS-INT = 400 THEN                                         IF1134.2
+041500     IF WS-INT = 800 THEN                                         IF1134.2
 041600                        PERFORM PASS                              IF1134.2
 041700     ELSE                                                         IF1134.2
-041800                        MOVE  400 TO CORRECT-N                    IF1134.2
+041800                        MOVE  800 TO CORRECT-N                    IF1134.2
 041900                        MOVE WS-INT TO COMPUTED-N                 IF1134.2
 042000                        PERFORM FAIL.                             IF1134.2
 042100     GO TO F-INTOFDAY-WRITE-07.                                   IF1134.2

@@ -8,42 +8,41 @@ binary metric is pass@1 (one generation, one epoch, no model judge).
 
 ## Frozen population and eligibility
 
-The indexed population contains 381 standalone `.CBL` programs. The original
-report rules admit 323; mutation matching admits 108 candidates. The shipped
-dataset contains **98** programs validated against the installed GnuCOBOL 3.2.0
-mutated logs. Another 215 lack three supported sites, 58 retain their original
-exclusions, seven fail mutation evidence checks, and three await fresh logs.
+<!-- population:begin -->
+The indexed population contains 381 standalone `.CBL` programs.
+The shipped dataset contains **97** programs validated against GnuCOBOL logs.
+Exclusions are **58 original + 215 insufficient-site + 11 execution-evidence**;
+**0** candidates await fresh operator logs.
 
 | Module | Shipped eligible programs |
 |---|---:|
-| NC | 48 |
+| NC | 49 |
 | SM | 4 |
-| IC | 10 |
+| IC | 9 |
 | SQ | 1 |
 | RL | 1 |
 | IX | 3 |
 | ST | 3 |
-| SG | 4 |
+| SG | 2 |
 | OB | 0 |
 | IF | 22 |
-| RW | 2 |
+| RW | 3 |
 | DB | 0 |
-| **Total** | **98** |
+| **Total** | **97** |
 
-Fresh logs are required for **NC132A, NC239A, RW101A**. Their regenerated sources
-are staged in `reference-mutated/`; stale `.log`/`.out` files were removed.
-They remain explicitly ineligible (`awaiting mutated logs`) until execution
-validates all planted sites. `manifest.json` lists them under `pending_programs`.
-All 105 previously mutated sources and their mutation selections are unchanged.
+There are 108 mutation candidates with 364 planted sites;
+331 sites belong to the shipped population.
+
+<!-- population:end -->
 
 `scripts/mutate_suite.py` derives baseline eligibility from the frozen original
 reports and `report.pl` special-case sets. It excludes compilation-only, no-output,
 interactive-kill, DB debugging, special-grader, and no-PASS/FAIL programs. Inspection
-counts require the existing source audits (NC114M and SQ201M); both are included.
+counts require the existing source audits (NC114M and SQ201M), followed by fresh mutation execution evidence.
 
-Each eligible source in `reference-mutated/<MODULE>/<PROG>.CBL` has a fixed,
-program-name-derived seed. The script changes K = max(3, nearest integer to 10%
-of supported sites), currently 334 planted sites across the 98 shipped programs. It changes a numeric
+Each candidate source in `reference-mutated/<MODULE>/<PROG>.CBL` uses
+HMAC-SHA256(NIST_MUTATION_SALT, program name) as its random seed. The script
+changes K = max(3, nearest integer to 10% of supported sites). It changes a numeric
 digit or an alphanumeric character in both the IF expectation and its matching
 MOVE to CORRECT. Replacements preserve byte width and fixed-format columns.
 COMPUTED receives the actual data item without modification. A faithful conversion
@@ -55,8 +54,8 @@ form accepts IF NOT = / NOT EQUAL TO followed by GO TO a local FAIL block,
 then unconditional PASS/GO TO WRITE. The FAIL block permits only paired evidence
 MOVEs, diagnostic MOVEs, and PERFORM FAIL. It cannot alter the tested data or
 perform user code. This adds NC132A, NC239A, and RW101A (three sites each).
-Programs with at least three legacy sites keep their exact legacy selection
-and original deterministic seed; the extension only applies below that threshold. Matching requires
+Programs with at least three legacy sites use that matcher; the extension applies
+below that threshold. All selections use the operator secret. Matching requires
 a test/check paragraph (or the strictly checked new jump form), an unambiguous
 matching literal, a MOVE of the tested data
 item to COMPUTED, both PASS and FAIL, and PRINT-DETAIL. N/A/X and the extended
@@ -69,11 +68,23 @@ CORRECT-MIN/MAX reporting. Shared PERFORM checks, compound conditions, and
 unmatched post-IF MOVEs remain unsupported; they require more control/data-flow
 analysis than this conservative matcher provides.
 
-`nist_cobol85/data/mutations.json` is PRIVATE grading provenance. It records original
-and mutated literal locations, seeds, source hashes, eligibility and reasons. It is
-never included in prompts or sent to candidate sandboxes. The original reference
-tree remains provenance only. The mutator copies `.DAT`/`.inp`, `.SUB`, `lib/`,
-`copy/` and `copyalt/` dependencies to the mutated tree without copying old logs.
+The private manifest lives only at `$NIST_PRIVATE_DIR/mutations.json`, outside the
+repository. The operator holds `NIST_MUTATION_SALT` in Secret Manager
+`nist-cobol85-mutation-salt` and injects it into the process environment. The salt
+comes **only** from that environment variable; mutation and dataset builds refuse
+a missing or empty value. Neither the salt nor derived seeds are written anywhere.
+The private manifest records site locations and original/mutated literals, comment
+edits, source checksums and validation decisions, plus SHA-256 of the salt so rebuilds
+reject a different secret. `NIST_PRIVATE_DIR` is required and must resolve outside
+the repository. The manifest is excluded from wheels, source distributions, package
+data, prompts and candidate sandboxes; ignore rules also guard accidental copies.
+
+Within each selected test block and its immediately preceding comments, literal
+occurrences in comments are rewritten. Remaining comment lines are conservatively
+blanked because prose may disclose an expectation without spelling its literal.
+Blanking preserves line numbers and fixed-format columns; every edit is privately
+audited. The original reference tree remains provenance only. The mutator copies
+`.DAT`/`.inp`, `.SUB`, `lib/`, `copy/` and `copyalt/` dependencies without old logs.
 
 The tree includes **44 `.SUB` continuation drivers**, absent from index.json.
 They inherit predecessor files: report.pl removes `XXXXX*` only before `.CBL`
@@ -198,6 +209,8 @@ Run Cloud Build from the repository root. Extract its logs back into the same
 module directories under `reference-mutated/`.
 
 ```sh
+# Inject NIST_MUTATION_SALT from Secret Manager without echoing or saving it.
+# Set NIST_PRIVATE_DIR to an operator-only directory outside this checkout.
 python scripts/mutate_suite.py
 # Operator: requires the reference-generation Cloud Build environment.
 gcloud builds submit --config=reference/cloudbuild.yaml .
@@ -215,8 +228,8 @@ The builder defaults to `reference-mutated/`, verifies source hashes and the com
 mutation inventory, and refuses missing previously validated logs or missing success
 summaries. Zero FAIL rows now mean ineligible with reason `mutation did not bite`.
 Unplanted FAIL rows, incorrect/missing COMPUTED/CORRECT evidence, and planted sites
-without matching FAIL rows also exclude the program. Both `mutations.json` and
-`eligibility.json` record these decisions. Runtime exclusions are rechecked on rebuild.
+without matching FAIL rows also exclude the program. The external private `mutations.json` and public
+`eligibility.json` record these decisions without exposing sites in public metadata. Runtime exclusions are rechecked on rebuild.
 
 `scripts/mutation_evidence.py` resolves report labels from literal PAR-NAME MOVEs,
 CCVS field widths and REC-CT suffixes. Explicit source audits handle IC222A's skipped
@@ -227,11 +240,20 @@ annotations; alphanumeric values preserve leading/internal spaces. Each site req
 a distinct matching FAIL row, and every FAIL must match a planted site and literal.
 There are no missing-row waivers in the shipped population.
 
-New candidates without logs are excluded while the validated dataset stays available.
-After installing fresh operator logs, run `python scripts/build_dataset.py` to validate
-and admit them automatically. Dataset and task integration tests load real mutated
-logs and fail on missing eligible logs; there is no missing-log skip or synthetic
-all-PASS fallback. Fault-injection unit tests deliberately alter copied real logs.
+Candidates without logs are excluded, and the builder reports every pending program
+by name. After installing fresh operator logs, run `python scripts/build_dataset.py`
+to validate and admit them. A complete regeneration removes all stale candidate logs;
+if none are validated, the dataset status is `awaiting_mutated_logs` and loading it
+fails with an actionable error. Tests needing real mutated logs skip with a reason
+until the new Cloud Build logs arrive. Tests that require mutation metadata use only
+small synthetic programs and a test salt, never the operator's private manifest.
+Fault-injection tests alter synthetic evidence. A wheel test checks that private
+mutation metadata cannot enter package data, including an accidentally staged file.
+
+The README population block is rendered from `data/eligibility.json` by the builder.
+A test asserts that its table and exclusion prose exactly match that data. Historical
+execution exclusions must be recomputed after regeneration and fresh execution;
+old decisions cannot validate newly selected sites.
 
 Portable supervisor tests execute the actual restriction/read function bodies with
 simulated system calls; full process execution tests require Linux root with reserved

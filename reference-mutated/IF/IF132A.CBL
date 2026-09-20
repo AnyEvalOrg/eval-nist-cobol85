@@ -358,11 +358,11 @@
 035800     MOVE ZERO TO WS-NUM.                                         IF1324.2
 035900 F-RANGE-TEST-01.                                                 IF1324.2
 036000     COMPUTE WS-NUM = FUNCTION RANGE(5, -2, -14, 0).              IF1324.2
-036100     IF WS-NUM = 19 THEN                                          IF1324.2
+036100     IF WS-NUM = 11 THEN                                          IF1324.2
 036200                    PERFORM PASS                                  IF1324.2
 036300     ELSE                                                         IF1324.2
 036400                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-036500                    MOVE 19 TO CORRECT-N                          IF1324.2
+036500                    MOVE 11 TO CORRECT-N                          IF1324.2
 036600                    PERFORM FAIL.                                 IF1324.2
 036700     GO TO F-RANGE-WRITE-01.                                      IF1324.2
 036800 F-RANGE-DELETE-01.                                               IF1324.2
@@ -460,11 +460,11 @@
 046000     MOVE ZERO TO WS-NUM.                                         IF1324.2
 046100 F-RANGE-TEST-07.                                                 IF1324.2
 046200     COMPUTE WS-NUM = FUNCTION RANGE(IND(1), IND(2), IND(3)).     IF1324.2
-046300     IF WS-NUM = 5 THEN                                           IF1324.2
+046300     IF WS-NUM = 0 THEN                                           IF1324.2
 046400                    PERFORM PASS                                  IF1324.2
 046500     ELSE                                                         IF1324.2
 046600                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-046700                    MOVE 5 TO CORRECT-N                           IF1324.2
+046700                    MOVE 0 TO CORRECT-N                           IF1324.2
 046800                    PERFORM FAIL.                                 IF1324.2
 046900     GO TO F-RANGE-WRITE-07.                                      IF1324.2
 047000 F-RANGE-DELETE-07.                                               IF1324.2
@@ -478,11 +478,11 @@
 047800     MOVE ZERO TO WS-NUM.                                         IF1324.2
 047900 F-RANGE-TEST-08.                                                 IF1324.2
 048000     COMPUTE WS-NUM = FUNCTION RANGE(IND(P), IND(Q), IND(R)).     IF1324.2
-048100     IF WS-NUM = 6 THEN                                           IF1324.2
+048100     IF WS-NUM = 3 THEN                                           IF1324.2
 048200                    PERFORM PASS                                  IF1324.2
 048300     ELSE                                                         IF1324.2
 048400                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-048500                    MOVE 6 TO CORRECT-N                           IF1324.2
+048500                    MOVE 3 TO CORRECT-N                           IF1324.2
 048600                    PERFORM FAIL.                                 IF1324.2
 048700     GO TO F-RANGE-WRITE-08.                                      IF1324.2
 048800 F-RANGE-DELETE-08.                                               IF1324.2
@@ -496,11 +496,11 @@
 049600     MOVE ZERO TO WS-NUM.                                         IF1324.2
 049700 F-RANGE-TEST-09.                                                 IF1324.2
 049800     COMPUTE WS-NUM = FUNCTION RANGE (4 0 5 3 7).
-049900     IF WS-NUM = 8 THEN                                           IF1324.2
+049900     IF WS-NUM = 7 THEN                                           IF1324.2
 050000                    PERFORM PASS                                  IF1324.2
 050100     ELSE                                                         IF1324.2
 050200                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-050300                    MOVE 8 TO CORRECT-N                           IF1324.2
+050300                    MOVE 7 TO CORRECT-N                           IF1324.2
 050400                    PERFORM FAIL.                                 IF1324.2
 050500     GO TO F-RANGE-WRITE-09.                                      IF1324.2
 050600 F-RANGE-DELETE-09.                                               IF1324.2
@@ -514,11 +514,11 @@
 051400     MOVE ZERO TO WS-NUM.                                         IF1324.2
 051500 F-RANGE-TEST-11.                                                 IF1324.2
 051600     COMPUTE WS-NUM = FUNCTION RANGE(M, N, O).                    IF1324.2
-051700     IF WS-NUM = 3080000 THEN                                     IF1324.2
+051700     IF WS-NUM = 1000000 THEN                                     IF1324.2
 051800                    PERFORM PASS                                  IF1324.2
 051900     ELSE                                                         IF1324.2
 052000                    MOVE WS-NUM TO COMPUTED-N                     IF1324.2
-052100                    MOVE 3080000 TO CORRECT-N                     IF1324.2
+052100                    MOVE 1000000 TO CORRECT-N                     IF1324.2
 052200                    PERFORM FAIL.                                 IF1324.2
 052300     GO TO F-RANGE-WRITE-11.                                      IF1324.2
 052400 F-RANGE-DELETE-11.                                               IF1324.2

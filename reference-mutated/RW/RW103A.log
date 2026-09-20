@@ -18,7 +18,7 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  RW103A
  FIRST GENERATE       FAIL* GENER-TEST-8.01               LINE-COUNTER AFTER FIRST GENER                                
                                                                                                                         
                                      COMPUTED=  000000000000000006                                                      
-                                     CORRECT =  000000000000000003                                                      
+                                     CORRECT =  000000000000000000                                                      
                                                                                                                         
  FIRST GENERATE       PASS  GENER-TEST-8.02                                                                             
  GENERATE 19 LINES    PASS  GENER-TEST-9.01                                                                             
@@ -26,17 +26,17 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  RW103A
  PAGE ADVANCE         FAIL* GENR-TEST-10.01               LINE-COUNTER AFTER PAGE ADVANCE                               
                                                                                                                         
                                      COMPUTED=  000000000000000006                                                      
-                                     CORRECT =  000000000000000009                                                      
+                                     CORRECT =  000000000000000000                                                      
                                                                                                                         
  PAGE ADVANCE         PASS  GENR-TEST-10.02                                                                             
  GENERATE 19 LINES    PASS  GENR-TEST-11.01                                                                             
  GENERATE 19 LINES    PASS  GENR-TEST-11.02                                                                             
- PAGE ADVANCE         PASS  GENR-TEST-12.01                                                                             
- PAGE ADVANCE         FAIL* GENR-TEST-12.02               PAGE-COUNTER AFTER PAGE ADVANCE                               
+ PAGE ADVANCE         FAIL* GENR-TEST-12.01               LINE-COUNTER AFTER PAGE ADVANCE                               
                                                                                                                         
-                                     COMPUTED=  000000000000000003                                                      
-                                     CORRECT =  000000000000000008                                                      
+                                     COMPUTED=  000000000000000006                                                      
+                                     CORRECT =  000000000000000003                                                      
                                                                                                                         
+ PAGE ADVANCE         PASS  GENR-TEST-12.02                                                                             
  GENERATE 19 LINES    PASS  GENR-TEST-13.01                                                                             
  GENERATE 19 LINES    PASS  GENR-TEST-13.02                                                                             
  TERMINATE REPORT           TERM-TEST-03                  CHECK RWCS OUTPUT REPORT                                      

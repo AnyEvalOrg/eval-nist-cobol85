@@ -35,12 +35,12 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  RELATION             FAIL* RELAT-TEST-GF-1                                                                             
                                                                                                                         
                                      COMPUTED= 3                                                                        
-                                     CORRECT = 6                     V1-54 6.3.1.1                                      
+                                     CORRECT = 2                     V1-54 6.3.1.1                                      
                                                                                                                         
- RELATION             PASS  RELAT-TEST-GF-2                                                                             
- RELATION             PASS  RELAT-TEST-GF-3                                                                             
- RELATION             PASS  RELAT-TEST-GF-4                                                                             
- RELATION             FAIL* RELAT-TEST-GF-5                                                                                                                                                                                                     
+ RELATION             FAIL* RELAT-TEST-GF-2                                                                             
+                                                                                                                        
+                                     COMPUTED= 3                                                                        
+                                     CORRECT = 8                     V1-54 6.3.1.1                                                                                                                                                              
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -55,14 +55,14 @@ TEST RESULT OF NC174A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
                                                                                                                         
-                                     COMPUTED= 3                                                                        
-                                     CORRECT = 7                     V1-54 6.3.1.1                                      
-                                                                                                                        
- RELATION             FAIL* RELAT-TEST-GF-6                                                                             
+ RELATION             FAIL* RELAT-TEST-GF-3                                                                             
                                                                                                                         
                                      COMPUTED= 3                                                                        
-                                     CORRECT = 0                     V1-54 6.3.1.1                                      
+                                     CORRECT = 5                     V1-54 6.3.1.1                                      
                                                                                                                         
+ RELATION             PASS  RELAT-TEST-GF-4                                                                             
+ RELATION             PASS  RELAT-TEST-GF-5                                                                             
+ RELATION             PASS  RELAT-TEST-GF-6                                                                             
  ABBREV. RELATION     PASS  RELAT-TEST-GF-7                                                                             
  ABBREV. RELATION     PASS  RELAT-TEST-GF-8                                                                             
  ABBREV. RELATION     PASS  RELAT-TEST-GF-9                                                                             

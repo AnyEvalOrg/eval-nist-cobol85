@@ -445,12 +445,12 @@
 045200     MOVE   "REL-TEST-1" TO PAR-NAME.                             RL2114.2
 045300     IF      WRK-CS-09V00 < 11                                    RL2114.2
 045400             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-045500                                 "A                    "          RL2114.2
+045500                                 "A                 Y  "          RL2114.2
 045600                     PERFORM PASS                                 RL2114.2
-045700*                    PERFORM PRINT-DETAIL                         RL2114.2
+045700*                                                                         
 045800             ELSE                                                 RL2114.2
 045900                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-046000                     MOVE   "A                    " TO CORRECT-X  RL2114.2
+046000                     MOVE   "A                 Y  " TO CORRECT-X  RL2114.2
 046100                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 046200                     PERFORM FAIL                                 RL2114.2
 046300                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -459,12 +459,12 @@
 046600     MOVE   "REL-TEST-2" TO PAR-NAME.                             RL2114.2
 046700     IF     (WRK-CS-09V00 > 10 AND < 21)                          RL2114.2
 046800             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-046900                                 "ABEDEFGHIJK          "          RL2114.2
+046900                                 "ABCDEFGHIJK          "          RL2114.2
 047000                     PERFORM PASS                                 RL2114.2
 047100*                    PERFORM PRINT-DETAIL                         RL2114.2
 047200             ELSE                                                 RL2114.2
 047300                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-047400                     MOVE   "ABEDEFGHIJK          " TO CORRECT-X  RL2114.2
+047400                     MOVE   "ABCDEFGHIJK          " TO CORRECT-X  RL2114.2
 047500                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 047600                     PERFORM FAIL                                 RL2114.2
 047700                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -473,12 +473,12 @@
 048000     MOVE   "REL-TEST-3" TO PAR-NAME.                             RL2114.2
 048100     IF     (WRK-CS-09V00 > 20 AND < 31)                          RL2114.2
 048200             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-048300                                 "ABCDEFGHIJKLMNOPQRSTU"          RL2114.2
+048300                                 "LBCDEFGHIJKLMNOPQRSTU"          RL2114.2
 048400                     PERFORM PASS                                 RL2114.2
-048500*                    PERFORM PRINT-DETAIL                         RL2114.2
+048500*                                                                         
 048600             ELSE                                                 RL2114.2
 048700                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-048800                     MOVE   "ABCDEFGHIJKLMNOPQRSTU" TO CORRECT-X  RL2114.2
+048800                     MOVE   "LBCDEFGHIJKLMNOPQRSTU" TO CORRECT-X  RL2114.2
 048900                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 049000                     PERFORM FAIL                                 RL2114.2
 049100                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -501,12 +501,12 @@
 050800     MOVE   "REL-TEST-5" TO PAR-NAME.                             RL2114.2
 050900     IF      WRK-CS-09V00 = 32                                    RL2114.2
 051000             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-051100                                 "ABCDEFGHIJKLMNOP  K  "          RL2114.2
+051100                                 "ABCMEFGHIJKLMNOP     "          RL2114.2
 051200                     PERFORM PASS                                 RL2114.2
-051300*                    PERFORM PRINT-DETAIL                         RL2114.2
+051300*                                                                         
 051400             ELSE                                                 RL2114.2
 051500                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-051600                     MOVE   "ABCDEFGHIJKLMNOP  K  " TO CORRECT-X  RL2114.2
+051600                     MOVE   "ABCMEFGHIJKLMNOP     " TO CORRECT-X  RL2114.2
 051700                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 051800                     PERFORM FAIL                                 RL2114.2
 051900                     PERFORM PRINT-DETAIL.                        RL2114.2
@@ -515,12 +515,12 @@
 052200     MOVE   "REL-TEST-6" TO PAR-NAME.                             RL2114.2
 052300     IF      WRK-CS-09V00 > 32                                    RL2114.2
 052400             IF      WS-VS1R1-F-G-120-140 =                       RL2114.2
-052500                                 "ABCDEFGHIJKLMNOTQRSTU"          RL2114.2
+052500                                 "ABCDEFGHIJKLMNOPQRSTU"          RL2114.2
 052600                     PERFORM PASS                                 RL2114.2
 052700*                    PERFORM PRINT-DETAIL                         RL2114.2
 052800             ELSE                                                 RL2114.2
 052900                     MOVE    WS-VS1R1-F-G-120-140 TO COMPUTED-X   RL2114.2
-053000                     MOVE   "ABCDEFGHIJKLMNOTQRSTU" TO CORRECT-X  RL2114.2
+053000                     MOVE   "ABCDEFGHIJKLMNOPQRSTU" TO CORRECT-X  RL2114.2
 053100                     MOVE   "WRONG LENGTH RECORD" TO RE-MARK      RL2114.2
 053200                     PERFORM FAIL                                 RL2114.2
 053300                     PERFORM PRINT-DETAIL.                        RL2114.2

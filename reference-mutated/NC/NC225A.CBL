@@ -1598,7 +1598,7 @@
 160000                  MOVE  "H" TO WRK-XN-00001-2                     NC2254.2
 160100     END-EVALUATE.                                                NC2254.2
 160200 EVA-TEST-GF-31-1.                                                NC2254.2
-160300     IF      WRK-XN-00001-1 = "F"                                 NC2254.2
+160300     IF      WRK-XN-00001-1 = "A"                                 NC2254.2
 160400             PERFORM PASS                                         NC2254.2
 160500             GO TO EVA-WRITE-GF-31-1                              NC2254.2
 160600     ELSE                                                         NC2254.2
@@ -1609,7 +1609,7 @@
 161100 EVA-FAIL-GF-31-1.                                                NC2254.2
 161200     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 161300     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2254.2
-161400     MOVE   "F"             TO CORRECT-X                          NC2254.2
+161400     MOVE   "A"             TO CORRECT-X                          NC2254.2
 161500     PERFORM FAIL.                                                NC2254.2
 161600 EVA-WRITE-GF-31-1.                                               NC2254.2
 161700     PERFORM PRINT-DETAIL.                                        NC2254.2
@@ -1698,7 +1698,7 @@
 170000     PERFORM PRINT-DETAIL.                                        NC2254.2
 170100 EVA-TEST-GF-32-2.                                                NC2254.2
 170200     ADD     1 TO REC-CT.                                         NC2254.2
-170300     IF      WRK-XN-00001-2 = "D"                                 NC2254.2
+170300     IF      WRK-XN-00001-2 = "F"                                 NC2254.2
 170400             PERFORM PASS                                         NC2254.2
 170500             GO TO EVA-WRITE-GF-32-2                              NC2254.2
 170600     ELSE                                                         NC2254.2
@@ -1709,7 +1709,7 @@
 171100 EVA-FAIL-GF-32-2.                                                NC2254.2
 171200     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 171300     MOVE    WRK-XN-00001-2 TO COMPUTED-X                         NC2254.2
-171400     MOVE   "D"             TO CORRECT-X                          NC2254.2
+171400     MOVE   "F"             TO CORRECT-X                          NC2254.2
 171500     PERFORM FAIL.                                                NC2254.2
 171600 EVA-WRITE-GF-32-2.                                               NC2254.2
 171700     PERFORM PRINT-DETAIL.                                        NC2254.2
@@ -1765,7 +1765,7 @@
 176700                  MOVE  "H" TO WRK-XN-00001-2                     NC2254.2
 176800     END-EVALUATE.                                                NC2254.2
 176900 EVA-TEST-GF-33-1.                                                NC2254.2
-177000     IF      WRK-XN-00001-1 = "E"                                 NC2254.2
+177000     IF      WRK-XN-00001-1 = "7"                                 NC2254.2
 177100             PERFORM PASS                                         NC2254.2
 177200             GO TO EVA-WRITE-GF-33-1                              NC2254.2
 177300     ELSE                                                         NC2254.2
@@ -1776,7 +1776,7 @@
 177800 EVA-FAIL-GF-33-1.                                                NC2254.2
 177900     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 178000     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2254.2
-178100     MOVE   "E"             TO CORRECT-X                          NC2254.2
+178100     MOVE   "7"             TO CORRECT-X                          NC2254.2
 178200     PERFORM FAIL.                                                NC2254.2
 178300 EVA-WRITE-GF-33-1.                                               NC2254.2
 178400     PERFORM PRINT-DETAIL.                                        NC2254.2
@@ -1849,7 +1849,7 @@
 185100                  MOVE  "H" TO WRK-XN-00001-2                     NC2254.2
 185200     END-EVALUATE.                                                NC2254.2
 185300 EVA-TEST-GF-34-1.                                                NC2254.2
-185400     IF      WRK-XN-00001-1 = "L"                                 NC2254.2
+185400     IF      WRK-XN-00001-1 = "G"                                 NC2254.2
 185500             PERFORM PASS                                         NC2254.2
 185600             GO TO EVA-WRITE-GF-34-1                              NC2254.2
 185700     ELSE                                                         NC2254.2
@@ -1860,13 +1860,13 @@
 186200 EVA-FAIL-GF-34-1.                                                NC2254.2
 186300     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 186400     MOVE    WRK-XN-00001-1 TO COMPUTED-X                         NC2254.2
-186500     MOVE   "L"             TO CORRECT-X                          NC2254.2
+186500     MOVE   "G"             TO CORRECT-X                          NC2254.2
 186600     PERFORM FAIL.                                                NC2254.2
 186700 EVA-WRITE-GF-34-1.                                               NC2254.2
 186800     PERFORM PRINT-DETAIL.                                        NC2254.2
 186900 EVA-TEST-GF-34-2.                                                NC2254.2
 187000     ADD     1 TO REC-CT.                                         NC2254.2
-187100     IF      WRK-XN-00001-2 = "K"                                 NC2254.2
+187100     IF      WRK-XN-00001-2 = "C"                                 NC2254.2
 187200             PERFORM PASS                                         NC2254.2
 187300             GO TO EVA-WRITE-GF-34-2                              NC2254.2
 187400     ELSE                                                         NC2254.2
@@ -1877,7 +1877,7 @@
 187900 EVA-FAIL-GF-34-2.                                                NC2254.2
 188000     MOVE   "EVALUATE FAILURE" TO RE-MARK                         NC2254.2
 188100     MOVE    WRK-XN-00001-2 TO COMPUTED-X                         NC2254.2
-188200     MOVE   "K"             TO CORRECT-X                          NC2254.2
+188200     MOVE   "C"             TO CORRECT-X                          NC2254.2
 188300     PERFORM FAIL.                                                NC2254.2
 188400 EVA-WRITE-GF-34-2.                                               NC2254.2
 188500     PERFORM PRINT-DETAIL.                                        NC2254.2

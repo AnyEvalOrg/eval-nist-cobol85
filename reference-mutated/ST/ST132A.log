@@ -16,19 +16,19 @@ TEST RESULT OF ST132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SORT, OUTPUT PROC    FAIL* SORT-TEST-16                                                                                
                                                                                                                         
                                      COMPUTED= PQRBABCDEZ7912345679                                                     
-                                     CORRECT = PQRBAGCDEZ7912345679                                                     
+                                     CORRECT = PQRBABCDEZ7912385679                                                     
                                                                                                                         
- SORT, OUTPUT PROC    FAIL* SORT-TEST-17                                                                                
-                                                                                                                        
-                                     COMPUTED= PQRAABCDEV7212345670                                                     
-                                     CORRECT = PQRAAQCDEV7212345670                                                     
-                                                                                                                        
+ SORT, OUTPUT PROC    PASS  SORT-TEST-17                                                                                
  SORT, OUTPUT PROC    FAIL* SORT-TEST-18                                                                                
                                                                                                                         
                                      COMPUTED= PQRAABCDEA7012345670                                                     
-                                     CORRECT = PQRAABCDEA7312345670                                                     
+                                     CORRECT = PQRAABCDEA7012345660                                                     
                                                                                                                         
- SORT, OUTPUT PROC    PASS  SORT-TEST-19                                                                                
+ SORT, OUTPUT PROC    FAIL* SORT-TEST-19                                                                                
+                                                                                                                        
+                                     COMPUTED= PQRAABCDEA7012345670                                                     
+                                     CORRECT = PQWAABCDEA7012345670                                                     
+                                                                                                                        
  SORT, OUTPUT PROC    PASS  SORT-TEST-20                                                                                
  2 SORTS ON ONE FILE  PASS  SORT-TEST-21                                                                                
  ***********************************************************************************************************************

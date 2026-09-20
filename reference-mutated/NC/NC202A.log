@@ -16,19 +16,15 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD CORRESPONDING    FAIL* ADD-TEST-F3-1                                                                               
                                                                                                                         
                                      COMPUTED= 11223344506677889900                                                     
-                                     CORRECT = 112B3344506677889900  VI-74 6.6.4 GR3                                    
+                                     CORRECT = 31223344506677889900  VI-74 6.6.4 GR3                                    
                                                                                                                         
  ADD CORRESPONDING    PASS  ADD-TEST-F3-2                                                                               
- ADD CORRESPONDING    FAIL* ADD-TEST-F3-3-1                                                                             
-                                                                                                                        
-                                     COMPUTED= 00223344000000000000                                                     
-                                     CORRECT = F0223344000000000000  VI-74 6.6.4 GR3                                    
-                                                                                                                        
+ ADD CORRESPONDING    PASS  ADD-TEST-F3-3-1                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-3-2                                                                             
  ADD CORRESPONDING    FAIL* ADD-TEST-F3-4                                                                               
                                                                                                                         
                                      COMPUTED= 00223344000000000000                                                     
-                                     CORRECT = 00223344008000000000  VI-74 6.6.4 GR3                                    
+                                     CORRECT = 0022334400000N000000  VI-74 6.6.4 GR3                                    
                                                                                                                         
  ADD CORRESPONDING    PASS  ADD-TEST-F3-5-1                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-5-2                                                                             
@@ -41,7 +37,11 @@ TEST RESULT OF NC202A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD CORRESPONDING    PASS  ADD-TEST-F3-7-4                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-7-5                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-8-1                                                                             
- ADD CORRESPONDING    PASS  ADD-TEST-F3-8-2                                                                             
+ ADD CORRESPONDING    FAIL* ADD-TEST-F3-8-2               WRONGLY AFFECTED BY SIZE ERROR                                
+                                                                                                                        
+                                     COMPUTED= 999999999999                                                             
+                                     CORRECT = 9W9999999999          VI-74 6.6.4 GR3                                    
+                                                                                                                        
  ADD CORRESPONDING    PASS  ADD-TEST-F3-9-1                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-9-2                                                                             
  ADD CORRESPONDING    PASS  ADD-TEST-F3-9-3                                                                             

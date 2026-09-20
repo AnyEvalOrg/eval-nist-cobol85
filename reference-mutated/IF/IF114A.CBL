@@ -384,10 +384,10 @@
 038400     MOVE ZERO TO WS-INT.                                         IF1144.2
 038500 F-INTPART-TEST-05.                                               IF1144.2
 038600     COMPUTE WS-INT = FUNCTION INTEGER-PART(-9.763).              IF1144.2
-038700     IF WS-INT = -6  THEN                                         IF1144.2
+038700     IF WS-INT = -9  THEN                                         IF1144.2
 038800                    PERFORM PASS                                  IF1144.2
 038900     ELSE                                                         IF1144.2
-039000                    MOVE -6 TO CORRECT-N                          IF1144.2
+039000                    MOVE -9 TO CORRECT-N                          IF1144.2
 039100                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 039200                    PERFORM FAIL.                                 IF1144.2
 039300     GO TO F-INTPART-WRITE-05.                                    IF1144.2
@@ -456,10 +456,10 @@
 045600     MOVE ZERO TO WS-INT.                                         IF1144.2
 045700 F-INTPART-TEST-09.                                               IF1144.2
 045800     COMPUTE WS-INT = FUNCTION INTEGER-PART(A).                   IF1144.2
-045900     IF WS-INT = 500000 THEN                                      IF1144.2
+045900     IF WS-INT = 530000 THEN                                      IF1144.2
 046000                    PERFORM PASS                                  IF1144.2
 046100     ELSE                                                         IF1144.2
-046200                    MOVE  500000  TO CORRECT-N                    IF1144.2
+046200                    MOVE  530000  TO CORRECT-N                    IF1144.2
 046300                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 046400                    PERFORM FAIL.                                 IF1144.2
 046500     GO TO F-INTPART-WRITE-09.                                    IF1144.2
@@ -492,10 +492,10 @@
 049200     MOVE ZERO TO WS-INT.                                         IF1144.2
 049300 F-INTPART-TEST-11.                                               IF1144.2
 049400     COMPUTE WS-INT = FUNCTION INTEGER-PART(B).                   IF1144.2
-049500     IF WS-INT = 7 THEN                                           IF1144.2
+049500     IF WS-INT = 1 THEN                                           IF1144.2
 049600                    PERFORM PASS                                  IF1144.2
 049700     ELSE                                                         IF1144.2
-049800                    MOVE  7  TO CORRECT-N                         IF1144.2
+049800                    MOVE  1  TO CORRECT-N                         IF1144.2
 049900                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 050000                    PERFORM FAIL.                                 IF1144.2
 050100     GO TO F-INTPART-WRITE-11.                                    IF1144.2
@@ -510,10 +510,10 @@
 051000     MOVE ZERO TO WS-INT.                                         IF1144.2
 051100 F-INTPART-TEST-12.                                               IF1144.2
 051200     COMPUTE WS-INT = FUNCTION INTEGER-PART(F).                   IF1144.2
-051300     IF WS-INT = 3 THEN                                           IF1144.2
+051300     IF WS-INT = 0 THEN                                           IF1144.2
 051400                    PERFORM PASS                                  IF1144.2
 051500     ELSE                                                         IF1144.2
-051600                    MOVE  3  TO CORRECT-N                         IF1144.2
+051600                    MOVE  0  TO CORRECT-N                         IF1144.2
 051700                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 051800                    PERFORM FAIL.                                 IF1144.2
 051900     GO TO F-INTPART-WRITE-12.                                    IF1144.2
@@ -528,10 +528,10 @@
 052800     MOVE ZERO TO WS-INT.                                         IF1144.2
 052900 F-INTPART-TEST-13.                                               IF1144.2
 053000     COMPUTE WS-INT = FUNCTION INTEGER-PART(IND(1)).              IF1144.2
-053100     IF WS-INT = 4 THEN                                           IF1144.2
+053100     IF WS-INT = 8 THEN                                           IF1144.2
 053200                    PERFORM PASS                                  IF1144.2
 053300     ELSE                                                         IF1144.2
-053400                    MOVE 4 TO CORRECT-N                           IF1144.2
+053400                    MOVE 8 TO CORRECT-N                           IF1144.2
 053500                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 053600                    PERFORM FAIL.                                 IF1144.2
 053700     GO TO F-INTPART-WRITE-13.                                    IF1144.2
@@ -693,10 +693,10 @@
 069300 F-INTPART-TEST-22.                                               IF1144.2
 069400     COMPUTE WS-INT = FUNCTION INTEGER-PART(3.2) +                IF1144.2
 069500                      FUNCTION INTEGER-PART(1.3).                 IF1144.2
-069600     IF WS-INT = 4 THEN                                           IF1144.2
+069600     IF WS-INT = 8 THEN                                           IF1144.2
 069700                    PERFORM PASS                                  IF1144.2
 069800     ELSE                                                         IF1144.2
-069900                    MOVE 4 TO CORRECT-N                           IF1144.2
+069900                    MOVE 8 TO CORRECT-N                           IF1144.2
 070000                    MOVE WS-INT TO COMPUTED-N                     IF1144.2
 070100                    PERFORM FAIL.                                 IF1144.2
 070200     GO TO F-INTPART-WRITE-22.                                    IF1144.2

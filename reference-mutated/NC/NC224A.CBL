@@ -394,7 +394,7 @@
 039600     GO TO   REF-INIT-GF-3.                                       NC2244.2
 039700 REF-TEST-GF-2-1.                                                 NC2244.2
 039800     MOVE   "REF-TEST-GF-2-1" TO PAR-NAME.                        NC2244.2
-039900     IF      TEST-2-DATA (WS-3:) = "12P4"                         NC2244.2
+039900     IF      TEST-2-DATA (WS-3:) = "1234"                         NC2244.2
 040000             PERFORM PASS                                         NC2244.2
 040100             GO TO REF-WRITE-GF-2-1                               NC2244.2
 040200     ELSE                                                         NC2244.2
@@ -403,7 +403,7 @@
 040500     PERFORM DE-LETE.                                             NC2244.2
 040600     GO TO REF-WRITE-GF-2-1.                                      NC2244.2
 040700 REF-FAIL-GF-2-1.                                                 NC2244.2
-040800     MOVE   "12P4" TO CORRECT-X                                   NC2244.2
+040800     MOVE   "1234" TO CORRECT-X                                   NC2244.2
 040900     MOVE    TEST-2-DATA (WS-3:) TO COMPUTED-X                    NC2244.2
 041000     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
 041100     PERFORM FAIL.                                                NC2244.2
@@ -428,11 +428,11 @@
 043000     PERFORM FAIL.                                                NC2244.2
 043100 REF-WRITE-GF-2-2.                                                NC2244.2
 043200     PERFORM PRINT-DETAIL.                                        NC2244.2
-043300*                                                                 NC2244.2
+043300*                                                                         
 043400 REF-TEST-GF-2-3.                                                 NC2244.2
 043500     ADD     1       TO REC-CT.                                   NC2244.2
 043600     MOVE   "REF-TEST-GF-2-3" TO PAR-NAME.                        NC2244.2
-043700     IF      TEST-2-DATA (10 - 7: 6 + 2 - 5) = "173"              NC2244.2
+043700     IF      TEST-2-DATA (10 - 7: 6 + 2 - 5) = "12O"              NC2244.2
 043800             PERFORM PASS                                         NC2244.2
 043900             GO TO REF-WRITE-GF-2-3                               NC2244.2
 044000     ELSE                                                         NC2244.2
@@ -441,7 +441,7 @@
 044300     PERFORM DE-LETE.                                             NC2244.2
 044400     GO TO REF-WRITE-GF-2-3.                                      NC2244.2
 044500 REF-FAIL-GF-2-3.                                                 NC2244.2
-044600     MOVE   "173" TO CORRECT-X                                    NC2244.2
+044600     MOVE   "12O" TO CORRECT-X                                    NC2244.2
 044700     MOVE    TEST-2-DATA (10 - 7: 6 + 2 - 5)                      NC2244.2
 044800          TO COMPUTED-X                                           NC2244.2
 044900     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
@@ -528,7 +528,7 @@
 053000     GO TO   REF-INIT-GF-5.                                       NC2244.2
 053100 REF-TEST-GF-4-1.                                                 NC2244.2
 053200     MOVE   "REF-TEST-GF-4-1" TO PAR-NAME.                        NC2244.2
-053300     IF      TEST-4-DATA (3:) = " CD EF"                          NC2244.2
+053300     IF      TEST-4-DATA (3:) = " CD LF"                          NC2244.2
 053400             PERFORM PASS                                         NC2244.2
 053500             GO TO REF-WRITE-GF-4-1                               NC2244.2
 053600     ELSE                                                         NC2244.2
@@ -537,17 +537,17 @@
 053900     PERFORM DE-LETE.                                             NC2244.2
 054000     GO TO REF-WRITE-GF-4-1.                                      NC2244.2
 054100 REF-FAIL-GF-4-1.                                                 NC2244.2
-054200     MOVE   " CD EF" TO CORRECT-X                                 NC2244.2
+054200     MOVE   " CD LF" TO CORRECT-X                                 NC2244.2
 054300     MOVE    TEST-4-DATA (3:) TO COMPUTED-X                       NC2244.2
 054400     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
 054500     PERFORM FAIL.                                                NC2244.2
 054600 REF-WRITE-GF-4-1.                                                NC2244.2
 054700     PERFORM PRINT-DETAIL.                                        NC2244.2
-054800*                                                                 NC2244.2
+054800*                                                                         
 054900 REF-TEST-GF-4-2.                                                 NC2244.2
 055000     ADD     1       TO REC-CT.                                   NC2244.2
 055100     MOVE   "REF-TEST-GF-4-2" TO PAR-NAME.                        NC2244.2
-055200     IF      TEST-4-DATA (WS-2: WS-3) = "B N"                     NC2244.2
+055200     IF      TEST-4-DATA (WS-2: WS-3) = "B4C"                     NC2244.2
 055300             PERFORM PASS                                         NC2244.2
 055400             GO TO REF-WRITE-GF-4-2                               NC2244.2
 055500     ELSE                                                         NC2244.2
@@ -556,7 +556,7 @@
 055800     PERFORM DE-LETE.                                             NC2244.2
 055900     GO TO REF-WRITE-GF-4-2.                                      NC2244.2
 056000 REF-FAIL-GF-4-2.                                                 NC2244.2
-056100     MOVE   "B N" TO CORRECT-X                                    NC2244.2
+056100     MOVE   "B4C" TO CORRECT-X                                    NC2244.2
 056200     MOVE    TEST-4-DATA (WS-2: WS-3) TO COMPUTED-X               NC2244.2
 056300     MOVE   "INCORRECT REFERENCE MODIFICATION" TO RE-MARK         NC2244.2
 056400     PERFORM FAIL.                                                NC2244.2

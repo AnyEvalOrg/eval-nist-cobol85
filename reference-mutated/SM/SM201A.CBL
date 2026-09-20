@@ -446,7 +446,7 @@
 044800     MOVE     "COPY-TEST-1 " TO PAR-NAME.                         SM2014.2
 044900     PERFORM  PRINT-DETAIL.                                       SM2014.2
 045000 COPY-TEST-2.                                                     SM2014.2
-045100     IF       WSTR-2A EQUAL TO "TBC"                              SM2014.2
+045100     IF       WSTR-2A EQUAL TO "ABC"                              SM2014.2
 045200              PERFORM PASS GO TO COPY-WRITE-2.                    SM2014.2
 045300*    NOTE     TESTS ORDINARY COPY OF ENTRIES WHICH ARE ALSO COPIEDSM2014.2
 045400*             BY COPY REPLACING.                                  SM2014.2
@@ -456,7 +456,7 @@
 045800     GO       TO COPY-WRITE-2.                                    SM2014.2
 045900 COPY-FAIL-2.                                                     SM2014.2
 046000     MOVE     WSTR-2A TO COMPUTED-A.                              SM2014.2
-046100     MOVE     "TBC" TO CORRECT-A.                                 SM2014.2
+046100     MOVE     "ABC" TO CORRECT-A.                                 SM2014.2
 046200     PERFORM  FAIL.                                               SM2014.2
 046300 COPY-WRITE-2.                                                    SM2014.2
 046400     MOVE     "  (NO REPLACING)" TO FEATURE.                      SM2014.2
@@ -481,7 +481,7 @@
 048300     MOVE     "COPY-TEST-3 " TO PAR-NAME.                         SM2014.2
 048400     PERFORM  PRINT-DETAIL.                                       SM2014.2
 048500 COPY-TEST-4.                                                     SM2014.2
-048600     IF       WSTR92 EQUAL TO "DEF"                               SM2014.2
+048600     IF       WSTR92 EQUAL TO "DE5"                               SM2014.2
 048700              PERFORM PASS GO TO COPY-WRITE-4.                    SM2014.2
 048800     GO       TO COPY-FAIL-4.                                     SM2014.2
 048900 COPY-DELETE-4.                                                   SM2014.2
@@ -489,13 +489,13 @@
 049100     GO       TO COPY-WRITE-4.                                    SM2014.2
 049200 COPY-FAIL-4.                                                     SM2014.2
 049300     MOVE     WSTR92 TO COMPUTED-A.                               SM2014.2
-049400     MOVE     "DEF" TO CORRECT-A.                                 SM2014.2
+049400     MOVE     "DE5" TO CORRECT-A.                                 SM2014.2
 049500     PERFORM  FAIL.                                               SM2014.2
 049600 COPY-WRITE-4.                                                    SM2014.2
 049700     MOVE     "COPY-TEST-4 " TO PAR-NAME.                         SM2014.2
 049800     PERFORM  PRINT-DETAIL.                                       SM2014.2
 049900 COPY-TEST-5.                                                     SM2014.2
-050000     IF       WSTR93 EQUAL TO "GHM"                               SM2014.2
+050000     IF       WSTR93 EQUAL TO "GHI"                               SM2014.2
 050100              PERFORM PASS GO TO COPY-WRITE-5.                    SM2014.2
 050200     GO       TO COPY-FAIL-5.                                     SM2014.2
 050300 COPY-DELETE-5.                                                   SM2014.2
@@ -503,7 +503,7 @@
 050500     GO       TO COPY-WRITE-5.                                    SM2014.2
 050600 COPY-FAIL-5.                                                     SM2014.2
 050700     MOVE     WSTR93 TO COMPUTED-A.                               SM2014.2
-050800     MOVE     "GHM" TO CORRECT-A.                                 SM2014.2
+050800     MOVE     "GHI" TO CORRECT-A.                                 SM2014.2
 050900     PERFORM  FAIL.                                               SM2014.2
 051000 COPY-WRITE-5.                                                    SM2014.2
 051100     MOVE     "COPY-TEST-5 " TO PAR-NAME.                         SM2014.2
@@ -511,23 +511,23 @@
 051300 COPY-INIT-B.                                                     SM2014.2
 051400     MOVE     "  (NOT REPLACING)" TO FEATURE.                     SM2014.2
 051500 COPY-TEST-6.                                                     SM2014.2
-051600     IF       WSTR4A EQUAL TO "ABC"                               SM2014.2
+051600     IF       WSTR4A EQUAL TO "ABP"                               SM2014.2
 051700              PERFORM PASS GO TO COPY-WRITE-6.                    SM2014.2
-051800*        NOTE COPY-TEST-6, 7, AND 8 TEST ORDINARY COPYING OF      SM2014.2
-051900*             ENTRIES WHICH ARE ALSO COPIED WITH REPLACEMENT.     SM2014.2
+051800*                                                                         
+051900*                                                                         
 052000     GO       TO COPY-FAIL-6.                                     SM2014.2
 052100 COPY-DELETE-6.                                                   SM2014.2
 052200     PERFORM  DE-LETE.                                            SM2014.2
 052300     GO       TO COPY-WRITE-6.                                    SM2014.2
 052400 COPY-FAIL-6.                                                     SM2014.2
 052500     MOVE     WSTR4A TO COMPUTED-A.                               SM2014.2
-052600     MOVE     "ABC" TO CORRECT-A.                                 SM2014.2
+052600     MOVE     "ABP" TO CORRECT-A.                                 SM2014.2
 052700     PERFORM  FAIL.                                               SM2014.2
 052800 COPY-WRITE-6.                                                    SM2014.2
 052900     MOVE     "COPY-TEST-6 " TO PAR-NAME.                         SM2014.2
 053000     PERFORM  PRINT-DETAIL.                                       SM2014.2
 053100 COPY-TEST-7.                                                     SM2014.2
-053200     IF       WSTR4B EQUAL TO "DEF"                               SM2014.2
+053200     IF       WSTR4B EQUAL TO "CEF"                               SM2014.2
 053300              PERFORM PASS GO TO COPY-WRITE-7.                    SM2014.2
 053400     GO       TO COPY-FAIL-7.                                     SM2014.2
 053500 COPY-DELETE-7.                                                   SM2014.2
@@ -535,13 +535,13 @@
 053700     GO       TO COPY-WRITE-7.                                    SM2014.2
 053800 COPY-FAIL-7.                                                     SM2014.2
 053900     MOVE     WSTR4B TO COMPUTED-A.                               SM2014.2
-054000     MOVE     "DEF" TO CORRECT-A.                                 SM2014.2
+054000     MOVE     "CEF" TO CORRECT-A.                                 SM2014.2
 054100     PERFORM  FAIL.                                               SM2014.2
 054200 COPY-WRITE-7.                                                    SM2014.2
 054300     MOVE     "COPY-TEST-7 " TO PAR-NAME.                         SM2014.2
 054400     PERFORM  PRINT-DETAIL.                                       SM2014.2
 054500 COPY-TEST-8.                                                     SM2014.2
-054600     IF       WSTR4C EQUAL TO "GAI"                               SM2014.2
+054600     IF       WSTR4C EQUAL TO "GHI"                               SM2014.2
 054700              PERFORM PASS GO TO COPY-WRITE-8.                    SM2014.2
 054800     GO       TO COPY-FAIL-8.                                     SM2014.2
 054900 COPY-DELETE-8.                                                   SM2014.2
@@ -549,7 +549,7 @@
 055100     GO       TO COPY-WRITE-8.                                    SM2014.2
 055200 COPY-FAIL-8.                                                     SM2014.2
 055300     MOVE     WSTR4C TO COMPUTED-A.                               SM2014.2
-055400     MOVE     "GAI" TO CORRECT-A.                                 SM2014.2
+055400     MOVE     "GHI" TO CORRECT-A.                                 SM2014.2
 055500     PERFORM  FAIL.                                               SM2014.2
 055600 COPY-WRITE-8.                                                    SM2014.2
 055700     MOVE     "COPY-TEST-8 " TO PAR-NAME.                         SM2014.2

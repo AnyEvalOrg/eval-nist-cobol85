@@ -516,7 +516,7 @@
 053600     PERFORM  PRINT-DETAIL-1.                                     ST1314.2
 053700 SORT-TEST-2.                                                     ST1314.2
 053800     PERFORM  READ-RELEASE-FILE2 35 TIMES.                        ST1314.2
-053900     IF       W-S1-KEYS EQUAL TO "567AI"                          ST1314.2
+053900     IF       W-S1-KEYS EQUAL TO "567KI"                          ST1314.2
 054000              PERFORM PASS-1 GO TO SORT-WRITE-2.                  ST1314.2
 054100     GO       TO SORT-FAIL-2.                                     ST1314.2
 054200 SORT-DELETE-2.                                                   ST1314.2
@@ -524,14 +524,14 @@
 054400     GO       TO SORT-WRITE-2.                                    ST1314.2
 054500 SORT-FAIL-2.                                                     ST1314.2
 054600     MOVE     W-S1-KEYS TO COMPUTED-A.                            ST1314.2
-054700     MOVE     "567AI" TO CORRECT-A.                               ST1314.2
+054700     MOVE     "567KI" TO CORRECT-A.                               ST1314.2
 054800     PERFORM  FAIL-1.                                             ST1314.2
 054900 SORT-WRITE-2.                                                    ST1314.2
 055000     MOVE     "SORT-TEST-2 " TO PAR-NAME.                         ST1314.2
 055100     PERFORM  PRINT-DETAIL-1.                                     ST1314.2
 055200 SORT-TEST-3.                                                     ST1314.2
 055300     PERFORM  READ-RELEASE-FILE2 35 TIMES.                        ST1314.2
-055400     IF       W-S1-KEYS EQUAL TO "5672S"                          ST1314.2
+055400     IF       W-S1-KEYS EQUAL TO "567AS"                          ST1314.2
 055500              PERFORM PASS-1 GO TO SORT-WRITE-3.                  ST1314.2
 055600     GO       TO SORT-FAIL-3.                                     ST1314.2
 055700 SORT-DELETE-3.                                                   ST1314.2
@@ -539,7 +539,7 @@
 055900     GO       TO SORT-WRITE-3.                                    ST1314.2
 056000 SORT-FAIL-3.                                                     ST1314.2
 056100     MOVE     W-S1-KEYS TO COMPUTED-A.                            ST1314.2
-056200     MOVE     "5672S" TO CORRECT-A.                               ST1314.2
+056200     MOVE     "567AS" TO CORRECT-A.                               ST1314.2
 056300     PERFORM  FAIL-1.                                             ST1314.2
 056400 SORT-WRITE-3.                                                    ST1314.2
 056500     MOVE     "SORT-TEST-3 " TO PAR-NAME.                         ST1314.2
@@ -652,7 +652,7 @@
 067200 SORT-TEST-5.                                                     ST1314.2
 067300     PERFORM  READ-RELEASE-FILE3.                                 ST1314.2
 067400     MOVE     R3-KEYS TO W-S3-KEYS.                               ST1314.2
-067500     IF       W-S2-KEYS EQUAL TO "567AZAZ"                        ST1314.2
+067500     IF       W-S2-KEYS EQUAL TO "167AZAZ"                        ST1314.2
 067600              PERFORM PASS-2 GO TO SORT-WRITE-5.                  ST1314.2
 067700     GO       TO SORT-FAIL-5.                                     ST1314.2
 067800 SORT-DELETE-5.                                                   ST1314.2
@@ -660,7 +660,7 @@
 068000     GO       TO SORT-WRITE-5.                                    ST1314.2
 068100 SORT-FAIL-5.                                                     ST1314.2
 068200     MOVE     W-S2-KEYS TO COMPUTED-A.                            ST1314.2
-068300     MOVE     "567AZAZ" TO CORRECT-A.                             ST1314.2
+068300     MOVE     "167AZAZ" TO CORRECT-A.                             ST1314.2
 068400     PERFORM  FAIL-2.                                             ST1314.2
 068500 SORT-WRITE-5.                                                    ST1314.2
 068600     MOVE     "SORT-TEST-5 " TO PAR-NAME.                         ST1314.2
@@ -668,7 +668,7 @@
 068800 SORT-TEST-6.                                                     ST1314.2
 068900     PERFORM  READ-RELEASE-FILE3 35 TIMES.                        ST1314.2
 069000     MOVE     R3-KEYS TO W-S3-KEYS.                               ST1314.2
-069100     IF       W-S2-KEYS EQUAL TO "56AARBR"                        ST1314.2
+069100     IF       W-S2-KEYS EQUAL TO "567ARBR"                        ST1314.2
 069200              PERFORM PASS-2 GO TO SORT-WRITE-6.                  ST1314.2
 069300     GO       TO SORT-FAIL-6.                                     ST1314.2
 069400 SORT-DELETE-6.                                                   ST1314.2
@@ -676,7 +676,7 @@
 069600     GO       TO SORT-WRITE-6.                                    ST1314.2
 069700 SORT-FAIL-6.                                                     ST1314.2
 069800     MOVE     W-S2-KEYS TO COMPUTED-A.                            ST1314.2
-069900     MOVE     "56AARBR" TO CORRECT-A.                             ST1314.2
+069900     MOVE     "567ARBR" TO CORRECT-A.                             ST1314.2
 070000     PERFORM  FAIL-2.                                             ST1314.2
 070100 SORT-WRITE-6.                                                    ST1314.2
 070200     MOVE     "SORT-TEST-6 " TO PAR-NAME.                         ST1314.2
@@ -807,7 +807,7 @@
 082700     PERFORM  PRINT-DETAIL-3.                                     ST1314.2
 082800 SORT-TEST-10.                                                    ST1314.2
 082900     PERFORM  RETURN-SORT3.                                       ST1314.2
-083000     IF       S3-KEYS EQUAL TO "56TAZBZ7026"                      ST1314.2
+083000     IF       S3-KEYS EQUAL TO "567AZBZ7026"                      ST1314.2
 083100              PERFORM PASS-3 GO TO SORT-WRITE-10.                 ST1314.2
 083200     GO       TO SORT-FAIL-10.                                    ST1314.2
 083300 SORT-DELETE-10.                                                  ST1314.2
@@ -815,7 +815,7 @@
 083500     GO       TO SORT-WRITE-10.                                   ST1314.2
 083600 SORT-FAIL-10.                                                    ST1314.2
 083700     MOVE     S3-KEYS TO COMPUTED-A.                              ST1314.2
-083800     MOVE     "56TAZBZ7026" TO CORRECT-A.                         ST1314.2
+083800     MOVE     "567AZBZ7026" TO CORRECT-A.                         ST1314.2
 083900     PERFORM  FAIL-3.                                             ST1314.2
 084000 SORT-WRITE-10.                                                   ST1314.2
 084100     MOVE     "SORT-TEST-10" TO PAR-NAME.                         ST1314.2
@@ -852,7 +852,7 @@
 087200     PERFORM  PRINT-DETAIL-3.                                     ST1314.2
 087300 SORT-TEST-13.                                                    ST1314.2
 087400     PERFORM  RETURN-SORT3 35 TIMES.                              ST1314.2
-087500     IF       S3-KEYS EQUAL TO "567AGBG7019"                      ST1314.2
+087500     IF       S3-KEYS EQUAL TO "5C7AGBG7019"                      ST1314.2
 087600              PERFORM PASS-3 GO TO SORT-WRITE-13.                 ST1314.2
 087700     GO       TO SORT-FAIL-13.                                    ST1314.2
 087800 SORT-DELETE-13.                                                  ST1314.2
@@ -860,7 +860,7 @@
 088000     GO       TO SORT-WRITE-13.                                   ST1314.2
 088100 SORT-FAIL-13.                                                    ST1314.2
 088200     MOVE     S3-KEYS TO COMPUTED-A.                              ST1314.2
-088300     MOVE     "567AGBG7019" TO CORRECT-A.                         ST1314.2
+088300     MOVE     "5C7AGBG7019" TO CORRECT-A.                         ST1314.2
 088400     PERFORM  FAIL-3.                                             ST1314.2
 088500 SORT-WRITE-13.                                                   ST1314.2
 088600     MOVE     "SORT-TEST-13" TO PAR-NAME.                         ST1314.2

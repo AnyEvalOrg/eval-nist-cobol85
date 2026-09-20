@@ -21,12 +21,12 @@ TEST RESULT OF NC253A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT SERIES      FAIL* SUB-TEST-F3-1                                                                               
                                                                                                                         
                                      COMPUTED= 11223344506677889900                                                     
-                                     CORRECT = 11223144506677889900  VI-134 6.25.4 GR3                                  
+                                     CORRECT = 112233445066778899F0  VI-134 6.25.4 GR3                                  
                                                                                                                         
  SUBTRACT SERIES      FAIL* SUB-TEST-F3-2                                                                               
                                                                                                                         
                                      COMPUTED= 11223344606677889900                                                     
-                                     CORRECT = 11H23344606677889900  VI-134 6.25.4 GR3                                  
+                                     CORRECT = 1122334460667W889900  VI-134 6.25.4 GR3                                  
                                                                                                                         
  SUBTRACT SERIES      PASS  SUB-TEST-F3-3-1                                                                             
  SUBTRACT SERIES      PASS  SUB-TEST-F3-3-2                                                                             
@@ -34,12 +34,12 @@ TEST RESULT OF NC253A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT SERIES      PASS  SUB-TEST-3-3-4                                                                              
  SUBTRACT SERIES      PASS  SUB-TEST-F3-4                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-5                                                                               
- SUBTRACT SERIES      PASS  SUB-TEST-F3-6                                                                               
- SUBTRACT SERIES      FAIL* SUB-TEST-F3-7                                                                               
+ SUBTRACT SERIES      FAIL* SUB-TEST-F3-6                                                                               
                                                                                                                         
-                                     COMPUTED= 88889999999999                                                           
-                                     CORRECT = 8B889999999999        VI-134 6.25.4 GR3                                  
+                                     COMPUTED= 892155995511                                                             
+                                     CORRECT = 892155998511          VI-134 6.25.4 GR3                                  
                                                                                                                         
+ SUBTRACT SERIES      PASS  SUB-TEST-F3-7                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-8                                                                               
  SUBTRACT SERIES      PASS  SUB-TEST-F3-9-1    .01                                                                      
  SUBTRACT SERIES      PASS  SUB-TEST-F3-9-2    .02                                                                      

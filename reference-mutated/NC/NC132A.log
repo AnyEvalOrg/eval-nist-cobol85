@@ -15,7 +15,11 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
  SUBSCRIPTING         PASS  SUB-SCRIPT-1                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-2                                                                                
- SUBSCRIPTING         PASS  SUB-SCRIPT-3                                                                                
+ SUBSCRIPTING         FAIL* SUB-SCRIPT-3                                                                                
+                                                                                                                        
+                                     COMPUTED= 111                                                                      
+                                     CORRECT = 11Y                   IV-21 4.3.8.2                                      
+                                                                                                                        
  SUBSCRIPTING         PASS  SUB-SCRIPT-4                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-5                                                                                
  SUBSCRIPTING         PASS  SUB-SCRIPT-6                                                                                
@@ -24,7 +28,7 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         FAIL* SUB-SCRIPT-10                                                                               
                                                                                                                         
                                      COMPUTED= 1                                                                        
-                                     CORRECT = 2                     IV-21 4.3.8.2                                      
+                                     CORRECT = K                     IV-21 4.3.8.2                                      
                                                                                                                         
  SUBSCRIPTING         PASS  SUB-SCRIPT-11                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-12                                                                               
@@ -36,11 +40,7 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBSCRIPTING         PASS  SUB-SCRIPT-18                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-19                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-20                                                                               
- SUBSCRIPTING         PASS  SUB-SCRIPT-21                                                                               
- SUBSCRIPTING         FAIL* SUB-SCRIPT-22                                                                               
-                                                                                                                        
-                                     COMPUTED= 4321                                                                     
-                                     CORRECT = N321                  IV-21 4.3.8.2                                                                                                                                                              
+ SUBSCRIPTING         PASS  SUB-SCRIPT-21                                                                                                                                                                                                       
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,13 +54,13 @@ TEST RESULT OF NC132A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
+ SUBSCRIPTING         PASS  SUB-SCRIPT-22                                                                               
+ SUBSCRIPTING         PASS  SUB-SCRIPT-23                                                                               
+ SUBSCRIPTING         FAIL* SUB-SCRIPT-24                                                                               
                                                                                                                         
- SUBSCRIPTING         FAIL* SUB-SCRIPT-23                                                                               
+                                     COMPUTED= 0000                                                                     
+                                     CORRECT = 2000                  IV-21 4.3.8.2                                      
                                                                                                                         
-                                     COMPUTED= 1234                                                                     
-                                     CORRECT = A234                  IV-21 4.3.8.2                                      
-                                                                                                                        
- SUBSCRIPTING         PASS  SUB-SCRIPT-24                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-25                                                                               
  SUBSCRIPTING         PASS  SUB-SCRIPT-26                                                                               
  ***********************************************************************************************************************

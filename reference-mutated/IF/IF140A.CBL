@@ -311,10 +311,10 @@
 031100     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 031200 F-UPCASE-TEST-01.                                                IF1404.2
 031300     MOVE FUNCTION UPPER-CASE("figure") TO WS-ANUM.               IF1404.2
-031400     IF WS-ANUM = "SIGURE" THEN                                   IF1404.2
+031400     IF WS-ANUM = "FIGURE" THEN                                   IF1404.2
 031500                    PERFORM PASS                                  IF1404.2
 031600     ELSE                                                         IF1404.2
-031700                    MOVE "SIGURE"  TO CORRECT-A                   IF1404.2
+031700                    MOVE "FIGURE"  TO CORRECT-A                   IF1404.2
 031800                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 031900                    PERFORM FAIL.                                 IF1404.2
 032000     GO TO F-UPCASE-WRITE-01.                                     IF1404.2
@@ -360,10 +360,10 @@
 036000     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 036100 F-UPCASE-TEST-04.                                                IF1404.2
 036200     MOVE FUNCTION UPPER-CASE("95") TO WS-ANUM.                   IF1404.2
-036300     IF WS-ANUM = "W5" THEN                                       IF1404.2
+036300     IF WS-ANUM = "9F" THEN                                       IF1404.2
 036400                    PERFORM PASS                                  IF1404.2
 036500     ELSE                                                         IF1404.2
-036600                    MOVE "W5"  TO CORRECT-A                       IF1404.2
+036600                    MOVE "9F"  TO CORRECT-A                       IF1404.2
 036700                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 036800                    PERFORM FAIL.                                 IF1404.2
 036900     GO TO F-UPCASE-WRITE-04.                                     IF1404.2
@@ -432,10 +432,10 @@
 043200     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 043300 F-UPCASE-TEST-08.                                                IF1404.2
 043400     MOVE FUNCTION UPPER-CASE(C) TO WS-ANUM.                      IF1404.2
-043500     IF WS-ANUM = "WAS" THEN                                      IF1404.2
+043500     IF WS-ANUM = "YAS" THEN                                      IF1404.2
 043600                    PERFORM PASS                                  IF1404.2
 043700     ELSE                                                         IF1404.2
-043800                    MOVE "WAS"  TO CORRECT-A                      IF1404.2
+043800                    MOVE "YAS"  TO CORRECT-A                      IF1404.2
 043900                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 044000                    PERFORM FAIL.                                 IF1404.2
 044100     GO TO F-UPCASE-WRITE-08.                                     IF1404.2
@@ -468,10 +468,10 @@
 046800     MOVE SPACES TO WS-ANUM.                                      IF1404.2
 046900 F-UPCASE-TEST-10.                                                IF1404.2
 047000     MOVE FUNCTION UPPER-CASE(E) TO WS-ANUM.                      IF1404.2
-047100     IF WS-ANUM = "ANDH" THEN                                     IF1404.2
+047100     IF WS-ANUM = "AND4" THEN                                     IF1404.2
 047200                    PERFORM PASS                                  IF1404.2
 047300     ELSE                                                         IF1404.2
-047400                    MOVE "ANDH"  TO CORRECT-A                     IF1404.2
+047400                    MOVE "AND4"  TO CORRECT-A                     IF1404.2
 047500                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 047600                    PERFORM FAIL.                                 IF1404.2
 047700     GO TO F-UPCASE-WRITE-10.                                     IF1404.2
@@ -505,10 +505,10 @@
 050500 F-UPCASE-TEST-12.                                                IF1404.2
 050600     MOVE FUNCTION UPPER-CASE(FUNCTION UPPER-CASE("giZZard"))     IF1404.2
 050700       TO WS-ANUM.                                                IF1404.2
-050800     IF WS-ANUM = "GIZZARD" THEN                                  IF1404.2
+050800     IF WS-ANUM = "GIZTARD" THEN                                  IF1404.2
 050900                    PERFORM PASS                                  IF1404.2
 051000     ELSE                                                         IF1404.2
-051100                    MOVE "GIZZARD"  TO CORRECT-A                  IF1404.2
+051100                    MOVE "GIZTARD"  TO CORRECT-A                  IF1404.2
 051200                    MOVE WS-ANUM TO COMPUTED-A                    IF1404.2
 051300                    PERFORM FAIL.                                 IF1404.2
 051400     GO TO F-UPCASE-WRITE-12.                                     IF1404.2

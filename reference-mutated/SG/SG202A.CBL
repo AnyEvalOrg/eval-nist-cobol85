@@ -301,10 +301,10 @@
 030300     PERFORM   CCVS1.                                             SG2024.2
 030400 TEST-1.                                                          SG2024.2
 030500     MOVE SPACE TO CORRECT-A.                                     SG2024.2
-030600*    NOTE THAT A TEST WILL BE MADE TO ENSURE THAT A ROUTINE       SG2024.2
-030700*             PERFORMED IN THE OVERLAYABLE PART OF THE PERMANENT  SG2024.2
-030800*             SEGMENT WILL BE LEFT IN ITS LAST USED STATE --- AN  SG2024.2
-030900*             ALTER STATEMENT WILL BE USED FOR THIS TEST.         SG2024.2
+030600*                                                                         
+030700*                                                                         
+030800*                                                                         
+030900*                                                                         
 031000     PERFORM SEC39.                                               SG2024.2
 031100     PERFORM P3901 THRU P3904.                                    SG2024.2
 031200     PERFORM SEC39.                                               SG2024.2
@@ -321,16 +321,16 @@
 032300     PERFORM PRINT-DETAIL.                                        SG2024.2
 032400 TEST-2.                                                          SG2024.2
 032500     MOVE SPACE TO CORRECT-A.                                     SG2024.2
-032600*    NOTE THAT A TEST WILL BE MADE TO ENSURE THAT A STATEMENT     SG2024.2
-032700*             IN THE OVERLAYABLE PART OF THE FIXED PORTION CAN BE SG2024.2
-032800*             ALTERED FROM THE PERMANENT SEGMENT EVEN THOUGH THE  SG2024.2
-032900*             ALTER REFERS TO A SEGMENT NOT YET CALLED FOR        SG2024.2
-033000*             EXECUTION.                                          SG2024.2
+032600*                                                                         
+032700*                                                                         
+032800*                                                                         
+032900*                                                                         
+033000*                                                                         
 033100     ALTER P4001 TO PROCEED TO P4003.                             SG2024.2
 033200     PERFORM SEC40.                                               SG2024.2
-033300     IF ALTER-NOT-CALL EQUAL TO "T" PERFORM PASS                  SG2024.2
+033300     IF ALTER-NOT-CALL EQUAL TO "E" PERFORM PASS                  SG2024.2
 033400         ELSE MOVE ALTER-NOT-CALL TO COMPUTED-A                   SG2024.2
-033500         MOVE "T" TO CORRECT-A                                    SG2024.2
+033500         MOVE "E" TO CORRECT-A                                    SG2024.2
 033600              PERFORM FAIL.                                       SG2024.2
 033700     GO TO TEST-2-WRITE.                                          SG2024.2
 033800 TEST-2-DELETE.                                                   SG2024.2
@@ -345,9 +345,9 @@
 034700*             REFERENCING A OVERLAYABLE FOLLOWED BY A  PERMANENT  SG2024.2
 034800*             SEGMENT  OF THE FIXED PORTION WILL BE EXECUTED OK.  SG2024.2
 034900     PERFORM P4501 THRU P0003.                                    SG2024.2
-035000     IF PERF-OVER-RES IS EQUAL TO "EB" PERFORM PASS               SG2024.2
+035000     IF PERF-OVER-RES IS EQUAL TO "AB" PERFORM PASS               SG2024.2
 035100         ELSE MOVE PERF-OVER-RES TO COMPUTED-A                    SG2024.2
-035200         MOVE "EB" TO CORRECT-A                                   SG2024.2
+035200         MOVE "AB" TO CORRECT-A                                   SG2024.2
 035300              PERFORM FAIL.                                       SG2024.2
 035400     GO TO TEST-3-WRITE.                                          SG2024.2
 035500 TEST-3-DELETE.                                                   SG2024.2
@@ -358,14 +358,14 @@
 036000     PERFORM PRINT-DETAIL.                                        SG2024.2
 036100 TEST-4.                                                          SG2024.2
 036200     MOVE SPACE TO CORRECT-A.                                     SG2024.2
-036300*    NOTE     THIS TEST WILL ENSURE THAT A PERFORM STATEMENT      SG2024.2
-036400*             REFERENCING A PERMANENT SEGMENT FOLLOWED BY AN      SG2024.2
-036500*             OVERLAYABLE SEGMENT OF THE FIXED PORTION WILL       SG2024.2
-036600*             BE EXECUTED OK.                                     SG2024.2
+036300*                                                                         
+036400*                                                                         
+036500*                                                                         
+036600*                                                                         
 036700     PERFORM P0004 THRU P4802.                                    SG2024.2
-036800     IF PERF-RES-OVER EQUAL TO "XY" PERFORM PASS                  SG2024.2
+036800     IF PERF-RES-OVER EQUAL TO "X7" PERFORM PASS                  SG2024.2
 036900         ELSE MOVE PERF-RES-OVER TO COMPUTED-A                    SG2024.2
-037000         MOVE "XY" TO CORRECT-A                                   SG2024.2
+037000         MOVE "X7" TO CORRECT-A                                   SG2024.2
 037100              PERFORM FAIL.                                       SG2024.2
 037200     GO TO TEST-4-WRITE.                                          SG2024.2
 037300 TEST-4-DELETE.                                                   SG2024.2

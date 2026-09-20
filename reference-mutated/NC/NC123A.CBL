@@ -419,7 +419,7 @@
 042100     MOVE "IND-TEST-GF-3-1" TO PAR-NAME.                          NC1234.2
 042200     PERFORM PRINT-DETAIL.                                        NC1234.2
 042300 IND-TEST-GF-3-2.                                                 NC1234.2
-042400     IF  NUM-9V9 = 5.0                                            NC1234.2
+042400     IF  NUM-9V9 = 4.0                                            NC1234.2
 042500         PERFORM PASS                                             NC1234.2
 042600         GO TO IND-WRITE-GF-3-2.                                  NC1234.2
 042700     GO TO IND-FAIL-GF-3-2.                                       NC1234.2
@@ -429,7 +429,7 @@
 043100 IND-FAIL-GF-3-2.                                                 NC1234.2
 043200     PERFORM FAIL.                                                NC1234.2
 043300     MOVE NUM-9V9 TO COMPUTED-14V4.                               NC1234.2
-043400     MOVE 5.0 TO CORRECT-14V4.                                    NC1234.2
+043400     MOVE 4.0 TO CORRECT-14V4.                                    NC1234.2
 043500     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1234.2
 043600 IND-WRITE-GF-3-2.                                                NC1234.2
 043700     MOVE "IND-TEST-GF-3-2" TO PAR-NAME.                          NC1234.2
@@ -501,7 +501,7 @@
 050300     MOVE "IND-TEST-GF-6-1" TO PAR-NAME.                          NC1234.2
 050400     PERFORM PRINT-DETAIL.                                        NC1234.2
 050500 IND-TEST-GF-6-2.                                                 NC1234.2
-050600     IF   TABLE2-NUM (INDEX2) = 9.0                               NC1234.2
+050600     IF   TABLE2-NUM (INDEX2) = 3.0                               NC1234.2
 050700        PERFORM PASS                                              NC1234.2
 050800        GO TO IND-WRITE-GF-6-2.                                   NC1234.2
 050900     GO TO IND-FAIL-GF-6-2.                                       NC1234.2
@@ -510,7 +510,7 @@
 051200     GO TO IND-WRITE-GF-6-2.                                      NC1234.2
 051300 IND-FAIL-GF-6-2.                                                 NC1234.2
 051400     PERFORM FAIL.                                                NC1234.2
-051500     MOVE 9.0 TO CORRECT-14V4.                                    NC1234.2
+051500     MOVE 3.0 TO CORRECT-14V4.                                    NC1234.2
 051600     MOVE TABLE2-NUM (INDEX2) TO COMPUTED-14V4.                   NC1234.2
 051700     MOVE "ON SIZE ERROR NOT EXECUTED" TO RE-MARK.                NC1234.2
 051800 IND-WRITE-GF-6-2.                                                NC1234.2
@@ -818,7 +818,7 @@
 082000     SUBTRACT TABLE1-NUM (INDEX1) FROM TABLE2-NUM (INDEX2)        NC1234.2
 082100        ROUNDED.                                                  NC1234.2
 082200 IND-TEST-GF-19-1.                                                NC1234.2
-082300     IF TABLE2-NUM (INDEX2) EQUAL TO 9.4                          NC1234.2
+082300     IF TABLE2-NUM (INDEX2) EQUAL TO 6.4                          NC1234.2
 082400        PERFORM PASS                                              NC1234.2
 082500        ELSE GO TO IND-FAIL-GF-19.                                NC1234.2
 082600     GO TO IND-WRITE-GF-19.                                       NC1234.2
@@ -828,7 +828,7 @@
 083000 IND-FAIL-GF-19.                                                  NC1234.2
 083100     PERFORM FAIL.                                                NC1234.2
 083200     MOVE TABLE2-NUM (INDEX2) TO COMPUTED-14V4.                   NC1234.2
-083300     MOVE 9.4 TO CORRECT-14V4.                                    NC1234.2
+083300     MOVE 6.4 TO CORRECT-14V4.                                    NC1234.2
 083400 IND-WRITE-GF-19.                                                 NC1234.2
 083500     MOVE "IND-TEST-GF-19" TO PAR-NAME.                           NC1234.2
 083600     PERFORM PRINT-DETAIL.                                        NC1234.2
@@ -878,7 +878,7 @@
 088000 IND-TEST-GF-24-0.                                                NC1234.2
 088100     SUBTRACT TABLE1-NUM (INDEX1) FROM 8 GIVING NUM-9V9.          NC1234.2
 088200 IND-TEST-GF-24-1.                                                NC1234.2
-088300     IF NUM-9V9 EQUAL TO 7.0                                      NC1234.2
+088300     IF NUM-9V9 EQUAL TO 6.0                                      NC1234.2
 088400        PERFORM PASS                                              NC1234.2
 088500        ELSE GO TO IND-FAIL-GF-24.                                NC1234.2
 088600     GO TO IND-WRITE-GF-24.                                       NC1234.2
@@ -888,7 +888,7 @@
 089000 IND-FAIL-GF-24.                                                  NC1234.2
 089100     PERFORM FAIL.                                                NC1234.2
 089200     MOVE NUM-9V9 TO COMPUTED-14V4.                               NC1234.2
-089300     MOVE 7.0 TO CORRECT-14V4.                                    NC1234.2
+089300     MOVE 6.0 TO CORRECT-14V4.                                    NC1234.2
 089400 IND-WRITE-GF-24.                                                 NC1234.2
 089500     MOVE "IND-TEST-GF-24" TO PAR-NAME.                           NC1234.2
 089600     PERFORM PRINT-DETAIL.                                        NC1234.2
@@ -903,7 +903,7 @@
 090500     SUBTRACT TABLE1-NUM (INDEX1) FROM TABLE2-NUM (INDEX2)        NC1234.2
 090600        GIVING NUM-9V9.                                           NC1234.2
 090700 IND-TEST-GF-25-1.                                                NC1234.2
-090800     IF NUM-9V9 EQUAL TO 8.7                                      NC1234.2
+090800     IF NUM-9V9 EQUAL TO 8.0                                      NC1234.2
 090900        PERFORM PASS                                              NC1234.2
 091000        ELSE GO TO IND-FAIL-GF-25.                                NC1234.2
 091100     GO TO IND-WRITE-GF-25.                                       NC1234.2
@@ -913,7 +913,7 @@
 091500 IND-FAIL-GF-25.                                                  NC1234.2
 091600     PERFORM FAIL.                                                NC1234.2
 091700     MOVE NUM-9V9 TO COMPUTED-14V4.                               NC1234.2
-091800     MOVE 8.7 TO CORRECT-14V4.                                    NC1234.2
+091800     MOVE 8.0 TO CORRECT-14V4.                                    NC1234.2
 091900 IND-WRITE-GF-25.                                                 NC1234.2
 092000     MOVE "IND-TEST-GF-25" TO PAR-NAME.                           NC1234.2
 092100     PERFORM PRINT-DETAIL.                                        NC1234.2
@@ -1024,7 +1024,7 @@
 102600     SUBTRACT TABLE1-NUM (INDEX1 - 2) FROM                        NC1234.2
 102700        TABLE2-NUM (INDEX2 - 1) GIVING NUM-9V9.                   NC1234.2
 102800 IND-TEST-GF-27-1.                                                NC1234.2
-102900     IF NUM-9V9 EQUAL TO 1.0                                      NC1234.2
+102900     IF NUM-9V9 EQUAL TO 7.0                                      NC1234.2
 103000        PERFORM PASS                                              NC1234.2
 103100        ELSE GO TO IND-FAIL-GF-27.                                NC1234.2
 103200     GO TO IND-WRITE-GF-27.                                       NC1234.2
@@ -1034,7 +1034,7 @@
 103600 IND-FAIL-GF-27.                                                  NC1234.2
 103700     PERFORM FAIL.                                                NC1234.2
 103800     MOVE NUM-9V9 TO COMPUTED-14V4.                               NC1234.2
-103900     MOVE 1.0 TO CORRECT-14V4.                                    NC1234.2
+103900     MOVE 7.0 TO CORRECT-14V4.                                    NC1234.2
 104000 IND-WRITE-GF-27.                                                 NC1234.2
 104100     MOVE "SUBTRCT-TEST-GF-27" TO PAR-NAME.                       NC1234.2
 104200     PERFORM PRINT-DETAIL.                                        NC1234.2

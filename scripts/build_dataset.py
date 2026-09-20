@@ -13,6 +13,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nist_cobol85.normalization import normalize_report
+from scripts.mutation_private import salt_sha256, private_manifest_path, check_salt, write_private
 
 MODULES = 'NC SM IC SQ RL IX ST SG OB IF RW DB'.split()
 SPECIAL = {'NC107A', 'NC113M', 'NC121M', 'NC220M', 'NC135A'}
@@ -216,27 +217,45 @@ def validate_mutated(reference, mutations):
                          + '; '.join(problems[:8]))
 
 
-def build(reference: Path, output: Path, mutation_manifest: Path | None = None):
-    mutation_manifest = mutation_manifest or ROOT / 'nist_cobol85/data/mutations.json'
+def build(reference: Path, output: Path):
+    salt_sha256()  # Refuse even before reading files when the operator secret is absent.
+    mutation_manifest = private_manifest_path()
     if not mutation_manifest.is_file():
         raise ValueError('Private mutation manifest missing; run scripts/mutate_suite.py first')
     mutations = json.loads(mutation_manifest.read_text())
+    check_salt(mutations)
     index = json.loads((reference / 'index.json').read_text())
     if set(index['programs']) != set(mutations['programs']):
         raise ValueError('Mutation inventory does not match reference index')
     validate_mutated(reference, mutations)
     serialized = json.dumps(mutations, indent=2, sort_keys=True) + '\n'
     if mutation_manifest.read_text() != serialized:
-        mutation_manifest.write_text(serialized)
+        write_private(mutation_manifest, mutations)
     records, eligibility, manifest = _build(reference, output, mutations)
     manifest['pending_programs'] = sorted(n for n, p in mutations['programs'].items() if p.get('needs_new_logs'))
+    pending = manifest['pending_programs']
+    manifest['status'] = 'awaiting_mutated_logs' if pending and not records else 'ready'
+    eligibility['mutation_summary'] = dict(
+        candidates=sum(p.get('mutation_candidate', False) for p in mutations['programs'].values()),
+        planted_sites=sum(len(p['mutations']) for p in mutations['programs'].values()),
+        shipped_sites=sum(len(p['mutations']) for p in mutations['programs'].values() if p['eligible']),
+        original_exclusions=sum(not p['baseline']['eligible'] for p in mutations['programs'].values()),
+        insufficient_sites=sum(p['baseline']['eligible'] and not p.get('mutation_candidate', False) for p in mutations['programs'].values()),
+        execution_exclusions=sum(p.get('mutation_candidate', False) and not p['eligible'] and not p.get('needs_new_logs', False) for p in mutations['programs'].values()),
+        pending=len(pending))
+    (output / 'eligibility.json').write_text(json.dumps(eligibility, indent=2) + '\n')
+    manifest['eligibility_sha256'] = hashlib.sha256((output / 'eligibility.json').read_bytes()).hexdigest()
+    if pending:
+        print('Programs awaiting mutated logs (' + str(len(pending)) + '): ' + ', '.join(pending))
     manifest['mutation_sha256'] = hashlib.sha256(mutation_manifest.read_bytes()).hexdigest()
     (output / 'manifest.json').write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n')
     if output.resolve() == (ROOT / 'nist_cobol85/data').resolve():
+        from scripts.readme_counts import update_readme
+        update_readme(ROOT / 'README.md', eligibility)
         catalog_path = ROOT / 'anyeval.json'
         catalog = json.loads(catalog_path.read_text())
         catalog['tasks'][0]['samples'] = catalog['total_samples'] = len(records)
-        catalog['dataset_status'] = 'ready'
+        catalog['dataset_status'] = manifest['status']
         catalog['upstream']['reference'] = 'reference-mutated/; validated mutated GnuCOBOL logs'
         catalog_path.write_text(json.dumps(catalog, indent=2) + '\n')
     return records, eligibility, manifest

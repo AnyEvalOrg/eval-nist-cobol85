@@ -36,7 +36,11 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  RENAMES              PASS  RENAM-TEST-2                                                                                
  RENAMES              PASS  RENAM-TEST-3                                                                                
  RENAMES              PASS  RENAM-TEST-4                                                                                
- RENAMES              PASS  RENAM-TEST-5                                                                                
+ RENAMES              FAIL* RENAM-TEST-5                                                                                
+                                                                                                                        
+                                     COMPUTED= X  123                                                                   
+                                     CORRECT = X  V23                                                                   
+                                                                                                                        
  RENAMES              PASS  RENAM-TEST-6                                                                                
  RENAMES              PASS  RENAM-TEST-7                                                                                
  QUALIFIED RENAMES    PASS  RENAM-TEST-8                                                                                
@@ -44,18 +48,14 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED RENAMES    PASS  RENAM-TEST-10                                                                               
  RENAMES A TABLE      PASS  RENAM-TEST-11                                                                               
  RENAMED DATA ---                                                                                                       
-   GROUP COMPARISON   PASS  RENAM-TEST-12                                                                               
-   GRP MOVE, COMPARE  PASS  RENAM-TEST-13                                                                               
-   GROUP MOVE         PASS  RENAM-TEST-14                                                                               
-   EDITED MOVE        FAIL* RENAM-TEST-15                                                                               
-                                                                                                                                                                                                                                                
+   GROUP COMPARISON   PASS  RENAM-TEST-12                                                                                                                                                                                                       
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
-                                     COMPUTED= ****234.50                                                               
-                                     CORRECT = ****234.57                                                               
-                                                                                                                        
+   GRP MOVE, COMPARE  PASS  RENAM-TEST-13                                                                               
+   GROUP MOVE         PASS  RENAM-TEST-14                                                                               
+   EDITED MOVE        PASS  RENAM-TEST-15                                                                               
    ADD, SIZE ERROR    PASS  RENAM-TEST-16                                                                               
    ADD, SIZE ERROR    PASS  RENAM-TEST-17                                                                               
    THROUGH            PASS  RENAM-TEST-18                                                                               
@@ -96,19 +96,23 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COMPUTE              PASS  COMP-TEST-26                                                                                
  COMPUTE              PASS  COMP-TEST-27                                                                                
  COMPUTE              PASS  COMP-TEST-28                                                                                
- COMPUTE              PASS  COMP-TEST-29                                                                                
- COMPUTE              PASS  COMP-TEST-30                                                                                
- COMPUTE              PASS  COMP-TEST-31                                                                                
- COMPUTE              PASS  COMP-TEST-32                                                                                
- COMPUTE              FAIL* COMP-TEST-33                                                                                
+ COMPUTE              FAIL* COMP-TEST-29                                                                                
                                                                                                                         
-                                     COMPUTED=  000000009.000000000                                                     
-                                     CORRECT =  000000006.000000000                                                                                                                                                                             
+                                     COMPUTED=  222222222222222222                                                      
+                                     CORRECT =  222222222242222222                                                      
+                                                                                                                        
+ COMPUTE              FAIL* COMP-TEST-30                                                                                
+                                                                                                                        
+                                     COMPUTED=  111111111111111111                                                                                                                                                                              
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
+                                     CORRECT =  111111131111111111                                                      
                                                                                                                         
+ COMPUTE              PASS  COMP-TEST-31                                                                                
+ COMPUTE              PASS  COMP-TEST-32                                                                                
+ COMPUTE              PASS  COMP-TEST-33                                                                                
  COMPUTE              PASS  COMP-TEST-34                                                                                
  COMPUTE              PASS  COMP-TEST-35                                                                                
  COMPUTE              PASS  COMP-TEST-36                                                                                
@@ -119,11 +123,7 @@ TEST RESULT OF NC252A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                             COMP-TEST-41                  NOT USED                                                      
                             COMP-TEST-42                  NOT USED                                                      
  COMPUTE              PASS  COMP-TEST-43                                                                                
- COMPUTE              FAIL* COMP-TEST-44                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000000000000010                                                      
-                                     CORRECT =  000000000000000013                                                      
-                                                                                                                        
+ COMPUTE              PASS  COMP-TEST-44                                                                                
  COMPUTE SERIES       PASS  COMP-TEST-045-1                                                                             
  COMPUTE SERIES       PASS  COMP-TEST-045-2                                                                             
  COMPUTE SERIES       PASS  COMP-TEST-045-3                                                                             

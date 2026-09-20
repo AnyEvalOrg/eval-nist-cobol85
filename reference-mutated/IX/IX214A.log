@@ -34,12 +34,12 @@ TEST RESULT OF IX214A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FILE STATUS START:23 PASS  START-TEST-GF-13                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-14                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-15                                                                            
- FILE STATUS START:23 PASS  START-TEST-GF-16                                                                            
- FILE STATUS START:00 FAIL* START-TEST-GF-17              IX-3; 1.3.4 (1) A;FROM START-TEST-GF-08                       
+ FILE STATUS START:23 FAIL* START-TEST-GF-16              FROM START-TEST-GF-07; IX-4 1.3.4 (3) C                       
                                                                                                                         
-                                     COMPUTED= 00                                                                       
-                                     CORRECT = 08                                                                       
+                                     COMPUTED= 23                                                                       
+                                     CORRECT = 22                                                                       
                                                                                                                         
+ FILE STATUS START:00 PASS  START-TEST-GF-17                                                                            
  FILE STATUS START:23 FAIL* START-TEST-GF-18              FROM START-TEST-GF-09; IX-4 1.3.4 (3) C                                                                                                                                               
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
@@ -56,7 +56,7 @@ TEST RESULT OF IX214A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ***********************************************************************************************************************
                                                                                                                         
                                      COMPUTED= 23                                                                       
-                                     CORRECT = Q3                                                                       
+                                     CORRECT = 2P                                                                       
                                                                                                                         
  STR NLT ALTKY W/O DU PASS  START-TEST-GF-19                                                                            
  STR NLT ALTKY W/O DU PASS  START-TEST-GF-20                                                                            
@@ -68,14 +68,14 @@ TEST RESULT OF IX214A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  STR NLT ALTKY W/O DU PASS  START-TEST-GF-26              SUBORDINATE DATA ITEM IN KEY                                  
  STR NLT ALTKY W/O DU PASS  START-TEST-GF-27              INVALID KEY                                                   
  FILE STATUS START:00 PASS  START-TEST-GF-28                                                                            
- FILE STATUS START:00 PASS  START-TEST-GF-20                                                                            
- FILE STATUS START:00 PASS  START-TEST-GF-30                                                                            
- FILE STATUS START:23 PASS  START-TEST-GF-31                                                                            
- FILE STATUS START:00 FAIL* START-TEST-GF-32              IX-3; 1.3.4 (1) A;FROM START-TEST-GF-23                       
+ FILE STATUS START:00 FAIL* START-TEST-GF-20              IX-3; 1.3.4 (1) A;FROM START-TEST-GF-20                       
                                                                                                                         
                                      COMPUTED= 00                                                                       
-                                     CORRECT = B0                                                                       
+                                     CORRECT = 08                                                                       
                                                                                                                         
+ FILE STATUS START:00 PASS  START-TEST-GF-30                                                                            
+ FILE STATUS START:23 PASS  START-TEST-GF-31                                                                            
+ FILE STATUS START:00 PASS  START-TEST-GF-32                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-33                                                                            
  FILE STATUS START:23 PASS  START-TEST-GF-34                                                                            
  FILE STATUS START:00 PASS  START-TEST-GF-35                                                                            

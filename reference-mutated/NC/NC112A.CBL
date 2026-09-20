@@ -377,11 +377,11 @@
 037900         DNAME-10 TO ACCUM-1 ROUNDED ON SIZE ERROR                NC1124.2
 038000             MOVE 0 TO ACCUM-1.                                   NC1124.2
 038100 ADD-TEST-F1-2-1.                                                 NC1124.2
-038200     IF ACCUM-1 EQUAL TO 30                                       NC1124.2
+038200     IF ACCUM-1 EQUAL TO 10                                       NC1124.2
 038300         PERFORM PASS                                             NC1124.2
 038400         GO TO ADD-WRITE-F1-2.                                    NC1124.2
 038500     MOVE ACCUM-1 TO COMPUTED-A.                                  NC1124.2
-038600     MOVE 30 TO CORRECT-A.                                        NC1124.2
+038600     MOVE 10 TO CORRECT-A.                                        NC1124.2
 038700     PERFORM FAIL.                                                NC1124.2
 038800     GO TO ADD-WRITE-F1-2.                                        NC1124.2
 038900 ADD-DELETE-F1-2.                                                 NC1124.2
@@ -687,11 +687,11 @@
 068900                    .5                                            NC1124.2
 069000                    .5 FROM ACCUM-1 ROUNDED.                      NC1124.2
 069100 SUB-TEST-F1-2-1.                                                 NC1124.2
-069200     IF ACCUM-1 EQUAL TO 5                                        NC1124.2
+069200     IF ACCUM-1 EQUAL TO 0                                        NC1124.2
 069300         PERFORM PASS                                             NC1124.2
 069400         GO TO SUB-WRITE-F1-2.                                    NC1124.2
 069500     MOVE ACCUM-1 TO COMPUTED-A.                                  NC1124.2
-069600     MOVE 5 TO CORRECT-A.                                         NC1124.2
+069600     MOVE 0 TO CORRECT-A.                                         NC1124.2
 069700     PERFORM FAIL.                                                NC1124.2
 069800     GO TO SUB-WRITE-F1-2.                                        NC1124.2
 069900 SUB-DELETE-F1-2.                                                 NC1124.2
@@ -825,10 +825,10 @@
 082700     MOVE "MOVE-TEST-F1-1-6 " TO PAR-NAME.                        NC1124.2
 082800     PERFORM PRINT-DETAIL.                                        NC1124.2
 082900 MOVE-TEST-F1-1-7.                                                NC1124.2
-083000     IF DNAME-7  EQUAL TO 6                                       NC1124.2
+083000     IF DNAME-7  EQUAL TO 1                                       NC1124.2
 083100         PERFORM PASS                                             NC1124.2
 083200         GO TO MOVE-WRITE-F1-1-7.                                 NC1124.2
-083300     MOVE 6 TO CORRECT-N.                                         NC1124.2
+083300     MOVE 1 TO CORRECT-N.                                         NC1124.2
 083400     MOVE DNAME-7  TO COMPUTED-N.                                 NC1124.2
 083500     PERFORM FAIL.                                                NC1124.2
 083600     GO TO MOVE-WRITE-F1-1-7.                                     NC1124.2
@@ -956,10 +956,10 @@
 095800     MOVE "MOVE-TEST-F1-2-5" TO PAR-NAME.                         NC1124.2
 095900     PERFORM PRINT-DETAIL.                                        NC1124.2
 096000 MOVE-TEST-F1-2-6.                                                NC1124.2
-096100     IF DNAME-6  EQUAL TO 0                                       NC1124.2
+096100     IF DNAME-6  EQUAL TO 2                                       NC1124.2
 096200         PERFORM PASS                                             NC1124.2
 096300         GO TO MOVE-WRITE-F1-2-6.                                 NC1124.2
-096400     MOVE 0 TO CORRECT-N.                                         NC1124.2
+096400     MOVE 2 TO CORRECT-N.                                         NC1124.2
 096500     MOVE DNAME-6  TO COMPUTED-N.                                 NC1124.2
 096600     PERFORM FAIL.                                                NC1124.2
 096700     GO TO MOVE-WRITE-F1-2-6.                                     NC1124.2

@@ -13,25 +13,25 @@ TEST RESULT OF IF112A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- INTEGER-OF-DATE      FAIL* F-DATEOFINT-01                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000001.000000000                                                     
-                                     CORRECT =  000000004.000000000  See ref. A-45 2.16                                 
-                                                                                                                        
+ INTEGER-OF-DATE      PASS  F-DATEOFINT-01                                                                              
  INTEGER-OF-DATE      PASS  F-DATEOFINT-02                                                                              
  INTEGER-OF-DATE      PASS  F-DATEOFINT-03                                                                              
  INTEGER-OF-DATE      FAIL* F-DATEOFINT-04                                                                              
                                                                                                                         
                                      COMPUTED=  000000406.000000000                                                     
-                                     CORRECT =  000000408.000000000  See ref. A-45 2.16                                 
+                                     CORRECT =  000000436.000000000  See ref. A-45 2.16                                 
                                                                                                                         
- INTEGER-OF-DATE      PASS  F-DATEOFINT-05                                                                              
- INTEGER-OF-DATE      FAIL* F-DATEOFINT-06                                                                              
+ INTEGER-OF-DATE      FAIL* F-DATEOFINT-05                                                                              
                                                                                                                         
-                                     COMPUTED=  000000410.000000000                                                     
-                                     CORRECT =  000000440.000000000  See ref. A-45 2.16                                 
+                                     COMPUTED=  000000365.000000000                                                     
+                                     CORRECT =  000000395.000000000  See ref. A-45 2.16                                 
                                                                                                                         
- INTEGER-OF-DATE      PASS  F-DATEOFINT-07                                                                              
+ INTEGER-OF-DATE      PASS  F-DATEOFINT-06                                                                              
+ INTEGER-OF-DATE      FAIL* F-DATEOFINT-07                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000800.000000000                                                     
+                                     CORRECT =  000000820.000000000  See ref. A-45 2.16                                 
+                                                                                                                        
  INTEGER-OF-DATE      PASS  F-DATEOFINT-10                                                                              
  ***********************************************************************************************************************
                                                                                                                         

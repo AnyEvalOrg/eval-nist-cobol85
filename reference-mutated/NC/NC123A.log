@@ -16,11 +16,19 @@ TEST RESULT OF NC123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  ADD TO               PASS  IND-TEST-GF-1                                                                               
  ADD ROUNDED          PASS  IND-TEST-GF-2                                                                               
  ADD ON SIZE ERROR    PASS  IND-TEST-GF-3-1                                                                             
- ADD ON SIZE ERROR    PASS  IND-TEST-GF-3-2                                                                             
+ ADD ON SIZE ERROR    FAIL* IND-TEST-GF-3-2               WRONGLY AFFECTED BY SIZE ERROR                                
+                                                                                                                        
+                                     COMPUTED=  00000000000005.0000                                                     
+                                     CORRECT =  00000000000004.0000  IV-21 4.3.8.2.3/4                                  
+                                                                                                                        
  ADD TO               PASS  IND-TEST-GF-4                                                                               
  ADD ROUNDED          PASS  IND-TEST-GF-5                                                                               
  ADD ON SIZE ERROR    PASS  IND-TEST-GF-6-1                                                                             
- ADD ON SIZE ERROR    PASS  IND-TEST-GF-6-2                                                                             
+ ADD ON SIZE ERROR    FAIL* IND-TEST-GF-6-2               ON SIZE ERROR NOT EXECUTED                                    
+                                                                                                                        
+                                     COMPUTED=  00000000000009.0000                                                     
+                                     CORRECT =  00000000000003.0000  IV-21 4.3.8.2.3/4                                  
+                                                                                                                        
  ADD GIVING           PASS  IND-TEST-GF-10                                                                              
  ADD GIVING           PASS  IND-TEST-GF-11                                                                              
  ADD GIVING           PASS  IND-TEST-GF-12                                                                              
@@ -32,15 +40,7 @@ TEST RESULT OF NC123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUBTRACT FROM        PASS  IND-TEST-GF-15                                                                              
  SUBTRACT ROUNDED     PASS  IND-TEST-GF-16                                                                              
  SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-17-1                                                                            
- SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-17-2                                                                            
- SUBTRACT FROM        PASS  IND-TEST-GF-18                                                                              
- SUBTRACT ROUNDED     FAIL* IND-TEST-GF-19                                                                              
-                                                                                                                        
-                                     COMPUTED=  00000000000006.4000                                                     
-                                     CORRECT =  00000000000009.4000  IV-21 4.3.8.2.3/4                                  
-                                                                                                                        
- SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-20-1                                                                            
- SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-20-2                                                                                                                                                                                                    
+ SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-17-2                                                                                                                                                                                                    
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,21 +54,21 @@ TEST RESULT OF NC123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- SUBTRACT GIVING      PASS  IND-TEST-GF-24                                                                              
- SUBTRACT GIVING      FAIL* IND-TEST-GF-25                                                                              
+ SUBTRACT FROM        PASS  IND-TEST-GF-18                                                                              
+ SUBTRACT ROUNDED     PASS  IND-TEST-GF-19                                                                              
+ SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-20-1                                                                            
+ SUBTRACT ON SIZE ERR PASS  IND-TEST-GF-20-2                                                                            
+ SUBTRACT GIVING      FAIL* IND-TEST-GF-24                                                                              
                                                                                                                         
-                                     COMPUTED=  00000000000008.0000                                                     
-                                     CORRECT =  00000000000008.7000  IV-21 4.3.8.2.3/4                                  
+                                     COMPUTED=  00000000000007.0000                                                     
+                                     CORRECT =  00000000000006.0000  IV-21 4.3.8.2.3/4                                  
                                                                                                                         
+ SUBTRACT GIVING      PASS  IND-TEST-GF-25                                                                              
  SUBTRACT GIVING      PASS  IND-TEST-GF-26                                                                              
  SUBTRACT FROM        PASS  SUBTRCT-TEST-GF-21                                                                          
  SUBTRACT FROM        PASS  SUBTRCT-TEST-GF-22                                                                          
  SUBTRACT FROM        PASS  SUBTRCT-TEST-GF-23                                                                          
- SUBTRACT GIVING      FAIL* SUBTRCT-TEST-GF-27                                                                          
-                                                                                                                        
-                                     COMPUTED=  00000000000007.0000                                                     
-                                     CORRECT =  00000000000001.0000  IV-21 4.3.8.2.3/4                                  
-                                                                                                                        
+ SUBTRACT GIVING      PASS  SUBTRCT-TEST-GF-27                                                                          
  SUBTRACT GIVING      PASS  SUBTRCT-TEST-GF-28                                                                          
  GO TO DEPENDING ON   PASS  IND-TEST-GF-29                                                                              
  GO TO DEPENDING ON   PASS  IND-TEST-GF-30                                                                              

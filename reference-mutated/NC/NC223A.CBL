@@ -703,7 +703,7 @@
 070500 INI-TEST-GF-2-10.                                                NC2234.2
 070600     ADD     1 TO REC-CT.                                         NC2234.2
 070700     MOVE   "INI-TEST-GF-2-10" TO PAR-NAME.                       NC2234.2
-070800     IF      TEST-1-9 = "     / C"                                NC2234.2
+070800     IF      TEST-1-9 = "     /  "                                NC2234.2
 070900             PERFORM PASS                                         NC2234.2
 071000             GO TO INI-WRITE-GF-2-10                              NC2234.2
 071100     ELSE                                                         NC2234.2
@@ -712,7 +712,7 @@
 071400     PERFORM DE-LETE.                                             NC2234.2
 071500     GO TO INI-WRITE-GF-2-10.                                     NC2234.2
 071600 INI-FAIL-GF-2-10.                                                NC2234.2
-071700     MOVE   "     / C" TO CORRECT-X                               NC2234.2
+071700     MOVE   "     /  " TO CORRECT-X                               NC2234.2
 071800     MOVE    TEST-1-9  TO COMPUTED-X                              NC2234.2
 071900     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 072000          TO RE-MARK                                              NC2234.2
@@ -734,7 +734,7 @@
 073600     GO TO   INI-INIT-GF-4.                                       NC2234.2
 073700 INI-TEST-GF-3-1.                                                 NC2234.2
 073800     MOVE   "INI-TEST-GF-3-1" TO PAR-NAME.                        NC2234.2
-073900     IF      TEST-1-3 = "**********"                              NC2234.2
+073900     IF      TEST-1-3 = "***N******"                              NC2234.2
 074000             PERFORM PASS                                         NC2234.2
 074100             GO TO INI-WRITE-GF-3-1                               NC2234.2
 074200     ELSE                                                         NC2234.2
@@ -743,17 +743,17 @@
 074500     PERFORM DE-LETE.                                             NC2234.2
 074600     GO TO INI-WRITE-GF-3-1.                                      NC2234.2
 074700 INI-FAIL-GF-3-1.                                                 NC2234.2
-074800     MOVE   "**********"  TO CORRECT-X                            NC2234.2
+074800     MOVE   "***N******"  TO CORRECT-X                            NC2234.2
 074900     MOVE    TEST-1-3 TO COMPUTED-X                               NC2234.2
 075000     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 075100     PERFORM FAIL.                                                NC2234.2
 075200 INI-WRITE-GF-3-1.                                                NC2234.2
 075300     PERFORM PRINT-DETAIL.                                        NC2234.2
-075400*                                                                 NC2234.2
+075400*                                                                         
 075500 INI-TEST-GF-3-2.                                                 NC2234.2
 075600     ADD     1 TO REC-CT.                                         NC2234.2
 075700     MOVE   "INI-TEST-GF-3-2" TO PAR-NAME.                        NC2234.2
-075800     IF      TEST-1-8 = "**********"                              NC2234.2
+075800     IF      TEST-1-8 = "**I*******"                              NC2234.2
 075900             PERFORM PASS                                         NC2234.2
 076000             GO TO INI-WRITE-GF-3-2                               NC2234.2
 076100     ELSE                                                         NC2234.2
@@ -762,7 +762,7 @@
 076400     PERFORM DE-LETE.                                             NC2234.2
 076500     GO TO INI-WRITE-GF-3-2.                                      NC2234.2
 076600 INI-FAIL-GF-3-2.                                                 NC2234.2
-076700     MOVE   "**********"   TO CORRECT-X                           NC2234.2
+076700     MOVE   "**I*******"   TO CORRECT-X                           NC2234.2
 076800     MOVE    TEST-1-8 TO COMPUTED-X                               NC2234.2
 076900     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 077000     PERFORM FAIL.                                                NC2234.2
@@ -912,7 +912,7 @@
 091400 INI-TEST-GF-3-10.                                                NC2234.2
 091500     ADD     1 TO REC-CT.                                         NC2234.2
 091600     MOVE   "INI-TEST-GF-3-10" TO PAR-NAME.                       NC2234.2
-091700     IF      TEST-1-10 = "BAAAAA"                                 NC2234.2
+091700     IF      TEST-1-10 = "AAAAAA"                                 NC2234.2
 091800             PERFORM PASS                                         NC2234.2
 091900             GO TO INI-WRITE-GF-3-10                              NC2234.2
 092000     ELSE                                                         NC2234.2
@@ -921,7 +921,7 @@
 092300     PERFORM DE-LETE.                                             NC2234.2
 092400     GO TO INI-WRITE-GF-3-10.                                     NC2234.2
 092500 INI-FAIL-GF-3-10.                                                NC2234.2
-092600     MOVE   "BAAAAA"  TO CORRECT-X                                NC2234.2
+092600     MOVE   "AAAAAA"  TO CORRECT-X                                NC2234.2
 092700     MOVE    TEST-1-10 TO COMPUTED-X                              NC2234.2
 092800     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 092900          TO RE-MARK                                              NC2234.2
@@ -943,7 +943,7 @@
 094500     GO TO   INI-INIT-GF-5.                                       NC2234.2
 094600 INI-TEST-GF-4-1.                                                 NC2234.2
 094700     MOVE   "INI-TEST-GF-4-1" TO PAR-NAME.                        NC2234.2
-094800     IF      TEST-1-4 = "DD DD/DD"                                NC2234.2
+094800     IF      TEST-1-4 = "DDFDD/DD"                                NC2234.2
 094900             PERFORM PASS                                         NC2234.2
 095000             GO TO INI-WRITE-GF-4-1                               NC2234.2
 095100     ELSE                                                         NC2234.2
@@ -952,17 +952,17 @@
 095400     PERFORM DE-LETE.                                             NC2234.2
 095500     GO TO INI-WRITE-GF-4-1.                                      NC2234.2
 095600 INI-FAIL-GF-4-1.                                                 NC2234.2
-095700     MOVE   "DD DD/DD" TO CORRECT-X                               NC2234.2
+095700     MOVE   "DDFDD/DD" TO CORRECT-X                               NC2234.2
 095800     MOVE    TEST-1-4  TO COMPUTED-X                              NC2234.2
 095900     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 096000     PERFORM FAIL.                                                NC2234.2
 096100 INI-WRITE-GF-4-1.                                                NC2234.2
 096200     PERFORM PRINT-DETAIL.                                        NC2234.2
-096300*                                                                 NC2234.2
+096300*                                                                         
 096400 INI-TEST-GF-4-2.                                                 NC2234.2
 096500     ADD     1 TO REC-CT.                                         NC2234.2
 096600     MOVE   "INI-TEST-GF-4-2" TO PAR-NAME.                        NC2234.2
-096700     IF      TEST-1-9 = "DD DD/DD"                                NC2234.2
+096700     IF      TEST-1-9 = "DD DM/DD"                                NC2234.2
 096800             PERFORM PASS                                         NC2234.2
 096900             GO TO INI-WRITE-GF-4-2                               NC2234.2
 097000     ELSE                                                         NC2234.2
@@ -971,7 +971,7 @@
 097300     PERFORM DE-LETE.                                             NC2234.2
 097400     GO TO INI-WRITE-GF-4-2.                                      NC2234.2
 097500 INI-FAIL-GF-4-2.                                                 NC2234.2
-097600     MOVE   "DD DD/DD" TO CORRECT-X                               NC2234.2
+097600     MOVE   "DD DM/DD" TO CORRECT-X                               NC2234.2
 097700     MOVE    TEST-1-9  TO COMPUTED-X                              NC2234.2
 097800     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 097900     PERFORM FAIL.                                                NC2234.2
@@ -1001,7 +1001,7 @@
 100300 INI-TEST-GF-4-4.                                                 NC2234.2
 100400     ADD     1 TO REC-CT.                                         NC2234.2
 100500     MOVE   "INI-TEST-GF-4-4" TO PAR-NAME.                        NC2234.2
-100600     IF      TEST-1-2 = "  $M.00"                                 NC2234.2
+100600     IF      TEST-1-2 = "  $0.00"                                 NC2234.2
 100700             PERFORM PASS                                         NC2234.2
 100800             GO TO INI-WRITE-GF-4-4                               NC2234.2
 100900     ELSE                                                         NC2234.2
@@ -1010,7 +1010,7 @@
 101200     PERFORM DE-LETE.                                             NC2234.2
 101300     GO TO INI-WRITE-GF-4-4.                                      NC2234.2
 101400 INI-FAIL-GF-4-4.                                                 NC2234.2
-101500     MOVE   "  $M.00"  TO CORRECT-X                               NC2234.2
+101500     MOVE   "  $0.00"  TO CORRECT-X                               NC2234.2
 101600     MOVE    TEST-1-2 TO COMPUTED-X                               NC2234.2
 101700     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 101800          TO RE-MARK                                              NC2234.2
@@ -1021,7 +1021,7 @@
 102300 INI-TEST-GF-4-5.                                                 NC2234.2
 102400     ADD     1 TO REC-CT.                                         NC2234.2
 102500     MOVE   "INI-TEST-GF-4-5" TO PAR-NAME.                        NC2234.2
-102600     IF      TEST-1-3 = "4*********"                              NC2234.2
+102600     IF      TEST-1-3 = "**********"                              NC2234.2
 102700             PERFORM PASS                                         NC2234.2
 102800             GO TO INI-WRITE-GF-4-5                               NC2234.2
 102900     ELSE                                                         NC2234.2
@@ -1030,7 +1030,7 @@
 103200     PERFORM DE-LETE.                                             NC2234.2
 103300     GO TO INI-WRITE-GF-4-5.                                      NC2234.2
 103400 INI-FAIL-GF-4-5.                                                 NC2234.2
-103500     MOVE   "4*********" TO CORRECT-X                             NC2234.2
+103500     MOVE   "**********" TO CORRECT-X                             NC2234.2
 103600     MOVE    TEST-1-3  TO COMPUTED-X                              NC2234.2
 103700     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 103800          TO RE-MARK                                              NC2234.2
@@ -1077,11 +1077,11 @@
 107900     PERFORM FAIL.                                                NC2234.2
 108000 INI-WRITE-GF-4-7.                                                NC2234.2
 108100     PERFORM PRINT-DETAIL.                                        NC2234.2
-108200*                                                                 NC2234.2
+108200*                                                                         
 108300 INI-TEST-GF-4-8.                                                 NC2234.2
 108400     ADD     1 TO REC-CT.                                         NC2234.2
 108500     MOVE   "INI-TEST-GF-4-8" TO PAR-NAME.                        NC2234.2
-108600     IF      TEST-1-7 = "  $0.00"                                 NC2234.2
+108600     IF      TEST-1-7 = "D $0.00"                                 NC2234.2
 108700             PERFORM PASS                                         NC2234.2
 108800             GO TO INI-WRITE-GF-4-8                               NC2234.2
 108900     ELSE                                                         NC2234.2
@@ -1090,7 +1090,7 @@
 109200     PERFORM DE-LETE.                                             NC2234.2
 109300     GO TO INI-WRITE-GF-4-8.                                      NC2234.2
 109400 INI-FAIL-GF-4-8.                                                 NC2234.2
-109500     MOVE   "  $0.00"  TO CORRECT-X                               NC2234.2
+109500     MOVE   "D $0.00"  TO CORRECT-X                               NC2234.2
 109600     MOVE    TEST-1-7 TO COMPUTED-X                               NC2234.2
 109700     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 109800          TO RE-MARK                                              NC2234.2
@@ -1121,7 +1121,7 @@
 112300 INI-TEST-GF-4-10.                                                NC2234.2
 112400     ADD     1 TO REC-CT.                                         NC2234.2
 112500     MOVE   "INI-TEST-GF-4-10" TO PAR-NAME.                       NC2234.2
-112600     IF      TEST-1-10 = "ARAAAA"                                 NC2234.2
+112600     IF      TEST-1-10 = "AAAAAA"                                 NC2234.2
 112700             PERFORM PASS                                         NC2234.2
 112800             GO TO INI-WRITE-GF-4-10                              NC2234.2
 112900     ELSE                                                         NC2234.2
@@ -1130,7 +1130,7 @@
 113200     PERFORM DE-LETE.                                             NC2234.2
 113300     GO TO INI-WRITE-GF-4-10.                                     NC2234.2
 113400 INI-FAIL-GF-4-10.                                                NC2234.2
-113500     MOVE   "ARAAAA"  TO CORRECT-X                                NC2234.2
+113500     MOVE   "AAAAAA"  TO CORRECT-X                                NC2234.2
 113600     MOVE    TEST-1-10 TO COMPUTED-X                              NC2234.2
 113700     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 113800     TO RE-MARK                                                   NC2234.2
@@ -1230,7 +1230,7 @@
 123200 INI-TEST-GF-5-5.                                                 NC2234.2
 123300     ADD     1 TO REC-CT.                                         NC2234.2
 123400     MOVE   "INI-TEST-GF-5-5" TO PAR-NAME.                        NC2234.2
-123500     IF      TEST-1-4 = "DD JD/DD"                                NC2234.2
+123500     IF      TEST-1-4 = "DD DD/DD"                                NC2234.2
 123600             PERFORM PASS                                         NC2234.2
 123700             GO TO INI-WRITE-GF-5-5                               NC2234.2
 123800     ELSE                                                         NC2234.2
@@ -1239,7 +1239,7 @@
 124100     PERFORM DE-LETE.                                             NC2234.2
 124200     GO TO INI-WRITE-GF-5-5.                                      NC2234.2
 124300 INI-FAIL-GF-5-5.                                                 NC2234.2
-124400     MOVE   "DD JD/DD" TO CORRECT-X                               NC2234.2
+124400     MOVE   "DD DD/DD" TO CORRECT-X                               NC2234.2
 124500     MOVE    TEST-1-4  TO COMPUTED-X                              NC2234.2
 124600     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 124700          TO RE-MARK                                              NC2234.2
@@ -1538,7 +1538,7 @@
 154000 INI-TEST-GF-6-10.                                                NC2234.2
 154100     ADD     1 TO REC-CT.                                         NC2234.2
 154200     MOVE   "INI-TEST-GF-6-10" TO PAR-NAME.                       NC2234.2
-154300     IF      TEST-1-10 = "PAAAAA"                                 NC2234.2
+154300     IF      TEST-1-10 = "AAAAAA"                                 NC2234.2
 154400             PERFORM PASS                                         NC2234.2
 154500             GO TO INI-WRITE-GF-6-10                              NC2234.2
 154600     ELSE                                                         NC2234.2
@@ -1547,7 +1547,7 @@
 154900     PERFORM DE-LETE.                                             NC2234.2
 155000     GO TO INI-WRITE-GF-6-10.                                     NC2234.2
 155100 INI-FAIL-GF-6-10.                                                NC2234.2
-155200     MOVE   "PAAAAA"  TO CORRECT-X                                NC2234.2
+155200     MOVE   "AAAAAA"  TO CORRECT-X                                NC2234.2
 155300     MOVE    TEST-1-10 TO COMPUTED-X                              NC2234.2
 155400     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 155500          TO RE-MARK                                              NC2234.2
@@ -1678,11 +1678,11 @@
 168000     PERFORM FAIL.                                                NC2234.2
 168100 INI-WRITE-GF-7-5.                                                NC2234.2
 168200     PERFORM PRINT-DETAIL.                                        NC2234.2
-168300*                                                                 NC2234.2
+168300*                                                                         
 168400 INI-TEST-GF-7-6.                                                 NC2234.2
 168500     ADD     1 TO REC-CT.                                         NC2234.2
 168600     MOVE   "INI-TEST-GF-7-6" TO PAR-NAME.                        NC2234.2
-168700     IF      TEST-1-5 = "AAAAAA"                                  NC2234.2
+168700     IF      TEST-1-5 = "AAAQAA"                                  NC2234.2
 168800             PERFORM PASS                                         NC2234.2
 168900             GO TO INI-WRITE-GF-7-6                               NC2234.2
 169000     ELSE                                                         NC2234.2
@@ -1691,7 +1691,7 @@
 169300     PERFORM DE-LETE.                                             NC2234.2
 169400     GO TO INI-WRITE-GF-7-6.                                      NC2234.2
 169500 INI-FAIL-GF-7-6.                                                 NC2234.2
-169600     MOVE   "AAAAAA"  TO CORRECT-X                                NC2234.2
+169600     MOVE   "AAAQAA"  TO CORRECT-X                                NC2234.2
 169700     MOVE    TEST-1-5 TO COMPUTED-X                               NC2234.2
 169800     MOVE   "WRONGLY AFFECTED BY OTHER INITIALISATION"            NC2234.2
 169900         TO RE-MARK                                               NC2234.2
@@ -1813,11 +1813,11 @@
 181500     PERFORM FAIL.                                                NC2234.2
 181600 INI-WRITE-GF-8-1.                                                NC2234.2
 181700     PERFORM PRINT-DETAIL.                                        NC2234.2
-181800*                                                                 NC2234.2
+181800*                                                                         
 181900 INI-TEST-GF-8-2.                                                 NC2234.2
 182000     ADD     1 TO REC-CT.                                         NC2234.2
 182100     MOVE   "INI-TEST-GF-8-2" TO PAR-NAME.                        NC2234.2
-182200     IF      TEST-1-7 = "  $0.00"                                 NC2234.2
+182200     IF      TEST-1-7 = "  $0Y00"                                 NC2234.2
 182300             PERFORM PASS                                         NC2234.2
 182400             GO TO INI-WRITE-GF-8-2                               NC2234.2
 182500     ELSE                                                         NC2234.2
@@ -1826,7 +1826,7 @@
 182800     PERFORM DE-LETE.                                             NC2234.2
 182900     GO TO INI-WRITE-GF-8-2.                                      NC2234.2
 183000 INI-FAIL-GF-8-2.                                                 NC2234.2
-183100     MOVE   "  $0.00"  TO CORRECT-X                               NC2234.2
+183100     MOVE   "  $0Y00"  TO CORRECT-X                               NC2234.2
 183200     MOVE    TEST-1-7 TO COMPUTED-X                               NC2234.2
 183300     MOVE   "INCORRECTLY INITIALIZED" TO RE-MARK                  NC2234.2
 183400     PERFORM FAIL.                                                NC2234.2

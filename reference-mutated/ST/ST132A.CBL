@@ -455,7 +455,7 @@
 046200     MOVE     "SORT, OUTPUT PROC" TO FEATURE.                     ST1324.2
 046300 SORT-TEST-16.                                                    ST1324.2
 046400     PERFORM  RETURN-SORT4.                                       ST1324.2
-046500     IF       S4-KEYS EQUAL TO "PQRBAGCDEZ7912345679"             ST1324.2
+046500     IF       S4-KEYS EQUAL TO "PQRBABCDEZ7912385679"             ST1324.2
 046600              PERFORM PASS-1 GO TO SORT-WRITE-16.                 ST1324.2
 046700     GO       TO SORT-FAIL-16.                                    ST1324.2
 046800 SORT-DELETE-16.                                                  ST1324.2
@@ -463,14 +463,14 @@
 047000     GO       TO SORT-WRITE-16.                                   ST1324.2
 047100 SORT-FAIL-16.                                                    ST1324.2
 047200     MOVE     S4-KEYS TO COMPUTED-A.                              ST1324.2
-047300     MOVE     "PQRBAGCDEZ7912345679" TO CORRECT-A.                ST1324.2
+047300     MOVE     "PQRBABCDEZ7912385679" TO CORRECT-A.                ST1324.2
 047400     PERFORM  FAIL-1.                                             ST1324.2
 047500 SORT-WRITE-16.                                                   ST1324.2
 047600     MOVE     "SORT-TEST-16" TO PAR-NAME.                         ST1324.2
 047700     PERFORM  PRINT-DETAIL-1.                                     ST1324.2
 047800 SORT-TEST-17.                                                    ST1324.2
 047900     PERFORM  RETURN-SORT4 59 TIMES.                              ST1324.2
-048000     IF       S4-KEYS EQUAL TO "PQRAAQCDEV7212345670"             ST1324.2
+048000     IF       S4-KEYS EQUAL TO "PQRAABCDEV7212345670"             ST1324.2
 048100              PERFORM PASS-1 GO TO SORT-WRITE-17.                 ST1324.2
 048200     GO       TO SORT-FAIL-17.                                    ST1324.2
 048300 SORT-DELETE-17.                                                  ST1324.2
@@ -478,7 +478,7 @@
 048500     GO       TO SORT-WRITE-17.                                   ST1324.2
 048600 SORT-FAIL-17.                                                    ST1324.2
 048700     MOVE     S4-KEYS TO COMPUTED-A.                              ST1324.2
-048800     MOVE     "PQRAAQCDEV7212345670" TO CORRECT-A.                ST1324.2
+048800     MOVE     "PQRAABCDEV7212345670" TO CORRECT-A.                ST1324.2
 048900     PERFORM  FAIL-1.                                             ST1324.2
 049000 SORT-WRITE-17.                                                   ST1324.2
 049100     MOVE     "SORT-TEST-17" TO PAR-NAME.                         ST1324.2
@@ -486,9 +486,9 @@
 049300 SORT-TEST-18.                                                    ST1324.2
 049400     CLOSE    FILE4 REEL.                                         ST1324.2
 049500                                                                  ST1324.2
-049700*        NOTE CLOSE REEL DELETED FOR THIS RUN    XXXXX     XXXXX. ST1324.2
+049700*                                                                         
 049800     PERFORM  RETURN-SORT4 40 TIMES.                              ST1324.2
-049900     IF       S4-KEYS EQUAL TO "PQRAABCDEA7312345670"             ST1324.2
+049900     IF       S4-KEYS EQUAL TO "PQRAABCDEA7012345660"             ST1324.2
 050000              PERFORM PASS-1 GO TO SORT-WRITE-18.                 ST1324.2
 050100     GO       TO SORT-FAIL-18.                                    ST1324.2
 050200 SORT-DELETE-18.                                                  ST1324.2
@@ -496,7 +496,7 @@
 050400     GO       TO SORT-WRITE-18.                                   ST1324.2
 050500 SORT-FAIL-18.                                                    ST1324.2
 050600     MOVE     S4-KEYS TO COMPUTED-A.                              ST1324.2
-050700     MOVE     "PQRAABCDEA7312345670" TO CORRECT-A.                ST1324.2
+050700     MOVE     "PQRAABCDEA7012345660" TO CORRECT-A.                ST1324.2
 050800     PERFORM  FAIL-1.                                             ST1324.2
 050900 SORT-WRITE-18.                                                   ST1324.2
 051000     MOVE     "SORT-TEST-18" TO PAR-NAME.                         ST1324.2
@@ -585,7 +585,7 @@
 059300     MOVE     "SORT, OUTPUT PROC" TO FEATURE.                     ST1324.2
 059400 SORT-TEST-19.                                                    ST1324.2
 059500     PERFORM  RETURN-SORT5.                                       ST1324.2
-059600     IF       S5-KEYS EQUAL TO "PQRAABCDEA7012345670"             ST1324.2
+059600     IF       S5-KEYS EQUAL TO "PQWAABCDEA7012345670"             ST1324.2
 059700              PERFORM PASS-2 GO TO SORT-WRITE-19.                 ST1324.2
 059800     GO       TO SORT-FAIL-19.                                    ST1324.2
 059900 SORT-DELETE-19.                                                  ST1324.2
@@ -593,7 +593,7 @@
 060100     GO       TO SORT-WRITE-19.                                   ST1324.2
 060200 SORT-FAIL-19.                                                    ST1324.2
 060300     MOVE     S5-KEYS TO COMPUTED-A.                              ST1324.2
-060400     MOVE     "PQRAABCDEA7012345670" TO CORRECT-A.                ST1324.2
+060400     MOVE     "PQWAABCDEA7012345670" TO CORRECT-A.                ST1324.2
 060500     PERFORM  FAIL-2.                                             ST1324.2
 060600 SORT-WRITE-19.                                                   ST1324.2
 060700     MOVE     "SORT-TEST-19" TO PAR-NAME.                         ST1324.2

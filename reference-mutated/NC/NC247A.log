@@ -18,23 +18,23 @@ TEST RESULT OF NC247A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  OCCURS DEPENDING ON  FAIL* INS-TEST-F1-1                 9 ACTIVE: 123456789                                           
                                                                                                                         
                                      COMPUTED=  000000000000000001                                                      
-                                     CORRECT =  000000000000000002   VI-26 5.8                                          
+                                     CORRECT =  000000000000000003   VI-26 5.8                                          
                                                                                                                         
  OCCURS DEPENDING ON  FAIL* INS-TEST-F1-2                 3 ACTIVE: 123                                                 
                                                                                                                         
                                      COMPUTED=  000000000000000000                                                      
-                                     CORRECT =  000000000000000003   VI-26 5.8                                          
+                                     CORRECT =  000000000000000007   VI-26 5.8                                          
                                                                                                                         
  OCCURS DEPENDING ON  PASS  MOV-TEST-F1-1                 FULL ODO + BASE SEGMENT SOURCE                                
  OCCURS DEPENDING ON  PASS  MOV-TEST-F1-2                 PART ODO + BASE SEGMENT SOURCE                                
- OCCURS DEPENDING ON  PASS  MOV-TEST-F1-3                 FULL ODO +BASE SEG RECEIVING                                  
+ OCCURS DEPENDING ON  FAIL* MOV-TEST-F1-3                 FULL ODO +BASE SEG RECEIVING                                  
+                                                                                                                        
+                                     COMPUTED= 9 ACTIVE: TEST PASS                                                      
+                                     CORRECT = 9 ACTIVE: TESTNPASS   VI-26 5.8                                          
+                                                                                                                        
  OCCURS DEPENDING ON  PASS  MOV-TEST-F1-4                 PART ODO + BASE SEG RECEIVING                                 
  OCCURS DEPENDING ON  ***** MOV-TEST-F1-5                 ****TEST DELETED****                                          
- OCCURS DEPENDING ON  FAIL* MOV-TEST-F1-6                 ALL 9 FIELDS SHOULD BE MOVED IN GROUP MOVE                    
-                                                                                                                        
-                                     COMPUTED= PQRSTUVWX                                                                
-                                     CORRECT = PQRSTCVWX             VI-26 5.8.3 SR5                                    
-                                                                                                                        
+ OCCURS DEPENDING ON  PASS  MOV-TEST-F1-6                                                                               
  OCCURS DEPENDING ON  PASS  SCH-TEST-F1-1                 SEARCH FULL ODO TABLE                                         
  OCCURS DEPENDING ON  PASS  SCH-TEST-F1-2                 SEARCH PARTIAL ODO TABLE                                      
  OCCURS DEPENDING ON  PASS  SCH-TEST-F2-3                 SEARCH ALL FULL ODO TABLE                                     

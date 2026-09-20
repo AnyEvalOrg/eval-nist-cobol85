@@ -13,30 +13,30 @@ TEST RESULT OF IF140A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- UPPER-CASE Function  FAIL* F-UPCASE-01                                                                                 
-                                                                                                                        
-                                     COMPUTED= FIGURE                                                                   
-                                     CORRECT = SIGURE                See ref. A-73 2.44                                 
-                                                                                                                        
+ UPPER-CASE Function  PASS  F-UPCASE-01                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-02                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-03                                                                                 
  UPPER-CASE Function  FAIL* F-UPCASE-04                                                                                 
                                                                                                                         
                                      COMPUTED= 95                                                                       
-                                     CORRECT = W5                    See ref. A-73 2.44                                 
+                                     CORRECT = 9F                    See ref. A-73 2.44                                 
                                                                                                                         
  UPPER-CASE Function  PASS  F-UPCASE-05                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-06                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-07                                                                                 
- UPPER-CASE Function  PASS  F-UPCASE-08                                                                                 
+ UPPER-CASE Function  FAIL* F-UPCASE-08                                                                                 
+                                                                                                                        
+                                     COMPUTED= WAS                                                                      
+                                     CORRECT = YAS                   See ref. A-73 2.44                                 
+                                                                                                                        
  UPPER-CASE Function  PASS  F-UPCASE-09                                                                                 
- UPPER-CASE Function  FAIL* F-UPCASE-10                                                                                 
-                                                                                                                        
-                                     COMPUTED= AND4                                                                     
-                                     CORRECT = ANDH                  See ref. A-73 2.44                                 
-                                                                                                                        
+ UPPER-CASE Function  PASS  F-UPCASE-10                                                                                 
  UPPER-CASE Function  PASS  F-UPCASE-11                                                                                 
- UPPER-CASE Function  PASS  F-UPCASE-12                                                                                 
+ UPPER-CASE Function  FAIL* F-UPCASE-12                                                                                 
+                                                                                                                        
+                                     COMPUTED= GIZZARD                                                                  
+                                     CORRECT = GIZTARD               See ref. A-73 2.44                                 
+                                                                                                                        
  UPPER-CASE Function  PASS  F-UPCASE-13                                                                                 
  ***********************************************************************************************************************
                                                                                                                         

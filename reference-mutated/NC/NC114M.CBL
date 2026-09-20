@@ -354,8 +354,8 @@
 035600     IF WRK-AE-1 EQUAL TO "ABC" NEXT SENTENCE ELSE MOVE "ABC" TO  NC1144.2
 035700         CORRECT-A GO TO ALPHA-EDIT-FAIL-4.                       NC1144.2
 035800     MOVE "DEF" TO WRK-AE-1.                                      NC1144.2
-035900     IF WRK-AE-1 EQUAL TO "DSE" PERFORM PASS                      NC1144.2
-036000         GO TO ALPHA-EDIT-WRITE-4 ELSE MOVE "DSE" TO CORRECT-A    NC1144.2
+035900     IF WRK-AE-1 EQUAL TO "W E" PERFORM PASS                      NC1144.2
+036000         GO TO ALPHA-EDIT-WRITE-4 ELSE MOVE "W E" TO CORRECT-A    NC1144.2
 036100         GO TO ALPHA-EDIT-FAIL-4.                                 NC1144.2
 036200 ALPHA-EDIT-DELETE-4.                                             NC1144.2
 036300     PERFORM DE-LETE.                                             NC1144.2
@@ -367,10 +367,10 @@
 036900     MOVE "ALPHA-ED-TEST-4" TO PAR-NAME.                          NC1144.2
 037000     MOVE "B AS EDIT CHARACTER" TO FEATURE.                       NC1144.2
 037100     PERFORM PRINT-DETAIL.                                        NC1144.2
-037200* ASTERISK COMMENT SHOULD NOT BE SYNTAX CHECKED "(,l*.)-/+> <,....NC1144.2
+037200*                                                                         
 037300 ALPHA-EDIT-TEST-5.                                               NC1144.2
 037400     MOVE "ABC" TO WRK-AE-2.                                      NC1144.2
-037500     IF WRK-AE-2 EQUAL TO "A/BZ" PERFORM PASS                     NC1144.2
+037500     IF WRK-AE-2 EQUAL TO "A/BK" PERFORM PASS                     NC1144.2
 037600         GO TO ALPHA-EDIT-WRITE-5 ELSE GO TO ALPHA-EDIT-FAIL-5.   NC1144.2
 037700 ALPHA-EDIT-DELETE-5.                                             NC1144.2
 037800     PERFORM DE-LETE.                                             NC1144.2
@@ -378,14 +378,14 @@
 038000 ALPHA-EDIT-FAIL-5.                                               NC1144.2
 038100     PERFORM FAIL.                                                NC1144.2
 038200     MOVE WRK-AE-2 TO COMPUTED-A.                                 NC1144.2
-038300     MOVE "A/BZ" TO CORRECT-A.                                    NC1144.2
+038300     MOVE "A/BK" TO CORRECT-A.                                    NC1144.2
 038400 ALPHA-EDIT-WRITE-5.                                              NC1144.2
 038500     MOVE "ALPHA-ED-TEST-5" TO PAR-NAME.                          NC1144.2
 038600     MOVE "/ AS EDIT CHARACTER" TO FEATURE.                       NC1144.2
 038700     PERFORM PRINT-DETAIL.                                        NC1144.2
 038800 NUM-EDIT-TEST-6.                                                 NC1144.2
 038900     MOVE 123 TO WRK-NE-1.                                        NC1144.2
-039000     IF WRK-NE-1 EQUAL TO "1/23" PERFORM PASS                     NC1144.2
+039000     IF WRK-NE-1 EQUAL TO "1V23" PERFORM PASS                     NC1144.2
 039100         GO TO NUM-EDIT-WRITE-6 ELSE GO TO NUM-EDIT-FAIL-6.       NC1144.2
 039200 NUM-EDIT-DELETE-6.                                               NC1144.2
 039300     PERFORM DE-LETE.                                             NC1144.2
@@ -393,7 +393,7 @@
 039500 NUM-EDIT-FAIL-6.                                                 NC1144.2
 039600     PERFORM FAIL.                                                NC1144.2
 039700     MOVE WRK-NE-1 TO COMPUTED-A.                                 NC1144.2
-039800     MOVE "1/23" TO CORRECT-A.                                    NC1144.2
+039800     MOVE "1V23" TO CORRECT-A.                                    NC1144.2
 039900 NUM-EDIT-WRITE-6.                                                NC1144.2
 040000     MOVE "NUM-EDIT-TEST-6" TO PAR-NAME.                          NC1144.2
 040100     MOVE "/ AS EDIT CHARACTER" TO FEATURE.                       NC1144.2
@@ -401,7 +401,7 @@
 040300* ASTERISK COMMENT SHOULD NOT BE SYNTAX CHECKED "(,l*.)-/+> <,....NC1144.2
 040400 ELEM-MOVE-TEST-16.                                               NC1144.2
 040500     MOVE WRK-DS-LS-1P17-1 TO WRK-XN-18-2.                        NC1144.2
-040600     IF WRK-XN-18-2 EQUAL TO "10000V000000000000" PERFORM PASS    NC1144.2
+040600     IF WRK-XN-18-2 EQUAL TO "100000000000000000" PERFORM PASS    NC1144.2
 040700         GO TO ELEM-MOVE-WRITE-16.                                NC1144.2
 040800     GO TO ELEM-MOVE-FAIL-16.                                     NC1144.2
 040900 ELEM-MOVE-DELETE-16.                                             NC1144.2
@@ -410,7 +410,7 @@
 041200 ELEM-MOVE-FAIL-16.                                               NC1144.2
 041300     PERFORM FAIL.                                                NC1144.2
 041400     MOVE WRK-XN-18-2 TO COMPUTED-A.                              NC1144.2
-041500     MOVE "10000V000000000000" TO CORRECT-A.                      NC1144.2
+041500     MOVE "100000000000000000" TO CORRECT-A.                      NC1144.2
 041600 ELEM-MOVE-WRITE-16.                                              NC1144.2
 041700     MOVE "MOVE-TEST-16" TO PAR-NAME.                             NC1144.2
 041800     MOVE "STRIP MINUS SIGN" TO FEATURE.                          NC1144.2

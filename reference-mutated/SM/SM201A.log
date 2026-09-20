@@ -17,25 +17,25 @@ TEST RESULT OF SM201A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                           INPUT FOR SM202A.                                             
  COPY 01 LEVEL ---                                                                                                      
    REPLACING          PASS  COPY-TEST-1                                                                                 
-   (NO REPLACING)     FAIL* COPY-TEST-2                                                                                 
+   (NO REPLACING)     PASS  COPY-TEST-2                                                                                 
+   REPLACING          PASS  COPY-TEST-3                                                                                 
+   REPLACING          FAIL* COPY-TEST-4                                                                                 
+                                                                                                                        
+                                     COMPUTED= DEF                                                                      
+                                     CORRECT = DE5                                                                      
+                                                                                                                        
+   REPLACING          PASS  COPY-TEST-5                                                                                 
+   (NOT REPLACING)    FAIL* COPY-TEST-6                                                                                 
                                                                                                                         
                                      COMPUTED= ABC                                                                      
-                                     CORRECT = TBC                                                                      
+                                     CORRECT = ABP                                                                      
                                                                                                                         
-   REPLACING          PASS  COPY-TEST-3                                                                                 
-   REPLACING          PASS  COPY-TEST-4                                                                                 
-   REPLACING          FAIL* COPY-TEST-5                                                                                 
+   (NOT REPLACING)    FAIL* COPY-TEST-7                                                                                 
                                                                                                                         
-                                     COMPUTED= GHI                                                                      
-                                     CORRECT = GHM                                                                      
+                                     COMPUTED= DEF                                                                      
+                                     CORRECT = CEF                                                                      
                                                                                                                         
-   (NOT REPLACING)    PASS  COPY-TEST-6                                                                                 
-   (NOT REPLACING)    PASS  COPY-TEST-7                                                                                 
-   (NOT REPLACING)    FAIL* COPY-TEST-8                                                                                 
-                                                                                                                        
-                                     COMPUTED= GHI                                                                      
-                                     CORRECT = GAI                                                                      
-                                                                                                                        
+   (NOT REPLACING)    PASS  COPY-TEST-8                                                                                 
  COPY PARA REPLACING  PASS  COPY-TEST-9                                                                                 
  COPY FD REPLACING    PASS  COPY-TEST-10                  OUTPUT PASSED ONTO SM202                                      
  PSEUDO TEXT          PASS  COPY-TEST-11                                                                                

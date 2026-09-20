@@ -17,29 +17,29 @@ TEST RESULT OF IF119A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MAX Function         PASS  F-MAX-02                                                                                    
  MAX Function         PASS  F-MAX-03                                                                                    
  MAX Function         PASS  F-MAX-04                                                                                    
- MAX Function         PASS  F-MAX-05                                                                                    
- MAX Function         FAIL* F-MAX-06                                                                                    
+ MAX Function         FAIL* F-MAX-05                                                                                    
                                                                                                                         
-                                     COMPUTED=  000000007.000000000                                                     
-                                     CORRECT =  000000003.000000000  See ref. A-52 2.23                                 
+                                     COMPUTED=  000000010.000000000                                                     
+                                     CORRECT =  000000090.000000000  See ref. A-52 2.23                                 
                                                                                                                         
+ MAX Function         PASS  F-MAX-06                                                                                    
  MAX Function         PASS  F-MAX-07                                                                                    
  MAX Function         PASS  F-MAX-08                                                                                    
  MAX Function         PASS  F-MAX-09                                                                                    
  MAX Function         PASS  F-MAX-10                                                                                    
- MAX Function         PASS  F-MAX-11                                                                                    
- MAX Function         FAIL* F-MAX-12                                                                                    
+ MAX Function         FAIL* F-MAX-11                                                                                    
                                                                                                                         
-                                     COMPUTED= U                                                                        
-                                     CORRECT = W                     See ref. A-52 2.23                                 
+                                     COMPUTED= a                                                                        
+                                     CORRECT = 1                     See ref. A-52 2.23                                 
                                                                                                                         
+ MAX Function         PASS  F-MAX-12                                                                                    
  MAX Function         PASS  F-MAX-13                                                                                    
- MAX Function         PASS  F-MAX-14                                                                                    
- MAX Function         FAIL* F-MAX-15                                                                                    
+ MAX Function         FAIL* F-MAX-14                                                                                    
                                                                                                                         
-                                     COMPUTED=  000000007.000000000                                                     
-                                     CORRECT =  000000006.000000000  See ref. A-52 2.23                                 
+                                     COMPUTED=  000000005.000000000                                                     
+                                     CORRECT =  000000004.000000000  See ref. A-52 2.23                                 
                                                                                                                         
+ MAX Function         PASS  F-MAX-15                                                                                    
  MAX Function         PASS  F-MAX-17                                                                                                                                                                                                            
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         

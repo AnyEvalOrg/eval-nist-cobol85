@@ -360,7 +360,7 @@
 036200 INSP-TEST-F1-1-0.                                                NC1154.2
 036300     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR CHARACTERS.       NC1154.2
 036400 INSP-TEST-F1-1-1.                                                NC1154.2
-036500     IF      WRK-DU-999-1 EQUAL TO 80                             NC1154.2
+036500     IF      WRK-DU-999-1 EQUAL TO 83                             NC1154.2
 036600     PERFORM PASS                                                 NC1154.2
 036700     GO      TO INSP-WRITE-F1-1.                                  NC1154.2
 036800     GO TO INSP-FAIL-F1-1.                                        NC1154.2
@@ -370,7 +370,7 @@
 037200 INSP-FAIL-F1-1.                                                  NC1154.2
 037300     PERFORM FAIL.                                                NC1154.2
 037400     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-037500     MOVE 80 TO CORRECT-N.                                        NC1154.2
+037500     MOVE 83 TO CORRECT-N.                                        NC1154.2
 037600 INSP-WRITE-F1-1.                                                 NC1154.2
 037700     MOVE "INSP-TEST-F1-1" TO PAR-NAME.                           NC1154.2
 037800     MOVE "TALLY FOR CHARACTERS" TO FEATURE.                      NC1154.2
@@ -381,7 +381,7 @@
 038300 INSP-TEST-F1-2-0.                                                NC1154.2
 038400     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL "A".          NC1154.2
 038500 INSP-TEST-F1-2-1.                                                NC1154.2
-038600     IF      WRK-DU-999-1 EQUAL TO 9                              NC1154.2
+038600     IF      WRK-DU-999-1 EQUAL TO 0                              NC1154.2
 038700     PERFORM PASS                                                 NC1154.2
 038800     GO      TO INSP-WRITE-F1-2.                                  NC1154.2
 038900     GO TO INSP-FAIL-F1-2.                                        NC1154.2
@@ -391,7 +391,7 @@
 039300 INSP-FAIL-F1-2.                                                  NC1154.2
 039400     PERFORM FAIL.                                                NC1154.2
 039500     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-039600     MOVE 9 TO CORRECT-N.                                         NC1154.2
+039600     MOVE 0 TO CORRECT-N.                                         NC1154.2
 039700 INSP-WRITE-F1-2.                                                 NC1154.2
 039800     MOVE "INSP-TEST-F1-2" TO PAR-NAME.                           NC1154.2
 039900     MOVE "TALLY ALL LITERAL" TO FEATURE.                         NC1154.2
@@ -402,7 +402,7 @@
 040400 INSP-TEST-F1-3-0.                                                NC1154.2
 040500     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL SPACE.        NC1154.2
 040600 INSP-TEST-F1-3-1.                                                NC1154.2
-040700     IF      WRK-DU-999-1 EQUAL TO 17                             NC1154.2
+040700     IF      WRK-DU-999-1 EQUAL TO 12                             NC1154.2
 040800     PERFORM PASS                                                 NC1154.2
 040900     GO      TO INSP-WRITE-F1-3.                                  NC1154.2
 041000     GO TO INSP-FAIL-F1-3.                                        NC1154.2
@@ -412,7 +412,7 @@
 041400 INSP-FAIL-F1-3.                                                  NC1154.2
 041500     PERFORM FAIL.                                                NC1154.2
 041600     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-041700     MOVE 17 TO CORRECT-N.                                        NC1154.2
+041700     MOVE 12 TO CORRECT-N.                                        NC1154.2
 041800 INSP-WRITE-F1-3.                                                 NC1154.2
 041900     MOVE "INSP-TEST-F1-3" TO PAR-NAME.                           NC1154.2
 042000     MOVE "TALLY FOR ALL SPACE" TO FEATURE.                       NC1154.2
@@ -423,7 +423,7 @@
 042500 INSP-TEST-F1-4-0.                                                NC1154.2
 042600     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR LEADING "A".      NC1154.2
 042700 INSP-TEST-F1-4-1.                                                NC1154.2
-042800     IF      WRK-DU-999-1 EQUAL TO 7                              NC1154.2
+042800     IF      WRK-DU-999-1 EQUAL TO 1                              NC1154.2
 042900     PERFORM PASS                                                 NC1154.2
 043000     GO      TO INSP-WRITE-F1-4.                                  NC1154.2
 043100     GO TO INSP-FAIL-F1-4.                                        NC1154.2
@@ -433,7 +433,7 @@
 043500 INSP-FAIL-F1-4.                                                  NC1154.2
 043600     PERFORM FAIL.                                                NC1154.2
 043700     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-043800     MOVE 7 TO CORRECT-N.                                         NC1154.2
+043800     MOVE 1 TO CORRECT-N.                                         NC1154.2
 043900 INSP-WRITE-F1-4.                                                 NC1154.2
 044000     MOVE "INSP-TEST-F1-4" TO PAR-NAME.                           NC1154.2
 044100     MOVE "TALLY LEADING LIT" TO FEATURE.                         NC1154.2
@@ -467,7 +467,7 @@
 046900     INSPECT WC-XN-83 TALLYING WRK-DU-999-1 FOR ALL " "           NC1154.2
 047000         BEFORE INITIAL "W".                                      NC1154.2
 047100 INSP-TEST-F1-6-1.                                                NC1154.2
-047200     IF      WRK-DU-999-1 EQUAL TO 4                              NC1154.2
+047200     IF      WRK-DU-999-1 EQUAL TO 3                              NC1154.2
 047300     PERFORM PASS                                                 NC1154.2
 047400     GO      TO INSP-WRITE-F1-6.                                  NC1154.2
 047500     GO TO INSP-FAIL-F1-6.                                        NC1154.2
@@ -477,7 +477,7 @@
 047900 INSP-FAIL-F1-6.                                                  NC1154.2
 048000     PERFORM FAIL.                                                NC1154.2
 048100     MOVE WRK-DU-999-1 TO COMPUTED-N.                             NC1154.2
-048200     MOVE 4 TO CORRECT-N.                                         NC1154.2
+048200     MOVE 3 TO CORRECT-N.                                         NC1154.2
 048300 INSP-WRITE-F1-6.                                                 NC1154.2
 048400     MOVE "INSP-TEST-F1-6" TO PAR-NAME.                           NC1154.2
 048500     MOVE "ALL BEFORE INITIAL" TO FEATURE.                        NC1154.2

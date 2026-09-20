@@ -13,33 +13,33 @@ TEST RESULT OF IF123A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- MIN Function         PASS  F-MIN-01                                                                                    
+ MIN Function         FAIL* F-MIN-01                                                                                    
+                                                                                                                        
+                                     COMPUTED=  000000003.000000000                                                     
+                                     CORRECT =  000000005.000000000  See ref. A-56 2.27                                 
+                                                                                                                        
  MIN Function         PASS  F-MIN-02                                                                                    
  MIN Function         PASS  F-MIN-03                                                                                    
  MIN Function         PASS  F-MIN-04                                                                                    
- MIN Function         PASS  F-MIN-05                                                                                    
+ MIN Function         FAIL* F-MIN-05                                                                                    
+                                                                                                                        
+                                     COMPUTED=  000000005.000000000                                                     
+                                     CORRECT =  000000008.000000000  See ref. A-56 2.27                                 
+                                                                                                                        
  MIN Function         PASS  F-MIN-06                                                                                    
  MIN Function         PASS  F-MIN-07                                                                                    
  MIN Function         PASS  F-MIN-08                                                                                    
  MIN Function         FAIL* F-MIN-09                                                                                    
                                                                                                                         
                                      COMPUTED= -000000010.000000000                                                     
-                                     CORRECT =  000000000.000000000  See ref. A-56 2.27                                 
+                                     CORRECT = -000000080.000000000  See ref. A-56 2.27                                 
                                                                                                                         
  MIN Function         PASS  F-MIN-10                                                                                    
  MIN Function         PASS  F-MIN-11                                                                                    
- MIN Function         FAIL* F-MIN-12                                                                                    
-                                                                                                                        
-                                     COMPUTED= J                                                                        
-                                     CORRECT = 6                     See ref. A-56 2.27                                 
-                                                                                                                        
+ MIN Function         PASS  F-MIN-12                                                                                    
  MIN Function         PASS  F-MIN-13                                                                                    
  MIN Function         PASS  F-MIN-14                                                                                    
- MIN Function         FAIL* F-MIN-15                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000000000.000000000                                                     
-                                     CORRECT =  000000008.000000000  See ref. A-56 2.27                                 
-                                                                                                                        
+ MIN Function         PASS  F-MIN-15                                                                                    
  MIN Function         PASS  F-MIN-17                                                                                                                                                                                                            
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         

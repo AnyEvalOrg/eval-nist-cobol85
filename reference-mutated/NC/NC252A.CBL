@@ -793,11 +793,11 @@
 079300     MOVE "RENAM-TEST-4" TO PAR-NAME.                             NC2524.2
 079400     PERFORM PRINT-DETAIL.                                        NC2524.2
 079500 RENAM-TEST-5.                                                    NC2524.2
-079600     IF RENAMES-TEST-3 EQUAL TO "X  123"                          NC2524.2
+079600     IF RENAMES-TEST-3 EQUAL TO "X  V23"                          NC2524.2
 079700         PERFORM PASS                                             NC2524.2
 079800         GO TO RENAM-WRITE-5.                                     NC2524.2
 079900     MOVE RENAMES-TEST-3 TO COMPUTED-A.                           NC2524.2
-080000     MOVE "X  123" TO CORRECT-A.                                  NC2524.2
+080000     MOVE "X  V23" TO CORRECT-A.                                  NC2524.2
 080100     PERFORM FAIL.                                                NC2524.2
 080200     GO TO RENAM-WRITE-5.                                         NC2524.2
 080300 RENAM-DELETE-5.                                                  NC2524.2
@@ -962,7 +962,7 @@
 096200 RENAM-TEST-15.                                                   NC2524.2
 096300     MOVE     SPACE TO W-RENAMES-DATA.                            NC2524.2
 096400     MOVE     234.5 TO RENAME-11.                                 NC2524.2
-096500     IF       WIDGET-2 EQUAL TO "****234.57"                      NC2524.2
+096500     IF       WIDGET-2 EQUAL TO "****234.50"                      NC2524.2
 096600              PERFORM PASS GO TO RENAM-WRITE-15.                  NC2524.2
 096700     GO       TO RENAM-FAIL-15.                                   NC2524.2
 096800 RENAM-DELETE-15.                                                 NC2524.2
@@ -971,7 +971,7 @@
 097100 RENAM-FAIL-15.                                                   NC2524.2
 097200     PERFORM FAIL.                                                NC2524.2
 097300     MOVE     WIDGET-2 TO COMPUTED-A.                             NC2524.2
-097400     MOVE     "****234.57" TO CORRECT-A.                          NC2524.2
+097400     MOVE     "****234.50" TO CORRECT-A.                          NC2524.2
 097500 RENAM-WRITE-15.                                                  NC2524.2
 097600     MOVE     "  EDITED MOVE" TO FEATURE.                         NC2524.2
 097700     MOVE     "RENAM-TEST-15" TO PAR-NAME.                        NC2524.2
@@ -1473,11 +1473,11 @@
 147300 COMP-TEST-29.                                                    NC2524.2
 147400     MOVE     ZERO TO WRK-DS-18V00.                               NC2524.2
 147500     COMPUTE  WRK-DS-18V00 = A18ONES-DS-18V00 + A18ONES-DS-18V00. NC2524.2
-147600     IF       WRK-DS-18V00 = 222222222222222222                   NC2524.2
+147600     IF       WRK-DS-18V00 = 222222222242222222                   NC2524.2
 147700              PERFORM PASS                                        NC2524.2
 147800              GO TO COMP-WRITE-29.                                NC2524.2
 147900     MOVE     WRK-DS-18V00 TO COMPUTED-18V0.                      NC2524.2
-148000     MOVE     222222222222222222 TO CORRECT-18V0.                 NC2524.2
+148000     MOVE     222222222242222222 TO CORRECT-18V0.                 NC2524.2
 148100     PERFORM  FAIL.                                               NC2524.2
 148200     GO TO COMP-WRITE-29.                                         NC2524.2
 148300 COMP-DELETE-29.                                                  NC2524.2
@@ -1488,11 +1488,11 @@
 148800 COMP-TEST-30.                                                    NC2524.2
 148900     MOVE     ZERO TO WRK-DS-18V00.                               NC2524.2
 149000     COMPUTE  WRK-DS-18V00 = A18TWOS-DS-18V00 - A18ONES-DS-18V00. NC2524.2
-149100     IF       WRK-DS-18V00 = 111111111111111111                   NC2524.2
+149100     IF       WRK-DS-18V00 = 111111131111111111                   NC2524.2
 149200              PERFORM PASS                                        NC2524.2
 149300              GO TO COMP-WRITE-30.                                NC2524.2
 149400     MOVE     WRK-DS-18V00 TO COMPUTED-18V0.                      NC2524.2
-149500     MOVE     111111111111111111 TO CORRECT-18V0.                 NC2524.2
+149500     MOVE     111111131111111111 TO CORRECT-18V0.                 NC2524.2
 149600     PERFORM  FAIL.                                               NC2524.2
 149700     GO TO COMP-WRITE-30.                                         NC2524.2
 149800 COMP-DELETE-30.                                                  NC2524.2
@@ -1533,11 +1533,11 @@
 153300 COMP-TEST-33.                                                    NC2524.2
 153400     MOVE     ZERO TO WRK-DS-05V00.                               NC2524.2
 153500     COMPUTE  WRK-DS-05V00 = 3 ** ATWO-DS-01V00.                  NC2524.2
-153600        IF WRK-DS-05V00 = 6                                       NC2524.2
+153600        IF WRK-DS-05V00 = 9                                       NC2524.2
 153700              PERFORM PASS                                        NC2524.2
 153800              GO TO COMP-WRITE-33.                                NC2524.2
 153900     MOVE     WRK-DS-05V00 TO COMPUTED-N.                         NC2524.2
-154000     MOVE     6 TO CORRECT-N.                                     NC2524.2
+154000     MOVE     9 TO CORRECT-N.                                     NC2524.2
 154100     PERFORM  FAIL.                                               NC2524.2
 154200     GO TO COMP-WRITE-33.                                         NC2524.2
 154300 COMP-DELETE-33.                                                  NC2524.2
@@ -1654,10 +1654,10 @@
 165400     COMPUTE  WHOLE-FIELD =                                       NC2524.2
 165500     (ONE + (TWO - (THREE + (FOUR - (FIVE + (SIX - (SEVEN +       NC2524.2
 165600         (EIGHT - (NINE + (TEN - EVEN-NAME1)))))))))).            NC2524.2
-165700        IF WHOLE-FIELD = 13    PERFORM PASS                       NC2524.2
+165700        IF WHOLE-FIELD = 10    PERFORM PASS                       NC2524.2
 165800         GO TO COMP-WRITE-44.                                     NC2524.2
 165900     MOVE WHOLE-FIELD TO COMPUTED-18V0.                           NC2524.2
-166000     MOVE 13 TO CORRECT-18V0.                                     NC2524.2
+166000     MOVE 10 TO CORRECT-18V0.                                     NC2524.2
 166100     PERFORM FAIL.                                                NC2524.2
 166200     GO TO COMP-WRITE-44.                                         NC2524.2
 166300 COMP-DELETE-44.                                                  NC2524.2

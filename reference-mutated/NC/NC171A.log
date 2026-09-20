@@ -13,18 +13,14 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- DIVIDE INTO          FAIL* DIV-TEST-F1-1                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000025.200000000                                                     
-                                     CORRECT =  000000065.200000000  V1-81 6.11.4 GR1                                   
-                                                                                                                        
+ DIVIDE INTO          PASS  DIV-TEST-F1-1                                                                               
  DIVIDE INTO          PASS  DIV-TEST-F1-2                                                                               
  DIVIDE INTO          PASS  DIV-TEST-F1-3-1                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-3-2                                                                             
  DIVIDE INTO          FAIL* DIV-TEST-F1-4-1               ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
                                      COMPUTED= N                                                                        
-                                     CORRECT = 3                     V1-81 6.11.4 GR1                                   
+                                     CORRECT = 9                     V1-81 6.11.4 GR1                                   
                                                                                                                         
  DIVIDE INTO          PASS  DIV-TEST-F1-4-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-5-1                                                                             
@@ -35,12 +31,16 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE INTO          PASS  DIV-TEST-F1-8-2                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-9-1                                                                             
  DIVIDE INTO          PASS  DIV-TEST-F1-9-2                                                                             
- DIVIDE INTO          FAIL* DIV-TEST-F1-10-1              WRONGLY AFFECTED BY SIZE ERROR                                
+ DIVIDE INTO          PASS  DIV-TEST-F1-10-1                                                                            
+ DIVIDE INTO          FAIL* DIV-TEST-F1-10-2              ON SIZE ERROR NOT EXECUTED                                    
                                                                                                                         
-                                     COMPUTED=  000000000.000000000                                                     
-                                     CORRECT =  000000003.000000000  V1-81 6.11.4 GR1                                   
+                                     COMPUTED= 1                                                                        
+                                     CORRECT = 4                     V1-81 6.11.4 GR1                                   
                                                                                                                         
- DIVIDE INTO          PASS  DIV-TEST-F1-10-2                                                                                                                                                                                                    
+ DIVIDE INTO          PASS  DIV-TEST-F1-11-1                                                                            
+ DIVIDE INTO          PASS  DIV-TEST-F1-11-2                                                                            
+ DIVIDE INTO          FAIL* DIV-TEST-F1-12                                                                              
+                                                                                                                                                                                                                                                
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,9 +54,9 @@ TEST RESULT OF NC171A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
- DIVIDE INTO          PASS  DIV-TEST-F1-11-1                                                                            
- DIVIDE INTO          PASS  DIV-TEST-F1-11-2                                                                            
- DIVIDE INTO          PASS  DIV-TEST-F1-12                                                                              
+                                     COMPUTED= -000000001.000000000                                                     
+                                     CORRECT = -000000051.000000000  V1-81 6.11.4 GR1                                   
+                                                                                                                        
  DIVIDE INTO          PASS  DIV-TEST-F1-13                                                                              
  DIVIDE INTO          PASS  DIV-TEST-F1-14-1   .01                                                                      
  DIVIDE INTO          PASS  DIV-TEST-F1-14-2   .02                                                                      

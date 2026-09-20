@@ -1420,8 +1420,8 @@
   },
   "RL211A": {
    "module": "RL",
-   "report_line": "501   22  479       0       0",
-   "report_bytes": 322103,
+   "report_line": "501  480   21       0       0",
+   "report_bytes": 17788,
    "stdout_bytes": 61
   },
   "RL212A": {
@@ -1542,7 +1542,7 @@
   "IX209A": {
    "module": "IX",
    "report_line": "56   52    4       0       0",
-   "report_bytes": 16820,
+   "report_bytes": 15731,
    "stdout_bytes": 61
   },
   "IX210A": {
@@ -1632,8 +1632,8 @@
   },
   "ST108A": {
    "module": "ST",
-   "report_line": "9    7    2       0       0",
-   "report_bytes": 7261,
+   "report_line": "9    9    0       0       0 OK",
+   "report_bytes": 4599,
    "stdout_bytes": 61
   },
   "ST109A": {
@@ -1656,8 +1656,8 @@
   },
   "ST118A": {
    "module": "ST",
-   "report_line": "9    9    0       0       0 OK",
-   "report_bytes": 4599,
+   "report_line": "9    7    2       0       0",
+   "report_bytes": 7261,
    "stdout_bytes": 61
   },
   "ST119A": {
@@ -1680,8 +1680,8 @@
   },
   "ST127A": {
    "module": "ST",
-   "report_line": "27   27    0       0       0 OK",
-   "report_bytes": 8471,
+   "report_line": "27   26    1       0       0",
+   "report_bytes": 8955,
    "stdout_bytes": 61
   },
   "ST131A": {
@@ -1780,14 +1780,14 @@
   },
   "SG104A": {
    "module": "SG",
-   "report_line": "9    6    3       0       0",
-   "report_bytes": 6051,
+   "report_line": "9    7    2       0       0",
+   "report_bytes": 5567,
    "stdout_bytes": 61
   },
   "SG105A": {
    "module": "SG",
-   "report_line": "9    6    3       0       0",
-   "report_bytes": 6051,
+   "report_line": "9    7    2       0       0",
+   "report_bytes": 5567,
    "stdout_bytes": 61
   },
   "SG106A": {
@@ -1817,7 +1817,7 @@
   "SG204A": {
    "module": "SG",
    "report_line": "15   12    3       0       0",
-   "report_bytes": 6414,
+   "report_bytes": 5446,
    "stdout_bytes": 61
   },
   "SG302M": {

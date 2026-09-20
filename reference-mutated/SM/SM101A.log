@@ -18,23 +18,23 @@ TEST RESULT OF SM101A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COPY ---                                                                                                               
    WKNG-STORAGE ENTRY PASS  COPY-TEST-1                                                                                 
    PROCEDURE          PASS  COPY-TEST-2                                                                                 
-   SECTION            FAIL* COPY-TEST-3                                                                                 
+   SECTION            PASS  COPY-TEST-3                                                                                 
+   SECTION            FAIL* COPY-TEST-4                                                                                 
                                                                                                                         
-                                     COMPUTED=  000095427.000000000                                                     
-                                     CORRECT =  000045427.000000000                                                     
+                                     COMPUTED=  000023121.000000000                                                     
+                                     CORRECT =  000024121.000000000                                                     
                                                                                                                         
-   SECTION            PASS  COPY-TEST-4                                                                                 
    SECTION            PASS  COPY-TEST-5                                                                                 
    SECTION            FAIL* COPY-TEST-6                                                                                 
                                                                                                                         
                                      COMPUTED= PYTST                                                                    
-                                     CORRECT = PYTXT                                                                    
+                                     CORRECT = PYTS1                                                                    
                                                                                                                         
    FILE DESCRIPTION   PASS  COPY-TEST-7                   OUTPUT CHECKED IN SM102A                                      
    FILE DESCRIPTION   FAIL* COPY-TEST-8                                                                                 
                                                                                                                         
                                      COMPUTED=  000097523.000000000                                                     
-                                     CORRECT =  000097524.000000000                                                     
+                                     CORRECT =  000097513.000000000                                                     
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

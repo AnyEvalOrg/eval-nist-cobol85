@@ -554,7 +554,7 @@
 055600     PERFORM  PRINT-DETAIL.                                       NC1064.2
 055700 SUB-TEST-F1-2.                                                   NC1064.2
 055800     SUBTRACT N-17 FROM N-18 ROUNDED.                             NC1064.2
-055900     IF       N-18 EQUAL TO -3                                    NC1064.2
+055900     IF       N-18 EQUAL TO -9                                    NC1064.2
 056000              PERFORM PASS                                        NC1064.2
 056100              GO TO SUB-WRITE-F1-2.                               NC1064.2
 056200     GO TO    SUB-FAIL-F1-2.                                      NC1064.2
@@ -563,7 +563,7 @@
 056500     GO TO    SUB-WRITE-F1-2.                                     NC1064.2
 056600 SUB-FAIL-F1-2.                                                   NC1064.2
 056700     MOVE     N-18 TO COMPUTED-N.                                 NC1064.2
-056800     MOVE     -3 TO CORRECT-N.                                    NC1064.2
+056800     MOVE     -9 TO CORRECT-N.                                    NC1064.2
 056900     PERFORM  FAIL.                                               NC1064.2
 057000 SUB-WRITE-F1-2.                                                  NC1064.2
 057100     MOVE "SUB-TEST-F1-2 " TO PAR-NAME.                           NC1064.2
@@ -661,7 +661,7 @@
 066300     SUBTRACT A05ONES-DS-05V00                                    NC1064.2
 066400              A05ONES-DS-00V05                                    NC1064.2
 066500              A06ONES-DS-03V03 FROM WRK-DS-06V06.                 NC1064.2
-066600     IF       WRK-DS-06V06 EQUAL TO 322111.111223                 NC1064.2
+066600     IF       WRK-DS-06V06 EQUAL TO 362111.111223                 NC1064.2
 066700              PERFORM PASS GO TO SUB-WRITE-F1-6.                  NC1064.2
 066800     GO       TO SUB-FAIL-F1-6.                                   NC1064.2
 066900 SUB-DELETE-F1-6.                                                 NC1064.2
@@ -669,7 +669,7 @@
 067100     GO       TO SUB-WRITE-F1-6.                                  NC1064.2
 067200 SUB-FAIL-F1-6.                                                   NC1064.2
 067300     MOVE     WRK-DS-06V06 TO COMPUTED-N.                         NC1064.2
-067400     MOVE     322111.111223 TO CORRECT-N.                         NC1064.2
+067400     MOVE     362111.111223 TO CORRECT-N.                         NC1064.2
 067500     PERFORM  FAIL.                                               NC1064.2
 067600 SUB-WRITE-F1-6.                                                  NC1064.2
 067700     MOVE     "SUB-TEST-F1-6" TO PAR-NAME.                        NC1064.2
@@ -831,7 +831,7 @@
 083300 SUB-TEST-F1-13.                                                  NC1064.2
 083400     MOVE     ZERO TO WRK-CS-02V02.                               NC1064.2
 083500     SUBTRACT A99-CS-02V00 FROM WRK-CS-02V02.                     NC1064.2
-083600     IF       WRK-CS-02V02 EQUAL TO -99.03                        NC1064.2
+083600     IF       WRK-CS-02V02 EQUAL TO -99.00                        NC1064.2
 083700              PERFORM PASS GO TO SUB-WRITE-F1-13.                 NC1064.2
 083800     GO       TO SUB-FAIL-F1-13.                                  NC1064.2
 083900 SUB-DELETE-F1-13.                                                NC1064.2
@@ -839,7 +839,7 @@
 084100     GO       TO SUB-WRITE-F1-13.                                 NC1064.2
 084200 SUB-FAIL-F1-13.                                                  NC1064.2
 084300     MOVE     WRK-CS-02V02 TO COMPUTED-N.                         NC1064.2
-084400     MOVE     -99.03 TO CORRECT-N.                                NC1064.2
+084400     MOVE     -99.00 TO CORRECT-N.                                NC1064.2
 084500     PERFORM  FAIL.                                               NC1064.2
 084600 SUB-WRITE-F1-13.                                                 NC1064.2
 084700     MOVE     "SUB-TEST-F1-13" TO PAR-NAME.                       NC1064.2
@@ -876,7 +876,7 @@
 087800     PERFORM  PRINT-DETAIL.                                       NC1064.2
 087900 SUB-TEST-F1-15.                                                  NC1064.2
 088000     SUBTRACT SUBTR-1 SUBTR-3 FROM SUBTR-7.                       NC1064.2
-088100     IF       SUBTR-7 EQUAL TO 99                                 NC1064.2
+088100     IF       SUBTR-7 EQUAL TO 89                                 NC1064.2
 088200              PERFORM PASS GO TO SUB-WRITE-F1-15.                 NC1064.2
 088300     GO       TO SUB-FAIL-F1-15.                                  NC1064.2
 088400 SUB-DELETE-F1-15.                                                NC1064.2
@@ -884,7 +884,7 @@
 088600     GO       TO SUB-WRITE-F1-15.                                 NC1064.2
 088700 SUB-FAIL-F1-15.                                                  NC1064.2
 088800     MOVE     SUBTR-7 TO COMPUTED-N.                              NC1064.2
-088900     MOVE     99        TO CORRECT-N.                             NC1064.2
+088900     MOVE     89        TO CORRECT-N.                             NC1064.2
 089000     PERFORM FAIL.                                                NC1064.2
 089100 SUB-WRITE-F1-15.                                                 NC1064.2
 089200     MOVE     "SUB-TEST-F1-15" TO PAR-NAME.                       NC1064.2
@@ -906,7 +906,7 @@
 090800     PERFORM PRINT-DETAIL.                                        NC1064.2
 090900 SUB-TEST-F1-17.                                                  NC1064.2
 091000     SUBTRACT SUBTR-4 FROM SUBTR-6 ROUNDED.                       NC1064.2
-091100     IF       SUBTR-6 EQUAL TO 3                                  NC1064.2
+091100     IF       SUBTR-6 EQUAL TO 1                                  NC1064.2
 091200              PERFORM PASS GO TO SUB-WRITE-F1-17.                 NC1064.2
 091300     GO       TO SUB-FAIL-F1-17.                                  NC1064.2
 091400 SUB-DELETE-F1-17.                                                NC1064.2
@@ -914,7 +914,7 @@
 091600     GO       TO SUB-WRITE-F1-17.                                 NC1064.2
 091700 SUB-FAIL-F1-17.                                                  NC1064.2
 091800     MOVE     SUBTR-6   TO COMPUTED-N.                            NC1064.2
-091900     MOVE     3         TO CORRECT-N.                             NC1064.2
+091900     MOVE     1         TO CORRECT-N.                             NC1064.2
 092000     PERFORM FAIL.                                                NC1064.2
 092100 SUB-WRITE-F1-17.                                                 NC1064.2
 092200     MOVE     "SUB-TEST-F1-17" TO PAR-NAME.                       NC1064.2
@@ -933,9 +933,9 @@
 093500     MOVE     "SUB-TEST-F1-18-1" TO PAR-NAME.                     NC1064.2
 093600     PERFORM PRINT-DETAIL.                                        NC1064.2
 093700 SUB-TEST-F1-18-2.                                                NC1064.2
-093800     IF       SUBTR-8 EQUAL TO -9.99                              NC1064.2
+093800     IF       SUBTR-8 EQUAL TO -2.99                              NC1064.2
 093900              PERFORM PASS GO TO SUB-WRITE-F1-18-2.               NC1064.2
-094000*    NOTE: THIS TEST DEPENDS UPON THE RESULT OF SUB-TEST-F1-18-1  NC1064.2
+094000*                                                                         
 094100     GO       TO SUB-FAIL-F1-18-2.                                NC1064.2
 094200 SUB-DELETE-F1-18-2.                                              NC1064.2
 094300     PERFORM DE-LETE.                                             NC1064.2
@@ -943,7 +943,7 @@
 094500 SUB-FAIL-F1-18-2.                                                NC1064.2
 094600     MOVE    "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.         NC1064.2
 094700     MOVE     SUBTR-8   TO COMPUTED-N.                            NC1064.2
-094800     MOVE     -9.99     TO CORRECT-N.                             NC1064.2
+094800     MOVE     -2.99     TO CORRECT-N.                             NC1064.2
 094900     PERFORM FAIL.                                                NC1064.2
 095000 SUB-WRITE-F1-18-2.                                               NC1064.2
 095100     MOVE     "SUB-TEST-F1-18-2" TO PAR-NAME.                     NC1064.2

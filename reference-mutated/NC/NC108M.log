@@ -19,7 +19,7 @@ TEST RESULT OF NC108M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COMPLETE DATA FORMAT FAIL* FMT-TEST-GF-2                                                                               
                                                                                                                         
                                      COMPUTED= 5                                                                        
-                                     CORRECT = 9                     V1-20 5.3                                          
+                                     CORRECT = I                     V1-20 5.3                                          
                                                                                                                         
  COMPLETE DATA FORMAT PASS  FMT-TEST-GF-3                                                                               
  DATA DESCR ABBREVS -                                                                                                   
@@ -27,12 +27,12 @@ TEST RESULT OF NC108M    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
    JUST               FAIL* ABR-TEST-GF-2                                                                               
                                                                                                                         
                                      COMPUTED=      RIGHT                                                               
-                                     CORRECT =      R6GHT            VI-20 5.3                                          
+                                     CORRECT = G    RIGHT            VI-20 5.3                                          
                                                                                                                         
    JUST               FAIL* ABR-TEST-GF-3                                                                               
                                                                                                                         
                                      COMPUTED=      RIGHT                                                               
-                                     CORRECT =      RI8HT            VI-20 5.3                                          
+                                     CORRECT = C    RIGHT            VI-20 5.3                                          
                                                                                                                         
    BLANK ZERO         PASS  ABR-TEST-GF-4                                                                               
    COMP               PASS  ABR-TEST-GF-5                                                                               

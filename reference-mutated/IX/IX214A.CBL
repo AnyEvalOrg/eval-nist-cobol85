@@ -1468,16 +1468,16 @@
 151600             PERFORM DE-LETE                                      IX2144.2
 151700             MOVE "FROM START-TEST-GF-07"  TO CORRECT-A           IX2144.2
 151800             GO TO  START-TEST-GF-16A.                            IX2144.2
-151900*                                                                 IX2144.2
-152000*  START-TEST-004.07 - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2144.2
-152100*                    RESULTING FROM START-TEST-GF-07.  THE FILE   IX2144.2
-152200*                    STATUS CONTENTS IS EXPECTED TO BE "23"       IX2144.2
-152300*                                                                 IX2144.2
-152400     IF      FILESTATUS (7)  EQUAL TO "23"                        IX2144.2
+151900*                                                                         
+152000*                                                                         
+152100*                                                                         
+152200*                                                                         
+152300*                                                                         
+152400     IF      FILESTATUS (7)  EQUAL TO "22"                        IX2144.2
 152500             PERFORM  PASS                                        IX2144.2
 152600             ELSE  PERFORM  FAIL                                  IX2144.2
 152700         MOVE "FROM START-TEST-GF-07; IX-4 1.3.4 (3) C" TO RE-MARKIX2144.2
-152800             MOVE    "23"  TO CORRECT-A                           IX2144.2
+152800             MOVE    "22"  TO CORRECT-A                           IX2144.2
 152900             MOVE   FILESTATUS (7)  TO COMPUTED-A.                IX2144.2
 153000 START-TEST-GF-16A.                                               IX2144.2
 153100     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -1493,11 +1493,11 @@
 154100*                    RESULTING FROM START-TEST-GF-08.  THE FILE   IX2144.2
 154200*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2144.2
 154300*                                                                 IX2144.2
-154400     IF      FILESTATUS (8) EQUAL TO "08"                         IX2144.2
+154400     IF      FILESTATUS (8) EQUAL TO "00"                         IX2144.2
 154500             PERFORM  PASS                                        IX2144.2
 154600             ELSE  PERFORM  FAIL                                  IX2144.2
 154700         MOVE "IX-3; 1.3.4 (1) A;FROM START-TEST-GF-08" TO RE-MARKIX2144.2
-154800             MOVE    "08"  TO CORRECT-A                           IX2144.2
+154800             MOVE    "00"  TO CORRECT-A                           IX2144.2
 154900             MOVE   FILESTATUS (8)  TO COMPUTED-A.                IX2144.2
 155000 START-TEST-GF-17A.                                               IX2144.2
 155100     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -1508,16 +1508,16 @@
 155600             PERFORM DE-LETE                                      IX2144.2
 155700             MOVE "FROM START-TEST-GF-09"  TO CORRECT-A           IX2144.2
 155800             GO TO  START-TEST-GF-18A.                            IX2144.2
-155900*                                                                 IX2144.2
-156000*  START-TEST-004.09 - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2144.2
-156100*                    RESULTING FROM START-TEST-GF-09.  THE FILE   IX2144.2
-156200*                    STATUS CONTENTS IS EXPECTED TO BE "23".      IX2144.2
-156300*                                                                 IX2144.2
-156400     IF      FILESTATUS (9)  EQUAL TO "Q3"                        IX2144.2
+155900*                                                                         
+156000*                                                                         
+156100*                                                                         
+156200*                                                                         
+156300*                                                                         
+156400     IF      FILESTATUS (9)  EQUAL TO "2P"                        IX2144.2
 156500             PERFORM PASS                                         IX2144.2
 156600     ELSE    PERFORM FAIL                                         IX2144.2
 156700         MOVE "FROM START-TEST-GF-09; IX-4 1.3.4 (3) C" TO RE-MARKIX2144.2
-156800             MOVE  "Q3"  TO CORRECT-A                             IX2144.2
+156800             MOVE  "2P"  TO CORRECT-A                             IX2144.2
 156900             MOVE   FILESTATUS (9)  TO COMPUTED-A.                IX2144.2
 157000 START-TEST-GF-18A.                                               IX2144.2
 157100     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -2042,16 +2042,16 @@
 209000             PERFORM DE-LETE                                      IX2144.2
 209100             MOVE "FROM START-TEST-GF-20"  TO CORRECT-A           IX2144.2
 209200             GO TO  START-TEST-GF-29A.                            IX2144.2
-209300*                                                                 IX2144.2
-209400*  START-TEST-006.02 - THIS TEST CHECKS THE FILE STATUS CONTENTS  IX2144.2
-209500*                    RESULTING FROM START-TEST-GF-20.  THE FILE   IX2144.2
-209600*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2144.2
-209700*                                                                 IX2144.2
-209800     IF      FILESTATUS (2) EQUAL TO "00"                         IX2144.2
+209300*                                                                         
+209400*                                                                         
+209500*                                                                         
+209600*                                                                         
+209700*                                                                         
+209800     IF      FILESTATUS (2) EQUAL TO "08"                         IX2144.2
 209900             PERFORM  PASS                                        IX2144.2
 210000             ELSE  PERFORM  FAIL                                  IX2144.2
 210100         MOVE "IX-3; 1.3.4 (1) A;FROM START-TEST-GF-20" TO RE-MARKIX2144.2
-210200             MOVE    "00"  TO CORRECT-A                           IX2144.2
+210200             MOVE    "08"  TO CORRECT-A                           IX2144.2
 210300             MOVE   FILESTATUS (2)  TO COMPUTED-A.                IX2144.2
 210400 START-TEST-GF-29A.                                               IX2144.2
 210500     PERFORM  PRINT-DETAIL.                                       IX2144.2
@@ -2106,11 +2106,11 @@
 215400*                    RESULTING FROM START-TEST-GF-23.  THE FILE   IX2144.2
 215500*                    STATUS CONTENTS IS EXPECTED TO BE "00"       IX2144.2
 215600*                                                                 IX2144.2
-215700     IF      FILESTATUS (5)  EQUAL TO "B0"                        IX2144.2
+215700     IF      FILESTATUS (5)  EQUAL TO "00"                        IX2144.2
 215800             PERFORM  PASS                                        IX2144.2
 215900             ELSE  PERFORM  FAIL                                  IX2144.2
 216000         MOVE "IX-3; 1.3.4 (1) A;FROM START-TEST-GF-23" TO RE-MARKIX2144.2
-216100             MOVE    "B0"  TO CORRECT-A                           IX2144.2
+216100             MOVE    "00"  TO CORRECT-A                           IX2144.2
 216200             MOVE   FILESTATUS (5)  TO COMPUTED-A.                IX2144.2
 216300 START-TEST-GF-32A.                                               IX2144.2
 216400     PERFORM  PRINT-DETAIL.                                       IX2144.2

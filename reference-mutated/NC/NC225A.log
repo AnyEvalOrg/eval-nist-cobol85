@@ -71,25 +71,25 @@ TEST RESULT OF NC225A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-28-1   .01                                                                      
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-29-1   .01                                                                      
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-30-1   .01                                                                      
- EVALUATE STATEMENT   FAIL* EVA-TEST-GF-31-1   .01        EVALUATE FAILURE                                              
-                                                                                                                        
-                                     COMPUTED= A                                                                        
-                                     CORRECT = F                     VI-84 6.12.4 GR3                                   
-                                                                                                                        
+ EVALUATE STATEMENT   PASS  EVA-TEST-GF-31-1   .01                                                                      
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-31-1   .01                                                                      
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-32-1   .01                                                                      
- EVALUATE STATEMENT   PASS  EVA-TEST-GF-32-1   .02                                                                      
- EVALUATE STATEMENT   PASS  EVA-TEST-GF-33-1   .01                                                                      
+ EVALUATE STATEMENT   FAIL* EVA-TEST-GF-32-1   .02        EVALUATE FAILURE                                              
+                                                                                                                        
+                                     COMPUTED= D                                                                        
+                                     CORRECT = F                     VI-84 6.12.4 GR3                                   
+                                                                                                                        
+ EVALUATE STATEMENT   FAIL* EVA-TEST-GF-33-1   .01        EVALUATE FAILURE                                              
+                                                                                                                        
+                                     COMPUTED= E                                                                        
+                                     CORRECT = 7                     VI-84 6.12.4 GR3                                   
+                                                                                                                        
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-33-1   .02                                                                      
- EVALUATE STATEMENT   FAIL* EVA-TEST-GF-34-1   .01        EVALUATE FAILURE                                              
-                                                                                                                        
-                                     COMPUTED= G                                                                        
-                                     CORRECT = L                     VI-84 6.12.4 GR3                                   
-                                                                                                                        
+ EVALUATE STATEMENT   PASS  EVA-TEST-GF-34-1   .01                                                                      
  EVALUATE STATEMENT   FAIL* EVA-TEST-GF-34-1   .02        EVALUATE FAILURE                                              
                                                                                                                         
                                      COMPUTED= H                                                                        
-                                     CORRECT = K                     VI-84 6.12.4 GR3                                   
+                                     CORRECT = C                     VI-84 6.12.4 GR3                                   
                                                                                                                         
  EVALUATE STATEMENT   PASS  EVA-TEST-GF-35-1   .01                                                                      
  ***********************************************************************************************************************

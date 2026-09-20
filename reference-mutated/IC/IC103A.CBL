@@ -430,13 +430,13 @@
 043200     ADD 1 TO REC-CT.                                             IC1034.2
 043300     PERFORM PRINT-DETAIL.                                        IC1034.2
 043400 CALL-TEST-06-02.                                                 IC1034.2
-043500     IF NUMER-FIELD EQUAL TO 25                                   IC1034.2
+043500     IF NUMER-FIELD EQUAL TO 21                                   IC1034.2
 043600         PERFORM PASS                                             IC1034.2
 043700         GO TO CALL-WRITE-06-02.                                  IC1034.2
 043800 CALL-FAIL-06-02.                                                 IC1034.2
 043900     PERFORM FAIL.                                                IC1034.2
 044000     MOVE NUMER-FIELD TO COMPUTED-18V0.                           IC1034.2
-044100     MOVE 25 TO CORRECT-18V0.                                     IC1034.2
+044100     MOVE 21 TO CORRECT-18V0.                                     IC1034.2
 044200     MOVE "NUMERIC DISPLAY PARAMETER" TO RE-MARK.                 IC1034.2
 044300 CALL-WRITE-06-02.                                                IC1034.2
 044400     ADD 1 TO REC-CT.                                             IC1034.2
@@ -454,37 +454,37 @@
 045600     ADD 1 TO REC-CT.                                             IC1034.2
 045700     PERFORM PRINT-DETAIL.                                        IC1034.2
 045800 CALL-TEST-06-04.                                                 IC1034.2
-045900     IF ELEM-77 EQUAL TO 0.7664                                   IC1034.2
+045900     IF ELEM-77 EQUAL TO 0.7652                                   IC1034.2
 046000         PERFORM PASS                                             IC1034.2
 046100         GO TO CALL-WRITE-06-04.                                  IC1034.2
 046200 CALL-FAIL-06-04.                                                 IC1034.2
 046300     PERFORM FAIL.                                                IC1034.2
 046400     MOVE ELEM-77 TO COMPUTED-4V14.                               IC1034.2
-046500     MOVE 0.7664 TO CORRECT-4V14.                                 IC1034.2
+046500     MOVE 0.7652 TO CORRECT-4V14.                                 IC1034.2
 046600     MOVE "COMPUTATIONAL PARAMETER" TO RE-MARK.                   IC1034.2
 046700 CALL-WRITE-06-04.                                                IC1034.2
 046800     ADD 1 TO REC-CT.                                             IC1034.2
 046900     PERFORM PRINT-DETAIL.                                        IC1034.2
 047000 CALL-TEST-06-05.                                                 IC1034.2
-047100     IF NUM-ITEM EQUAL TO 24                                      IC1034.2
+047100     IF NUM-ITEM EQUAL TO 25                                      IC1034.2
 047200         PERFORM PASS                                             IC1034.2
 047300         GO TO CALL-WRITE-06-05.                                  IC1034.2
 047400 CALL-FAIL-06-05.                                                 IC1034.2
 047500     PERFORM FAIL.                                                IC1034.2
 047600     MOVE NUM-ITEM TO COMPUTED-18V0.                              IC1034.2
-047700     MOVE 24 TO CORRECT-18V0.                                     IC1034.2
+047700     MOVE 25 TO CORRECT-18V0.                                     IC1034.2
 047800     MOVE "SIGNED NUMERIC PARAMETER" TO RE-MARK.                  IC1034.2
 047900 CALL-WRITE-06-05.                                                IC1034.2
 048000     ADD 1 TO REC-CT.                                             IC1034.2
 048100     PERFORM PRINT-DETAIL.                                        IC1034.2
 048200 CALL-TEST-06-06.                                                 IC1034.2
-048300     IF ALPHA-EDITED EQUAL TO "AB C0R"                            IC1034.2
+048300     IF ALPHA-EDITED EQUAL TO "AB M0D"                            IC1034.2
 048400         PERFORM PASS                                             IC1034.2
 048500         GO TO CALL-WRITE-06-06.                                  IC1034.2
 048600 CALL-FAIL-06-06.                                                 IC1034.2
 048700     PERFORM FAIL.                                                IC1034.2
 048800     MOVE ALPHA-EDITED TO COMPUTED-A.                             IC1034.2
-048900     MOVE "AB C0R" TO CORRECT-A.                                  IC1034.2
+048900     MOVE "AB M0D" TO CORRECT-A.                                  IC1034.2
 049000     MOVE "ALPHANUMERIC EDITED" TO RE-MARK.                       IC1034.2
 049100 CALL-WRITE-06-06.                                                IC1034.2
 049200     ADD 1 TO REC-CT.                                             IC1034.2

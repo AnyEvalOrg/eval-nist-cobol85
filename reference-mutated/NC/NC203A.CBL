@@ -414,7 +414,7 @@
 041600     DIVIDE  22 INTO WRK-DS-06V06 GIVING WRK-DS-05V00             NC2034.2
 041700             REMAINDER WRK-DS-02V00.                              NC2034.2
 041800     ADD     WRK-DS-02V00 TO WRK-DS-05V00.                        NC2034.2
-041900     IF      WRK-DS-05V00 EQUAL TO 5061                           NC2034.2
+041900     IF      WRK-DS-05V00 EQUAL TO 3061                           NC2034.2
 042000              PERFORM PASS                                        NC2034.2
 042100              GO TO DIV-WRITE-F4-1.                               NC2034.2
 042200     GO TO DIV-FAIL-F4-1.                                         NC2034.2
@@ -423,7 +423,7 @@
 042500     GO TO DIV-WRITE-F4-1.                                        NC2034.2
 042600 DIV-FAIL-F4-1.                                                   NC2034.2
 042700     MOVE     WRK-DS-05V00 TO COMPUTED-N.                         NC2034.2
-042800     MOVE     5061 TO CORRECT-N.                                  NC2034.2
+042800     MOVE     3061 TO CORRECT-N.                                  NC2034.2
 042900     PERFORM  FAIL.                                               NC2034.2
 043000 DIV-WRITE-F4-1.                                                  NC2034.2
 043100     PERFORM  PRINT-DETAIL.                                       NC2034.2
@@ -670,13 +670,13 @@
 067200 DIV-INIT-F4-7-1.                                                 NC2034.2
 067300     MOVE     "DIV-TEST-F4-7-1" TO  PAR-NAME.                     NC2034.2
 067400 DIV-TEST-F4-7-1.                                                 NC2034.2
-067500     IF      NE-0009  EQUAL TO "V**01"                            NC2034.2
+067500     IF      NE-0009  EQUAL TO "***02"                            NC2034.2
 067600             PERFORM   PASS                                       NC2034.2
 067700             GO TO DIV-WRITE-F4-7-1.                              NC2034.2
 067800     GO TO DIV-FAIL-F4-7-1.                                       NC2034.2
 067900 DIV-FAIL-F4-7-1.                                                 NC2034.2
 068000     PERFORM  FAIL.                                               NC2034.2
-068100     MOVE    "V**01"  TO CORRECT-A.                               NC2034.2
+068100     MOVE    "***02"  TO CORRECT-A.                               NC2034.2
 068200     MOVE     NE-0009 TO COMPUTED-A.                              NC2034.2
 068300 DIV-DELETE-F4-7-1.                                               NC2034.2
 068400     PERFORM   DE-LETE.                                           NC2034.2
@@ -1649,11 +1649,11 @@
 165100     PERFORM FAIL.                                                NC2034.2
 165200     MOVE "SIZE ERROR SHOULD NOT BE EXECUTED" TO RE-MARK.         NC2034.2
 165300     PERFORM PRINT-DETAIL.                                        NC2034.2
-165400*                                                                 NC2034.2
+165400*                                                                         
 165500 DIV-TEST-F4-20-1.                                                NC2034.2
 165600     MOVE   "DIV-TEST-F4-20-1" TO PAR-NAME.                       NC2034.2
 165700     MOVE 1 TO REC-CT.                                            NC2034.2
-165800     IF WRK-DU-1V5-1 = 0.31616                                    NC2034.2
+165800     IF WRK-DU-1V5-1 = 0.31418                                    NC2034.2
 165900          PERFORM PASS                                            NC2034.2
 166000          GO TO DIV-WRITE-F4-20-1                                 NC2034.2
 166100     ELSE                                                         NC2034.2
@@ -1664,14 +1664,14 @@
 166600 DIV-FAIL-F4-20-1.                                                NC2034.2
 166700     PERFORM FAIL                                                 NC2034.2
 166800     MOVE WRK-DU-1V5-1 TO COMPUTED-N                              NC2034.2
-166900     MOVE 0.31616 TO CORRECT-N.                                   NC2034.2
+166900     MOVE 0.31418 TO CORRECT-N.                                   NC2034.2
 167000 DIV-WRITE-F4-20-1.                                               NC2034.2
 167100     PERFORM PRINT-DETAIL.                                        NC2034.2
 167200*                                                                 NC2034.2
 167300 DIV-TEST-F4-20-2.                                                NC2034.2
 167400     ADD 1 TO REC-CT.                                             NC2034.2
 167500     MOVE   "DIV-TEST-F4-20-2" TO PAR-NAME.                       NC2034.2
-167600     IF WRK-NE-1 = ".0000O92653,58979,32"                         NC2034.2
+167600     IF WRK-NE-1 = ".0000/92653,58979,32"                         NC2034.2
 167700            PERFORM PASS                                          NC2034.2
 167800            GO TO DIV-WRITE-F4-20-2                               NC2034.2
 167900     ELSE                                                         NC2034.2
@@ -1682,7 +1682,7 @@
 168400 DIV-FAIL-F4-20-2.                                                NC2034.2
 168500     PERFORM FAIL                                                 NC2034.2
 168600     MOVE WRK-NE-1 TO COMPUTED-A                                  NC2034.2
-168700     MOVE ".0000O92653,58979,32"  TO CORRECT-A.                   NC2034.2
+168700     MOVE ".0000/92653,58979,32"  TO CORRECT-A.                   NC2034.2
 168800 DIV-WRITE-F4-20-2.                                               NC2034.2
 168900     PERFORM PRINT-DETAIL.                                        NC2034.2
 169000*                                                                 NC2034.2

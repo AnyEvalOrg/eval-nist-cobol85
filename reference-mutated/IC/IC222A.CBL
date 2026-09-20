@@ -436,11 +436,11 @@
 043800****************************************************************  IC2224.2
 043900*                                                                 IC2224.2
 044000     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-044100     IF      CALL-FLAG = 6                                        IC2224.2
+044100     IF      CALL-FLAG = 1                                        IC2224.2
 044200             PERFORM PASS                                         IC2224.2
 044300     ELSE                                                         IC2224.2
 044400             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-044500             MOVE    6 TO CORRECT-N                               IC2224.2
+044500             MOVE    1 TO CORRECT-N                               IC2224.2
 044600             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 044700             PERFORM FAIL.                                        IC2224.2
 044800     PERFORM PRINT-DETAIL.                                        IC2224.2
@@ -753,23 +753,23 @@
 075500     PERFORM PRINT-DETAIL.                                        IC2224.2
 075600     ADD     1 TO REC-CT.                                         IC2224.2
 075700     GO TO   CALL-EXIT-5.                                         IC2224.2
-075800*                                                                 IC2224.2
+075800*                                                                         
 075900 CALL-TEST-5-2.                                                   IC2224.2
-076000****************************************************************  IC2224.2
-076100*                                                              *  IC2224.2
-076200*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-076300*    WAS EXECUTED.  A PASS HERE ALSO INDICATES THAT THE        *  IC2224.2
-076400*    "NOT ON EXCEPTION" PHRASE OF THE PRECEDING CALL STATEMENT *  IC2224.2
-076500*    WAS EXECUTED.                                             *  IC2224.2
-076600*                                                              *  IC2224.2
-076700****************************************************************  IC2224.2
-076800*                                                                 IC2224.2
+076000*                                                                         
+076100*                                                                         
+076200*                                                                         
+076300*                                                                         
+076400*                                                                         
+076500*                                                                         
+076600*                                                                         
+076700*                                                                         
+076800*                                                                         
 076900     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-077000     IF      CALL-FLAG = 5                                        IC2224.2
+077000     IF      CALL-FLAG = 8                                        IC2224.2
 077100             PERFORM PASS                                         IC2224.2
 077200     ELSE                                                         IC2224.2
 077300             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-077400             MOVE    5 TO CORRECT-N                               IC2224.2
+077400             MOVE    8 TO CORRECT-N                               IC2224.2
 077500             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 077600             PERFORM FAIL.                                        IC2224.2
 077700     PERFORM PRINT-DETAIL.                                        IC2224.2
@@ -903,25 +903,25 @@
 090500     PERFORM PRINT-DETAIL.                                        IC2224.2
 090600     ADD     1 TO REC-CT.                                         IC2224.2
 090700     GO TO   CALL-EXIT-7.                                         IC2224.2
-090800*                                                                 IC2224.2
+090800*                                                                         
 090900 CALL-TEST-7-2.                                                   IC2224.2
-091000****************************************************************  IC2224.2
-091100*                                                              *  IC2224.2
-091200*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-091300*    WAS EXECUTED.  IF THE PREVIOUS TEST PASSED, A PASS HERE   *  IC2224.2
-091400*    INDICATES THAT THE SCOPE TERMINATOR HAS BEEN INTERPRETED  *  IC2224.2
-091500*    CORRECTLY.  IF THE PREVIOUS TEST FAILED, A PASS HERE      *  IC2224.2
-091600*    INDICATES THAT THE SCOPE TERMINATOR WAS NOT INTERPRETED   *  IC2224.2
-091700*    AS "NOT ON EXCEPTION" OR "GO TO NEXT-SENTENCE".           *  IC2224.2
-091800*                                                              *  IC2224.2
-091900****************************************************************  IC2224.2
-092000*                                                                 IC2224.2
+091000*                                                                         
+091100*                                                                         
+091200*                                                                         
+091300*                                                                         
+091400*                                                                         
+091500*                                                                         
+091600*                                                                         
+091700*                                                                         
+091800*                                                                         
+091900*                                                                         
+092000*                                                                         
 092100     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-092200     IF      CALL-FLAG = 2                                        IC2224.2
+092200     IF      CALL-FLAG = 5                                        IC2224.2
 092300             PERFORM PASS                                         IC2224.2
 092400     ELSE                                                         IC2224.2
 092500             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-092600             MOVE    2 TO CORRECT-N                               IC2224.2
+092600             MOVE    5 TO CORRECT-N                               IC2224.2
 092700             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 092800             PERFORM FAIL.                                        IC2224.2
 092900     PERFORM PRINT-DETAIL.                                        IC2224.2
@@ -984,25 +984,25 @@
 098600     PERFORM PRINT-DETAIL.                                        IC2224.2
 098700     ADD     1 TO REC-CT.                                         IC2224.2
 098800     GO TO   CALL-EXIT-8.                                         IC2224.2
-098900*                                                                 IC2224.2
+098900*                                                                         
 099000 CALL-TEST-8-2.                                                   IC2224.2
-099100****************************************************************  IC2224.2
-099200*                                                              *  IC2224.2
-099300*    CHECKS THAT THE STATEMENT FOLLOWING THE SCOPE TERMINATOR  *  IC2224.2
-099400*    WAS EXECUTED.  IF THE PREVIOUS TEST FAILED, A PASS HERE   *  IC2224.2
-099500*    INDICATES THAT THE SCOPE TERMINATOR HAS BEEN INTERPRETED  *  IC2224.2
-099600*    CORRECTLY.  IF THE PREVIOUS TEST PASSED, A PASS HERE      *  IC2224.2
-099700*    INDICATES THAT THE SCOPE TERMINATOR WAS NOT INTERPRETED   *  IC2224.2
-099800*    AS "NOT ON EXCEPTION" OR "GO TO NEXT-SENTENCE".           *  IC2224.2
-099900*                                                              *  IC2224.2
-100000****************************************************************  IC2224.2
-100100*                                                                 IC2224.2
+099100*                                                                         
+099200*                                                                         
+099300*                                                                         
+099400*                                                                         
+099500*                                                                         
+099600*                                                                         
+099700*                                                                         
+099800*                                                                         
+099900*                                                                         
+100000*                                                                         
+100100*                                                                         
 100200     MOVE   "END-CALL OBSERVANCE" TO FEATURE.                     IC2224.2
-100300     IF      CALL-FLAG = 1                                        IC2224.2
+100300     IF      CALL-FLAG = 7                                        IC2224.2
 100400             PERFORM PASS                                         IC2224.2
 100500     ELSE                                                         IC2224.2
 100600             MOVE   "INCORRECT CONTROL FLOW" TO RE-MARK           IC2224.2
-100700             MOVE    1 TO CORRECT-N                               IC2224.2
+100700             MOVE    7 TO CORRECT-N                               IC2224.2
 100800             MOVE    CALL-FLAG TO COMPUTED-N                      IC2224.2
 100900             PERFORM FAIL.                                        IC2224.2
 101000     PERFORM PRINT-DETAIL.                                        IC2224.2

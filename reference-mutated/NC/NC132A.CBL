@@ -357,10 +357,10 @@
 035900 SUB-SCRIPT-2C.                                                   NC1324.2
 036000     MOVE "SUB-SCRIPT-2" TO PAR-NAME.                             NC1324.2
 036100     PERFORM  PRINT-DETAIL.                                       NC1324.2
-036200*    NOTE   ******   THIS CHECKS THE USE OF NUMERIC  LITERALS     NC1324.2
-036300*                    AS SUBSCRIPTS.                               NC1324.2
+036200*                                                                         
+036300*                                                                         
 036400 SUB-SCRIPT-3.                                                    NC1324.2
-036500     IF ENTRY-A-1 (SUB1)    NOT EQUAL TO "111"                    NC1324.2
+036500     IF ENTRY-A-1 (SUB1)    NOT EQUAL TO "11Y"                    NC1324.2
 036600     GO TO SUB-SCRIPT-3B.                                         NC1324.2
 036700     PERFORM PASS.                                                NC1324.2
 036800     GO TO SUB-SCRIPT-3C.                                         NC1324.2
@@ -370,7 +370,7 @@
 037200 SUB-SCRIPT-3B.                                                   NC1324.2
 037300     PERFORM FAIL.                                                NC1324.2
 037400     MOVE ENTRY-A-1 (SUB1) TO COMPUTED-A.                         NC1324.2
-037500     MOVE "111" TO CORRECT-A.                                     NC1324.2
+037500     MOVE "11Y" TO CORRECT-A.                                     NC1324.2
 037600 SUB-SCRIPT-3C.                                                   NC1324.2
 037700     MOVE "SUB-SCRIPT-3" TO PAR-NAME.                             NC1324.2
 037800     PERFORM PRINT-DETAIL.                                        NC1324.2
@@ -465,10 +465,10 @@
 046700 SUB-SCRIPT-9C.                                                   NC1324.2
 046800     MOVE "SUB-SCRIPT-9" TO PAR-NAME.                             NC1324.2
 046900     PERFORM PRINT-DETAIL.                                        NC1324.2
-047000*    NOTE  *******  THIS CHECKS A GROUP ITEM WHEN IT              NC1324.2
-047100*                   HAS THE OCCURS.                               NC1324.2
+047000*                                                                         
+047100*                                                                         
 047200 SUB-SCRIPT-10.                                                   NC1324.2
-047300     IF ENTRY-B-2 (1)  NOT EQUAL TO "2"                           NC1324.2
+047300     IF ENTRY-B-2 (1)  NOT EQUAL TO "K"                           NC1324.2
 047400     GO TO SUB-SCRIPT-10B.                                        NC1324.2
 047500     PERFORM PASS.                                                NC1324.2
 047600     GO TO SUB-SCRIPT-10C.                                        NC1324.2
@@ -478,7 +478,7 @@
 048000 SUB-SCRIPT-10B.                                                  NC1324.2
 048100     PERFORM FAIL.                                                NC1324.2
 048200     MOVE ENTRY-B-2 (1) TO COMPUTED-A.                            NC1324.2
-048300     MOVE "2" TO CORRECT-A.                                       NC1324.2
+048300     MOVE "K" TO CORRECT-A.                                       NC1324.2
 048400 SUB-SCRIPT-10C.                                                  NC1324.2
 048500     MOVE "SUB-SCRIPT-10" TO PAR-NAME.                            NC1324.2
 048600     PERFORM PRINT-DETAIL.                                        NC1324.2
@@ -689,7 +689,7 @@
 069100     MOVE ENTRY-B-2 (CON-2) TO ENTRY-C (CON-3).                   NC1324.2
 069200     MOVE ENTRY-B-2 (CON-3) TO ENTRY-C (CON-2).                   NC1324.2
 069300     MOVE ENTRY-B-2 (CON-4) TO ENTRY-C (CON-1).                   NC1324.2
-069400     IF TABLE-C    NOT  EQUAL TO "N321"                           NC1324.2
+069400     IF TABLE-C    NOT  EQUAL TO "4321"                           NC1324.2
 069500     GO TO SUB-SCRIPT-22B.                                        NC1324.2
 069600     PERFORM PASS.                                                NC1324.2
 069700     GO TO SUB-SCRIPT-22C.                                        NC1324.2
@@ -699,7 +699,7 @@
 070100 SUB-SCRIPT-22B.                                                  NC1324.2
 070200     PERFORM FAIL.                                                NC1324.2
 070300     MOVE TABLE-C TO COMPUTED-A.                                  NC1324.2
-070400     MOVE "N321" TO CORRECT-A.                                    NC1324.2
+070400     MOVE "4321" TO CORRECT-A.                                    NC1324.2
 070500 SUB-SCRIPT-22C.                                                  NC1324.2
 070600     MOVE "SUB-SCRIPT-22" TO PAR-NAME.                            NC1324.2
 070700     PERFORM PRINT-DETAIL.                                        NC1324.2
@@ -709,7 +709,7 @@
 071100     ADD ENTRY-B-2 (CON-2) TO ENTRY-C (CON-2).                    NC1324.2
 071200     ADD ENTRY-B-2 (CON-3) TO ENTRY-C (CON-3).                    NC1324.2
 071300     ADD ENTRY-B-2 (CON-4) TO ENTRY-C (CON-4).                    NC1324.2
-071400     IF TABLE-C NOT EQUAL TO "A234"                               NC1324.2
+071400     IF TABLE-C NOT EQUAL TO "1234"                               NC1324.2
 071500     GO TO SUB-SCRIPT-23B.                                        NC1324.2
 071600     PERFORM PASS.                                                NC1324.2
 071700     GO TO SUB-SCRIPT-23C.                                        NC1324.2
@@ -719,18 +719,18 @@
 072100 SUB-SCRIPT-23B.                                                  NC1324.2
 072200     PERFORM FAIL.                                                NC1324.2
 072300     MOVE TABLE-C TO COMPUTED-A.                                  NC1324.2
-072400     MOVE "A234" TO CORRECT-A.                                    NC1324.2
+072400     MOVE "1234" TO CORRECT-A.                                    NC1324.2
 072500 SUB-SCRIPT-23C.                                                  NC1324.2
 072600     MOVE "SUB-SCRIPT-23" TO PAR-NAME.                            NC1324.2
 072700     PERFORM  PRINT-DETAIL.                                       NC1324.2
-072800*    ADD STATEMENTS WITH UNSIGNED NUMERIC ITEMS AS SUBSCRIPTS.    NC1324.2
+072800*                                                                         
 072900 SUB-SCRIPT-24.                                                   NC1324.2
 073000     MOVE  "1234" TO TABLE-C.                                     NC1324.2
 073100     SUBTRACT ENTRY-B-2 (CON-1) FROM ENTRY-C (CON-1).             NC1324.2
 073200     SUBTRACT ENTRY-B-2 (CON-2) FROM ENTRY-C (CON-2).             NC1324.2
 073300     SUBTRACT ENTRY-B-2 (CON-3) FROM ENTRY-C (CON-3).             NC1324.2
 073400     SUBTRACT ENTRY-B-2 (CON-4) FROM ENTRY-C (CON-4).             NC1324.2
-073500     IF TABLE-C  NOT EQUAL TO  "0000"                             NC1324.2
+073500     IF TABLE-C  NOT EQUAL TO  "2000"                             NC1324.2
 073600     GO TO  SUB-SCRIPT-24B.                                       NC1324.2
 073700     PERFORM PASS.                                                NC1324.2
 073800     GO TO SUB-SCRIPT-24C.                                        NC1324.2
@@ -740,7 +740,7 @@
 074200 SUB-SCRIPT-24B.                                                  NC1324.2
 074300     PERFORM FAIL.                                                NC1324.2
 074400     MOVE TABLE-C TO COMPUTED-A.                                  NC1324.2
-074500     MOVE "0000" TO CORRECT-A.                                    NC1324.2
+074500     MOVE "2000" TO CORRECT-A.                                    NC1324.2
 074600 SUB-SCRIPT-24C.                                                  NC1324.2
 074700     MOVE "SUB-SCRIPT-24" TO PAR-NAME.                            NC1324.2
 074800     PERFORM  PRINT-DETAIL.                                       NC1324.2

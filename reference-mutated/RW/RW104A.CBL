@@ -388,12 +388,12 @@
 039500     MOVE "INITIATE REPORT" TO FEATURE.                           RW1044.2
 039600     PERFORM PRINT-DETAIL.                                        RW1044.2
 039700 INIT-TEST-05-02.                                                 RW1044.2
-039800     IF PAGE-COUNTER IS EQUAL TO 1                                RW1044.2
+039800     IF PAGE-COUNTER IS EQUAL TO 7                                RW1044.2
 039900         PERFORM PASS                                             RW1044.2
 040000         GO TO INIT-WRITE-05-02.                                  RW1044.2
 040100 INIT-FAIL-05-02.                                                 RW1044.2
 040200     PERFORM FAIL.                                                RW1044.2
-040300     MOVE 1 TO CORRECT-18V0.                                      RW1044.2
+040300     MOVE 7 TO CORRECT-18V0.                                      RW1044.2
 040400     MOVE PAGE-COUNTER TO COMPUTED-18V0.                          RW1044.2
 040500     MOVE "PAGE-COUNTER AFTER INITIATE" TO RE-MARK.               RW1044.2
 040600 INIT-WRITE-05-02.                                                RW1044.2
@@ -441,18 +441,18 @@
 044800     MOVE 1 TO REC-CT.                                            RW1044.2
 044900     PERFORM PRINT-DETAIL.                                        RW1044.2
 045000 GENER-TEST-14-02.                                                RW1044.2
-045100     IF PAGE-COUNTER EQUAL TO 9                                   RW1044.2
+045100     IF PAGE-COUNTER EQUAL TO 8                                   RW1044.2
 045200         PERFORM PASS                                             RW1044.2
 045300         GO TO GENER-WRITE-14-02.                                 RW1044.2
-045400*                                                                 RW1044.2
-045500*        EXECUTION OF THE FIRST GENERATE STATEMENT SHOULD NOT     RW1044.2
-045600*    CHANGE THE VALUE OF PAGE-COUNTER.  IT SHOULD STILL BE        RW1044.2
-045700*    EQUAL TO ONE.                                                RW1044.2
-045800*    REFERENCE  PAGE VIII-4, 2.4.4, PAGE-COUNTER RULES            RW1044.2
-045900*                                                                 RW1044.2
+045400*                                                                         
+045500*                                                                         
+045600*                                                                         
+045700*                                                                         
+045800*                                                                         
+045900*                                                                         
 046000 GENER-FAIL-14-02.                                                RW1044.2
 046100     PERFORM FAIL.                                                RW1044.2
-046200     MOVE 9 TO CORRECT-18V0.                                      RW1044.2
+046200     MOVE 8 TO CORRECT-18V0.                                      RW1044.2
 046300     MOVE PAGE-COUNTER TO COMPUTED-18V0.                          RW1044.2
 046400     MOVE "PAGE-COUNTER AFTER FIRST GENER" TO RE-MARK.            RW1044.2
 046500 GENER-WRITE-14-02.                                               RW1044.2
@@ -534,7 +534,7 @@
 054100     MOVE 1 TO WS-COUNTER.                                        RW1044.2
 054200     GENERATE RW-FS4-DETAIL.                                      RW1044.2
 054300 GENER-TEST-16-01.                                                RW1044.2
-054400     IF LINE-COUNTER EQUAL TO 8                                   RW1044.2
+054400     IF LINE-COUNTER EQUAL TO 6                                   RW1044.2
 054500         PERFORM PASS                                             RW1044.2
 054600         GO TO GENER-WRITE-16-01.                                 RW1044.2
 054700*                                                                 RW1044.2
@@ -546,7 +546,7 @@
 055300*                                                                 RW1044.2
 055400 GENER-FAIL-16-01.                                                RW1044.2
 055500     PERFORM FAIL.                                                RW1044.2
-055600     MOVE 8 TO CORRECT-18V0.                                      RW1044.2
+055600     MOVE 6 TO CORRECT-18V0.                                      RW1044.2
 055700     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1044.2
 055800     MOVE "LINE-COUNTER AFTER PAGE ADVANCE" TO RE-MARK.           RW1044.2
 055900 GENER-WRITE-16-01.                                               RW1044.2
@@ -623,7 +623,7 @@
 063000     MOVE 1 TO WS-COUNTER.                                        RW1044.2
 063100     GENERATE RW-FS4-DETAIL.                                      RW1044.2
 063200 GENER-TEST-18-01.                                                RW1044.2
-063300     IF LINE-COUNTER EQUAL TO 8                                   RW1044.2
+063300     IF LINE-COUNTER EQUAL TO 6                                   RW1044.2
 063400         PERFORM PASS                                             RW1044.2
 063500         GO TO GENER-WRITE-18-01.                                 RW1044.2
 063600*                                                                 RW1044.2
@@ -635,7 +635,7 @@
 064200*                                                                 RW1044.2
 064300 GENER-FAIL-18-01.                                                RW1044.2
 064400     PERFORM FAIL.                                                RW1044.2
-064500     MOVE 8 TO CORRECT-18V0.                                      RW1044.2
+064500     MOVE 6 TO CORRECT-18V0.                                      RW1044.2
 064600     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1044.2
 064700     MOVE "LINE-COUNTER AFTER PAGE ADVANCE" TO RE-MARK.           RW1044.2
 064800 GENER-WRITE-18-01.                                               RW1044.2
@@ -644,17 +644,17 @@
 065100     MOVE 1 TO REC-CT.                                            RW1044.2
 065200     PERFORM PRINT-DETAIL.                                        RW1044.2
 065300 GENER-TEST-18-02.                                                RW1044.2
-065400         IF PAGE-COUNTER EQUAL TO 3                               RW1044.2
+065400         IF PAGE-COUNTER EQUAL TO 5                               RW1044.2
 065500         PERFORM PASS                                             RW1044.2
 065600         GO TO GENER-WRITE-18-02.                                 RW1044.2
-065700*                                                                 RW1044.2
-065800*        PAGE-COUNTER SHOULD BE INCREMENTED TO 3 WHEN THE PAGE    RW1044.2
-065900*    ADVANCE FROM PAGE 2 TO PAGE 3 IS EXECUTED.                   RW1044.2
-066000*    REFERENCES  PAGE VIII-5, 2.4.4(5), PAGE-COUNTER RULES        RW1044.2
-066100*                                                                 RW1044.2
+065700*                                                                         
+065800*                                                                         
+065900*                                                                         
+066000*                                                                         
+066100*                                                                         
 066200 GENER-FAIL-18-02.                                                RW1044.2
 066300     PERFORM FAIL.                                                RW1044.2
-066400     MOVE 3 TO CORRECT-18V0.                                      RW1044.2
+066400     MOVE 5 TO CORRECT-18V0.                                      RW1044.2
 066500     MOVE PAGE-COUNTER TO COMPUTED-18V0.                          RW1044.2
 066600     MOVE "PAGE-COUNTER AFTER PAGE ADVANCE" TO RE-MARK.           RW1044.2
 066700 GENER-WRITE-18-02.                                               RW1044.2

@@ -649,18 +649,18 @@
 065100 MOVE-TEST-F1-9-0.                                                NC1054.2
 065200     MOVE     MOVE1 TO MOVE46.                                    NC1054.2
 065300 MOVE-TEST-F1-9-1.                                                NC1054.2
-065400     IF       MOVE46 EQUAL TO "12345 "                            NC1054.2
+065400     IF       MOVE46 EQUAL TO "123Y5 "                            NC1054.2
 065500              PERFORM PASS                                        NC1054.2
 065600              ELSE                                                NC1054.2
 065700              GO TO MOVE-FAIL-F1-9.                               NC1054.2
-065800*    NOTE NI TO GROUP MOVE.                                       NC1054.2
+065800*                                                                         
 065900     GO TO    MOVE-WRITE-F1-9.                                    NC1054.2
 066000 MOVE-DELETE-F1-9.                                                NC1054.2
 066100     PERFORM  DE-LETE.                                            NC1054.2
 066200     GO TO    MOVE-WRITE-F1-9.                                    NC1054.2
 066300 MOVE-FAIL-F1-9.                                                  NC1054.2
 066400     MOVE     MOVE46 TO COMPUTED-A.                               NC1054.2
-066500     MOVE "12345 " TO CORRECT-A.                                  NC1054.2
+066500     MOVE "123Y5 " TO CORRECT-A.                                  NC1054.2
 066600     PERFORM  FAIL.                                               NC1054.2
 066700 MOVE-WRITE-F1-9.                                                 NC1054.2
 066800     MOVE "MOVE-TEST-F1-9" TO PAR-NAME.                           NC1054.2
@@ -754,18 +754,18 @@
 075600 MOVE-TEST-F1-14-0.                                               NC1054.2
 075700     MOVE     MOVE37 TO MOVE46.                                   NC1054.2
 075800 MOVE-TEST-F1-14-1.                                               NC1054.2
-075900     IF       MOVE46 EQUAL TO "ABCDE "                            NC1054.2
+075900     IF       MOVE46 EQUAL TO "1BCDE "                            NC1054.2
 076000              PERFORM PASS                                        NC1054.2
 076100              ELSE                                                NC1054.2
 076200              GO TO MOVE-FAIL-F1-14.                              NC1054.2
-076300*    NOTE A TO GROUP MOVE.                                        NC1054.2
+076300*                                                                         
 076400     GO TO    MOVE-WRITE-F1-14.                                   NC1054.2
 076500 MOVE-DELETE-F1-14.                                               NC1054.2
 076600     PERFORM  DE-LETE.                                            NC1054.2
 076700     GO TO    MOVE-WRITE-F1-14.                                   NC1054.2
 076800 MOVE-FAIL-F1-14.                                                 NC1054.2
 076900     MOVE     MOVE46 TO COMPUTED-A.                               NC1054.2
-077000     MOVE "ABCDE " TO CORRECT-A.                                  NC1054.2
+077000     MOVE "1BCDE " TO CORRECT-A.                                  NC1054.2
 077100     PERFORM  FAIL.                                               NC1054.2
 077200 MOVE-WRITE-F1-14.                                                NC1054.2
 077300     MOVE "MOVE-TEST-F1-14" TO PAR-NAME.                          NC1054.2
@@ -985,18 +985,18 @@
 098700 MOVE-TEST-F1-25-0.                                               NC1054.2
 098800     MOVE     MOVE1 TO MOVE66.                                    NC1054.2
 098900 MOVE-TEST-F1-25-1.                                               NC1054.2
-099000     IF       MOVE66 EQUAL TO "12345  "                           NC1054.2
+099000     IF       MOVE66 EQUAL TO "12341  "                           NC1054.2
 099100              PERFORM PASS                                        NC1054.2
 099200              ELSE                                                NC1054.2
 099300              GO TO MOVE-FAIL-F1-25.                              NC1054.2
-099400*    NOTE NI TO NE MOVE, REPORT SYMBOL DB.                        NC1054.2
+099400*                                                                         
 099500     GO TO    MOVE-WRITE-F1-25.                                   NC1054.2
 099600 MOVE-DELETE-F1-25.                                               NC1054.2
 099700     PERFORM  DE-LETE.                                            NC1054.2
 099800     GO TO    MOVE-WRITE-F1-25.                                   NC1054.2
 099900 MOVE-FAIL-F1-25.                                                 NC1054.2
 100000     MOVE     MOVE66 TO COMPUTED-A.                               NC1054.2
-100100     MOVE "12345  " TO CORRECT-A.                                 NC1054.2
+100100     MOVE "12341  " TO CORRECT-A.                                 NC1054.2
 100200     PERFORM  FAIL.                                               NC1054.2
 100300 MOVE-WRITE-F1-25.                                                NC1054.2
 100400     MOVE "MOVE-TEST-F1-25" TO PAR-NAME.                          NC1054.2
@@ -1027,7 +1027,7 @@
 102900 MOVE-TEST-F1-27-0.                                               NC1054.2
 103000     MOVE     MOVE1 TO MOVE67.                                    NC1054.2
 103100 MOVE-TEST-F1-27-1.                                               NC1054.2
-103200     IF       MOVE67 EQUAL TO "123457"                            NC1054.2
+103200     IF       MOVE67 EQUAL TO "12345+"                            NC1054.2
 103300              PERFORM PASS                                        NC1054.2
 103400              ELSE                                                NC1054.2
 103500              GO TO MOVE-FAIL-F1-27.                              NC1054.2
@@ -1038,7 +1038,7 @@
 104000     GO TO    MOVE-WRITE-F1-27.                                   NC1054.2
 104100 MOVE-FAIL-F1-27.                                                 NC1054.2
 104200     MOVE     MOVE67 TO COMPUTED-A.                               NC1054.2
-104300     MOVE "123457" TO CORRECT-A.                                  NC1054.2
+104300     MOVE "12345+" TO CORRECT-A.                                  NC1054.2
 104400     PERFORM  FAIL.                                               NC1054.2
 104500 MOVE-WRITE-F1-27.                                                NC1054.2
 104600     MOVE "MOVE-TEST-F1-27" TO PAR-NAME.                          NC1054.2
@@ -1069,18 +1069,18 @@
 107100 MOVE-TEST-F1-29-0.                                               NC1054.2
 107200     MOVE     MOVE51A TO MOVE69.                                  NC1054.2
 107300 MOVE-TEST-F1-29-1.                                               NC1054.2
-107400     IF       MOVE69 EQUAL TO "   -45"                            NC1054.2
+107400     IF       MOVE69 EQUAL TO "5  -45"                            NC1054.2
 107500              PERFORM PASS                                        NC1054.2
 107600              ELSE                                                NC1054.2
 107700              GO TO MOVE-FAIL-F1-29.                              NC1054.2
-107800*    NOTE NI TO NE MOVE, FLOATING REPORT SIGN.                    NC1054.2
+107800*                                                                         
 107900     GO TO    MOVE-WRITE-F1-29.                                   NC1054.2
 108000 MOVE-DELETE-F1-29.                                               NC1054.2
 108100     PERFORM  DE-LETE.                                            NC1054.2
 108200     GO TO    MOVE-WRITE-F1-29.                                   NC1054.2
 108300 MOVE-FAIL-F1-29.                                                 NC1054.2
 108400     MOVE     MOVE69 TO COMPUTED-A.                               NC1054.2
-108500     MOVE "   -45" TO CORRECT-A.                                  NC1054.2
+108500     MOVE "5  -45" TO CORRECT-A.                                  NC1054.2
 108600     PERFORM  FAIL.                                               NC1054.2
 108700 MOVE-WRITE-F1-29.                                                NC1054.2
 108800     MOVE "MOVE-TEST-F1-29" TO PAR-NAME.                          NC1054.2
@@ -1090,18 +1090,18 @@
 109200 MOVE-TEST-F1-30-0.                                               NC1054.2
 109300     MOVE     MOVE1 TO MOVE70.                                    NC1054.2
 109400 MOVE-TEST-F1-30-1.                                               NC1054.2
-109500     IF       MOVE70 EQUAL TO 12345                               NC1054.2
+109500     IF       MOVE70 EQUAL TO 13345                               NC1054.2
 109600              PERFORM PASS                                        NC1054.2
 109700              ELSE                                                NC1054.2
 109800              GO TO MOVE-FAIL-F1-30.                              NC1054.2
-109900*    NOTE, TO AUDIT SYNC OPTION.                                  NC1054.2
+109900*                                                                         
 110000     GO TO    MOVE-WRITE-F1-30.                                   NC1054.2
 110100 MOVE-DELETE-F1-30.                                               NC1054.2
 110200     PERFORM  DE-LETE.                                            NC1054.2
 110300     GO TO    MOVE-WRITE-F1-30.                                   NC1054.2
 110400 MOVE-FAIL-F1-30.                                                 NC1054.2
 110500     MOVE     MOVE70 TO COMPUTED-N.                               NC1054.2
-110600     MOVE     12345 TO CORRECT-N.                                 NC1054.2
+110600     MOVE     13345 TO CORRECT-N.                                 NC1054.2
 110700     PERFORM  FAIL.                                               NC1054.2
 110800 MOVE-WRITE-F1-30.                                                NC1054.2
 110900     MOVE "MISC MOVE           " TO FEATURE.                      NC1054.2
@@ -1519,7 +1519,7 @@
 152100     MOVE ALPHANUMERIC-XN-00049 TO AE-0001.                       NC1054.2
 152200 MOVE-TEST-F1-49-1.                                               NC1054.2
 152300     MOVE AE-0001 TO AE-0002.                                     NC1054.2
-152400     IF AE-0002 EQUAL TO "AB0CD EBG"                              NC1054.2
+152400     IF AE-0002 EQUAL TO "AB0CD EFG"                              NC1054.2
 152500         PERFORM PASS                                             NC1054.2
 152600         GO TO MOVE-WRITE-F1-49.                                  NC1054.2
 152700     GO TO MOVE-FAIL-F1-49.                                       NC1054.2
@@ -1528,7 +1528,7 @@
 153000     GO TO MOVE-WRITE-F1-49.                                      NC1054.2
 153100 MOVE-FAIL-F1-49.                                                 NC1054.2
 153200     MOVE AE-0002 TO COMPUTED-A.                                  NC1054.2
-153300     MOVE "AB0CD EBG" TO CORRECT-A.                               NC1054.2
+153300     MOVE "AB0CD EFG" TO CORRECT-A.                               NC1054.2
 153400     PERFORM FAIL.                                                NC1054.2
 153500 MOVE-WRITE-F1-49.                                                NC1054.2
 153600     MOVE "MOVE-TEST-F1-49" TO PAR-NAME.                          NC1054.2
@@ -2209,7 +2209,7 @@
 221100 MOVE-TEST-F1-84-0.                                               NC1054.2
 221200     MOVE 019823 TO AE-0002.                                      NC1054.2
 221300 MOVE-TEST-F1-84-1.                                               NC1054.2
-221400     IF GRP-AE-0002 EQUAL TO "01098 23 "                          NC1054.2
+221400     IF GRP-AE-0002 EQUAL TO "01098 22 "                          NC1054.2
 221500         PERFORM PASS                                             NC1054.2
 221600         GO TO MOVE-WRITE-F1-84.                                  NC1054.2
 221700     GO TO MOVE-FAIL-F1-84.                                       NC1054.2
@@ -2217,7 +2217,7 @@
 221900     PERFORM DE-LETE.                                             NC1054.2
 222000     GO TO MOVE-WRITE-F1-84.                                      NC1054.2
 222100 MOVE-FAIL-F1-84.                                                 NC1054.2
-222200     MOVE "01098 23 " TO CORRECT-A.                               NC1054.2
+222200     MOVE "01098 22 " TO CORRECT-A.                               NC1054.2
 222300     MOVE GRP-AE-0002 TO COMPUTED-A.                              NC1054.2
 222400     PERFORM FAIL.                                                NC1054.2
 222500 MOVE-WRITE-F1-84.                                                NC1054.2
@@ -2351,11 +2351,11 @@
 235300 MOVE-TEST-F1-92-0.                                               NC1054.2
 235400     MOVE    SPOS-LIT1 TO ALPHA-LIT.                              NC1054.2
 235500 MOVE-TEST-F1-92-1.                                               NC1054.2
-235600     IF      ALPHA-LIT EQUAL TO "67666"                           NC1054.2
+235600     IF      ALPHA-LIT EQUAL TO "60666"                           NC1054.2
 235700              PERFORM PASS                                        NC1054.2
 235800              GO TO MOVE-WRITE-F1-92.                             NC1054.2
 235900     MOVE ALPHA-LIT TO COMPUTED-A.                                NC1054.2
-236000     MOVE "67666" TO CORRECT-A.                                   NC1054.2
+236000     MOVE "60666" TO CORRECT-A.                                   NC1054.2
 236100     MOVE "SIGN SHOULD NOT BE MOVED" TO RE-MARK.                  NC1054.2
 236200     PERFORM FAIL.                                                NC1054.2
 236300     GO TO MOVE-WRITE-F1-92.                                      NC1054.2
@@ -2389,11 +2389,11 @@
 239100     MOVE GRP-NUMERIC-99 TO RECEIVE-1  RECEIVE-4  RECEIVE-5       NC1054.2
 239200         RECEIVE-6.                                               NC1054.2
 239300 MOVE-TEST-F1-94-1.                                               NC1054.2
-239400     IF RECEIVE-1 EQUAL TO "99  L"                                NC1054.2
+239400     IF RECEIVE-1 EQUAL TO "99   "                                NC1054.2
 239500         PERFORM PASS                                             NC1054.2
 239600         GO TO MOVE-WRITE-F1-94.                                  NC1054.2
 239700     MOVE RECEIVE-1 TO COMPUTED-A.                                NC1054.2
-239800     MOVE "99  L" TO CORRECT-A.                                   NC1054.2
+239800     MOVE "99   " TO CORRECT-A.                                   NC1054.2
 239900     PERFORM FAIL.                                                NC1054.2
 240000     GO TO MOVE-WRITE-F1-94.                                      NC1054.2
 240100 MOVE-DELETE-F1-94.                                               NC1054.2
@@ -2620,10 +2620,10 @@
 262200 MOVE-TEST-F1-108-0.                                              NC1054.2
 262300     MOVE WRK-DS-10V00 TO WRK-CS-01V00.                           NC1054.2
 262400 MOVE-TEST-F1-108-1.                                              NC1054.2
-262500     IF WRK-CS-01V00 EQUAL TO 1                                   NC1054.2
+262500     IF WRK-CS-01V00 EQUAL TO 5                                   NC1054.2
 262600         PERFORM PASS                                             NC1054.2
 262700         GO TO MOVE-WRITE-F1-108.                                 NC1054.2
-262800     MOVE 1 TO CORRECT-N.                                         NC1054.2
+262800     MOVE 5 TO CORRECT-N.                                         NC1054.2
 262900     MOVE WRK-CS-01V00 TO COMPUTED-N.                             NC1054.2
 263000     PERFORM FAIL.                                                NC1054.2
 263100     GO TO MOVE-WRITE-F1-108.                                     NC1054.2
@@ -2795,11 +2795,11 @@
 279700     MOVE     SNEG-LIT1 TO CS-05V00-001.                          NC1054.2
 279800     MOVE     CS-05V00-001 TO CU-05V00-001.                       NC1054.2
 279900 MOVE-TEST-F1-118-1.                                              NC1054.2
-280000     IF      CU-05V00-001 EQUAL TO 70715                          NC1054.2
+280000     IF      CU-05V00-001 EQUAL TO 70117                          NC1054.2
 280100             PERFORM PASS                                         NC1054.2
 280200             GO TO MOVE-WRITE-F1-118.                             NC1054.2
 280300     MOVE CU-05V00-001 TO COMPUTED-18V0.                          NC1054.2
-280400     MOVE     70715 TO CORRECT-18V0.                              NC1054.2
+280400     MOVE     70117 TO CORRECT-18V0.                              NC1054.2
 280500     PERFORM FAIL.                                                NC1054.2
 280600     GO TO MOVE-WRITE-F1-118.                                     NC1054.2
 280700 MOVE-DELETE-F1-118.                                              NC1054.2
@@ -2813,11 +2813,11 @@
 281500     MOVE     SNEG-LIT2 TO CS-05V00-001.                          NC1054.2
 281600     MOVE     CS-05V00-001 TO CU-05V00-001.                       NC1054.2
 281700 MOVE-TEST-F1-119-1.                                              NC1054.2
-281800     IF      CU-05V00-001 EQUAL TO 70818                          NC1054.2
+281800     IF      CU-05V00-001 EQUAL TO 70718                          NC1054.2
 281900             PERFORM PASS                                         NC1054.2
 282000             GO TO MOVE-WRITE-F1-119.                             NC1054.2
 282100     MOVE CU-05V00-001 TO COMPUTED-18V0.                          NC1054.2
-282200     MOVE     70818 TO CORRECT-18V0.                              NC1054.2
+282200     MOVE     70718 TO CORRECT-18V0.                              NC1054.2
 282300     PERFORM FAIL.                                                NC1054.2
 282400     GO TO MOVE-WRITE-F1-119.                                     NC1054.2
 282500 MOVE-DELETE-F1-119.                                              NC1054.2

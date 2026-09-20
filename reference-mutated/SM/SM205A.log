@@ -17,20 +17,20 @@ TEST RESULT OF SM205A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  COPY SD REPLACING    FAIL* COPY-TEST-2                                                                                 
                                                                                                                         
                                      COMPUTED=  000009000000900008                                                      
-                                     CORRECT =  000009002000900008                                                      
+                                     CORRECT =  000009000600900008                                                      
                                                                                                                         
- COPY SD REPLACING    FAIL* COPY-TEST-3                                                                                 
-                                                                                                                        
-                                     COMPUTED=  000106001000200002                                                      
-                                     CORRECT =  000006001000200002                                                      
-                                                                                                                        
+ COPY SD REPLACING    PASS  COPY-TEST-3                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-4                                                                                 
  COPY SD REPLACING    FAIL* COPY-TEST-5                                                                                 
                                                                                                                         
                                      COMPUTED=  000201001000200002                                                      
-                                     CORRECT =  000201001000200702                                                      
+                                     CORRECT =  000201001000400002                                                      
                                                                                                                         
- COPY SD REPLACING    PASS  COPY-TEST-6                                                                                 
+ COPY SD REPLACING    FAIL* COPY-TEST-6                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000201002000100001                                                      
+                                     CORRECT =  000211002000100001                                                      
+                                                                                                                        
  COPY SD REPLACING    PASS  COPY-TEST-7                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-8                                                                                 
  COPY SD REPLACING    PASS  COPY-TEST-9                                                                                 

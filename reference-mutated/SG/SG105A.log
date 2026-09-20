@@ -16,25 +16,21 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG105A
                                                           THE COLLATING SEQUENCE                                        
                                                           RENDERS TESTS 1 THRU 8                                        
                                                           UNNECESSARY.                                                  
- SORT - 8 ASC. KEYS   PASS  SORT-TEST-9                                                                                 
- SORT - 8 ASC. KEYS   FAIL* SORT-TEST-10                                                                                
+ SORT - 8 ASC. KEYS   FAIL* SORT-TEST-9                                                                                 
                                                                                                                         
-                                     COMPUTED=          X                                                               
-                                     CORRECT =         IX                                                               
+                                     COMPUTED=     X                                                                    
+                                     CORRECT =  5  X                                                                    
                                                                                                                         
- SORT - 8 ASC. KEYS   FAIL* SORT-TEST-11                                                                                
-                                                                                                                        
-                                     COMPUTED=  000000418.000000000                                                     
-                                     CORRECT =  000000419.000000000                                                     
-                                                                                                                        
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-10                                                                                
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-11                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-12                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-13                                                                                
- SORT - 8 ASC. KEYS   PASS  SORT-TEST-14                                                                                
- SORT - 8 ASC. KEYS   FAIL* SORT-TEST-15                                                                                
+ SORT - 8 ASC. KEYS   FAIL* SORT-TEST-14                                                                                
                                                                                                                         
-                                     COMPUTED=  000000000000000000                                                      
-                                     CORRECT =  000000000000000000                                                      
+                                     COMPUTED= Z                                                                        
+                                     CORRECT = Z     0                                                                  
                                                                                                                         
+ SORT - 8 ASC. KEYS   PASS  SORT-TEST-15                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-16                                                                                
  SORT - 8 ASC. KEYS   PASS  SORT-TEST-17                                                                                
  ***********************************************************************************************************************
@@ -44,8 +40,8 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG105A
                                                                                                                         
                                                     END OF TEST-  SG105A    NTIS DISTRIBUTION COBOL 74                  
                                                                                                                         
-                                                    006 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
-                                                    003 TEST(S) FAILED                                                  
+                                                    007 OF 009  TESTS WERE EXECUTED SUCCESSFULLY                        
+                                                    002 TEST(S) FAILED                                                  
                                                     NO  TEST(S) DELETED                                                 
                                                     NO  TEST(S) REQUIRE INSPECTION                                      
  FOR OFFICIAL USE ONLY            ON-SITE VALIDATION, NATIONAL INSTITUTE OF STD & TECH.                   COPYRIGHT 1974

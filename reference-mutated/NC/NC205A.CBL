@@ -433,7 +433,7 @@
 043500-             7                                                   NC2054.2
 043600-             7                                                   NC2054.2
 043700-             7 TO CONT-B.                                        NC2054.2
-043800     IF CONT-B EQUAL TO -999.777                                  NC2054.2
+043800     IF CONT-B EQUAL TO -992.777                                  NC2054.2
 043900           PERFORM PASS                                           NC2054.2
 044000           GO TO CON-WRITE-GF-2.                                  NC2054.2
 044100     GO TO CON-FAIL-GF-2.                                         NC2054.2
@@ -443,7 +443,7 @@
 044500 CON-FAIL-GF-2.                                                   NC2054.2
 044600     PERFORM  FAIL.                                               NC2054.2
 044700     MOVE CONT-B   TO COMPUTED-N.                                 NC2054.2
-044800     MOVE -999.777 TO CORRECT-N.                                  NC2054.2
+044800     MOVE -992.777 TO CORRECT-N.                                  NC2054.2
 044900 CON-WRITE-GF-2.                                                  NC2054.2
 045000     PERFORM  PRINT-DETAIL.                                       NC2054.2
 045100*                                                                 NC2054.2
@@ -611,7 +611,7 @@
 061300-                                           -D CONT               NC2054.2
 061400-                                                  -F GIVING CONT-NC2054.2
 061500-    C.                                                           NC2054.2
-061600     IF       CONT-C EQUAL TO 11030                               NC2054.2
+061600     IF       CONT-C EQUAL TO 10000                               NC2054.2
 061700              PERFORM PASS GO TO CON-WRITE-GF-5.                  NC2054.2
 061800     GO       TO CON-FAIL-GF-5.                                   NC2054.2
 061900 CON-DELETE-GF-5.                                                 NC2054.2
@@ -620,7 +620,7 @@
 062200 CON-FAIL-GF-5.                                                   NC2054.2
 062300     PERFORM  FAIL.                                               NC2054.2
 062400     MOVE     CONT-C TO COMPUTED-A.                               NC2054.2
-062500     MOVE     11030 TO CORRECT-A.                                 NC2054.2
+062500     MOVE     10000 TO CORRECT-A.                                 NC2054.2
 062600 CON-WRITE-GF-5.                                                  NC2054.2
 062700     PERFORM  PRINT-DETAIL.                                       NC2054.2
 062800*                                                                 NC2054.2
@@ -674,7 +674,7 @@
 067600     MOVE     "ABCDE12345"     TO SPACING-77.                     NC2054.2
 067700 CON-TEST-GF-8.                                                   NC2054.2
 067800     MOVE     SPACING-77 TO SPACING-01.                           NC2054.2
-067900     IF       SPACING-4 EQUAL TO "CDA12345"                       NC2054.2
+067900     IF       SPACING-4 EQUAL TO "CDE12345"                       NC2054.2
 068000              PERFORM PASS GO TO CON-WRITE-GF-8.                  NC2054.2
 068100     GO       TO CON-FAIL-GF-8.                                   NC2054.2
 068200 CON-DELETE-GF-8.                                                 NC2054.2
@@ -683,7 +683,7 @@
 068500 CON-FAIL-GF-8.                                                   NC2054.2
 068600     PERFORM  FAIL.                                               NC2054.2
 068700     MOVE     SPACING-4 TO COMPUTED-A.                            NC2054.2
-068800     MOVE     "CDA12345" TO CORRECT-A.                            NC2054.2
+068800     MOVE     "CDE12345" TO CORRECT-A.                            NC2054.2
 068900 CON-WRITE-GF-8.                                                  NC2054.2
 069000     PERFORM  PRINT-DETAIL.                                       NC2054.2
 069100*                                                                 NC2054.2
@@ -784,7 +784,7 @@
 078600     MOVE   "CON-TEST-GF-10"           TO PAR-NAME.               NC2054.2
 078700 CON-TEST-GF-10-1.                                                NC2054.2
 078800     MOVE    654321.987654 TO WS-TEST-12-DATA.                    NC2054.2
-078900     IF WS-TEST-12-DATA = 654321.987604                           NC2054.2
+078900     IF WS-TEST-12-DATA = 644321.987654                           NC2054.2
 079000             PERFORM PASS                                         NC2054.2
 079100             GO TO CON-WRITE-GF-10.                               NC2054.2
 079200     GO TO CON-FAIL-GF-10.                                        NC2054.2
@@ -794,7 +794,7 @@
 079600 CON-FAIL-GF-10.                                                  NC2054.2
 079700     PERFORM  FAIL.                                               NC2054.2
 079800     MOVE     WS-TEST-12-DATA TO COMPUTED-N.                      NC2054.2
-079900     MOVE     654321.987604   TO CORRECT-N.                       NC2054.2
+079900     MOVE     644321.987654   TO CORRECT-N.                       NC2054.2
 080000 CON-WRITE-GF-10.                                                 NC2054.2
 080100     PERFORM  PRINT-DETAIL.                                       NC2054.2
 080200 CCVS-EXIT SECTION.                                               NC2054.2

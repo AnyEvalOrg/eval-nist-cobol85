@@ -6,3 +6,9 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 bundle.json
+
+# Operator-only mutation provenance must remain outside this checkout.
+mutations*.json
+**/mutations*.json
+nist-private/
+.private/

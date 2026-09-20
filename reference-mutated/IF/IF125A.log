@@ -13,7 +13,11 @@ TEST RESULT OF IF125A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- NUMVAL Function      PASS  F-NUMVAL-01                                                                                 
+ NUMVAL Function      FAIL* F-NUMVAL-01                                                                                 
+                                                                                                                        
+                                     COMPUTED=  000000009.000000000                                                     
+                                     CORRECT =  000000005.000000000  See ref. A-58 2.29                                 
+                                                                                                                        
  NUMVAL Function      PASS  F-NUMVAL-02                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-03                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-04                                                                                 
@@ -25,22 +29,18 @@ TEST RESULT OF IF125A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  NUMVAL Function      FAIL* F-NUMVAL-10                                                                                 
                                                                                                                         
                                      COMPUTED=  000000004.000000000                                                     
-                                     CORRECT =  000000003.000000000  See ref. A-58 2.29                                 
+                                     CORRECT =  000000009.000000000  See ref. A-58 2.29                                 
                                                                                                                         
  NUMVAL Function      FAIL* F-NUMVAL-11                                                                                 
                                                                                                                         
                                      COMPUTED=  000000203.000000000                                                     
-                                     CORRECT =  000000283.000000000  See ref. A-58 2.29                                 
+                                     CORRECT =  000000293.000000000  See ref. A-58 2.29                                 
                                                                                                                         
  NUMVAL Function      PASS  F-NUMVAL-12                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-13                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-14                                                                                 
  NUMVAL Function      PASS  F-NUMVAL-15                                                                                 
- NUMVAL Function      PASS  F-NUMVAL-16                                                                                 
- NUMVAL Function      PASS  F-NUMVAL-17                                                                                 
- NUMVAL Function      PASS  F-NUMVAL-18                                                                                 
- NUMVAL Function      PASS  F-NUMVAL-19                                                                                 
- NUMVAL Function      FAIL* F-NUMVAL-20                                                                                                                                                                                                         
+ NUMVAL Function      PASS  F-NUMVAL-16                                                                                                                                                                                                         
                                        OFFICIAL COBOL COMPILER VALIDATION SYSTEM                                        
                                                                                                                         
                                         CCVS85 4.2  COPY - NOT FOR DISTRIBUTION                                         
@@ -54,10 +54,10 @@ TEST RESULT OF IF125A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
  ***********************************************************************************************************************
-                                                                                                                        
-                                     COMPUTED=  000000010.000000000                                                     
-                                     CORRECT =  000000012.000000000  See ref. A-58 2.29                                 
-                                                                                                                        
+ NUMVAL Function      PASS  F-NUMVAL-17                                                                                 
+ NUMVAL Function      PASS  F-NUMVAL-18                                                                                 
+ NUMVAL Function      PASS  F-NUMVAL-19                                                                                 
+ NUMVAL Function      PASS  F-NUMVAL-20                                                                                 
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

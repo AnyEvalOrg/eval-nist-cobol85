@@ -21,14 +21,14 @@ CCVS74 NCC  COPY, NOT FOR DISTRIBUTION.             TEST RESULTS SET-  SG202A
  ALTER NOT CALLD      FAIL* TEST-2                                                                                      
                                                                                                                         
                                      COMPUTED= B                                                                        
-                                     CORRECT = T                                                                        
+                                     CORRECT = E                                                                        
                                                                                                                         
- PERFORM OVER/FIX     FAIL* TEST-3                                                                                      
+ PERFORM OVER/FIX     PASS  TEST-3                                                                                      
+ PERFORM FIX/OVER     FAIL* TEST-4                                                                                      
                                                                                                                         
-                                     COMPUTED= AB                                                                       
-                                     CORRECT = EB                                                                       
+                                     COMPUTED= XY                                                                       
+                                     CORRECT = X7                                                                       
                                                                                                                         
- PERFORM FIX/OVER     PASS  TEST-4                                                                                      
  FALL THRU IMPLIED    PASS  TEST-5                                                                                      
  ***********************************************************************************************************************
                                                                                                                         

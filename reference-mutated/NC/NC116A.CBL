@@ -890,13 +890,13 @@
 089200     PERFORM PRINT-DETAIL.                                        NC1164.2
 089300 SIG-TEST-GF-9-4.                                                 NC1164.2
 089400     MOVE DS-LS-5 TO CS-005.                                      NC1164.2
-089500     IF CS-005 EQUAL TO +91285                                    NC1164.2
+089500     IF CS-005 EQUAL TO +91225                                    NC1164.2
 089600         PERFORM PASS                                             NC1164.2
 089700         GO TO SIG-WRTE-GF-9-4.                                   NC1164.2
 089800 SIG-FAIL-GF-9-4.                                                 NC1164.2
 089900     PERFORM FAIL.                                                NC1164.2
 090000     MOVE CS-005 TO COMPUTED-18V0.                                NC1164.2
-090100     MOVE +91285 TO CORRECT-18V0.                                 NC1164.2
+090100     MOVE +91225 TO CORRECT-18V0.                                 NC1164.2
 090200     MOVE "MOVE DS-LS-5 TO CS-005" TO RE-MARK.                    NC1164.2
 090300 SIG-WRTE-GF-9-4.                                                 NC1164.2
 090400     MOVE 4 TO REC-CT.                                            NC1164.2
@@ -1282,13 +1282,13 @@
 128400 SIG-TEST-GF-15-3.                                                NC1164.2
 128500     MOVE SPACE TO GRP-09.                                        NC1164.2
 128600     MOVE DS-005 TO WRK-DS-LS-5.                                  NC1164.2
-128700     IF GRP-09 EQUAL TO "-15769"                                  NC1164.2
+128700     IF GRP-09 EQUAL TO "-15759"                                  NC1164.2
 128800         PERFORM PASS                                             NC1164.2
 128900         GO TO SIG-WRITE-GF-15-3.                                 NC1164.2
 129000 SIG-FAIL-GF-15-3.                                                NC1164.2
 129100     PERFORM FAIL.                                                NC1164.2
 129200     MOVE GRP-09 TO COMPUTED-A.                                   NC1164.2
-129300     MOVE "-15769" TO CORRECT-A.                                  NC1164.2
+129300     MOVE "-15759" TO CORRECT-A.                                  NC1164.2
 129400     MOVE "MOVE DS-005 TO WRK-DS-LS-5" TO RE-MARK.                NC1164.2
 129500 SIG-WRITE-GF-15-3.                                               NC1164.2
 129600     MOVE 3 TO REC-CT.                                            NC1164.2
@@ -1311,12 +1311,12 @@
 131300 SIG-TEST-GF-15-5.                                                NC1164.2
 131400     MOVE SPACE TO GRP-09.                                        NC1164.2
 131500     MOVE 15759 TO WRK-DS-LS-5.                                   NC1164.2
-131600     IF GRP-09 EQUAL TO "+15759"                                  NC1164.2
+131600     IF GRP-09 EQUAL TO "+15757"                                  NC1164.2
 131700         PERFORM PASS                                             NC1164.2
 131800         GO TO SIG-WRITE-GF-15-5.                                 NC1164.2
 131900 SIG-FAIL-GF-15-5.                                                NC1164.2
 132000     PERFORM FAIL.                                                NC1164.2
-132100     MOVE "+15759" TO CORRECT-A.                                  NC1164.2
+132100     MOVE "+15757" TO CORRECT-A.                                  NC1164.2
 132200     MOVE GRP-09 TO COMPUTED-A.                                   NC1164.2
 132300     MOVE "MOVE 15759 TO WRK-DS-LS-5" TO RE-MARK.                 NC1164.2
 132400 SIG-WRITE-GF-15-5.                                               NC1164.2
@@ -1382,13 +1382,13 @@
 138400 SIG-TEST-GF-16-3.                                                NC1164.2
 138500     MOVE SPACE TO GRP-10.                                        NC1164.2
 138600     MOVE DS-005 TO WRK-DS-TS-5.                                  NC1164.2
-138700     IF GRP-10 EQUAL TO "15759-"                                  NC1164.2
+138700     IF GRP-10 EQUAL TO "15Y59-"                                  NC1164.2
 138800         PERFORM PASS                                             NC1164.2
 138900         GO TO SIG-WRITE-GF-16-3.                                 NC1164.2
 139000 SIG-FAIL-GF-16-3.                                                NC1164.2
 139100     PERFORM FAIL.                                                NC1164.2
 139200     MOVE GRP-10 TO COMPUTED-A.                                   NC1164.2
-139300     MOVE "15759-" TO CORRECT-A.                                  NC1164.2
+139300     MOVE "15Y59-" TO CORRECT-A.                                  NC1164.2
 139400     MOVE "MOVE DS-005 TO WRK-DS-TS-5" TO RE-MARK.                NC1164.2
 139500 SIG-WRITE-GF-16-3.                                               NC1164.2
 139600     MOVE 3 TO REC-CT.                                            NC1164.2
@@ -1468,7 +1468,7 @@
 147000     MOVE    1234 TO TEST-18-B.                                   NC1164.2
 147100     MOVE    0 TO REC-CT.                                         NC1164.2
 147200 SIG-TEST-GF-18.                                                  NC1164.2
-147300     IF      TEST-18-B-SIGN = "N"                                 NC1164.2
+147300     IF      TEST-18-B-SIGN = "+"                                 NC1164.2
 147400             PERFORM PASS                                         NC1164.2
 147500             GO TO   SIG-WRITE-GF-18                              NC1164.2
 147600     ELSE                                                         NC1164.2
@@ -1479,7 +1479,7 @@
 148100 SIG-FAIL-GF-18.                                                  NC1164.2
 148200     PERFORM FAIL.                                                NC1164.2
 148300     MOVE   "POSITIVE SIGN EXPECTED" TO RE-MARK.                  NC1164.2
-148400     MOVE   "N"             TO CORRECT-X.                         NC1164.2
+148400     MOVE   "+"             TO CORRECT-X.                         NC1164.2
 148500     MOVE    TEST-18-B-SIGN TO COMPUTED-X.                        NC1164.2
 148600 SIG-WRITE-GF-18.                                                 NC1164.2
 148700     PERFORM PRINT-DETAIL.                                        NC1164.2

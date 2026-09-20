@@ -539,10 +539,10 @@
 054100     MOVE    2 TO CORRECT-N.                                      NC2184.2
 054200 UST-WRITE-GF-2-3.                                                NC2184.2
 054300     PERFORM PRINT-DETAIL.                                        NC2184.2
-054400*                                                                 NC2184.2
+054400*                                                                         
 054500 UST-TEST-GF-2-4.                                                 NC2184.2
 054600     ADD     1 TO REC-CT.                                         NC2184.2
-054700     IF      ID10-DU-2V0 = 4                                      NC2184.2
+054700     IF      ID10-DU-2V0 = 2                                      NC2184.2
 054800             PERFORM PASS                                         NC2184.2
 054900             GO TO UST-WRITE-GF-2-4                               NC2184.2
 055000     ELSE                                                         NC2184.2
@@ -553,13 +553,13 @@
 055500 UST-FAIL-GF-2-4.                                                 NC2184.2
 055600     PERFORM FAIL                                                 NC2184.2
 055700     MOVE    ID10-DU-2V0 TO COMPUTED-N                            NC2184.2
-055800     MOVE    4 TO CORRECT-N.                                      NC2184.2
+055800     MOVE    2 TO CORRECT-N.                                      NC2184.2
 055900 UST-WRITE-GF-2-4.                                                NC2184.2
 056000     PERFORM PRINT-DETAIL.                                        NC2184.2
-056100*                                                                 NC2184.2
+056100*                                                                         
 056200 UST-TEST-GF-2-5.                                                 NC2184.2
 056300     ADD     1 TO REC-CT.                                         NC2184.2
-056400     IF      ID11-DU-2V0 = 5                                      NC2184.2
+056400     IF      ID11-DU-2V0 = 6                                      NC2184.2
 056500             PERFORM PASS                                         NC2184.2
 056600             GO TO UST-WRITE-GF-2-5                               NC2184.2
 056700     ELSE                                                         NC2184.2
@@ -570,7 +570,7 @@
 057200 UST-FAIL-GF-2-5.                                                 NC2184.2
 057300     PERFORM FAIL                                                 NC2184.2
 057400     MOVE    ID11-DU-2V0 TO COMPUTED-N                            NC2184.2
-057500     MOVE    5 TO CORRECT-N.                                      NC2184.2
+057500     MOVE    6 TO CORRECT-N.                                      NC2184.2
 057600 UST-WRITE-GF-2-5.                                                NC2184.2
 057700     PERFORM PRINT-DETAIL.                                        NC2184.2
 057800*                                                                 NC2184.2
@@ -722,10 +722,10 @@
 072400     MOVE    " 12" TO CORRECT-A.                                  NC2184.2
 072500 UST-WRITE-GF-4-1.                                                NC2184.2
 072600     PERFORM PRINT-DETAIL.                                        NC2184.2
-072700*                                                                 NC2184.2
+072700*                                                                         
 072800 UST-TEST-GF-4-2.                                                 NC2184.2
 072900     ADD     1 TO REC-CT.                                         NC2184.2
-073000     IF      ID5-XN-4 = "0   "                                    NC2184.2
+073000     IF      ID5-XN-4 = "0  9"                                    NC2184.2
 073100             PERFORM PASS                                         NC2184.2
 073200             GO TO UST-WRITE-GF-4-2                               NC2184.2
 073300     ELSE                                                         NC2184.2
@@ -736,7 +736,7 @@
 073800 UST-FAIL-GF-4-2.                                                 NC2184.2
 073900     PERFORM FAIL                                                 NC2184.2
 074000     MOVE    ID5-XN-4 TO COMPUTED-A                               NC2184.2
-074100     MOVE "0   " TO CORRECT-A.                                    NC2184.2
+074100     MOVE "0  9" TO CORRECT-A.                                    NC2184.2
 074200 UST-WRITE-GF-4-2.                                                NC2184.2
 074300     PERFORM PRINT-DETAIL.                                        NC2184.2
 074400*                                                                 NC2184.2
@@ -1100,7 +1100,7 @@
 110200*                                                                 NC2184.2
 110300 UST-TEST-GF-7-5.                                                 NC2184.2
 110400     ADD     1 TO REC-CT.                                         NC2184.2
-110500     IF      ID11-DU-2V0 = 6                                      NC2184.2
+110500     IF      ID11-DU-2V0 = 1                                      NC2184.2
 110600             PERFORM PASS                                         NC2184.2
 110700             GO TO UST-WRITE-GF-7-5                               NC2184.2
 110800     ELSE                                                         NC2184.2
@@ -1111,7 +1111,7 @@
 111300 UST-FAIL-GF-7-5.                                                 NC2184.2
 111400     PERFORM FAIL                                                 NC2184.2
 111500     MOVE    ID11-DU-2V0 TO COMPUTED-N                            NC2184.2
-111600     MOVE    6 TO CORRECT-N.                                      NC2184.2
+111600     MOVE    1 TO CORRECT-N.                                      NC2184.2
 111700 UST-WRITE-GF-7-5.                                                NC2184.2
 111800     PERFORM PRINT-DETAIL.                                        NC2184.2
 111900*                                                                 NC2184.2
@@ -1140,7 +1140,7 @@
 114200     GO      TO UST-INIT-GF-9.                                    NC2184.2
 114300*                                                                 NC2184.2
 114400 UST-TEST-GF-8-1.                                                 NC2184.2
-114500     IF      ID4-DS-2V0 = +42                                     NC2184.2
+114500     IF      ID4-DS-2V0 = +12                                     NC2184.2
 114600             PERFORM PASS                                         NC2184.2
 114700             GO TO UST-WRITE-GF-8-1                               NC2184.2
 114800     ELSE                                                         NC2184.2
@@ -1151,7 +1151,7 @@
 115300 UST-FAIL-GF-8-1.                                                 NC2184.2
 115400     PERFORM FAIL                                                 NC2184.2
 115500     MOVE    ID4-DS-2V0 TO COMPUTED-N                             NC2184.2
-115600     MOVE    +42 TO CORRECT-N.                                    NC2184.2
+115600     MOVE    +12 TO CORRECT-N.                                    NC2184.2
 115700 UST-WRITE-GF-8-1.                                                NC2184.2
 115800     PERFORM PRINT-DETAIL.                                        NC2184.2
 115900*                                                                 NC2184.2
@@ -1389,7 +1389,7 @@
 139100*                                                                 NC2184.2
 139200 UST-TEST-GF-10-3.                                                NC2184.2
 139300     ADD     1 TO REC-CT.                                         NC2184.2
-139400     IF      ID6-DU-2V0 = 5                                       NC2184.2
+139400     IF      ID6-DU-2V0 = 2                                       NC2184.2
 139500             PERFORM PASS                                         NC2184.2
 139600             GO TO UST-WRITE-GF-10-3                              NC2184.2
 139700     ELSE                                                         NC2184.2
@@ -1400,7 +1400,7 @@
 140200 UST-FAIL-GF-10-3.                                                NC2184.2
 140300     PERFORM FAIL                                                 NC2184.2
 140400     MOVE    ID6-DU-2V0 TO COMPUTED-N                             NC2184.2
-140500     MOVE    5 TO CORRECT-N.                                      NC2184.2
+140500     MOVE    2 TO CORRECT-N.                                      NC2184.2
 140600 UST-WRITE-GF-10-3.                                               NC2184.2
 140700     PERFORM PRINT-DETAIL.                                        NC2184.2
 140800*                                                                 NC2184.2
@@ -1539,7 +1539,7 @@
 154100*                                                                 NC2184.2
 154200 UST-TEST-GF-13-2.                                                NC2184.2
 154300     ADD     1 TO REC-CT.                                         NC2184.2
-154400     IF      GRP4-XN-6 = "ABCDED"                                 NC2184.2
+154400     IF      GRP4-XN-6 = "ABCDE "                                 NC2184.2
 154500             PERFORM PASS                                         NC2184.2
 154600             GO TO UST-WRITE-GF-13-2                              NC2184.2
 154700     ELSE                                                         NC2184.2
@@ -1550,7 +1550,7 @@
 155200 UST-FAIL-GF-13-2.                                                NC2184.2
 155300     PERFORM FAIL                                                 NC2184.2
 155400     MOVE    GRP4-XN-6 TO COMPUTED-A                              NC2184.2
-155500     MOVE    "ABCDED" TO CORRECT-A.                               NC2184.2
+155500     MOVE    "ABCDE " TO CORRECT-A.                               NC2184.2
 155600 UST-WRITE-GF-13-2.                                               NC2184.2
 155700     PERFORM PRINT-DETAIL.                                        NC2184.2
 155800*                                                                 NC2184.2
@@ -1597,10 +1597,10 @@
 159900     MOVE    "ALL SPACES" TO CORRECT-A.                           NC2184.2
 160000 UST-WRITE-GF-14-2.                                               NC2184.2
 160100     PERFORM PRINT-DETAIL.                                        NC2184.2
-160200*                                                                 NC2184.2
+160200*                                                                         
 160300 UST-TEST-GF-14-3.                                                NC2184.2
 160400     ADD     1 TO REC-CT.                                         NC2184.2
-160500     IF      ID10-DU-2V0 = 7                                      NC2184.2
+160500     IF      ID10-DU-2V0 = 6                                      NC2184.2
 160600             PERFORM PASS                                         NC2184.2
 160700             GO TO UST-WRITE-GF-14-3                              NC2184.2
 160800     ELSE                                                         NC2184.2
@@ -1611,7 +1611,7 @@
 161300 UST-FAIL-GF-14-3.                                                NC2184.2
 161400     PERFORM FAIL                                                 NC2184.2
 161500     MOVE    ID10-DU-2V0 TO COMPUTED-N                            NC2184.2
-161600     MOVE    7 TO CORRECT-N.                                      NC2184.2
+161600     MOVE    6 TO CORRECT-N.                                      NC2184.2
 161700 UST-WRITE-GF-14-3.                                               NC2184.2
 161800     PERFORM PRINT-DETAIL.                                        NC2184.2
 161900*                                                                 NC2184.2
@@ -1641,10 +1641,10 @@
 164300     MOVE    "OVERFLOW SHOULD NOT HAVE OCCURED" TO RE-MARK.       NC2184.2
 164400 UST-WRITE-GF-15-1.                                               NC2184.2
 164500     PERFORM PRINT-DETAIL.                                        NC2184.2
-164600*                                                                 NC2184.2
+164600*                                                                         
 164700 UST-TEST-GF-15-2.                                                NC2184.2
 164800     ADD     1 TO REC-CT.                                         NC2184.2
-164900     IF      GRP4-XN-6 = "CDEF  "                                 NC2184.2
+164900     IF      GRP4-XN-6 = "CDEF C"                                 NC2184.2
 165000             PERFORM PASS                                         NC2184.2
 165100             GO TO UST-WRITE-GF-15-2                              NC2184.2
 165200     ELSE                                                         NC2184.2
@@ -1655,13 +1655,13 @@
 165700 UST-FAIL-GF-15-2.                                                NC2184.2
 165800     PERFORM FAIL                                                 NC2184.2
 165900     MOVE    GRP4-XN-6 TO COMPUTED-A                              NC2184.2
-166000     MOVE    "CDEF  " TO CORRECT-A.                               NC2184.2
+166000     MOVE    "CDEF C" TO CORRECT-A.                               NC2184.2
 166100 UST-WRITE-GF-15-2.                                               NC2184.2
 166200     PERFORM PRINT-DETAIL.                                        NC2184.2
 166300*                                                                 NC2184.2
 166400 UST-TEST-GF-15-3.                                                NC2184.2
 166500     ADD     1 TO REC-CT.                                         NC2184.2
-166600     IF      ID10-DU-2V0 = 3                                      NC2184.2
+166600     IF      ID10-DU-2V0 = 7                                      NC2184.2
 166700             PERFORM PASS                                         NC2184.2
 166800             GO TO UST-WRITE-GF-15-3                              NC2184.2
 166900     ELSE                                                         NC2184.2
@@ -1672,7 +1672,7 @@
 167400 UST-FAIL-GF-15-3.                                                NC2184.2
 167500     PERFORM FAIL                                                 NC2184.2
 167600     MOVE    ID10-DU-2V0 TO COMPUTED-N                            NC2184.2
-167700     MOVE    3 TO CORRECT-N.                                      NC2184.2
+167700     MOVE    7 TO CORRECT-N.                                      NC2184.2
 167800 UST-WRITE-GF-15-3.                                               NC2184.2
 167900     PERFORM PRINT-DETAIL.                                        NC2184.2
 168000*                                                                 NC2184.2
@@ -1699,7 +1699,7 @@
 170100     GO      TO UST-INIT-GF-17.                                   NC2184.2
 170200*                                                                 NC2184.2
 170300 UST-TEST-GF-16-1.                                                NC2184.2
-170400     IF      GRP4-XN-6 = "AB8DEF"                                 NC2184.2
+170400     IF      GRP4-XN-6 = "ABCDEF"                                 NC2184.2
 170500             PERFORM PASS                                         NC2184.2
 170600             GO TO UST-WRITE-GF-16-1                              NC2184.2
 170700     ELSE                                                         NC2184.2
@@ -1710,13 +1710,13 @@
 171200 UST-FAIL-GF-16-1.                                                NC2184.2
 171300     PERFORM FAIL                                                 NC2184.2
 171400     MOVE    GRP4-XN-6 TO COMPUTED-A                              NC2184.2
-171500     MOVE    "AB8DEF" TO CORRECT-A.                               NC2184.2
+171500     MOVE    "ABCDEF" TO CORRECT-A.                               NC2184.2
 171600 UST-WRITE-GF-16-1.                                               NC2184.2
 171700     PERFORM PRINT-DETAIL.                                        NC2184.2
-171800*                                                                 NC2184.2
+171800*                                                                         
 171900 UST-TEST-GF-16-2.                                                NC2184.2
 172000     ADD     1 TO REC-CT.                                         NC2184.2
-172100     IF      ID4C-XXXX = "****"                                   NC2184.2
+172100     IF      ID4C-XXXX = "*M**"                                   NC2184.2
 172200             PERFORM PASS                                         NC2184.2
 172300             GO TO UST-WRITE-GF-16-2                              NC2184.2
 172400     ELSE                                                         NC2184.2
@@ -1727,7 +1727,7 @@
 172900 UST-FAIL-GF-16-2.                                                NC2184.2
 173000     PERFORM FAIL                                                 NC2184.2
 173100     MOVE    ID4C-XXXX TO COMPUTED-A                              NC2184.2
-173200     MOVE    "****" TO CORRECT-A.                                 NC2184.2
+173200     MOVE    "*M**" TO CORRECT-A.                                 NC2184.2
 173300 UST-WRITE-GF-16-2.                                               NC2184.2
 173400     PERFORM PRINT-DETAIL.                                        NC2184.2
 173500*                                                                 NC2184.2
@@ -1825,7 +1825,7 @@
 182700*                                                                 NC2184.2
 182800 UST-TEST-GF-17-4.                                                NC2184.2
 182900     ADD     1 TO REC-CT.                                         NC2184.2
-183000     IF      ID10-DU-2V0 = 9                                      NC2184.2
+183000     IF      ID10-DU-2V0 = 4                                      NC2184.2
 183100             PERFORM PASS                                         NC2184.2
 183200             GO TO UST-WRITE-GF-17-4                              NC2184.2
 183300     ELSE                                                         NC2184.2
@@ -1836,7 +1836,7 @@
 183800 UST-FAIL-GF-17-4.                                                NC2184.2
 183900     PERFORM FAIL                                                 NC2184.2
 184000     MOVE    ID10-DU-2V0 TO COMPUTED-N                            NC2184.2
-184100     MOVE    9 TO CORRECT-N.                                      NC2184.2
+184100     MOVE    4 TO CORRECT-N.                                      NC2184.2
 184200 UST-WRITE-GF-17-4.                                               NC2184.2
 184300     PERFORM PRINT-DETAIL.                                        NC2184.2
 184400*                                                                 NC2184.2
@@ -2064,9 +2064,9 @@
 206600     PERFORM DE-LETE.                                             NC2184.2
 206700     PERFORM PRINT-DETAIL.                                        NC2184.2
 206800     GO      TO UST-INIT-GF-21.                                   NC2184.2
-206900*                                                                 NC2184.2
+206900*                                                                         
 207000 UST-TEST-GF-20-1.                                                NC2184.2
-207100     IF      GRP4-XN-6 = "ABCDEF"                                 NC2184.2
+207100     IF      GRP4-XN-6 = "ABCDEU"                                 NC2184.2
 207200             PERFORM PASS                                         NC2184.2
 207300             GO TO UST-WRITE-GF-20-1                              NC2184.2
 207400     ELSE                                                         NC2184.2
@@ -2077,7 +2077,7 @@
 207900 UST-FAIL-GF-20-1.                                                NC2184.2
 208000     PERFORM FAIL                                                 NC2184.2
 208100     MOVE    GRP4-XN-6 TO COMPUTED-A                              NC2184.2
-208200     MOVE    "ABCDEF" TO CORRECT-A.                               NC2184.2
+208200     MOVE    "ABCDEU" TO CORRECT-A.                               NC2184.2
 208300 UST-WRITE-GF-20-1.                                               NC2184.2
 208400     PERFORM PRINT-DETAIL.                                        NC2184.2
 208500*                                                                 NC2184.2
@@ -2097,10 +2097,10 @@
 209900     MOVE    "****" TO CORRECT-A.                                 NC2184.2
 210000 UST-WRITE-GF-20-2.                                               NC2184.2
 210100     PERFORM PRINT-DETAIL.                                        NC2184.2
-210200*                                                                 NC2184.2
+210200*                                                                         
 210300 UST-TEST-GF-20-3.                                                NC2184.2
 210400     ADD     1 TO REC-CT.                                         NC2184.2
-210500     IF      ID4D-X = "*"                                         NC2184.2
+210500     IF      ID4D-X = "B"                                         NC2184.2
 210600             PERFORM PASS                                         NC2184.2
 210700             GO TO UST-WRITE-GF-20-3                              NC2184.2
 210800     ELSE                                                         NC2184.2
@@ -2111,7 +2111,7 @@
 211300 UST-FAIL-GF-20-3.                                                NC2184.2
 211400     PERFORM FAIL                                                 NC2184.2
 211500     MOVE    ID4D-X TO COMPUTED-A                                 NC2184.2
-211600     MOVE    "*" TO CORRECT-A.                                    NC2184.2
+211600     MOVE    "B" TO CORRECT-A.                                    NC2184.2
 211700 UST-WRITE-GF-20-3.                                               NC2184.2
 211800     PERFORM PRINT-DETAIL.                                        NC2184.2
 211900*                                                                 NC2184.2
@@ -2441,10 +2441,10 @@
 244300     MOVE   "0   " TO CORRECT-A.                                  NC2184.2
 244400 UST-WRITE-GF-24-3.                                               NC2184.2
 244500     PERFORM PRINT-DETAIL.                                        NC2184.2
-244600*                                                                 NC2184.2
+244600*                                                                         
 244700 UST-TEST-GF-24-4.                                                NC2184.2
 244800     ADD     1 TO REC-CT.                                         NC2184.2
-244900     IF      ID6-DU-2V0 = 2                                       NC2184.2
+244900     IF      ID6-DU-2V0 = 5                                       NC2184.2
 245000             PERFORM PASS                                         NC2184.2
 245100             GO TO UST-WRITE-GF-24-4                              NC2184.2
 245200     ELSE                                                         NC2184.2
@@ -2455,7 +2455,7 @@
 245700 UST-FAIL-GF-24-4.                                                NC2184.2
 245800     PERFORM FAIL                                                 NC2184.2
 245900     MOVE    ID6-DU-2V0 TO COMPUTED-N                             NC2184.2
-246000     MOVE    2 TO CORRECT-N.                                      NC2184.2
+246000     MOVE    5 TO CORRECT-N.                                      NC2184.2
 246100 UST-WRITE-GF-24-4.                                               NC2184.2
 246200     PERFORM PRINT-DETAIL.                                        NC2184.2
 246300*                                                                 NC2184.2
@@ -2561,10 +2561,10 @@
 256300     PERFORM DE-LETE.                                             NC2184.2
 256400     PERFORM PRINT-DETAIL.                                        NC2184.2
 256500     GO      TO UST-INIT-GF-27.                                   NC2184.2
-256600*                                                                 NC2184.2
+256600*                                                                         
 256700 UST-TEST-GF-26-1.                                                NC2184.2
 256800     ADD     1 TO REC-CT.                                         NC2184.2
-256900     IF      GRP4-XN-6 = "ABCDEF"                                 NC2184.2
+256900     IF      GRP4-XN-6 = "ABCD9F"                                 NC2184.2
 257000             PERFORM PASS                                         NC2184.2
 257100             GO TO UST-WRITE-GF-26-1                              NC2184.2
 257200     ELSE                                                         NC2184.2
@@ -2575,7 +2575,7 @@
 257700 UST-FAIL-GF-26-1.                                                NC2184.2
 257800     PERFORM FAIL                                                 NC2184.2
 257900     MOVE    GRP4-XN-6 TO COMPUTED-A                              NC2184.2
-258000     MOVE   "ABCDEF" TO CORRECT-A.                                NC2184.2
+258000     MOVE   "ABCD9F" TO CORRECT-A.                                NC2184.2
 258100 UST-WRITE-GF-26-1.                                               NC2184.2
 258200     PERFORM PRINT-DETAIL.                                        NC2184.2
 258300*                                                                 NC2184.2
@@ -2685,7 +2685,7 @@
 268700*                                                                 NC2184.2
 268800 UST-TEST-GF-27-2.                                                NC2184.2
 268900     ADD     1 TO REC-CT.                                         NC2184.2
-269000     IF      ID5-XN-4 = "V   "                                    NC2184.2
+269000     IF      ID5-XN-4 = "0   "                                    NC2184.2
 269100             PERFORM PASS                                         NC2184.2
 269200             GO TO UST-WRITE-GF-27-2                              NC2184.2
 269300     ELSE                                                         NC2184.2
@@ -2696,7 +2696,7 @@
 269800 UST-FAIL-GF-27-2.                                                NC2184.2
 269900     PERFORM FAIL                                                 NC2184.2
 270000     MOVE    ID5-XN-4 TO COMPUTED-A                               NC2184.2
-270100     MOVE   "V   " TO CORRECT-A.                                  NC2184.2
+270100     MOVE   "0   " TO CORRECT-A.                                  NC2184.2
 270200 UST-WRITE-GF-27-2.                                               NC2184.2
 270300     PERFORM PRINT-DETAIL.                                        NC2184.2
 270400*                                                                 NC2184.2
@@ -2829,7 +2829,7 @@
 283100     PERFORM DE-LETE.                                             NC2184.2
 283200     PERFORM PRINT-DETAIL.                                        NC2184.2
 283300     GO TO   UST-INIT-GF-30.                                      NC2184.2
-283400*                                                                 NC2184.2
+283400*                                                                         
 283500 UST-TEST-GF-29-1.                                                NC2184.2
 283600     MOVE   "UST-TEST-GF-29-1" TO PAR-NAME.                       NC2184.2
 283700     ADD     1 TO REC-CT.                                         NC2184.2
@@ -2884,7 +2884,7 @@
 288600*                                                                 NC2184.2
 288700 UST-TEST-GF-29-4.                                                NC2184.2
 288800     ADD     1 TO REC-CT.                                         NC2184.2
-288900     IF      ID10-DU-2V0 = 3                                      NC2184.2
+288900     IF      ID10-DU-2V0 = 4                                      NC2184.2
 289000             PERFORM PASS                                         NC2184.2
 289100             GO TO UST-WRITE-GF-29-4                              NC2184.2
 289200     ELSE                                                         NC2184.2
@@ -2895,7 +2895,7 @@
 289700 UST-FAIL-GF-29-4.                                                NC2184.2
 289800     PERFORM FAIL                                                 NC2184.2
 289900     MOVE    ID10-DU-2V0 TO COMPUTED-N                            NC2184.2
-290000     MOVE    3 TO CORRECT-N.                                      NC2184.2
+290000     MOVE    4 TO CORRECT-N.                                      NC2184.2
 290100 UST-WRITE-GF-29-4.                                               NC2184.2
 290200     PERFORM PRINT-DETAIL.                                        NC2184.2
 290300*                                                                 NC2184.2

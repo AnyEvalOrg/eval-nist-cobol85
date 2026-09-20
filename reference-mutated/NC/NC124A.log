@@ -226,26 +226,26 @@ TEST RESULT OF NC124A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  PICTURE CHARACTER Z  PASS  PCTRE-TST-26       .05                                                                      
  PICTURE CHARACTER Z  PASS  PCTRE-TST-26       .06                                                                      
  PICTURE CHARACTER Z  PASS  PCTRE-TST-26       .07                                                                      
- PICTURE CHARACTER P  PASS  PICTURE-TEST-27                                                                             
+ PICTURE CHARACTER P  FAIL* PICTURE-TEST-27                                                                             
+                                                                                                                        
+                                     COMPUTED= 200                                                                      
+                                     CORRECT = 300                   VI-31                                              
+                                                                                                                        
  PICTURE CHARACTER P  PASS  PICTURE-TEST-28                                                                             
  PICTURE CHARACTER P  FAIL* PICTURE-TEST-29                                                                             
                                                                                                                         
                                      COMPUTED= 100                                                                      
-                                     CORRECT = V00                   VI-31                                              
+                                     CORRECT = 10D                   VI-31                                              
                                                                                                                         
  PICTURE CHARACTER P  PASS  PICTURE-TEST-30                                                                             
- PICTURE CHARACTER P  FAIL* PICTURE-TEST-31                                                                             
+ PICTURE CHARACTER P  PASS  PICTURE-TEST-31                                                                             
+ PICTURE CHARACTER P  FAIL* PICTURE-TEST-32                                                                             
                                                                                                                         
-                                     COMPUTED=  12                                                                      
-                                     CORRECT =  L2                   VI-31                                              
+                                     COMPUTED=  .001000000000000000                                                     
+                                     CORRECT =  .091000000000000000  VI-31                                              
                                                                                                                         
- PICTURE CHARACTER P  PASS  PICTURE-TEST-32                                                                             
  PICTURE CHARACTER P  PASS  PICTURE-TEST-33                                                                             
- PICTURE CHARACTER P  FAIL* PICTURE-TEST-34                                                                             
-                                                                                                                        
-                                     COMPUTED=  .003000000000000000                                                     
-                                     CORRECT =  .004000000000000000  VI-31                                              
-                                                                                                                        
+ PICTURE CHARACTER P  PASS  PICTURE-TEST-34                                                                             
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

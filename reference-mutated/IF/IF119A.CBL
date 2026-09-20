@@ -427,11 +427,11 @@
 042700     MOVE ZERO TO WS-NUM.                                         IF1194.2
 042800 F-MAX-TEST-05.                                                   IF1194.2
 042900     COMPUTE WS-NUM = FUNCTION MAX(A, B, D).                      IF1194.2
-043000     IF WS-NUM = 10 THEN                                          IF1194.2
+043000     IF WS-NUM = 90 THEN                                          IF1194.2
 043100                    PERFORM PASS                                  IF1194.2
 043200     ELSE                                                         IF1194.2
 043300                    MOVE WS-NUM TO COMPUTED-N                     IF1194.2
-043400                    MOVE 10 TO CORRECT-N                          IF1194.2
+043400                    MOVE 90 TO CORRECT-N                          IF1194.2
 043500                    PERFORM FAIL.                                 IF1194.2
 043600     GO TO F-MAX-WRITE-05.                                        IF1194.2
 043700 F-MAX-DELETE-05.                                                 IF1194.2
@@ -445,11 +445,11 @@
 044500     MOVE ZERO TO WS-NUM.                                         IF1194.2
 044600 F-MAX-TEST-06.                                                   IF1194.2
 044700     COMPUTE WS-NUM = FUNCTION MAX(A, B, C).                      IF1194.2
-044800     IF WS-NUM = 3 THEN                                           IF1194.2
+044800     IF WS-NUM = 7 THEN                                           IF1194.2
 044900                    PERFORM PASS                                  IF1194.2
 045000     ELSE                                                         IF1194.2
 045100                    MOVE WS-NUM TO COMPUTED-N                     IF1194.2
-045200                    MOVE 3 TO CORRECT-N                           IF1194.2
+045200                    MOVE 7 TO CORRECT-N                           IF1194.2
 045300                    PERFORM FAIL.                                 IF1194.2
 045400     GO TO F-MAX-WRITE-06.                                        IF1194.2
 045500 F-MAX-DELETE-06.                                                 IF1194.2
@@ -538,11 +538,11 @@
 053800     MOVE SPACES TO WS-ANUM.                                      IF1194.2
 053900 F-MAX-TEST-11.                                                   IF1194.2
 054000     MOVE FUNCTION MAX("R", I, "I", "a") TO WS-ANUM.              IF1194.2
-054100     IF WS-ANUM = "a" THEN                                        IF1194.2
+054100     IF WS-ANUM = "1" THEN                                        IF1194.2
 054200                    PERFORM PASS                                  IF1194.2
 054300     ELSE                                                         IF1194.2
 054400                    MOVE WS-ANUM TO COMPUTED-A                    IF1194.2
-054500                    MOVE "a" TO CORRECT-A                         IF1194.2
+054500                    MOVE "1" TO CORRECT-A                         IF1194.2
 054600                    PERFORM FAIL.                                 IF1194.2
 054700     GO TO F-MAX-WRITE-11.                                        IF1194.2
 054800 F-MAX-DELETE-11.                                                 IF1194.2
@@ -556,11 +556,11 @@
 055600     MOVE ZERO TO WS-NUM.                                         IF1194.2
 055700 F-MAX-TEST-12.                                                   IF1194.2
 055800     MOVE FUNCTION MAX("A", J, "J") TO WS-ANUM.                   IF1194.2
-055900     IF WS-ANUM = "W" THEN                                        IF1194.2
+055900     IF WS-ANUM = "U" THEN                                        IF1194.2
 056000                    PERFORM PASS                                  IF1194.2
 056100     ELSE                                                         IF1194.2
 056200                    MOVE WS-ANUM TO COMPUTED-A                    IF1194.2
-056300                    MOVE "W" TO CORRECT-A                         IF1194.2
+056300                    MOVE "U" TO CORRECT-A                         IF1194.2
 056400                    PERFORM FAIL.                                 IF1194.2
 056500     GO TO F-MAX-WRITE-12.                                        IF1194.2
 056600 F-MAX-DELETE-12.                                                 IF1194.2
@@ -592,11 +592,11 @@
 059200     MOVE ZERO TO WS-NUM.                                         IF1194.2
 059300 F-MAX-TEST-14.                                                   IF1194.2
 059400     COMPUTE WS-NUM = FUNCTION MAX(IND(1), IND(2), IND(3)).       IF1194.2
-059500     IF WS-NUM = 5 THEN                                           IF1194.2
+059500     IF WS-NUM = 4 THEN                                           IF1194.2
 059600                    PERFORM PASS                                  IF1194.2
 059700     ELSE                                                         IF1194.2
 059800                    MOVE WS-NUM TO COMPUTED-N                     IF1194.2
-059900                    MOVE 5 TO CORRECT-N                           IF1194.2
+059900                    MOVE 4 TO CORRECT-N                           IF1194.2
 060000                    PERFORM FAIL.                                 IF1194.2
 060100     GO TO F-MAX-WRITE-14.                                        IF1194.2
 060200 F-MAX-DELETE-14.                                                 IF1194.2
@@ -610,11 +610,11 @@
 061000     MOVE ZERO TO WS-NUM.                                         IF1194.2
 061100 F-MAX-TEST-15.                                                   IF1194.2
 061200     COMPUTE WS-NUM = FUNCTION MAX (4 0 5 3 7).
-061300     IF WS-NUM = 6 THEN                                           IF1194.2
+061300     IF WS-NUM = 7 THEN                                           IF1194.2
 061400                    PERFORM PASS                                  IF1194.2
 061500     ELSE                                                         IF1194.2
 061600                    MOVE WS-NUM TO COMPUTED-N                     IF1194.2
-061700                    MOVE 6       TO CORRECT-N                     IF1194.2
+061700                    MOVE 7       TO CORRECT-N                     IF1194.2
 061800                    PERFORM FAIL.                                 IF1194.2
 061900     GO TO F-MAX-WRITE-15.                                        IF1194.2
 062000 F-MAX-DELETE-15.                                                 IF1194.2

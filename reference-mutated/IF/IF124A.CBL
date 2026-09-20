@@ -346,11 +346,11 @@
 034600     MOVE ZERO TO WS-NUM.                                         IF1244.2
 034700 F-MOD-TEST-01.                                                   IF1244.2
 034800     COMPUTE WS-NUM = FUNCTION MOD(6, 6).                         IF1244.2
-034900     IF WS-NUM = 9 THEN                                           IF1244.2
+034900     IF WS-NUM = 4 THEN                                           IF1244.2
 035000                    PERFORM PASS                                  IF1244.2
 035100     ELSE                                                         IF1244.2
 035200                    MOVE WS-NUM TO COMPUTED-N                     IF1244.2
-035300                    MOVE 9 TO CORRECT-N                           IF1244.2
+035300                    MOVE 4 TO CORRECT-N                           IF1244.2
 035400                    PERFORM FAIL.                                 IF1244.2
 035500     GO TO F-MOD-WRITE-01.                                        IF1244.2
 035600 F-MOD-DELETE-01.                                                 IF1244.2
@@ -409,11 +409,11 @@
 040900     MOVE ZERO TO WS-NUM.                                         IF1244.2
 041000 F-MOD-TEST-05.                                                   IF1244.2
 041100     COMPUTE WS-NUM = FUNCTION MOD(A, -3).                        IF1244.2
-041200     IF WS-NUM = -6 THEN                                          IF1244.2
+041200     IF WS-NUM = -5 THEN                                          IF1244.2
 041300                    PERFORM PASS                                  IF1244.2
 041400     ELSE                                                         IF1244.2
 041500                    MOVE WS-NUM TO COMPUTED-N                     IF1244.2
-041600                    MOVE -6 TO CORRECT-N                          IF1244.2
+041600                    MOVE -5 TO CORRECT-N                          IF1244.2
 041700                    PERFORM FAIL.                                 IF1244.2
 041800     GO TO F-MOD-WRITE-05.                                        IF1244.2
 041900 F-MOD-DELETE-05.                                                 IF1244.2
@@ -481,11 +481,11 @@
 048100     MOVE ZERO TO WS-NUM.                                         IF1244.2
 048200 F-MOD-TEST-09.                                                   IF1244.2
 048300     COMPUTE WS-NUM = FUNCTION MOD(-11, 5).                       IF1244.2
-048400     IF WS-NUM = 0 THEN                                           IF1244.2
+048400     IF WS-NUM = 8 THEN                                           IF1244.2
 048500                    PERFORM PASS                                  IF1244.2
 048600     ELSE                                                         IF1244.2
 048700                    MOVE WS-NUM TO COMPUTED-N                     IF1244.2
-048800                    MOVE 0 TO CORRECT-N                           IF1244.2
+048800                    MOVE 8 TO CORRECT-N                           IF1244.2
 048900                    PERFORM FAIL.                                 IF1244.2
 049000     GO TO F-MOD-WRITE-09.                                        IF1244.2
 049100 F-MOD-DELETE-09.                                                 IF1244.2

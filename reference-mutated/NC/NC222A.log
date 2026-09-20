@@ -20,18 +20,18 @@ TEST RESULT OF NC222A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MOVE CORRESPONDING   FAIL* MOV-TEST-F2-3-1    .01        DE-EDITING MOVE ERROR                                         
                                                                                                                         
                                      COMPUTED= -000000123.450000000                                                     
-                                     CORRECT = -000000125.450000000  VI-104 6.18.4 GR4(b)                               
+                                     CORRECT = -000000120.450000000  VI-104 6.18.4 GR4(b)                               
                                                                                                                         
  MOVE CORRESPONDING   PASS  MOV-TEST-F2-3-2    .02                                                                      
  MOVE CORRESPONDING   FAIL* MOV-TEST-F2-4-1    .01        DE-EDITING MOVE ERROR                                         
                                                                                                                         
                                      COMPUTED= -000000042.987600000                                                     
-                                     CORRECT = -000000042.987606000  VI-104 6.18.4 GR4(b)                               
+                                     CORRECT = -000000002.987600000  VI-104 6.18.4 GR4(b)                               
                                                                                                                         
  MOVE CORRESPONDING   FAIL* MOV-TEST-F2-4-2    .02        EDITED DATA MOVE ERROR                                        
                                                                                                                         
                                      COMPUTED= -42 .98 76/00                                                            
-                                     CORRECT = -44 .98 76/00         VI-104 6.18.4 GR4(b)                               
+                                     CORRECT = 742 .98 76/00         VI-104 6.18.4 GR4(b)                               
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         

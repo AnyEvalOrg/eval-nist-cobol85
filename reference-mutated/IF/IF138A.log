@@ -13,7 +13,11 @@ TEST RESULT OF IF138A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- SUM Function         PASS  F-SUM-01                                                                                    
+ SUM Function         FAIL* F-SUM-01                                                                                    
+                                                                                                                        
+                                     COMPUTED= -000000011.000000000                                                     
+                                     CORRECT = -000000081.000000000  See ref. A-69 2.40                                 
+                                                                                                                        
  SUM Function         PASS  F-SUM-02                                                                                    
  SUM Function         PASS  F-SUM-03                                                                                    
  SUM Function         PASS  F-SUM-04                                                                                    
@@ -23,18 +27,14 @@ TEST RESULT OF IF138A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SUM Function         FAIL* F-SUM-08                                                                                    
                                                                                                                         
                                      COMPUTED=  000000016.000000000                                                     
-                                     CORRECT =  000000014.000000000  See ref. A-69 2.40                                 
+                                     CORRECT =  000000066.000000000  See ref. A-69 2.40                                 
                                                                                                                         
  SUM Function         FAIL* F-SUM-09                                                                                    
                                                                                                                         
                                      COMPUTED=  000000019.000000000                                                     
-                                     CORRECT =  000000013.000000000  See ref. A-69 2.40                                 
+                                     CORRECT =  000000010.000000000  See ref. A-69 2.40                                 
                                                                                                                         
- SUM Function         FAIL* F-SUM-11                                                                                    
-                                                                                                                        
-                                     COMPUTED=  000540000.000000000                                                     
-                                     CORRECT =  000546000.000000000  See ref. A-69 2.40                                 
-                                                                                                                        
+ SUM Function         PASS  F-SUM-11                                                                                    
  SUM Function         PASS  F-SUM-12                                                                                    
  SUM Function         PASS  F-SUM-13                                                                                    
  SUM Function         PASS  F-SUM-14                                                                                    

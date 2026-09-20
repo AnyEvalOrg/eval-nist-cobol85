@@ -358,11 +358,11 @@
 035800     MOVE ZERO TO WS-NUM.                                         IF1384.2
 035900 F-SUM-TEST-01.                                                   IF1384.2
 036000     COMPUTE WS-NUM = FUNCTION SUM(5, -2, -14, 0).                IF1384.2
-036100     IF WS-NUM = -11 THEN                                         IF1384.2
+036100     IF WS-NUM = -81 THEN                                         IF1384.2
 036200                    PERFORM PASS                                  IF1384.2
 036300     ELSE                                                         IF1384.2
 036400                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-036500                    MOVE -11 TO CORRECT-N                         IF1384.2
+036500                    MOVE -81 TO CORRECT-N                         IF1384.2
 036600                    PERFORM FAIL.                                 IF1384.2
 036700     GO TO F-SUM-WRITE-01.                                        IF1384.2
 036800 F-SUM-DELETE-01.                                                 IF1384.2
@@ -478,11 +478,11 @@
 047800     MOVE ZERO TO WS-NUM.                                         IF1384.2
 047900 F-SUM-TEST-08.                                                   IF1384.2
 048000     COMPUTE WS-NUM = FUNCTION SUM(IND(P), IND(Q), IND(R)).       IF1384.2
-048100     IF WS-NUM = 14 THEN                                          IF1384.2
+048100     IF WS-NUM = 66 THEN                                          IF1384.2
 048200                    PERFORM PASS                                  IF1384.2
 048300     ELSE                                                         IF1384.2
 048400                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-048500                    MOVE 14 TO CORRECT-N                          IF1384.2
+048500                    MOVE 66 TO CORRECT-N                          IF1384.2
 048600                    PERFORM FAIL.                                 IF1384.2
 048700     GO TO F-SUM-WRITE-08.                                        IF1384.2
 048800 F-SUM-DELETE-08.                                                 IF1384.2
@@ -496,11 +496,11 @@
 049600     MOVE ZERO TO WS-NUM.                                         IF1384.2
 049700 F-SUM-TEST-09.                                                   IF1384.2
 049800     COMPUTE WS-NUM = FUNCTION SUM (4 0 5 3 7).
-049900     IF WS-NUM = 13 THEN                                          IF1384.2
+049900     IF WS-NUM = 10 THEN                                          IF1384.2
 050000                    PERFORM PASS                                  IF1384.2
 050100     ELSE                                                         IF1384.2
 050200                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-050300                    MOVE 13 TO CORRECT-N                          IF1384.2
+050300                    MOVE 10 TO CORRECT-N                          IF1384.2
 050400                    PERFORM FAIL.                                 IF1384.2
 050500     GO TO F-SUM-WRITE-09.                                        IF1384.2
 050600 F-SUM-DELETE-09.                                                 IF1384.2
@@ -514,11 +514,11 @@
 051400     MOVE ZERO TO WS-NUM.                                         IF1384.2
 051500 F-SUM-TEST-11.                                                   IF1384.2
 051600     COMPUTE WS-NUM = FUNCTION SUM(M, N, O).                      IF1384.2
-051700     IF WS-NUM = 546000 THEN                                      IF1384.2
+051700     IF WS-NUM = 540000 THEN                                      IF1384.2
 051800                    PERFORM PASS                                  IF1384.2
 051900     ELSE                                                         IF1384.2
 052000                    MOVE WS-NUM TO COMPUTED-N                     IF1384.2
-052100                    MOVE 546000 TO CORRECT-N                      IF1384.2
+052100                    MOVE 540000 TO CORRECT-N                      IF1384.2
 052200                    PERFORM FAIL.                                 IF1384.2
 052300     GO TO F-SUM-WRITE-11.                                        IF1384.2
 052400 F-SUM-DELETE-11.                                                 IF1384.2

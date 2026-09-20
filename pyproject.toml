@@ -27,8 +27,11 @@ include-package-data = true
 license-files = ["LICENSE", "NOTICE.md"]
 
 [tool.setuptools.package-data]
-nist_cobol85 = ["data/*.gz", "data/*.json", "*.yaml", "Dockerfile", "chart/*.yaml", "chart/templates/*.yaml"]
+nist_cobol85 = ["data/problems.jsonl.gz", "data/manifest.json", "data/eligibility.json", "*.yaml", "Dockerfile", "chart/*.yaml", "chart/templates/*.yaml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--tb=short --basetemp=.build/pytest-tmp"
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*mutations*", "*private*"]

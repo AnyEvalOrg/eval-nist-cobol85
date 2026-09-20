@@ -592,7 +592,7 @@
 059400 SORT-TEST-5.                                                     SG2044.2
 059500     PERFORM  READ-RELEASE-FILE3.                                 SG2044.2
 059600     MOVE     R3-KEYS TO W-S3-KEYS.                               SG2044.2
-059700     IF       W-S2-KEYS EQUAL TO "R67AZAZ"                        SG2044.2
+059700     IF       W-S2-KEYS EQUAL TO "567AZAZ"                        SG2044.2
 059800              PERFORM PASS-2 GO TO SORT-WRITE-5.                  SG2044.2
 059900     GO       TO SORT-FAIL-5.                                     SG2044.2
 060000 SORT-DELETE-5.                                                   SG2044.2
@@ -600,7 +600,7 @@
 060200     GO       TO SORT-WRITE-5.                                    SG2044.2
 060300 SORT-FAIL-5.                                                     SG2044.2
 060400     MOVE     W-S2-KEYS TO COMPUTED-A.                            SG2044.2
-060500     MOVE     "R67AZAZ" TO CORRECT-A.                             SG2044.2
+060500     MOVE     "567AZAZ" TO CORRECT-A.                             SG2044.2
 060600     PERFORM  FAIL-2.                                             SG2044.2
 060700 SORT-WRITE-5.                                                    SG2044.2
 060800     MOVE     "SORT-TEST-5 " TO PAR-NAME.                         SG2044.2
@@ -624,7 +624,7 @@
 062600 SORT-TEST-7.                                                     SG2044.2
 062700     PERFORM  READ-RELEASE-FILE3 35 TIMES.                        SG2044.2
 062800     MOVE     R3-KEYS TO W-S3-KEYS.                               SG2044.2
-062900     IF       W-S2-KEYS EQUAL TO "667AHBH"                        SG2044.2
+062900     IF       W-S2-KEYS EQUAL TO "56SAHBH"                        SG2044.2
 063000              PERFORM PASS-2 GO TO SORT-WRITE-7.                  SG2044.2
 063100     GO       TO SORT-FAIL-7.                                     SG2044.2
 063200 SORT-DELETE-7.                                                   SG2044.2
@@ -632,7 +632,7 @@
 063400     GO       TO SORT-WRITE-7.                                    SG2044.2
 063500 SORT-FAIL-7.                                                     SG2044.2
 063600     MOVE     W-S2-KEYS TO COMPUTED-A.                            SG2044.2
-063700     MOVE     "667AHBH" TO CORRECT-A.                             SG2044.2
+063700     MOVE     "56SAHBH" TO CORRECT-A.                             SG2044.2
 063800     PERFORM  FAIL-2.                                             SG2044.2
 063900 SORT-WRITE-7.                                                    SG2044.2
 064000     MOVE     "SORT-TEST-7 " TO PAR-NAME.                         SG2044.2
@@ -640,7 +640,7 @@
 064200 SORT-TEST-8.                                                     SG2044.2
 064300     PERFORM  READ-RELEASE-FILE3 29 TIMES.                        SG2044.2
 064400     MOVE     R3-KEYS TO W-S3-KEYS.                               SG2044.2
-064500     IF       W-S2-KEYS EQUAL TO "R67AABA"                        SG2044.2
+064500     IF       W-S2-KEYS EQUAL TO "567AABA"                        SG2044.2
 064600              PERFORM PASS-2 GO TO SORT-WRITE-8.                  SG2044.2
 064700     GO       TO SORT-FAIL-8.                                     SG2044.2
 064800 SORT-DELETE-8.                                                   SG2044.2
@@ -648,7 +648,7 @@
 065000     GO       TO SORT-WRITE-8.                                    SG2044.2
 065100 SORT-FAIL-8.                                                     SG2044.2
 065200     MOVE     W-S2-KEYS TO COMPUTED-A.                            SG2044.2
-065300     MOVE     "R67AABA" TO CORRECT-A.                             SG2044.2
+065300     MOVE     "567AABA" TO CORRECT-A.                             SG2044.2
 065400     PERFORM  FAIL-2.                                             SG2044.2
 065500 SORT-WRITE-8.                                                    SG2044.2
 065600     MOVE     "SORT-TEST-8 " TO PAR-NAME.                         SG2044.2
@@ -745,7 +745,7 @@
 074700     PERFORM  PRINT-DETAIL-3.                                     SG2044.2
 074800 SORT-TEST-10.                                                    SG2044.2
 074900     PERFORM  RETURN-SORT3.                                       SG2044.2
-075000     IF       S3-KEYS EQUAL TO "567AZBZ7026"                      SG2044.2
+075000     IF       S3-KEYS EQUAL TO "567AZBN7026"                      SG2044.2
 075100              PERFORM PASS-3 GO TO SORT-WRITE-10.                 SG2044.2
 075200     GO       TO SORT-FAIL-10.                                    SG2044.2
 075300 SORT-DELETE-10.                                                  SG2044.2
@@ -753,14 +753,14 @@
 075500     GO       TO SORT-WRITE-10.                                   SG2044.2
 075600 SORT-FAIL-10.                                                    SG2044.2
 075700     MOVE     S3-KEYS TO COMPUTED-A.                              SG2044.2
-075800     MOVE     "567AZBZ7026" TO CORRECT-A.                         SG2044.2
+075800     MOVE     "567AZBN7026" TO CORRECT-A.                         SG2044.2
 075900     PERFORM  FAIL-3.                                             SG2044.2
 076000 SORT-WRITE-10.                                                   SG2044.2
 076100     MOVE     "SORT-TEST-10" TO PAR-NAME.                         SG2044.2
 076200     PERFORM  PRINT-DETAIL-3.                                     SG2044.2
 076300 SORT-TEST-11.                                                    SG2044.2
 076400     PERFORM  RETURN-SORT3 35 TIMES.                              SG2044.2
-076500     IF       S3-KEYS EQUAL TO "567AQBQ7010"                      SG2044.2
+076500     IF       S3-KEYS EQUAL TO "5678QBQ7010"                      SG2044.2
 076600              PERFORM PASS-3 GO TO SORT-WRITE-11.                 SG2044.2
 076700     GO       TO SORT-FAIL-11.                                    SG2044.2
 076800 SORT-DELETE-11.                                                  SG2044.2
@@ -768,7 +768,7 @@
 077000     GO       TO SORT-WRITE-11.                                   SG2044.2
 077100 SORT-FAIL-11.                                                    SG2044.2
 077200     MOVE     S3-KEYS TO COMPUTED-A.                              SG2044.2
-077300     MOVE     "567AQBQ7010" TO CORRECT-A.                         SG2044.2
+077300     MOVE     "5678QBQ7010" TO CORRECT-A.                         SG2044.2
 077400     PERFORM  FAIL-3.                                             SG2044.2
 077500 SORT-WRITE-11.                                                   SG2044.2
 077600     MOVE     "SORT-TEST-11" TO PAR-NAME.                         SG2044.2

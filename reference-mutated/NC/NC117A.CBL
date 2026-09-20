@@ -655,7 +655,7 @@
 065700     MOVE "DIVIDE BY" TO FEATURE.                                 NC1174.2
 065800 SIG-TEST-GF-19.                                                  NC1174.2
 065900     DIVIDE   864.36 BY DIV2 GIVING DIV8.                         NC1174.2
-066000     IF       DIV8 EQUAL TO 39.6                                  NC1174.2
+066000     IF       DIV8 EQUAL TO 19.6                                  NC1174.2
 066100              PERFORM PASS                                        NC1174.2
 066200              ELSE                                                NC1174.2
 066300              GO TO SIG-FAIL-GF-19.                               NC1174.2
@@ -666,7 +666,7 @@
 066800 SIG-FAIL-GF-19.                                                  NC1174.2
 066900     PERFORM  FAIL.                                               NC1174.2
 067000     MOVE     DIV8 TO COMPUTED-N.                                 NC1174.2
-067100     MOVE     39.6 TO CORRECT-N.                                  NC1174.2
+067100     MOVE     19.6 TO CORRECT-N.                                  NC1174.2
 067200 SIG-WRITE-GF-19.                                                 NC1174.2
 067300     MOVE "SIG-TEST-GF-19" TO PAR-NAME.                           NC1174.2
 067400     PERFORM  PRINT-DETAIL.                                       NC1174.2
@@ -800,10 +800,10 @@
 080200     MOVE "SIG-TEST-GF-8-1         " TO PAR-NAME.                 NC1174.2
 080300     PERFORM PRINT-DETAIL.                                        NC1174.2
 080400 SIG-TEST-GF-8-2.                                                 NC1174.2
-080500     IF WRK-XN-00001 EQUAL TO "5"                                 NC1174.2
+080500     IF WRK-XN-00001 EQUAL TO "1"                                 NC1174.2
 080600         PERFORM PASS                                             NC1174.2
 080700         GO TO SIG-WRITE-GF-8-2.                                  NC1174.2
-080800     MOVE "5" TO CORRECT-A.                                       NC1174.2
+080800     MOVE "1" TO CORRECT-A.                                       NC1174.2
 080900     MOVE WRK-XN-00001 TO COMPUTED-A.                             NC1174.2
 081000     MOVE "ON SIZE ERROR SHOULD BE EXECUTED" TO RE-MARK.          NC1174.2
 081100     PERFORM FAIL.                                                NC1174.2
@@ -821,7 +821,7 @@
 082300     DIVIDE A01ONE-DS-TS-P0801 INTO WRK-DS-09V09 ON SIZE ERROR    NC1174.2
 082400         MOVE "0" TO WRK-XN-00001.                                NC1174.2
 082500 SIG-TEST-GF-9-1.                                                 NC1174.2
-082600     IF WRK-DS-18V00-S EQUAL TO -070000001000000000               NC1174.2
+082600     IF WRK-DS-18V00-S EQUAL TO -000000001000000000               NC1174.2
 082700         PERFORM PASS                                             NC1174.2
 082800         GO TO SIG-WRITE-GF-9-1.                                  NC1174.2
 082900     GO TO SIG-FAIL-GF-9-1.                                       NC1174.2
@@ -829,7 +829,7 @@
 083100     PERFORM DE-LETE.                                             NC1174.2
 083200     GO TO SIG-WRITE-GF-9-1.                                      NC1174.2
 083300 SIG-FAIL-GF-9-1.                                                 NC1174.2
-083400     MOVE -070000001000000000 TO CORRECT-18V0.                    NC1174.2
+083400     MOVE -000000001000000000 TO CORRECT-18V0.                    NC1174.2
 083500     MOVE WRK-DS-18V00-S TO COMPUTED-18V0.                        NC1174.2
 083600     PERFORM FAIL.                                                NC1174.2
 083700 SIG-WRITE-GF-9-1.                                                NC1174.2
@@ -857,7 +857,7 @@
 085900     DIVIDE AZERO-DS-LS-05V05 INTO WRK-DS-LS-01V00 ROUNDED        NC1174.2
 086000         ON SIZE ERROR  MOVE "1" TO WRK-XN-00001.                 NC1174.2
 086100 SIG-TEST-GF-10-1.                                                NC1174.2
-086200     IF WRK-DS-LS-01V00 EQUAL TO 0                                NC1174.2
+086200     IF WRK-DS-LS-01V00 EQUAL TO 2                                NC1174.2
 086300         PERFORM PASS                                             NC1174.2
 086400         GO TO SIG-WRITE-GF-10-1.                                 NC1174.2
 086500     GO TO SIG-FAIL-GF-10-1.                                      NC1174.2
@@ -865,7 +865,7 @@
 086700     PERFORM DE-LETE.                                             NC1174.2
 086800     GO TO SIG-WRITE-GF-10-1.                                     NC1174.2
 086900 SIG-FAIL-GF-10-1.                                                NC1174.2
-087000     MOVE  0                  TO CORRECT-N.                       NC1174.2
+087000     MOVE  2                  TO CORRECT-N.                       NC1174.2
 087100     MOVE  WRK-DS-LS-01V00       TO COMPUTED-N.                   NC1174.2
 087200     MOVE "WRONGLY AFFECTED BY SIZE ERROR" TO RE-MARK.            NC1174.2
 087300     PERFORM FAIL.                                                NC1174.2
@@ -980,7 +980,7 @@
 098200         MOVE "1" TO WRK-XN-00001.                                NC1174.2
 098300 SIG-TEST-GF-17-1.                                                NC1174.2
 098400     MOVE WRK-DS-LS-0201P TO WRK-DS-05V00.                        NC1174.2
-098500     IF WRK-DS-05V00 EQUAL TO  -00020                             NC1174.2
+098500     IF WRK-DS-05V00 EQUAL TO  -05020                             NC1174.2
 098600         PERFORM PASS                                             NC1174.2
 098700         GO TO SIG-WRITE-GF-17-1.                                 NC1174.2
 098800     GO TO SIG-FAIL-GF-17-1.                                      NC1174.2
@@ -988,7 +988,7 @@
 099000     PERFORM DE-LETE.                                             NC1174.2
 099100     GO TO SIG-WRITE-GF-17-1.                                     NC1174.2
 099200 SIG-FAIL-GF-17-1.                                                NC1174.2
-099300     MOVE -00020 TO CORRECT-N.                                    NC1174.2
+099300     MOVE -05020 TO CORRECT-N.                                    NC1174.2
 099400     MOVE WRK-DS-05V00 TO COMPUTED-N.                             NC1174.2
 099500     PERFORM FAIL.                                                NC1174.2
 099600 SIG-WRITE-GF-17-1.                                               NC1174.2
@@ -1138,10 +1138,10 @@
 114000         MOVE "1" TO WRK-XN-00001.                                NC1174.2
 114100 SIG-TEST-GF-25-1.                                                NC1174.2
 114200     MOVE WRK-DS-LS-0201P TO WRK-DS-05V00.                        NC1174.2
-114300     IF  WRK-DS-05V00 EQUAL TO -00020                             NC1174.2
+114300     IF  WRK-DS-05V00 EQUAL TO -00820                             NC1174.2
 114400         PERFORM PASS                                             NC1174.2
 114500         GO TO SIG-WRITE-GF-25-1.                                 NC1174.2
-114600     MOVE  -00020             TO CORRECT-N.                       NC1174.2
+114600     MOVE  -00820             TO CORRECT-N.                       NC1174.2
 114700     MOVE  WRK-DS-05V00       TO COMPUTED-N.                      NC1174.2
 114800     PERFORM FAIL.                                                NC1174.2
 114900     GO TO SIG-WRITE-GF-25-1.                                     NC1174.2

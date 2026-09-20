@@ -18,21 +18,21 @@ TEST RESULT OF IC235A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  MULTIPLE EXIT PROGRM PASS  EXIT-TEST-03                                                                                
  MULTIPLE EXIT PROGRM PASS  EXIT-TEST-04                                                                                
  CALL USING DN SERIES PASS  CALL-TEST-06       .01                                                                      
- CALL USING DN SERIES FAIL* CALL-TEST-06       .02        NUMERIC DISPLAY PARAMETER                                     
+ CALL USING DN SERIES PASS  CALL-TEST-06       .02                                                                      
+ CALL USING DN SERIES FAIL* CALL-TEST-06       .03        ALPHABETIC PARAMETER                                          
                                                                                                                         
-                                     COMPUTED=  000000000000000025                                                      
-                                     CORRECT =  000000000000000035                                                      
+                                     COMPUTED= YES                                                                      
+                                     CORRECT = YE1                                                                      
                                                                                                                         
- CALL USING DN SERIES PASS  CALL-TEST-06       .03                                                                      
  CALL USING DN SERIES FAIL* CALL-TEST-06       .04        COMPUTATIONAL PARAMETER                                       
                                                                                                                         
                                      COMPUTED=  0000.76540000000000                                                     
-                                     CORRECT =  0000.78540000000000                                                     
+                                     CORRECT =  0000.36540000000000                                                     
                                                                                                                         
  CALL USING DN SERIES FAIL* CALL-TEST-06       .05        SIGNED NUMERIC PARAMETER                                      
                                                                                                                         
                                      COMPUTED=  000000000000000025                                                      
-                                     CORRECT =  000000000000000028                                                      
+                                     CORRECT =  000000000000000075                                                      
                                                                                                                         
  CALL USING DN SERIES PASS  CALL-TEST-06       .06                                                                      
  CALL USING DN SERIES PASS  CALL-TEST-06       .07                                                                      

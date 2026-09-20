@@ -13,7 +13,11 @@ TEST RESULT OF NC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- DIVIDE               PASS  DIV-TEST-F4-1                                                                               
+ DIVIDE               FAIL* DIV-TEST-F4-1                                                                               
+                                                                                                                        
+                                     COMPUTED=  000005061.000000000                                                     
+                                     CORRECT =  000003061.000000000  VI-82 6.11.4 GR4                                   
+                                                                                                                        
  DIVIDE               PASS  DIV-TEST-F4-2                                                                               
  DIVIDE               PASS  DIV-TEST-F4-3                                                                               
  DIVIDE               PASS  DIV-TEST-F4-4-0    .01                                                                      
@@ -26,7 +30,7 @@ TEST RESULT OF NC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE               PASS  DIV-TEST-F4-6-1    .02                                                                      
  DIVIDE               PASS  DIV-TEST-F4-6-2    .03                                                                      
  DIVIDE               ***** DIV-TEST-F4-7-1    .01        ****TEST DELETED****                                          
-*** INFORMATION ***        ***01                    V**01               VI-82 6.11.4 GR4                                
+*** INFORMATION ***        ***01                    ***02               VI-82 6.11.4 GR4                                
                                                                                                                         
  DIVIDE               PASS  DIV-TEST-F4-7-2    .02                                                                      
  DIVIDE               PASS  DIV-TEST-F4-8-1    .01                                                                      
@@ -44,15 +48,15 @@ TEST RESULT OF NC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE               PASS  DIV-TEST-F4-12-1   .02                                                                      
  DIVIDE               PASS  DIV-TEST-F4-12-2   .03                                                                      
  DIVIDE               PASS  DIV-TEST-F4-13-1   .01                                                                      
- DIVIDE               PASS  DIV-TEST-F4-13-2   .02                                                                      
- DIVIDE               PASS  DIV-TEST-F4-13-3   .03                                                                      
- DIVIDE               PASS  DIV-TEST-F4-13-4   .04                                                                      
- DIVIDE               PASS  DIV-TEST-F4-14-1   .01                                                                      
- DIVIDE               PASS  DIV-TEST-F4-14-2   .02                                                                                                                                                                                              
+ DIVIDE               PASS  DIV-TEST-F4-13-2   .02                                                                                                                                                                                              
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
+ DIVIDE               PASS  DIV-TEST-F4-13-3   .03                                                                      
+ DIVIDE               PASS  DIV-TEST-F4-13-4   .04                                                                      
+ DIVIDE               PASS  DIV-TEST-F4-14-1   .01                                                                      
+ DIVIDE               PASS  DIV-TEST-F4-14-2   .02                                                                      
  DIVIDE               PASS  DIV-TEST-F4-14-3   .03                                                                      
  DIVIDE               PASS  DIV-TEST-F4-14-4   .04                                                                      
  DIVIDE               PASS  DIV-TEST-F4-15-1   .02                                                                      
@@ -77,13 +81,9 @@ TEST RESULT OF NC203A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  DIVIDE               FAIL* DIV-TEST-F4-20-1   .01                                                                      
                                                                                                                         
                                      COMPUTED=  000000000.314160000                                                     
-                                     CORRECT =  000000000.316160000  VI-82 6.11.4 GR4                                   
+                                     CORRECT =  000000000.314180000  VI-82 6.11.4 GR4                                   
                                                                                                                         
- DIVIDE               FAIL* DIV-TEST-F4-20-2   .02                                                                      
-                                                                                                                        
-                                     COMPUTED= .0000/92653,58979,32                                                     
-                                     CORRECT = .0000O92653,58979,32  VI-82 6.11.4 GR4                                   
-                                                                                                                        
+ DIVIDE               PASS  DIV-TEST-F4-20-2   .02                                                                      
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         

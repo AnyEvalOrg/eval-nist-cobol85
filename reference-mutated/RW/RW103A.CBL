@@ -403,33 +403,33 @@
 041000*                                                                 RW1034.2
 041100     ADD 1 TO WS-COUNTER.                                         RW1034.2
 041200     GENERATE RW-FS3-DETAIL.                                      RW1034.2
-041300*                                                                 RW1034.2
-041400*    OUTPUT REPORT INFO                                           RW1034.2
-041500*                                                                 RW1034.2
-041600*        THE PAGE HEADING REPORT GROUP IS PRESENTED ON LINE 1     RW1034.2
-041700*    OF PAGE 1.                                                   RW1034.2
-041800*    REFERENCE  PAGE VIII-14, 2.5.5.7, PAGE HEADING PRE. RULES    RW1034.2
-041900*                                                                 RW1034.2
-042000*        THE LINE-COUNTER VALUE PRINTED ON THE PH LINE SHOULD     RW1034.2
-042100*    EQUAL ONE.                                                   RW1034.2
-042200*    REFERENCE PAGE VIII-5, 2.4.5(6), LINE-COUNTER RULES          RW1034.2
-042300*                                                                 RW1034.2
-042400*        THE FIRST DETAIL LINE IS PRESENTED ON LINE 6 OF PAGE 1.  RW1034.2
-042500*    REFERENCE  PAGE VIII-18, 2.5.5.8.1(4)B, BODY GROUP PRE RULES RW1034.2
-042600*                                                                 RW1034.2
+041300*                                                                         
+041400*                                                                         
+041500*                                                                         
+041600*                                                                         
+041700*                                                                         
+041800*                                                                         
+041900*                                                                         
+042000*                                                                         
+042100*                                                                         
+042200*                                                                         
+042300*                                                                         
+042400*                                                                         
+042500*                                                                         
+042600*                                                                         
 042700 GENER-TEST-08-01.                                                RW1034.2
-042800     IF LINE-COUNTER EQUAL TO 3                                   RW1034.2
+042800     IF LINE-COUNTER EQUAL TO 0                                   RW1034.2
 042900         PERFORM PASS                                             RW1034.2
 043000         GO TO GENER-WRITE-08-01.                                 RW1034.2
-043100*                                                                 RW1034.2
-043200*        THE LINE-COUNTER SETTING AFTER THE GENERATE STATEMENT    RW1034.2
-043300*    IS EQUAL TO THE LINE NUMBER ON WHICH THE PRINT LINE WAS      RW1034.2
-043400*    PRESENTED, IN THIS CASE 6.                                   RW1034.2
-043500*    REFERENCE  PAGE VIII-19, 2.5.5.8.1(6)D, FINAL L-C SETTING    RW1034.2
-043600*                                                                 RW1034.2
+043100*                                                                         
+043200*                                                                         
+043300*                                                                         
+043400*                                                                         
+043500*                                                                         
+043600*                                                                         
 043700 GENER-FAIL-08-01.                                                RW1034.2
 043800     PERFORM FAIL.                                                RW1034.2
-043900     MOVE 3 TO CORRECT-18V0.                                      RW1034.2
+043900     MOVE 0 TO CORRECT-18V0.                                      RW1034.2
 044000     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1034.2
 044100     MOVE "LINE-COUNTER AFTER FIRST GENER" TO RE-MARK.            RW1034.2
 044200 GENER-WRITE-08-01.                                               RW1034.2
@@ -528,19 +528,19 @@
 053500     MOVE 1 TO WS-COUNTER.                                        RW1034.2
 053600     GENERATE RW-FS3-DETAIL.                                      RW1034.2
 053700 GENER-TEST-10-01.                                                RW1034.2
-053800     IF LINE-COUNTER EQUAL TO 9                                   RW1034.2
+053800     IF LINE-COUNTER EQUAL TO 0                                   RW1034.2
 053900         PERFORM PASS                                             RW1034.2
 054000         GO TO GENER-WRITE-10-01.                                 RW1034.2
-054100*                                                                 RW1034.2
-054200*        LINE-COUNTER SHOULD BE RESET TO ZERO WHEN THE PAGE       RW1034.2
-054300*    ADVANCE FROM PAGE 1 TO PAGE 2 IS EXECUTED, AND LINE-COUNTER  RW1034.2
-054400*    IS SET TO 6 WHEN THE DETAIL REPORT GROUP IS PRESENTED.       RW1034.2
-054500*    REFERENCES  PAGE VIII-5, 2.4.5(4), LINE-COUNTER RULES        RW1034.2
-054600*                PAGE VIII-19, 2.5.5.8.1(6)D, FINAL L-C SETTING   RW1034.2
-054700*                                                                 RW1034.2
+054100*                                                                         
+054200*                                                                         
+054300*                                                                         
+054400*                                                                         
+054500*                                                                         
+054600*                                                                         
+054700*                                                                         
 054800 GENER-FAIL-10-01.                                                RW1034.2
 054900     PERFORM FAIL.                                                RW1034.2
-055000     MOVE 9 TO CORRECT-18V0.                                      RW1034.2
+055000     MOVE 0 TO CORRECT-18V0.                                      RW1034.2
 055100     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1034.2
 055200     MOVE "LINE-COUNTER AFTER PAGE ADVANCE" TO RE-MARK.           RW1034.2
 055300 GENER-WRITE-10-01.                                               RW1034.2
@@ -614,19 +614,19 @@
 062100     MOVE 1 TO WS-COUNTER.                                        RW1034.2
 062200     GENERATE RW-FS3-DETAIL.                                      RW1034.2
 062300 GENER-TEST-12-01.                                                RW1034.2
-062400     IF LINE-COUNTER EQUAL TO 6                                   RW1034.2
+062400     IF LINE-COUNTER EQUAL TO 3                                   RW1034.2
 062500         PERFORM PASS                                             RW1034.2
 062600         GO TO GENER-WRITE-12-01.                                 RW1034.2
-062700*                                                                 RW1034.2
-062800*        LINE-COUNTER SHOULD BE RESET TO ZERO WHEN THE PAGE       RW1034.2
-062900*    ADVANCE FROM PAGE 2 TO PAGE 3 IS EXECUTED, AND LINE-COUNTER  RW1034.2
-063000*    IS SET TO 6 WHEN THE DETAIL REPORT GROUP IS PRESENTED.       RW1034.2
-063100*    REFERENCES  PAGE VIII-5, 2.4.5(4), LINE-COUNTER RULES        RW1034.2
-063200*                PAGE VIII-19, 2.5.5.8.1(6)D, FINAL L-C SETTING   RW1034.2
-063300*                                                                 RW1034.2
+062700*                                                                         
+062800*                                                                         
+062900*                                                                         
+063000*                                                                         
+063100*                                                                         
+063200*                                                                         
+063300*                                                                         
 063400 GENER-FAIL-12-01.                                                RW1034.2
 063500     PERFORM FAIL.                                                RW1034.2
-063600     MOVE 6 TO CORRECT-18V0.                                      RW1034.2
+063600     MOVE 3 TO CORRECT-18V0.                                      RW1034.2
 063700     MOVE LINE-COUNTER TO COMPUTED-18V0.                          RW1034.2
 063800     MOVE "LINE-COUNTER AFTER PAGE ADVANCE" TO RE-MARK.           RW1034.2
 063900 GENER-WRITE-12-01.                                               RW1034.2
@@ -635,7 +635,7 @@
 064200     MOVE 1 TO REC-CT.                                            RW1034.2
 064300     PERFORM PRINT-DETAIL.                                        RW1034.2
 064400 GENER-TEST-12-02.                                                RW1034.2
-064500     IF PAGE-COUNTER EQUAL TO 8                                   RW1034.2
+064500     IF PAGE-COUNTER EQUAL TO 3                                   RW1034.2
 064600         PERFORM PASS                                             RW1034.2
 064700         GO TO GENER-WRITE-12-02.                                 RW1034.2
 064800*                                                                 RW1034.2
@@ -645,7 +645,7 @@
 065200*                                                                 RW1034.2
 065300 GENER-FAIL-12-02.                                                RW1034.2
 065400     PERFORM FAIL.                                                RW1034.2
-065500     MOVE 8 TO CORRECT-18V0.                                      RW1034.2
+065500     MOVE 3 TO CORRECT-18V0.                                      RW1034.2
 065600     MOVE PAGE-COUNTER TO COMPUTED-18V0.                          RW1034.2
 065700     MOVE "PAGE-COUNTER AFTER PAGE ADVANCE" TO RE-MARK.           RW1034.2
 065800 GENER-WRITE-12-02.                                               RW1034.2

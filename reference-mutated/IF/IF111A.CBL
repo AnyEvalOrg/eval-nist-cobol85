@@ -420,10 +420,10 @@
 042000     MOVE ZERO TO WS-INT.                                         IF1114.2
 042100 F-INTEGER-TEST-07.                                               IF1114.2
 042200     COMPUTE WS-INT = FUNCTION INTEGER(230492.4828).              IF1114.2
-042300     IF WS-INT = 230492 THEN                                      IF1114.2
+042300     IF WS-INT = 235492 THEN                                      IF1114.2
 042400                    PERFORM PASS                                  IF1114.2
 042500     ELSE                                                         IF1114.2
-042600                    MOVE  230492  TO CORRECT-N                    IF1114.2
+042600                    MOVE  235492  TO CORRECT-N                    IF1114.2
 042700                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 042800                    PERFORM FAIL.                                 IF1114.2
 042900     GO TO F-INTEGER-WRITE-07.                                    IF1114.2
@@ -456,10 +456,10 @@
 045600     MOVE ZERO TO WS-INT.                                         IF1114.2
 045700 F-INTEGER-TEST-09.                                               IF1114.2
 045800     COMPUTE WS-INT = FUNCTION INTEGER(A).                        IF1114.2
-045900     IF WS-INT = 500000 THEN                                      IF1114.2
+045900     IF WS-INT = 500003 THEN                                      IF1114.2
 046000                    PERFORM PASS                                  IF1114.2
 046100     ELSE                                                         IF1114.2
-046200                    MOVE  500000  TO CORRECT-N                    IF1114.2
+046200                    MOVE  500003  TO CORRECT-N                    IF1114.2
 046300                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 046400                    PERFORM FAIL.                                 IF1114.2
 046500     GO TO F-INTEGER-WRITE-09.                                    IF1114.2
@@ -492,10 +492,10 @@
 049200     MOVE ZERO TO WS-INT.                                         IF1114.2
 049300 F-INTEGER-TEST-11.                                               IF1114.2
 049400     COMPUTE WS-INT = FUNCTION INTEGER(B).                        IF1114.2
-049500     IF WS-INT = 4 THEN                                           IF1114.2
+049500     IF WS-INT = 1 THEN                                           IF1114.2
 049600                    PERFORM PASS                                  IF1114.2
 049700     ELSE                                                         IF1114.2
-049800                    MOVE  4  TO CORRECT-N                         IF1114.2
+049800                    MOVE  1  TO CORRECT-N                         IF1114.2
 049900                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 050000                    PERFORM FAIL.                                 IF1114.2
 050100     GO TO F-INTEGER-WRITE-11.                                    IF1114.2
@@ -528,10 +528,10 @@
 052800     MOVE ZERO TO WS-INT.                                         IF1114.2
 052900 F-INTEGER-TEST-13.                                               IF1114.2
 053000     COMPUTE WS-INT = FUNCTION INTEGER(IND(2)).                   IF1114.2
-053100     IF WS-INT = 0 THEN                                           IF1114.2
+053100     IF WS-INT = 7 THEN                                           IF1114.2
 053200                    PERFORM PASS                                  IF1114.2
 053300     ELSE                                                         IF1114.2
-053400                    MOVE  0  TO CORRECT-N                         IF1114.2
+053400                    MOVE  7  TO CORRECT-N                         IF1114.2
 053500                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 053600                    PERFORM FAIL.                                 IF1114.2
 053700     GO TO F-INTEGER-WRITE-13.                                    IF1114.2
@@ -582,10 +582,10 @@
 058200     MOVE ZERO TO WS-INT.                                         IF1114.2
 058300 F-INTEGER-TEST-16.                                               IF1114.2
 058400     COMPUTE WS-INT = FUNCTION INTEGER(H + B).                    IF1114.2
-058500     IF WS-INT = -3 THEN                                          IF1114.2
+058500     IF WS-INT = -4 THEN                                          IF1114.2
 058600                    PERFORM PASS                                  IF1114.2
 058700     ELSE                                                         IF1114.2
-058800                    MOVE  -3  TO CORRECT-N                        IF1114.2
+058800                    MOVE  -4  TO CORRECT-N                        IF1114.2
 058900                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 059000                    PERFORM FAIL.                                 IF1114.2
 059100     GO TO F-INTEGER-WRITE-16.                                    IF1114.2
@@ -692,10 +692,10 @@
 069200 F-INTEGER-TEST-22.                                               IF1114.2
 069300     COMPUTE WS-INT = FUNCTION INTEGER(1.2) +                     IF1114.2
 069400                      FUNCTION INTEGER(1.6).                      IF1114.2
-069500     IF WS-INT = 9 THEN                                           IF1114.2
+069500     IF WS-INT = 2 THEN                                           IF1114.2
 069600                    PERFORM PASS                                  IF1114.2
 069700     ELSE                                                         IF1114.2
-069800                    MOVE  9  TO CORRECT-N                         IF1114.2
+069800                    MOVE  2  TO CORRECT-N                         IF1114.2
 069900                    MOVE WS-INT TO COMPUTED-N                     IF1114.2
 070000                    PERFORM FAIL.                                 IF1114.2
 070100     GO TO F-INTEGER-WRITE-22.                                    IF1114.2

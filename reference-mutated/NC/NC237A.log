@@ -16,23 +16,23 @@ TEST RESULT OF NC237A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-1                 TABLE BUILT CORRECTLY                                         
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-2                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-3                                                                               
- SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-4                                                                               
-                                                                                                                        
-                                     COMPUTED= 0101                                                                     
-                                     CORRECT = 3101                  VI-121 6.21.2                                      
-                                                                                                                        
+ SET AND SEARCH-ALL   PASS  IDX-TEST-GF-4                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-GF-5                                                                               
  SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-6                                                                               
                                                                                                                         
                                      COMPUTED= 070307                                                                   
-                                     CORRECT = A70307                VI-121 6.21.2                                      
+                                     CORRECT = 07P307                VI-121 6.21.2                                      
                                                                                                                         
  SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-7                                                                               
                                                                                                                         
                                      COMPUTED= 040604                                                                   
-                                     CORRECT = 040G04                VI-121 6.21.2                                      
+                                     CORRECT = 240604                VI-121 6.21.2                                      
                                                                                                                         
- SET AND SEARCH-ALL   PASS  IDX-TEST-GF-8                                                                               
+ SET AND SEARCH-ALL   FAIL* IDX-TEST-GF-8                                                                               
+                                                                                                                        
+                                     COMPUTED= 040604                                                                   
+                                     CORRECT = 140604                VI-121 6.21.2                                      
+                                                                                                                        
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-9                                                                               
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-10                                                                              
  SET AND SEARCH-ALL   PASS  IDX-TEST-F2-11                                                                              

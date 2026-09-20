@@ -392,7 +392,7 @@
 039400     MOVE 0 TO WRK-DU-05V00.                                      NC2474.2
 039500 INS-TEST-F1-1.                                                   NC2474.2
 039600     INSPECT ODO-GRP-00009 TALLYING WRK-DU-05V00 FOR ALL "7".     NC2474.2
-039700     IF WRK-DU-05V00 IS EQUAL TO 2                                NC2474.2
+039700     IF WRK-DU-05V00 IS EQUAL TO 3                                NC2474.2
 039800         PERFORM PASS                                             NC2474.2
 039900         GO TO INS-WRITE-F1-1                                     NC2474.2
 040000     ELSE                                                         NC2474.2
@@ -402,7 +402,7 @@
 040400     GO TO INS-WRITE-F1-1.                                        NC2474.2
 040500 INS-FAIL-F1-1.                                                   NC2474.2
 040600     PERFORM FAIL                                                 NC2474.2
-040700     MOVE 2 TO  CORRECT-18V0                                      NC2474.2
+040700     MOVE 3 TO  CORRECT-18V0                                      NC2474.2
 040800     MOVE WRK-DU-05V00 TO COMPUTED-18V0.                          NC2474.2
 040900 INS-WRITE-F1-1.                                                  NC2474.2
 041000     PERFORM PRINT-DETAIL.                                        NC2474.2
@@ -417,7 +417,7 @@
 041900     MOVE WRK-GRP-00019 TO RE-MARK.                               NC2474.2
 042000 INS-TEST-F1-2.                                                   NC2474.2
 042100     INSPECT ODO-GRP-00009 TALLYING WRK-DU-05V00 FOR ALL "7".     NC2474.2
-042200     IF WRK-DU-05V00 IS EQUAL TO 3                                NC2474.2
+042200     IF WRK-DU-05V00 IS EQUAL TO 7                                NC2474.2
 042300         PERFORM PASS                                             NC2474.2
 042400         GO TO INS-WRITE-F1-2                                     NC2474.2
 042500     ELSE                                                         NC2474.2
@@ -427,7 +427,7 @@
 042900     GO TO INS-WRITE-F1-2.                                        NC2474.2
 043000 INS-FAIL-F1-2.                                                   NC2474.2
 043100     PERFORM FAIL                                                 NC2474.2
-043200     MOVE 3 TO CORRECT-18V0                                       NC2474.2
+043200     MOVE 7 TO CORRECT-18V0                                       NC2474.2
 043300     MOVE WRK-DU-05V00 TO COMPUTED-18V0.                          NC2474.2
 043400 INS-WRITE-F1-2.                                                  NC2474.2
 043500     PERFORM PRINT-DETAIL.                                        NC2474.2
@@ -491,7 +491,7 @@
 049300     MOVE "3 ACTIVE: TEST PASS" TO GRP-ODO.                       NC2474.2
 049400     MOVE 9 TO DOI-DU-01V00.                                      NC2474.2
 049500 MOV-TEST-F1-3.                                                   NC2474.2
-049600     IF GRP-ODO IS EQUAL TO "9 ACTIVE: TEST PASS"                 NC2474.2
+049600     IF GRP-ODO IS EQUAL TO "9 ACTIVE: TESTNPASS"                 NC2474.2
 049700         PERFORM PASS                                             NC2474.2
 049800         GO TO MOV-WRITE-F1-3                                     NC2474.2
 049900     ELSE                                                         NC2474.2
@@ -501,7 +501,7 @@
 050300     GO TO MOV-WRITE-F1-3.                                        NC2474.2
 050400 MOV-FAIL-F1-3.                                                   NC2474.2
 050500     PERFORM FAIL                                                 NC2474.2
-050600     MOVE "9 ACTIVE: TEST PASS" TO CORRECT-A                      NC2474.2
+050600     MOVE "9 ACTIVE: TESTNPASS" TO CORRECT-A                      NC2474.2
 050700     MOVE GRP-ODO TO COMPUTED-A.                                  NC2474.2
 050800 MOV-WRITE-F1-3.                                                  NC2474.2
 050900     PERFORM PRINT-DETAIL.                                        NC2474.2
@@ -580,7 +580,7 @@
 058200     MOVE    3  TO NEW-DU-01V00.                                  NC2474.2
 058300     MOVE    ODO-RECORD TO NEW-RECORD.                            NC2474.2
 058400 MOV-TEST-F1-6.                                                   NC2474.2
-058500     IF      NEW-GRP-00009 = "PQRSTCVWX"                          NC2474.2
+058500     IF      NEW-GRP-00009 = "PQRSTUVWX"                          NC2474.2
 058600             PERFORM PASS                                         NC2474.2
 058700             GO TO MOV-WRITE-F1-6                                 NC2474.2
 058800     ELSE                                                         NC2474.2
@@ -590,7 +590,7 @@
 059200     GO TO   MOV-WRITE-F1-6.                                      NC2474.2
 059300 MOV-FAIL-F1-6.                                                   NC2474.2
 059400     MOVE    NEW-GRP-00009 TO COMPUTED-A                          NC2474.2
-059500     MOVE   "PQRSTCVWX"   TO CORRECT-A                            NC2474.2
+059500     MOVE   "PQRSTUVWX"   TO CORRECT-A                            NC2474.2
 059600     MOVE   "ALL 9 FIELDS SHOULD BE MOVED IN GROUP MOVE"          NC2474.2
 059700            TO RE-MARK                                            NC2474.2
 059800     PERFORM FAIL.                                                NC2474.2

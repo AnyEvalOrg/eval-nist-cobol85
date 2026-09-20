@@ -22,15 +22,15 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED ADDITION   PASS  ADD-TEST-F1-7                                                                               
  QUALIFIED ADDITION   PASS  ADD-TEST-F1-8                                                                               
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-9                                                                               
- QUALIFIED ADDITION   FAIL* ADD-TEST-F2-10                                                                              
-                                                                                                                        
-                                     COMPUTED=  000000020.000000000                                                     
-                                     CORRECT =  000000000.000000000  IV-18 4.3.8.1                                      
-                                                                                                                        
+ QUALIFIED ADDITION   PASS  ADD-TEST-F2-10                                                                              
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-11                                                                              
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-12                                                                              
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-13                                                                              
- QUALIFIED ADDITION   PASS  ADD-TEST-F2-14                                                                              
+ QUALIFIED ADDITION   FAIL* ADD-TEST-F2-14                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000028.000000000                                                     
+                                     CORRECT =  000000068.000000000  IV-18 4.3.8.1                                      
+                                                                                                                        
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-15                                                                              
  QUALIFIED ADDITION   PASS  ADD-TEST-F2-16                                                                              
         CORRESPONDING PASS  ADD-TEST-F3-17                                                                              
@@ -47,29 +47,25 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
                                                                                                                         
                                                                                                                         
         CORRESPONDING PASS  ADD-TEST-F1-25                                                                              
- QUALIFIED SUBTRACT   FAIL* SUB-TEST-F2-1                                                                               
-                                                                                                                                                                                                                                                
+ QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-1                                                                               
+ QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-2                                                                                                                                                                                                       
  FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
-                                     COMPUTED=  000000015.000000000                                                     
-                                     CORRECT =  000000055.000000000  IV-18 4.3.8.1                                      
-                                                                                                                        
- QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-2                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-3                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-4                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-5                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-6                                                                               
- QUALIFIED SUBTRACT   FAIL* SUB-TEST-F2-7                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000003.000000000                                                     
-                                     CORRECT =  000000007.000000000  IV-18 4.3.8.1                                      
-                                                                                                                        
+ QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-7                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-8                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-9                                                                               
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-10                                                                              
- QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-11                                                                              
+ QUALIFIED SUBTRACT   FAIL* SUB-TEST-F2-11                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000005.000000000                                                     
+                                     CORRECT =  000000000.000000000  IV-18 4.3.8.1                                      
+                                                                                                                        
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-12                                                                              
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-13                                                                              
  QUALIFIED SUBTRACT   PASS  SUB-TEST-F2-14                                                                              
@@ -93,41 +89,41 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-2                                                                               
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-3                                                                               
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-4                                                                               
- QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-5                                                                               
+ QUALIFIED MULTIPLY   FAIL* MPY-TEST-F2-5                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000025.000000000                                                     
+                                     CORRECT =  000000075.000000000  IV-18 4.3.8.1                                      
+                                                                                                                        
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-6                                                                               
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-7                                                                               
- QUALIFIED MULTIPLY   FAIL* MPY-TEST-F2-8                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000008.000000000                                                     
-                                     CORRECT =  000000009.000000000  IV-18 4.3.8.1                                      
-                                                                                                                        
- QUALIFIED MULTIPLY   FAIL* MPY-TEST-F2-9                                                                               
-                                                                                                                        
-                                     COMPUTED=  000000009.000000000                                                                                                                                                                             
- FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
- TESTED               FAIL                                                                                              
-                                                                                                                        
- ***********************************************************************************************************************
-                                     CORRECT =  000000005.000000000  IV-18 4.3.8.1                                      
-                                                                                                                        
+ QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-8                                                                               
+ QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-9                                                                               
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-10                                                                              
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-11                                                                              
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-12                                                                              
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-13                                                                              
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-14                                                                              
- QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-15                                                                              
- QUALIFIED MULTIPLY   FAIL* MPY-TEST-F2-16                                                                              
+ QUALIFIED MULTIPLY   FAIL* MPY-TEST-F2-15                                                                                                                                                                                                      
+ FEATURE              PASS  PARAGRAPH-NAME                                                 REMARKS                      
+ TESTED               FAIL                                                                                              
                                                                                                                         
-                                     COMPUTED=  000000256.000000000                                                     
-                                     CORRECT =  000000276.000000000  IV-18 4.3.8.1                                      
+ ***********************************************************************************************************************
                                                                                                                         
+                                     COMPUTED=  000000225.000000000                                                     
+                                     CORRECT =  000000229.000000000  IV-18 4.3.8.1                                      
+                                                                                                                        
+ QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-16                                                                              
  QUALIFIED MULTIPLY   PASS  MPY-TEST-F2-17                                                                              
  ***********************************************************************************************************************
                                                                                                                         
                                                                                                                         
                                                                                                                         
                                                                                                                         
- QUALIFIED DIVIDE     PASS  DIV-TEST-F3-1                                                                               
+ QUALIFIED DIVIDE     FAIL* DIV-TEST-F3-1                                                                               
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000000.000000000  IV-18 4.3.8.1                                      
+                                                                                                                        
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-2                                                                               
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-3                                                                               
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-4                                                                               
@@ -139,7 +135,11 @@ TEST RESULT OF NC207     IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-10                                                                              
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-11                                                                              
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-12                                                                              
- QUALIFIED DIVIDE     PASS  DIV-TEST-F3-13                                                                              
+ QUALIFIED DIVIDE     FAIL* DIV-TEST-F3-13                                                                              
+                                                                                                                        
+                                     COMPUTED=  000000001.000000000                                                     
+                                     CORRECT =  000000003.000000000  IV-18 4.3.8.1                                      
+                                                                                                                        
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-14                                                                              
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-15                                                                              
  QUALIFIED DIVIDE     PASS  DIV-TEST-F3-16                                                                              

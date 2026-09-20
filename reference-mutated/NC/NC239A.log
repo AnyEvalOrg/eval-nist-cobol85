@@ -13,25 +13,25 @@ TEST RESULT OF NC239A    IN  HIGH        LEVEL VALIDATION FOR ON-SITE VALIDATION
  TESTED               FAIL                                                                                              
                                                                                                                         
  ***********************************************************************************************************************
- LEVEL 1 INT INDEXING FAIL* TABLE-TEST                    INTERNAL INDEXING LEVEL 1                                     
-                                                                                                                        
-                                     COMPUTED= GRP05                                                                    
-                                     CORRECT = GHP05                 IV-21 & II-15 4.4.2                                
-                                                                                                                        
- LEVEL 1 INT INDEXING FAIL* TH1-TEST-GF-1                 INTERNAL INDEXING LEVEL 1                                     
-                                                                                                                        
-                                     COMPUTED= GRP08                                                                    
-                                     CORRECT = MRP08                 IV-21 & II-15 4.4.2                                
-                                                                                                                        
+ LEVEL 1 INT INDEXING PASS  TABLE-TEST                                                                                  
+ LEVEL 1 INT INDEXING PASS  TH1-TEST-GF-1                                                                               
  LEVEL 2 INT INDEXING PASS  TH2-TEST-GF-1                                                                               
  LEVEL 2 INT INDEXING PASS  TH2-TEST-GF-2                                                                               
- LEVEL 2 INT INDEXING PASS  TH2-TEST-GF-3                                                                               
- LEVEL 3 INT INDEXING PASS  TH3-TEST-GF-1                                                                               
+ LEVEL 2 INT INDEXING FAIL* TH2-TEST-GF-3                 INTERNAL INDEXING LEVEL 2                                     
+                                                                                                                        
+                                     COMPUTED= SEC (03,07)                                                              
+                                     CORRECT = SEN (03,07)           IV-21 & II-15 4.4.2                                
+                                                                                                                        
+ LEVEL 3 INT INDEXING FAIL* TH3-TEST-GF-1                 INTERNAL INDEXING LEVEL 3                                     
+                                                                                                                        
+                                     COMPUTED= ELEM (02,06,10)                                                          
+                                     CORRECT = ELEM (02L06,10)       IV-21 & II-15 4.4.2                                
+                                                                                                                        
  LEVEL 3 INT INDEXING PASS  TH3-TEST-GF-2                                                                               
  LEVEL 3 INT INDEXING FAIL* TH3-TEST-GF-3                 INTERNAL INDEXING LEVEL 3                                     
                                                                                                                         
                                      COMPUTED= ELEM (09,08,07)                                                          
-                                     CORRECT = ELEM (09,B8,07)       IV-21 & II-15 4.4.2                                
+                                     CORRECT = ELEM (09,08107)       IV-21 & II-15 4.4.2                                
                                                                                                                         
  ***********************************************************************************************************************
                                                                                                                         
